@@ -1,0 +1,12 @@
+{
+  "id": "instandhaltung",
+  "type": "category",
+  "title": "Wartung und Instandhaltung",
+  "category": "instandhaltung",
+  "order": 12,
+  "icon": "wrench",
+  "summary": "Instandhaltung nach DIN 31051, Kalibrierung, Aufbereitung und Medizintechnik-Management im Krankenhaus.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

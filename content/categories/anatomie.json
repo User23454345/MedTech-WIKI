@@ -1,0 +1,12 @@
+{
+  "id": "anatomie",
+  "type": "category",
+  "title": "Anatomie und Physiologie",
+  "category": "anatomie",
+  "order": 9,
+  "icon": "heart",
+  "summary": "Bau und Funktion des menschlichen Körpers, soweit sie für das Verständnis von Messung und Therapie mit Medizingeräten nötig sind.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

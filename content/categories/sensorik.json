@@ -1,0 +1,12 @@
+{
+  "id": "sensorik",
+  "type": "category",
+  "title": "Sensoren und Messtechnik",
+  "category": "sensorik",
+  "order": 6,
+  "icon": "gauge",
+  "summary": "Wie Medizingeräte Druck, Fluss, Temperatur, Gase, Licht und bioelektrische Signale erfassen – und wie zuverlässig das ist.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "stk-mtk",
+  "type": "category",
+  "title": "STK und MTK",
+  "category": "stk-mtk",
+  "order": 11,
+  "icon": "check",
+  "summary": "Sicherheitstechnische und messtechnische Kontrollen nach MPBetreibV sowie elektrische Wiederholungsprüfungen.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

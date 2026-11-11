@@ -1,0 +1,12 @@
+{
+  "id": "recht",
+  "type": "category",
+  "title": "Medizinprodukte und gesetzliche Grundlagen",
+  "category": "recht",
+  "order": 10,
+  "icon": "scale",
+  "summary": "Medizinprodukterecht in EU und Deutschland: MDR, MPDG, MPBetreibV, Risikoklassen, Konformitätsbewertung und Betreiberpflichten.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

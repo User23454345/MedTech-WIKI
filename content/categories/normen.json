@@ -1,0 +1,12 @@
+{
+  "id": "normen",
+  "type": "category",
+  "title": "Normen und Vorschriften",
+  "category": "normen",
+  "order": 15,
+  "icon": "ruler",
+  "summary": "Wichtige Normen für Medizinprodukte: Sicherheit, EMV, Alarme, Risikomanagement, Software, Qualitätsmanagement und gerätespezifische Besonderheiten.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

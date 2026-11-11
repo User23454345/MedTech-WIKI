@@ -1,0 +1,12 @@
+{
+  "id": "hersteller",
+  "type": "category",
+  "title": "Hersteller und Gerätemodelle",
+  "category": "hersteller",
+  "order": 4,
+  "icon": "factory",
+  "summary": "Unternehmen der Medizintechnik, ihre Produktbereiche und bekannte Gerätelinien.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

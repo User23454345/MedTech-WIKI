@@ -1,0 +1,70 @@
+[
+  {
+    "id": "beatmung-anaesthesie",
+    "label": "Beatmung & Anästhesie"
+  },
+  {
+    "id": "monitoring",
+    "label": "Patientenüberwachung"
+  },
+  {
+    "id": "kardiologie",
+    "label": "Kardiologie & Elektrotherapie"
+  },
+  {
+    "id": "infusion",
+    "label": "Infusions- & Ernährungstherapie"
+  },
+  {
+    "id": "bildgebung",
+    "label": "Bildgebende Diagnostik"
+  },
+  {
+    "id": "funktionsdiagnostik",
+    "label": "Funktionsdiagnostik"
+  },
+  {
+    "id": "extrakorporal",
+    "label": "Extrakorporale Verfahren"
+  },
+  {
+    "id": "chirurgie",
+    "label": "Chirurgie & OP-Technik"
+  },
+  {
+    "id": "endoskopie",
+    "label": "Endoskopie & minimalinvasive Technik"
+  },
+  {
+    "id": "neonatologie",
+    "label": "Neonatologie"
+  },
+  {
+    "id": "notfall",
+    "label": "Notfall- & Rettungsmedizin"
+  },
+  {
+    "id": "strahlentherapie",
+    "label": "Strahlentherapie & Nuklearmedizin"
+  },
+  {
+    "id": "labor",
+    "label": "Labor- & In-vitro-Diagnostik"
+  },
+  {
+    "id": "therapie",
+    "label": "Physikalische Therapie & Rehabilitation"
+  },
+  {
+    "id": "aufbereitung",
+    "label": "Aufbereitung & Hygiene"
+  },
+  {
+    "id": "pflege",
+    "label": "Pflege- & Allgemeintechnik"
+  },
+  {
+    "id": "augen-hno-dental",
+    "label": "Augen-, HNO- & Zahnmedizin"
+  }
+]

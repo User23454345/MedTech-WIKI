@@ -1,0 +1,12 @@
+{
+  "id": "komponenten",
+  "type": "category",
+  "title": "Technische Komponenten",
+  "category": "komponenten",
+  "order": 5,
+  "icon": "cog",
+  "summary": "Baugruppen, aus denen Medizingeräte aufgebaut sind: Antriebe, Ventile, Pumpen, Energiespeicher, Röhren, Detektoren und Wandler.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

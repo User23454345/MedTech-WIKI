@@ -1,0 +1,12 @@
+{
+  "id": "einfuehrung",
+  "type": "category",
+  "title": "Einführung in die Medizintechnik",
+  "category": "einfuehrung",
+  "order": 1,
+  "icon": "book",
+  "summary": "Was Medizintechnik ist, wie sie sich entwickelt hat, wer in ihr arbeitet und wie ein Medizinprodukt von der Idee bis zur Aussonderung begleitet wird.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

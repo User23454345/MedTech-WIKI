@@ -1,0 +1,12 @@
+{
+  "id": "fehler",
+  "type": "category",
+  "title": "Technische Fehler und Fehlercodes",
+  "category": "fehler",
+  "order": 13,
+  "icon": "alert",
+  "summary": "Herstellerübergreifende Fehlerbilder und Alarme, ihre technischen Ursachen und das systematische Vorgehen bei der Fehlersuche.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

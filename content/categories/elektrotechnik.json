@@ -1,0 +1,12 @@
+{
+  "id": "elektrotechnik",
+  "type": "category",
+  "title": "Elektrotechnik und Elektronik",
+  "category": "elektrotechnik",
+  "order": 7,
+  "icon": "bolt",
+  "summary": "Elektrische Grundlagen, Verstärker, Wandler, Regelung, Schutzkonzepte und Datenschnittstellen in medizinischen elektrischen Geräten.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

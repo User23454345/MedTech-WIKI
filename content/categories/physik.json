@@ -1,0 +1,12 @@
+{
+  "id": "physik",
+  "type": "category",
+  "title": "Physikalische Grundlagen",
+  "category": "physik",
+  "order": 8,
+  "icon": "atom",
+  "summary": "Die Physik hinter den Geräten: Druck und Strömung, Schall, Licht, Strahlung, Magnetismus, Wärme und Stromwirkungen.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

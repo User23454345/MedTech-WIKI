@@ -1,0 +1,384 @@
+[
+  {
+    "id": "kramme-2017",
+    "kind": "buch",
+    "title": "Medizintechnik – Verfahren, Systeme, Informationsverarbeitung",
+    "authors": "Kramme, R. (Hrsg.)",
+    "edition": "5. Auflage",
+    "publisher": "Springer",
+    "year": "2017"
+  },
+  {
+    "id": "wintermantel-2009",
+    "kind": "buch",
+    "title": "Medizintechnik – Life Science Engineering",
+    "authors": "Wintermantel, E.; Ha, S.-W.",
+    "edition": "5. Auflage",
+    "publisher": "Springer",
+    "year": "2009"
+  },
+  {
+    "id": "webster-2010",
+    "kind": "buch",
+    "title": "Medical Instrumentation: Application and Design",
+    "authors": "Webster, J. G. (Ed.)",
+    "edition": "4th edition",
+    "publisher": "Wiley",
+    "year": "2010"
+  },
+  {
+    "id": "bronzino-2015",
+    "kind": "buch",
+    "title": "The Biomedical Engineering Handbook",
+    "authors": "Bronzino, J. D.; Peterson, D. R. (Eds.)",
+    "edition": "4th edition",
+    "publisher": "CRC Press",
+    "year": "2015"
+  },
+  {
+    "id": "doessel-2016",
+    "kind": "buch",
+    "title": "Bildgebende Verfahren in der Medizin – Von der Technik zur medizinischen Anwendung",
+    "authors": "Dössel, O.",
+    "edition": "2. Auflage",
+    "publisher": "Springer Vieweg",
+    "year": "2016"
+  },
+  {
+    "id": "bushberg-2020",
+    "kind": "buch",
+    "title": "The Essential Physics of Medical Imaging",
+    "authors": "Bushberg, J. T.; Seibert, J. A.; Leidholdt, E. M.; Boone, J. M.",
+    "edition": "4th edition",
+    "publisher": "Wolters Kluwer",
+    "year": "2020"
+  },
+  {
+    "id": "szabo-2014",
+    "kind": "buch",
+    "title": "Diagnostic Ultrasound Imaging: Inside Out",
+    "authors": "Szabo, T. L.",
+    "edition": "2nd edition",
+    "publisher": "Academic Press",
+    "year": "2014"
+  },
+  {
+    "id": "mcrobbie-2017",
+    "kind": "buch",
+    "title": "MRI from Picture to Proton",
+    "authors": "McRobbie, D. W.; Moore, E. A.; Graves, M. J.; Prince, M. R.",
+    "edition": "3rd edition",
+    "publisher": "Cambridge University Press",
+    "year": "2017"
+  },
+  {
+    "id": "kalender-2011",
+    "kind": "buch",
+    "title": "Computed Tomography: Fundamentals, System Technology, Image Quality, Applications",
+    "authors": "Kalender, W. A.",
+    "edition": "3rd edition",
+    "publisher": "Publicis",
+    "year": "2011"
+  },
+  {
+    "id": "krieger-strahlungsquellen-2018",
+    "kind": "buch",
+    "title": "Strahlungsquellen für Technik und Medizin",
+    "authors": "Krieger, H.",
+    "edition": "3. Auflage",
+    "publisher": "Springer Spektrum",
+    "year": "2018"
+  },
+  {
+    "id": "krieger-strahlenschutz-2019",
+    "kind": "buch",
+    "title": "Grundlagen der Strahlungsphysik und des Strahlenschutzes",
+    "authors": "Krieger, H.",
+    "edition": "6. Auflage",
+    "publisher": "Springer Spektrum",
+    "year": "2019"
+  },
+  {
+    "id": "schmidt-lang-2019",
+    "kind": "buch",
+    "title": "Physiologie des Menschen – mit Pathophysiologie",
+    "authors": "Brandes, R.; Lang, F.; Schmidt, R. F. (Hrsg.)",
+    "edition": "32. Auflage",
+    "publisher": "Springer",
+    "year": "2019"
+  },
+  {
+    "id": "guyton-2021",
+    "kind": "buch",
+    "title": "Guyton and Hall Textbook of Medical Physiology",
+    "authors": "Hall, J. E.; Hall, M. E.",
+    "edition": "14th edition",
+    "publisher": "Elsevier",
+    "year": "2021"
+  },
+  {
+    "id": "oczenski-2017",
+    "kind": "buch",
+    "title": "Atmen – Atemhilfen: Atemphysiologie und Beatmungstechnik",
+    "authors": "Oczenski, W. (Hrsg.)",
+    "edition": "10. Auflage",
+    "publisher": "Thieme",
+    "year": "2017"
+  },
+  {
+    "id": "tobin-2013",
+    "kind": "buch",
+    "title": "Principles and Practice of Mechanical Ventilation",
+    "authors": "Tobin, M. J. (Ed.)",
+    "edition": "3rd edition",
+    "publisher": "McGraw-Hill",
+    "year": "2013"
+  },
+  {
+    "id": "dorsch-2008",
+    "kind": "buch",
+    "title": "Understanding Anesthesia Equipment",
+    "authors": "Dorsch, J. A.; Dorsch, S. E.",
+    "edition": "5th edition",
+    "publisher": "Lippincott Williams & Wilkins",
+    "year": "2008"
+  },
+  {
+    "id": "larsen-2018",
+    "kind": "buch",
+    "title": "Anästhesie",
+    "authors": "Larsen, R.",
+    "edition": "11. Auflage",
+    "publisher": "Elsevier",
+    "year": "2018"
+  },
+  {
+    "id": "daugirdas-2015",
+    "kind": "buch",
+    "title": "Handbook of Dialysis",
+    "authors": "Daugirdas, J. T.; Blake, P. G.; Ing, T. S. (Eds.)",
+    "edition": "5th edition",
+    "publisher": "Wolters Kluwer",
+    "year": "2015"
+  },
+  {
+    "id": "tietze-schenk-2019",
+    "kind": "buch",
+    "title": "Halbleiter-Schaltungstechnik",
+    "authors": "Tietze, U.; Schenk, C.; Gamm, E.",
+    "edition": "16. Auflage",
+    "publisher": "Springer Vieweg",
+    "year": "2019"
+  },
+  {
+    "id": "tipler-2019",
+    "kind": "buch",
+    "title": "Physik für Studierende der Naturwissenschaften und Technik",
+    "authors": "Tipler, P. A.; Mosca, G.",
+    "edition": "8. Auflage",
+    "publisher": "Springer Spektrum",
+    "year": "2019"
+  },
+  {
+    "id": "hering-2018",
+    "kind": "buch",
+    "title": "Sensoren in Wissenschaft und Technik",
+    "authors": "Hering, E.; Schönfelder, G. (Hrsg.)",
+    "edition": "2. Auflage",
+    "publisher": "Springer Vieweg",
+    "year": "2018"
+  },
+  {
+    "id": "eichler-2015",
+    "kind": "buch",
+    "title": "Laser – Bauformen, Strahlführung, Anwendungen",
+    "authors": "Eichler, J.; Eichler, H. J.",
+    "edition": "8. Auflage",
+    "publisher": "Springer Vieweg",
+    "year": "2015"
+  },
+  {
+    "id": "jubran-2015",
+    "kind": "artikel",
+    "title": "Pulse oximetry",
+    "authors": "Jubran, A.",
+    "publisher": "Critical Care 19:272",
+    "year": "2015"
+  },
+  {
+    "id": "erc-2021",
+    "kind": "leitlinie",
+    "title": "European Resuscitation Council Guidelines 2021: Executive summary",
+    "authors": "Perkins, G. D. et al.",
+    "publisher": "Resuscitation 161:1–60",
+    "year": "2021"
+  },
+  {
+    "id": "krinko-bfarm-2012",
+    "kind": "leitlinie",
+    "title": "Anforderungen an die Hygiene bei der Aufbereitung von Medizinprodukten – Empfehlung der KRINKO beim RKI und des BfArM",
+    "publisher": "Bundesgesundheitsblatt 55:1244–1310",
+    "year": "2012"
+  },
+  {
+    "id": "who-thermal-1997",
+    "kind": "leitlinie",
+    "title": "Thermal protection of the newborn: a practical guide (WHO/RHT/MSM/97.2)",
+    "authors": "World Health Organization",
+    "publisher": "WHO",
+    "year": "1997"
+  },
+  {
+    "id": "mdcg-2021-24",
+    "kind": "leitlinie",
+    "title": "MDCG 2021-24 – Guidance on classification of medical devices",
+    "authors": "Medical Device Coordination Group",
+    "year": "2021"
+  },
+  {
+    "id": "mdcg-2019-11",
+    "kind": "leitlinie",
+    "title": "MDCG 2019-11 – Guidance on Qualification and Classification of Software in Regulation (EU) 2017/745 – MDR and Regulation (EU) 2017/746 – IVDR",
+    "authors": "Medical Device Coordination Group",
+    "year": "2019"
+  },
+  {
+    "id": "mdr-2017",
+    "kind": "gesetz",
+    "title": "Verordnung (EU) 2017/745 über Medizinprodukte (MDR)",
+    "publisher": "Amtsblatt der EU L 117",
+    "year": "2017",
+    "url": "https://eur-lex.europa.eu/eli/reg/2017/745/oj"
+  },
+  {
+    "id": "ivdr-2017",
+    "kind": "gesetz",
+    "title": "Verordnung (EU) 2017/746 über In-vitro-Diagnostika (IVDR)",
+    "publisher": "Amtsblatt der EU L 117",
+    "year": "2017",
+    "url": "https://eur-lex.europa.eu/eli/reg/2017/746/oj"
+  },
+  {
+    "id": "mpdg",
+    "kind": "gesetz",
+    "title": "Medizinprodukterecht-Durchführungsgesetz (MPDG)",
+    "publisher": "Bundesrepublik Deutschland",
+    "year": "2020",
+    "url": "https://www.gesetze-im-internet.de/mpdg/"
+  },
+  {
+    "id": "mpbetreibv",
+    "kind": "gesetz",
+    "title": "Verordnung über das Betreiben und Benutzen von Medizinprodukten (Medizinprodukte-Betreiberverordnung – MPBetreibV) vom 14. Februar 2025",
+    "publisher": "BGBl. 2025 I Nr. 38",
+    "url": "https://www.gesetze-im-internet.de/mpbetreibv_2025/",
+    "note": "Neufassung 2025 (löst die MPBetreibV 2002/2017 ab). STK: § 12 i. V. m. Anlage 1; MTK: § 15 i. V. m. Anlage 2. Maßgeblich ist die jeweils aktuelle Fassung.",
+    "year": "2025"
+  },
+  {
+    "id": "strlschg",
+    "kind": "gesetz",
+    "title": "Strahlenschutzgesetz (StrlSchG)",
+    "publisher": "Bundesrepublik Deutschland",
+    "year": "2017",
+    "url": "https://www.gesetze-im-internet.de/strlschg/"
+  },
+  {
+    "id": "strlschv",
+    "kind": "gesetz",
+    "title": "Strahlenschutzverordnung (StrlSchV)",
+    "publisher": "Bundesrepublik Deutschland",
+    "year": "2018",
+    "url": "https://www.gesetze-im-internet.de/strlschv_2018/"
+  },
+  {
+    "id": "dguv-v3",
+    "kind": "gesetz",
+    "title": "DGUV Vorschrift 3 – Elektrische Anlagen und Betriebsmittel",
+    "publisher": "Deutsche Gesetzliche Unfallversicherung"
+  },
+  {
+    "id": "bfarm",
+    "kind": "behoerde",
+    "title": "Bundesinstitut für Arzneimittel und Medizinprodukte – Medizinprodukte",
+    "publisher": "BfArM",
+    "url": "https://www.bfarm.de"
+  },
+  {
+    "id": "eudamed",
+    "kind": "behoerde",
+    "title": "EUDAMED – European Database on Medical Devices",
+    "publisher": "Europäische Kommission",
+    "url": "https://ec.europa.eu/tools/eudamed"
+  },
+  {
+    "id": "iec-60601-1",
+    "kind": "norm",
+    "title": "IEC 60601-1 – Medizinische elektrische Geräte – Teil 1: Allgemeine Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale"
+  },
+  {
+    "id": "iec-60601-1-2",
+    "kind": "norm",
+    "title": "IEC 60601-1-2 – Ergänzungsnorm: Elektromagnetische Störgrößen – Anforderungen und Prüfungen"
+  },
+  {
+    "id": "iec-60601-1-6",
+    "kind": "norm",
+    "title": "IEC 60601-1-6 – Ergänzungsnorm: Gebrauchstauglichkeit"
+  },
+  {
+    "id": "iec-60601-1-8",
+    "kind": "norm",
+    "title": "IEC 60601-1-8 – Ergänzungsnorm: Alarmsysteme"
+  },
+  {
+    "id": "iec-60601-1-11",
+    "kind": "norm",
+    "title": "IEC 60601-1-11 – Ergänzungsnorm: Anforderungen an medizinische elektrische Geräte für die medizinische Versorgung in häuslicher Umgebung"
+  },
+  {
+    "id": "iec-62353",
+    "kind": "norm",
+    "title": "IEC 62353 – Medizinische elektrische Geräte – Wiederholungsprüfungen und Prüfung nach Instandsetzung von medizinischen elektrischen Geräten"
+  },
+  {
+    "id": "iso-14971",
+    "kind": "norm",
+    "title": "ISO 14971 – Medizinprodukte – Anwendung des Risikomanagements auf Medizinprodukte"
+  },
+  {
+    "id": "iec-62304",
+    "kind": "norm",
+    "title": "IEC 62304 – Medizingeräte-Software – Software-Lebenszyklus-Prozesse"
+  },
+  {
+    "id": "iso-13485",
+    "kind": "norm",
+    "title": "ISO 13485 – Medizinprodukte – Qualitätsmanagementsysteme – Anforderungen für regulatorische Zwecke"
+  },
+  {
+    "id": "iec-62366-1",
+    "kind": "norm",
+    "title": "IEC 62366-1 – Medizinprodukte – Anwendung der Gebrauchstauglichkeit auf Medizinprodukte"
+  },
+  {
+    "id": "iso-10993-1",
+    "kind": "norm",
+    "title": "ISO 10993-1 – Biologische Beurteilung von Medizinprodukten – Teil 1: Beurteilung und Prüfungen im Rahmen eines Risikomanagementsystems"
+  },
+  {
+    "id": "din-31051",
+    "kind": "norm",
+    "title": "DIN 31051 – Grundlagen der Instandhaltung"
+  },
+  {
+    "id": "din-vde-0100-710",
+    "kind": "norm",
+    "title": "DIN VDE 0100-710 – Errichten von Niederspannungsanlagen – Medizinisch genutzte Bereiche"
+  },
+  {
+    "id": "iec-60479-1",
+    "kind": "norm",
+    "title": "IEC/TS 60479-1 – Wirkungen des elektrischen Stromes auf Menschen und Nutztiere – Teil 1: Allgemeine Aspekte"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "id": "fachbereiche",
+  "type": "category",
+  "title": "Medizinische Fachbereiche",
+  "category": "fachbereiche",
+  "order": 2,
+  "icon": "stethoscope",
+  "summary": "Klinische Disziplinen und die Medizintechnik, auf die sie angewiesen sind – von der Intensivmedizin bis zur Zahnmedizin.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

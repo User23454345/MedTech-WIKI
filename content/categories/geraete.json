@@ -1,0 +1,12 @@
+{
+  "id": "geraete",
+  "type": "category",
+  "title": "Die 100 wichtigsten Medizintechnikgeräte",
+  "category": "geraete",
+  "order": 3,
+  "icon": "device",
+  "summary": "Gerätedatenbank mit Funktionsprinzip, Aufbau, Komponenten, Sensoren, Kenndaten, Prüfpflichten und typischen Fehlern.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}

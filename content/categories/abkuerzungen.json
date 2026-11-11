@@ -1,0 +1,12 @@
+{
+  "id": "abkuerzungen",
+  "type": "category",
+  "title": "Medizinische und technische Abkürzungen",
+  "category": "abkuerzungen",
+  "order": 14,
+  "icon": "abc",
+  "summary": "Abkürzungsverzeichnis aus Medizin, Technik und Regulatorik – mit Verweis auf die erklärenden Artikel.",
+  "body": "",
+  "status": "basis",
+  "updated": "2026-11-11"
+}
