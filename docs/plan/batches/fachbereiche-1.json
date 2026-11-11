@@ -1,0 +1,68 @@
+[
+ {
+  "id": "intensivmedizin",
+  "type": "domain",
+  "title": "Intensivmedizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "anaesthesiologie",
+  "type": "domain",
+  "title": "Anästhesiologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "kardiologie",
+  "type": "domain",
+  "title": "Kardiologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "radiologie",
+  "type": "domain",
+  "title": "Radiologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "nephrologie",
+  "type": "domain",
+  "title": "Nephrologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "chirurgie",
+  "type": "domain",
+  "title": "Chirurgie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "notfallmedizin",
+  "type": "domain",
+  "title": "Notfall- und Rettungsmedizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "neonatologie",
+  "type": "domain",
+  "title": "Neonatologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "neurologie",
+  "type": "domain",
+  "title": "Neurologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "pneumologie",
+  "type": "domain",
+  "title": "Pneumologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "nuklearmedizin",
+  "type": "domain",
+  "title": "Nuklearmedizin",
+  "category": "fachbereiche"
+ }
+]

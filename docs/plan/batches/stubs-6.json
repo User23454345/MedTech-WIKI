@@ -1,0 +1,92 @@
+[
+ {
+  "id": "tonometer",
+  "type": "device",
+  "title": "Augentonometer",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 91,
+  "status": "stub"
+ },
+ {
+  "id": "oct",
+  "type": "device",
+  "title": "Optische Kohärenztomographie (OCT)",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 92,
+  "status": "stub"
+ },
+ {
+  "id": "phakoemulsifikation",
+  "type": "device",
+  "title": "Phakoemulsifikationssystem",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 93,
+  "status": "stub"
+ },
+ {
+  "id": "dentaleinheit",
+  "type": "device",
+  "title": "Zahnärztliche Behandlungseinheit",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 94,
+  "status": "stub"
+ },
+ {
+  "id": "dampfsterilisator",
+  "type": "device",
+  "title": "Dampfsterilisator",
+  "category": "geraete",
+  "deviceGroup": "aufbereitung",
+  "rank": 95,
+  "status": "stub"
+ },
+ {
+  "id": "niedertemperatursterilisator",
+  "type": "device",
+  "title": "Niedertemperatur-Plasmasterilisator",
+  "category": "geraete",
+  "deviceGroup": "aufbereitung",
+  "rank": 96,
+  "status": "stub"
+ },
+ {
+  "id": "rdg",
+  "type": "device",
+  "title": "Reinigungs- und Desinfektionsgerät (RDG)",
+  "category": "geraete",
+  "deviceGroup": "aufbereitung",
+  "rank": 97,
+  "status": "stub"
+ },
+ {
+  "id": "pflegebett",
+  "type": "device",
+  "title": "Elektrisches Klinik- und Pflegebett",
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 98,
+  "status": "stub"
+ },
+ {
+  "id": "patientenlifter",
+  "type": "device",
+  "title": "Patientenlifter",
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 99,
+  "status": "stub"
+ },
+ {
+  "id": "antidekubitussystem",
+  "type": "device",
+  "title": "Antidekubitus-Wechseldrucksystem",
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 100,
+  "status": "stub"
+ }
+]

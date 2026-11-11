@@ -1,0 +1,62 @@
+[
+ {
+  "id": "spannung-strom-widerstand",
+  "type": "term",
+  "title": "Spannung, Strom und Widerstand",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "operationsverstaerker",
+  "type": "term",
+  "title": "Operationsverstärker",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "instrumentenverstaerker",
+  "type": "term",
+  "title": "Instrumentenverstärker",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "analog-digital-wandler",
+  "type": "term",
+  "title": "Analog-Digital-Wandler",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "filter",
+  "type": "term",
+  "title": "Analoge und digitale Filter",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "pwm",
+  "type": "term",
+  "title": "Pulsweitenmodulation (PWM)",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "drehzahlregelung",
+  "type": "term",
+  "title": "Drehzahlregelung",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "regelkreis",
+  "type": "term",
+  "title": "Regelkreis und PID-Regler",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "mikrocontroller",
+  "type": "term",
+  "title": "Mikrocontroller und Embedded-Systeme",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "galvanische-trennung",
+  "type": "term",
+  "title": "Galvanische Trennung",
+  "category": "elektrotechnik"
+ }
+]

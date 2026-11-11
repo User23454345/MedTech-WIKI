@@ -1,0 +1,11 @@
+[
+ {
+  "id": "ultraschallgeraet",
+  "type": "device",
+  "title": "Ultraschallgerät (Sonographie)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 9,
+  "status": "ausfuehrlich"
+ }
+]

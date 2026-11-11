@@ -1,0 +1,11 @@
+[
+ {
+  "id": "spritzenpumpe",
+  "type": "device",
+  "title": "Spritzenpumpe",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 5,
+  "status": "ausfuehrlich"
+ }
+]

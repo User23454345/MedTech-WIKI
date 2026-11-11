@@ -1,0 +1,11 @@
+[
+ {
+  "id": "anaesthesiegeraet",
+  "type": "device",
+  "title": "Anästhesiearbeitsplatz (Narkosegerät)",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 8,
+  "status": "ausfuehrlich"
+ }
+]

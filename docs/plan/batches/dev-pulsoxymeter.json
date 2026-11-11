@@ -1,0 +1,11 @@
+[
+ {
+  "id": "pulsoxymeter",
+  "type": "device",
+  "title": "Pulsoxymeter",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 7,
+  "status": "ausfuehrlich"
+ }
+]

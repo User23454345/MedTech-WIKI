@@ -1,0 +1,86 @@
+[
+ {
+  "id": "schiller",
+  "type": "manufacturer",
+  "title": "Schiller",
+  "category": "hersteller"
+ },
+ {
+  "id": "erbe",
+  "type": "manufacturer",
+  "title": "Erbe Elektromedizin",
+  "category": "hersteller"
+ },
+ {
+  "id": "olympus",
+  "type": "manufacturer",
+  "title": "Olympus",
+  "category": "hersteller"
+ },
+ {
+  "id": "karl-storz",
+  "type": "manufacturer",
+  "title": "KARL STORZ",
+  "category": "hersteller"
+ },
+ {
+  "id": "getinge",
+  "type": "manufacturer",
+  "title": "Getinge",
+  "category": "hersteller"
+ },
+ {
+  "id": "canon-medical",
+  "type": "manufacturer",
+  "title": "Canon Medical Systems",
+  "category": "hersteller"
+ },
+ {
+  "id": "loewenstein-medical",
+  "type": "manufacturer",
+  "title": "Löwenstein Medical",
+  "category": "hersteller"
+ },
+ {
+  "id": "masimo",
+  "type": "manufacturer",
+  "title": "Masimo",
+  "category": "hersteller"
+ },
+ {
+  "id": "icu-medical",
+  "type": "manufacturer",
+  "title": "ICU Medical",
+  "category": "hersteller"
+ },
+ {
+  "id": "bd",
+  "type": "manufacturer",
+  "title": "BD (Becton, Dickinson and Company)",
+  "category": "hersteller"
+ },
+ {
+  "id": "resmed",
+  "type": "manufacturer",
+  "title": "ResMed",
+  "category": "hersteller"
+ },
+ {
+  "id": "zeiss",
+  "type": "manufacturer",
+  "title": "Carl Zeiss Meditec",
+  "category": "hersteller"
+ },
+ {
+  "id": "elekta",
+  "type": "manufacturer",
+  "title": "Elekta",
+  "category": "hersteller"
+ },
+ {
+  "id": "intuitive",
+  "type": "manufacturer",
+  "title": "Intuitive Surgical",
+  "category": "hersteller"
+ }
+]

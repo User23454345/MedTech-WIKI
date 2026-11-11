@@ -1,0 +1,137 @@
+[
+ {
+  "id": "nibp-messgeraet",
+  "type": "device",
+  "title": "Automatisches nichtinvasives Blutdruckmessgerät",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 16,
+  "status": "stub"
+ },
+ {
+  "id": "invasive-druckmessung",
+  "type": "device",
+  "title": "Invasive Blutdruckmessung (Druckmesssystem)",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 17,
+  "status": "stub"
+ },
+ {
+  "id": "kapnometer",
+  "type": "device",
+  "title": "Kapnometer / Kapnograph",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 18,
+  "status": "stub"
+ },
+ {
+  "id": "transportbeatmungsgeraet",
+  "type": "device",
+  "title": "Notfall- und Transportbeatmungsgerät",
+  "category": "geraete",
+  "deviceGroup": "notfall",
+  "rank": 19,
+  "status": "stub"
+ },
+ {
+  "id": "herz-lungen-maschine",
+  "type": "device",
+  "title": "Herz-Lungen-Maschine",
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 20,
+  "status": "stub"
+ },
+ {
+  "id": "ecmo",
+  "type": "device",
+  "title": "ECMO-System",
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 21,
+  "status": "stub"
+ },
+ {
+  "id": "crrt-geraet",
+  "type": "device",
+  "title": "Gerät zur kontinuierlichen Nierenersatztherapie (CRRT)",
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 22,
+  "status": "stub"
+ },
+ {
+  "id": "iabp",
+  "type": "device",
+  "title": "Intraaortale Ballonpumpe (IABP)",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 23,
+  "status": "stub"
+ },
+ {
+  "id": "vad",
+  "type": "device",
+  "title": "Herzunterstützungssystem (VAD)",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 24,
+  "status": "stub"
+ },
+ {
+  "id": "herzschrittmacher",
+  "type": "device",
+  "title": "Implantierbarer Herzschrittmacher",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 25,
+  "status": "stub"
+ },
+ {
+  "id": "icd",
+  "type": "device",
+  "title": "Implantierbarer Kardioverter-Defibrillator (ICD)",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 26,
+  "status": "stub"
+ },
+ {
+  "id": "externer-schrittmacher",
+  "type": "device",
+  "title": "Externer temporärer Herzschrittmacher",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 27,
+  "status": "stub"
+ },
+ {
+  "id": "langzeit-ekg",
+  "type": "device",
+  "title": "Langzeit-EKG-Rekorder",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 28,
+  "status": "stub"
+ },
+ {
+  "id": "ergometer",
+  "type": "device",
+  "title": "Belastungs-EKG mit Ergometer",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 29,
+  "status": "stub"
+ },
+ {
+  "id": "langzeit-blutdruck",
+  "type": "device",
+  "title": "Langzeit-Blutdruckmessgerät",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 30,
+  "status": "stub"
+ }
+]

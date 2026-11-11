@@ -1,0 +1,11 @@
+[
+ {
+  "id": "patientenmonitor",
+  "type": "device",
+  "title": "Patientenmonitor",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 1,
+  "status": "ausfuehrlich"
+ }
+]

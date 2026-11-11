@@ -1,0 +1,62 @@
+[
+ {
+  "id": "instandhaltung-grundlagen",
+  "type": "term",
+  "title": "Instandhaltung",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "wartung",
+  "type": "term",
+  "title": "Wartung",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "inspektion",
+  "type": "term",
+  "title": "Inspektion",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "instandsetzung",
+  "type": "term",
+  "title": "Instandsetzung",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "kalibrierung",
+  "type": "term",
+  "title": "Kalibrierung und Justierung",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "aufbereitung",
+  "type": "term",
+  "title": "Aufbereitung von Medizinprodukten",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "sterilisation",
+  "type": "term",
+  "title": "Sterilisation",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "desinfektion",
+  "type": "term",
+  "title": "Desinfektion",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "medizintechnik-management",
+  "type": "term",
+  "title": "Medizintechnik-Management",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "fehlersuche",
+  "type": "term",
+  "title": "Systematische Fehlersuche",
+  "category": "instandhaltung"
+ }
+]

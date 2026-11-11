@@ -31,6 +31,9 @@ const md = (src: string | undefined, env: RenderEnv, prefix?: string) => {
   return html;
 };
 const il = (src: string | undefined, env: RenderEnv) => renderInline(src, env);
+/** Fußnoten für Quellen-IDs, die im zugehörigen Text noch nicht zitiert sind */
+const cites = (ids: string[] | undefined, text: string | undefined, env: RenderEnv) =>
+  (ids ?? []).filter((id) => !(text ?? '').includes(`[@${id}`)).map((id) => il(`[@${id}]`, env)).join('');
 
 function Breadcrumb({ entry }: { entry: Entry }) {
   const cat = categories.find((c) => c.id === entry.category);
@@ -116,10 +119,10 @@ function DevicePage({ d }: { d: DeviceEntry }) {
       sensors: (d.sensors ?? []).map((c) => il(c.role, env)),
       specs: (d.specs ?? []).map((x) => ({
         note: il(x.note, env),
-        cites: (x.sources ?? []).map((id) => il(`[@${id}]`, env)).join(''),
+        cites: cites(x.sources, x.note, env),
       })),
-      risk: il(d.riskClass?.note, env) + (d.riskClass?.sources ?? []).map((id) => il(`[@${id}]`, env)).join(''),
-      price: il(d.price?.note, env) + (d.price?.sources ?? []).map((id) => il(`[@${id}]`, env)).join(''),
+      risk: il(d.riskClass?.note, env) + cites(d.riskClass?.sources, d.riskClass?.note, env),
+      price: il(d.price?.note, env) + cites(d.price?.sources, d.price?.note, env),
       maintenance: md(s.maintenance, env, 'wartung'),
       faults: (d.faults ?? []).map((f) => ({ cause: il(f.cause, env), action: il(f.action, env) })),
       tests: (d.tests ?? []).map((t) => il(t.description, env)),

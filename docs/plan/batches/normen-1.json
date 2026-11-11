@@ -1,0 +1,74 @@
+[
+ {
+  "id": "iec-60601-1",
+  "type": "standard",
+  "title": "IEC 60601-1",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-1-2",
+  "type": "standard",
+  "title": "IEC 60601-1-2",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-1-6",
+  "type": "standard",
+  "title": "IEC 60601-1-6",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-1-8",
+  "type": "standard",
+  "title": "IEC 60601-1-8",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-1-11",
+  "type": "standard",
+  "title": "IEC 60601-1-11",
+  "category": "normen"
+ },
+ {
+  "id": "iec-62353",
+  "type": "standard",
+  "title": "IEC 62353",
+  "category": "normen"
+ },
+ {
+  "id": "iso-14971",
+  "type": "standard",
+  "title": "ISO 14971",
+  "category": "normen"
+ },
+ {
+  "id": "iec-62304",
+  "type": "standard",
+  "title": "IEC 62304",
+  "category": "normen"
+ },
+ {
+  "id": "iso-13485",
+  "type": "standard",
+  "title": "ISO 13485",
+  "category": "normen"
+ },
+ {
+  "id": "iec-62366-1",
+  "type": "standard",
+  "title": "IEC 62366-1",
+  "category": "normen"
+ },
+ {
+  "id": "iso-10993-1",
+  "type": "standard",
+  "title": "ISO 10993-1",
+  "category": "normen"
+ },
+ {
+  "id": "din-31051",
+  "type": "standard",
+  "title": "DIN 31051",
+  "category": "normen"
+ }
+]

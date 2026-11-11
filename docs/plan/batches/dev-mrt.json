@@ -1,0 +1,11 @@
+[
+ {
+  "id": "mrt",
+  "type": "device",
+  "title": "Magnetresonanztomograph (MRT)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 11,
+  "status": "ausfuehrlich"
+ }
+]

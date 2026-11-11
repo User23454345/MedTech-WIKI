@@ -1,0 +1,62 @@
+[
+ {
+  "id": "turbine",
+  "type": "term",
+  "title": "Turbine (Radialgebläse)",
+  "category": "komponenten"
+ },
+ {
+  "id": "elektromotor",
+  "type": "term",
+  "title": "Elektromotor",
+  "category": "komponenten"
+ },
+ {
+  "id": "bldc-motor",
+  "type": "term",
+  "title": "Bürstenloser Gleichstrommotor (BLDC)",
+  "category": "komponenten"
+ },
+ {
+  "id": "schrittmotor",
+  "type": "term",
+  "title": "Schrittmotor",
+  "category": "komponenten"
+ },
+ {
+  "id": "magnetventil",
+  "type": "term",
+  "title": "Magnetventil",
+  "category": "komponenten"
+ },
+ {
+  "id": "proportionalventil",
+  "type": "term",
+  "title": "Proportionalventil",
+  "category": "komponenten"
+ },
+ {
+  "id": "exspirationsventil",
+  "type": "term",
+  "title": "Exspirationsventil",
+  "category": "komponenten"
+ },
+ {
+  "id": "peristaltikpumpe",
+  "type": "term",
+  "title": "Peristaltikpumpe",
+  "category": "komponenten"
+ },
+ {
+  "id": "spindelantrieb",
+  "type": "term",
+  "title": "Spindelantrieb",
+  "category": "komponenten"
+ },
+ {
+  "id": "lithium-ionen-akku",
+  "type": "term",
+  "title": "Lithium-Ionen-Akkumulator",
+  "category": "komponenten"
+ }
+]

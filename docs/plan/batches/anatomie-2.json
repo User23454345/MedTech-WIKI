@@ -1,0 +1,50 @@
+[
+ {
+  "id": "niere",
+  "type": "term",
+  "title": "Niere",
+  "category": "anatomie"
+ },
+ {
+  "id": "nervensystem",
+  "type": "term",
+  "title": "Nervensystem",
+  "category": "anatomie"
+ },
+ {
+  "id": "haut",
+  "type": "term",
+  "title": "Haut",
+  "category": "anatomie"
+ },
+ {
+  "id": "thermoregulation",
+  "type": "term",
+  "title": "Thermoregulation",
+  "category": "anatomie"
+ },
+ {
+  "id": "blut",
+  "type": "term",
+  "title": "Blut",
+  "category": "anatomie"
+ },
+ {
+  "id": "saeure-basen-haushalt",
+  "type": "term",
+  "title": "Säure-Basen-Haushalt",
+  "category": "anatomie"
+ },
+ {
+  "id": "auge",
+  "type": "term",
+  "title": "Auge",
+  "category": "anatomie"
+ },
+ {
+  "id": "ohr",
+  "type": "term",
+  "title": "Ohr und Hören",
+  "category": "anatomie"
+ }
+]

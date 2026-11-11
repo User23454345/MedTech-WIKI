@@ -1,0 +1,62 @@
+[
+ {
+  "id": "beauftragter-medizinproduktesicherheit",
+  "type": "term",
+  "title": "Beauftragter für Medizinproduktesicherheit",
+  "category": "recht"
+ },
+ {
+  "id": "medizinproduktebuch",
+  "type": "term",
+  "title": "Medizinproduktebuch",
+  "category": "recht"
+ },
+ {
+  "id": "bestandsverzeichnis",
+  "type": "term",
+  "title": "Bestandsverzeichnis",
+  "category": "recht"
+ },
+ {
+  "id": "software-medizinprodukt",
+  "type": "term",
+  "title": "Software als Medizinprodukt",
+  "category": "recht"
+ },
+ {
+  "id": "strahlenschutz",
+  "type": "term",
+  "title": "Strahlenschutz in der Medizin",
+  "category": "recht"
+ },
+ {
+  "id": "mdr",
+  "type": "standard",
+  "title": "Medizinprodukteverordnung (MDR)",
+  "category": "recht"
+ },
+ {
+  "id": "ivdr",
+  "type": "standard",
+  "title": "In-vitro-Diagnostika-Verordnung (IVDR)",
+  "category": "recht"
+ },
+ {
+  "id": "mpdg",
+  "type": "standard",
+  "title": "Medizinprodukterecht-Durchführungsgesetz (MPDG)",
+  "category": "recht"
+ },
+ {
+  "id": "mpbetreibv",
+  "type": "standard",
+  "title": "Medizinprodukte-Betreiberverordnung (MPBetreibV)",
+  "category": "recht"
+ },
+ {
+  "id": "strlschg",
+  "type": "standard",
+  "title": "Strahlenschutzgesetz (StrlSchG)",
+  "category": "recht"
+ }
+]

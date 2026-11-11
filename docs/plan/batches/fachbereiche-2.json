@@ -1,0 +1,68 @@
+[
+ {
+  "id": "strahlentherapie",
+  "type": "domain",
+  "title": "Strahlentherapie (Radioonkologie)",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "labormedizin",
+  "type": "domain",
+  "title": "Laboratoriumsmedizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "gastroenterologie",
+  "type": "domain",
+  "title": "Gastroenterologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "augenheilkunde",
+  "type": "domain",
+  "title": "Augenheilkunde",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "hno-heilkunde",
+  "type": "domain",
+  "title": "Hals-Nasen-Ohren-Heilkunde",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "zahnmedizin",
+  "type": "domain",
+  "title": "Zahnmedizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "geburtshilfe",
+  "type": "domain",
+  "title": "Gynäkologie und Geburtshilfe",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "orthopaedie-unfallchirurgie",
+  "type": "domain",
+  "title": "Orthopädie und Unfallchirurgie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "physikalische-medizin",
+  "type": "domain",
+  "title": "Physikalische und Rehabilitative Medizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "diabetologie",
+  "type": "domain",
+  "title": "Diabetologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "herzchirurgie",
+  "type": "domain",
+  "title": "Herzchirurgie",
+  "category": "fachbereiche"
+ }
+]

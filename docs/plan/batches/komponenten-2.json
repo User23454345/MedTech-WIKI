@@ -1,0 +1,62 @@
+[
+ {
+  "id": "medizinisches-netzteil",
+  "type": "term",
+  "title": "Medizinisches Netzteil",
+  "category": "komponenten"
+ },
+ {
+  "id": "kondensator",
+  "type": "term",
+  "title": "Kondensator",
+  "category": "komponenten"
+ },
+ {
+  "id": "transformator",
+  "type": "term",
+  "title": "Transformator",
+  "category": "komponenten"
+ },
+ {
+  "id": "roentgenroehre",
+  "type": "term",
+  "title": "Röntgenröhre",
+  "category": "komponenten"
+ },
+ {
+  "id": "roentgendetektor",
+  "type": "term",
+  "title": "Röntgendetektor (Flachdetektor)",
+  "category": "komponenten"
+ },
+ {
+  "id": "kollimator",
+  "type": "term",
+  "title": "Kollimator und Blende",
+  "category": "komponenten"
+ },
+ {
+  "id": "gantry",
+  "type": "term",
+  "title": "Gantry",
+  "category": "komponenten"
+ },
+ {
+  "id": "supraleitender-magnet",
+  "type": "term",
+  "title": "Supraleitender Magnet",
+  "category": "komponenten"
+ },
+ {
+  "id": "gradientenspule",
+  "type": "term",
+  "title": "Gradientenspule",
+  "category": "komponenten"
+ },
+ {
+  "id": "hf-spule",
+  "type": "term",
+  "title": "HF-Spule (MRT)",
+  "category": "komponenten"
+ }
+]

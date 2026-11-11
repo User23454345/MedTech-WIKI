@@ -1,0 +1,44 @@
+[
+ {
+  "id": "medizintechnik",
+  "type": "term",
+  "title": "Medizintechnik",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "geschichte-medizintechnik",
+  "type": "term",
+  "title": "Geschichte der Medizintechnik",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "berufe-medizintechnik",
+  "type": "term",
+  "title": "Berufe in der Medizintechnik",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "lebenszyklus-medizinprodukt",
+  "type": "term",
+  "title": "Lebenszyklus eines Medizinprodukts",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "patientensicherheit",
+  "type": "term",
+  "title": "Patientensicherheit und Medizintechnik",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "gebrauchstauglichkeit",
+  "type": "term",
+  "title": "Gebrauchstauglichkeit (Usability)",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "medizinisches-elektrisches-geraet",
+  "type": "term",
+  "title": "Medizinisches elektrisches Gerät (ME-Gerät)",
+  "category": "einfuehrung"
+ }
+]

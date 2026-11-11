@@ -1,0 +1,11 @@
+[
+ {
+  "id": "hf-chirurgiegeraet",
+  "type": "device",
+  "title": "HF-Chirurgiegerät",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 14,
+  "status": "ausfuehrlich"
+ }
+]

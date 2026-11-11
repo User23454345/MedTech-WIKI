@@ -1,0 +1,56 @@
+[
+ {
+  "id": "druckmessung",
+  "type": "term",
+  "title": "Druckmessung",
+  "category": "sensorik"
+ },
+ {
+  "id": "drucksensor",
+  "type": "term",
+  "title": "Piezoresistiver Drucksensor",
+  "category": "sensorik"
+ },
+ {
+  "id": "flowsensor",
+  "type": "term",
+  "title": "Flowsensor",
+  "category": "sensorik"
+ },
+ {
+  "id": "temperatursensor",
+  "type": "term",
+  "title": "Temperatursensor",
+  "category": "sensorik"
+ },
+ {
+  "id": "sauerstoffsensor",
+  "type": "term",
+  "title": "Sauerstoffsensor",
+  "category": "sensorik"
+ },
+ {
+  "id": "co2-sensor",
+  "type": "term",
+  "title": "CO₂-Sensor (NDIR)",
+  "category": "sensorik"
+ },
+ {
+  "id": "photoplethysmographie",
+  "type": "term",
+  "title": "Photoplethysmographie",
+  "category": "sensorik"
+ },
+ {
+  "id": "ekg-elektrode",
+  "type": "term",
+  "title": "EKG-Elektrode (Ag/AgCl)",
+  "category": "sensorik"
+ },
+ {
+  "id": "luftblasendetektor",
+  "type": "term",
+  "title": "Luftblasendetektor",
+  "category": "sensorik"
+ }
+]

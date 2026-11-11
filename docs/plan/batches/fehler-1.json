@@ -1,0 +1,56 @@
+[
+ {
+  "id": "okklusionsalarm",
+  "type": "fault",
+  "title": "Okklusionsalarm",
+  "category": "fehler"
+ },
+ {
+  "id": "luft-im-system",
+  "type": "fault",
+  "title": "Luft-im-System-Alarm",
+  "category": "fehler"
+ },
+ {
+  "id": "leckage",
+  "type": "fault",
+  "title": "Leckagealarm (Beatmung)",
+  "category": "fehler"
+ },
+ {
+  "id": "atemwegsdruck-hoch",
+  "type": "fault",
+  "title": "Alarm: Atemwegsdruck hoch",
+  "category": "fehler"
+ },
+ {
+  "id": "diskonnektion",
+  "type": "fault",
+  "title": "Diskonnektion",
+  "category": "fehler"
+ },
+ {
+  "id": "elektrodenproblem",
+  "type": "fault",
+  "title": "Elektrode ab / schlechter Elektrodenkontakt",
+  "category": "fehler"
+ },
+ {
+  "id": "bewegungsartefakt",
+  "type": "fault",
+  "title": "Bewegungsartefakte",
+  "category": "fehler"
+ },
+ {
+  "id": "netzstoerung",
+  "type": "fault",
+  "title": "Netzbrumm (50-Hz-Störung)",
+  "category": "fehler"
+ },
+ {
+  "id": "akkufehler",
+  "type": "fault",
+  "title": "Akkufehler und Kapazitätsverlust",
+  "category": "fehler"
+ }
+]

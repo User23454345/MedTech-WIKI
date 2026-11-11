@@ -1,0 +1,56 @@
+[
+ {
+  "id": "sensordrift",
+  "type": "fault",
+  "title": "Sensordrift",
+  "category": "fehler"
+ },
+ {
+  "id": "emv-stoerung",
+  "type": "fault",
+  "title": "EMV-Störung",
+  "category": "fehler"
+ },
+ {
+  "id": "anwendungsfehler",
+  "type": "fault",
+  "title": "Anwendungsfehler",
+  "category": "fehler"
+ },
+ {
+  "id": "alarmmuedigkeit",
+  "type": "fault",
+  "title": "Alarmmüdigkeit",
+  "category": "fehler"
+ },
+ {
+  "id": "neutralelektroden-verbrennung",
+  "type": "fault",
+  "title": "Verbrennung unter der Neutralelektrode",
+  "category": "fehler"
+ },
+ {
+  "id": "blutleck-alarm",
+  "type": "fault",
+  "title": "Blutleckalarm",
+  "category": "fehler"
+ },
+ {
+  "id": "leitfaehigkeitsalarm",
+  "type": "fault",
+  "title": "Leitfähigkeitsalarm",
+  "category": "fehler"
+ },
+ {
+  "id": "bildartefakte",
+  "type": "fault",
+  "title": "Bildartefakte",
+  "category": "fehler"
+ },
+ {
+  "id": "fehlercodes",
+  "type": "fault",
+  "title": "Fehlercodes und Fehlerspeicher",
+  "category": "fehler"
+ }
+]

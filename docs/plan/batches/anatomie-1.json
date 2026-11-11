@@ -1,0 +1,56 @@
+[
+ {
+  "id": "herz",
+  "type": "term",
+  "title": "Herz",
+  "category": "anatomie"
+ },
+ {
+  "id": "erregungsleitungssystem",
+  "type": "term",
+  "title": "Erregungsbildungs- und -leitungssystem",
+  "category": "anatomie"
+ },
+ {
+  "id": "aktionspotential",
+  "type": "term",
+  "title": "Aktionspotential",
+  "category": "anatomie"
+ },
+ {
+  "id": "blutkreislauf",
+  "type": "term",
+  "title": "Blutkreislauf",
+  "category": "anatomie"
+ },
+ {
+  "id": "blutdruck",
+  "type": "term",
+  "title": "Blutdruck (Physiologie)",
+  "category": "anatomie"
+ },
+ {
+  "id": "lunge",
+  "type": "term",
+  "title": "Lunge und Atemwege",
+  "category": "anatomie"
+ },
+ {
+  "id": "atemmechanik",
+  "type": "term",
+  "title": "Atemmechanik",
+  "category": "anatomie"
+ },
+ {
+  "id": "gasaustausch",
+  "type": "term",
+  "title": "Gasaustausch",
+  "category": "anatomie"
+ },
+ {
+  "id": "haemoglobin",
+  "type": "term",
+  "title": "Hämoglobin und Sauerstoffbindung",
+  "category": "anatomie"
+ }
+]

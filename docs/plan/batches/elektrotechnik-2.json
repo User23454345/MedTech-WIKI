@@ -1,0 +1,56 @@
+[
+ {
+  "id": "schutzklassen",
+  "type": "term",
+  "title": "Schutzklassen",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "anwendungsteile",
+  "type": "term",
+  "title": "Anwendungsteile (Typ B, BF, CF)",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "ableitstrom",
+  "type": "term",
+  "title": "Ableitstrom",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "emv",
+  "type": "term",
+  "title": "Elektromagnetische Verträglichkeit (EMV)",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "medizinisch-genutzte-bereiche",
+  "type": "term",
+  "title": "Elektrische Anlagen in medizinisch genutzten Bereichen",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "hochspannungserzeugung",
+  "type": "term",
+  "title": "Hochspannungserzeugung",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "dicom",
+  "type": "term",
+  "title": "DICOM",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "hl7-fhir",
+  "type": "term",
+  "title": "HL7 und FHIR",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "alarmsystem",
+  "type": "term",
+  "title": "Alarmsysteme medizinischer Geräte",
+  "category": "elektrotechnik"
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "id": "iec-60601-2-19",
+  "type": "standard",
+  "title": "IEC 60601-2-19",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-25",
+  "type": "standard",
+  "title": "IEC 60601-2-25",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-27",
+  "type": "standard",
+  "title": "IEC 60601-2-27",
+  "category": "normen"
+ },
+ {
+  "id": "iec-80601-2-30",
+  "type": "standard",
+  "title": "IEC 80601-2-30",
+  "category": "normen"
+ },
+ {
+  "id": "iec-80601-2-49",
+  "type": "standard",
+  "title": "IEC 80601-2-49",
+  "category": "normen"
+ },
+ {
+  "id": "iso-80601-2-55",
+  "type": "standard",
+  "title": "ISO 80601-2-55",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-54",
+  "type": "standard",
+  "title": "IEC 60601-2-54",
+  "category": "normen"
+ },
+ {
+  "id": "iec-61010-1",
+  "type": "standard",
+  "title": "IEC 61010-1",
+  "category": "normen"
+ },
+ {
+  "id": "iso-17665",
+  "type": "standard",
+  "title": "ISO 17665",
+  "category": "normen"
+ },
+ {
+  "id": "iso-15883",
+  "type": "standard",
+  "title": "ISO 15883",
+  "category": "normen"
+ }
+]

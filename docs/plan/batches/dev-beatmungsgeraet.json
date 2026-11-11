@@ -1,0 +1,11 @@
+[
+ {
+  "id": "beatmungsgeraet",
+  "type": "device",
+  "title": "Intensivbeatmungsgerät",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 2,
+  "status": "ausfuehrlich"
+ }
+]

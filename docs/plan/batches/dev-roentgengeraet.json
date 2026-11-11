@@ -1,0 +1,11 @@
+[
+ {
+  "id": "roentgengeraet",
+  "type": "device",
+  "title": "Röntgenanlage (Projektionsradiographie)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 12,
+  "status": "ausfuehrlich"
+ }
+]

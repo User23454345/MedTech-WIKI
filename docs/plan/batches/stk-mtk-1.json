@@ -1,0 +1,62 @@
+[
+ {
+  "id": "stk",
+  "type": "term",
+  "title": "Sicherheitstechnische Kontrolle (STK)",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "mtk",
+  "type": "term",
+  "title": "Messtechnische Kontrolle (MTK)",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "elektrische-sicherheitspruefung",
+  "type": "term",
+  "title": "Elektrische Sicherheitsprüfung nach IEC 62353",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "schutzleiterwiderstand",
+  "type": "term",
+  "title": "Schutzleiterwiderstand",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "isolationswiderstand",
+  "type": "term",
+  "title": "Isolationswiderstand",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "ableitstrommessung",
+  "type": "term",
+  "title": "Ableitstrommessung",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "funktionspruefung",
+  "type": "term",
+  "title": "Funktionsprüfung",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "pruefgeraete",
+  "type": "term",
+  "title": "Prüfgeräte und Simulatoren",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "dguv-vorschrift-3",
+  "type": "term",
+  "title": "Prüfung nach DGUV Vorschrift 3",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "konstanzpruefung",
+  "type": "term",
+  "title": "Abnahme- und Konstanzprüfung (Röntgen)",
+  "category": "stk-mtk"
+ }
+]

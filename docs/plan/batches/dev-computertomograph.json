@@ -1,0 +1,11 @@
+[
+ {
+  "id": "computertomograph",
+  "type": "device",
+  "title": "Computertomograph (CT)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 10,
+  "status": "ausfuehrlich"
+ }
+]

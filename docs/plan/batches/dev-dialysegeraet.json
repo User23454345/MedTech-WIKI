@@ -1,0 +1,11 @@
+[
+ {
+  "id": "dialysegeraet",
+  "type": "device",
+  "title": "Hämodialysegerät",
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 13,
+  "status": "ausfuehrlich"
+ }
+]

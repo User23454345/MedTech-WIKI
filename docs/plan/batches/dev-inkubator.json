@@ -1,0 +1,11 @@
+[
+ {
+  "id": "inkubator",
+  "type": "device",
+  "title": "Säuglingsinkubator",
+  "category": "geraete",
+  "deviceGroup": "neonatologie",
+  "rank": 15,
+  "status": "ausfuehrlich"
+ }
+]

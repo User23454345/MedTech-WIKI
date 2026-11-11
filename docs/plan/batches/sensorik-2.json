@@ -1,0 +1,50 @@
+[
+ {
+  "id": "leitfaehigkeitssensor",
+  "type": "term",
+  "title": "Leitfähigkeitsmessung",
+  "category": "sensorik"
+ },
+ {
+  "id": "blutleckdetektor",
+  "type": "term",
+  "title": "Blutleckdetektor",
+  "category": "sensorik"
+ },
+ {
+  "id": "kraftsensor",
+  "type": "term",
+  "title": "Kraftsensor (Dehnungsmessstreifen)",
+  "category": "sensorik"
+ },
+ {
+  "id": "hall-sensor",
+  "type": "term",
+  "title": "Hall-Sensor",
+  "category": "sensorik"
+ },
+ {
+  "id": "oszillometrie",
+  "type": "term",
+  "title": "Oszillometrische Blutdruckmessung",
+  "category": "sensorik"
+ },
+ {
+  "id": "messkette",
+  "type": "term",
+  "title": "Messkette",
+  "category": "sensorik"
+ },
+ {
+  "id": "messunsicherheit",
+  "type": "term",
+  "title": "Messabweichung und Messunsicherheit",
+  "category": "sensorik"
+ },
+ {
+  "id": "biosignale",
+  "type": "term",
+  "title": "Biosignale",
+  "category": "sensorik"
+ }
+]

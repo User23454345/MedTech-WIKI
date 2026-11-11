@@ -1,0 +1,74 @@
+[
+ {
+  "id": "din-vde-0100-710",
+  "type": "standard",
+  "title": "DIN VDE 0100-710",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60479-1",
+  "type": "standard",
+  "title": "IEC/TS 60479-1",
+  "category": "normen"
+ },
+ {
+  "id": "iso-80601-2-12",
+  "type": "standard",
+  "title": "ISO 80601-2-12",
+  "category": "normen"
+ },
+ {
+  "id": "iso-80601-2-13",
+  "type": "standard",
+  "title": "ISO 80601-2-13",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-4",
+  "type": "standard",
+  "title": "IEC 60601-2-4",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-24",
+  "type": "standard",
+  "title": "IEC 60601-2-24",
+  "category": "normen"
+ },
+ {
+  "id": "iso-80601-2-61",
+  "type": "standard",
+  "title": "ISO 80601-2-61",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-16",
+  "type": "standard",
+  "title": "IEC 60601-2-16",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-2",
+  "type": "standard",
+  "title": "IEC 60601-2-2",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-37",
+  "type": "standard",
+  "title": "IEC 60601-2-37",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-33",
+  "type": "standard",
+  "title": "IEC 60601-2-33",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-44",
+  "type": "standard",
+  "title": "IEC 60601-2-44",
+  "category": "normen"
+ }
+]

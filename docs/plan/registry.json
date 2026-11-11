@@ -1,0 +1,2480 @@
+[
+ {
+  "id": "patientenmonitor",
+  "type": "device",
+  "title": "Patientenmonitor",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 1,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "beatmungsgeraet",
+  "type": "device",
+  "title": "Intensivbeatmungsgerät",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 2,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "defibrillator",
+  "type": "device",
+  "title": "Defibrillator (inkl. AED)",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 3,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "infusionspumpe",
+  "type": "device",
+  "title": "Volumetrische Infusionspumpe",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 4,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "spritzenpumpe",
+  "type": "device",
+  "title": "Spritzenpumpe",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 5,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "ekg-geraet",
+  "type": "device",
+  "title": "Elektrokardiograph (12-Kanal-EKG)",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 6,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "pulsoxymeter",
+  "type": "device",
+  "title": "Pulsoxymeter",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 7,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "anaesthesiegeraet",
+  "type": "device",
+  "title": "Anästhesiearbeitsplatz (Narkosegerät)",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 8,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "ultraschallgeraet",
+  "type": "device",
+  "title": "Ultraschallgerät (Sonographie)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 9,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "computertomograph",
+  "type": "device",
+  "title": "Computertomograph (CT)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 10,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "mrt",
+  "type": "device",
+  "title": "Magnetresonanztomograph (MRT)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 11,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "roentgengeraet",
+  "type": "device",
+  "title": "Röntgenanlage (Projektionsradiographie)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 12,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "dialysegeraet",
+  "type": "device",
+  "title": "Hämodialysegerät",
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 13,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "hf-chirurgiegeraet",
+  "type": "device",
+  "title": "HF-Chirurgiegerät",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 14,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "inkubator",
+  "type": "device",
+  "title": "Säuglingsinkubator",
+  "category": "geraete",
+  "deviceGroup": "neonatologie",
+  "rank": 15,
+  "status": "ausfuehrlich"
+ },
+ {
+  "id": "nibp-messgeraet",
+  "type": "device",
+  "title": "Automatisches nichtinvasives Blutdruckmessgerät",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 16,
+  "status": "stub"
+ },
+ {
+  "id": "invasive-druckmessung",
+  "type": "device",
+  "title": "Invasive Blutdruckmessung (Druckmesssystem)",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 17,
+  "status": "stub"
+ },
+ {
+  "id": "kapnometer",
+  "type": "device",
+  "title": "Kapnometer / Kapnograph",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 18,
+  "status": "stub"
+ },
+ {
+  "id": "transportbeatmungsgeraet",
+  "type": "device",
+  "title": "Notfall- und Transportbeatmungsgerät",
+  "category": "geraete",
+  "deviceGroup": "notfall",
+  "rank": 19,
+  "status": "stub"
+ },
+ {
+  "id": "herz-lungen-maschine",
+  "type": "device",
+  "title": "Herz-Lungen-Maschine",
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 20,
+  "status": "stub"
+ },
+ {
+  "id": "ecmo",
+  "type": "device",
+  "title": "ECMO-System",
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 21,
+  "status": "stub"
+ },
+ {
+  "id": "crrt-geraet",
+  "type": "device",
+  "title": "Gerät zur kontinuierlichen Nierenersatztherapie (CRRT)",
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 22,
+  "status": "stub"
+ },
+ {
+  "id": "iabp",
+  "type": "device",
+  "title": "Intraaortale Ballonpumpe (IABP)",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 23,
+  "status": "stub"
+ },
+ {
+  "id": "vad",
+  "type": "device",
+  "title": "Herzunterstützungssystem (VAD)",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 24,
+  "status": "stub"
+ },
+ {
+  "id": "herzschrittmacher",
+  "type": "device",
+  "title": "Implantierbarer Herzschrittmacher",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 25,
+  "status": "stub"
+ },
+ {
+  "id": "icd",
+  "type": "device",
+  "title": "Implantierbarer Kardioverter-Defibrillator (ICD)",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 26,
+  "status": "stub"
+ },
+ {
+  "id": "externer-schrittmacher",
+  "type": "device",
+  "title": "Externer temporärer Herzschrittmacher",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 27,
+  "status": "stub"
+ },
+ {
+  "id": "langzeit-ekg",
+  "type": "device",
+  "title": "Langzeit-EKG-Rekorder",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 28,
+  "status": "stub"
+ },
+ {
+  "id": "ergometer",
+  "type": "device",
+  "title": "Belastungs-EKG mit Ergometer",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 29,
+  "status": "stub"
+ },
+ {
+  "id": "langzeit-blutdruck",
+  "type": "device",
+  "title": "Langzeit-Blutdruckmessgerät",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 30,
+  "status": "stub"
+ },
+ {
+  "id": "thoraxkompressionsgeraet",
+  "type": "device",
+  "title": "Mechanisches Thoraxkompressionsgerät",
+  "category": "geraete",
+  "deviceGroup": "notfall",
+  "rank": 31,
+  "status": "stub"
+ },
+ {
+  "id": "absauggeraet",
+  "type": "device",
+  "title": "Medizinisches Absauggerät",
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 32,
+  "status": "stub"
+ },
+ {
+  "id": "cpap-geraet",
+  "type": "device",
+  "title": "CPAP-/Schlaftherapiegerät",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 33,
+  "status": "stub"
+ },
+ {
+  "id": "heimbeatmungsgeraet",
+  "type": "device",
+  "title": "Heimbeatmungsgerät",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 34,
+  "status": "stub"
+ },
+ {
+  "id": "sauerstoffkonzentrator",
+  "type": "device",
+  "title": "Sauerstoffkonzentrator",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 35,
+  "status": "stub"
+ },
+ {
+  "id": "inhalationsgeraet",
+  "type": "device",
+  "title": "Inhalationsgerät (Vernebler)",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 36,
+  "status": "stub"
+ },
+ {
+  "id": "high-flow-geraet",
+  "type": "device",
+  "title": "High-Flow-Sauerstofftherapiegerät",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 37,
+  "status": "stub"
+ },
+ {
+  "id": "enterale-ernaehrungspumpe",
+  "type": "device",
+  "title": "Enterale Ernährungspumpe",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 38,
+  "status": "stub"
+ },
+ {
+  "id": "pca-pumpe",
+  "type": "device",
+  "title": "PCA-Pumpe (patientenkontrollierte Analgesie)",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 39,
+  "status": "stub"
+ },
+ {
+  "id": "insulinpumpe",
+  "type": "device",
+  "title": "Insulinpumpe",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 40,
+  "status": "stub"
+ },
+ {
+  "id": "infusionswaermer",
+  "type": "device",
+  "title": "Blut- und Infusionswärmer",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 41,
+  "status": "stub"
+ },
+ {
+  "id": "mammographiegeraet",
+  "type": "device",
+  "title": "Mammographiesystem",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 42,
+  "status": "stub"
+ },
+ {
+  "id": "c-bogen",
+  "type": "device",
+  "title": "C-Bogen (mobile Durchleuchtung)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 43,
+  "status": "stub"
+ },
+ {
+  "id": "angiographieanlage",
+  "type": "device",
+  "title": "Angiographieanlage",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 44,
+  "status": "stub"
+ },
+ {
+  "id": "pet-ct",
+  "type": "device",
+  "title": "PET/CT",
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 45,
+  "status": "stub"
+ },
+ {
+  "id": "gammakamera",
+  "type": "device",
+  "title": "Gammakamera / SPECT",
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 46,
+  "status": "stub"
+ },
+ {
+  "id": "linearbeschleuniger",
+  "type": "device",
+  "title": "Medizinischer Linearbeschleuniger",
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 47,
+  "status": "stub"
+ },
+ {
+  "id": "afterloader",
+  "type": "device",
+  "title": "Afterloading-Gerät (Brachytherapie)",
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 48,
+  "status": "stub"
+ },
+ {
+  "id": "dvt",
+  "type": "device",
+  "title": "Digitale Volumentomographie (DVT)",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 49,
+  "status": "stub"
+ },
+ {
+  "id": "knochendichtemessung",
+  "type": "device",
+  "title": "Knochendichtemessgerät (DXA)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 50,
+  "status": "stub"
+ },
+ {
+  "id": "eeg-geraet",
+  "type": "device",
+  "title": "Elektroenzephalograph (EEG)",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 51,
+  "status": "stub"
+ },
+ {
+  "id": "emg-geraet",
+  "type": "device",
+  "title": "Elektromyograph / Neurographie (EMG/NLG)",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 52,
+  "status": "stub"
+ },
+ {
+  "id": "spirometer",
+  "type": "device",
+  "title": "Spirometer",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 53,
+  "status": "stub"
+ },
+ {
+  "id": "bodyplethysmograph",
+  "type": "device",
+  "title": "Bodyplethysmograph",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 54,
+  "status": "stub"
+ },
+ {
+  "id": "polysomnograph",
+  "type": "device",
+  "title": "Polysomnograph",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 55,
+  "status": "stub"
+ },
+ {
+  "id": "ctg",
+  "type": "device",
+  "title": "Kardiotokograph (CTG)",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 56,
+  "status": "stub"
+ },
+ {
+  "id": "audiometer",
+  "type": "device",
+  "title": "Audiometer",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 57,
+  "status": "stub"
+ },
+ {
+  "id": "thermometer",
+  "type": "device",
+  "title": "Medizinisches elektrisches Thermometer",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 58,
+  "status": "stub"
+ },
+ {
+  "id": "blutzuckermessgeraet",
+  "type": "device",
+  "title": "Blutzuckermessgerät",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 59,
+  "status": "stub"
+ },
+ {
+  "id": "blutgasanalysator",
+  "type": "device",
+  "title": "Blutgasanalysator",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 60,
+  "status": "stub"
+ },
+ {
+  "id": "haematologie-analysator",
+  "type": "device",
+  "title": "Hämatologie-Analysator",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 61,
+  "status": "stub"
+ },
+ {
+  "id": "klinisch-chemischer-analysator",
+  "type": "device",
+  "title": "Klinisch-chemischer Analysator",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 62,
+  "status": "stub"
+ },
+ {
+  "id": "gerinnungsanalysator",
+  "type": "device",
+  "title": "Gerinnungsanalysator",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 63,
+  "status": "stub"
+ },
+ {
+  "id": "laborzentrifuge",
+  "type": "device",
+  "title": "Laborzentrifuge",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 64,
+  "status": "stub"
+ },
+ {
+  "id": "blutkuehlschrank",
+  "type": "device",
+  "title": "Blutkonservenkühlschrank",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 65,
+  "status": "stub"
+ },
+ {
+  "id": "zellseparator",
+  "type": "device",
+  "title": "Zellseparator (Apheresegerät)",
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 66,
+  "status": "stub"
+ },
+ {
+  "id": "endoskop",
+  "type": "device",
+  "title": "Flexibles Videoendoskop",
+  "category": "geraete",
+  "deviceGroup": "endoskopie",
+  "rank": 67,
+  "status": "stub"
+ },
+ {
+  "id": "kapselendoskop",
+  "type": "device",
+  "title": "Kapselendoskop",
+  "category": "geraete",
+  "deviceGroup": "endoskopie",
+  "rank": 68,
+  "status": "stub"
+ },
+ {
+  "id": "insufflator",
+  "type": "device",
+  "title": "CO₂-Insufflator (Laparoskopie)",
+  "category": "geraete",
+  "deviceGroup": "endoskopie",
+  "rank": 69,
+  "status": "stub"
+ },
+ {
+  "id": "videolaryngoskop",
+  "type": "device",
+  "title": "Videolaryngoskop",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 70,
+  "status": "stub"
+ },
+ {
+  "id": "op-tisch",
+  "type": "device",
+  "title": "Operationstisch",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 71,
+  "status": "stub"
+ },
+ {
+  "id": "op-leuchte",
+  "type": "device",
+  "title": "Operationsleuchte",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 72,
+  "status": "stub"
+ },
+ {
+  "id": "op-mikroskop",
+  "type": "device",
+  "title": "Operationsmikroskop",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 73,
+  "status": "stub"
+ },
+ {
+  "id": "chirurgischer-laser",
+  "type": "device",
+  "title": "Chirurgisches Lasersystem",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 74,
+  "status": "stub"
+ },
+ {
+  "id": "ultraschalldissektor",
+  "type": "device",
+  "title": "Ultraschall-Dissektionsgerät",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 75,
+  "status": "stub"
+ },
+ {
+  "id": "chirurgisches-motorsystem",
+  "type": "device",
+  "title": "Chirurgisches Motorsystem",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 76,
+  "status": "stub"
+ },
+ {
+  "id": "op-roboter",
+  "type": "device",
+  "title": "Robotisches Chirurgie-Assistenzsystem",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 77,
+  "status": "stub"
+ },
+ {
+  "id": "patientenwaermesystem",
+  "type": "device",
+  "title": "Patientenwärmesystem",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 78,
+  "status": "stub"
+ },
+ {
+  "id": "lithotripter",
+  "type": "device",
+  "title": "Extrakorporaler Stoßwellen-Lithotripter (ESWL)",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 79,
+  "status": "stub"
+ },
+ {
+  "id": "waermebett",
+  "type": "device",
+  "title": "Säuglingswärmebett / Reanimationseinheit",
+  "category": "geraete",
+  "deviceGroup": "neonatologie",
+  "rank": 80,
+  "status": "stub"
+ },
+ {
+  "id": "phototherapiegeraet",
+  "type": "device",
+  "title": "Phototherapiegerät (Neugeborenenikterus)",
+  "category": "geraete",
+  "deviceGroup": "neonatologie",
+  "rank": 81,
+  "status": "stub"
+ },
+ {
+  "id": "hypothermiegeraet",
+  "type": "device",
+  "title": "Temperaturmanagementsystem (Hypothermie)",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 82,
+  "status": "stub"
+ },
+ {
+  "id": "druckkammer",
+  "type": "device",
+  "title": "Druckkammer (Hyperbare Oxygenation)",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 83,
+  "status": "stub"
+ },
+ {
+  "id": "reizstromgeraet",
+  "type": "device",
+  "title": "Reizstromgerät (TENS/EMS)",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 84,
+  "status": "stub"
+ },
+ {
+  "id": "ultraschalltherapiegeraet",
+  "type": "device",
+  "title": "Ultraschalltherapiegerät",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 85,
+  "status": "stub"
+ },
+ {
+  "id": "ipk-geraet",
+  "type": "device",
+  "title": "Gerät zur intermittierenden pneumatischen Kompression",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 86,
+  "status": "stub"
+ },
+ {
+  "id": "npwt-geraet",
+  "type": "device",
+  "title": "Unterdruck-Wundtherapiegerät (NPWT)",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 87,
+  "status": "stub"
+ },
+ {
+  "id": "cochlea-implantat",
+  "type": "device",
+  "title": "Cochlea-Implantat-System",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 88,
+  "status": "stub"
+ },
+ {
+  "id": "hoergeraet",
+  "type": "device",
+  "title": "Hörgerät",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 89,
+  "status": "stub"
+ },
+ {
+  "id": "spaltlampe",
+  "type": "device",
+  "title": "Spaltlampe",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 90,
+  "status": "stub"
+ },
+ {
+  "id": "tonometer",
+  "type": "device",
+  "title": "Augentonometer",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 91,
+  "status": "stub"
+ },
+ {
+  "id": "oct",
+  "type": "device",
+  "title": "Optische Kohärenztomographie (OCT)",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 92,
+  "status": "stub"
+ },
+ {
+  "id": "phakoemulsifikation",
+  "type": "device",
+  "title": "Phakoemulsifikationssystem",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 93,
+  "status": "stub"
+ },
+ {
+  "id": "dentaleinheit",
+  "type": "device",
+  "title": "Zahnärztliche Behandlungseinheit",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 94,
+  "status": "stub"
+ },
+ {
+  "id": "dampfsterilisator",
+  "type": "device",
+  "title": "Dampfsterilisator",
+  "category": "geraete",
+  "deviceGroup": "aufbereitung",
+  "rank": 95,
+  "status": "stub"
+ },
+ {
+  "id": "niedertemperatursterilisator",
+  "type": "device",
+  "title": "Niedertemperatur-Plasmasterilisator",
+  "category": "geraete",
+  "deviceGroup": "aufbereitung",
+  "rank": 96,
+  "status": "stub"
+ },
+ {
+  "id": "rdg",
+  "type": "device",
+  "title": "Reinigungs- und Desinfektionsgerät (RDG)",
+  "category": "geraete",
+  "deviceGroup": "aufbereitung",
+  "rank": 97,
+  "status": "stub"
+ },
+ {
+  "id": "pflegebett",
+  "type": "device",
+  "title": "Elektrisches Klinik- und Pflegebett",
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 98,
+  "status": "stub"
+ },
+ {
+  "id": "patientenlifter",
+  "type": "device",
+  "title": "Patientenlifter",
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 99,
+  "status": "stub"
+ },
+ {
+  "id": "antidekubitussystem",
+  "type": "device",
+  "title": "Antidekubitus-Wechseldrucksystem",
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 100,
+  "status": "stub"
+ },
+ {
+  "id": "medizintechnik",
+  "type": "term",
+  "title": "Medizintechnik",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "geschichte-medizintechnik",
+  "type": "term",
+  "title": "Geschichte der Medizintechnik",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "berufe-medizintechnik",
+  "type": "term",
+  "title": "Berufe in der Medizintechnik",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "lebenszyklus-medizinprodukt",
+  "type": "term",
+  "title": "Lebenszyklus eines Medizinprodukts",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "patientensicherheit",
+  "type": "term",
+  "title": "Patientensicherheit und Medizintechnik",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "gebrauchstauglichkeit",
+  "type": "term",
+  "title": "Gebrauchstauglichkeit (Usability)",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "medizinisches-elektrisches-geraet",
+  "type": "term",
+  "title": "Medizinisches elektrisches Gerät (ME-Gerät)",
+  "category": "einfuehrung"
+ },
+ {
+  "id": "intensivmedizin",
+  "type": "domain",
+  "title": "Intensivmedizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "anaesthesiologie",
+  "type": "domain",
+  "title": "Anästhesiologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "kardiologie",
+  "type": "domain",
+  "title": "Kardiologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "radiologie",
+  "type": "domain",
+  "title": "Radiologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "nephrologie",
+  "type": "domain",
+  "title": "Nephrologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "chirurgie",
+  "type": "domain",
+  "title": "Chirurgie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "notfallmedizin",
+  "type": "domain",
+  "title": "Notfall- und Rettungsmedizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "neonatologie",
+  "type": "domain",
+  "title": "Neonatologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "neurologie",
+  "type": "domain",
+  "title": "Neurologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "pneumologie",
+  "type": "domain",
+  "title": "Pneumologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "nuklearmedizin",
+  "type": "domain",
+  "title": "Nuklearmedizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "strahlentherapie",
+  "type": "domain",
+  "title": "Strahlentherapie (Radioonkologie)",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "labormedizin",
+  "type": "domain",
+  "title": "Laboratoriumsmedizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "gastroenterologie",
+  "type": "domain",
+  "title": "Gastroenterologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "augenheilkunde",
+  "type": "domain",
+  "title": "Augenheilkunde",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "hno-heilkunde",
+  "type": "domain",
+  "title": "Hals-Nasen-Ohren-Heilkunde",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "zahnmedizin",
+  "type": "domain",
+  "title": "Zahnmedizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "geburtshilfe",
+  "type": "domain",
+  "title": "Gynäkologie und Geburtshilfe",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "orthopaedie-unfallchirurgie",
+  "type": "domain",
+  "title": "Orthopädie und Unfallchirurgie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "physikalische-medizin",
+  "type": "domain",
+  "title": "Physikalische und Rehabilitative Medizin",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "diabetologie",
+  "type": "domain",
+  "title": "Diabetologie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "herzchirurgie",
+  "type": "domain",
+  "title": "Herzchirurgie",
+  "category": "fachbereiche"
+ },
+ {
+  "id": "draeger",
+  "type": "manufacturer",
+  "title": "Drägerwerk",
+  "category": "hersteller"
+ },
+ {
+  "id": "hamilton-medical",
+  "type": "manufacturer",
+  "title": "Hamilton Medical",
+  "category": "hersteller"
+ },
+ {
+  "id": "philips",
+  "type": "manufacturer",
+  "title": "Philips",
+  "category": "hersteller"
+ },
+ {
+  "id": "ge-healthcare",
+  "type": "manufacturer",
+  "title": "GE HealthCare",
+  "category": "hersteller"
+ },
+ {
+  "id": "siemens-healthineers",
+  "type": "manufacturer",
+  "title": "Siemens Healthineers",
+  "category": "hersteller"
+ },
+ {
+  "id": "medtronic",
+  "type": "manufacturer",
+  "title": "Medtronic",
+  "category": "hersteller"
+ },
+ {
+  "id": "zoll",
+  "type": "manufacturer",
+  "title": "ZOLL Medical",
+  "category": "hersteller"
+ },
+ {
+  "id": "stryker",
+  "type": "manufacturer",
+  "title": "Stryker",
+  "category": "hersteller"
+ },
+ {
+  "id": "b-braun",
+  "type": "manufacturer",
+  "title": "B. Braun",
+  "category": "hersteller"
+ },
+ {
+  "id": "fresenius-medical-care",
+  "type": "manufacturer",
+  "title": "Fresenius Medical Care",
+  "category": "hersteller"
+ },
+ {
+  "id": "fresenius-kabi",
+  "type": "manufacturer",
+  "title": "Fresenius Kabi",
+  "category": "hersteller"
+ },
+ {
+  "id": "baxter",
+  "type": "manufacturer",
+  "title": "Baxter",
+  "category": "hersteller"
+ },
+ {
+  "id": "nihon-kohden",
+  "type": "manufacturer",
+  "title": "Nihon Kohden",
+  "category": "hersteller"
+ },
+ {
+  "id": "mindray",
+  "type": "manufacturer",
+  "title": "Mindray",
+  "category": "hersteller"
+ },
+ {
+  "id": "schiller",
+  "type": "manufacturer",
+  "title": "Schiller",
+  "category": "hersteller"
+ },
+ {
+  "id": "erbe",
+  "type": "manufacturer",
+  "title": "Erbe Elektromedizin",
+  "category": "hersteller"
+ },
+ {
+  "id": "olympus",
+  "type": "manufacturer",
+  "title": "Olympus",
+  "category": "hersteller"
+ },
+ {
+  "id": "karl-storz",
+  "type": "manufacturer",
+  "title": "KARL STORZ",
+  "category": "hersteller"
+ },
+ {
+  "id": "getinge",
+  "type": "manufacturer",
+  "title": "Getinge",
+  "category": "hersteller"
+ },
+ {
+  "id": "canon-medical",
+  "type": "manufacturer",
+  "title": "Canon Medical Systems",
+  "category": "hersteller"
+ },
+ {
+  "id": "loewenstein-medical",
+  "type": "manufacturer",
+  "title": "Löwenstein Medical",
+  "category": "hersteller"
+ },
+ {
+  "id": "masimo",
+  "type": "manufacturer",
+  "title": "Masimo",
+  "category": "hersteller"
+ },
+ {
+  "id": "icu-medical",
+  "type": "manufacturer",
+  "title": "ICU Medical",
+  "category": "hersteller"
+ },
+ {
+  "id": "bd",
+  "type": "manufacturer",
+  "title": "BD (Becton, Dickinson and Company)",
+  "category": "hersteller"
+ },
+ {
+  "id": "resmed",
+  "type": "manufacturer",
+  "title": "ResMed",
+  "category": "hersteller"
+ },
+ {
+  "id": "zeiss",
+  "type": "manufacturer",
+  "title": "Carl Zeiss Meditec",
+  "category": "hersteller"
+ },
+ {
+  "id": "elekta",
+  "type": "manufacturer",
+  "title": "Elekta",
+  "category": "hersteller"
+ },
+ {
+  "id": "intuitive",
+  "type": "manufacturer",
+  "title": "Intuitive Surgical",
+  "category": "hersteller"
+ },
+ {
+  "id": "abbott",
+  "type": "manufacturer",
+  "title": "Abbott",
+  "category": "hersteller"
+ },
+ {
+  "id": "boston-scientific",
+  "type": "manufacturer",
+  "title": "Boston Scientific",
+  "category": "hersteller"
+ },
+ {
+  "id": "biotronik",
+  "type": "manufacturer",
+  "title": "Biotronik",
+  "category": "hersteller"
+ },
+ {
+  "id": "roche-diagnostics",
+  "type": "manufacturer",
+  "title": "Roche Diagnostics",
+  "category": "hersteller"
+ },
+ {
+  "id": "sysmex",
+  "type": "manufacturer",
+  "title": "Sysmex",
+  "category": "hersteller"
+ },
+ {
+  "id": "weinmann",
+  "type": "manufacturer",
+  "title": "Weinmann Emergency",
+  "category": "hersteller"
+ },
+ {
+  "id": "corpuls",
+  "type": "manufacturer",
+  "title": "corpuls",
+  "category": "hersteller"
+ },
+ {
+  "id": "fujifilm",
+  "type": "manufacturer",
+  "title": "Fujifilm Healthcare",
+  "category": "hersteller"
+ },
+ {
+  "id": "dentsply-sirona",
+  "type": "manufacturer",
+  "title": "Dentsply Sirona",
+  "category": "hersteller"
+ },
+ {
+  "id": "cochlear",
+  "type": "manufacturer",
+  "title": "Cochlear",
+  "category": "hersteller"
+ },
+ {
+  "id": "belimed",
+  "type": "manufacturer",
+  "title": "Belimed",
+  "category": "hersteller"
+ },
+ {
+  "id": "arjo",
+  "type": "manufacturer",
+  "title": "Arjo",
+  "category": "hersteller"
+ },
+ {
+  "id": "hillrom",
+  "type": "manufacturer",
+  "title": "Hillrom",
+  "category": "hersteller"
+ },
+ {
+  "id": "turbine",
+  "type": "term",
+  "title": "Turbine (Radialgebläse)",
+  "category": "komponenten"
+ },
+ {
+  "id": "elektromotor",
+  "type": "term",
+  "title": "Elektromotor",
+  "category": "komponenten"
+ },
+ {
+  "id": "bldc-motor",
+  "type": "term",
+  "title": "Bürstenloser Gleichstrommotor (BLDC)",
+  "category": "komponenten"
+ },
+ {
+  "id": "schrittmotor",
+  "type": "term",
+  "title": "Schrittmotor",
+  "category": "komponenten"
+ },
+ {
+  "id": "magnetventil",
+  "type": "term",
+  "title": "Magnetventil",
+  "category": "komponenten"
+ },
+ {
+  "id": "proportionalventil",
+  "type": "term",
+  "title": "Proportionalventil",
+  "category": "komponenten"
+ },
+ {
+  "id": "exspirationsventil",
+  "type": "term",
+  "title": "Exspirationsventil",
+  "category": "komponenten"
+ },
+ {
+  "id": "peristaltikpumpe",
+  "type": "term",
+  "title": "Peristaltikpumpe",
+  "category": "komponenten"
+ },
+ {
+  "id": "spindelantrieb",
+  "type": "term",
+  "title": "Spindelantrieb",
+  "category": "komponenten"
+ },
+ {
+  "id": "lithium-ionen-akku",
+  "type": "term",
+  "title": "Lithium-Ionen-Akkumulator",
+  "category": "komponenten"
+ },
+ {
+  "id": "medizinisches-netzteil",
+  "type": "term",
+  "title": "Medizinisches Netzteil",
+  "category": "komponenten"
+ },
+ {
+  "id": "kondensator",
+  "type": "term",
+  "title": "Kondensator",
+  "category": "komponenten"
+ },
+ {
+  "id": "transformator",
+  "type": "term",
+  "title": "Transformator",
+  "category": "komponenten"
+ },
+ {
+  "id": "roentgenroehre",
+  "type": "term",
+  "title": "Röntgenröhre",
+  "category": "komponenten"
+ },
+ {
+  "id": "roentgendetektor",
+  "type": "term",
+  "title": "Röntgendetektor (Flachdetektor)",
+  "category": "komponenten"
+ },
+ {
+  "id": "kollimator",
+  "type": "term",
+  "title": "Kollimator und Blende",
+  "category": "komponenten"
+ },
+ {
+  "id": "gantry",
+  "type": "term",
+  "title": "Gantry",
+  "category": "komponenten"
+ },
+ {
+  "id": "supraleitender-magnet",
+  "type": "term",
+  "title": "Supraleitender Magnet",
+  "category": "komponenten"
+ },
+ {
+  "id": "gradientenspule",
+  "type": "term",
+  "title": "Gradientenspule",
+  "category": "komponenten"
+ },
+ {
+  "id": "hf-spule",
+  "type": "term",
+  "title": "HF-Spule (MRT)",
+  "category": "komponenten"
+ },
+ {
+  "id": "ultraschallwandler",
+  "type": "term",
+  "title": "Ultraschallwandler (Schallkopf)",
+  "category": "komponenten"
+ },
+ {
+  "id": "dialysator",
+  "type": "term",
+  "title": "Dialysator",
+  "category": "komponenten"
+ },
+ {
+  "id": "narkosemittelverdampfer",
+  "type": "term",
+  "title": "Narkosemittelverdampfer",
+  "category": "komponenten"
+ },
+ {
+  "id": "co2-absorber",
+  "type": "term",
+  "title": "CO₂-Absorber (Atemkalk)",
+  "category": "komponenten"
+ },
+ {
+  "id": "atemgasbefeuchter",
+  "type": "term",
+  "title": "Atemgasbefeuchter und HME-Filter",
+  "category": "komponenten"
+ },
+ {
+  "id": "neutralelektrode",
+  "type": "term",
+  "title": "Neutralelektrode",
+  "category": "komponenten"
+ },
+ {
+  "id": "defibrillationselektroden",
+  "type": "term",
+  "title": "Defibrillationselektroden",
+  "category": "komponenten"
+ },
+ {
+  "id": "heizelement",
+  "type": "term",
+  "title": "Heizelement",
+  "category": "komponenten"
+ },
+ {
+  "id": "display-bedienoberflaeche",
+  "type": "term",
+  "title": "Display und Bedienoberfläche",
+  "category": "komponenten"
+ },
+ {
+  "id": "druckmessung",
+  "type": "term",
+  "title": "Druckmessung",
+  "category": "sensorik"
+ },
+ {
+  "id": "drucksensor",
+  "type": "term",
+  "title": "Piezoresistiver Drucksensor",
+  "category": "sensorik"
+ },
+ {
+  "id": "flowsensor",
+  "type": "term",
+  "title": "Flowsensor",
+  "category": "sensorik"
+ },
+ {
+  "id": "temperatursensor",
+  "type": "term",
+  "title": "Temperatursensor",
+  "category": "sensorik"
+ },
+ {
+  "id": "sauerstoffsensor",
+  "type": "term",
+  "title": "Sauerstoffsensor",
+  "category": "sensorik"
+ },
+ {
+  "id": "co2-sensor",
+  "type": "term",
+  "title": "CO₂-Sensor (NDIR)",
+  "category": "sensorik"
+ },
+ {
+  "id": "photoplethysmographie",
+  "type": "term",
+  "title": "Photoplethysmographie",
+  "category": "sensorik"
+ },
+ {
+  "id": "ekg-elektrode",
+  "type": "term",
+  "title": "EKG-Elektrode (Ag/AgCl)",
+  "category": "sensorik"
+ },
+ {
+  "id": "luftblasendetektor",
+  "type": "term",
+  "title": "Luftblasendetektor",
+  "category": "sensorik"
+ },
+ {
+  "id": "leitfaehigkeitssensor",
+  "type": "term",
+  "title": "Leitfähigkeitsmessung",
+  "category": "sensorik"
+ },
+ {
+  "id": "blutleckdetektor",
+  "type": "term",
+  "title": "Blutleckdetektor",
+  "category": "sensorik"
+ },
+ {
+  "id": "kraftsensor",
+  "type": "term",
+  "title": "Kraftsensor (Dehnungsmessstreifen)",
+  "category": "sensorik"
+ },
+ {
+  "id": "hall-sensor",
+  "type": "term",
+  "title": "Hall-Sensor",
+  "category": "sensorik"
+ },
+ {
+  "id": "oszillometrie",
+  "type": "term",
+  "title": "Oszillometrische Blutdruckmessung",
+  "category": "sensorik"
+ },
+ {
+  "id": "messkette",
+  "type": "term",
+  "title": "Messkette",
+  "category": "sensorik"
+ },
+ {
+  "id": "messunsicherheit",
+  "type": "term",
+  "title": "Messabweichung und Messunsicherheit",
+  "category": "sensorik"
+ },
+ {
+  "id": "biosignale",
+  "type": "term",
+  "title": "Biosignale",
+  "category": "sensorik"
+ },
+ {
+  "id": "spannung-strom-widerstand",
+  "type": "term",
+  "title": "Spannung, Strom und Widerstand",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "operationsverstaerker",
+  "type": "term",
+  "title": "Operationsverstärker",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "instrumentenverstaerker",
+  "type": "term",
+  "title": "Instrumentenverstärker",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "analog-digital-wandler",
+  "type": "term",
+  "title": "Analog-Digital-Wandler",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "filter",
+  "type": "term",
+  "title": "Analoge und digitale Filter",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "pwm",
+  "type": "term",
+  "title": "Pulsweitenmodulation (PWM)",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "drehzahlregelung",
+  "type": "term",
+  "title": "Drehzahlregelung",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "regelkreis",
+  "type": "term",
+  "title": "Regelkreis und PID-Regler",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "mikrocontroller",
+  "type": "term",
+  "title": "Mikrocontroller und Embedded-Systeme",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "galvanische-trennung",
+  "type": "term",
+  "title": "Galvanische Trennung",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "schutzklassen",
+  "type": "term",
+  "title": "Schutzklassen",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "anwendungsteile",
+  "type": "term",
+  "title": "Anwendungsteile (Typ B, BF, CF)",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "ableitstrom",
+  "type": "term",
+  "title": "Ableitstrom",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "emv",
+  "type": "term",
+  "title": "Elektromagnetische Verträglichkeit (EMV)",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "medizinisch-genutzte-bereiche",
+  "type": "term",
+  "title": "Elektrische Anlagen in medizinisch genutzten Bereichen",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "hochspannungserzeugung",
+  "type": "term",
+  "title": "Hochspannungserzeugung",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "dicom",
+  "type": "term",
+  "title": "DICOM",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "hl7-fhir",
+  "type": "term",
+  "title": "HL7 und FHIR",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "alarmsystem",
+  "type": "term",
+  "title": "Alarmsysteme medizinischer Geräte",
+  "category": "elektrotechnik"
+ },
+ {
+  "id": "druck",
+  "type": "term",
+  "title": "Druck",
+  "category": "physik"
+ },
+ {
+  "id": "gasgesetze",
+  "type": "term",
+  "title": "Gasgesetze",
+  "category": "physik"
+ },
+ {
+  "id": "stroemungslehre",
+  "type": "term",
+  "title": "Strömungslehre",
+  "category": "physik"
+ },
+ {
+  "id": "elektrische-stromwirkung",
+  "type": "term",
+  "title": "Wirkung des elektrischen Stroms auf den Körper",
+  "category": "physik"
+ },
+ {
+  "id": "joulesche-waerme",
+  "type": "term",
+  "title": "Joulesche Wärme",
+  "category": "physik"
+ },
+ {
+  "id": "piezoelektrischer-effekt",
+  "type": "term",
+  "title": "Piezoelektrischer Effekt",
+  "category": "physik"
+ },
+ {
+  "id": "schallwellen",
+  "type": "term",
+  "title": "Schallwellen und Ultraschallphysik",
+  "category": "physik"
+ },
+ {
+  "id": "doppler-effekt",
+  "type": "term",
+  "title": "Doppler-Effekt",
+  "category": "physik"
+ },
+ {
+  "id": "lambert-beer",
+  "type": "term",
+  "title": "Lambert-Beer-Gesetz",
+  "category": "physik"
+ },
+ {
+  "id": "roentgenstrahlung",
+  "type": "term",
+  "title": "Röntgenstrahlung",
+  "category": "physik"
+ },
+ {
+  "id": "ionisierende-strahlung",
+  "type": "term",
+  "title": "Wechselwirkung ionisierender Strahlung mit Materie",
+  "category": "physik"
+ },
+ {
+  "id": "radioaktivitaet",
+  "type": "term",
+  "title": "Radioaktivität",
+  "category": "physik"
+ },
+ {
+  "id": "kernspinresonanz",
+  "type": "term",
+  "title": "Kernspinresonanz",
+  "category": "physik"
+ },
+ {
+  "id": "elektromagnetische-induktion",
+  "type": "term",
+  "title": "Elektromagnetische Induktion",
+  "category": "physik"
+ },
+ {
+  "id": "diffusion-osmose",
+  "type": "term",
+  "title": "Diffusion, Osmose und Konvektion",
+  "category": "physik"
+ },
+ {
+  "id": "waermeuebertragung",
+  "type": "term",
+  "title": "Wärmeübertragung",
+  "category": "physik"
+ },
+ {
+  "id": "laser",
+  "type": "term",
+  "title": "Laser",
+  "category": "physik"
+ },
+ {
+  "id": "optik",
+  "type": "term",
+  "title": "Optik und Lichtausbreitung",
+  "category": "physik"
+ },
+ {
+  "id": "herz",
+  "type": "term",
+  "title": "Herz",
+  "category": "anatomie"
+ },
+ {
+  "id": "erregungsleitungssystem",
+  "type": "term",
+  "title": "Erregungsbildungs- und -leitungssystem",
+  "category": "anatomie"
+ },
+ {
+  "id": "aktionspotential",
+  "type": "term",
+  "title": "Aktionspotential",
+  "category": "anatomie"
+ },
+ {
+  "id": "blutkreislauf",
+  "type": "term",
+  "title": "Blutkreislauf",
+  "category": "anatomie"
+ },
+ {
+  "id": "blutdruck",
+  "type": "term",
+  "title": "Blutdruck (Physiologie)",
+  "category": "anatomie"
+ },
+ {
+  "id": "lunge",
+  "type": "term",
+  "title": "Lunge und Atemwege",
+  "category": "anatomie"
+ },
+ {
+  "id": "atemmechanik",
+  "type": "term",
+  "title": "Atemmechanik",
+  "category": "anatomie"
+ },
+ {
+  "id": "gasaustausch",
+  "type": "term",
+  "title": "Gasaustausch",
+  "category": "anatomie"
+ },
+ {
+  "id": "haemoglobin",
+  "type": "term",
+  "title": "Hämoglobin und Sauerstoffbindung",
+  "category": "anatomie"
+ },
+ {
+  "id": "niere",
+  "type": "term",
+  "title": "Niere",
+  "category": "anatomie"
+ },
+ {
+  "id": "nervensystem",
+  "type": "term",
+  "title": "Nervensystem",
+  "category": "anatomie"
+ },
+ {
+  "id": "haut",
+  "type": "term",
+  "title": "Haut",
+  "category": "anatomie"
+ },
+ {
+  "id": "thermoregulation",
+  "type": "term",
+  "title": "Thermoregulation",
+  "category": "anatomie"
+ },
+ {
+  "id": "blut",
+  "type": "term",
+  "title": "Blut",
+  "category": "anatomie"
+ },
+ {
+  "id": "saeure-basen-haushalt",
+  "type": "term",
+  "title": "Säure-Basen-Haushalt",
+  "category": "anatomie"
+ },
+ {
+  "id": "auge",
+  "type": "term",
+  "title": "Auge",
+  "category": "anatomie"
+ },
+ {
+  "id": "ohr",
+  "type": "term",
+  "title": "Ohr und Hören",
+  "category": "anatomie"
+ },
+ {
+  "id": "medizinprodukt",
+  "type": "term",
+  "title": "Medizinprodukt (Begriff)",
+  "category": "recht"
+ },
+ {
+  "id": "zweckbestimmung",
+  "type": "term",
+  "title": "Zweckbestimmung",
+  "category": "recht"
+ },
+ {
+  "id": "risikoklassen",
+  "type": "term",
+  "title": "Risikoklassen von Medizinprodukten",
+  "category": "recht"
+ },
+ {
+  "id": "ce-kennzeichnung",
+  "type": "term",
+  "title": "CE-Kennzeichnung",
+  "category": "recht"
+ },
+ {
+  "id": "benannte-stelle",
+  "type": "term",
+  "title": "Benannte Stelle",
+  "category": "recht"
+ },
+ {
+  "id": "konformitaetsbewertung",
+  "type": "term",
+  "title": "Konformitätsbewertung",
+  "category": "recht"
+ },
+ {
+  "id": "klinische-bewertung",
+  "type": "term",
+  "title": "Klinische Bewertung",
+  "category": "recht"
+ },
+ {
+  "id": "udi",
+  "type": "term",
+  "title": "UDI – Unique Device Identification",
+  "category": "recht"
+ },
+ {
+  "id": "vigilanz",
+  "type": "term",
+  "title": "Vigilanz und Vorkommnismeldung",
+  "category": "recht"
+ },
+ {
+  "id": "betreiberpflichten",
+  "type": "term",
+  "title": "Betreiberpflichten",
+  "category": "recht"
+ },
+ {
+  "id": "einweisung",
+  "type": "term",
+  "title": "Einweisung in Medizinprodukte",
+  "category": "recht"
+ },
+ {
+  "id": "beauftragter-medizinproduktesicherheit",
+  "type": "term",
+  "title": "Beauftragter für Medizinproduktesicherheit",
+  "category": "recht"
+ },
+ {
+  "id": "medizinproduktebuch",
+  "type": "term",
+  "title": "Medizinproduktebuch",
+  "category": "recht"
+ },
+ {
+  "id": "bestandsverzeichnis",
+  "type": "term",
+  "title": "Bestandsverzeichnis",
+  "category": "recht"
+ },
+ {
+  "id": "software-medizinprodukt",
+  "type": "term",
+  "title": "Software als Medizinprodukt",
+  "category": "recht"
+ },
+ {
+  "id": "strahlenschutz",
+  "type": "term",
+  "title": "Strahlenschutz in der Medizin",
+  "category": "recht"
+ },
+ {
+  "id": "stk",
+  "type": "term",
+  "title": "Sicherheitstechnische Kontrolle (STK)",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "mtk",
+  "type": "term",
+  "title": "Messtechnische Kontrolle (MTK)",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "elektrische-sicherheitspruefung",
+  "type": "term",
+  "title": "Elektrische Sicherheitsprüfung nach IEC 62353",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "schutzleiterwiderstand",
+  "type": "term",
+  "title": "Schutzleiterwiderstand",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "isolationswiderstand",
+  "type": "term",
+  "title": "Isolationswiderstand",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "ableitstrommessung",
+  "type": "term",
+  "title": "Ableitstrommessung",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "funktionspruefung",
+  "type": "term",
+  "title": "Funktionsprüfung",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "pruefgeraete",
+  "type": "term",
+  "title": "Prüfgeräte und Simulatoren",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "dguv-vorschrift-3",
+  "type": "term",
+  "title": "Prüfung nach DGUV Vorschrift 3",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "konstanzpruefung",
+  "type": "term",
+  "title": "Abnahme- und Konstanzprüfung (Röntgen)",
+  "category": "stk-mtk"
+ },
+ {
+  "id": "instandhaltung-grundlagen",
+  "type": "term",
+  "title": "Instandhaltung",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "wartung",
+  "type": "term",
+  "title": "Wartung",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "inspektion",
+  "type": "term",
+  "title": "Inspektion",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "instandsetzung",
+  "type": "term",
+  "title": "Instandsetzung",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "kalibrierung",
+  "type": "term",
+  "title": "Kalibrierung und Justierung",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "aufbereitung",
+  "type": "term",
+  "title": "Aufbereitung von Medizinprodukten",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "sterilisation",
+  "type": "term",
+  "title": "Sterilisation",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "desinfektion",
+  "type": "term",
+  "title": "Desinfektion",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "medizintechnik-management",
+  "type": "term",
+  "title": "Medizintechnik-Management",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "fehlersuche",
+  "type": "term",
+  "title": "Systematische Fehlersuche",
+  "category": "instandhaltung"
+ },
+ {
+  "id": "okklusionsalarm",
+  "type": "fault",
+  "title": "Okklusionsalarm",
+  "category": "fehler"
+ },
+ {
+  "id": "luft-im-system",
+  "type": "fault",
+  "title": "Luft-im-System-Alarm",
+  "category": "fehler"
+ },
+ {
+  "id": "leckage",
+  "type": "fault",
+  "title": "Leckagealarm (Beatmung)",
+  "category": "fehler"
+ },
+ {
+  "id": "atemwegsdruck-hoch",
+  "type": "fault",
+  "title": "Alarm: Atemwegsdruck hoch",
+  "category": "fehler"
+ },
+ {
+  "id": "diskonnektion",
+  "type": "fault",
+  "title": "Diskonnektion",
+  "category": "fehler"
+ },
+ {
+  "id": "elektrodenproblem",
+  "type": "fault",
+  "title": "Elektrode ab / schlechter Elektrodenkontakt",
+  "category": "fehler"
+ },
+ {
+  "id": "bewegungsartefakt",
+  "type": "fault",
+  "title": "Bewegungsartefakte",
+  "category": "fehler"
+ },
+ {
+  "id": "netzstoerung",
+  "type": "fault",
+  "title": "Netzbrumm (50-Hz-Störung)",
+  "category": "fehler"
+ },
+ {
+  "id": "akkufehler",
+  "type": "fault",
+  "title": "Akkufehler und Kapazitätsverlust",
+  "category": "fehler"
+ },
+ {
+  "id": "sensordrift",
+  "type": "fault",
+  "title": "Sensordrift",
+  "category": "fehler"
+ },
+ {
+  "id": "emv-stoerung",
+  "type": "fault",
+  "title": "EMV-Störung",
+  "category": "fehler"
+ },
+ {
+  "id": "anwendungsfehler",
+  "type": "fault",
+  "title": "Anwendungsfehler",
+  "category": "fehler"
+ },
+ {
+  "id": "alarmmuedigkeit",
+  "type": "fault",
+  "title": "Alarmmüdigkeit",
+  "category": "fehler"
+ },
+ {
+  "id": "neutralelektroden-verbrennung",
+  "type": "fault",
+  "title": "Verbrennung unter der Neutralelektrode",
+  "category": "fehler"
+ },
+ {
+  "id": "blutleck-alarm",
+  "type": "fault",
+  "title": "Blutleckalarm",
+  "category": "fehler"
+ },
+ {
+  "id": "leitfaehigkeitsalarm",
+  "type": "fault",
+  "title": "Leitfähigkeitsalarm",
+  "category": "fehler"
+ },
+ {
+  "id": "bildartefakte",
+  "type": "fault",
+  "title": "Bildartefakte",
+  "category": "fehler"
+ },
+ {
+  "id": "fehlercodes",
+  "type": "fault",
+  "title": "Fehlercodes und Fehlerspeicher",
+  "category": "fehler"
+ },
+ {
+  "id": "mdr",
+  "type": "standard",
+  "title": "Medizinprodukteverordnung (MDR)",
+  "category": "recht"
+ },
+ {
+  "id": "ivdr",
+  "type": "standard",
+  "title": "In-vitro-Diagnostika-Verordnung (IVDR)",
+  "category": "recht"
+ },
+ {
+  "id": "mpdg",
+  "type": "standard",
+  "title": "Medizinprodukterecht-Durchführungsgesetz (MPDG)",
+  "category": "recht"
+ },
+ {
+  "id": "mpbetreibv",
+  "type": "standard",
+  "title": "Medizinprodukte-Betreiberverordnung (MPBetreibV)",
+  "category": "recht"
+ },
+ {
+  "id": "strlschg",
+  "type": "standard",
+  "title": "Strahlenschutzgesetz (StrlSchG)",
+  "category": "recht"
+ },
+ {
+  "id": "iec-60601-1",
+  "type": "standard",
+  "title": "IEC 60601-1",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-1-2",
+  "type": "standard",
+  "title": "IEC 60601-1-2",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-1-6",
+  "type": "standard",
+  "title": "IEC 60601-1-6",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-1-8",
+  "type": "standard",
+  "title": "IEC 60601-1-8",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-1-11",
+  "type": "standard",
+  "title": "IEC 60601-1-11",
+  "category": "normen"
+ },
+ {
+  "id": "iec-62353",
+  "type": "standard",
+  "title": "IEC 62353",
+  "category": "normen"
+ },
+ {
+  "id": "iso-14971",
+  "type": "standard",
+  "title": "ISO 14971",
+  "category": "normen"
+ },
+ {
+  "id": "iec-62304",
+  "type": "standard",
+  "title": "IEC 62304",
+  "category": "normen"
+ },
+ {
+  "id": "iso-13485",
+  "type": "standard",
+  "title": "ISO 13485",
+  "category": "normen"
+ },
+ {
+  "id": "iec-62366-1",
+  "type": "standard",
+  "title": "IEC 62366-1",
+  "category": "normen"
+ },
+ {
+  "id": "iso-10993-1",
+  "type": "standard",
+  "title": "ISO 10993-1",
+  "category": "normen"
+ },
+ {
+  "id": "din-31051",
+  "type": "standard",
+  "title": "DIN 31051",
+  "category": "normen"
+ },
+ {
+  "id": "din-vde-0100-710",
+  "type": "standard",
+  "title": "DIN VDE 0100-710",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60479-1",
+  "type": "standard",
+  "title": "IEC/TS 60479-1",
+  "category": "normen"
+ },
+ {
+  "id": "iso-80601-2-12",
+  "type": "standard",
+  "title": "ISO 80601-2-12",
+  "category": "normen"
+ },
+ {
+  "id": "iso-80601-2-13",
+  "type": "standard",
+  "title": "ISO 80601-2-13",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-4",
+  "type": "standard",
+  "title": "IEC 60601-2-4",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-24",
+  "type": "standard",
+  "title": "IEC 60601-2-24",
+  "category": "normen"
+ },
+ {
+  "id": "iso-80601-2-61",
+  "type": "standard",
+  "title": "ISO 80601-2-61",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-16",
+  "type": "standard",
+  "title": "IEC 60601-2-16",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-2",
+  "type": "standard",
+  "title": "IEC 60601-2-2",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-37",
+  "type": "standard",
+  "title": "IEC 60601-2-37",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-33",
+  "type": "standard",
+  "title": "IEC 60601-2-33",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-44",
+  "type": "standard",
+  "title": "IEC 60601-2-44",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-19",
+  "type": "standard",
+  "title": "IEC 60601-2-19",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-25",
+  "type": "standard",
+  "title": "IEC 60601-2-25",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-27",
+  "type": "standard",
+  "title": "IEC 60601-2-27",
+  "category": "normen"
+ },
+ {
+  "id": "iec-80601-2-30",
+  "type": "standard",
+  "title": "IEC 80601-2-30",
+  "category": "normen"
+ },
+ {
+  "id": "iec-80601-2-49",
+  "type": "standard",
+  "title": "IEC 80601-2-49",
+  "category": "normen"
+ },
+ {
+  "id": "iso-80601-2-55",
+  "type": "standard",
+  "title": "ISO 80601-2-55",
+  "category": "normen"
+ },
+ {
+  "id": "iec-60601-2-54",
+  "type": "standard",
+  "title": "IEC 60601-2-54",
+  "category": "normen"
+ },
+ {
+  "id": "iec-61010-1",
+  "type": "standard",
+  "title": "IEC 61010-1",
+  "category": "normen"
+ },
+ {
+  "id": "iso-17665",
+  "type": "standard",
+  "title": "ISO 17665",
+  "category": "normen"
+ },
+ {
+  "id": "iso-15883",
+  "type": "standard",
+  "title": "ISO 15883",
+  "category": "normen"
+ }
+]

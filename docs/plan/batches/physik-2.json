@@ -1,0 +1,56 @@
+[
+ {
+  "id": "roentgenstrahlung",
+  "type": "term",
+  "title": "Röntgenstrahlung",
+  "category": "physik"
+ },
+ {
+  "id": "ionisierende-strahlung",
+  "type": "term",
+  "title": "Wechselwirkung ionisierender Strahlung mit Materie",
+  "category": "physik"
+ },
+ {
+  "id": "radioaktivitaet",
+  "type": "term",
+  "title": "Radioaktivität",
+  "category": "physik"
+ },
+ {
+  "id": "kernspinresonanz",
+  "type": "term",
+  "title": "Kernspinresonanz",
+  "category": "physik"
+ },
+ {
+  "id": "elektromagnetische-induktion",
+  "type": "term",
+  "title": "Elektromagnetische Induktion",
+  "category": "physik"
+ },
+ {
+  "id": "diffusion-osmose",
+  "type": "term",
+  "title": "Diffusion, Osmose und Konvektion",
+  "category": "physik"
+ },
+ {
+  "id": "waermeuebertragung",
+  "type": "term",
+  "title": "Wärmeübertragung",
+  "category": "physik"
+ },
+ {
+  "id": "laser",
+  "type": "term",
+  "title": "Laser",
+  "category": "physik"
+ },
+ {
+  "id": "optik",
+  "type": "term",
+  "title": "Optik und Lichtausbreitung",
+  "category": "physik"
+ }
+]

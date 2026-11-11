@@ -1,0 +1,68 @@
+[
+ {
+  "id": "medizinprodukt",
+  "type": "term",
+  "title": "Medizinprodukt (Begriff)",
+  "category": "recht"
+ },
+ {
+  "id": "zweckbestimmung",
+  "type": "term",
+  "title": "Zweckbestimmung",
+  "category": "recht"
+ },
+ {
+  "id": "risikoklassen",
+  "type": "term",
+  "title": "Risikoklassen von Medizinprodukten",
+  "category": "recht"
+ },
+ {
+  "id": "ce-kennzeichnung",
+  "type": "term",
+  "title": "CE-Kennzeichnung",
+  "category": "recht"
+ },
+ {
+  "id": "benannte-stelle",
+  "type": "term",
+  "title": "Benannte Stelle",
+  "category": "recht"
+ },
+ {
+  "id": "konformitaetsbewertung",
+  "type": "term",
+  "title": "Konformitätsbewertung",
+  "category": "recht"
+ },
+ {
+  "id": "klinische-bewertung",
+  "type": "term",
+  "title": "Klinische Bewertung",
+  "category": "recht"
+ },
+ {
+  "id": "udi",
+  "type": "term",
+  "title": "UDI – Unique Device Identification",
+  "category": "recht"
+ },
+ {
+  "id": "vigilanz",
+  "type": "term",
+  "title": "Vigilanz und Vorkommnismeldung",
+  "category": "recht"
+ },
+ {
+  "id": "betreiberpflichten",
+  "type": "term",
+  "title": "Betreiberpflichten",
+  "category": "recht"
+ },
+ {
+  "id": "einweisung",
+  "type": "term",
+  "title": "Einweisung in Medizinprodukte",
+  "category": "recht"
+ }
+]

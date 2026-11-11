@@ -1,0 +1,86 @@
+[
+ {
+  "id": "draeger",
+  "type": "manufacturer",
+  "title": "Drägerwerk",
+  "category": "hersteller"
+ },
+ {
+  "id": "hamilton-medical",
+  "type": "manufacturer",
+  "title": "Hamilton Medical",
+  "category": "hersteller"
+ },
+ {
+  "id": "philips",
+  "type": "manufacturer",
+  "title": "Philips",
+  "category": "hersteller"
+ },
+ {
+  "id": "ge-healthcare",
+  "type": "manufacturer",
+  "title": "GE HealthCare",
+  "category": "hersteller"
+ },
+ {
+  "id": "siemens-healthineers",
+  "type": "manufacturer",
+  "title": "Siemens Healthineers",
+  "category": "hersteller"
+ },
+ {
+  "id": "medtronic",
+  "type": "manufacturer",
+  "title": "Medtronic",
+  "category": "hersteller"
+ },
+ {
+  "id": "zoll",
+  "type": "manufacturer",
+  "title": "ZOLL Medical",
+  "category": "hersteller"
+ },
+ {
+  "id": "stryker",
+  "type": "manufacturer",
+  "title": "Stryker",
+  "category": "hersteller"
+ },
+ {
+  "id": "b-braun",
+  "type": "manufacturer",
+  "title": "B. Braun",
+  "category": "hersteller"
+ },
+ {
+  "id": "fresenius-medical-care",
+  "type": "manufacturer",
+  "title": "Fresenius Medical Care",
+  "category": "hersteller"
+ },
+ {
+  "id": "fresenius-kabi",
+  "type": "manufacturer",
+  "title": "Fresenius Kabi",
+  "category": "hersteller"
+ },
+ {
+  "id": "baxter",
+  "type": "manufacturer",
+  "title": "Baxter",
+  "category": "hersteller"
+ },
+ {
+  "id": "nihon-kohden",
+  "type": "manufacturer",
+  "title": "Nihon Kohden",
+  "category": "hersteller"
+ },
+ {
+  "id": "mindray",
+  "type": "manufacturer",
+  "title": "Mindray",
+  "category": "hersteller"
+ }
+]

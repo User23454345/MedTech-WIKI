@@ -1,0 +1,11 @@
+[
+ {
+  "id": "ekg-geraet",
+  "type": "device",
+  "title": "Elektrokardiograph (12-Kanal-EKG)",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 6,
+  "status": "ausfuehrlich"
+ }
+]

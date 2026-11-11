@@ -1,0 +1,137 @@
+[
+ {
+  "id": "haematologie-analysator",
+  "type": "device",
+  "title": "Hämatologie-Analysator",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 61,
+  "status": "stub"
+ },
+ {
+  "id": "klinisch-chemischer-analysator",
+  "type": "device",
+  "title": "Klinisch-chemischer Analysator",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 62,
+  "status": "stub"
+ },
+ {
+  "id": "gerinnungsanalysator",
+  "type": "device",
+  "title": "Gerinnungsanalysator",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 63,
+  "status": "stub"
+ },
+ {
+  "id": "laborzentrifuge",
+  "type": "device",
+  "title": "Laborzentrifuge",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 64,
+  "status": "stub"
+ },
+ {
+  "id": "blutkuehlschrank",
+  "type": "device",
+  "title": "Blutkonservenkühlschrank",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 65,
+  "status": "stub"
+ },
+ {
+  "id": "zellseparator",
+  "type": "device",
+  "title": "Zellseparator (Apheresegerät)",
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 66,
+  "status": "stub"
+ },
+ {
+  "id": "endoskop",
+  "type": "device",
+  "title": "Flexibles Videoendoskop",
+  "category": "geraete",
+  "deviceGroup": "endoskopie",
+  "rank": 67,
+  "status": "stub"
+ },
+ {
+  "id": "kapselendoskop",
+  "type": "device",
+  "title": "Kapselendoskop",
+  "category": "geraete",
+  "deviceGroup": "endoskopie",
+  "rank": 68,
+  "status": "stub"
+ },
+ {
+  "id": "insufflator",
+  "type": "device",
+  "title": "CO₂-Insufflator (Laparoskopie)",
+  "category": "geraete",
+  "deviceGroup": "endoskopie",
+  "rank": 69,
+  "status": "stub"
+ },
+ {
+  "id": "videolaryngoskop",
+  "type": "device",
+  "title": "Videolaryngoskop",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 70,
+  "status": "stub"
+ },
+ {
+  "id": "op-tisch",
+  "type": "device",
+  "title": "Operationstisch",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 71,
+  "status": "stub"
+ },
+ {
+  "id": "op-leuchte",
+  "type": "device",
+  "title": "Operationsleuchte",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 72,
+  "status": "stub"
+ },
+ {
+  "id": "op-mikroskop",
+  "type": "device",
+  "title": "Operationsmikroskop",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 73,
+  "status": "stub"
+ },
+ {
+  "id": "chirurgischer-laser",
+  "type": "device",
+  "title": "Chirurgisches Lasersystem",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 74,
+  "status": "stub"
+ },
+ {
+  "id": "ultraschalldissektor",
+  "type": "device",
+  "title": "Ultraschall-Dissektionsgerät",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 75,
+  "status": "stub"
+ }
+]

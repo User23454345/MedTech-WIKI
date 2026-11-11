@@ -1,0 +1,11 @@
+[
+ {
+  "id": "defibrillator",
+  "type": "device",
+  "title": "Defibrillator (inkl. AED)",
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 3,
+  "status": "ausfuehrlich"
+ }
+]

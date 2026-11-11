@@ -1,0 +1,137 @@
+[
+ {
+  "id": "gammakamera",
+  "type": "device",
+  "title": "Gammakamera / SPECT",
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 46,
+  "status": "stub"
+ },
+ {
+  "id": "linearbeschleuniger",
+  "type": "device",
+  "title": "Medizinischer Linearbeschleuniger",
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 47,
+  "status": "stub"
+ },
+ {
+  "id": "afterloader",
+  "type": "device",
+  "title": "Afterloading-Gerät (Brachytherapie)",
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 48,
+  "status": "stub"
+ },
+ {
+  "id": "dvt",
+  "type": "device",
+  "title": "Digitale Volumentomographie (DVT)",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 49,
+  "status": "stub"
+ },
+ {
+  "id": "knochendichtemessung",
+  "type": "device",
+  "title": "Knochendichtemessgerät (DXA)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 50,
+  "status": "stub"
+ },
+ {
+  "id": "eeg-geraet",
+  "type": "device",
+  "title": "Elektroenzephalograph (EEG)",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 51,
+  "status": "stub"
+ },
+ {
+  "id": "emg-geraet",
+  "type": "device",
+  "title": "Elektromyograph / Neurographie (EMG/NLG)",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 52,
+  "status": "stub"
+ },
+ {
+  "id": "spirometer",
+  "type": "device",
+  "title": "Spirometer",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 53,
+  "status": "stub"
+ },
+ {
+  "id": "bodyplethysmograph",
+  "type": "device",
+  "title": "Bodyplethysmograph",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 54,
+  "status": "stub"
+ },
+ {
+  "id": "polysomnograph",
+  "type": "device",
+  "title": "Polysomnograph",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 55,
+  "status": "stub"
+ },
+ {
+  "id": "ctg",
+  "type": "device",
+  "title": "Kardiotokograph (CTG)",
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 56,
+  "status": "stub"
+ },
+ {
+  "id": "audiometer",
+  "type": "device",
+  "title": "Audiometer",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 57,
+  "status": "stub"
+ },
+ {
+  "id": "thermometer",
+  "type": "device",
+  "title": "Medizinisches elektrisches Thermometer",
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 58,
+  "status": "stub"
+ },
+ {
+  "id": "blutzuckermessgeraet",
+  "type": "device",
+  "title": "Blutzuckermessgerät",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 59,
+  "status": "stub"
+ },
+ {
+  "id": "blutgasanalysator",
+  "type": "device",
+  "title": "Blutgasanalysator",
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 60,
+  "status": "stub"
+ }
+]

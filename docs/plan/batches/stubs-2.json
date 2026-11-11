@@ -1,0 +1,137 @@
+[
+ {
+  "id": "thoraxkompressionsgeraet",
+  "type": "device",
+  "title": "Mechanisches Thoraxkompressionsgerät",
+  "category": "geraete",
+  "deviceGroup": "notfall",
+  "rank": 31,
+  "status": "stub"
+ },
+ {
+  "id": "absauggeraet",
+  "type": "device",
+  "title": "Medizinisches Absauggerät",
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 32,
+  "status": "stub"
+ },
+ {
+  "id": "cpap-geraet",
+  "type": "device",
+  "title": "CPAP-/Schlaftherapiegerät",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 33,
+  "status": "stub"
+ },
+ {
+  "id": "heimbeatmungsgeraet",
+  "type": "device",
+  "title": "Heimbeatmungsgerät",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 34,
+  "status": "stub"
+ },
+ {
+  "id": "sauerstoffkonzentrator",
+  "type": "device",
+  "title": "Sauerstoffkonzentrator",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 35,
+  "status": "stub"
+ },
+ {
+  "id": "inhalationsgeraet",
+  "type": "device",
+  "title": "Inhalationsgerät (Vernebler)",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 36,
+  "status": "stub"
+ },
+ {
+  "id": "high-flow-geraet",
+  "type": "device",
+  "title": "High-Flow-Sauerstofftherapiegerät",
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 37,
+  "status": "stub"
+ },
+ {
+  "id": "enterale-ernaehrungspumpe",
+  "type": "device",
+  "title": "Enterale Ernährungspumpe",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 38,
+  "status": "stub"
+ },
+ {
+  "id": "pca-pumpe",
+  "type": "device",
+  "title": "PCA-Pumpe (patientenkontrollierte Analgesie)",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 39,
+  "status": "stub"
+ },
+ {
+  "id": "insulinpumpe",
+  "type": "device",
+  "title": "Insulinpumpe",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 40,
+  "status": "stub"
+ },
+ {
+  "id": "infusionswaermer",
+  "type": "device",
+  "title": "Blut- und Infusionswärmer",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 41,
+  "status": "stub"
+ },
+ {
+  "id": "mammographiegeraet",
+  "type": "device",
+  "title": "Mammographiesystem",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 42,
+  "status": "stub"
+ },
+ {
+  "id": "c-bogen",
+  "type": "device",
+  "title": "C-Bogen (mobile Durchleuchtung)",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 43,
+  "status": "stub"
+ },
+ {
+  "id": "angiographieanlage",
+  "type": "device",
+  "title": "Angiographieanlage",
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 44,
+  "status": "stub"
+ },
+ {
+  "id": "pet-ct",
+  "type": "device",
+  "title": "PET/CT",
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 45,
+  "status": "stub"
+ }
+]

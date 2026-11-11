@@ -1,0 +1,137 @@
+[
+ {
+  "id": "chirurgisches-motorsystem",
+  "type": "device",
+  "title": "Chirurgisches Motorsystem",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 76,
+  "status": "stub"
+ },
+ {
+  "id": "op-roboter",
+  "type": "device",
+  "title": "Robotisches Chirurgie-Assistenzsystem",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 77,
+  "status": "stub"
+ },
+ {
+  "id": "patientenwaermesystem",
+  "type": "device",
+  "title": "Patientenwärmesystem",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 78,
+  "status": "stub"
+ },
+ {
+  "id": "lithotripter",
+  "type": "device",
+  "title": "Extrakorporaler Stoßwellen-Lithotripter (ESWL)",
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 79,
+  "status": "stub"
+ },
+ {
+  "id": "waermebett",
+  "type": "device",
+  "title": "Säuglingswärmebett / Reanimationseinheit",
+  "category": "geraete",
+  "deviceGroup": "neonatologie",
+  "rank": 80,
+  "status": "stub"
+ },
+ {
+  "id": "phototherapiegeraet",
+  "type": "device",
+  "title": "Phototherapiegerät (Neugeborenenikterus)",
+  "category": "geraete",
+  "deviceGroup": "neonatologie",
+  "rank": 81,
+  "status": "stub"
+ },
+ {
+  "id": "hypothermiegeraet",
+  "type": "device",
+  "title": "Temperaturmanagementsystem (Hypothermie)",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 82,
+  "status": "stub"
+ },
+ {
+  "id": "druckkammer",
+  "type": "device",
+  "title": "Druckkammer (Hyperbare Oxygenation)",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 83,
+  "status": "stub"
+ },
+ {
+  "id": "reizstromgeraet",
+  "type": "device",
+  "title": "Reizstromgerät (TENS/EMS)",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 84,
+  "status": "stub"
+ },
+ {
+  "id": "ultraschalltherapiegeraet",
+  "type": "device",
+  "title": "Ultraschalltherapiegerät",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 85,
+  "status": "stub"
+ },
+ {
+  "id": "ipk-geraet",
+  "type": "device",
+  "title": "Gerät zur intermittierenden pneumatischen Kompression",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 86,
+  "status": "stub"
+ },
+ {
+  "id": "npwt-geraet",
+  "type": "device",
+  "title": "Unterdruck-Wundtherapiegerät (NPWT)",
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 87,
+  "status": "stub"
+ },
+ {
+  "id": "cochlea-implantat",
+  "type": "device",
+  "title": "Cochlea-Implantat-System",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 88,
+  "status": "stub"
+ },
+ {
+  "id": "hoergeraet",
+  "type": "device",
+  "title": "Hörgerät",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 89,
+  "status": "stub"
+ },
+ {
+  "id": "spaltlampe",
+  "type": "device",
+  "title": "Spaltlampe",
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 90,
+  "status": "stub"
+ }
+]

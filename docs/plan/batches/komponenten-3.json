@@ -1,0 +1,56 @@
+[
+ {
+  "id": "ultraschallwandler",
+  "type": "term",
+  "title": "Ultraschallwandler (Schallkopf)",
+  "category": "komponenten"
+ },
+ {
+  "id": "dialysator",
+  "type": "term",
+  "title": "Dialysator",
+  "category": "komponenten"
+ },
+ {
+  "id": "narkosemittelverdampfer",
+  "type": "term",
+  "title": "Narkosemittelverdampfer",
+  "category": "komponenten"
+ },
+ {
+  "id": "co2-absorber",
+  "type": "term",
+  "title": "CO₂-Absorber (Atemkalk)",
+  "category": "komponenten"
+ },
+ {
+  "id": "atemgasbefeuchter",
+  "type": "term",
+  "title": "Atemgasbefeuchter und HME-Filter",
+  "category": "komponenten"
+ },
+ {
+  "id": "neutralelektrode",
+  "type": "term",
+  "title": "Neutralelektrode",
+  "category": "komponenten"
+ },
+ {
+  "id": "defibrillationselektroden",
+  "type": "term",
+  "title": "Defibrillationselektroden",
+  "category": "komponenten"
+ },
+ {
+  "id": "heizelement",
+  "type": "term",
+  "title": "Heizelement",
+  "category": "komponenten"
+ },
+ {
+  "id": "display-bedienoberflaeche",
+  "type": "term",
+  "title": "Display und Bedienoberfläche",
+  "category": "komponenten"
+ }
+]

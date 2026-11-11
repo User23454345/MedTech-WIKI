@@ -1,0 +1,80 @@
+[
+ {
+  "id": "abbott",
+  "type": "manufacturer",
+  "title": "Abbott",
+  "category": "hersteller"
+ },
+ {
+  "id": "boston-scientific",
+  "type": "manufacturer",
+  "title": "Boston Scientific",
+  "category": "hersteller"
+ },
+ {
+  "id": "biotronik",
+  "type": "manufacturer",
+  "title": "Biotronik",
+  "category": "hersteller"
+ },
+ {
+  "id": "roche-diagnostics",
+  "type": "manufacturer",
+  "title": "Roche Diagnostics",
+  "category": "hersteller"
+ },
+ {
+  "id": "sysmex",
+  "type": "manufacturer",
+  "title": "Sysmex",
+  "category": "hersteller"
+ },
+ {
+  "id": "weinmann",
+  "type": "manufacturer",
+  "title": "Weinmann Emergency",
+  "category": "hersteller"
+ },
+ {
+  "id": "corpuls",
+  "type": "manufacturer",
+  "title": "corpuls",
+  "category": "hersteller"
+ },
+ {
+  "id": "fujifilm",
+  "type": "manufacturer",
+  "title": "Fujifilm Healthcare",
+  "category": "hersteller"
+ },
+ {
+  "id": "dentsply-sirona",
+  "type": "manufacturer",
+  "title": "Dentsply Sirona",
+  "category": "hersteller"
+ },
+ {
+  "id": "cochlear",
+  "type": "manufacturer",
+  "title": "Cochlear",
+  "category": "hersteller"
+ },
+ {
+  "id": "belimed",
+  "type": "manufacturer",
+  "title": "Belimed",
+  "category": "hersteller"
+ },
+ {
+  "id": "arjo",
+  "type": "manufacturer",
+  "title": "Arjo",
+  "category": "hersteller"
+ },
+ {
+  "id": "hillrom",
+  "type": "manufacturer",
+  "title": "Hillrom",
+  "category": "hersteller"
+ }
+]

@@ -1,0 +1,56 @@
+[
+ {
+  "id": "druck",
+  "type": "term",
+  "title": "Druck",
+  "category": "physik"
+ },
+ {
+  "id": "gasgesetze",
+  "type": "term",
+  "title": "Gasgesetze",
+  "category": "physik"
+ },
+ {
+  "id": "stroemungslehre",
+  "type": "term",
+  "title": "Strömungslehre",
+  "category": "physik"
+ },
+ {
+  "id": "elektrische-stromwirkung",
+  "type": "term",
+  "title": "Wirkung des elektrischen Stroms auf den Körper",
+  "category": "physik"
+ },
+ {
+  "id": "joulesche-waerme",
+  "type": "term",
+  "title": "Joulesche Wärme",
+  "category": "physik"
+ },
+ {
+  "id": "piezoelektrischer-effekt",
+  "type": "term",
+  "title": "Piezoelektrischer Effekt",
+  "category": "physik"
+ },
+ {
+  "id": "schallwellen",
+  "type": "term",
+  "title": "Schallwellen und Ultraschallphysik",
+  "category": "physik"
+ },
+ {
+  "id": "doppler-effekt",
+  "type": "term",
+  "title": "Doppler-Effekt",
+  "category": "physik"
+ },
+ {
+  "id": "lambert-beer",
+  "type": "term",
+  "title": "Lambert-Beer-Gesetz",
+  "category": "physik"
+ }
+]

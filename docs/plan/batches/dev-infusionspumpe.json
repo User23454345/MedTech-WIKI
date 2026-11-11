@@ -1,0 +1,11 @@
+[
+ {
+  "id": "infusionspumpe",
+  "type": "device",
+  "title": "Volumetrische Infusionspumpe",
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 4,
+  "status": "ausfuehrlich"
+ }
+]
