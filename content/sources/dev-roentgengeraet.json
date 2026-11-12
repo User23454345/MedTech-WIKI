@@ -1,0 +1,45 @@
+[
+  {
+    "id": "iec-60601-2-54-2022",
+    "kind": "norm",
+    "title": "IEC 60601-2-54 – Medizinische elektrische Geräte – Teil 2-54: Besondere Festlegungen für die Sicherheit und die wesentlichen Leistungsmerkmale von Röntgeneinrichtungen für Radiographie und Radioskopie",
+    "edition": "IEC 60601-2-54:2022",
+    "publisher": "IEC / in Deutschland als DIN EN IEC 60601-2-54 (VDE 0750-2-54):2025-05",
+    "year": "2022",
+    "note": "Gerätespezifische Sicherheitsnorm für Röntgeneinrichtungen zur Aufnahme (Radiographie) und Durchleuchtung (Radioskopie). Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60601-1-3-strahlenschutz",
+    "kind": "norm",
+    "title": "IEC 60601-1-3 – Medizinische elektrische Geräte – Teil 1-3: Allgemeine Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale – Ergänzungsnorm: Strahlenschutz von diagnostischen Röntgengeräten",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-1-3 (VDE 0750-1-3)",
+    "note": "Ergänzungsnorm u. a. zu Strahlenqualität, Filterung, Begrenzung des Nutzstrahlenfelds und Leckstrahlung. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "din-6868-4-2021",
+    "kind": "norm",
+    "title": "DIN 6868-4 – Sicherung der Bildqualität in röntgendiagnostischen Betrieben – Teil 4: Konstanzprüfung an medizinischen Röntgeneinrichtungen zur Projektionsradiographie mit digitalen Bildempfängersystemen und zur Durchleuchtung",
+    "edition": "DIN 6868-4:2021-03",
+    "publisher": "DIN Media, Berlin",
+    "year": "2021",
+    "note": "Ersetzt u. a. die zurückgezogene DIN 6868-13 (Konstanzprüfung bei Projektionsradiographie mit digitalen Bildempfängern). Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-62220-1-1-2015",
+    "kind": "norm",
+    "title": "IEC 62220-1-1 – Medical electrical equipment – Characteristics of digital X-ray imaging devices – Part 1-1: Determination of the detective quantum efficiency – Detectors used in radiographic imaging",
+    "edition": "IEC 62220-1-1:2015",
+    "publisher": "IEC / in Deutschland als DIN EN 62220-1-1",
+    "year": "2015",
+    "note": "Messverfahren für die detektive Quanteneffizienz (DQE) digitaler Röntgendetektoren in Abhängigkeit von Luftkerma und Ortsfrequenz."
+  },
+  {
+    "id": "roentgen-1895",
+    "kind": "artikel",
+    "authors": "Röntgen WC",
+    "title": "Ueber eine neue Art von Strahlen (Vorläufige Mittheilung)",
+    "publisher": "Sitzungsberichte der Physikalisch-medicinischen Gesellschaft zu Würzburg",
+    "year": "1895",
+    "note": "Erstbeschreibung der Röntgenstrahlung."
+  }
+]
