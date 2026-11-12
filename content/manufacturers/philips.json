@@ -1,0 +1,168 @@
+{
+  "id": "philips",
+  "type": "manufacturer",
+  "title": "Philips",
+  "aliases": [
+    "Koninklijke Philips N.V.",
+    "Royal Philips",
+    "Philips Healthcare",
+    "Philips Respironics"
+  ],
+  "category": "hersteller",
+  "summary": "Koninklijke Philips N.V. ist ein niederländischer Konzern mit Sitz in Amsterdam, der sich auf Gesundheitstechnologie konzentriert. Das Medizintechnik-Portfolio reicht von Bildgebung und Ultraschall über Patientenmonitoring und Defibrillation bis zur Schlaf- und Atemtherapie.",
+  "headquarters": "Amsterdam, Niederlande",
+  "founded": "1891",
+  "website": "https://www.philips.com/",
+  "productLines": [
+    {
+      "device": "patientenmonitor",
+      "models": [
+        "IntelliVue MX450",
+        "IntelliVue MX550",
+        "IntelliVue MX750",
+        "IntelliVue MX850"
+      ]
+    },
+    {
+      "device": "defibrillator",
+      "models": [
+        "HeartStart FRx",
+        "HeartStart HS1",
+        "HeartStart MRx"
+      ],
+      "note": "Verfügbarkeit einzelner Modelle regional unterschiedlich."
+    },
+    {
+      "device": "ekg-geraet",
+      "models": [
+        "PageWriter TC20",
+        "PageWriter TC35",
+        "PageWriter TC50",
+        "PageWriter TC70"
+      ]
+    },
+    {
+      "device": "langzeit-ekg",
+      "models": [
+        "DigiTrak XT"
+      ]
+    },
+    {
+      "device": "ergometer",
+      "models": [
+        "ST80i"
+      ],
+      "note": "Belastungs-EKG-System."
+    },
+    {
+      "device": "ctg",
+      "models": [
+        "Avalon FM30",
+        "Avalon FM50"
+      ]
+    },
+    {
+      "device": "ultraschallgeraet",
+      "models": [
+        "EPIQ",
+        "Affiniti",
+        "Lumify"
+      ]
+    },
+    {
+      "device": "computertomograph",
+      "models": [
+        "Spectral CT 7500",
+        "IQon Spectral CT",
+        "Incisive CT"
+      ]
+    },
+    {
+      "device": "mrt",
+      "models": [
+        "Ingenia Ambition",
+        "Ingenia Elition",
+        "MR 5300"
+      ],
+      "note": "Ingenia Ambition und MR 5300 mit heliumarmem BlueSeal-Magneten."
+    },
+    {
+      "device": "roentgengeraet",
+      "models": [
+        "DigitalDiagnost C90",
+        "MobileDiagnost wDR"
+      ]
+    },
+    {
+      "device": "angiographieanlage",
+      "models": [
+        "Azurion"
+      ]
+    },
+    {
+      "device": "c-bogen",
+      "models": [
+        "Zenition"
+      ]
+    },
+    {
+      "device": "pet-ct",
+      "models": [
+        "Vereos"
+      ]
+    },
+    {
+      "device": "cpap-geraet",
+      "models": [
+        "DreamStation"
+      ],
+      "note": "Philips Respironics; Rückruf 2021 wegen schalldämmendem Schaumstoff, Vertriebsbeschränkungen in den USA seit 2024."
+    },
+    {
+      "device": "heimbeatmungsgeraet",
+      "models": [
+        "Trilogy"
+      ],
+      "note": "Philips Respironics; aktuelle Verfügbarkeit beim Hersteller prüfen."
+    },
+    {
+      "device": "sauerstoffkonzentrator",
+      "models": [
+        "EverFlo",
+        "SimplyGo"
+      ]
+    },
+    {
+      "device": "polysomnograph",
+      "models": [
+        "Alice"
+      ]
+    },
+    {
+      "device": "inhalationsgeraet",
+      "models": [
+        "InnoSpire"
+      ]
+    }
+  ],
+  "body": "## Überblick\n\n**Koninklijke Philips N.V.** (Royal Philips) ist ein niederländischer Konzern mit Hauptsitz in Amsterdam. Nach der Abtrennung früherer Kerngeschäfte (u. a. Beleuchtung und Haushaltsgeräte) versteht sich Philips heute als Unternehmen der Gesundheitstechnologie [@philips-web]. Das Portfolio deckt die Bildgebung, das Patientenmonitoring, die Notfallmedizin und die häusliche Versorgung ab.\n\n## Geschichte in Stichpunkten\n\n* **1891:** Gründung in Eindhoven als Hersteller von Glühlampen durch Gerard Philips und dessen Vater Frederik Philips.\n* **1920er-Jahre:** Einstieg in die Medizintechnik mit [[roentgenroehre|Röntgenröhren]]; die „Metalix“-Röhre mit geerdetem Metallmittelteil verbesserte Strahlen- und Hochspannungsschutz gegenüber reinen Glasröhren.\n* **1998–2001:** Ausbau zum Medizintechnikkonzern durch Übernahmen, u. a. ATL Ultrasound (Ultraschall), ADAC (Nuklearmedizin), Marconi Medical Systems (CT) und das Medizingeschäft von Agilent Technologies (ehemals Hewlett-Packard; Monitoring, EKG, Defibrillation).\n* **2008:** Übernahme von Respironics (Schlaf- und Atemtherapie).\n* **2016:** Abspaltung der Lichtsparte (heute Signify); Konzentration auf Gesundheitstechnologie.\n* **2021:** Großer Rückruf von CPAP- und Beatmungsgeräten der Sparte Respironics wegen sich zersetzenden schalldämmenden PE-PUR-Schaumstoffs.\n* **2024:** Vereinbarung (Consent Decree) mit US-Behörden: Neue Schlaf- und Atemtherapiegeräte werden in den USA erst nach Erfüllung behördlicher Auflagen wieder verkauft; Service und Zubehör für installierte Geräte bleiben möglich.\n\n## Geschäftsbereiche\n\n| Segment | Inhalte (Auswahl) |\n|---|---|\n| Diagnosis & Treatment | [[computertomograph|CT]], [[mrt|MRT]], [[roentgengeraet|Röntgen]], [[ultraschallgeraet|Ultraschall]], [[angiographieanlage|bildgestützte Therapie]] |\n| Connected Care | [[patientenmonitor|Patientenmonitoring]], [[ekg-geraet|EKG]], [[defibrillator|Defibrillation]], Schlaf- und Atemtherapie |\n| Personal Health | Konsumgüter (z. B. Rasierer, Zahnbürsten) – nicht Gegenstand dieses Wikis |\n\n## Bedeutung für die Medizintechnik\n\nPhilips gehört zu den großen Systemanbietern der Bildgebung („Big Three“ zusammen mit [[siemens-healthineers]] und [[ge-healthcare]]). Technische Besonderheiten sind etwa das Spektral-CT mit Dual-Layer-Detektor ([[roentgendetektor]]) und MRT-Magnete mit stark reduzierter Heliummenge [@philips-blueseal]. Im Monitoring ist die IntelliVue-Familie weit verbreitet; sie geht technisch auf die Hewlett-Packard-Linie zurück.\n\n> [!warnung] Der Respironics-Rückruf ist ein Lehrbeispiel für die Bedeutung von [[vigilanz]] und Marktüberwachung: Betreiber müssen Sicherheitsinformationen des Herstellers umsetzen und betroffene Geräte identifizieren können – eine Aufgabe, für die ein gepflegtes [[bestandsverzeichnis]] unverzichtbar ist.\n\n> [!hinweis] Philips-Produktnamen wurden in den letzten Jahren teils neu systematisiert (z. B. Röntgensysteme unter der Dachbezeichnung „Radiography“). Maßgeblich ist die aktuelle Herstellerbezeichnung [@philips-web].\n\n## Einordnung im Markt\n\nPhilips ist einer der wenigen Hersteller, die zugleich Großgeräte der Bildgebung, Patientenmonitoring und Produkte für die häusliche Versorgung anbieten. Für Kliniken ergibt sich daraus oft eine enge Verzahnung von Geräten, Software und Serviceverträgen. Die Bildgebungssysteme kommunizieren über [[dicom|DICOM]] mit dem PACS, die Monitore über [[hl7-fhir|HL7]] mit klinischen Informationssystemen – Schnittstellen, die bei Instandhaltung und Updates mitgeprüft werden müssen.",
+  "related": [
+    "patientenmonitor",
+    "defibrillator",
+    "ultraschallgeraet",
+    "computertomograph",
+    "mrt",
+    "cpap-geraet",
+    "ge-healthcare",
+    "siemens-healthineers",
+    "radiologie",
+    "kardiologie",
+    "vigilanz"
+  ],
+  "sources": [
+    "philips-web",
+    "philips-blueseal"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -34,13 +34,17 @@
   <rect x="60" y="205" width="380" height="140" fill="#f1f5f9"/>
   <line x1="60" y1="275" x2="440" y2="275" stroke="#0b2545" stroke-width="1.5"/>
   <line x1="60" y1="205" x2="60" y2="345" stroke="#0b2545" stroke-width="1.5"/>
-  <text x="54" y="218" text-anchor="end">V̇</text>
-  <text x="54" y="234" text-anchor="end">l/s</text>
+  <text x="30" y="218" text-anchor="middle">V̇</text>
+  <text x="30" y="234" text-anchor="middle">l/s</text>
   <text x="54" y="279" text-anchor="end">0</text>
+  <text x="54" y="239" text-anchor="end">1</text>
+  <line x1="56" y1="235" x2="64" y2="235" stroke="#0b2545" stroke-width="1"/>
+  <text x="54" y="319" text-anchor="end">−1</text>
+  <line x1="56" y1="315" x2="64" y2="315" stroke="#0b2545" stroke-width="1"/>
   <!-- Inspiration konstanter Flow -->
   <polyline points="60,275 90,275 90,235 210,235 210,275 250,275" fill="none" stroke="#0d9488" stroke-width="2.5" stroke-linejoin="round"/>
   <!-- passive Exspiration exponentiell -->
-  <path d="M250,275 L250,335 C275,300 300,288 340,280 C370,277 400,275.5 440,275" fill="none" stroke="#0d9488" stroke-width="2.5"/>
+  <polyline points="250,275 250,315.0 260,308.9 270,303.7 280,299.3 290,295.5 300,292.4 310,289.7 320,287.5 330,285.5 340,283.9 350,282.6 360,281.4 370,280.4 380,279.6 390,278.9 400,278.3 410,277.8 420,277.4 430,277.0 440,276.7" fill="none" stroke="#0d9488" stroke-width="2.5" stroke-linejoin="round"/>
   <line x1="150" y1="235" x2="150" y2="218" stroke="#0b2545" stroke-width="1"/>
   <text x="100" y="214">Inspiration: V̇ = 1 l/s</text>
   <line x1="230" y1="275" x2="230" y2="300" stroke="#0b2545" stroke-width="1"/>

@@ -1,0 +1,167 @@
+{
+  "id": "gantry",
+  "type": "term",
+  "title": "Gantry",
+  "aliases": [
+    "Gantrie",
+    "Abtasteinheit",
+    "Drehkranz",
+    "Schleifring-Gantry",
+    "Rotor (CT)",
+    "Portal",
+    "Gantry-Tilt"
+  ],
+  "category": "komponenten",
+  "summary": "Ring- oder portalförmige Trägerstruktur eines Großgeräts, die Strahlenquelle und Detektor um den Patienten herum anordnet und bewegt. Im CT rotiert sie mit hoher Geschwindigkeit und wird über einen Schleifring mit Energie und Daten versorgt; beim Linearbeschleuniger dreht sie isozentrisch um den Patienten.",
+  "body": "## Begriff\n\nAls **Gantry** (engl. für Portal, Gerüst) bezeichnet man in der Medizintechnik den ring- oder portalförmigen Teil eines Großgeräts, der die strahlerzeugenden und -erfassenden Komponenten trägt und um den Patienten herum anordnet oder bewegt. Der Begriff wird vor allem beim [[computertomograph|Computertomographen]] verwendet, außerdem beim [[linearbeschleuniger|Linearbeschleuniger]], bei [[pet-ct|PET/CT]]-Systemen und umgangssprachlich auch für das Magnetgehäuse eines [[mrt|MRT]] [@kalender-2011] [@hsieh-2015].\n\nDie Gantry ist mechanisch eine der anspruchsvollsten Baugruppen der Medizintechnik: Sie muss tonnenschwere Komponenten mit hoher Geschwindigkeit, mit Positioniergenauigkeiten im Submillimeterbereich und über viele Jahre zuverlässig bewegen.\n\n## CT-Gantry\n\n### Aufbau\n\n| Baugruppe | Funktion |\n|---|---|\n| Stationärer Teil (Stator, Rahmen) | trägt das Großlager, enthält Antrieb, Kühlung, Bedienelemente, Positionierlaser; bei vielen Systemen kippbar (Gantry-Tilt) |\n| Rotierender Teil (Rotor, Drehkranz) | trägt [[roentgenroehre|Röntgenröhre]], Hochspannungsgenerator, [[kollimator|Kollimator]], [[roentgendetektor|Detektor]] und Datenerfassungssystem (DAS) |\n| Großlager | Wälzlager mit großem Durchmesser, nimmt Gewichts- und Fliehkräfte auf |\n| Antrieb | [[elektromotor|Elektromotor]], häufig als Direktantrieb (Torquemotor) oder über Riemen |\n| Schleifring | überträgt Energie und Steuerdaten auf den Rotor und Messdaten zurück |\n| Kühlung | Luft- oder Flüssigkeitskühlung für Röhre, Generator und Detektorelektronik |\n| Patientenöffnung | typischerweise etwa 70–80 cm Durchmesser, für Strahlentherapieplanung auch größer (typische Werte) |\n\n### Rotation und Fliehkraft\n\nModerne CT-Systeme erreichen Rotationszeiten von deutlich unter einer halben Sekunde pro Umdrehung. Die Zentripetalbeschleunigung der rotierenden Komponenten beträgt\n\n`a = ω² · r = (2π / T_rot)² · r`\n\n> [!beispiel] Bei einer Rotationszeit von T_rot = 0,3 s und einem Radius von r = 0,6 m folgt ω ≈ 20,9 s⁻¹ und a ≈ 20,9² · 0,6 m/s² ≈ 263 m/s² ≈ 27 g. Bei 0,25 s sind es bereits rund 38 g. Eine Röntgenröhre von einigen zehn Kilogramm erfährt dann Zentrifugalkräfte von über 10 kN – das entspricht der Gewichtskraft von mehr als einer Tonne. Die Werte sind didaktisch gewählt und beschreiben kein bestimmtes Gerät.\n\nDiese Kräfte müssen Lager, Rotorstruktur, Röhrenlagerung (bei Drehanodenröhren zusätzlich die Lager der Anode) und die Befestigung aller Baugruppen dauerhaft aushalten. Die Unwucht des Rotors wird deshalb sorgfältig ausgewuchtet; eine Unwucht verursacht Vibrationen, Lagerverschleiß und Bildartefakte.\n\n### Schleifringtechnik und Spiral-CT\n\nFrühe CT-Scanner waren über Kabel mit dem Rotor verbunden und mussten nach jeder Umdrehung zurückdrehen. Erst die **Schleifringtechnik** erlaubte eine kontinuierliche Rotation und damit die **Spiral-CT**, bei der der Patient während der Rotation kontinuierlich durch die Gantry gefahren wird [@kalender-1990].\n\nDer Schleifring überträgt:\n\n* **Leistung**: über Schleifbahnen und Kohlebürsten, je nach Konzept Netzspannung oder Gleichspannung für den Generator auf dem Rotor,\n* **Steuersignale** zum Rotor,\n* **Messdaten** vom DAS zum Bildrechner – wegen der hohen Datenraten berührungslos (kapazitiv, optisch oder per Funk).\n\nDas Verhältnis von Tischvorschub pro Umdrehung zur kollimierten Strahlbreite heißt **Pitch**:\n\n`p = d / (N · S)` (d: Tischvorschub pro Umdrehung, N · S: Zeilenzahl mal Schichtbreite) [@iec-60601-2-44]\n\nBei p = 1 schließen die Spiralbahnen lückenlos aneinander; p > 1 verkürzt die Scanzeit und senkt bei gleichem Röhrenstrom die Dosis, p < 1 erzeugt überlappende Daten (z. B. in der Herzbildgebung).\n\n### Antrieb und Regelung\n\nDer Gantryantrieb ist ein typisches Beispiel für die Kette [[elektromotor]] → [[drehzahlregelung]] → Sensorik: Ein Motor beschleunigt den Rotor auf die Solldrehzahl, ein Winkelgeber misst die Position, und ein [[regelkreis|Regelkreis]] hält die Rotationsgeschwindigkeit konstant – denn die Bildrekonstruktion setzt voraus, dass jede Projektion einem genau bekannten Winkel zugeordnet ist. Beim Stopp muss die Gantry die gespeicherte Rotationsenergie `E = ½ · J · ω²` sicher abbauen, z. B. durch generatorisches Bremsen.\n\n> [!vereinfacht] Die Darstellung als einfacher Drehzahlregelkreis vereinfacht stark. Reale Systeme synchronisieren Rotation, Tischbewegung, Röhrenstrom (Dosismodulation), Datenerfassung und gegebenenfalls ein EKG-Triggersignal.\n\n## Gantrys in weiteren Modalitäten\n\n### Linearbeschleuniger\n\nBeim [[linearbeschleuniger|medizinischen Linearbeschleuniger]] trägt die Gantry die Beschleunigerstruktur, den Strahlerkopf mit Target, Filtern, Monitorkammern und Multi-Leaf-[[kollimator|Kollimator]] sowie meist eine Bildgebungseinrichtung. Sie rotiert langsam (typischerweise höchstens etwa eine Umdrehung pro Minute; herstellerabhängig) um den **Isozentrum** genannten Punkt, in dem sich Gantry-, Kollimator- und Tischdrehachse schneiden. Die mechanische Genauigkeit des Isozentrums ist eine Kerngröße der Qualitätssicherung [@krieger-strahlungsquellen-2018].\n\n### Partikeltherapie\n\nIn der Protonen- und Ionentherapie lenken drehbare Gantrys mit großen Ablenkmagneten den Strahl aus verschiedenen Richtungen auf den Patienten. Diese Konstruktionen sind wesentlich größer und schwerer als Gantrys der Photonentherapie.\n\n### PET/CT und MRT\n\nBei [[pet-ct|PET/CT]] sind CT-Gantry und ringförmiger PET-Detektor hintereinander in einem Gehäuse angeordnet. Beim [[mrt|MRT]] rotiert nichts; dort bezeichnet „Gantry“ das Gehäuse mit [[supraleitender-magnet|Magnet]], [[gradientenspule|Gradientenspulen]] und Körper-[[hf-spule|HF-Spule]].\n\n## Anwendung in Geräten\n\n| Gerät | Gantry-Merkmal |\n|---|---|\n| [[computertomograph]] | schnelle kontinuierliche Rotation, Schleifring, ggf. Tilt |\n| [[pet-ct]] | kombinierte Gantry, gemeinsamer Patiententisch |\n| [[linearbeschleuniger]] | langsame isozentrische Rotation, hohe Positioniergenauigkeit |\n| [[dvt]] | kompakte Gantry, je nach System Teil- oder Vollumlauf (etwa 180–360°) pro Aufnahme |\n| [[mrt]] | stationäres Magnetgehäuse mit Patientenöffnung |\n| [[angiographieanlage]], [[c-bogen]] | statt einer Ringgantry ein C-förmiger Bogen; Rotationsangiographie erzeugt CT-ähnliche Volumendaten |\n\n## Sicherheit\n\n* **Kollisionsschutz**: Kontaktleisten, kapazitive Sensoren oder Lichtschranken stoppen Gantry- und Tischbewegungen bei Berührung.\n* **Not-Halt**-Taster an Gantry und Bedienpult unterbrechen Bewegung und Strahlung.\n* **Laserpositionierlichter** dienen der Patientenlagerung; Laserklasse und Warnhinweise sind zu beachten.\n\n> [!belegt] Die besonderen Sicherheitsanforderungen an CT-Röntgeneinrichtungen – einschließlich mechanischer Gefährdungen und Dosisanzeige – regelt die IEC 60601-2-44 [@iec-60601-2-44].\n\n## Instandhaltung\n\n> [!praxis] Typische Wartungspunkte an CT-Gantrys sind Reinigung des Schleifrings und Wechsel der Kohlebürsten, Kontrolle der Lager auf Geräusche und Spiel, Prüfung der Kühlkreisläufe und Filter, Kontrolle von Kabeln, Kollisionssensoren und Not-Halt-Funktion. Kohlenstaub aus dem Bürstenabrieb kann Isolationsfehler und Kontaktstörungen verursachen. Art und Intervall legt der Hersteller fest; die Arbeiten erfolgen durch autorisiertes Servicepersonal.\n\nDie Bildqualität wird mit Prüfkörpern im Rahmen der [[konstanzpruefung|Konstanzprüfung]] überwacht [@iec-61223-2-6]. Mechanische Probleme der Gantry äußern sich häufig als Ring- oder Streifenartefakte (siehe [[bildartefakte]]).\n",
+  "related": [
+    "computertomograph",
+    "linearbeschleuniger",
+    "roentgenroehre",
+    "roentgendetektor",
+    "kollimator",
+    "elektromotor",
+    "drehzahlregelung",
+    "regelkreis",
+    "pet-ct",
+    "bildartefakte"
+  ],
+  "paths": [
+    [
+      "computertomograph",
+      "gantry",
+      "elektromotor",
+      "drehzahlregelung",
+      "regelkreis"
+    ],
+    [
+      "computertomograph",
+      "gantry",
+      "roentgenroehre",
+      "roentgendetektor"
+    ]
+  ],
+  "sources": [
+    "kalender-2011",
+    "hsieh-2015",
+    "kalender-1990",
+    "krieger-strahlungsquellen-2018",
+    "iec-60601-2-44",
+    "iec-61223-2-6",
+    "oppelt-2005"
+  ],
+  "diagram": {
+    "title": "Funktionsschema einer CT-Gantry",
+    "caption": "Energie- und Datenfluss zwischen stationärem und rotierendem Teil über den Schleifring.",
+    "width": 960,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "netz",
+        "label": "Netzanschluss /\nEnergieverteilung",
+        "kind": "source",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "id": "ring",
+        "label": "Schleifring",
+        "kind": "process",
+        "x": 290,
+        "y": 90
+      },
+      {
+        "id": "gen",
+        "label": "HV-Generator\n(rotierend)",
+        "ref": "hochspannungserzeugung",
+        "kind": "process",
+        "x": 490,
+        "y": 90
+      },
+      {
+        "id": "roehre",
+        "label": "Röntgenröhre",
+        "ref": "roentgenroehre",
+        "kind": "source",
+        "x": 690,
+        "y": 90
+      },
+      {
+        "id": "det",
+        "label": "Detektor + DAS",
+        "ref": "roentgendetektor",
+        "kind": "sensor",
+        "x": 870,
+        "y": 200
+      },
+      {
+        "id": "pc",
+        "label": "Bildrechner\n(Rekonstruktion)",
+        "kind": "output",
+        "x": 490,
+        "y": 280,
+        "w": 160
+      },
+      {
+        "id": "mot",
+        "label": "Gantry-Antrieb",
+        "ref": "elektromotor",
+        "kind": "actuator",
+        "x": 90,
+        "y": 230
+      },
+      {
+        "id": "regler",
+        "label": "Drehzahl-\nregelung",
+        "ref": "drehzahlregelung",
+        "kind": "control",
+        "x": 290,
+        "y": 230
+      }
+    ],
+    "edges": [
+      {
+        "from": "netz",
+        "to": "ring",
+        "kind": "power"
+      },
+      {
+        "from": "ring",
+        "to": "gen",
+        "kind": "power"
+      },
+      {
+        "from": "gen",
+        "to": "roehre",
+        "kind": "power",
+        "label": "kV, mA"
+      },
+      {
+        "from": "roehre",
+        "to": "det",
+        "kind": "energy",
+        "label": "Strahlung"
+      },
+      {
+        "from": "det",
+        "to": "pc",
+        "kind": "data",
+        "label": "Projektionen"
+      },
+      {
+        "from": "regler",
+        "to": "mot",
+        "kind": "signal",
+        "label": "Stellgröße"
+      },
+      {
+        "from": "mot",
+        "to": "ring",
+        "kind": "energy",
+        "label": "Rotation"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "iec-62366-1",
+  "type": "standard",
+  "title": "IEC 62366-1",
+  "code": "IEC 62366-1",
+  "kind": "norm",
+  "fullTitle": "Medizinprodukte – Teil 1: Anwendung der Gebrauchstauglichkeit auf Medizinprodukte",
+  "scope": "Legt einen Prozess fest, mit dem Hersteller die Gebrauchstauglichkeit eines Medizinprodukts im Hinblick auf die Sicherheit analysieren, spezifizieren, entwickeln und bewerten.",
+  "aliases": [
+    "DIN EN 62366-1",
+    "EN 62366-1",
+    "Usability Engineering",
+    "Gebrauchstauglichkeitsnorm",
+    "62366-1"
+  ],
+  "category": "normen",
+  "summary": "IEC 62366-1 beschreibt das Usability-Engineering für alle Medizinprodukte. Im Mittelpunkt stehen gefährdungsbezogene Nutzungsszenarien, die Gestaltung der Benutzerschnittstelle sowie formative und summative Evaluierung mit repräsentativen Anwendern.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 62366-1** ist die produktübergreifende Prozessnorm für die [[gebrauchstauglichkeit|Gebrauchstauglichkeit (Usability)]] von [[medizinprodukt|Medizinprodukten]] [@iec-62366-1]. Sie gilt – anders als die [[iec-60601-1-6|Ergänzungsnorm IEC 60601-1-6]] – nicht nur für elektrische Geräte, sondern auch für passive Produkte wie Spritzen oder Katheter und für [[software-medizinprodukt|Software]].\n\nGegenstand ist ausschließlich die Gebrauchstauglichkeit **im Hinblick auf die Sicherheit**. Komfort, Effizienz oder Zufriedenheit sind erwünscht, aber nicht der Fokus. Begleitend gibt es den technischen Bericht IEC/TR 62366-2 mit Anleitungen und Methoden.\n\n## Zentrale Konzepte und Anforderungen\n\n### Arten der Benutzung\n\n| Kategorie | Beschreibung | Umgang |\n|---|---|---|\n| bestimmungsgemäßer Gebrauch, korrekt | Anwender handelt wie vorgesehen | Ziel der Gestaltung |\n| Benutzungsfehler (*use error*) | unbeabsichtigtes Abweichen, z. B. Verwechseln, Vergessen, Fehlinterpretation | durch Gestaltung minimieren; Teil des [[iso-14971|Risikomanagements]] |\n| bestimmungswidrige Verwendung (*abnormal use*) | bewusste Handlung entgegen der Gebrauchsanweisung, z. B. Überbrücken einer Schutzfunktion | nicht durch Usability-Prozess abgedeckt; ggf. Hinweise in Begleitpapieren |\n\n> [!vereinfacht] Psychologisch werden Benutzungsfehler oft in Wahrnehmungs-, Kognitions- und Handlungsfehler eingeteilt (z. B. Anzeige übersehen, Situation falsch eingeschätzt, falsche Taste gedrückt). Jede Kategorie erfordert andere Gestaltungsmaßnahmen.\n\n### Prozessschritte\n\n1. **Nutzungsspezifikation:** medizinischer Zweck, Patientengruppen, Anwenderprofile, Nutzungsumgebung, Funktionsprinzip.\n2. **Sicherheitsrelevante Merkmale der Benutzerschnittstelle** identifizieren.\n3. **Bekannte oder vorhersehbare Gefährdungen** ermitteln – auch aus Marktdaten ähnlicher Produkte.\n4. **Gefährdungsbezogene Nutzungsszenarien** beschreiben und auswählen, welche summativ bewertet werden.\n5. **Spezifikation der Benutzerschnittstelle**, einschließlich Begleitpapieren und Schulung.\n6. **Evaluierungsplan** erstellen.\n7. **Gestaltung und formative Evaluierung** – iterative Verbesserung, z. B. durch Heuristiken, Walkthroughs, Prototypentests.\n8. **Summative Evaluierung** – Nachweis mit repräsentativen Anwendern unter realitätsnahen Bedingungen, dass die Benutzerschnittstelle sicher genutzt werden kann; beobachtete Benutzungsfehler werden auf Ursachen und Risiken analysiert.\n\nAlle Ergebnisse gehören in die **Gebrauchstauglichkeitsakte**.\n\n> [!beispiel] Ein [[defibrillator|AED]] wird von Laien unter Stress bedient. Gefährdungsbezogene Szenarien sind z. B. falsche Platzierung der [[defibrillationselektroden|Elektroden]] oder Berühren des Patienten während der Schockabgabe. Gestaltungsmaßnahmen sind Sprachanweisungen, Piktogramme auf den Elektroden und eine automatische Rhythmusanalyse vor Freigabe des Schocks.\n\n### Benutzerschnittstelle\n\nDie Benutzerschnittstelle umfasst alle Mittel der Interaktion: [[display-bedienoberflaeche|Anzeigen und Bedienelemente]], Anschlüsse und Steckverbinder, Verpackung, Kennzeichnung, [[alarmsystem|Alarmsignale]], Gebrauchsanweisung und Schulung.\n\n## Bezug zu anderen Normen\n\n| Norm | Bezug |\n|---|---|\n| [[iec-60601-1-6]] | wendet den Prozess der IEC 62366-1 auf ME-Geräte an (Ergänzungsnorm der 60601-Familie) |\n| [[iec-60601-1]] | Basisnorm, die über 60601-1-6 auf diesen Prozess verweist |\n| [[iec-60601-1-8]] | Alarmsignale als Teil der Benutzerschnittstelle |\n| [[iec-60601-1-11]] | Laienanwender in häuslicher Umgebung |\n| [[iso-14971]] | Risiken aus Benutzungsfehlern fließen in das Risikomanagement |\n| [[iec-62304]] | Softwareentwicklung der Benutzeroberfläche |\n| [[iso-13485]] | Usability als Teil von Design und Entwicklung |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** erfüllen damit die Forderung der [[mdr|MDR]] (Anhang I), Risiken durch Anwendungsfehler aufgrund ergonomischer Merkmale und der Nutzungsumgebung so weit wie möglich zu verringern und Kenntnisse, Ausbildung und ggf. Gesundheitszustand der Anwender zu berücksichtigen [@mdr-2017].\n\n**Betreiber** können Usability bei der Beschaffung bewerten, etwa durch Praxistests mit dem späteren Personal. Wiederkehrende [[anwendungsfehler|Anwendungsfehler]] sind ein Hinweis auf Gestaltungsprobleme und sollten dem Hersteller bzw. im Rahmen der [[vigilanz]] gemeldet werden. Die [[einweisung|Einweisung]] ersetzt keine gute Gestaltung, ergänzt sie aber.\n\n> [!praxis] Viele „Bedienfehler“ in Vorkommnisberichten sind bei genauer Analyse Gestaltungsfehler: unklare Einheiten, ähnliche Tasten, verwechselbare Anschlüsse. Eine systematische Ursachenanalyse ([[fehlersuche]]) sollte deshalb immer auch die Benutzerschnittstelle betrachten.\n\n## Betroffene Geräte\n\nAlle Medizinprodukte, besonders [[infusionspumpe]], [[spritzenpumpe]], [[pca-pumpe]], [[insulinpumpe]], [[defibrillator]], [[beatmungsgeraet]], [[anaesthesiegeraet]], [[blutzuckermessgeraet]], [[cpap-geraet]], [[dialysegeraet]] und [[op-roboter]].\n",
+  "related": [
+    "gebrauchstauglichkeit",
+    "anwendungsfehler",
+    "iec-60601-1-6",
+    "iso-14971",
+    "display-bedienoberflaeche",
+    "alarmsystem",
+    "einweisung",
+    "patientensicherheit",
+    "defibrillator",
+    "infusionspumpe"
+  ],
+  "sources": [
+    "iec-62366-1",
+    "iec-60601-1-6",
+    "mdr-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

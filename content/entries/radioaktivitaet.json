@@ -1,0 +1,58 @@
+{
+  "id": "radioaktivitaet",
+  "type": "term",
+  "title": "Radioaktivität",
+  "aliases": [
+    "radioaktiver Zerfall",
+    "radioactivity",
+    "radioactive decay",
+    "Aktivität",
+    "Becquerel",
+    "Halbwertszeit",
+    "Zerfallsgesetz",
+    "Radionuklid",
+    "Gammastrahlung",
+    "Betastrahlung",
+    "Alphastrahlung",
+    "Positronenstrahler"
+  ],
+  "category": "physik",
+  "summary": "Radioaktivität ist die spontane Umwandlung instabiler Atomkerne unter Aussendung von Alpha-, Beta- oder Gammastrahlung. Aktivität, Zerfallsgesetz und Halbwertszeit bestimmen, wie Radionuklide in Nuklearmedizin (SPECT, PET) und Brachytherapie eingesetzt und wie sie im Strahlenschutz gehandhabt werden.",
+  "body": "## Grundlagen\n\nAtomkerne bestehen aus Protonen und Neutronen. Nur bestimmte Kombinationen sind stabil; instabile Kerne (**Radionuklide**) wandeln sich spontan in andere Kerne um und geben dabei Energie als Strahlung ab. Henri Becquerel entdeckte 1896 die Strahlung von Uransalzen [@becquerel-1896]; Marie und Pierre Curie prägten kurz darauf den Begriff Radioaktivität.\n\nDie Umwandlung ist ein **Zufallsprozess**: Für einen einzelnen Kern lässt sich nicht vorhersagen, wann er zerfällt, wohl aber für eine große Anzahl die mittlere Zerfallsrate.\n\n## Zerfallsarten\n\n| Zerfallsart | Vorgang im Kern | ausgesandte Strahlung | Reichweite in Gewebe (Größenordnung) |\n|---|---|---|---|\n| α-Zerfall | Kern gibt ⁴He-Kern ab | Alphateilchen (diskrete Energie, einige MeV) | unter 0,1 mm |\n| β⁻-Zerfall | Neutron → Proton + Elektron + Antineutrino | Elektronen (kontinuierliches Spektrum) | mm bis cm |\n| β⁺-Zerfall | Proton → Neutron + Positron + Neutrino | Positronen, danach 2 × 511-keV-Vernichtungsphotonen | Positron: mm |\n| Elektroneneinfang | Kern fängt Hüllenelektron ein | charakteristische Röntgenstrahlung, Auger-Elektronen | – |\n| γ-Übergang / Isomerieübergang | angeregter Kern geht in Grundzustand über | Gammaphotonen (diskrete Energie) | durchdringend, exponentielle Schwächung |\n\nGammastrahlung folgt meist einem Alpha- oder Betazerfall, weil der Tochterkern angeregt zurückbleibt. Ein Sonderfall ist der **metastabile** Zustand, etwa Technetium-99m, der mit messbarer Halbwertszeit in den Grundzustand übergeht [@krieger-strahlenschutz-2019].\n\n## Zerfallsgesetz und Aktivität\n\nDie Zahl der pro Zeit zerfallenden Kerne ist proportional zur Zahl N der vorhandenen Kerne:\n\n`A = −dN/dt = λ · N`   →   `N(t) = N₀ · e^(−λ · t)`\n\n* **Aktivität A** in Becquerel: 1 Bq = 1 Zerfall pro Sekunde. Die alte Einheit Curie entspricht 1 Ci = 3,7 · 10¹⁰ Bq.\n* **Zerfallskonstante λ** in s⁻¹.\n* **Halbwertszeit** `T½ = ln 2 / λ` – die Zeit, nach der die Hälfte der Kerne zerfallen ist.\n\n> [!beispiel] Ein Präparat mit Tc-99m (T½ ≈ 6 h) hat um 8 Uhr eine Aktivität von 800 MBq. Um 14 Uhr sind es noch 400 MBq, um 20 Uhr 200 MBq. Nach zehn Halbwertszeiten ist die Aktivität auf weniger als ein Tausendstel gesunken (2⁻¹⁰ ≈ 0,1 %).\n\nIm Körper wirkt zusätzlich die biologische Ausscheidung. Die **effektive Halbwertszeit** ergibt sich aus\n\n`1/T_eff = 1/T_phys + 1/T_biol`\n\n> [!vereinfacht] Die Formel setzt eine exponentielle Ausscheidung voraus. Reale Biokinetik verläuft oft mehrphasig; für Dosisabschätzungen werden Kompartimentmodelle verwendet.\n\n## Radionuklide in der Medizin\n\n| Nuklid | Halbwertszeit (ca.) | Strahlung | Einsatz |\n|---|---|---|---|\n| Technetium-99m | 6 h | γ 140 keV | Szintigraphie, SPECT ([[gammakamera]]) |\n| Fluor-18 | 110 min | β⁺ → 511 keV | PET ([[pet-ct]]), z. B. FDG |\n| Iod-131 | 8 d | β⁻ und γ | Radioiodtherapie der Schilddrüse |\n| Iridium-192 | 74 d | γ (mehrere Linien) | HDR-Brachytherapie ([[afterloader]]) |\n| Cobalt-60 | 5,3 a | γ 1,17 und 1,33 MeV | Teletherapie (in Deutschland weitgehend durch Linearbeschleuniger abgelöst), Gamma-Knife-Radiochirurgie, HDR-Brachytherapie |\n\nDie Halbwertszeiten sind gerundete Literaturwerte [@krieger-strahlungsquellen-2018] [@bushberg-2020].\n\nTc-99m wird in der Klinik aus einem **Radionuklidgenerator** gewonnen: Die Mutter Molybdän-99 (T½ rund 66 h) ist an eine Säule gebunden, das Tochternuklid wird täglich mit Kochsalzlösung „gemolken“. F-18 dagegen wird in einem Zyklotron hergestellt und muss wegen seiner kurzen Halbwertszeit innerhalb weniger Stunden zum Anwender gelangen; die Produktionsstätte liegt daher in erreichbarer Nähe.\n\n## Messung\n\nRadioaktivität wird über die ionisierende Wirkung ihrer Strahlung gemessen ([[ionisierende-strahlung]]):\n\n* **Aktivimeter** (Ionisationskammer in Brunnenform) – Bestimmung der Aktivität vor der Applikation; unterliegt regelmäßigen Konstanzprüfungen.\n* **Kontaminationsmonitor** (Proportional- oder Geiger-Müller-Zählrohr) – Prüfung von Händen, Arbeitsflächen und Abfällen.\n* **Szintillationsdetektor** – Kristall (z. B. NaI(Tl) in der Gammakamera, LSO/LYSO bzw. BGO in PET-Detektoren) wandelt Gammaenergie in Lichtblitze, die von Photomultipliern oder SiPMs in elektrische Pulse umgesetzt werden.\n\n> [!praxis] Die Zählrate eines Detektors folgt der **Poisson-Statistik**: Die relative Unsicherheit beträgt etwa 1/√N. Bei 10 000 gezählten Ereignissen sind das rund 1 % – ein Grund, warum nuklearmedizinische Bilder bei kurzen Aufnahmezeiten verrauscht sind ([[messunsicherheit]]).\n\n## Anwendung in Geräten\n\n* [[gammakamera]] (Szintigraphie, SPECT) – Detektion einzelner Gammaquanten mit Kollimator.\n* [[pet-ct]] – Koinzidenzmessung der beiden gegenläufigen 511-keV-Photonen.\n* [[afterloader]] – ferngesteuertes Einfahren eines umschlossenen Ir-192-Strahlers in Applikatoren.\n* [[linearbeschleuniger]] – kein Radionuklid, aber Ersatz der früheren Co-60-Anlagen.\n* [[roentgengeraet]] und [[computertomograph]] erzeugen dagegen **keine Radioaktivität**: Ihre Strahlung endet mit dem Abschalten der Hochspannung.\n\n## Bedeutung in der Medizintechnik und im Strahlenschutz\n\nUmgang mit offenen und umschlossenen radioaktiven Stoffen ist nach [[strlschg|Strahlenschutzgesetz]] und [@strlschv] genehmigungspflichtig. Für Technikerinnen und Techniker bedeutet das: Arbeiten in nuklearmedizinischen Kontrollbereichen nur nach Unterweisung und mit Dosimeter, Kontaminationskontrolle beim Verlassen, Wartung von Afterloadern nur durch autorisiertes Fachpersonal und in Abstimmung mit dem Strahlenschutzbeauftragten ([[strahlenschutz]]).\n\n> [!warnung] Ein umschlossener Strahler im [[afterloader|Afterloader]] bleibt auch bei abgeschaltetem Gerät aktiv. Bei Störungen (Strahler fährt nicht zurück) gelten ausschließlich die Notfallanweisungen des Betreibers und Herstellers.\n\n> [!belegt] Grundprinzipien des Strahlenschutzes – Rechtfertigung, Optimierung, Dosisbegrenzung – sind im StrlSchG verankert und folgen den Empfehlungen der ICRP [@strlschg] [@icrp-103].",
+  "related": [
+    "ionisierende-strahlung",
+    "roentgenstrahlung",
+    "strahlenschutz",
+    "gammakamera",
+    "pet-ct",
+    "afterloader",
+    "nuklearmedizin",
+    "strahlentherapie",
+    "strlschg",
+    "messunsicherheit"
+  ],
+  "paths": [
+    [
+      "pet-ct",
+      "radioaktivitaet",
+      "ionisierende-strahlung",
+      "strahlenschutz"
+    ],
+    [
+      "afterloader",
+      "radioaktivitaet",
+      "strahlentherapie"
+    ]
+  ],
+  "sources": [
+    "becquerel-1896",
+    "krieger-strahlenschutz-2019",
+    "krieger-strahlungsquellen-2018",
+    "bushberg-2020",
+    "strlschg",
+    "strlschv",
+    "icrp-103"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

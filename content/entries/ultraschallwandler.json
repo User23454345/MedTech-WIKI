@@ -1,0 +1,157 @@
+{
+  "id": "ultraschallwandler",
+  "type": "term",
+  "title": "Ultraschallwandler (Schallkopf)",
+  "aliases": [
+    "Schallkopf",
+    "Ultraschallsonde",
+    "Transducer",
+    "Ultrasound probe",
+    "Piezowandler",
+    "Linear-Array",
+    "Phased-Array",
+    "Konvex-Array"
+  ],
+  "category": "komponenten",
+  "summary": "Piezoelektrische Baugruppe, die elektrische Impulse in Ultraschall umsetzt und die Echos aus dem Gewebe wieder in elektrische Signale wandelt. Aufbau aus Linse, Anpassungsschichten, Piezoelementen und Dämpfungskörper; Bauform und Frequenz bestimmen Auflösung und Eindringtiefe.",
+  "body": "## Begriff\n\nDer **Ultraschallwandler** (Schallkopf, Sonde, englisch *transducer* oder *probe*) ist die Baugruppe eines [[ultraschallgeraet|Ultraschallgeräts]], die elektrische Energie in mechanische Schallwellen umsetzt und die zurückkehrenden Echos wieder in elektrische Signale verwandelt. Er arbeitet also sowohl als Sender (Aktor) als auch als Empfänger (Sensor). Grundlage ist der [[piezoelektrischer-effekt|piezoelektrische Effekt]]: Ein Piezokristall verformt sich beim Anlegen einer Spannung (inverser Effekt) und erzeugt bei mechanischer Verformung eine Ladung (direkter Effekt) [@szabo-2014] [@kramme-2017].\n\nOb ein Gerät gute Bilder liefert, entscheidet sich zu einem großen Teil im Schallkopf: Mittenfrequenz, Bandbreite, Elementzahl und Fokussierung bestimmen Eindringtiefe und Auflösung.\n\n## Aufbau\n\nEin moderner Array-Schallkopf ist ein Schichtsystem. Von der Patientenseite aus betrachtet:\n\n| Schicht | Aufgabe |\n|---|---|\n| Akustische Linse (meist Silikon) | Fokussiert in der Elevationsebene (senkrecht zur Bildebene), schützt die Elemente |\n| Anpassungsschicht(en) (*matching layer*) | Verringern den Impedanzsprung zwischen Keramik und Gewebe |\n| Piezoelemente | Meist Blei-Zirkonat-Titanat (PZT) oder Piezokomposit, in viele schmale Elemente unterteilt |\n| Dämpfungskörper (*backing*) | Bedämpft das Nachschwingen, verkürzt den Impuls und verbessert so die axiale Auflösung |\n| Elektroden, Flexleiterplatte, Kabel | Verbinden jedes Element einzeln mit dem Sende- und Empfangsteil des Geräts |\n\nBei einem Array mit z. B. 128 oder mehr Elementen führt das Kabel entsprechend viele Koaxialleitungen; bei manchen Bauformen sitzen Teile der Strahlformungselektronik (Multiplexer, Vorverstärker) bereits im Schallkopf.\n\n### Resonanzfrequenz\n\nEin Piezoplättchen schwingt am stärksten, wenn seine Dicke d einer halben Wellenlänge im Piezomaterial entspricht:\n\n`f₀ = c_P / (2 · d)`\n\nmit der Schallgeschwindigkeit im Piezomaterial c_P. Höhere Frequenzen verlangen also dünnere Elemente [@szabo-2014].\n\n> [!beispiel] Mit c_P ≈ 4 000 m/s ergibt sich für f₀ = 5 MHz eine Elementdicke d = 4 000 / (2 · 5 · 10⁶) m = 0,4 mm. Für 2 MHz wären es 1 mm. Die Werte sind didaktisch gerundet; reale Materialien und Bauformen weichen ab.\n\n### Impedanzanpassung\n\nDie akustische Impedanz `Z = ρ · c` (Dichte mal [[schallwellen|Schallgeschwindigkeit]]) liegt bei PZT-Keramik in der Größenordnung von etwa 30 MRayl und damit rund zwanzigmal über der von Weichgewebe (ca. 1,5 MRayl). An der Grenzfläche würde der größte Teil der Schallintensität reflektiert. Der Intensitäts-Reflexionsgrad für senkrechten Einfall beträgt\n\n`R = ((Z₂ − Z₁) / (Z₂ + Z₁))²`\n\nEine Anpassungsschicht der Dicke λ/4 mit der Impedanz `Z_A ≈ √(Z_P · Z_G)` verbessert die Übertragung erheblich; mehrere Schichten erweitern zusätzlich die Bandbreite [@szabo-2014]. Aus demselben Grund ist **Ultraschallgel** nötig: Bereits eine dünne Luftschicht zwischen Schallkopf und Haut reflektiert den Schall nahezu vollständig.\n\n> [!vereinfacht] Die Formel für R gilt für ebene Wellen und senkrechten Einfall. In der Praxis sind Schallfelder gebündelt und breitbandig; die Anpassungsschichten werden numerisch optimiert.\n\n## Bauformen\n\n| Bauform | Prinzip | Typischer Einsatz |\n|---|---|---|\n| Linear-Array | Elemente in einer Reihe, Gruppen werden nacheinander angesteuert; Rechteckbild | Gefäße, Schilddrüse, Bewegungsapparat, Gefäßpunktion |\n| Konvex-Array (Curved) | Elemente auf gekrümmter Fläche; Sektorförmiges Bild mit breitem Nahfeld | Abdomen, Geburtshilfe |\n| Phased-Array | Kleine Auflagefläche, Strahl wird durch Zeitverzögerung geschwenkt | Echokardiographie durch Rippenzwischenräume |\n| Matrix-Array (2D) | Elemente in Zeilen und Spalten | 3D-/4D-Bildgebung, Echokardiographie |\n| Endokavitäre und TEE-Sonden | Miniaturisierte Arrays an Schaft bzw. Gastroskop | Gynäkologie, Urologie, transösophageale Echokardiographie |\n\nTypische Mittenfrequenzen liegen bei tiefen Organen im unteren Megahertzbereich und bei oberflächlichen Strukturen deutlich darüber. Grund ist die frequenzabhängige Dämpfung im Gewebe: Höhere Frequenz bedeutet bessere Auflösung, aber geringere Eindringtiefe [@bushberg-2020].\n\n## Strahlformung\n\nBeim Array-Wandler wird der Schallstrahl elektronisch geformt: Die Sendeimpulse der einzelnen Elemente werden so verzögert, dass sich die Wellenfronten in einem gewünschten Punkt konstruktiv überlagern (**elektronische Fokussierung**) oder in eine gewünschte Richtung laufen (**Strahlschwenkung**, *steering*). Beim Empfang werden die Echos der Elemente entsprechend verzögert und aufsummiert (*delay and sum*), wobei der Fokus dynamisch mit der Tiefe nachgeführt wird. Die Signale durchlaufen danach eine tiefenabhängige Verstärkung (TGC), Filterung und Digitalisierung ([[analog-digital-wandler]]) [@szabo-2014].\n\n> [!belegt] Die axiale Auflösung wird im Wesentlichen durch die Impulslänge bestimmt (etwa die halbe räumliche Pulslänge), die laterale Auflösung durch die Strahlbreite im Fokus. Breitbandige, gut bedämpfte Wandler liefern kurze Impulse und damit eine feine axiale Auflösung [@bushberg-2020].\n\nFür die [[doppler-effekt|Doppler-Verfahren]] sendet der Wandler längere Impulsfolgen; die Frequenzverschiebung `Δf = 2 · f₀ · v · cos α / c` wird aus den Empfangssignalen geschätzt.\n\n## Sicherheit und Normen\n\nDer Schallkopf ist das [[anwendungsteile|Anwendungsteil]] des Ultraschallgeräts. Die Partikularnorm [[iec-60601-2-37|IEC 60601-2-37]] regelt unter anderem die Anzeige von thermischem Index (TI) und mechanischem Index (MI) sowie Temperaturgrenzen an der Wandleroberfläche; die Messverfahren für TI und MI beschreibt IEC 62359 [@iec-60601-2-37] [@iec-62359]. Endokavitäre und TEE-Sonden haben direkten Schleimhautkontakt und unterliegen erhöhten Anforderungen an [[aufbereitung]] und [[desinfektion]] [@krinko-bfarm-2012].\n\n> [!warnung] Beschädigte Linsen, Risse im Gehäuse oder angescheuerte Kabel können zu Undichtigkeit und damit zu erhöhtem [[ableitstrom|Ableitstrom]] oder Hygienerisiken führen. Solche Schallköpfe sind außer Betrieb zu nehmen und durch befugtes Fachpersonal zu prüfen.\n\n## Prüfung und typische Fehler\n\n| Befund | Mögliche Ursache | Hinweis |\n|---|---|---|\n| Senkrechte dunkle Streifen im Bild | Ausgefallene Elemente oder Kabeladern | Elementtest mit geeignetem Sondenprüfgerät oder Gerätediagnose |\n| Bildrauschen, Störlinien | Kabel- oder Steckerschaden, [[emv-stoerung|EMV-Störung]] | Steckverbinder und Umgebung prüfen |\n| Ablösung oder Blasen in der Linse | Mechanische Belastung, ungeeignete Desinfektionsmittel | Nur vom Hersteller freigegebene Mittel verwenden |\n| Fehlende Erkennung durch das Gerät | Steckerkontakte, Kodierung | Kontakte sichten, ggf. Instandsetzung |\n\nBei der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] nach [[iec-62353|IEC 62353]] wird der Schallkopf als Anwendungsteil in die Patientenableitstrommessung einbezogen [@iec-62353]. Bildqualitätsprüfungen (Eindringtiefe, Auflösung, Ausfall einzelner Elemente) erfolgen mit Gewebephantomen; auffällige [[bildartefakte|Bildartefakte]] sind dabei ein wichtiger Ausgangspunkt der [[fehlersuche|Fehlersuche]].\n\n## Anwendung in Geräten\n\n| Gerät | Rolle des Wandlers |\n|---|---|\n| [[ultraschallgeraet]] | Bildgebung im B-Bild-, M-Mode- und Doppler-Betrieb |\n| [[ctg]] | Doppler-Wandler zur Ableitung der fetalen Herztöne |\n| [[ultraschalltherapiegeraet]] | Leistungsschallkopf zur Erwärmung von Gewebe |\n| [[lithotripter]] | Ortung der Steine (Ultraschall-Ortung bauartabhängig); einige Systeme nutzen piezoelektrische Stoßwellenquellen |\n| [[ultraschalldissektor]] | Antrieb des schwingenden Instruments – je nach Bauart piezoelektrisch oder magnetostriktiv |\n| [[phakoemulsifikation]] | Piezoelektrisch angetriebenes Handstück zur Linsenzertrümmerung |\n| [[luftblasendetektor]] | Ultraschall-Sender und -Empfänger erkennen Luft im Schlauch von [[infusionspumpe|Infusionspumpen]] und [[dialysegeraet|Dialysegeräten]] |\n\n## Bedeutung in der Medizintechnik\n\nDer Ultraschallwandler verbindet [[physik]] und [[sensorik]]: Schallausbreitung, Piezoelektrizität und Signalverarbeitung greifen unmittelbar ineinander. Weil Schallköpfe ständig bewegt, gereinigt und desinfiziert werden, gehören sie zu den am häufigsten reparierten Baugruppen eines Ultraschallsystems. Wer den Schichtaufbau kennt, kann Bildfehler gezielt einer Ursache zuordnen [@kramme-2017].\n",
+  "related": [
+    "ultraschallgeraet",
+    "piezoelektrischer-effekt",
+    "schallwellen",
+    "doppler-effekt",
+    "iec-60601-2-37",
+    "anwendungsteile",
+    "ctg",
+    "luftblasendetektor",
+    "ultraschalltherapiegeraet",
+    "bildartefakte",
+    "aufbereitung"
+  ],
+  "paths": [
+    [
+      "ultraschallgeraet",
+      "ultraschallwandler",
+      "piezoelektrischer-effekt",
+      "schallwellen"
+    ],
+    [
+      "ultraschallwandler",
+      "operationsverstaerker",
+      "analog-digital-wandler",
+      "filter"
+    ]
+  ],
+  "sources": [
+    "szabo-2014",
+    "kramme-2017",
+    "bushberg-2020",
+    "iec-60601-2-37",
+    "iec-62359",
+    "iec-62353",
+    "krinko-bfarm-2012"
+  ],
+  "diagram": {
+    "title": "Signalweg im Ultraschallwandler",
+    "caption": "Funktionsschema: Derselbe Wandler sendet Impulse und empfängt Echos; die Strahlformung erfolgt elektronisch im Gerät.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "tx",
+        "label": "Sendeimpuls-\ngenerator",
+        "kind": "control",
+        "x": 100,
+        "y": 80
+      },
+      {
+        "id": "pz",
+        "label": "Piezoelemente\n(Array)",
+        "ref": "piezoelektrischer-effekt",
+        "kind": "actuator",
+        "x": 310,
+        "y": 80
+      },
+      {
+        "id": "ml",
+        "label": "Anpassungs-\nschicht + Linse",
+        "kind": "process",
+        "x": 520,
+        "y": 80
+      },
+      {
+        "id": "pat",
+        "label": "Gewebe",
+        "kind": "patient",
+        "x": 790,
+        "y": 200
+      },
+      {
+        "id": "amp",
+        "label": "Vorverstärker\n+ TGC",
+        "ref": "operationsverstaerker",
+        "kind": "process",
+        "x": 520,
+        "y": 220
+      },
+      {
+        "id": "adc",
+        "label": "A/D-Wandlung",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 310,
+        "y": 220
+      },
+      {
+        "id": "bf",
+        "label": "Strahlformung\n(Delay and Sum)",
+        "kind": "output",
+        "x": 100,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "tx",
+        "to": "pz",
+        "kind": "signal",
+        "label": "HV-Impuls"
+      },
+      {
+        "from": "pz",
+        "to": "ml",
+        "kind": "energy",
+        "label": "Schall"
+      },
+      {
+        "from": "ml",
+        "to": "pat",
+        "kind": "energy"
+      },
+      {
+        "from": "pat",
+        "to": "pz",
+        "kind": "energy",
+        "label": "Echo"
+      },
+      {
+        "from": "pz",
+        "to": "amp",
+        "kind": "signal",
+        "label": "Empfangssignal"
+      },
+      {
+        "from": "amp",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "bf",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

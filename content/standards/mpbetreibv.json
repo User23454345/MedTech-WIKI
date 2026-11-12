@@ -1,0 +1,175 @@
+{
+  "id": "mpbetreibv",
+  "type": "standard",
+  "title": "Medizinprodukte-Betreiberverordnung (MPBetreibV)",
+  "code": "MPBetreibV",
+  "kind": "verordnung",
+  "fullTitle": "Verordnung über das Betreiben und Benutzen von Medizinprodukten (Medizinprodukte-Betreiberverordnung – MPBetreibV) vom 14. Februar 2025",
+  "scope": "Regelt in Deutschland das Betreiben und Anwenden von Medizinprodukten in Gesundheitseinrichtungen und anderen Bereichen, einschließlich Einweisung, Instandhaltung, sicherheits- und messtechnischer Kontrollen sowie Dokumentation.",
+  "aliases": [
+    "MPBetreibV",
+    "Medizinprodukte-Betreiberverordnung",
+    "Betreiberverordnung",
+    "MPBetreibV 2025",
+    "Medical Device Operator Ordinance"
+  ],
+  "category": "recht",
+  "summary": "Die MPBetreibV regelt in Deutschland Betrieb und Anwendung von Medizinprodukten: Einweisung, Instandhaltung, sicherheitstechnische Kontrollen (§ 12, Anlage 1), messtechnische Kontrollen (§ 15, Anlage 2), Medizinproduktebuch und Bestandsverzeichnis. Sie wurde mit Verordnung vom 14. Februar 2025 (BGBl. 2025 I Nr. 38) neu gefasst.",
+  "body": "## Überblick\n\nDie **Medizinprodukte-Betreiberverordnung (MPBetreibV)** regelt in Deutschland, wie [[medizinprodukt|Medizinprodukte]] **betrieben und angewendet** werden dürfen. Während die [[mdr|MDR]] den Hersteller und das Inverkehrbringen adressiert, richtet sich die MPBetreibV an **Betreiber** (z. B. Krankenhausträger, Praxisinhaber, Pflegeeinrichtungen) und **Anwender** (Ärzt:innen, Pflegekräfte, Therapeut:innen). Rechtsgrundlage ist das [[mpdg|MPDG]].\n\nDie Verordnung wurde **2025 vollständig neu gefasst**: Die Neufassung vom 14. Februar 2025 ist im Bundesgesetzblatt 2025 I Nr. 38 verkündet und gilt seit Februar 2025 [@mpbetreibv]. Sie löst die Fassung von 2002 (zuletzt 2017 grundlegend geändert) ab. Im Laufe des Jahres 2025 wurde insbesondere die Anlage 2 durch eine Änderungsverordnung nachträglich korrigiert; maßgeblich ist daher die aktuelle konsolidierte Fassung.\n\n> [!warnung] Durch die Neufassung haben sich **Paragraphennummern verschoben**. Die sicherheitstechnische Kontrolle steht jetzt in **§ 12** (früher § 11), die messtechnische Kontrolle in **§ 15** (früher § 14). Ältere Prüfprotokolle, Lehrbücher und Verfahrensanweisungen mit den alten Nummern sollten aktualisiert werden.\n\n## Zuordnung alt – neu (Auswahl)\n\n| Regelungsgegenstand | Fassung 2002/2017 | Fassung 2025 |\n|---|---|---|\n| [[beauftragter-medizinproduktesicherheit|Beauftragter für Medizinproduktesicherheit]] | § 6 | § 6 |\n| Funktionsprüfung und [[einweisung]] bei Produkten nach Anlage 1 | § 10 | § 11 (Abs. 3) |\n| [[stk|Sicherheitstechnische Kontrolle (STK)]] | § 11 | **§ 12** i. V. m. Anlage 1 |\n| [[medizinproduktebuch|Medizinproduktebuch]] | § 12 | § 13 |\n| [[bestandsverzeichnis|Bestandsverzeichnis]] | § 13 | § 14 |\n| [[mtk|Messtechnische Kontrolle (MTK)]] | § 14 | **§ 15** i. V. m. Anlage 2 |\n\n> [!belegt] Die Zuordnung der Fassung 2025 folgt dem Verordnungstext auf gesetze-im-internet.de [@mpbetreibv]. Maßgeblich ist stets die aktuelle, amtliche Fassung einschließlich späterer Änderungsverordnungen.\n\n## Begriffe: Betreiber und Anwender\n\n* **Betreiber** ist, wer für den Betrieb der Gesundheitseinrichtung verantwortlich ist, in der das Produkt eingesetzt wird – im Krankenhaus also in der Regel der Träger. Er trägt die organisatorische Gesamtverantwortung und delegiert Aufgaben (z. B. an die Medizintechnik-Abteilung).\n* **Anwender** ist, wer ein Medizinprodukt am Patienten einsetzt. Er muss sich vor der Anwendung vom ordnungsgemäßen Zustand überzeugen und die Gebrauchsanweisung beachten.\n\nDie konkreten Pflichten werden im Artikel [[betreiberpflichten]] systematisch dargestellt.\n\n## Allgemeine Anforderungen\n\nMedizinprodukte dürfen nur entsprechend ihrer [[zweckbestimmung|Zweckbestimmung]] und nach den Vorschriften der Verordnung betrieben und angewendet werden. Betreiben und Anwenden dürfen nur Personen, die die dafür erforderliche **Ausbildung oder Kenntnis und Erfahrung** besitzen [@mpbetreibv]. Kombinationen aus mehreren Produkten (z. B. ein [[patientenmonitor|Patientenmonitor]] mit Fremdsensoren) sind nur zulässig, wenn sie nach ihrer Zweckbestimmung und den Herstellerangaben miteinander verwendet werden dürfen und die Sicherheit gewährleistet ist.\n\n### Einweisung\n\nAnwender müssen in die sachgerechte Handhabung eingewiesen sein. Bei Produkten der **Anlage 1** (z. B. Infusionspumpen, Defibrillatoren, HF-Chirurgiegeräte, Beatmungsgeräte) gelten erhöhte Anforderungen: Der Betreiber darf sie erst betreiben, wenn der Hersteller oder eine befugte Person am Betriebsort eine **Funktionsprüfung** durchgeführt und die vom Betreiber beauftragte Person **eingewiesen** hat; nur eingewiesene Personen dürfen das Produkt anwenden [@mpbetreibv]. Details siehe [[einweisung]].\n\n> [!hinweis] Nach Übersichten zur Neufassung ist eine erneute Einweisung auch dann erforderlich, wenn eine Softwareaktualisierung die Bedienung mehr als nur geringfügig verändert. Die genaue Formulierung sollte im Verordnungstext geprüft werden.\n\n## Instandhaltung\n\nDie [[instandhaltung-grundlagen|Instandhaltung]] umfasst nach der Systematik von [[din-31051]] [[wartung]], [[inspektion]], [[instandsetzung]] und Verbesserung. Die MPBetreibV verlangt, dass Betreiber nur Personen, Betriebe oder Einrichtungen beauftragen, die die **Sachkenntnis, Voraussetzungen und Mittel** zur ordnungsgemäßen Ausführung besitzen; Instandhaltungsmaßnahmen sind nach den Angaben des Herstellers durchzuführen [@mpbetreibv]. Nach einer Instandhaltung müssen die für die Sicherheit und Funktionstüchtigkeit wesentlichen Merkmale geprüft werden – in der Praxis etwa über eine [[funktionspruefung|Funktionsprüfung]] und eine [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] nach [[iec-62353]].\n\n## Sicherheitstechnische Kontrolle (STK) – § 12 und Anlage 1\n\nFür die in **Anlage 1** genannten aktiven Medizinprodukte muss der Betreiber **sicherheitstechnische Kontrollen** durchführen lassen [@mpbetreibv]:\n\n* **Frist:** spätestens **alle zwei Jahre** (mit Ablauf des Monats); früher, wenn nach den Einsatzbedingungen Mängel früher zu erwarten sind. Die Kontrollen schließen die Messfunktionen ein.\n* **Umfang:** nach den allgemein anerkannten Regeln der Technik, typischerweise Sichtprüfung, Messung von [[schutzleiterwiderstand|Schutzleiterwiderstand]], [[isolationswiderstand|Isolationswiderstand]] und [[ableitstrommessung|Ableitströmen]] sowie Funktionsprüfung.\n* **Durchführende:** nur Personen, die die Voraussetzungen der Verordnung erfüllen (Ausbildung, Kenntnisse, Erfahrung, Weisungsfreiheit hinsichtlich der Prüfung, geeignete [[pruefgeraete|Prüfmittel]]).\n* **Dokumentation:** Protokoll mit Datum und Ergebnis; Eintrag ins Medizinproduktebuch.\n\n> [!vereinfacht] Grob gilt: Anlage 1 erfasst aktive Produkte, bei denen ein Ausfall oder Fehler unmittelbar zu einer Gefährdung führen kann – z. B. Geräte, die Energie an den Patienten abgeben oder Vitalfunktionen unterstützen. Die vollständige, abschließende Liste steht in der Anlage selbst.\n\nNach der aus der Fassung von 2017 bekannten Systematik umfasst Anlage 1 u. a. Geräte zur Reizstrom- und Defibrillationstherapie, zur intrakardialen Messung, zur Koagulation bzw. Gewebezerstörung (HF-Chirurgie, Lithotripsie), zur Einbringung von Flüssigkeiten in den Blutkreislauf unter Druck, zur maschinellen Beatmung, zur MR-Bildgebung, zur Druckkammer- und Hypothermietherapie sowie Säuglingsinkubatoren und externe aktive Komponenten aktiver Implantate. Typische Anlage-1-Geräte in der Klinik sind damit der [[defibrillator|Defibrillator]], das [[hf-chirurgiegeraet|HF-Chirurgiegerät]], die [[infusionspumpe|Infusionspumpe]] und [[spritzenpumpe|Spritzenpumpe]], das [[beatmungsgeraet|Beatmungsgerät]], das [[dialysegeraet|Dialysegerät]] und der [[inkubator|Inkubator]]. Ob ein Gerät in der Fassung 2025 erfasst ist, ist stets an der aktuellen Anlage 1 zu prüfen. Ausführlich: [[stk]].\n\n## Messtechnische Kontrolle (MTK) – § 15 und Anlage 2\n\nFür Produkte mit Messfunktion nach **Anlage 2** schreibt die Verordnung **messtechnische Kontrollen** vor. Geprüft wird, ob die **Fehlergrenzen** eingehalten werden – also eine metrologische Prüfung im Sinne der [[kalibrierung]] mit Bewertung gegen zulässige Abweichungen [@mpbetreibv]. Nach bisheriger Systematik gehören dazu u. a. Geräte zur Messung von Hörfähigkeit ([[audiometer|Audiometer]]), Körpertemperatur ([[thermometer|medizinische Thermometer]]), nichtinvasivem Blutdruck ([[nibp-messgeraet|NIBP-Messgeräte]]) und Augeninnendruck ([[tonometer|Tonometer]]) sowie Therapiedosimeter. Fristen und Ausnahmen sind in Anlage 2 festgelegt, die 2025 nachträglich berichtigt wurde. Ausführlich: [[mtk]].\n\n> [!beispiel] Ein oszillometrisches [[nibp-messgeraet|Blutdruckmessgerät]] zeigt bei der MTK an einem Referenzdruck von 200 mmHg einen Wert von 202 mmHg. Ob das zulässig ist, entscheidet die in den Prüfvorschriften festgelegte Fehlergrenze – nicht die subjektive Einschätzung der prüfenden Person. Die Zahlen sind beispielhaft.\n\n## Dokumentation\n\n| Dokument | Inhalt (zusammengefasst) | Rechtsgrundlage 2025 |\n|---|---|---|\n| [[medizinproduktebuch|Medizinproduktebuch]] | für Produkte der Anlagen 1 und 2: Identifikation, Funktionsprüfung und Einweisung, Kontrollen und Instandhaltung, Störungen, Vorkommnismeldungen | § 13 |\n| [[bestandsverzeichnis|Bestandsverzeichnis]] | alle aktiven nichtimplantierbaren Produkte je Betriebsstätte | § 14 |\n| Gebrauchsanweisung | muss für Anwender jederzeit zugänglich sein | – |\n\nDas Medizinproduktebuch ist nach der Außerbetriebnahme noch fünf Jahre aufzubewahren [@mpbetreibv].\n\n## Organisation: Beauftragter für Medizinproduktesicherheit\n\nGesundheitseinrichtungen mit regelmäßig mehr als 20 Beschäftigten müssen nach § 6 eine sachkundige und zuverlässige Person als [[beauftragter-medizinproduktesicherheit|Beauftragten für Medizinproduktesicherheit]] bestimmen, deren Funktions-E-Mail-Adresse bekannt zu machen ist [@mpbetreibv]. Er ist Kontaktstelle für Behörden und Hersteller in Fragen der [[vigilanz|Vigilanz]].\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechniker:innen ist die MPBetreibV die **wichtigste Rechtsnorm des Berufsalltags**. Sie bestimmt\n\n* welche Geräte im [[medizintechnik-management|Medizintechnik-Management]] mit STK- und MTK-Fristen erfasst werden müssen,\n* welche Nachweise bei einer Begehung durch die Landesbehörde vorliegen müssen,\n* wer Prüfungen durchführen darf und mit welchen [[pruefgeraete|Prüfgeräten]],\n* dass die fristgerechte Durchführung von STK und MTK Voraussetzung für den ordnungsgemäßen Weiterbetrieb ist – Geräte mit überschrittener Prüffrist werden in der Praxis gesperrt, bis die Kontrolle nachgeholt ist.\n\nErgänzend gelten für ortsveränderliche elektrische Betriebsmittel die Regeln der [[dguv-vorschrift-3|DGUV Vorschrift 3]] [@dguv-v3] und für Röntgeneinrichtungen die Prüfpflichten aus dem [[strahlenschutz|Strahlenschutzrecht]] ([[konstanzpruefung]]).\n\n> [!praxis] Bewährt hat sich, in der Gerätedatenbank für jeden Gerätetyp die Rechtsgrundlage (z. B. „STK nach § 12 MPBetreibV i. V. m. Anlage 1“), die Herstellerfrist und die zuletzt gültige Prüfanweisung zu hinterlegen. So lassen sich auch Änderungen wie die Neufassung 2025 zentral nachziehen.\n",
+  "related": [
+    "betreiberpflichten",
+    "einweisung",
+    "beauftragter-medizinproduktesicherheit",
+    "medizinproduktebuch",
+    "bestandsverzeichnis",
+    "stk",
+    "mtk",
+    "instandhaltung-grundlagen",
+    "elektrische-sicherheitspruefung",
+    "iec-62353",
+    "mpdg",
+    "mdr",
+    "dguv-vorschrift-3",
+    "medizintechnik-management"
+  ],
+  "paths": [
+    [
+      "mdr",
+      "mpdg",
+      "mpbetreibv",
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "ableitstrommessung"
+    ],
+    [
+      "mpbetreibv",
+      "mtk",
+      "kalibrierung",
+      "messunsicherheit"
+    ],
+    [
+      "betreiberpflichten",
+      "mpbetreibv",
+      "medizinproduktebuch",
+      "bestandsverzeichnis"
+    ]
+  ],
+  "sources": [
+    "mpbetreibv",
+    "mpdg",
+    "mdr-2017",
+    "dguv-v3",
+    "din-31051",
+    "iec-62353"
+  ],
+  "diagram": {
+    "title": "Pflichtenkette des Betreibers nach MPBetreibV",
+    "caption": "Vereinfachter Ablauf vom Geräteeingang bis zur wiederkehrenden Prüfung.",
+    "width": 900,
+    "height": 320,
+    "nodes": [
+      {
+        "id": "ein",
+        "label": "Geräteeingang\n(Bestandsverzeichnis)",
+        "ref": "bestandsverzeichnis",
+        "kind": "source",
+        "x": 110,
+        "y": 80,
+        "w": 180
+      },
+      {
+        "id": "fp",
+        "label": "Funktionsprüfung\n& Einweisung",
+        "ref": "einweisung",
+        "kind": "process",
+        "x": 330,
+        "y": 80,
+        "w": 170
+      },
+      {
+        "id": "anw",
+        "label": "Anwendung\nam Patienten",
+        "kind": "patient",
+        "x": 550,
+        "y": 80
+      },
+      {
+        "id": "stk",
+        "label": "STK\n(§ 12, Anlage 1)",
+        "ref": "stk",
+        "kind": "control",
+        "x": 770,
+        "y": 80
+      },
+      {
+        "id": "mtk",
+        "label": "MTK\n(§ 15, Anlage 2)",
+        "ref": "mtk",
+        "kind": "sensor",
+        "x": 770,
+        "y": 240
+      },
+      {
+        "id": "mpb",
+        "label": "Medizinproduktebuch\n(§ 13)",
+        "ref": "medizinproduktebuch",
+        "kind": "output",
+        "x": 520,
+        "y": 240,
+        "w": 180
+      },
+      {
+        "id": "bmps",
+        "label": "Beauftragter\nMP-Sicherheit (§ 6)",
+        "ref": "beauftragter-medizinproduktesicherheit",
+        "kind": "control",
+        "x": 250,
+        "y": 240,
+        "w": 180
+      }
+    ],
+    "edges": [
+      {
+        "from": "ein",
+        "to": "fp",
+        "kind": "data"
+      },
+      {
+        "from": "fp",
+        "to": "anw",
+        "kind": "data",
+        "label": "Freigabe"
+      },
+      {
+        "from": "anw",
+        "to": "stk",
+        "kind": "data",
+        "label": "Frist"
+      },
+      {
+        "from": "anw",
+        "to": "mtk",
+        "kind": "data"
+      },
+      {
+        "from": "stk",
+        "to": "mpb",
+        "kind": "data",
+        "label": "Protokoll"
+      },
+      {
+        "from": "mtk",
+        "to": "mpb",
+        "kind": "data"
+      },
+      {
+        "from": "anw",
+        "to": "bmps",
+        "kind": "signal",
+        "label": "Vorkommnis"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-12"
+}

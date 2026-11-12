@@ -1,0 +1,63 @@
+{
+  "id": "fresenius-medical-care",
+  "type": "manufacturer",
+  "title": "Fresenius Medical Care",
+  "aliases": [
+    "Fresenius Medical Care AG",
+    "FMC",
+    "FME",
+    "NxStage",
+    "Xenios"
+  ],
+  "category": "hersteller",
+  "summary": "Die Fresenius Medical Care AG mit Sitz in Bad Homburg vor der Höhe ist der weltweit größte Anbieter von Dialyseprodukten und Dialysedienstleistungen. Sie entwickelt und fertigt Dialysegeräte, Dialysatoren und Verbrauchsmaterial und betreibt ein großes Netz von Dialysezentren.",
+  "headquarters": "Bad Homburg vor der Höhe, Deutschland",
+  "founded": "1996",
+  "website": "https://www.freseniusmedicalcare.com/",
+  "productLines": [
+    {
+      "device": "dialysegeraet",
+      "models": [
+        "6008 CAREsystem",
+        "5008S CorDiax",
+        "4008 S",
+        "NxStage System One"
+      ],
+      "note": "NxStage System One für die Heimhämodialyse."
+    },
+    {
+      "device": "crrt-geraet",
+      "models": [
+        "multiFiltratePRO"
+      ]
+    },
+    {
+      "device": "ecmo",
+      "models": [
+        "Novalung"
+      ],
+      "note": "Über die Tochter Xenios."
+    }
+  ],
+  "body": "## Überblick\n\nDie **Fresenius Medical Care AG** (FMC) mit Sitz in Bad Homburg vor der Höhe ist auf die Versorgung von Patientinnen und Patienten mit chronischem Nierenversagen spezialisiert [@fresenius-medical-care-web]. Das Unternehmen ist vertikal integriert: Es entwickelt und produziert [[dialysegeraet|Dialysegeräte]], [[dialysator|Dialysatoren]], Konzentrate und Schlauchsysteme und betreibt zugleich weltweit Dialysezentren.\n\n## Geschichte in Stichpunkten\n\n* **Ursprung:** Die Muttergesellschaft Fresenius wurde 1912 von dem Apotheker Eduard Fresenius als pharmazeutisches Unternehmen aus der traditionsreichen Hirsch-Apotheke in Frankfurt am Main heraus gegründet; ab den 1960er-/1970er-Jahren baut Fresenius ein Dialysegeschäft auf.\n* **Ende der 1970er-Jahre:** Eigene Dialysegeräte der Baureihe 2008, Vorläufer der späteren 4008-Generation.\n* **1980er-Jahre:** Fertigung von Dialysatoren mit synthetischen Polysulfon-Membranen.\n* **1996:** Zusammenschluss des Dialysegeschäfts von Fresenius mit der US-amerikanischen National Medical Care zur Fresenius Medical Care.\n* **2016:** Übernahme von Xenios (extrakorporale Herz- und Lungenunterstützung, Marke Novalung).\n* **2019:** Übernahme von NxStage (Heimdialyse).\n* **2023:** Umwandlung der Rechtsform von einer KGaA in eine AG; Fresenius SE bleibt Ankeraktionär, konsolidiert FMC aber nicht mehr.\n\n## Geschäftsbereiche\n\n| Segment | Inhalte |\n|---|---|\n| Care Delivery | Betrieb von Dialysezentren und weitere Versorgungsleistungen |\n| Care Enablement | Entwicklung, Herstellung und Vertrieb von Dialysegeräten, Dialysatoren, Verbrauchsmaterial und [[crrt-geraet|Akutdialysesystemen]] |\n\n## Bedeutung für die Medizintechnik\n\nFresenius-Dialysegeräte sind in deutschen Dialysezentren sehr verbreitet. Technisch charakteristisch sind die volumetrische Ultrafiltrationsbilanzierung über **Bilanzkammern** sowie die Online-Hämodiafiltration, bei der Substitutionslösung im Gerät aus Dialysierflüssigkeit über Ultrafilter hergestellt wird [@fmc-6008]. Für die Patientensicherheit zentral sind Schutzsysteme wie [[leitfaehigkeitssensor|Leitfähigkeitsüberwachung]], [[blutleckdetektor|Blutleckdetektor]] und [[luftblasendetektor|Luftdetektor]] [@daugirdas-2015].\n\n> [!vereinfacht] Eine Bilanzkammer besteht aus zwei durch eine flexible Membran getrennten Hälften mit festem Volumen. Weil der Dialysator dadurch in einem geschlossenen Kreislauf stets genau so viel Frischdialysat erhält, wie Altdialysat abgeführt wird, entspricht das von einer separaten Ultrafiltrationspumpe zusätzlich entnommene Volumen dem Flüssigkeitsentzug beim Patienten.\n\n> [!praxis] Dialysegeräte unterliegen der [[stk]] nach [[mpbetreibv]]. Daneben sind Desinfektionsprogramme, Wasseraufbereitung und mikrobiologische Kontrollen der Dialysierflüssigkeit fester Bestandteil der Instandhaltung im Dialysezentrum.\n\n## Einordnung im Markt\n\nIm Bereich der Dialysetechnik konkurriert Fresenius Medical Care vor allem mit [[b-braun]] (Avitum) und Vantive, dem ehemaligen Nierengeschäft von [[baxter]]. Neben der chronischen Hämodialyse ist das Unternehmen auch in der Akutdialyse auf der Intensivstation ([[crrt-geraet]]) und mit der Marke Novalung in der extrakorporalen Lungenunterstützung ([[ecmo]]) tätig.",
+  "related": [
+    "dialysegeraet",
+    "crrt-geraet",
+    "ecmo",
+    "dialysator",
+    "leitfaehigkeitssensor",
+    "blutleckdetektor",
+    "fresenius-kabi",
+    "b-braun",
+    "baxter",
+    "nephrologie",
+    "niere"
+  ],
+  "sources": [
+    "fresenius-medical-care-web",
+    "fmc-6008",
+    "daugirdas-2015"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

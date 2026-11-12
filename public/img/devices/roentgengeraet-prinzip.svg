@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Physikalisches Prinzip der Projektionsradiographie: Röhre, Spektrum, Projektionsgeometrie</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+    <marker id="arrd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b2545"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="22" text-anchor="middle" font-size="15" font-weight="600">Röntgenprinzip – Erzeugung, Spektrum, Projektion (Schema)</text>
+
+  <!-- 1 Röntgenröhre -->
+  <text x="150" y="46" text-anchor="middle" font-size="14" font-weight="600">1  Röntgenröhre</text>
+  <rect x="30" y="76" width="250" height="92" rx="40" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Kathode -->
+  <path d="M60,106 L82,106 L82,144 L60,144" fill="none" stroke="#0b2545" stroke-width="2"/>
+  <path d="M74,118 q4,-4 8,0 q4,4 8,0" fill="none" stroke="#0d9488" stroke-width="2"/>
+  <text x="70" y="70" text-anchor="middle" font-size="13">Glühkathode (−)</text>
+  <!-- Drehanode -->
+  <path d="M200,96 L214,96 L224,152 L210,152 Z" fill="#e6f7f5" stroke="#0b2545" stroke-width="2"/>
+  <rect x="224" y="118" width="40" height="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="236" y="70" text-anchor="middle" font-size="13">Drehanode (+)</text>
+  <!-- Elektronenstrahl -->
+  <line x1="92" y1="120" x2="202" y2="120" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="140" y="112" text-anchor="middle" font-size="13">e⁻ (Röhrenstrom)</text>
+  <!-- Austretende Strahlung -->
+  <g stroke="#14b8a6" stroke-width="1.5">
+    <line x1="206" y1="124" x2="180" y2="200" marker-end="url(#arr)"/>
+    <line x1="206" y1="124" x2="206" y2="200" marker-end="url(#arr)"/>
+    <line x1="206" y1="124" x2="232" y2="200" marker-end="url(#arr)"/>
+  </g>
+  <text x="170" y="196" text-anchor="end" font-size="13">Röntgenstrahlung</text>
+
+  <!-- 2 Spektrum -->
+  <text x="455" y="46" text-anchor="middle" font-size="14" font-weight="600">2  Röntgenspektrum (W-Anode)</text>
+  <line x1="350" y1="190" x2="575" y2="190" stroke="#0b2545" stroke-width="1.5" marker-end="url(#arrd)"/>
+  <line x1="350" y1="190" x2="350" y2="62" stroke="#0b2545" stroke-width="1.5" marker-end="url(#arrd)"/>
+  <text x="530" y="180" font-size="13">E / keV</text>
+  <text x="356" y="66" font-size="13">Intensität</text>
+  <polyline points="368,190 380,160 394,128 410,112 430,110 455,124 482,148 518,190" fill="#e6f7f5" stroke="#0d9488" stroke-width="2"/>
+  <line x1="433" y1="190" x2="433" y2="78" stroke="#0b2545" stroke-width="2"/>
+  <line x1="444" y1="190" x2="444" y2="100" stroke="#0b2545" stroke-width="2"/>
+  <text x="452" y="88" font-size="13">K-Linien</text>
+  <text x="452" y="102" font-size="13">(≈ 59 / 67 keV)</text>
+  <line x1="483" y1="127" x2="466" y2="132" stroke="#0b2545" stroke-width="1"/>
+  <text x="485" y="130" font-size="13">Bremsstrahlung</text>
+  <text x="518" y="205" text-anchor="middle" font-size="13">E_max = e·U_R</text>
+
+  <!-- 3 Projektionsgeometrie -->
+  <text x="300" y="232" text-anchor="middle" font-size="14" font-weight="600">3  Projektion, Vergrößerung, geometrische Unschärfe</text>
+  <!-- Fokus -->
+  <rect x="54" y="298" width="8" height="14" fill="#0d9488"/>
+  <text x="58" y="290" text-anchor="middle" font-size="13">Fokus f</text>
+  <!-- Patient / Absorber -->
+  <rect x="200" y="252" width="60" height="98" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="230" cy="305" r="8" fill="#0b2545"/>
+  <text x="230" y="248" text-anchor="middle" font-size="13">Objekt (μ, d)</text>
+  <!-- Strahlen -->
+  <g stroke="#14b8a6" stroke-width="1">
+    <line x1="62" y1="300" x2="420" y2="327.5"/>
+    <line x1="62" y1="310" x2="420" y2="282.5"/>
+    <line x1="62" y1="300" x2="420" y2="293.6"/>
+    <line x1="62" y1="310" x2="420" y2="316.4"/>
+  </g>
+  <text x="130" y="276" font-size="13">I₀</text>
+  <text x="300" y="276" font-size="13">I</text>
+  <!-- Detektor -->
+  <rect x="420" y="250" width="8" height="110" fill="#0d9488" stroke="#0b2545" stroke-width="1"/>
+  <rect x="420" y="293.6" width="8" height="22.8" fill="#0b2545"/>
+  <path d="M434,282.5 L440,282.5 L440,327.5 L434,327.5" fill="none" stroke="#0b2545" stroke-width="1"/>
+  <text x="434" y="372" text-anchor="middle" font-size="13">Detektor</text>
+  <!-- Bemaßung -->
+  <line x1="58" y1="362" x2="230" y2="362" stroke="#0b2545" stroke-width="1" marker-start="url(#arrd)" marker-end="url(#arrd)"/>
+  <text x="144" y="357" text-anchor="middle" font-size="13">FOA</text>
+  <line x1="58" y1="384" x2="420" y2="384" stroke="#0b2545" stroke-width="1" marker-start="url(#arrd)" marker-end="url(#arrd)"/>
+  <text x="300" y="379" text-anchor="middle" font-size="13">FDA</text>
+  <!-- Formeln -->
+  <text x="450" y="280" font-size="13">V = FDA / FOA</text>
+  <text x="450" y="306" font-size="13">U_g = f · (V − 1)</text>
+  <text x="450" y="332" font-size="13">I = I₀ · e^(−μ·d)</text>
+</svg>

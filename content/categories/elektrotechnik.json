@@ -6,7 +6,29 @@
   "order": 7,
   "icon": "bolt",
   "summary": "Elektrische Grundlagen, Verstärker, Wandler, Regelung, Schutzkonzepte und Datenschnittstellen in medizinischen elektrischen Geräten.",
-  "body": "",
+  "body": "Die meisten Medizingeräte sind **medizinische elektrische Geräte**: Sie werden aus dem Netz oder aus Akkus versorgt, verarbeiten Messsignale elektronisch, steuern Motoren, Ventile und Heizungen über Leistungselektronik und tauschen Daten mit Kliniksystemen aus. Diese Kategorie erklärt die elektrotechnischen Grundlagen dafür – von [[spannung-strom-widerstand|Spannung, Strom und Widerstand]] bis zu Kommunikationsstandards [@tietze-schenk-2019].\n\nEin besonderer Schwerpunkt liegt auf der **elektrischen Sicherheit**. Patienten sind elektrischem Strom gegenüber besonders gefährdet: Elektroden, Katheter und Sonden schaffen leitfähige Verbindungen in den Körper, die Hautbarriere ist teilweise umgangen, und Patienten können sich oft nicht selbst schützen. Schon sehr kleine Ströme, die direkt am Herzen wirken, können Kammerflimmern auslösen (Mikroschock). Die [[iec-60601-1]] begegnet dem mit einem System aus [[schutzklassen]], [[anwendungsteile|Anwendungsteilen]] der Typen B, BF und CF, Grenzwerten für den [[ableitstrom]] und [[galvanische-trennung|galvanischer Trennung]] [@iec-60601-1].\n\n> [!belegt] Für Anwendungsteile vom Typ CF, die für die direkte Anwendung am Herzen vorgesehen sind, begrenzt die IEC 60601-1 den Patientenableitstrom im Normalzustand auf 10 µA [@iec-60601-1].\n\n## Überblick\n\n| Themenfeld | Artikel | Bedeutung im Gerät |\n|---|---|---|\n| Grundlagen | [[spannung-strom-widerstand]] | Ohmsches Gesetz, Leistung, Netzwerke |\n| Analoge Signalverarbeitung | [[operationsverstaerker]], [[instrumentenverstaerker]], [[filter]] | Biosignal- und Sensorverstärkung, Störunterdrückung |\n| Digitalisierung und Steuerung | [[analog-digital-wandler]], [[mikrocontroller]] | Abtastung, Gerätesteuerung, Software |\n| Leistungselektronik und Regelung | [[pwm]], [[drehzahlregelung]], [[regelkreis]], [[hochspannungserzeugung]] | Motoren, Heizungen, Röntgengeneratoren, Defibrillatoren |\n| Elektrische Sicherheit | [[schutzklassen]], [[anwendungsteile]], [[ableitstrom]], [[galvanische-trennung]] | Schutz von Patient und Anwender |\n| Umgebung und Installation | [[emv]], [[medizinisch-genutzte-bereiche]] | Störfestigkeit, Raumgruppen, IT-System |\n| Alarme | [[alarmsystem]] | Priorisierung, Signalisierung, Alarmmanagement |\n| Kommunikation | [[dicom]], [[hl7-fhir]] | Bild- und Datenaustausch mit PACS und KIS |\n\n> [!beispiel] Ein EKG-Eingang zeigt das Zusammenspiel: Der [[instrumentenverstaerker]] unterdrückt die auf beiden Elektroden gleichphasig anliegende 50-Hz-Störung, [[filter]] begrenzen die Bandbreite, ein [[analog-digital-wandler]] tastet das Signal ab, und eine galvanisch getrennte Eingangsstufe hält den Ableitstrom klein. Fehler in dieser Kette äußern sich etwa als [[netzstoerung|Netzbrumm]].\n\n## Bezug zur Praxis\n\nDie Grundlagen dieser Kategorie sind Voraussetzung für die [[elektrische-sicherheitspruefung]] nach [[iec-62353]]: Wer weiß, wozu Schutzleiter, Isolation und Anwendungsteil-Klassifizierung dienen, versteht die Messungen von [[schutzleiterwiderstand]], [[isolationswiderstand]] und [[ableitstrommessung|Ableitströmen]]. Die physiologischen Wirkungen des Stroms beschreibt [[elektrische-stromwirkung]] in der Kategorie [[physik]] auf Grundlage von [[iec-60479-1]].\n\n## Lernpfad-Empfehlung\n\n1. [[spannung-strom-widerstand]] → [[elektrische-stromwirkung]] → [[schutzklassen]] → [[anwendungsteile]] → [[ableitstrom]].\n2. [[operationsverstaerker]] → [[instrumentenverstaerker]] → [[filter]] → [[analog-digital-wandler]].\n3. [[mikrocontroller]] → [[regelkreis]] → [[pwm]] → [[drehzahlregelung]].\n4. [[galvanische-trennung]], [[emv]] und [[medizinisch-genutzte-bereiche]] als Bindeglied zu Installation und Betrieb.\n5. [[alarmsystem]], [[dicom]] und [[hl7-fhir]] für Vernetzung und Bedienung.\n6. Abschließend [[hochspannungserzeugung]] mit Blick auf [[roentgengeraet]] und [[defibrillator]].",
+  "paths": [
+    [
+      "biosignale",
+      "instrumentenverstaerker",
+      "filter",
+      "analog-digital-wandler",
+      "mikrocontroller"
+    ],
+    [
+      "elektrische-stromwirkung",
+      "schutzklassen",
+      "anwendungsteile",
+      "ableitstrom",
+      "ableitstrommessung"
+    ]
+  ],
+  "sources": [
+    "tietze-schenk-2019",
+    "horowitz-hill-2015",
+    "webster-2010",
+    "iec-60601-1"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

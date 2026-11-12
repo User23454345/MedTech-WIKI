@@ -1,0 +1,64 @@
+{
+  "id": "diskonnektion",
+  "type": "fault",
+  "title": "Diskonnektion",
+  "aliases": [
+    "Diskonnektionsalarm",
+    "Disconnect",
+    "Patient diskonnektiert",
+    "Schlauchdiskonnektion",
+    "Nadeldiskonnektion"
+  ],
+  "category": "fehler",
+  "summary": "Unbeabsichtigte Trennung einer Verbindung zwischen Gerät und Patient, etwa des Beatmungsschlauchs vom Tubus oder einer Blutleitung von der Kanüle. Sie gehört zu den gefährlichsten Ereignissen in der Intensiv- und Anästhesiemedizin und wird indirekt über Druck-, Volumen- oder CO₂-Abfall erkannt.",
+  "devices": [
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "transportbeatmungsgeraet",
+    "heimbeatmungsgeraet",
+    "kapnometer",
+    "dialysegeraet",
+    "invasive-druckmessung"
+  ],
+  "causes": [
+    "Zug am Schlauchsystem bei Lagerung, Transport oder Mobilisation des Patienten.",
+    "Nicht fest aufgesteckte Konusverbindungen (Y-Stück, Filter, Tubusadapter, Katheter-Mount).",
+    "Akzidentelle Extubation oder Dekanülierung.",
+    "Bewusstes Trennen (z. B. zum Absaugen oder Umlagern) ohne Standby-Funktion und ohne Wiederanschluss.",
+    "Bei extrakorporalen Verfahren: Herausrutschen einer Punktionsnadel (Nadeldislokation), gelöster Luer-Lock-Konnektor.",
+    "Bei invasiver Druckmessung: gelöster Dreiwegehahn oder Konnektor am arteriellen Zugang mit Blutungsgefahr ([[invasive-druckmessung]]).",
+    "Falsch eingestellte Alarmgrenzen (zu weit, Apnoezeit zu lang), sodass die Diskonnektion spät oder gar nicht alarmiert wird."
+  ],
+  "actions": [
+    "**Sofort Verbindung wiederherstellen** bzw. Patienten manuell mit Beatmungsbeutel und Sauerstoff beatmen.",
+    "Bei Blutungsgefahr (Dialyse, arterieller Zugang): Blutpumpe stoppen bzw. Zugang sichern und Blutung komprimieren, ärztliches Personal rufen.",
+    "Patientenzustand beurteilen (SpO₂, etCO₂, Kreislauf); bei Verdacht auf Extubation ärztliches Atemwegsmanagement.",
+    "Alle Verbindungen auf festen Sitz prüfen; Schlauchsystem zugentlastet fixieren.",
+    "Alarmgrenzen (Minutenvolumen, Druck, Apnoe, etCO₂) auf Plausibilität kontrollieren lassen.",
+    "Tritt der Alarm ohne erkennbare Trennung auf, Leckage- und Sensorursachen prüfen (siehe [[leckage]], [[sensordrift]]) und ggf. Gerät durch die Medizintechnik prüfen lassen."
+  ],
+  "body": "## Technischer Hintergrund\n\nKaum ein Gerät misst eine Diskonnektion direkt. Erkannt wird sie an ihren **Folgen** für Druck, Fluss und Gaszusammensetzung. Deshalb kombinieren Geräte mehrere Alarmbedingungen [@iso-80601-2-12] [@iec-60601-1-8]:\n\n| Messgröße | Verhalten bei Diskonnektion (Beatmung) | Sensorik |\n|---|---|---|\n| Atemwegsdruck | erreicht den eingestellten Mindestdruck nicht | [[drucksensor]] |\n| Exspiratorisches Volumen / Minutenvolumen | fällt stark ab | [[flowsensor]] |\n| Leckage | steigt auf nahezu 100 % | Vergleich VTi / VTe |\n| etCO₂ | keine CO₂-Kurve mehr | [[co2-sensor]] im [[kapnometer]] |\n| Apnoe | keine Exspiration erkannt | Fluss / CO₂ |\n\nWegen der unmittelbaren Lebensgefahr wird die Diskonnektion an Beatmungs- und Narkosegeräten in der Regel als Alarm **hoher Priorität** nach [[iec-60601-1-8]] signalisiert. Die Kapnographie gilt in der Anästhesie als besonders empfindlicher Indikator, weil ohne Exspiration kein CO₂ mehr gemessen wird [@dorsch-2008].\n\n### Teil-Diskonnektion\n\n> [!warnung] Bleibt das abgetrennte Schlauchende z. B. in Bettwäsche verlegt oder ist es nur teilweise gelöst, kann der Widerstand so hoch sein, dass der Druck trotzdem den Mindestdruck erreicht. Ein reiner Druckalarm erkennt die Diskonnektion dann nicht. Erst Volumen-, Apnoe- oder CO₂-Alarme greifen [@tobin-2013].\n\n### Extrakorporale Kreisläufe\n\nBeim [[dialysegeraet|Dialysegerät]] wird der venöse Rücklaufdruck überwacht. Rutscht die venöse Nadel heraus, fällt der gemessene Druck oft nur wenig ab, weil der größte Teil des Widerstands in Nadel und Schlauch liegt – der Abfall kann innerhalb der Alarmgrenzen bleiben. Die venöse Nadel muss daher sicher fixiert und sichtbar bleiben [@daugirdas-2015] [@iec-60601-2-16].\n\n> [!hinweis] Auch eine [[infusionspumpe]] erkennt eine Diskonnektion patientenseitig in der Regel nicht, da der Gegendruck sinkt statt steigt; sie fördert weiter in die Umgebung. Die Okklusionserkennung (siehe [[okklusionsalarm]]) hilft hier nicht.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Druck und Volumen fallen schlagartig ab | Y-Stück, Tubusadapter, Filter | Wieder verbinden, fixieren |\n| Keine CO₂-Kurve | Probenleitung, Patientenverbindung | Verbindung prüfen; bei korrekter Verbindung an Atemweg denken |\n| Alarm bei Umlagerung | Zugentlastung, Schlauchlänge | Schläuche führen und fixieren |\n| Alarm intermittierend ohne sichtbare Trennung | Leckagen, Wasserfalle, Konnektoren | siehe [[leckage]] |\n| Kein Alarm trotz Trennung (Ereignisanalyse) | Alarmgrenzen, Apnoezeit, Alarm stummgeschaltet? | Grenzen anpassen, Alarmmanagement schulen |\n| Blutung an der Dialysenadel | Nadelfixierung, venöse Druckgrenzen | Fixierung nach Standard, Punktionsstelle sichtbar lassen |\n\n## Prävention\n\n- Konusverbindungen beim Aufbau mit leichter Drehung fest aufstecken, Schläuche zugentlastet führen.\n- Beim gewollten Trennen Standby- bzw. Absaugfunktion des Geräts nutzen, danach Alarmzustand kontrollieren.\n- Alarmgrenzen patientenbezogen und eng genug einstellen; Alarmtöne nicht dauerhaft stummschalten (siehe [[alarmmuedigkeit]]).\n- Kapnographie als zusätzliche Überwachung einsetzen.\n- Personal in Gerät und Alarmverhalten [[einweisung|einweisen]] [@mpbetreibv].\n\n> [!hinweis] Herstellerspezifische Alarmtexte und Fehlercodes stehen in den Gebrauchsanweisungen und Service-Unterlagen (siehe [[fehlercodes]]).",
+  "related": [
+    "leckage",
+    "atemwegsdruck-hoch",
+    "kapnometer",
+    "co2-sensor",
+    "alarmsystem",
+    "alarmmuedigkeit",
+    "beatmungsgeraet",
+    "dialysegeraet",
+    "patientensicherheit",
+    "iso-80601-2-12"
+  ],
+  "sources": [
+    "iso-80601-2-12",
+    "iec-60601-1-8",
+    "iec-60601-2-16",
+    "dorsch-2008",
+    "tobin-2013",
+    "daugirdas-2015",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

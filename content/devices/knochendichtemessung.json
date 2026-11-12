@@ -1,0 +1,67 @@
+{
+  "id": "knochendichtemessung",
+  "type": "device",
+  "title": "Knochendichtemessgerät (DXA)",
+  "aliases": [
+    "DXA",
+    "DEXA",
+    "Dual-Energy-X-Ray-Absorptiometrie",
+    "Osteodensitometrie",
+    "Knochendichtemessung"
+  ],
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 50,
+  "domains": [
+    "orthopaedie-unfallchirurgie",
+    "radiologie"
+  ],
+  "summary": "Knochendichtemessgeräte nach dem DXA-Verfahren bestimmen die Mineralsalzdichte des Knochens, indem sie die Schwächung von Röntgenstrahlung zweier unterschiedlicher Energien vergleichen. Das Ergebnis dient vor allem der Diagnose und Verlaufskontrolle der Osteoporose bei sehr geringer Strahlenexposition.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives Diagnoseprodukt, das ionisierende Strahlung abgibt – [[mdr|MDR]] Anhang VIII **Regel 10** (letzter Absatz): Klasse IIb. Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die Osteodensitometrie quantifiziert die Knochenmineraldichte an Lendenwirbelsäule und proximalem Femur. Nach der Definition der WHO liegt eine densitometrische Osteoporose bei einem **T-Score ≤ −2,5** vor; der T-Score gibt die Abweichung vom Mittelwert junger gesunder Erwachsener in Standardabweichungen an [@who-trs-843-1994].",
+    "principle": "## Zwei-Energien-Prinzip\n\nDie Schwächung von [[roentgenstrahlung]] folgt näherungsweise dem Gesetz von [[lambert-beer|Lambert-Beer]] und hängt von Energie und Material ab. Knochenmineral (Hydroxylapatit) schwächt niederenergetische Photonen deutlich stärker als Weichteilgewebe. Misst man die Transmission bei **zwei Energien**, ergeben sich zwei Gleichungen mit zwei Unbekannten – den Flächenmassen von Knochen und Weichteil. So lässt sich der Weichteilanteil rechnerisch eliminieren [@bushberg-2020].\n\nDie beiden Energien werden je nach Hersteller entweder durch Umschalten der Röhrenspannung oder durch ein Filter mit K-Kante erzeugt, das das Spektrum der [[roentgenroehre]] in zwei Anteile aufspaltet; ein energieauflösender [[roentgendetektor]] trennt dann die Anteile.\n\n## Messgröße\n\nErgebnis ist eine **flächenbezogene Knochenmineraldichte** in g/cm² (Projektion, keine echte Volumendichte). Die Software vergleicht den Wert mit Referenzdatenbanken und berechnet T- und Z-Score.\n\n> [!vereinfacht] Da DXA eine Projektionsmessung ist, können Verkalkungen der Aorta oder degenerative Veränderungen der Wirbelsäule die Dichte scheinbar erhöhen.\n\n## Abtastung\n\nÄltere Geräte tasten mit einem Nadelstrahl (Pencil Beam) zeilenweise ab, neuere mit einem Fächerstrahl. Die effektive Dosis ist sehr gering im Vergleich zu anderen Röntgenuntersuchungen ([[strahlenschutz]]).\n\n> [!praxis] Für Verlaufskontrollen ist die **Präzision** entscheidend: Messungen sollten möglichst am selben Gerät erfolgen; die tägliche Phantommessung überwacht die Langzeitstabilität ([[messunsicherheit]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "Lunar iDXA",
+        "Lunar Prodigy"
+      ],
+      "note": ""
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Nadel- oder Fächerstrahltechnik, Ganzkörper- und Körperzusammensetzungsanalyse, Auswertesoftware und Referenzdatenbanken, Strahlenschutz im Raum, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025): weder in Anlage 1 (STK, § 12) noch in Anlage 2 (MTK, § 15) aufgeführt. Als Röntgeneinrichtung gelten die Prüfpflichten des Strahlenschutzrechts (Abnahmeprüfung, Konstanzprüfung, Sachverständigenprüfung nach StrlSchG/StrlSchV).",
+    "intervals": "Qualitätskontrolle mit Phantom nach Herstellerangabe (in der Regel arbeitstäglich); Konstanzprüfung und Sachverständigenprüfung in den festgelegten Intervallen; Wartung nach Herstellerangabe; elektrische Sicherheitsprüfung nach IEC 62353 nach Herstellervorgabe."
+  },
+  "related": [
+    "roentgengeraet",
+    "roentgenstrahlung",
+    "lambert-beer",
+    "roentgendetektor",
+    "strahlenschutz",
+    "konstanzpruefung"
+  ],
+  "sources": [
+    "bushberg-2020",
+    "who-trs-843-1994",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

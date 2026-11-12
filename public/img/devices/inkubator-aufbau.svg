@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Schematischer Aufbau eines Säuglingsinkubators (Schnitt)</title>
+  <defs>
+    <marker id="ink-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="24" text-anchor="middle" font-size="15" font-weight="600">Säuglingsinkubator – schematischer Aufbau</text>
+
+  <!-- Haube (Doppelwand) -->
+  <path d="M150,200 V92 Q150,60 182,60 H418 Q450,60 450,92 V200" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <path d="M160,200 V96 Q160,70 186,70 H414 Q440,70 440,96 V200" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Durchgriffsöffnung -->
+  <circle cx="392" cy="128" r="16" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="392" cy="128" r="9" fill="#ffffff" stroke="#0b2545" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <!-- Umluft im Patientenraum -->
+  <path d="M425,175 Q430,95 300,92 Q178,95 176,170" fill="none" stroke="#0d9488" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#ink-arr)"/>
+  <text x="300" y="86" text-anchor="middle" font-size="13" fill="#0d9488">Umluft</text>
+
+  <!-- Matratze, Schale, Waage -->
+  <rect x="172" y="186" width="256" height="12" rx="3" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="166" y="198" width="268" height="6" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="200" y="204" width="22" height="8" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <rect x="378" y="204" width="22" height="8" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+
+  <!-- Kind -->
+  <circle cx="230" cy="174" r="11" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <ellipse cx="282" cy="176" rx="42" ry="10" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="290" cy="166" r="3.5" fill="#0d9488"/>
+  <path d="M290,166 Q320,140 360,150 T436,182" fill="none" stroke="#0b2545" stroke-width="1"/>
+
+  <!-- Grundgerät -->
+  <rect x="140" y="212" width="320" height="98" rx="6" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <!-- Lüfter -->
+  <circle cx="200" cy="268" r="20" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M200,268 L200,250 M200,268 L216,277 M200,268 L184,277" stroke="#0b2545" stroke-width="2"/>
+  <!-- Heizelement -->
+  <path d="M248,268 l7,-10 l7,20 l7,-20 l7,20 l7,-20 l7,20 l7,-20 l7,20 l7,-10" fill="none" stroke="#0b2545" stroke-width="2"/>
+  <!-- Befeuchter -->
+  <rect x="340" y="262" width="84" height="36" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="342" y="280" width="80" height="16" fill="#14b8a6" opacity="0.45"/>
+  <path d="M358,276 q4,-6 0,-10 M380,276 q4,-6 0,-10 M402,276 q4,-6 0,-10" fill="none" stroke="#0d9488" stroke-width="1.5"/>
+  <!-- Luftwege im Grundgerät -->
+  <line x1="222" y1="236" x2="430" y2="236" stroke="#0d9488" stroke-width="2" marker-end="url(#ink-arr)"/>
+  <line x1="444" y1="236" x2="444" y2="190" stroke="#0d9488" stroke-width="2" marker-end="url(#ink-arr)"/>
+  <line x1="156" y1="190" x2="156" y2="250" stroke="#0d9488" stroke-width="2" marker-end="url(#ink-arr)"/>
+  <line x1="160" y1="268" x2="178" y2="268" stroke="#0d9488" stroke-width="2" marker-end="url(#ink-arr)"/>
+  <!-- Frischluftfilter -->
+  <rect x="116" y="252" width="24" height="32" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M120,256 L136,280 M128,256 L136,268 M120,268 L128,280" stroke="#0b2545" stroke-width="1"/>
+
+  <text x="432" y="228" text-anchor="end" font-size="12" fill="#0d9488">Warmluft</text>
+
+  <!-- Fahrgestell -->
+  <rect x="290" y="310" width="20" height="40" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="190" y="350" width="220" height="10" rx="3" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="205" cy="370" r="9" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="395" cy="370" r="9" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Bedieneinheit -->
+  <rect x="478" y="300" width="108" height="46" rx="5" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="532" y="319" text-anchor="middle">Bedien- und</text>
+  <text x="532" y="335" text-anchor="middle">Regeleinheit</text>
+  <line x1="460" y1="300" x2="478" y2="315" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Beschriftungen links -->
+  <g font-size="13">
+    <text x="10" y="76">Doppelwandhaube</text>
+    <line x1="118" y1="80" x2="150" y2="96" stroke="#0b2545" stroke-width="1"/>
+    <text x="10" y="128">Rückluft-</text>
+    <text x="10" y="143">kanal</text>
+    <line x1="72" y1="135" x2="154" y2="196" stroke="#0b2545" stroke-width="1"/>
+    <text x="10" y="232">Frischluft-</text>
+    <text x="10" y="247">filter</text>
+    <line x1="48" y1="250" x2="116" y2="262" stroke="#0b2545" stroke-width="1"/>
+    <text x="10" y="300">Lüfter</text>
+    <line x1="50" y1="296" x2="183" y2="278" stroke="#0b2545" stroke-width="1"/>
+    <text x="10" y="332">Heizelement</text>
+    <line x1="88" y1="328" x2="268" y2="279" stroke="#0b2545" stroke-width="1"/>
+    <text x="10" y="372">Fahrgestell</text>
+    <line x1="82" y1="368" x2="190" y2="356" stroke="#0b2545" stroke-width="1"/>
+  </g>
+  <!-- Beschriftungen rechts -->
+  <g font-size="13">
+    <text x="470" y="100">Durchgriffs-</text>
+    <text x="470" y="115">öffnung</text>
+    <line x1="468" y1="108" x2="408" y2="124" stroke="#0b2545" stroke-width="1"/>
+    <text x="470" y="150">Hauttemperatur-</text>
+    <text x="470" y="165">fühler</text>
+    <line x1="468" y1="158" x2="294" y2="164" stroke="#0b2545" stroke-width="1"/>
+    <text x="470" y="200">Matratze</text>
+    <text x="470" y="215">mit Waage</text>
+    <line x1="468" y1="204" x2="400" y2="208" stroke="#0b2545" stroke-width="1"/>
+    <text x="470" y="262">Befeuchter</text>
+    <line x1="468" y1="258" x2="424" y2="276" stroke="#0b2545" stroke-width="1"/>
+  </g>
+</svg>

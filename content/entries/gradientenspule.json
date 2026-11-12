@@ -1,0 +1,157 @@
+{
+  "id": "gradientenspule",
+  "type": "term",
+  "title": "Gradientenspule",
+  "aliases": [
+    "Gradientensystem",
+    "Gradient Coil",
+    "Gradientenverstärker",
+    "Magnetfeldgradient",
+    "Slew Rate",
+    "Anstiegsrate",
+    "x-/y-/z-Gradient"
+  ],
+  "category": "komponenten",
+  "summary": "Spulensystem im MRT, das dem Grundfeld in jeder Raumrichtung einen linear ortsabhängigen Zusatzfeldanteil überlagert und so die Ortskodierung des Kernspinsignals ermöglicht. Schnelles Schalten verursacht den typischen Lärm und kann periphere Nerven stimulieren.",
+  "body": "## Begriff und Aufgabe\n\nDie **Gradientenspulen** eines [[mrt|Magnetresonanztomographen]] überlagern dem homogenen Grundfeld B₀ des [[supraleitender-magnet|supraleitenden Magneten]] kurzzeitig ein Zusatzfeld, dessen Stärke linear mit dem Ort zunimmt. Erst dadurch wird die Resonanzfrequenz der Protonen ortsabhängig – und aus dem Kernspinsignal lässt sich ein Bild berechnen. Die Idee der Ortskodierung durch Magnetfeldgradienten geht auf Paul Lauterbur (1973) zurück [@lauterbur-1973] [@haacke-2014].\n\nEin MRT besitzt drei voneinander unabhängige Gradientenspulen für die Raumrichtungen x, y und z. Sie sitzen als zylindrische Einheit zwischen Magnet und Körper-[[hf-spule|HF-Spule]] und werden von leistungsstarken Gradientenverstärkern angesteuert.\n\n## Physikalisches Prinzip\n\n### Ortskodierung\n\nMit einem Gradienten G_x (Einheit mT/m) in x-Richtung beträgt die Flussdichte am Ort x\n\n`B(x) = B₀ + G_x · x`\n\nund damit die Larmor-Frequenz (siehe [[kernspinresonanz]]):\n\n`f(x) = (γ / 2π) · (B₀ + G_x · x)` mit γ/2π ≈ 42,58 MHz/T für ¹H\n\nDie drei Aufgaben der Gradienten sind [@weishaupt-2014]:\n\n| Aufgabe | Prinzip |\n|---|---|\n| Schichtselektion | Während des HF-Pulses liegt ein Gradient an; nur Protonen, deren Frequenz in die Bandbreite des Pulses fällt, werden angeregt. |\n| Phasenkodierung | Ein kurzer Gradientenpuls prägt den Spins eine ortsabhängige Phase auf; wird für jede Bildzeile variiert. |\n| Frequenzkodierung (Auslese) | Während der Signalaufnahme liegt ein Gradient an; jeder Ort sendet mit eigener Frequenz, die Fourier-Transformation trennt sie. |\n\n### Schichtdicke\n\nDie Schichtdicke Δz ergibt sich aus der Bandbreite Δf des Anregungspulses und der Gradientenstärke:\n\n`Δz = Δf / ((γ / 2π) · G_z)`\n\n> [!beispiel] Mit Δf = 1 kHz und G_z = 10 mT/m folgt Δz = 1 000 Hz / (42,58 · 10⁶ Hz/T · 0,01 T/m) ≈ 2,3 mm. Ein doppelt so starker Gradient halbiert bei gleicher Pulsbandbreite die Schichtdicke. Die Werte sind didaktisch gewählt.\n\n## Kenngrößen der Gradientenleistung\n\n| Kenngröße | Bedeutung | Typischer Bereich klinischer Systeme |\n|---|---|---|\n| Maximale Amplitude G_max | bestimmt minimale Schichtdicke, Auflösung, Diffusionswichtung | etwa 20–80 mT/m |\n| Anstiegsrate (Slew Rate) SR = G_max / t_Anstieg | bestimmt, wie schnell Gradienten geschaltet werden – wichtig für kurze Echozeiten und schnelle Sequenzen (EPI) | etwa 100–200 T/(m·s) |\n| Linearität | Abweichung vom idealen linearen Verlauf; verursacht geometrische Verzeichnung | wird softwareseitig korrigiert |\n| Tastverhältnis (Duty Cycle) | Dauerbelastbarkeit von Spule, Verstärker und Kühlung | herstellerabhängig |\n\n> [!hinweis] Die angegebenen Bereiche sind typische Werte aus der Fachliteratur; einzelne Hochleistungs- und Forschungssysteme liegen deutlich darüber. Maßgeblich sind die Datenblätter der Hersteller [@mcrobbie-2017].\n\n## Aufbau\n\n### Spulengeometrie\n\n* **z-Gradient:** im einfachsten Fall ein Spulenpaar mit gegensinnigem Strom (Maxwell-Paar): Das Feld wird auf der einen Seite verstärkt, auf der anderen geschwächt.\n* **x- und y-Gradient:** sattelförmige Spulen (Golay-Anordnung), um 90° gegeneinander gedreht.\n* Heute werden die Leiterbahnen numerisch optimiert („fingerabdruckartige“ Muster), um Linearität, Induktivität und Streufelder gleichzeitig zu optimieren.\n\n### Aktive Abschirmung und Wirbelströme\n\nSchnell geschaltete Gradienten induzieren nach dem [[elektromagnetische-induktion|Induktionsgesetz]] Wirbelströme in den leitfähigen Strukturen des Kryostaten. Diese erzeugen Störfelder, die das Bild verzerren. Abhilfe schaffen **aktiv abgeschirmte Gradientenspulen** mit einer äußeren Gegenwicklung sowie eine elektronische Vorverzerrung des Stromverlaufs (Pre-Emphasis) [@haacke-2014].\n\n### Gradientenverstärker\n\nDie Gradientenspule ist elektrisch vor allem eine Induktivität L mit Widerstand R. Für die benötigte Spannung gilt\n\n`U = L · dI/dt + R · I`\n\nUm Ströme von mehreren hundert Ampere in Bruchteilen einer Millisekunde zu schalten, sind Verstärker mit hohen Spannungen und Leistungen nötig; sie arbeiten als getaktete Leistungsendstufen mit [[pwm|Pulsweitenmodulation]] und präziser Stromregelung über einen [[regelkreis|Regelkreis]]. Der Verlauf des Stroms muss sehr genau dem von der Sequenzsteuerung ([[mikrocontroller|Echtzeitsteuerung]]) vorgegebenen Sollverlauf folgen.\n\n### Kühlung\n\nDie ohmschen Verluste (`P = R · I²`, siehe [[joulesche-waerme]]) werden über eingebettete Wasserkühlkanäle abgeführt. Temperatursensoren ([[temperatursensor]]) überwachen Spule und Verstärker und begrenzen bei Bedarf die Sequenzauswahl.\n\n## Nebenwirkungen und Sicherheit\n\n### Lärm\n\nIm starken Grundfeld wirkt auf die stromdurchflossenen Leiter die Lorentzkraft `F = I · (l × B)`. Beim schnellen Schalten verformt sich die Spule geringfügig und wirkt wie eine Lautsprechermembran. Je nach Sequenz entstehen Schalldruckpegel, die einen Gehörschutz für Patienten und anwesendes Personal zwingend erforderlich machen [@iec-60601-2-33].\n\n### Periphere Nervenstimulation\n\nDie zeitliche Feldänderung dB/dt induziert im Körper elektrische Felder (siehe [[elektrische-stromwirkung]]). Oberhalb einer Schwelle können periphere Nerven stimuliert werden – Patienten spüren Kribbeln oder Muskelzucken. Die IEC 60601-2-33 legt Betriebsarten mit Grenzwerten für die Gradientenschaltung fest, die das Gerät automatisch überwacht [@iec-60601-2-33].\n\n> [!belegt] Die Grenzwerte für dB/dt sind so festgelegt, dass eine Stimulation des Herzens sicher vermieden wird; die periphere Nervenstimulation tritt bei deutlich niedrigeren Werten auf und dient als begrenzendes Kriterium im Normalbetrieb [@iec-60601-2-33] [@mcrobbie-2017].\n\n### Implantate\n\nGradientenfelder können in Implantaten und Leitungen Spannungen induzieren und Elektronik stören. Die Herstellerangaben zu „bedingt MR-sicheren“ Implantaten enthalten deshalb oft Grenzwerte für die Slew Rate [@astm-f2503].\n\n## Anwendung in Geräten\n\n* [[mrt]]: Ganzkörpersysteme, Spezialsysteme für Extremitäten und Kopf; Hochleistungsgradienten für Diffusions- und funktionelle Bildgebung.\n* MR-gestützte Strahlentherapie (MR-Linac) und MR-gesteuerte Interventionen nutzen dieselbe Gradiententechnik in angepasster Bauform.\n\nDie Gradientenspule ist damit das Glied, das das Magnetfeld des [[supraleitender-magnet|Magneten]] und das Signal der [[hf-spule|HF-Spule]] erst zu einem ortsaufgelösten Bild macht.\n\n## Fehlerbilder und Instandhaltung\n\n| Symptom | mögliche Ursache |\n|---|---|\n| Geometrische Verzerrung, Verschiebungen | Gradientennichtlinearität, Kalibrierfehler, Wirbelströme |\n| Fischgrätenmuster („Spikes“) im Bild | Funkenüberschläge, lose Verbindungen, statische Entladung |\n| Ungewöhnliche Geräusche, Vibrationen | gelöste Befestigungen, mechanische Resonanzen |\n| Sequenzabbrüche, Übertemperaturmeldung | Kühlwasserproblem, Verstärkerdefekt |\n\nDie Gradientenkalibrierung und die geometrische Genauigkeit werden mit Phantomen geprüft [@iec-62464-1]. Arbeiten an Gradientenspulen und Verstärkern erfolgen ausschließlich durch den Herstellerservice. Bildfehler sind unter [[bildartefakte]] beschrieben.\n",
+  "related": [
+    "mrt",
+    "supraleitender-magnet",
+    "hf-spule",
+    "kernspinresonanz",
+    "elektromagnetische-induktion",
+    "elektrische-stromwirkung",
+    "pwm",
+    "regelkreis",
+    "iec-60601-2-33",
+    "bildartefakte"
+  ],
+  "paths": [
+    [
+      "mrt",
+      "gradientenspule",
+      "kernspinresonanz"
+    ],
+    [
+      "gradientenspule",
+      "elektromagnetische-induktion",
+      "elektrische-stromwirkung"
+    ]
+  ],
+  "sources": [
+    "lauterbur-1973",
+    "haacke-2014",
+    "weishaupt-2014",
+    "mcrobbie-2017",
+    "iec-60601-2-33",
+    "astm-f2503",
+    "iec-62464-1"
+  ],
+  "diagram": {
+    "title": "Signalkette des Gradientensystems",
+    "caption": "Von der Sequenzsteuerung zum ortsabhängigen Magnetfeld; Nebenwirkungen grau angedeutet.",
+    "width": 960,
+    "height": 320,
+    "nodes": [
+      {
+        "id": "seq",
+        "label": "Sequenz-\nsteuerung",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 90,
+        "y": 100
+      },
+      {
+        "id": "amp",
+        "label": "Gradienten-\nverstärker (PWM)",
+        "ref": "pwm",
+        "kind": "actuator",
+        "x": 280,
+        "y": 100,
+        "w": 160
+      },
+      {
+        "id": "spule",
+        "label": "Gradientenspule\nx / y / z",
+        "ref": "gradientenspule",
+        "kind": "actuator",
+        "x": 480,
+        "y": 100
+      },
+      {
+        "id": "feld",
+        "label": "B(x) = B₀ + G·x",
+        "ref": "kernspinresonanz",
+        "kind": "process",
+        "x": 680,
+        "y": 100
+      },
+      {
+        "id": "bild",
+        "label": "Ortskodiertes\nSignal → Bild",
+        "kind": "output",
+        "x": 870,
+        "y": 100
+      },
+      {
+        "id": "mess",
+        "label": "Strommessung\n(Rückführung)",
+        "ref": "regelkreis",
+        "kind": "sensor",
+        "x": 280,
+        "y": 240,
+        "w": 160
+      },
+      {
+        "id": "neben",
+        "label": "Lärm, dB/dt,\nWärme",
+        "ref": "elektrische-stromwirkung",
+        "kind": "output",
+        "x": 580,
+        "y": 240
+      }
+    ],
+    "edges": [
+      {
+        "from": "seq",
+        "to": "amp",
+        "kind": "signal",
+        "label": "Sollverlauf"
+      },
+      {
+        "from": "amp",
+        "to": "spule",
+        "kind": "power",
+        "label": "I(t)"
+      },
+      {
+        "from": "spule",
+        "to": "feld",
+        "kind": "energy"
+      },
+      {
+        "from": "feld",
+        "to": "bild",
+        "kind": "signal"
+      },
+      {
+        "from": "spule",
+        "to": "mess",
+        "kind": "signal",
+        "label": "Ist-Strom"
+      },
+      {
+        "from": "mess",
+        "to": "amp",
+        "kind": "signal"
+      },
+      {
+        "from": "spule",
+        "to": "neben",
+        "kind": "energy"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

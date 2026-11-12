@@ -1,0 +1,96 @@
+[
+ {
+  "id": "iec-60601-2-21",
+  "kind": "norm",
+  "title": "IEC 60601-2-21 – Medical electrical equipment – Part 2-21: Particular requirements for the basic safety and essential performance of infant radiant warmers",
+  "publisher": "IEC / in Deutschland als DIN EN 60601-2-21 (VDE 0750-2-21)",
+  "note": "Besondere Festlegungen für Säuglings-Wärmestrahler (offene Wärmebetten); maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iec-60601-2-50",
+  "kind": "norm",
+  "title": "IEC 60601-2-50 – Medical electrical equipment – Part 2-50: Particular requirements for the basic safety and essential performance of infant phototherapy equipment",
+  "publisher": "IEC / in Deutschland als DIN EN 60601-2-50 (VDE 0750-2-50)",
+  "note": "Besondere Festlegungen für Phototherapiegeräte für Säuglinge; maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iec-80601-2-35",
+  "kind": "norm",
+  "title": "IEC 80601-2-35 – Medical electrical equipment – Part 2-35: Particular requirements for the basic safety and essential performance of heating devices using blankets, pads or mattresses and intended for heating in medical use",
+  "publisher": "IEC/ISO / in Deutschland als DIN EN IEC 80601-2-35",
+  "note": "Besondere Festlegungen für Wärmegeräte mit Decken, Auflagen oder Matratzen; maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iec-60601-2-36",
+  "kind": "norm",
+  "title": "IEC 60601-2-36 – Medical electrical equipment – Part 2-36: Particular requirements for the basic safety of equipment for extracorporeally induced lithotripsy",
+  "publisher": "IEC / in Deutschland als DIN EN 60601-2-36",
+  "note": "Besondere Festlegungen für Geräte zur extrakorporal induzierten Lithotripsie; maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iec-60601-2-10",
+  "kind": "norm",
+  "title": "IEC 60601-2-10 – Medical electrical equipment – Part 2-10: Particular requirements for the basic safety and essential performance of nerve and muscle stimulators",
+  "publisher": "IEC / in Deutschland als DIN EN 60601-2-10",
+  "note": "Besondere Festlegungen für Nerven- und Muskelstimulatoren (u. a. TENS/EMS); maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iec-60601-2-5",
+  "kind": "norm",
+  "title": "IEC 60601-2-5 – Medical electrical equipment – Part 2-5: Particular requirements for the basic safety and essential performance of ultrasonic physiotherapy equipment",
+  "publisher": "IEC / in Deutschland als DIN EN 60601-2-5",
+  "note": "Besondere Festlegungen für Ultraschall-Physiotherapiegeräte; maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iec-60601-2-66",
+  "kind": "norm",
+  "title": "IEC 60601-2-66 – Medical electrical equipment – Part 2-66: Particular requirements for the basic safety and essential performance of hearing aids and hearing aid systems",
+  "publisher": "IEC",
+  "note": "Besondere Festlegungen für Hörgeräte und Hörgerätesysteme (frühere Ausgabe mit der Bezeichnung „hearing instruments and hearing instrument systems“); maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iso-14708-7",
+  "kind": "norm",
+  "title": "ISO 14708-7 – Implants for surgery – Active implantable medical devices – Part 7: Particular requirements for cochlear and auditory brainstem implant systems",
+  "publisher": "ISO",
+  "note": "Besondere Anforderungen an Cochlea-Implantat-Systeme (und Hirnstammimplantate); maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iec-80601-2-77",
+  "kind": "norm",
+  "title": "IEC 80601-2-77 – Medical electrical equipment – Part 2-77: Particular requirements for the basic safety and essential performance of robotically assisted surgical equipment",
+  "publisher": "IEC/ISO",
+  "note": "Besondere Festlegungen für robotisch assistierte chirurgische Ausrüstung; maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iso-10939",
+  "kind": "norm",
+  "title": "ISO 10939 – Ophthalmic instruments – Slit-lamp microscopes",
+  "publisher": "ISO / in Deutschland als DIN EN ISO 10939",
+  "note": "Anforderungen und Prüfverfahren für Spaltlampenmikroskope; maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "en-14931",
+  "kind": "norm",
+  "title": "EN 14931 – Druckgeräte für Personen – Mehrplatz-Druckkammersysteme für hyperbare Therapie – Leistung, sicherheitstechnische Anforderungen und Prüfung",
+  "publisher": "CEN / in Deutschland als DIN EN 14931",
+  "note": "Europäische Norm für Mehrplatz-Therapiedruckkammern; maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "aap-hyperbilirubinemia-2004",
+  "kind": "leitlinie",
+  "authors": "American Academy of Pediatrics, Subcommittee on Hyperbilirubinemia",
+  "title": "Management of hyperbilirubinemia in the newborn infant 35 or more weeks of gestation",
+  "publisher": "Pediatrics 114(1): 297–316",
+  "year": "2004",
+  "note": "Klinische Leitlinie der AAP; enthält u. a. Angaben zu Wellenlängenbereich und Bestrahlungsstärke der intensiven Phototherapie. 2022 durch eine revidierte Fassung (Kemper et al.) aktualisiert."
+ },
+ {
+  "id": "awmf-s3-perioperative-hypothermie",
+  "kind": "leitlinie",
+  "authors": "Deutsche Gesellschaft für Anästhesiologie und Intensivmedizin (DGAI) u. a.",
+  "title": "S3-Leitlinie Vermeidung von perioperativer Hypothermie (AWMF-Register-Nr. 001-018)",
+  "publisher": "AWMF",
+  "note": "Empfehlungen zu Temperaturmessung und aktiver Wärmung im perioperativen Verlauf; maßgeblich ist die jeweils gültige Fassung."
+ }
+]

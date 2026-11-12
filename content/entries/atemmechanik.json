@@ -1,0 +1,199 @@
+{
+  "id": "atemmechanik",
+  "type": "term",
+  "title": "Atemmechanik",
+  "aliases": [
+    "Atemmechanik",
+    "respiratory mechanics",
+    "Compliance",
+    "Resistance",
+    "Elastance",
+    "Bewegungsgleichung",
+    "equation of motion",
+    "Plateaudruck",
+    "Driving Pressure",
+    "Zeitkonstante",
+    "intrinsischer PEEP",
+    "Auto-PEEP",
+    "Atemarbeit"
+  ],
+  "category": "anatomie",
+  "summary": "Lehre von den Drücken, Volumina und Flüssen bei Spontanatmung und Beatmung. Compliance, Resistance und die Bewegungsgleichung des respiratorischen Systems erklären Spitzen- und Plateaudruck, Zeitkonstanten und Auto-PEEP und sind Grundlage jeder Beatmungsgeräte-Regelung.",
+  "body": "## Überblick\n\nDie **Atemmechanik** beschreibt, wie durch Druckdifferenzen Luft in die [[lunge|Lunge]] hinein- und wieder herausströmt und welche elastischen und resistiven Kräfte dabei überwunden werden müssen. Sie ist die physikalische Brücke zwischen Physiologie und Beatmungstechnik: Jedes [[beatmungsgeraet|Beatmungsgerät]] misst und regelt genau die Größen, die hier definiert werden – Druck, Volumen und Fluss [@west-luks-2021] [@oczenski-2017] [@tobin-2013].\n\n## Spontanatmung: Unterdruck als Antrieb\n\n### Atemmuskulatur\n\n* **Inspiration** ist aktiv: Das Zwerchfell kontrahiert und flacht ab, die äußeren Zwischenrippenmuskeln heben die Rippen. Der Thorax erweitert sich, der Druck im Pleuraspalt wird negativer, die Lunge folgt passiv.\n* **Exspiration** ist in Ruhe passiv: Die elastischen Rückstellkräfte von Lunge und Thorax treiben die Luft hinaus. Erst bei erhöhtem Bedarf helfen Bauchmuskeln und innere Zwischenrippenmuskeln.\n\n### Drücke im System\n\n| Größe | Symbol | Bedeutung |\n|---|---|---|\n| Atemwegsdruck | P_aw | Druck an der Atemwegsöffnung (Mund, Tubus, Y-Stück) |\n| Alveolardruck | P_alv | Druck in den Alveolen |\n| Pleuradruck | P_pl | Druck im Pleuraspalt, in Ruhe negativ (ca. −5 cmH₂O am Ende der Exspiration) |\n| transpulmonaler Druck | P_tp = P_alv − P_pl | dehnt die Lunge |\n| Muskeldruck | P_mus | von der Atemmuskulatur erzeugter Druck |\n\nBei Spontanatmung strömt Luft ein, weil P_alv kurzzeitig um wenige cmH₂O unter den Atmosphärendruck fällt. Bei der maschinellen Überdruckbeatmung wird dagegen P_aw angehoben – die Druckverhältnisse im Thorax kehren sich um, was u. a. den venösen Rückstrom zum [[herz|Herzen]] beeinflusst.\n\n> [!hinweis] In der Beatmungstechnik ist die Einheit cmH₂O bzw. mbar (hPa) üblich: `1 cmH₂O = 98,07 Pa ≈ 0,98 mbar ≈ 0,74 mmHg`. Zu Druckbegriffen siehe [[druck]].\n\n## Compliance – die elastische Komponente\n\nDie **Compliance** C beschreibt die Dehnbarkeit:\n\n`C = ΔV / Δp`\n\nDer Kehrwert heißt **Elastance** E = 1/C. Lunge und Thoraxwand sind mechanisch in Reihe geschaltet; ihre Elastancen addieren sich:\n\n`1 / C_rs = 1 / C_L + 1 / C_cw`\n\n> [!belegt] Beim Lungengesunden liegen Lungen- und Thoraxwandcompliance jeweils in der Größenordnung von 200 ml/cmH₂O; die Gesamtcompliance des respiratorischen Systems beträgt damit etwa 100 ml/cmH₂O [@west-luks-2021]. Lungenfibrose, Lungenödem, ARDS oder Adipositas senken die Compliance, das Emphysem erhöht die Lungencompliance. Bei beatmeten Patienten in Rückenlage werden typischerweise deutlich niedrigere Werte gemessen (Größenordnung 50–80 ml/cmH₂O), weshalb das Rechenbeispiel unten mit 50 ml/cmH₂O arbeitet.\n\n### Druck-Volumen-Kurve\n\nDie statische Druck-Volumen-Kurve ist nicht linear: Bei niedrigen Volumina müssen kollabierte Alveolen erst eröffnet werden (Rekrutierung), bei hohen Volumina wird die Lunge steifer (Überdehnung). In der Beatmungsmedizin spricht man vom unteren und oberen Umschlagpunkt; der positive endexspiratorische Druck (**PEEP**) soll ein Kollabieren der Alveolen am Ende der Ausatmung verhindern. Die Ursache der Oberflächenkräfte und die Rolle des Surfactants erklärt der Artikel [[lunge]].\n\n## Resistance – die resistive Komponente\n\nDer Atemwegswiderstand R (Resistance) verknüpft Druckabfall und Fluss:\n\n`R = Δp / V̇`  (Einheit z. B. cmH₂O·s/l oder hPa·s/l)\n\nNach Hagen-Poiseuille (siehe [[stroemungslehre]]) wächst der Widerstand bei laminarer Strömung mit der vierten Potenz des Kehrwerts des Radius. Ein Endotrachealtubus kleinen Durchmessers, Sekret, Bronchospasmus oder ein abgeknickter Schlauch erhöhen R erheblich. Bei hohen Flüssen wird die Strömung im Tubus turbulent; der Druckabfall steigt dann überproportional (näherungsweise quadratisch) mit dem Fluss.\n\n## Bewegungsgleichung des respiratorischen Systems\n\nDas einfachste Modell ist ein Ein-Kompartiment-Modell aus einem Widerstand R und einer Compliance C in Reihe. Die Kräftebilanz lautet:\n\n`P_aw(t) + P_mus(t) = V(t) / C + R · V̇(t) + PEEP_tot`\n\nmit dem über PEEP hinaus eingeatmeten Volumen V(t), dem Fluss V̇(t) und dem gesamten endexspiratorischen Druck PEEP_tot (eingestellter PEEP plus ggf. intrinsischer PEEP).\n\n> [!vereinfacht] Das Ein-Kompartiment-Modell entspricht elektrotechnisch einem RC-Glied: Druck ≙ Spannung, Fluss ≙ Strom, Volumen ≙ Ladung, Compliance ≙ Kapazität, Resistance ≙ Widerstand. Reale Lungen sind inhomogen (viele Kompartimente mit unterschiedlichen R und C) und nichtlinear.\n\n### Spitzendruck, Plateaudruck, Driving Pressure\n\nBei volumenkontrollierter Beatmung mit konstantem Fluss lassen sich die Anteile direkt ablesen:\n\n* **Spitzendruck** P_peak = PEEP + V_T/C + R·V̇ (elastischer plus resistiver Anteil),\n* **Plateaudruck** P_plat nach einer endinspiratorischen Pause (V̇ = 0) = PEEP + V_T/C,\n* **Driving Pressure** ΔP = P_plat − PEEP = V_T / C.\n\n> [!beispiel] V_T = 0,5 l, C = 50 ml/cmH₂O, R = 10 cmH₂O·s/l, Fluss 0,5 l/s (30 l/min), PEEP = 5 cmH₂O. Elastischer Anteil: 0,5 l / 0,05 l/cmH₂O = 10 cmH₂O; resistiver Anteil: 10 · 0,5 = 5 cmH₂O. Damit P_plat = 15 cmH₂O, P_peak = 20 cmH₂O. Beispielwerte zur Veranschaulichung.\n\nSteigt nur P_peak, liegt meist ein Resistanceproblem vor (Sekret, Knick, Bronchospasmus); steigen P_peak und P_plat gemeinsam, hat die Compliance abgenommen (oder das Volumen zugenommen). Diese Unterscheidung ist zentral bei der Abklärung eines Alarms [[atemwegsdruck-hoch|„Atemwegsdruck hoch“]].\n\n### Zeitkonstante\n\nDie passive Exspiration verläuft exponentiell mit der Zeitkonstante\n\n`τ = R · C`\n\nNach 1 τ sind etwa 63 %, nach 3 τ etwa 95 % des Volumens ausgeatmet.\n\n> [!beispiel] Mit R = 10 cmH₂O·s/l und C = 0,05 l/cmH₂O ist τ = 0,5 s; für eine nahezu vollständige Ausatmung werden also rund 1,5 s benötigt. Ist die Exspirationszeit kürzer (hohe Atemfrequenz, obstruktive Erkrankung mit hohem R), bleibt Luft gefangen: Es entsteht ein **intrinsischer PEEP** (Auto-PEEP).\n\n## Atemarbeit\n\nDie mechanische Atemarbeit ist das Integral `W = ∫ p · dV` über einen Atemzug, also die Fläche in der Druck-Volumen-Schleife. Sie besteht aus elastischer und resistiver Arbeit. Erhöhte Atemarbeit – z. B. durch einen engen Tubus oder steife Lunge – kann die Atemmuskulatur erschöpfen; unterstützende Beatmungsformen und eine automatische Tubuskompensation sollen sie verringern [@oczenski-2017].\n\n## Lungenprotektive Beatmung\n\nHohe Volumina und Drücke können die Lunge schädigen (beatmungsassoziierte Lungenschädigung durch Überdehnung und wiederholtes Öffnen und Schließen von Alveolen). Die ARDS-Network-Studie zeigte eine geringere Sterblichkeit mit niedrigen Tidalvolumina von 6 ml/kg idealisiertem Körpergewicht und einer Begrenzung des Plateaudrucks auf höchstens 30 cmH₂O gegenüber 12 ml/kg [@ardsnet-2000]. Deutsche Empfehlungen fasst die S3-Leitlinie zur invasiven Beatmung zusammen [@awmf-s3-invasive-beatmung].\n\n> [!warnung] Konkrete Beatmungseinstellungen sind ärztliche Entscheidungen auf Grundlage aktueller Leitlinien. Die Zahlen in diesem Artikel dienen dem technischen Verständnis.\n\n## Bedeutung in der Medizintechnik\n\nEin Beatmungsgerät ist technisch ein Regelsystem, das die Bewegungsgleichung „von außen“ bedient:\n\n| Größe der Atemmechanik | Technische Umsetzung |\n|---|---|\n| P_aw erzeugen | [[turbine|Turbine (Radialgebläse)]] angetrieben von einem [[elektromotor|Elektromotor]] bzw. [[bldc-motor|BLDC-Motor]] mit [[drehzahlregelung|Drehzahlregelung]], oder Druckgas über [[proportionalventil|Proportionalventile]] |\n| P_aw messen | [[drucksensor|piezoresistiver Drucksensor]], siehe [[druckmessung]] |\n| V̇ und V messen | [[flowsensor|Flowsensor]], Volumen durch Integration des Flusses |\n| PEEP halten, Exspiration freigeben | [[exspirationsventil|Exspirationsventil]] |\n| Regelung | [[regelkreis|Regelkreis]] im [[mikrocontroller|Mikrocontroller]] |\n| Überwachung | [[alarmsystem|Alarme]] für Druck, Volumen, [[leckage|Leckage]] und [[diskonnektion|Diskonnektion]] |\n\nDiese Kette – [[beatmungsgeraet|Beatmungsgerät]] → [[turbine|Turbine]] → [[elektromotor|Elektromotor]] → [[drehzahlregelung|Drehzahlregelung]] → [[druckmessung|Druckmessung]] – zeigt exemplarisch, wie Physiologie, Mechanik, Elektrotechnik und Sensorik ineinandergreifen. Moderne Geräte berechnen aus Druck- und Flusskurven laufend Compliance, Resistance und intrinsischen PEEP und stellen Schleifen (Druck-Volumen, Fluss-Volumen) dar. Die Grundanforderungen an Intensivbeatmungsgeräte enthält [[iso-80601-2-12|ISO 80601-2-12]] [@iso-80601-2-12].\n\nAuch die Lungenfunktionsdiagnostik misst Atemmechanik: Das [[spirometer]] erfasst Volumina und Flüsse, der [[bodyplethysmograph]] zusätzlich den Atemwegswiderstand und das intrathorakale Gasvolumen. [[cpap-geraet|CPAP-Geräte]] und [[high-flow-geraet|High-Flow-Geräte]] nutzen einen positiven Atemwegsdruck bzw. hohen Fluss, um Atemwege offen zu halten und Atemarbeit zu verringern.\n",
+  "related": [
+    "lunge",
+    "gasaustausch",
+    "beatmungsgeraet",
+    "turbine",
+    "elektromotor",
+    "drehzahlregelung",
+    "druckmessung",
+    "drucksensor",
+    "flowsensor",
+    "exspirationsventil",
+    "atemwegsdruck-hoch",
+    "spirometer",
+    "bodyplethysmograph",
+    "iso-80601-2-12"
+  ],
+  "paths": [
+    [
+      "atemmechanik",
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "drehzahlregelung",
+      "druckmessung",
+      "drucksensor"
+    ],
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "elektrotechnik",
+      "drehzahlregelung",
+      "sensorik",
+      "druckmessung"
+    ],
+    [
+      "atemmechanik",
+      "flowsensor",
+      "regelkreis",
+      "exspirationsventil"
+    ]
+  ],
+  "sources": [
+    "west-luks-2021",
+    "oczenski-2017",
+    "tobin-2013",
+    "ardsnet-2000",
+    "awmf-s3-invasive-beatmung",
+    "iso-80601-2-12"
+  ],
+  "diagram": {
+    "title": "Beatmungsgerät und Atemmechanik als Regelkreis",
+    "caption": "Ein-Kompartiment-Modell (R, C) mit den technischen Gegenstücken im Beatmungsgerät (Funktionsschema).",
+    "width": 900,
+    "height": 400,
+    "nodes": [
+      {
+        "id": "reg",
+        "label": "Regler\n(Soll: Druck/Volumen)",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 110,
+        "y": 80,
+        "w": 160
+      },
+      {
+        "id": "turb",
+        "label": "Turbine +\nElektromotor",
+        "ref": "turbine",
+        "kind": "actuator",
+        "x": 340,
+        "y": 80
+      },
+      {
+        "id": "ps",
+        "label": "Drucksensor\n(P_aw)",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 570,
+        "y": 80
+      },
+      {
+        "id": "res",
+        "label": "Atemwege / Tubus\nResistance R",
+        "ref": "lunge",
+        "kind": "patient",
+        "x": 790,
+        "y": 80
+      },
+      {
+        "id": "comp",
+        "label": "Alveolen\nCompliance C",
+        "ref": "lunge",
+        "kind": "patient",
+        "x": 790,
+        "y": 240
+      },
+      {
+        "id": "flow",
+        "label": "Flowsensor\n(V̇, V = ∫V̇ dt)",
+        "ref": "flowsensor",
+        "kind": "sensor",
+        "x": 570,
+        "y": 240
+      },
+      {
+        "id": "exv",
+        "label": "Exspirationsventil\n(PEEP)",
+        "ref": "exspirationsventil",
+        "kind": "actuator",
+        "x": 340,
+        "y": 240
+      },
+      {
+        "id": "mon",
+        "label": "Anzeige: C, R,\nP_plat, Alarme",
+        "ref": "alarmsystem",
+        "kind": "output",
+        "x": 110,
+        "y": 330
+      }
+    ],
+    "edges": [
+      {
+        "from": "reg",
+        "to": "turb",
+        "kind": "power",
+        "label": "Drehzahl"
+      },
+      {
+        "from": "turb",
+        "to": "ps",
+        "kind": "gas"
+      },
+      {
+        "from": "ps",
+        "to": "res",
+        "kind": "gas",
+        "label": "Inspiration"
+      },
+      {
+        "from": "res",
+        "to": "comp",
+        "kind": "gas"
+      },
+      {
+        "from": "comp",
+        "to": "flow",
+        "kind": "gas",
+        "label": "Exspiration"
+      },
+      {
+        "from": "flow",
+        "to": "exv",
+        "kind": "gas"
+      },
+      {
+        "from": "ps",
+        "to": "reg",
+        "kind": "signal",
+        "label": "Istwert"
+      },
+      {
+        "from": "flow",
+        "to": "mon",
+        "kind": "data"
+      },
+      {
+        "from": "reg",
+        "to": "exv",
+        "kind": "signal"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

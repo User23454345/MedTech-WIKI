@@ -1,0 +1,57 @@
+{
+  "id": "joulesche-waerme",
+  "type": "term",
+  "title": "Joulesche Wärme",
+  "aliases": [
+    "Joule-Wärme",
+    "Joulesches Gesetz",
+    "Stromwärme",
+    "ohmsche Verluste",
+    "Verlustleistung",
+    "Joule heating",
+    "ohmic heating",
+    "resistive heating",
+    "I²R-Verluste"
+  ],
+  "category": "physik",
+  "summary": "Joulesche Wärme ist die Wärme, die beim Stromfluss durch einen elektrischen Widerstand entsteht (P = I² · R). Sie wird in Heizelementen und in der HF-Chirurgie gezielt genutzt und ist zugleich Ursache von Verbrennungen unter Neutralelektroden, Verlusten in Netzteilen und Akkus sowie Erwärmung von Kabeln und Steckverbindungen.",
+  "body": "## Das Joule'sche Gesetz\n\nFließt ein Strom I durch einen Leiter mit dem Widerstand R, stoßen die Ladungsträger mit dem Kristallgitter bzw. – in Elektrolyten wie Körpergewebe – mit Ionen und Wassermolekülen zusammen. Die elektrische Energie wird dabei vollständig in Wärme umgewandelt. Die umgesetzte Leistung beträgt [@tipler-2019]:\n\n`P = U · I = I² · R = U² / R`\n\nDie in der Zeit t freigesetzte Wärmemenge ist\n\n`Q = W = ∫ P dt`   (bei konstanter Leistung `Q = I² · R · t`)\n\nund erhöht die Temperatur eines Körpers mit Masse m und spezifischer Wärmekapazität c um\n\n`ΔT = Q / (m · c)`   – sofern keine Wärme abgeführt wird.\n\nBenannt ist das Gesetz nach James Prescott Joule, der den Zusammenhang zwischen Stromstärke, Widerstand und Wärme in den 1840er-Jahren experimentell untersuchte.\n\n> [!vereinfacht] Die Formeln gelten für Gleichstrom und für Wechselstrom mit Effektivwerten an rein ohmschen Lasten. Bei Gewebe und hochfrequenten Strömen spielen zusätzlich kapazitive Anteile und die Frequenzabhängigkeit der Leitfähigkeit eine Rolle.\n\n## Stromdichte: entscheidend für die lokale Erwärmung\n\nFür die Erwärmung eines Gewebevolumens zählt nicht der Gesamtstrom, sondern die **Stromdichte** J = I / A. Die pro Volumen umgesetzte Leistung ist\n\n`p_V = J² / σ`   (σ = elektrische Leitfähigkeit)\n\nDie Erwärmung wächst also mit dem **Quadrat** der Stromdichte. Kleine Kontaktflächen bündeln den Strom und erzeugen hohe Temperaturen – große Flächen verteilen ihn und bleiben kühl. Das ist das physikalische Grundprinzip der HF-Chirurgie [@massarweh-2006] [@webster-2010].\n\n## Gezielte Nutzung: HF-Chirurgie\n\nIm [[hf-chirurgiegeraet|HF-Chirurgiegerät]] fließt ein hochfrequenter Wechselstrom (typischerweise einige hundert Kilohertz bis wenige Megahertz) von einer kleinen **Aktivelektrode** durch den Körper zur großflächigen [[neutralelektrode|Neutralelektrode]]. Wegen der hohen Frequenz werden Nerven und Muskeln nicht gereizt ([[elektrische-stromwirkung]]); es bleibt die thermische Wirkung [@iec-60601-2-2]:\n\n| Effekt | Temperaturbereich (ca.) | Mechanismus |\n|---|---|---|\n| Koagulation | über etwa 60 °C | Denaturierung von Eiweiß, Gefäßverschluss |\n| Desikkation | um 100 °C | Verdampfen des Zellwassers, Austrocknung |\n| Schneiden | deutlich über 100 °C | schlagartige Verdampfung, Funkenbildung, Zellen platzen |\n| Karbonisation | über etwa 200 °C | Verkohlung (meist unerwünscht) |\n\n> [!belegt] Die gewebeschädigende Wirkung der HF-Chirurgie beruht auf der Joule'schen Wärme an der Aktivelektrode, deren kleine Fläche eine hohe Stromdichte erzeugt; die Temperaturbereiche sind gerundete Literaturwerte [@massarweh-2006].\n\nBipolare Instrumente führen den Strom nur zwischen den Branchen einer Pinzette; eine Neutralelektrode ist dann nicht nötig.\n\n## Unerwünschte Erwärmung: Neutralelektrode\n\nLöst sich eine Neutralelektrode teilweise ab, sinkt die wirksame Fläche, und die Stromdichte unter dem verbliebenen Rest steigt. Weil die Erwärmung quadratisch mit J wächst, entsteht schnell eine [[neutralelektroden-verbrennung|Verbrennung]].\n\n> [!beispiel] Fließt ein HF-Strom von 0,7 A über eine Kontaktfläche von 100 cm², beträgt die mittlere Stromdichte 7 mA/cm². Haftet nur noch ein Zehntel der Fläche (10 cm²), steigt sie auf 70 mA/cm² – die lokale Leistungsdichte steigt um den Faktor 10² = 100. Die Zahlen sind beispielhaft und keine Grenzwerte.\n\nModerne Geräte überwachen deshalb bei geteilten Neutralelektroden die Übergangsimpedanz zwischen beiden Hälften und unterbrechen bei Ablösung die Leistungsabgabe.\n\n## Heizen in Medizingeräten\n\nEin [[heizelement|Heizelement]] ist im Kern ein definierter ohmscher Widerstand, dessen Leistung über die Spannung oder per [[pwm|Pulsweitenmodulation]] gestellt wird. Ein [[temperatursensor|Temperatursensor]] und ein [[regelkreis|Regelkreis]] halten die Solltemperatur; ein unabhängiger Übertemperaturschutz verhindert Überhitzung bei Reglerausfall.\n\n| Gerät | Nutzung der Joule'schen Wärme |\n|---|---|\n| [[inkubator]], [[waermebett]] | Lufterwärmung bzw. Wärmeabgabe an das Neugeborene |\n| [[patientenwaermesystem]] | Warmluft- oder Widerstandsheizdecken |\n| [[infusionswaermer]] | Erwärmung von Infusionen und Blutprodukten |\n| [[atemgasbefeuchter]] | Heizplatte und beheizter Beatmungsschlauch |\n| [[narkosemittelverdampfer]] (Desfluran) | Beheizung des Verdampfers ([[gasgesetze]]) |\n| Laborgeräte ([[blutgasanalysator]], [[klinisch-chemischer-analysator]]) | Thermostatisierung von Messzellen auf 37 °C |\n\n## Verluste in der Elektronik\n\nWo Strom fließt, entsteht Wärme – auch dort, wo sie nicht erwünscht ist:\n\n- **[[medizinisches-netzteil|Netzteile]] und Leistungselektronik:** Leitungsverluste in Halbleitern und Wicklungen bestimmen Wirkungsgrad und Kühlbedarf.\n- **[[lithium-ionen-akku|Akkus]]:** Der Innenwiderstand erzeugt beim Laden und bei hohen Entladeströmen Wärme; Übertemperatur beschleunigt Alterung und kann zum thermischen Durchgehen führen ([[akkufehler]]).\n- **[[elektromotor|Elektromotoren]]:** Kupferverluste `I² · R` in den Wicklungen begrenzen das Dauerdrehmoment.\n- **Kabel und Steckverbindungen:** Erhöhte Übergangswiderstände (Korrosion, gelockerte Kontakte) führen zu lokaler Erwärmung bis zum Brand.\n- **[[defibrillator|Defibrillator]]:** Die abgegebene Energie wird zum größten Teil im Thorax als Wärme umgesetzt; an Elektroden mit schlechtem Kontakt können Hautverbrennungen entstehen ([[defibrillationselektroden]]).\n\n> [!praxis] Bei der Messung des [[schutzleiterwiderstand|Schutzleiterwiderstands]] im Rahmen der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] wird unter anderem gefunden, was sonst als Joule'sche Wärme auffallen würde: korrodierte, gequetschte oder lockere Verbindungen. Verfärbte Stecker und Gerätesteckdosen sind ein Warnzeichen.\n\n## Bedeutung in der Medizintechnik\n\nJoule'sche Wärme ist zugleich **Wirkprinzip** (HF-Chirurgie, Heizung), **Risiko** (Verbrennung, Brand, Akkuschäden) und **Konstruktionsgrenze** (Kühlung, Wirkungsgrad, Baugröße). Die Begrenzung von Oberflächentemperaturen berührbarer Teile und Anwendungsteile ist deshalb Bestandteil der Sicherheitsanforderungen der [[iec-60601-1|IEC 60601-1]] [@iec-60601-1].\n\nWeiterführend: [[spannung-strom-widerstand]], [[waermeuebertragung]], [[thermoregulation]], [[elektrische-stromwirkung]].\n",
+  "related": [
+    "spannung-strom-widerstand",
+    "elektrische-stromwirkung",
+    "hf-chirurgiegeraet",
+    "neutralelektrode",
+    "neutralelektroden-verbrennung",
+    "heizelement",
+    "waermeuebertragung",
+    "pwm",
+    "temperatursensor",
+    "lithium-ionen-akku",
+    "iec-60601-2-2",
+    "thermoregulation"
+  ],
+  "paths": [
+    [
+      "hf-chirurgiegeraet",
+      "neutralelektrode",
+      "joulesche-waerme",
+      "neutralelektroden-verbrennung"
+    ],
+    [
+      "inkubator",
+      "heizelement",
+      "joulesche-waerme",
+      "pwm",
+      "regelkreis"
+    ]
+  ],
+  "sources": [
+    "tipler-2019",
+    "webster-2010",
+    "massarweh-2006",
+    "iec-60601-2-2",
+    "iec-60601-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

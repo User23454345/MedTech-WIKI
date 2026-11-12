@@ -1,0 +1,145 @@
+{
+  "id": "regelkreis",
+  "type": "term",
+  "title": "Regelkreis und PID-Regler",
+  "aliases": [
+    "Regelung",
+    "Regelkreis",
+    "PID-Regler",
+    "PI-Regler",
+    "Closed loop",
+    "Feedback control",
+    "Rückkopplung",
+    "Regelungstechnik",
+    "Zweipunktregler",
+    "Closed-Loop-System"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Ein Regelkreis misst eine Größe fortlaufend, vergleicht sie mit einem Sollwert und greift so lange korrigierend ein, bis die Abweichung verschwindet. Der PID-Regler mit proportionalem, integralem und differenzierendem Anteil ist die in Medizingeräten am weitesten verbreitete Reglerform – von der Temperatur im Inkubator bis zum Atemwegsdruck im Beatmungsgerät.",
+  "body": "## Steuerung und Regelung\n\nBei einer **Steuerung** wirkt eine Eingangsgröße in einer offenen Wirkungskette auf das System, ohne dass das Ergebnis überprüft wird. Bei einer **Regelung** wird die zu beeinflussende Größe gemessen und auf den Eingang zurückgeführt – es entsteht ein geschlossener **Regelkreis** (engl. *closed loop*, *feedback*). Nur die Regelung kann unbekannte Störungen ausgleichen [@lunze-regelungstechnik-2020] [@astrom-murray-2021].\n\n> [!beispiel] Ein [[infusionspumpe|Infusionspumpen]]-Motor, der nur eine feste Schrittzahl pro Minute ausführt, ist gesteuert. Wird dagegen die Ist-Drehzahl gemessen und nachgeregelt, liegt ein Regelkreis vor – siehe [[drehzahlregelung|Drehzahlregelung]].\n\n## Begriffe\n\n| Begriff | Zeichen (häufig) | Bedeutung |\n|---|---|---|\n| Regelgröße | x | gemessene Größe, die geregelt werden soll (z. B. Temperatur) |\n| Führungsgröße / Sollwert | w | gewünschter Wert |\n| Regelabweichung (Regeldifferenz) | e = w − x | Eingang des Reglers |\n| Stellgröße | u (teils y) | Ausgang des Reglers, z. B. Tastgrad einer [[pwm|PWM]] |\n| Stellglied | – | setzt die Stellgröße um (Heizung, Motor, Ventil) |\n| Regelstrecke | – | das zu beeinflussende System (Inkubatorraum, Turbine + Schläuche) |\n| Störgröße | z | unerwünschte Einflüsse (Klappe geöffnet, Leckage) |\n| Messglied | – | Sensor mit Signalaufbereitung, siehe [[messkette]] |\n\nDie Qualität einer Regelung beurteilt man an **Stabilität**, **stationärer Genauigkeit** (bleibt eine Restabweichung?), **Schnelligkeit** (Anregelzeit) und **Dämpfung** (Überschwingen).\n\n## Der PID-Regler\n\nDer PID-Regler addiert drei Anteile [@astrom-murray-2021]:\n\n`u(t) = K_P · e(t) + K_I · ∫ e(τ) dτ + K_D · de(t)/dt`\n\nIn der Schreibweise mit Nachstellzeit T_N und Vorhaltzeit T_V: `K_I = K_P / T_N`, `K_D = K_P · T_V`.\n\n| Anteil | Wirkung | Typische Nebenwirkung |\n|---|---|---|\n| P (proportional) | reagiert sofort auf die aktuelle Abweichung | bei vielen Strecken bleibende Regelabweichung |\n| I (integral) | summiert die Abweichung auf, beseitigt die bleibende Abweichung | langsamer, Neigung zum Überschwingen, „Windup“ bei Stellgrößenbegrenzung |\n| D (differenzierend) | reagiert auf die Änderungsgeschwindigkeit, dämpft | verstärkt Messrauschen, meist nur mit Filter einsetzbar |\n\nIn der Praxis ist der **PI-Regler** am häufigsten, etwa für Strom- und Drehzahlregelung. Der D-Anteil wird oft weggelassen oder nur auf den Messwert (nicht den Sollwert) angewendet, damit Sollwertsprünge keine Stellgrößenspitzen erzeugen.\n\n### Digitale Umsetzung\n\nIm [[mikrocontroller|Mikrocontroller]] wird der Regler mit der Abtastzeit T_s zeitdiskret berechnet, z. B.\n\n`u[k] = K_P · e[k] + K_I · T_s · Σ e[i] + K_D · (e[k] − e[k−1]) / T_s`\n\nWichtig sind dabei eine ausreichend kurze Abtastzeit gegenüber der Streckendynamik, eine Begrenzung der Stellgröße und ein **Anti-Windup**: Ist die Stellgröße am Anschlag, darf der I-Anteil nicht weiter aufintegrieren, sonst schießt die Regelgröße nach dem Verlassen der Begrenzung deutlich über.\n\n### Einstellung\n\nFür die Reglerparameter gibt es modellbasierte Entwurfsverfahren und empirische Faustregeln. Die bekannteste ist das Verfahren nach Ziegler und Nichols: Man erhöht K_P eines reinen P-Reglers, bis Dauerschwingungen auftreten (kritische Verstärkung K_krit, Periodendauer T_krit), und leitet daraus Reglerparameter ab [@ziegler-nichols-1942]:\n\n| Reglertyp | K_P | T_N | T_V |\n|---|---|---|---|\n| P | 0,5 · K_krit | – | – |\n| PI | 0,45 · K_krit | T_krit / 1,2 ≈ 0,83 · T_krit (oft gerundet 0,85) | – |\n| PID | 0,6 · K_krit | 0,5 · T_krit | 0,125 · T_krit |\n\n> [!vereinfacht] Die Ziegler-Nichols-Werte liefern einen Ausgangspunkt mit vergleichsweise wenig Dämpfung. An Medizingeräten werden Reglerparameter nicht im Feld „ausprobiert“: Sie sind Teil der Gerätesoftware und werden vom Hersteller entwickelt, verifiziert und validiert.\n\n## Stabilität und Totzeit\n\nJede Rückführung kann einen Regelkreis auch **instabil** machen: Ist die Verstärkung zu hoch und die Phasenverschiebung im Kreis zu groß, verstärkt sich eine Schwingung selbst. Besonders kritisch sind **Totzeiten** – Transportverzögerungen, bis eine Stellgrößenänderung am Sensor ankommt. Beispiele: Gaslaufzeit im Schlauch bis zu einem patientennahen Sensor, Wärmeleitung durch eine Inkubatorwand, Mischzeit in der Dialysierflüssigkeit [@lunze-regelungstechnik-2020].\n\n## Zweipunktregler\n\nNicht jede Regelung ist kontinuierlich. Ein **Zweipunktregler** schaltet das Stellglied nur ein oder aus, mit einer Schalthysterese gegen zu häufiges Schalten. Die Regelgröße pendelt dann um den Sollwert. Für träge thermische Systeme mit geringen Genauigkeitsanforderungen ist das ausreichend; anspruchsvolle Temperaturregelungen arbeiten stetig (PI/PID mit PWM-Heizung).\n\n## Anwendung in Geräten\n\n| Gerät | Regelgröße | Stellglied | Sensor |\n|---|---|---|---|\n| [[beatmungsgeraet]] | Atemwegsdruck, Flow | [[turbine]] bzw. [[proportionalventil]], [[exspirationsventil]] | [[drucksensor]], [[flowsensor]] |\n| [[inkubator]] | Luft- oder Hauttemperatur, Luftfeuchte | [[heizelement]], Befeuchter | [[temperatursensor]] |\n| [[dialysegeraet]] | Temperatur, Leitfähigkeit der Dialysierflüssigkeit, Ultrafiltration | Heizung, Konzentratpumpen, Pumpen | [[temperatursensor]], [[leitfaehigkeitssensor]] |\n| [[infusionspumpe]], [[spritzenpumpe]] | Förderrate | [[elektromotor]], [[schrittmotor]] | Drehgeber, [[kraftsensor]] |\n| [[hypothermiegeraet]], [[patientenwaermesystem]] | Patiententemperatur | Heizung/Kühlung | Temperatursonde |\n| [[anaesthesiegeraet]] | Frischgasfluss, Gaszusammensetzung | Ventile | Flow- und Gassensoren |\n\nEin Sonderfall sind **physiologische geschlossene Regelkreise** (PCLC), bei denen eine physiologische Größe des Patienten selbst die Regelgröße ist – etwa die Hauttemperatur eines Frühgeborenen im Inkubator oder der Glukosewert bei Systemen zur automatisierten Insulindosierung mit einer [[insulinpumpe]]. Der Patient wird dabei Teil der Regelstrecke, mit großer individueller Variabilität.\n\n> [!belegt] Für die Entwicklung physiologischer geschlossener Regelkreise in medizinischen elektrischen Geräten gibt es mit IEC 60601-1-10 eine eigene Ergänzungsnorm zur Normenreihe [[iec-60601-1|IEC 60601-1]] [@iec-60601-1-10].\n\n> [!warnung] Ein Regler kann einen Sensorfehler nicht erkennen: Liefert ein Temperatur- oder Drucksensor falsche Werte ([[sensordrift]]), regelt der Kreis zuverlässig auf den falschen Wert. Sicherheitskritische Geräte verwenden deshalb unabhängige Überwachungssensoren, Plausibilitätsprüfungen und Alarme ([[alarmsystem]]).",
+  "related": [
+    "drehzahlregelung",
+    "pwm",
+    "mikrocontroller",
+    "messkette",
+    "alarmsystem",
+    "sensordrift",
+    "inkubator",
+    "beatmungsgeraet"
+  ],
+  "paths": [
+    [
+      "inkubator",
+      "temperatursensor",
+      "regelkreis",
+      "pwm",
+      "heizelement"
+    ],
+    [
+      "beatmungsgeraet",
+      "drucksensor",
+      "regelkreis",
+      "drehzahlregelung",
+      "turbine"
+    ]
+  ],
+  "diagram": {
+    "title": "Standard-Regelkreis",
+    "caption": "Wirkungsplan eines einschleifigen Regelkreises am Beispiel der Inkubator-Temperaturregelung.",
+    "width": 900,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "w",
+        "label": "Sollwert w",
+        "kind": "source",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "id": "reg",
+        "label": "PID-Regler",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 290,
+        "y": 90
+      },
+      {
+        "id": "stell",
+        "label": "Stellglied\n(PWM + Heizung)",
+        "ref": "heizelement",
+        "kind": "actuator",
+        "x": 500,
+        "y": 90
+      },
+      {
+        "id": "str",
+        "label": "Regelstrecke\n(Inkubatorraum)",
+        "ref": "inkubator",
+        "kind": "process",
+        "x": 720,
+        "y": 90
+      },
+      {
+        "id": "z",
+        "label": "Störgröße z\n(Klappe offen)",
+        "kind": "source",
+        "x": 720,
+        "y": 260
+      },
+      {
+        "id": "mess",
+        "label": "Messglied\n(Temperatursensor)",
+        "ref": "temperatursensor",
+        "kind": "sensor",
+        "x": 400,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "w",
+        "to": "reg",
+        "kind": "signal",
+        "label": "e = w − x"
+      },
+      {
+        "from": "reg",
+        "to": "stell",
+        "kind": "signal",
+        "label": "u"
+      },
+      {
+        "from": "stell",
+        "to": "str",
+        "kind": "energy",
+        "label": "Wärme"
+      },
+      {
+        "from": "z",
+        "to": "str",
+        "kind": "energy"
+      },
+      {
+        "from": "str",
+        "to": "mess",
+        "kind": "signal",
+        "label": "x"
+      },
+      {
+        "from": "mess",
+        "to": "reg",
+        "kind": "signal",
+        "label": "Rückführung"
+      }
+    ]
+  },
+  "sources": [
+    "lunze-regelungstechnik-2020",
+    "astrom-murray-2021",
+    "ziegler-nichols-1942",
+    "iec-60601-1-10"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

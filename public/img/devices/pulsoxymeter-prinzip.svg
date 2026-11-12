@@ -23,8 +23,8 @@
   <!-- HbO2 -->
   <path d="M60,140 L77,200 L93,225 L110,230 L137,215 L173,190 L198,180 L225,172 L247,170 L280,178" fill="none" stroke="#0d9488" stroke-width="2.5"/>
   <circle cx="173" cy="190" r="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
-  <line x1="176" y1="194" x2="200" y2="245" stroke="#0b2545" stroke-width="1"/>
-  <text x="200" y="260" font-size="13" fill="#0b2545">isosbestisch</text>
+  <line x1="176" y1="194" x2="190" y2="245" stroke="#0b2545" stroke-width="1"/>
+  <text x="150" y="260" font-size="13" fill="#0b2545">isosbestisch</text>
 
   <!-- Legende A -->
   <line x1="70" y1="335" x2="95" y2="335" stroke="#0b2545" stroke-width="2"/>
@@ -40,6 +40,7 @@
   <line x1="335" y1="300" x2="585" y2="300" stroke="#0b2545" stroke-width="1.5"/>
   <line x1="335" y1="300" x2="335" y2="60" stroke="#0b2545" stroke-width="1.5"/>
   <text x="460" y="320" font-size="13" fill="#0b2545" text-anchor="middle">Zeit</text>
+  <text x="323" y="180" font-size="13" fill="#0b2545" text-anchor="middle" transform="rotate(-90 323 180)">Absorption</text>
 
   <!-- Schichten -->
   <rect x="336" y="240" width="200" height="59" fill="#f1f5f9" stroke="#0b2545" stroke-width="1"/>

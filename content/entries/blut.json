@@ -1,0 +1,69 @@
+{
+  "id": "blut",
+  "type": "term",
+  "title": "Blut",
+  "aliases": [
+    "blood",
+    "Sanguis",
+    "Vollblut",
+    "Blutplasma",
+    "Plasma",
+    "Hämatokrit",
+    "Hkt",
+    "Erythrozyten",
+    "Leukozyten",
+    "Thrombozyten",
+    "Blutbild",
+    "Gerinnung",
+    "Hämolyse"
+  ],
+  "category": "anatomie",
+  "summary": "Zellsuspension aus Erythrozyten, Leukozyten und Thrombozyten in Plasma, die Gase, Stoffe und Wärme transportiert, den pH-Wert puffert und gerinnen kann. Für Geräte ist Blut Messobjekt, nicht-newtonsches Fördermedium in extrakorporalen Kreisläufen und empfindliches Gut, das durch Scherkräfte, Fremdoberflächen und Wärme geschädigt werden kann.",
+  "body": "## Überblick\n\n**Blut** ist eine Suspension aus Zellen in einer wässrigen Proteinlösung, dem Plasma. Es transportiert Sauerstoff, Kohlendioxid, Nährstoffe, Hormone, Stoffwechselprodukte und Wärme, puffert den pH-Wert, wehrt Erreger ab und verschließt Gefäßverletzungen durch Gerinnung [@schmidt-lang-2019] [@guyton-2021]. Das Blutvolumen eines Erwachsenen beträgt etwa 7–8 % des Körpergewichts, bei 70 kg also rund 5 l.\n\nIn der Medizintechnik ist Blut zugleich **Messobjekt** (Labor- und Point-of-Care-Diagnostik), **Fördermedium** (extrakorporale Kreisläufe, Pumpen) und **empfindliches Gut** (Lagerung, Erwärmung, Schädigung durch Scherkräfte).\n\n## Zusammensetzung\n\n| Bestandteil | Anteil / Konzentration (typisch, Erwachsene) | Hauptfunktion |\n|---|---|---|\n| Plasma | ca. 55 % des Volumens; ~90 % Wasser, ~7 % Proteine (Albumin, Globuline, Fibrinogen) | Transport, kolloidosmotischer Druck, Gerinnung |\n| Erythrozyten | ca. 4–6 × 10¹²/l | O₂- und CO₂-Transport über [[haemoglobin|Hämoglobin]] |\n| Leukozyten | ca. 4–10 × 10⁹/l | Immunabwehr |\n| Thrombozyten | ca. 150–400 × 10⁹/l | Blutstillung |\n\n> [!hinweis] Referenzbereiche sind Orientierungswerte; sie sind geschlechts-, alters- und labormethodenabhängig. Maßgeblich sind die Referenzbereiche des jeweiligen Labors [@schmidt-lang-2019].\n\nDer **Hämatokrit** (Hkt) ist der Volumenanteil der Zellen (praktisch der Erythrozyten) am Gesamtblut – typisch etwa 0,40–0,50 bei Männern und 0,37–0,47 bei Frauen. Er bestimmt maßgeblich Viskosität und O₂-Transportkapazität.\n\n### Sauerstofftransport\n\nDer Sauerstoffgehalt des arteriellen Blutes setzt sich aus hämoglobingebundenem und physikalisch gelöstem Anteil zusammen:\n\n`CaO₂ = 1,34 · Hb · SaO₂ + 0,003 · paO₂`\n\n(`Hb` in g/dl, `SaO₂` als Bruch, `paO₂` in mmHg, Ergebnis in ml O₂/dl). Die Bindungseigenschaften beschreibt der Artikel [[haemoglobin|Hämoglobin und Sauerstoffbindung]]; gemessen wird `SpO₂` nichtinvasiv mit dem [[pulsoxymeter|Pulsoxymeter]], `SaO₂` und `paO₂` mit dem [[blutgasanalysator|Blutgasanalysator]].\n\n> [!beispiel] Hb = 15 g/dl, SaO₂ = 0,98, paO₂ = 100 mmHg: CaO₂ = 1,34 · 15 · 0,98 + 0,003 · 100 ≈ 19,7 + 0,3 = 20,0 ml/dl. Der gelöste Anteil ist unter Normaldruck sehr klein – erst in der [[druckkammer|Druckkammer]] mit stark erhöhtem paO₂ wird er therapeutisch bedeutsam.\n\n## Physikalische Eigenschaften\n\n### Rheologie\n\nBlut ist eine **nicht-newtonsche Flüssigkeit**: Seine scheinbare Viskosität sinkt mit zunehmender Schergeschwindigkeit (Scherverdünnung), weil Erythrozytenaggregate zerfallen und sich die verformbaren Zellen in Strömungsrichtung ausrichten. In engen Gefäßen unter etwa 0,3 mm Durchmesser sinkt die effektive Viskosität zusätzlich (Fåhræus-Lindqvist-Effekt). Bei normalem Hämatokrit liegt die Viskosität bei hohen Scherraten etwa beim 3- bis 4-Fachen von Wasser [@guyton-2021].\n\n> [!vereinfacht] Für Abschätzungen in Schläuchen und Kanülen wird Blut oft als newtonsche Flüssigkeit mit konstanter Viskosität behandelt; dann gilt das Hagen-Poiseuille-Gesetz (siehe [[stroemungslehre|Strömungslehre]]). Bei niedrigen Scherraten unterschätzt das den Strömungswiderstand.\n\n### Weitere Kenngrößen\n\n| Eigenschaft | Bedeutung in Geräten |\n|---|---|\n| Dichteunterschiede der Bestandteile | Trennung in der [[laborzentrifuge|Laborzentrifuge]] und im [[zellseparator|Zellseparator]] |\n| elektrische Leitfähigkeit (Elektrolyte) | Impedanz-Zellzählung, Leitfähigkeitseffekte bei Elektroden [@grimnes-martinsen-2015] |\n| optische Absorption (Hämoglobin) | [[lambert-beer|Lambert-Beer]], Pulsoxymetrie, [[blutleckdetektor|Blutleckdetektor]] |\n| Schallgeschwindigkeit/Streuung | Doppler-Flussmessung im [[ultraschallgeraet|Ultraschall]] ([[doppler-effekt|Doppler-Effekt]]) |\n| Wärmekapazität (ähnlich Wasser) | Wärmetauscher in [[herz-lungen-maschine|HLM]] und [[ecmo|ECMO]], [[infusionswaermer|Blutwärmer]] |\n\n## Gerinnung\n\nDie Blutstillung umfasst die primäre Hämostase (Thrombozytenadhäsion und -aggregation) und die plasmatische Gerinnung, eine Kaskade von Enzymen, die in der Bildung von Fibrin endet. Fremdoberflächen – Schläuche, Membranen, Oxygenatoren, Pumpenköpfe – aktivieren die Gerinnung. Extrakorporale Verfahren wie [[dialysegeraet|Hämodialyse]], [[crrt-geraet|CRRT]], [[herz-lungen-maschine|Herz-Lungen-Maschine]] und [[ecmo|ECMO]] benötigen deshalb eine Antikoagulation (z. B. Heparin oder regionale Citrat-Antikoagulation) und deren Überwachung mit [[gerinnungsanalysator|Gerinnungsanalysatoren]] oder Point-of-Care-Tests.\n\n## Blutschädigung durch Technik\n\n| Mechanismus | Ursache im Gerät | Folge |\n|---|---|---|\n| Hämolyse | hohe Scherspannungen in Pumpen, Kanülen, Engstellen; Okklusion | freies Hämoglobin, Kaliumanstieg |\n| Thrombose | Stagnationszonen, Fremdoberflächen | Filter-/Oxygenatorverschluss, Embolie |\n| Luftembolie | Luft im Schlauchsystem | Gefäßverschluss – Schutz durch [[luftblasendetektor|Luftblasendetektor]] |\n| Thermische Schädigung | Überhitzung bei Erwärmung | Hämolyse, Proteindenaturierung |\n\n> [!warnung] Blut darf nur mit dafür zugelassenen Geräten erwärmt werden. Überhitzung schädigt Erythrozyten; Mikrowellen oder improvisierte Wasserbäder sind ungeeignet.\n\nBlutpumpen ([[peristaltikpumpe|Rollerpumpen]] in Dialyse und HLM, Zentrifugalpumpen in der ECMO, Rotationspumpen in Axial- oder Zentrifugalbauweise im [[vad|VAD]]) werden daher auf geringe Hämolyse ausgelegt; Fehlbedienungen wie ein abgeknickter Schlauch erzeugen Druckspitzen, die über [[druckmessung|Druckmessung]] und [[okklusionsalarm|Okklusionsalarm]] erkannt werden.\n\n## Lagerung von Blutprodukten\n\nErythrozytenkonzentrate, Thrombozytenkonzentrate und Plasma haben unterschiedliche Lagerbedingungen (Kühlung, Raumtemperatur unter Agitation, Tiefkühlung). Die Anforderungen an Herstellung, Lagerung, Transport und Anwendung legt in Deutschland die Hämotherapie-Richtlinie fest [@richtlinie-haemotherapie].\n\n> [!belegt] Für die Lagerung von Blutkomponenten sind temperaturüberwachte, alarmgesicherte Kühleinrichtungen vorgeschrieben; die konkreten Temperaturbereiche je Blutprodukt ergeben sich aus der jeweils geltenden Fassung der Hämotherapie-Richtlinie [@richtlinie-haemotherapie]. Siehe [[blutkuehlschrank|Blutkonservenkühlschrank]].\n\n## Bedeutung in der Medizintechnik\n\n| Bereich | Geräte |\n|---|---|\n| Labordiagnostik | [[haematologie-analysator|Hämatologie-Analysator]], [[klinisch-chemischer-analysator|klinische Chemie]], [[gerinnungsanalysator|Gerinnung]], [[laborzentrifuge|Zentrifuge]] |\n| Point of Care | [[blutgasanalysator|Blutgasanalysator]], [[blutzuckermessgeraet|Blutzuckermessgerät]] |\n| Nichtinvasives Monitoring | [[pulsoxymeter|Pulsoxymeter]], [[nibp-messgeraet|NIBP]] |\n| Extrakorporale Verfahren | [[dialysegeraet|Dialyse]], [[herz-lungen-maschine|HLM]], [[ecmo|ECMO]], [[zellseparator|Apherese]] |\n| Transfusion | [[blutkuehlschrank|Blutkühlschrank]], [[infusionswaermer|Blutwärmer]], [[infusionspumpe|Infusionspumpe]] |\n\nBlut verbindet die Organe [[herz|Herz]], [[lunge|Lunge]] und [[niere|Niere]] über den [[blutkreislauf|Blutkreislauf]]; sein pH-Wert ist Gegenstand des [[saeure-basen-haushalt|Säure-Basen-Haushalts]]. Fachlich zuständig ist neben der klinischen Medizin die [[labormedizin|Laboratoriumsmedizin]].\n",
+  "related": [
+    "haemoglobin",
+    "blutkreislauf",
+    "saeure-basen-haushalt",
+    "niere",
+    "blutgasanalysator",
+    "haematologie-analysator",
+    "gerinnungsanalysator",
+    "laborzentrifuge",
+    "dialysegeraet",
+    "herz-lungen-maschine",
+    "ecmo",
+    "blutkuehlschrank",
+    "infusionswaermer",
+    "stroemungslehre",
+    "labormedizin"
+  ],
+  "paths": [
+    [
+      "blut",
+      "haemoglobin",
+      "lambert-beer",
+      "pulsoxymeter"
+    ],
+    [
+      "blut",
+      "dialysegeraet",
+      "peristaltikpumpe",
+      "druckmessung"
+    ],
+    [
+      "blut",
+      "ecmo",
+      "luftblasendetektor"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021",
+    "grimnes-martinsen-2015",
+    "richtlinie-haemotherapie",
+    "daugirdas-2015",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

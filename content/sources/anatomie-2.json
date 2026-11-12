@@ -1,0 +1,85 @@
+[
+  {
+    "id": "kandel-2021",
+    "kind": "buch",
+    "authors": "Kandel, E. R.; Koester, J. D.; Mack, S. H.; Siegelbaum, S. A. (Hrsg.)",
+    "title": "Principles of Neural Science",
+    "edition": "6th edition",
+    "publisher": "McGraw Hill, New York",
+    "year": "2021"
+  },
+  {
+    "id": "jasper-1958",
+    "kind": "artikel",
+    "authors": "Jasper, H. H.",
+    "title": "The ten-twenty electrode system of the International Federation",
+    "publisher": "Electroencephalography and Clinical Neurophysiology 10, S. 371–375",
+    "year": "1958",
+    "note": "Ursprüngliche Beschreibung des 10-20-Systems der EEG-Elektrodenplatzierung"
+  },
+  {
+    "id": "grimnes-martinsen-2015",
+    "kind": "buch",
+    "authors": "Grimnes, S.; Martinsen, Ø. G.",
+    "title": "Bioimpedance and Bioelectricity Basics",
+    "edition": "3rd edition",
+    "publisher": "Academic Press (Elsevier), Oxford",
+    "year": "2015",
+    "note": "Elektrische Eigenschaften von Gewebe, Haut und Elektroden"
+  },
+  {
+    "id": "stewart-1983",
+    "kind": "artikel",
+    "authors": "Stewart, P. A.",
+    "title": "Modern quantitative acid-base chemistry",
+    "publisher": "Canadian Journal of Physiology and Pharmacology 61(12), S. 1444–1461",
+    "year": "1983",
+    "note": "Physikochemischer Ansatz (starke Ionendifferenz, schwache Säuren, pCO₂)"
+  },
+  {
+    "id": "severinghaus-bradley-1958",
+    "kind": "artikel",
+    "authors": "Severinghaus, J. W.; Bradley, A. F.",
+    "title": "Electrodes for blood pO2 and pCO2 determination",
+    "publisher": "Journal of Applied Physiology 13(3), S. 515–520",
+    "year": "1958",
+    "note": "Beschreibung der pCO₂-Elektrode nach Severinghaus"
+  },
+  {
+    "id": "levey-2009",
+    "kind": "artikel",
+    "authors": "Levey, A. S.; Stevens, L. A.; Schmid, C. H. et al. (CKD-EPI)",
+    "title": "A new equation to estimate glomerular filtration rate",
+    "publisher": "Annals of Internal Medicine 150(9), S. 604–612",
+    "year": "2009",
+    "note": "CKD-EPI-Kreatinin-Gleichung zur Schätzung der GFR"
+  },
+  {
+    "id": "inker-2021",
+    "kind": "artikel",
+    "authors": "Inker, L. A.; Eneanya, N. D.; Coresh, J. et al. (CKD-EPI)",
+    "title": "New Creatinine- and Cystatin C-Based Equations to Estimate GFR without Race",
+    "publisher": "New England Journal of Medicine 385(19), S. 1737–1749",
+    "year": "2021",
+    "note": "Überarbeitete CKD-EPI-Gleichungen ohne Ethnie-Koeffizient"
+  },
+  {
+    "id": "kdigo-ckd-2024",
+    "kind": "leitlinie",
+    "authors": "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group",
+    "title": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
+    "publisher": "Kidney International 105(4S), S. S117–S314",
+    "year": "2024",
+    "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+    "note": "doi:10.1016/j.kint.2023.10.018; Stadieneinteilung der chronischen Nierenerkrankung nach GFR- und Albuminurie-Kategorien"
+  },
+  {
+    "id": "iso-226",
+    "kind": "norm",
+    "title": "ISO 226 – Acoustics – Normal equal-loudness-level contours",
+    "edition": "2023",
+    "publisher": "International Organization for Standardization, Genf",
+    "year": "2023",
+    "note": "Kurven gleicher Lautstärkepegel für otologisch normale Personen von 18 bis 25 Jahren"
+  }
+]

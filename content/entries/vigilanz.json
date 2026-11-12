@@ -1,0 +1,152 @@
+{
+  "id": "vigilanz",
+  "type": "term",
+  "title": "Vigilanz und Vorkommnismeldung",
+  "aliases": [
+    "Vigilance",
+    "Vorkommnis",
+    "Schwerwiegendes Vorkommnis",
+    "Serious incident",
+    "Sicherheitskorrekturmaßnahme im Feld",
+    "FSCA",
+    "Field Safety Notice",
+    "Kundeninformation",
+    "Medizinprodukte-Beobachtungs- und Meldesystem",
+    "MPAMIV"
+  ],
+  "category": "recht",
+  "summary": "Vigilanz bezeichnet das System zur Erfassung, Meldung und Bewertung von Vorkommnissen mit Medizinprodukten nach dem Inverkehrbringen. Hersteller melden schwerwiegende Vorkommnisse und Sicherheitskorrekturmaßnahmen nach der MDR an die Behörden; in Deutschland sind auch Betreiber und Anwender zur Meldung mutmaßlicher schwerwiegender Vorkommnisse an das BfArM verpflichtet.",
+  "body": "## Begriff\n\n**Vigilanz** (von lateinisch *vigilantia*, Wachsamkeit) ist das Beobachtungs- und Meldesystem für Medizinprodukte nach dem Inverkehrbringen. Ziel ist, Risiken, die erst in der breiten Anwendung sichtbar werden, frühzeitig zu erkennen und durch Korrekturmaßnahmen zu beseitigen. Die [[mdr|MDR]] regelt die Vigilanz in Art. 87 ff., eingebettet in die Überwachung nach dem Inverkehrbringen (Post-Market Surveillance) [@mdr-2017]. In Deutschland ergänzen das [[mpdg|MPDG]] und die Medizinprodukte-Anwendermelde- und Informationsverordnung (MPAMIV) die Pflichten von Anwendern und Betreibern [@mpdg] [@mpamiv].\n\n## Zentrale Begriffe\n\n| Begriff | Bedeutung (mit eigenen Worten nach MDR) |\n|---|---|\n| **Vorkommnis** | Fehlfunktion oder Verschlechterung der Eigenschaften oder Leistung eines bereitgestellten Produkts, Unzulänglichkeit der Herstellerinformationen oder eine unerwünschte Nebenwirkung (Art. 2 Nr. 64) |\n| **Schwerwiegendes Vorkommnis** | Vorkommnis, das direkt oder indirekt zum Tod, zu einer vorübergehenden oder dauerhaften schwerwiegenden Verschlechterung des Gesundheitszustands oder zu einer schwerwiegenden Gefahr für die öffentliche Gesundheit geführt hat, hätte führen können oder führen könnte (Art. 2 Nr. 65) |\n| **Sicherheitskorrekturmaßnahme im Feld** (FSCA) | Korrekturmaßnahme des Herstellers aus technischen oder medizinischen Gründen, um das Risiko eines schwerwiegenden Vorkommnisses zu verhindern oder zu verringern – z. B. Rückruf, Software-Update, Austausch, Änderung der Gebrauchsanweisung |\n| **Sicherheitsanweisung im Feld** (FSN) | Mitteilung des Herstellers an Anwender und Betreiber über eine Sicherheitskorrekturmaßnahme |\n\n> [!belegt] Entscheidend ist das Wort „**hätte führen können**“: Auch ein Beinahe-Schaden kann ein schwerwiegendes Vorkommnis sein, etwa wenn ein [[beatmungsgeraet|Beatmungsgerät]] ohne Alarm ausfällt, die Situation aber rechtzeitig bemerkt wird [@mdr-2017] [@mdcg-2023-3].\n\n## Meldepflichten des Herstellers\n\nDer Hersteller muss schwerwiegende Vorkommnisse (mit Ausnahme erwarteter, in der Produktdokumentation quantifizierter Nebenwirkungen, für die Trendberichte vorgesehen sind) und alle Sicherheitskorrekturmaßnahmen im Feld an die zuständigen Behörden melden. Die Fristen der MDR [@mdr-2017]:\n\n| Situation | Meldefrist nach Kenntnisnahme |\n|---|---|\n| Schwerwiegende Gefahr für die öffentliche Gesundheit | unverzüglich, spätestens **2 Tage** |\n| Tod oder unvorhergesehene schwerwiegende Verschlechterung des Gesundheitszustands | unverzüglich, spätestens **10 Tage** |\n| Sonstige schwerwiegende Vorkommnisse | unverzüglich, spätestens **15 Tage** |\n\nAnschließend untersucht der Hersteller das Vorkommnis (Ursachenanalyse, Risikobewertung, ggf. Korrekturmaßnahmen) und berichtet abschließend an die Behörde. Statistisch signifikante Zunahmen der Häufigkeit oder des Schweregrads nicht schwerwiegender Vorkommnisse sowie erwarteter unerwünschter Nebenwirkungen sind als **Trendbericht** zu melden (Art. 88) [@mdr-2017].\n\n## Meldepflichten in Deutschland für Anwender und Betreiber\n\nNach der MPAMIV melden Angehörige der Gesundheitsberufe sowie Betreiber und Anwender **mutmaßliche schwerwiegende Vorkommnisse** unverzüglich der zuständigen Bundesoberbehörde – für die meisten Medizinprodukte ist das das [@bfarm] [@mpamiv]. Die Meldung erfolgt über das Online-Formular der Behörde.\n\n> [!warnung] Eine Meldung setzt **keinen Beweis** voraus, dass das Produkt ursächlich war. Bereits der begründete Verdacht genügt. Die Ursachenklärung ist Aufgabe von Hersteller und Behörde.\n\n### Was tun bei einem Vorkommnis? (praxisorientierter Ablauf)\n\n1. **Patient:in versorgen**, Gefahr abwenden, ggf. Ersatzgerät einsetzen.\n2. **Produkt sichern** – nicht reinigen, zerlegen, Einstellungen ändern oder Akku entfernen, soweit dies die Sicherheit zulässt; Einmalartikel, Verpackungen und Zubehör aufbewahren.\n3. **Dokumentieren:** Zeitpunkt, Einstellungen, Alarme, beteiligtes Zubehör, Seriennummer und [[udi|UDI]]; Fehlerspeicher nur nach Rücksprache auslesen lassen (vgl. [[fehlercodes]]).\n4. **Intern informieren:** Medizintechnik und [[beauftragter-medizinproduktesicherheit|Beauftragte:n für Medizinproduktesicherheit]].\n5. **Melden** an das BfArM und in der Regel parallel an den Hersteller.\n6. **Untersuchung ermöglichen:** Produkt nach Absprache für Hersteller- bzw. Behördenuntersuchung bereitstellen.\n\n> [!praxis] Viele Kliniken regeln diesen Ablauf in einer Verfahrensanweisung. Das zurückgehaltene Gerät erhält einen deutlichen Sperrvermerk („nicht benutzen – Vorkommnis“), damit es nicht versehentlich repariert oder wieder eingesetzt wird.\n\n## Umgang mit Sicherheitsinformationen\n\nBetreiber erhalten Sicherheitsanweisungen im Feld (FSN) vom Hersteller und Informationen über Rückrufe auch über die Veröffentlichungen des BfArM [@bfarm]. Die Medizintechnik muss:\n\n* prüfen, ob betroffene Produkte im [[bestandsverzeichnis]] geführt werden (Modell, Seriennummer, Charge),\n* die Maßnahme umsetzen bzw. mit dem Hersteller koordinieren (z. B. Software-Update eines [[infusionspumpe|Infusionsgeräts]], Austausch von [[defibrillationselektroden]]),\n* die Umsetzung dokumentieren, etwa im [[medizinproduktebuch]],\n* Anwender informieren und ggf. [[einweisung|erneut einweisen]].\n\n## Abgrenzung: Vorkommnis oder Anwendungsfehler?\n\nNicht jeder Schaden ist ein Produktfehler – aber auch [[anwendungsfehler]] können meldepflichtig sein, wenn sie auf eine mangelhafte Gestaltung oder unklare Gebrauchsanweisung zurückgehen. Das Konzept der [[gebrauchstauglichkeit]] nach [[iec-62366-1]] betrachtet vorhersehbare Fehlbedienungen ausdrücklich als Risiko, das der Hersteller beherrschen muss [@mdcg-2023-3].\n\n| Beobachtung | Mögliche Einordnung |\n|---|---|\n| [[alarmsystem|Alarm]] wird wegen ungünstiger Lautstärke-Voreinstellung überhört | Gestaltungsproblem → ggf. meldepflichtig |\n| Falsche Spritzengröße gewählt, obwohl Gerät korrekt warnt | Anwendungsfehler, Schulungsbedarf |\n| Wiederholte Akkuausfälle trotz Wartung ([[akkufehler]]) | mögliches Vorkommnis/Trend |\n| [[neutralelektroden-verbrennung|Verbrennung unter der Neutralelektrode]] | schwerwiegend; Ursache (Produkt, Anwendung) klären |\n\n> [!vereinfacht] Die Zuordnung in der Tabelle ist beispielhaft. Ob eine Meldepflicht besteht, hängt immer vom Einzelfall ab; im Zweifel sollte gemeldet werden.\n\n## Bedeutung in der Medizintechnik\n\nVigilanz schließt den Kreis im [[lebenszyklus-medizinprodukt|Lebenszyklus]]: Erfahrungen aus dem Betrieb fließen über Meldungen in [[iso-14971|Risikomanagement]], [[klinische-bewertung|klinische Bewertung]] und Produktverbesserungen zurück. Ohne Meldungen aus Kliniken bleiben systematische Fehler unentdeckt. Für die [[patientensicherheit]] ist eine offene Meldekultur deshalb ebenso wichtig wie technische Prüfungen wie [[stk]] und [[mtk]].\n\n## Hinweis\n\nMaßgeblich sind MDR, MPDG und MPAMIV in der jeweils gültigen Fassung sowie die Hinweise des BfArM.",
+  "related": [
+    "udi",
+    "betreiberpflichten",
+    "beauftragter-medizinproduktesicherheit",
+    "anwendungsfehler",
+    "patientensicherheit",
+    "klinische-bewertung",
+    "mdr",
+    "mpdg",
+    "iso-14971"
+  ],
+  "paths": [
+    [
+      "vigilanz",
+      "beauftragter-medizinproduktesicherheit",
+      "betreiberpflichten"
+    ],
+    [
+      "udi",
+      "vigilanz",
+      "klinische-bewertung"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "mdcg-2023-3",
+    "mpdg",
+    "mpamiv",
+    "bfarm"
+  ],
+  "diagram": {
+    "title": "Meldeweg bei einem Vorkommnis",
+    "caption": "Vereinfachter Informationsfluss nach MDR und MPAMIV.",
+    "width": 900,
+    "height": 330,
+    "nodes": [
+      {
+        "id": "vk",
+        "label": "Vorkommnis\nam Patienten",
+        "kind": "patient",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "anw",
+        "label": "Anwender /\nBetreiber",
+        "ref": "betreiberpflichten",
+        "kind": "process",
+        "x": 310,
+        "y": 90
+      },
+      {
+        "id": "bmps",
+        "label": "Beauftragte:r\nMP-Sicherheit",
+        "ref": "beauftragter-medizinproduktesicherheit",
+        "kind": "control",
+        "x": 310,
+        "y": 250
+      },
+      {
+        "id": "bfarm",
+        "label": "Behörde\n(BfArM)",
+        "kind": "control",
+        "x": 540,
+        "y": 90
+      },
+      {
+        "id": "her",
+        "label": "Hersteller:\nUntersuchung",
+        "kind": "process",
+        "x": 540,
+        "y": 250
+      },
+      {
+        "id": "fsca",
+        "label": "Sicherheits-\nkorrektur (FSCA)",
+        "kind": "output",
+        "x": 770,
+        "y": 250
+      },
+      {
+        "id": "eud",
+        "label": "EUDAMED /\nandere Behörden",
+        "ref": "udi",
+        "kind": "output",
+        "x": 770,
+        "y": 90
+      }
+    ],
+    "edges": [
+      {
+        "from": "vk",
+        "to": "anw",
+        "kind": "data"
+      },
+      {
+        "from": "anw",
+        "to": "bmps",
+        "kind": "data",
+        "label": "intern"
+      },
+      {
+        "from": "anw",
+        "to": "bfarm",
+        "kind": "data",
+        "label": "Meldung"
+      },
+      {
+        "from": "bfarm",
+        "to": "her",
+        "kind": "data"
+      },
+      {
+        "from": "her",
+        "to": "fsca",
+        "kind": "data"
+      },
+      {
+        "from": "bfarm",
+        "to": "eud",
+        "kind": "data"
+      },
+      {
+        "from": "fsca",
+        "to": "bmps",
+        "kind": "data",
+        "label": "FSN"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

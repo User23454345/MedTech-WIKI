@@ -1,0 +1,33 @@
+[
+  {
+    "id": "iec-60601-2-2",
+    "kind": "norm",
+    "title": "IEC 60601-2-2 – Medizinische elektrische Geräte – Teil 2-2: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Hochfrequenz-Chirurgiegeräten und Hochfrequenz-Chirurgiezubehör",
+    "publisher": "IEC; in Deutschland als DIN EN IEC 60601-2-2 (VDE 0750-2-2)",
+    "note": "Gerätespezifische Norm für HF-Chirurgiegeräte und deren Zubehör (u. a. Neutralelektroden, Überwachung der Neutralelektrode, HF-Ableitströme, Ausgangsleistung, Aktivierungssignal). Zum Bearbeitungsstand 2026: 6. Ausgabe 2017 mit Änderung 1:2023 (konsolidiert Ausgabe 6.1). Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "massarweh-2006",
+    "kind": "artikel",
+    "authors": "Massarweh NN, Cosgriff N, Slakey DP",
+    "title": "Electrosurgery: history, principles, and current and future uses",
+    "publisher": "Journal of the American College of Surgeons 202(3): 520–530",
+    "year": "2006",
+    "note": "Übersichtsarbeit zu Geschichte, physikalischen Grundlagen, Gewebewirkungen und Komplikationen der Elektrochirurgie."
+  },
+  {
+    "id": "erbe-vio3",
+    "kind": "hersteller",
+    "authors": "Erbe Elektromedizin GmbH",
+    "title": "VIO 3 – Elektrochirurgie-Plattform (Produktinformation)",
+    "publisher": "Erbe Elektromedizin GmbH, Tübingen",
+    "note": "Herstellerangaben zur Plattform VIO 3 mit monopolaren und bipolaren Modi sowie Argonplasma-Koagulation über das Modul APC 3."
+  },
+  {
+    "id": "iec-60479-2",
+    "kind": "norm",
+    "title": "IEC TS 60479-2 – Effects of current on human beings and livestock – Part 2: Special aspects",
+    "publisher": "IEC",
+    "note": "Behandelt u. a. die Wirkung von Wechselströmen mit Frequenzen oberhalb 100 Hz (frequenzabhängiger Anstieg der Reizschwellen). Maßgeblich ist die jeweils gültige Ausgabe."
+  }
+]

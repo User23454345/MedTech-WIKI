@@ -1,0 +1,109 @@
+{
+  "id": "mindray",
+  "type": "manufacturer",
+  "title": "Mindray",
+  "aliases": [
+    "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
+    "Mindray Medical"
+  ],
+  "category": "hersteller",
+  "summary": "Shenzhen Mindray Bio-Medical Electronics ist ein chinesischer Medizintechnikhersteller mit Sitz in Shenzhen. Das Portfolio umfasst Patientenmonitoring und Lebenserhaltung, In-vitro-Diagnostik sowie medizinische Bildgebung, insbesondere Ultraschall.",
+  "headquarters": "Shenzhen, China",
+  "founded": "1991",
+  "website": "https://www.mindray.com/",
+  "productLines": [
+    {
+      "device": "patientenmonitor",
+      "models": [
+        "BeneVision N12",
+        "BeneVision N15",
+        "BeneVision N17",
+        "BeneVision N19",
+        "BeneVision N22"
+      ]
+    },
+    {
+      "device": "pulsoxymeter",
+      "models": [
+        "PM-60"
+      ]
+    },
+    {
+      "device": "anaesthesiegeraet",
+      "models": [
+        "A9",
+        "A8",
+        "A7"
+      ]
+    },
+    {
+      "device": "beatmungsgeraet",
+      "models": [
+        "SV600",
+        "SV800"
+      ]
+    },
+    {
+      "device": "defibrillator",
+      "models": [
+        "BeneHeart D3",
+        "BeneHeart D6"
+      ]
+    },
+    {
+      "device": "ekg-geraet",
+      "models": [
+        "BeneHeart R12"
+      ]
+    },
+    {
+      "device": "infusionspumpe",
+      "models": [
+        "BeneFusion VP5"
+      ]
+    },
+    {
+      "device": "spritzenpumpe",
+      "models": [
+        "BeneFusion SP5"
+      ]
+    },
+    {
+      "device": "ultraschallgeraet",
+      "models": [
+        "Resona",
+        "Consona",
+        "TE-Serie"
+      ]
+    },
+    {
+      "device": "haematologie-analysator",
+      "models": [],
+      "note": "Hämatologiesysteme der BC-Serie."
+    },
+    {
+      "device": "klinisch-chemischer-analysator",
+      "models": [],
+      "note": "Chemieanalysatoren der BS-Serie."
+    }
+  ],
+  "body": "## Überblick\n\n**Shenzhen Mindray Bio-Medical Electronics Co., Ltd.** ist einer der größten Medizintechnikhersteller Chinas mit Sitz in Shenzhen [@mindray-web]. Das Unternehmen ist in drei Feldern tätig – Patientenmonitoring und Lebenserhaltung, In-vitro-Diagnostik und Bildgebung – und hat sich in den vergangenen zwei Jahrzehnten auch in Europa als Anbieter für Klinik und Rettungsdienst etabliert.\n\n## Geschichte in Stichpunkten\n\n* **1991:** Gründung in Shenzhen.\n* **2006:** Börsengang an der New York Stock Exchange.\n* **2008:** Übernahme des Patientenmonitoring-Geschäfts der US-Firma Datascope; dadurch deutlicher Ausbau des Monitoringgeschäfts in Nordamerika.\n* **2013:** Übernahme des US-Ultraschallherstellers ZONARE.\n* **2016/2018:** Rückzug von der NYSE und erneuter Börsengang an der Börse Shenzhen.\n* **2023:** Übernahme einer Mehrheitsbeteiligung an der deutschen DiaSys Diagnostic Systems (Reagenzien für die Labordiagnostik).\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Patient Monitoring & Life Support | [[patientenmonitor|Monitoring]], [[anaesthesiegeraet|Anästhesie]], [[beatmungsgeraet|Beatmung]], [[defibrillator|Defibrillation]], [[infusionspumpe|Infusionstechnik]] |\n| In-vitro-Diagnostik | [[haematologie-analysator|Hämatologie]], [[klinisch-chemischer-analysator|Klinische Chemie]], Immunassays, Reagenzien |\n| Medical Imaging | [[ultraschallgeraet|Ultraschall]], digitale Radiographie |\n\n## Bedeutung für die Medizintechnik\n\nMindray steht für den Aufstieg chinesischer Hersteller in den Markt für klinische Medizintechnik. Durch ein breites Portfolio aus einer Hand – vom [[pulsoxymeter|Handpulsoxymeter]] [@mindray-pm60] bis zum Anästhesiearbeitsplatz – ist Mindray für Kliniken interessant, die Geräte verschiedener Bereiche vereinheitlichen wollen. Das Spitzenmodell der Anästhesie-A-Serie (A9) bietet nach Herstellerangabe eine elektronische Narkosemitteldosierung statt eines klassischen [[narkosemittelverdampfer|Plenumverdampfers]]; Ausstattungsdetails sind modellabhängig der Herstellerdokumentation zu entnehmen.\n\n> [!praxis] Bei der Integration in bestehende Klinik-IT sind Schnittstellen ([[hl7-fhir|HL7]], [[dicom|DICOM]] bei Ultraschall) und die Alarmweiterleitung zu klären. Wie bei allen Herstellern richten sich [[stk]], [[wartung]] und Ersatzteilversorgung nach den Vorgaben des Herstellers und der [[mpbetreibv]].\n\n> [!hinweis] Modellbezeichnungen und Verfügbarkeit unterscheiden sich zwischen China, Europa und Nordamerika; maßgeblich ist das regionale Produktprogramm [@mindray-web].\n\n## Einordnung im Markt\n\nMindray konkurriert im Monitoring mit [[philips]], [[ge-healthcare]], [[draeger]] und [[nihon-kohden]], in der Labordiagnostik u. a. mit [[sysmex]], [[roche-diagnostics]] und [[siemens-healthineers]]. Bei Beschaffungsentscheidungen spielen neben dem Gerätepreis die Servicestruktur in der Region, die Ersatzteilversorgung und die Kompatibilität mit vorhandenem Zubehör (z. B. SpO₂-Sensoren, NIBP-Manschetten) eine wichtige Rolle. Eine einheitliche Geräteflotte erleichtert zudem Schulung, [[einweisung]] und Ersatzteilhaltung.",
+  "related": [
+    "patientenmonitor",
+    "anaesthesiegeraet",
+    "beatmungsgeraet",
+    "ultraschallgeraet",
+    "haematologie-analysator",
+    "philips",
+    "ge-healthcare",
+    "draeger",
+    "nihon-kohden",
+    "labormedizin"
+  ],
+  "sources": [
+    "mindray-web",
+    "mindray-pm60"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "transportbeatmungsgeraet",
+  "type": "device",
+  "title": "Notfall- und Transportbeatmungsgerät",
+  "aliases": [
+    "Transportbeatmungsgerät",
+    "Notfallbeatmungsgerät",
+    "Rettungsdienst-Beatmungsgerät",
+    "EMS ventilator",
+    "transport ventilator"
+  ],
+  "category": "geraete",
+  "deviceGroup": "notfall",
+  "rank": 19,
+  "domains": [
+    "notfallmedizin",
+    "intensivmedizin",
+    "anaesthesiologie"
+  ],
+  "summary": "Notfall- und Transportbeatmungsgeräte sind kompakte, robuste Beatmungsgeräte für Rettungsdienst, Luftrettung und innerklinische Transporte. Sie arbeiten mit Sauerstoff aus Druckgasflaschen oder mit eingebautem Gebläse und bieten heute meist druck- und volumenkontrollierte Modi sowie nichtinvasive Beatmung.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives Produkt, das Atemgas in potenziell gefährlicher Weise an den Körper abgibt: [[mdr|MDR]] Anhang VIII **Regel 12** (Klasse IIb), wie beim [[beatmungsgeraet|Intensivbeatmungsgerät]].",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die Geräte sichern die maschinelle Beatmung vom Notfallort bis zur Klinik und während Transporten zwischen Stationen oder Kliniken (z. B. Intensivpatient zum CT). Sie ersetzen die Beutelbeatmung durch definierte, überwachte Atemzüge und entlasten das Team, etwa während einer Reanimation. Gegenüber dem [[beatmungsgeraet|Intensivbeatmungsgerät]] stehen Robustheit, Gewicht, Akkulaufzeit und geringer Gasverbrauch im Vordergrund.",
+    "principle": "## Antriebskonzepte\n\n* **Pneumatisch angetrieben:** Der Druckgasvorrat (meist O₂ mit 2,7–6 bar Versorgungsdruck, *typisch*) treibt das Gerät an; die Dosierung erfolgt über [[proportionalventil|Proportional-]] bzw. [[magnetventil|Magnetventile]]. Für Gemische mit niedrigerem FiO₂ wird über ein Injektorprinzip Umgebungsluft angesaugt ([[stroemungslehre|Venturi-Effekt]]).\n* **Gebläsebasiert:** Eine elektrisch angetriebene [[turbine]] erzeugt den Inspirationsfluss aus Umgebungsluft; Sauerstoff wird zugemischt. Vorteil: geringer O₂-Verbrauch, unabhängig von Druckluft.\n\n## Steuerung und Überwachung\n\nEin [[regelkreis]] regelt Druck oder Fluss anhand von [[drucksensor|Druck-]] und [[flowsensor|Flowsensoren]]; das Ausatemventil im Patientenschlauchsystem öffnet zur Exspiration und hält den PEEP. Ein [[alarmsystem]] überwacht u. a. Atemwegsdruck, Volumen, [[diskonnektion]] und Gasversorgung. Für die Volumenmessung sind die [[gasgesetze]] zu beachten: Gasvolumina hängen von Druck und Temperatur ab, sodass Messwerte auf Bezugsbedingungen (z. B. BTPS) umgerechnet werden – im Rettungsdienst relevant bei wechselnden Umgebungstemperaturen und in der Luftrettung bei sinkendem Umgebungsdruck.\n\n## Anforderungen an das Umfeld\n\nDie Norm ISO 80601-2-84 legt besondere Anforderungen für Beatmungsgeräte im Rettungsdienst fest – u. a. zum Betrieb bei Erschütterung, Feuchtigkeit und unterschiedlichen Temperaturen [@iso-80601-2-84]. Hinzu kommen Anforderungen an [[emv]] und die Akkuversorgung ([[lithium-ionen-akku]]).\n\n> [!praxis] Vor jedem Einsatz Gasvorrat prüfen und Reichweite abschätzen: Bei pneumatischen Geräten verbraucht der Antrieb selbst einen Teil des Sauerstoffs."
+  },
+  "manufacturers": [
+    {
+      "ref": "weinmann",
+      "models": [
+        "MEDUMAT Standard²"
+      ],
+      "note": "Notfall- und Transportbeatmung."
+    },
+    {
+      "ref": "draeger",
+      "models": [
+        "Oxylog 3000 plus"
+      ],
+      "note": "Notfall- und Transportbeatmung."
+    },
+    {
+      "ref": "hamilton-medical",
+      "models": [
+        "HAMILTON-T1"
+      ],
+      "note": "Gebläsebasiertes Transportbeatmungsgerät."
+    }
+  ],
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.5 – nichtimplantierbare aktive Produkte zur maschinellen Beatmung; nicht in Anlage 2 aufgeführt.",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); Wartung nach Herstellerangabe (Kalender- oder Betriebsstundenintervalle, Wechsel von Verschleißteilen und Akkus); Funktions- und Dichtheitsprüfung durch Anwender vor jedem Einsatz."
+  },
+  "related": [
+    "beatmungsgeraet",
+    "turbine",
+    "proportionalventil",
+    "flowsensor",
+    "atemmechanik",
+    "leckage"
+  ],
+  "sources": [
+    "iso-80601-2-84",
+    "oczenski-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

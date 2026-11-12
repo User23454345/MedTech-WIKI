@@ -1,0 +1,170 @@
+{
+  "id": "hall-sensor",
+  "type": "term",
+  "title": "Hall-Sensor",
+  "aliases": [
+    "Hallsensor",
+    "Hall-Effekt-Sensor",
+    "Hall-Element",
+    "Hall-IC",
+    "Hall effect sensor",
+    "Hall-Schalter",
+    "Hall-Stromsensor",
+    "Magnetfeldsensor"
+  ],
+  "category": "sensorik",
+  "summary": "Halbleitersensor, der die magnetische Flussdichte über die Hall-Spannung misst, die die Lorentzkraft in einem stromdurchflossenen Plättchen erzeugt. Dient in Medizingeräten zur Rotorlage- und Drehzahlerfassung bürstenloser Motoren, zur Positionserkennung und zur potenzialfreien Strommessung.",
+  "body": "## Begriff\n\nEin **Hall-Sensor** misst die magnetische Flussdichte B über den **Hall-Effekt**: In einem stromdurchflossenen Leiter oder Halbleiter, der von einem Magnetfeld durchsetzt wird, entsteht quer zu Strom- und Feldrichtung eine elektrische Spannung, die **Hall-Spannung**. Der Effekt wurde 1879 von Edwin H. Hall an einem Goldleiter entdeckt [@hall-1879]. Heute sind Hall-Sensoren massenhaft eingesetzte, kostengünstige Halbleiterbauteile – in der Medizintechnik vor allem zur Rotorlage- und [[drehzahlregelung|Drehzahlerfassung]] in Elektromotoren, zur berührungslosen Positions- und Endlagenerkennung und zur potenzialfreien Strommessung [@fraden-2016] [@hering-2018].\n\n## Physikalisches Prinzip\n\nAuf bewegte Ladungsträger (Ladung q, Driftgeschwindigkeit v) wirkt im Magnetfeld die **Lorentzkraft**\n\n`F_L = q · (v × B)`\n\nSie lenkt die Ladungsträger seitlich ab, bis das entstehende Querfeld E_H die Lorentzkraft gerade kompensiert. Für ein Plättchen der Dicke d, durchflossen vom Steuerstrom I, ergibt sich die Hall-Spannung\n\n`U_H = R_H · I · B / d`  mit der Hall-Konstante  `R_H = 1 / (n · q)`\n\n(n: Ladungsträgerdichte). Daraus folgen die Konstruktionsregeln:\n\n| Einflussgröße | Folge für den Sensor |\n|---|---|\n| geringe Ladungsträgerdichte n | große Hall-Spannung – deshalb Halbleiter (Si, GaAs, InSb, InAs) statt Metall; Werkstoffe mit hoher Ladungsträgerbeweglichkeit (InSb, InAs, GaAs) liefern bei gegebener Steuerspannung besonders hohe Empfindlichkeit |\n| dünnes Plättchen d | höhere Empfindlichkeit |\n| Steuerstrom I | Empfindlichkeit proportional zu I, aber Eigenerwärmung begrenzt ihn |\n| Vorzeichen von U_H | gibt die Richtung von B (Nord-/Südpol) an |\n\n> [!beispiel] In Metallen ist n sehr groß (Größenordnung 10²⁸ bis 10²⁹ m⁻³), die Hall-Spannung daher winzig. In schwach dotiertem Halbleitermaterial liegt n um Größenordnungen niedriger – bei gleichem Strom und Feld entsteht eine entsprechend größere, gut messbare Spannung im Millivoltbereich.\n\n> [!vereinfacht] Die Formel gilt für ein ideales, langes Plättchen mit einer Ladungsträgersorte. Reale Sensoren zeigen einen Offset (Fehlausrichtung der Kontakte), Temperaturabhängigkeit und mechanische Spannungsempfindlichkeit. Integrierte Hall-ICs kompensieren dies z. B. durch Umschalten der Stromrichtung (*spinning current*) und eine Temperaturkorrektur [@fraden-2016].\n\n## Bauformen\n\n| Typ | Ausgang | Typische Verwendung |\n|---|---|---|\n| Linearer Hall-Sensor | analoge Spannung proportional zu B | Positions-, Winkel- und Strommessung |\n| Hall-Schalter (unipolar) | schaltet bei Überschreiten einer Flussdichte | Tür-, Klappen- und Endlagenerkennung |\n| Hall-Latch (bipolar) | wechselt den Zustand bei Polwechsel | Kommutierung von BLDC-Motoren, Drehzahlerfassung |\n| Hall-Stromsensor (offener oder geschlossener Regelkreis) | Spannung proportional zum Primärstrom | potenzialfreie Strommessung in Netzteilen und Motorsteuerungen |\n\nBeim **Stromsensor** konzentriert ein geschlitzter Ringkern das Magnetfeld des stromführenden Leiters auf den Hall-Chip im Luftspalt. Weil kein elektrischer Kontakt zum Primärleiter besteht, bietet das Prinzip zugleich eine [[galvanische-trennung|galvanische Trennung]]. Bei der Closed-Loop-Bauweise regelt eine Kompensationswicklung das Feld im Kern auf null ([[regelkreis]]); der Kompensationsstrom ist dann das Messsignal – mit besserer Linearität und Bandbreite.\n\n## Anwendung in Geräten\n\n### Turbine und Drehzahlregelung im Beatmungsgerät\n\nIm turbinengetriebenen [[beatmungsgeraet|Beatmungsgerät]] treibt ein [[bldc-motor|bürstenloser Gleichstrommotor]] die [[turbine|Turbine]] an. Ein BLDC-Motor hat keinen mechanischen Kommutator; die Elektronik muss wissen, in welcher Stellung sich der Permanentmagnet-Rotor befindet, um die richtige Statorwicklung zu bestromen. Dazu dienen häufig **drei Hall-Sensoren**, die um 120° elektrisch versetzt angeordnet sind und sechs unterscheidbare Schaltzustände pro elektrischer Umdrehung liefern (Blockkommutierung) [@hughes-drury-2019].\n\nDie Frequenz der Hall-Signale ist zugleich das Drehzahlsignal. Für einen Motor mit p Polpaaren und der Signalfrequenz f eines Hall-Sensors gilt:\n\n`n = 60 · f / p`  (n in min⁻¹, f in Hz)\n\n> [!beispiel] Ein Motor mit p = 2 Polpaaren liefert an einem Hall-Sensor f = 1 000 Hz. Die Drehzahl beträgt n = 60 · 1 000 / 2 = 30 000 min⁻¹.\n\nDamit schließt sich die Kette: Das Beatmungsgerät gibt einen Solldruck vor, die [[drehzahlregelung|Drehzahlregelung]] stellt über [[pwm|Pulsweitenmodulation]] die Motorspannung, der Hall-Sensor meldet Rotorlage und Drehzahl, und der [[drucksensor|Drucksensor]] liefert den eigentlichen Istwert der [[druckmessung|Druckmessung]]. Viele Antriebe arbeiten alternativ **sensorlos** und werten die Gegenspannung (Gegen-EMK) der nicht bestromten Wicklung aus; welche Lösung ein Gerät nutzt, ist herstellerspezifisch [@hughes-drury-2019].\n\n### Weitere Beispiele\n\n| Gerät | Aufgabe des Hall-Sensors |\n|---|---|\n| [[chirurgisches-motorsystem]], [[ecmo]], [[herz-lungen-maschine]] | Kommutierung und Drehzahlerfassung bürstenloser Antriebe (je nach Bauart, z. B. bei Zentrifugalpumpen) |\n| [[spritzenpumpe]], [[infusionspumpe]] | Erkennung von Klappen- und Hebelstellungen, Positionserkennung (je nach Gerät) |\n| [[pflegebett]], [[op-tisch]] | Endlagen- und Positionserkennung der Verstellantriebe |\n| [[medizinisches-netzteil]], Motorsteuerungen | potenzialfreie Strommessung, Überstromerkennung |\n| [[herzschrittmacher]], [[icd]] | Erkennung eines aufgelegten Magneten (je nach Modell über Reed-Kontakt oder Magnetfeldsensor) |\n\n> [!belegt] Der Hall-Effekt beschreibt die durch die Lorentzkraft verursachte Querspannung in einem stromdurchflossenen Leiter im Magnetfeld; die Hall-Spannung ist proportional zu Strom und Flussdichte und umgekehrt proportional zu Ladungsträgerdichte und Dicke [@tipler-2019] [@fraden-2016].\n\n## Störeinflüsse und Fehlerbilder\n\n* **Fremdfelder:** Starke Magnetfelder – etwa im Umfeld eines [[mrt|Magnetresonanztomographen]] – können Hall-Sensoren sättigen oder falsch schalten. Im MR-Untersuchungsraum dürfen deshalb nur Geräte eingesetzt werden, die als „MR-sicher“ oder „bedingt MR-sicher“ (*MR Conditional*) mit den angegebenen Bedingungen gekennzeichnet sind.\n* **Temperatur und Alterung:** Offset- und Empfindlichkeitsdrift ([[sensordrift]]); bei Schaltsensoren verschiebt sich die Schaltschwelle.\n* **Mechanik:** Veränderter Abstand zum Magneten (gelockerte Halterung, Lagerverschleiß) führt zu Aussetzern. Bei BLDC-Antrieben äußern sich defekte Hall-Sensoren durch unruhigen Lauf, Anlaufprobleme oder Drehzahlfehler.\n* **EMV:** Lange, ungeschirmte Sensorleitungen sind anfällig für [[emv-stoerung|EMV-Störungen]].\n\n> [!praxis] Meldet ein Gerät einen Motor- oder Drehzahlfehler, liegt die Ursache nicht immer im Motor selbst: Steckverbinder der Hall-Leitungen, verschmutzte Lager oder eine schwergängige Turbine sind häufige Befunde der [[fehlersuche|Fehlersuche]]. Die Instandsetzung erfolgt durch befugtes Fachpersonal nach Herstellervorgabe.\n\n## Einordnung\n\nDer Hall-Sensor verbindet [[elektrotechnik|Elektrotechnik]], Magnetismus und [[elektromotor|Antriebstechnik]]: Er ist das Bindeglied zwischen dem mechanischen Rotor und der digitalen Regelung im [[mikrocontroller|Mikrocontroller]] und damit ein Baustein vieler [[messkette|Messketten]] in aktiven Medizinprodukten.\n",
+  "related": [
+    "bldc-motor",
+    "elektromotor",
+    "turbine",
+    "drehzahlregelung",
+    "beatmungsgeraet",
+    "pwm",
+    "regelkreis",
+    "galvanische-trennung",
+    "drucksensor",
+    "druckmessung",
+    "sensordrift",
+    "mrt"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "bldc-motor",
+      "hall-sensor",
+      "drehzahlregelung",
+      "druckmessung"
+    ],
+    [
+      "hall-sensor",
+      "galvanische-trennung",
+      "medizinisches-netzteil"
+    ]
+  ],
+  "sources": [
+    "hall-1879",
+    "fraden-2016",
+    "hering-2018",
+    "hughes-drury-2019",
+    "tipler-2019"
+  ],
+  "diagram": {
+    "title": "Hall-Sensoren im BLDC-Turbinenantrieb",
+    "caption": "Rotorlage- und Drehzahlrückführung in der Antriebsregelung eines turbinengetriebenen Beatmungsgeräts (vereinfacht).",
+    "width": 960,
+    "height": 280,
+    "nodes": [
+      {
+        "id": "soll",
+        "label": "Solldruck\nBeatmungsgerät",
+        "kind": "control",
+        "x": 90,
+        "y": 80,
+        "ref": "beatmungsgeraet"
+      },
+      {
+        "id": "regler",
+        "label": "Drehzahl-\nregelung",
+        "kind": "control",
+        "x": 280,
+        "y": 80,
+        "ref": "drehzahlregelung"
+      },
+      {
+        "id": "pwm",
+        "label": "PWM-Endstufe",
+        "kind": "actuator",
+        "x": 470,
+        "y": 80,
+        "ref": "pwm"
+      },
+      {
+        "id": "motor",
+        "label": "BLDC-Motor",
+        "kind": "actuator",
+        "x": 660,
+        "y": 80,
+        "ref": "bldc-motor"
+      },
+      {
+        "id": "turb",
+        "label": "Turbine",
+        "kind": "actuator",
+        "x": 850,
+        "y": 80,
+        "ref": "turbine"
+      },
+      {
+        "id": "hall",
+        "label": "Hall-Sensoren\n(Rotorlage, n)",
+        "kind": "sensor",
+        "x": 660,
+        "y": 210,
+        "ref": "hall-sensor"
+      },
+      {
+        "id": "ps",
+        "label": "Drucksensor",
+        "kind": "sensor",
+        "x": 850,
+        "y": 210,
+        "ref": "drucksensor"
+      }
+    ],
+    "edges": [
+      {
+        "from": "soll",
+        "to": "regler",
+        "kind": "signal"
+      },
+      {
+        "from": "regler",
+        "to": "pwm",
+        "kind": "signal",
+        "label": "Tastgrad"
+      },
+      {
+        "from": "pwm",
+        "to": "motor",
+        "kind": "power",
+        "label": "Phasenströme"
+      },
+      {
+        "from": "motor",
+        "to": "turb",
+        "kind": "energy",
+        "label": "Drehmoment"
+      },
+      {
+        "from": "motor",
+        "to": "hall",
+        "kind": "energy",
+        "label": "Magnetfeld"
+      },
+      {
+        "from": "hall",
+        "to": "regler",
+        "kind": "signal",
+        "label": "n, Lage"
+      },
+      {
+        "from": "turb",
+        "to": "ps",
+        "kind": "gas",
+        "label": "Atemgas"
+      },
+      {
+        "from": "ps",
+        "to": "regler",
+        "kind": "signal",
+        "label": "p_ist"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

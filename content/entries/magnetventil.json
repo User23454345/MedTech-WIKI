@@ -1,0 +1,144 @@
+{
+  "id": "magnetventil",
+  "type": "term",
+  "title": "Magnetventil",
+  "aliases": [
+    "Solenoid valve",
+    "Solenoidventil",
+    "Schaltventil",
+    "Elektromagnetventil",
+    "2/2-Wegeventil",
+    "3/2-Wegeventil"
+  ],
+  "category": "komponenten",
+  "summary": "Elektrisch betätigtes Ventil, bei dem eine Spule einen Anker anzieht und so einen Gas- oder Flüssigkeitsweg öffnet oder schließt. Es schaltet in Medizingeräten zweistufig, etwa in der Dialysehydraulik, beim Manschettenablass oder beim Nullabgleich von Drucksensoren.",
+  "body": "## Begriff\n\nEin **Magnetventil** (englisch *solenoid valve*) ist ein elektrisch betätigtes Ventil, bei dem eine stromdurchflossene Spule einen beweglichen Eisenkern – den **Anker** – anzieht und damit einen Ventilsitz öffnet oder schließt. Im Unterschied zum [[proportionalventil|Proportionalventil]] kennt das klassische Magnetventil nur zwei Schaltzustände: offen oder geschlossen. In Medizingeräten schaltet es Gas- und Flüssigkeitswege, etwa in der Hydraulik des [[dialysegeraet|Dialysegeräts]], beim Nullabgleich der Drucksensoren im [[beatmungsgeraet|Beatmungsgerät]] oder beim Ablassen der Manschette im [[nibp-messgeraet|NIBP-Messgerät]] [@kramme-2017].\n\n## Aufbau\n\n| Bauteil | Funktion |\n|---|---|\n| Spule (Wicklung mit N Windungen) | Erzeugt bei Bestromung den magnetischen Fluss |\n| Magnetkreis (Joch, Polstück) | Führt den Fluss mit geringem magnetischen Widerstand |\n| Anker (Tauchanker) | Beweglicher Eisenkern, trägt die Dichtung |\n| Rückstellfeder | Bringt den Anker im stromlosen Zustand in die Ruhelage |\n| Ventilsitz und Dichtung | Trennen bzw. verbinden die Anschlüsse; Werkstoffe mediumgerecht |\n| Gehäuse mit Anschlüssen | 2/2-Wege (ein Eingang, ein Ausgang) oder 3/2-Wege (Umschaltung) |\n\nDie Bezeichnung **x/y-Wegeventil** gibt die Zahl der Anschlüsse (x) und Schaltstellungen (y) an. Ein **stromlos geschlossenes** Ventil (NC, *normally closed*) sperrt ohne Strom, ein **stromlos offenes** (NO, *normally open*) gibt frei.\n\n## Physikalisches Prinzip\n\n### Magnetkreis und Zugkraft\n\nDie Spule erzeugt die Durchflutung `Θ = N · I`. Wird der magnetische Widerstand im Wesentlichen vom Luftspalt δ zwischen Anker und Polstück bestimmt, gilt näherungsweise für die Flussdichte im Spalt:\n\n`B ≈ μ₀ · N · I / δ`\n\nDie Zugkraft auf den Anker ergibt sich aus der im Spalt gespeicherten magnetischen Energie [@tipler-2019]:\n\n`F = B² · A / (2 · μ₀) ≈ μ₀ · (N · I)² · A / (2 · δ²)`\n\n(je Luftspalt; bei zwei wirksamen Spalten verteilt sich die Durchflutung entsprechend) mit Polfläche A und magnetischer Feldkonstante μ₀ = 4π · 10⁻⁷ V·s/(A·m).\n\n> [!vereinfacht] Die Formel vernachlässigt den magnetischen Widerstand des Eisens, Streuflüsse und Sättigung. Sie zeigt aber das Wesentliche: Die Kraft steigt mit dem **Quadrat des Stroms** und fällt mit dem **Quadrat des Luftspalts**. Ein anziehender Anker wird immer stärker angezogen – das Ventil „schnappt“ durch.\n\nWeil die Kraft bei geschlossenem Spalt viel größer ist als beim Anzug, genügt zum Halten ein Bruchteil des Anzugsstroms. Viele Ansteuerungen nutzen deshalb eine **Anzug-Halte-Schaltung** (*peak and hold*), häufig realisiert über [[pwm|Pulsweitenmodulation]]: Das spart Energie, reduziert die Eigenerwärmung der Spule und verlängert die Akkulaufzeit tragbarer Geräte.\n\n### Induktives Verhalten\n\nDie Spule ist eine Induktivität L. Beim Abschalten erzeugt die Stromänderung eine Selbstinduktionsspannung `u = −L · di/dt`, die den ansteuernden Transistor zerstören könnte. Eine **Freilaufdiode** oder ein Begrenzernetzwerk führt diese Energie ab. Zugleich verlängert ein langsamer Stromabbau die Abfallzeit des Ventils – ein Zielkonflikt zwischen Schutz und Schaltgeschwindigkeit ([[spannung-strom-widerstand]], [[elektromagnetische-induktion]]).\n\n> [!praxis] Weil sich die Induktivität mit der Ankerposition ändert, zeigt der Stromverlauf beim Einschalten einen charakteristischen „Knick“, wenn der Anker anzieht. Manche Geräte werten diese Signatur aus, um ein klemmendes Ventil ohne zusätzlichen Sensor zu erkennen.\n\n## Bauformen\n\n| Bauform | Prinzip | Einsatz |\n|---|---|---|\n| Direktgesteuert | Anker öffnet den Sitz unmittelbar | kleine Nennweiten, funktioniert ab Differenzdruck null |\n| Vorgesteuert (servogesteuert) | Anker öffnet nur eine kleine Vorsteuerbohrung; der Mediumsdruck bewegt eine Membran oder einen Kolben | große Durchflüsse mit kleiner Spule; benötigt einen Mindest-Differenzdruck |\n| Zwangsgesteuert | Kombination: Anker unterstützt die Membran mechanisch | große Nennweiten ab niedrigem Differenzdruck |\n| Bistabil (Impulsventil) | Permanentmagnet hält die Endlage, Umschalten per Strompuls | sehr geringer Energiebedarf |\n| Quetschventil | Anker quetscht einen Schlauch ab; Medium berührt das Ventil nicht | Einmalschlauchsysteme, Blutleitungen |\n\nDer Durchfluss wird über den **Durchflusskoeffizienten** (k_v-Wert) charakterisiert; physikalisch verhält sich der offene Sitz wie eine Blende, deren Volumenstrom mit der Wurzel des Differenzdrucks wächst ([[stroemungslehre]]).\n\n## Anforderungen in der Medizintechnik\n\n* **Sichere Ruhelage:** Ob NC oder NO gewählt wird, folgt aus der Risikoanalyse nach [[iso-14971|ISO 14971]]: Der stromlose Zustand – also auch der Zustand bei Netz- und Akkuausfall – soll der sichere sein [@iso-14971].\n* **Sauerstoffverträglichkeit:** Ventile in O₂-führenden Leitungen müssen öl- und fettfrei und aus sauerstoffbeständigen Werkstoffen gefertigt sein, um Brand- und Zündgefahren zu vermeiden.\n* **Medienbeständigkeit:** In der Dialysehydraulik müssen Dichtungen Desinfektions- und Entkalkungsmitteln sowie Bicarbonatkonzentrat standhalten.\n* **Geräusch und Wärme:** Schaltgeräusche sind am Patientenbett störend; dauerbestromte Spulen erwärmen das Gerät.\n\n> [!belegt] Dialysegeräte steuern die Flüssigkeitswege ihrer Hydraulik – Bilanzkammern, Bypass, Spül- und Desinfektionswege – über eine Vielzahl elektrisch betätigter Ventile; ihre Dichtigkeit ist Voraussetzung für eine korrekte Ultrafiltrationsbilanz [@daugirdas-2015] [@kramme-2017].\n\n## Fehlerbilder\n\n| Fehler | Ursache | Folge |\n|---|---|---|\n| Ventil öffnet nicht | Spule unterbrochen, Treiberdefekt, zu geringe Spannung | Funktion fällt aus, oft Selbsttestfehler |\n| Ventil schließt nicht | Partikel oder Kalk am Sitz, verklebter Anker | Leckage, Bilanzfehler, Druckverlust |\n| Undichtigkeit | gealterte Dichtung | schleichende Fehler, z. B. [[leckage|Leckagealarm]] |\n| Übertemperatur | Dauerbestromung ohne Haltestromabsenkung | Isolationsalterung |\n\nBei der [[fehlersuche|Fehlersuche]] helfen Spulenwiderstandsmessung, Beobachtung des Schaltverhaltens und Dichtheitsprüfungen. Der Tausch von Ventilen erfolgt nach Herstellerangaben durch befugtes Personal ([[instandsetzung]]).\n\n## Anwendung in Geräten\n\n| Gerät | Aufgabe |\n|---|---|\n| [[dialysegeraet]], [[crrt-geraet]] | Schalten der Hydraulikwege, Bilanzierung, Desinfektion |\n| [[beatmungsgeraet]] | Nullabgleich von [[drucksensor|Drucksensoren]], Spülung von Messleitungen, Sicherheitsfunktionen |\n| [[nibp-messgeraet]], [[langzeit-blutdruck]] | Schnellablass der Manschette nach der Messung |\n| [[sauerstoffkonzentrator]] | Umschalten der Molekularsiebbetten bei der Druckwechseladsorption (bauartabhängig, teils auch motorisch betätigte Drehschieberventile) |\n| [[anaesthesiegeraet]] | Umschalt- und Absperrfunktionen im Gasweg (bauartabhängig) |\n| [[ipk-geraet]], [[antidekubitussystem]] | Verteilung der Luft auf Kammern (bauartabhängig) |\n| [[rdg]], [[dampfsterilisator]] | Steuerung von Wasser-, Dampf- und Luftwegen (bauartabhängig) |\n\n## Bedeutung in der Medizintechnik\n\nMagnetventile sind die „Schalter“ der Fluidtechnik. Sie zeigen, wie eng Elektrotechnik ([[elektromagnetische-induktion|Induktion]], Treiberschaltung), Physik ([[stroemungslehre|Strömung]]) und Sicherheitstechnik (sichere Ruhelage) zusammenhängen. Für Proportionalaufgaben – also stufenlose Dosierung – kommt dagegen das [[proportionalventil|Proportionalventil]] zum Einsatz.",
+  "related": [
+    "proportionalventil",
+    "exspirationsventil",
+    "elektromagnetische-induktion",
+    "pwm",
+    "stroemungslehre",
+    "dialysegeraet",
+    "beatmungsgeraet",
+    "nibp-messgeraet",
+    "sauerstoffkonzentrator",
+    "fehlersuche"
+  ],
+  "paths": [
+    [
+      "dialysegeraet",
+      "magnetventil",
+      "elektromagnetische-induktion"
+    ],
+    [
+      "magnetventil",
+      "proportionalventil",
+      "regelkreis"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "tipler-2019",
+    "daugirdas-2015",
+    "iso-14971"
+  ],
+  "diagram": {
+    "title": "Wirkkette eines Magnetventils",
+    "caption": "Funktionsschema eines direktgesteuerten 2/2-Wege-Ventils (stromlos geschlossen).",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "mc",
+        "label": "Steuerung",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "tr",
+        "label": "Treiber +\nFreilaufdiode",
+        "ref": "pwm",
+        "kind": "control",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "sp",
+        "label": "Spule\n(Θ = N · I)",
+        "ref": "elektromagnetische-induktion",
+        "kind": "actuator",
+        "x": 470,
+        "y": 80
+      },
+      {
+        "id": "an",
+        "label": "Anker +\nRückstellfeder",
+        "kind": "actuator",
+        "x": 660,
+        "y": 80
+      },
+      {
+        "id": "sitz",
+        "label": "Ventilsitz",
+        "ref": "magnetventil",
+        "kind": "process",
+        "x": 660,
+        "y": 220
+      },
+      {
+        "id": "ein",
+        "label": "Medium\n(Gas/Flüssigkeit)",
+        "kind": "source",
+        "x": 470,
+        "y": 220
+      },
+      {
+        "id": "aus",
+        "label": "Verbraucher",
+        "kind": "output",
+        "x": 850,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "mc",
+        "to": "tr",
+        "kind": "signal",
+        "label": "Ein/Aus"
+      },
+      {
+        "from": "tr",
+        "to": "sp",
+        "kind": "power"
+      },
+      {
+        "from": "sp",
+        "to": "an",
+        "kind": "energy",
+        "label": "Magnetkraft"
+      },
+      {
+        "from": "an",
+        "to": "sitz",
+        "kind": "energy",
+        "label": "Hub"
+      },
+      {
+        "from": "ein",
+        "to": "sitz",
+        "kind": "fluid"
+      },
+      {
+        "from": "sitz",
+        "to": "aus",
+        "kind": "fluid"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

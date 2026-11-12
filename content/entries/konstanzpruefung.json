@@ -1,0 +1,160 @@
+{
+  "id": "konstanzpruefung",
+  "type": "term",
+  "title": "Abnahme- und Konstanzprüfung (Röntgen)",
+  "aliases": [
+    "Konstanzprüfung",
+    "Abnahmeprüfung",
+    "Qualitätssicherung Röntgen",
+    "Acceptance test",
+    "Constancy test",
+    "Quality control radiography",
+    "QS-Röntgen",
+    "Bezugswerte"
+  ],
+  "category": "stk-mtk",
+  "summary": "Abnahme- und Konstanzprüfungen sichern die Bildqualität und die Dosis von Röntgeneinrichtungen. Bei der Abnahmeprüfung vor Inbetriebnahme werden Bezugswerte festgelegt; die Konstanzprüfung kontrolliert regelmäßig mit Prüfkörpern, ob diese Werte innerhalb festgelegter Toleranzen bleiben. Rechtsgrundlage sind §§ 115 bis 117 der Strahlenschutzverordnung.",
+  "body": "## Zweck\n\nBei [[roentgenstrahlung|Röntgenuntersuchungen]] hängen diagnostische Aussagekraft und Strahlenexposition des Patienten unmittelbar vom technischen Zustand der Anlage ab. Altert die [[roentgenroehre|Röntgenröhre]], driftet die Belichtungsautomatik oder verliert der [[roentgendetektor|Bildempfänger]] an Empfindlichkeit, kann das zu schlechteren Bildern, Wiederholungsaufnahmen und unnötiger Dosis führen. Die Qualitätssicherung nach Strahlenschutzrecht soll dies verhindern [@strlschv] [@krieger-strahlenschutz-2019].\n\n## Rechtsgrundlage\n\n> [!belegt] Die [[strlschg|Strahlenschutzgesetzgebung]] verpflichtet den Strahlenschutzverantwortlichen zur Qualitätssicherung. Die Strahlenschutzverordnung regelt in **§ 115** die Abnahmeprüfung vor Inbetriebnahme und die Festlegung von Bezugswerten, in **§ 116** die regelmäßige Konstanzprüfung und in **§ 117** die Aufzeichnung und Aufbewahrung der Ergebnisse [@strlschv]. Die Qualitätssicherungs-Richtlinie Röntgendiagnostik konkretisiert Art, Umfang, Toleranzen und Intervalle [@qs-rl-roentgendiagnostik-2024].\n\n| Prüfung | Zeitpunkt | Durchführung (typisch) | Ergebnis |\n|---|---|---|---|\n| Abnahmeprüfung | vor Inbetriebnahme und nach Änderungen, die Bildqualität oder Dosis beeinflussen können | Hersteller bzw. Lieferant | Nachweis der Qualität, Festlegung der Bezugswerte |\n| Konstanzprüfung | regelmäßig nach Inbetriebnahme | Betreiber (z. B. MTR) mit Prüfkörper | Vergleich mit Bezugswerten |\n| Sachverständigenprüfung | vor Inbetriebnahme und wiederkehrend | behördlich bestimmte Sachverständige | Prüfung von Strahlenschutz und Qualitätssicherung |\n\nDie Ergebnisse werden der **Ärztlichen Stelle** vorgelegt, die die Qualitätssicherung in den Einrichtungen überprüft [@qs-rl-roentgendiagnostik-2024].\n\n## Abnahmeprüfung\n\nBei der Abnahmeprüfung wird nachgewiesen, dass die Röntgeneinrichtung die erforderliche Bildqualität mit möglichst geringer Strahlenexposition erreicht. Geprüft werden u. a. [@qs-rl-roentgendiagnostik-2024] [@bushberg-2020]:\n\n* Röhrenspannung, Strom-Zeit-Produkt und Belichtungszeit im Vergleich zum Einstellwert,\n* Strahlenqualität (Halbwertschichtdicke, Gesamtfilterung),\n* Übereinstimmung von Lichtfeld und Nutzstrahlenfeld, [[kollimator|Feldbegrenzung]],\n* Belichtungsautomatik und Dosis am Bildempfänger,\n* Bildqualität: Ortsauflösung, Kontrastauflösung, Homogenität, Artefakte,\n* Bildwiedergabesysteme (Befundungsmonitore).\n\nAm Ende werden mit einem definierten **Prüfkörper** unter festgelegten Aufnahmebedingungen die **Bezugswerte** ermittelt – sozusagen der „Fingerabdruck“ der Anlage im abgenommenen Zustand.\n\n## Konstanzprüfung\n\nDie Konstanzprüfung wiederholt in festgelegten Abständen eine Auswahl dieser Messungen mit **gleichartigem und gleichwertigem Prüfkörper** und gleichen Aufnahmebedingungen. Bewertet wird nicht der Absolutwert, sondern die **Abweichung vom Bezugswert** [@strlschv]:\n\nΔ = (x_aktuell − x_Bezug) / x_Bezug · 100 %\n\nLiegt Δ innerhalb der Toleranz, wird das Ergebnis aufgezeichnet. Liegt es außerhalb, ist die Ursache vor weiteren Patientenuntersuchungen zu klären.\n\n### Normen nach Modalität\n\n| Modalität | Prüfgrundlage (Auswahl) |\n|---|---|\n| Projektionsradiographie mit digitalen Bildempfängern, Durchleuchtung | DIN 6868-4 [@din-6868-4-2021] |\n| Computertomographie | IEC 61223-2-6 (Konstanzprüfung), IEC 61223-3-5 (Abnahme) [@iec-61223-2-6] [@iec-61223-3-5] |\n| Bildwiedergabesysteme (Monitore) | DIN 6868-157 [@din-6868-157] |\n| alle Modalitäten | Qualitätssicherungs-Richtlinie [@qs-rl-roentgendiagnostik-2024] |\n\n> [!hinweis] Normen und Richtlinie werden regelmäßig überarbeitet; die Tabelle nennt die zum Bearbeitungsstand bekannten Dokumente. Prüfintervalle und Toleranzen sind der jeweils gültigen Fassung zu entnehmen.\n\n### Beispiel Computertomographie\n\nBeim [[computertomograph|CT]] wird typischerweise ein wassergefülltes Phantom gescannt. Ausgewertet werden die mittlere CT-Zahl von Wasser, das Bildrauschen (Standardabweichung σ der CT-Zahlen in einer Messregion), die Homogenität über das Bildfeld und die Schichtdicke [@iec-61223-2-6] [@kalender-2011]. Die CT-Zahl ist definiert als\n\nCT-Zahl = 1000 · (μ − μ_Wasser) / μ_Wasser  [HU]\n\nsodass Wasser per Definition 0 HU hat.\n\n> [!beispiel] Bezugswert Bildrauschen σ = 4,0 HU; aktueller Wert σ = 4,3 HU, also Δ = +7,5 %. Ob das zulässig ist, entscheidet die in der Prüfgrundlage festgelegte Toleranz. Ein steigendes Rauschen bei gleichen Scanparametern kann auf eine nachlassende Röhrenleistung oder Detektorprobleme hinweisen. Zahlen beispielhaft.\n\n## Abgrenzung zur STK\n\nRöntgeneinrichtungen gehören nicht zur Anlage 1 der [[mpbetreibv|MPBetreibV]]; eine [[stk|STK]] ist nur erforderlich, wenn der Hersteller sie vorsieht. Unabhängig davon unterliegen sie als ME-Geräte der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] nach Herstellerangaben und der [[dguv-vorschrift-3|DGUV Vorschrift 3]]. Die Qualitätssicherung nach Strahlenschutzrecht ist eine **zusätzliche**, eigenständige Prüfwelt [@strlschv] [@mpbetreibv].\n\n> [!vereinfacht] Bei Röntgenanlagen gibt es drei Prüfperspektiven: Strahlenschutz und Bildqualität (Abnahme, Konstanz, Sachverständige), elektrische Sicherheit (IEC 62353, DGUV V3) und Funktion nach Herstellerwartung. Ein guter Prüfplan führt alle drei zusammen.\n\n## Bedeutung in der Medizintechnik\n\nKonstanzprüfungen betreffen alle Röntgeneinrichtungen zur Anwendung am Menschen: [[roentgengeraet|Röntgenaufnahmegeräte]], [[c-bogen|C-Bögen]], [[angiographieanlage|Angiographieanlagen]], [[mammographiegeraet|Mammographiegeräte]], [[computertomograph|Computertomographen]] und [[dvt|DVT-Geräte]] sowie die zugehörigen Befundungsmonitore. Für die Medizintechnik sind die Ergebnisse ein wertvolles Diagnosewerkzeug: Trends in Dosisindikator, Rauschen oder Homogenität weisen früh auf Verschleiß von [[roentgenroehre|Röhre]] und [[roentgendetektor|Detektor]] oder auf Fehlkalibrierungen hin. Ungeklärte Artefakte im Prüfkörperbild (siehe [[bildartefakte]]) sind ein typischer Anlass für einen Serviceeinsatz.\n\n> [!praxis] Nach jedem Serviceeinsatz, der Bildqualität oder Dosis beeinflussen kann – etwa Röhrenwechsel, Detektortausch oder Softwareupdate der Bildverarbeitung – ist zu prüfen, ob eine (Teil-)Abnahmeprüfung mit neuen Bezugswerten erforderlich ist. Eine Konstanzprüfung gegen veraltete Bezugswerte ist nicht aussagekräftig.",
+  "related": [
+    "strahlenschutz",
+    "strlschg",
+    "roentgengeraet",
+    "computertomograph",
+    "roentgenroehre",
+    "roentgendetektor",
+    "kollimator",
+    "roentgenstrahlung",
+    "stk",
+    "pruefgeraete",
+    "bildartefakte",
+    "mammographiegeraet"
+  ],
+  "paths": [
+    [
+      "roentgengeraet",
+      "konstanzpruefung",
+      "roentgendetektor",
+      "roentgenstrahlung"
+    ],
+    [
+      "strahlenschutz",
+      "konstanzpruefung",
+      "computertomograph"
+    ]
+  ],
+  "diagram": {
+    "title": "Qualitätssicherungskreislauf bei Röntgeneinrichtungen",
+    "caption": "Abnahmeprüfung, Bezugswerte, regelmäßige Konstanzprüfung und Reaktion bei Toleranzüberschreitung; didaktisches Schema.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "abn",
+        "label": "Abnahmeprüfung\n(§ 115 StrlSchV)",
+        "kind": "source",
+        "x": 110,
+        "y": 90
+      },
+      {
+        "id": "bez",
+        "label": "Bezugswerte\n(Prüfkörperbilder)",
+        "kind": "process",
+        "x": 330,
+        "y": 90
+      },
+      {
+        "id": "kp",
+        "label": "Konstanzprüfung\n(§ 116 StrlSchV)",
+        "ref": "roentgendetektor",
+        "kind": "sensor",
+        "x": 550,
+        "y": 90
+      },
+      {
+        "id": "tol",
+        "label": "Vergleich mit\nToleranz",
+        "kind": "control",
+        "x": 770,
+        "y": 90
+      },
+      {
+        "id": "ok",
+        "label": "Aufzeichnung\n(§ 117 StrlSchV)",
+        "kind": "output",
+        "x": 770,
+        "y": 240
+      },
+      {
+        "id": "nok",
+        "label": "Ursachenklärung,\nService, erneute Abnahme",
+        "ref": "roentgenroehre",
+        "kind": "process",
+        "x": 520,
+        "y": 240,
+        "w": 180
+      },
+      {
+        "id": "aes",
+        "label": "Ärztliche Stelle,\nSachverständige",
+        "ref": "strahlenschutz",
+        "kind": "output",
+        "x": 280,
+        "y": 240
+      }
+    ],
+    "edges": [
+      {
+        "from": "abn",
+        "to": "bez",
+        "kind": "data"
+      },
+      {
+        "from": "bez",
+        "to": "kp",
+        "kind": "data"
+      },
+      {
+        "from": "kp",
+        "to": "tol",
+        "kind": "data"
+      },
+      {
+        "from": "tol",
+        "to": "ok",
+        "kind": "data",
+        "label": "in Toleranz"
+      },
+      {
+        "from": "tol",
+        "to": "nok",
+        "kind": "data",
+        "label": "außerhalb"
+      },
+      {
+        "from": "nok",
+        "to": "abn",
+        "kind": "data"
+      },
+      {
+        "from": "ok",
+        "to": "aes",
+        "kind": "data"
+      }
+    ]
+  },
+  "sources": [
+    "strlschv",
+    "strlschg",
+    "qs-rl-roentgendiagnostik-2024",
+    "din-6868-4-2021",
+    "din-6868-157",
+    "iec-61223-2-6",
+    "iec-61223-3-5",
+    "kalender-2011",
+    "bushberg-2020",
+    "doessel-2016",
+    "krieger-strahlenschutz-2019"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

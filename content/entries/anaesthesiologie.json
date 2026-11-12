@@ -1,0 +1,41 @@
+{
+  "id": "anaesthesiologie",
+  "type": "domain",
+  "title": "Anästhesiologie",
+  "aliases": [
+    "Anästhesie",
+    "Anaesthesiologie",
+    "Narkose",
+    "Anesthesiology",
+    "Anästhesie und Intensivmedizin"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Anästhesiologie ermöglicht Operationen und Eingriffe durch Allgemein- und Regionalanästhesie und sichert dabei die Vitalfunktionen. Ihr zentrales Gerät ist der Anästhesiearbeitsplatz aus Narkosegerät, Gasmonitoring und Patientenmonitor.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Anästhesiologie** umfasst die Allgemeinanästhesie (Narkose), die Regionalanästhesie, die perioperative Überwachung, Teile der [[intensivmedizin]], der [[notfallmedizin]] und der Schmerztherapie [@larsen-2018]. Während der Narkose übernimmt das Anästhesieteam die Kontrolle über Atmung, Kreislauf, Bewusstsein und Schmerzempfinden der Patientin oder des Patienten.\n\nTypische Aufgaben sind die Einleitung der Narkose mit intravenösen Hypnotika, die Atemwegssicherung (Gesichtsmaske, Larynxmaske, endotracheale Intubation), die Aufrechterhaltung mit Inhalationsanästhetika oder als totale intravenöse Anästhesie (TIVA), die Ausleitung und die Überwachung im Aufwachraum. Hinzu kommen rückenmarksnahe und periphere Nervenblockaden, häufig ultraschallgestützt.\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[anaesthesiegeraet]] | Frischgasdosierung, Kreissystem, maschinelle Beatmung während der Narkose |\n| [[narkosemittelverdampfer]] | Dosierung volatiler Anästhetika (Bauteil des Anästhesiegeräts) |\n| [[co2-absorber]] | CO₂-Entfernung im Rückatemsystem |\n| [[patientenmonitor]] / [[nibp-messgeraet]] | Basismonitoring: EKG, SpO₂, nichtinvasiver Blutdruck, Temperatur |\n| [[kapnometer]] | CO₂-Messung zur Bestätigung der Tubuslage und Beatmungskontrolle |\n| [[pulsoxymeter]] | Sauerstoffsättigung über [[photoplethysmographie]] |\n| [[invasive-druckmessung]] | arterieller Blutdruck bei großen Eingriffen |\n| [[videolaryngoskop]] | Intubation, vor allem bei schwierigem Atemweg |\n| [[spritzenpumpe]] / [[infusionspumpe]] | TIVA, Katecholamine, Volumentherapie |\n| [[infusionswaermer]] / [[patientenwaermesystem]] | Vermeidung perioperativer Hypothermie |\n| [[ultraschallgeraet]] | Regionalanästhesie, Gefäßpunktion, Notfallsonographie |\n| [[pca-pumpe]] | patientenkontrollierte Schmerztherapie nach der Operation |\n| [[defibrillator]] | Reanimation, Kardioversion |\n| [[absauggeraet]] | Absaugung von Sekret und Aspirat |\n\nDie Gerätesicherheit des Anästhesiearbeitsplatzes regelt die Norm [[iso-80601-2-13]] [@iso-80601-2-13-2022]; Atemgasmonitore fallen unter [[iso-80601-2-55]] [@iso-80601-2-55].\n\n## Besondere technische Anforderungen\n\n### Gasversorgung und Gerätecheck\n\nDas Anästhesiegerät wird aus der zentralen Gasversorgung (O₂, Druckluft, häufig N₂O) über Wandentnahmestellen gespeist und besitzt Reservezylinder. Verwechslungssichere Anschlüsse, O₂-Mangelsignal und Sicherungen gegen hypoxische Gemische gehören zur Grundausstattung [@dorsch-2008]. Vor jedem Einsatz ist ein Gerätecheck (Selbsttest mit Dichtigkeitsprüfung) nach Herstellerangabe durchzuführen.\n\n> [!warnung] Ein nicht bestandener Dichtigkeits- oder Selbsttest ist kein „Formfehler“: Leckagen im Kreissystem können zu Hypoventilation und zu Narkosegasbelastung des Personals führen.\n\n### Niedrigflussnarkose und Gasmonitoring\n\nBei der Low-Flow- oder Minimal-Flow-Anästhesie wird der Frischgasfluss stark reduziert, das Rückatemsystem rezirkuliert den größten Teil des Gases [@baum-2001]. Das spart Anästhetika, verlangt aber eine kontinuierliche Messung von inspiratorischem O₂, CO₂ und Anästhetikakonzentration – häufig per Infrarotabsorption im Seitenstrom ([[co2-sensor]], [[sauerstoffsensor]]).\n\n> [!vereinfacht] Je kleiner der Frischgasfluss, desto weiter können sich eingestellte und tatsächlich eingeatmete Konzentration unterscheiden. Das Gasmonitoring macht diese Differenz sichtbar.\n\n### Arbeitsschutz und Brandschutz\n\nÜberschüssiges Narkosegas wird über eine Narkosegasfortleitung abgeführt, damit die Raumluftbelastung des Personals gering bleibt. In sauerstoffangereicherter Atmosphäre steigt das Brandrisiko, besonders bei Einsatz des [[hf-chirurgiegeraet|HF-Chirurgiegeräts]] oder [[chirurgischer-laser|Lasers]] in Atemwegsnähe [@massarweh-2006].\n\n### Hypothermie und Alarme\n\nNarkose hemmt die [[thermoregulation]]; ohne aktive Wärmung kühlen Patienten ab. Die S3-Leitlinie empfiehlt Temperaturmessung und Wärmemaßnahmen [@awmf-s3-perioperative-hypothermie]. Für Monitore und Narkosegeräte gelten die Alarmanforderungen der [[iec-60601-1-8]].\n\n### Prüfpflichten\n\nDie STK ist in § 12 i. V. m. Anlage 1, die MTK in § 15 i. V. m. Anlage 2 der [[mpbetreibv]] (Neufassung 2025) geregelt [@mpbetreibv]. Nach der aus der Vorgängerfassung bekannten Systematik erfasst Anlage 1 Geräte zur maschinellen Beatmung mit oder ohne Anästhesie, sodass Anästhesie- und Beatmungsgeräte [[stk]]-pflichtig sind; Messgeräte für die nichtinvasive Blutdruckmessung unterliegen der [[mtk|messtechnischen Kontrolle]] nach Anlage 2. Maßgeblich ist der Wortlaut der jeweils geltenden Anlagen – Anlage 2 wurde 2025 nachträglich berichtigt.\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[chirurgie]]**, **[[herzchirurgie]]**, **[[orthopaedie-unfallchirurgie]]**, **[[geburtshilfe]]**: Narkose und Überwachung bei allen operativen Eingriffen.\n- **[[intensivmedizin]]**: postoperative Weiterbehandlung, gemeinsame Beatmungs- und Monitoringtechnik.\n- **[[notfallmedizin]]**: Notarztdienst, Schockraum, Reanimation nach den Leitlinien des European Resuscitation Council [@erc-2025-als].\n- **[[radiologie]]**: Narkosen im CT, in der Angiographie und im [[mrt]] (MR-taugliche Geräte erforderlich).\n- **[[pneumologie]]**: Atemphysiologie, Beatmung, Bronchoskopie.\n",
+  "related": [
+    "anaesthesiegeraet",
+    "intensivmedizin",
+    "chirurgie",
+    "narkosemittelverdampfer",
+    "co2-absorber",
+    "kapnometer",
+    "iso-80601-2-13",
+    "patientenwaermesystem",
+    "videolaryngoskop",
+    "notfallmedizin"
+  ],
+  "sources": [
+    "larsen-2018",
+    "dorsch-2008",
+    "baum-2001",
+    "iso-80601-2-13-2022",
+    "iso-80601-2-55",
+    "massarweh-2006",
+    "awmf-s3-perioperative-hypothermie",
+    "iec-60601-1-8",
+    "mpbetreibv",
+    "erc-2025-als"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,166 @@
+{
+  "id": "oszillometrie",
+  "type": "term",
+  "title": "Oszillometrische Blutdruckmessung",
+  "aliases": [
+    "Oszillometrie",
+    "oszillometrisches Verfahren",
+    "NIBP",
+    "NIBD",
+    "oscillometric blood pressure measurement",
+    "nichtinvasive Blutdruckmessung",
+    "automatische Blutdruckmessung"
+  ],
+  "category": "sensorik",
+  "summary": "Automatisches nichtinvasives Blutdruckmessverfahren, das die pulssynchronen Druckschwankungen in einer Manschette während des Ablassens auswertet. Der Mitteldruck liegt beim Amplitudenmaximum; systolischer und diastolischer Druck werden algorithmisch aus der Hüllkurve abgeleitet.",
+  "body": "## Begriff\n\nDie **oszillometrische Blutdruckmessung** ist das heute dominierende Verfahren der automatischen nichtinvasiven Blutdruckmessung (NIBP). Statt Korotkow-Geräusche abzuhören, wertet das Gerät die kleinen, pulssynchronen **Druckschwankungen (Oszillationen)** aus, die die Arterienwand während des Manschettenablasses auf die Manschette überträgt. Aus der Hüllkurve dieser Oszillationen werden mittlerer, systolischer und diastolischer [[blutdruck|Blutdruck]] bestimmt [@webster-2010] [@geddes-1982]. Das Verfahren steckt in jedem [[nibp-messgeraet|automatischen Blutdruckmessgerät]], im NIBP-Modul des [[patientenmonitor|Patientenmonitors]] und im [[langzeit-blutdruck|Langzeit-Blutdruckmessgerät]].\n\n## Messablauf\n\n1. **Aufpumpen:** Eine kleine Membranpumpe bläst die Manschette über den erwarteten systolischen Druck auf; die Arterie unter der Manschette ist dann verschlossen.\n2. **Ablassen:** Ein Ablassventil ([[proportionalventil]] oder getaktetes [[magnetventil]]) senkt den Manschettendruck stufenweise oder linear.\n3. **Erfassen:** Ein [[drucksensor|Drucksensor]] misst den Manschettendruck. Das Signal enthält den langsam fallenden Gleichanteil (Manschettendruck) und überlagerte Pulsschwankungen von typischerweise wenigen mmHg oder weniger.\n4. **Trennen:** Ein Hochpass- bzw. Bandpass-[[filter]] trennt die Oszillationen vom Gleichanteil; je Druckstufe wird die Oszillationsamplitude bestimmt.\n5. **Auswerten:** Aus der Amplitude als Funktion des Manschettendrucks (Hüllkurve) berechnet der Algorithmus die Blutdruckwerte; danach wird die Manschette vollständig entlüftet.\n\n## Physikalisches Prinzip\n\nDie Amplitude der Oszillationen hängt von der **transmuralen Druckdifferenz** ab, also der Differenz zwischen Arterieninnendruck und Manschettendruck. Die Arterienwand ist am nachgiebigsten (größte Volumenänderung pro Druckänderung, d. h. größte Compliance), wenn der transmurale Druck nahe null liegt. Das ist der Fall, wenn der Manschettendruck dem **arteriellen Mitteldruck** entspricht – dort sind die Oszillationen maximal [@geddes-1982] [@webster-2010].\n\n| Größe | Bestimmung aus der Hüllkurve |\n|---|---|\n| Mitteldruck (MAD, MAP) | Manschettendruck bei maximaler Oszillationsamplitude A_max – am direktesten gemessen |\n| systolischer Druck (SAD) | oberhalb des MAD, wo die Amplitude auf einen festgelegten Anteil von A_max gefallen ist |\n| diastolischer Druck (DAD) | unterhalb des MAD, bei einem anderen festgelegten Anteil von A_max oder über Kurvenmerkmale |\n\n> [!beispiel] Ein Algorithmus mit festen Amplitudenverhältnissen könnte den systolischen Druck dort ansetzen, wo die Amplitude oberhalb des Maximums auf 50 % von A_max abgefallen ist, und den diastolischen Druck dort, wo sie unterhalb des Maximums auf 80 % abgefallen ist. Die Zahlen dienen nur der Veranschaulichung; die tatsächlich verwendeten Verhältnisse und Zusatzkriterien sind herstellerspezifisch und in der Regel nicht veröffentlicht.\n\n> [!vereinfacht] Die Zuordnung „maximale Oszillation = Mitteldruck“ ist ein gut belegter empirischer Zusammenhang, aber keine exakte Messung. Systolischer und diastolischer Wert sind beim oszillometrischen Verfahren immer **abgeleitete** Größen. Steife Gefäße, Arrhythmien oder Ödeme verändern die Hüllkurve und damit die Ergebnisse [@geddes-1982].\n\nZur Orientierung wird der Mitteldruck oft über die Näherung `MAD ≈ DAD + (SAD − DAD) / 3` abgeschätzt; beim oszillometrischen Verfahren ist es gerade umgekehrt – der MAD wird gemessen, SAD und DAD werden berechnet.\n\n## Einflussgrößen und Fehlerquellen\n\n| Einflussgröße | Wirkung |\n|---|---|\n| Manschettengröße | zu kleine Manschette ergibt tendenziell zu hohe, zu große Manschette zu niedrige Werte; Blasenbreite und -länge müssen zum Armumfang passen |\n| Höhe der Manschette relativ zum Herzen | hydrostatischer Fehler, siehe Beispiel |\n| Bewegung, Zittern, Transport | Störoszillationen ([[bewegungsartefakt|Bewegungsartefakte]]), Messabbruch oder Fehlwerte |\n| Herzrhythmusstörungen (z. B. Vorhofflimmern) | stark schwankende Schlagvolumina verzerren die Hüllkurve |\n| Undichtigkeit von Schlauch oder Manschette | Druckabfall verfälscht den Ablass, Messabbruch |\n| sehr niedrige Drücke (Schock) | kleine Oszillationen, geringe Zuverlässigkeit; ggf. [[invasive-druckmessung]] erforderlich |\n\n> [!beispiel] Hydrostatischer Fehler: Liegt die Manschette 10 cm unterhalb des Herzniveaus, erhöht die Blutsäule den gemessenen Druck um Δp = ρ · g · h ≈ 1 060 kg/m³ · 9,81 m/s² · 0,10 m ≈ 1 040 Pa ≈ 7,8 mmHg (siehe [[druck]]).\n\n## Normen und Genauigkeit\n\nSicherheit und wesentliche Leistungsmerkmale automatischer Blutdruckmessgeräte regelt die Norm IEC 80601-2-30 ([[iec-80601-2-30]]), unter anderem Anforderungen an die Genauigkeit der Manschettendruckanzeige, an den Überdruckschutz und an die maximale Messdauer [@iec-80601-2-30-2018]. Die **klinische Genauigkeit** des Gesamtsystems einschließlich Algorithmus wird nach ISO 81060-2 im Vergleich mit einer Referenzmethode an Probanden nachgewiesen [@iso-81060-2].\n\n> [!belegt] Nach dem Validierungsprotokoll der ISO 81060-2 darf die mittlere Abweichung zum Referenzverfahren höchstens ±5 mmHg bei einer Standardabweichung von höchstens 8 mmHg betragen; dazu kommen weitere, probandenbezogene Kriterien [@iso-81060-2]. Zur statistischen Bewertung von Methodenvergleichen siehe [[messunsicherheit]].\n\n## Sicherheit\n\n* **Überdruckschutz:** Schutzmaßnahmen begrenzen Manschettendruck und Messdauer – auch bei einem Fehler der Steuerung –, damit keine Gewebe- oder Nervenschäden entstehen; im Neugeborenenmodus gelten niedrigere Grenzen [@iec-80601-2-30-2018].\n* **Messintervalle:** Sehr kurze Intervalle oder Serienmessungen können Petechien, Ödeme und Nervenschäden verursachen; nicht an einer Extremität mit Infusion oder Shunt messen.\n* **Alarme:** Grenzwertalarme des [[alarmsystem|Alarmsystems]] beruhen auf intermittierenden Werten – zwischen zwei Messungen ist der Patient nicht überwacht.\n\n## Anwendung in Geräten\n\n| Gerät | Einsatz |\n|---|---|\n| [[nibp-messgeraet]] | Einzel- und Intervallmessung auf Station und in der Praxis |\n| [[patientenmonitor]] | NIBP-Modul mit Intervallbetrieb und Alarmen |\n| [[langzeit-blutdruck]] | 24-Stunden-Messung mit tragbarem Rekorder |\n| [[ergometer]] | Blutdruckmessung unter Belastung (Bewegungsartefakte besonders kritisch; je nach System auch auskultatorisch mit Mikrofon in der Manschette statt rein oszillometrisch) |\n| [[defibrillator]] | NIBP-Option in Monitor-Defibrillatoren des Rettungsdienstes (je nach Ausstattung) |\n\nDas Verfahren schließt die Kette Druck → [[drucksensor|Drucksensor]] → [[druckmessung|Druckmessung]] → Signalverarbeitung: Es ist eine reine Drucksignalauswertung, bei der die medizinische Information im kleinen Wechselanteil eines großen Gleichsignals steckt – ein Musterbeispiel für eine [[messkette|Messkette]] mit anspruchsvoller Filterung im [[mikrocontroller|Mikrocontroller]].\n\n## Prüfung\n\nMedizinprodukte zur nichtinvasiven Blutdruckmessung – automatische wie manuelle – unterliegen nach der [[mpbetreibv|MPBetreibV]] der [[mtk|messtechnischen Kontrolle]] (§ 15 i. V. m. Anlage 2) mit einer Nachprüffrist von zwei Jahren [@mpbetreibv]. Maßgeblich ist der Wortlaut der Anlage 2 in der jeweils gültigen (2025 neu gefassten und berichtigten) Fassung, insbesondere für Ausnahmen. Geprüft werden mit einem kalibrierten Referenzmanometer insbesondere die Abweichung der Druckanzeige an mehreren Druckstufen und die Dichtheit des pneumatischen Systems; der Auswertealgorithmus selbst wird dabei nicht geprüft. Dazu kommen die [[stk|sicherheitstechnische Kontrolle]] (sofern vom Hersteller vorgesehen), Überdruckschutzprüfung und Funktionsprüfung mit einem NIBP-Simulator ([[pruefgeraete]]).\n\n> [!praxis] NIBP-Simulatoren erzeugen reproduzierbare Oszillationsmuster und eignen sich gut zur Funktionsprüfung und Wiederholbarkeitsprüfung. Da jeder Hersteller einen eigenen Algorithmus verwendet, zeigen verschiedene Geräte am selben Simulator oft leicht unterschiedliche Werte – das ist kein Defekt, sondern Ausdruck der algorithmischen Unterschiede.\n",
+  "related": [
+    "nibp-messgeraet",
+    "patientenmonitor",
+    "langzeit-blutdruck",
+    "blutdruck",
+    "drucksensor",
+    "druckmessung",
+    "filter",
+    "invasive-druckmessung",
+    "iec-80601-2-30",
+    "mtk",
+    "bewegungsartefakt",
+    "messunsicherheit"
+  ],
+  "paths": [
+    [
+      "patientenmonitor",
+      "nibp-messgeraet",
+      "oszillometrie",
+      "drucksensor",
+      "druckmessung"
+    ],
+    [
+      "blutdruck",
+      "oszillometrie",
+      "filter",
+      "mikrocontroller"
+    ]
+  ],
+  "sources": [
+    "webster-2010",
+    "geddes-1982",
+    "iec-80601-2-30-2018",
+    "iso-81060-2",
+    "mpbetreibv",
+    "hering-2018"
+  ],
+  "diagram": {
+    "title": "Oszillometrische Messung: Funktionsschema",
+    "caption": "Pneumatik, Druckerfassung und Auswertung der Oszillationshüllkurve (vereinfacht).",
+    "width": 960,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "pumpe",
+        "label": "Membranpumpe",
+        "kind": "actuator",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "ventil",
+        "label": "Ablassventil",
+        "kind": "actuator",
+        "x": 90,
+        "y": 220,
+        "ref": "proportionalventil"
+      },
+      {
+        "id": "mansch",
+        "label": "Manschette\n(Oberarm)",
+        "kind": "patient",
+        "x": 290,
+        "y": 150
+      },
+      {
+        "id": "ps",
+        "label": "Drucksensor",
+        "kind": "sensor",
+        "x": 490,
+        "y": 150,
+        "ref": "drucksensor"
+      },
+      {
+        "id": "filt",
+        "label": "Hoch-/Bandpass\n(Oszillationen)",
+        "kind": "process",
+        "x": 690,
+        "y": 80,
+        "ref": "filter"
+      },
+      {
+        "id": "alg",
+        "label": "Hüllkurve:\nMAD, SAD, DAD",
+        "kind": "control",
+        "x": 870,
+        "y": 150,
+        "ref": "mikrocontroller"
+      },
+      {
+        "id": "anz",
+        "label": "Anzeige /\nAlarm",
+        "kind": "output",
+        "x": 690,
+        "y": 230,
+        "ref": "alarmsystem"
+      }
+    ],
+    "edges": [
+      {
+        "from": "pumpe",
+        "to": "mansch",
+        "kind": "gas",
+        "label": "Aufpumpen"
+      },
+      {
+        "from": "mansch",
+        "to": "ventil",
+        "kind": "gas",
+        "label": "Ablass"
+      },
+      {
+        "from": "mansch",
+        "to": "ps",
+        "kind": "gas",
+        "label": "p_M + Δp"
+      },
+      {
+        "from": "ps",
+        "to": "filt",
+        "kind": "signal"
+      },
+      {
+        "from": "ps",
+        "to": "alg",
+        "kind": "signal",
+        "label": "Gleichanteil"
+      },
+      {
+        "from": "filt",
+        "to": "alg",
+        "kind": "signal",
+        "label": "Amplitude"
+      },
+      {
+        "from": "alg",
+        "to": "anz",
+        "kind": "data"
+      },
+      {
+        "from": "alg",
+        "to": "ventil",
+        "kind": "signal",
+        "label": "Steuerung"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

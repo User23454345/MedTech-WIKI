@@ -1,0 +1,56 @@
+{
+  "id": "leitfaehigkeitsalarm",
+  "type": "fault",
+  "title": "Leitfähigkeitsalarm",
+  "aliases": [
+    "Conductivity alarm",
+    "Leitfähigkeitsfehler",
+    "LF-Alarm",
+    "Konzentratalarm"
+  ],
+  "category": "fehler",
+  "summary": "Alarm eines Hämodialysegeräts, wenn die gemessene elektrische Leitfähigkeit des Dialysats außerhalb des zulässigen Fensters liegt. Da die Leitfähigkeit die Elektrolytzusammensetzung widerspiegelt, schützt die Überwachung den Patienten vor falsch gemischtem Dialysat.",
+  "devices": [
+    "dialysegeraet"
+  ],
+  "causes": [
+    "Konzentratkanister leer oder Ansaugstab nicht vollständig eingetaucht, Luft in der Konzentratleitung",
+    "Falsches oder vertauschtes Konzentrat (saures Konzentrat und Bicarbonat verwechselt, falsche Rezeptur)",
+    "Bicarbonatkartusche erschöpft oder nicht korrekt eingesetzt",
+    "Störung der Wasserversorgung (Druckabfall der Umkehrosmose, unterbrochener Zulauf) oder fehlerhafte Entgasung",
+    "Defekt oder Verschleiß der Konzentrat- bzw. Mischpumpen, Undichtigkeiten im Hydraulikteil",
+    "[[sensordrift|Drift]], Beläge oder Defekt der [[leitfaehigkeitssensor|Leitfähigkeitsmesszellen]] oder des zugehörigen [[temperatursensor|Temperatursensors]] (fehlerhafte Temperaturkompensation)",
+    "Rückstände von Desinfektions- oder Entkalkungsmitteln nach einem Desinfektionsprogramm"
+  ],
+  "actions": [
+    "Patienten beurteilen (Kreislauf, Symptome wie Krämpfe, Übelkeit, Kopfschmerz); das Gerät leitet das Dialysat im Bypass am Dialysator vorbei – diesen Schutzzustand nicht umgehen",
+    "Konzentrate kontrollieren: richtiges Produkt laut Verordnung, Füllstand, Ansaugstäbe, Bicarbonatkartusche",
+    "Wasserversorgung und Anschlüsse prüfen (Zulauf, Druck, Status der Wasseraufbereitung)",
+    "Warten, bis sich die Leitfähigkeit stabilisiert hat; die Behandlung erst fortsetzen, wenn das Gerät den Bypass freigibt",
+    "Bei Verdacht auf falsches Konzentrat: ärztliche Information, ggf. Elektrolytkontrolle im Blut",
+    "Bei wiederkehrenden Alarmen Leitfähigkeitsmessung durch die Medizintechnik mit kalibriertem Referenz-Leitfähigkeitsmessgerät prüfen und ggf. justieren lassen",
+    "Ergebnis, Konzentratcharge und Gerätezustand dokumentieren"
+  ],
+  "body": "## Technischer Hintergrund\n\nDas Hämodialysegerät stellt das Dialysat online aus aufbereitetem Wasser, einem sauren Elektrolytkonzentrat und Bicarbonat her. Die Elektrolytkonzentration – vor allem Natrium – bestimmt den diffusiven Austausch mit dem Blut ([[diffusion-osmose]]). Ein falsch gemischtes Dialysat kann schwere Störungen verursachen: Ein zu verdünntes (hypotones) Dialysat kann zu Hyponatriämie und Hämolyse führen, ein zu konzentriertes zu Hypernatriämie [@daugirdas-2015]. Deshalb fordert [[iec-60601-2-16]] eine Schutzeinrichtung gegen fehlerhafte Dialysatzusammensetzung [@iec-60601-2-16].\n\n### Messprinzip\n\nDie [[leitfaehigkeitssensor|Leitfähigkeitsmessung]] bestimmt den elektrischen Leitwert der Lösung zwischen Elektroden mit einer Wechselspannung (um Polarisation und Elektrolyse zu vermeiden) oder induktiv. Da die Leitfähigkeit stark temperaturabhängig ist, wird sie mit einem integrierten [[temperatursensor|Temperatursensor]] auf eine Referenztemperatur umgerechnet, üblicherweise 25 °C; ohne Kompensation würde sich die Anzeige um rund 2 % pro Kelvin ändern [@hering-2018].\n\n> [!vereinfacht] Die Leitfähigkeit des Dialysats wird überwiegend von Natriumchlorid und Natriumbicarbonat bestimmt. Sie ist deshalb ein guter Summenparameter für die Natriumkonzentration, unterscheidet aber nicht zwischen einzelnen Ionen. Ein falsches Konzentrat mit ähnlicher Leitfähigkeit – etwa ein saures Konzentrat mit anderem Kalium- oder Calciumgehalt – wird deshalb **nicht** erkannt; hier schützt nur die organisatorische Kontrolle der verordneten Rezeptur.\n\nViele Geräte arbeiten mit zwei unabhängigen Kanälen: einer Messung für die **Regelung** der Mischpumpen und einer zweiten für das **Schutzsystem**. Weicht die Leitfähigkeit vom eingestellten Sollwert über das zulässige Fenster hinaus ab oder widersprechen sich die Kanäle, schaltet das Gerät in den **Bypass**: Das Dialysat wird am Dialysator vorbei in den Abfluss geleitet; Diffusion und Ultrafiltration sind damit unterbrochen. Die Blutpumpe läuft dabei in der Regel weiter, damit das Blut im extrakorporalen Kreislauf nicht stillsteht – die genaue Reaktion ist herstellerspezifisch. Nach [[iec-60601-1-8]] handelt es sich um eine Alarmbedingung, deren Priorität der Hersteller aus der Risikoanalyse ableitet [@iec-60601-1-8].\n\n| Messkanal | Funktion | Fehlerfolge |\n|---|---|---|\n| Regelkanal | Regelt Konzentratdosierung nach Sollwert ([[regelkreis]]) | falsche Mischung |\n| Schutzkanal | Unabhängige Überwachung, löst Bypass aus | Alarm, Therapiepause |\n| Temperaturmessung | Temperaturkompensation | scheinbare Leitfähigkeitsabweichung |\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Leitfähigkeit zu niedrig | Konzentrat leer, Ansaugstab, Luft in Leitung, Kartusche erschöpft | Konzentrat/Kartusche wechseln, Leitung entlüften |\n| Leitfähigkeit zu hoch | Wasserzulauf, Konzentratsorte, Mischpumpe | Wasserversorgung herstellen, richtiges Konzentrat |\n| Alarm nur zu Behandlungsbeginn | Vorbereitungs- und Spülphase, Desinfektionsrückstände | Stabilisierung abwarten, Spülprogramm prüfen |\n| Kanäle widersprechen sich | Vergleichsmessung mit Referenzgerät | Messzelle reinigen, kalibrieren oder tauschen |\n| Leitfähigkeit schwankt | Luft im Hydraulikteil, Entgasung, Pumpenverschleiß | Hydraulik durch Service prüfen lassen |\n\n> [!praxis] Bei mehreren Geräten gleichzeitig auftretende Leitfähigkeitsalarme deuten auf eine zentrale Ursache hin – etwa eine Störung der Wasseraufbereitung oder der zentralen Konzentratversorgung – und nicht auf einen Einzelgerätefehler.\n\n## Prävention\n\n* Konzentrate eindeutig kennzeichnen und getrennt lagern; Vier-Augen-Prinzip beim Anschluss.\n* Wasseraufbereitung überwachen; Anforderungen an die Qualität der Dialysierflüssigkeit beachten [@iso-23500-5].\n* Entkalkung und Desinfektion nach Herstellervorgaben, um Beläge auf den Messzellen zu vermeiden.\n* Leitfähigkeitsmessung im Rahmen der [[wartung|Wartung]] mit rückgeführtem Referenzmessgerät überprüfen ([[kalibrierung]]); Funktionsprüfung der Schutzsysteme bei der [[stk|STK]] nach § 12 [[mpbetreibv|MPBetreibV]] [@mpbetreibv].\n\n> [!hinweis] Zulässige Leitfähigkeitsfenster, Kalibrierpunkte und herstellerspezifische Fehlercodes sind in Gebrauchsanweisung und Service-Unterlagen des jeweiligen Geräts festgelegt. Siehe auch [[fehlercodes]].",
+  "related": [
+    "leitfaehigkeitssensor",
+    "dialysegeraet",
+    "blutleck-alarm",
+    "sensordrift",
+    "temperatursensor",
+    "kalibrierung",
+    "iec-60601-2-16",
+    "niere",
+    "nephrologie"
+  ],
+  "sources": [
+    "daugirdas-2015",
+    "iec-60601-2-16",
+    "hering-2018",
+    "iec-60601-1-8",
+    "iso-23500-5",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

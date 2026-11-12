@@ -1,0 +1,84 @@
+{
+  "id": "op-roboter",
+  "type": "device",
+  "title": "Robotisches Chirurgie-Assistenzsystem",
+  "aliases": [
+    "OP-Roboter",
+    "Operationsroboter",
+    "Chirurgieroboter",
+    "Robotic Surgery",
+    "Robotisch assistierte Chirurgie",
+    "RAS",
+    "Telemanipulator"
+  ],
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 77,
+  "domains": [
+    "chirurgie",
+    "orthopaedie-unfallchirurgie"
+  ],
+  "summary": "Robotische Chirurgie-Assistenzsysteme übertragen die Handbewegungen des Operateurs an einer Konsole auf Roboterarme mit Instrumenten und Endoskop oder führen Werkzeuge entlang einer zuvor geplanten Bahn. Sie arbeiten nicht autonom, sondern stets unter Kontrolle der Chirurgin oder des Chirurgen.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktive chirurgische Systeme, die Instrumente steuern und teils Energie (HF-Strom) abgeben, werden üblicherweise der Klasse IIb zugeordnet (vgl. [[mdr|MDR]] Anhang VIII, Regel 9 für aktive therapeutische Produkte sowie Produkte, die die Leistung solcher Produkte steuern) [@mdr-2017]. Die verbindliche Klassifizierung trifft der Hersteller; Instrumente und Zubehör können abweichend eingestuft sein. Siehe [[risikoklassen]].",
+    "sources": [
+      "mdr-2017",
+      "mdcg-2021-24"
+    ]
+  },
+  "sections": {
+    "purpose": "Die Systeme sollen minimalinvasive Eingriffe präziser und ergonomischer machen: In der Viszeral-, Thorax-, Urologie- und gynäkologischen Chirurgie dienen sie vor allem als **Telemanipulatoren** für die Schlüssellochchirurgie mit [[endoskop|Endoskop]] und [[insufflator|Insufflation]]; in der Orthopädie unterstützen sie das bildgestützte, geplante Sägen und Fräsen beim Gelenkersatz. Der Eingriff wird jederzeit vom Menschen geführt [@kramme-2017].",
+    "principle": "## Telemanipulator (Master-Slave-Prinzip)\n\nDas System besteht typischerweise aus drei Einheiten: der **Chirurgenkonsole** mit Handgriffen (Master) und Stereo-Sichtsystem, dem **Patientenwagen** mit mehreren Roboterarmen (Slave) und einem **Systemturm** mit Bildverarbeitung, Lichtquelle und ggf. [[hf-chirurgiegeraet|HF-Generator]]. Winkelsensoren in den Handgriffen erfassen die Bewegungen; ein Steuerrechner übersetzt sie in Sollwerte für die Gelenkantriebe ([[elektromotor|Elektromotoren]] mit Lageregelung, [[regelkreis]]). Dabei werden Bewegungen **skaliert** (z. B. große Handbewegung → kleine Instrumentenbewegung) und physiologischer Tremor herausgefiltert ([[filter]]).\n\nDie Arme bewegen das Instrument um einen festen Drehpunkt in der Bauchdecke (**Remote Center of Motion**), damit der Trokar das Gewebe nicht aufreißt. Abgewinkelte Instrumentenspitzen mit eigenen Gelenken ermöglichen Bewegungsfreiheitsgrade, die mit starren laparoskopischen Instrumenten nicht erreichbar sind. Ein Stereoendoskop liefert ein dreidimensionales Bild.\n\n## Bildgestützte Systeme (Orthopädie)\n\nHier wird auf Grundlage eines [[computertomograph|CT]]-Datensatzes die Implantatlage geplant. Ein optisches Navigationssystem verfolgt Markierungen an Knochen und Roboterarm; der Arm begrenzt das Werkzeug (Säge, Fräse) haptisch auf das geplante Volumen.\n\n> [!hinweis] Typische Risiken sind Kollisionen der Arme, Instrumentenfehlfunktionen, Isolationsdefekte an HF-Instrumenten und Probleme beim Umstieg auf offene Chirurgie. Teamtraining, Einweisung und Notfallabläufe sind daher zentral ([[einweisung]], [[patientensicherheit]]). Die gerätespezifischen Sicherheitsanforderungen beschreibt [@iec-80601-2-77]."
+  },
+  "manufacturers": [
+    {
+      "ref": "intuitive",
+      "models": [
+        "da Vinci Xi",
+        "da Vinci 5"
+      ],
+      "note": "Telemanipulator-Systeme für die minimalinvasive Weichteilchirurgie"
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "Hugo"
+      ],
+      "note": "modulares Robotersystem für die Weichteilchirurgie"
+    },
+    {
+      "ref": "stryker",
+      "models": [
+        "Mako"
+      ],
+      "note": "bildgestütztes Robotersystem für Knie- und Hüftendoprothetik"
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Systemkonfiguration (Anzahl Arme, Zweitkonsole), Instrumente mit begrenzter Anzahl an Einsätzen, Einmalmaterial, Servicevertrag, Software-Updates, Schulung des OP-Teams, Finanzierungsmodell (Kauf, Leasing, Nutzungsentgelt je Eingriff)."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Robotersysteme sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht ausdrücklich genannt; ein integrierter oder angeschlossener HF-Generator fällt als Produkt zur Erzeugung und Anwendung von Energie zur unmittelbaren Koagulation und Gewebezerstörung unter Anlage 1 (Wortlaut der amtlichen Fassung maßgeblich). Im Übrigen Kontrollen nach § 12, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Präventive Wartung durch den Hersteller nach dessen Vorgaben; Systemtests vor jedem Eingriff; STK des HF-Generators spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025)."
+  },
+  "related": [
+    "endoskop",
+    "insufflator",
+    "hf-chirurgiegeraet",
+    "regelkreis",
+    "chirurgisches-motorsystem",
+    "patientensicherheit"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iec-80601-2-77",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

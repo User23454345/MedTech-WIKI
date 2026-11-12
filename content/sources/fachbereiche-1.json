@@ -1,0 +1,31 @@
+[
+  {
+    "id": "iec-60601-1-12",
+    "kind": "norm",
+    "title": "IEC 60601-1-12 – Medical electrical equipment – Part 1-12: General requirements for basic safety and essential performance – Collateral Standard: Requirements for medical electrical equipment and medical electrical systems intended for use in the emergency medical services environment",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-1-12 (VDE 0750-1-12)",
+    "year": "2014",
+    "note": "Erstausgabe 2014, Änderung A1:2020; jeweils gültige Fassung beachten."
+  },
+  {
+    "id": "en-1789",
+    "kind": "norm",
+    "title": "DIN EN 1789 – Rettungsdienstfahrzeuge und deren Ausrüstung – Krankenkraftwagen",
+    "publisher": "DIN / CEN",
+    "note": "Unterscheidet Krankentransportwagen (Typ A1, A2), Notfallkrankenwagen (Typ B) und Rettungswagen (Typ C); jeweils gültige Fassung beachten."
+  },
+  {
+    "id": "iec-60601-2-26",
+    "kind": "norm",
+    "title": "IEC 60601-2-26 – Medical electrical equipment – Part 2-26: Particular requirements for the basic safety and essential performance of electroencephalographs",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-26 (VDE 0750-2-26)",
+    "note": "Maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "iec-60601-2-40",
+    "kind": "norm",
+    "title": "IEC 60601-2-40 – Medical electrical equipment – Part 2-40: Particular requirements for the basic safety and essential performance of electromyographs and evoked response equipment",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-40 (VDE 0750-2-40)",
+    "note": "Maßgeblich ist die jeweils gültige Fassung."
+  }
+]

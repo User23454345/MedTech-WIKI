@@ -1,0 +1,178 @@
+{
+  "id": "messkette",
+  "type": "term",
+  "title": "Messkette",
+  "aliases": [
+    "Messsignalkette",
+    "Signalkette",
+    "measuring chain",
+    "measurement chain",
+    "Messsystem",
+    "Messeinrichtung",
+    "Signalpfad"
+  ],
+  "category": "sensorik",
+  "summary": "Hintereinanderschaltung aller Glieder einer Messeinrichtung vom Sensor über Verstärker, Filter und A/D-Wandler bis zur Anzeige oder zum Regler. Empfindlichkeiten, Abweichungen und Zeitverhalten der einzelnen Glieder bestimmen gemeinsam Genauigkeit und Dynamik des Messwerts.",
+  "body": "## Begriff\n\nEine **Messkette** ist die Hintereinanderschaltung aller Elemente einer Messeinrichtung, die das Signal vom Sensor bis zur Ausgabe durchläuft – vom Aufnehmer über Verstärker, Filter und Wandler bis zur Anzeige, zum Alarm oder zum Regler [@jcgm-200-2012] [@din-1319-1]. Jedes Glied wandelt oder bearbeitet das Signal und trägt dabei eigene Abweichungen, Störungen und Verzögerungen bei. Wer Messwerte eines Medizingeräts beurteilen, prüfen oder Fehler suchen will, muss die Kette kennen: Ein falscher Anzeigewert kann ebenso vom Sensor wie vom Schlauch, vom Verstärker, vom Filter oder von der Software stammen.\n\n## Aufbau einer typischen Messkette\n\n| Glied | Aufgabe | Typische Bauteile |\n|---|---|---|\n| Messobjekt / Ankopplung | Messgröße an den Sensor heranführen | Schlauch, Manschette, Elektrode, Messkammer, Katheter |\n| Aufnehmer (Sensor) | physikalische Größe → elektrische Größe | [[drucksensor]], [[flowsensor]], [[temperatursensor]], [[ekg-elektrode]], [[kraftsensor]] |\n| Signalaufbereitung | Verstärkung, Speisung, Brückenschaltung, Impedanzwandlung | [[instrumentenverstaerker]], [[operationsverstaerker]] |\n| Trennung | Patientenschutz, Potenzialtrennung | [[galvanische-trennung]] (Optokoppler, Übertrager, isolierte Wandler) |\n| Filterung | Störungen und Rauschen entfernen, Aliasing verhindern | [[filter|analoge und digitale Filter]] |\n| Digitalisierung | Abtastung und Quantisierung | [[analog-digital-wandler]] |\n| Verarbeitung | Kalibrierkurven, Kompensation, Algorithmen, Plausibilität | [[mikrocontroller]], Software ([[iec-62304]]) |\n| Ausgabe | Anzeige, Speicherung, [[alarmsystem|Alarm]], Stellgröße eines [[regelkreis|Regelkreises]] | [[display-bedienoberflaeche]], Schnittstellen ([[hl7-fhir]]) |\n\n## Statisches Verhalten\n\nIm einfachsten (linearen) Fall hat jedes Glied i eine **Empfindlichkeit** S_i = Δy_i / Δx_i. Für die Gesamtkette gilt\n\n`S_ges = S₁ · S₂ · … · S_n`\n\nFür relative Empfindlichkeitsfehler folgt daraus näherungsweise, dass sich die relativen Abweichungen der einzelnen Glieder addieren:\n\n`ΔS_ges / S_ges ≈ ΔS₁/S₁ + ΔS₂/S₂ + … + ΔS_n/S_n`\n\nDiese Summe ist die **Worst-Case-Abschätzung**. Sind die Einzelabweichungen voneinander unabhängig und zufällig, ist die quadratische Addition realistischer – das ist der Ansatz der [[messunsicherheit|Messunsicherheit]] nach GUM [@jcgm-100-2008].\n\n> [!beispiel] Ein Drucksensor mit ±1 % Empfindlichkeitstoleranz, ein Verstärker mit ±0,5 % Verstärkungsfehler und ein A/D-Wandler mit ±0,2 % Referenzfehler ergeben im ungünstigsten Fall ±1,7 %, bei quadratischer Addition dagegen √(1² + 0,5² + 0,2²) % ≈ ±1,1 %. Werkskalibrierung der gesamten Kette reduziert beide Werte erheblich.\n\n**Nullpunktabweichungen (Offsets)** werden dagegen mit der Verstärkung aller folgenden Glieder multipliziert. Ein Offset am Anfang der Kette wirkt deshalb stärker als derselbe Offset am Ende – ein Grund, warum der erste Verstärker rauscharm und driftarm sein muss und warum Geräte vor der Messung einen **Nullabgleich** durchführen (z. B. „Nullen“ bei der [[invasive-druckmessung|invasiven Druckmessung]]).\n\n## Dynamisches Verhalten\n\nJedes Glied hat ein Zeitverhalten. Ein mechanisches Ankopplungselement (Schlauch, Flüssigkeitssäule) wirkt oft als System zweiter Ordnung mit Eigenfrequenz und Dämpfung, ein RC-Filter als System erster Ordnung mit der Zeitkonstante τ = R · C und der Grenzfrequenz\n\n`f_g = 1 / (2π · τ)`\n\nDie Bandbreite der gesamten Kette wird im Wesentlichen vom langsamsten Glied begrenzt; liegen mehrere Grenzfrequenzen nahe beieinander, ist die Gesamtbandbreite kleiner als jede einzelne. Für die Digitalisierung gilt das **Abtasttheorem**: Die Abtastfrequenz muss mehr als doppelt so groß sein wie die höchste im Signal enthaltene Frequenz,\n\n`f_A > 2 · f_max`\n\nsonst entstehen Alias-Frequenzen, die sich nachträglich nicht mehr entfernen lassen. Deshalb sitzt vor jedem A/D-Wandler ein analoges Anti-Aliasing-Tiefpassfilter. Die Quantisierung begrenzt die Auflösung auf `LSB = U_ref / 2^N` bei N Bit. Für einen idealen Wandler und ein vollausgesteuertes Sinussignal ergibt sich daraus ein theoretischer Signal-Rausch-Abstand von\n\n`SNR ≈ 6,02 · N + 1,76 dB`\n\n[@tietze-schenk-2019]. Entscheidend ist die **Aussteuerung**: Nutzt das Signal nur einen kleinen Teil des Eingangsbereichs, geht ein großer Teil der Auflösung verloren. Die Verstärkung vor dem Wandler wird deshalb so gewählt, dass der erwartete Signalbereich einschließlich Offsets und Störungen den Wandlerbereich gut ausnutzt, ohne ihn zu übersteuern.\n\n> [!beispiel] Ein 12-Bit-Wandler mit U_ref = 3,3 V hat ein LSB von 3,3 V / 4 096 ≈ 0,8 mV. Liefert ein Drucksensor nach dem Verstärker 1 V für 100 mbar, entspricht ein LSB etwa 0,08 mbar – ausreichend für die Atemwegsdruckmessung. Ohne Verstärker (Sensorsignal einige mV) wäre die Auflösung dagegen völlig unzureichend.\n\n> [!belegt] Bei der invasiven Blutdruckmessung bestimmen Länge, Nachgiebigkeit und Luftblasen im flüssigkeitsgefüllten Schlauchsystem Eigenfrequenz und Dämpfung der Messkette; eine zu niedrige Eigenfrequenz oder falsche Dämpfung verzerrt die Druckkurve und die systolischen Werte [@webster-2010].\n\n## Störungen in der Messkette\n\n| Störung | Eintrittsstelle | Gegenmaßnahme |\n|---|---|---|\n| Netzbrumm (50 Hz) | Elektroden, Kabel, Verstärkereingang | Gleichtaktunterdrückung, Schirmung, Notch-Filter – siehe [[netzstoerung]] |\n| Elektromagnetische Störungen | Leitungen, Platine | [[emv|EMV-gerechtes]] Design, Filter – siehe [[emv-stoerung]] |\n| Temperaturdrift | Sensor, Verstärker | Kompensation, Referenzmessung – siehe [[sensordrift]] |\n| Bewegungsartefakte | Ankopplung am Patienten | Fixierung, Plausibilitätsprüfung – siehe [[bewegungsartefakt]] |\n| Mechanische Einflüsse | Schläuche, Messleitungen | Kondensat, Knick, Leck vermeiden |\n\n> [!vereinfacht] Die Darstellung als lineare Kette ist ein Modell. Moderne Geräte enthalten Rückkopplungen (Selbsttests, automatischer Nullabgleich, Sensorfusion), und viele Glieder sind in einem einzigen integrierten Sensorbaustein zusammengefasst. Für Fehlersuche und Prüfung bleibt das Kettenmodell dennoch das wichtigste Denkwerkzeug.\n\n## Bedeutung in der Medizintechnik\n\n### Kette vom Beatmungsgerät bis zum Drucksensor\n\nIm [[beatmungsgeraet|Beatmungsgerät]] ist die Messkette Teil eines geschlossenen [[regelkreis|Regelkreises]]: Die [[turbine|Turbine]] wird von einem [[elektromotor|Elektromotor]] angetrieben, dessen [[drehzahlregelung|Drehzahlregelung]] aus der [[elektrotechnik|Elektrotechnik]] stammt. Der Regler braucht jedoch einen Istwert – und den liefert die [[sensorik|Sensorik]]: Der Atemwegsdruck gelangt über eine Messleitung an den Drucksensor, wird verstärkt, gefiltert und digitalisiert ([[druckmessung]]). Ein Fehler irgendwo in dieser Messkette (Kondensat in der Messleitung, driftender Nullpunkt) verfälscht nicht nur die Anzeige, sondern unmittelbar den applizierten Druck.\n\n### Weitere Beispiele\n\n| Gerät | Messkette (vereinfacht) |\n|---|---|\n| [[ekg-geraet]] | [[ekg-elektrode]] → Instrumentenverstärker → galvanische Trennung → Filter → A/D-Wandler → Anzeige |\n| [[pulsoxymeter]] | LED/Photodiode ([[photoplethysmographie]]) → Transimpedanzverstärker → Demodulation → Verhältnisbildung → SpO₂ |\n| [[nibp-messgeraet]] | Manschette → Drucksensor → Bandpass ([[oszillometrie]]) → Algorithmus |\n| [[dialysegeraet]] | Messzelle ([[leitfaehigkeitssensor]], [[blutleckdetektor]]) → Verstärker → Temperaturkompensation → Schutzsystem |\n| [[thermometer]] | [[temperatursensor]] → Brücke/Verstärker → Linearisierung → Anzeige |\n\nFür [[anwendungsteile|Anwendungsteile]] vom Typ BF und CF verlangt die [[iec-60601-1|IEC 60601-1]] eine Isolation des patientenseitigen Teils (F-Typ, „floating“) gegen Erde und die übrigen Geräteteile, sodass die Grenzwerte für Patientenableitströme eingehalten werden [@iec-60601-1]. Bei Biosignalverstärkern liegt die Trennstelle deshalb meist direkt hinter dem Eingangsverstärker bzw. dem A/D-Wandler des isolierten Eingangsteils.\n\n## Prüfung, Kalibrierung und Fehlersuche\n\nBei der [[kalibrierung|Kalibrierung]] und der [[mtk|messtechnischen Kontrolle]] wird in der Regel die **gesamte** Kette geprüft: Ein Referenznormal (Referenzmanometer, Thermometer, Simulator) prägt eine bekannte Messgröße am Eingang ein, verglichen wird mit der Anzeige am Ausgang. Liegt die Abweichung außerhalb der Fehlergrenzen, hilft die gliedweise Betrachtung bei der [[fehlersuche|Fehlersuche]]: Signal am Sensorausgang, nach dem Verstärker, nach der Digitalisierung – von außen nach innen, beginnend bei Schläuchen, Kabeln und Steckern.\n\n> [!praxis] Die meisten Messfehler entstehen am Anfang der Kette, an der Ankopplung zum Patienten: abgeknickte oder feuchte Druckmessleitungen, ausgetrocknete Elektroden, falsche Manschettengröße, ein nicht genullter Druckaufnehmer. Erst wenn diese Glieder ausgeschlossen sind, lohnt der Verdacht auf den Sensor oder die Elektronik.\n",
+  "related": [
+    "drucksensor",
+    "druckmessung",
+    "instrumentenverstaerker",
+    "filter",
+    "analog-digital-wandler",
+    "mikrocontroller",
+    "galvanische-trennung",
+    "messunsicherheit",
+    "kalibrierung",
+    "regelkreis",
+    "drehzahlregelung",
+    "biosignale",
+    "fehlersuche"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "drehzahlregelung",
+      "messkette",
+      "drucksensor",
+      "druckmessung"
+    ],
+    [
+      "ekg-elektrode",
+      "instrumentenverstaerker",
+      "galvanische-trennung",
+      "filter",
+      "analog-digital-wandler",
+      "mikrocontroller"
+    ],
+    [
+      "messkette",
+      "messunsicherheit",
+      "kalibrierung",
+      "mtk"
+    ]
+  ],
+  "sources": [
+    "jcgm-200-2012",
+    "din-1319-1",
+    "jcgm-100-2008",
+    "webster-2010",
+    "tietze-schenk-2019",
+    "hering-2018",
+    "iec-60601-1"
+  ],
+  "diagram": {
+    "title": "Allgemeine Messkette eines Medizingeräts",
+    "caption": "Glieder vom Patienten bis zur Ausgabe; jede Stufe trägt eigene Abweichungen und Verzögerungen bei.",
+    "width": 960,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Patient /\nMessgröße",
+        "kind": "patient",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "sens",
+        "label": "Sensor",
+        "kind": "sensor",
+        "x": 280,
+        "y": 80,
+        "ref": "drucksensor"
+      },
+      {
+        "id": "amp",
+        "label": "Verstärker",
+        "kind": "process",
+        "x": 470,
+        "y": 80,
+        "ref": "instrumentenverstaerker"
+      },
+      {
+        "id": "iso",
+        "label": "Galvanische\nTrennung",
+        "kind": "process",
+        "x": 660,
+        "y": 80,
+        "ref": "galvanische-trennung"
+      },
+      {
+        "id": "filt",
+        "label": "Anti-Aliasing-\nFilter",
+        "kind": "process",
+        "x": 850,
+        "y": 80,
+        "ref": "filter"
+      },
+      {
+        "id": "adc",
+        "label": "A/D-Wandler",
+        "kind": "process",
+        "x": 850,
+        "y": 220,
+        "ref": "analog-digital-wandler"
+      },
+      {
+        "id": "mcu",
+        "label": "Mikrocontroller\n(Kompensation)",
+        "kind": "control",
+        "x": 620,
+        "y": 220,
+        "ref": "mikrocontroller"
+      },
+      {
+        "id": "out",
+        "label": "Anzeige, Alarm,\nRegler",
+        "kind": "output",
+        "x": 390,
+        "y": 220,
+        "ref": "regelkreis"
+      }
+    ],
+    "edges": [
+      {
+        "from": "pat",
+        "to": "sens",
+        "kind": "energy",
+        "label": "Druck, Temperatur …"
+      },
+      {
+        "from": "sens",
+        "to": "amp",
+        "kind": "signal",
+        "label": "µV–mV"
+      },
+      {
+        "from": "amp",
+        "to": "iso",
+        "kind": "signal"
+      },
+      {
+        "from": "iso",
+        "to": "filt",
+        "kind": "signal"
+      },
+      {
+        "from": "filt",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "mcu",
+        "kind": "data"
+      },
+      {
+        "from": "mcu",
+        "to": "out",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

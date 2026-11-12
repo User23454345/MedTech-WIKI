@@ -1,0 +1,173 @@
+{
+  "id": "roentgenroehre",
+  "type": "term",
+  "title": "Röntgenröhre",
+  "aliases": [
+    "Drehanodenröhre",
+    "Stehanodenröhre",
+    "X-Ray Tube",
+    "Röntgenstrahler",
+    "Röhrenbaugruppe",
+    "Röhrenschutzgehäuse",
+    "Drehanode",
+    "Glühkathode"
+  ],
+  "category": "komponenten",
+  "summary": "Evakuierte Elektronenröhre, in der durch Hochspannung beschleunigte Elektronen beim Abbremsen in der Anode Röntgenstrahlung erzeugen. Weil über 99 % der Energie als Wärme anfallen, bestimmen Drehanode, Brennfleckgeometrie und Kühlung Leistungsfähigkeit und Lebensdauer.",
+  "body": "## Begriff und Aufgabe\n\nDie **Röntgenröhre** ist die Strahlenquelle aller röntgenbasierten Bildgebungsverfahren – vom [[roentgengeraet|Projektionsröntgen]] über [[mammographiegeraet|Mammographie]], [[c-bogen|C-Bogen]] und [[angiographieanlage|Angiographie]] bis zum [[computertomograph|Computertomographen]] und zur [[dvt|DVT]]. Sie ist eine evakuierte Elektronenröhre, in der Elektronen aus einer geheizten Kathode durch eine Hochspannung zur Anode beschleunigt werden und dort beim Abbremsen [[roentgenstrahlung|Röntgenstrahlung]] erzeugen [@krieger-strahlungsquellen-2018] [@bushberg-2020].\n\nDie Röntgenröhre ist ein ausgesprochen ineffizienter Energiewandler: Über 99 % der eingesetzten elektrischen Leistung werden in der Anode zu Wärme. Konstruktion, Betriebsgrenzen und Lebensdauer der Röhre werden deshalb vor allem vom **Wärmemanagement** bestimmt.\n\n## Aufbau\n\n| Baugruppe | Aufgabe | Technische Ausführung |\n|---|---|---|\n| Kathode | Elektronenquelle | Glühwendel aus Wolfram, häufig zwei Wendeln für kleinen und großen Brennfleck; Fokussierkappe (Wehnelt) bündelt den Elektronenstrahl |\n| Anode | Bremsung der Elektronen, Strahlungserzeugung | Stehanode (Dental, kleine Leistungen) oder **Drehanode**: Teller mit Wolfram-Rhenium-Brennbahn auf Molybdän-, häufig mit Graphit-Rückseite |\n| Rotor und Lager | Drehung der Anode | Rotor im Vakuum, angetrieben vom außen liegenden Stator (Induktionsprinzip); Kugellager mit Festschmierstoff oder Flüssigmetall-Gleitlager |\n| Röhrenkolben | Vakuumgefäß | Glas oder Metall-Keramik |\n| Röhrenschutzgehäuse | Isolation, Kühlung, Strahlenschutz | ölgefülltes Gehäuse mit Bleiauskleidung, Strahlenaustrittsfenster, Ausdehnungsbalg, Temperaturschalter |\n\nDas Röhrenschutzgehäuse schirmt die nicht genutzte Strahlung ab; die zulässige **Leckstrahlung** ist in der IEC 60601-1-3 geregelt [@iec-60601-1-3-strahlenschutz]. Am Austrittsfenster folgen Filter und [[kollimator|Tiefenblende]].\n\n## Physikalisches Prinzip\n\n### Elektronenemission\n\nDer Heizstrom erwärmt die Wolframwendel so stark, dass Elektronen durch **Glühemission** austreten. Die Emission steigt sehr stark mit der Temperatur; der **Röhrenstrom** (mA) wird deshalb über den Heizstrom eingestellt. Bei niedriger Röhrenspannung begrenzt die Raumladungswolke vor der Kathode den Strom – der Generator kompensiert dies durch Nachregelung des Heizstroms [@krieger-strahlungsquellen-2018].\n\n### Beschleunigung und Bremsstrahlung\n\nDie Röhrenspannung U (in der Diagnostik etwa 25–150 kV) beschleunigt die Elektronen auf die kinetische Energie `E = e · U`. In der Anode werden sie im Coulombfeld der Atomkerne abgelenkt und abgebremst; die dabei abgestrahlte Energie bildet das kontinuierliche **Bremsstrahlungsspektrum**. Dessen Maximalenergie entspricht der Elektronenenergie (Duane-Hunt-Gesetz):\n\n`E_max = e · U` bzw. `λ_min [nm] ≈ 1,24 / U [kV]`\n\nZusätzlich entsteht **charakteristische Strahlung**, wenn Elektronen innere Schalen der Anodenatome ionisieren. Für Wolfram liegen die K-Linien knapp unter 60 keV bzw. bei etwa 67 keV; in der Mammographie werden Molybdän- oder Rhodium-Anoden wegen ihrer niedrigeren K-Linien eingesetzt [@bushberg-2020].\n\n### Wirkungsgrad\n\nDer Anteil der Elektronenenergie, der in Bremsstrahlung umgesetzt wird, ist näherungsweise\n\n`η ≈ k · Z · U` mit k ≈ 1 · 10⁻⁹ V⁻¹\n\n> [!beispiel] Für eine Wolframanode (Z = 74) bei U = 100 kV folgt η ≈ 10⁻⁹ · 74 · 10⁵ ≈ 0,7 %. Bei einer elektrischen Leistung von 50 kW (z. B. 100 kV · 500 mA) entstehen also rund 49,6 kW Wärme im Brennfleck – für Sekundenbruchteile auf wenigen Quadratmillimetern. Die Zahlen sind didaktisch gewählt.\n\n## Brennfleck und Strichfokusprinzip\n\nDie Bildschärfe hängt von der Größe der Strahlenquelle ab: Je kleiner der **optische Brennfleck**, desto geringer die geometrische Unschärfe. Ein kleiner Brennfleck verträgt aber weniger Leistung. Den Ausweg bietet das **Strichfokusprinzip**: Die Anode ist um einen kleinen Winkel α (typisch etwa 7–17°) geneigt. Der thermische Brennfleck ist ein langgestrecktes Rechteck der Länge L, in Strahlrichtung erscheint er verkürzt:\n\n`f_optisch ≈ L · sin α`\n\n> [!vereinfacht] Bei kleinem Anodenwinkel wird der optische Brennfleck klein, gleichzeitig aber das nutzbare Strahlenfeld schmaler, und der **Heel-Effekt** (Abfall der Intensität zur Anodenseite durch Selbstabsorption in der Anode) nimmt zu. Die Wahl des Anodenwinkels ist daher ein Kompromiss zwischen Leistung, Feldgröße und Homogenität.\n\nTypische Nennbrennflecke liegen bei Universalröhren im Bereich 0,6 mm / 1,2 mm, in der Mammographie deutlich darunter (typische Werte; maßgeblich sind die Herstellerangaben).\n\n## Wärmemanagement\n\n### Drehanode\n\nBei der **Drehanode** wird die Wärme über die gesamte ringförmige Brennbahn verteilt; jeder Punkt der Bahn wird nur kurz belastet. Höhere Drehzahlen erhöhen die Kurzzeitbelastbarkeit. Die Anode wird über einen Asynchronmotor-Stator angetrieben (Prinzip siehe [[elektromotor]]); Drehzahlen von einigen tausend bis rund zehntausend Umdrehungen pro Minute sind typisch [@krieger-strahlungsquellen-2018].\n\n### Wärmeabfuhr\n\nIm Vakuum gibt die Anode Wärme fast nur durch **Strahlung** ab (Stefan-Boltzmann-Gesetz, P ∝ T⁴, siehe [[waermeuebertragung]]), daher die hohen Anodentemperaturen von weit über 1 000 °C (Größenordnung; im Brennfleck kurzzeitig deutlich mehr, begrenzt durch den Schmelzpunkt von Wolfram von rund 3 400 °C). Von dort gelangt die Wärme ins Isolieröl und über Wärmetauscher, Lüfter oder Wasserkühlung nach außen. Bei Röhren mit Flüssigmetall-Gleitlagern (Spiralrillenlager) wird ein Teil der Wärme zusätzlich durch Wärmeleitung über Lager und Achse abgeführt; bei anderen Hochleistungskonzepten wird die Anode direkt mit Öl gekühlt. Ausführung und Kennwerte sind herstellerspezifisch.\n\nKenngrößen für die Belastbarkeit sind:\n\n| Kenngröße | Bedeutung |\n|---|---|\n| Nennleistung (kW) | maximale elektrische Leistung für eine Belastung von 0,1 s |\n| Anodenwärmespeicherkapazität (kJ bzw. MHU) | wie viel Wärme die Anode aufnehmen kann, bevor gekühlt werden muss |\n| Gehäusewärmespeicherkapazität | Wärmekapazität von Öl und Gehäuse |\n| Kühlrate | abführbare Leistung im Dauerbetrieb |\n\nDer Generator berechnet die Röhrenbelastung laufend aus einem thermischen Modell und sperrt oder verzögert Aufnahmen bei Überlast (Röhrenschutz). Besonders der [[computertomograph]] mit langen Spiralscans stellt hohe Anforderungen an Wärmespeicher und Kühlung [@kalender-2011] [@hsieh-2015].\n\n## Ansteuerung durch den Generator\n\nDer Röntgengenerator stellt die drei Belichtungsparameter ein:\n\n* **Röhrenspannung (kV)** – bestimmt die Strahlenqualität (Durchdringungsfähigkeit, Kontrast),\n* **Röhrenstrom (mA)** – bestimmt die Photonenzahl pro Zeit,\n* **Belichtungszeit (s)** – gemeinsam mit dem Strom das Strom-Zeit-Produkt (mAs).\n\nDie Hochspannung entsteht in Hochfrequenzgeneratoren mit Wechselrichter, [[transformator|Hochspannungstransformator]] und Gleichrichterkaskade (siehe [[hochspannungserzeugung]]). Für gepulste Durchleuchtung werden gittergesteuerte Röhren verwendet, bei denen eine Steuerelektrode den Elektronenstrahl sehr schnell ein- und ausschaltet.\n\n> [!belegt] Die Anforderungen an Röntgeneinrichtungen einschließlich Röhrenbaugruppe, Kennzeichnung und Belastungsangaben sind in der Gerätenorm IEC 60601-2-54 bzw. für CT in IEC 60601-2-44 festgelegt [@iec-60601-2-54-2022] [@iec-60601-2-44].\n\n## Anwendung in Geräten\n\n| Gerät | Besonderheit der Röhre |\n|---|---|\n| [[roentgengeraet]] | Doppelfokus-Drehanodenröhre, Universalbetrieb |\n| [[mammographiegeraet]] | niedrige Spannung, Mo/Rh- oder W-Anode, sehr kleiner Brennfleck |\n| [[c-bogen]], [[angiographieanlage]] | gepulste Durchleuchtung, hohe Dauerleistung, gittergesteuert |\n| [[computertomograph]] | höchste Wärmespeicherkapazität, rotiert auf der [[gantry]] mit hoher Fliehkraft |\n| [[dvt]], intraorales Dentalröntgen | kleine Stehanodenröhren (intraoral) bzw. Stehanoden- oder Drehanodenröhren (DVT) |\n| [[knochendichtemessung]] | Röhre mit zwei Energiespektren für die Zwei-Spektren-Absorptiometrie |\n\n## Alterung, Fehlerbilder und Instandhaltung\n\nRöntgenröhren sind Verschleißteile. Typische Alterungsmechanismen sind:\n\n* **Aufrauung der Brennbahn** durch thermische Wechselbelastung – Dosisausbeute sinkt, Spektrum wird härter.\n* **Wolframbedampfung** des Kolbens – Gefahr von Hochspannungsüberschlägen.\n* **Lagerverschleiß** – Laufgeräusche, verlängerte Hochlaufzeiten.\n* **Wendelbruch** – Ausfall eines Brennflecks.\n* **Gasausbrüche** im Vakuum – Überschläge („Arcing“), die der Generator als Fehler meldet.\n\n> [!praxis] Nach längeren Stillstandszeiten schreiben Hersteller häufig ein Aufwärm- bzw. Konditionierungsprogramm vor, um Überschläge zu vermeiden. Röhrenwechsel und anschließende Justage erfolgen durch den Hersteller oder autorisierte Servicetechniker.\n\nNach einem Röhrenwechsel ist die Anlage einer **Abnahmeprüfung** zu unterziehen; im laufenden Betrieb sichern [[konstanzpruefung|Konstanzprüfungen]] die Bildqualität [@din-6868-4-2021]. Die strahlenschutzrechtlichen Pflichten ergeben sich aus [[strlschg|Strahlenschutzgesetz]] und Strahlenschutzverordnung (siehe [[strahlenschutz]]). Röhrenbedingte Bildfehler werden unter [[bildartefakte]] behandelt.\n",
+  "related": [
+    "roentgenstrahlung",
+    "hochspannungserzeugung",
+    "transformator",
+    "kollimator",
+    "roentgendetektor",
+    "gantry",
+    "roentgengeraet",
+    "computertomograph",
+    "strahlenschutz",
+    "konstanzpruefung",
+    "waermeuebertragung",
+    "ionisierende-strahlung"
+  ],
+  "paths": [
+    [
+      "roentgengeraet",
+      "roentgenroehre",
+      "roentgenstrahlung",
+      "ionisierende-strahlung",
+      "roentgendetektor"
+    ],
+    [
+      "computertomograph",
+      "gantry",
+      "roentgenroehre",
+      "hochspannungserzeugung",
+      "transformator"
+    ]
+  ],
+  "sources": [
+    "krieger-strahlungsquellen-2018",
+    "bushberg-2020",
+    "kalender-2011",
+    "hsieh-2015",
+    "iec-60601-2-54-2022",
+    "iec-60601-2-44",
+    "iec-60601-1-3-strahlenschutz",
+    "din-6868-4-2021",
+    "doessel-2016"
+  ],
+  "diagram": {
+    "title": "Funktionsprinzip der Röntgenröhre",
+    "caption": "Vom Heizstrom zur Nutzstrahlung; der überwiegende Teil der Energie fließt als Wärme in das Kühlsystem.",
+    "width": 960,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "gen",
+        "label": "Generator\n(kV, mA, s)",
+        "ref": "hochspannungserzeugung",
+        "kind": "source",
+        "x": 90,
+        "y": 100
+      },
+      {
+        "id": "kath",
+        "label": "Glühkathode\n(Elektronen)",
+        "kind": "process",
+        "x": 280,
+        "y": 100
+      },
+      {
+        "id": "anode",
+        "label": "Drehanode\n(Brennfleck)",
+        "kind": "process",
+        "x": 470,
+        "y": 100
+      },
+      {
+        "id": "stator",
+        "label": "Stator /\nAnodenantrieb",
+        "ref": "elektromotor",
+        "kind": "actuator",
+        "x": 470,
+        "y": 260
+      },
+      {
+        "id": "kuehl",
+        "label": "Öl, Wärmetauscher\n(> 99 % Wärme)",
+        "ref": "waermeuebertragung",
+        "kind": "output",
+        "x": 680,
+        "y": 260,
+        "w": 170
+      },
+      {
+        "id": "koll",
+        "label": "Filter +\nKollimator",
+        "ref": "kollimator",
+        "kind": "process",
+        "x": 680,
+        "y": 100
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 870,
+        "y": 100
+      },
+      {
+        "id": "det",
+        "label": "Detektor",
+        "ref": "roentgendetektor",
+        "kind": "sensor",
+        "x": 870,
+        "y": 200
+      }
+    ],
+    "edges": [
+      {
+        "from": "gen",
+        "to": "kath",
+        "kind": "power",
+        "label": "Heizstrom + HV"
+      },
+      {
+        "from": "kath",
+        "to": "anode",
+        "kind": "energy",
+        "label": "e⁻, E = e·U"
+      },
+      {
+        "from": "anode",
+        "to": "koll",
+        "kind": "energy",
+        "label": "Röntgenstrahlung"
+      },
+      {
+        "from": "koll",
+        "to": "pat",
+        "kind": "energy"
+      },
+      {
+        "from": "pat",
+        "to": "det",
+        "kind": "energy"
+      },
+      {
+        "from": "stator",
+        "to": "anode",
+        "kind": "power",
+        "label": "Drehfeld"
+      },
+      {
+        "from": "anode",
+        "to": "kuehl",
+        "kind": "energy",
+        "label": "Wärme"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

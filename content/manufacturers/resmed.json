@@ -1,0 +1,59 @@
+{
+  "id": "resmed",
+  "type": "manufacturer",
+  "title": "ResMed",
+  "aliases": [
+    "ResMed Inc.",
+    "ResCare"
+  ],
+  "category": "hersteller",
+  "summary": "Hersteller von Geräten und Masken für Schlaftherapie und außerklinische Beatmung, gegründet 1989 in Sydney, heute mit Hauptsitz in San Diego. ResMed geht auf die Entwicklung der nasalen CPAP-Therapie zurück und bietet zudem Software für die außerklinische Versorgung an.",
+  "headquarters": "San Diego, USA",
+  "founded": "1989",
+  "website": "https://www.resmed.com/",
+  "productLines": [
+    {
+      "device": "cpap-geraet",
+      "models": [
+        "AirSense 10",
+        "AirSense 11",
+        "AirCurve 10"
+      ],
+      "note": "AirSense: CPAP/APAP; AirCurve: Bilevel-Therapie."
+    },
+    {
+      "device": "heimbeatmungsgeraet",
+      "models": [
+        "Astral 100",
+        "Astral 150",
+        "Stellar 150"
+      ],
+      "note": "Astral: lebenserhaltende Beatmung, invasiv und nichtinvasiv."
+    },
+    {
+      "device": "polysomnograph",
+      "models": [
+        "ApneaLink Air"
+      ],
+      "note": "Ambulantes Screening (Polygraphie), keine vollständige Polysomnographie."
+    }
+  ],
+  "body": "## Überblick\n\nResMed ist ein börsennotierter Anbieter für **Schlafmedizin** und **außerklinische Beatmung**. Neben Therapiegeräten und Masken gehört Software für Telemonitoring und für ambulante Pflege- und Versorgungsdienste zum Portfolio [@hst-resmed].\n\n## Geschichte in Stichpunkten\n\n* **1981** – Colin Sullivan und Kollegen an der University of Sydney beschreiben die Behandlung der obstruktiven Schlafapnoe mit **nasalem CPAP** [@hst-resmed-story].\n* **1989** – Gründung des Unternehmens (zunächst als ResCare) durch Peter Farrell, um die CPAP-Technologie zu kommerzialisieren; später Umbenennung in ResMed [@hst-resmed-story].\n* **Folgejahre** – Verlagerung des Hauptsitzes nach San Diego; Ausbau zu Bilevel- und Heimbeatmungsgeräten.\n* **Mitte der 2010er-Jahre** – Einführung der Heimbeatmungsplattform Astral.\n* **ab 2016** – Ausbau des Softwaregeschäfts für außerklinische Versorger, u. a. durch Übernahmen in den USA und in Deutschland.\n\n## Geschäftsbereiche\n\n| Bereich | Wiki-Geräte |\n|---|---|\n| Schlafapnoetherapie | [[cpap-geraet]] |\n| Außerklinische Beatmung | [[heimbeatmungsgeraet]] |\n| Schlafdiagnostik (Screening) | [[polysomnograph]] |\n\n## Technischer Hintergrund\n\nCPAP-Geräte erzeugen mit einem drehzahlgeregelten Gebläse ([[turbine]], [[bldc-motor]], [[drehzahlregelung]]) einen positiven Atemwegsdruck, der die oberen Atemwege pneumatisch offenhält. Automatische Geräte (APAP) passen den Druck anhand des gemessenen Flusses ([[flowsensor]]) an Ereignisse wie Apnoen, Hypopnoen oder Flusslimitation an. Ein beheizter [[atemgasbefeuchter]] reduziert die Austrocknung der Schleimhäute. Bilevel-Geräte (z. B. AirCurve) arbeiten mit zwei Druckniveaus – einem höheren inspiratorischen (IPAP) und einem niedrigeren exspiratorischen Druck (EPAP); die Druckdifferenz unterstützt die Ventilation. Da Masken bewusst eine Ausatemöffnung besitzen und zusätzlich unbeabsichtigte Leckagen auftreten, schätzen die Geräte die Leckage aus Fluss und Druck und kompensieren sie, um Ereignisse korrekt zu erkennen.\n\n> [!vereinfacht] Der CPAP-Druck wirkt wie eine „pneumatische Schiene“: Der Überdruck im Rachenraum verhindert, dass die erschlaffte Muskulatur im Schlaf die Atemwege verschließt (siehe [[atemmechanik]]).\n\n## Bedeutung für die Medizintechnik\n\nResMed ist neben [[philips|Philips]] und [[loewenstein-medical|Löwenstein Medical]] einer der großen Anbieter von CPAP-Geräten. Viele Geräte übertragen Therapiedaten per Mobilfunk an Versorger und Ärzte – ein Beispiel für vernetzte Medizinprodukte mit Anforderungen an Datenschutz und IT-Sicherheit ([[software-medizinprodukt]]). Für Heimbeatmungsgeräte gelten die Anforderungen an den Einsatz in häuslicher Umgebung nach [[iec-60601-1-11|IEC 60601-1-11]] [@iec-60601-1-11].\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "cpap-geraet",
+    "heimbeatmungsgeraet",
+    "polysomnograph",
+    "pneumologie",
+    "atemgasbefeuchter",
+    "philips",
+    "loewenstein-medical",
+    "hamilton-medical"
+  ],
+  "sources": [
+    "hst-resmed",
+    "hst-resmed-story",
+    "iec-60601-1-11"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

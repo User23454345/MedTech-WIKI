@@ -1,0 +1,46 @@
+{
+  "id": "desinfektion",
+  "type": "term",
+  "title": "Desinfektion",
+  "aliases": [
+    "Disinfection",
+    "Thermische Desinfektion",
+    "Chemische Desinfektion",
+    "Flächendesinfektion",
+    "A0-Wert",
+    "High-Level-Desinfektion",
+    "Keimreduktion"
+  ],
+  "category": "instandhaltung",
+  "summary": "Desinfektion reduziert die Zahl vermehrungsfähiger Mikroorganismen so weit, dass von einem Gegenstand keine Infektion mehr ausgehen kann; Sporen werden dabei nicht zwingend erfasst. Bei Medizinprodukten wird bevorzugt maschinell-thermisch desinfiziert, bewertet über den A₀-Wert; ergänzend kommen chemische Verfahren zum Einsatz.",
+  "body": "## Begriff\n\n**Desinfektion** ist die Reduktion der Anzahl vermehrungsfähiger Mikroorganismen auf Oberflächen, Instrumenten oder Händen so weit, dass von dem behandelten Gegenstand **keine Infektion mehr ausgehen kann**. Im Unterschied zur [[sterilisation|Sterilisation]] werden bakterielle Sporen nicht zwingend erfasst. Desinfektion ist ein Kernschritt der [[aufbereitung|Aufbereitung]] von Medizinprodukten und – als Flächendesinfektion – Teil der täglichen Gerätehygiene [@krinko-bfarm-2012] [@rutala-cdc-2008].\n\n## Wirksamkeit: Logarithmische Reduktion\n\nDie Wirksamkeit wird als **Reduktionsfaktor** in Zehnerpotenzen angegeben:\n\nlg R = lg N₀ − lg N\n\n> [!beispiel] Werden auf einem Prüfkörper vor der Desinfektion 10⁷ koloniebildende Einheiten gefunden und danach 10², beträgt die Reduktion lg R = 7 − 2 = 5. Das entspricht einer Abtötung von 99,999 % – und zeigt zugleich, dass bei hoher Ausgangsbelastung noch Keime übrig bleiben. Die Zahlen sind beispielhaft; die geforderten Reduktionsfaktoren hängen vom Prüfverfahren und Anwendungsbereich ab.\n\n### Wirkungsbereiche\n\nDesinfektionsmittel werden nach ihrem Wirkspektrum beschrieben, z. B. **bakterizid**, **levurozid** (Hefen), **fungizid**, **tuberkulozid** bzw. **mykobakterizid**, **begrenzt viruzid** (behüllte Viren), **begrenzt viruzid PLUS**, **viruzid** (auch unbehüllte Viren) und **sporizid**. Unbehüllte Viren und Sporen sind deutlich widerstandsfähiger als behüllte Viren und vegetative Bakterien. Welcher Wirkbereich nötig ist, ergibt sich aus Einsatzbereich und Erregerlage.\n\n## Spaulding-Klassifikation\n\nDie Anforderungen an die Desinfektion richten sich nach dem Kontakt des Produkts mit dem Patienten. Spaulding unterschied 1968 **kritische**, **semikritische** und **unkritische** Produkte [@spaulding-1968]; in den USA entspricht dem eine Einteilung in hochwirksame (*high-level*), mittel- und niedrig wirksame Desinfektion [@rutala-cdc-2008]. In Deutschland verfeinert die KRINKO-BfArM-Empfehlung dieses Schema (semikritisch A/B, kritisch A/B/C; siehe [[aufbereitung]]) [@krinko-bfarm-2012].\n\n## Verfahren\n\n### Thermische Desinfektion und A₀-Konzept\n\nBevorzugt wird die **maschinelle thermische Desinfektion** im [[rdg|Reinigungs- und Desinfektionsgerät]], weil sie reproduzierbar, gut überwachbar und rückstandsfrei ist. Die Wirkung wird über den **A₀-Wert** nach ISO 15883 beschrieben – die äquivalente Einwirkzeit in Sekunden bei 80 °C [@iso-15883-1]:\n\nA₀ = Σ 10^((T − 80 °C) / z) · Δt, mit z = 10 K\n\nEine Temperaturerhöhung um 10 K verkürzt die erforderliche Zeit also auf ein Zehntel.\n\n| A₀-Wert | Äquivalente Zeit-Temperatur-Kombinationen | Typischer Einsatz |\n|---|---|---|\n| 60 | 1 min bei 80 °C | unkritische Produkte (z. B. Pflegegeschirr) |\n| 600 | 10 min bei 80 °C oder 1 min bei 90 °C | in ISO 15883 als Mindestwert für unkritische Medizinprodukte mit Kontakt zu intakter Haut genannt |\n| 3 000 | 5 min bei 90 °C oder 50 min bei 80 °C | in Deutschland üblich für semikritische und kritische Medizinprodukte (Erfassung hitzeresistenterer Viren) |\n\n> [!hinweis] Die Zuordnung der A₀-Werte zu Produktgruppen folgt ISO 15883 und nationalen Empfehlungen; A₀ = 60 ist v. a. für Steckbeckenspüler (ISO 15883-3) relevant, A₀ = 3 000 entspricht der in Deutschland für semikritische und kritische Produkte geforderten Wirkung gegen hitzeresistentere Viren (z. B. Hepatitis-B-Virus); die genauen Anforderungen sind der jeweils gültigen Norm, der KRINKO-BfArM-Empfehlung und der Validierung zu entnehmen [@iso-15883-1] [@krinko-bfarm-2012].\n\n### Chemische und chemothermische Desinfektion\n\n| Wirkstoffgruppe | Eigenschaften | Hinweise für die Medizintechnik |\n|---|---|---|\n| Alkohole (Ethanol, Propanol) | schnell wirksam, rückstandsarm, nicht sporizid | brennbar; können Kunststoffe, Klebungen und Display-Beschichtungen angreifen |\n| Aldehyde | breites Spektrum | fixieren Proteine – Reinigung vorher zwingend; Arbeitsschutz |\n| Peroxidverbindungen, Peressigsäure | breites Spektrum, teils sporizid | Materialverträglichkeit mit Metallen beachten; häufig in Endoskop-Aufbereitung |\n| Quartäre Ammoniumverbindungen | gute Reinigungswirkung, schmaleres Spektrum | oft in Flächendesinfektionstüchern |\n| Chlorabspalter | breites Spektrum | korrosiv |\n\nFür **chemothermische** Verfahren werden Desinfektionsmittel bei erhöhter Temperatur eingesetzt, etwa für thermolabile [[endoskop|Endoskope]] in Endoskop-RDG.\n\n> [!warnung] Alkoholische Desinfektionsmittel können brennbare Dämpfe bilden. Bei der Anwendung von [[hf-chirurgiegeraet|HF-Chirurgie]] und Lasern ([[chirurgischer-laser]]) müssen Desinfektionsmittel vollständig abgetrocknet sein, sonst besteht Brandgefahr.\n\n### Listung von Desinfektionsmitteln\n\nIn Deutschland orientiert sich die Auswahl an Listen geprüfter Mittel: der Desinfektionsmittel-Liste des Verbunds für Angewandte Hygiene (VAH) für die routinemäßige Desinfektion und der **RKI-Liste** für behördlich angeordnete Desinfektionsmaßnahmen nach dem Infektionsschutzgesetz [@rki-desinfektionsmittelliste].\n\n## Desinfektion von Geräteoberflächen\n\nFür Geräte wie [[patientenmonitor|Patientenmonitore]], [[infusionspumpe|Infusionspumpen]], [[beatmungsgeraet|Beatmungsgeräte]] oder [[ultraschallgeraet|Ultraschallgeräte]] gilt:\n\n* nur vom Hersteller **freigegebene** Mittel verwenden – Materialunverträglichkeiten führen zu Spannungsrissen in Gehäusen, eingetrübten Displays ([[display-bedienoberflaeche]]) und undichten Tastaturen,\n* keine Flüssigkeit in Lüftungsöffnungen, Steckverbinder oder Lautsprecher bringen (Gefahr für Isolation und [[ableitstrom|Ableitströme]]),\n* Ultraschallsonden je nach Einstufung desinfizieren; endokavitäre Sonden mit nachweislich ausreichendem Wirkspektrum.\n\n> [!praxis] Wiederkehrende Gehäuserisse an einem Gerätetyp sind ein typisches Inspektionsergebnis, das auf ein ungeeignetes Desinfektionsmittel hinweist. Die Medizintechnik sollte solche Befunde mit Hygiene und Einkauf abstimmen.\n\n## Anwendung in Geräten\n\nDesinfektion findet auch **innerhalb** von Geräten statt: Ein [[dialysegeraet|Dialysegerät]] führt zwischen den Behandlungen thermische oder chemische Desinfektionsprogramme seiner Hydraulik durch, Endoskop-RDG desinfizieren Kanäle, und Beatmungs- und [[anaesthesiegeraet|Anästhesiegeräte]] haben aufbereitbare Atemsysteme. Für die korrekte Funktion dieser Programme sind [[temperatursensor|Temperatursensoren]], [[leitfaehigkeitssensor|Leitfähigkeitsmessung]] und Dosierpumpen verantwortlich – ihre [[kalibrierung|Kalibrierung]] und [[wartung|Wartung]] ist daher hygienerelevant.",
+  "related": [
+    "aufbereitung",
+    "sterilisation",
+    "rdg",
+    "iso-15883",
+    "endoskop",
+    "dialysegeraet",
+    "temperatursensor",
+    "waermeuebertragung",
+    "patientensicherheit"
+  ],
+  "paths": [
+    [
+      "aufbereitung",
+      "desinfektion",
+      "rdg",
+      "temperatursensor"
+    ]
+  ],
+  "sources": [
+    "krinko-bfarm-2012",
+    "rutala-cdc-2008",
+    "spaulding-1968",
+    "iso-15883-1",
+    "rki-desinfektionsmittelliste",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

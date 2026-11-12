@@ -1,0 +1,43 @@
+{
+  "id": "beauftragter-medizinproduktesicherheit",
+  "type": "term",
+  "title": "Beauftragter für Medizinproduktesicherheit",
+  "aliases": [
+    "BfMPS",
+    "Medizinproduktesicherheitsbeauftragter",
+    "MP-Sicherheitsbeauftragter",
+    "Beauftragte für Medizinproduktesicherheit",
+    "Medical Device Safety Officer",
+    "§ 6 MPBetreibV"
+  ],
+  "category": "recht",
+  "summary": "Der Beauftragte für Medizinproduktesicherheit ist nach § 6 MPBetreibV in Gesundheitseinrichtungen mit regelmäßig mehr als 20 Beschäftigten zu bestimmen. Er ist zentrale Kontaktstelle für Behörden und Hersteller bei Risikomeldungen und koordiniert Meldepflichten und Sicherheitskorrekturmaßnahmen im Feld.",
+  "body": "## Begriff\n\nDer **Beauftragte für Medizinproduktesicherheit** ist eine vom Betreiber bestimmte Person, die in einer Gesundheitseinrichtung als **zentrale Kontaktstelle** für alle Fragen der Produktsicherheit von [[medizinprodukt|Medizinprodukten]] fungiert. Die Funktion wurde mit der Änderung der [[mpbetreibv|Medizinprodukte-Betreiberverordnung]] zum 1. Januar 2017 eingeführt und ist in der Neufassung von 2025 weiterhin in **§ 6 MPBetreibV** geregelt [@mpbetreibv].\n\n> [!belegt] Gesundheitseinrichtungen mit **regelmäßig mehr als 20 Beschäftigten** haben sicherzustellen, dass eine sachkundige und zuverlässige Person mit medizinischer, naturwissenschaftlicher, pflegerischer, pharmazeutischer oder technischer Ausbildung als Beauftragter für Medizinproduktesicherheit bestimmt ist. [@mpbetreibv]\n\n## Hintergrund: Warum eine zentrale Stelle?\n\nSicherheitsrelevante Informationen zu Medizinprodukten fließen aus vielen Richtungen: Hersteller versenden **Sicherheitsinformationen** (*Field Safety Notices*) und führen **Sicherheitskorrekturmaßnahmen im Feld** (*Field Safety Corrective Actions*, FSCA) durch, die Bundesoberbehörde veröffentlicht Risikobewertungen, und in der Klinik selbst treten Vorkommnisse auf. Ohne zentrale Stelle besteht das Risiko, dass eine Rückrufinformation zu einer [[infusionspumpe|Infusionspumpe]] im Einkauf liegen bleibt, während die Geräte auf Station weiter genutzt werden. Der Beauftragte schließt diese Lücke im [[vigilanz|Vigilanzsystem]] zwischen Hersteller, Behörde und Anwender [@mdr-2017] [@mpamiv].\n\n## Aufgaben\n\nNach § 6 MPBetreibV nimmt der Beauftragte als zentrale Stelle insbesondere folgende Aufgaben für den Betreiber wahr [@mpbetreibv]:\n\n| Aufgabe | Erläuterung |\n|---|---|\n| **Kontaktperson** für Behörden, Hersteller und Vertreiber | im Zusammenhang mit Meldungen über Risiken von Medizinprodukten und bei der Umsetzung notwendiger korrektiver Maßnahmen |\n| **Koordination interner Prozesse** | zur Erfüllung der Melde- und Mitwirkungspflichten der Anwender und Betreiber |\n| **Umsetzung von Sicherheitskorrekturmaßnahmen** | Koordination von Rückrufen und korrektiven Maßnahmen der Hersteller in der Einrichtung |\n\nDie Pflicht zur Meldung schwerwiegender Vorkommnisse durch Anwender und Betreiber ergibt sich aus der MPAMIV [@mpamiv]; der Beauftragte organisiert, dass diese Meldungen tatsächlich erfolgen.\n\n> [!hinweis] Der Betreiber muss sicherstellen, dass eine **Funktions-E-Mail-Adresse** des Beauftragten auf der Internetseite der Einrichtung oder in sonstiger geeigneter Weise bekannt gemacht ist, damit Hersteller und Behörden ihn direkt erreichen [@mpbetreibv].\n\n## Qualifikation und Stellung\n\nDie Verordnung nennt keine bestimmte Berufsausbildung, sondern verlangt **Sachkunde und Zuverlässigkeit** auf Basis einer medizinischen, naturwissenschaftlichen, pflegerischen, pharmazeutischen oder technischen Ausbildung. In der Praxis werden häufig Leitungen der Medizintechnik, Ingenieur:innen für Medizintechnik, Apotheker:innen oder Mitarbeitende des Qualitäts- und Risikomanagements bestimmt. Sinnvoll sind Kenntnisse in:\n\n* Medizinprodukterecht ([[mdr|MDR]], [[mpdg|MPDG]], MPBetreibV, MPAMIV),\n* [[risikoklassen|Risikoklassen]] und Grundzügen der Gerätetechnik,\n* Vigilanz- und Meldewesen,\n* internen Abläufen der Einrichtung (Stationen, Einkauf, Apotheke, IT, Hygiene).\n\n> [!vereinfacht] Man kann sich den Beauftragten als „Drehscheibe“ vorstellen: Er muss nicht jede Meldung selbst fachlich bewerten oder jedes Gerät selbst prüfen, sorgt aber dafür, dass Informationen schnell zur richtigen Stelle gelangen und Maßnahmen nachweisbar umgesetzt werden.\n\n## Typischer Ablauf bei einer Sicherheitsinformation\n\n1. **Eingang** einer Kundeninformation des Herstellers über die Funktions-E-Mail-Adresse.\n2. **Betroffenheitsprüfung** anhand von [[bestandsverzeichnis|Bestandsverzeichnis]] und Gerätedatenbank (Typ, Seriennummer, Softwarestand, [[udi|UDI]]).\n3. **Verteilung** an betroffene Bereiche (Medizintechnik, Stationen, OP, Apotheke).\n4. **Umsetzung** der Maßnahme, z. B. Software-Update eines [[beatmungsgeraet|Beatmungsgeräts]], Austausch eines Akkus ([[lithium-ionen-akku]]), Anpassung von Arbeitsanweisungen, zusätzliche [[einweisung]] der Anwender.\n5. **Rückmeldung** an den Hersteller (Rückantwortformular) und **Dokumentation**, ggf. im [[medizinproduktebuch|Medizinproduktebuch]].\n\n> [!beispiel] Ein Hersteller informiert, dass bei einer bestimmten Seriennummernreihe eines [[defibrillator|Defibrillators]] die Selbsttestfunktion einen Akkufehler nicht zuverlässig erkennt. Der Beauftragte ermittelt über das Bestandsverzeichnis drei betroffene Geräte, die Medizintechnik tauscht die Akkus nach Herstellervorgabe, und die Stationsleitungen werden über die Übergangsmaßnahmen informiert. Das Szenario ist frei konstruiert.\n\n## Abgrenzung zu anderen Funktionen\n\n| Funktion | Rechtsgrundlage | Schwerpunkt |\n|---|---|---|\n| Beauftragter für Medizinproduktesicherheit | MPBetreibV | Vigilanz, Meldungen, Sicherheitskorrekturmaßnahmen |\n| Leitung Medizintechnik / [[medizintechnik-management|Medizintechnik-Management]] | betriebliche Organisation | [[instandhaltung-grundlagen|Instandhaltung]], [[stk|STK]], [[mtk|MTK]], Beschaffung |\n| Strahlenschutzbeauftragter | [[strlschg|StrlSchG]] | [[strahlenschutz|Strahlenschutz]] beim Umgang mit ionisierender Strahlung |\n| Verantwortliche Person für die Einhaltung der Regulierungsvorschriften (PRRC) | Art. 15 MDR | Herstellerseite, nicht Betreiber |\n\nBetreibt ein Träger mehrere Einrichtungen, sollte anhand des Verordnungstexts geklärt und dokumentiert werden, für welche Einrichtung(en) die bestimmte Person zuständig ist. Häufig werden mehrere Funktionen von derselben Person wahrgenommen; die Aufgaben sollten dennoch klar getrennt beschrieben und dokumentiert sein.\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechniker:innen ist der Beauftragte der wichtigste Partner bei herstellerseitigen Rückrufen und bei Vorkommnissen. Fällt etwa ein [[patientenmonitor|Patientenmonitor]] mit fehlender [[alarmsystem|Alarmierung]] aus oder verursacht ein [[hf-chirurgiegeraet|HF-Chirurgiegerät]] eine [[neutralelektroden-verbrennung|Verbrennung unter der Neutralelektrode]], sollte das Gerät gesichert (nicht verändert!) und der Vorgang über den Beauftragten gemeldet werden. Nur so können Hersteller und Behörde die Ursache klären.\n\n> [!praxis] Bewährt hat sich ein schriftliches Verfahren (SOP) mit Vertretungsregelung, festen Bearbeitungsfristen und einer Übersicht aller offenen Sicherheitsinformationen. Bei Begehungen durch die Aufsichtsbehörde wird häufig nach diesem Verfahren und nach Nachweisen zur Umsetzung gefragt.\n",
+  "related": [
+    "mpbetreibv",
+    "vigilanz",
+    "betreiberpflichten",
+    "bestandsverzeichnis",
+    "medizinproduktebuch",
+    "einweisung",
+    "medizintechnik-management",
+    "patientensicherheit",
+    "mdr"
+  ],
+  "paths": [
+    [
+      "mpbetreibv",
+      "beauftragter-medizinproduktesicherheit",
+      "vigilanz",
+      "bestandsverzeichnis"
+    ]
+  ],
+  "sources": [
+    "mpbetreibv",
+    "mpamiv",
+    "mdr-2017",
+    "bfarm"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

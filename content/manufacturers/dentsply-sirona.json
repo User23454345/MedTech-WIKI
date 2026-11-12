@@ -1,0 +1,51 @@
+{
+  "id": "dentsply-sirona",
+  "type": "manufacturer",
+  "title": "Dentsply Sirona",
+  "aliases": [
+    "Dentsply Sirona Inc.",
+    "Sirona",
+    "Sirona Dental Systems",
+    "Dentsply International",
+    "CEREC"
+  ],
+  "category": "hersteller",
+  "summary": "Dentsply Sirona ist ein Hersteller von Dentalprodukten, der 2016 aus der Fusion von Dentsply International und Sirona Dental Systems hervorging. Das Portfolio reicht von Behandlungseinheiten und dentaler Bildgebung über CAD/CAM-Systeme bis zu Verbrauchsmaterialien und Implantaten.",
+  "headquarters": "Charlotte, North Carolina, USA",
+  "founded": "2016",
+  "website": "https://www.dentsplysirona.com/",
+  "productLines": [
+    {
+      "device": "dentaleinheit",
+      "models": [
+        "Axano",
+        "Sinius",
+        "Intego"
+      ],
+      "note": "Behandlungseinheiten in mehreren Ausstattungslinien (Fertigung u. a. in Bensheim)."
+    },
+    {
+      "device": "dvt",
+      "models": [
+        "Orthophos",
+        "Axeos"
+      ],
+      "note": "Kombinierte Panorama-/DVT-Geräte."
+    }
+  ],
+  "body": "## Überblick\n\n**Dentsply Sirona** ist ein börsennotierter Dentalkonzern mit Hauptsitz in Charlotte (North Carolina, USA) [@dentsply-sirona-web]. Ein großer Teil der Geräteentwicklung und -fertigung (Behandlungseinheiten, Bildgebung, CAD/CAM) findet am traditionsreichen Sirona-Standort **Bensheim** in Hessen statt.\n\n## Geschichte in Stichpunkten\n\n* **1899:** Gründung der Dental Manufacturing Company in New York, später **Dentsply** – Schwerpunkt künstliche Zähne und Dentalmaterialien.\n* **19./20. Jahrhundert:** Die Dentaltechnik von Siemens bildet die Wurzel von Sirona; Siemens produzierte über Jahrzehnte zahnärztliche Einheiten und Dentalröntgen.\n* **1997:** Ausgliederung des Siemens-Dentalbereichs als eigenständiges Unternehmen **Sirona**.\n* **ab 1985:** Erste chairside gefertigte Restauration mit **CEREC** (Entwicklung an der Universität Zürich, Vermarktung durch Siemens) – Beginn der CAD/CAM-Fertigung von Restaurationen direkt in der Praxis.\n* **2016:** Zusammenschluss von Dentsply International und Sirona Dental Systems zu **Dentsply Sirona**.\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Behandlungseinheiten | [[dentaleinheit|Zahnärztliche Behandlungseinheiten]], Instrumente, Hand- und Winkelstücke |\n| Bildgebung | Intraorale Röntgen, Panoramaröntgen, [[dvt|digitale Volumentomographie]] |\n| CAD/CAM | Intraoralscanner, Schleif- und Fräseinheiten |\n| Verbrauchsmaterial | Füllungsmaterialien, Endodontie, Prophylaxe |\n| Implantologie | Implantatsysteme, Navigation |\n\n## Bedeutung für die Medizintechnik\n\nDentsply Sirona deckt in der [[zahnmedizin]] einen großen Teil der apparativen Ausstattung einer Praxis ab. Für Medizintechniker:innen relevant sind die Behandlungseinheit als komplexes Gerät mit Wasser-, Luft- und Absaugsystemen sowie die Röntgen- und DVT-Geräte mit ihren Anforderungen an [[strahlenschutz]].\n\n> [!hinweis] Die Wasser führenden Systeme einer Behandlungseinheit erfordern Maßnahmen gegen Biofilmbildung (Desinfektionsanlagen, Spülprotokolle). Hand- und Winkelstücke werden als Medizinprodukte aufbereitet ([[aufbereitung]], [[sterilisation]]).\n\n> [!hinweis] DVT-Geräte und Dentalröntgen fallen unter das [[strlschg|Strahlenschutzgesetz]]; neben Abnahme- und [[konstanzpruefung|Konstanzprüfungen]] ist die Fachkunde der Anwender geregelt.\n\n> [!praxis] Viele Praxen betreuen Behandlungseinheiten über Dental-Fachhändler mit eigenem Servicetechnikerstamm; Herstellerschulungen sind oft Voraussetzung für die Instandsetzung.\n\nMit dem CAD/CAM-Ansatz (Intraoralscan, Konstruktion am Rechner, Schleifen in der Praxis) hat Sirona früh die Digitalisierung der Zahnheilkunde vorangetrieben; Bilddaten aus Röntgen, DVT und Scanner werden zunehmend in gemeinsamen Softwareumgebungen zusammengeführt.\n\n## Einordnung im Markt\n\nWettbewerber bei Behandlungseinheiten und dentaler Bildgebung sind u. a. KaVo, Planmeca und weitere Dentalhersteller. Im Bereich der Röntgen- und Schnittbildtechnik bestehen technologische Überschneidungen mit den Herstellern der allgemeinen [[radiologie]].",
+  "related": [
+    "dentaleinheit",
+    "dvt",
+    "zahnmedizin",
+    "strahlenschutz",
+    "aufbereitung",
+    "roentgengeraet",
+    "konstanzpruefung"
+  ],
+  "sources": [
+    "dentsply-sirona-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

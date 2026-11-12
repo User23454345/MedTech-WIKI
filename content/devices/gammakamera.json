@@ -1,0 +1,80 @@
+{
+  "id": "gammakamera",
+  "type": "device",
+  "title": "Gammakamera / SPECT",
+  "aliases": [
+    "Szintillationskamera",
+    "Anger-Kamera",
+    "SPECT",
+    "SPECT/CT",
+    "Single-Photon-Emissionscomputertomographie",
+    "Szintigraphie"
+  ],
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 46,
+  "domains": [
+    "nuklearmedizin",
+    "kardiologie",
+    "radiologie"
+  ],
+  "summary": "Die Gammakamera bildet die räumliche Verteilung eines zuvor verabreichten Radiopharmakons im Körper ab, indem sie die vom Patienten ausgehende Gammastrahlung ortsaufgelöst detektiert. Rotiert der Detektor um den Patienten, entstehen Schnittbilder (SPECT); in Kombination mit einem CT spricht man von SPECT/CT.",
+  "riskClass": {
+    "value": "IIa",
+    "evidence": "typisch",
+    "note": "Aktives Diagnoseprodukt zur Darstellung der In-vivo-Verteilung von Radiopharmaka – [[mdr|MDR]] Anhang VIII **Regel 10** (Klasse IIa). Hybridgeräte mit integrierter Röntgen-CT emittieren selbst ionisierende Strahlung und werden nach Regel 10 der Klasse IIb zugeordnet. Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die Szintigraphie ist ein **funktionelles** bildgebendes Verfahren der [[nuklearmedizin]]: Sie zeigt nicht primär Anatomie, sondern Stoffwechsel, Durchblutung oder Rezeptorbindung. Typische Untersuchungen sind Skelett-, Schilddrüsen- und Nierenszintigraphie sowie die Myokardperfusions-SPECT in der [[kardiologie]] [@bushberg-2020].",
+    "principle": "## Detektion und Ortung\n\nDer Patient erhält ein Radiopharmakon, meist mit dem Gammastrahler Technetium-99m (Photonenenergie 140 keV, Halbwertszeit rund 6 h, siehe [[radioaktivitaet]]). Vor dem Detektor sitzt ein **Kollimator** aus Blei, meist mit vielen parallelen Bohrungen (Parallellochkollimator; für Spezialfragen auch Pinhole- oder Fächerkollimatoren) ([[kollimator]]): Er lässt nur annähernd senkrecht einfallende Photonen durch und ersetzt damit die Linse einer optischen Kamera. Dahinter wandelt ein großflächiger **Szintillationskristall** (klassisch NaI(Tl)) die Gammaquanten in Lichtblitze um, die von einer Matrix aus Photomultipliern registriert werden. Aus dem Verhältnis der Signale benachbarter Photomultiplier berechnet die **Anger-Logik** den Ort des Ereignisses; die Summe aller Signale ist proportional zur deponierten Energie [@bushberg-2020].\n\n## Energiefenster und Bildqualität\n\nEin Impulshöhenanalysator akzeptiert nur Ereignisse im Energiefenster um den Photopeak und verwirft so einen großen Teil der im Körper gestreuten Photonen ([[ionisierende-strahlung]]). Die Ortsauflösung des Gesamtsystems wird überwiegend vom Kollimator bestimmt und verschlechtert sich mit zunehmendem Abstand zwischen Patient und Detektor – deshalb werden die Köpfe möglichst körpernah geführt. Neuere Systeme nutzen Halbleiterdetektoren aus CZT (direkte Umwandlung der Gammaquanten in Ladung, bessere Energieauflösung) oder ersetzen die Photomultiplier durch Silizium-Photomultiplier.\n\n## SPECT und SPECT/CT\n\nBei der SPECT rotieren ein bis drei Detektorköpfe auf einer [[gantry]] um den Patienten und nehmen Projektionen aus vielen Winkeln auf. Daraus werden – wie in der [[computertomograph|CT]] – Schnittbilder rekonstruiert, heute meist iterativ. Im SPECT/CT liefert die integrierte [[roentgenroehre|Röntgen]]-CT die Schwächungskorrektur und die anatomische Zuordnung [@doessel-2016].\n\n> [!vereinfacht] Die Gammakamera „sieht“ nur Photonen aus dem Körper; sie sendet selbst keine Strahlung aus. Die Strahlenexposition des Patienten stammt aus dem Radiopharmakon bzw. beim Hybridgerät zusätzlich aus der CT."
+  },
+  "manufacturers": [
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "Symbia Intevo"
+      ],
+      "note": "SPECT/CT-Produktlinie."
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "Discovery NM/CT 670"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "philips",
+      "models": [],
+      "note": "Nuklearmedizinische Bildgebung im Portfolio; konkrete aktuelle Modelle beim Hersteller prüfen."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Anzahl der Detektorköpfe, Detektortechnik (Szintillator mit Photomultipliern oder Halbleiter), integrierte CT, Rekonstruktions- und Auswertesoftware, bauliche Maßnahmen und Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025): weder in Anlage 1 (STK, § 12) noch in Anlage 2 (MTK, § 15) aufgeführt; allgemeine Betreiberpflichten und Instandhaltung nach Herstellerangaben gelten. Qualitätssicherung nuklearmedizinischer Messsysteme (Abnahme- und Konstanzprüfungen) nach Strahlenschutzrecht und einschlägigen DIN-Normen; bei SPECT/CT zusätzlich Prüfungen der Röntgeneinrichtung.",
+    "intervals": "Konstanzprüfungen (z. B. Homogenität, Energiefenster/Photopeak, Ausrichtung des Rotationszentrums) in den normativ bzw. behördlich festgelegten Intervallen – einzelne Prüfungen arbeitstäglich; Wartung nach Herstellerangabe; elektrische Sicherheitsprüfung nach IEC 62353 im Rahmen der Wartung und nach Instandsetzung."
+  },
+  "related": [
+    "pet-ct",
+    "computertomograph",
+    "kollimator",
+    "radioaktivitaet",
+    "strahlenschutz",
+    "konstanzpruefung"
+  ],
+  "sources": [
+    "bushberg-2020",
+    "doessel-2016",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

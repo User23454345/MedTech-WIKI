@@ -1,0 +1,57 @@
+{
+  "id": "instandsetzung",
+  "type": "term",
+  "title": "Instandsetzung",
+  "aliases": [
+    "Reparatur",
+    "Repair",
+    "korrektive Instandhaltung",
+    "Corrective Maintenance",
+    "Störungsbeseitigung",
+    "Prüfung nach Instandsetzung"
+  ],
+  "category": "instandhaltung",
+  "summary": "Instandsetzung ist die Grundmaßnahme der Instandhaltung, die die Funktion einer fehlerhaften Einheit wiederherstellt – umgangssprachlich die Reparatur. Bei Medizinprodukten folgen auf jede Instandsetzung eine Prüfung der sicherheits- und funktionsrelevanten Eigenschaften und eine Dokumentation.",
+  "body": "## Begriff\n\n**Instandsetzung** ist nach [[din-31051|DIN 31051]] die physische Maßnahme, die ausgeführt wird, um die Funktion einer fehlerhaften Einheit wiederherzustellen [@din-31051]. Umgangssprachlich spricht man von **Reparatur**. Im Modell des Abnutzungsvorrats füllt die Instandsetzung den Vorrat wieder auf, nachdem er – durch Verschleiß, Alterung, Schaden oder Fehlbedienung – ganz oder teilweise aufgebraucht wurde.\n\nInstandsetzung unterscheidet sich von der [[wartung|Wartung]], die einem Fehler vorbeugt, und von der Verbesserung, die eine Einheit über ihren ursprünglichen Zustand hinaus zuverlässiger oder sicherer macht. In der Praxis gehen die Grenzen fließend ineinander über, etwa wenn bei einer Reparatur ein vom Hersteller überarbeitetes Ersatzteil eingebaut wird.\n\n> [!belegt] Die MPBetreibV 2025 zählt die Instandsetzung zur Instandhaltung (§ 7) und verlangt, dass nur Personen, Betriebe oder Einrichtungen mit der erforderlichen Sachkenntnis, den Voraussetzungen und Mitteln beauftragt werden [@mpbetreibv].\n\n> [!hinweis] Die Pflicht, nach Wartung oder Instandsetzung die für Sicherheit und Funktionstüchtigkeit wesentlichen Merkmale zu prüfen, soweit sie durch den Eingriff beeinträchtigt sein können, stand bereits in der Vorgängerfassung der MPBetreibV; für den genauen Wortlaut der Fassung 2025 ist der amtliche Text maßgeblich [@mpbetreibv].\n\n## Ablauf einer Instandsetzung\n\n| Schritt | Inhalt | Hinweise |\n|---|---|---|\n| 1. Störungsmeldung | Symptom, Umstände, Gerät, Zeitpunkt erfassen | Bei Verdacht auf Patientenschaden Gerät und Zubehör sicherstellen |\n| 2. Außerbetriebnahme | Gerät kennzeichnen und aus dem Verkehr ziehen | Verhindert erneute Anwendung; ggf. [[aufbereitung|Aufbereitung]] bzw. Desinfektion vor der Bearbeitung |\n| 3. Diagnose | Fehler eingrenzen und Ursache finden | siehe [[fehlersuche|systematische Fehlersuche]], [[fehlercodes|Fehlerspeicher]] |\n| 4. Entscheidung | Reparatur vor Ort, Herstellerservice oder Aussonderung | Wirtschaftlichkeit, Ersatzteilverfügbarkeit, Alter des Geräts |\n| 5. Durchführung | Tausch von Baugruppen oder Bauteilen | nur freigegebene Ersatzteile und Serviceunterlagen des Herstellers |\n| 6. Prüfung nach Instandsetzung | elektrische Sicherheit, Funktion, Messgenauigkeit | [[iec-62353|IEC 62353]], [[funktionspruefung|Funktionsprüfung]], ggf. [[kalibrierung|Kalibrierung]] |\n| 7. Freigabe und Dokumentation | Rückgabe an den Anwender | Eintrag ins [[medizinproduktebuch|Medizinproduktebuch]] bzw. die Instandhaltungshistorie |\n\n### Prüfung nach Instandsetzung\n\nDie [[iec-62353|IEC 62353]] beschreibt neben der Wiederholungsprüfung ausdrücklich die **Prüfung nach Instandsetzung** von [[medizinisches-elektrisches-geraet|ME-Geräten]] [@iec-62353]. Der Prüfumfang hängt vom Eingriff ab: Nach dem Tausch einer Netzleitung steht der [[schutzleiterwiderstand|Schutzleiterwiderstand]] im Vordergrund, nach Arbeiten an Netzteil oder Patientenisolation der [[isolationswiderstand|Isolationswiderstand]] und die [[ableitstrommessung|Ableitströme]], nach Arbeiten an messenden Baugruppen die messtechnische Genauigkeit. Eine [[funktionspruefung|Funktionsprüfung]] mit Alarmtests schließt jede Instandsetzung ab.\n\n> [!warnung] Schutzfunktionen – etwa Alarme, Begrenzungen von Druck oder Energie, [[galvanische-trennung|galvanische Trennungen]] – dürfen bei der Instandsetzung weder überbrückt noch dauerhaft deaktiviert werden. Arbeiten an Netzspannung und an energiespeichernden Baugruppen (z. B. Hochspannungs-[[kondensator|Kondensatoren]] im [[defibrillator|Defibrillator]]) sind ausschließlich befugtem Fachpersonal mit geeigneter Schutzausrüstung vorbehalten.\n\n## Instandsetzungsebenen\n\n| Ebene | Wer? | Typische Arbeiten |\n|---|---|---|\n| Anwenderebene | Pflege, Ärzt:innen | Zubehör tauschen (Sensorleitungen, Schläuche), Fehler nach Gebrauchsanweisung beheben |\n| Modulebene | geschulte Medizintechnik | Austausch von Baugruppen: Netzteil, Display, [[turbine]], Pumpenmodul, Akku |\n| Bauteilebene | Hersteller, spezialisierte Werkstatt | Platinenreparatur, Neukalibrierung im Werk, Austausch von Röhren oder Detektoren |\n\n> [!vereinfacht] Die Einteilung in Ebenen ist eine didaktische Gliederung. Welche Arbeiten eine Klinik selbst ausführen darf, ergibt sich aus Schulung, verfügbaren Serviceunterlagen, Ersatzteilen, Prüfmitteln und den Vorgaben des Herstellers.\n\n### Beispiel: Instandsetzung am Beatmungsgerät\n\nEin [[beatmungsgeraet|Intensivbeatmungsgerät]] meldet wiederholt, dass der eingestellte Inspirationsdruck nicht erreicht wird. Die Diagnose führt entlang der Wirkkette: Patientenschlauchsystem und [[exspirationsventil|Exspirationsventil]] (Leckage, siehe [[leckage]]) → [[turbine]] → antreibender [[elektromotor|Elektromotor]] (meist ein [[bldc-motor|BLDC-Motor]]) → [[drehzahlregelung|Drehzahlregelung]] → [[drucksensor|Drucksensor]] der [[druckmessung|Druckmessung]]. Zeigt der Selbsttest ein dichtes System, aber eine unplausibel hohe Drehzahl bei zu niedrigem angezeigtem Druck, kommen zwei Ursachen in Frage: ein Problem im Gasweg (z. B. verschmutzter Ansaugfilter, beschädigtes Laufrad) oder eine Messkette, die zu wenig Druck meldet. Erst eine unabhängige Referenzmessung mit kalibriertem Manometer trennt beides; liefert der Drucksensor schon bei Umgebungsdruck einen Offset, liegt der Fehler in der Messkette. Getauscht wird die defekte Baugruppe; danach folgen Kalibrierung der Sensorik nach Herstellervorgabe, Selbsttest, Funktionsprüfung mit Testlunge und elektrische Sicherheitsprüfung.\n\n## Rechtliche Aspekte\n\n* **Herstellervorgaben:** Instandsetzungen erfolgen nach den Angaben des Herstellers, mit freigegebenen Ersatzteilen [@mpbetreibv].\n* **Veränderung des Produkts:** Wer ein bereits in Verkehr gebrachtes Produkt so verändert, dass die Konformität mit den Anforderungen beeinträchtigt sein kann, oder seine Zweckbestimmung ändert, kann nach Art. 16 der [[mdr|MDR]] Herstellerpflichten übernehmen [@mdr-2017]. Reparaturen „1:1“ mit Originalteilen fallen typischerweise nicht darunter.\n* **Vorkommnisse:** Hat ein Gerätefehler zu einer schwerwiegenden Gefährdung geführt oder hätte er dazu führen können, ist das Gerät als Beweismittel zu sichern und das Vorkommnis zu melden (siehe [[vigilanz]]) [@mpamiv].\n* **Elektrische Prüfung:** Für ME-Geräte gilt [[iec-62353|IEC 62353]]; DIN EN 50678 (VDE 0701) betrifft elektrische Geräte außerhalb der Medizintechnik [@din-en-50678].\n\n## Bedeutung in der Medizintechnik\n\nInstandsetzungen bestimmen maßgeblich die **Ausfallzeit** (MTTR) und damit die Verfügbarkeit von Geräten wie [[infusionspumpe|Infusionspumpen]], [[patientenmonitor|Patientenmonitoren]], [[ultraschallgeraet|Ultraschallgeräten]] oder [[endoskop|Endoskopen]]. Ersatzgeräte-Pools, Leihgeräte und Serviceverträge mit Reaktionszeiten sind Instrumente des [[medizintechnik-management|Medizintechnik-Managements]], um diese Ausfallzeiten zu überbrücken. Eine Auswertung der Instandsetzungshistorie zeigt Schwachstellen, Anwendungsfehler ([[anwendungsfehler]]) und Schulungsbedarf auf.",
+  "related": [
+    "instandhaltung-grundlagen",
+    "fehlersuche",
+    "wartung",
+    "inspektion",
+    "iec-62353",
+    "elektrische-sicherheitspruefung",
+    "funktionspruefung",
+    "kalibrierung",
+    "vigilanz",
+    "fehlercodes",
+    "mdr",
+    "mpbetreibv"
+  ],
+  "paths": [
+    [
+      "fehlersuche",
+      "instandsetzung",
+      "elektrische-sicherheitspruefung",
+      "funktionspruefung"
+    ],
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "drehzahlregelung",
+      "drucksensor",
+      "druckmessung"
+    ]
+  ],
+  "sources": [
+    "din-31051",
+    "mpbetreibv",
+    "iec-62353",
+    "mdr-2017",
+    "mpamiv",
+    "din-en-50678",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

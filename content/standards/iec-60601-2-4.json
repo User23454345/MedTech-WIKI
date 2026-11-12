@@ -1,0 +1,41 @@
+{
+  "id": "iec-60601-2-4",
+  "type": "standard",
+  "title": "IEC 60601-2-4",
+  "code": "IEC 60601-2-4",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-4: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Herzdefibrillatoren",
+  "scope": "Legt besondere Sicherheits- und Leistungsanforderungen an externe Herzdefibrillatoren einschließlich automatisierter externer Defibrillatoren (AED) fest.",
+  "aliases": [
+    "DIN EN 60601-2-4",
+    "EN 60601-2-4",
+    "VDE 0750-2-4",
+    "60601-2-4",
+    "Defibrillatornorm"
+  ],
+  "category": "normen",
+  "summary": "IEC 60601-2-4 ist die besondere Festlegung der Normenfamilie IEC 60601 für externe Defibrillatoren und AED. Sie regelt u. a. Genauigkeit der abgegebenen Energie, Ladezeiten, synchronisierte Kardioversion, die Rhythmusanalyse von AED sowie den Schutz von Anwendern und anderen Geräten vor der Defibrillationsenergie.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-2-4** gilt für [[defibrillator|Herzdefibrillatoren]], die über Elektroden auf der Körperoberfläche (oder bei offenem Thorax direkt am Herzen) einen Stromimpuls abgeben, um Kammerflimmern oder pulslose ventrikuläre Tachykardie zu beenden [@iec-60601-2-4]. Eingeschlossen sind manuelle Defibrillatoren, Geräte mit Beratungsfunktion und **automatisierte externe Defibrillatoren (AED)** für Laienhelfer. Implantierbare Defibrillatoren ([[icd]]) sind aktive Implantate und fallen nicht darunter.\n\nDer Defibrillator ist ein Sonderfall in der Familie [[iec-60601-1|IEC 60601]]: Er gibt **absichtlich** eine Energie ab, die weit über allen sonst zulässigen Patientenströmen liegt. Die Norm muss daher gleichzeitig die **Wirksamkeit** des Schocks und den **Schutz** von Anwendern, Umstehenden und anderen Geräten sicherstellen ([[elektrische-stromwirkung]]).\n\n## Zentrale Konzepte und Anforderungen\n\n### Energieabgabe und Impulsform\n\nDie abgegebene Energie wird an einer genormten ohmschen Last von 50 Ω geprüft, die näherungsweise die transthorakale Impedanz nachbildet. Die Norm fordert, dass die tatsächlich abgegebene Energie innerhalb festgelegter Toleranzen zur gewählten Energie liegt und dass der Hersteller das Verhalten bei anderen Lastimpedanzen offenlegt. Die Impulsform (biphasisch, monophasisch) gibt die Norm nicht vor.\n\n> [!vereinfacht] Der Defibrillator lädt einen Hochspannungs-[[kondensator]] auf (`E = ½ · C · U²`) und entlädt ihn über die Elektroden. Biphasische Geräte kompensieren die individuelle Patientenimpedanz, indem sie Dauer oder Amplitude der Impulsphasen anpassen ([[hochspannungserzeugung]]).\n\n### Ladezeit und Energiereserve\n\nDer Defibrillator muss die maximale Energie innerhalb begrenzter Zeit bereitstellen – auch nach einer Serie von Schocks und mit teilentladenem [[lithium-ionen-akku|Akku]]. Nicht abgegebene Energie muss sicher intern entladen werden.\n\n### Synchronisierte Kardioversion\n\nIm Synchronbetrieb wird der Schock auf die R-Zacke des EKG getriggert, um die vulnerable Phase zu vermeiden ([[erregungsleitungssystem]]). Die Norm begrenzt die Verzögerung zwischen R-Zacke und Schockabgabe und fordert eine eindeutige Anzeige des Synchronmodus.\n\n### Rhythmusanalyse bei AED\n\nFür AED und Beratungsfunktionen verlangt die Norm, dass die Erkennungsleistung des Analysealgorithmus anhand von EKG-Datenbanken nachgewiesen und offengelegt wird: Schockbare Rhythmen sollen zuverlässig erkannt (Sensitivität), nicht schockbare Rhythmen nicht geschockt werden (Spezifität). Artefakte durch Bewegung oder Herzdruckmassage sind dabei zu berücksichtigen ([[bewegungsartefakt]]).\n\n### Schutz vor der Defibrillationsenergie\n\n- **Anwenderschutz:** isolierte Elektrodengriffe und Auslösung nur durch bewusste Bedienhandlung.\n- **Defibrillationsfeste Anwendungsteile:** Andere am Patienten angeschlossene Geräte (z. B. EKG-Eingänge am [[patientenmonitor]]) müssen einen Schock unbeschadet überstehen; dies regelt die Basisnorm, auf die -2-4 aufbaut ([[anwendungsteile]]).\n- **EKG-Überwachung über Elektroden:** Das EKG wird häufig über die [[defibrillationselektroden]] abgeleitet und muss sich nach dem Schock schnell erholen.\n\n### Bereitschaft und Selbsttest\n\nInsbesondere AED stehen oft lange ungenutzt. Selbsttests und eine gut sichtbare Bereitschaftsanzeige sollen sicherstellen, dass Fehler wie ein erschöpfter Akku oder abgelaufene Elektroden erkannt werden ([[akkufehler]]).\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Sicherheit, Defibrillationsfestigkeit |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-6]], [[iec-60601-1-8]], [[iec-60601-1-11]] | EMV, Gebrauchstauglichkeit (wichtig für Laien-AED), Alarme, häusliche Umgebung |\n| Besondere Festlegungen | [[iec-60601-2-27]], [[iec-60601-2-25]] | EKG-Überwachung bzw. diagnostisches EKG in Kombinationsgeräten |\n| Leitlinien | ERC-Leitlinien [@erc-2021] | klinische Vorgaben zu Energien und Ablauf, nicht Teil der Norm |\n\n> [!hinweis] Grundprinzip der Familie IEC 60601: Die besondere Festlegung (-2-x) hat Vorrang vor Ergänzungsnormen (-1-x) und der Basisnorm. Sie gibt jeweils an, welche Abschnitte der Basisnorm gelten, ergänzt oder ersetzt werden.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** weisen mit der Norm die Konformität nach [[mdr]] nach; Als aktive therapeutische Produkte, die Energie in potenziell gefährlicher Weise an den Körper abgeben, werden Defibrillatoren in der Regel der Klasse IIb zugeordnet ([[risikoklassen]], Regel 9 Anhang VIII MDR).\n\n**Betreiber** müssen Defibrillatoren gemäß [[mpbetreibv]] regelmäßig der [[stk]] unterziehen (spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind; § 12 i. V. m. Anlage 1) [@mpbetreibv]. Dabei wird u. a. die abgegebene Energie mit einem Defibrillator-Analysator an einer Prüflast gemessen ([[pruefgeraete]]). Für die Ersthelferausstattung kommen [[einweisung|Einweisung]] und Kontrolle von Elektroden- und Akkuverfallsdaten hinzu.\n\n> [!praxis] Die häufigsten Ursachen für nicht einsatzbereite AED sind nicht technischer Art: abgelaufene Elektroden, erschöpfte Batterien und ignorierte Statusanzeigen. Eine regelmäßige Sichtkontrolle durch eine benannte Person ist sinnvoll.\n\n## Betroffene Geräte\n\n[[defibrillator]] (manuell, AED, Kombinationsgeräte mit [[patientenmonitor|Monitoring]] und [[externer-schrittmacher|externem Schrittmacher]]); mittelbar [[thoraxkompressionsgeraet]] und alle Geräte mit defibrillationsfesten Anwendungsteilen wie [[ekg-geraet]]. Hersteller sind u. a. [[zoll]], [[philips]], [[stryker]], [[corpuls]], [[schiller]], [[nihon-kohden]] und [[mindray]].\n",
+  "related": [
+    "defibrillator",
+    "defibrillationselektroden",
+    "kondensator",
+    "hochspannungserzeugung",
+    "anwendungsteile",
+    "iec-60601-1",
+    "iec-60601-2-27",
+    "elektrische-stromwirkung",
+    "erregungsleitungssystem",
+    "notfallmedizin",
+    "externer-schrittmacher",
+    "icd"
+  ],
+  "sources": [
+    "iec-60601-2-4",
+    "iec-60601-1",
+    "erc-2021",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,152 @@
+{
+  "id": "elektrische-sicherheitspruefung",
+  "type": "term",
+  "title": "Elektrische Sicherheitsprüfung nach IEC 62353",
+  "aliases": [
+    "Elektrische Sicherheitsprüfung",
+    "ESP",
+    "Wiederholungsprüfung ME-Geräte",
+    "Prüfung nach DIN EN 62353",
+    "VDE 0751-1",
+    "Electrical safety test",
+    "Electrical safety inspection",
+    "Recurrent test"
+  ],
+  "category": "stk-mtk",
+  "summary": "Die elektrische Sicherheitsprüfung nach IEC 62353 ist das genormte Verfahren für Prüfungen medizinischer elektrischer Geräte vor der Inbetriebnahme, als Wiederholungsprüfung und nach Instandsetzung. Sie umfasst Sichtprüfung, Schutzleiterwiderstand, gegebenenfalls Isolationswiderstand, Ableitströme und eine Funktionsprüfung und ist Kernbestandteil der STK.",
+  "body": "## Einordnung\n\nDie **IEC 62353** (in Deutschland DIN EN 62353, VDE 0751-1) beschreibt, wie die elektrische Sicherheit von [[medizinisches-elektrisches-geraet|medizinischen elektrischen Geräten (ME-Geräten)]] und ME-Systemen **im Feld** geprüft wird: vor der Inbetriebnahme, als Wiederholungsprüfung und nach einer [[instandsetzung|Instandsetzung]] [@iec-62353]. Sie ist die anerkannte Regel der Technik für den elektrischen Teil der [[stk|sicherheitstechnischen Kontrolle]] und für Prüfungen nach Reparaturen.\n\n> [!belegt] Die IEC 62353 ersetzt **nicht** die Typprüfung nach [[iec-60601-1|IEC 60601-1]]. Die Typprüfung weist im Prüflabor nach, dass eine Bauart sicher konstruiert ist (u. a. mit Erstfehlerbedingungen und erhöhter Netzspannung). Die IEC 62353 prüft mit vertretbarem Aufwand, ob ein einzelnes Gerät diesen sicheren Zustand im Betrieb beibehalten hat [@iec-62353] [@iec-60601-1].\n\n| Merkmal | Typprüfung IEC 60601-1 | Prüfung nach IEC 62353 |\n|---|---|---|\n| Zweck | Nachweis der Bauartsicherheit | Nachweis des Erhalts der Sicherheit im Betrieb |\n| Ort | Prüflabor | Werkstatt, Station, Betriebsort |\n| Fehlerbedingungen | systematisch simuliert | nur, soweit im Verfahren vorgesehen |\n| Netzspannung | teilweise erhöht | Netzspannung am Prüfort bzw. Prüfgerät |\n| Ergebnis | Konformität der Bauart | Freigabe des einzelnen Geräts, Trendvergleich |\n\n## Prüfschritte\n\n### 1. Sichtprüfung\n\nDie Sichtprüfung ist der Prüfschritt mit der höchsten Fehlerausbeute. Kontrolliert werden Gehäuse, Netzleitung und Stecker, Zugentlastungen, Patientenleitungen, Sicherungen (Wert und Typ), Kennzeichnungen, Lüftungsöffnungen und Hinweise auf eingedrungene Flüssigkeit [@iec-62353].\n\n### 2. Schutzleiterwiderstand\n\nBei Geräten der [[schutzklassen|Schutzklasse I]] wird der Widerstand zwischen dem Schutzkontakt des Netzsteckers und allen berührbaren leitfähigen Teilen gemessen, die mit dem Schutzleiter verbunden sind. Nach verbreiteter Darstellung der Norm gilt für ein Gerät einschließlich Netzleitung ein Grenzwert von 0,3 Ω bei einem Messstrom von mindestens 200 mA. Details: [[schutzleiterwiderstand]] [@iec-62353].\n\n### 3. Isolationswiderstand\n\nDer [[isolationswiderstand|Isolationswiderstand]] wird mit Gleichspannung (typisch 500 V) zwischen Netzteil und Schutzleiter bzw. Gehäuse sowie zwischen Netzteil und Anwendungsteilen gemessen. Die Messung ist nur durchzuführen, wenn sie für das Gerät zulässig ist – manche Geräte enthalten Überspannungsschutzelemente oder Elektronik, die dadurch verfälscht oder belastet wird. Herstellerangaben gehen vor [@iec-62353].\n\n### 4. Ableitströme\n\nDie IEC 62353 fasst die Ableitströme der Typprüfung zu zwei Messgrößen zusammen: dem **Geräteableitstrom** und dem **Ableitstrom vom Anwendungsteil**. Sie können nach drei Verfahren gemessen werden – Direktmessung, Differenzstrommessung oder Ersatzableitstrommessung (alternatives Verfahren). Details: [[ableitstrommessung]] und [[ableitstrom]] [@iec-62353].\n\n| Messgröße | Schutzklasse / Typ | Direkt- bzw. Differenzstrommessung (typisch) | Ersatzableitstrommessung (typisch) |\n|---|---|---|---|\n| Geräteableitstrom | Schutzklasse I | 500 µA | 1 000 µA |\n| Geräteableitstrom | Schutzklasse II | 100 µA | 500 µA |\n| Ableitstrom vom Anwendungsteil | Typ BF | 5 000 µA (nur direkt) | 5 000 µA |\n| Ableitstrom vom Anwendungsteil | Typ CF | 50 µA (nur direkt) | 50 µA |\n\n> [!hinweis] Die Tabelle gibt die häufig zitierten Werte der IEC 62353 wieder (Stand der verbreiteten Ausgabe; Werte nicht wörtlich gegen den Normtext geprüft). Der Ableitstrom vom Anwendungsteil wird nur direkt oder nach dem Ersatzverfahren gemessen, nicht mit dem Differenzstromverfahren. Die höheren Werte beim Ersatzverfahren für den Geräteableitstrom berücksichtigen, dass dort L und N gemeinsam gegen Erde beaufschlagt werden. Gerätespezifische Normen oder Herstellerangaben können abweichen. Maßgeblich ist die jeweils gültige Normausgabe [@iec-62353].\n\n### 5. Funktionsprüfung\n\nNach den elektrischen Messungen folgt die [[funktionspruefung|Funktionsprüfung]] der sicherheitsrelevanten Funktionen nach Herstellerangaben. Erst die Kombination aus elektrischer und funktionaler Prüfung erlaubt eine Aussage über die Sicherheit des Geräts [@iec-62353].\n\n### 6. Bewertung und Dokumentation\n\nAlle Messwerte werden protokolliert und – wichtig für die Früherkennung – mit den Vorwerten verglichen. Ein Gerät, das einen Grenzwert überschreitet, wird gesperrt, gekennzeichnet und instand gesetzt.\n\n## Physikalische Grundlagen\n\nDie Prüfschritte bilden die Schutzkonzepte der IEC 60601-1 ab: **Basisisolierung plus Schutzleiter** (Schutzklasse I) bzw. **doppelte oder verstärkte Isolierung** (Schutzklasse II). Dazu kommen die Anforderungen an [[anwendungsteile|Anwendungsteile]] der Typen B, BF und CF, deren Ableitströme umso strenger begrenzt sind, je näher der Strompfad am Herzen liegt (siehe [[elektrische-stromwirkung]]) [@iec-60601-1].\n\nZwei Formeln erklären die meisten Messwerte:\n\n* Ohmsches Gesetz: R = U / I – Schutzleiter- und Isolationswiderstand,\n* kapazitiver Strom: I = U · 2π · f · C – Hauptursache von Ableitströmen.\n\n> [!beispiel] Ein Gerät hat zwischen Netzteil und Gehäuse eine wirksame Kapazität von 1,5 nF. Bei 230 V und 50 Hz ergibt sich ein Ableitstrom von I = 230 V · 2π · 50 Hz · 1,5 nF ≈ 108 µA. Bei Schutzklasse I wäre das unkritisch; bei Schutzklasse II läge der Wert knapp über dem typischen Grenzwert von 100 µA. Die Zahlen sind beispielhaft.\n\n## Prüfgeräte und Qualifikation\n\nVerwendet werden Sicherheitstester, die die Anforderungen der IEC 61557-16 erfüllen und die genormte Messeinrichtung zur Ableitstrommessung enthalten (siehe [[pruefgeraete]]) [@iec-61557-16]. Die Prüfung erfolgt durch Elektrofachkräfte oder entsprechend unterwiesene Personen mit medizintechnischer Qualifikation; für die STK gelten zusätzlich die Anforderungen der [[mpbetreibv|MPBetreibV]] an die Prüfperson [@mpbetreibv].\n\n> [!warnung] Während der Direktmessung ist der Schutzleiter des Prüflings unterbrochen, und Anwendungsteile werden bei der Prüfung des Anwendungsteilableitstroms mit Netzspannung beaufschlagt. Das Gerät darf in dieser Zeit nicht am Patienten angeschlossen sein und nicht berührt werden.\n\n## Abgrenzung zu anderen Prüfnormen\n\nFür elektrische Geräte, die **keine** ME-Geräte sind – etwa Laborgeräte, Kühlschränke oder Büro-IT – gelten DIN EN 50678 (VDE 0701) nach Reparatur und DIN EN 50699 (VDE 0702) für Wiederholungsprüfungen [@din-en-50699]. Arbeitsschutzrechtlich verlangt die [[dguv-vorschrift-3|DGUV Vorschrift 3]] wiederkehrende Prüfungen aller elektrischen Betriebsmittel; für ME-Geräte wird diese Prüfung in der Regel nach IEC 62353 durchgeführt [@dguv-v3].\n\n## Anwendung in Geräten\n\nBesonders anspruchsvoll ist die Prüfung bei Geräten mit CF-Anwendungsteilen, etwa [[ekg-geraet]], [[patientenmonitor]], [[defibrillator]] und [[invasive-druckmessung]]. Bei [[dialysegeraet|Dialysegeräten]] und der [[herz-lungen-maschine]] kommen leitfähige Flüssigkeiten hinzu. Großgeräte wie [[computertomograph]] und [[mrt]] sind meist fest angeschlossen; hier werden Schutzleiterverbindungen und Ableitströme nach Herstellerverfahren geprüft. Bei akkubetriebenen Geräten wie [[infusionspumpe|Infusionspumpen]] oder [[transportbeatmungsgeraet|Transportbeatmungsgeräten]] wird das Ladenetzteil in die Prüfung einbezogen.\n\n> [!praxis] Bei ME-Systemen (z. B. Monitor, Pumpe und Beatmungsgerät an einer gemeinsamen Mehrfachsteckdose) sollte auch das System als Ganzes geprüft werden: Die Erdableitströme addieren sich auf dem gemeinsamen Schutzleiter.",
+  "related": [
+    "stk",
+    "schutzleiterwiderstand",
+    "isolationswiderstand",
+    "ableitstrommessung",
+    "funktionspruefung",
+    "pruefgeraete",
+    "ableitstrom",
+    "schutzklassen",
+    "anwendungsteile",
+    "iec-62353",
+    "iec-60601-1",
+    "dguv-vorschrift-3"
+  ],
+  "paths": [
+    [
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "schutzleiterwiderstand",
+      "schutzklassen"
+    ],
+    [
+      "elektrische-sicherheitspruefung",
+      "ableitstrommessung",
+      "ableitstrom",
+      "anwendungsteile"
+    ]
+  ],
+  "diagram": {
+    "title": "Prüfablauf nach IEC 62353",
+    "caption": "Didaktische Darstellung der Prüfschritte; Messung des Isolationswiderstands nur, soweit für das Gerät zulässig und sinnvoll.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "sicht",
+        "label": "Sichtprüfung",
+        "ref": "inspektion",
+        "kind": "process",
+        "x": 110,
+        "y": 90
+      },
+      {
+        "id": "rpe",
+        "label": "Schutzleiter-\nwiderstand (SK I)",
+        "ref": "schutzleiterwiderstand",
+        "kind": "sensor",
+        "x": 330,
+        "y": 90
+      },
+      {
+        "id": "riso",
+        "label": "Isolations-\nwiderstand",
+        "ref": "isolationswiderstand",
+        "kind": "sensor",
+        "x": 550,
+        "y": 90
+      },
+      {
+        "id": "ia",
+        "label": "Ableitströme",
+        "ref": "ableitstrommessung",
+        "kind": "sensor",
+        "x": 770,
+        "y": 90
+      },
+      {
+        "id": "fkt",
+        "label": "Funktionsprüfung",
+        "ref": "funktionspruefung",
+        "kind": "process",
+        "x": 770,
+        "y": 240
+      },
+      {
+        "id": "bew",
+        "label": "Bewertung",
+        "kind": "control",
+        "x": 550,
+        "y": 240
+      },
+      {
+        "id": "doku",
+        "label": "Dokumentation\n(Protokoll, Trend)",
+        "ref": "stk",
+        "kind": "output",
+        "x": 330,
+        "y": 240
+      }
+    ],
+    "edges": [
+      {
+        "from": "sicht",
+        "to": "rpe",
+        "kind": "data"
+      },
+      {
+        "from": "rpe",
+        "to": "riso",
+        "kind": "data"
+      },
+      {
+        "from": "riso",
+        "to": "ia",
+        "kind": "data"
+      },
+      {
+        "from": "ia",
+        "to": "fkt",
+        "kind": "data"
+      },
+      {
+        "from": "fkt",
+        "to": "bew",
+        "kind": "data"
+      },
+      {
+        "from": "bew",
+        "to": "doku",
+        "kind": "data"
+      }
+    ]
+  },
+  "sources": [
+    "iec-62353",
+    "iec-60601-1",
+    "iec-61557-16",
+    "mpbetreibv",
+    "dguv-v3",
+    "din-en-50699",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

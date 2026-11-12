@@ -1,0 +1,44 @@
+{
+  "id": "operationsverstaerker",
+  "type": "term",
+  "title": "Operationsverstärker",
+  "aliases": [
+    "OPV",
+    "OP-Amp",
+    "OpAmp",
+    "Operational amplifier",
+    "Differenzverstärker",
+    "Transimpedanzverstärker",
+    "Impedanzwandler"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Der Operationsverstärker ist ein integrierter Differenzverstärker mit sehr hoher Verstärkung, dessen Verhalten erst durch eine äußere Gegenkopplung festgelegt wird. Er ist der Grundbaustein analoger Messschaltungen in Medizingeräten – vom EKG-Vorverstärker über den Photodiodenverstärker im Pulsoxymeter bis zum aktiven Filter.",
+  "body": "## Begriff\n\nEin **Operationsverstärker** (OPV) ist ein mehrstufiger, gleichspannungsgekoppelter Verstärker mit einem nichtinvertierenden (+) und einem invertierenden (−) Eingang sowie einem Ausgang. Er verstärkt die Differenzspannung zwischen den Eingängen mit einer sehr großen Leerlaufverstärkung A₀ (typisch 10⁵ bis 10⁶). Der Name stammt aus der Analogrechentechnik, in der solche Verstärker Rechenoperationen wie Addition oder Integration ausführten [@tietze-schenk-2019] [@horowitz-hill-2015].\n\n`U_a = A₀ · (U₊ − U₋)`\n\nWeil A₀ so groß und ungenau ist, wird ein OPV praktisch nie offen betrieben. Erst eine **Gegenkopplung** – eine Rückführung des Ausgangs auf den invertierenden Eingang – legt die Verstärkung über wenige präzise Widerstände fest.\n\n## Idealer Operationsverstärker\n\nFür den Schaltungsentwurf rechnet man zunächst mit einem idealen OPV:\n\n| Eigenschaft | Ideal | Realer Präzisions-OPV (Größenordnung, typisch) |\n|---|---|---|\n| Leerlaufverstärkung A₀ | ∞ | 100–140 dB |\n| Eingangswiderstand | ∞ | MΩ bis TΩ (CMOS/JFET-Eingänge) |\n| Ausgangswiderstand | 0 | einige bis einige hundert Ω |\n| Eingangs-Offsetspannung | 0 | µV bis mV |\n| Bandbreite | ∞ | durch Verstärkungs-Bandbreite-Produkt begrenzt |\n\nDaraus ergeben sich die beiden **„goldenen Regeln“** für gegengekoppelte Schaltungen [@horowitz-hill-2015]:\n\n1. Der Ausgang stellt sich so ein, dass die Spannungsdifferenz zwischen den Eingängen null wird (`U₊ = U₋`, „virtueller Kurzschluss“).\n2. In die Eingänge fließt kein Strom.\n\n> [!vereinfacht] Die goldenen Regeln gelten nur, solange der OPV im linearen Bereich arbeitet, also weder an der Versorgungsspannung anschlägt noch zu schnell angesteuert wird. Für Offset, Rauschen und Frequenzgang muss mit dem realen Modell gerechnet werden.\n\n## Grundschaltungen\n\n| Schaltung | Verstärkung | Typische Aufgabe |\n|---|---|---|\n| Nichtinvertierender Verstärker | `V = 1 + R₂ / R₁` | Sensorsignal hochohmig abgreifen und verstärken |\n| Spannungsfolger (Impedanzwandler) | `V = 1` | hochohmige Quelle entkoppeln, z. B. Elektrodeneingang |\n| Invertierender Verstärker | `V = −R₂ / R₁` | Verstärken mit Vorzeichenumkehr, Summieren |\n| Differenzverstärker | `U_a = (R₂ / R₁) · (U₂ − U₁)` | Brückenspannung, Differenzsignale |\n| Transimpedanzverstärker | `U_a = −I · R_f` | Photostrom einer Photodiode in Spannung umsetzen |\n| Integrator | `U_a = −1/(R·C) · ∫ U_e dt` | Rampen, Regler mit I-Anteil |\n| Aktiver Tief-/Hochpass | Frequenzgang über R und C | [[filter|Filter]] vor dem [[analog-digital-wandler|ADC]] |\n| Komparator (ohne Gegenkopplung) | Schaltschwelle | Grenzwerterkennung, z. B. Überstrom |\n\n> [!beispiel] Ein Pulsoxymeter-Photodetektor liefert einen Photostrom von 1 µA. Ein Transimpedanzverstärker mit `R_f = 1 MΩ` erzeugt daraus `U_a = −1 µA · 1 MΩ = −1 V`. Die Zahlen sind beispielhaft; reale Werte hängen von LED-Strom, Gewebedicke und Durchblutung ab.\n\n## Grenzen des realen OPV\n\nFür Medizingeräte, in denen Signale im Mikro- bis Millivoltbereich verarbeitet werden, entscheiden die **Nichtidealitäten** über die Messqualität [@tietze-schenk-2019] [@webster-2010]:\n\n* **Offsetspannung und Drift:** werden mitverstärkt und verschieben den Nullpunkt – eine Ursache von [[sensordrift|Sensordrift]].\n* **Eingangsruheströme:** erzeugen an hochohmigen Quellen (Elektroden, Photodioden) Fehlerspannungen.\n* **Verstärkungs-Bandbreite-Produkt (GBW):** Bei 1 MHz GBW und einer Verstärkung von 100 bleiben etwa 10 kHz Bandbreite.\n* **Anstiegsgeschwindigkeit (Slew Rate):** begrenzt die Ausgangsflanke in V/µs.\n* **Gleichtaktunterdrückung (CMRR):** wie gut gleichphasige Störungen an beiden Eingängen unterdrückt werden – zentral bei Biosignalen, siehe [[instrumentenverstaerker|Instrumentenverstärker]].\n* **Rauschen:** Spannungs- und Stromrauschen, besonders 1/f-Rauschen bei tiefen Frequenzen, wie sie in [[biosignale|Biosignalen]] vorkommen.\n\nModerne batteriebetriebene Geräte verwenden überwiegend **Rail-to-Rail-OPV** an einer einzigen niedrigen Versorgungsspannung; die Signalmitte wird dann auf eine Referenzspannung (z. B. halbe Versorgung) gelegt.\n\n## Anwendung in Geräten\n\n| Gerät | Funktion des OPV |\n|---|---|\n| [[ekg-geraet]], [[patientenmonitor]], [[eeg-geraet]] | Eingangspuffer, [[instrumentenverstaerker|Instrumentenverstärker]], Right-Leg-Drive, Filterstufen |\n| [[pulsoxymeter]] | Transimpedanzverstärker für die Photodiode, LED-Stromquelle |\n| [[invasive-druckmessung]], [[beatmungsgeraet]] | Verstärkung der Brückenspannung des [[drucksensor|Drucksensors]] |\n| [[infusionspumpe]], [[spritzenpumpe]] | Auswertung von [[kraftsensor|Kraftsensoren]] zur Okklusionserkennung |\n| Motorantriebe (z. B. [[turbine]]) | Strommessverstärker am Shunt-Widerstand für die [[drehzahlregelung|Strom- und Drehzahlregelung]] |\n| [[ultraschallgeraet]] | rauscharme Empfangsverstärker vor der Digitalisierung |\n\n> [!belegt] Fachbücher zur Halbleiter-Schaltungstechnik behandeln die gegengekoppelten OPV-Grundschaltungen und den Einfluss realer Kenngrößen wie Offset, Gleichtaktunterdrückung und Frequenzgang ausführlich [@tietze-schenk-2019] [@horowitz-hill-2015].\n\n> [!praxis] Bei der Fehlersuche auf analogen Baugruppen lohnt der Blick auf die Gegenkopplung: Ein Ausgang, der dauerhaft an einer Versorgungsschiene „klebt“, deutet auf eine unterbrochene Rückführung, ein übersteuertes Eingangssignal oder einen defekten Sensor hin. Eingriffe in zugelassene Geräte erfolgen nur durch befugtes Fachpersonal nach Herstellervorgaben.",
+  "related": [
+    "instrumentenverstaerker",
+    "filter",
+    "analog-digital-wandler",
+    "spannung-strom-widerstand",
+    "messkette",
+    "biosignale",
+    "photoplethysmographie",
+    "drucksensor"
+  ],
+  "paths": [
+    [
+      "biosignale",
+      "ekg-elektrode",
+      "instrumentenverstaerker",
+      "operationsverstaerker",
+      "filter",
+      "analog-digital-wandler"
+    ]
+  ],
+  "sources": [
+    "tietze-schenk-2019",
+    "horowitz-hill-2015",
+    "webster-2010"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

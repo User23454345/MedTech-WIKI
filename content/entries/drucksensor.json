@@ -1,0 +1,158 @@
+{
+  "id": "drucksensor",
+  "type": "term",
+  "title": "Piezoresistiver Drucksensor",
+  "aliases": [
+    "Drucksensor",
+    "Drucktransducer",
+    "Druckaufnehmer",
+    "Druckwandler",
+    "pressure transducer",
+    "piezoresistive pressure sensor",
+    "MEMS-Drucksensor",
+    "Druckdom"
+  ],
+  "category": "sensorik",
+  "summary": "Drucksensor, bei dem eine Siliziummembran mit eindiffundierten Widerständen den Druck in eine Widerstandsänderung umsetzt, die in einer Wheatstone-Brücke ausgewertet wird. Standardbauteil für Atemwegs-, Blut- und Leitungsdruckmessung in Medizingeräten.",
+  "body": "## Begriff und Einordnung\n\nDer **piezoresistive Drucksensor** ist der in der Medizintechnik mit Abstand häufigste Druckaufnehmer. Er nutzt den **piezoresistiven Effekt**: Mechanische Spannung ändert den spezifischen Widerstand eines Halbleiters. Anders als beim [[piezoelektrischer-effekt|piezoelektrischen Effekt]] entsteht dabei keine Ladung, sondern eine Widerstandsänderung – der Sensor misst deshalb auch **statische** Drücke [@hering-2018] [@fraden-2016]. Er ist das zentrale Bauteil der [[druckmessung|Druckmessung]] in Beatmungs-, Infusions-, Dialyse- und Überwachungsgeräten.\n\n## Aufbau\n\nEin typischer Sensor ist als **MEMS-Bauteil** (mikromechanisch) gefertigt:\n\n| Element | Funktion |\n|---|---|\n| Siliziummembran | durch anisotropes Ätzen gedünnter Bereich eines Siliziumchips; verformt sich unter Druck |\n| Piezowiderstände | vier eindiffundierte oder implantierte Widerstände an den Orten maximaler mechanischer Spannung |\n| Referenzseite | Vakuum (Absolutdruck), Umgebungsbelüftung (Relativdruck) oder zweiter Druckanschluss (Differenzdruck) |\n| Gehäuse, Gel | Schutz des Chips; bei Flüssigkeitskontakt Gel- oder Folienvorlage zur Medientrennung |\n| Kompensationselektronik | Temperaturkompensation, Linearisierung, häufig integrierte Verstärkung und Digitalschnittstelle |\n\n## Physikalisches Prinzip\n\n### Piezoresistiver Effekt\n\nFür einen Widerstand mit Länge l, Querschnitt A und spezifischem Widerstand ρ gilt `R = ρ · l / A`. Bei Dehnung ändern sich alle drei Größen. Die relative Widerstandsänderung pro Dehnung ε heißt **k-Faktor** (gauge factor):\n\n`ΔR / R = k · ε`\n\nBei Metall-Dehnungsmessstreifen ist k ≈ 2 und fast ausschließlich geometrisch bedingt. In Silizium dominiert die Änderung von ρ selbst (Verschiebung der Bandstruktur und der Ladungsträgerbeweglichkeit); der k-Faktor ist dadurch um ein bis zwei Größenordnungen höher [@hering-2018]. Die Widerstandsänderung hängt von der Kristallorientierung und von der Spannungsrichtung ab:\n\n`ΔR / R = π_l · σ_l + π_t · σ_t`\n\nmit den piezoresistiven Koeffizienten π_l (längs) und π_t (quer) und den mechanischen Spannungen σ. Geschickt angeordnete Widerstände erfahren dadurch **gegensinnige** Änderungen – zwei werden größer, zwei kleiner.\n\n### Wheatstone-Brücke\n\nDie vier Widerstände bilden eine Vollbrücke, gespeist mit der Spannung U₀. Bei vier aktiven, gegensinnig beanspruchten Armen gilt näherungsweise:\n\n`U_a = U₀ · ΔR / R`\n\nDie Brücke unterdrückt gleichsinnige Störungen (z. B. gleichmäßige Temperaturänderung aller Widerstände) und liefert ein differentielles Signal im Millivoltbereich, das ein [[instrumentenverstaerker|Instrumentenverstärker]] verstärkt.\n\n> [!beispiel] Einweg-Druckaufnehmer der invasiven Blutdruckmessung werden typischerweise mit einer Empfindlichkeit von 5 µV pro Volt Speisespannung und mmHg spezifiziert. Bei U₀ = 5 V liefert ein Druck von 100 mmHg also 5 µV/V/mmHg · 5 V · 100 mmHg = 2,5 mV. Der Wert dient der Veranschaulichung; maßgeblich sind Herstellerangabe und Monitoreingang.\n\n## Kenngrößen und Fehlerquellen\n\n| Kenngröße | Bedeutung | Ursache/Gegenmaßnahme |\n|---|---|---|\n| Nullpunkt (Offset) | Ausgangssignal bei p = 0 | Fertigungstoleranz; Abgleich, Nullung vor Messung |\n| Empfindlichkeit (Span) | Steigung der Kennlinie | Kalibrierung im Werk, Speicherung von Korrekturwerten |\n| Temperaturkoeffizient von Offset und Span | Drift mit der Temperatur | stark ausgeprägt bei Silizium; Kompensation über Temperaturmessung |\n| Nichtlinearität, Hysterese | Abweichung von der Geraden, Abhängigkeit von der Vorgeschichte | Membrangestaltung, digitale Linearisierung |\n| Langzeitstabilität | Drift über Monate | Alterung, Feuchte, Gehäusespannungen – siehe [[sensordrift]] |\n| Überlastfestigkeit | zulässiger Druck ohne Schaden | Membranbruch bei Fehlbedienung, z. B. Druckluft auf Relativsensor |\n\n> [!vereinfacht] Die lineare Brückengleichung gilt nur für kleine Widerstandsänderungen. Reale Sensoren werden deshalb über Polynom-Korrekturen in Abhängigkeit von Druck und Temperatur linearisiert, deren Koeffizienten im Werk ermittelt und im Sensor oder Gerät gespeichert werden.\n\nWeil Silizium stark temperaturabhängig ist, enthalten moderne Sensoren oft einen [[temperatursensor|Temperatursensor]] auf demselben Chip. Kapazitive Sensoren sind hier im Vorteil, benötigen aber aufwendigere Auswerteelektronik.\n\n## Anwendung in Geräten\n\n| Gerät | Einsatz des Drucksensors |\n|---|---|\n| [[beatmungsgeraet]], [[heimbeatmungsgeraet]], [[cpap-geraet]] | Atemwegsdruck als Istwert des Druckreglers; Differenzdruck am [[flowsensor]] |\n| [[anaesthesiegeraet]] | Atemwegsdruck, Versorgungsdruck der Gase |\n| [[invasive-druckmessung]], [[patientenmonitor]] | Einweg-Druckaufnehmer mit Spülsystem am arteriellen oder zentralvenösen Katheter |\n| [[nibp-messgeraet]], [[langzeit-blutdruck]] | Manschettendruck und Oszillationen ([[oszillometrie]]) |\n| [[infusionspumpe]] | Drucksensoren am Pumpensegment zur [[okklusionsalarm|Okklusionserkennung]] |\n| [[dialysegeraet]] | arterieller und venöser Druck, Transmembrandruck |\n| [[insufflator]], [[npwt-geraet]], [[absauggeraet]] | Über- bzw. Unterdruck |\n\n### Platz in der Regelkette des Beatmungsgeräts\n\nIm Turbinenbeatmungsgerät schließt der Drucksensor den Regelkreis: Das [[beatmungsgeraet|Beatmungsgerät]] fordert einen Solldruck, die [[turbine|Turbine]] wird vom [[elektromotor|Elektromotor]] angetrieben, dessen [[drehzahlregelung|Drehzahlregelung]] die Stellgröße umsetzt – und der Drucksensor meldet den Istwert zurück. Ein driftender Nullpunkt verschiebt damit unmittelbar den applizierten PEEP.\n\n## Prüfung und Instandhaltung\n\nDrucksensoren werden im Rahmen von [[wartung|Wartung]] und [[stk|sicherheitstechnischer Kontrolle]] meist indirekt geprüft: Das Gerät zeigt einen von einem kalibrierten Referenzmanometer vorgegebenen Druck an, die Abweichung wird mit der Herstellerspezifikation verglichen ([[kalibrierung]], [[funktionspruefung]]). Für nichtinvasive Blutdruckmessgeräte schreibt die [[mpbetreibv|MPBetreibV]] zusätzlich die messtechnische Kontrolle ([[mtk]]) vor [@mpbetreibv].\n\n> [!praxis] Viele Beatmungsgeräte führen beim Selbsttest einen automatischen Nullabgleich durch, indem sie den Sensor über ein Ventil zur Umgebung öffnen. Feuchtigkeit oder Sekret in der Druckmessleitung ist eine häufige Ursache für unplausible Druckwerte – Messleitungen und Filter sind deshalb Prüfpunkte bei der [[fehlersuche|Fehlersuche]].\n\n> [!warnung] Druckaufnehmer der invasiven Blutdruckmessung sind [[anwendungsteile|Anwendungsteile]], die über die leitfähige Flüssigkeitssäule im Katheter bis in herznahe Gefäße reichen (in der Regel Typ CF); Isolation und [[ableitstrom|Ableitströme]] unterliegen deshalb besonders strengen Anforderungen der [[iec-60601-1|IEC 60601-1]] [@iec-60601-1].\n",
+  "related": [
+    "druckmessung",
+    "piezoelektrischer-effekt",
+    "instrumentenverstaerker",
+    "messkette",
+    "sensordrift",
+    "temperatursensor",
+    "flowsensor",
+    "invasive-druckmessung",
+    "beatmungsgeraet",
+    "turbine",
+    "drehzahlregelung",
+    "kalibrierung",
+    "kraftsensor"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "drehzahlregelung",
+      "drucksensor",
+      "druckmessung"
+    ],
+    [
+      "drucksensor",
+      "instrumentenverstaerker",
+      "analog-digital-wandler",
+      "mikrocontroller"
+    ]
+  ],
+  "sources": [
+    "hering-2018",
+    "fraden-2016",
+    "webster-2010",
+    "iec-60601-2-34",
+    "iec-60601-1",
+    "mpbetreibv"
+  ],
+  "diagram": {
+    "title": "Piezoresistiver Drucksensor: Wirkprinzip",
+    "caption": "Wandlungskette vom Druck bis zum digitalen Messwert.",
+    "width": 960,
+    "height": 280,
+    "nodes": [
+      {
+        "id": "p",
+        "label": "Druck p",
+        "kind": "source",
+        "x": 90,
+        "y": 80,
+        "ref": "druck"
+      },
+      {
+        "id": "mem",
+        "label": "Silizium-\nmembran",
+        "kind": "process",
+        "x": 270,
+        "y": 80
+      },
+      {
+        "id": "sig",
+        "label": "mech. Spannung σ\n→ ΔR/R",
+        "kind": "sensor",
+        "x": 460,
+        "y": 80,
+        "ref": "drucksensor"
+      },
+      {
+        "id": "br",
+        "label": "Wheatstone-\nBrücke (U₀)",
+        "kind": "process",
+        "x": 650,
+        "y": 80
+      },
+      {
+        "id": "ina",
+        "label": "Instrumenten-\nverstärker",
+        "kind": "process",
+        "x": 850,
+        "y": 80,
+        "ref": "instrumentenverstaerker"
+      },
+      {
+        "id": "ts",
+        "label": "Temperatur-\nsensor",
+        "kind": "sensor",
+        "x": 460,
+        "y": 210,
+        "ref": "temperatursensor"
+      },
+      {
+        "id": "mcu",
+        "label": "Kompensation +\nA/D-Wandlung",
+        "kind": "control",
+        "x": 850,
+        "y": 210,
+        "ref": "analog-digital-wandler"
+      }
+    ],
+    "edges": [
+      {
+        "from": "p",
+        "to": "mem",
+        "kind": "gas",
+        "label": "Kraft"
+      },
+      {
+        "from": "mem",
+        "to": "sig",
+        "kind": "energy",
+        "label": "Dehnung ε"
+      },
+      {
+        "from": "sig",
+        "to": "br",
+        "kind": "signal",
+        "label": "ΔR"
+      },
+      {
+        "from": "br",
+        "to": "ina",
+        "kind": "signal",
+        "label": "U_a (mV)"
+      },
+      {
+        "from": "ina",
+        "to": "mcu",
+        "kind": "signal"
+      },
+      {
+        "from": "ts",
+        "to": "mcu",
+        "kind": "signal",
+        "label": "T"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

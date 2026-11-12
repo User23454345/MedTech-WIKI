@@ -1,0 +1,38 @@
+{
+  "id": "iso-10993-1",
+  "type": "standard",
+  "title": "ISO 10993-1",
+  "code": "ISO 10993-1",
+  "kind": "norm",
+  "fullTitle": "Biologische Beurteilung von Medizinprodukten – Teil 1: Beurteilung und Prüfungen im Rahmen eines Risikomanagementsystems",
+  "scope": "Legt die Grundsätze für die biologische Beurteilung von Medizinprodukten und deren Materialien im Rahmen des Risikomanagements fest, einschließlich der Kategorisierung nach Art und Dauer des Körperkontakts.",
+  "aliases": [
+    "DIN EN ISO 10993-1",
+    "EN ISO 10993-1",
+    "Biokompatibilität",
+    "Biologische Beurteilung",
+    "10993-1"
+  ],
+  "category": "normen",
+  "summary": "ISO 10993-1 ist die Rahmennorm der Normenreihe ISO 10993 zur biologischen Sicherheit (Biokompatibilität) von Medizinprodukten. Sie ordnet Produkte nach Art und Dauer des Körperkontakts ein und legt fest, welche biologischen Endpunkte im Rahmen des Risikomanagements zu bewerten sind.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nJedes Medizinprodukt, das direkt oder indirekt mit dem Körper in Kontakt kommt, kann über seine Materialien unerwünschte biologische Reaktionen auslösen – von Hautreizungen durch [[ekg-elektrode|EKG-Elektroden]] bis zu Entzündungen um ein [[herzschrittmacher|Implantat]]. Die **ISO 10993-1** legt fest, wie die **biologische Sicherheit** eines Produkts beurteilt wird [@iso-10993-1]. Sie ist der erste Teil einer umfangreichen Normenreihe, deren weitere Teile einzelne Prüfverfahren beschreiben.\n\nLeitgedanke ist, dass die biologische Beurteilung **im Rahmen des Risikomanagements** nach [[iso-14971|ISO 14971]] erfolgt. Es geht nicht darum, eine starre Liste von Tierversuchen abzuarbeiten, sondern vorhandene Daten zu Materialien, Herstellung und Anwendung zu bewerten und nur die verbleibenden Wissenslücken durch Prüfungen zu schließen.\n\n## Zentrale Konzepte und Anforderungen\n\n### Kategorisierung\n\n| Kriterium | Kategorien (vereinfacht) | Beispiele |\n|---|---|---|\n| Art des Kontakts | Oberflächenkontakt (Haut, Schleimhaut, verletzte Oberfläche) | [[ekg-elektrode]], [[neutralelektrode]], Beatmungsmaske |\n| | von außen mit dem Körper in Verbindung stehend (Blutweg, Gewebe) | Infusionsleitung, [[dialysator]], Schlauchsystem der [[herz-lungen-maschine]] |\n| | Implantat | [[herzschrittmacher]], [[cochlea-implantat]] |\n| Kontaktdauer | begrenzt (bis 24 Stunden), länger (bis 30 Tage), dauerhaft (über 30 Tage) | Mehrfachanwendungen werden kumuliert betrachtet |\n\n> [!hinweis] Kategorien und Zeitgrenzen sind hier vereinfacht nach der lange gültigen Ausgabe dargestellt; Neuausgaben der Norm können Titel, Kategorien und Bewertungslogik ändern. Maßgeblich ist die jeweils gültige Fassung.\n\n### Biologische Endpunkte\n\nJe nach Kategorie sind verschiedene Wirkungen zu betrachten. Wichtige Endpunkte und zugehörige Teile der Normenreihe sind:\n\n| Endpunkt | Frage | Teil der Reihe ISO 10993 |\n|---|---|---|\n| Zytotoxizität | schädigt das Material Zellen? | Teil 5 |\n| Sensibilisierung | löst es Allergien aus? | Teil 10 |\n| Irritation | reizt es Haut oder Schleimhaut? | Teil 23 |\n| systemische Toxizität | wirken herausgelöste Stoffe im ganzen Körper? | Teil 11 |\n| Gentoxizität | schädigt es das Erbgut? | Teil 3 |\n| Implantationswirkungen | wie reagiert Gewebe lokal? | Teil 6 |\n| Hämokompatibilität | Wechselwirkung mit [[blut|Blut]], z. B. Hämolyse, Gerinnung | Teil 4 |\n\n### Chemische Charakterisierung\n\nEine zentrale Rolle spielt die **chemische Charakterisierung** der Materialien (Teil 18): Welche Stoffe können unter Anwendungsbedingungen herausgelöst werden (Extrahierbare, Auslaugbare)? Diese Daten werden toxikologisch bewertet (Teil 17). Belastbare chemische und toxikologische Daten können Tierversuche reduzieren oder teilweise ersetzen; dem Tierschutz widmet sich Teil 2 der Reihe.\n\n> [!beispiel] Wird bei einem [[dialysator|Dialysator]] das Vergussmaterial geändert, muss der Hersteller prüfen, ob sich das Spektrum auslaugbarer Stoffe ändert – auch wenn die Membran gleich bleibt. Eine Änderung von Material, Sterilisationsverfahren ([[sterilisation]]) oder Herstellprozess kann eine erneute biologische Beurteilung auslösen.\n\n## Bezug zu anderen Normen\n\nDie ISO 10993-1 gehört nicht zur 60601-Familie, ergänzt diese aber: Die [[iec-60601-1|IEC 60601-1]] verlangt für Teile mit Patientenkontakt eine biologische Beurteilung und verweist dafür auf die Reihe ISO 10993.\n\n| Norm | Bezug |\n|---|---|\n| [[iso-14971]] | übergeordneter Risikomanagementprozess |\n| [[iso-13485]] | Lenkung von Materialien, Lieferanten und Änderungen |\n| [[iec-60601-1]] und besondere Festlegungen | Anwendungsteile mit Patientenkontakt |\n| [[iso-17665]] / [[iso-15883]] | Sterilisation bzw. Reinigung und Desinfektion können Materialien und Rückstände beeinflussen |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen nach Anhang I der [[mdr|MDR]] Risiken durch Materialien und herausgelöste Stoffe minimieren [@mdr-2017]; die biologische Beurteilung ist Bestandteil der technischen Dokumentation und wird von der [[benannte-stelle|Benannten Stelle]] geprüft.\n\n**Betreiber** sind betroffen, wenn sie Produkte [[aufbereitung|aufbereiten]]: Rückstände von Reinigungs- und [[desinfektion|Desinfektionsmitteln]] oder Materialveränderungen durch wiederholte Aufbereitung können die Biokompatibilität beeinflussen. Daher sind die Aufbereitungsangaben des Herstellers einzuhalten [@krinko-bfarm-2012].\n\n> [!praxis] Nicht freigegebenes Fremdzubehör mit Patientenkontakt (Elektroden, Sensoren, Schlauchsysteme) ist nicht nur technisch, sondern auch biologisch ein Risiko, weil dessen Bewertung nicht in der Dokumentation des Geräteherstellers enthalten ist.\n\n## Betroffene Geräte\n\nAlle Produkte mit Körperkontakt, z. B. [[pulsoxymeter]] (Sensor), [[ekg-geraet]] (Elektroden), [[dialysegeraet]], [[ecmo]], [[herz-lungen-maschine]], [[infusionspumpe]] (Überleitsysteme), [[endoskop]], [[herzschrittmacher]], [[icd]], [[vad]], [[cochlea-implantat]] und [[hoergeraet]].\n",
+  "related": [
+    "herzschrittmacher",
+    "dialysator",
+    "ekg-elektrode",
+    "aufbereitung",
+    "sterilisation",
+    "iso-14971",
+    "iso-13485",
+    "iec-60601-1",
+    "haut",
+    "blut"
+  ],
+  "sources": [
+    "iso-10993-1",
+    "mdr-2017",
+    "krinko-bfarm-2012"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

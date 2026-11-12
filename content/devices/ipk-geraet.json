@@ -1,0 +1,62 @@
+{
+  "id": "ipk-geraet",
+  "type": "device",
+  "title": "Gerät zur intermittierenden pneumatischen Kompression",
+  "aliases": [
+    "IPK-Gerät",
+    "IPK",
+    "Intermittierende pneumatische Kompression",
+    "AIK",
+    "Apparative intermittierende Kompression",
+    "Lymphdrainagegerät",
+    "IPC",
+    "Kompressionspumpe"
+  ],
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 86,
+  "domains": [
+    "chirurgie",
+    "intensivmedizin",
+    "physikalische-medizin",
+    "orthopaedie-unfallchirurgie"
+  ],
+  "summary": "IPK-Geräte blasen Manschetten an Beinen oder Armen in festgelegten Zyklen mit Luft auf und entleeren sie wieder. Der wiederholte Druck fördert den venösen und lymphatischen Rückstrom und wird zur Thromboseprophylaxe sowie zur Behandlung von Ödemen eingesetzt.",
+  "sections": {
+    "purpose": "Bei immobilen Patienten – etwa während und nach Operationen oder auf der Intensivstation – fehlt die Muskelpumpe der Waden, das Blut in den tiefen Venen strömt langsamer, und das Thromboserisiko steigt. IPK-Geräte ersetzen diese Pumpfunktion mechanisch, insbesondere wenn Medikamente zur Gerinnungshemmung nicht gegeben werden können. Mehrkammergeräte werden außerdem in der Ödem- und Lymphödemtherapie eingesetzt [@kramme-2017]. Siehe [[blutkreislauf]].",
+    "principle": "## Pneumatik\n\nEin Kompressor (meist eine Membranpumpe, angetrieben von einem [[elektromotor|Elektromotor]]) erzeugt Druckluft, die über [[magnetventil|Magnetventile]] und Schläuche in die Kammern der Manschetten geleitet wird. Ein [[drucksensor|Drucksensor]] misst den Kammerdruck; die Steuerung ([[mikrocontroller]]) schaltet die Ventile so, dass der eingestellte Solldruck erreicht und gehalten wird ([[regelkreis]]). Danach wird die Luft über ein Ventil abgelassen.\n\n## Kompressionsmuster\n\n| Muster | Ablauf | Typischer Einsatz |\n|---|---|---|\n| einkammerig | gleichmäßiger Druck auf die ganze Manschette | einfache Thromboseprophylaxe |\n| sequenziell mehrkammerig | Kammern füllen sich nacheinander von distal nach proximal | Thromboseprophylaxe, Ödemtherapie |\n| gradiert | distal höherer Druck als proximal | Lymphödemtherapie |\n| Fußpumpe | kurzer, schneller Druck auf die Fußsohle | Prophylaxe bei Bein-Verletzungen |\n\nDer äußere [[druck|Druck]] verkleinert den Venenquerschnitt und drückt das Blut herzwärts; Venenklappen verhindern den Rückfluss. Die Pause zwischen den Zyklen erlaubt die Wiederfüllung.\n\n> [!vereinfacht] Die Wirkung beruht vor allem auf der erhöhten Strömungsgeschwindigkeit im Venensystem (weniger Stase); diskutiert werden zusätzlich Effekte auf die Fibrinolyse ([[stroemungslehre]]).\n\n> [!warnung] Bei bestehender tiefer Venenthrombose, schwerer arterieller Durchblutungsstörung oder dekompensierter Herzinsuffizienz kann IPK kontraindiziert sein. Falsch angelegte Manschetten können Druckschäden an Haut und Nerven verursachen.\n\nAlarme melden Leckagen, abgeknickte Schläuche oder nicht erreichten Druck ([[leckage]], [[alarmsystem]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "arjo",
+      "models": [
+        "Flowtron"
+      ],
+      "note": "Kompressionssysteme zur Thromboseprophylaxe"
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Einkammer- oder Mehrkammersystem, Klinik- oder Heimgerät, Einmal- bzw. Mehrwegmanschetten als laufende Kosten, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) aufgeführt. Prüfung der Druckgenauigkeit und der elektrischen Sicherheit nach [[iec-62353|IEC 62353]] gemäß Herstellervorgabe.",
+    "intervals": "Wartung, Druck- und Dichtheitsprüfung nach Herstellerangabe; Manschetten und Schläuche vor Anwendung auf Beschädigung prüfen."
+  },
+  "related": [
+    "blutkreislauf",
+    "drucksensor",
+    "magnetventil",
+    "stroemungslehre",
+    "antidekubitussystem",
+    "leckage"
+  ],
+  "sources": [
+    "kramme-2017",
+    "wintermantel-2009"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

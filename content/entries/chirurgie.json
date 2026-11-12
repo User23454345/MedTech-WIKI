@@ -1,0 +1,43 @@
+{
+  "id": "chirurgie",
+  "type": "domain",
+  "title": "Chirurgie",
+  "aliases": [
+    "Operative Medizin",
+    "Surgery",
+    "Allgemeinchirurgie",
+    "Viszeralchirurgie",
+    "Operationssaal",
+    "OP"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Chirurgie behandelt Erkrankungen und Verletzungen durch operative Eingriffe. Der Operationssaal vereint OP-Tisch, OP-Leuchte, HF-Chirurgie, Endoskopie, Bildgebung und zunehmend robotische Systeme; Sterilität, Brand- und Strahlenschutz sind zentrale technische Anforderungen.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Chirurgie** umfasst die operative Behandlung von Krankheiten, Verletzungen und Fehlbildungen. Sie gliedert sich in Spezialgebiete wie Allgemein- und Viszeralchirurgie, Gefäßchirurgie, Thoraxchirurgie, [[herzchirurgie]], [[orthopaedie-unfallchirurgie]], Neurochirurgie, Urologie und plastische Chirurgie [@kramme-2017].\n\nTypische Eingriffe sind Gallenblasen- und Blinddarmentfernung, Hernienversorgung, Darm- und Tumorresektionen, Gefäßrekonstruktionen und Gelenkersatz. Seit den 1990er-Jahren hat sich die minimalinvasive Chirurgie (Laparoskopie, Thorakoskopie) stark verbreitet; sie verlangt Kamera-, Licht- und Insufflationstechnik. Robotische Assistenzsysteme erweitern diesen Ansatz.\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[op-tisch]] | Lagerung und Positionierung der Patienten |\n| [[op-leuchte]] | schattenarme Ausleuchtung des Operationsfelds |\n| [[hf-chirurgiegeraet]] | Schneiden und Koagulieren mit hochfrequentem Strom |\n| [[ultraschalldissektor]] | Gewebedissektion und Gefäßversiegelung mit Ultraschall |\n| [[chirurgischer-laser]] | Schneiden, Koagulieren, Vaporisieren |\n| [[endoskop]] | Laparoskopie und Endoskopie mit Videokette |\n| [[insufflator]] | CO₂-Pneumoperitoneum für die Laparoskopie |\n| [[chirurgisches-motorsystem]] | Bohren, Sägen, Fräsen an Knochen |\n| [[op-mikroskop]] | Mikrochirurgie (Neuro-, Gefäß-, HNO-Chirurgie) |\n| [[op-roboter]] | robotisch assistierte minimalinvasive Eingriffe |\n| [[c-bogen]] | intraoperative Röntgendurchleuchtung |\n| [[patientenwaermesystem]] | Vermeidung perioperativer Hypothermie |\n| [[npwt-geraet]] | Unterdruck-Wundtherapie |\n| [[lithotripter]] | Steinzertrümmerung (Urologie) |\n| [[absauggeraet]] | Absaugung von Blut und Spülflüssigkeit |\n\nNarkose, Beatmung und Überwachung stellt die [[anaesthesiologie]] mit [[anaesthesiegeraet]] und [[patientenmonitor]].\n\n## Besondere technische Anforderungen\n\n### Sterilität und Aufbereitung\n\nChirurgische Instrumente sind „kritische“ Medizinprodukte: Sie dringen in sterile Körperbereiche ein und müssen steril sein [@spaulding-1968]. Die [[aufbereitung]] erfolgt in der Aufbereitungseinheit für Medizinprodukte mit [[rdg]], [[dampfsterilisator]] und ggf. [[niedertemperatursterilisator]] nach validierten Verfahren [@krinko-bfarm-2012][@iso-17665-2024]. Für die Medizintechnik bedeutet das: Endoskope, Motorsysteme und Optiken müssen aufbereitbar konstruiert sein, und die Aufbereitungsgeräte selbst unterliegen Validierung und Instandhaltung.\n\n### HF-Chirurgie und Neutralelektrode\n\nBei der monopolaren [[hf-chirurgiegeraet|HF-Chirurgie]] fließt der Strom über den Körper zur [[neutralelektrode]] zurück. Eine schlecht anliegende Neutralelektrode kann zu Verbrennungen führen ([[neutralelektroden-verbrennung]]); moderne Geräte überwachen deshalb die Kontaktqualität geteilter Elektroden [@iec-60601-2-2][@massarweh-2006].\n\n> [!warnung] Chirurgischer Rauch aus HF-Chirurgie und Laser enthält Partikel und Schadstoffe; Absaugsysteme schützen das Personal. In sauerstoffangereicherter Atmosphäre besteht Brandgefahr.\n\n### Laserschutz\n\nChirurgische Laser der Klasse 4 erfordern einen Laserbereich mit Warnkennzeichnung, Laserschutzbrillen, die für Wellenlänge und Leistung des eingesetzten Lasers ausgelegt sind, sowie eine Gefährdungsbeurteilung durch eine fachkundige Person. Für Laser der Klassen 3R, 3B und 4 verlangt die Arbeitsschutzverordnung zu künstlicher optischer Strahlung außerdem einen schriftlich bestellten Laserschutzbeauftragten [@iec-60825-1][@ostrv].\n\n### Strahlenschutz im OP\n\nBeim Einsatz des [[c-bogen|C-Bogens]] gelten die Pflichten des [[strlschg|Strahlenschutzgesetzes]]: Fachkunde, Dosisüberwachung, Schutzkleidung und Abnahme- sowie [[konstanzpruefung|Konstanzprüfungen]] [@strlschg].\n\n### Elektrische Infrastruktur\n\nOperationsräume sind in der Regel Räume der Gruppe 2 nach [[din-vde-0100-710]] mit IT-System, Isolationsüberwachung und Sicherheitsstromversorgung, damit ein Isolationsfehler oder Netzausfall den Eingriff nicht unterbricht [@din-vde-0100-710].\n\n> [!vereinfacht] Im OP arbeiten viele Geräte gleichzeitig am selben Patienten. Die Kombination aus [[emv]], Ableitströmen, Brandlast und Sterilitätsanforderungen macht ihn zu einem der technisch anspruchsvollsten Räume des Krankenhauses.\n\n### Ergonomie und Integration\n\nIntegrierte OP-Säle bündeln Videosignale, Gerätesteuerung und Dokumentation an einem Bedienplatz. [[gebrauchstauglichkeit|Gebrauchstauglichkeit]] und eindeutige Bedienung sind besonders wichtig, weil Bedienfehler unter Zeitdruck entstehen können [@iec-62366-1].\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[anaesthesiologie]]**: Narkose, Monitoring und Wärmemanagement.\n- **[[intensivmedizin]]**: postoperative Überwachung nach großen Eingriffen.\n- **[[radiologie]]**: präoperative Bildgebung, intraoperative Durchleuchtung, Navigation.\n- **[[gastroenterologie]]**: flexible Endoskopie, Übergänge zur minimalinvasiven Chirurgie.\n- **[[notfallmedizin]]**: Polytraumaversorgung im Schockraum.\n- **[[orthopaedie-unfallchirurgie]]** und **[[herzchirurgie]]**: spezialisierte operative Disziplinen mit eigener Gerätetechnik.\n",
+  "related": [
+    "op-tisch",
+    "op-leuchte",
+    "hf-chirurgiegeraet",
+    "endoskop",
+    "op-roboter",
+    "aufbereitung",
+    "sterilisation",
+    "anaesthesiologie",
+    "orthopaedie-unfallchirurgie",
+    "herzchirurgie"
+  ],
+  "sources": [
+    "kramme-2017",
+    "spaulding-1968",
+    "krinko-bfarm-2012",
+    "iso-17665-2024",
+    "iec-60601-2-2",
+    "massarweh-2006",
+    "iec-60825-1",
+    "ostrv",
+    "strlschg",
+    "din-vde-0100-710",
+    "iec-62366-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

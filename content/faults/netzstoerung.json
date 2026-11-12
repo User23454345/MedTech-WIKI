@@ -1,0 +1,68 @@
+{
+  "id": "netzstoerung",
+  "type": "fault",
+  "title": "Netzbrumm (50-Hz-Störung)",
+  "aliases": [
+    "Netzbrumm",
+    "50-Hz-Störung",
+    "Netzstörung",
+    "Mains Interference",
+    "Power Line Interference",
+    "Brummstörung",
+    "Wechselstromstörung"
+  ],
+  "category": "fehler",
+  "summary": "Überlagerung eines Biosignals mit einer sinusförmigen Störung der Netzfrequenz von 50 Hz und ihren Oberwellen. Sie entsteht durch kapazitive oder induktive Einkopplung aus dem Stromnetz und wird durch ungleiche Elektrodenimpedanzen in ein Differenzsignal umgewandelt.",
+  "devices": [
+    "ekg-geraet",
+    "patientenmonitor",
+    "defibrillator",
+    "langzeit-ekg",
+    "ergometer",
+    "eeg-geraet",
+    "emg-geraet",
+    "polysomnograph"
+  ],
+  "causes": [
+    "Kapazitive Einkopplung aus Netzleitungen, Leuchten, Betten oder anderen Geräten in den Patientenkörper und die Ableitungskabel.",
+    "Ungleiche Elektroden-Haut-Impedanzen (ausgetrocknete Elektroden, schlechte Hautvorbereitung), die Gleichtaktstörungen in Differenzspannungen umwandeln (siehe [[elektrodenproblem]]).",
+    "Fehlende oder hochohmige Referenz- bzw. Rechtes-Bein-Elektrode (N/RL).",
+    "Induktive Einkopplung in große Leiterschleifen, die von gespreizt geführten Ableitungskabeln gebildet werden ([[elektromagnetische-induktion]]).",
+    "Ableitungskabel parallel zu Netzkabeln, Netzteilen oder Transformatoren geführt; elektrisch verstellbare Betten in unmittelbarer Nähe.",
+    "Ausgeschalteter oder falsch eingestellter Netzfilter, falsch eingestellte Netzfrequenz (50/60 Hz).",
+    "Mängel in Schutzleiter, Potentialausgleich oder Abschirmung von Kabeln und Geräten ([[medizinisch-genutzte-bereiche]])."
+  ],
+  "actions": [
+    "**Patienten zuerst:** Klinisch relevante Rhythmusstörungen durch Puls- und Kreislaufkontrolle ausschließen – Brumm kann z. B. Kammerflimmern vortäuschen oder kleine Signale verdecken.",
+    "Elektroden erneuern, Haut vorbereiten, einheitlichen Elektrodentyp verwenden; Referenzelektrode prüfen.",
+    "Ableitungskabel eng zusammen und abseits von Netzkabeln führen; nicht benötigte netzbetriebene Geräte in Patientennähe probeweise vom Netz trennen bzw. Abstand vergrößern.",
+    "Netzfilter-Einstellung und Netzfrequenz am Gerät prüfen; Filterwahl dokumentieren, da Filter die Signalform beeinflussen können.",
+    "Bei Persistenz Kabel und Gerät mit Simulator prüfen; Ableitungskabel mit beschädigter Abschirmung aussondern.",
+    "Bei Verdacht auf Installationsmängel (Schutzleiter, Potentialausgleich) Elektrofachkraft bzw. Medizintechnik einschalten; ggf. [[elektrische-sicherheitspruefung]] durchführen."
+  ],
+  "body": "## Technischer Hintergrund\n\nDie Amplituden von [[biosignale|Biosignalen]] sind klein: Das EKG liegt im Bereich von etwa 1 mV, das EEG im Bereich von einigen zehn µV [@webster-2010]. Netzspannung mit 230 V und 50 Hz befindet sich im Umfeld fast jedes Patienten. Schon geringe Kopplungen reichen, um ein Störsignal in der Größenordnung des Nutzsignals zu erzeugen.\n\n### Einkopplungswege\n\n| Weg | Physik | Wirkung |\n|---|---|---|\n| kapazitiv auf den Körper | Streukapazitäten zwischen Netzleitungen und Patient treiben einen Verschiebungsstrom durch den Körper zur Erde | Gleichtaktspannung am Patienten |\n| kapazitiv auf die Kabel | Verschiebungsstrom in die einzelnen Ableitungsleitungen | Störstrom fließt durch die Elektrodenimpedanzen |\n| induktiv | magnetisches Wechselfeld durchsetzt die Fläche zwischen den Ableitungskabeln | Differenzspannung proportional zur Schleifenfläche |\n\n> [!vereinfacht] Eine Gleichtaktspannung wäre für einen idealen Differenzverstärker unsichtbar. Sind die Elektrodenimpedanzen Z₁ und Z₂ aber ungleich, bilden sie mit der Eingangsimpedanz des Verstärkers zwei unterschiedliche Spannungsteiler. Ein Teil der Gleichtaktspannung erscheint dadurch als Differenzspannung – und wird wie ein EKG-Signal verstärkt („Potentialteilereffekt“) [@webster-2010].\n\n### Schutzmaßnahmen im Gerät\n\n- **[[instrumentenverstaerker|Instrumentenverstärker]]** mit hoher Gleichtaktunterdrückung (CMRR) und hoher Eingangsimpedanz [@tietze-schenk-2019].\n- **Driven-Right-Leg-Schaltung:** Die Gleichtaktspannung wird gemessen, invertiert und über die Referenzelektrode zurückgeführt; sie wird dadurch aktiv verringert [@winter-webster-1983].\n- **[[galvanische-trennung|Galvanisch getrennter]] Eingang** ([[anwendungsteile|Typ BF/CF]]) verringert Erdschleifen.\n- **Abgeschirmte Kabel**, deren Schirm auf ein definiertes Potential geführt wird.\n- **Netzfilter** (Kerbfilter, Notch) bei 50 Hz bzw. 60 Hz als digitale [[filter|Filter]]; sie können die Signalform, insbesondere schnelle QRS-Anteile, geringfügig verändern. Die Diagnostik-Bandbreite des EKG ist in Empfehlungen und Normen festgelegt [@kligfield-2007] [@iec-60601-2-25].\n\nDie Störfestigkeit gegenüber netzfrequenten Feldern ist Teil der [[emv|EMV]]-Anforderungen nach [[iec-60601-1-2]] [@iec-60601-1-2]. Abgrenzung: Hochfrequente Störungen, etwa durch HF-Chirurgie oder Funk, sind unter [[emv-stoerung]] beschrieben.\n\n### Erkennung\n\nNetzbrumm zeigt sich als gleichmäßig dicke, „verbreiterte“ Grundlinie; in der Spektralanalyse als Linie bei 50 Hz und ggf. bei 100 Hz, 150 Hz. Einige Geräte melden ein verrauschtes Signal als technischen Hinweis; ein eigener Alarm ist nicht üblich. Brumm kann Fehlalarme (z. B. falsche Herzfrequenz) auslösen.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Brumm nur in einzelnen Ableitungen | Elektroden dieser Ableitungen, Impedanz | Elektroden erneuern |\n| Brumm in allen Ableitungen | Referenzelektrode, Stammkabel, Filtereinstellung | RL-Elektrode neu kleben, Kabel tauschen, Filter prüfen |\n| Brumm verschwindet bei Akkubetrieb | Netzteil, Schutzleiter, Erdschleife | Gerät elektrisch prüfen lassen |\n| Brumm abhängig von Umgebung (Bett, Leuchte) | Nahe Störquellen | Kabelführung ändern, Störquelle prüfen lassen |\n| Brumm trotz Simulator am Gerät | Gerät selbst (Eingangsstufe, Schirm) | Gerät zur Medizintechnik |\n\n> [!praxis] Ein schneller Test: Patientensimulator statt Patient anschließen. Ist das Signal dann sauber, liegt die Ursache bei Elektroden, Kabelführung oder Umgebung, nicht im Gerät.\n\n## Prävention\n\n- Sorgfältige Hautvorbereitung und frische Elektroden derselben Sorte.\n- Kabel gebündelt und kurz führen, getrennt von Netzkabeln.\n- Elektrische Installation in [[medizinisch-genutzte-bereiche|medizinisch genutzten Bereichen]] nach [[din-vde-0100-710]] und regelmäßige Prüfungen ([[stk]], [[dguv-vorschrift-3]]) [@din-vde-0100-710] [@mpbetreibv].\n\n> [!hinweis] Herstellerspezifische Filterbezeichnungen und Fehlercodes stehen in den Service-Unterlagen (siehe [[fehlercodes]]).",
+  "related": [
+    "elektrodenproblem",
+    "emv-stoerung",
+    "bewegungsartefakt",
+    "instrumentenverstaerker",
+    "filter",
+    "emv",
+    "galvanische-trennung",
+    "biosignale",
+    "ekg-geraet",
+    "iec-60601-1-2"
+  ],
+  "sources": [
+    "webster-2010",
+    "winter-webster-1983",
+    "tietze-schenk-2019",
+    "kligfield-2007",
+    "iec-60601-2-25",
+    "iec-60601-1-2",
+    "din-vde-0100-710",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

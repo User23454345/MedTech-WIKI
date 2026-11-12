@@ -1,0 +1,60 @@
+{
+  "id": "weinmann",
+  "type": "manufacturer",
+  "title": "Weinmann Emergency",
+  "aliases": [
+    "WEINMANN Emergency Medical Technology GmbH + Co. KG",
+    "WEINMANN",
+    "Weinmann Geräte für Medizin"
+  ],
+  "category": "hersteller",
+  "summary": "WEINMANN Emergency mit Sitz in Hamburg ist ein Hersteller von Medizintechnik für Notfall-, Transport- und Katastrophenmedizin. Schwerpunkte sind Notfall- und Transportbeatmungsgeräte, Defibrillation, Absaugung und Sauerstofftherapie.",
+  "headquarters": "Hamburg, Deutschland",
+  "founded": "1874",
+  "website": "https://www.weinmann-emergency.com/",
+  "productLines": [
+    {
+      "device": "transportbeatmungsgeraet",
+      "models": [
+        "MEDUMAT Standard²",
+        "MEDUMAT Transport",
+        "MEDUMAT Easy CPR"
+      ],
+      "note": "Notfall- und Transportbeatmung, MEDUMAT Easy CPR mit Ausrichtung auf die Beatmung unter Reanimation."
+    },
+    {
+      "device": "defibrillator",
+      "models": [
+        "MEDUCORE Standard²"
+      ],
+      "note": "Kombination aus Defibrillator und Monitor für den Rettungsdienst."
+    },
+    {
+      "device": "absauggeraet",
+      "models": [
+        "ACCUVAC"
+      ],
+      "note": "Tragbare Absaugpumpen für den Rettungsdienst."
+    }
+  ],
+  "body": "## Überblick\n\n**WEINMANN Emergency** ist ein mittelständisches Familienunternehmen aus Hamburg, das sich auf Medizintechnik für die präklinische Notfallmedizin und den Patiententransport spezialisiert hat [@weinmann-web]. Die Geräte sind auf robuste Bauweise, geringes Gewicht und Bedienbarkeit unter Einsatzbedingungen ausgelegt.\n\n## Geschichte in Stichpunkten\n\n* **1874:** Gründung des Unternehmens in Ludwigshafen am Rhein.\n* **1956:** Verlagerung des Unternehmens nach Hamburg.\n* **20. Jahrhundert:** Entwicklung von Sauerstoff- und Beatmungsgeräten für Rettungsdienst, Militär und Katastrophenschutz.\n* **2010er Jahre:** Das Heimtherapiegeschäft (Schlaf- und Beatmungstherapie) wird abgegeben und Teil von [[loewenstein-medical|Löwenstein Medical]]; der verbleibende Bereich firmiert als **WEINMANN Emergency**.\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Beatmung | [[transportbeatmungsgeraet|Notfall- und Transportbeatmungsgeräte]] |\n| Defibrillation/Monitoring | [[defibrillator|Defibrillatoren]] mit Monitoringfunktion |\n| Absaugung | [[absauggeraet|Mobile Absauggeräte]] |\n| Sauerstoff | Druckminderer, Sauerstoffinhalation |\n| Systemlösungen | Tragesysteme und Halterungen für Fahrzeuge |\n\n## Bedeutung für die Medizintechnik\n\nIm deutschsprachigen Rettungsdienst gehören WEINMANN-Beatmungsgeräte zur verbreiteten Ausstattung von Rettungs- und Notarztwagen. Transportbeatmungsgeräte werden häufig pneumatisch aus der Sauerstoffflasche betrieben und müssen auch bei Vibration, Kälte und wechselnder Spannungsversorgung zuverlässig arbeiten. Normativ werden Notfall- und Transportbeatmungsgeräte in einem eigenen besonderen Teil, ISO 80601-2-84, behandelt und von den Intensivbeatmungsgeräten ([[iso-80601-2-12|ISO 80601-2-12]]) abgegrenzt; maßgeblich ist die jeweils gültige Fassung.\n\n> [!hinweis] Geräte zur maschinellen Beatmung und [[defibrillator|Defibrillatoren]] gehören zu den in Anlage 1 der [[mpbetreibv|MPBetreibV]] genannten Produkten, für die eine [[stk|sicherheitstechnische Kontrolle]] vorgeschrieben ist; Fristen spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 i. V. m. Anlage 1 MPBetreibV 2025) [@mpbetreibv]. Für Absauggeräte ergibt sich eine STK-Pflicht nicht aus Anlage 1, sondern nur, wenn der Hersteller sicherheitstechnische Kontrollen vorschreibt.\n\n> [!praxis] Im Rettungsdienst sind tägliche Funktionsprüfungen bei Fahrzeugübernahme (Gasvorrat, Akkus, Selbsttest, Zubehör) üblich – sie ersetzen nicht die vorgeschriebenen Prüfungen durch befugte Personen.\n\nFür die Bedienung gelten im Rettungsdienst wie in der Klinik die Betreiberpflichten zur [[einweisung]] der Anwender; für Anlage-1-Produkte wie Beatmungsgeräte und Defibrillatoren sind sie besonders streng geregelt. Weil Notfallgeräte selten, aber unter hohem Zeitdruck eingesetzt werden, legen Hersteller besonderen Wert auf [[gebrauchstauglichkeit]] (wenige Bedienschritte, voreingestellte Notfallmodi, gut ablesbare Anzeigen).\n\n## Einordnung im Markt\n\nWettbewerber in der Notfallmedizin sind u. a. [[draeger]], [[hamilton-medical]] (Transportbeatmung), [[corpuls]], [[zoll]] und [[stryker]] (Defibrillation).",
+  "related": [
+    "transportbeatmungsgeraet",
+    "defibrillator",
+    "absauggeraet",
+    "notfallmedizin",
+    "stk",
+    "loewenstein-medical",
+    "corpuls",
+    "draeger",
+    "zoll",
+    "stryker",
+    "mpbetreibv"
+  ],
+  "sources": [
+    "weinmann-web",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

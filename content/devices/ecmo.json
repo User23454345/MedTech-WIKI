@@ -1,0 +1,70 @@
+{
+  "id": "ecmo",
+  "type": "device",
+  "title": "ECMO-System",
+  "aliases": [
+    "ECMO",
+    "extrakorporale Membranoxygenierung",
+    "ECLS",
+    "extracorporeal life support",
+    "VV-ECMO",
+    "VA-ECMO",
+    "ECLS-System"
+  ],
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 21,
+  "domains": [
+    "intensivmedizin",
+    "herzchirurgie",
+    "kardiologie"
+  ],
+  "summary": "ECMO-Systeme übernehmen über Tage bis Wochen ganz oder teilweise den Gasaustausch der Lunge (veno-venöse ECMO) oder zusätzlich die Kreislauffunktion (veno-arterielle ECMO). Sie bestehen aus Zentrifugalpumpe, Membranoxygenator, Konsole mit Sensorik sowie Kanülen und werden auf der Intensivstation, im Herzkatheterlabor und im Transport eingesetzt.",
+  "sections": {
+    "purpose": "Die ECMO ist eine Rettungstherapie beim schwersten Lungenversagen (z. B. ARDS), wenn die lungenprotektive Beatmung mit dem [[beatmungsgeraet]] nicht ausreicht, sowie beim kardiogenen Schock und in der Reanimation (eCPR). Sie überbrückt bis zur Erholung, zur Transplantation oder zu einem dauerhaften [[vad|Herzunterstützungssystem]].",
+    "principle": "## Konfigurationen\n\n| Modus | Kanülierung | ersetzt |\n|---|---|---|\n| VV-ECMO | Blut aus und zurück in das venöse System | Lungenfunktion ([[gasaustausch]]) |\n| VA-ECMO | Blut aus dem venösen in das arterielle System | Lungen- und (teilweise) Herzfunktion |\n\n## Komponenten\n\nEine **Zentrifugalpumpe** – ein Laufrad, angetrieben von einem [[bldc-motor|bürstenlosen Motor]] über magnetische Kopplung oder magnetisch gelagert – erzeugt den Blutfluss; dieser hängt bei konstanter Drehzahl von Vor- und Nachlast ab und wird deshalb mit einem auf die Leitung aufgesetzten Ultraschall-[[flowsensor]] gemessen (meist nach dem Laufzeitdifferenzverfahren: Schall braucht mit der Strömung weniger Zeit als gegen sie). Der **Membranoxygenator** besteht meist aus plasmadichten Hohlfasern aus Polymethylpenten; Sauerstoffzufuhr über die FiO₂ des Frischgases, CO₂-Elimination über den Sweep-Gasfluss ([[diffusion-osmose|Diffusion]]). Ein Wärmetauscher hält die Bluttemperatur [@kramme-2017].\n\n## Überwachung\n\n[[drucksensor|Drucksensoren]] vor der Pumpe (Ansaugdruck, negativ), vor und nach dem Oxygenator erfassen Ansaugprobleme und den Druckabfall über dem Oxygenator – ein steigender Gradient weist auf Gerinnselbildung hin. [[luftblasendetektor|Luftblasendetektoren]], venöse Sättigungs- und Hämatokritmessung ergänzen die Sensorik. Die Antikoagulation wird laborchemisch überwacht.\n\n> [!praxis] Das „Chattern“ (Zittern) der venösen Leitung zeigt einen zu hohen Sog an, z. B. bei Volumenmangel – die Drehzahl muss angepasst werden.\n\n> [!hinweis] Eine Handkurbel oder Notfallantrieb gehört zur Ausstattung, damit die Pumpe bei Konsolenausfall weiter betrieben werden kann."
+  },
+  "manufacturers": [
+    {
+      "ref": "getinge",
+      "models": [
+        "Cardiohelp"
+      ],
+      "note": "Kompaktes, transportfähiges ECLS-System (Marke Maquet)."
+    },
+    {
+      "ref": "fresenius-medical-care",
+      "models": [
+        "Novalung"
+      ],
+      "note": "Über die Tochter Xenios."
+    },
+    {
+      "ref": "abbott",
+      "models": [
+        "CentriMag"
+      ],
+      "note": "Extrakorporale Zentrifugalpumpe, u. a. für ECLS."
+    }
+  ],
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.4 – nichtimplantierbare aktive Produkte zur unmittelbaren Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potenziellem Druckaufbau; erfasst sind auch aufbereitete körpereigene Flüssigkeiten (hier: Blut), deren Einbringen mit einer Entnahmefunktion direkt gekoppelt ist; nicht in Anlage 2 aufgeführt.",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); Wartung der Konsole, des Notfallantriebs und des Wärmegeräts nach Herstellerangabe; Einmalsets (Pumpenkopf, Oxygenator, Schläuche) werden nach Herstellerangabe bzw. klinischem Bedarf gewechselt."
+  },
+  "related": [
+    "herz-lungen-maschine",
+    "beatmungsgeraet",
+    "gasaustausch",
+    "vad",
+    "luftblasendetektor",
+    "intensivmedizin"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

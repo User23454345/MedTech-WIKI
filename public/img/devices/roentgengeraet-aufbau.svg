@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Schematischer Aufbau eines Röntgenarbeitsplatzes (Projektionsradiographie)</title>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="24" text-anchor="middle" font-size="15" font-weight="600">Röntgenarbeitsplatz – schematischer Aufbau</text>
+
+  <!-- Deckenschiene -->
+  <rect x="40" y="46" width="290" height="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="40" y="40" font-size="13">Deckenschiene</text>
+  <!-- Teleskopsäule (Deckenstativ) -->
+  <rect x="172" y="54" width="16" height="30" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="175" y="84" width="10" height="26" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="104" y1="80" x2="172" y2="72" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="84" font-size="13">Deckenstativ</text>
+  <!-- Röhrenstrahler -->
+  <rect x="130" y="110" width="100" height="32" rx="10" fill="#e6f7f5" stroke="#0b2545" stroke-width="2"/>
+  <circle cx="180" cy="126" r="6" fill="#0d9488"/>
+  <line x1="118" y1="110" x2="130" y2="118" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="112" font-size="13">Röhrenstrahler</text>
+  <!-- Tiefenblende + DFP-Kammer -->
+  <path d="M158,142 L202,142 L196,162 L164,162 Z" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="162" y="163" width="36" height="7" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <line x1="106" y1="148" x2="158" y2="150" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="152" font-size="13">Tiefenblende</text>
+  <line x1="134" y1="176" x2="162" y2="168" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="180" font-size="13">DFP-Messkammer</text>
+
+  <!-- Strahlenbündel -->
+  <path d="M170,170 L190,170 L222,292 L138,292 Z" fill="#14b8a6" fill-opacity="0.18" stroke="#14b8a6" stroke-width="1.2"/>
+  <line x1="180" y1="170" x2="180" y2="292" stroke="#0d9488" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- Patient -->
+  <ellipse cx="180" cy="234" rx="80" ry="13" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="58" y1="210" x2="104" y2="230" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="206" font-size="13">Patient</text>
+  <!-- Tischplatte -->
+  <rect x="60" y="248" width="240" height="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Rasterlade: Raster, AEC, Detektor -->
+  <rect x="122" y="262" width="116" height="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.2"/>
+  <g stroke="#0b2545" stroke-width="0.8">
+    <line x1="130" y1="262" x2="130" y2="268"/><line x1="140" y1="262" x2="140" y2="268"/><line x1="150" y1="262" x2="150" y2="268"/>
+    <line x1="160" y1="262" x2="160" y2="268"/><line x1="170" y1="262" x2="170" y2="268"/><line x1="180" y1="262" x2="180" y2="268"/>
+    <line x1="190" y1="262" x2="190" y2="268"/><line x1="200" y1="262" x2="200" y2="268"/><line x1="210" y1="262" x2="210" y2="268"/>
+    <line x1="220" y1="262" x2="220" y2="268"/><line x1="230" y1="262" x2="230" y2="268"/>
+  </g>
+  <rect x="122" y="272" width="116" height="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.2"/>
+  <rect x="122" y="282" width="116" height="10" fill="#0d9488" stroke="#0b2545" stroke-width="1.2"/>
+  <line x1="82" y1="266" x2="122" y2="265" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="270" font-size="13">Raster</text>
+  <line x1="104" y1="292" x2="122" y2="276" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="296" font-size="13">AEC-Kammer</text>
+  <line x1="108" y1="318" x2="122" y2="290" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="322" font-size="13">Flachdetektor</text>
+  <!-- Tischsäule -->
+  <rect x="170" y="292" width="20" height="58" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="140" y="350" width="80" height="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="180" y="382" text-anchor="middle" font-size="13">Patientenlagerungstisch (Rastertisch)</text>
+
+  <!-- Rasterwandstativ -->
+  <rect x="338" y="96" width="12" height="254" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="318" y="150" width="20" height="104" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="332" y="156" width="4" height="92" fill="#0d9488"/>
+  <rect x="324" y="350" width="40" height="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="360" y1="118" x2="350" y2="132" stroke="#0b2545" stroke-width="1"/>
+  <text x="352" y="96" font-size="13">Rasterwand-</text>
+  <text x="352" y="112" font-size="13">stativ</text>
+
+  <!-- Generator -->
+  <rect x="390" y="270" width="54" height="80" rx="3" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="398" y1="286" x2="436" y2="286" stroke="#0b2545" stroke-width="1"/>
+  <line x1="398" y1="296" x2="436" y2="296" stroke="#0b2545" stroke-width="1"/>
+  <text x="417" y="262" text-anchor="middle" font-size="13">Generator</text>
+  <!-- Hochspannungskabel -->
+  <path d="M390,310 L310,310 L310,68 L230,68 L215,110" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="244" y="200" font-size="13" fill="#0d9488">HV-Kabel</text>
+
+  <!-- Strahlenschutzwand -->
+  <rect x="470" y="150" width="10" height="208" fill="#0b2545"/>
+  <rect x="470" y="226" width="10" height="40" fill="#14b8a6"/>
+  <text x="475" y="128" text-anchor="middle" font-size="13">Strahlen-</text>
+  <text x="475" y="143" text-anchor="middle" font-size="13">schutzwand</text>
+  <line x1="484" y1="246" x2="500" y2="206" stroke="#0b2545" stroke-width="1"/>
+  <text x="492" y="198" font-size="13">Bleiglas</text>
+
+  <!-- Bedienplatz -->
+  <rect x="512" y="248" width="62" height="42" rx="3" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="539" y="290" width="8" height="10" fill="#f1f5f9" stroke="#0b2545" stroke-width="1"/>
+  <rect x="496" y="300" width="94" height="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="504" y1="308" x2="504" y2="358" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="582" y1="308" x2="582" y2="358" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="543" y="330" text-anchor="middle" font-size="13">Bedienplatz</text>
+
+  <!-- Boden -->
+  <line x1="20" y1="358" x2="590" y2="358" stroke="#0b2545" stroke-width="2"/>
+</svg>

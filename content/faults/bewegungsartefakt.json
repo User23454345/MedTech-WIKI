@@ -1,0 +1,70 @@
+{
+  "id": "bewegungsartefakt",
+  "type": "fault",
+  "title": "Bewegungsartefakte",
+  "aliases": [
+    "Motion Artifact",
+    "Bewegungsartefakt",
+    "Artefakt",
+    "Störsignal durch Bewegung",
+    "Bewegungsunschärfe"
+  ],
+  "category": "fehler",
+  "summary": "Durch Bewegung des Patienten, der Sensoren oder der Kabel verursachte Störungen eines Messsignals oder Bildes. Sie führen zu Fehlmessungen, Fehlalarmen und Messabbrüchen bei EKG, Pulsoxymetrie, nichtinvasiver Blutdruckmessung und bildgebenden Verfahren.",
+  "devices": [
+    "patientenmonitor",
+    "ekg-geraet",
+    "langzeit-ekg",
+    "ergometer",
+    "pulsoxymeter",
+    "nibp-messgeraet",
+    "langzeit-blutdruck",
+    "defibrillator",
+    "ctg",
+    "eeg-geraet",
+    "computertomograph",
+    "mrt"
+  ],
+  "causes": [
+    "Bewegung an der Grenzfläche Haut–Elektrode verändert die Halbzellenspannung und Impedanz der [[ekg-elektrode]] (Elektrodenartefakt).",
+    "Muskelaktivität (Zittern, Kältezittern, Pressen, Krampfanfall) überlagert das EKG mit EMG-Signalen.",
+    "Kabelbewegung und Reibung erzeugen Störspannungen (triboelektrische und kapazitive Effekte).",
+    "Lose sitzender Pulsoxymetriesensor, Fremdlicht oder Bewegung des Messorts verändern das [[photoplethysmographie|PPG-Signal]].",
+    "Bewegung, Sprechen oder Muskelanspannung während der [[oszillometrie|oszillometrischen]] Blutdruckmessung erzeugen Druckschwankungen in der Manschette.",
+    "Transport im Fahrzeug, Thoraxkompressionen oder Beatmung während einer Defibrillator-Analyse.",
+    "Bei Bildgebung: Patientenbewegung, Atmung oder Herzbewegung während der Aufnahme ([[bildartefakte]])."
+  ],
+  "actions": [
+    "**Patienten zuerst:** Einen auffälligen Messwert oder Alarm immer am klinischen Bild prüfen (Puls tasten, Patient ansehen) – nicht jeden Alarm als Artefakt abtun.",
+    "Sensoren und Elektroden korrekt und fest anbringen; Elektroden auf Knochen bzw. muskelarmen Stellen platzieren.",
+    "Kabel zugentlastet fixieren, Kabelschlaufen vermeiden.",
+    "Pulsoxymetrie: geeigneten Sensortyp und Messort wählen (z. B. Klebesensor statt Clip), vor Fremdlicht schützen.",
+    "NIBP: Messung in Ruhe wiederholen, Arm entspannt auf Herzhöhe lagern.",
+    "Bei AED-Analyse den Patienten nicht berühren, Fahrzeug ggf. anhalten, Analyse nach Sprachanweisung wiederholen.",
+    "Treten Artefakte trotz korrekter Anwendung auf, Kabel und Sensoren mit Simulator prüfen lassen."
+  ],
+  "body": "## Technischer Hintergrund\n\nEin Bewegungsartefakt ist kein Gerätefehler im engeren Sinn, sondern eine Störung der [[messkette]] am Übergang zum Patienten. Die Störsignale liegen häufig im **gleichen Frequenzbereich** wie das Nutzsignal und lassen sich deshalb nicht einfach wegfiltern [@webster-2010].\n\n### Wie Bewegung das Signal stört\n\n| Messverfahren | Mechanismus | Typische Folge |\n|---|---|---|\n| EKG ([[ekg-geraet]], [[patientenmonitor]]) | Verschiebung der Ionenschicht an der Elektrode, Muskelpotentiale | Grundlinienschwankung, Pseudo-Arrhythmien, falsche Herzfrequenz |\n| Pulsoxymetrie ([[pulsoxymeter]]) | Bewegung verändert den Lichtweg, venöses Blut pulsiert mit | falsch niedrige SpO₂, falsche Pulsfrequenz |\n| NIBP ([[nibp-messgeraet]]) | Druckschwankungen in der Manschette überlagern die Oszillationen | Messabbruch, falsche Werte, verlängerte Messung |\n| Defibrillator-Analyse | Bewegung imitiert Rhythmusmerkmale | Analyse gestört, „Bewegung erkannt“ |\n| CT/MRT | Objektbewegung während der Datenerfassung | Unschärfe, Doppelkonturen; im CT Streifenartefakte, im MRT Geisterbilder in Phasenkodierrichtung |\n\n> [!vereinfacht] Die Pulsoxymetrie berechnet die Sättigung aus dem Verhältnis der pulsatilen Anteile von rotem und infrarotem Licht (Ratio R, siehe [[lambert-beer]]). Bewegung erzeugt in beiden Wellenlängen ähnliche Signaländerungen, R nähert sich dem Wert 1 – das entspricht einer angezeigten Sättigung im Bereich um 85 %. Daher zeigen gestörte Messungen oft falsch niedrige Werte [@jubran-2015] [@webster-2010].\n\n### Gegenmaßnahmen im Gerät\n\n- **[[filter|Filterung]]:** Hochpass gegen Grundliniendrift im EKG (Überwachungsfilter), wobei ein zu hoch gewählter Hochpass die ST-Strecke verfälschen kann [@kligfield-2007].\n- **Artefakterkennung:** Algorithmen erkennen untypische Signalformen und unterdrücken Alarme oder kennzeichnen Werte als unsicher.\n- **Mittelung und Alarmverzögerung:** reduzieren Fehlalarme, verlängern aber die Reaktionszeit ([[alarmsystem]]).\n- **Bewegungsdetektion:** Manche Defibrillatoren werten zusätzlich Änderungen der über die Pads gemessenen transthorakalen Impedanz aus, um Bewegung zu erkennen, und unterbrechen dann die Analyse (herstellerspezifisch). Die Norm [[iec-60601-2-4]] legt Anforderungen an die Rhythmuserkennung fest, nicht ein bestimmtes Detektionsverfahren [@iec-60601-2-4].\n- **NIBP:** Plausibilitätsprüfung der Oszillationshüllkurve, ggf. Wiederholung der Messung [@iec-80601-2-30-2018].\n- **Bildgebung:** kurze Aufnahmezeiten, EKG- oder Atemtriggerung, Bewegungskorrektur.\n\n### Bedeutung für die Alarmierung\n\nArtefakte sind eine Hauptursache für Fehlalarme und tragen wesentlich zur [[alarmmuedigkeit]] bei [@sendelbach-funk-2013]. Umgekehrt dürfen Artefaktunterdrückung und Alarmverzögerung echte Ereignisse nicht verdecken – diese Abwägung trifft der Hersteller im Rahmen von [[iec-60601-1-8]] und [[iso-14971|Risikomanagement]].\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Unruhige EKG-Grundlinie | Elektrodenposition, Hautvorbereitung, Kabelfixierung | Elektroden über Knochen platzieren, Kabel fixieren |\n| Hochfrequentes Zittern im EKG | Muskelzittern, Kälte | Patienten wärmen und lagern; EMG-Filter nur bewusst nutzen |\n| SpO₂ schwankt, Pulskurve unregelmäßig | Sensorsitz, Messort, Pulsfrequenz-Vergleich mit EKG | Klebesensor, anderer Messort |\n| NIBP bricht ab | Bewegung, Manschettensitz, Größe | In Ruhe wiederholen, passende Manschette |\n| Artefakte auch beim ruhigen Patienten | Kabelbruch, Sensordefekt | Kabel/Sensor tauschen, Simulatortest |\n\n## Prävention\n\n- Standardisierte Elektroden- und Sensorplatzierung, regelmäßiger Elektrodenwechsel.\n- Bewegungstolerante Messverfahren und Sensoren dort einsetzen, wo Bewegung unvermeidbar ist (Transport, Kinder).\n- Schulung der Anwender im Erkennen von Artefakten ([[einweisung]]).\n\n> [!hinweis] Herstellerspezifische Artefaktmeldungen und Fehlercodes stehen in den Gebrauchsanweisungen und Service-Unterlagen (siehe [[fehlercodes]]).",
+  "related": [
+    "elektrodenproblem",
+    "netzstoerung",
+    "photoplethysmographie",
+    "oszillometrie",
+    "filter",
+    "alarmmuedigkeit",
+    "bildartefakte",
+    "messkette",
+    "pulsoxymeter",
+    "patientenmonitor"
+  ],
+  "sources": [
+    "webster-2010",
+    "jubran-2015",
+    "kligfield-2007",
+    "iec-60601-2-4",
+    "iec-80601-2-30-2018",
+    "sendelbach-funk-2013",
+    "iec-60601-1-8"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

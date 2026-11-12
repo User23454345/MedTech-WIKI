@@ -1,0 +1,161 @@
+{
+  "id": "atemgasbefeuchter",
+  "type": "term",
+  "title": "Atemgasbefeuchter und HME-Filter",
+  "aliases": [
+    "Atemgasbefeuchtung",
+    "Aktiver Befeuchter",
+    "Heated humidifier",
+    "HME",
+    "HMEF",
+    "Wärme- und Feuchtigkeitstauscher",
+    "Künstliche Nase",
+    "Heat and moisture exchanger"
+  ],
+  "category": "komponenten",
+  "summary": "Komponenten zur Konditionierung des Atemgases bei Umgehung der oberen Atemwege: aktive Befeuchter erwärmen Wasser in einer beheizten Kammer, passive Wärme- und Feuchtigkeitstauscher (HME/HMEF) speichern Wärme und Feuchte des Ausatemgases. Ziel ist eine physiologische Temperatur und Feuchte des Einatemgases.",
+  "body": "## Begriff\n\nBei normaler Nasenatmung wird die Einatemluft in den oberen Atemwegen erwärmt und befeuchtet; unterhalb der Hauptcarina ist sie praktisch auf Körpertemperatur und vollständig wasserdampfgesättigt (*isotherme Sättigungsgrenze*). Werden die oberen Atemwege durch einen Endotrachealtubus oder eine Trachealkanüle umgangen, entfällt diese Konditionierung. Medizinische Gase aus der Wandversorgung sind zudem praktisch trocken. **Atemgasbefeuchter** übernehmen deshalb die Aufgabe der Nase [@oczenski-2017] [@schmidt-lang-2019].\n\nMan unterscheidet zwei Prinzipien:\n\n| Prinzip | Funktionsweise | Energiebedarf |\n|---|---|---|\n| **Aktiver Befeuchter** (*heated humidifier*) | Beheizte Wasserkammer gibt Wasserdampf an das Atemgas ab; Regelung über Temperatursensoren | Elektrisch, mit [[heizelement|Heizplatte]] |\n| **Passiver Befeuchter** – Wärme- und Feuchtigkeitstauscher (**HME**, *heat and moisture exchanger*), mit Filterfunktion **HMEF** | Speichert Wärme und Feuchte des Ausatemgases und gibt sie bei der nächsten Einatmung ab („künstliche Nase“) | Keiner |\n\n## Physikalische Grundlagen\n\n### Absolute und relative Feuchte\n\nDie **absolute Feuchte** AH ist die Masse Wasserdampf pro Volumen Gas (mg/l). Die **relative Feuchte** RH ist das Verhältnis zur maximal möglichen Menge bei der jeweiligen Temperatur. Die Sättigungsmenge steigt stark mit der Temperatur:\n\n| Temperatur | Absolute Feuchte bei Sättigung (ca.) |\n|---|---|\n| 20 °C | ca. 17 mg/l |\n| 30 °C | ca. 30 mg/l |\n| 34 °C | ca. 38 mg/l |\n| 37 °C | ca. 44 mg/l |\n\n> [!hinweis] Die Werte sind gerundete physikalische Tabellenwerte des Wasserdampfs. Daraus folgt: Kühlt gesättigtes Gas auf dem Weg zum Patienten ab, muss Wasser auskondensieren („Rain-out“) – bei Erwärmung sinkt dagegen die relative Feuchte.\n\n> [!belegt] Für invasiv beatmete Patienten empfiehlt die AARC-Leitlinie bei aktiver Befeuchtung eine absolute Feuchte zwischen 33 und 44 mg/l bei 34 bis 41 °C an der Y-Verbindung und für HME eine Abgabe von mindestens 30 mg/l [@aarc-humidification-2012].\n\n### Folgen unzureichender Befeuchtung\n\nTrockenes, kaltes Atemgas schädigt das Flimmerepithel, verdickt das Sekret und begünstigt Sekretverhalt, Atelektasen und Tubusverlegung. Übermäßige Feuchte und Temperatur dagegen können zu Wasseransammlung und thermischer Schädigung führen [@oczenski-2017].\n\n## Aktiver Atemgasbefeuchter\n\n### Aufbau\n\n| Baugruppe | Funktion |\n|---|---|\n| Grundgerät mit Heizplatte | Erwärmt das Wasser in der Kammer; Leistungsstellung über [[pwm|PWM]] oder Schwingungspaketsteuerung |\n| Befeuchterkammer (meist Einweg) | Wasserreservoir mit großer Oberfläche; Nachfüllung über Schwimmerventil aus einem Wasserbeutel |\n| [[temperatursensor|Temperatursensoren]] am Kammerausgang und an der Y-Verbindung | Messen die Gastemperatur für die Regelung |\n| Beheiztes Schlauchsystem (Heizdraht) | Hält das Gas auf dem Weg zum Patienten über dem Taupunkt und verhindert Kondensation |\n| Steuerelektronik mit [[mikrocontroller]] | Zwei-Zonen-Regelung, Alarme (Übertemperatur, Sensorfehler, Wassermangel) |\n\n### Regelung\n\nDer Befeuchter regelt typischerweise zwei Größen: die **Kammerausgangstemperatur** (bestimmt die absolute Feuchte, da das Gas in der Kammer annähernd gesättigt wird) und die **Temperatur an der Y-Verbindung** (bestimmt, ob unterwegs Kondensat entsteht). Der Heizdraht im Inspirationsschlauch wird so geregelt, dass das Gas am Patienten leicht wärmer ist als am Kammerausgang. So bleibt die relative Feuchte knapp unter 100 % und Rain-out wird minimiert [@oczenski-2017].\n\n> [!vereinfacht] Das reale Verhalten hängt vom Flow, von der Umgebungstemperatur, von Zugluft und vom Schlauchsystem ab. Bei sehr hohen Flows (etwa in der [[high-flow-geraet|High-Flow-Therapie]]) wird die Heizleistung zum begrenzenden Faktor.\n\n### Sicherheit\n\nDie Partikularnorm ISO 80601-2-74 enthält Anforderungen an Basissicherheit und wesentliche Leistungsmerkmale aktiver Atemgasbefeuchter, darunter den Schutz vor Übertemperatur und die Angabe der Befeuchtungsleistung [@iso-80601-2-74]. Eine unabhängige Übertemperaturabschaltung ist Teil des Schutzkonzepts.\n\n> [!warnung] Heizplatte und Kammerboden werden sehr heiß. Kondensat im Schlauchsystem darf nicht zum Patienten zurücklaufen; Wasserfallen müssen tiefer liegen als der Patient.\n\n## Wärme- und Feuchtigkeitstauscher (HME/HMEF)\n\nEin HME enthält ein hygroskopisch beschichtetes Medium (Papier, Schaumstoff oder Kunststoffvlies) mit großer Oberfläche. Beim Ausatmen kondensiert Wasserdampf darauf und gibt Kondensationswärme ab; beim Einatmen verdunstet das Wasser wieder in das kältere, trockene Einatemgas. **HMEF** kombinieren dies mit einem Bakterien- und Virenfilter (elektrostatisch oder mechanisch-plissiert). Anforderungen und Prüfverfahren beschreibt ISO 9360 [@iso-9360-1].\n\n| Eigenschaft | Bedeutung |\n|---|---|\n| Feuchtigkeitsabgabe | Leistungskennwert; nimmt bei großem Atemminutenvolumen ab |\n| Totraumvolumen | Erhöht die Rückatmung von CO₂ – bei kleinen Tidalvolumina relevant |\n| Strömungswiderstand | Steigt bei Durchfeuchtung oder Sekret an |\n| Filtrationsleistung (HMEF) | Schutz von Gerät und Umgebung vor Kontamination |\n\n> [!praxis] HME und aktiver Befeuchter dürfen nicht gleichzeitig verwendet werden: Der HME saugt sich voll, sein Widerstand steigt stark an, bis hin zur Verlegung. Auch die Vernebelung von Medikamenten durch einen HME hindurch ist ungeeignet. HME werden nach Herstellerangabe gewechselt, spätestens bei sichtbarer Verschmutzung oder erhöhtem Widerstand.\n\n## Auswahl in der Praxis\n\n| Situation | Bevorzugte Lösung |\n|---|---|\n| Kurze Beatmung, Narkose, Transport | HME/HMEF |\n| Langzeitbeatmung, zähes Sekret, Hypothermie | Aktive Befeuchtung |\n| Kleine Tidalvolumina (Kinder, lungenprotektive Beatmung) | Aktive Befeuchtung oder HME mit kleinem Totraum |\n| Nichtinvasive Beatmung und High-Flow | Aktive Befeuchtung (beheizte Systeme) |\n\n[@aarc-humidification-2012] [@oczenski-2017]\n\n## Wartung und Prüfung\n\nBei aktiven Befeuchtern gehören zur Prüfung die Funktion der Temperaturregelung, der Übertemperaturschutz, die Alarme und die [[elektrische-sicherheitspruefung|elektrische Sicherheit]] nach [[iec-62353|IEC 62353]] [@iec-62353]. Defekte Temperaturfühler zeigen sich als Sensoralarm oder unplausible Temperaturen ([[sensordrift]]). Kammern und Schlauchsysteme sind meist Einmalprodukte.\n\n## Anwendung in Geräten\n\n| Gerät | Rolle |\n|---|---|\n| [[beatmungsgeraet]] | Aktiver Befeuchter oder HME im Patientenschlauchsystem |\n| [[anaesthesiegeraet]] | HMEF am Tubus; das Kreissystem mit [[co2-absorber|CO₂-Absorber]] trägt bei Niedrigfluss selbst zur Befeuchtung bei |\n| [[high-flow-geraet]] | Integrierte beheizte Befeuchtung, Voraussetzung für hohe Flows |\n| [[cpap-geraet]] und [[heimbeatmungsgeraet]] | Optionaler Warmluftbefeuchter gegen Austrocknung der Schleimhäute |\n| [[transportbeatmungsgeraet]] | In der Regel HME/HMEF |\n| [[inkubator]] | Eigene Befeuchtung der Inkubatorluft (anderes Prinzip, gleiche Physik) |\n\n## Bedeutung in der Medizintechnik\n\nAtemgasbefeuchter verbinden [[lunge|Atemphysiologie]], [[waermeuebertragung|Wärmeübertragung]] und Regelungstechnik. Für Medizintechniker ist vor allem die Kette Heizelement – [[temperatursensor|Temperatursensor]] – [[regelkreis|Regelkreis]] – Alarm bedeutsam, weil sie bei jeder Prüfung und Fehlersuche im Mittelpunkt steht [@kramme-2017].\n",
+  "related": [
+    "beatmungsgeraet",
+    "high-flow-geraet",
+    "anaesthesiegeraet",
+    "heizelement",
+    "temperatursensor",
+    "regelkreis",
+    "waermeuebertragung",
+    "lunge",
+    "co2-absorber",
+    "intensivmedizin"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "atemgasbefeuchter",
+      "heizelement",
+      "joulesche-waerme"
+    ],
+    [
+      "atemgasbefeuchter",
+      "temperatursensor",
+      "regelkreis"
+    ]
+  ],
+  "sources": [
+    "oczenski-2017",
+    "schmidt-lang-2019",
+    "aarc-humidification-2012",
+    "iso-80601-2-74",
+    "iso-9360-1",
+    "iec-62353",
+    "kramme-2017"
+  ],
+  "diagram": {
+    "title": "Regelkreis eines aktiven Atemgasbefeuchters",
+    "caption": "Funktionsschema mit zwei Temperaturzonen: Kammerausgang und Y-Verbindung.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "beat",
+        "label": "Beatmungsgerät\n(trockenes Gas)",
+        "ref": "beatmungsgeraet",
+        "kind": "source",
+        "x": 90,
+        "y": 70
+      },
+      {
+        "id": "kam",
+        "label": "Befeuchter-\nkammer",
+        "kind": "process",
+        "x": 290,
+        "y": 70
+      },
+      {
+        "id": "hp",
+        "label": "Heizplatte",
+        "ref": "heizelement",
+        "kind": "actuator",
+        "x": 290,
+        "y": 220
+      },
+      {
+        "id": "hd",
+        "label": "Beheizter\nSchlauch",
+        "ref": "heizelement",
+        "kind": "actuator",
+        "x": 500,
+        "y": 70
+      },
+      {
+        "id": "ty",
+        "label": "Temperatur-\nsensoren",
+        "ref": "temperatursensor",
+        "kind": "sensor",
+        "x": 700,
+        "y": 70
+      },
+      {
+        "id": "reg",
+        "label": "Regler\n(Mikrocontroller)",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 500,
+        "y": 220
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 830,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "beat",
+        "to": "kam",
+        "kind": "gas"
+      },
+      {
+        "from": "hp",
+        "to": "kam",
+        "kind": "energy",
+        "label": "Wärme"
+      },
+      {
+        "from": "kam",
+        "to": "hd",
+        "kind": "gas",
+        "label": "gesättigt"
+      },
+      {
+        "from": "hd",
+        "to": "ty",
+        "kind": "gas"
+      },
+      {
+        "from": "ty",
+        "to": "pat",
+        "kind": "gas"
+      },
+      {
+        "from": "ty",
+        "to": "reg",
+        "kind": "signal",
+        "label": "T_ist"
+      },
+      {
+        "from": "reg",
+        "to": "hp",
+        "kind": "power"
+      },
+      {
+        "from": "reg",
+        "to": "hd",
+        "kind": "power"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

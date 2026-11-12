@@ -1,0 +1,42 @@
+{
+  "id": "iec-80601-2-49",
+  "type": "standard",
+  "title": "IEC 80601-2-49",
+  "code": "IEC 80601-2-49",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-49: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von multifunktionalen Patientenüberwachungsgeräten",
+  "scope": "Legt besondere Anforderungen an Basissicherheit und wesentliche Leistungsmerkmale von Patientenmonitoren fest, die mehrere physiologische Parameter in einem Gerät überwachen.",
+  "aliases": [
+    "DIN EN IEC 80601-2-49",
+    "EN IEC 80601-2-49",
+    "IEC 60601-2-49",
+    "Multiparametermonitor-Norm",
+    "80601-2-49"
+  ],
+  "category": "normen",
+  "summary": "Die IEC 80601-2-49 ist die besondere Festlegung für multifunktionale Patientenmonitore. Sie regelt das Zusammenspiel mehrerer Messfunktionen in einem Gerät, etwa gemeinsame Alarme, Verhalten bei Stromausfall und gegenseitige Beeinflussung, während für die einzelnen Parameter die jeweiligen Teil-2-Normen gelten.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 80601-2-49** gilt für **multifunktionale Patientenüberwachungsgeräte** – den klassischen [[patientenmonitor|Multiparameter-Patientenmonitor]], der z. B. EKG, Pulsoxymetrie, nichtinvasiven und invasiven Blutdruck, Temperatur und Atemgase in einem Gerät zusammenführt [@iec-80601-2-49]. Sie ist die Nachfolgerin der früheren IEC 60601-2-49; die Vorsilbe 80601 kennzeichnet die gemeinsame Bearbeitung durch IEC und ISO.\n\nDie Norm verfolgt einen **Baukastenansatz**: Sie regelt das Gerät als Ganzes, während für jede einzelne Messfunktion die jeweils zuständige besondere Festlegung gilt.\n\n| Parameter im Monitor | zuständige Norm |\n|---|---|\n| EKG-Überwachung | [[iec-60601-2-27]] |\n| automatisierter NIBP | [[iec-80601-2-30]] |\n| [[invasive-druckmessung|Invasiver Blutdruck]] | IEC 60601-2-34 |\n| [[pulsoxymeter|Pulsoxymetrie]] | [[iso-80601-2-61]] |\n| Atemgase (CO₂, O₂, Anästhesiegase) | [[iso-80601-2-55]] |\n| Körpertemperatur | ISO 80601-2-56 [@iso-80601-2-56] |\n\n## Zentrale Konzepte und Anforderungen\n\n### Das Gerät als System\n\nWenn mehrere Messfunktionen in einem Gehäuse oder modularen System kombiniert werden, entstehen eigene Gefährdungen:\n\n* **Gegenseitige Beeinflussung** der Messkanäle (z. B. Störungen durch die NIBP-Pumpe oder durch Impedanz-Atmungsmessung auf andere Kanäle),\n* **gemeinsame Ressourcen** (Stromversorgung, Prozessor, Display) – ein Fehler kann mehrere Parameter gleichzeitig betreffen,\n* **Modulwechsel** im laufenden Betrieb, eindeutige Zuordnung von Kurven, Werten und Alarmgrenzen zum richtigen Parameter.\n\n### Alarme\n\nEin Monitor ist vor allem ein **Alarmgeber**. Die Norm konkretisiert die Anforderungen der Ergänzungsnorm [[iec-60601-1-8]] für Monitore: Priorisierung physiologischer und technischer Alarme, Alarmgrenzen, Voreinstellungen, Verhalten beim Neustart und Anforderungen an **verteilte Alarmsysteme** (Weiterleitung an Zentrale oder mobile Endgeräte). Siehe [[alarmsystem]] und [[alarmmuedigkeit]].\n\n> [!vereinfacht] Die Einzelnormen sorgen dafür, dass jeder Messwert für sich stimmt; die IEC 80601-2-49 sorgt dafür, dass der Monitor als Ganzes verlässlich bleibt und kein Alarm „untergeht“.\n\n### Stromversorgung und Datenhaltung\n\nGefordert werden u. a. ein definiertes Verhalten bei Netzausfall und Akkubetrieb (siehe [[lithium-ionen-akku]], [[akkufehler]]), Warnung vor Erschöpfung der internen Stromquelle sowie der Erhalt von Einstellungen und Trenddaten nach kurzen Unterbrechungen. Für den Transport von Patienten gelten zusätzliche mechanische und Umgebungsanforderungen, wenn der Hersteller den Transporteinsatz vorsieht.\n\n> [!hinweis] Konkrete Zeiten (z. B. Wiederanlauf, Alarmverzögerungen) sind der jeweils gültigen Ausgabe zu entnehmen.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Rolle |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Basissicherheit |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-6]], [[iec-60601-1-8]], [[iec-60601-1-11]] | [[emv|EMV]], Usability, Alarme, Heimbereich |\n| Besondere Festlegungen | IEC 80601-2-49 + Parameter-Normen | Gesamtgerät + Einzelfunktionen |\n| Prozessnormen | [[iso-14971]], [[iec-62304]] | Risikomanagement, Software |\n| Vernetzung | IEC 80001-1 | Risikomanagement im IT-Netz [@iec-80001-1] |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen für jedes Modul die Parameter-Norm und für das Gesamtsystem die IEC 80601-2-49 erfüllen. Bei modularen Systemen ist festzulegen, welche Modulkombinationen freigegeben sind.\n\n**Betreiber** müssen nach der [[mpbetreibv|MPBetreibV]] u. a. für eine [[einweisung]] des Personals sorgen und die vom Hersteller vorgegebenen Prüfungen veranlassen. Für Monitore mit NIBP-Funktion ist zusätzlich die [[mtk|messtechnische Kontrolle]] nach § 15 i. V. m. Anlage 2 relevant [@mpbetreibv]. Bei vernetzten Überwachungsanlagen gehört die Zuverlässigkeit der Alarmweiterleitung zur Verantwortung des Betreibers.\n\n> [!praxis] In der [[funktionspruefung]] wird mit einem Multiparameter-Patientensimulator geprüft (siehe [[pruefgeraete]]): EKG- und Drucksignale, SpO₂-Simulation, Alarmauslösung und Alarmweiterleitung zur Zentrale. Ergänzend erfolgt die [[elektrische-sicherheitspruefung]] nach [[iec-62353]].\n\n## Betroffene Geräte\n\n* [[patientenmonitor]] (primär), Monitorfunktion in [[defibrillator|Defibrillatoren]] und [[anaesthesiegeraet|Anästhesiearbeitsplätzen]]\n* Parametergeräte: [[pulsoxymeter]], [[nibp-messgeraet]], [[kapnometer]], [[invasive-druckmessung]]\n* Fachbereiche: [[intensivmedizin]], [[anaesthesiologie]], [[notfallmedizin]]\n",
+  "related": [
+    "patientenmonitor",
+    "pulsoxymeter",
+    "nibp-messgeraet",
+    "kapnometer",
+    "invasive-druckmessung",
+    "iec-60601-2-27",
+    "iec-80601-2-30",
+    "iso-80601-2-55",
+    "iso-80601-2-61",
+    "iec-60601-1-8",
+    "alarmsystem",
+    "alarmmuedigkeit"
+  ],
+  "sources": [
+    "iec-80601-2-49",
+    "iec-60601-1",
+    "iso-80601-2-56",
+    "iec-80001-1",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

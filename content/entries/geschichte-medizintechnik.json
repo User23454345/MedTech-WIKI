@@ -1,0 +1,64 @@
+{
+  "id": "geschichte-medizintechnik",
+  "type": "term",
+  "title": "Geschichte der Medizintechnik",
+  "aliases": [
+    "Medizintechnikgeschichte",
+    "History of Medical Technology",
+    "Geschichte der Medizingeräte"
+  ],
+  "category": "einfuehrung",
+  "summary": "Die Medizintechnik entwickelte sich von Hörrohr und Röntgenröhre über Dialyse, Beatmung und Herzschrittmacher bis zu CT, MRT und vernetzter Software. Mit jedem Technologiesprung wuchs auch der rechtliche Sicherheitsrahmen.",
+  "body": "## Überblick\n\nDie Geschichte der [[medizintechnik|Medizintechnik]] ist eng mit der Geschichte der Physik verknüpft: Fast jede große Entdeckung – Elektrizität, [[roentgenstrahlung|Röntgenstrahlung]], [[radioaktivitaet|Radioaktivität]], [[kernspinresonanz|Kernspinresonanz]], [[laser|Laser]], Halbleiter – wurde innerhalb weniger Jahre oder Jahrzehnte medizinisch genutzt. Parallel dazu entstand ein eigenes Sicherheits- und Rechtssystem, weil technische Fortschritte immer auch neue Risiken brachten [@kramme-2017] [@bronzino-2015].\n\n> [!hinweis] Jahreszahlen in der Medizingeschichte beziehen sich je nach Quelle auf Erfindung, Erstpublikation oder ersten klinischen Einsatz. Die Tabelle nennt jeweils das gängigste Datum; maßgeblich sind die zitierten Originalarbeiten.\n\n## Vom Hörrohr zur Elektrophysiologie (19. und frühes 20. Jahrhundert)\n\nAm Anfang standen mechanische und optische Hilfsmittel. René Laennec erfand 1816 das Hörrohr (veröffentlicht 1819), den Vorläufer des Stethoskops. Mit dem Quecksilbermanometer nach Scipione Riva-Rocci (1896) und der auskultatorischen Methode nach Nikolai Korotkow (1905) wurde die nichtinvasive Messung des [[blutdruck|Blutdrucks]] klinischer Alltag – ein Prinzip, das in automatisierter Form als [[oszillometrie|Oszillometrie]] im [[nibp-messgeraet|NIBP-Messgerät]] weiterlebt.\n\nWillem Einthoven registrierte zu Beginn des 20. Jahrhunderts mit dem Saitengalvanometer die elektrische Herzaktion und begründete damit das [[ekg-geraet|Elektrokardiogramm]]; er erhielt 1924 den Nobelpreis für Medizin. Hans Berger leitete in den 1920er-Jahren erstmals Hirnströme am Menschen ab und schuf damit die Grundlage des [[eeg-geraet|EEG]]. Beide Verfahren beruhen auf dem [[aktionspotential|Aktionspotential]] erregbarer Zellen und auf der Fähigkeit, Signale im Mikro- bis Millivoltbereich zu verstärken – heute mit [[instrumentenverstaerker|Instrumentenverstärkern]] statt Galvanometern.\n\n## Die Strahlen-Revolution (ab 1895)\n\nWilhelm Conrad Röntgen entdeckte im November 1895 in Würzburg eine „neue Art von Strahlen“ und veröffentlichte die Entdeckung noch im selben Jahr [@roentgen-1895]. Innerhalb weniger Monate wurden weltweit Röntgenaufnahmen angefertigt. Kurz darauf folgten die Entdeckung der Radioaktivität und erste therapeutische Anwendungen. Die frühe Euphorie führte zu schweren Strahlenschäden bei Ärzten und Technikern – der Beginn des [[strahlenschutz|Strahlenschutzes]] [@krieger-strahlenschutz-2019].\n\nDie [[roentgenroehre|Röntgenröhre]] wurde im 20. Jahrhundert zur Drehanodenröhre weiterentwickelt; der [[roentgendetektor|Detektor]] wanderte vom Film über den Bildverstärker zum digitalen Flachdetektor. Heute regeln das [[strlschg|Strahlenschutzgesetz]] und die Strahlenschutzverordnung den Umgang [@strlschg] [@strlschv].\n\n## Organersatz und Lebenserhaltung (1940er–1960er)\n\n| Jahr | Ereignis | Heutiges Gerät |\n|---|---|---|\n| 1928/29 | „Eiserne Lunge“ nach Drinker (Unterdruckbeatmung) | – (abgelöst durch Überdruckbeatmung) |\n| 1943/44 | Willem Kolff behandelt Patienten mit einer Trommelniere [@kolff-1944] | [[dialysegeraet]], [[dialysator]] |\n| 1952 | Polio-Epidemie in Kopenhagen: Überdruckbeatmung über Tracheostoma, zunächst manuell | [[beatmungsgeraet]] |\n| 1953 | Erste erfolgreiche Operation mit einer Herz-Lungen-Maschine (John Gibbon) | [[herz-lungen-maschine]], [[ecmo]] |\n| 1958 | Erster implantierter Herzschrittmacher (Stockholm, Elmqvist und Senning) | [[herzschrittmacher]] |\n| 1960er | Gleichstrom-Defibrillation setzt sich gegenüber Wechselstrom durch | [[defibrillator]] |\n\nDie Kopenhagener Polio-Epidemie gilt als Geburtsstunde der Intensivmedizin: Hunderte Patienten mussten über Wochen beatmet werden, was den Bau maschineller Überdruck-Respiratoren vorantrieb [@oczenski-2017] [@tobin-2013]. Aus diesen pneumatisch gesteuerten Geräten wurden über mehrere Generationen elektronisch geregelte Systeme mit [[proportionalventil|Proportionalventilen]] oder [[turbine|Turbinen]], [[flowsensor|Flowsensoren]] und Mikroprozessorsteuerung.\n\n> [!vereinfacht] Die Entwicklung verlief nicht linear. Viele Prinzipien – etwa Hämodialyse oder Defibrillation – wurden zunächst im Tierversuch oder in Einzelfällen erprobt, bevor sie über Jahrzehnte zu standardisierten Geräten reiften.\n\n## Die Bildgebungs-Revolution (1970er–1980er)\n\nDie Verbindung von Messtechnik und Computer schuf völlig neue Verfahren:\n\n* **Computertomographie:** Godfrey Hounsfield stellte Anfang der 1970er-Jahre das erste klinische CT vor [@hounsfield-1973]; das mathematische Fundament – die Rekonstruktion aus Linienintegralen – hatte Johann Radon bereits 1917 beschrieben [@radon-1917]. Hounsfield und Allan Cormack erhielten 1979 den Nobelpreis. → [[computertomograph]]\n* **Magnetresonanztomographie:** Auf der Kernspinresonanz [@bloch-1946] aufbauend zeigte Paul Lauterbur 1973, wie sich mit Magnetfeldgradienten Bilder erzeugen lassen [@lauterbur-1973]. → [[mrt]], [[gradientenspule]], [[supraleitender-magnet]]\n* **Ultraschall:** Aus Sonar- und Werkstoffprüfung abgeleitet, wurde die Sonographie zu einem der am häufigsten eingesetzten bildgebenden Verfahren [@szabo-2014]. → [[ultraschallgeraet]], [[piezoelektrischer-effekt]]\n* **Pulsoxymetrie:** Takuo Aoyagi beschrieb 1974 das Prinzip, aus den pulsatilen Anteilen der Lichtabsorption die Sauerstoffsättigung zu bestimmen [@jubran-2015]. → [[pulsoxymeter]], [[photoplethysmographie]], [[lambert-beer]]\n\n## Mikroelektronik, Software und Vernetzung (ab 1980)\n\nMit dem [[mikrocontroller|Mikroprozessor]] wanderten Steuerung, Überwachung und Alarmierung in Software. Das brachte Präzision und Komfort, aber auch neue Fehlerarten. Bekanntestes Lehrbeispiel sind die Unfälle mit dem Bestrahlungsgerät Therac-25 Mitte der 1980er-Jahre, bei denen Softwarefehler zu massiven Überdosierungen führten. Sie sind bis heute das meistzitierte Lehrbeispiel dafür, dass Software eigene, systematische Sicherheitsanforderungen braucht – Anforderungen, wie sie Jahrzehnte später die Software-Lebenszyklus-Norm [[iec-62304]] (erste Ausgabe 2006) festschreibt [@iec-62304].\n\nSeit den 2000er-Jahren prägen Vernetzung ([[dicom]], [[hl7-fhir]]), minimalinvasive und robotische Chirurgie ([[op-roboter]], [[endoskop]]) sowie [[software-medizinprodukt|Software als Medizinprodukt]] die Entwicklung.\n\n## Entwicklung des Rechtsrahmens in Deutschland und Europa\n\n| Zeitraum | Regelwerk | Bedeutung |\n|---|---|---|\n| 1985 | Medizingeräteverordnung (MedGV) [@medgv-1985] | erste umfassende Sicherheitsverordnung für medizinisch-technische Geräte in der Bundesrepublik; Gerätegruppen nach Gefährdung |\n| 1990er | EU-Richtlinien für aktive implantierbare Geräte, Medizinprodukte und In-vitro-Diagnostika | europäische Harmonisierung, [[ce-kennzeichnung]] |\n| 1994/95 | Medizinproduktegesetz (MPG) | Umsetzung der Richtlinien, Ablösung der MedGV |\n| 1998 | erste Medizinprodukte-Betreiberverordnung | Betreiberpflichten, STK und MTK |\n| 2017 / 2021 | [[mdr|MDR]] und [[ivdr|IVDR]]; Geltungsbeginn der MDR im Mai 2021 [@mdr-2017] | strengere Anforderungen an klinische Bewertung, [[udi]], [[benannte-stelle|Benannte Stellen]] |\n| 2020/21 | [[mpdg|MPDG]] löst das MPG ab [@mpdg] | nationale Durchführung der MDR |\n| 2025 | Neufassung der [[mpbetreibv|MPBetreibV]] [@mpbetreibv] | STK nach § 12 i. V. m. Anlage 1, MTK nach § 15 i. V. m. Anlage 2 |\n\n> [!belegt] Die neu gefasste MPBetreibV stammt vom 14. Februar 2025 (BGBl. 2025 I Nr. 38) und ersetzt die frühere Fassung; ältere Paragraphenverweise für STK und MTK sind damit überholt [@mpbetreibv].\n\n## Bedeutung in der Medizintechnik\n\nGeschichte ist für Medizintechniker:innen kein Selbstzweck. Sie erklärt,\n\n* **warum Normen so aussehen, wie sie aussehen** – viele Anforderungen der [[iec-60601-1|IEC 60601-1]] oder an [[alarmsystem|Alarmsysteme]] sind Antworten auf konkrete Unfälle;\n* **warum Geräte ähnlich aufgebaut sind** – ein moderner [[patientenmonitor]] vereint EKG, Blutdruck und Pulsoxymetrie, die einst getrennte Erfindungen waren;\n* **warum Prüfungen Pflicht sind** – die STK nach MPBetreibV ist die Fortsetzung jahrzehntelanger Erfahrung mit Alterung, Verschleiß und Fehlbedienung.\n\nWer die Herkunft eines Prinzips kennt, findet schneller den Weg zu den Grundlagen: vom [[defibrillator]] über den [[kondensator]] zur [[elektrische-stromwirkung|Wirkung des Stroms]] am [[herz|Herzen]], oder vom [[dialysegeraet]] über den [[dialysator]] zur [[diffusion-osmose|Diffusion und Osmose]].",
+  "related": [
+    "medizintechnik",
+    "roentgenstrahlung",
+    "computertomograph",
+    "mrt",
+    "dialysegeraet",
+    "herzschrittmacher",
+    "beatmungsgeraet",
+    "mdr",
+    "mpbetreibv",
+    "patientensicherheit"
+  ],
+  "paths": [
+    [
+      "geschichte-medizintechnik",
+      "roentgenstrahlung",
+      "roentgenroehre",
+      "roentgengeraet",
+      "computertomograph"
+    ],
+    [
+      "geschichte-medizintechnik",
+      "ekg-geraet",
+      "aktionspotential",
+      "instrumentenverstaerker"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "bronzino-2015",
+    "roentgen-1895",
+    "kolff-1944",
+    "hounsfield-1973",
+    "radon-1917",
+    "bloch-1946",
+    "lauterbur-1973",
+    "jubran-2015",
+    "oczenski-2017",
+    "tobin-2013",
+    "szabo-2014",
+    "krieger-strahlenschutz-2019",
+    "iec-62304",
+    "medgv-1985",
+    "mdr-2017",
+    "mpdg",
+    "mpbetreibv",
+    "strlschg",
+    "strlschv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

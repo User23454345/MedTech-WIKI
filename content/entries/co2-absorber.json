@@ -1,0 +1,132 @@
+{
+  "id": "co2-absorber",
+  "type": "term",
+  "title": "CO₂-Absorber (Atemkalk)",
+  "aliases": [
+    "Atemkalk",
+    "Kohlendioxidabsorber",
+    "Absorberkalk",
+    "Soda lime",
+    "CO2 absorber",
+    "Absorberkartusche"
+  ],
+  "category": "komponenten",
+  "summary": "Mit Atemkalk gefüllter Behälter im Kreissystem des Narkosegeräts, der Kohlendioxid aus dem Ausatemgas chemisch bindet und so die Rückatmung ermöglicht. Grundlage der Niedrigflussnarkose; Erschöpfung wird über Farbindikator und vor allem über das inspiratorische CO₂ erkannt.",
+  "body": "## Begriff\n\nDer **CO₂-Absorber** ist ein mit **Atemkalk** gefüllter Behälter im Kreissystem des [[anaesthesiegeraet|Narkosegeräts]]. Er entfernt das vom Patienten abgeatmete Kohlendioxid chemisch aus dem Ausatemgas, sodass dieses – mit Sauerstoff und Anästhetikum ergänzt – erneut eingeatmet werden kann. Erst der Absorber macht die **Rückatmung** und damit die sparsame Niedrigfluss- und Minimal-Flow-Narkose möglich [@baum-2001] [@dorsch-2008].\n\n## Chemie des Atemkalks\n\nAtemkalk besteht überwiegend aus **Calciumhydroxid** Ca(OH)₂, enthält Wasser und – je nach Produkt – geringe Anteile stark alkalischer Aktivatoren (z. B. Natriumhydroxid). Moderne Produkte verzichten weitgehend auf Kaliumhydroxid und starke Basen, um unerwünschte Reaktionen mit Anästhetika zu vermeiden [@dorsch-2008].\n\nDie Absorption verläuft vereinfacht in drei Schritten:\n\n1. `CO₂ + H₂O → H₂CO₃` (Kohlensäurebildung im Wasserfilm der Granulatoberfläche)\n2. `H₂CO₃ + 2 NaOH → Na₂CO₃ + 2 H₂O + Wärme`\n3. `Na₂CO₃ + Ca(OH)₂ → CaCO₃ + 2 NaOH`\n\nNetto wird Calciumhydroxid zu Calciumcarbonat (Kalk) umgesetzt: `CO₂ + Ca(OH)₂ → CaCO₃ + H₂O + Wärme`. Natriumhydroxid wirkt als Katalysator und wird zurückgebildet [@dorsch-2008].\n\n> [!vereinfacht] Die Darstellung in drei Teilreaktionen ist ein Lehrbuchmodell. Bei Atemkalk ohne starke Base läuft die Reaktion direkt über das Calciumhydroxid, aber ebenfalls nur in Anwesenheit von Wasser.\n\n### Theoretische Kapazität\n\n> [!beispiel] Ca(OH)₂ hat eine molare Masse von rund 74 g/mol. Enthält 100 g Atemkalk etwa 80 g Ca(OH)₂, sind das rund 1,08 mol. Da ein Mol Ca(OH)₂ ein Mol CO₂ bindet und ein Mol Gas unter Normbedingungen etwa 22,4 l einnimmt, ergibt sich eine theoretische Obergrenze von etwa 24 l CO₂ pro 100 g. Die praktisch nutzbare Kapazität ist deutlich geringer, weil sich Kanäle bilden und die Granulatkörner nicht vollständig durchreagieren. Die Zahlen sind beispielhaft gerechnet.\n\n### Wärme und Feuchte\n\nDie Reaktion ist **exotherm** und setzt Wasser frei. Ein arbeitender Absorber ist deshalb spürbar warm, und im Kreissystem kondensiert Wasser. Wärme und Feuchte sind durchaus erwünscht, weil sie das Atemgas anwärmen und befeuchten – eine Art eingebauter [[atemgasbefeuchter|Atemgasbefeuchtung]] bei Niedrigfluss [@baum-2001].\n\n## Indikator und Erschöpfung\n\nDem Atemkalk ist ein **pH-Indikator** (häufig Ethylviolett) beigemischt. Mit sinkendem pH bei Erschöpfung schlägt die Farbe – bei Ethylviolett von weiß nach violett – um [@dorsch-2008].\n\n> [!warnung] Der Farbumschlag ist kein verlässlicher alleiniger Erschöpfungsindikator: Manche Indikatoren bleichen in Ruhephasen wieder aus, und Kanalbildung kann CO₂ durchlassen, obwohl ein Teil des Granulats noch weiß ist. Maßgeblich ist die **inspiratorische CO₂-Konzentration** in der [[kapnometer|Kapnometrie]]. Ist im Einatemgas anhaltend CO₂ messbar (FiCO₂ über null, sofern andere Ursachen wie defekte Richtungsventile ausgeschlossen sind), ist der Absorber zu wechseln.\n\n## Aufbau des Absorbers\n\n| Element | Funktion |\n|---|---|\n| Behälter (Einweg-Kartusche oder nachfüllbar) | Nimmt das Granulat auf; meist transparent zur Sichtkontrolle |\n| Granulat (Körnung im Millimeterbereich) | Kompromiss aus großer Reaktionsfläche und geringem Strömungswiderstand |\n| Siebe, Staubfilter | Halten Granulatstaub vom Atemsystem fern |\n| Dichtungen, Schnellwechseladapter | Ermöglichen Kartuschenwechsel, bei manchen Systemen während laufender Narkose |\n| Bypass bei Kartuschenwechsel (bauartabhängig) | Verhindert Leckage beim Entfernen |\n\nDer Strömungswiderstand des Granulatbetts folgt den Gesetzen der [[stroemungslehre|Strömungslehre]]: Zu feines Granulat oder Staub erhöht die Atemarbeit und kann bei Spontanatmung relevant werden.\n\n## Interaktion mit Anästhetika\n\n| Phänomen | Ursache | Gegenmaßnahme |\n|---|---|---|\n| **Compound A** aus Sevofluran | Abbau von Sevofluran an stark basischem Atemkalk, verstärkt bei niedrigem Frischgasfluss und hoher Temperatur | Atemkalk ohne bzw. mit wenig starker Base; Herstellerangaben zum Mindestfluss beachten |\n| **Kohlenmonoxid** (CO) | Abbau von Anästhetika (v. a. Desfluran) an **ausgetrocknetem** Atemkalk | Austrocknung vermeiden, z. B. kein hoher Frischgasfluss über Nacht/Wochenende bei Stillstand |\n| Starke Erwärmung | Exotherme Zersetzung von Anästhetika (beschrieben v. a. für Sevofluran an ausgetrocknetem, stark basischem bzw. KOH-haltigem Kalk); in seltenen Fällen Brände im Absorber berichtet | Ausgetrockneten Kalk wechseln, Kalk ohne starke Basen verwenden, Herstellerhinweise beachten |\n\n[@dorsch-2008] [@larsen-2018]\n\n> [!praxis] Wird ein Narkosegerät nach Betriebsende mit offenem Frischgasfluss stehen gelassen, trocknet der Kalk aus. Viele Kliniken regeln deshalb in Arbeitsanweisungen das Abschalten des Frischgases und den Wechsel bei Verdacht auf Austrocknung.\n\n## Wartung und Hygiene\n\nDer Absorber wird nach Erschöpfung bzw. nach Herstellervorgabe gewechselt; Einwegkartuschen werden entsorgt. Mehrweg-Absorberbehälter sind Teil des Atemsystems und werden nach Herstellerangabe aufbereitet ([[aufbereitung]]). Nach jedem Wechsel ist im Rahmen des Geräte-Selbsttests die **Dichtheit** des Kreissystems zu prüfen; eine undichte Kartusche führt zu [[leckage|Leckagealarmen]] und Gasverlust.\n\n## Normen\n\nAnforderungen an das Atemsystem des Anästhesiearbeitsplatzes einschließlich CO₂-Absorption sind in [[iso-80601-2-13|ISO 80601-2-13]] zusammengefasst [@iso-80601-2-13-2022].\n\n## Anwendung in Geräten\n\n| Gerät | Rolle |\n|---|---|\n| [[anaesthesiegeraet]] | Kreissystem mit Rückatmung, Grundlage der Niedrigflussnarkose |\n| [[kapnometer]] | Kein Bestandteil, aber unverzichtbare Überwachung der Absorberfunktion über das inspiratorische CO₂ |\n\nIm [[beatmungsgeraet|Intensivbeatmungsgerät]] gibt es dagegen keinen CO₂-Absorber: Es arbeitet als offenes System ohne Rückatmung, das Ausatemgas verlässt das Gerät über das [[exspirationsventil|Exspirationsventil]].\n\n## Bedeutung in der Medizintechnik\n\nDer Absorber verknüpft Chemie, [[gasaustausch|Atemphysiologie]] und Gerätetechnik. Zusammen mit dem [[narkosemittelverdampfer|Verdampfer]], dem [[co2-sensor|CO₂-Sensor]] und der Atemgasüberwachung entscheidet er über Sicherheit, Wirtschaftlichkeit und Umweltbilanz der Inhalationsanästhesie [@baum-2001].\n",
+  "related": [
+    "anaesthesiegeraet",
+    "narkosemittelverdampfer",
+    "kapnometer",
+    "co2-sensor",
+    "gasaustausch",
+    "iso-80601-2-13",
+    "leckage",
+    "atemgasbefeuchter",
+    "anaesthesiologie"
+  ],
+  "paths": [
+    [
+      "anaesthesiegeraet",
+      "co2-absorber",
+      "co2-sensor",
+      "kapnometer"
+    ]
+  ],
+  "sources": [
+    "baum-2001",
+    "dorsch-2008",
+    "larsen-2018",
+    "iso-80601-2-13-2022"
+  ],
+  "diagram": {
+    "title": "CO₂-Absorber im Kreissystem",
+    "caption": "Funktionsschema: Ausatemgas wird im Absorber von CO₂ befreit und mit Frischgas ergänzt wieder eingeatmet.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 90,
+        "y": 150
+      },
+      {
+        "id": "exv",
+        "label": "Exspirations-\nventil",
+        "ref": "exspirationsventil",
+        "kind": "actuator",
+        "x": 290,
+        "y": 240
+      },
+      {
+        "id": "abs",
+        "label": "CO₂-Absorber\n(Atemkalk)",
+        "ref": "co2-absorber",
+        "kind": "process",
+        "x": 500,
+        "y": 240
+      },
+      {
+        "id": "fg",
+        "label": "Frischgas +\nVerdampfer",
+        "ref": "narkosemittelverdampfer",
+        "kind": "source",
+        "x": 720,
+        "y": 150
+      },
+      {
+        "id": "insp",
+        "label": "Inspirations-\nschenkel",
+        "kind": "process",
+        "x": 500,
+        "y": 60
+      },
+      {
+        "id": "cap",
+        "label": "Kapnometrie\n(FiCO₂)",
+        "ref": "co2-sensor",
+        "kind": "sensor",
+        "x": 290,
+        "y": 60
+      }
+    ],
+    "edges": [
+      {
+        "from": "pat",
+        "to": "exv",
+        "kind": "gas",
+        "label": "Ausatemgas"
+      },
+      {
+        "from": "exv",
+        "to": "abs",
+        "kind": "gas"
+      },
+      {
+        "from": "abs",
+        "to": "insp",
+        "kind": "gas",
+        "label": "CO₂-frei"
+      },
+      {
+        "from": "fg",
+        "to": "insp",
+        "kind": "gas"
+      },
+      {
+        "from": "insp",
+        "to": "cap",
+        "kind": "gas"
+      },
+      {
+        "from": "cap",
+        "to": "pat",
+        "kind": "gas",
+        "label": "Einatemgas"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

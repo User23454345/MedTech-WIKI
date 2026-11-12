@@ -1,0 +1,162 @@
+{
+  "id": "blutdruck",
+  "type": "term",
+  "title": "Blutdruck (Physiologie)",
+  "aliases": [
+    "arterieller Blutdruck",
+    "blood pressure",
+    "RR",
+    "Riva-Rocci",
+    "MAP",
+    "mittlerer arterieller Druck",
+    "systolischer Blutdruck",
+    "diastolischer Blutdruck",
+    "Pulsdruck",
+    "ZVD",
+    "Hypertonie"
+  ],
+  "category": "anatomie",
+  "summary": "Druck des Blutes auf die Gefäßwand, meist als arterieller Druck mit systolischem, diastolischem und mittlerem Wert in mmHg angegeben. Er ergibt sich aus Herzzeitvolumen und peripherem Widerstand, wird reflektorisch geregelt und invasiv oder nichtinvasiv (oszillometrisch) gemessen.",
+  "body": "## Begriff\n\nDer **Blutdruck** ist der Druck, den das Blut auf die Gefäßwand ausübt, angegeben als Überdruck gegenüber dem Atmosphärendruck. Im klinischen Sprachgebrauch ist meist der **arterielle** Blutdruck im Körperkreislauf gemeint. Er ist die treibende Größe der Organdurchblutung und einer der wichtigsten Vitalparameter [@schmidt-lang-2019] [@guyton-2021]. Die physikalischen Grundlagen der Größe [[druck|Druck]] und ihrer Messung behandeln die Artikel [[druck]] und [[druckmessung]].\n\n## Kenngrößen\n\n| Größe | Definition | Typischer Wert (gesunder Erwachsener in Ruhe) |\n|---|---|---|\n| systolischer Druck (SAP) | Maximum während der Austreibungsphase | ca. 110–130 mmHg |\n| diastolischer Druck (DAP) | Minimum am Ende der Diastole | ca. 70–80 mmHg |\n| Pulsdruck (Blutdruckamplitude) | SAP − DAP | ca. 40–50 mmHg |\n| mittlerer arterieller Druck (MAP) | zeitlicher Mittelwert über einen Herzzyklus | ca. 90–95 mmHg |\n| zentralvenöser Druck (ZVD) | Druck in der oberen Hohlvene nahe dem rechten Vorhof | ca. 2–8 mmHg |\n\nDer MAP ist das Integral der Druckkurve geteilt durch die Zykluszeit. Für Ruhefrequenzen gilt die Näherung\n\n`MAP ≈ DAP + (SAP − DAP) / 3`\n\n> [!vereinfacht] Die Drittel-Regel setzt eine bestimmte Kurvenform voraus und wird bei hohen Herzfrequenzen ungenau. Invasive Monitore berechnen den MAP daher durch Integration der gemessenen Kurve; oszillometrische Geräte bestimmen ihn als Druck maximaler Oszillation [@webster-2010].\n\n### Einheiten\n\nKlinisch wird der Blutdruck traditionell in mmHg angegeben: `1 mmHg ≈ 133,322 Pa ≈ 1,36 cmH₂O`. Ein Druck von 120 mmHg entspricht also rund 16 kPa.\n\n## Physiologische Determinanten und Regulation\n\nAus dem Ohmschen Gesetz des [[blutkreislauf|Kreislaufs]] folgt:\n\n`MAP ≈ HZV · TPR + ZVD`\n\nDer Blutdruck steigt also mit dem Herzzeitvolumen (Herzfrequenz × Schlagvolumen, siehe [[herz]]) und mit dem totalen peripheren Widerstand. Geregelt wird er auf mehreren Zeitskalen:\n\n| Zeitskala | Mechanismus |\n|---|---|\n| Sekunden | **Barorezeptorreflex:** Dehnungsrezeptoren im Aortenbogen und Karotissinus melden den Druck an das Kreislaufzentrum; über Sympathikus und Parasympathikus werden Herzfrequenz, Kontraktilität und Gefäßweite angepasst. |\n| Minuten bis Stunden | hormonelle Systeme, insbesondere das Renin-Angiotensin-Aldosteron-System |\n| Tage | Salz- und Wasserausscheidung der [[niere]] (Volumenregulation) |\n\n> [!vereinfacht] Der Barorezeptorreflex ist technisch ein negativer [[regelkreis|Regelkreis]]: Istwert = Druck an den Barorezeptoren, Regler = Kreislaufzentrum im Hirnstamm, Stellgrößen = Herzfrequenz, Schlagvolumen und Gefäßtonus. Echte Regelziele verschieben sich jedoch, etwa bei Belastung oder chronischer Hypertonie.\n\n## Klassifikation\n\nDie Leitlinie der Europäischen Gesellschaft für Kardiologie von 2024 unterscheidet für Praxismessungen [@esc-hypertension-2024]:\n\n| Kategorie | Praxisblutdruck |\n|---|---|\n| nicht erhöht | unter 120 / 70 mmHg |\n| erhöht | 120–139 / 70–89 mmHg |\n| Hypertonie | ab 140 / 90 mmHg |\n\n> [!hinweis] Klassifikationen und Zielwerte ändern sich mit neuen Leitlinienfassungen und unterscheiden sich international. Für Diagnose und Therapie ist die jeweils aktuelle Leitlinie maßgeblich, nicht diese Übersicht.\n\n## Ortsabhängigkeit\n\n### Hydrostatischer Druck\n\nDer gemessene Druck hängt von der Höhe des Messorts relativ zum Herzen ab:\n\n`Δp = ρ · g · Δh`\n\n> [!beispiel] Mit ρ_Blut ≈ 1060 kg/m³ und g = 9,81 m/s² ergibt ein Höhenunterschied von 10 cm Δp ≈ 1040 Pa ≈ 7,8 mmHg. Liegt eine Blutdruckmanschette 10 cm unter Herzniveau, misst sie also einen um knapp 8 mmHg zu hohen Wert.\n\nBei der [[invasive-druckmessung|invasiven Druckmessung]] wird der Druckaufnehmer deshalb auf eine definierte Bezugshöhe (Herzhöhe, meist die phlebostatische Achse) ausgerichtet und gegen Atmosphärendruck abgeglichen („Nullabgleich“).\n\n### Pulswellenverstärkung\n\nDie Druckwelle wird auf dem Weg in die Peripherie an Gefäßverzweigungen reflektiert. In peripheren Arterien (z. B. A. radialis) ist der systolische Druck daher meist höher als in der Aorta, während der Mitteldruck nahezu gleich bleibt. Der MAP ist deshalb die robustere Vergleichsgröße zwischen verschiedenen Messorten [@guyton-2021].\n\n## Messverfahren\n\n| Verfahren | Prinzip | Typische Anwendung |\n|---|---|---|\n| invasiv | Katheter in Arterie, flüssigkeitsgefülltes System überträgt Druck auf [[drucksensor|piezoresistiven Druckaufnehmer]] | Intensivmedizin, OP, Herzkatheter |\n| auskultatorisch (Riva-Rocci/Korotkoff) | Manschette, Abhören der Strömungsgeräusche beim Ablassen | manuelle Messung |\n| oszillometrisch | Auswertung der Druckoszillationen in der Manschette, siehe [[oszillometrie]] | [[nibp-messgeraet]], [[patientenmonitor]], [[langzeit-blutdruck]] |\n\nBei der Oszillometrie entspricht der Manschettendruck mit maximaler Oszillationsamplitude näherungsweise dem MAP; systolischer und diastolischer Wert werden herstellerspezifisch, z. B. über charakteristische Amplitudenverhältnisse, berechnet [@geddes-1982]. Die klinische Genauigkeit automatischer Geräte wird nach der Normenreihe ISO 81060 validiert; die Sicherheits- und Leistungsanforderungen an automatische nichtinvasive Blutdruckmessgeräte enthält [[iec-80601-2-30|IEC 80601-2-30]] [@iso-81060-2] [@iec-80601-2-30-2018].\n\n> [!praxis] Häufige Fehlerquellen der nichtinvasiven Messung sind eine falsche Manschettengröße (zu kleine Manschette → zu hohe Werte), eine Manschette nicht auf Herzhöhe, Bewegung des Patienten ([[bewegungsartefakt]]) und Herzrhythmusstörungen, die die Oszillationsauswertung erschweren.\n\n## Bedeutung in der Medizintechnik\n\n* [[patientenmonitor|Patientenmonitore]] messen den Blutdruck invasiv (IBP) und nichtinvasiv (NIBP) und alarmieren bei Grenzwertverletzungen ([[alarmsystem]]).\n* Bei der [[invasive-druckmessung|invasiven Druckmessung]] bilden Katheter, Schlauchsystem und Druckaufnehmer ein schwingungsfähiges System; Eigenfrequenz und Dämpfung bestimmen, ob die Kurve unverfälscht dargestellt wird.\n* Die [[iabp|IABP]] wird mit dem arteriellen Druck oder EKG synchronisiert, um den diastolischen Druck anzuheben.\n* Extrakorporale Systeme ([[herz-lungen-maschine]], [[ecmo]], [[dialysegeraet]]) überwachen arterielle und venöse Leitungsdrücke als Sicherheitsgrößen.\n* In der [[mtk|messtechnischen Kontrolle]] nichtinvasiver Blutdruckmessgeräte werden u. a. die Abweichung der Druckanzeige gegenüber einem Referenzmanometer und die Dichtheit des pneumatischen Systems geprüft (§ 15 i. V. m. Anlage 2 MPBetreibV in der jeweils geltenden Fassung) [@mpbetreibv].\n\nDamit schließt sich die Kette von der Physiologie zur Technik: Blutdruck → [[druckmessung|Druckmessung]] → [[drucksensor|Drucksensor]] → [[instrumentenverstaerker|Messverstärker]] → [[analog-digital-wandler|Digitalisierung]] → Anzeige.\n",
+  "related": [
+    "blutkreislauf",
+    "herz",
+    "druck",
+    "druckmessung",
+    "drucksensor",
+    "oszillometrie",
+    "invasive-druckmessung",
+    "nibp-messgeraet",
+    "langzeit-blutdruck",
+    "patientenmonitor",
+    "iec-80601-2-30",
+    "niere"
+  ],
+  "paths": [
+    [
+      "blutdruck",
+      "druckmessung",
+      "drucksensor",
+      "instrumentenverstaerker",
+      "analog-digital-wandler",
+      "patientenmonitor"
+    ],
+    [
+      "blutdruck",
+      "oszillometrie",
+      "nibp-messgeraet",
+      "mtk"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021",
+    "webster-2010",
+    "esc-hypertension-2024",
+    "geddes-1982",
+    "iso-81060-2",
+    "iec-80601-2-30-2018",
+    "mpbetreibv"
+  ],
+  "diagram": {
+    "title": "Messkette der invasiven Blutdruckmessung",
+    "caption": "Vom arteriellen Druck zum Monitorwert (Funktionsschema, kein konkretes Produkt).",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "art",
+        "label": "Arterie\n(Blutdruck)",
+        "kind": "patient",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "kat",
+        "label": "Katheter +\nflüssigkeitsgef. System",
+        "kind": "process",
+        "x": 330,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "ds",
+        "label": "Druckaufnehmer\n(Herzhöhe, genullt)",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 570,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "br",
+        "label": "Brücken- /\nInstrumentenverstärker",
+        "ref": "instrumentenverstaerker",
+        "kind": "process",
+        "x": 790,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "adc",
+        "label": "A/D-Wandler",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 790,
+        "y": 260
+      },
+      {
+        "id": "cpu",
+        "label": "Auswertung\nSAP / DAP / MAP",
+        "ref": "druckmessung",
+        "kind": "control",
+        "x": 560,
+        "y": 260
+      },
+      {
+        "id": "mon",
+        "label": "Monitor + Alarm",
+        "ref": "patientenmonitor",
+        "kind": "output",
+        "x": 330,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "art",
+        "to": "kat",
+        "kind": "fluid",
+        "label": "Druckwelle"
+      },
+      {
+        "from": "kat",
+        "to": "ds",
+        "kind": "fluid"
+      },
+      {
+        "from": "ds",
+        "to": "br",
+        "kind": "signal",
+        "label": "µV/V/mmHg"
+      },
+      {
+        "from": "br",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "cpu",
+        "kind": "data"
+      },
+      {
+        "from": "cpu",
+        "to": "mon",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

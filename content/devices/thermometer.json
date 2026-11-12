@@ -1,0 +1,60 @@
+{
+  "id": "thermometer",
+  "type": "device",
+  "title": "Medizinisches elektrisches Thermometer",
+  "aliases": [
+    "Fieberthermometer",
+    "Elektrothermometer",
+    "Infrarot-Ohrthermometer",
+    "Stirnthermometer",
+    "Klinisches Thermometer",
+    "Temperaturmessgerät"
+  ],
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 58,
+  "domains": [
+    "intensivmedizin",
+    "anaesthesiologie",
+    "neonatologie"
+  ],
+  "summary": "Medizinische elektrische Thermometer bestimmen die Körpertemperatur entweder über einen Kontaktfühler (meist NTC-Thermistor) oder berührungslos über die Infrarotstrahlung von Trommelfell oder Stirn. Neben Handgeräten gibt es Dauermessfühler für Patientenmonitore. In Deutschland unterliegen sie der messtechnischen Kontrolle.",
+  "sections": {
+    "purpose": "Die Körpertemperatur ist ein zentraler Vitalparameter zur Erkennung von Fieber und Hypothermie sowie zur Steuerung von Wärme- und Kühlverfahren. Kontinuierliche Messung ist in Anästhesie, Intensivmedizin und Neonatologie Standard ([[thermoregulation]]) [@kramme-2017].",
+    "principle": "## Kontaktthermometer\n\nIm Messfühler sitzt ein [[temperatursensor]], meist ein **NTC-Thermistor**, dessen Widerstand mit steigender Temperatur stark abnimmt. Eine Brücken- oder Spannungsteilerschaltung, ein [[analog-digital-wandler]] und ein [[mikrocontroller]] mit Kennlinie rechnen den Widerstand in eine Temperatur um ([[spannung-strom-widerstand]]). Bis zum thermischen Gleichgewicht vergehen Sekunden bis Minuten. Viele Geräte arbeiten im **Prädiktivmodus**: Sie schätzen den Endwert aus dem Anfangsverlauf der Erwärmungskurve; im Direktmodus wird bis zum Gleichgewicht gemessen ([[waermeuebertragung]]).\n\n## Infrarotthermometer\n\nJeder Körper strahlt Wärmestrahlung ab, deren Leistung nach dem Stefan-Boltzmann-Gesetz mit der vierten Potenz der absoluten Temperatur wächst. Ein **Thermopile** (Reihenschaltung vieler Thermoelemente) misst die einfallende Strahlung relativ zur eigenen Gehäusetemperatur. Ohrthermometer zielen auf das Trommelfell, Stirnthermometer auf die Haut über der Schläfenarterie. Ergebnis und Genauigkeit hängen von Emissionsgrad, Messort, Ausrichtung und Umgebungstemperatur ab; die Geräte rechnen häufig auf eine Referenzstelle (z. B. oral oder rektal) um.\n\n> [!vereinfacht] Unterschiedliche Messorte liefern physiologisch unterschiedliche Werte – Kerntemperatur, Rektal-, Oral- und Hauttemperatur sind nicht gleich. Für Verlaufsbeurteilungen sollte immer am selben Ort mit derselben Methode gemessen werden.\n\n## Normative Anforderungen\n\nAnforderungen an Sicherheit und Messgenauigkeit klinischer Thermometer legt ISO 80601-2-56 fest [@iso-80601-2-56]. Schutzhüllen für Messfühler sind Einmalartikel und Teil des Messsystems."
+  },
+  "manufacturers": [
+    {
+      "ref": "hillrom",
+      "models": [
+        "SureTemp Plus"
+      ],
+      "note": "Produkt der Marke Welch Allyn (Teil von Hillrom, seit 2021 zu Baxter gehörend)."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Messprinzip (Kontakt oder Infrarot), Robustheit für den Klinikbetrieb, Messfühlervarianten, Schutzhüllen als Verbrauchsmaterial, Datenübertragung an die Dokumentation, Kosten der MTK."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "ja",
+    "basis": "MTK: MPBetreibV (2025) § 15 i. V. m. Anlage 2 Nr. 1.2 – Medizinprodukte zur Bestimmung der Körpertemperatur (u. a. medizinische Elektrothermometer, Thermometer mit austauschbaren Temperaturfühlern, Infrarot-Strahlungsthermometer). STK: nicht in Anlage 1 aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt.",
+    "intervals": "MTK nach Anlage 2: medizinische Elektrothermometer und Thermometer mit austauschbaren Fühlern alle 2 Jahre, Infrarot-Strahlungsthermometer jährlich; Sichtprüfung von Fühler und Kabel vor Gebrauch; Aufbereitung nach Herstellerangabe."
+  },
+  "related": [
+    "temperatursensor",
+    "thermoregulation",
+    "waermeuebertragung",
+    "patientenmonitor",
+    "inkubator",
+    "mtk"
+  ],
+  "sources": [
+    "iso-80601-2-56",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

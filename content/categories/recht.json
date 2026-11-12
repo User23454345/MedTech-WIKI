@@ -6,7 +6,34 @@
   "order": 10,
   "icon": "scale",
   "summary": "Medizinprodukterecht in EU und Deutschland: MDR, MPDG, MPBetreibV, Risikoklassen, Konformitätsbewertung und Betreiberpflichten.",
-  "body": "",
+  "body": "Medizinprodukte dürfen nur in Verkehr gebracht und betrieben werden, wenn sie sicher und leistungsfähig sind. Das **Medizinprodukterecht** legt fest, wie das nachgewiesen, überwacht und im Betrieb aufrechterhalten wird. Es richtet sich an Hersteller, Händler und Importeure ebenso wie an Betreiber und Anwender – und damit auch unmittelbar an die Medizintechnik im Krankenhaus.\n\nSeit dem 26. Mai 2021 gilt in der EU die Medizinprodukteverordnung ([[mdr|MDR]], Verordnung (EU) 2017/745) unmittelbar; sie hat die früheren Richtlinien abgelöst [@mdr-2017]. Für In-vitro-Diagnostika gilt die [[ivdr|IVDR]] [@ivdr-2017]. In Deutschland ergänzt das [[mpdg|Medizinprodukterecht-Durchführungsgesetz (MPDG)]] die EU-Verordnungen, etwa bei Zuständigkeiten und Sanktionen [@mpdg]. Den Betrieb regelt die [[mpbetreibv|Medizinprodukte-Betreiberverordnung]], die 2025 neu gefasst wurde [@mpbetreibv].\n\n## Überblick: Regelungsebenen\n\n| Ebene | Regelwerk | Adressaten | Kernthemen |\n|---|---|---|---|\n| EU | [[mdr]], [[ivdr]] | Hersteller, Bevollmächtigte, Importeure, Händler, Benannte Stellen | [[risikoklassen]], [[konformitaetsbewertung]], [[klinische-bewertung]], [[ce-kennzeichnung]], [[udi]], [[vigilanz]] |\n| National | [[mpdg]] | alle Akteure, Behörden | Durchführung der EU-Verordnungen in Deutschland |\n| National | [[mpbetreibv]] | Betreiber und Anwender | [[betreiberpflichten]], [[einweisung]], [[stk]], [[mtk]], [[medizinproduktebuch]], [[bestandsverzeichnis]] |\n| National | [[strlschg]] und Strahlenschutzverordnung | Strahlenschutzverantwortliche, Anwender | [[strahlenschutz]], Abnahme- und [[konstanzpruefung]] |\n\n## Überblick: Themen dieser Kategorie\n\n| Thema | Artikel |\n|---|---|\n| Grundbegriffe | [[medizinprodukt]], [[zweckbestimmung]], [[software-medizinprodukt]] |\n| Marktzugang | [[risikoklassen]], [[konformitaetsbewertung]], [[benannte-stelle]], [[klinische-bewertung]], [[ce-kennzeichnung]] |\n| Rückverfolgbarkeit und Marktüberwachung | [[udi]], [[vigilanz]] |\n| Betrieb | [[betreiberpflichten]], [[einweisung]], [[beauftragter-medizinproduktesicherheit]], [[medizinproduktebuch]], [[bestandsverzeichnis]] |\n| Strahlenschutz | [[strahlenschutz]], [[strlschg]] |\n\n> [!belegt] Die MDR teilt Medizinprodukte in die Klassen I, IIa, IIb und III ein; die Einstufung folgt den Klassifizierungsregeln in Anhang VIII und richtet sich u. a. nach Anwendungsdauer, Invasivität und Wirkprinzip [@mdr-2017].\n\n> [!belegt] Die MPBetreibV in der Fassung vom 14.02.2025 regelt die sicherheitstechnischen Kontrollen in § 12 i. V. m. Anlage 1 und die messtechnischen Kontrollen in § 15 i. V. m. Anlage 2 [@mpbetreibv].\n\n> [!hinweis] Paragraphenangaben aus älteren Fassungen der MPBetreibV (2002/2017) sind seit der Neufassung 2025 überholt. Rechtstexte ändern sich – maßgeblich ist immer die jeweils geltende Fassung; Auskünfte geben die zuständigen Behörden sowie das Bundesinstitut für Arzneimittel und Medizinprodukte [@bfarm].\n\n## Lernpfad-Empfehlung\n\n1. **Begriffe:** [[medizinprodukt]] → [[zweckbestimmung]] → [[software-medizinprodukt]].\n2. **Herstellerseite:** [[mdr]] → [[risikoklassen]] → [[konformitaetsbewertung]] → [[benannte-stelle]] → [[klinische-bewertung]] → [[ce-kennzeichnung]] → [[udi]].\n3. **Nach dem Inverkehrbringen:** [[vigilanz]].\n4. **Betreiberseite:** [[mpdg]] → [[mpbetreibv]] → [[betreiberpflichten]] → [[einweisung]] → [[bestandsverzeichnis]] → [[medizinproduktebuch]] → [[beauftragter-medizinproduktesicherheit]].\n5. **Prüfpflichten:** Übergang in die Kategorie [[stk-mtk]].\n6. **Strahlenschutz:** [[strlschg]] → [[strahlenschutz]].",
+  "paths": [
+    [
+      "medizinprodukt",
+      "zweckbestimmung",
+      "risikoklassen",
+      "konformitaetsbewertung",
+      "benannte-stelle",
+      "ce-kennzeichnung"
+    ],
+    [
+      "betreiberpflichten",
+      "einweisung",
+      "bestandsverzeichnis",
+      "medizinproduktebuch",
+      "stk",
+      "mtk"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "ivdr-2017",
+    "mpdg",
+    "mpbetreibv",
+    "strlschg",
+    "strlschv",
+    "bfarm"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

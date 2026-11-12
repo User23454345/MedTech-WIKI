@@ -1,0 +1,55 @@
+{
+  "id": "hamilton-medical",
+  "type": "manufacturer",
+  "title": "Hamilton Medical",
+  "aliases": [
+    "Hamilton Medical AG"
+  ],
+  "category": "hersteller",
+  "summary": "Die Hamilton Medical AG mit Sitz in Bonaduz (Schweiz) ist ein auf Beatmungstechnik spezialisiertes Unternehmen der familiengeführten Hamilton-Gruppe. Bekannt ist es für Intensiv- und Transportbeatmungsgeräte sowie für geschlossene Regelkreise in der Beatmung.",
+  "headquarters": "Bonaduz, Schweiz",
+  "founded": "1983",
+  "website": "https://www.hamilton-medical.com/",
+  "productLines": [
+    {
+      "device": "beatmungsgeraet",
+      "models": [
+        "HAMILTON-C6",
+        "HAMILTON-C3",
+        "HAMILTON-C1",
+        "HAMILTON-G5",
+        "HAMILTON-MR1"
+      ],
+      "note": "Intensivbeatmung für Erwachsene, Kinder und (modellabhängig) Neonaten; HAMILTON-MR1 als MRT-taugliches (MR Conditional) Gerät."
+    },
+    {
+      "device": "transportbeatmungsgeraet",
+      "models": [
+        "HAMILTON-T1"
+      ],
+      "note": "Gebläsebasiertes Transportbeatmungsgerät."
+    },
+    {
+      "device": "high-flow-geraet",
+      "models": [],
+      "note": "High-Flow-Sauerstofftherapie als Option in Intensivbeatmungsgeräten (modellabhängig)."
+    }
+  ],
+  "body": "## Überblick\n\nDie **Hamilton Medical AG** ist ein Schweizer Hersteller mit Hauptsitz in Bonaduz im Kanton Graubünden. Das Unternehmen gehört zur familiengeführten Hamilton-Gruppe, deren Schwesterunternehmen vor allem in der Labor- und Liquid-Handling-Technik tätig sind [@hamilton-medical-web]. Hamilton Medical konzentriert sich nahezu ausschließlich auf die maschinelle Beatmung und zählt damit zu den wenigen spezialisierten Beatmungsherstellern.\n\n## Geschichte in Stichpunkten\n\n* **1983:** Gründung der Hamilton Medical AG in Bonaduz [@hamilton-medical-web].\n* **Mitte der 1980er-Jahre:** Markteinführung des Beatmungsgeräts VEOLAR, eines der frühen mikroprozessorgesteuerten Intensivbeatmungsgeräte.\n* **Ende der 1990er-Jahre:** Einführung der Adaptive Support Ventilation (ASV), eines Beatmungsmodus, bei dem das Gerät Atemfrequenz und Tidalvolumen anhand gemessener Lungenmechanik selbst anpasst.\n* **Anfang der 2000er-Jahre:** Markteinführung des kompakten Beatmungsgeräts RAPHAEL.\n* **Seit den 2000er-Jahren:** Aufbau der heutigen Plattformen (G5, C-Serie, T1) und Weiterentwicklung zu INTELLiVENT-ASV, das zusätzlich Messwerte wie SpO₂ und endtidales CO₂ in die Regelung einbezieht.\n\n## Geschäftsbereiche\n\n| Bereich | Typische Produkte |\n|---|---|\n| Intensivbeatmung | Intensivbeatmungsgeräte der C- und G-Serie ([[beatmungsgeraet]]) |\n| Transport und Notfall | Transportbeatmungsgerät HAMILTON-T1 ([[transportbeatmungsgeraet]]) |\n| Spezialanwendungen | MRT-geeignete Beatmung, [[high-flow-geraet|High-Flow-Sauerstofftherapie]] als Gerätefunktion |\n| Zubehör | Atemgasbefeuchter ([[atemgasbefeuchter]]), proximale Flowsensoren, Beatmungsschläuche |\n\n## Bedeutung für die Medizintechnik\n\nTechnisch prägend sind zwei Konzepte:\n\n1. **Proximale Flowmessung:** Ein Differenzdruck-[[flowsensor]] am Y-Stück misst Flow und Druck direkt am Patienten. Das verbessert die Erkennung von Patientenbemühungen und die Volumenmessung, macht den Sensor aber zu einem Verbrauchs- und Kalibrierteil.\n2. **Geschlossene Regelkreise:** Mit ASV und INTELLiVENT-ASV werden Beatmungsparameter über einen [[regelkreis]] automatisch an Messgrößen des Patienten angepasst.\n\n> [!vereinfacht] Ein geschlossener Regelkreis in der Beatmung ersetzt nicht die ärztliche Verantwortung: Das Gerät verändert Parameter nur innerhalb vom Anwender gesetzter Grenzen und Zielbereiche.\n\nDie Geräte der C-Serie und das HAMILTON-T1 erzeugen den Gasfluss mit einem eingebauten Gebläse ([[turbine]]) und benötigen daher keine Druckluftversorgung – sie eignen sich dadurch auch für Transport und Bereiche ohne zentrale Gasversorgung. Das HAMILTON-G5 arbeitet dagegen klassisch mit Druckluft- und Sauerstoffanschluss (bzw. optionalem Kompressor).\n\n> [!praxis] Bei Hamilton-Geräten gehört die Kalibrierung bzw. Prüfung des Flowsensors und der O₂-Messung zur täglichen Vorbereitung vor Inbetriebnahme. Die Durchführung von [[stk]] und [[wartung]] richtet sich nach Herstellervorgaben und den Anforderungen der [[mpbetreibv]].\n\n## Einordnung im Markt\n\nAnders als Vollsortimenter wie [[draeger]], [[ge-healthcare]] oder [[mindray]] bietet Hamilton Medical weder Anästhesiearbeitsplätze noch Patientenmonitore an. Die Geräte werden deshalb in Kliniken häufig mit Monitoring anderer Hersteller kombiniert; Datenschnittstellen zum Patientenmonitor und zum Patientendatenmanagementsystem sind dann eigens zu konfigurieren und zu prüfen. Die Intensivbeatmungsgeräte fallen unter die gerätespezifische Norm [[iso-80601-2-12]] für Beatmungsgeräte in der Intensivpflege, die u. a. Anforderungen an Alarme, Volumengenauigkeit und Gasversorgungsausfall stellt; für Transport- und Notfallbeatmungsgeräte gilt eine eigene Norm der Reihe ISO 80601-2.",
+  "related": [
+    "beatmungsgeraet",
+    "transportbeatmungsgeraet",
+    "high-flow-geraet",
+    "flowsensor",
+    "regelkreis",
+    "atemgasbefeuchter",
+    "draeger",
+    "intensivmedizin",
+    "iso-80601-2-12"
+  ],
+  "sources": [
+    "hamilton-medical-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

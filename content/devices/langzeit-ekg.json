@@ -1,0 +1,84 @@
+{
+  "id": "langzeit-ekg",
+  "type": "device",
+  "title": "Langzeit-EKG-Rekorder",
+  "aliases": [
+    "Langzeit-EKG",
+    "Holter-EKG",
+    "Holter-Monitor",
+    "ambulantes EKG",
+    "Holter",
+    "Event-Rekorder"
+  ],
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 28,
+  "domains": [
+    "kardiologie",
+    "neurologie"
+  ],
+  "summary": "Langzeit-EKG-Rekorder zeichnen das Elektrokardiogramm über 24 Stunden bis mehrere Tage im Alltag des Patienten auf. Eine Auswertesoftware klassifiziert anschließend Millionen von Herzschlägen und findet Rhythmusstörungen, Pausen und ST-Veränderungen. Das Verfahren geht auf Norman J. Holter zurück.",
+  "riskClass": {
+    "value": "IIa",
+    "evidence": "typisch",
+    "note": "Aktives Diagnoseprodukt zur Überwachung einer vitalen Körperfunktion nach [[mdr|MDR]] Anhang VIII **Regel 10** (Klasse IIa); da keine Echtzeitüberwachung mit unmittelbarer Gefahrenabwehr erfolgt, ist Klasse IIb nicht typisch. Auswertesoftware wird nach **Regel 11** eigenständig klassifiziert. Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Das Langzeit-EKG dient der Erfassung seltener oder symptomgebundener Rhythmusstörungen, z. B. bei Herzrasen, Synkopen oder zur Suche nach Vorhofflimmern nach Schlaganfall, sowie der Kontrolle von Therapien und [[herzschrittmacher|Schrittmacherfunktion]]. Es ergänzt das Ruhe-EKG am [[ekg-geraet]], das nur wenige Sekunden abbildet.",
+    "principle": "## Aufzeichnung\n\nDer Rekorder ist ein batteriebetriebener, am Körper getragener Datenlogger. Über Klebeelektroden ([[ekg-elektrode|Ag/AgCl-Elektroden]]) werden meist zwei bis drei Kanäle, bei manchen Systemen zwölf Ableitungen erfasst. Ein [[instrumentenverstaerker]] mit hoher Gleichtaktunterdrückung verstärkt die [[biosignale]], [[filter]] begrenzen die Bandbreite, ein [[analog-digital-wandler]] digitalisiert, und die Daten werden auf Flash-Speicher abgelegt. Schrittmacherimpulse werden mit einer gesonderten, schnelleren Erkennung markiert. Patientenereignisse (Symptome) lassen sich per Taste markieren [@webster-2010].\n\n## Auswertung\n\nDie Analysesoftware erkennt QRS-Komplexe, bildet Schlagklassen (normal, ventrikulär, supraventrikulär, Artefakt) und berechnet Rhythmusereignisse, Herzfrequenztrend, Herzfrequenzvariabilität und ST-Strecken-Verläufe. Die automatische Klassifikation muss von Fachpersonal geprüft werden, da [[bewegungsartefakt|Bewegungsartefakte]] und [[elektrodenproblem|Elektrodenablösungen]] Fehlklassifikationen verursachen. Anforderungen an ambulante EKG-Systeme legt IEC 60601-2-47 fest [@iec-60601-2-47].\n\n## Varianten\n\n| Variante | Dauer | Merkmal |\n|---|---|---|\n| klassischer Holter | 24–48 h (*typisch*) | kontinuierlich, Kabel und Elektroden |\n| Pflaster-Rekorder (Patch) | mehrere Tage bis Wochen | kabellos, meist ein Kanal |\n| Event-Rekorder | Wochen | speichert nur Ereignisse |\n| implantierbarer Ereignisrekorder | Jahre | subkutan, Fernübertragung |\n\n> [!praxis] Gute Hautvorbereitung und Zugentlastung der Kabel entscheiden über die Auswertbarkeit der Aufzeichnung."
+  },
+  "manufacturers": [
+    {
+      "ref": "schiller",
+      "models": [
+        "MEDILOG"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "SEER"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "philips",
+      "models": [
+        "DigiTrak XT"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "LINQ"
+      ],
+      "note": "Implantierbarer Ereignisrekorder."
+    }
+  ],
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Vom Hersteller vorgeschriebene Kontrollen nach Herstellerangabe; Prüfung der Patientenkabel vor der Anlage; netzbetriebene Auswertestationen und Ladegeräte: elektrische Wiederholungsprüfung nach IEC 62353 bzw. DGUV Vorschrift 3 gemäß Gefährdungsbeurteilung."
+  },
+  "related": [
+    "ekg-geraet",
+    "ekg-elektrode",
+    "biosignale",
+    "ergometer",
+    "bewegungsartefakt",
+    "iec-60601-2-25"
+  ],
+  "sources": [
+    "webster-2010",
+    "iec-60601-2-47",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

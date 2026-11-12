@@ -1,0 +1,65 @@
+{
+  "id": "optik",
+  "type": "term",
+  "title": "Optik und Lichtausbreitung",
+  "aliases": [
+    "Optik",
+    "Lichtausbreitung",
+    "optics",
+    "Brechung",
+    "Brechungsgesetz",
+    "Snellius",
+    "Totalreflexion",
+    "numerische Apertur",
+    "Lichtleiter",
+    "Gewebeoptik",
+    "Streuung",
+    "optisches Fenster",
+    "Beleuchtungsstärke"
+  ],
+  "category": "physik",
+  "summary": "Die Optik beschreibt, wie Licht sich ausbreitet, gebrochen, reflektiert, gestreut und absorbiert wird. Brechungsgesetz, Totalreflexion, Abbildung durch Linsen und die Lichtausbreitung im Gewebe sind die Grundlage von Endoskopen, Operationsmikroskopen, OP-Leuchten, Spaltlampen, Pulsoxymetern, OCT und Lasersystemen.",
+  "body": "## Licht als Welle und Teilchen\n\nLicht ist elektromagnetische Strahlung. Für die Medizintechnik relevant ist der Bereich vom ultravioletten (UV, ca. 100–380 nm) über das sichtbare (ca. 380–780 nm) bis zum infraroten Licht (IR, ab ca. 780 nm). Je nach Fragestellung wird Licht als **Strahl** (geometrische Optik), als **Welle** (Beugung, Interferenz) oder als **Photon** (Absorption, Detektion, [[laser]]) beschrieben [@tipler-2019].\n\nIm Vakuum breitet sich Licht mit c ≈ 3 · 10⁸ m/s aus, in Materie langsamer. Der **Brechungsindex** n = c / v_Medium beträgt z. B. für Luft ≈ 1,00, Wasser ≈ 1,33, Hornhaut ≈ 1,38 und Glas ≈ 1,5.\n\n## Reflexion und Brechung\n\nAn einer Grenzfläche wird Licht teils reflektiert (Einfallswinkel = Ausfallswinkel), teils gebrochen. Das **Brechungsgesetz nach Snellius** lautet:\n\n`n₁ · sin θ₁ = n₂ · sin θ₂`\n\n### Totalreflexion und Lichtleiter\n\nTrifft Licht aus dem optisch dichteren Medium (n₁ > n₂) flacher als unter dem Grenzwinkel θ_g auf die Grenzfläche, wird es vollständig reflektiert:\n\n`sin θ_g = n₂ / n₁`\n\nDarauf beruhen **Glasfasern**: Ein Kern mit höherem Brechungsindex ist von einem Mantel mit niedrigerem Index umgeben. Der maximale Akzeptanzwinkel wird über die **numerische Apertur** beschrieben:\n\n`NA = sin θ_max = √(n_Kern² − n_Mantel²)`\n\n> [!beispiel] Kern n = 1,62, Mantel n = 1,52: NA = √(2,624 − 2,310) ≈ 0,56; das entspricht einem Akzeptanzhalbwinkel von rund 34°. Je größer die NA, desto mehr Licht nimmt die Faser auf – wichtig für Lichtleitkabel an [[endoskop|Endoskopen]].\n\n## Abbildung mit Linsen\n\nFür eine dünne Linse mit Brennweite f, Gegenstandsweite g und Bildweite b gilt:\n\n`1/f = 1/g + 1/b`   und   Abbildungsmaßstab `β = b / g`\n\nDie **Brechkraft** D = 1/f wird in Dioptrien (1/m) angegeben – in der Augenheilkunde die übliche Einheit ([[auge]]). Das **Auflösungsvermögen** eines Mikroskops ist durch Beugung begrenzt (Abbe):\n\n`d ≈ λ / (2 · NA)`\n\nKürzere Wellenlänge und größere numerische Apertur ergeben feinere Details. Reale Systeme leiden zusätzlich unter **Abbildungsfehlern** (sphärische und chromatische Aberration), die durch Linsenkombinationen korrigiert werden.\n\n## Licht im Gewebe\n\nGewebe ist für Licht ein **trübes Medium**: Licht wird absorbiert und vor allem stark gestreut.\n\n| Prozess | Ursache | Folge |\n|---|---|---|\n| Absorption | Hämoglobin, Melanin, Wasser, Bilirubin | Energieabgabe → Erwärmung oder Photochemie; Grundlage der Spektroskopie |\n| Streuung | Zellmembranen, Kollagenfasern, Organellen | Licht verliert seine Richtung, Bild wird unscharf |\n| Fluoreszenz | Farbstoffe, körpereigene Moleküle | Emission bei längerer Wellenlänge; Grundlage der Fluoreszenzbildgebung |\n\nUnterhalb von etwa 600 nm absorbiert Hämoglobin stark, oberhalb von etwa 1000–1300 nm zunehmend Wasser. Dazwischen liegt das **optische (therapeutische) Fenster** im Rot- und Nahinfrarotbereich, in dem Licht mehrere Millimeter bis Zentimeter tief eindringt [@bronzino-2015].\n\n> [!vereinfacht] Die Absorption in einer klaren Lösung beschreibt das [[lambert-beer|Lambert-Beer-Gesetz]]. In stark streuendem Gewebe gilt es nur näherungsweise; Pulsoxymeter umgehen das Problem durch empirische Kalibrierkurven und die Auswertung des pulsatilen Anteils [@jubran-2015].\n\n## Lichttechnische Größen\n\n| Größe | Einheit | Bedeutung |\n|---|---|---|\n| Lichtstrom Φ | Lumen (lm) | gesamte, mit der Augenempfindlichkeit bewertete Lichtleistung |\n| Lichtstärke I | Candela (cd) | Lichtstrom pro Raumwinkel |\n| Beleuchtungsstärke E | Lux (lx = lm/m²) | auftreffender Lichtstrom pro Fläche |\n| Bestrahlungsstärke | W/m² | physikalische (unbewertete) Leistung pro Fläche – relevant für Erwärmung |\n\n> [!hinweis] Für Operationsleuchten legt [@iec-60601-2-41] u. a. Anforderungen an die zentrale Beleuchtungsstärke und an die Begrenzung der Bestrahlungsstärke im Operationsfeld fest (Schutz vor Erwärmung). In Herstellerunterlagen und Sekundärliteratur wird dafür ein Bereich der zentralen Beleuchtungsstärke von 40 000 bis 160 000 lx in 1 m Abstand genannt; maßgeblich ist der Normtext der jeweils gültigen Ausgabe.\n\n## Anwendung in Geräten\n\n| Gerät | optisches Prinzip |\n|---|---|\n| [[endoskop]] | Lichtleitfasern (Totalreflexion) zur Beleuchtung; starre Optiken mit Stablinsensystem, flexible Videoendoskope mit Bildsensor an der Spitze |\n| [[op-mikroskop]] | Stereomikroskop mit Zoomoptik, koaxiale Beleuchtung |\n| [[op-leuchte]] | viele Einzelreflektoren bzw. LED-Module für schattenarmes Licht |\n| [[spaltlampe]] | schmaler Lichtspalt erzeugt optischen Schnitt durch die vorderen Augenabschnitte |\n| [[oct]] | Interferometrie mit Licht kurzer Kohärenzlänge [@huang-1991] |\n| [[pulsoxymeter]] | Durchlicht bei Rot und Infrarot ([[photoplethysmographie]]) |\n| [[phototherapiegeraet]] | blaues Licht im Absorptionsbereich des Bilirubins |\n| [[videolaryngoskop]], [[kapselendoskop]] | Miniaturkamera mit LED-Beleuchtung |\n| [[chirurgischer-laser]] | Strahlformung und Faserführung ([[laser]]) |\n\n## Bedeutung in der Medizintechnik\n\nOptische Systeme sind empfindlich gegenüber mechanischen und thermischen Belastungen. Typische Prüf- und Fehlerthemen:\n\n* **Faserbruch in Lichtleitkabeln** – sichtbar als dunkle Punkte beim Blick in das Kabelende; verringert die Lichtausbeute.\n* **Beschlagene oder verkratzte Optiken** – Feuchtigkeit nach der [[aufbereitung]], undichte Endoskope (Dichtheitstest).\n* **Farbwiedergabe und Lichtintensität** von OP-Leuchten und Lichtquellen (Alterung von Lampen und LEDs).\n* **Blendung und Augenschutz** bei hellen Lichtquellen und Lasern.\n\n> [!praxis] Bei der Prüfung einer Endoskop-Lichtquelle immer das am Gerät verwendete Lichtleitkabel mitprüfen: Ein beschädigtes Kabel kann einen erheblichen Teil des Lichts verlieren, obwohl die Lichtquelle einwandfrei arbeitet. Konkrete Grenzwerte nennt der Hersteller.",
+  "related": [
+    "laser",
+    "lambert-beer",
+    "photoplethysmographie",
+    "endoskop",
+    "op-mikroskop",
+    "op-leuchte",
+    "spaltlampe",
+    "oct",
+    "pulsoxymeter",
+    "auge",
+    "phototherapiegeraet",
+    "augenheilkunde"
+  ],
+  "paths": [
+    [
+      "pulsoxymeter",
+      "photoplethysmographie",
+      "optik",
+      "lambert-beer"
+    ],
+    [
+      "endoskop",
+      "optik",
+      "laser"
+    ],
+    [
+      "spaltlampe",
+      "optik",
+      "auge"
+    ]
+  ],
+  "sources": [
+    "tipler-2019",
+    "bronzino-2015",
+    "jubran-2015",
+    "huang-1991",
+    "iec-60601-2-41",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

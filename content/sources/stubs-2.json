@@ -1,0 +1,58 @@
+[
+  {
+    "id": "iso-80601-2-70",
+    "kind": "norm",
+    "title": "ISO 80601-2-70 – Medizinische elektrische Geräte – Teil 2-70: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Atemtherapiegeräten für Schlafapnoe",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 80601-2-70",
+    "note": "Aktuelle Ausgabe ISO 80601-2-70:2025 (ersetzt die Ausgabe 2020); maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-80601-2-72",
+    "kind": "norm",
+    "title": "ISO 80601-2-72 – Medizinische elektrische Geräte – Teil 2-72: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Heimbeatmungsgeräten für beatmungsabhängige Patienten",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 80601-2-72",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-80601-2-69",
+    "kind": "norm",
+    "title": "ISO 80601-2-69 – Medizinische elektrische Geräte – Teil 2-69: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Sauerstoffkonzentratoren",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 80601-2-69",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-80601-2-90",
+    "kind": "norm",
+    "title": "ISO 80601-2-90 – Medizinische elektrische Geräte – Teil 2-90: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Geräten für die High-Flow-Atemtherapie",
+    "publisher": "ISO",
+    "note": "Erstausgabe 2021; 2. Ausgabe 2026 (Anwendungsbereich Akut- und Säuglingsversorgung). Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-10079-1",
+    "kind": "norm",
+    "title": "ISO 10079-1 – Medizinische Absauggeräte – Teil 1: Elektrisch betriebene Absauggeräte",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 10079-1",
+    "note": "Weitere Teile behandeln manuell betriebene Geräte und Geräte mit Vakuum- oder Druckgasantrieb. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-27427",
+    "kind": "norm",
+    "title": "ISO 27427 – Anästhesie- und Beatmungsgeräte – Verneblersysteme und Komponenten",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 27427",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60601-2-45",
+    "kind": "norm",
+    "title": "IEC 60601-2-45 – Medizinische elektrische Geräte – Teil 2-45: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Röntgeneinrichtungen für die Mammographie und von mammographischen Stereotaxie-Einrichtungen",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-45",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60601-2-43",
+    "kind": "norm",
+    "title": "IEC 60601-2-43 – Medizinische elektrische Geräte – Teil 2-43: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Röntgeneinrichtungen für interventionelle Verfahren",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-43",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  }
+]

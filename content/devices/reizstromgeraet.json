@@ -1,0 +1,52 @@
+{
+  "id": "reizstromgeraet",
+  "type": "device",
+  "title": "Reizstromgerät (TENS/EMS)",
+  "aliases": [
+    "Reizstromgerät",
+    "TENS-Gerät",
+    "EMS-Gerät",
+    "Elektrotherapiegerät",
+    "Nerven- und Muskelstimulator",
+    "Transkutane elektrische Nervenstimulation",
+    "Elektromyostimulation"
+  ],
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 84,
+  "domains": [
+    "physikalische-medizin",
+    "orthopaedie-unfallchirurgie",
+    "neurologie"
+  ],
+  "summary": "Reizstromgeräte leiten über Hautelektroden elektrische Impulse in den Körper, um Nerven oder Muskeln zu erregen. TENS dient vor allem der Schmerzlinderung, EMS der Muskelkräftigung und dem Erhalt der Muskelfunktion.",
+  "sections": {
+    "purpose": "Die Elektrotherapie wird in der [[physikalische-medizin|physikalischen Medizin]], Physiotherapie und Schmerztherapie eingesetzt: TENS zur symptomatischen Behandlung akuter und chronischer Schmerzen, EMS bzw. neuromuskuläre Elektrostimulation zur Aktivierung geschwächter oder gelähmter Muskulatur. Viele TENS-Geräte werden auch von Patienten zu Hause angewendet [@kramme-2017].",
+    "principle": "## Erregung von Nervenfasern\n\nEin Stromimpuls zwischen zwei Hautelektroden erzeugt im Gewebe ein elektrisches Feld. Erreicht die Depolarisation einer Nervenfasermembran die Schwelle, wird ein [[aktionspotential|Aktionspotenzial]] ausgelöst ([[nervensystem]], [[elektrische-stromwirkung]]). Dicke, myelinisierte Fasern haben niedrigere Schwellen als dünne; mit steigender Intensität werden nacheinander sensible, motorische und schließlich schmerzleitende Fasern erregt.\n\n## Impulsparameter\n\n| Parameter | Wirkung |\n|---|---|\n| Impulsform | meist biphasisch und ladungsausgeglichen, um elektrochemische Hautreizungen zu vermeiden |\n| Impulsbreite | bestimmt mit der Amplitude die Ladung pro Impuls (Q = I · t); bei TENS typischerweise im Bereich von etwa 50–250 µs |\n| Frequenz | „konventionelle“ (hochfrequente) TENS typischerweise etwa 50–100 Hz, akupunkturähnliche (niederfrequente) TENS etwa 1–4 Hz; bei EMS werden tetanische Kontraktionen ab etwa 20–30 Hz ausgelöst |\n| Amplitude | Konstantstrom oder Konstantspannung; Einstellung bis zur gewünschten Empfindung bzw. Kontraktion |\n\n> [!hinweis] Die genannten Frequenzen und Impulsbreiten sind typische Bereiche aus der Literatur, keine Herstellerspezifikation. „Hochfrequent“ meint in der TENS-Nomenklatur nur einige zehn bis hundert Hertz; davon zu unterscheiden sind Mittelfrequenzverfahren (etwa 1–100 kHz, z. B. Interferenzstrom), bei denen die Haut einen geringeren kapazitiven Widerstand aufweist.\n\n> [!vereinfacht] Für die schmerzlindernde Wirkung der TENS wird häufig die **Gate-Control-Theorie** herangezogen: Die Erregung dicker Berührungsfasern hemmt im Rückenmark die Weiterleitung von Schmerzsignalen. Daneben werden körpereigene Opioidmechanismen diskutiert.\n\n## Aufbau und Sicherheit\n\nEin [[mikrocontroller|Mikrocontroller]] steuert eine Endstufe mit Stromquelle; die Ausgänge sind galvanisch getrennt ([[galvanische-trennung]], [[anwendungsteile]]). Entscheidend für die Sicherheit ist die **Stromdichte** unter den Elektroden: Zu kleine oder schlecht haftende Elektroden konzentrieren den Strom und können Hautschäden verursachen. Begrenzungen von Ausgangsstrom, -energie und Gleichstromanteil legt [@iec-60601-2-10] fest.\n\n> [!warnung] Bei aktiven Implantaten (z. B. [[herzschrittmacher|Herzschrittmacher]]) und bei Stromführung über den Brustkorb gelten Kontraindikationen bzw. besondere Vorsicht laut Herstellerangabe."
+  },
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Heimgerät oder Praxis-/Kombinationsgerät, Anzahl der Kanäle, Stromformen und Programme, Elektroden als Verbrauchsmaterial, Kombination mit Ultraschall- oder Vakuumtherapie."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "STK: MPBetreibV (Fassung 2025) Anlage 1 – nichtimplantierbare aktive Produkte zur Erzeugung und Anwendung elektrischer Energie zur unmittelbaren Beeinflussung der Funktion von Nerven und/oder Muskeln; Kontrollen nach § 12. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "STK spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025); Sichtprüfung von Kabeln und Elektroden vor jeder Anwendung."
+  },
+  "related": [
+    "aktionspotential",
+    "elektrische-stromwirkung",
+    "nervensystem",
+    "anwendungsteile",
+    "ultraschalltherapiegeraet",
+    "physikalische-medizin"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iec-60601-2-10",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

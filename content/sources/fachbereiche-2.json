@@ -1,0 +1,66 @@
+[
+  {
+    "id": "iec-60601-2-1",
+    "kind": "norm",
+    "title": "IEC 60601-2-1 – Medizinische elektrische Geräte – Teil 2-1: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Elektronenbeschleunigern im Bereich von 1 MeV bis 50 MeV",
+    "publisher": "IEC / in Europa als EN IEC 60601-2-1",
+    "year": "2020",
+    "note": "Aktuelle IEC-Ausgabe 2020 (ersetzt Ausgabe 2009 + A1:2014); europäische Übernahme als EN IEC 60601-2-1:2021. Jeweils gültige Fassung beachten."
+  },
+  {
+    "id": "iec-60601-2-17",
+    "kind": "norm",
+    "title": "IEC 60601-2-17 – Medizinische elektrische Geräte – Teil 2-17: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von automatisch gesteuerten Afterloading-Geräten für die Brachytherapie",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-17",
+    "year": "2013",
+    "note": "Dritte Ausgabe 2013; umschlossene radioaktive Quellen selbst sind nicht Gegenstand der Norm. Jeweils gültige Fassung beachten."
+  },
+  {
+    "id": "iso-15189",
+    "kind": "norm",
+    "title": "ISO 15189 – Medizinische Laboratorien – Anforderungen an die Qualität und Kompetenz",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 15189",
+    "year": "2022",
+    "note": "Vierte Ausgabe 2022; integriert die Anforderungen an patientennahe Untersuchungen (POCT). Grundlage der Akkreditierung medizinischer Laboratorien."
+  },
+  {
+    "id": "iec-60601-2-63",
+    "kind": "norm",
+    "title": "IEC 60601-2-63 – Medizinische elektrische Geräte – Teil 2-63: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von dentalen extraoralen Röntgeneinrichtungen",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-63",
+    "note": "Ausgabe 2012 mit Änderung A1:2017; gilt u. a. für Panoramaschicht- und DVT-Geräte der Zahnmedizin. Jeweils gültige Fassung beachten."
+  },
+  {
+    "id": "iec-60601-2-65",
+    "kind": "norm",
+    "title": "IEC 60601-2-65 – Medizinische elektrische Geräte – Teil 2-65: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von dentalen intraoralen Röntgeneinrichtungen",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-65",
+    "note": "Ausgabe 2012 mit Änderung A1:2017. Jeweils gültige Fassung beachten."
+  },
+  {
+    "id": "abwv",
+    "kind": "gesetz",
+    "title": "Verordnung über Anforderungen an das Einleiten von Abwasser in Gewässer (Abwasserverordnung – AbwV)",
+    "publisher": "Bundesrepublik Deutschland",
+    "url": "https://www.gesetze-im-internet.de/abwv/",
+    "note": "Anhang 50: Zahnbehandlung (Anforderungen an amalgamhaltiges Abwasser). Maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "sax-2015",
+    "kind": "artikel",
+    "authors": "Sax H, Bloemberg G, Hasse B, Sommerstein R, Kohler P, Achermann Y, et al.",
+    "title": "Prolonged Outbreak of Mycobacterium chimaera Infection After Open-Chest Heart Surgery",
+    "publisher": "Clinical Infectious Diseases 61(1):67–75",
+    "year": "2015",
+    "note": "Erstbeschreibung der Übertragung von M. chimaera über Aerosole aus Heater-Cooler-Geräten."
+  },
+  {
+    "id": "epstein-2014",
+    "kind": "artikel",
+    "authors": "Epstein L, Hunter JC, Arwady MA, et al.",
+    "title": "New Delhi Metallo-β-Lactamase–Producing Carbapenem-Resistant Escherichia coli Associated With Exposure to Duodenoscopes",
+    "publisher": "JAMA 312(14):1447–1455",
+    "year": "2014",
+    "note": "Ausbruchsuntersuchung zu Übertragungen über ERCP-Duodenoskope trotz Aufbereitung nach Herstellerangabe."
+  }
+]

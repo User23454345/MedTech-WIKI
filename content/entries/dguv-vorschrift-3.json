@@ -1,0 +1,55 @@
+{
+  "id": "dguv-vorschrift-3",
+  "type": "term",
+  "title": "Prüfung nach DGUV Vorschrift 3",
+  "aliases": [
+    "DGUV V3",
+    "DGUV Vorschrift 3",
+    "BGV A3",
+    "UVV-Prüfung",
+    "E-Check",
+    "Wiederholungsprüfung elektrischer Betriebsmittel",
+    "Prüfung ortsveränderlicher Betriebsmittel",
+    "DGUV Regulation 3"
+  ],
+  "category": "stk-mtk",
+  "summary": "Die DGUV Vorschrift 3 ist die Unfallverhütungsvorschrift für elektrische Anlagen und Betriebsmittel. Sie verpflichtet Unternehmer, elektrische Anlagen und Betriebsmittel vor der ersten Inbetriebnahme, nach Änderung oder Instandsetzung und in regelmäßigen Abständen durch eine Elektrofachkraft prüfen zu lassen – im Krankenhaus auch Medizingeräte, Laborgeräte und Haustechnik.",
+  "body": "## Einordnung\n\nDie **DGUV Vorschrift 3 „Elektrische Anlagen und Betriebsmittel“** ist eine Unfallverhütungsvorschrift der Deutschen Gesetzlichen Unfallversicherung (früher BGV A3) [@dguv-v3]. Sie richtet sich an den **Unternehmer als Arbeitgeber** und dient dem Schutz der Beschäftigten vor elektrischen Gefährdungen. Damit unterscheidet sie sich in ihrer Zielrichtung von der [[mpbetreibv|MPBetreibV]], die den Schutz von Patienten, Anwendern und Dritten beim Betrieb von Medizinprodukten regelt.\n\n| Merkmal | DGUV Vorschrift 3 | MPBetreibV ([[stk|STK]]) |\n|---|---|---|\n| Rechtscharakter | autonomes Satzungsrecht der Unfallversicherungsträger | Rechtsverordnung |\n| Adressat | Unternehmer/Arbeitgeber | Betreiber von Medizinprodukten |\n| Schutzziel | Beschäftigte | Patienten, Anwender, Dritte |\n| Geltungsbereich | alle elektrischen Anlagen und Betriebsmittel | Medizinprodukte (STK: Anlage 1 und Herstellervorgabe) |\n| Fristen | durch den Unternehmer festzulegen; Richtwerte in den Durchführungsanweisungen | spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind |\n\nErgänzend gilt die Betriebssicherheitsverordnung (BetrSichV); sie verlangt, dass Arbeitsmittel auf Basis einer Gefährdungsbeurteilung durch eine zur Prüfung befähigte Person geprüft werden [@betrsichv].\n\n## Prüfpflichten\n\n> [!belegt] Nach § 5 der DGUV Vorschrift 3 hat der Unternehmer dafür zu sorgen, dass elektrische Anlagen und Betriebsmittel auf ihren ordnungsgemäßen Zustand geprüft werden – vor der ersten Inbetriebnahme, nach einer Änderung oder Instandsetzung vor der Wiederinbetriebnahme sowie in bestimmten Zeitabständen. Die Prüfung erfolgt durch eine Elektrofachkraft oder unter deren Leitung und Aufsicht [@dguv-v3].\n\nDie Fristen sind so zu bemessen, dass entstehende Mängel rechtzeitig festgestellt werden. Die Durchführungsanweisungen zur Vorschrift nennen Richtwerte, die der Unternehmer im Rahmen seiner Gefährdungsbeurteilung anpasst [@dguv-v3] [@betrsichv].\n\n| Anlage / Betriebsmittel (Auswahl) | Richtwert der Durchführungsanweisungen |\n|---|---|\n| Ortsveränderliche elektrische Betriebsmittel (allgemein) | 6 Monate, auf Baustellen 3 Monate |\n| Verlängerung bei Fehlerquote unter etwa 2 % | Höchstwerte: auf Baustellen, in Werkstätten und Fertigungsstätten bis zu 1 Jahr, in Büros und unter vergleichbaren Bedingungen bis zu 2 Jahre |\n| Elektrische Anlagen und ortsfeste Betriebsmittel | 4 Jahre |\n| Anlagen in Räumen und Betriebsstätten besonderer Art | 1 Jahr |\n\n> [!hinweis] Die Tabelle gibt verbreitete Richtwerte sinngemäß wieder; sie sind keine starren Fristen. Maßgeblich sind die aktuelle Fassung der DGUV Vorschrift 3 mit Durchführungsanweisungen und die Gefährdungsbeurteilung des Unternehmers. Elektrische Anlagen in [[medizinisch-genutzte-bereiche|medizinisch genutzten Bereichen]] nach [[din-vde-0100-710]] gehören zu den Anlagen besonderer Art und unterliegen zusätzlichen Prüfanforderungen, etwa für Isolationsüberwachung und Sicherheitsstromversorgung [@din-vde-0100-710].\n\nDie Fehlerquote ist dabei ein zentrales Steuerungsinstrument: Werden bei den Prüfungen kaum Mängel gefunden, dürfen die Fristen verlängert werden; steigt die Quote, sind sie zu verkürzen.\n\nFehlerquote = Anzahl mangelhafter Betriebsmittel / Anzahl geprüfter Betriebsmittel · 100 %\n\n> [!beispiel] Bei der Prüfung von 400 ortsveränderlichen Geräten in einer Verwaltung werden 5 mit Mängeln gefunden (z. B. beschädigte Leitungen). Fehlerquote = 5 / 400 · 100 % = 1,25 %. Die Prüffrist kann im Rahmen der Gefährdungsbeurteilung verlängert werden. Zahlen beispielhaft.\n\n## Prüfnormen\n\nDie DGUV Vorschrift 3 schreibt nicht vor, **wie** gemessen wird – sie verweist auf die elektrotechnischen Regeln. Je nach Gerät gelten unterschiedliche Normen:\n\n| Gerätetyp | Anzuwendende Prüfnorm |\n|---|---|\n| Medizinische elektrische Geräte und ME-Systeme | [[iec-62353|IEC 62353]] (DIN EN 62353, VDE 0751-1) [@iec-62353] |\n| Sonstige elektrische Geräte nach Reparatur | DIN EN 50678 (VDE 0701) [@din-en-50678] |\n| Sonstige elektrische Geräte, Wiederholungsprüfung | DIN EN 50699 (VDE 0702) [@din-en-50699] |\n| Elektrische Anlagen | Normen der Reihe DIN VDE 0100 bzw. DIN VDE 0105-100 |\n\nDie Prüfschritte ähneln sich: Sichtprüfung, [[schutzleiterwiderstand|Schutzleiterwiderstand]], [[isolationswiderstand|Isolationswiderstand]], Schutzleiter- bzw. Berührungsstrom und Funktionsprüfung. Für ME-Geräte sind die Grenzwerte der IEC 62353 jedoch auf die besonderen Gefährdungen der Patienten abgestimmt (siehe [[ableitstrommessung]]).\n\n> [!vereinfacht] DIN EN 50678/50699 und IEC 62353 sind „Geschwister“: gleiche Grundidee, aber unterschiedliche Grenzwerte und Messverfahren. Wer ein ME-Gerät nur nach VDE 0701/0702 prüft, bewertet die Ableitströme von Anwendungsteilen nicht angemessen.\n\n## DGUV Vorschrift 3 im Krankenhaus\n\nIm Krankenhaus betrifft die DGUV Vorschrift 3 nahezu alles, was einen Stecker hat:\n\n* **Medizingeräte** wie [[patientenmonitor|Patientenmonitore]], [[infusionspumpe|Infusionspumpen]], [[pflegebett|elektrische Pflegebetten]] oder [[patientenlifter|Patientenlifter]] – sie sind zugleich elektrische Betriebsmittel,\n* **Laborgeräte** wie [[laborzentrifuge|Laborzentrifugen]] oder [[blutkuehlschrank|Blutkühlschränke]], die oft unter die [[iec-61010-1|IEC 61010-1]] fallen,\n* **Bürogeräte, IT, Küchen- und Reinigungsgeräte** sowie Verlängerungsleitungen und Mehrfachsteckdosen.\n\n> [!praxis] Für Medizingeräte, die einer STK unterliegen, kann die elektrische Sicherheitsprüfung nach IEC 62353 in der Regel zugleich die Wiederholungsprüfung nach DGUV Vorschrift 3 abdecken – vorausgesetzt, die Prüfperson ist Elektrofachkraft (oder arbeitet unter deren Leitung) und das kürzere der beiden Intervalle wird eingehalten. Medizingeräte **ohne** STK-Pflicht (z. B. viele Untersuchungsleuchten oder Pflegebetten) werden häufig ausschließlich über die DGUV-Prüfung erfasst.\n\n## Qualifikation\n\nPrüfende müssen **Elektrofachkräfte** sein – Personen, die aufgrund ihrer fachlichen Ausbildung, Kenntnisse und Erfahrungen sowie Kenntnis der einschlägigen Bestimmungen die übertragenen Arbeiten beurteilen und mögliche Gefahren erkennen können – oder unter deren Leitung und Aufsicht arbeiten [@dguv-v3]. Für einfache, gleichartige Prüfungen mit geeigneten [[pruefgeraete|Prüfgeräten]] werden in der Praxis auch elektrotechnisch unterwiesene Personen eingesetzt, wenn eine Elektrofachkraft Verantwortung und Aufsicht übernimmt.\n\n## Bedeutung in der Medizintechnik\n\nDie DGUV Vorschrift 3 schließt die Lücke zwischen Arbeitsschutz und Medizinprodukterecht: Sie sorgt dafür, dass auch Geräte ohne STK-Pflicht regelmäßig elektrisch geprüft werden. Für Medizintechnik-Abteilungen bedeutet das, beide Prüfwelten in einem gemeinsamen Prüfplan zusammenzuführen – idealerweise im [[medizintechnik-management|Medizintechnik-Managementsystem]] mit [[bestandsverzeichnis|Bestandsverzeichnis]] und einheitlicher Prüfplakette.",
+  "related": [
+    "stk",
+    "elektrische-sicherheitspruefung",
+    "schutzleiterwiderstand",
+    "isolationswiderstand",
+    "ableitstrommessung",
+    "pruefgeraete",
+    "medizinisch-genutzte-bereiche",
+    "din-vde-0100-710",
+    "iec-62353",
+    "iec-61010-1",
+    "betreiberpflichten",
+    "schutzklassen"
+  ],
+  "paths": [
+    [
+      "dguv-vorschrift-3",
+      "elektrische-sicherheitspruefung",
+      "schutzleiterwiderstand"
+    ],
+    [
+      "medizinisch-genutzte-bereiche",
+      "dguv-vorschrift-3",
+      "stk"
+    ]
+  ],
+  "sources": [
+    "dguv-v3",
+    "betrsichv",
+    "din-en-50678",
+    "din-en-50699",
+    "iec-62353",
+    "mpbetreibv",
+    "din-vde-0100-710"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

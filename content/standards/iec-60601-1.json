@@ -1,0 +1,45 @@
+{
+  "id": "iec-60601-1",
+  "type": "standard",
+  "title": "IEC 60601-1",
+  "code": "IEC 60601-1",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 1: Allgemeine Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale",
+  "scope": "Legt die grundlegenden Anforderungen an die Basissicherheit und die wesentlichen Leistungsmerkmale von medizinischen elektrischen Geräten und medizinischen elektrischen Systemen fest.",
+  "aliases": [
+    "DIN EN 60601-1",
+    "EN 60601-1",
+    "VDE 0750-1",
+    "Basisnorm ME-Geräte",
+    "60601-1"
+  ],
+  "category": "normen",
+  "summary": "IEC 60601-1 ist die Basisnorm der Normenfamilie 60601 für medizinische elektrische Geräte. Sie regelt Schutz gegen elektrischen Schlag, mechanische und thermische Gefährdungen, Brandschutz, programmierbare Systeme und ME-Systeme und verknüpft diese Anforderungen mit einem Risikomanagement nach ISO 14971.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-1** ist die zentrale Sicherheitsnorm für [[medizinisches-elektrisches-geraet|medizinische elektrische Geräte]] (ME-Geräte) und medizinische elektrische Systeme (ME-Systeme) [@iec-60601-1]. Ein ME-Gerät ist – vereinfacht – ein elektrisches Gerät mit einem [[anwendungsteile|Anwendungsteil]] oder einem Gerät, das Energie zum oder vom Patienten überträgt bzw. eine solche Übertragung erfasst, und das vom Hersteller für Diagnose, Therapie oder Überwachung bestimmt ist. In Europa ist die Norm als DIN EN 60601-1 übernommen; sofern eine Fassung im Amtsblatt der EU als harmonisierte Norm zur [[mdr|MDR]] gelistet ist, begründet ihre Anwendung die Vermutung, die davon abgedeckten grundlegenden Sicherheits- und Leistungsanforderungen zu erfüllen (Art. 8 MDR) [@mdr-2017]. Welche Ausgabe aktuell gelistet ist, ist im Amtsblatt zu prüfen.\n\nDie Norm gilt für nahezu alle aktiven Geräte am Patienten – vom [[pulsoxymeter|Pulsoxymeter]] über das [[beatmungsgeraet|Intensivbeatmungsgerät]] bis zum [[computertomograph|Computertomographen]]. Nicht erfasst sind In-vitro-Diagnostika ohne Patientenkontakt; für Laborgeräte gilt meist die [[iec-61010-1|IEC 61010-1]].\n\n## Zentrale Konzepte\n\n### Basissicherheit und wesentliche Leistungsmerkmale\n\nDie Norm unterscheidet zwei Schutzziele:\n\n| Begriff | Bedeutung (eigene Worte) |\n|---|---|\n| Basissicherheit | Freiheit von unvertretbaren Risiken durch physikalische Gefährdungen (elektrischer Schlag, Brand, Mechanik, Temperatur, Strahlung), wenn das Gerät normal oder im ersten Fehlerfall betrieben wird |\n| Wesentliche Leistungsmerkmale (*essential performance*) | Funktionen, deren Ausfall oder Verschlechterung zu einem unvertretbaren Risiko führen würde – z. B. die korrekte Abgabe des Tidalvolumens eines Beatmungsgeräts |\n\nWelche Leistungsmerkmale „wesentlich“ sind, legt der Hersteller im Rahmen seines [[iso-14971|Risikomanagements nach ISO 14971]] fest. Diese Verknüpfung von Prüfnorm und Risikomanagement ist ein Grundprinzip der aktuellen Normengeneration [@iec-60601-1].\n\n### Schutz gegen elektrischen Schlag\n\n* **Schutzmaßnahmen (MOP, *means of protection*):** Die Norm verlangt zwei unabhängige Schutzmaßnahmen (2 MOP), sodass ein einzelner Fehler nicht zur Gefährdung führt. Bei [[schutzklassen|Schutzklasse I]] sind das typischerweise Basisisolierung plus Schutzleiteranschluss, bei Schutzklasse II Basisisolierung plus zusätzliche Isolierung (bzw. verstärkte Isolierung). Unterschieden werden Schutzmaßnahmen für den Bediener (MOOP) und für den Patienten (MOPP); für den Patienten gelten strengere Kriech- und Luftstrecken sowie Prüfspannungen. Realisiert wird das z. B. durch [[galvanische-trennung|galvanische Trennung]], doppelte Isolierung oder Schutzleiter (siehe [[schutzklassen]]).\n* **Anwendungsteile:** Typ B, BF und CF beschreiben den Grad des Schutzes gegen elektrischen Schlag; BF und CF sind vom Erdpotential getrennt (*floating*), nur Typ CF ist für die direkte Anwendung am Herzen zulässig (siehe [[anwendungsteile]]).\n* **Ableitströme:** Die Norm begrenzt Erd-, Berührungs- und Patientenableitströme sowie Patientenhilfsströme jeweils im Normalzustand und im ersten Fehlerfall ([[ableitstrom]], [[elektrische-stromwirkung]]).\n\n> [!vereinfacht] Grenzwerte für den Patientenableitstrom liegen für Anwendungsteile vom Typ CF etwa eine Größenordnung unter denen für Typ B/BF, weil bei direktem Herzkontakt bereits Ströme im Mikroampere-Bereich Kammerflimmern auslösen können. Die genauen Werte und Messbedingungen sind der jeweils gültigen Fassung der Norm zu entnehmen.\n\n### Erster Fehlerfall\n\nSicherheit muss nicht nur im Normalzustand, sondern auch bei genau einem Fehler (*single fault condition*) gewährleistet sein – etwa bei Unterbrechung des Schutzleiters, Kurzschluss einer Isolierung oder Ausfall eines Lüfters. Gleichzeitige zweite, unabhängige Fehler werden nicht unterstellt; der Hersteller muss aber zeigen, dass ein erster Fehler entweder sehr unwahrscheinlich ist oder rechtzeitig erkannt wird (z. B. durch Alarm, Anzeige oder Wiederholungsprüfung), bevor ein zweiter hinzukommen kann.\n\n### Weitere Anforderungsbereiche\n\n* **Mechanische Gefährdungen:** Standsicherheit, bewegte Teile, Quetschstellen, Tragfähigkeit (z. B. [[op-tisch|OP-Tische]]).\n* **Thermische Gefährdungen und Brandschutz:** zulässige Oberflächentemperaturen an Anwendungsteilen ([[joulesche-waerme]]), Brandschutzgehäuse.\n* **Programmierbare elektrische medizinische Systeme (PEMS):** Anforderungen an softwaregesteuerte Funktionen mit Verweis auf [[iec-62304|IEC 62304]].\n* **ME-Systeme:** Kombinationen aus ME-Geräten und anderen Geräten (z. B. PC am [[ultraschallgeraet|Ultraschallgerät]]) – Ableitstrombegrenzung, Mehrfachsteckdosen, Trennvorrichtungen.\n* **Kennzeichnung und Begleitpapiere:** Symbole, Typschild, Gebrauchsanweisung, technische Beschreibung.\n\n## Bezug zu anderen Normen\n\nDie IEC 60601-1 ist die **Basisnorm** einer dreistufigen Normenfamilie:\n\n| Ebene | Bezeichnung | Beispiele |\n|---|---|---|\n| Basisnorm | IEC 60601-1 | allgemeine Festlegungen |\n| Ergänzungsnormen | IEC 60601-1-x | [[iec-60601-1-2]] (EMV), [[iec-60601-1-6]] (Gebrauchstauglichkeit), [[iec-60601-1-8]] (Alarmsysteme), [[iec-60601-1-11]] (häusliche Umgebung) |\n| Besondere Festlegungen | IEC 60601-2-x / ISO 80601-2-x | [[iec-60601-2-4]] (Defibrillatoren), [[iec-60601-2-24]] (Infusionspumpen), [[iso-80601-2-12]] (Intensivbeatmung), [[iec-60601-2-2]] (HF-Chirurgie) |\n\n> [!hinweis] Besondere Festlegungen haben Vorrang: Sie ändern, ergänzen oder ersetzen einzelne Abschnitte der Basisnorm für einen bestimmten Gerätetyp.\n\nQuerverbindungen bestehen zu [[iso-14971]] (Risikomanagement), [[iec-62366-1]] (Gebrauchstauglichkeit), [[iec-62304]] (Software) und – für die Prüfung im Betrieb – zu [[iec-62353]].\n\n## Bedeutung für Hersteller und Betreiber\n\nFür **Hersteller** ist die Norm der wichtigste Nachweisweg für die elektrische, mechanische und thermische Sicherheit im Rahmen der [[konformitaetsbewertung]] und [[ce-kennzeichnung]]. Prüfungen erfolgen typischerweise in akkreditierten Prüflaboren; das Ergebnis fließt in die technische Dokumentation ein.\n\nFür **Betreiber** und Medizintechniker:innen ist die IEC 60601-1 vor allem indirekt relevant: Sie erklärt die Bedeutung von Typschild-Symbolen, Schutzklassen und Anwendungsteil-Typen und bildet die konzeptionelle Grundlage für die [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] im Rahmen der [[stk]]. Wiederholungsprüfungen im Betrieb werden jedoch **nicht** nach IEC 60601-1, sondern nach [[iec-62353]] durchgeführt.\n\n> [!praxis] Beim Kombinieren von Geräten am Patienten (z. B. Monitor, Drucker, Notebook auf einem Gerätewagen) entsteht ein ME-System. Wer ein solches System zusammenstellt, übernimmt Verantwortung für dessen Sicherheit – Ableitströme sind dann für das System als Ganzes zu bewerten.\n\n## Betroffene Geräte\n\nPraktisch alle aktiven Geräte am Patienten, u. a. [[patientenmonitor]], [[beatmungsgeraet]], [[defibrillator]], [[infusionspumpe]], [[spritzenpumpe]], [[ekg-geraet]], [[hf-chirurgiegeraet]], [[dialysegeraet]], [[inkubator]], [[roentgengeraet]], [[mrt]], [[anaesthesiegeraet]] und [[pflegebett]]. Siehe auch die Hub-Seite [[normen]].\n",
+  "related": [
+    "medizinisches-elektrisches-geraet",
+    "anwendungsteile",
+    "schutzklassen",
+    "ableitstrom",
+    "galvanische-trennung",
+    "elektrische-sicherheitspruefung",
+    "iec-60601-1-2",
+    "iec-60601-1-6",
+    "iec-60601-1-8",
+    "iec-60601-1-11",
+    "iec-62353",
+    "iso-14971",
+    "iec-62304",
+    "patientenmonitor",
+    "beatmungsgeraet",
+    "defibrillator",
+    "infusionspumpe"
+  ],
+  "sources": [
+    "iec-60601-1",
+    "mdr-2017",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

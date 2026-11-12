@@ -1,0 +1,170 @@
+{
+  "id": "waermeuebertragung",
+  "type": "term",
+  "title": "Wärmeübertragung",
+  "aliases": [
+    "Wärmetransport",
+    "heat transfer",
+    "Wärmeleitung",
+    "Konvektion (Wärme)",
+    "Wärmestrahlung",
+    "Verdunstung",
+    "Fourier’sches Gesetz",
+    "Stefan-Boltzmann-Gesetz",
+    "Wärmeübergangskoeffizient",
+    "Bioheat-Gleichung"
+  ],
+  "category": "physik",
+  "summary": "Wärme wird durch Wärmeleitung, Konvektion, Wärmestrahlung und Verdunstung übertragen. Diese vier Mechanismen bestimmen den Wärmehaushalt von Patienten – besonders von Früh- und Neugeborenen – und sind das Arbeitsprinzip von Inkubatoren, Wärmebetten, Wärmesystemen, Infusionswärmern, Hypothermiegeräten, Infrarot-Thermometern und der Kühlung von Röntgenröhren und Elektronik.",
+  "body": "## Grundbegriffe\n\nWärme ist Energie, die aufgrund eines Temperaturunterschieds übertragen wird; sie fließt stets vom wärmeren zum kälteren Körper. Die für eine Temperaturänderung ΔT nötige Wärmemenge ist\n\n`Q = m · c · ΔT`\n\nmit der spezifischen Wärmekapazität c (Wasser: rund 4,19 kJ/(kg·K)). Für Phasenübergänge kommt die latente Wärme hinzu, z. B. die Verdampfungsenthalpie von Wasser (rund 2,4 MJ/kg bei Hauttemperatur, rund 2,2 MJ/kg bei Sterilisationstemperaturen) [@tipler-2019].\n\n## Die vier Mechanismen\n\n### Wärmeleitung (Konduktion)\n\nWärme wird durch Stöße benachbarter Teilchen weitergegeben, ohne dass sich Materie bewegt. Das **Fourier’sche Gesetz** lautet für eine ebene Schicht:\n\n`Q̇ = λ · A · ΔT / d`\n\nλ ist die Wärmeleitfähigkeit, A die Fläche, d die Dicke.\n\n| Material | Wärmeleitfähigkeit λ (ca., W/(m·K)) |\n|---|---|\n| Kupfer | 400 |\n| Edelstahl | 15 |\n| Wasser | 0,6 |\n| Muskelgewebe | 0,5 |\n| Fettgewebe | 0,2 |\n| Luft (ruhend) | 0,026 |\n\n> [!hinweis] Die Werte sind gerundete Lehrbuch-Größenordnungen. Ruhende Luft isoliert gut – darauf beruhen Decken, Doppelwände und Schaumstoffmatratzen.\n\n### Konvektion\n\nEin strömendes Fluid (Luft, Wasser, Blut) nimmt Wärme an einer Oberfläche auf und transportiert sie mit. Nach **Newton** gilt:\n\n`Q̇ = h · A · (T_Oberfläche − T_Fluid)`\n\nDer Wärmeübergangskoeffizient h hängt von der Strömungsgeschwindigkeit und vom Medium ab ([[stroemungslehre]]). **Freie Konvektion** entsteht durch Dichteunterschiede, **erzwungene Konvektion** durch Gebläse oder Pumpen – z. B. im Inkubator oder in Warmluft-Patientenwärmesystemen.\n\n### Wärmestrahlung\n\nJeder Körper strahlt elektromagnetische Energie ab, deren Leistung nach dem **Stefan-Boltzmann-Gesetz** mit der vierten Potenz der absoluten Temperatur steigt:\n\n`Q̇ = ε · σ · A · (T₁⁴ − T₂⁴)`   mit σ ≈ 5,67 · 10⁻⁸ W/(m²·K⁴)\n\nDie menschliche Haut ist im Infraroten ein nahezu schwarzer Strahler (ε nahe 1). Das Strahlungsmaximum liegt nach dem Wien’schen Gesetz `λ_max ≈ 2898 µm·K / T` bei Körpertemperatur um 9–10 µm [@tipler-2019]. Strahlung braucht kein Medium – sie wirkt auch durch Luft hindurch auf kalte Wände und Fenster.\n\n### Verdunstung (Evaporation)\n\nVerdunstet Wasser von Haut oder Schleimhäuten, entzieht es dem Körper die Verdampfungsenthalpie. Die Rate hängt von der Luftfeuchte und der Luftbewegung ab.\n\n## Wärmebilanz des Patienten\n\nDie [[thermoregulation|Thermoregulation]] gleicht Wärmeproduktion und -abgabe aus. Neugeborene sind besonders gefährdet: große Körperoberfläche im Verhältnis zur Masse, dünne Haut, wenig Fettgewebe [@who-thermal-1997].\n\n> [!beispiel] Strahlungsverlust eines Neugeborenen (A ≈ 0,2 m², Hauttemperatur 36 °C = 309 K, ε ≈ 0,98) an eine 28 °C (301 K) warme Inkubatorwand: Q̇ ≈ 0,98 · 5,67·10⁻⁸ · 0,2 · (309⁴ − 301⁴) ≈ 10 W. Das liegt in der Größenordnung des gesamten Ruheumsatzes eines reifen Neugeborenen (grob einige Watt) – der Verlust muss also durch Wärmezufuhr über die warme Inkubatorluft ausgeglichen werden. Doppelwandige Hauben halten die Innenwand wärmer und verringern so den Strahlungsverlust; eine erhöhte Luftfeuchte senkt dagegen den Verdunstungsverlust.\n\n| Mechanismus | Wärmeverlust des Patienten | technische Gegenmaßnahme |\n|---|---|---|\n| Leitung | kalte Unterlage, OP-Tisch | vorgewärmte Matratzen, Wärmematten |\n| Konvektion | Luftzug, Klimaanlage | [[inkubator]] mit geregelter Warmluft, Warmluftdecken ([[patientenwaermesystem]]) |\n| Strahlung | kalte Wände/Fenster | doppelwandige Haube, Heizstrahler am [[waermebett]] |\n| Verdunstung | nasse Haut, trockene Atemgase | Befeuchtung im Inkubator, [[atemgasbefeuchter|Atemgasbefeuchter]] |\n\nIm durchbluteten Gewebe transportiert zusätzlich das Blut Wärme. Die **Bioheat-Gleichung** nach Pennes ergänzt die Wärmeleitung um einen Perfusionsterm und dient zur Abschätzung der Gewebeerwärmung durch HF-Chirurgie, [[laser|Laser]], Ultraschall oder MRT-Hochfrequenz [@pennes-1948].\n\n## Anwendung in Geräten\n\n| Gerät | genutzter Mechanismus |\n|---|---|\n| [[inkubator]] | erzwungene Konvektion über [[heizelement|Heizelement]] und Lüfter, Haut- oder Lufttemperaturregelung ([[regelkreis]]) |\n| [[waermebett]] (Reanimationseinheit) | Infrarot-Wärmestrahlung von oben, Regelung über Hauttemperatursensor |\n| [[patientenwaermesystem]] | Warmluft-Konvektion oder Leitung (Wärmematten) |\n| [[infusionswaermer]] | Leitung/Konvektion über Wärmetauscher |\n| [[hypothermiegeraet]] | Leitung über wasserdurchströmte Pads oder intravasale Katheter |\n| [[herz-lungen-maschine]], [[ecmo]] | Wärmetauscher im Oxygenator |\n| [[thermometer]] (Infrarot) | Messung der Wärmestrahlung von Trommelfell oder Stirn |\n| [[dampfsterilisator]] | Kondensation von Sattdampf überträgt latente Wärme sehr effektiv |\n| [[roentgenroehre]] | Strahlung der Drehanode, Leitung und Konvektion über Öl |\n\n> [!beispiel] Ein [[infusionswaermer|Infusionswärmer]] soll 500 mL Lösung in 30 min von 20 °C auf 37 °C erwärmen: Q = 0,5 kg · 4190 J/(kg·K) · 17 K ≈ 35,6 kJ; P = 35,6 kJ / 1800 s ≈ 20 W (ohne Verluste). Bei Schnellinfusionen steigt der Leistungsbedarf entsprechend.\n\n## Bedeutung in der Medizintechnik\n\nWärmeübertragung ist gleichzeitig **Therapieprinzip** und **Gefährdung**:\n\n* **Verbrennungen** durch Heizstrahler, Wärmematten oder warme Geräteoberflächen – [[iec-60601-1]] begrenzt Oberflächentemperaturen von Anwendungsteilen [@iec-60601-1]; besondere Festlegungen gelten u. a. für Inkubatoren und Wärmebetten [@iec-60601-2-19] [@iec-60601-2-21].\n* **Überhitzung von Elektronik und Antrieben**: Lüfter, Kühlkörper und Filtermatten müssen bei der [[wartung]] kontrolliert werden; verstopfte Filter erhöhen die Temperatur von [[elektromotor|Motoren]] und [[medizinisches-netzteil|Netzteilen]] ([[joulesche-waerme]]).\n* **Messfehler**: [[temperatursensor|Temperatursensoren]] messen falsch, wenn der Wärmekontakt schlecht ist oder Fremdstrahlung einwirkt (z. B. Hautsensor unter Heizstrahler ohne Reflexionsschutz).\n\n> [!warnung] Ein abgelöster Hauttemperatursensor an einem servogeregelten Wärmebett meldet scheinbar zu niedrige Temperatur – die Regelung heizt nach. Geräte verfügen dafür über Alarm- und Begrenzungsfunktionen, die nicht umgangen werden dürfen.\n\n> [!belegt] Die vier Mechanismen Leitung, Konvektion, Strahlung und Verdunstung sind in der Literatur zum Wärmeschutz Neugeborener als Grundlage aller Maßnahmen beschrieben [@who-thermal-1997].",
+  "related": [
+    "thermoregulation",
+    "inkubator",
+    "waermebett",
+    "patientenwaermesystem",
+    "infusionswaermer",
+    "hypothermiegeraet",
+    "heizelement",
+    "temperatursensor",
+    "joulesche-waerme",
+    "thermometer",
+    "dampfsterilisator",
+    "stroemungslehre"
+  ],
+  "paths": [
+    [
+      "inkubator",
+      "heizelement",
+      "waermeuebertragung",
+      "thermoregulation"
+    ],
+    [
+      "waermebett",
+      "temperatursensor",
+      "regelkreis",
+      "waermeuebertragung"
+    ]
+  ],
+  "sources": [
+    "tipler-2019",
+    "who-thermal-1997",
+    "pennes-1948",
+    "iec-60601-1",
+    "iec-60601-2-19",
+    "iec-60601-2-21"
+  ],
+  "diagram": {
+    "title": "Wärmeströme am Neugeborenen im Inkubator",
+    "caption": "Vier Wege der Wärmeabgabe und die geregelte Wärmezufuhr (Funktionsschema).",
+    "width": 900,
+    "height": 320,
+    "nodes": [
+      {
+        "id": "hz",
+        "label": "Heizelement\n+ Lüfter",
+        "ref": "heizelement",
+        "kind": "actuator",
+        "x": 110,
+        "y": 160
+      },
+      {
+        "id": "pat",
+        "label": "Neugeborenes",
+        "ref": "thermoregulation",
+        "kind": "patient",
+        "x": 440,
+        "y": 160
+      },
+      {
+        "id": "lei",
+        "label": "Leitung\n(Matratze)",
+        "kind": "process",
+        "x": 440,
+        "y": 270
+      },
+      {
+        "id": "kon",
+        "label": "Konvektion\n(Luftstrom)",
+        "kind": "process",
+        "x": 270,
+        "y": 60
+      },
+      {
+        "id": "str",
+        "label": "Strahlung\n(Haubenwand)",
+        "kind": "process",
+        "x": 620,
+        "y": 60
+      },
+      {
+        "id": "ver",
+        "label": "Verdunstung\n(Haut, Atmung)",
+        "kind": "process",
+        "x": 780,
+        "y": 160
+      },
+      {
+        "id": "ts",
+        "label": "Haut-/Luft-\ntemperatursensor",
+        "ref": "temperatursensor",
+        "kind": "sensor",
+        "x": 220,
+        "y": 270
+      },
+      {
+        "id": "reg",
+        "label": "Regler",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 110,
+        "y": 60
+      }
+    ],
+    "edges": [
+      {
+        "from": "reg",
+        "to": "hz",
+        "kind": "signal",
+        "label": "Stellgröße"
+      },
+      {
+        "from": "hz",
+        "to": "kon",
+        "kind": "energy"
+      },
+      {
+        "from": "kon",
+        "to": "pat",
+        "kind": "energy"
+      },
+      {
+        "from": "pat",
+        "to": "str",
+        "kind": "energy"
+      },
+      {
+        "from": "pat",
+        "to": "ver",
+        "kind": "energy"
+      },
+      {
+        "from": "pat",
+        "to": "lei",
+        "kind": "energy"
+      },
+      {
+        "from": "pat",
+        "to": "ts",
+        "kind": "signal"
+      },
+      {
+        "from": "ts",
+        "to": "reg",
+        "kind": "data",
+        "label": "Istwert"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

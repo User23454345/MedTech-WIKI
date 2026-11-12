@@ -1,0 +1,61 @@
+[
+  {
+    "id": "richtlinie-haemotherapie",
+    "kind": "leitlinie",
+    "authors": "Bundesärztekammer",
+    "title": "Richtlinie zur Gewinnung von Blut und Blutbestandteilen und zur Anwendung von Blutprodukten (Richtlinie Hämotherapie)",
+    "publisher": "Bundesärztekammer / Paul-Ehrlich-Institut",
+    "note": "Regelt u. a. Lagerung und Transport von Blutkomponenten; maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "iec-61010-2-020",
+    "kind": "norm",
+    "title": "IEC 61010-2-020 – Sicherheitsbestimmungen für elektrische Mess-, Steuer-, Regel- und Laborgeräte – Teil 2-020: Besondere Anforderungen an Laborzentrifugen",
+    "publisher": "IEC / in Deutschland als DIN EN IEC 61010-2-020",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60601-2-18",
+    "kind": "norm",
+    "title": "IEC 60601-2-18 – Medizinische elektrische Geräte – Teil 2-18: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von endoskopischen Geräten",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-18",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60601-2-41",
+    "kind": "norm",
+    "title": "IEC 60601-2-41 – Medizinische elektrische Geräte – Teil 2-41: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Operationsleuchten und Untersuchungsleuchten",
+    "publisher": "IEC / in Deutschland als DIN EN IEC 60601-2-41",
+    "year": "2021",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60601-2-46",
+    "kind": "norm",
+    "title": "IEC 60601-2-46 – Medizinische elektrische Geräte – Teil 2-46: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Operationstischen",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-46",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60601-2-22",
+    "kind": "norm",
+    "title": "IEC 60601-2-22 – Medizinische elektrische Geräte – Teil 2-22: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von chirurgischen, kosmetischen, therapeutischen und diagnostischen Lasergeräten",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-22",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60825-1",
+    "kind": "norm",
+    "title": "IEC 60825-1 – Sicherheit von Lasereinrichtungen – Teil 1: Klassifizierung von Anlagen und Anforderungen",
+    "publisher": "IEC / in Deutschland als DIN EN 60825-1",
+    "note": "Grundlage der Laserklassen 1 bis 4; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "ostrv",
+    "kind": "gesetz",
+    "title": "Verordnung zum Schutz der Beschäftigten vor Gefährdungen durch künstliche optische Strahlung (Arbeitsschutzverordnung zu künstlicher optischer Strahlung – OStrV)",
+    "publisher": "Bundesrepublik Deutschland",
+    "year": "2010",
+    "note": "Regelt u. a. Gefährdungsbeurteilung und Laserschutzbeauftragte beim Betrieb von Lasern der Klassen 3R, 3B und 4; maßgeblich ist die jeweils gültige Fassung."
+  }
+]

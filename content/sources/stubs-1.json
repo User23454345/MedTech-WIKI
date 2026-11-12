@@ -1,0 +1,39 @@
+[
+  {
+    "id": "iso-81060-2",
+    "kind": "norm",
+    "title": "ISO 81060-2 – Nichtinvasive Blutdruckmessgeräte – Teil 2: Klinische Prüfung von Geräten mit automatisierter Messung (intermittierend)",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 81060-2",
+    "note": "Legt das Protokoll zur klinischen Validierung automatischer nichtinvasiver Blutdruckmessgeräte fest; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-80601-2-84",
+    "kind": "norm",
+    "title": "ISO 80601-2-84 – Medizinische elektrische Geräte – Teil 2-84: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Beatmungsgeräten für den Rettungsdienst",
+    "publisher": "ISO",
+    "note": "Erstausgabe 2020, ersetzt durch die 2. Ausgabe 2023; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60601-2-47",
+    "kind": "norm",
+    "title": "IEC 60601-2-47 – Medizinische elektrische Geräte – Teil 2-47: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von ambulanten elektrokardiographischen Systemen",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-47",
+    "note": "Gerätespezifische Norm für Langzeit-EKG-Systeme; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "kdigo-aki-2012",
+    "kind": "leitlinie",
+    "authors": "Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group",
+    "title": "KDIGO Clinical Practice Guideline for Acute Kidney Injury",
+    "publisher": "Kidney International Supplements 2(1)",
+    "year": "2012"
+  },
+  {
+    "id": "thiele-2012",
+    "kind": "artikel",
+    "authors": "Thiele H, Zeymer U, Neumann FJ et al.",
+    "title": "Intraaortic Balloon Support for Myocardial Infarction with Cardiogenic Shock (IABP-SHOCK II)",
+    "publisher": "New England Journal of Medicine 367: 1287–1296",
+    "year": "2012"
+  }
+]

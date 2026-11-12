@@ -1,0 +1,169 @@
+{
+  "id": "mdr",
+  "type": "standard",
+  "title": "Medizinprodukteverordnung (MDR)",
+  "code": "Verordnung (EU) 2017/745",
+  "kind": "verordnung",
+  "fullTitle": "Verordnung (EU) 2017/745 des Europäischen Parlaments und des Rates vom 5. April 2017 über Medizinprodukte, zur Änderung der Richtlinie 2001/83/EG, der Verordnung (EG) Nr. 178/2002 und der Verordnung (EG) Nr. 1223/2009 und zur Aufhebung der Richtlinien 90/385/EWG und 93/42/EWG des Rates",
+  "scope": "Regelt das Inverkehrbringen, die Bereitstellung auf dem Markt und die Inbetriebnahme von Medizinprodukten für den menschlichen Gebrauch und deren Zubehör in der EU sowie die Überwachung nach dem Inverkehrbringen.",
+  "aliases": [
+    "MDR",
+    "Medical Device Regulation",
+    "EU-Medizinprodukteverordnung",
+    "Verordnung (EU) 2017/745",
+    "EU MDR",
+    "MP-VO"
+  ],
+  "category": "recht",
+  "summary": "Die Verordnung (EU) 2017/745 (MDR) ist seit dem 26. Mai 2021 das unmittelbar geltende EU-Recht für Medizinprodukte. Sie regelt Klassifizierung, Konformitätsbewertung, klinische Bewertung, Rückverfolgbarkeit und Überwachung nach dem Inverkehrbringen und hat die Richtlinien 93/42/EWG und 90/385/EWG abgelöst.",
+  "body": "## Überblick\n\nDie **Verordnung (EU) 2017/745 über Medizinprodukte** – kurz **MDR** (*Medical Device Regulation*) – ist das zentrale Regelwerk für das Inverkehrbringen, die Inbetriebnahme und die Marktüberwachung von [[medizinprodukt|Medizinprodukten]] in der Europäischen Union [@mdr-2017]. Sie wurde am 5. April 2017 erlassen und ersetzt die früheren Richtlinien 93/42/EWG (Medizinprodukte) und 90/385/EWG (aktive implantierbare Medizinprodukte). Ursprünglich sollte sie ab dem 26. Mai 2020 gelten; wegen der COVID-19-Pandemie wurde der Geltungsbeginn um ein Jahr auf den **26. Mai 2021** verschoben [@vo-2020-561].\n\nAls **Verordnung** gilt die MDR in allen Mitgliedstaaten unmittelbar – anders als die alten Richtlinien, die erst in nationales Recht (in Deutschland das Medizinproduktegesetz, MPG) umgesetzt werden mussten. Nationale Gesetze regeln seitdem nur noch, was die MDR den Mitgliedstaaten überlässt; in Deutschland ist das vor allem das [[mpdg|Medizinprodukterecht-Durchführungsgesetz (MPDG)]], für den Betrieb von Geräten die [[mpbetreibv|Medizinprodukte-Betreiberverordnung]]. Für Labordiagnostika gilt die parallel erlassene [[ivdr|IVDR]].\n\n> [!belegt] Die MDR umfasst 123 Artikel und 17 Anhänge. Kernstücke für Hersteller sind Anhang I (grundlegende Sicherheits- und Leistungsanforderungen), Anhang VIII (Klassifizierungsregeln) sowie die Anhänge IX bis XI (Konformitätsbewertungsverfahren) [@mdr-2017].\n\n## Aufbau der Verordnung\n\n| Kapitel / Anhang | Inhalt (vereinfacht) |\n|---|---|\n| Kapitel I | Geltungsbereich und Begriffsbestimmungen (Art. 2: u. a. Medizinprodukt, [[zweckbestimmung]], Inverkehrbringen) |\n| Kapitel II | Bereitstellung, Pflichten der Wirtschaftsakteure (Hersteller, Bevollmächtigte, Importeure, Händler) |\n| Kapitel III | Identifizierung und Rückverfolgbarkeit ([[udi]]), Registrierung, EUDAMED [@eudamed] |\n| Kapitel IV | [[benannte-stelle|Benannte Stellen]] |\n| Kapitel V | Klassifizierung und [[konformitaetsbewertung|Konformitätsbewertung]] |\n| Kapitel VI | [[klinische-bewertung|Klinische Bewertung]] und klinische Prüfungen |\n| Kapitel VII | Überwachung nach dem Inverkehrbringen, [[vigilanz|Vigilanz]], Marktüberwachung |\n| Kapitel VIII–X | Zusammenarbeit der Mitgliedstaaten, Vertraulichkeit, Sanktionen, Schlussbestimmungen |\n| Anhang I | Grundlegende Sicherheits- und Leistungsanforderungen (GSPR) |\n| Anhang II/III | Technische Dokumentation, Dokumentation zur Überwachung nach dem Inverkehrbringen |\n| Anhang VIII | 22 Klassifizierungsregeln |\n| Anhang IX–XI | Konformitätsbewertungsverfahren |\n| Anhang XIV | Klinische Bewertung und klinische Nachbeobachtung (PMCF) |\n\n## Risikoklassen und Klassifizierung\n\nDie MDR ordnet Medizinprodukte in vier [[risikoklassen|Risikoklassen]] ein: **I, IIa, IIb und III**. Grundlage sind die 22 Regeln in Anhang VIII, die an Anwendungsdauer (vorübergehend, kurzzeitig, langzeitig), Invasivität, betroffene Körperregion (z. B. zentrales Kreislauf- oder Nervensystem) und Wirkungsweise (aktiv/nicht aktiv) anknüpfen [@mdr-2017]. Erläuterungen mit Beispielen enthält der Leitfaden MDCG 2021-24 [@mdcg-2021-24].\n\n| Klasse | Risiko | Beteiligung Benannte Stelle | Beispiele (typisch) |\n|---|---|---|---|\n| I | gering | nein (Ausnahmen: steril, mit Messfunktion, wiederverwendbare chirurgische Instrumente) | Untersuchungsliege, [[pflegebett|Pflegebett]] (je nach Zweckbestimmung) |\n| IIa | mittel | ja | [[ekg-geraet|EKG-Gerät]], [[ultraschallgeraet|Diagnostik-Ultraschall]] |\n| IIb | erhöht | ja | [[beatmungsgeraet|Intensivbeatmungsgerät]], [[infusionspumpe|Infusionspumpe]], [[defibrillator|Defibrillator]], [[roentgengeraet|Röntgengerät]] |\n| III | hoch | ja, inkl. ggf. Konsultationsverfahren | Herzklappen, [[herzschrittmacher|Herzschrittmacher]] (aktive Implantate) |\n\n> [!vereinfacht] Die Beispiele zeigen typische Einstufungen. Maßgeblich ist immer die konkrete [[zweckbestimmung]] des Herstellers; dasselbe Grundprinzip kann je nach Anwendung in unterschiedlichen Klassen landen.\n\nFür Software gilt die eigene **Regel 11**; Details siehe [[software-medizinprodukt]].\n\n## Pflichten der Wirtschaftsakteure\n\n### Hersteller\n\nDer Hersteller trägt die Hauptverantwortung (Art. 10 MDR). Er muss unter anderem [@mdr-2017]:\n\n* ein **Qualitätsmanagementsystem** betreiben (in der Praxis meist nach [[iso-13485]]),\n* ein **Risikomanagement** über den gesamten Lebenszyklus führen (Methodik nach [[iso-14971]]),\n* eine **technische Dokumentation** nach Anhang II und III erstellen,\n* eine **klinische Bewertung** durchführen und aktualisieren,\n* ein System zur **Überwachung nach dem Inverkehrbringen** (*Post-Market Surveillance*, PMS) betreiben,\n* eine **für die Einhaltung der Regulierungsvorschriften verantwortliche Person** (PRRC, Art. 15) benennen,\n* Produkte mit [[udi|UDI]] kennzeichnen und in EUDAMED registrieren,\n* nach erfolgreicher Konformitätsbewertung eine EU-Konformitätserklärung ausstellen und die [[ce-kennzeichnung|CE-Kennzeichnung]] anbringen.\n\n### Bevollmächtigte, Importeure, Händler\n\nHersteller außerhalb der EU benötigen einen **EU-Bevollmächtigten**. Importeure und Händler haben Prüfpflichten (z. B. CE-Kennzeichnung, Kennzeichnung, Gebrauchsanweisung in Landessprache) und müssen Beschwerden und Verdachtsfälle weitergeben.\n\n## Grundlegende Sicherheits- und Leistungsanforderungen\n\nAnhang I verlangt, dass Produkte die vom Hersteller vorgesehene Leistung erbringen und bei bestimmungsgemäßer Anwendung sicher sind; verbleibende Risiken müssen im Verhältnis zum Nutzen vertretbar sein. Für technische Produkte sind besonders relevant:\n\n* **Elektrische Sicherheit und [[emv|EMV]]** – in der Praxis über [[iec-60601-1]] und [[iec-60601-1-2]] nachgewiesen,\n* **Alarmsysteme** – vgl. [[iec-60601-1-8]] und [[alarmsystem]],\n* **Software und IT-Sicherheit** – Lebenszyklus nach [[iec-62304]],\n* **Gebrauchstauglichkeit** – vgl. [[gebrauchstauglichkeit]] und [[iec-62366-1]],\n* **Strahlenschutz** bei strahlenemittierenden Produkten – vgl. [[strahlenschutz]],\n* **Biokompatibilität** – vgl. [[iso-10993-1]].\n\n> [!hinweis] **Harmonisierte Normen** sind nicht verpflichtend. Wer sie anwendet, profitiert aber von der **Konformitätsvermutung**: Es wird vermutet, dass die durch die Norm abgedeckten Anforderungen erfüllt sind. Maßgeblich ist die jeweils im Amtsblatt veröffentlichte Fassung.\n\n## Konformitätsbewertung\n\nAb Klasse IIa (sowie bei Klasse I steril, mit Messfunktion oder wiederverwendbaren chirurgischen Instrumenten) muss eine [[benannte-stelle|Benannte Stelle]] beteiligt werden. Typische Wege sind die Bewertung des Qualitätsmanagementsystems mit Prüfung der technischen Dokumentation (Anhang IX) oder die Baumusterprüfung (Anhang X) in Kombination mit Anhang XI. Einzelheiten: [[konformitaetsbewertung]].\n\n## Überwachung nach dem Inverkehrbringen und Vigilanz\n\nNeu gegenüber den Richtlinien ist der starke Fokus auf den gesamten [[lebenszyklus-medizinprodukt|Lebenszyklus]]:\n\n* **PMS-Plan und PMS-Bericht** (Klasse I) bzw. **regelmäßig aktualisierter Sicherheitsbericht** (PSUR, ab Klasse IIa),\n* **Klinische Nachbeobachtung** (PMCF) zur Bestätigung von Sicherheit und Leistung,\n* **Meldung schwerwiegender Vorkommnisse** und **Sicherheitskorrekturmaßnahmen im Feld** (FSCA) an die zuständige Behörde – in Deutschland das Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM) [@bfarm]; siehe [[vigilanz]].\n\nFür Betreiber und Anwender in Deutschland ergänzt die MPAMIV die Meldewege [@mpamiv]; Ansprechpartner in der Gesundheitseinrichtung ist der [[beauftragter-medizinproduktesicherheit|Beauftragte für Medizinproduktesicherheit]].\n\n## Übergangsfristen\n\nProdukte mit gültigen Bescheinigungen nach den alten Richtlinien (sog. *Legacy Devices*) dürfen unter Bedingungen weiter in Verkehr gebracht werden. Die Verordnung (EU) 2023/607 hat diese Fristen verlängert – gestaffelt nach Risikoklasse bis längstens Ende 2027 bzw. Ende 2028 – sofern der Hersteller u. a. ein MDR-Qualitätsmanagementsystem eingeführt und bei einer Benannten Stelle einen Antrag gestellt hat [@vo-2023-607]. Die Verordnung (EU) 2024/1860 führte zusätzlich eine Informationspflicht bei Lieferunterbrechungen ein [@vo-2024-1860].\n\n> [!hinweis] Das EU-Medizinprodukterecht ist in Bewegung: Die Europäische Kommission hat Ende 2025 einen Vorschlag zur gezielten Überarbeitung von MDR und IVDR vorgelegt. Für verbindliche Aussagen stets die aktuelle konsolidierte Fassung auf EUR-Lex prüfen.\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechniker:innen in Kliniken wirkt die MDR vor allem indirekt, aber spürbar:\n\n* **Beschaffung:** Nur CE-gekennzeichnete Produkte mit Konformitätserklärung dürfen in Betrieb genommen werden – etwa ein [[patientenmonitor|Patientenmonitor]] oder eine [[spritzenpumpe|Spritzenpumpe]].\n* **Eigenherstellung und Umbauten:** Wer Geräte so verändert, dass sich Zweckbestimmung oder Leistung ändern, oder Systeme aus mehreren Produkten zusammenstellt, kann selbst Herstellerpflichten übernehmen. Für hausintern hergestellte Produkte gelten die Sonderregeln des Art. 5 Abs. 5 MDR.\n* **Aufbereitung:** Die [[aufbereitung]] von Medizinprodukten muss den Herstellerangaben entsprechen (Anhang I verlangt validierte Verfahren in der Gebrauchsanweisung).\n* **Vigilanz:** Fehlfunktionen, z. B. eines [[defibrillator|Defibrillators]] oder einer [[infusionspumpe|Infusionspumpe]], müssen gemeldet werden; Herstellerinformationen zu Rückrufen sind umzusetzen.\n* **Rückverfolgbarkeit:** Die UDI erleichtert die Zuordnung von Sicherheitsinformationen zum [[bestandsverzeichnis|Bestandsverzeichnis]].\n\n> [!praxis] Bei einer Ausschreibung lohnt die Prüfung, ob ein Produkt bereits unter der MDR zertifiziert ist oder noch als Altprodukt nach Übergangsrecht vertrieben wird – das beeinflusst die langfristige Verfügbarkeit von Zubehör, Software-Updates und Ersatzteilen.\n",
+  "related": [
+    "medizinprodukt",
+    "zweckbestimmung",
+    "risikoklassen",
+    "konformitaetsbewertung",
+    "benannte-stelle",
+    "ce-kennzeichnung",
+    "klinische-bewertung",
+    "udi",
+    "vigilanz",
+    "ivdr",
+    "mpdg",
+    "mpbetreibv",
+    "software-medizinprodukt",
+    "iso-13485",
+    "iso-14971"
+  ],
+  "paths": [
+    [
+      "medizinprodukt",
+      "zweckbestimmung",
+      "risikoklassen",
+      "konformitaetsbewertung",
+      "ce-kennzeichnung"
+    ],
+    [
+      "mdr",
+      "mpdg",
+      "mpbetreibv",
+      "betreiberpflichten",
+      "stk"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "vo-2020-561",
+    "vo-2023-607",
+    "vo-2024-1860",
+    "mdcg-2021-24",
+    "bfarm",
+    "mpamiv",
+    "eudamed"
+  ],
+  "diagram": {
+    "title": "Lebenszyklus eines Medizinprodukts unter der MDR",
+    "caption": "Vereinfachtes Ablaufschema von der Zweckbestimmung bis zur Überwachung im Feld.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "zb",
+        "label": "Zweck-\nbestimmung",
+        "ref": "zweckbestimmung",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "kl",
+        "label": "Klassifizierung\n(Anhang VIII)",
+        "ref": "risikoklassen",
+        "kind": "process",
+        "x": 290,
+        "y": 80
+      },
+      {
+        "id": "kb",
+        "label": "Klinische\nBewertung",
+        "ref": "klinische-bewertung",
+        "kind": "process",
+        "x": 490,
+        "y": 80
+      },
+      {
+        "id": "ko",
+        "label": "Konformitäts-\nbewertung",
+        "ref": "konformitaetsbewertung",
+        "kind": "control",
+        "x": 690,
+        "y": 80
+      },
+      {
+        "id": "ce",
+        "label": "CE-Kennzeichnung",
+        "ref": "ce-kennzeichnung",
+        "kind": "output",
+        "x": 690,
+        "y": 220
+      },
+      {
+        "id": "be",
+        "label": "Betrieb\n(MPBetreibV)",
+        "ref": "mpbetreibv",
+        "kind": "patient",
+        "x": 490,
+        "y": 220
+      },
+      {
+        "id": "vi",
+        "label": "PMS / Vigilanz",
+        "ref": "vigilanz",
+        "kind": "sensor",
+        "x": 290,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "zb",
+        "to": "kl",
+        "kind": "data"
+      },
+      {
+        "from": "kl",
+        "to": "kb",
+        "kind": "data"
+      },
+      {
+        "from": "kb",
+        "to": "ko",
+        "kind": "data"
+      },
+      {
+        "from": "ko",
+        "to": "ce",
+        "kind": "data"
+      },
+      {
+        "from": "ce",
+        "to": "be",
+        "kind": "data",
+        "label": "Inverkehrbringen"
+      },
+      {
+        "from": "be",
+        "to": "vi",
+        "kind": "signal",
+        "label": "Vorkommnisse"
+      },
+      {
+        "from": "vi",
+        "to": "kl",
+        "kind": "signal",
+        "label": "Rückkopplung"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

@@ -39,16 +39,16 @@
 
   <!-- Patientenkabel links -->
   <g stroke="#0d9488" stroke-width="2" fill="none">
-    <path d="M190,110 C150,110 140,90 110,90"/>
-    <path d="M190,150 C150,150 140,140 110,140"/>
-    <path d="M190,190 C150,190 140,190 110,190"/>
-    <path d="M190,225 C150,225 140,240 110,240"/>
+    <path d="M190,110 C150,110 140,90 125,90"/>
+    <path d="M190,150 C150,150 140,140 125,140"/>
+    <path d="M190,190 C150,190 140,190 125,190"/>
+    <path d="M190,225 C150,225 140,240 125,240"/>
   </g>
   <g font-size="13" fill="#0b2545" text-anchor="end">
-    <text x="104" y="94">EKG-Elektroden</text>
-    <text x="104" y="144">SpO₂-Sensor</text>
-    <text x="104" y="194">NIBP-Manschette</text>
-    <text x="104" y="244">Temperaturfühler</text>
+    <text x="119" y="94">EKG-Elektroden</text>
+    <text x="119" y="144">SpO₂-Sensor</text>
+    <text x="119" y="194">NIBP-Manschette</text>
+    <text x="119" y="244">Temperaturfühler</text>
   </g>
   <text x="20" y="275" font-size="13" fill="#0b2545">Anwendungsteile</text>
   <text x="20" y="291" font-size="13" fill="#0b2545">(Typ BF/CF, galvanisch</text>
@@ -63,7 +63,7 @@
 
   <!-- Beschriftungen mit Führungslinien -->
   <line x1="315" y1="48" x2="470" y2="48" stroke="#0b2545" stroke-width="1.5"/>
-  <text x="474" y="52" font-size="13" fill="#0b2545">optische Alarmanzeige</text>
+  <text x="474" y="52" font-size="13" fill="#0b2545">Alarmleuchte</text>
   <line x1="428" y1="92" x2="470" y2="92" stroke="#0b2545" stroke-width="1.5"/>
   <text x="474" y="96" font-size="13" fill="#0b2545">Parametermodule</text>
   <line x1="372" y1="100" x2="372" y2="68" stroke="#0b2545" stroke-width="1"/>

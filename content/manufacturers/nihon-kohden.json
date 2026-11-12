@@ -1,0 +1,89 @@
+{
+  "id": "nihon-kohden",
+  "type": "manufacturer",
+  "title": "Nihon Kohden",
+  "aliases": [
+    "Nihon Kohden Corporation",
+    "Nihon Kohden Kogyo"
+  ],
+  "category": "hersteller",
+  "summary": "Die Nihon Kohden Corporation mit Sitz in Tokio ist ein japanischer Hersteller von Geräten für die Messung physiologischer Signale, Patientenmonitoring und Notfallmedizin. Das Unternehmen ist eng mit der Erfindung der Pulsoxymetrie verbunden.",
+  "headquarters": "Tokio, Japan",
+  "founded": "1951",
+  "website": "https://www.nihonkohden.com/",
+  "productLines": [
+    {
+      "device": "patientenmonitor",
+      "models": [
+        "Life Scope G5",
+        "Life Scope G7",
+        "Life Scope G9"
+      ]
+    },
+    {
+      "device": "ekg-geraet",
+      "models": [
+        "Cardiofax M",
+        "Cardiofax V"
+      ]
+    },
+    {
+      "device": "eeg-geraet",
+      "models": [
+        "Neurofax"
+      ],
+      "note": "EEG- und Neurophysiologiesysteme."
+    },
+    {
+      "device": "emg-geraet",
+      "models": [
+        "Neuropack"
+      ]
+    },
+    {
+      "device": "pulsoxymeter",
+      "models": [
+        "OLV-3100"
+      ]
+    },
+    {
+      "device": "defibrillator",
+      "models": [
+        "Cardiolife"
+      ],
+      "note": "Defibrillatoren und AED."
+    },
+    {
+      "device": "beatmungsgeraet",
+      "models": [
+        "NKV-550"
+      ],
+      "note": "Entwickelt von der US-Tochter Nihon Kohden OrangeMed."
+    },
+    {
+      "device": "haematologie-analysator",
+      "models": [
+        "Celltac"
+      ]
+    }
+  ],
+  "body": "## Überblick\n\nDie **Nihon Kohden Corporation** ist ein börsennotierter japanischer Medizintechnikhersteller mit Sitz in Tokio [@nihon-kohden-web]. Der Name bedeutet sinngemäß „japanische Photoelektrik“. Das Unternehmen ist vor allem in der Messung [[biosignale|bioelektrischer Signale]] (EKG, EEG, EMG), im [[patientenmonitor|Patientenmonitoring]] und in der Notfallmedizin tätig.\n\n## Geschichte in Stichpunkten\n\n* **1951:** Gründung in Tokio durch Yoshio Ogino; zu den frühen Produkten gehören Geräte zur Ableitung von Hirnströmen ([[eeg-geraet]]).\n* **1974:** Der Nihon-Kohden-Ingenieur Takuo Aoyagi beschreibt das Prinzip der Pulsoxymetrie: Aus der pulsatilen Änderung der Lichtabsorption bei zwei Wellenlängen lässt sich die arterielle Sauerstoffsättigung bestimmen ([[photoplethysmographie]], [[lambert-beer]]) [@webster-2010].\n* **Folgejahrzehnte:** Ausbau zu einem Vollsortimenter für Neurophysiologie, Kardiologie und Monitoring; internationale Tochtergesellschaften, u. a. in Europa.\n* **Seit Ende der 2010er-Jahre:** Einstieg in die Intensivbeatmung über die US-Tochter Nihon Kohden OrangeMed (Beatmungsgerät NKV-550).\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Physiologische Messtechnik | [[ekg-geraet|EKG]], [[eeg-geraet|EEG]], [[emg-geraet|EMG/Neurographie]], Polygraphie |\n| Patientenmonitoring | Bettmonitore, Zentralen, Telemetrie, [[pulsoxymeter|Pulsoxymetrie]] |\n| Behandlungsgeräte | [[defibrillator|Defibrillatoren und AED]], [[beatmungsgeraet|Beatmung]] |\n| Labordiagnostik | [[haematologie-analysator|Hämatologie-Analysatoren]] |\n\n## Bedeutung für die Medizintechnik\n\nDie Erfindung der Pulsoxymetrie durch Aoyagi gilt als einer der wichtigsten Beiträge zur Patientensicherheit in Anästhesie und Intensivmedizin: Erstmals ließ sich die Oxygenierung kontinuierlich, nichtinvasiv und ohne Kalibrierung am Patienten überwachen. In Europa ist Nihon Kohden vor allem in der Neurophysiologie (EEG, EMG) verbreitet.\n\n> [!vereinfacht] Das Pulsoxymeter vergleicht nur die *pulsierenden* Anteile der Absorption bei Rot- und Infrarotlicht. Dadurch fallen Gewebe, venöses Blut und Haut weitgehend heraus, und der Quotient beider Signale wird über eine empirische Kalibrierkurve in einen SpO₂-Wert umgerechnet.\n\n> [!praxis] EEG- und EMG-Geräte stellen hohe Anforderungen an [[emv]], Erdung und Elektrodenübergangswiderstände; viele Messprobleme in der Neurophysiologie sind Störeinkopplungen und keine Gerätedefekte ([[emv-stoerung]], [[elektrodenproblem]]).\n\n## Einordnung im Markt\n\nIm Patientenmonitoring konkurriert Nihon Kohden mit [[philips]], [[ge-healthcare]], [[draeger]] und [[mindray]], in der Neurophysiologie mit spezialisierten Anbietern. Die Monitore und EKG-Geräte nutzen teils eigene Interpretations- und Analyseprogramme; bei der Anbindung an Klinikinformationssysteme sind die herstellerspezifischen Schnittstellen und Gateways zu berücksichtigen. Wie bei allen Herstellern gelten für [[stk]] und [[wartung]] die Vorgaben der Herstellerdokumentation und der [[mpbetreibv]].",
+  "related": [
+    "pulsoxymeter",
+    "photoplethysmographie",
+    "eeg-geraet",
+    "emg-geraet",
+    "patientenmonitor",
+    "ekg-geraet",
+    "philips",
+    "mindray",
+    "neurologie",
+    "lambert-beer"
+  ],
+  "sources": [
+    "nihon-kohden-web",
+    "webster-2010"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

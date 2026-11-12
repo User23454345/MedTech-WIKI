@@ -1,0 +1,43 @@
+{
+  "id": "notfallmedizin",
+  "type": "domain",
+  "title": "Notfall- und Rettungsmedizin",
+  "aliases": [
+    "Notfallmedizin",
+    "Rettungsmedizin",
+    "Rettungsdienst",
+    "Notaufnahme",
+    "Emergency Medicine",
+    "Präklinik",
+    "Schockraum"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Notfall- und Rettungsmedizin versorgt akut lebensbedrohte Menschen am Einsatzort, während des Transports und in der Notaufnahme. Ihre Medizintechnik muss robust, mobil, akkubetrieben und unter Zeitdruck sicher bedienbar sein.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Notfall- und Rettungsmedizin** umfasst die präklinische Versorgung durch Rettungsdienst und Notarzt sowie die klinische Akut- und Notfallmedizin in der zentralen Notaufnahme und im Schockraum. Ziel ist die Sicherung der Vitalfunktionen nach dem Prinzip „Atemweg – Atmung – Kreislauf“ und der schnelle, sichere Transport in die geeignete Klinik.\n\nTypische Einsatzbilder sind Herz-Kreislauf-Stillstand, akutes Koronarsyndrom, Schlaganfall, schwere Atemnot, Polytrauma, Vergiftungen und Bewusstseinsstörungen. Für die Reanimation geben die Leitlinien des European Resuscitation Council (ERC) Ablauf, Drucktiefe und -frequenz der Thoraxkompressionen und die Defibrillationsstrategie vor [@erc-2025-als].\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[defibrillator]] | manuelle und automatisierte Defibrillation, Kardioversion, Monitoring |\n| [[externer-schrittmacher]] | transkutane Stimulation bei Bradykardie |\n| [[patientenmonitor]] | mobiles Monitoring inkl. 12-Kanal-[[ekg-geraet|EKG]], SpO₂, NIBP, etCO₂ |\n| [[transportbeatmungsgeraet]] | Beatmung im Rettungsdienst und bei innerklinischen Transporten |\n| [[kapnometer]] | Tubuslagekontrolle, Reanimationsqualität |\n| [[thoraxkompressionsgeraet]] | mechanische Herzdruckmassage, z. B. während des Transports |\n| [[videolaryngoskop]] | Atemwegssicherung |\n| [[absauggeraet]] | Freimachen der Atemwege |\n| [[spritzenpumpe]] | Medikamentendosierung während des Transports |\n| [[pulsoxymeter]] | Sauerstoffsättigung |\n| [[blutzuckermessgeraet]] | Hypoglykämie-Diagnostik |\n| [[thermometer]] | Temperatur, Unterkühlung |\n| [[ultraschallgeraet]] | Notfallsonographie (z. B. freie Flüssigkeit, Perikarderguss) |\n| [[computertomograph]] | Schockraum-Diagnostik |\n\nDefibrillatoren und AEDs müssen die Anforderungen der [[iec-60601-2-4]] erfüllen [@iec-60601-2-4]. Laien-AEDs im öffentlichen Raum sind seit den 1990er-Jahren verbreitet [@kerber-1997].\n\n## Besondere technische Anforderungen\n\n### Einsatzumgebung des Rettungsdienstes\n\nGeräte für den Rettungsdienst werden getragen, in Fahrzeugen und Hubschraubern befestigt, im Freien bei Regen, Kälte und Hitze eingesetzt und fallen gelegentlich herunter. Die Ergänzungsnorm IEC 60601-1-12 stellt deshalb zusätzliche Anforderungen an Schutz gegen Eindringen von Wasser und Staub, mechanische Festigkeit (Stoß, Vibration, Fall) und den Betrieb an wechselnden, oft unzuverlässigen Stromquellen [@iec-60601-1-12]. Krankenkraftwagen und ihre Ausrüstung regelt DIN EN 1789, die zwischen Krankentransportwagen (Typ A), Notfallkrankenwagen (Typ B) und Rettungswagen (Typ C) unterscheidet [@en-1789].\n\n> [!praxis] Halterungen im Fahrzeug müssen für die Geräte und die Fahrzeugnorm geeignet sein. Ein ungesicherter Monitor oder Beatmungsgerät wird bei einer Vollbremsung zum Geschoss.\n\n### Energieversorgung\n\nRettungsdienstgeräte laufen überwiegend aus [[lithium-ionen-akku|Akkus]]. Akkukapazität nimmt mit Alter und Ladezyklen ab; ein Gerät, das bei der Übergabe noch voll anzeigt, kann im Einsatz früher abschalten ([[akkufehler]]). Akkumanagement, Ladestationen im Fahrzeug und geregelter Akkutausch sind daher Teil der Instandhaltung [@reddy-linden-2011].\n\n### Bedienung unter Stress\n\nNotfälle erzeugen hohen Zeitdruck. Geräte sollten selbsterklärend bedienbar sein, Alarme eindeutig priorisieren und Fehlbedienungen ([[anwendungsfehler]]) möglichst verhindern [@iec-62366-1][@iec-60601-1-8]. Einheitliche Geräteausstattung in Rettungsdienstbereich und Klinik erleichtert Übergaben.\n\n### Täglicher Funktionscheck und Dokumentation\n\nAEDs und Defibrillatoren führen Selbsttests durch; zusätzlich gehört eine Sicht- und Funktionsprüfung zum Schichtbeginn. Defibrillatoren unterliegen der [[stk]] nach § 12 i. V. m. Anlage 1 [[mpbetreibv]] (Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind) [@mpbetreibv]. Für automatisierte externe Defibrillatoren im öffentlichen Raum, die für Laien bestimmt sind, sieht die Verordnung eine Ausnahme von der STK vor, sofern die Geräte regelmäßige Selbsttests durchführen und der Betreiber sie regelmäßig in Augenschein nimmt; die genauen Bedingungen ergeben sich aus § 12 in der geltenden Fassung. Für Defibrillatoren im Rettungsdienst und in der Klinik gilt diese Ausnahme nicht. Einsatzdaten (EKG, Schockabgaben) werden zur Qualitätssicherung ausgelesen.\n\n> [!hinweis] Unterschiedliche Steckverbinder für Defibrillationselektroden und Sensoren verschiedener Hersteller können Übergaben zwischen Rettungsdienst und Klinik verzögern. Kompatibilität sollte bei Beschaffungen regional abgestimmt werden.\n\n### Hygiene\n\nPräklinisch sind Hygieneschritte erschwert. Geräte und Taschen müssen gut wischdesinfizierbar sein; Einwegzubehör reduziert den Aufbereitungsaufwand [@krinko-bfarm-2012].\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[anaesthesiologie]]**: Notarztqualifikation, Atemwegsmanagement, Narkose im Einsatz.\n- **[[intensivmedizin]]**: Weiterbehandlung, Interhospitaltransporte mit Intensivtransportsystemen.\n- **[[kardiologie]]**: Herzinfarkt-Netzwerke, Prä-Hospital-EKG-Übertragung, Reanimation.\n- **[[neurologie]]**: Schlaganfall-Erkennung und Transport zur Stroke Unit.\n- **[[radiologie]]** und **[[chirurgie]]**: Schockraum-CT und Polytraumaversorgung.\n- **[[neonatologie]]**: Neugeborenen-Transport im Transportinkubator.\n",
+  "related": [
+    "defibrillator",
+    "transportbeatmungsgeraet",
+    "thoraxkompressionsgeraet",
+    "patientenmonitor",
+    "akkufehler",
+    "anaesthesiologie",
+    "intensivmedizin",
+    "kardiologie",
+    "corpuls",
+    "zoll"
+  ],
+  "sources": [
+    "erc-2025-als",
+    "iec-60601-2-4",
+    "kerber-1997",
+    "iec-60601-1-12",
+    "en-1789",
+    "reddy-linden-2011",
+    "iec-62366-1",
+    "iec-60601-1-8",
+    "mpbetreibv",
+    "krinko-bfarm-2012"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

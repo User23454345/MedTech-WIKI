@@ -1,0 +1,45 @@
+{
+  "id": "radiologie",
+  "type": "domain",
+  "title": "Radiologie",
+  "aliases": [
+    "Diagnostische Radiologie",
+    "Radiology",
+    "Röntgenabteilung",
+    "Bildgebende Diagnostik",
+    "Interventionelle Radiologie",
+    "Neuroradiologie"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Radiologie erzeugt mit Röntgenstrahlung, Magnetresonanz und Ultraschall Bilder aus dem Körperinneren und führt bildgesteuerte Eingriffe durch. Technisch prägen sie Strahlenschutz, MRT-Sicherheit, Qualitätssicherung der Bildgebung und die digitale Bildkommunikation.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Radiologie** ist das Fachgebiet der bildgebenden Diagnostik und der bildgesteuerten Therapie. Sie nutzt [[roentgenstrahlung]] (Projektionsradiographie, Durchleuchtung, [[computertomograph|Computertomographie]], Mammographie, Angiographie), die [[kernspinresonanz|Magnetresonanz]] ([[mrt|MRT]]) und [[schallwellen|Ultraschall]] [@doessel-2016][@bushberg-2020]. Die interventionelle Radiologie behandelt unter Bildkontrolle, etwa durch Gefäßeröffnung, Embolisation, Drainage oder Tumorablation; die Neuroradiologie führt u. a. die mechanische Thrombektomie beim Schlaganfall durch.\n\nTypische Fragestellungen reichen vom Knochenbruch über Lungenentzündung und Tumorsuche bis zur Gefäßdarstellung. Die Radiologie arbeitet für fast alle anderen Fachbereiche als Dienstleister und ist deshalb organisatorisch eng mit Notaufnahme, OP und Intensivstation verbunden.\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[roentgengeraet]] | Projektionsradiographie (Thorax, Skelett), Durchleuchtung |\n| [[computertomograph]] | Schnittbilder, Notfall- und Tumordiagnostik, Angiographie (CTA) |\n| [[mrt]] | Weichteilkontrast ohne ionisierende Strahlung (Gehirn, Gelenke, Abdomen) |\n| [[ultraschallgeraet]] | Abdomen-, Gefäß- und Weichteilsonographie, Punktionen |\n| [[mammographiegeraet]] | Brustkrebsdiagnostik und Früherkennung |\n| [[angiographieanlage]] | Gefäßdarstellung (DSA) und Interventionen |\n| [[c-bogen]] | mobile Durchleuchtung, z. B. im OP |\n| [[knochendichtemessung]] | Osteoporose-Diagnostik (DXA) |\n| [[dvt]] | dreidimensionale Kegelstrahl-Bildgebung von Zähnen, Kiefer, Felsenbein |\n\nZentrale Komponenten sind [[roentgenroehre]], [[roentgendetektor]], [[kollimator]], [[gantry]], [[hochspannungserzeugung]], [[supraleitender-magnet]], [[gradientenspule]], [[hf-spule]] und [[ultraschallwandler]].\n\n## Besondere technische Anforderungen\n\n### Strahlenschutz\n\nAnwendungen ionisierender Strahlung am Menschen unterliegen dem [[strlschg|Strahlenschutzgesetz]] und der Strahlenschutzverordnung [@strlschg][@strlschv]. Grundprinzipien sind Rechtfertigung, Optimierung und Dosisbegrenzung [@icrp-103][@rl-2013-59-euratom]. Für jede Untersuchung braucht es eine rechtfertigende Indikation durch einen Arzt bzw. eine Ärztin mit der erforderlichen Fachkunde im [[strahlenschutz]]. Das Bundesamt für Strahlenschutz veröffentlicht diagnostische Referenzwerte als Orientierung für die Patientendosis [@bfs-drw]. Sie werden in gerätenah messbaren Größen angegeben – in der Projektionsradiographie und Durchleuchtung z. B. als Dosisflächenprodukt (DFP), in der CT als volumenbezogener CT-Dosisindex (CTDI_vol) und Dosislängenprodukt (DLP). Für die Medizintechnik folgt daraus, dass Dosisanzeigen und -protokollierung der Geräte korrekt arbeiten und in die Prüfungen einbezogen werden müssen.\n\n> [!vereinfacht] Rechtfertigung heißt: Der Nutzen der Untersuchung muss das Strahlenrisiko überwiegen. Optimierung heißt: so wenig Dosis wie möglich, so viel wie für eine diagnostische Bildqualität nötig.\n\n### Qualitätssicherung der Bildgebung\n\nRöntgeneinrichtungen werden bei Inbetriebnahme einer Abnahmeprüfung und danach regelmäßigen [[konstanzpruefung|Konstanzprüfungen]] unterzogen; zusätzlich prüfen ärztliche Stellen die Qualität. Grundlage sind die Qualitätssicherungs-Richtlinie und Normen wie DIN 6868 [@qs-rl-roentgendiagnostik-2024][@din-6868-157]. Auch die Befundmonitore unterliegen Prüfungen.\n\n### MRT-Sicherheit\n\nDer Magnet eines MRT ist ständig eingeschaltet. Ferromagnetische Gegenstände werden zu gefährlichen Projektilen, aktive Implantate können gestört, leitfähige Schleifen durch HF-Energie erwärmt werden. Üblich ist ein Zonenkonzept mit kontrolliertem Zugang und Kennzeichnung von Geräten als „MR safe“, „MR conditional“ oder „MR unsafe“ [@kanal-2013][@astm-f2503]. Für die Geräte selbst gilt [[iec-60601-2-33]] [@iec-60601-2-33].\n\nNeben dem statischen Feld wirken zwei weitere Felder auf den Patienten: Die schnell geschalteten Gradientenfelder können periphere Nerven stimulieren und erzeugen hohe Schallpegel (Gehörschutz erforderlich), die Hochfrequenzfelder deponieren Energie im Gewebe. Die Norm begrenzt deshalb die Änderungsrate der Gradientenfelder (dB/dt) und die spezifische Absorptionsrate (SAR) und definiert Betriebsarten mit abgestuften Grenzwerten [@iec-60601-2-33].\n\n> [!belegt] Im normalen Betriebsmodus begrenzt IEC 60601-2-33 die Ganzkörper-SAR auf 2 W/kg, in der kontrollierten Betriebsart erster Stufe auf 4 W/kg (jeweils gemittelt über die Zeit) [@iec-60601-2-33].\n\n> [!warnung] Ein Quench (schlagartiges Verdampfen des flüssigen Heliums) beendet das Magnetfeld nicht sofort und kann bei Versagen der Quench-Leitung zu Sauerstoffverdrängung im Untersuchungsraum führen. Notfallabläufe müssen geübt sein.\n\n### Digitale Bildkommunikation\n\nBilder werden im Format [[dicom]] erzeugt, im PACS archiviert und über Befundungsarbeitsplätze verteilt; Aufträge und Befunde laufen über [[hl7-fhir|HL7]]-Schnittstellen mit dem RIS/KIS [@nema-dicom]. Für die Medizintechnik bedeutet das: Netzwerkintegration, IT-Sicherheit und Software-Updates gehören zur Instandhaltung dazu.\n\n### Bau und Infrastruktur\n\nCT und Angiographie benötigen Strahlenschutzabschirmung, das MRT eine HF-Kabine (Faraday-Käfig), Kaltkopf und Kältemittelversorgung. Hohe Anschlussleistungen und Klimatisierung gehören zur Planung.\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[notfallmedizin]]**: Schockraum-CT bei Polytrauma, Schlaganfall-Bildgebung.\n- **[[neurologie]]**: CT/MRT des Gehirns, Thrombektomie.\n- **[[nuklearmedizin]]**: Hybridbildgebung ([[pet-ct]]).\n- **[[strahlentherapie]]**: Bestrahlungsplanungs-CT.\n- **[[chirurgie]]** und **[[orthopaedie-unfallchirurgie]]**: intraoperative Bildgebung mit dem [[c-bogen]].\n- **[[kardiologie]]**: Kardio-CT, Kardio-MRT.\n",
+  "related": [
+    "roentgengeraet",
+    "computertomograph",
+    "mrt",
+    "strahlenschutz",
+    "roentgenstrahlung",
+    "dicom",
+    "konstanzpruefung",
+    "nuklearmedizin",
+    "strahlentherapie",
+    "angiographieanlage"
+  ],
+  "sources": [
+    "doessel-2016",
+    "bushberg-2020",
+    "strlschg",
+    "strlschv",
+    "icrp-103",
+    "rl-2013-59-euratom",
+    "bfs-drw",
+    "qs-rl-roentgendiagnostik-2024",
+    "din-6868-157",
+    "kanal-2013",
+    "astm-f2503",
+    "iec-60601-2-33",
+    "nema-dicom"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

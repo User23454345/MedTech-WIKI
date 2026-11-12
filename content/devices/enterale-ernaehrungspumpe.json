@@ -1,0 +1,57 @@
+{
+  "id": "enterale-ernaehrungspumpe",
+  "type": "device",
+  "title": "Enterale Ernährungspumpe",
+  "aliases": [
+    "Ernährungspumpe",
+    "Sondenernährungspumpe",
+    "Enteral feeding pump",
+    "Sondenpumpe"
+  ],
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 38,
+  "domains": [
+    "gastroenterologie",
+    "intensivmedizin",
+    "neonatologie"
+  ],
+  "summary": "Enterale Ernährungspumpen fördern Sondennahrung kontrolliert über eine Magen- oder Dünndarmsonde. Sie arbeiten meist nach dem Peristaltikprinzip und verwenden verwechslungssichere Konnektoren, um Fehlanschlüsse an intravenöse Zugänge zu verhindern.",
+  "sections": {
+    "purpose": "Patienten, die nicht ausreichend schlucken oder essen können, werden über nasogastrale Sonden, PEG oder Jejunalsonden ernährt. Eine Pumpe ermöglicht eine gleichmäßige, langsame Gabe, was Aspiration, Durchfall und Unverträglichkeiten reduziert – besonders bei Dünndarmsonden, Intensivpatienten und Kindern. Mobile Pumpen mit Rucksack erlauben die Heimernährung im Alltag.",
+    "principle": "## Förderprinzip\n\nDie meisten Geräte nutzen eine [[peristaltikpumpe|Rollen- oder Linearperistaltik]]: Ein [[schrittmotor]] oder [[elektromotor]] dreht einen Rotor, dessen Rollen ein elastisches Pumpsegment des Überleitsystems abquetschen und die Nahrung volumetrisch vorwärtsschieben. Die Förderrate ergibt sich aus Segmentvolumen und Drehzahl; Toleranzen des Schlauchs bestimmen die Genauigkeit maßgeblich.\n\n## Überwachung\n\n| Funktion | Sensorik |\n|---|---|\n| Verschluss (Abknicken, verstopfte Sonde) | [[drucksensor|Druck-]] bzw. [[kraftsensor]] am Schlauch → [[okklusionsalarm]] |\n| Leerer Beutel / Luft | Ultraschall-[[luftblasendetektor]] oder Tropfen-/Leererkennung |\n| Korrekt eingelegtes Set | Mikroschalter, oft Freiflussschutz beim Öffnen |\n\n> [!hinweis] Luft im enteralen System ist – anders als bei intravenöser Infusion – nicht wegen einer Embolie gefährlich; die Lufterkennung dient vor allem der Erkennung eines leeren Behälters.\n\n## Verwechslungssicherheit\n\nEnterale Systeme verwenden eigene Konnektoren (ENFit nach ISO 80369-3), die nicht auf Luer-Anschlüsse intravenöser Zugänge passen. Damit wird die gefährliche Fehlapplikation von Nahrung in die Blutbahn konstruktiv verhindert.\n\n> [!warnung] Ernährungspumpen dürfen nicht für intravenöse Infusionen verwendet werden; dafür sind [[infusionspumpe|Infusionspumpen]] mit entsprechender Genauigkeit und Luftüberwachung vorgesehen."
+  },
+  "manufacturers": [
+    {
+      "ref": "fresenius-kabi",
+      "models": [
+        "Applix"
+      ],
+      "note": ""
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Nicht unter Anlage 1 Nr. 1.4 der MPBetreibV (Fassung 2025), da keine Einbringung in den Blutkreislauf; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Prüfungen nach Herstellerangabe (Förderrate, Okklusionsdruck, Alarme, Akku); elektrische Wiederholungsprüfung nach IEC 62353 bzw. DGUV Vorschrift 3 gemäß Gefährdungsbeurteilung; Überleitsysteme als Einwegprodukte nach Herstellerangabe wechseln."
+  },
+  "related": [
+    "peristaltikpumpe",
+    "infusionspumpe",
+    "okklusionsalarm",
+    "luftblasendetektor",
+    "anwendungsfehler",
+    "iec-60601-2-24"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

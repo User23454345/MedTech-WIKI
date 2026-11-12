@@ -1,0 +1,60 @@
+{
+  "id": "anwendungsteile",
+  "type": "term",
+  "title": "Anwendungsteile (Typ B, BF, CF)",
+  "aliases": [
+    "Anwendungsteil",
+    "Applied part",
+    "Typ B",
+    "Typ BF",
+    "Typ CF",
+    "Type B",
+    "Type BF",
+    "Type CF",
+    "F-Typ-Anwendungsteil",
+    "Patientenanschluss",
+    "defibrillationsgeschützt",
+    "Defibrillation-proof",
+    "Body Floating",
+    "Cardiac Floating"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Anwendungsteile sind die Teile eines ME-Geräts, die bestimmungsgemäß mit dem Patienten in Kontakt kommen. Nach IEC 60601-1 werden sie in die Typen B, BF und CF eingeteilt, die sich in der Isolierung gegen Erde und in den zulässigen Patientenableitströmen unterscheiden; Typ CF ist für die direkte Anwendung am Herzen vorgeschrieben.",
+  "body": "## Begriff\n\nEin **Anwendungsteil** ist nach [[iec-60601-1]] das Teil eines [[medizinisches-elektrisches-geraet|ME-Geräts]], das bei bestimmungsgemäßem Gebrauch notwendigerweise in physischen Kontakt mit dem Patienten kommt, damit das Gerät seine Funktion erfüllen kann [@iec-60601-1]. Beispiele sind [[ekg-elektrode|EKG-Elektroden]], die Manschette eines [[nibp-messgeraet|Blutdruckmessgeräts]], der Sensor eines [[pulsoxymeter|Pulsoxymeters]] oder der [[ultraschallwandler|Schallkopf]]. Darüber hinaus können Teile, die der Patient nur gelegentlich berühren kann, aufgrund der Risikoanalyse ([[iso-14971]]) wie ein Anwendungsteil behandelt werden.\n\nDie einzelne elektrische Verbindungsstelle zum Patienten heißt **Patientenanschluss**. Ein Anwendungsteil kann mehrere Patientenanschlüsse haben – ein 12-Kanal-EKG-Kabel etwa zehn.\n\nDer Typ des Anwendungsteils beschreibt, **wie gut der Patient gegen elektrischen Strom geschützt ist**. Er ist unabhängig von der [[schutzklassen|Schutzklasse]] des Geräts.\n\n## Die drei Typen\n\n| Typ | Bedeutung | Isolierung gegen Erde | Zulässige Anwendung |\n|---|---|---|---|\n| **B** (*Body*) | Grundschutz | darf mit Erde verbunden sein | Kontakt mit Körperoberfläche, nicht am Herzen |\n| **BF** (*Body Floating*) | erhöhter Schutz | „schwebend“ (F-Typ), von Erde und anderen Teilen isoliert | Körperoberfläche, auch Körperöffnungen und invasiv, nicht direkt am Herzen |\n| **CF** (*Cardiac Floating*) | höchster Schutz | schwebend, sehr strenge Ableitstromgrenzen | auch direkte Anwendung am Herzen |\n\n> [!belegt] Anwendungsteile, die für eine direkte Anwendung am Herzen bestimmt sind, müssen nach IEC 60601-1 vom Typ CF sein [@iec-60601-1]. Ein F-Typ-Anwendungsteil ist so vom übrigen Gerät getrennt, dass selbst bei einer von außen am Patienten anliegenden Netzspannung nur ein begrenzter Strom über den Patienten fließen kann.\n\nDie Kennzeichnung erfolgt mit genormten Bildzeichen: eine stilisierte Person für Typ B, dieselbe Person in einem Quadrat für Typ BF und ein Herz in einem Quadrat für Typ CF. Sind die Anwendungsteile zusätzlich **defibrillationsgeschützt**, wird das Symbol durch seitliche „Blitzpfeile“ ergänzt.\n\n## Warum der Schutz am Herzen so streng ist: Mikroschock\n\nDer Körper reagiert sehr unterschiedlich auf Strom, je nachdem, wo er eintritt (siehe [[elektrische-stromwirkung]] und [[iec-60479-1]]) [@iec-60479-1]:\n\n* **Makroschock:** Der Strom fließt über die Haut durch den Körper. Nur ein kleiner Teil durchsetzt das Herz; Kammerflimmern tritt erst bei Strömen im Bereich von zig bis hunderten Milliampere auf.\n* **Mikroschock:** Über einen Katheter, eine Schrittmachersonde oder eine flüssigkeitsgefüllte Leitung gelangt der Strom direkt an das Myokard. Hier genügen bereits Ströme im Mikroampere- bis unteren Milliamperebereich, um Rhythmusstörungen auszulösen [@webster-2010].\n\n> [!vereinfacht] Die Grenzwerte für CF-Anwendungsteile (10 µA im Normalzustand) enthalten gegenüber den in der Literatur berichteten Flimmerschwellen bei direkter Herzanwendung einen Sicherheitsabstand. Die tatsächliche Schwelle streut stark mit Kontaktfläche, Lage und Frequenz.\n\n## Grenzwerte für Patientenableitströme\n\nDie Unterschiede zwischen den Typen zeigen sich vor allem in den zulässigen [[ableitstrom|Ableitströmen]] [@iec-60601-1]:\n\n| Größe (Wechselstrom) | Typ B | Typ BF | Typ CF |\n|---|---|---|---|\n| Patientenableitstrom, Normalzustand | 100 µA | 100 µA | 10 µA |\n| Patientenableitstrom, erster Fehler | 500 µA | 500 µA | 50 µA |\n| Patientenableitstrom bei Netzspannung am Anwendungsteil | – | 5 000 µA | 50 µA |\n| Gleichstromanteil, Normalzustand / erster Fehler | 10 / 50 µA | 10 / 50 µA | 10 / 50 µA |\n\n> [!hinweis] Auszug, typische Werte nach der 3. Ausgabe der IEC 60601-1; zusätzlich gelten Grenzwerte für Patientenhilfsströme und für den Gesamt-Patientenableitstrom, wenn mehrere Anwendungsteile gleichen Typs angeschlossen sind. Maßgeblich ist die jeweils gültige Fassung.\n\n## Technische Umsetzung\n\n### Galvanische Trennung\n\nF-Typ-Anwendungsteile werden durch eine **Isolationsbarriere** vom netzbezogenen Teil des Geräts getrennt (siehe [[galvanische-trennung]]). Typische Elemente:\n\n* ein isolierender DC/DC-Wandler mit [[transformator|Transformator]] für die Energieversorgung der Eingangsstufe,\n* Optokoppler, digitale Isolatoren (kapazitiv oder magnetisch) für die Datenübertragung,\n* ausreichende Luft- und Kriechstrecken auf der Leiterplatte, häufig ausgelegt für zwei Patientenschutzmaßnahmen (2 MOPP).\n\nKritisch ist die **Koppelkapazität** über die Barriere: Durch sie fließt bei anliegender Netzspannung ein kapazitiver Strom `I = U · 2πf · C`. Für CF-Anwendungsteile muss diese Kapazität sehr klein sein.\n\n> [!beispiel] Eine Koppelkapazität von 100 pF ergibt bei 230 V und 50 Hz einen Strom von I = 230 V · 2π · 50 Hz · 100 pF ≈ 7,2 µA – bereits ein großer Teil des CF-Grenzwerts von 50 µA bei Netzspannung am Anwendungsteil. Die Zahlen sind beispielhaft.\n\n### Eingangsschaltung\n\nBiosignal-Eingänge (z. B. im [[ekg-geraet]]) kombinieren die galvanische Trennung mit einem [[instrumentenverstaerker|Instrumentenverstärker]] hoher Gleichtaktunterdrückung. Schutzwiderstände in den Patientenleitungen begrenzen Ströme im Fehlerfall; bei defibrillationsgeschützten Eingängen schützen Gasableiter, Funkenstrecken oder Halbleiter-Begrenzer die Elektronik vor den Kilovoltimpulsen eines [[defibrillator|Defibrillators]].\n\n### Defibrillationsschutz\n\nEin defibrillationsgeschütztes Anwendungsteil muss einer Defibrillatorentladung am Patienten standhalten, ohne beschädigt zu werden und ohne dem Patienten wesentliche Defibrillationsenergie zu entziehen. Nach der Entladung muss das Gerät innerhalb einer festgelegten Zeit wieder bestimmungsgemäß arbeiten – entscheidend für die Beurteilung des Reanimationserfolgs am [[patientenmonitor|Monitor]] [@iec-60601-1].\n\n## Anwendung in Geräten\n\n| Gerät | Anwendungsteil | Typische Einstufung |\n|---|---|---|\n| [[ekg-geraet]], [[patientenmonitor]] | EKG-Elektroden und -Kabel | CF, defibrillationsgeschützt |\n| [[invasive-druckmessung]] | flüssigkeitsgefüllter Katheter mit Druckaufnehmer | CF |\n| [[pulsoxymeter]] | Fingersensor | BF oder CF |\n| [[nibp-messgeraet]] | Manschette und Schlauch | BF oder CF |\n| [[hf-chirurgiegeraet]] | aktive Elektrode, [[neutralelektrode]] | BF oder CF, defibrillationsgeschützt |\n| [[ultraschallgeraet]] | Schallkopf | B oder BF |\n| [[computertomograph]], [[roentgengeraet]] | Patientenliege | B |\n| [[externer-schrittmacher]] | Stimulationselektroden | CF |\n\n> [!hinweis] Typische Einstufungen; verbindlich ist die Kennzeichnung des jeweiligen Geräts.\n\n## Bedeutung in der Medizintechnik\n\nFür die Instandhaltung ergeben sich drei praktische Konsequenzen:\n\n1. **Prüfung:** Bei der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] nach [[iec-62353]] wird für BF- und CF-Anwendungsteile der Ableitstrom vom Anwendungsteil gemessen (siehe [[ableitstrommessung]]); die Grenzwerte hängen vom Typ ab.\n2. **Zubehör:** Patientenkabel, Sensoren und Elektroden sind Teil des Anwendungsteils. Nicht freigegebenes Fremdzubehör kann Isolation und Defibrillationsschutz aufheben.\n3. **Kombinationen:** Werden mehrere Geräte am selben Patienten betrieben (z. B. am Intensivbett), addieren sich Ableitströme über den Patienten. Das ist bei der Bildung von ME-Systemen zu berücksichtigen.\n\n> [!praxis] Ein beschädigter Isolationsmantel eines EKG-Kabels oder Flüssigkeit im Stecker eines Druckaufnehmers kann die Trennung eines CF-Anwendungsteils überbrücken. Sichtprüfung des Zubehörs gehört daher zu jeder Kontrolle.\n\nSiehe auch: [[schutzklassen]], [[biosignale]], [[elektrotechnik]].\n",
+  "related": [
+    "schutzklassen",
+    "ableitstrom",
+    "ableitstrommessung",
+    "galvanische-trennung",
+    "instrumentenverstaerker",
+    "elektrische-stromwirkung",
+    "ekg-elektrode",
+    "defibrillator",
+    "iec-60601-1",
+    "iec-62353",
+    "iec-60479-1"
+  ],
+  "paths": [
+    [
+      "patientenmonitor",
+      "ekg-elektrode",
+      "anwendungsteile",
+      "galvanische-trennung",
+      "ableitstrom"
+    ],
+    [
+      "invasive-druckmessung",
+      "anwendungsteile",
+      "elektrische-stromwirkung"
+    ]
+  ],
+  "sources": [
+    "iec-60601-1",
+    "iec-62353",
+    "iec-60479-1",
+    "webster-2010",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

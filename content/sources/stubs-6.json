@@ -1,0 +1,87 @@
+[
+ {
+  "id": "iso-8612",
+  "kind": "norm",
+  "title": "ISO 8612 – Ophthalmic instruments – Tonometers",
+  "publisher": "ISO / in Deutschland als DIN EN ISO 8612",
+  "note": "Anforderungen und Prüfverfahren für Augentonometer; maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "huang-1991",
+  "kind": "artikel",
+  "authors": "Huang D, Swanson EA, Lin CP, Schuman JS, Stinson WG, Chang W, Hee MR, Flotte T, Gregory K, Puliafito CA, Fujimoto JG",
+  "title": "Optical coherence tomography",
+  "publisher": "Science 254(5035): 1178–1181",
+  "year": "1991",
+  "note": "Grundlegende Erstbeschreibung der optischen Kohärenztomographie."
+ },
+ {
+  "id": "kelman-1967",
+  "kind": "artikel",
+  "authors": "Kelman CD",
+  "title": "Phaco-emulsification and aspiration: a new technique of cataract removal. A preliminary report",
+  "publisher": "American Journal of Ophthalmology 64(1): 23–35",
+  "year": "1967",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/6028631/",
+  "note": "Erstbeschreibung der Phakoemulsifikation."
+ },
+ {
+  "id": "iso-7494-1",
+  "kind": "norm",
+  "title": "ISO 7494-1 – Dentistry – Stationary dental units and dental patient chairs – Part 1: General requirements",
+  "publisher": "ISO / in Deutschland als DIN EN ISO 7494-1",
+  "note": "Allgemeine Anforderungen an zahnärztliche Behandlungseinheiten und Patientenstühle; maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "en-285",
+  "kind": "norm",
+  "title": "EN 285 – Sterilisation – Dampf-Sterilisatoren – Groß-Sterilisatoren",
+  "publisher": "CEN / in Deutschland als DIN EN 285",
+  "note": "Anforderungen und Prüfungen für Groß-Dampfsterilisatoren (Fassungsvermögen ab einer Sterilisiereinheit); für Klein-Sterilisatoren gilt EN 13060. Maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iso-14937",
+  "kind": "norm",
+  "title": "ISO 14937 – Sterilization of health care products – General requirements for characterization of a sterilizing agent and the development, validation and routine control of a sterilization process for medical devices",
+  "publisher": "ISO / in Deutschland als DIN EN ISO 14937",
+  "note": "Allgemeine Validierungsgrundlage für Sterilisationsverfahren, für die keine spezifische Verfahrensnorm besteht (u. a. Niedertemperaturverfahren)."
+ },
+ {
+  "id": "iso-15883-1",
+  "kind": "norm",
+  "title": "ISO 15883-1 – Reinigungs-Desinfektionsgeräte – Teil 1: Allgemeine Anforderungen, Begriffe und Prüfverfahren",
+  "publisher": "ISO / in Deutschland als DIN EN ISO 15883-1",
+  "note": "Grundnorm der Reihe ISO 15883 (u. a. A0-Konzept der thermischen Desinfektion); weitere Teile für Instrumente (Teil 2), Steckbeckenspüler (Teil 3) und thermolabile Endoskope (Teil 4). Maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iec-60601-2-52",
+  "kind": "norm",
+  "title": "IEC 60601-2-52 – Medizinische elektrische Geräte – Teil 2-52: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von medizinischen Betten",
+  "publisher": "IEC / in Deutschland als DIN EN 60601-2-52 (VDE 0750-2-52)",
+  "note": "Besondere Festlegungen für elektrisch verstellbare medizinische Betten (u. a. Seitengitter, Einklemmstellen, Stabilität); maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "iso-10535",
+  "kind": "norm",
+  "title": "ISO 10535 – Hilfsmittel für Menschen mit Behinderungen – Lifter zum Transport von Personen – Anforderungen und Prüfverfahren",
+  "publisher": "ISO / in Deutschland als DIN EN ISO 10535",
+  "note": "Anforderungen an Patientenlifter einschließlich Gurten; maßgeblich ist die jeweils gültige Ausgabe."
+ },
+ {
+  "id": "krinko-zahn-2006",
+  "kind": "leitlinie",
+  "authors": "Kommission für Krankenhaushygiene und Infektionsprävention (KRINKO) beim Robert Koch-Institut",
+  "title": "Infektionsprävention in der Zahnheilkunde – Anforderungen an die Hygiene",
+  "publisher": "Bundesgesundheitsblatt – Gesundheitsforschung – Gesundheitsschutz 49: 375–394",
+  "year": "2006",
+  "note": "KRINKO-Empfehlung u. a. zu Wasser führenden Systemen zahnärztlicher Behandlungseinheiten und zur Aufbereitung von Übertragungsinstrumenten."
+ },
+ {
+  "id": "iso-22441",
+  "kind": "norm",
+  "title": "ISO 22441 – Sterilization of health care products – Low temperature vaporized hydrogen peroxide – Requirements for the development, validation and routine control of a sterilization process for medical devices",
+  "publisher": "ISO / in Deutschland als DIN EN ISO 22441",
+  "year": "2022",
+  "note": "Verfahrensspezifische Norm für die Sterilisation mit verdampftem Wasserstoffperoxid; maßgeblich ist die jeweils gültige Ausgabe."
+ }
+]

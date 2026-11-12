@@ -1,0 +1,67 @@
+{
+  "id": "haut",
+  "type": "term",
+  "title": "Haut",
+  "aliases": [
+    "Cutis",
+    "Derma",
+    "skin",
+    "Epidermis",
+    "Dermis",
+    "Subcutis",
+    "Stratum corneum",
+    "Hautimpedanz",
+    "Hautwiderstand"
+  ],
+  "category": "anatomie",
+  "summary": "Flächengrößtes Organ mit Schutz-, Sinnes- und Wärmeregulationsfunktion. In der Medizintechnik ist sie die elektrische, optische und thermische Grenzfläche fast aller nichtinvasiven Messungen und zugleich Ort typischer Geräteschäden wie Verbrennungen und Druckschäden.",
+  "body": "## Überblick\n\nDie **Haut** (lat. *cutis*, griech. *derma*) bedeckt beim Erwachsenen etwa 1,5–2 m² und ist das größte äußere Organ des Körpers [@schmidt-lang-2019]. Sie schützt vor mechanischen, chemischen, mikrobiellen und Strahlungseinflüssen, verhindert Wasserverlust, ist zentrales Stellglied der [[thermoregulation|Thermoregulation]] und Sinnesorgan für Druck, Vibration, Temperatur und Schmerz.\n\nFür die Medizintechnik ist die Haut vor allem **Grenzfläche**: Fast jedes nichtinvasive Messverfahren muss durch sie hindurch messen – elektrisch ([[ekg-elektrode|EKG-Elektrode]]), optisch ([[photoplethysmographie|Photoplethysmographie]]), thermisch ([[temperatursensor|Temperatursensor]]) oder mechanisch ([[oszillometrie|Oszillometrie]]). Zugleich ist sie der Ort, an dem Gerätewirkungen Schäden hinterlassen können: Verbrennungen, Druckschäden, Hautreizungen.\n\n## Aufbau\n\n| Schicht | Dicke (typisch) | Aufbau | technisch relevante Eigenschaft |\n|---|---|---|---|\n| Epidermis (Oberhaut) | ca. 0,05–1 mm, je nach Körperstelle | mehrschichtiges verhornendes Plattenepithel | äußerste Lage **Stratum corneum** (tote, verhornte Zellen, meist nur einige zehn µm) mit hohem elektrischem Widerstand |\n| Dermis (Lederhaut) | ca. 1–4 mm | Bindegewebe, Kapillaren, Schweißdrüsen, Haarfollikel, Rezeptoren | gut durchblutet und leitfähig; pulsatile Blutvolumenänderung ist optisch messbar |\n| Subcutis (Unterhaut) | stark variabel | Fettgewebe | Wärmeisolation, Polsterung über Knochenvorsprüngen |\n\n> [!hinweis] Dickenangaben sind grobe Lehrbuchbereiche [@schmidt-lang-2019]; sie variieren stark mit Körperregion, Alter und Konstitution. Bei Früh- und Neugeborenen ist das Stratum corneum noch unreif und deutlich durchlässiger.\n\n## Elektrische Eigenschaften\n\n### Hautimpedanz\n\nElektrisch lässt sich die Haut vereinfacht als Parallelschaltung aus Widerstand und Kapazität (Stratum corneum) in Reihe mit einem kleinen Widerstand der tieferen, gut leitenden Gewebe darstellen:\n\n`Z(ω) = R_tief + R_H / (1 + jω·R_H·C_H)`\n\nDer Widerstand `R_H` des trockenen Stratum corneum ist hoch und schwankt erheblich (Feuchtigkeit, Schweiß, Hornhautdicke, Kontaktfläche, Druck), die Kapazität `C_H` bewirkt, dass der Betrag der Impedanz mit steigender Frequenz sinkt [@grimnes-martinsen-2015].\n\n> [!vereinfacht] Das RC-Ersatzschaltbild ist ein didaktisches Modell. Reales Hautverhalten ist nichtlinear, zeitabhängig und spannungsabhängig (bei höheren Berührungsspannungen kann die Hornschicht durchschlagen) [@grimnes-martinsen-2015] [@iec-60479-1].\n\n### Elektrode-Haut-Grenzfläche\n\nAn der Grenzfläche zwischen Elektrode und Elektrolyt (Gel, Schweiß) entsteht ein **Halbzellenpotential**; bei Silber/Silberchlorid ist es vergleichsweise klein und stabil (Standardpotential gegenüber der Normalwasserstoffelektrode rund +0,22 V), weshalb Ag/AgCl der Standard für Biosignalelektroden ist [@webster-2010]. Zusätzlich besteht über der Epidermis ein Hautpotential, das sich bei Dehnung oder Druck ändert. Unterschiede zwischen zwei Elektroden erscheinen als Gleichspannungs-Offset von bis zu einigen hundert Millivolt, ihre Schwankungen als [[bewegungsartefakt|Bewegungsartefakte]] im Frequenzbereich des Nutzsignals. Biosignalverstärker müssen den Offset ohne Übersteuerung verkraften und die Artefakte durch Hochpassfilter und hohe Eingangsimpedanz begrenzen [@webster-2010] [@grimnes-martinsen-2015].\n\n> [!beispiel] Hat das RC-Glied der Hornschicht beispielhaft `R_H` = 100 kΩ und `C_H` = 10 nF, liegt seine Grenzfrequenz bei `f = 1 / (2π·R_H·C_H)` ≈ 160 Hz. Darüber wird die Impedanz zunehmend kapazitiv und kleiner – ein Grund, warum Gewebe für HF-Ströme gut leitet, für Gleichstrom dagegen kaum. (Zahlen zur Veranschaulichung, keine Messwerte.)\n\n### Folgen für Elektroden und Sicherheit\n\n* **Biosignalableitung:** Elektrodengel durchfeuchtet die Hornschicht, die Ag/AgCl-Grenzfläche wandelt Ionen- in Elektronenleitung. Hautvorbereitung (Reinigen, leichtes Abrasieren) senkt Impedanz und Störanfälligkeit. Schlechter Kontakt führt zum [[elektrodenproblem|Elektrodenproblem]] und verstärkt [[netzstoerung|Netzbrumm]] [@webster-2010].\n* **Defibrillation:** [[defibrillationselektroden|Defibrillationselektroden]] brauchen großflächigen, gelvermittelten Kontakt, damit die Energie das Herz erreicht und die Haut nicht verbrennt.\n* **Körperdurchströmung:** Die Hautimpedanz begrenzt bei äußerem Kontakt den Körperstrom – ein Schutz, der bei invasiven Zugängen (Katheter, Kanülen) entfällt. Deshalb unterscheidet die IEC 60601-1 [[anwendungsteile|Anwendungsteile]] der Typen B, BF und CF mit unterschiedlichen Grenzwerten für den [[ableitstrom|Patientenableitstrom]] [@iec-60601-1].\n\n## Optische Eigenschaften\n\nLicht im roten und nahinfraroten Bereich (etwa 600–1000 nm) dringt einige Millimeter in die Haut ein, weil Hämoglobin und Wasser dort vergleichsweise wenig absorbieren („optisches Fenster“). Die pulsatile Änderung des arteriellen Blutvolumens in der Dermis moduliert die transmittierte bzw. reflektierte Intensität – das Messprinzip der [[photoplethysmographie|Photoplethysmographie]] und des [[pulsoxymeter|Pulsoxymeters]] [@allen-2007]. Die Auswertung stützt sich auf das [[lambert-beer|Lambert-Beer-Gesetz]].\n\n> [!praxis] Starke Hautpigmentierung, Nagellack, kalte Akren mit Vasokonstriktion oder Bewegung verschlechtern das PPG-Signal. Studien zeigen bei dunkler Hautpigmentierung systematisch höhere Pulsoxymetrie-Messwerte gegenüber der Blutgasanalyse [@sjoding-2020].\n\nIm blauen Spektralbereich wird die Haut therapeutisch genutzt: Das [[phototherapiegeraet|Phototherapiegerät]] wandelt Bilirubin in den Hautkapillaren Neugeborener photochemisch in ausscheidbare Isomere um [@aap-hyperbilirubinemia-2004].\n\n## Thermische Eigenschaften\n\nDie Haut tauscht Wärme über Strahlung, Konvektion, Leitung und Verdunstung aus; ihre Durchblutung kann zur Wärmeabgabe stark gesteigert oder gedrosselt werden (siehe [[thermoregulation|Thermoregulation]] und [[waermeuebertragung|Wärmeübertragung]]). Für Geräte bedeutet das:\n\n| Situation | Risiko | Gegenmaßnahme |\n|---|---|---|\n| warme Oberflächen von [[anwendungsteile|Anwendungsteilen]] | Verbrennung bei langer Kontaktzeit, v. a. bei bewusstlosen Patienten | Temperaturgrenzen nach IEC 60601-1 [@iec-60601-1] |\n| Wärmesysteme ([[patientenwaermesystem|Patientenwärmesystem]], [[waermebett|Wärmebett]]) | lokale Überhitzung unter Druck | Temperaturbegrenzung, Sensorüberwachung [@iec-80601-2-35] |\n| [[neutralelektrode|Neutralelektrode]] der HF-Chirurgie | Stromdichte → [[joulesche-waerme|Joulesche Wärme]] → Verbrennung | vollflächiger Kontakt, Kontaktqualitätsüberwachung [@iec-60601-2-2] |\n\n> [!warnung] Die volumenbezogene Wärmeleistung im Gewebe unter einer Neutralelektrode steigt mit dem Quadrat der Stromdichte (`p = J²/σ`, `J = I/A`). Löst sich die Elektrode teilweise, steigt die Stromdichte am Restkontakt – es droht eine [[neutralelektroden-verbrennung|Verbrennung unter der Neutralelektrode]].\n\n## Mechanische Belastung\n\nAnhaltender Druck über Knochenvorsprüngen drosselt die Kapillardurchblutung; es entstehen Druckgeschwüre (Dekubitus). Relevant sind neben Lagerung und [[pflegebett|Pflegebett]] auch Medizinprodukte selbst: Masken, Schläuche, Sensoren und Klebeelektroden können „device-related pressure injuries“ erzeugen. Wechseldruckmatratzen ([[antidekubitussystem|Antidekubitussystem]]) entlasten die Haut zyklisch; die [[npwt-geraet|Unterdruck-Wundtherapie]] unterstützt die Heilung bestehender Wunden.\n\n## Bedeutung in der Medizintechnik\n\n| Funktion der Haut | Gerät / Komponente |\n|---|---|\n| elektrische Ableitung | [[ekg-elektrode|EKG-Elektrode]], [[ekg-geraet|EKG]], [[eeg-geraet|EEG]], [[emg-geraet|EMG]] |\n| optisches Fenster | [[pulsoxymeter|Pulsoxymeter]], [[photoplethysmographie|PPG]] |\n| Wärmeaustausch | [[inkubator|Inkubator]], [[patientenwaermesystem|Patientenwärmesystem]], [[hypothermiegeraet|Temperaturmanagement]] |\n| elektrischer Stromweg | [[hf-chirurgiegeraet|HF-Chirurgie]], [[defibrillator|Defibrillator]], [[reizstromgeraet|Reizstromgerät]] |\n| Druckempfindlichkeit | [[antidekubitussystem|Antidekubitussystem]], [[nibp-messgeraet|NIBP-Manschette]] |\n\nMaterialien mit Hautkontakt müssen biologisch beurteilt werden (Zytotoxizität, Sensibilisierung, Irritation) [@iso-10993-1]. Wer Elektroden, Sensoren und Wärmegeräte auswählt oder prüft, muss die Haut als elektrische, optische und thermische Schnittstelle verstehen.\n",
+  "related": [
+    "ekg-elektrode",
+    "photoplethysmographie",
+    "pulsoxymeter",
+    "neutralelektrode",
+    "neutralelektroden-verbrennung",
+    "thermoregulation",
+    "anwendungsteile",
+    "elektrische-stromwirkung",
+    "antidekubitussystem",
+    "phototherapiegeraet",
+    "waermeuebertragung"
+  ],
+  "paths": [
+    [
+      "haut",
+      "ekg-elektrode",
+      "instrumentenverstaerker",
+      "ekg-geraet"
+    ],
+    [
+      "haut",
+      "photoplethysmographie",
+      "lambert-beer",
+      "pulsoxymeter"
+    ],
+    [
+      "haut",
+      "neutralelektrode",
+      "joulesche-waerme",
+      "hf-chirurgiegeraet"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "grimnes-martinsen-2015",
+    "webster-2010",
+    "iec-60479-1",
+    "iec-60601-1",
+    "iec-60601-2-2",
+    "iec-80601-2-35",
+    "allen-2007",
+    "sjoding-2020",
+    "aap-hyperbilirubinemia-2004",
+    "iso-10993-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

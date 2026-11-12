@@ -1,0 +1,38 @@
+{
+  "id": "iso-13485",
+  "type": "standard",
+  "title": "ISO 13485",
+  "code": "ISO 13485",
+  "kind": "norm",
+  "fullTitle": "Medizinprodukte – Qualitätsmanagementsysteme – Anforderungen für regulatorische Zwecke",
+  "scope": "Legt Anforderungen an ein Qualitätsmanagementsystem fest, mit dem eine Organisation nachweist, dass sie Medizinprodukte und zugehörige Dienstleistungen beständig gemäß Kundenanforderungen und regulatorischen Anforderungen bereitstellt.",
+  "aliases": [
+    "DIN EN ISO 13485",
+    "EN ISO 13485",
+    "QM-Norm Medizinprodukte",
+    "13485"
+  ],
+  "category": "normen",
+  "summary": "ISO 13485 ist die Norm für Qualitätsmanagementsysteme in der Medizinprodukteindustrie. Sie verlangt dokumentierte, risikobasierte Prozesse für Entwicklung, Beschaffung, Produktion, Rückverfolgbarkeit, Reklamationen, Korrektur- und Vorbeugemaßnahmen und Meldungen an Behörden.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **ISO 13485** beschreibt die Anforderungen an ein Qualitätsmanagementsystem (QMS) für Organisationen, die in einer oder mehreren Phasen des [[lebenszyklus-medizinprodukt|Lebenszyklus eines Medizinprodukts]] tätig sind – Hersteller, Zulieferer, Händler, Sterilisationsdienstleister oder Serviceunternehmen [@iso-13485]. Im Unterschied zur allgemeinen ISO 9001 steht nicht die Kundenzufriedenheit oder kontinuierliche Verbesserung im Vordergrund, sondern die **Erfüllung regulatorischer Anforderungen** und die Aufrechterhaltung eines wirksamen Systems.\n\nDie [[mdr|MDR]] verpflichtet Hersteller in Art. 10, ein Qualitätsmanagementsystem einzurichten [@mdr-2017]; die ISO 13485 ist der etablierte Weg, diese Pflicht nachweisbar zu erfüllen.\n\n## Zentrale Konzepte und Anforderungen\n\n### Grundprinzipien\n\n* **Prozessorientierung und Risikobasierung:** Umfang der Steuerung richtet sich nach dem Risiko für Produktsicherheit und -leistung ([[iso-14971]]).\n* **Dokumentation:** Qualitätshandbuch, dokumentierte Verfahren und Aufzeichnungen; für jeden Produkttyp eine Medizinprodukteakte.\n* **Validierung:** Prozesse, deren Ergebnis nicht vollständig durch nachfolgende Prüfung verifiziert werden kann (z. B. [[sterilisation|Sterilisation]], Kleben, Schweißen, Software), müssen validiert werden.\n* **Verantwortung der Leitung:** Qualitätspolitik, Ziele, Managementbewertung.\n\n### Wesentliche Abschnitte (Überblick)\n\n| Bereich | Inhalte (eigene Worte) |\n|---|---|\n| QM-System | Dokumentenlenkung, Aufzeichnungen, Auslagerung von Prozessen |\n| Ressourcen | Kompetenz und Schulung des Personals, Infrastruktur, Arbeitsumgebung, Kontaminationskontrolle |\n| Produktrealisierung | Planung, Design und Entwicklung (Eingaben, Verifizierung, Validierung, Transfer, Änderungen), Beschaffung und Lieferantenbewertung, Produktion, Kennzeichnung, Rückverfolgbarkeit ([[udi]]), Instandhaltungstätigkeiten, Lenkung von Prüfmitteln ([[kalibrierung]]) |\n| Messung und Verbesserung | Rückmeldungen, Reklamationsbearbeitung, Meldung an Behörden ([[vigilanz]]), interne Audits, Lenkung fehlerhafter Produkte, Korrektur- und Vorbeugemaßnahmen (CAPA) |\n\n> [!vereinfacht] Ein QMS nach ISO 13485 lässt sich als Regelkreis verstehen: Anforderungen werden in Prozesse übersetzt, Ergebnisse gemessen, Abweichungen analysiert und über Korrektur- und Vorbeugemaßnahmen zurückgeführt (vgl. [[regelkreis]]).\n\n> [!hinweis] Für Ausgabestand und harmonisierte europäische Fassung ist die jeweils gültige Fassung maßgeblich; Übergangsregelungen bei Neuausgaben legt die zuständige Normungsorganisation fest.\n\n## Bezug zu anderen Normen\n\nDie ISO 13485 gehört nicht zur 60601-Familie, sondern bildet den **organisatorischen Rahmen**, in dem produktbezogene Normen angewendet werden:\n\n| Norm | Bezug |\n|---|---|\n| [[iso-14971]] | Risikomanagement als Bestandteil der Produktrealisierung |\n| [[iec-62304]] | Software-Lebenszyklus innerhalb des QMS |\n| [[iec-62366-1]] | Gebrauchstauglichkeit im Design-Prozess |\n| [[iec-60601-1]] und Familie | Nachweis der Produktsicherheit als Design-Ergebnis |\n| [[iso-10993-1]] | biologische Beurteilung als Teil von Design und Entwicklung |\n| ISO 9001 | allgemeines QM-System; strukturell verwandt, aber nicht deckungsgleich |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** lassen ihr QMS in der Regel durch eine [[benannte-stelle|Benannte Stelle]] im Rahmen der [[konformitaetsbewertung]] auditieren oder durch Zertifizierungsstellen zertifizieren. Ein Zertifikat ist für viele Märkte Voraussetzung der Marktzulassung.\n\n**Betreiber** sind nicht verpflichtet, nach ISO 13485 zertifiziert zu sein. Relevant wird die Norm aber für:\n\n* **Aufbereitung:** Einrichtungen bzw. Dienstleister, die Medizinprodukte [[aufbereitung|aufbereiten]], benötigen ein Qualitätsmanagementsystem; für Produkte mit besonders hohen Anforderungen an die Aufbereitung (Einstufung „kritisch C“) sieht die KRINKO-BfArM-Empfehlung eine Zertifizierung des QM-Systems nach DIN EN ISO 13485 vor [@krinko-bfarm-2012].\n* **Eigenherstellung:** Wer Medizinprodukte im Haus herstellt oder wesentlich verändert, kann Herstellerpflichten übernehmen; für die Eigenherstellung in Gesundheitseinrichtungen verlangt die MDR (Art. 5 Abs. 5) u. a. ein geeignetes QM-System [@mdr-2017].\n* **Lieferantenbewertung:** Bei Ausschreibungen und Serviceverträgen ist ein QMS-Zertifikat ein wichtiges Kriterium.\n\n> [!praxis] Medizintechnik-Abteilungen nutzen Elemente der Norm – Dokumentenlenkung, Prüfmittelüberwachung, CAPA, Schulungsnachweise – oft auch ohne Zertifizierung, um ihr [[medizintechnik-management|Medizintechnik-Management]] nachvollziehbar zu organisieren.\n\n## Betroffene Geräte\n\nDie Norm betrifft keine einzelnen Gerätetypen, sondern alle Organisationen, die Medizinprodukte entwickeln, herstellen, aufbereiten oder warten – vom [[pflegebett]] über [[infusionspumpe]] und [[beatmungsgeraet]] bis zu [[herzschrittmacher]], [[mrt]] und [[dampfsterilisator]].\n",
+  "related": [
+    "medizinprodukt",
+    "konformitaetsbewertung",
+    "benannte-stelle",
+    "ce-kennzeichnung",
+    "udi",
+    "vigilanz",
+    "iso-14971",
+    "iec-62304",
+    "aufbereitung",
+    "medizintechnik-management",
+    "mdr"
+  ],
+  "sources": [
+    "iso-13485",
+    "mdr-2017",
+    "krinko-bfarm-2012"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "medizinproduktebuch",
+  "type": "term",
+  "title": "Medizinproduktebuch",
+  "aliases": [
+    "MPB",
+    "Gerätebuch",
+    "Medical Device Logbook",
+    "Gerätelebenslaufakte",
+    "§ 13 MPBetreibV"
+  ],
+  "category": "recht",
+  "summary": "Das Medizinproduktebuch ist die vom Betreiber nach § 13 MPBetreibV zu führende Dokumentation für Medizinprodukte der Anlagen 1 und 2. Es enthält Angaben zur Identifikation, zu Funktionsprüfung und Einweisung, zu sicherheits- und messtechnischen Kontrollen, zu Störungen und zu Vorkommnismeldungen und ist fünf Jahre nach Außerbetriebnahme aufzubewahren.",
+  "body": "## Begriff\n\nDas **Medizinproduktebuch** (MPB) ist die gerätebezogene Lebenslaufakte eines [[medizinprodukt|Medizinprodukts]] beim Betreiber. Es dokumentiert, dass ein Gerät ordnungsgemäß in Betrieb genommen, die Anwender [[einweisung|eingewiesen]] und die vorgeschriebenen Kontrollen durchgeführt wurden, und hält Störungen sowie Vorkommnismeldungen fest. Rechtsgrundlage ist in der Neufassung der [[mpbetreibv|Medizinprodukte-Betreiberverordnung]] von 2025 der **§ 13 MPBetreibV** (früher § 12) [@mpbetreibv].\n\n> [!belegt] Der Betreiber hat für die in **Anlage 1** (STK-pflichtige aktive Produkte) und **Anlage 2** (Produkte mit Messfunktion, MTK-pflichtig) aufgeführten Medizinprodukte ein Medizinproduktebuch zu führen; für bestimmte einfache Produkte der Anlage 2 sieht die Verordnung Ausnahmen vor. Das Buch muss den Anwendern während der Arbeitszeit zugänglich sein und ist nach der Außerbetriebnahme des Produkts noch **fünf Jahre** aufzubewahren [@mpbetreibv].\n\n## Geltungsbereich\n\n| Produktgruppe | Medizinproduktebuch | Beispiele |\n|---|---|---|\n| Anlage 1 MPBetreibV | ja | [[defibrillator|Defibrillator]], [[hf-chirurgiegeraet|HF-Chirurgiegerät]], [[infusionspumpe|Infusionspumpe]], [[spritzenpumpe|Spritzenpumpe]], [[beatmungsgeraet|Beatmungsgerät]], [[dialysegeraet|Dialysegerät]], [[inkubator|Inkubator]] |\n| Anlage 2 MPBetreibV | ja (mit Ausnahmen) | [[audiometer|Audiometer]], [[tonometer|Tonometer]], [[nibp-messgeraet|NIBP-Messgeräte]], [[thermometer|medizinische Thermometer]] |\n| sonstige aktive Produkte | nein, aber Eintrag im [[bestandsverzeichnis|Bestandsverzeichnis]] | z. B. [[op-leuchte|OP-Leuchte]], [[pflegebett|Pflegebett]] |\n\n> [!vereinfacht] Die Beispiele dienen der Orientierung. Ob ein konkretes Gerät unter Anlage 1 oder 2 fällt, ergibt sich aus der jeweils aktuellen Anlage der Verordnung und der Zweckbestimmung des Geräts.\n\n## Inhalte\n\nDie Verordnung legt fest, welche Angaben einzutragen sind [@mpbetreibv]. Zusammengefasst umfasst das Medizinproduktebuch:\n\n| Inhalt | Zweck | Beispiel |\n|---|---|---|\n| **Identifikation** des Produkts | eindeutige Zuordnung | Bezeichnung, Typ, Seriennummer, ggf. Inventarnummer |\n| **Funktionsprüfung und Einweisung** vor der ersten Inbetriebnahme (Anlage-1-Produkte, vgl. § 11 Abs. 3) | Nachweis der Erstinbetriebnahme | Datum, durchführende Person, eingewiesene Beauftragte |\n| **Sicherheits- und messtechnische Kontrollen** | Nachweis der Prüfpflichten | Frist, Datum, Ergebnis der [[stk|STK]] oder [[mtk|MTK]], Prüfer |\n| **Instandhaltungsmaßnahmen** | Nachvollziehbarkeit | [[instandsetzung|Reparaturen]], Austausch sicherheitsrelevanter Teile |\n| **Funktionsstörungen und wiederholte gleichartige Bedienfehler** | Erkennen von Mustern | Datum, Art, Folgen |\n| **Meldungen von Vorkommnissen** an Behörden und Hersteller | Nachweis der [[vigilanz|Vigilanz]] | Datum, Inhalt der Meldung |\n\n> [!hinweis] Der genaue Wortlaut der Pflichtangaben wurde 2025 neu gefasst. Die obige Tabelle fasst die Inhalte zusammen; bei Prüfungen durch die Aufsichtsbehörde zählt allein der aktuelle Verordnungstext [@mpbetreibv].\n\n## Form: Papier oder elektronisch\n\nDas Medizinproduktebuch kann in Papierform oder **elektronisch** geführt werden, sofern die Angaben während der Arbeitszeit für Anwender verfügbar sind. In Krankenhäusern ist heute die Führung in einer **Gerätedatenbank** bzw. einem CAFM-/Instandhaltungsmanagementsystem üblich; die Datensätze für Kontrollen und Reparaturen bilden dann das MPB. Wichtig sind:\n\n* **Unveränderbarkeit** bzw. Nachvollziehbarkeit von Änderungen (Audit-Trail),\n* **Zugriff** für Anwender, z. B. über das Intranet oder einen Barcode/QR-Code am Gerät,\n* **Datensicherung** und Lesbarkeit über die gesamte Aufbewahrungsfrist,\n* **Verknüpfung** mit Bestandsverzeichnis und Prüfprotokollen.\n\nFür Altgeräte sah bereits die Fassung von 2017 vor, dass Gerätebücher nach der früheren Medizingeräteverordnung [@medgv-1985] weitergeführt werden durften. Ob und in welcher Form diese Übergangsregel in der Neufassung 2025 fortgilt, sollte im aktuellen Verordnungstext geprüft werden [@mpbetreibv].\n\n## Abgrenzung\n\n| Dokument | Umfang | Inhalt |\n|---|---|---|\n| Medizinproduktebuch (§ 13) | nur Produkte nach Anlage 1 und 2 | Lebenslauf des einzelnen Geräts |\n| [[bestandsverzeichnis|Bestandsverzeichnis]] (§ 14) | alle aktiven nichtimplantierbaren Produkte | Übersicht über den Gerätebestand |\n| Prüfprotokoll | jede einzelne Prüfung | Messwerte, z. B. [[schutzleiterwiderstand|Schutzleiterwiderstand]] und [[ableitstrommessung|Ableitströme]] |\n| Gebrauchsanweisung | jedes Produkt | Herstellerangaben zu Bedienung und Pflege |\n\n## Beispiel: Lebenslauf einer Infusionspumpe\n\n> [!beispiel] Ein frei konstruierter MPB-Auszug für eine [[infusionspumpe|Infusionspumpe]]:\n> * Inbetriebnahme mit Funktionsprüfung durch den Hersteller; Einweisung von zwei Beauftragten der Station.\n> * Nach einem Jahr: Funktionsstörung „[[okklusionsalarm|Okklusionsalarm]] ohne erkennbare Ursache“, Gerät an die Medizintechnik; Ursache: verschmutzter Drucksensor, Reinigung und [[funktionspruefung|Funktionsprüfung]].\n> * Nach zwei Jahren: STK nach Herstellerangabe mit [[elektrische-sicherheitspruefung|elektrischer Sicherheitsprüfung]] und Förderratenprüfung, Ergebnis „bestanden“.\n> * Sicherheitsinformation des Herstellers: Software-Update eingespielt, Version dokumentiert.\n\n## Bedeutung in der Medizintechnik\n\nDas Medizinproduktebuch ist der zentrale **Nachweis**, dass ein Gerät sicher betrieben werden darf. Es\n\n* belegt gegenüber Aufsichtsbehörden, Haftpflichtversicherern und Gerichten die Erfüllung der [[betreiberpflichten|Betreiberpflichten]],\n* hilft bei der [[fehlersuche|Fehlersuche]], weil sich wiederholende Störungen (z. B. [[akkufehler|Akkufehler]] oder [[sensordrift|Sensordrift]]) erkennbar werden,\n* liefert Daten für das [[medizintechnik-management|Medizintechnik-Management]] (Ausfallraten, Reparaturkosten, Ersatzbeschaffung),\n* unterstützt den [[beauftragter-medizinproduktesicherheit|Beauftragten für Medizinproduktesicherheit]] bei der Bewertung von Vorkommnissen.\n\n> [!praxis] Bei einem Vorkommnis ist es hilfreich, wenn im Medizinproduktebuch schnell erkennbar ist, wann die letzte STK stattfand, welche Softwareversion installiert ist und ob die beteiligten Anwender eingewiesen waren – genau diese Fragen stellen Hersteller und Behörden zuerst.\n",
+  "related": [
+    "mpbetreibv",
+    "bestandsverzeichnis",
+    "stk",
+    "mtk",
+    "einweisung",
+    "betreiberpflichten",
+    "beauftragter-medizinproduktesicherheit",
+    "medizintechnik-management",
+    "instandhaltung-grundlagen"
+  ],
+  "paths": [
+    [
+      "infusionspumpe",
+      "mpbetreibv",
+      "stk",
+      "medizinproduktebuch"
+    ],
+    [
+      "betreiberpflichten",
+      "bestandsverzeichnis",
+      "medizinproduktebuch"
+    ]
+  ],
+  "sources": [
+    "mpbetreibv",
+    "medgv-1985"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

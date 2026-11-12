@@ -1,0 +1,40 @@
+{
+  "id": "iec-60601-2-24",
+  "type": "standard",
+  "title": "IEC 60601-2-24",
+  "code": "IEC 60601-2-24",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-24: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Infusionspumpen und Infusionsreglern",
+  "scope": "Legt besondere Sicherheits- und Leistungsanforderungen an Infusionspumpen und Infusionsregler fest, insbesondere an die Fördergenauigkeit und an Schutzfunktionen gegen Fehlförderung.",
+  "aliases": [
+    "DIN EN 60601-2-24",
+    "EN 60601-2-24",
+    "VDE 0750-2-24",
+    "60601-2-24",
+    "Infusionspumpennorm"
+  ],
+  "category": "normen",
+  "summary": "IEC 60601-2-24 ist die besondere Festlegung der Normenfamilie IEC 60601 für Infusionspumpen und -regler. Sie definiert, wie Fördergenauigkeit mit Anlaufkurve und Trompetenkurve geprüft wird, und stellt Anforderungen an Okklusions- und Luftalarme, den Schutz vor freiem Durchfluss und unbeabsichtigten Bolusgaben.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-2-24** gilt für Geräte, die Flüssigkeiten kontrolliert in den Körper des Patienten fördern [@iec-60601-2-24]. Dazu zählen volumetrische [[infusionspumpe|Infusionspumpen]], [[spritzenpumpe|Spritzenpumpen]], ambulante (tragbare) Pumpen sowie **Infusionsregler**, die den Schwerkraftfluss nur steuern. Die Norm unterscheidet Gerätetypen nach Funktionsprinzip, weil sich daraus unterschiedliche Prüfungen ergeben.\n\nInfusionstechnik ist besonders risikobehaftet: Hochpotente Medikamente (Katecholamine, Insulin, Opioide) werden in sehr kleinen Raten gegeben, und sowohl Unter- als auch Überdosierung können lebensbedrohlich sein.\n\n## Zentrale Konzepte und Anforderungen\n\n### Fördergenauigkeit: Anlauf- und Trompetenkurve\n\nHerzstück ist ein genormtes Verfahren zur Bestimmung der Fördergenauigkeit. Das geförderte Volumen wird typischerweise **gravimetrisch** (mit einer Präzisionswaage) über die Zeit erfasst. Daraus entstehen zwei Darstellungen:\n\n| Kurve | Aussage |\n|---|---|\n| **Anlaufkurve** | zeigt, wie schnell nach dem Start die eingestellte Rate erreicht wird – bei Spritzenpumpen wegen mechanischer Spiele oft deutlich verzögert |\n| **Trompetenkurve** | zeigt die maximale und minimale Abweichung der Rate, gemittelt über verschieden lange Beobachtungsfenster |\n\n> [!vereinfacht] Die Trompetenkurve heißt so, weil sie sich bei kurzen Beobachtungsfenstern weit öffnet und bei langen Fenstern zusammenläuft: Kurzfristig schwankt jede Pumpe (z. B. durch die Arbeitstakte einer [[peristaltikpumpe|Peristaltik]] oder die Schrittauflösung eines [[schrittmotor|Schrittmotors]]), im längeren Mittel ist sie genau. Für kurz wirksame Medikamente zählt die Öffnung der Trompete, nicht nur der Mittelwert.\n\n### Okklusion und Bolus\n\nDie Pumpe muss einen Verschluss im Schlauchsystem erkennen ([[okklusionsalarm]]), meist über [[drucksensor|Drucksensoren]] oder [[kraftsensor|Kraftsensoren]] am Spritzenkolben. Die Norm fordert, dass Hersteller die Alarmzeit bis zur Okklusionserkennung und das **Bolusvolumen** offenlegen, das sich bis dahin im System aufgebaut hat und nach Lösen des Verschlusses unkontrolliert abgegeben werden könnte.\n\n### Luft und freier Durchfluss\n\n- **Luft im System:** Volumetrische Pumpen benötigen eine Lufterkennung, meist mit einem [[luftblasendetektor|Ultraschall-Luftblasendetektor]] ([[luft-im-system]]).\n- **Freier Durchfluss:** Wird das Infusionsset aus der Pumpe genommen, darf keine Schwerkraftinfusion ungewollt einsetzen (Free-Flow-Schutz durch Klemmen im Set oder Gerät).\n- **Siphoneffekt:** Bei Spritzenpumpen kann ein Höhenunterschied ungewollte Förderung bewirken, wenn die Spritze nicht korrekt fixiert ist.\n\n### Alarme und Statusmeldungen\n\nGefordert sind u. a. Alarme bei Infusionsende bzw. bevorstehendem Infusionsende, Okklusion, Luft, niedrigem Akkuladestand ([[akkufehler]]) und Fehlern im Antrieb ([[spindelantrieb]]). Die Gestaltung richtet sich nach [[iec-60601-1-8]].\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Sicherheit |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-6]], [[iec-60601-1-8]], [[iec-60601-1-11]] | EMV, Gebrauchstauglichkeit (Programmierfehler!), Alarme, Heimanwendung |\n| Prozessnormen | [[iec-62304]], [[iec-62366-1]], [[iso-14971]] | Pumpensoftware, Medikamentenbibliotheken, Risikomanagement |\n\n> [!hinweis] Grundprinzip der Familie IEC 60601: Die besondere Festlegung (-2-x) hat Vorrang vor Ergänzungsnormen (-1-x) und der Basisnorm. Sie gibt jeweils an, welche Abschnitte der Basisnorm gelten, ergänzt oder ersetzt werden.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen die Genauigkeitskurven in den Begleitpapieren angeben. Für Anwender sind diese Angaben entscheidend, um z. B. bei sehr kleinen Raten in der [[neonatologie]] die geeignete Pumpe auszuwählen.\n\n**Betreiber** unterziehen Infusionspumpen der [[stk]] nach [[mpbetreibv]] (§ 12 i. V. m. Anlage 1, Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind) [@mpbetreibv]. Dabei werden Förderrate, Okklusionsdruck und Alarme mit einem Infusionspumpen-Analysator geprüft ([[pruefgeraete]]).\n\n> [!praxis] Viele Fehlbedienungen entstehen bei der Programmierung (Komma- oder Einheitenfehler). Dosisfehlerreduktionssysteme mit Medikamentenbibliothek und harten bzw. weichen Grenzen sind deshalb ein wichtiges Thema im [[medizintechnik-management]] ([[anwendungsfehler]]).\n\n## Betroffene Geräte\n\n[[infusionspumpe]], [[spritzenpumpe]], [[pca-pumpe]], [[insulinpumpe]] (soweit ambulante Infusionspumpe), mittelbar [[infusionswaermer]] und [[enterale-ernaehrungspumpe]] (Anwendungsbereich der jeweils gültigen Ausgabe prüfen). Hersteller sind u. a. [[b-braun]], [[fresenius-kabi]], [[bd]], [[baxter]] und [[icu-medical]].\n",
+  "related": [
+    "infusionspumpe",
+    "spritzenpumpe",
+    "pca-pumpe",
+    "okklusionsalarm",
+    "luft-im-system",
+    "luftblasendetektor",
+    "peristaltikpumpe",
+    "spindelantrieb",
+    "drucksensor",
+    "iec-60601-1-8",
+    "iec-60601-1",
+    "anwendungsfehler"
+  ],
+  "sources": [
+    "iec-60601-2-24",
+    "iec-60601-1",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

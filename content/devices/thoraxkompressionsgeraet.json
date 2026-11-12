@@ -1,0 +1,73 @@
+{
+  "id": "thoraxkompressionsgeraet",
+  "type": "device",
+  "title": "Mechanisches Thoraxkompressionsgerät",
+  "aliases": [
+    "mechanische Reanimationshilfe",
+    "mechanisches CPR-Gerät",
+    "Thoraxkompressionssystem",
+    "mechanical CPR device",
+    "Reanimationsgerät"
+  ],
+  "category": "geraete",
+  "deviceGroup": "notfall",
+  "rank": 31,
+  "domains": [
+    "notfallmedizin",
+    "kardiologie",
+    "intensivmedizin"
+  ],
+  "summary": "Mechanische Thoraxkompressionsgeräte führen die Herzdruckmassage bei der kardiopulmonalen Reanimation automatisch mit gleichbleibender Frequenz und Tiefe durch. Sie entlasten das Rettungsteam bei langen Reanimationen, beim Transport oder während Interventionen im Herzkatheterlabor.",
+  "sections": {
+    "purpose": "Bei einem Kreislaufstillstand muss durch Thoraxkompressionen ein Minimalkreislauf aufrechterhalten werden. Manuelle Kompressionen ermüden die Helfenden und sind während eines Transports oder einer Koronarintervention kaum in gleichbleibender Qualität möglich. Die Leitlinien des European Resuscitation Council empfehlen mechanische Geräte nicht als Routine, halten sie aber für eine sinnvolle Alternative, wenn hochwertige manuelle Kompressionen nicht praktikabel oder für das Personal gefährlich sind [@erc-2021]. Das Gerät ersetzt nicht den [[defibrillator]], sondern arbeitet mit ihm zusammen.",
+    "principle": "## Wirkprinzipien\n\nZwei Bauarten sind verbreitet:\n\n| Bauart | Prinzip |\n|---|---|\n| Stempelsystem | Ein elektrisch oder pneumatisch angetriebener Stempel mit Saugglocke drückt das Sternum in einem Rahmen gegen ein Rückenbrett; die Saugglocke kann die Brustwand bei der Entlastung aktiv anheben. |\n| Lastverteilendes Band | Ein um den Thorax gelegtes Band wird motorisch zyklisch gestrafft und komprimiert den gesamten Brustkorb zirkulär. |\n\nBei aktuellen akkubetriebenen Geräten treibt ein [[elektromotor|Elektromotor]] (z. B. ein [[bldc-motor]]) über eine Mechanik (z. B. [[spindelantrieb|Spindel-]] oder Bandantrieb) den Kompressionsweg; ältere Stempelsysteme arbeiteten auch pneumatisch mit Druckgas; ein [[mikrocontroller]] regelt in einem [[regelkreis]] Frequenz, Tiefe bzw. Bandspannung und Kompressions-Entlastungs-Verhältnis. Die Energieversorgung erfolgt überwiegend aus [[lithium-ionen-akku|Lithium-Ionen-Akkus]], damit das Gerät beim Transport netzunabhängig ist.\n\n## Sicherheitsaspekte\n\nDie Leitlinien für die manuelle Reanimation nennen eine Kompressionstiefe von etwa 5–6 cm und eine Frequenz von 100–120/min beim Erwachsenen [@erc-2021]; mechanische Geräte arbeiten mit herstellerseitig vorgegebenen bzw. in Grenzen einstellbaren Parametern, die sich an diesen Zielwerten orientieren. Maßgeblich ist die jeweils aktuelle Leitlinie [@erc-2025-als]. Kritisch sind korrekte Positionierung (Druckpunkt auf der unteren Sternumhälfte), minimale Unterbrechungen beim Anlegen sowie die Abstimmung mit [[defibrillationselektroden|Defibrillationselektroden]], deren Lage nicht vom Gerät verdeckt werden darf.\n\n> [!vereinfacht] Ob der Blutfluss überwiegend durch direkte Herzkompression („Herzpumpe“) oder durch intrathorakale Druckschwankungen („Thoraxpumpe“) entsteht, ist physiologisch nicht abschließend geklärt; vermutlich wirken beide Mechanismen zusammen."
+  },
+  "manufacturers": [
+    {
+      "ref": "stryker",
+      "models": [
+        "LUCAS"
+      ],
+      "note": "Stempelsystem mit Saugglocke."
+    },
+    {
+      "ref": "zoll",
+      "models": [
+        "AutoPulse"
+      ],
+      "note": "Lastverteilendes Band."
+    },
+    {
+      "ref": "corpuls",
+      "models": [
+        "corpuls cpr"
+      ],
+      "note": "Stempelsystem (Bauartdetails nach Herstellerangabe)."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt – die dortige Nr. 1.1 betrifft Produkte, die elektrische Energie zur Beeinflussung von Nerven, Muskeln oder Herztätigkeit anwenden, nicht die mechanische Kompression. Kontrollen nach § 12 daher nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Wartung und Prüfungen nach Herstellerangabe (u. a. Akkuzustand, Kompressionsmechanik, Saugglocke bzw. Band als Verbrauchsteil); Funktionsprüfung vor dem Einsatz bzw. bei der Fahrzeugcheckliste."
+  },
+  "related": [
+    "defibrillator",
+    "transportbeatmungsgeraet",
+    "kapnometer",
+    "herz",
+    "blutkreislauf",
+    "akkufehler"
+  ],
+  "sources": [
+    "erc-2021",
+    "erc-2025-als",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

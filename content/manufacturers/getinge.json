@@ -1,0 +1,108 @@
+{
+  "id": "getinge",
+  "type": "manufacturer",
+  "title": "Getinge",
+  "aliases": [
+    "Getinge AB",
+    "Getinge Group",
+    "Maquet",
+    "Datascope"
+  ],
+  "category": "hersteller",
+  "summary": "Schwedischer Medizintechnikkonzern mit Sitz in Göteborg, gegründet 1904. Getinge bietet Lösungen für Intensivmedizin und Anästhesie, Herz- und Gefäßchirurgie, OP-Ausstattung sowie Sterilgutaufbereitung; die Marke Maquet gehört zum Konzern.",
+  "headquarters": "Göteborg, Schweden",
+  "founded": "1904",
+  "website": "https://www.getinge.com/",
+  "productLines": [
+    {
+      "device": "beatmungsgeraet",
+      "models": [
+        "Servo-u",
+        "Servo-n",
+        "Servo-air"
+      ],
+      "note": "Servo-Produktlinie, früher unter der Marke Maquet."
+    },
+    {
+      "device": "anaesthesiegeraet",
+      "models": [
+        "Flow-i",
+        "Flow-e",
+        "Flow-c"
+      ]
+    },
+    {
+      "device": "herz-lungen-maschine",
+      "models": [
+        "HL 40"
+      ],
+      "note": "Marke Maquet."
+    },
+    {
+      "device": "ecmo",
+      "models": [
+        "Cardiohelp"
+      ]
+    },
+    {
+      "device": "iabp",
+      "models": [
+        "Cardiosave"
+      ],
+      "note": "Ursprünglich Datascope."
+    },
+    {
+      "device": "op-tisch",
+      "models": [
+        "Maquet Magnus",
+        "Maquet Alphamaxx"
+      ]
+    },
+    {
+      "device": "op-leuchte",
+      "models": [
+        "Maquet PowerLED",
+        "Maquet Volista"
+      ]
+    },
+    {
+      "device": "dampfsterilisator",
+      "models": [],
+      "note": "Großsterilisatoren für die Zentralsterilgutversorgung."
+    },
+    {
+      "device": "niedertemperatursterilisator",
+      "models": [],
+      "note": "Niedertemperaturverfahren auf Wasserstoffperoxid-Basis."
+    },
+    {
+      "device": "rdg",
+      "models": [],
+      "note": "Reinigungs- und Desinfektionsgeräte für Instrumente."
+    }
+  ],
+  "body": "## Überblick\n\nGetinge ist ein börsennotierter schwedischer Medizintechnikkonzern mit Hauptsitz in Göteborg. Das Portfolio deckt drei große Bereiche ab: **Akutversorgung** (Beatmung, Anästhesie, Herz-Kreislauf-Unterstützung), **chirurgische Arbeitsplätze** (OP-Tische, OP-Leuchten, Deckenversorgung) und **Life Science/Sterilgutversorgung** [@hst-getinge].\n\n## Geschichte in Stichpunkten\n\n* **1904** – Gründung im südschwedischen Ort Getinge, zunächst als Hersteller landwirtschaftlicher Geräte.\n* **1930er-Jahre** – Einstieg in die Medizintechnik mit Sterilisatoren.\n* **1995** – Übernahme von Arjo (Pflegebetten, Patientenlifter, Hygiene).\n* **2000** – Übernahme der deutschen Maquet (OP-Tische), später Ausbau zum Akut- und Herz-Kreislauf-Geschäft, u. a. mit der Servo-Beatmung.\n* **2009** – Abschluss der Übernahme von Datascope (u. a. Intraaortale Ballonpumpen) [@hst-getinge-datascope-2009].\n* **2017** – Abspaltung von [[arjo|Arjo]] als eigenständiges, an der Nasdaq Stockholm notiertes Unternehmen [@hst-arjo-listing-2017]; Maquet und weitere Marken werden unter der Dachmarke Getinge zusammengeführt.\n\n## Geschäftsbereiche\n\n| Bereich | Wiki-Geräte |\n|---|---|\n| Beatmung und Anästhesie | [[beatmungsgeraet]], [[anaesthesiegeraet]] |\n| Herz-Kreislauf-Unterstützung | [[herz-lungen-maschine]], [[ecmo]], [[iabp]] |\n| OP-Ausstattung | [[op-tisch]], [[op-leuchte]] |\n| Aufbereitung | [[dampfsterilisator]], [[niedertemperatursterilisator]], [[rdg]] |\n\n## Bedeutung für die Medizintechnik\n\nGetinge-Geräte sind in Intensivstationen, Herz-OPs und Aufbereitungseinheiten für Medizinprodukte (AEMP) weit verbreitet. Die Servo-Beatmungsgeräte arbeiten mit [[proportionalventil|Proportionalventilen]] für Inspiration und Exspiration, die Herz-Lungen-Maschinen mit Rollen- bzw. Zentrifugalpumpen und umfangreicher Sensorik (Druck, Temperatur, [[luftblasendetektor|Luftblasendetektion]]). Damit berührt das Portfolio viele Prüfpflichten:\n\n* Beatmungs- und Anästhesiegeräte fallen unter die Gruppe „maschinelle Beatmung mit oder ohne Anästhesie“ der Anlage 1 der [[mpbetreibv|MPBetreibV]] und unterliegen damit der [[stk]] (§ 12) [@mpbetreibv]. Herz-Lungen-Maschinen und ECMO-Systeme werden in der Fachpraxis meist der Gruppe „Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potenziellem Druckaufbau“ zugeordnet; diese Zuordnung ist eine fachliche Einordnung, kein Wortlaut der Verordnung – maßgeblich sind Anlage 1 und die Herstellerangaben.\n* Bei Sterilisatoren und RDG steht die **Validierung** der Aufbereitungsprozesse nach [[iso-17665|ISO 17665]] bzw. [[iso-15883|ISO 15883]] im Vordergrund ([[sterilisation]], [[desinfektion]]).\n* OP-Tische und OP-Leuchten sind sicherheitsrelevante Einrichtungsgegenstände, deren Instandhaltung nach Herstellerangaben erfolgt ([[instandhaltung-grundlagen]]).\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "herz-lungen-maschine",
+    "ecmo",
+    "iabp",
+    "op-tisch",
+    "dampfsterilisator",
+    "rdg",
+    "arjo",
+    "draeger",
+    "belimed",
+    "intensivmedizin",
+    "herzchirurgie"
+  ],
+  "sources": [
+    "hst-getinge",
+    "hst-getinge-datascope-2009",
+    "hst-arjo-listing-2017",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

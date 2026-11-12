@@ -1,0 +1,68 @@
+{
+  "id": "emv-stoerung",
+  "type": "fault",
+  "title": "EMV-Störung",
+  "aliases": [
+    "Elektromagnetische Störung",
+    "EMI",
+    "Electromagnetic interference",
+    "Funkstörung",
+    "HF-Einkopplung"
+  ],
+  "category": "fehler",
+  "summary": "Fehlfunktion oder Messwertverfälschung eines medizinischen Geräts durch elektromagnetische Störgrößen wie Funkfelder, elektrostatische Entladungen, Netztransienten oder HF-Chirurgie. Typische Folgen sind Artefakte, Fehlalarme, Resets oder Therapieunterbrechungen.",
+  "devices": [
+    "patientenmonitor",
+    "ekg-geraet",
+    "infusionspumpe",
+    "spritzenpumpe",
+    "beatmungsgeraet",
+    "hf-chirurgiegeraet",
+    "eeg-geraet",
+    "defibrillator",
+    "herzschrittmacher",
+    "icd",
+    "mrt",
+    "insulinpumpe"
+  ],
+  "causes": [
+    "Hochfrequente Felder tragbarer Funkgeräte (Mobiltelefone, Funkgeräte von Rettungsdienst und Sicherheitspersonal, WLAN-Geräte) in unmittelbarer Nähe des Geräts",
+    "Aktivierung eines [[hf-chirurgiegeraet|HF-Chirurgiegeräts]]: leitungsgebundene und gestrahlte Einkopplung in EKG-, EEG- und Druckleitungen",
+    "Elektrostatische Entladung (ESD) beim Berühren des Geräts, z. B. bei trockener Luft und isolierenden Bodenbelägen",
+    "Schnelle Transienten (Burst) und Stoßspannungen (Surge) im Netz durch Schaltvorgänge, Motoren oder Blitzeinwirkung",
+    "Magnetfelder von Transformatoren, Motoren, [[mrt|MRT]]-Anlagen oder Induktionsgeräten (niederfrequente Einkopplung, [[netzstoerung|Netzbrumm]])",
+    "Beschädigte Kabelschirme, fehlende Ferritkerne, gelöste Gehäuseschrauben oder nicht originales Zubehör, das die [[emv|EMV]]-Eigenschaften verändert",
+    "Störaussendung anderer Geräte (z. B. defekte Netzteile, nicht medizinische Unterhaltungselektronik) im gleichen Stromkreis oder Raum"
+  ],
+  "actions": [
+    "Patientenzustand unabhängig vom gestörten Gerät beurteilen; bei Therapieunterbrechung (Pumpe, Beatmung) Versorgung sofort sicherstellen, ggf. Ersatzgerät",
+    "Vermutete Störquelle entfernen bzw. ausschalten (Funkgerät, Mobiltelefon) und beobachten, ob die Störung verschwindet",
+    "Kabel von Patientenableitungen getrennt von Netz- und HF-Kabeln führen, Ableitungen kurz und verdrillt halten, HF-Filter des Monitors nutzen",
+    "Zeitpunkt, Umgebung, beteiligte Geräte und Gerätezustand genau dokumentieren (Event-Log sichern, siehe [[fehlercodes]])",
+    "Gerät durch die Medizintechnik prüfen lassen: Schirmung, Kabel, Ferrite, Gehäuse, Schutzleiter, Zubehör",
+    "Bei Gefährdung oder Fehlfunktion mit Patientenbezug Vorkommnismeldung prüfen ([[vigilanz]])",
+    "Keine eigenmächtigen Umbauten (z. B. Entfernen von Filtern oder Ferriten); Instandsetzung nur durch befugtes Fachpersonal"
+  ],
+  "body": "## Technischer Hintergrund\n\n[[emv|Elektromagnetische Verträglichkeit]] bedeutet, dass ein Gerät in seiner elektromagnetischen Umgebung bestimmungsgemäß funktioniert (**Störfestigkeit**) und selbst keine unzulässigen Störungen verursacht (**Störaussendung**). Für [[medizinisches-elektrisches-geraet|ME-Geräte]] legt die Ergänzungsnorm [[iec-60601-1-2]] Prüfungen und Anforderungen fest; die Grenzwerte der Störaussendung stützen sich auf CISPR 11 [@iec-60601-1-2][@cispr-11]. Störfestigkeit ist dabei immer **endlich**: Ein Gerät ist für bestimmte Prüfpegel ausgelegt, nicht für beliebig starke Felder.\n\n### Geprüfte Störphänomene\n\nDie Störfestigkeitsprüfungen nach [[iec-60601-1-2]] verweisen auf die Grundnormen der Reihe IEC 61000-4. Die Prüfpegel hängen von der vorgesehenen Umgebung ab (professionelle Gesundheitseinrichtung, häusliche Umgebung, besondere Umgebungen) und stehen in den Begleitpapieren des Geräts [@iec-60601-1-2].\n\n| Störphänomen | Grundnorm | typische reale Quelle |\n|---|---|---|\n| Elektrostatische Entladung (ESD) | IEC 61000-4-2 | aufgeladene Person, Kunststoffoberflächen |\n| Gestrahlte HF-Felder, inkl. Nahfelder von Funkgeräten | IEC 61000-4-3 | Mobiltelefon, Funkgerät, WLAN, Rundfunksender |\n| Schnelle transiente Störgrößen (Burst) | IEC 61000-4-4 | Schalten induktiver Lasten |\n| Stoßspannungen (Surge) | IEC 61000-4-5 | Blitzeinwirkung, Netzschaltvorgänge |\n| Leitungsgeführte HF | IEC 61000-4-6 | HF auf Netz- und Signalleitungen |\n| Netzfrequente Magnetfelder | IEC 61000-4-8 | Transformatoren, Stromschienen |\n| Spannungseinbrüche und -unterbrechungen | IEC 61000-4-11 | Netzumschaltung, Generatorbetrieb |\n\n> [!hinweis] Konkrete Prüfpegel (V/m, kV) und empfohlene Mindestabstände werden hier bewusst nicht angegeben, weil sie von Ausgabe der Norm und vorgesehener Umgebung abhängen. Maßgeblich sind die EMV-Angaben in den Begleitpapieren des jeweiligen Geräts.\n\n### Kopplungswege\n\n| Kopplungsweg | Mechanismus | typische Auswirkung |\n|---|---|---|\n| galvanisch/leitungsgebunden | Störung über Netzleitung oder gemeinsame Masse | Resets, Spannungseinbrüche, Rauschen |\n| kapazitiv | elektrisches Feld koppelt in hochohmige Leitungen | Störsignal auf EKG/EEG |\n| induktiv | Magnetfeld induziert Spannung in Leiterschleifen ([[elektromagnetische-induktion]]) | 50-Hz-Brumm, Artefakte |\n| Strahlung | HF-Feld wird von Kabeln wie von Antennen aufgenommen und an Halbleiterübergängen gleichgerichtet | Messwertsprünge, Fehlalarme, Displayfehler |\n\nBesonders empfindlich sind Eingänge für [[biosignale|Biosignale]] im Mikro- bis Millivoltbereich. Hochfrequente Störungen, die eigentlich weit über der Signalbandbreite liegen, werden an nichtlinearen Bauteilen ([[operationsverstaerker|Verstärkereingängen]], Schutzdioden) gleichgerichtet und erscheinen dann als niederfrequenter Offset oder als scheinbare Biosignale [@webster-2010].\n\n### Wie das Gerät die Störung erkennt\n\nEin Gerät kann eine EMV-Störung meist **nicht als solche** erkennen. Sichtbar werden nur die Folgen: Elektrodenimpedanz- oder Rauschüberwachung meldet „Signal gestört“, Plausibilitätsprüfungen schlagen fehl, ein Watchdog löst einen Neustart aus oder ein interner Kommunikationsfehler wird als technischer Alarm gemeldet. Nach [[iec-60601-1-8]] sind dies technische Alarmbedingungen; ihre Priorität legt der Hersteller anhand möglicher Schadensfolge und Zeit bis zum Schadenseintritt fest. Führt die Störung zum Therapiestopp (z. B. einer [[infusionspumpe|Infusionspumpe]]), wird häufig eine hohe Priorität gewählt [@iec-60601-1-8].\n\n> [!beispiel] Während einer Operation zeigt das EKG bei jeder Aktivierung des HF-Chirurgiegeräts eine scheinbare Kammertachykardie. Der Effekt endet mit der Aktivierung – ein typisches Muster für HF-Einkopplung, nicht für eine echte Arrhythmie.\n\n## Systematische Fehlersuche\n\nKernfrage jeder EMV-Analyse ist die **zeitliche Korrelation** zwischen Störung und möglicher Quelle.\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Artefakte nur bei HF-Chirurgie | Korrelation mit Aktivierung, Kabelführung, Lage der Neutralelektrode | Kabel trennen, EKG-Elektroden fern vom OP-Feld, HF-Filtermodus |\n| Störung beim Funken/Telefonieren | Abstand zur Quelle variieren, Reproduzierbarkeit | Mindestabstand aus den Begleitpapieren einhalten, Funkregeln festlegen |\n| Reset nach Berührung | Raumfeuchte, Bodenbelag, Erdung, Gehäusezustand | ESD-Schutzmaßnahmen, Gerät prüfen lassen |\n| Sporadische Neustarts | Netzqualität, gemeinsamer Stromkreis mit großen Verbrauchern, Event-Log | anderen Stromkreis nutzen, Elektrofachkraft einbinden |\n| 50-Hz-Überlagerung | Elektrodenkontakt, Leitungsschleifen, Potentialausgleich | siehe [[netzstoerung]] und [[elektrodenproblem]] |\n| Störung nur mit bestimmtem Zubehör | Originalzubehör, Kabelschirm, Ferrite | nur freigegebenes Zubehör verwenden |\n\n> [!warnung] Implantate wie [[herzschrittmacher|Herzschrittmacher]] und [[icd|ICD]] reagieren auf starke Felder (HF-Chirurgie, MRT, Diebstahlsicherungsanlagen) mit Fehlwahrnehmung oder Umschalten in Sicherheitsmodi. Vor solchen Expositionen sind die Vorgaben des Implantatherstellers und eine kardiologische Abklärung maßgeblich.\n\n## Prävention\n\n* Die Begleitpapiere nach [[iec-60601-1-2]] enthalten Angaben zur vorgesehenen elektromagnetischen Umgebung und zu empfohlenen Schutzabständen zu tragbaren Funkgeräten; diese in Einweisung und Hausregeln übernehmen [@iec-60601-1-2].\n* Nur vom Hersteller freigegebene Kabel und Zubehörteile verwenden; Ferrite und Schirmungen nicht entfernen.\n* Leitungen von Patientenableitungen, Netzkabeln und HF-Kabeln räumlich trennen; Schleifen vermeiden.\n* Elektrische Installation in [[medizinisch-genutzte-bereiche|medizinisch genutzten Bereichen]] nach [[din-vde-0100-710]] und Potentialausgleich fachgerecht ausführen.\n* Bei Funkvernetzung ([[hl7-fhir|Datenschnittstellen]], WLAN-Telemetrie) Koexistenz und Frequenzplanung im Risikomanagement nach [[iso-14971]] berücksichtigen.\n\n> [!hinweis] Herstellerspezifische Fehlercodes, die bei EMV-bedingten Resets oder Kommunikationsfehlern gespeichert werden, sind in den Service-Unterlagen beschrieben. Die Auswertung des Event-Logs erleichtert die Zuordnung zu einer Störquelle erheblich.",
+  "related": [
+    "emv",
+    "iec-60601-1-2",
+    "netzstoerung",
+    "bewegungsartefakt",
+    "elektrodenproblem",
+    "hf-chirurgiegeraet",
+    "filter",
+    "galvanische-trennung",
+    "medizinisch-genutzte-bereiche",
+    "fehlersuche"
+  ],
+  "sources": [
+    "iec-60601-1-2",
+    "cispr-11",
+    "iec-60601-1-8",
+    "webster-2010",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

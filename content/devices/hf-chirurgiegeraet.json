@@ -1,0 +1,603 @@
+{
+ "id": "hf-chirurgiegeraet",
+ "type": "device",
+ "title": "HF-Chirurgiegerät",
+ "aliases": [
+  "Elektrochirurgiegerät",
+  "HF-Generator",
+  "Elektrokauter",
+  "Elektrotom",
+  "ESU",
+  "Electrosurgical Unit",
+  "Diathermiegerät",
+  "Hochfrequenzchirurgie"
+ ],
+ "category": "geraete",
+ "deviceGroup": "chirurgie",
+ "rank": 14,
+ "domains": [
+  "chirurgie",
+  "gastroenterologie",
+  "geburtshilfe",
+  "hno-heilkunde",
+  "orthopaedie-unfallchirurgie",
+  "herzchirurgie"
+ ],
+ "summary": "Ein HF-Chirurgiegerät erzeugt hochfrequenten Wechselstrom im Bereich mehrerer hundert Kilohertz, der durch das Gewebe geleitet wird und dort durch hohe lokale Stromdichte Wärme erzeugt. So lässt sich Gewebe schneiden und koagulieren; monopolare, bipolare und Argonplasma-Verfahren decken Anwendungen von der offenen Chirurgie bis zur Endoskopie ab.",
+ "riskClass": {
+  "value": "IIb",
+  "evidence": "typisch",
+  "note": "HF-Chirurgiegeräte sind aktive therapeutische Produkte, die Energie an den Körper abgeben. Nach [[mdr|MDR]] Anhang VIII **Regel 9** gehören solche Produkte zur Klasse IIa, wenn die Energieabgabe jedoch unter Berücksichtigung von Art, Dichte und Applikationsort potenziell gefährlich ist, zur **Klasse IIb** [@mdr-2017]. Da HF-Generatoren gezielt Gewebe zerstören und hohe Leistungen abgeben, werden sie üblicherweise in Klasse IIb eingestuft [@mdcg-2021-24]. Zubehör wie Elektroden oder Instrumente kann abweichend klassifiziert sein. Die verbindliche Einstufung trifft der Hersteller für sein konkretes Produkt (siehe [[risikoklassen|Risikoklassen]]).",
+  "sources": [
+   "mdr-2017",
+   "mdcg-2021-24"
+  ]
+ },
+ "sections": {
+  "purpose": "## Medizinischer Zweck\n\nEin **HF-Chirurgiegerät** (auch Elektrochirurgiegerät, HF-Generator oder umgangssprachlich „Elektrokauter“) nutzt hochfrequenten Wechselstrom, um Gewebe gezielt zu **schneiden** (Elektrotomie) und zu **koagulieren** (Blutstillung durch Eiweißgerinnung). Der Strom fließt dabei durch das Gewebe selbst; die Wärme entsteht **im Gewebe** durch [[joulesche-waerme|Joulesche Wärme]] – anders als beim echten Thermokauter, bei dem ein glühender Draht Wärme von außen zuführt [@kramme-2017][@massarweh-2006].\n\nDie HF-Chirurgie ist eines der am häufigsten eingesetzten Verfahren im Operationssaal überhaupt: Nahezu jede offene, laparoskopische oder endoskopische Operation nutzt sie zur Präparation und Blutstillung. Ihre Vorteile sind:\n\n* **Gleichzeitiges Schneiden und Blutstillen** – kleine Gefäße werden beim Schnitt sofort verschlossen, Blutverlust und Operationszeit sinken.\n* **Präzise Dosierbarkeit** – über Elektrodenform, Spannungsform und Leistung lässt sich die Gewebewirkung von oberflächlicher Koagulation bis zum glatten Schnitt einstellen.\n* **Minimalinvasive Anwendbarkeit** – über dünne Instrumente in der Laparoskopie und durch den Arbeitskanal von [[endoskop|Endoskopen]].\n* **Gefäßversiegelung** – moderne bipolare Verfahren verschließen Gefäße ohne Clips oder Ligaturen.\n\n> [!hinweis] Der Begriff „Kauter“ ist technisch ungenau: Beim HF-Chirurgiegerät ist die Elektrode selbst nicht heiß, sondern der Patient ist Teil des Stromkreises. Daraus ergeben sich die typischen Risiken – insbesondere Verbrennungen an unerwünschten Stellen, etwa unter der [[neutralelektrode|Neutralelektrode]].\n\nDas Gerät ist ein [[medizinisches-elektrisches-geraet|medizinisches elektrisches Gerät]], das gezielt elektrische Energie in den Körper einbringt. Es unterliegt deshalb neben der allgemeinen Sicherheitsnorm [[iec-60601-1|IEC 60601-1]] der gerätespezifischen Norm [[iec-60601-2-2|IEC 60601-2-2]] [@iec-60601-1][@iec-60601-2-2] sowie in Deutschland den Betreiberpflichten der [[mpbetreibv|MPBetreibV]] einschließlich regelmäßiger [[stk|sicherheitstechnischer Kontrollen]] [@mpbetreibv].",
+  "applications": "## Einsatzgebiete\n\nHF-Chirurgie ist fachübergreifend verbreitet. Die folgende Übersicht zeigt typische Anwendungen in den einzelnen Disziplinen:\n\n| Fachgebiet | Typische Anwendungen | Bevorzugte Technik |\n|---|---|---|\n| [[chirurgie|Allgemein- und Viszeralchirurgie]] | Hautschnitt und Präparation, Blutstillung, laparoskopische Cholezystektomie, Darmresektionen | monopolar (Schneiden/Koagulation), bipolare Gefäßversiegelung |\n| [[gastroenterologie|Gastroenterologie]] | Polypektomie mit Schlinge, Papillotomie (ERCP), endoskopische Submukosadissektion, Blutstillung | monopolare Endoskopie-Modi mit fraktioniertem Schnitt, Argonplasma-Koagulation (APC) |\n| [[geburtshilfe|Gynäkologie]] | Hysterektomie, Konisation mit Schlinge, laparoskopische Eingriffe | bipolar, Gefäßversiegelung, monopolare Schlinge |\n| Urologie | transurethrale Resektion von Prostata (TUR-P) und Blase (TUR-B) | monopolar in nichtleitender Spülflüssigkeit oder bipolar in Kochsalzlösung |\n| [[hno-heilkunde|HNO-Heilkunde]] | Tonsillektomie, Nasenmuschelkoagulation, Blutstillung | bipolar, Nadelelektroden |\n| Neurochirurgie | Blutstillung an feinen Gefäßen nahe neuronaler Strukturen | bipolar mit niedriger Leistung, Pinzetten mit Spülung |\n| [[orthopaedie-unfallchirurgie|Orthopädie/Unfallchirurgie]] | Präparation, Arthroskopie | monopolar, bipolare Ablationssonden |\n| [[herzchirurgie|Herz- und Thoraxchirurgie]] | Sternotomie-Präparation, Blutstillung | monopolar, Spray-Koagulation |\n\n### Monopolare, bipolare und Hybridtechnik\n\n* **Monopolare Technik:** Der Strom fließt von einer kleinen **Aktivelektrode** (Messer-, Nadel-, Kugel-, Schlingenelektrode) durch den Körper zur großflächigen [[neutralelektrode|Neutralelektrode]]. Sie ist universell, erfordert aber besondere Sorgfalt beim Anlegen der Neutralelektrode.\n* **Bipolare Technik:** Beide Pole liegen am Instrument (z. B. Branchen einer Pinzette); der Strom fließt nur durch das gefasste Gewebe. Keine Neutralelektrode nötig, deutlich geringeres Risiko von Fehlströmen.\n* **Bipolare Gefäßversiegelung** („Vessel Sealing“): Kombination aus definiertem Anpressdruck und impedanzgeregelter Energieabgabe; Kollagen und Elastin der Gefäßwand verschmelzen zu einer belastbaren Versiegelung.\n* **Argonplasma-Koagulation (APC):** berührungsfreie monopolare Koagulation über ein ionisiertes Argongas, vor allem in der flexiblen Endoskopie.\n* **Kombinationssysteme:** Viele Plattformen integrieren zusätzlich Module für Rauchgasabsaugung, Spülung oder Ultraschallenergie (siehe [[ultraschalldissektor|Ultraschall-Dissektionsgerät]]).\n\n> [!praxis] Im OP stehen HF-Generatoren meist auf einem Gerätewagen oder sind an Deckenversorgungseinheiten montiert und werden oft mit [[insufflator|CO₂-Insufflator]], Videoturm und Rauchgasabsaugung kombiniert. Die Wahl des Modus und der Leistung erfolgt nach Eingriff, Instrument und Gewebe – viele Kliniken hinterlegen dafür abgestimmte Programme je Fachabteilung.",
+  "principle": "## Funktionsprinzip\n\nDie HF-Chirurgie beruht auf einer einfachen Idee: Ein elektrischer Strom erzeugt in einem Leiter mit Widerstand Wärme. Wird dieser Strom auf eine sehr kleine Fläche konzentriert, entsteht dort lokal so viel Wärme, dass Gewebe koaguliert oder verdampft – während die übrige Strombahn durch den Körper praktisch unbeeinflusst bleibt [@kramme-2017][@massarweh-2006].\n\n### Warum Hochfrequenz? – Die drei Stromwirkungen\n\nElektrischer Strom hat im Gewebe drei grundsätzliche Wirkungen ([[elektrische-stromwirkung|Wirkung des elektrischen Stroms auf den Körper]]) [@iec-60479-1][@kramme-2017]:\n\n| Wirkung | Ursache | Bedeutung für die HF-Chirurgie |\n|---|---|---|\n| **Elektrolytische Wirkung** | Ionenwanderung bei Gleichstrom, Zersetzung an den Elektroden | unerwünscht – wird durch reinen Wechselstrom ohne Gleichanteil vermieden |\n| **Faradische Wirkung** | Depolarisation erregbarer Membranen von Nerven und Muskeln ([[aktionspotential|Aktionspotential]]) | unerwünscht – Muskelzuckungen, Kammerflimmern; bei hohen Frequenzen stark abgeschwächt |\n| **Thermische Wirkung** | Joulesche Wärme im Gewebewiderstand | **erwünscht** – Grundlage von Schneiden und Koagulieren |\n\nErregbare Zellen benötigen für eine Depolarisation eine gewisse Mindest-Reizdauer. Bei Wechselstrom mit Frequenzen oberhalb von etwa 100 kHz ist jede Halbwelle so kurz, dass sich die Ionenverschiebung an der Membran wieder umkehrt, bevor die Reizschwelle erreicht wird. Die Reizwirkung nimmt mit steigender Frequenz stark ab – die Wahrnehmungs- und Loslassschwellen steigen oberhalb einiger Kilohertz deutlich an –, während die Wärmewirkung erhalten bleibt [@iec-60479-2][@kramme-2017]. HF-Chirurgiegeräte arbeiten deshalb typischerweise mit Grundfrequenzen im Bereich von einigen hundert Kilohertz bis in den unteren Megahertzbereich [@kramme-2017].\n\n> [!vereinfacht] Man kann sich vorstellen, dass die Ionen bei Hochfrequenz nur noch „hin- und herzittern“, statt über die Zellmembran hinweg einen Reiz aufzubauen. Die dabei im ohmschen Gewebewiderstand umgesetzte Leistung erzeugt aber weiterhin Wärme – genau diese wird genutzt.\n\nRestrisiken der faradischen Wirkung bestehen dennoch: Beim Funkenüberschlag zwischen Elektrode und Gewebe kann das Metall-Gewebe-Plasma wie ein Gleichrichter wirken und niederfrequente Anteile erzeugen. **Koppelkondensatoren** im Ausgangskreis sperren Gleichstrom und niederfrequente Komponenten und reduzieren so ungewollte Nerven- und Muskelstimulation [@kramme-2017].\n\n### Stromdichte – der Schlüssel zur Gewebewirkung\n\nDie thermische Wirkung hängt nicht vom Gesamtstrom, sondern von der **Stromdichte** ab:\n\n`J = I / A`  (J in A/cm², I Strom, A durchströmte Fläche)\n\nDie pro Volumen umgesetzte Wärmeleistung (Leistungsdichte) folgt aus dem Ohmschen Gesetz in differentieller Form ([[spannung-strom-widerstand|Spannung, Strom und Widerstand]]):\n\n`p = J² / σ = σ · E²`  (p in W/m³, σ elektrische Leitfähigkeit des Gewebes, E Feldstärke)\n\nWeil die Leistungsdichte **quadratisch** mit der Stromdichte steigt, wirkt eine Konzentration des Stroms auf eine kleine Fläche überproportional. An der feinen Aktivelektrode entstehen hohe Temperaturen, an der großflächigen Neutralelektrode dagegen nur eine geringe, unbedenkliche Erwärmung – sofern sie vollflächig anliegt.\n\n> [!beispiel] Ein Generator gibt im Schneidmodus **P = 50 W** an einen Gewebewiderstand von **R = 500 Ω** ab.\n> Effektivspannung: U = √(P · R) = √(50 W · 500 Ω) ≈ **158 V**; Effektivstrom: I = P / U ≈ **0,32 A**.\n> **Neutralelektrode** mit 150 cm² wirksamer Kontaktfläche: J = 0,32 A / 150 cm² ≈ **2,1 mA/cm²**.\n> **Nadelelektrode** mit 0,5 mm² = 0,005 cm² Kontaktfläche: J = 0,32 A / 0,005 cm² ≈ **63 A/cm²**.\n> Das Verhältnis der Stromdichten beträgt rund 30 000 : 1, das der Leistungsdichten (∝ J²) rund 10⁹ : 1. Haftet die Neutralelektrode nur noch mit 5 cm², steigt dort die Stromdichte auf etwa 63 mA/cm² – die lokale Leistungsdichte um den Faktor 900. Das erklärt, warum eine teilweise abgelöste Neutralelektrode zu [[neutralelektroden-verbrennung|Verbrennungen]] führt. Alle Zahlen sind Beispielwerte.\n\n### Temperatur und Gewebeeffekt\n\nDie Gewebewirkung hängt von der erreichten Temperatur und der Einwirkzeit ab [@kramme-2017][@massarweh-2006]:\n\n| Temperatur (Größenordnung) | Effekt | Klinische Nutzung |\n|---|---|---|\n| bis ca. 40–50 °C | reversible Erwärmung, Hyperthermie | – |\n| ab ca. 50–60 °C | Devitalisierung, Denaturierung von Eiweißen | Beginn der Koagulation |\n| ca. 60–100 °C | Koagulation, Schrumpfung von Kollagen | Blutstillung, Gefäßversiegelung |\n| ca. 100 °C | Verdampfen des Gewebewassers (Desikkation) | tiefe Koagulation; Impedanz steigt stark an |\n| deutlich über 100 °C, rasch | explosionsartige Vaporisation der Zellen | **Schneiden** |\n| über ca. 200 °C | Karbonisation (Verkohlung) | unerwünscht: Nekrose, Rauch, schlechtere Wundheilung |\n\n> [!vereinfacht] Die Temperaturgrenzen sind fließend und hängen von Gewebeart, Durchblutung und Einwirkzeit ab. Sie dienen der Orientierung, nicht als exakte Schwellwerte.\n\n### Schneiden: Funkenbildung und Spannung\n\nBeim Schneiden wird die Aktivelektrode knapp über bzw. am Gewebe geführt. Das Zellwasser verdampft schlagartig, es bildet sich eine Dampfschicht zwischen Elektrode und Gewebe. Übersteigt die Spitzenspannung einen Wert in der Größenordnung von **200 V**, zünden durch diese Dampfschicht **elektrische Lichtbögen (Funken)**. In den Fußpunkten der Funken entsteht eine extrem hohe Stromdichte; die Zellen verdampfen, und die Elektrode gleitet nahezu widerstandslos durch das Gewebe [@kramme-2017].\n\nDie **Schnittqualität** wird über die Spannung und die Intensität der Funken gesteuert:\n\n* **Geringe Funkenintensität** → glatter Schnitt mit wenig Koagulation (Schnittränder bluten eher).\n* **Hohe Funkenintensität** → stärkere Koagulation der Schnittränder („Blend“-Modus), aber auch mehr Karbonisation.\n\n### Koagulation: Spannungsformen und Crestfaktor\n\nFür die Koagulation soll das Gewebe langsam erwärmt und ausgetrocknet werden, ohne dass es zerschnitten wird. Dafür nutzen Generatoren **modulierte Spannungsformen**: kurze HF-Pakete (Bursts) mit Pausen dazwischen. Ein wichtiges Kennmaß ist der **Crestfaktor** (Scheitelfaktor):\n\n`CF = Û / U_eff`\n\n| Modus (Beispielbezeichnung) | Spannungsform | Crestfaktor | Spitzenspannung | Gewebeeffekt |\n|---|---|---|---|---|\n| Schneiden (reiner Schnitt) | ungemoduliertes Sinus-Dauersignal | ≈ 1,4 (√2) | mittel | Vaporisation, wenig Koagulation |\n| Blend-/Mischschnitt | leicht moduliert | etwa 2–4 | mittel bis hoch | Schnitt mit Randkoagulation |\n| Soft-Koagulation | ungemoduliert, Spitzenspannung unter Funkenschwelle | ≈ 1,4 | niedrig (< ca. 200 V) | tiefe Koagulation ohne Funken und Karbonisation |\n| Forcierte Koagulation | stark moduliert | etwa 5–8 | hoch (bis in den kV-Bereich) | rasche, oberflächliche Koagulation mit Funken |\n| Spray-Koagulation | sehr stark moduliert | groß (> 6) | sehr hoch (kV) | berührungslose, flächige Oberflächenkoagulation |\n\n> [!hinweis] Die Bezeichnungen der Modi und die genauen Kennwerte unterscheiden sich zwischen Herstellern erheblich. Die Tabelle zeigt typische Größenordnungen aus der Fachliteratur, keine Gerätedaten [@kramme-2017][@massarweh-2006].\n\nEin hoher Crestfaktor bedeutet: hohe Spitzenspannung (lange Funken, große Reichweite) bei vergleichsweise geringer mittlerer Leistung, also oberflächliche Wirkung. Die **Soft-Koagulation** bleibt dagegen bewusst unterhalb der Funkenschwelle; sie erzeugt eine tiefe, schonende Koagulation ohne Karbonisation.\n\n### Gewebeimpedanz und Leistungsregelung\n\nDer Generator „sieht“ als Last das Gewebe zwischen Aktiv- und Neutralelektrode (bzw. zwischen den bipolaren Branchen). Dessen Impedanz ist keineswegs konstant: Sie hängt von Gewebeart (Fett hat eine deutlich geringere Leitfähigkeit als Muskel oder Blut), Kontaktfläche, Elektrodenform und vor allem vom Wassergehalt ab. Während der Koagulation trocknet das Gewebe aus – die Impedanz steigt stark an. Typischerweise liegt die Lastimpedanz im Bereich von einigen zehn Ohm (bipolar, feuchtes Gewebe) bis zu einigen Kiloohm (ausgetrocknetes Gewebe, Funkenstrecke) [@kramme-2017].\n\nEin Generator mit Innenwiderstand R_i gibt an eine Last R_L die Leistung\n\n`P = U₀² · R_L / (R_i + R_L)²`\n\nab; das Maximum liegt bei Anpassung (R_L = R_i). Die Kurve **P(R_L)** heißt **Leistungskennlinie** und ist ein wesentliches Merkmal jedes Modus. Moderne Generatoren regeln nicht einfach eine feste Leistung, sondern je nach Modus eine Zielgröße:\n\n| Regelgröße | Ziel | Typische Anwendung |\n|---|---|---|\n| **Ausgangsspannung (Spitzenwert)** | reproduzierbarer Schnitt bzw. Koagulation unabhängig von Schnitttiefe und Elektrodenfläche | Schneiden, Soft-Koagulation |\n| **Funken-/Lichtbogenintensität** | konstante Schnittqualität, wenig Karbonisation | Schneiden mit gleichbleibendem Hämostaseeffekt |\n| **Leistung (mit Begrenzung)** | definierte Energiezufuhr | klassische Modi, Spray |\n| **Impedanzverlauf** | Abschaltung bei vollständiger Versiegelung | bipolare Gefäßversiegelung |\n\nDie Regelung arbeitet als geschlossener [[regelkreis|Regelkreis]]: Spannungs- und Stromsensoren im Ausgangskreis messen u(t) und i(t), ein [[analog-digital-wandler|A/D-Wandler]] und ein [[mikrocontroller|Mikrocontroller]] bzw. Signalprozessor berechnen Effektivwerte, Spitzenwerte, Impedanz |Z| = U_eff / I_eff, Wirkleistung und Phasenlage. Aus Oberwellen und einem eventuellen Gleichanteil (Gleichrichtereffekt des Lichtbogens) kann auf das Vorhandensein und die Intensität von Funken geschlossen werden. Die Stellgröße wirkt auf die Zwischenkreisspannung des Netzteils und/oder auf das Tastverhältnis der Endstufe ([[pwm|Pulsweitenmodulation]]). Die Regelung muss sehr schnell sein, weil sich die Last beim Ein- und Austauchen der Elektrode innerhalb von Millisekunden ändert.\n\n> [!beispiel] **Gefäßversiegelung (vereinfachter Ablauf):** Das Instrument fasst das Gefäß mit hoher Kompression. Der Generator misst die Startimpedanz (z. B. einige zehn Ohm) und erhöht die Leistung kontrolliert. Mit Austrocknung steigt die Impedanz an; erreicht sie einen gerätespezifischen Endwert oder flacht der Anstieg ab, beendet der Generator die Energieabgabe und meldet akustisch „Versiegelung abgeschlossen“. Die Kombination aus Druck und kontrolliertem Wärmeeintrag lässt Kollagen und Elastin verschmelzen.\n\n### Monopolar versus bipolar: Stromkreis und Sicherheit\n\nBeim **monopolaren** Verfahren ist der gesamte Patient Teil des Stromkreises. Der Rückstrom wird über die Neutralelektrode zum Generator geführt. Die Neutralelektrode muss so groß sein und so gut anliegen, dass die Stromdichte unkritisch bleibt; sie sollte nahe am OP-Gebiet, auf gut durchblutetem Muskelgewebe (z. B. Oberschenkel, Oberarm) und mit der Längsseite zum OP-Gebiet angebracht werden. An der dem OP-Feld zugewandten Kante sammelt sich der Strom bevorzugt (**Randeffekt**, englisch „leading edge effect“) [@kramme-2017][@iec-60601-2-2].\n\n**Überwachung der Neutralelektrode:** Bei geteilten (zweiflächigen) Neutralelektroden misst der Generator mit einem kleinen Hilfsstrom die Impedanz zwischen den beiden Teilflächen. Steigt diese an oder wird sie unsymmetrisch – Zeichen einer teilweisen Ablösung –, wird die Aktivierung gesperrt und ein Alarm ausgegeben. Systeme verschiedener Hersteller tragen dafür unterschiedliche Namen (allgemein „Contact Quality Monitoring“). Einige Systeme überwachen zusätzlich die Symmetrie der Stromverteilung auf die beiden Teilflächen während der Aktivierung [@iec-60601-2-2].\n\nBeim **bipolaren** Verfahren fließt der Strom nur zwischen den beiden Branchen durch das gefasste Gewebe. Die Spannungen sind meist niedriger, eine Neutralelektrode entfällt, Fehlströme durch den Körper sind minimal. Deshalb wird bipolar bevorzugt in der Neurochirurgie, bei Patienten mit aktiven Implantaten (z. B. [[herzschrittmacher|Herzschrittmachern]]) und an Strukturen mit kleinem Querschnitt (Finger, Penis), wo monopolarer Strom gefährlich hohe Stromdichten erzeugen könnte.\n\n### Ausgangskreis: erdfrei, HF-Ableitströme und kapazitive Kopplung\n\nModerne Generatoren besitzen einen **erdfreien (floatenden) Patientenkreis**: Der Ausgangstransformator trennt den Patientenkreis galvanisch vom Netz und vom Schutzleiter ([[galvanische-trennung|galvanische Trennung]], [[transformator|Transformator]]). Damit sollen Ströme nicht über unerwünschte Erdverbindungen – etwa EKG-Elektroden oder Kontaktstellen am [[op-tisch|OP-Tisch]] – abfließen. Bei hohen Frequenzen wirken jedoch Streukapazitäten als Strompfade:\n\n`X_C = 1 / (2π · f · C)`\n\n> [!beispiel] Eine Streukapazität von 100 pF zwischen Patientenkreis und Erde hat bei f = 400 kHz einen Blindwiderstand von X_C = 1 / (2π · 400 000 Hz · 100 · 10⁻¹² F) ≈ **4 kΩ**. Liegt am Patientenkreis gegen Erde eine Effektivspannung von z. B. 200 V an, fließt über diese Kapazität ein Strom von I = U / X_C ≈ 200 V / 4 kΩ ≈ **50 mA** – ein **HF-Ableitstrom**, der an kleinen Kontaktstellen (z. B. EKG-Elektrode, Kontakt zum OP-Tisch) Verbrennungen verursachen kann. Bei doppelter Frequenz halbiert sich X_C und der Strom verdoppelt sich; hochmodulierte Koagulationsmodi mit Spitzenspannungen im kV-Bereich und hohem Oberwellenanteil sind deshalb besonders kritisch. Die Zahlen sind Beispielwerte.\n\nDeshalb begrenzt [[iec-60601-2-2|IEC 60601-2-2]] die HF-Ableitströme und schreibt definierte Messanordnungen vor [@iec-60601-2-2]. In der Laparoskopie können zusätzlich **kapazitive Kopplung** (Aktivelektrode durch die Isolation hindurch in Metalltrokare oder Optiken), **direkte Kopplung** (Berührung leitender Instrumente) und **Isolationsdefekte** an Instrumenten zu Verletzungen außerhalb des Sichtfelds führen [@massarweh-2006].\n\n### Argonplasma-Koagulation\n\nBei der APC strömt Argongas aus einer Sonde; eine hohe HF-Spannung ionisiert das Gas, sodass ein leitfähiges **Plasma** entsteht, das den Strom berührungslos zum nächstgelegenen, leitfähigen Gewebe führt. Da ausgetrocknetes Gewebe hochohmig wird, wandert der Plasmastrahl selbsttätig zu noch feuchten Bereichen – die Koagulationstiefe bleibt dadurch begrenzt. Typische Anwendungen sind flächige Blutungen und Gewebeabtragung in der flexiblen Endoskopie [@erbe-vio3][@kramme-2017].\n\n> [!warnung] Bei APC und Gasinsufflation besteht das Risiko einer Gasembolie bzw. Überdehnung von Hohlorganen; Gasfluss, Abstand und Aktivierungsdauer sind nach Herstellerangabe zu begrenzen.",
+  "construction": "## Technischer Aufbau\n\nEin HF-Chirurgiegerät besteht aus dem Generator (Grundgerät), dem Zubehör (Aktivelektroden, Instrumente, Kabel, Neutralelektrode) sowie den Bedien- und Aktivierungselementen. Die folgende Gliederung folgt dem Energiefluss vom Netz zum Patienten.\n\n### Energiepfad\n\n| Baugruppe | Funktion | Technische Umsetzung (typisch) |\n|---|---|---|\n| **Netzteil** ([[medizinisches-netzteil|medizinisches Netzteil]]) | erzeugt aus der Netzspannung eine regelbare Gleichspannung (Zwischenkreis) | Schaltnetzteil mit Leistungsfaktorkorrektur, Leistung im Bereich mehrerer hundert Watt |\n| **HF-Leistungsendstufe** | wandelt die Gleichspannung in hochfrequenten Wechselstrom | Schaltverstärker mit Leistungs-MOSFETs (Halb- oder Vollbrücke, Resonanzwandler); Ansteuerung über [[pwm|PWM]] |\n| **Ausgangstransformator** ([[transformator|Transformator]]) | Spannungsanpassung an die Gewebeimpedanz, galvanische Trennung des Patientenkreises | HF-Ferritkern; Isolationsfestigkeit für Spitzenspannungen im kV-Bereich |\n| **Koppel- und Filterkondensatoren** ([[kondensator|Kondensator]]) | sperren Gleichstrom und niederfrequente Anteile, Oberwellenfilterung | Hochspannungskondensatoren im Ausgangskreis |\n| **Ausgangsrelais/Umschaltung** | Zuschaltung der Energie auf die gewählte Buchse (monopolar, bipolar, APC) | Hochspannungsrelais; verhindert gleichzeitige unbeabsichtigte Ausgänge |\n| **Ausgangsbuchsen** | Anschluss von Instrumenten und Neutralelektrode | buchsenspezifische Kodierung, teils Instrumentenerkennung über Chip oder Widerstand |\n\n### Mess- und Steuerteil\n\n* **Spannungs- und Strommessung** im Ausgangskreis (Spannungsteiler, Stromwandler), danach Gleichrichtung bzw. schnelle Abtastung über [[analog-digital-wandler|A/D-Wandler]].\n* **Steuerung und Regelung** auf einem [[mikrocontroller|Mikrocontroller]] oder Signalprozessor: Moduswahl, Leistungs-/Spannungsregelung, Funkenerkennung, Überwachungsfunktionen, Fehlerspeicher; Software nach [[iec-62304|IEC 62304]] entwickelt [@iec-62304].\n* **Überwachung der Neutralelektrode**: Hilfsstromkreis mit kleiner Amplitude (getrennt vom Leistungs-HF) zur Messung der Teilflächenimpedanz; Sperrung der monopolaren Aktivierung bei Fehler.\n* **Redundante Sicherheitsüberwachung**: unabhängige Kontrolle von Ausgangsleistung, ungewollter Aktivierung und Ausgangsspannung; bei Abweichung Abschaltung (Erstfehlersicherheit nach [[iec-60601-1|IEC 60601-1]]) [@iec-60601-1].\n* **Temperaturüberwachung** von Endstufe und Kühlkörper; Lüfterregelung.\n\n### Bedienung und Aktivierung\n\n* **Bedienoberfläche** ([[display-bedienoberflaeche|Display und Bedienoberfläche]]) mit Touchscreen oder Tasten zur Wahl von Modus, Effekt bzw. Spannungsstufe und Leistungsgrenze; Programmspeicher für Eingriffe.\n* **Aktivierung** über Fingerschalter am Handgriff oder über **Fußschalter** (getrennte Pedale für Schneiden und Koagulieren, ggf. Umschalter zwischen Ausgängen).\n* **Aktivierungston**: Während der Energieabgabe ertönt ein akustisches Signal, sodass das OP-Team jede Aktivierung bemerkt; zusätzlich optische Anzeige. Eine solche Aktivierungsanzeige gehört zu den gerätespezifischen Anforderungen der [[iec-60601-2-2|IEC 60601-2-2]]; Detailvorgaben (z. B. zur Lautstärke) sind der jeweils gültigen Ausgabe zu entnehmen [@iec-60601-2-2].\n* **Alarmsystem** ([[alarmsystem|Alarmsysteme medizinischer Geräte]]) für NE-Fehler, Kurzschluss, Überschreitung der Aktivierungsdauer, interne Fehler [@iec-60601-1-8].\n\n### Zubehör\n\n| Zubehör | Ausführungen | Hinweise |\n|---|---|---|\n| Monopolare Handgriffe | mit Finger- oder Fußschaltung, wiederverwendbar oder Einweg | Isolation und Kabel regelmäßig prüfen |\n| Aktivelektroden | Messer-, Nadel-, Kugel-, Schlingen-, Lanzettelektroden | Form bestimmt die Stromdichte |\n| Bipolare Instrumente | Pinzetten, Scheren, Fasszangen, Gefäßversiegelungsinstrumente | oft mit Instrumentenerkennung |\n| [[neutralelektrode|Neutralelektroden]] | einteilig oder geteilt, Erwachsene/Kinder/Neugeborene, Einweg-Klebeelektroden; kapazitive Matten | geteilte Elektroden ermöglichen die Kontaktüberwachung |\n| Endoskopisches Zubehör | Polypektomieschlingen, Papillotome, Messer, APC-Sonden | Abstimmung auf Generator-Modi |\n| Rauchgasabsaugung | integriert oder separat | Schutz vor chirurgischem Rauch |\n\n> [!praxis] Viele Generator-Plattformen sind modular aufgebaut: Ein Grundgerät wird mit Modulen für Argonplasma, Wasserstrahl, Rauchgasabsaugung oder Spülung kombiniert und auf einem Gerätewagen montiert. Für die Instandhaltung bedeutet das, dass jedes Modul eigene Prüfanforderungen haben kann.\n\n> [!warnung] Chirurgischer Rauch („Surgical Smoke“) enthält Partikel und gasförmige Schadstoffe. Eine wirksame Absaugung möglichst nahe an der Entstehungsstelle gehört zum Arbeitsschutz im OP. Zudem können HF-Funken brennbare Stoffe entzünden – z. B. nicht abgetrocknete alkoholische Hautdesinfektionsmittel oder Tücher in sauerstoffangereicherter Atmosphäre im Kopf-Hals-Bereich.",
+  "maintenance": "## Wartung und Instandhaltung\n\nDie [[instandhaltung-grundlagen|Instandhaltung]] von HF-Chirurgiegeräten umfasst nach [[din-31051|DIN 31051]] [[wartung|Wartung]], [[inspektion|Inspektion]], [[instandsetzung|Instandsetzung]] und Verbesserung [@din-31051]. Grundlage sind die Vorgaben des Herstellers und die Betreiberpflichten nach [[mpbetreibv|MPBetreibV]] ([[betreiberpflichten|Betreiberpflichten]]).\n\n### Rechtliche Einordnung\n\n> [!belegt] HF-Chirurgiegeräte gehören zu den in **Anlage 1 Nr. 1.3** der MPBetreibV (Fassung 2025) genannten Produkten zur Erzeugung und Anwendung jeglicher Energie zur unmittelbaren Koagulation, Gewebezerstörung oder Zertrümmerung von Ablagerungen in Organen. Für sie sind **sicherheitstechnische Kontrollen nach § 12** durchzuführen – in den vom Hersteller angegebenen Fristen, fehlen solche Angaben, spätestens alle zwei Jahre [@mpbetreibv].\n\nEine [[mtk|messtechnische Kontrolle]] nach § 15 i. V. m. Anlage 2 ist für HF-Chirurgiegeräte nicht vorgeschrieben, da sie dort nicht aufgeführt sind. Maßgeblich ist jeweils die geltende Fassung der Verordnung [@mpbetreibv].\n\nDarüber hinaus sind die allgemeinen Betreiberpflichten zu beachten, u. a. die [[einweisung|Einweisung]] der Anwender:innen, die Dokumentation im [[medizinproduktebuch|Medizinproduktebuch]] und die Führung des [[bestandsverzeichnis|Bestandsverzeichnisses]]. HF-Chirurgiegeräte zählen zu den Produkten, bei denen eine dokumentierte Ersteinweisung durch den Hersteller bzw. eine beauftragte Person besonders wichtig ist, weil Bedienfehler unmittelbar zu Patientenschäden führen können.\n\n### Wartungsaufgaben\n\n| Tätigkeit | Inhalt | Häufigkeit (typisch) |\n|---|---|---|\n| Sichtkontrolle vor Anwendung | Gehäuse, Buchsen, Kabel, Fußschalter, Handgriffe, Isolation der Instrumente | vor jedem Einsatz durch Anwender:innen |\n| Selbsttest | interner Funktionstest beim Einschalten (Endstufe, Relais, Überwachungen) | bei jedem Einschalten (automatisch) |\n| Reinigung/Desinfektion | Wischdesinfektion von Gehäuse und Fußschalter; [[aufbereitung|Aufbereitung]] wiederverwendbarer Instrumente nach Herstellerangabe | nach jedem Einsatz |\n| Prüfung des Zubehörs | Isolationsprüfung wiederverwendbarer laparoskopischer Instrumente, Austausch spröder Kabel | im Aufbereitungsprozess bzw. nach Herstellerangabe |\n| STK | siehe Abschnitt Prüfverfahren | spätestens alle 2 Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV) |\n| Software-Updates | Updates und Sicherheitskorrekturen nach Herstellerinformation | nach Herstellerangabe |\n| Wartung durch Service | Lüfter/Filter, Kalibrierung der Messkreise ([[kalibrierung|Kalibrierung]]), Austausch von Verschleißteilen | nach Herstellerangabe |\n\n> [!praxis] Häufige Ausfallursachen im Alltag sind nicht der Generator selbst, sondern das **Zubehör**: gebrochene Kabel an Handgriffen und Neutralelektroden, beschädigte Isolation laparoskopischer Instrumente, verschmutzte oder verbogene Steckkontakte und defekte Fußschalter (Flüssigkeitseintritt). Eine regelmäßige Isolationsprüfung wiederverwendbarer Instrumente in der Aufbereitung reduziert das Risiko unbemerkter Isolationsdefekte deutlich.\n\n### Instandsetzung\n\n[[instandsetzung|Instandsetzungen]] dürfen nur von Personen durchgeführt werden, die über die erforderliche Sachkenntnis, Ausbildung und Ausstattung verfügen; viele Hersteller geben Schaltpläne, Service-Software und Ersatzteile nur an geschulte Servicetechniker:innen heraus. Nach jeder Instandsetzung, die sicherheitsrelevante Teile betrifft, sind eine Funktionsprüfung, eine Leistungsmessung und eine [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] durchzuführen [@iec-62353]. Bei der [[fehlersuche|Fehlersuche]] helfen der interne Fehlerspeicher ([[fehlercodes|Fehlercodes]]) und die Herstellerdokumentation.\n\n> [!warnung] Im Generator treten Hochspannungen und hochfrequente Ströme auf. Messungen am geöffneten Gerät nur durch befugtes Fachpersonal mit geeigneten Messmitteln und nach den Vorgaben des Herstellers.",
+  "testing": "## Prüfverfahren\n\nDie Prüfung von HF-Chirurgiegeräten kombiniert die allgemeine elektrische Sicherheitsprüfung mit **HF-spezifischen Leistungs- und Sicherheitsmessungen**. Grundlage ist die Prüfanweisung des Herstellers; die gerätespezifischen Anforderungen ergeben sich aus [[iec-60601-2-2|IEC 60601-2-2]] [@iec-60601-2-2]. Als Messmittel dienen ein Sicherheitsprüfgerät nach [[iec-62353|IEC 62353]] und ein **HF-Chirurgie-Analysator** ([[pruefgeraete|Prüfgeräte und Simulatoren]]).\n\n### Sicherheitstechnische Kontrolle (STK)\n\nDie Pflicht zur [[stk|STK]] ergibt sich aus § 12 MPBetreibV i. V. m. Anlage 1 Nr. 1.3 [@mpbetreibv]; Umfang und Grenzwerte legt die Prüfanweisung des Herstellers fest. Typischerweise umfasst sie:\n\n1. **Sichtprüfung:** Gehäuse, Typschild, Netzkabel, Buchsen, Fußschalter, Handgriffe und Kabel, Neutralelektrodenkabel, Gebrauchsanweisung, Kennzeichnungen.\n2. **Elektrische Sicherheitsprüfung** nach IEC 62353.\n3. **Funktionsprüfung:** Selbsttest, Bedienelemente, Anzeigen, Aktivierungston, Alarme, Fußschalter- und Handschalteraktivierung, Ausgangsumschaltung.\n4. **Leistungsmessung** der Ausgänge in den wesentlichen Modi.\n5. **Prüfung der Neutralelektrodenüberwachung.**\n6. **HF-Ableitstrommessung** (sofern vom Hersteller gefordert).\n7. **Dokumentation** im Medizinproduktebuch, Prüfplakette, Bewertung.\n\n### Elektrische Sicherheitsprüfung\n\nNach IEC 62353 werden der [[schutzleiterwiderstand|Schutzleiterwiderstand]] (Schutzklasse I), ggf. der [[isolationswiderstand|Isolationswiderstand]] und die Ableitströme ([[ableitstrommessung|Ableitstrommessung]]) – Geräteableitstrom und Ableitstrom vom Anwendungsteil – gemessen. Die Anwendungsteile (Ausgänge, Neutralelektrode) sind meist vom Typ BF oder CF ([[anwendungsteile|Anwendungsteile]]) und defibrillationsgeschützt ausgeführt [@iec-62353][@iec-60601-1]. Diese Messungen erfassen die netzfrequenten Ableitströme – die HF-Ableitströme werden gesondert geprüft.\n\n### Leistungsmessung mit dem HF-Analysator\n\nDer Analysator stellt einstellbare **ohmsche Lastwiderstände** bereit und misst den Effektivwert des HF-Stroms bzw. der Spannung mit ausreichender Bandbreite (True-RMS bis in den MHz-Bereich). Daraus wird die Leistung berechnet:\n\n`P = I_eff² · R_Last`\n\nGemessen wird für jeden wesentlichen Modus bei der Nennlast des Herstellers und bei mehreren Einstellungen (z. B. niedrig, mittel, maximal). Zusätzlich kann die **Leistungskennlinie** über mehrere Lastwiderstände aufgenommen und mit den Angaben in der Gebrauchsanweisung verglichen werden.\n\n> [!beispiel] Im monopolaren Schneidmodus wird bei Einstellung „100 W“ an einer Last von 500 Ω ein Effektivstrom von 0,43 A gemessen. Daraus folgt P = 0,43² · 500 Ω ≈ 92 W. Die Abweichung von −8 % liegt innerhalb einer (beispielhaften) Herstellertoleranz von ±20 % – bestanden. Maßgeblich sind stets Last, Toleranz und Messaufbau der Herstellerprüfanweisung.\n\n> [!hinweis] HF-Messungen sind empfindlich gegenüber dem Messaufbau: Leitungslänge, Leitungsführung und Streukapazitäten beeinflussen die Ergebnisse. Kabel kurz halten, nicht aufwickeln und den vom Analysator- bzw. Gerätehersteller beschriebenen Aufbau verwenden.\n\n### Prüfung der Neutralelektrodenüberwachung\n\nMit einer Widerstandsdekade oder dem NE-Simulator des Analysators wird der Widerstand zwischen den beiden Teilflächen der Neutralelektrode verändert. Geprüft wird, ob der Generator bei Überschreiten der zulässigen Werte (bzw. bei unzulässiger Änderung gegenüber dem Ausgangswert) **Alarm gibt und die monopolare Aktivierung sperrt**, und ob er bei Rückkehr in den zulässigen Bereich wieder freigibt. Die Grenzwerte sind gerätespezifisch und der Prüfanweisung zu entnehmen.\n\n### HF-Ableitstrommessung\n\nDie HF-Ableitströme werden mit den in [[iec-60601-2-2|IEC 60601-2-2]] beschriebenen Messanordnungen bestimmt – mit Lastwiderständen zwischen Aktiv- und Neutralelektrode bzw. von der jeweiligen Elektrode gegen Erde – und mit den Grenzwerten des Herstellers bzw. der Norm verglichen [@iec-60601-2-2]. Ein Anstieg gegenüber Vorwerten kann auf Alterung von Isolationen oder Bauteilen im Ausgangskreis hinweisen.\n\n### Weitere Funktionsprüfungen\n\n| Prüfung | Vorgehen | Bewertung |\n|---|---|---|\n| Aktivierungssignal | Aktivierung in allen Modi | Ton und Anzeige vorhanden, Ton hörbar und nicht vollständig abschaltbar (Herstellerangabe) |\n| Fußschalter/Handschalter | alle Pedale und Tasten einzeln, auch Doppelbetätigung | korrekter Modus, keine Fehlaktivierung |\n| Bipolare Ausgänge | Leistungsmessung an niedriger Last; Auto-Start-Funktion, falls vorhanden | Herstellerangabe |\n| APC-Modul | Gasfluss, Zündverhalten, Gasversorgung und Druckminderer | Herstellerangabe |\n| Alarme | Kurzschluss, NE-Fehler, Zeitüberschreitung | Alarm und Sperrung |\n\nIm Anschluss an eine STK oder Instandsetzung folgt stets eine abschließende [[funktionspruefung|Funktionsprüfung]] in betriebsbereitem Zustand."
+ },
+ "body": "## Geschichte und Entwicklung\n\nDie gezielte Nutzung hochfrequenter Ströme zur Gewebeerwärmung geht auf Untersuchungen des späten 19. Jahrhunderts zurück, u. a. von Jacques-Arsène d'Arsonval, der beobachtete, dass Wechselströme hoher Frequenz keine Muskelreizung auslösen. In den 1920er-Jahren entwickelte der Physiker William T. Bovie einen Funkenstreckengenerator, den der Neurochirurg Harvey Cushing 1926 in die Operationspraxis einführte – im englischen Sprachraum heißt das Elektrokauter deshalb bis heute oft „Bovie“ [@massarweh-2006]. Frühe Generatoren arbeiteten mit Funkenstrecken und Röhren und hatten einen erdbezogenen Ausgang; Verbrennungen an Erdungsstellen waren häufig.\n\nWesentliche Entwicklungsschritte waren:\n\n* der **erdfreie Ausgangskreis** mit Trenntransformator,\n* die **geteilte Neutralelektrode mit Kontaktüberwachung**,\n* **mikroprozessorgesteuerte Regelung** von Spannung, Leistung und Funkenintensität,\n* die **bipolare Gefäßversiegelung** mit impedanzgeregelter Energieabgabe,\n* **Hybridinstrumente**, die HF-Energie mit Ultraschall oder Wasserstrahl kombinieren.\n\n## Sicherheit im OP – kompakt\n\n| Risiko | Maßnahme |\n|---|---|\n| Verbrennung unter der Neutralelektrode | geteilte NE mit Überwachung, vollflächiges Anlegen auf gut durchblutetem Muskel, Längsseite zum OP-Feld, nicht über Knochenvorsprüngen, Narben oder Metallimplantaten |\n| Verbrennung an Nebenstrombahnen | Patient isoliert lagern, kein Hautkontakt zu Metallteilen, Haut-zu-Haut-Kontakte vermeiden (Tücher), EKG-Elektroden fern vom OP-Gebiet |\n| Brand/Explosion | Desinfektionsmittel abtrocknen lassen, O₂-Anreicherung im OP-Feld vermeiden, Elektrode im Köcher ablegen |\n| Störung aktiver Implantate | bipolar bevorzugen, Strombahn fern vom Implantat, Herstellerempfehlungen zum Implantat und ggf. Umprogrammierung beachten |\n| Störung von Monitoring | Filterung am [[patientenmonitor|Patientenmonitor]], Kabelführung getrennt ([[emv|EMV]]) |\n\n> [!hinweis] Diese Übersicht ersetzt keine Einweisung und keine Herstellerangaben; sie fasst typische Maßnahmen aus der Fachliteratur zusammen [@kramme-2017][@massarweh-2006].",
+ "components": [
+  {
+   "ref": "medizinisches-netzteil",
+   "role": "Erzeugt aus der Netzspannung eine regelbare Zwischenkreis-Gleichspannung für die Endstufe; Leistungsfaktorkorrektur und Netztrennung."
+  },
+  {
+   "ref": "pwm",
+   "role": "HF-Leistungsendstufe aus schnell schaltenden MOSFETs; Tastverhältnis bzw. Pulsmuster bestimmen Leistung und Modulation (Schneiden, Koagulation)."
+  },
+  {
+   "ref": "transformator",
+   "role": "Ausgangstransformator: Anpassung an die Gewebeimpedanz und galvanische Trennung des erdfreien Patientenkreises."
+  },
+  {
+   "ref": "kondensator",
+   "role": "Koppelkondensatoren im Ausgangskreis sperren Gleichstrom und niederfrequente Anteile (Schutz vor faradischer Reizung)."
+  },
+  {
+   "ref": "neutralelektrode",
+   "role": "Großflächige Rückleitungselektrode im monopolaren Betrieb; geteilte Ausführung ermöglicht die Kontaktüberwachung."
+  },
+  {
+   "ref": "mikrocontroller",
+   "role": "Steuerung, schnelle Regelung von Spannung/Leistung/Funkenintensität, Überwachungsfunktionen, Selbsttest und Fehlerspeicher."
+  },
+  {
+   "ref": "galvanische-trennung",
+   "role": "Trennt Patientenkreis, Netz und Steuerelektronik; Voraussetzung für den erdfreien (BF/CF) Ausgang."
+  },
+  {
+   "ref": "display-bedienoberflaeche",
+   "role": "Wahl von Modus, Effekt und Leistungsgrenze, Programmspeicher, Anzeige von Alarmen; ergänzt durch Fuß- und Fingerschalter."
+  },
+  {
+   "ref": "alarmsystem",
+   "role": "Aktivierungston, NE-Alarm, Kurzschluss- und Gerätefehlermeldungen."
+  }
+ ],
+ "sensors": [
+  {
+   "ref": "spannung-strom-widerstand",
+   "role": "Messung von Ausgangsspannung und -strom (Spannungsteiler, Stromwandler) zur Berechnung von Impedanz, Leistung und Funkenintensität."
+  },
+  {
+   "ref": "neutralelektrode",
+   "role": "Kontaktqualitätsüberwachung: Messung der Impedanz zwischen den Teilflächen der geteilten Neutralelektrode mit kleinem Hilfsstrom."
+  },
+  {
+   "ref": "temperatursensor",
+   "role": "Temperaturüberwachung von Endstufe und Kühlkörper; Lüfterregelung und Übertemperaturabschaltung."
+  },
+  {
+   "ref": "analog-digital-wandler",
+   "role": "Schnelle Digitalisierung der Mess-Signale für die Regelung in Echtzeit."
+  },
+  {
+   "ref": "druckmessung",
+   "role": "Bei APC-Modulen: Überwachung von Gasdruck und Gasfluss des Argons."
+  }
+ ],
+ "specs": [
+  {
+   "param": "Grundfrequenz der HF-Spannung",
+   "value": "einige hundert kHz bis wenige MHz",
+   "note": "Oberhalb von etwa 100 kHz ist die Reizwirkung auf Nerven und Muskeln stark verringert.",
+   "evidence": "typisch",
+   "sources": [
+    "kramme-2017",
+    "iec-60479-2"
+   ]
+  },
+  {
+   "param": "Maximale Ausgangsleistung monopolar Schneiden",
+   "value": "typisch bis einige hundert Watt",
+   "note": "Herstellerabhängig; für die meisten Eingriffe werden deutlich geringere Leistungen genutzt.",
+   "evidence": "typisch",
+   "sources": [
+    "kramme-2017"
+   ]
+  },
+  {
+   "param": "Ausgangsleistung bipolar",
+   "value": "typisch bis etwa 100 W (Gefäßversiegelung teils höher)",
+   "note": "Herstellerabhängig.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Funkenschwelle (Spitzenspannung)",
+   "value": "Größenordnung 200 V",
+   "note": "Darunter keine Funkenbildung (Soft-Koagulation), darüber Schneiden bzw. forcierte Koagulation möglich.",
+   "evidence": "typisch",
+   "sources": [
+    "kramme-2017"
+   ]
+  },
+  {
+   "param": "Spitzenspannung Spray-/forcierte Koagulation",
+   "value": "bis in den Kilovolt-Bereich",
+   "note": "Hohe Crestfaktoren; erhöhte Anforderungen an die Isolation des Zubehörs.",
+   "evidence": "typisch",
+   "sources": [
+    "kramme-2017"
+   ]
+  },
+  {
+   "param": "Crestfaktor",
+   "value": "≈ 1,4 (ungemoduliertes Schneiden) bis > 6 (Spray-Koagulation)",
+   "note": "CF = Û / U_eff; modusabhängig.",
+   "evidence": "typisch",
+   "sources": [
+    "kramme-2017"
+   ]
+  },
+  {
+   "param": "Lastimpedanz im Betrieb",
+   "value": "von einigen zehn Ohm bis zu einigen Kiloohm",
+   "note": "Abhängig von Gewebe, Kontaktfläche, Wassergehalt und Modus (bipolar niedriger).",
+   "evidence": "typisch",
+   "sources": [
+    "kramme-2017"
+   ]
+  },
+  {
+   "param": "Anwendungsteil",
+   "value": "Typ BF oder CF, defibrillationsgeschützt",
+   "note": "Erdfreier Patientenkreis bei modernen Generatoren.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-1"
+   ]
+  },
+  {
+   "param": "Schutzklasse",
+   "value": "I (netzbetrieben mit Schutzleiter)",
+   "note": "Siehe [[schutzklassen|Schutzklassen]].",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Aktivierungsanzeige",
+   "value": "akustisches Signal und optische Anzeige während der Energieabgabe",
+   "note": "In IEC 60601-2-2 für HF-Chirurgiegeräte gefordert; Detailanforderungen (z. B. Mindestlautstärke) siehe jeweils gültige Ausgabe. Aussage nicht am Normtext selbst geprüft.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-2"
+   ]
+  }
+ ],
+ "manufacturers": [
+  {
+   "ref": "erbe",
+   "models": [
+    "VIO 3",
+    "VIO 300 D",
+    "APC 3"
+   ],
+   "note": "Erbe Elektromedizin, Tübingen; APC 3 als Argonplasma-Modul für die VIO-3-Plattform."
+  },
+  {
+   "ref": "medtronic",
+   "models": [
+    "Valleylab FT10",
+    "ForceTriad",
+    "LigaSure"
+   ],
+   "note": "Valleylab-Generatoren; LigaSure als bipolares Gefäßversiegelungssystem."
+  },
+  {
+   "ref": "olympus",
+   "models": [
+    "ESG-400",
+    "ESG-410",
+    "POWERSEAL"
+   ],
+   "note": "ESG-Generatoren für offene, laparoskopische und endoskopische Chirurgie; POWERSEAL als bipolares Versiegelungsinstrument."
+  },
+  {
+   "ref": "karl-storz",
+   "models": [
+    "AUTOCON III 400"
+   ],
+   "note": "Monopolarer und bipolarer HF-Generator, auch mit Gefäßversiegelungsmodus erhältlich."
+  },
+  {
+   "ref": "b-braun",
+   "models": [
+    "Lektrafuse",
+    "Caiman"
+   ],
+   "note": "Marke Aesculap; bipolarer Generator Lektrafuse mit Caiman-Versiegelungsinstrumenten."
+  }
+ ],
+ "price": {
+  "status": "nicht-verifiziert",
+  "note": "Für HF-Chirurgiegeräte liegen keine öffentlich überprüfbaren, allgemein gültigen Listenpreise vor. Einflussfaktoren sind Leistungsklasse und Anzahl der Ausgänge, Umfang der Modi (Gefäßversiegelung, Endoskopie-Modi), Zusatzmodule (Argonplasma, Rauchgasabsaugung, Spülung, Wasserstrahl), Gerätewagen und Integration in den OP, Software-Lizenzen und -Updates sowie Servicevertrag und Rahmenvertragskonditionen. Für die Wirtschaftlichkeit sind die **Gesamtbetriebskosten** entscheidend: Einweg-Neutralelektroden, Handgriffe und insbesondere Einweg-Versiegelungsinstrumente verursachen pro Eingriff laufende Kosten, die die Investition über die Nutzungsdauer deutlich übersteigen können; hinzu kommen STK, Aufbereitung wiederverwendbarer Instrumente und Schulung."
+ },
+ "maintenance": {
+  "stk": "ja",
+  "mtk": "nein",
+  "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.3 – Erzeugung und Anwendung jeglicher Energie zur unmittelbaren Koagulation, Gewebezerstörung oder Zertrümmerung von Ablagerungen in Organen; nicht in Anlage 2 aufgeführt.",
+  "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); Sichtprüfung von Gerät und Zubehör vor jeder Anwendung; Wartung nach Herstellerangabe"
+ },
+ "faults": [
+  {
+   "title": "Alarm Neutralelektrode / Kontaktqualität",
+   "ref": "elektrodenproblem",
+   "cause": "Neutralelektrode teilweise abgelöst, falsch platziert (über Knochen, Narben, Behaarung), Gel ausgetrocknet, Kabel nicht gesteckt oder gebrochen, ungeteilte NE an Generator mit Überwachung.",
+   "action": "Neue geteilte Neutralelektrode vollflächig auf gut durchblutetem Muskel anlegen, Kabel und Stecker prüfen; Alarm nie durch Umgehung der Überwachung quittieren."
+  },
+  {
+   "title": "Verbrennung unter der Neutralelektrode",
+   "ref": "neutralelektroden-verbrennung",
+   "cause": "Verringerte Kontaktfläche, Flüssigkeit unter der Elektrode, ungünstige Position, lange Aktivierung mit hoher Leistung.",
+   "action": "Ereignis dokumentieren und als Vorkommnis prüfen ([[vigilanz|Vigilanz]]); Gerät und Zubehör sichern und durch Medizintechnik prüfen lassen."
+  },
+  {
+   "title": "Unzureichende Schneid- oder Koagulationswirkung",
+   "cause": "Verschmutzte bzw. verkohlte Aktivelektrode, falscher Modus oder Effekt, zu hohe Lastimpedanz (Fettgewebe), Kabelbruch, schlechter NE-Kontakt, Defekt der Endstufe.",
+   "action": "Elektrode reinigen oder tauschen, Einstellungen prüfen, statt Leistungserhöhung Ursache suchen; bei Verdacht auf Gerätefehler Leistungsmessung mit HF-Analysator."
+  },
+  {
+   "title": "Störungen von EKG und Monitoring während Aktivierung",
+   "ref": "emv-stoerung",
+   "cause": "Hochfrequente Einkopplung in EKG-Kabel und Monitore, ungünstige Kabelführung, fehlende Filterung.",
+   "action": "Kabel getrennt führen, EKG-Elektroden fern vom OP-Gebiet, HF-Filter am Monitor nutzen; siehe [[emv|EMV]]."
+  },
+  {
+   "title": "Ungewollte Aktivierung oder Bedienfehler",
+   "ref": "anwendungsfehler",
+   "cause": "Fußschalter verwechselt oder verdeckt, Handgriff nicht im Köcher abgelegt, falsche Buchse/falscher Modus gewählt, Flüssigkeit im Fußschalter.",
+   "action": "Elektrode nach Gebrauch im isolierten Köcher ablegen, Fußschalter eindeutig positionieren, Einweisung und Standardprogramme; defekte Fußschalter aussondern."
+  },
+  {
+   "title": "Selbsttest- oder Gerätefehlermeldung",
+   "ref": "fehlercodes",
+   "cause": "Interner Fehler in Endstufe, Relais, Messkreis oder Überwachung; Übertemperatur bei verstopftem Lüfter.",
+   "action": "Gerät außer Betrieb nehmen, Ersatzgerät verwenden, Fehlerspeicher durch Service auslesen lassen; Lüftung prüfen."
+  },
+  {
+   "title": "Verbrennungen außerhalb des Sichtfelds (Laparoskopie)",
+   "cause": "Isolationsdefekt an Instrumenten, kapazitive Kopplung in Trokare, direkte Kopplung mit leitenden Instrumenten.",
+   "action": "Isolationsprüfung der Instrumente, Aktivierung nur bei Sichtkontakt, keine Aktivierung im offenen Kreis; ggf. Instrumente mit Isolationsüberwachung einsetzen."
+  },
+  {
+   "title": "OP-Brand / Entzündung",
+   "cause": "Funken in Gegenwart brennbarer Stoffe (alkoholische Desinfektionsmittel, Tücher) und sauerstoffangereicherter Atmosphäre.",
+   "action": "Desinfektionsmittel vollständig abtrocknen lassen, O₂-Anreicherung im OP-Feld vermeiden, Brandschutzmaßnahmen im OP-Team abstimmen."
+  }
+ ],
+ "tests": [
+  {
+   "name": "Sicherheitstechnische Kontrolle",
+   "ref": "stk",
+   "description": "Pflichtprüfung nach § 12 MPBetreibV (Anlage 1 Nr. 1.3) nach Herstellerprüfanweisung: Sichtprüfung, elektrische Sicherheit, Funktion, Leistungsmessung, NE-Überwachung, ggf. HF-Ableitströme, Dokumentation."
+  },
+  {
+   "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+   "ref": "elektrische-sicherheitspruefung",
+   "description": "Schutzleiterwiderstand, ggf. Isolationswiderstand, Geräteableitstrom und Ableitstrom vom Anwendungsteil; nach STK und Instandsetzung."
+  },
+  {
+   "name": "Leistungsmessung mit HF-Analysator",
+   "ref": "pruefgeraete",
+   "description": "Ausgangsleistung je Modus an definierter Lastimpedanz und mehreren Einstellungen; optional Aufnahme der Leistungskennlinie über verschiedene Lasten."
+  },
+  {
+   "name": "Prüfung der Neutralelektrodenüberwachung",
+   "ref": "pruefgeraete",
+   "description": "Simulation steigender Teilflächenimpedanz; Generator muss alarmieren und die monopolare Aktivierung sperren."
+  },
+  {
+   "name": "HF-Ableitstrommessung",
+   "ref": "ableitstrommessung",
+   "description": "Messung der HF-Ableitströme mit den normativen Messanordnungen (gegen Erde, mit/ohne Last zwischen den Elektroden)."
+  },
+  {
+   "name": "Funktionsprüfung",
+   "ref": "funktionspruefung",
+   "description": "Selbsttest, Bedienelemente, Aktivierungston, Fuß-/Handschalter, Ausgangsumschaltung, Alarme, Zusatzmodule (z. B. APC)."
+  },
+  {
+   "name": "Isolationsprüfung von Instrumenten",
+   "ref": "isolationswiderstand",
+   "description": "Hochspannungsprüfung wiederverwendbarer laparoskopischer Instrumente im Rahmen der Aufbereitung nach Herstellerangabe."
+  }
+ ],
+ "diagram": {
+  "title": "Funktionsschema eines monopolaren HF-Chirurgiegeräts",
+  "caption": "Vereinfachtes Funktionsschema: Energiepfad (oben) vom Netz über Netzteil, HF-Endstufe und Ausgangstransformator zur Aktivelektrode und durch den Patienten zur Neutralelektrode; Mess- und Regelpfad (Mitte/unten) mit U/I-Messung, NE-Überwachung und Temperaturüberwachung. Kein Abbild eines konkreten Modells.",
+  "width": 960,
+  "height": 400,
+  "nodes": [
+   {
+    "id": "netz",
+    "label": "Netz-\nversorgung",
+    "ref": "medizinisch-genutzte-bereiche",
+    "kind": "source",
+    "x": 90,
+    "y": 80
+   },
+   {
+    "id": "netzteil",
+    "label": "Netzteil\n(Zwischenkreis)",
+    "ref": "medizinisches-netzteil",
+    "kind": "process",
+    "x": 280,
+    "y": 80
+   },
+   {
+    "id": "endstufe",
+    "label": "HF-Endstufe\n(MOSFET, PWM)",
+    "ref": "pwm",
+    "kind": "actuator",
+    "x": 470,
+    "y": 80
+   },
+   {
+    "id": "trafo",
+    "label": "Ausgangstrafo +\nKoppel-C",
+    "ref": "transformator",
+    "kind": "process",
+    "x": 660,
+    "y": 80
+   },
+   {
+    "id": "aktiv",
+    "label": "Aktivelektrode /\nInstrument",
+    "kind": "output",
+    "x": 860,
+    "y": 80
+   },
+   {
+    "id": "alarm",
+    "label": "Aktivierungston\n& Alarme",
+    "ref": "alarmsystem",
+    "kind": "output",
+    "x": 90,
+    "y": 200
+   },
+   {
+    "id": "cpu",
+    "label": "Steuerung &\nRegelung",
+    "ref": "regelkreis",
+    "kind": "control",
+    "x": 470,
+    "y": 200
+   },
+   {
+    "id": "umess",
+    "label": "U/I-Messung",
+    "ref": "spannung-strom-widerstand",
+    "kind": "sensor",
+    "x": 660,
+    "y": 200
+   },
+   {
+    "id": "pat",
+    "label": "Patient\n(Gewebe)",
+    "ref": "joulesche-waerme",
+    "kind": "patient",
+    "x": 860,
+    "y": 200
+   },
+   {
+    "id": "fuss",
+    "label": "Fuß-/\nHandschalter",
+    "kind": "control",
+    "x": 90,
+    "y": 320
+   },
+   {
+    "id": "ui",
+    "label": "Bedienfeld /\nDisplay",
+    "ref": "display-bedienoberflaeche",
+    "kind": "output",
+    "x": 280,
+    "y": 320
+   },
+   {
+    "id": "temp",
+    "label": "Temperatur-\nüberwachung",
+    "ref": "temperatursensor",
+    "kind": "sensor",
+    "x": 470,
+    "y": 320
+   },
+   {
+    "id": "nemon",
+    "label": "NE-Überwachung",
+    "ref": "neutralelektroden-verbrennung",
+    "kind": "sensor",
+    "x": 660,
+    "y": 320
+   },
+   {
+    "id": "ne",
+    "label": "Neutralelektrode\n(geteilt)",
+    "ref": "neutralelektrode",
+    "kind": "output",
+    "x": 860,
+    "y": 320
+   }
+  ],
+  "edges": [
+   {
+    "from": "netz",
+    "to": "netzteil",
+    "kind": "power",
+    "label": "230 V~"
+   },
+   {
+    "from": "netzteil",
+    "to": "endstufe",
+    "kind": "power",
+    "label": "DC"
+   },
+   {
+    "from": "endstufe",
+    "to": "trafo",
+    "kind": "energy",
+    "label": "HF"
+   },
+   {
+    "from": "trafo",
+    "to": "aktiv",
+    "kind": "energy"
+   },
+   {
+    "from": "aktiv",
+    "to": "pat",
+    "kind": "energy",
+    "label": "HF-Strom"
+   },
+   {
+    "from": "pat",
+    "to": "ne",
+    "kind": "energy",
+    "label": "Rückstrom"
+   },
+   {
+    "from": "ne",
+    "to": "nemon",
+    "kind": "signal",
+    "label": "Teilflächen-Z"
+   },
+   {
+    "from": "trafo",
+    "to": "umess",
+    "kind": "signal",
+    "label": "u(t), i(t)"
+   },
+   {
+    "from": "umess",
+    "to": "cpu",
+    "kind": "data",
+    "label": "Z, P"
+   },
+   {
+    "from": "cpu",
+    "to": "endstufe",
+    "kind": "signal",
+    "label": "Stellgröße"
+   },
+   {
+    "from": "nemon",
+    "to": "cpu",
+    "kind": "signal",
+    "label": "Freigabe"
+   },
+   {
+    "from": "temp",
+    "to": "cpu",
+    "kind": "signal"
+   },
+   {
+    "from": "fuss",
+    "to": "cpu",
+    "kind": "signal",
+    "label": "Aktivierung"
+   },
+   {
+    "from": "ui",
+    "to": "cpu",
+    "kind": "data"
+   },
+   {
+    "from": "cpu",
+    "to": "alarm",
+    "kind": "signal"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "img/devices/hf-chirurgiegeraet-aufbau.svg",
+   "kind": "schema",
+   "caption": "Schematischer Aufbau eines HF-Chirurgie-Arbeitsplatzes: Generator mit monopolarer, bipolarer und NE-Buchse, Fußschalter, Handgriff mit Aktivelektrode sowie Neutralelektrode am Oberschenkel des isoliert gelagerten Patienten (eigene Darstellung, kein reales Modell)."
+  },
+  {
+   "src": "img/devices/hf-chirurgiegeraet-prinzip.svg",
+   "kind": "schema",
+   "caption": "Prinzip der HF-Chirurgie: Stromdichte an Aktiv- und Neutralelektrode, Leistungsdichte p = J²/σ, Temperaturbereiche der Gewebewirkung sowie typische Spannungsformen für Schneiden und Koagulation (eigene Darstellung)."
+  }
+ ],
+ "paths": [
+  [
+   "hf-chirurgiegeraet",
+   "neutralelektrode",
+   "joulesche-waerme",
+   "haut"
+  ],
+  [
+   "hf-chirurgiegeraet",
+   "transformator",
+   "elektromagnetische-induktion",
+   "galvanische-trennung"
+  ],
+  [
+   "hf-chirurgiegeraet",
+   "elektrische-stromwirkung",
+   "aktionspotential",
+   "nervensystem"
+  ]
+ ],
+ "related": [
+  "neutralelektrode",
+  "neutralelektroden-verbrennung",
+  "ultraschalldissektor",
+  "chirurgischer-laser",
+  "insufflator",
+  "endoskop",
+  "op-tisch",
+  "absauggeraet",
+  "iec-60601-2-2",
+  "iec-60601-1",
+  "iec-62353",
+  "mpbetreibv",
+  "joulesche-waerme",
+  "elektrische-stromwirkung",
+  "herzschrittmacher"
+ ],
+ "sources": [
+  "kramme-2017",
+  "massarweh-2006",
+  "iec-60601-2-2",
+  "iec-60601-1",
+  "iec-60601-1-8",
+  "iec-62353",
+  "iec-62304",
+  "iec-60479-1",
+  "iec-60479-2",
+  "mdr-2017",
+  "mdcg-2021-24",
+  "mpbetreibv",
+  "din-31051",
+  "erbe-vio3"
+ ],
+ "status": "ausfuehrlich",
+ "updated": "2026-11-11"
+}

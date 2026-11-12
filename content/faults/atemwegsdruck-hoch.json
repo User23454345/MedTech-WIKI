@@ -1,0 +1,62 @@
+{
+  "id": "atemwegsdruck-hoch",
+  "type": "fault",
+  "title": "Alarm: Atemwegsdruck hoch",
+  "aliases": [
+    "Paw hoch",
+    "Pmax-Alarm",
+    "Druck hoch",
+    "High Pressure Alarm",
+    "Spitzendruck hoch",
+    "Stenosealarm"
+  ],
+  "category": "fehler",
+  "summary": "Alarm von Beatmungs- und Narkosegeräten, wenn der gemessene Atemwegsdruck die eingestellte obere Druckgrenze erreicht. Er zeigt eine erhöhte Atemwegsresistance, eine verminderte Compliance, Gegenatmen des Patienten oder eine Verlegung des Schlauchsystems an.",
+  "devices": [
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "transportbeatmungsgeraet",
+    "heimbeatmungsgeraet"
+  ],
+  "causes": [
+    "Sekret im Tubus oder in den Atemwegen, abgeknickter oder verlegter Tubus, Patient beißt auf den Tubus.",
+    "Erhöhte Atemwegsresistance, z. B. Bronchospasmus (siehe [[atemmechanik]]).",
+    "Verminderte Compliance: Pneumothorax, Lungenödem, Atelektasen, intraabdominelle Druckerhöhung, einseitige Intubation.",
+    "Husten, Pressen oder Gegenatmen des Patienten (Asynchronie), unzureichende Sedierung.",
+    "Kondenswasser im Schlauchsystem, verlegter Bakterienfilter oder HME-Filter ([[atemgasbefeuchter]]).",
+    "Geräteseitig: hängendes oder verlegtes [[exspirationsventil]], geknickter Exspirationsschlauch; am Narkosegerät zusätzlich geschlossenes APL-Ventil im Handbetrieb oder – je nach Bauart – eine Störung der Narkosegasabsaugung.",
+    "Zu eng eingestellte obere Druckgrenze oder falsch eingestellte Beatmungsparameter (z. B. zu hohes Tidalvolumen, zu kurze Inspirationszeit).",
+    "Messfehler durch [[drucksensor|Drucksensor]] mit Nullpunktfehler oder verlegter Druckmessleitung (siehe [[sensordrift]])."
+  ],
+  "actions": [
+    "**Patienten zuerst:** Oxygenierung und Ventilation beurteilen (SpO₂, etCO₂, Thoraxbewegung, Auskultation durch ärztliches Personal).",
+    "Bei fehlender Besserung oder Unklarheit den Patienten vom Gerät trennen und manuell beatmen – lässt sich der Patient leicht beatmen, liegt das Problem eher im Gerät oder Schlauchsystem.",
+    "Tubus und Schlauchsystem prüfen: Knick, Beißen, Sekret (ggf. Absaugen mit dem [[absauggeraet|Absauggerät]]), Kondensat, Filter.",
+    "Spitzendruck und Plateaudruck vergleichen, um Resistance- von Compliance-Problemen zu unterscheiden (Inspirationshalt).",
+    "Alarmgrenzen und Beatmungsparameter durch ärztliches Personal überprüfen lassen; die Druckgrenze nicht „wegstellen“, ohne die Ursache zu kennen.",
+    "Geräteseitige Ursachen ausschließen: Exspirationsventil, Druckmessleitung, Selbsttest; bei Verdacht auf Gerätefehler Ersatzgerät verwenden und Medizintechnik informieren."
+  ],
+  "body": "## Technischer Hintergrund\n\nDer Atemwegsdruck (Paw) wird mit [[drucksensor|piezoresistiven Drucksensoren]] im Gerät gemessen – je nach Konstruktion im Inspirations- und Exspirationszweig oder über eine Messleitung am Y-Stück. Für die obere Druckgrenze gibt es zwei Funktionen [@iso-80601-2-12]:\n\n1. **Alarmgrenze (Pmax-Alarm):** Wird sie erreicht, entsteht eine Alarmbedingung.\n2. **Druckbegrenzung:** Die meisten Geräte beenden bei Erreichen der Grenze die Inspiration und öffnen das [[exspirationsventil]], damit der Druck nicht weiter steigt. Unabhängig davon besitzen Geräte eine technische Sicherheitsdruckbegrenzung.\n\nDer Alarm wird je nach Gerät mit **mittlerer oder hoher Priorität** nach [[iec-60601-1-8]] signalisiert (Festlegung durch den Hersteller, teils mit Eskalation bei wiederholtem Auftreten), weil ein hoher Druck ein Barotrauma bedeuten kann und gleichzeitig das geplante Volumen nicht abgegeben wird [@iec-60601-1-8].\n\n### Resistance oder Compliance?\n\nDer Spitzendruck (Ppeak) setzt sich vereinfacht aus einem resistiven und einem elastischen Anteil zusammen:\n\n> [!vereinfacht] Ppeak ≈ PEEP + V̇ · R + VT / C. Der Plateaudruck (Pplat, gemessen im Inspirationshalt ohne Flow) enthält nur den elastischen Anteil: Pplat ≈ PEEP + VT / C. Eine große Differenz Ppeak − Pplat spricht für eine erhöhte Resistance R (Tubus, Sekret, Bronchospasmus), ein hoher Pplat für eine verminderte Compliance C (Lunge, Thoraxwand) [@oczenski-2017].\n\nGrundlagen dazu unter [[atemmechanik]] und [[stroemungslehre]].\n\n### Abhängigkeit vom Beatmungsmodus\n\n| Modus | Verhalten bei steigendem Widerstand |\n|---|---|\n| volumenkontrolliert | Druck steigt, Pmax-Alarm wahrscheinlich |\n| druckkontrolliert | Druck bleibt begrenzt, stattdessen sinkt das Volumen – Alarm „Tidalvolumen bzw. Minutenvolumen niedrig“ |\n\nIn druckkontrollierten Modi ist daher die richtige Einstellung der Volumenalarme entscheidend [@tobin-2013].\n\nAm [[anaesthesiegeraet|Narkosegerät]] kommen Ursachen im Atemsystem hinzu, z. B. ein geschlossenes APL-Ventil bei Handbeatmung oder eine Fehlbedienung des O₂-Flush während der Inspiration [@dorsch-2008].\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Plötzlicher Druckanstieg, Ppeak hoch, Pplat normal | Tubus, Sekret, Knick, Beißen | Absaugen, Beißschutz, Lage korrigieren |\n| Ppeak und Pplat hoch | Compliance-Ursachen (Pneumothorax, Tubus einseitig) | ärztliche Diagnostik |\n| Alarm atemsynchron mit Husten | Asynchronie, Sedierung | ärztliche Anpassung |\n| Druck hoch, Patient manuell leicht beatmbar | Schlauchsystem, Filter, Kondensat, Exspirationsventil | Teile tauschen, Kondensat entfernen |\n| PEEP steigt unbeabsichtigt | Exspirationsventil, Exspirationsfilter | Ventil prüfen, Filter tauschen |\n| Druckanzeige unplausibel ohne Patient | Nullpunkt, Druckmessleitung | Selbsttest, [[kalibrierung]], Gerät zur Medizintechnik |\n\n> [!praxis] Bewährt hat sich die Frage: „Ist das Problem beim Patienten oder in der Technik?“ Das Trennen vom Gerät und die Handbeatmung mit dem Beatmungsbeutel beantworten sie oft in Sekunden: Lässt sich der Patient leicht beatmen, liegt die Ursache im Gerät oder im Schlauchsystem; bleibt der Widerstand hoch, im Tubus oder in der Lunge. Die Entscheidung zum Trennen trifft das behandelnde Team, da bei hohem PEEP ein Druckverlust die Oxygenierung verschlechtern kann.\n\n## Prävention\n\n- Alarmgrenzen patientenbezogen einstellen (eng genug, um Ereignisse zu erkennen, weit genug gegen Fehlalarme; siehe [[alarmmuedigkeit]]).\n- Kondensat regelmäßig entfernen, Filter nach Herstellerangabe wechseln.\n- Selbsttest vor jedem Einsatz; Druckmessung im Rahmen von [[stk]] und [[funktionspruefung]] prüfen [@mpbetreibv].\n\n> [!hinweis] Herstellerspezifische Fehlercodes, Druckgrenzen und Prüfabläufe stehen in den Service-Unterlagen (siehe [[fehlercodes]]).",
+  "related": [
+    "leckage",
+    "diskonnektion",
+    "atemmechanik",
+    "drucksensor",
+    "exspirationsventil",
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "druckmessung",
+    "iso-80601-2-12",
+    "alarmsystem"
+  ],
+  "sources": [
+    "iso-80601-2-12",
+    "iec-60601-1-8",
+    "oczenski-2017",
+    "tobin-2013",
+    "dorsch-2008",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

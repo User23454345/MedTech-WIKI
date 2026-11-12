@@ -1,0 +1,150 @@
+{
+  "id": "kondensator",
+  "type": "term",
+  "title": "Kondensator",
+  "aliases": [
+    "Kapazität",
+    "Capacitor",
+    "Elektrolytkondensator",
+    "Elko",
+    "Folienkondensator",
+    "Keramikkondensator",
+    "MLCC",
+    "Y-Kondensator",
+    "X-Kondensator",
+    "Superkondensator"
+  ],
+  "category": "komponenten",
+  "summary": "Passives Bauelement, das elektrische Energie im elektrischen Feld eines Dielektrikums speichert. In Medizingeräten dient es zur Glättung, Filterung, Entstörung und – etwa im Defibrillator – als Energiespeicher für Hochspannungsimpulse.",
+  "body": "## Begriff\n\nEin **Kondensator** ist ein passives Bauelement, das elektrische Energie im elektrischen Feld zwischen zwei voneinander isolierten Elektroden speichert. Zwischen den Elektroden befindet sich ein Isolierstoff, das **Dielektrikum**. Die Fähigkeit, bei einer Spannung U eine Ladung Q zu speichern, heißt **Kapazität** C (Einheit Farad, F = As/V) [@tipler-2019]:\n\n`C = Q / U`\n\nKondensatoren gehören neben Widerständen und Spulen zu den Grundbausteinen jeder Elektronik (siehe [[spannung-strom-widerstand]]). In der Medizintechnik reichen ihre Aufgaben von der Glättung im [[medizinisches-netzteil|Netzteil]] über Filter in [[biosignale|Biosignal]]-Verstärkern bis zum Energiespeicher im [[defibrillator]].\n\n## Physikalische Grundlagen\n\n### Plattenkondensator\n\nFür einen Plattenkondensator mit Plattenfläche A, Abstand d und relativer Permittivität εᵣ gilt:\n\n`C = ε₀ · εᵣ · A / d` mit ε₀ ≈ 8,854 · 10⁻¹² As/(Vm)\n\nGroße Kapazitäten erfordern also große Flächen, dünne Dielektrika und Werkstoffe mit hoher Permittivität. Die maximal zulässige Spannung wird durch die **Durchschlagfestigkeit** des Dielektrikums begrenzt – ein Zielkonflikt zwischen kleinem d und hoher Spannungsfestigkeit.\n\n### Gespeicherte Energie\n\n`W = ½ · C · U²`\n\nDie Energie wächst quadratisch mit der Spannung. Deshalb arbeiten Energiespeicher-Kondensatoren mit hohen Spannungen.\n\n### Lade- und Entladevorgang\n\nWird ein Kondensator über einen Widerstand R geladen oder entladen, ändert sich die Spannung exponentiell mit der **Zeitkonstante** τ = R · C:\n\n`u_C(t) = U₀ · (1 − e^(−t/τ))` (Laden), `u_C(t) = U₀ · e^(−t/τ)` (Entladen)\n\nNach etwa 5 τ gilt der Vorgang als abgeschlossen (> 99 %).\n\n### Verhalten im Wechselstromkreis\n\nFür sinusförmige Wechselgrößen wirkt der Kondensator als frequenzabhängiger Blindwiderstand:\n\n`X_C = 1 / (2π · f · C)`\n\nGleichspannung wird gesperrt, hohe Frequenzen werden durchgelassen. Darauf beruhen Koppelkondensatoren, RC-[[filter|Filter]] und die Entstörung von Netzleitungen [@tietze-schenk-2019].\n\n## Bauarten\n\n| Bauart | Dielektrikum | Eigenschaften | Typische Aufgabe |\n|---|---|---|---|\n| Keramikkondensator (MLCC) | Keramik (z. B. Klasse 1: C0G, Klasse 2: X7R) | klein, niederinduktiv; Klasse 2 mit spannungs- und temperaturabhängiger Kapazität | Abblocken von Versorgungsspannungen, HF-Filter |\n| Folienkondensator | Polypropylen, Polyester | stabil, selbstheilend, verlustarm | Netzentstörung (X/Y), Impulsanwendungen |\n| Aluminium-Elektrolytkondensator | Oxidschicht auf Aluminium, flüssiger Elektrolyt | große Kapazität je Volumen, gepolt, begrenzte Lebensdauer | Glättung in Netzteilen, Zwischenkreise |\n| Tantal-/Polymerkondensator | Tantaloxid bzw. leitfähiges Polymer | kompakt, niedriger Serienwiderstand | Versorgung von Mikroelektronik |\n| Doppelschichtkondensator (Superkondensator) | elektrochemische Doppelschicht | sehr große Kapazität, niedrige Spannung je Zelle | Pufferung, Uhren- und Datenerhalt |\n\n> [!belegt] Funkentstörkondensatoren für den Netzanschluss werden nach IEC 60384-14 in die Klassen X (zwischen den Netzleitern) und Y (zwischen Netzleiter und Schutzleiter bzw. berührbaren Teilen) eingeteilt; Y-Kondensatoren müssen so ausgelegt sein, dass ihr Versagen keinen gefährlichen Körperstrom verursacht [@iec-60384-14].\n\n## Kenngrößen und Grenzen realer Kondensatoren\n\nEin realer Kondensator ist kein idealer Speicher. Sein Ersatzschaltbild enthält:\n\n* **ESR** (Equivalent Series Resistance): Serienwiderstand, verursacht Erwärmung bei Wechselstrom (Rippelstrom) und Spannungseinbrüche bei Pulslast.\n* **ESL**: parasitäre Serieninduktivität; oberhalb der Eigenresonanz wirkt der Kondensator induktiv.\n* **Isolations- bzw. Leckstrom**: besonders bei Elektrolytkondensatoren relevant.\n* **Dielektrische Absorption**: Nach dem Entladen „erholt“ sich ein Teil der Spannung wieder – ein Sicherheitsaspekt bei Hochspannungskondensatoren.\n\n### Alterung von Elektrolytkondensatoren\n\nDer flüssige Elektrolyt diffundiert über die Dichtung langsam aus. Kapazität sinkt, ESR steigt, die Erwärmung nimmt zu – ein sich selbst verstärkender Prozess. Die Lebensdauer hängt stark von der Temperatur ab.\n\n> [!vereinfacht] Als Faustregel wird häufig angegeben, dass sich die Lebensdauer eines Elektrolytkondensators je 10 K Temperaturerhöhung etwa halbiert (Arrhenius-Ansatz). Verbindlich sind die Lebensdauerangaben und Berechnungsmodelle des jeweiligen Bauteilherstellers.\n\n## Anwendung in Geräten\n\n### Energiespeicher im Defibrillator\n\nIm [[defibrillator]] lädt eine Ladeschaltung ([[hochspannungserzeugung]]) einen Hochspannungs-Folienkondensator auf; eine Brückenschaltung gibt die Energie anschließend als biphasischen Impuls über die [[defibrillationselektroden|Defibrillationselektroden]] an den Patienten ab [@kramme-2017].\n\n> [!beispiel] Ein Kondensator mit C = 150 µF, geladen auf U = 2 000 V, speichert W = ½ · 150 · 10⁻⁶ F · (2 000 V)² = 300 J. Bei einer Patientenimpedanz von 75 Ω ergäbe sich für eine ungesteuerte Entladung eine Zeitkonstante von τ = 75 Ω · 150 µF ≈ 11 ms. Moderne Geräte schneiden die Exponentialkurve ab und polen um (biphasische Kurvenform). Die Zahlen sind didaktisch gewählt und beschreiben kein bestimmtes Gerät.\n\n### Weitere Einsatzorte\n\n| Gerät / Baugruppe | Funktion des Kondensators |\n|---|---|\n| [[medizinisches-netzteil]] | Zwischenkreis- und Ausgangsglättung, Netzfilter (X/Y) |\n| [[ekg-geraet]], [[eeg-geraet]], [[patientenmonitor]] | Hoch- und Tiefpässe, Eingangsschutz, Antialiasing vor dem [[analog-digital-wandler|A/D-Wandler]] |\n| [[hf-chirurgiegeraet]] | Koppelkondensator im Patientenkreis verhindert niederfrequente Ströme (Faradisation) |\n| [[ultraschallgeraet]] | Speicher für die Sendepulse des [[ultraschallwandler|Wandlers]] |\n| [[roentgengeraet]], [[computertomograph]] | Glättung der Hochspannung im Generator ([[hochspannungserzeugung]]) |\n| Motorsteuerung von [[turbine]] und [[bldc-motor]] | Zwischenkreis-Kondensator liefert die Stromspitzen bei schnellen Drehzahländerungen |\n| [[mrt]] | Abstimmkondensatoren in [[hf-spule|HF-Spulen]] bestimmen die Resonanzfrequenz |\n\n### Kapazitive Kopplung als Störquelle\n\nKondensatoren entstehen auch ungewollt: Zwischen Patient, Kabeln und Netzleitungen bestehen parasitäre Kapazitäten, über die 50-Hz-Störungen eingekoppelt werden ([[netzstoerung|Netzbrumm]]) und über die [[ableitstrom|Ableitströme]] fließen. Für eine parasitäre Kapazität von 100 pF ergibt sich bei 50 Hz ein Blindwiderstand von etwa 32 MΩ – klein genug, um bei 230 V einen Strom von einigen Mikroampere zu treiben.\n\n## Sicherheit und Instandhaltung\n\n> [!warnung] Hochspannungs- und Zwischenkreis-Kondensatoren können nach dem Ausschalten lebensgefährliche Ladungen speichern. Eingebaute Entladewiderstände oder Sicherheitsentladungen dürfen nicht als gegeben vorausgesetzt werden. Arbeiten an Defibrillatoren, Röntgengeneratoren und Netzteilen nur durch befugtes Fachpersonal nach Herstelleranweisung.\n\n* Aufgeblähte oder ausgelaufene Elektrolytkondensatoren, Verfärbungen der Leiterplatte und Brummen bzw. Neustarts deuten auf Kondensatoralterung hin.\n* Bei Defibrillatoren prüft die [[stk|sicherheitstechnische Kontrolle]] mit einem Defibrillator-Analysator die abgegebene Energie und die Ladezeit ([[pruefgeraete]]).\n* Nach Instandsetzung ist eine [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] durchzuführen.\n",
+  "related": [
+    "spannung-strom-widerstand",
+    "filter",
+    "defibrillator",
+    "medizinisches-netzteil",
+    "hochspannungserzeugung",
+    "ableitstrom",
+    "netzstoerung",
+    "transformator",
+    "emv",
+    "hf-spule"
+  ],
+  "paths": [
+    [
+      "defibrillator",
+      "kondensator",
+      "hochspannungserzeugung",
+      "defibrillationselektroden"
+    ],
+    [
+      "spannung-strom-widerstand",
+      "kondensator",
+      "filter",
+      "analog-digital-wandler"
+    ]
+  ],
+  "sources": [
+    "tipler-2019",
+    "tietze-schenk-2019",
+    "iec-60384-14",
+    "kramme-2017"
+  ],
+  "diagram": {
+    "title": "Kondensator als Energiespeicher im Defibrillator",
+    "caption": "Vereinfachtes Funktionsschema der Energieabgabe; Steuerung und Sicherheitsentladung nur angedeutet.",
+    "width": 900,
+    "height": 320,
+    "nodes": [
+      {
+        "id": "akku",
+        "label": "Akku /\nNetzteil",
+        "ref": "lithium-ionen-akku",
+        "kind": "source",
+        "x": 90,
+        "y": 110
+      },
+      {
+        "id": "lader",
+        "label": "Ladeschaltung\n(Hochspannung)",
+        "ref": "hochspannungserzeugung",
+        "kind": "process",
+        "x": 280,
+        "y": 110
+      },
+      {
+        "id": "c",
+        "label": "Speicher-\nkondensator",
+        "ref": "kondensator",
+        "kind": "process",
+        "x": 470,
+        "y": 110
+      },
+      {
+        "id": "bruecke",
+        "label": "H-Brücke\n(biphasisch)",
+        "kind": "actuator",
+        "x": 660,
+        "y": 110
+      },
+      {
+        "id": "pat",
+        "label": "Patient\n(Thoraximpedanz)",
+        "ref": "herz",
+        "kind": "patient",
+        "x": 820,
+        "y": 230
+      },
+      {
+        "id": "mcu",
+        "label": "Steuerung\n(Mikrocontroller)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 470,
+        "y": 250
+      }
+    ],
+    "edges": [
+      {
+        "from": "akku",
+        "to": "lader",
+        "kind": "power"
+      },
+      {
+        "from": "lader",
+        "to": "c",
+        "kind": "energy",
+        "label": "Laden"
+      },
+      {
+        "from": "c",
+        "to": "bruecke",
+        "kind": "energy"
+      },
+      {
+        "from": "bruecke",
+        "to": "pat",
+        "kind": "energy",
+        "label": "Schock"
+      },
+      {
+        "from": "mcu",
+        "to": "lader",
+        "kind": "signal"
+      },
+      {
+        "from": "mcu",
+        "to": "bruecke",
+        "kind": "signal",
+        "label": "Ansteuerung"
+      },
+      {
+        "from": "c",
+        "to": "mcu",
+        "kind": "signal",
+        "label": "U_C"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

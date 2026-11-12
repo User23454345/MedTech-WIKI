@@ -1,0 +1,58 @@
+{
+  "id": "zellseparator",
+  "type": "device",
+  "title": "Zellseparator (Apheresegerät)",
+  "aliases": [
+    "Apheresegerät",
+    "Blutzellseparator",
+    "Apheresesystem",
+    "Cell separator",
+    "Plasmapheresegerät"
+  ],
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 66,
+  "domains": [
+    "labormedizin",
+    "nephrologie",
+    "intensivmedizin"
+  ],
+  "summary": "Zellseparatoren entnehmen Blut in einen extrakorporalen Kreislauf, trennen es zentrifugal (oder per Membran) in seine Bestandteile, sammeln oder entfernen eine Fraktion und geben den Rest dem Spender oder Patienten zurück. Sie werden zur Gewinnung von Blutkomponenten und für therapeutische Apheresen eingesetzt.",
+  "sections": {
+    "purpose": "In der **präparativen Apherese** werden von Spendern gezielt Thrombozyten, Plasma oder periphere Blutstammzellen gewonnen. Die **therapeutische Apherese** entfernt krankheitsrelevante Bestandteile, etwa beim Plasmaaustausch (Entfernung pathogener Antikörper), beim Erythrozytenaustausch oder bei der Leukozytendepletion; auch die extrakorporale Photopherese basiert auf Zellseparation. Die Behandlungen finden in transfusionsmedizinischen Einrichtungen, Dialyse- und Intensivbereichen statt [@kramme-2017].",
+    "principle": "## Zentrifugale Trennung\n\nIn einer rotierenden Trennkammer sedimentieren die Blutbestandteile nach ihrer Dichte ([[laborzentrifuge|Zentrifugation]]): außen die schweren Erythrozyten, darüber Granulozyten, mononukleäre Zellen und Thrombozyten (der „Buffy Coat“), innen das leichte Plasma ([[blut]]). Über getrennte Auslässe wird die gewünschte Schicht abgezogen; die Lage der Trennschicht wird optisch überwacht und über die Pumpenraten nachgeregelt ([[regelkreis]]).\n\n| Verfahren | Merkmal |\n|---|---|\n| Kontinuierlich | Blut fließt ständig zu und ab, meist mit zwei venösen Zugängen |\n| Diskontinuierlich | Zyklen aus Füllen, Trennen und Rückgabe, auch mit einem Zugang möglich |\n| Membranplasmaseparation | Plasma wird über eine Membran mit großen Poren abgetrennt; Triebkraft ist der Transmembrandruck (Filtration/Konvektion), nicht Diffusion oder Osmose ([[stroemungslehre]]) |\n\n## Extrakorporaler Kreislauf\n\nDas Blut wird mit [[peristaltikpumpe|Peristaltikpumpen]] durch ein Einweg-Schlauchsystem gefördert. Zur Antikoagulation dient meist eine Citratlösung, die Calcium bindet. [[drucksensor|Drucksensoren]] überwachen Entnahme- und Rückgabedruck, [[luftblasendetektor|Luftblasendetektoren]] mit Schlauchklemme verhindern eine Luftembolie – vergleichbar dem [[dialysegeraet|Dialysegerät]].\n\n> [!warnung] Citrat kann beim Patienten oder Spender eine Hypokalzämie mit Kribbelparästhesien bis hin zu Herzrhythmusstörungen verursachen; Überwachung und ggf. Calciumgabe nach ärztlicher Anordnung sind Teil des Behandlungsablaufs.\n\n> [!vereinfacht] Die Dichtereihenfolge ist idealisiert; die Zellpopulationen überlappen, weshalb Produkte immer eine gewisse Verunreinigung mit anderen Zellen aufweisen."
+  },
+  "manufacturers": [
+    {
+      "ref": "fresenius-kabi",
+      "models": [
+        "COM.TEC",
+        "AMICUS"
+      ]
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (Fassung 2025) Anlage 1 – Produktgruppe zur unmittelbaren Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potenzieller Druckerhöhung, ausdrücklich auch aufbereiteter körpereigener Flüssigkeiten, deren Einbringen mit einer Entnahmefunktion direkt gekoppelt ist (sinngemäß; Nummerierung der Neufassung hier nicht angegeben). Nicht in Anlage 2 aufgeführt.",
+    "intervals": "[[stk|STK]] spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025); Wartung von Zentrifugenantrieb, Pumpen, Klemmen, Luft- und Drucksensorik nach Herstellerangabe; Funktionsprüfung vor jeder Behandlung (Selbsttest, Einlegen des Schlauchsets)."
+  },
+  "related": [
+    "dialysegeraet",
+    "crrt-geraet",
+    "laborzentrifuge",
+    "peristaltikpumpe",
+    "luftblasendetektor",
+    "blutkuehlschrank"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

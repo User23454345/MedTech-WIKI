@@ -1,0 +1,35 @@
+{
+  "id": "gastroenterologie",
+  "type": "domain",
+  "title": "Gastroenterologie",
+  "aliases": [
+    "Magen-Darm-Heilkunde",
+    "Gastroenterology",
+    "Gastro",
+    "Endoskopie-Abteilung",
+    "Hepatologie"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Gastroenterologie befasst sich mit Erkrankungen von Speiseröhre, Magen, Darm, Leber, Gallenwegen und Bauchspeicheldrüse. Technisch prägen sie flexible Endoskope, Hochfrequenzchirurgie und die anspruchsvolle Aufbereitung thermolabiler Instrumente.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Gastroenterologie** ist ein Teilgebiet der Inneren Medizin. Sie diagnostiziert und behandelt Erkrankungen des Verdauungstrakts sowie von Leber (Hepatologie), Gallenwegen und Pankreas. Charakteristisch ist, dass sich viele Diagnosen und Therapien **endoskopisch** durchführen lassen: Über natürliche Körperöffnungen wird ein flexibles [[endoskop]] eingeführt, durch dessen Arbeitskanal Instrumente geschoben werden. So können Gewebeproben entnommen, Polypen abgetragen, Blutungen gestillt oder Gallengänge drainiert werden – oft ohne offene Operation [@kramme-2017].\n\n## Typische Krankheitsbilder und Eingriffe\n\n| Krankheitsbild | Typische Diagnostik/Therapie |\n|---|---|\n| Kolorektale Polypen, Darmkrebsvorsorge | Koloskopie, Polypektomie mit Hochfrequenzschlinge |\n| Gastrointestinale Blutung | Gastroskopie, Clips, Injektion, Argon-Plasma-Koagulation (APC) |\n| Gallensteine, Gallengangstenosen | ERCP mit Durchleuchtung, Papillotomie, Stent |\n| Chronisch-entzündliche Darmerkrankungen | Ileokoloskopie, Kapselendoskopie, Darmultraschall |\n| Lebererkrankungen | Abdomensonographie, Elastographie, Punktion |\n| Tumoren von Pankreas und Ösophagus | Endosonographie (EUS) mit Feinnadelpunktion |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[endoskop]] | flexible Videoendoskope (Gastroskop, Koloskop, Duodenoskop, Echoendoskop) mit Bildsensor an der Spitze, Licht-, Luft/Wasser- und Arbeitskanal |\n| [[kapselendoskop]] | Untersuchung des Dünndarms mit einer schluckbaren Kamerakapsel und Funkübertragung zu einem Rekorder |\n| [[insufflator]] | CO₂-Insufflation zur Darmentfaltung; CO₂ wird schneller resorbiert als Raumluft |\n| [[hf-chirurgiegeraet]] | Schneiden und Koagulieren bei Polypektomie, Papillotomie und APC |\n| [[ultraschallgeraet]] | Abdomensonographie, Endosonographie, Kontrastmittelsonographie |\n| [[c-bogen]] bzw. [[roentgengeraet]] | Durchleuchtung bei ERCP und Stentimplantation |\n| [[patientenmonitor]], [[pulsoxymeter]], [[kapnometer]] | Überwachung während der Sedierung |\n| [[absauggeraet]] | Absaugung von Sekret und Spülflüssigkeit |\n| [[rdg]] | maschinelle Reinigung und Desinfektion flexibler Endoskope |\n\n## Besondere technische Anforderungen\n\n### Aufbereitung flexibler Endoskope\n\nFlexible Endoskope sind **thermolabil** und können nicht dampfsterilisiert werden. Ihre engen, langen Kanäle sind schwer zu reinigen und begünstigen Biofilme. Die Aufbereitung folgt deshalb einem validierten Ablauf ([[aufbereitung]]) [@krinko-bfarm-2012]:\n\n1. Vorreinigung direkt nach der Untersuchung (Durchsaugen und Abwischen),\n2. **Dichtheitstest** – ein Leck lässt Flüssigkeit in das Innere eindringen und führt zu teuren Schäden,\n3. manuelle Reinigung mit Bürsten aller zugänglichen Kanäle,\n4. maschinelle Reinigung und chemothermische [[desinfektion]] in einem Reinigungs-Desinfektionsgerät für Endoskope [@iso-15883-1],\n5. Trocknung und hygienische Lagerung, regelmäßige mikrobiologische Kontrollen.\n\n> [!warnung] Duodenoskope mit beweglichem Albarran-Hebel haben schwer zugängliche Spalträume an der Spitze. International wurden Ausbrüche mit multiresistenten Erregern beschrieben, die auf unzureichend aufbereitete Duodenoskope zurückgeführt wurden. Herstellervorgaben zur Aufbereitung sind exakt einzuhalten [@epstein-2014].\n\n### Hochfrequenzchirurgie im Darm\n\nDie Darmwand ist dünn; zu tiefe Koagulation kann zur Perforation führen. HF-Generatoren bieten dafür fraktionierte Schneidmodi, bei denen Schneid- und Koagulationsphasen automatisch wechseln. Die [[neutralelektrode]] muss korrekt platziert sein, um [[neutralelektroden-verbrennung|Verbrennungen]] zu vermeiden; bei der APC wird der Strom berührungslos über ionisiertes Argongas übertragen [@iec-60601-2-2].\n\n### Sedierung und Monitoring\n\nDie meisten Endoskopien erfolgen unter Sedierung, häufig mit Propofol. Atemdepression ist die wichtigste Komplikation; daher sind [[pulsoxymeter|Pulsoxymetrie]], Blutdruckmessung und zunehmend Kapnographie Standard. Ein durchdachtes [[alarmsystem]] und die Verfügbarkeit von Sauerstoff, Absaugung und Notfallausrüstung gehören zur Grundausstattung.\n\n### Videotechnik und Dokumentation\n\nVideoprozessor, Lichtquelle (heute meist LED), Monitor und Bilddokumentation bilden ein **medizinisches elektrisches System**. Für Endoskope und ihr Zubehör gelten die besonderen Festlegungen der IEC 60601-2-18 [@iec-60601-2-18]. Die Bilddaten werden zunehmend per [[dicom]] im Bildarchiv abgelegt. Elektronische Bildverstärkung und schmalbandige Beleuchtung helfen, Schleimhautveränderungen zu erkennen.\n\n> [!hinweis] Das Kapselendoskop muss vor einer [[mrt|MRT-Untersuchung]] sicher ausgeschieden sein; eine im Darm verbliebene Kapsel kann im Magnetfeld gefährlich werden.\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[chirurgie]]: Viszeralchirurgie bei Tumoren, Komplikationen und Notfällen; laparoskopische Techniken teilen Optik und Insufflation.\n* [[radiologie]]: CT, MRT und interventionelle Verfahren an Leber und Gallenwegen.\n* [[anaesthesiologie]]: Narkose bei komplexen Interventionen.\n* [[labormedizin]]: Leber- und Pankreaswerte, Entzündungsmarker.\n* [[strahlentherapie]] und Onkologie: Behandlung gastrointestinaler Tumoren.\n",
+  "related": [
+    "endoskop",
+    "kapselendoskop",
+    "insufflator",
+    "hf-chirurgiegeraet",
+    "aufbereitung",
+    "rdg",
+    "desinfektion",
+    "chirurgie"
+  ],
+  "sources": [
+    "kramme-2017",
+    "krinko-bfarm-2012",
+    "iso-15883-1",
+    "iec-60601-2-18",
+    "iec-60601-2-2",
+    "epstein-2014"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

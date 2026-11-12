@@ -1,0 +1,148 @@
+{
+  "id": "spindelantrieb",
+  "type": "term",
+  "title": "Spindelantrieb",
+  "aliases": [
+    "Gewindetrieb",
+    "Spindeltrieb",
+    "Lead screw",
+    "Ball screw",
+    "Kugelgewindetrieb",
+    "Trapezgewindespindel",
+    "Linearantrieb",
+    "Bewegungsschraube"
+  ],
+  "category": "komponenten",
+  "summary": "Mechanischer Antrieb, der über Gewindespindel und Mutter die Drehbewegung eines Motors in eine lineare Bewegung umsetzt. Er treibt den Kolben von Spritzenpumpen sowie Verstellantriebe in Betten, OP-Tischen und Liftern an; Steigung, Reibung und Spiel bestimmen Genauigkeit und Selbsthemmung.",
+  "body": "## Begriff\n\nEin **Spindelantrieb** (Gewindetrieb, Bewegungsschraube, englisch *lead screw* bzw. *ball screw drive*) wandelt die Drehbewegung eines [[elektromotor|Elektromotors]] in eine geradlinige Bewegung um. Eine Gewindespindel dreht sich in einer Mutter; ist die Mutter gegen Verdrehen gesichert, verschiebt sie sich entlang der Spindel – oder umgekehrt. In der Medizintechnik schiebt der Spindelantrieb den Kolben der [[spritzenpumpe|Spritzenpumpe]], hebt [[pflegebett|Pflegebetten]] und [[op-tisch|OP-Tische]] und verfährt Stative und Lifter [@roloff-matek-2021] [@kramme-2017].\n\n## Bauformen\n\n| Bauform | Prinzip | Eigenschaften | Medizintechnische Beispiele |\n|---|---|---|---|\n| Trapezgewindetrieb | Gleitreibung zwischen Spindel und (Kunststoff-/Bronze-)Mutter | einfach, preiswert, leise; häufig selbsthemmend; Verschleiß an der Mutter | Linearantriebe in Betten und Liftern, Spritzenpumpen |\n| Kugelgewindetrieb | Kugeln laufen zwischen Spindel und Mutter um (Wälzreibung) | hoher Wirkungsgrad, spielarm, präzise; nicht selbsthemmend | Präzisionsachsen, Positioniersysteme |\n| Rollengewindetrieb | Planetenrollen statt Kugeln | sehr hohe Lasten | Schwerlastantriebe |\n| Spindel mit Halbmutter | Mutter umschließt die Spindel nur halb und kann ausgekuppelt werden | schneller Wechsel der Kolbenposition | Spritzenpumpen |\n\n## Kinematik und Kräfte\n\n### Vorschub\n\nBei einer Spindel mit der Steigung P (Weg pro Umdrehung; bei mehrgängigen Gewinden die Gangsteigung) und der Drehzahl n beträgt die Vorschubgeschwindigkeit\n\n`v = P · n`\n\nDer Vorschub je Motorschritt oder Drehgeberimpuls bestimmt die Auflösung – bei der Spritzenpumpe also das kleinste dosierbare Volumen ([[schrittmotor]]).\n\n### Antriebsmoment und Wirkungsgrad\n\nUm die Axialkraft F zu überwinden, braucht die Spindel das Drehmoment\n\n`M = F · P / (2π · η)`\n\nDer Wirkungsgrad η eines Gleitgewindes folgt aus dem Steigungswinkel φ (`tan φ = P / (π · d₂)`, Flankendurchmesser d₂) und dem Reibungswinkel ρ′ (`tan ρ′ = μ′`, wirksame Reibungszahl im Gewinde) [@roloff-matek-2021]:\n\n`η = tan φ / tan(φ + ρ′)`\n\n### Selbsthemmung\n\nEin Gewinde ist **selbsthemmend**, wenn `φ ≤ ρ′` gilt: Eine axiale Last kann die Spindel dann nicht zurückdrehen, die Last bleibt auch ohne Bremse stehen. Aus der Wirkungsgradformel folgt, dass selbsthemmende Gewinde einen Wirkungsgrad unter 50 % haben [@roloff-matek-2021].\n\n> [!vereinfacht] In der Praxis ist Selbsthemmung kein absolut sicherer Zustand: Vibration, Schmierung und Temperatur verändern die Reibung. Sicherheitsrelevante Antriebe verlassen sich deshalb nicht allein auf die Selbsthemmung.\n\nKugelgewindetriebe sind wegen der Wälzreibung nicht selbsthemmend und benötigen bei vertikalen Lasten eine Bremse oder ein selbsthemmendes Getriebe (z. B. Schneckengetriebe).\n\n> [!beispiel] Ein Bettantrieb habe einen Motor mit 3 000 min⁻¹, ein Getriebe 20 : 1 und eine Spindel mit P = 4 mm. Die Spindel dreht mit 150 min⁻¹, der Antrieb fährt mit v = 4 mm · 150 min⁻¹ = 600 mm/min = 10 mm/s. Bei F = 4 000 N und η = 0,3 braucht die Spindel M = 4 000 N · 0,004 m / (2π · 0,3) ≈ 8,5 N·m. Alle Werte sind beispielhaft.\n\n## Spindelantrieb in der Spritzenpumpe\n\nIn der Spritzenpumpe wird die Spindel über ein Untersetzungsgetriebe von einem Schrittmotor angetrieben. Eine **Halbmutter** im Schiebeteil greift in die Spindel ein; beim Spritzenwechsel wird sie über einen Hebel ausgekuppelt, damit das Schiebeteil frei verschoben werden kann.\n\nDrei Effekte sind für die Dosiergenauigkeit entscheidend:\n\n1. **Umkehrspiel und Elastizität:** Mutter, Getriebe und Kolbenstopfen haben Spiel; die Spritze selbst ist elastisch. Nach dem Start muss dieses Spiel erst überwunden werden – bei sehr niedrigen Raten entsteht eine deutliche **Anlaufverzögerung**. Viele Pumpen bieten daher eine Vorfüll- bzw. Spielausgleichsfunktion.\n2. **Haftreibung des Kolbenstopfens:** Ruckartiges Lösen (*stick-slip*) erzeugt Förderschwankungen.\n3. **Lageerfassung:** Ein Wegaufnehmer ([[messkette]]) misst die Kolbenposition für Restvolumen und Voralarm; ein [[kraftsensor|Kraftsensor]] im Schiebeteil erkennt Okklusionen über die steigende Vorschubkraft ([[okklusionsalarm]]).\n\n> [!warnung] Ist der Spritzenkolben nicht sicher im Schiebeteil gehalten – etwa bei ausgekuppelter Halbmutter oder nicht eingerasteter Kolbenhalterung – und liegt die Spritze bei angeschlossenem Patientenzugang höher als der Patient, kann sie sich durch die Schwerkraft unkontrolliert entleeren (Siphon-Effekt). Hersteller sichern dies konstruktiv und durch Alarme ab; Spritzen müssen nach Herstellerangabe korrekt eingelegt und gesichert werden. Die Fördergenauigkeit von Spritzenpumpen wird nach der Partikularnorm [[iec-60601-2-24|IEC 60601-2-24]] geprüft [@iec-60601-2-24].\n\n## Linearantriebe in Betten, Tischen und Liftern\n\nElektrische [[pflegebett|Pflege-]] und Klinikbetten, [[patientenlifter|Patientenlifter]] und viele [[op-tisch|OP-Tische]] nutzen geschlossene **Linearantriebe**: Gleichstrommotor, Schneckengetriebe und Trapezspindel in einem Gehäuse, mit Endschaltern und häufig mit einer Überlastkupplung. Sicherheitsrelevant sind:\n\n* **Quetsch- und Scherstellen** beim Verfahren – Gegenstand der Partikularnorm IEC 60601-2-52 für medizinische Betten [@iec-60601-2-52].\n* **Not-Absenkung:** z. B. eine mechanische Schnellabsenkung der Rückenlehne für die Reanimation.\n* **Sperrfunktionen:** Bedienteile lassen sich sperren, um unbeabsichtigtes Verfahren durch Patienten zu verhindern.\n\n> [!praxis] Knackgeräusche, ungleichmäßiges Fahren, zunehmendes Spiel oder Kunststoffabrieb deuten auf eine verschlissene Spindelmutter hin. Linearantriebe werden in der Regel als Baugruppe getauscht; Eingriffe in das Antriebsgehäuse sind dem Hersteller oder befugtem Personal vorbehalten ([[instandsetzung]]).\n\n## Prüfung und Wartung\n\n| Prüfpunkt | Methode |\n|---|---|\n| Fördergenauigkeit (Spritzenpumpe) | gravimetrische oder volumetrische Messung mit [[pruefgeraete|Prüfgeräten]] |\n| Okklusionsdruck | Druckmessung bei verschlossenem Ausgang |\n| Laufruhe, Spiel | Sicht- und Funktionsprüfung, Geräusch |\n| Endlagen, Überlast | Funktionsprüfung der Endschalter und Abschaltung |\n| Elektrische Sicherheit | [[elektrische-sicherheitspruefung|Prüfung nach IEC 62353]] am Gesamtgerät |\n\n## Anwendung in Geräten\n\n| Gerät | Aufgabe des Spindelantriebs |\n|---|---|\n| [[spritzenpumpe]], [[pca-pumpe]] | Kolbenvorschub mit Halbmutter |\n| [[insulinpumpe]] | Kolbenvorschub im Reservoir (bauartabhängig) |\n| [[pflegebett]] | Höhen-, Rücken- und Beinverstellung |\n| [[patientenlifter]] | Heben und Senken des Auslegers |\n| [[op-tisch]] | Verstellung von Säule und Segmenten (elektromechanisch oder elektrohydraulisch) |\n| [[dentaleinheit]] | Verstellung des Patientenstuhls (bauartabhängig) |\n| [[roentgengeraet]] | Höhen- und Längsverstellung von Stativen und Tischen (bauartabhängig) |\n\n## Bedeutung in der Medizintechnik\n\nDer Spindelantrieb ist das mechanische Bindeglied zwischen Motor und Patient. An ihm zeigt sich, dass Genauigkeit und Sicherheit nicht nur von Elektronik und Software abhängen, sondern auch von Reibung, Spiel und Werkstoffen – Grundwissen, das bei Prüfung und Fehlersuche an Pumpen und Verstellantrieben unmittelbar gebraucht wird.",
+  "related": [
+    "spritzenpumpe",
+    "schrittmotor",
+    "elektromotor",
+    "kraftsensor",
+    "messkette",
+    "okklusionsalarm",
+    "pflegebett",
+    "op-tisch",
+    "patientenlifter",
+    "iec-60601-2-24"
+  ],
+  "paths": [
+    [
+      "spritzenpumpe",
+      "spindelantrieb",
+      "schrittmotor",
+      "elektromotor"
+    ],
+    [
+      "pflegebett",
+      "spindelantrieb",
+      "elektromotor"
+    ]
+  ],
+  "sources": [
+    "roloff-matek-2021",
+    "kramme-2017",
+    "iec-60601-2-24",
+    "iec-60601-2-52"
+  ],
+  "diagram": {
+    "title": "Spindelantrieb einer Spritzenpumpe",
+    "caption": "Funktionsschema der Antriebskette mit Kraft- und Wegüberwachung.",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "mot",
+        "label": "Schrittmotor",
+        "ref": "schrittmotor",
+        "kind": "actuator",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "get",
+        "label": "Untersetzungs-\ngetriebe",
+        "kind": "process",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "sp",
+        "label": "Spindel +\nHalbmutter",
+        "ref": "spindelantrieb",
+        "kind": "process",
+        "x": 470,
+        "y": 80
+      },
+      {
+        "id": "sch",
+        "label": "Schiebeteil /\nKolbenplatte",
+        "kind": "process",
+        "x": 660,
+        "y": 80
+      },
+      {
+        "id": "pat",
+        "label": "Spritze →\nPatient",
+        "kind": "patient",
+        "x": 850,
+        "y": 80
+      },
+      {
+        "id": "ks",
+        "label": "Kraftsensor\n(Okklusion)",
+        "ref": "kraftsensor",
+        "kind": "sensor",
+        "x": 660,
+        "y": 220
+      },
+      {
+        "id": "weg",
+        "label": "Wegaufnehmer\n(Restvolumen)",
+        "ref": "messkette",
+        "kind": "sensor",
+        "x": 470,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "mot",
+        "to": "get",
+        "kind": "energy",
+        "label": "Drehung"
+      },
+      {
+        "from": "get",
+        "to": "sp",
+        "kind": "energy"
+      },
+      {
+        "from": "sp",
+        "to": "sch",
+        "kind": "energy",
+        "label": "Linearbewegung"
+      },
+      {
+        "from": "sch",
+        "to": "pat",
+        "kind": "fluid"
+      },
+      {
+        "from": "sch",
+        "to": "ks",
+        "kind": "signal",
+        "label": "Vorschubkraft"
+      },
+      {
+        "from": "sch",
+        "to": "weg",
+        "kind": "signal",
+        "label": "Position"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

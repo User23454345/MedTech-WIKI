@@ -1,0 +1,38 @@
+{
+  "id": "iec-60601-2-37",
+  "type": "standard",
+  "title": "IEC 60601-2-37",
+  "code": "IEC 60601-2-37",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-37: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Ultraschallgeräten für die medizinische Diagnose und Überwachung",
+  "scope": "Legt besondere Sicherheits- und Leistungsanforderungen an Ultraschallgeräte für Diagnose und Überwachung fest, insbesondere an die Begrenzung und Anzeige der akustischen Ausgangsgrößen und an die Oberflächentemperatur der Schallköpfe.",
+  "aliases": [
+    "DIN EN 60601-2-37",
+    "EN 60601-2-37",
+    "VDE 0750-2-37",
+    "60601-2-37",
+    "Ultraschall-Sicherheitsnorm"
+  ],
+  "category": "normen",
+  "summary": "IEC 60601-2-37 ist die besondere Festlegung der Normenfamilie IEC 60601 für diagnostische und überwachende Ultraschallgeräte. Sie regelt vor allem die Anzeige von thermischem Index (TI) und mechanischem Index (MI), die Begrenzung der Schallkopf-Oberflächentemperatur sowie die Offenlegung akustischer Ausgangsdaten.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-2-37** gilt für Ultraschallgeräte zur medizinischen **Diagnose und Überwachung** [@iec-60601-2-37]. Dazu zählen bildgebende [[ultraschallgeraet|Ultraschallgeräte]] mit Doppler-Funktion ebenso wie Überwachungsgeräte, die Ultraschall nutzen, etwa der Doppler-Wehenschreiber ([[ctg]]). Therapeutischer Ultraschall ([[ultraschalltherapiegeraet]]), Lithotripsie ([[lithotripter]]) und chirurgische Ultraschallgeräte ([[ultraschalldissektor]], [[phakoemulsifikation]]) unterliegen eigenen Normen bzw. Teilen der Familie.\n\nUltraschall gilt als nebenwirkungsarm, ist aber nicht wirkungslos: Schallenergie kann Gewebe **erwärmen** (thermische Wirkung) und bei hohen Unterdruckamplituden **Kavitation** auslösen (mechanische Wirkung) ([[schallwellen]]). Die Norm soll Anwender in die Lage versetzen, diese Risiken während der Untersuchung einzuschätzen – nach dem Prinzip **ALARA** („as low as reasonably achievable“).\n\n## Zentrale Konzepte und Anforderungen\n\n### Thermischer und mechanischer Index\n\nStatt starrer Grenzwerte setzt die Norm vor allem auf **Echtzeit-Anzeige** von Sicherheitsindizes:\n\n| Index | Bedeutung | Varianten |\n|---|---|---|\n| Thermischer Index (TI) | Verhältnis der aktuellen akustischen Leistung zu der Leistung, die unter Modellannahmen eine Erwärmung um 1 °C bewirken würde | TIS (Weichgewebe), TIB (Knochen im Fokus), TIC (Schädelknochen nahe der Oberfläche) |\n| Mechanischer Index (MI) | Maß für das Kavitationspotenzial, abgeleitet aus dem Spitzen-Unterdruck und der Frequenz | – |\n\n> [!vereinfacht] Ein TI von 1 bedeutet nicht, dass sich das Gewebe tatsächlich um 1 °C erwärmt – es ist eine Modellgröße für den ungünstigen Fall. Die Indizes dienen dem Vergleich und der Orientierung, nicht als exakte Temperatur- oder Schadensvorhersage. Die Berechnungsverfahren sind in einer eigenen IEC-Norm (IEC 62359) festgelegt.\n\nDie Indizes müssen angezeigt werden, wenn das System in der jeweiligen Betriebsart einen TI- oder MI-Wert von 1,0 überschreiten kann; die Anzeige muss während der Untersuchung sichtbar und hinreichend genau sein.\n\n### Oberflächentemperatur der Schallköpfe\n\nEin [[ultraschallwandler]] erwärmt sich durch Verluste im Piezomaterial ([[piezoelektrischer-effekt]]) und in der Elektronik. Die Norm begrenzt die Oberflächentemperatur von Schallköpfen sowohl bei simuliertem Gebrauch am Gewebephantom als auch in Luft (etwa wenn der Schallkopf aktiv abgelegt ist). Für endokavitäre Sonden ist das besonders wichtig.\n\n### Offenlegung akustischer Ausgangsdaten\n\nHersteller müssen für jede Kombination aus Gerät, Schallkopf und Betriebsart (B-Mode, M-Mode, PW- und Farbdoppler, [[doppler-effekt]]) Angaben zu den akustischen Ausgangsgrößen in den Begleitpapieren machen. So können Anwender und Fachleute Betriebsarten mit hoher Schallleistung erkennen.\n\n### Weitere Themen\n\n- Schutz vor Stromfluss über die Schallkopfoberfläche (Anwendungsteile, [[ableitstrom]]),\n- Dichtigkeit und Isolation bei endokavitären und transösophagealen Sonden,\n- Verträglichkeit mit Desinfektionsverfahren ([[desinfektion]], [[aufbereitung]]).\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Sicherheit, Oberflächentemperatur von Anwendungsteilen |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-6]] | EMV, Gebrauchstauglichkeit (Lesbarkeit der Indizes) |\n| Mess- und Berechnungsnormen | IEC 62359 (Bestimmung von TI und MI) und weitere IEC-Normen zur Messung von Schallfeldern | liefern die Verfahren hinter den Indizes |\n| Biokompatibilität | [[iso-10993-1]] | Schallkopfoberfläche mit Haut- bzw. Schleimhautkontakt |\n\n> [!hinweis] Grundprinzip der Familie IEC 60601: Die besondere Festlegung (-2-x) hat Vorrang vor Ergänzungsnormen (-1-x) und der Basisnorm. Sie gibt jeweils an, welche Abschnitte der Basisnorm gelten, ergänzt oder ersetzt werden.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen umfangreiche Schallfeldmessungen (z. B. mit Hydrophonen im Wassertank) durchführen und die Ergebnisse dokumentieren.\n\n**Betreiber und Anwender** sollten wissen, wo TI und MI auf dem Bildschirm angezeigt werden und wie Voreinstellungen (Presets) sie beeinflussen. Besonders in der Geburtshilfe und Neonatologie gilt: Dopplerbetrieb und Untersuchungsdauer bewusst begrenzen ([[geburtshilfe]], [[neonatologie]]).\n\n> [!praxis] Bei der [[funktionspruefung|Funktionsprüfung]] und Inspektion von Schallköpfen sind Risse in der Linse, beschädigte Kabel und ausgefallene Elemente (Bildstreifen, [[bildartefakte]]) häufige Befunde. Beschädigte Sonden sind wegen der Gefahr von Ableitströmen und Infektionen außer Betrieb zu nehmen.\n\n## Betroffene Geräte\n\n[[ultraschallgeraet]] (einschließlich Doppler- und endokavitärer Sonden) und Ultraschall-Überwachungsgeräte wie das [[ctg]]. Hersteller sind u. a. [[ge-healthcare]], [[philips]], [[siemens-healthineers]], [[canon-medical]], [[fujifilm]] und [[mindray]].\n",
+  "related": [
+    "ultraschallgeraet",
+    "ultraschallwandler",
+    "schallwellen",
+    "piezoelektrischer-effekt",
+    "doppler-effekt",
+    "ctg",
+    "radiologie",
+    "geburtshilfe",
+    "iec-60601-1",
+    "ultraschalltherapiegeraet"
+  ],
+  "sources": [
+    "iec-60601-2-37",
+    "iec-60601-1",
+    "szabo-2014"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

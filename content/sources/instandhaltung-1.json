@@ -1,0 +1,82 @@
+[
+  {
+    "id": "din-en-13306",
+    "kind": "norm",
+    "title": "DIN EN 13306 – Instandhaltung – Begriffe der Instandhaltung",
+    "publisher": "DIN / CEN; DIN Media, Berlin",
+    "year": "2018",
+    "note": "Europäische Begriffsnorm der Instandhaltung; DIN 31051 ergänzt sie national. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "en-556-1",
+    "kind": "norm",
+    "title": "DIN EN 556-1 – Sterilisation von Medizinprodukten – Anforderungen an Medizinprodukte, die als „STERIL“ gekennzeichnet werden – Teil 1: Anforderungen an Medizinprodukte, die in der Endpackung sterilisiert wurden",
+    "publisher": "CEN; DIN Media, Berlin",
+    "note": "Legt den Sterilitätssicherheitswert (SAL) von 10⁻⁶ für die Kennzeichnung „STERIL“ fest. Titel sinngemäß; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-17665-2024",
+    "kind": "norm",
+    "title": "ISO 17665 – Sterilization of health care products – Moist heat – Requirements for the development, validation and routine control of a sterilization process for medical devices",
+    "publisher": "ISO, Genf; als DIN EN ISO 17665 übernommen",
+    "year": "2024",
+    "note": "Die Ausgabe 2024 fasst ISO 17665-1:2006 sowie die Technischen Spezifikationen ISO/TS 17665-2 und -3 zusammen. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "spaulding-1968",
+    "kind": "buch",
+    "authors": "Spaulding, E. H.",
+    "title": "Chemical disinfection of medical and surgical materials. In: Lawrence, C. A.; Block, S. S. (Hrsg.): Disinfection, Sterilization, and Preservation",
+    "publisher": "Lea & Febiger, Philadelphia",
+    "year": "1968",
+    "note": "Ursprung der Einteilung von Medizinprodukten in kritisch, semikritisch und unkritisch."
+  },
+  {
+    "id": "rutala-cdc-2008",
+    "kind": "leitlinie",
+    "authors": "Rutala, W. A.; Weber, D. J.; Healthcare Infection Control Practices Advisory Committee (HICPAC)",
+    "title": "Guideline for Disinfection and Sterilization in Healthcare Facilities, 2008",
+    "publisher": "Centers for Disease Control and Prevention (CDC), Atlanta",
+    "year": "2008",
+    "note": "US-amerikanische Leitlinie; seither mehrfach aktualisiert."
+  },
+  {
+    "id": "iec-80001-1",
+    "kind": "norm",
+    "title": "IEC 80001-1 – Application of risk management for IT-networks incorporating medical devices – Part 1: Safety, effectiveness and security in the implementation and use of connected medical devices or connected health software",
+    "publisher": "IEC, Genf; als DIN EN IEC 80001-1 übernommen",
+    "year": "2021",
+    "note": "Risikomanagement beim Einbinden von Medizinprodukten in IT-Netzwerke durch die verantwortliche Organisation. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-55000",
+    "kind": "norm",
+    "title": "ISO 55000 – Asset management – Vocabulary, overview and principles",
+    "publisher": "ISO, Genf",
+    "note": "Grundlagennorm des Anlagen- bzw. Asset-Managements (Erstausgabe 2014, überarbeitet 2024). Titel der jeweils gültigen Ausgabe maßgeblich."
+  },
+  {
+    "id": "fennigkoh-smith-1989",
+    "kind": "artikel",
+    "authors": "Fennigkoh, L.; Smith, B.",
+    "title": "Clinical equipment management",
+    "publisher": "JCAHO Plant, Technology & Safety Management Series, Nr. 2, S. 5–14",
+    "year": "1989",
+    "note": "Klassischer Ansatz zur risikobasierten Aufnahme von Geräten in Instandhaltungsprogramme (Equipment Management Number aus Funktion, Risiko und Wartungsbedarf)."
+  },
+  {
+    "id": "iso-iec-17025",
+    "kind": "norm",
+    "title": "ISO/IEC 17025 – Allgemeine Anforderungen an die Kompetenz von Prüf- und Kalibrierlaboratorien",
+    "publisher": "ISO/IEC, Genf; als DIN EN ISO/IEC 17025 übernommen",
+    "year": "2017",
+    "note": "Grundlage der Akkreditierung von Kalibrierlaboratorien (in Deutschland durch die DAkkS). Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "rki-desinfektionsmittelliste",
+    "kind": "behoerde",
+    "title": "Liste der vom Robert Koch-Institut geprüften und anerkannten Desinfektionsmittel und -verfahren",
+    "publisher": "Robert Koch-Institut; veröffentlicht im Bundesgesundheitsblatt",
+    "note": "Maßgeblich für behördlich angeordnete Desinfektionsmaßnahmen nach dem Infektionsschutzgesetz; jeweils aktuelle Ausgabe beachten."
+  }
+]

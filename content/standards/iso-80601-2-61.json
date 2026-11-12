@@ -1,0 +1,40 @@
+{
+  "id": "iso-80601-2-61",
+  "type": "standard",
+  "title": "ISO 80601-2-61",
+  "code": "ISO 80601-2-61",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-61: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Pulsoximetriegeräten",
+  "scope": "Legt besondere Sicherheits- und Leistungsanforderungen an Pulsoximeter einschließlich Sensoren und Verlängerungskabel fest, insbesondere an die Genauigkeit der SpO₂- und Pulsfrequenzmessung und deren klinischen Nachweis.",
+  "aliases": [
+    "DIN EN ISO 80601-2-61",
+    "EN ISO 80601-2-61",
+    "80601-2-61",
+    "Pulsoximetrienorm"
+  ],
+  "category": "normen",
+  "summary": "ISO 80601-2-61 ist die besondere Festlegung der Normenfamilie IEC 60601 für Pulsoximeter. Sie regelt vor allem, wie die SpO₂-Genauigkeit in klinischen Studien gegen arterielle Blutgasanalysen nachgewiesen und als Effektivwert der Abweichung angegeben wird, sowie Anforderungen an Pulsfrequenz, Sensoren, Alarme und Schutz vor Hautschäden.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **ISO 80601-2-61** gilt für Pulsoximetriegeräte, also für Geräte, die die funktionelle Sauerstoffsättigung des arteriellen Blutes (SpO₂) nichtinvasiv mittels [[photoplethysmographie|Photoplethysmographie]] schätzen [@iso-80601-2-61]. Erfasst sind eigenständige [[pulsoxymeter|Pulsoximeter]], Pulsoximetrie-Module in [[patientenmonitor|Patientenmonitoren]] und anderen Geräten sowie die zugehörigen **Sensoren** und Kabel. Wie andere ISO/IEC-80601-Normen gehört sie zur Familie [[iec-60601-1|IEC 60601]].\n\n## Zentrale Konzepte und Anforderungen\n\n### Messprinzip als Grundlage\n\nPulsoximeter strahlen rotes und infrarotes Licht durch gut durchblutetes Gewebe und werten den pulsatilen Anteil der Absorption aus. Aus dem Verhältnis der beiden normierten Signale (*Ratio of Ratios*) wird über eine empirische **Kalibrierkurve** auf die Sättigung geschlossen ([[lambert-beer]], [[haemoglobin]]).\n\n> [!vereinfacht] Weil das Lambert-Beer-Gesetz im streuenden Gewebe nur näherungsweise gilt, kann ein Pulsoximeter nicht aus Physik allein „richtig rechnen“. Die Kalibrierkurve wird empirisch an Probanden ermittelt – genau deshalb legt die Norm so viel Gewicht auf den klinischen Genauigkeitsnachweis.\n\n### SpO₂-Genauigkeit\n\nDie Genauigkeit wird als **Effektivwert der Abweichung** (Arms, *accuracy root mean square*) zwischen SpO₂ und der mit einem CO-Oximeter gemessenen arteriellen Sättigung (SaO₂) angegeben. Die Norm fordert im Bereich von 70 % bis 100 % SaO₂ einen Arms-Wert von höchstens 4 % SpO₂; viele Hersteller geben für ihre Sensoren kleinere Werte an (typischerweise 2–3 %) [@iso-80601-2-61] [@jubran-2015].\n\nDer Nachweis erfolgt typischerweise in **kontrollierten Entsättigungsstudien**: Gesunde Probanden atmen Gasgemische mit reduziertem Sauerstoffanteil, sodass die Sättigung stufenweise sinkt, während arterielle Blutproben entnommen werden ([[blutgasanalysator]]).\n\n> [!hinweis] Ein Arms von 4 % bedeutet nicht, dass jeder Einzelwert höchstens 4 % abweicht. Es ist ein statistisches Maß; einzelne Abweichungen können größer sein. Diskutiert werden zudem systematische Abweichungen bei dunkler Hautpigmentierung, niedriger Perfusion oder Dyshämoglobinen (CO-Hb, Met-Hb) [@jubran-2015].\n\n### Weitere Anforderungen\n\n| Thema | Inhalt (sinngemäß) |\n|---|---|\n| Pulsfrequenz | Genauigkeit und Messbereich sind anzugeben und nachzuweisen |\n| Bewegung, niedrige Perfusion | Leistungsangaben nur, wenn durch geeignete Prüfungen belegt ([[bewegungsartefakt]]) |\n| Anzeige | Aktualisierungs- und Mittelungszeiten offenlegen; Signalqualität erkennbar machen |\n| Alarme | physiologische und technische Alarme nach [[iec-60601-1-8]], z. B. Sensor ab, kein Puls |\n| Sensortemperatur | Begrenzung der Erwärmung an der Haut, um Verbrennungen bei Langzeitanwendung zu vermeiden ([[haut]]) |\n| Funktionsprüfgeräte | Simulatoren prüfen Funktion und Signalverarbeitung, aber **nicht** die klinische Genauigkeit |\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Sicherheit |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-8]], [[iec-60601-1-11]] | EMV, Alarme, Heimanwendung (Fingerclip-Geräte) |\n| Besondere Festlegungen | [[iec-60601-2-27]], [[iec-80601-2-49]] | EKG-Überwachung bzw. multifunktionale Monitore, in die SpO₂-Module integriert sind |\n| Biokompatibilität | [[iso-10993-1]] | Sensor mit Hautkontakt |\n\n> [!hinweis] Grundprinzip der Familie IEC 60601: Die besondere Festlegung (-2-x) hat Vorrang vor Ergänzungsnormen (-1-x) und der Basisnorm. Sie gibt jeweils an, welche Abschnitte der Basisnorm gelten, ergänzt oder ersetzt werden.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen die Genauigkeit **pro Sensortyp** angeben und belegen – eine Monitorplattform mit verschiedenen Sensoren benötigt also mehrere Nachweise. Fremdsensoren dürfen nur verwendet werden, wenn ihre Kompatibilität nachgewiesen ist.\n\n**Betreiber** sollten bei der Beschaffung auf belegte Genauigkeitsangaben und auf geeignete Sensoren für die Zielgruppe (Neonaten, Erwachsene) achten. Pulsoximeter sind in Anlage 1 der [[mpbetreibv]] nicht aufgeführt; eine [[stk]] ist daher nur durchzuführen, wenn der Hersteller sie vorschreibt [@mpbetreibv]. Bei solchen Prüfungen bzw. bei der [[funktionspruefung]] werden Funktion und Alarme mit einem SpO₂-Simulator geprüft ([[pruefgeraete]]).\n\n> [!praxis] Häufige Ursachen falscher Werte sind nicht technischer Art: kalte Finger, Nagellack, Bewegung, Umgebungslicht oder ein falsch platzierter Sensor. Vor einem Gerätetausch lohnt die Prüfung von Sensorsitz und Plethysmogramm-Kurve ([[sensordrift]], [[fehlersuche]]).\n\n## Betroffene Geräte\n\n[[pulsoxymeter]], [[patientenmonitor]], [[defibrillator]] (mit SpO₂-Modul), [[anaesthesiegeraet]] mit integriertem Monitoring, [[polysomnograph]], [[inkubator]]-Umgebung in der [[neonatologie]]. Hersteller sind u. a. [[masimo]], [[medtronic]], [[philips]], [[nihon-kohden]] und [[mindray]].\n",
+  "related": [
+    "pulsoxymeter",
+    "photoplethysmographie",
+    "lambert-beer",
+    "haemoglobin",
+    "patientenmonitor",
+    "iec-60601-1",
+    "iec-60601-1-8",
+    "bewegungsartefakt",
+    "blutgasanalysator",
+    "masimo",
+    "neonatologie"
+  ],
+  "sources": [
+    "iso-80601-2-61",
+    "iec-60601-1",
+    "jubran-2015",
+    "webster-2010",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "iec-80601-2-30",
+  "type": "standard",
+  "title": "IEC 80601-2-30",
+  "code": "IEC 80601-2-30",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-30: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von automatisierten nichtinvasiven Blutdruckmessgeräten",
+  "scope": "Legt besondere Anforderungen an Basissicherheit und wesentliche Leistungsmerkmale von automatisierten Blutdruckmessgeräten fest, die den Blutdruck intermittierend und indirekt über eine Manschette bestimmen.",
+  "aliases": [
+    "DIN EN IEC 80601-2-30",
+    "EN IEC 80601-2-30",
+    "NIBP-Norm",
+    "80601-2-30"
+  ],
+  "category": "normen",
+  "summary": "Die IEC 80601-2-30 ist die besondere Festlegung für automatisierte nichtinvasive Blutdruckmessgeräte (NIBP), vom Heimgerät bis zum NIBP-Modul im Patientenmonitor. Sie begrenzt Manschettendruck und Aufpumpdauer, fordert Schutz bei Fehlern und verweist für die klinische Messgenauigkeit auf ISO 81060-2.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 80601-2-30** gilt für **automatisierte nichtinvasive Blutdruckmessgeräte**: Geräte, die eine Manschette elektrisch aufpumpen, den Druck kontrolliert ablassen und daraus – meist nach dem Prinzip der [[oszillometrie|Oszillometrie]] – systolischen, diastolischen und mittleren [[blutdruck|Blutdruck]] bestimmen [@iec-80601-2-30-2018]. Erfasst sind sowohl eigenständige Geräte ([[nibp-messgeraet]], [[langzeit-blutdruck|Langzeit-Blutdruckmessgeräte]]) als auch NIBP-Module in [[patientenmonitor|Patientenmonitoren]], einschließlich Geräten für die Heimanwendung.\n\nDie Vorsilbe **80601** zeigt an, dass die Norm gemeinsam von IEC und ISO erarbeitet wird. Nicht erfasst sind die [[invasive-druckmessung|invasive Blutdruckmessung]] (eigene Norm IEC 60601-2-34) und nicht automatisierte Geräte mit Handpumpe (ISO 81060-1).\n\n## Zentrale Konzepte und Anforderungen\n\n### Schutz vor Gefährdung durch die Manschette\n\nDie Manschette ist ein aktiver Teil: Ein zu hoher, zu langer oder zu häufiger Druck kann venöse Stauung, Petechien, Nervenschäden oder Durchblutungsstörungen verursachen. Die Norm verlangt deshalb u. a.:\n\n| Gefährdung | Typische Schutzmaßnahme |\n|---|---|\n| zu hoher Manschettendruck | Druckbegrenzung, für Neugeborene niedriger als für Erwachsene |\n| zu lange Aufpumpphase | zeitliche Begrenzung des Messzyklus mit automatischem Ablassen |\n| Dauerdruck durch Fehler | **unabhängige** Überdruck- bzw. Zeitüberwachung, die das Ablassen erzwingt |\n| zu häufige Messungen | Begrenzungen für Intervall- und Serienmessungen |\n| falscher Patiententyp | eindeutige Anzeige/Einstellung des Patientenmodus |\n\n> [!vereinfacht] Das Gerät muss auch dann sicher Luft ablassen, wenn Software oder [[magnetventil|Ventil]] versagen. Dafür ist ein zweiter, vom Messkanal unabhängiger [[drucksensor|Drucksensor]] bzw. eine unabhängige Schutzschaltung üblich – eine Anwendung des Einfehlerprinzips aus [[iec-60601-1]].\n\n### Messgenauigkeit – zwei Ebenen\n\n1. **Statische Druckmessung:** Der Manometerteil (Drucksensor und Elektronik) muss den Manschettendruck innerhalb einer festgelegten Fehlergrenze anzeigen. Das ist die technische Genauigkeit, die sich mit einem Referenzmanometer prüfen lässt.\n2. **Klinische Genauigkeit:** Ob der Algorithmus aus den Druckoszillationen den „richtigen“ Blutdruck ableitet, wird in einer klinischen Validierungsstudie nach **ISO 81060-2** geprüft [@iso-81060-2].\n\n> [!hinweis] Ein Gerät kann den Manschettendruck exakt messen und trotzdem klinisch ungenaue Werte liefern – etwa bei falscher Manschettengröße, Arrhythmien oder Bewegung. Konkrete Fehlergrenzen sind der jeweils gültigen Fassung der Normen zu entnehmen.\n\n### Weitere Anforderungen\n\n* Alarme bei Messfehlern und physiologische Alarme in Monitoren (siehe [[alarmsystem]], [[iec-60601-1-8]]),\n* Kennzeichnung der Manschetten nach Größe/Patientengruppe,\n* Kennzeichnung ungültiger Messungen statt Anzeige von Scheinwerten (z. B. bei [[bewegungsartefakt|Bewegungsartefakten]]),\n* bei Heimgeräten zusätzlich [[iec-60601-1-11]].\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Rolle |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Basissicherheit |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-8]], [[iec-60601-1-11]] | [[emv|EMV]], Alarme, Heimbereich |\n| Besondere Festlegung | IEC 80601-2-30 | automatisierte NIBP |\n| Klinische Validierung | ISO 81060-2 | Prüfprotokoll für die klinische Genauigkeit |\n| Multiparametermonitor | [[iec-80601-2-49]] | Gesamtgerät, wenn NIBP Teil eines Monitors ist |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen sowohl die technischen Sicherheitsprüfungen als auch eine klinische Validierung nachweisen; diese Nachweise sind Teil der [[klinische-bewertung|klinischen Bewertung]] und der [[konformitaetsbewertung]] nach der [[mdr|MDR]].\n\n**Betreiber** in Deutschland sind besonders betroffen, weil nichtinvasive Blutdruckmessgeräte zu den Medizinprodukten mit Messfunktion gehören, für die **[[mtk|messtechnische Kontrollen]]** nach § 15 i. V. m. Anlage 2 [[mpbetreibv|MPBetreibV]] vorgeschrieben sind [@mpbetreibv]. Geprüft wird dabei vor allem die statische Druckanzeige und die Dichtheit – also die erste der beiden Genauigkeitsebenen.\n\n> [!praxis] Häufige Ursachen für Fehlmessungen im Alltag sind falsche Manschettengröße, undichte Schläuche oder Manschetten, abgeknickte Leitungen und Patientenbewegung. Bei der MTK fallen undichte Systeme und [[sensordrift|Sensordrift]] auf; die Prüfung erfolgt mit einem kalibrierten Referenzmanometer (siehe [[pruefgeraete]], [[kalibrierung]]).\n\n## Betroffene Geräte\n\n* [[nibp-messgeraet]], [[langzeit-blutdruck]], [[patientenmonitor]] (NIBP-Modul)\n* abgegrenzt: [[invasive-druckmessung]]\n* Grundlagen: [[oszillometrie]], [[druckmessung]], [[blutdruck]]\n",
+  "related": [
+    "nibp-messgeraet",
+    "langzeit-blutdruck",
+    "patientenmonitor",
+    "oszillometrie",
+    "blutdruck",
+    "drucksensor",
+    "druckmessung",
+    "mtk",
+    "invasive-druckmessung",
+    "iec-80601-2-49",
+    "iec-60601-1-11",
+    "kalibrierung"
+  ],
+  "sources": [
+    "iec-80601-2-30-2018",
+    "iso-81060-2",
+    "iec-60601-1",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

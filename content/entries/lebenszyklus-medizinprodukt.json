@@ -1,0 +1,164 @@
+{
+  "id": "lebenszyklus-medizinprodukt",
+  "type": "term",
+  "title": "Lebenszyklus eines Medizinprodukts",
+  "aliases": [
+    "Produktlebenszyklus Medizinprodukt",
+    "Medical Device Lifecycle",
+    "Lebenszyklus",
+    "Total Product Life Cycle",
+    "TPLC"
+  ],
+  "category": "einfuehrung",
+  "summary": "Ein Medizinprodukt durchläuft Zweckbestimmung, Entwicklung, Konformitätsbewertung, Inverkehrbringen, Betrieb mit Instandhaltung, Marktüberwachung und Außerbetriebnahme. Hersteller und Betreiber tragen dabei klar getrennte, ineinandergreifende Pflichten.",
+  "body": "## Überblick\n\nEin [[medizinprodukt|Medizinprodukt]] durchläuft von der ersten Idee bis zur Entsorgung mehrere Phasen. Für jede Phase gibt es eigene Verantwortliche und Regelwerke: Der **Hersteller** trägt die Verantwortung bis zum Inverkehrbringen und bleibt über die Marktüberwachung danach zuständig; der **Betreiber** (z. B. ein Krankenhaus) und die **Anwender** sind für den sicheren Betrieb verantwortlich [@mdr-2017] [@mpbetreibv].\n\n| Phase | Verantwortlich | Zentrale Regelwerke |\n|---|---|---|\n| 1. Idee und [[zweckbestimmung]] | Hersteller | [[mdr]] Art. 2, MDCG-Leitlinien [@mdcg-2021-24] |\n| 2. Entwicklung und Verifizierung | Hersteller | [[iso-13485]], [[iso-14971]], [[iec-60601-1]], [[iec-62304]], [[iec-62366-1]], [[iso-10993-1]] |\n| 3. Klinische Bewertung und Konformitätsbewertung | Hersteller, ggf. [[benannte-stelle]] | MDR Art. 52, Art. 61, Anhänge |\n| 4. Inverkehrbringen | Hersteller, Händler, Importeure | [[ce-kennzeichnung]], [[udi]], EUDAMED |\n| 5. Betrieb und Anwendung | Betreiber, Anwender | [[mpbetreibv]], [[betreiberpflichten]] |\n| 6. Instandhaltung und Aufbereitung | Betreiber, Dienstleister | MPBetreibV, [[din-31051]], [[iec-62353]], KRINKO/BfArM-Empfehlung |\n| 7. Überwachung nach dem Inverkehrbringen | Hersteller, Behörden, Anwender | MDR Art. 83 ff., [[vigilanz]], [[mpdg]] |\n| 8. Außerbetriebnahme und Entsorgung | Betreiber | Umwelt- und Abfallrecht, Datenschutz |\n\n> [!vereinfacht] Die Phasen überlappen in der Praxis: Erkenntnisse aus dem Betrieb fließen über die Marktüberwachung zurück in die Entwicklung (Design-Änderungen, Software-Updates, Sicherheitsmaßnahmen). Der Lebenszyklus ist daher eher ein Kreislauf als eine Linie.\n\n## Phase 1–2: Zweckbestimmung und Entwicklung\n\nAlles beginnt mit der [[zweckbestimmung|Zweckbestimmung]]: Für welche Patienten, welche Anwender, welche Umgebung und welchen medizinischen Zweck ist das Produkt bestimmt? Aus ihr folgen die [[risikoklassen|Risikoklasse]] (MDR Art. 51 i. V. m. Anhang VIII) und damit der Aufwand der späteren Konformitätsbewertung [@mdr-2017] [@mdcg-2021-24].\n\nDie Entwicklung erfolgt in einem **Qualitätsmanagementsystem** nach [[iso-13485]] [@iso-13485]. Kernstück ist das **Risikomanagement** nach [[iso-14971]], das über den gesamten Lebenszyklus geführt wird [@iso-14971]:\n\nRisiko R = f(Wahrscheinlichkeit des Schadens P, Schwere des Schadens S)\n\nGefährdungen werden identifiziert, Risiken bewertet und durch Maßnahmen in der Reihenfolge **inhärent sichere Konstruktion → Schutzmaßnahmen → Information für die Sicherheit** beherrscht. Für [[medizinisches-elektrisches-geraet|ME-Geräte]] konkretisiert [[iec-60601-1]] die Anforderungen an Basissicherheit und wesentliche Leistungsmerkmale; Software wird nach [[iec-62304]] entwickelt, die Benutzungsschnittstelle nach [[iec-62366-1]] ([[gebrauchstauglichkeit]]), Werkstoffe mit Körperkontakt nach [[iso-10993-1]].\n\n> [!belegt] Die MDR verlangt vom Hersteller ein Risikomanagementsystem als kontinuierlichen, iterativen Prozess über den gesamten Lebenszyklus des Produkts (Anhang I, Kapitel I, Abschnitt 3) [@mdr-2017].\n\n## Phase 3–4: Konformitätsbewertung und Inverkehrbringen\n\nVor dem Inverkehrbringen weist der Hersteller nach, dass das Produkt die grundlegenden Sicherheits- und Leistungsanforderungen (Anhang I MDR) erfüllt. Dazu gehören die technische Dokumentation, die [[klinische-bewertung|klinische Bewertung]] und – ab Klasse I mit Messfunktion, steril oder wiederverwendbar chirurgisch bzw. ab Klasse IIa – die Beteiligung einer [[benannte-stelle|Benannten Stelle]] an der [[konformitaetsbewertung|Konformitätsbewertung]] [@mdr-2017]. Abschluss sind die EU-Konformitätserklärung und die [[ce-kennzeichnung|CE-Kennzeichnung]]. Über die [[udi|UDI]] (Unique Device Identification) wird das Produkt eindeutig identifizierbar und in EUDAMED registriert [@eudamed].\n\n## Phase 5–6: Betrieb, Instandhaltung, Aufbereitung\n\nMit der Übergabe an den Betreiber greifen die Pflichten der [[mpbetreibv|Medizinprodukte-Betreiberverordnung]] [@mpbetreibv]:\n\n* **Funktionsprüfung am Betriebsort und [[einweisung|Einweisung]]** vor der ersten Anwendung, insbesondere bei den in Anlage 1 genannten aktiven Produkten,\n* Dokumentation im [[bestandsverzeichnis|Bestandsverzeichnis]] und [[medizinproduktebuch|Medizinproduktebuch]],\n* [[stk|Sicherheitstechnische Kontrollen]] nach § 12 i. V. m. Anlage 1 – spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind,\n* [[mtk|Messtechnische Kontrollen]] nach § 15 i. V. m. Anlage 2 für die dort aufgeführten Medizinprodukte mit Messfunktion (klassische Beispiele sind bestimmte medizinische [[thermometer|Thermometer]] und Augen-[[tonometer|Tonometer]]; maßgeblich ist die Liste der Anlage 2 in der jeweils gültigen Fassung),\n* [[instandhaltung-grundlagen|Instandhaltung]] durch qualifizierte Personen; Prüfung nach Instandsetzung, etwa nach [[iec-62353]] [@iec-62353],\n* [[aufbereitung|Aufbereitung]] wiederverwendbarer Produkte mit validierten Verfahren ([[desinfektion]], [[sterilisation]]) [@krinko-bfarm-2012].\n\n> [!praxis] Für Medizintechnik-Abteilungen ist Phase 5–6 die längste: Große Geräte wie [[computertomograph|CT]], [[beatmungsgeraet|Beatmungsgeräte]] oder [[dialysegeraet|Dialysegeräte]] sind oft viele Jahre im Einsatz. Begrenzend wirken dann häufig nicht der Verschleiß, sondern die Verfügbarkeit von Ersatzteilen, Software-Updates und Hersteller-Support.\n\n## Phase 7: Überwachung nach dem Inverkehrbringen\n\nDer Hersteller betreibt ein System zur **Überwachung nach dem Inverkehrbringen** (Post-Market Surveillance, MDR Art. 83 ff.). Es sammelt systematisch Erfahrungen aus Beschwerden, Wartungsberichten, Literatur und Registern. Schwerwiegende Vorkommnisse und Sicherheitskorrekturmaßnahmen im Feld unterliegen der [[vigilanz|Vigilanz]] [@mdr-2017]. Anwender und Betreiber in Deutschland melden mutmaßliche schwerwiegende Vorkommnisse an die zuständige Bundesoberbehörde, meist das BfArM [@mpamiv] [@bfarm].\n\n## Phase 8: Außerbetriebnahme\n\nAm Ende stehen Aussonderung und Entsorgung. Zu beachten sind u. a. die Löschung von Patientendaten auf Gerätespeichern, die fachgerechte Entsorgung von Akkus ([[lithium-ionen-akku]]), Elektronikschrott und ggf. radioaktiven Quellen ([[afterloader]]), sowie die Aktualisierung des Bestandsverzeichnisses.\n\n## Bedeutung in der Medizintechnik\n\nDer Lebenszyklus erklärt, **wer wann wofür verantwortlich ist**. Beispiel [[infusionspumpe]]: Der Hersteller klassifiziert und entwickelt sie nach [[iec-60601-2-24]], legt STK-Intervalle fest und meldet Feldkorrekturen. Die Klinik weist ein, führt STK durch, prüft die Fördergenauigkeit und meldet z. B. wiederholte [[okklusionsalarm|Okklusionsalarme]] ohne erkennbare Ursache. Beispiel [[beatmungsgeraet]]: Erkenntnisse aus dem Betrieb – etwa zu [[sensordrift|Sensordrift]] des [[flowsensor|Flowsensors]] oder zum Verhalten der [[turbine]] – fließen als Software-Update oder geänderte Wartungsvorgabe zurück.\n\nSiehe auch [[patientensicherheit]], [[medizintechnik-management]] und [[instandhaltung-grundlagen]].",
+  "related": [
+    "medizinprodukt",
+    "zweckbestimmung",
+    "risikoklassen",
+    "konformitaetsbewertung",
+    "ce-kennzeichnung",
+    "betreiberpflichten",
+    "vigilanz",
+    "iso-14971",
+    "iso-13485",
+    "instandhaltung-grundlagen"
+  ],
+  "paths": [
+    [
+      "lebenszyklus-medizinprodukt",
+      "zweckbestimmung",
+      "risikoklassen",
+      "konformitaetsbewertung",
+      "ce-kennzeichnung"
+    ],
+    [
+      "lebenszyklus-medizinprodukt",
+      "betreiberpflichten",
+      "stk",
+      "elektrische-sicherheitspruefung"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "mdcg-2021-24",
+    "iso-13485",
+    "iso-14971",
+    "iec-60601-1",
+    "iec-62304",
+    "iec-62366-1",
+    "mpbetreibv",
+    "iec-62353",
+    "krinko-bfarm-2012",
+    "mpamiv",
+    "bfarm",
+    "eudamed"
+  ],
+  "diagram": {
+    "title": "Lebenszyklus eines Medizinprodukts",
+    "caption": "Vereinfachtes Phasenmodell. Die Rückkopplung aus Marktüberwachung und Vigilanz in die Entwicklung schließt den Kreislauf.",
+    "width": 900,
+    "height": 400,
+    "nodes": [
+      {
+        "id": "zweck",
+        "label": "Zweckbestimmung",
+        "ref": "zweckbestimmung",
+        "kind": "source",
+        "x": 110,
+        "y": 90
+      },
+      {
+        "id": "entw",
+        "label": "Entwicklung +\nRisikomanagement",
+        "ref": "iso-14971",
+        "kind": "process",
+        "x": 330,
+        "y": 90
+      },
+      {
+        "id": "konf",
+        "label": "Konformitäts-\nbewertung",
+        "ref": "konformitaetsbewertung",
+        "kind": "control",
+        "x": 560,
+        "y": 90
+      },
+      {
+        "id": "ce",
+        "label": "CE-Kennzeichnung /\nInverkehrbringen",
+        "ref": "ce-kennzeichnung",
+        "kind": "output",
+        "x": 790,
+        "y": 90
+      },
+      {
+        "id": "betrieb",
+        "label": "Betrieb:\nEinweisung, STK, MTK",
+        "ref": "betreiberpflichten",
+        "kind": "process",
+        "x": 790,
+        "y": 300
+      },
+      {
+        "id": "pms",
+        "label": "Marktüberwachung /\nVigilanz",
+        "ref": "vigilanz",
+        "kind": "sensor",
+        "x": 450,
+        "y": 300
+      },
+      {
+        "id": "ende",
+        "label": "Außerbetriebnahme",
+        "kind": "output",
+        "x": 110,
+        "y": 300
+      }
+    ],
+    "edges": [
+      {
+        "from": "zweck",
+        "to": "entw",
+        "kind": "data"
+      },
+      {
+        "from": "entw",
+        "to": "konf",
+        "kind": "data",
+        "label": "techn. Doku"
+      },
+      {
+        "from": "konf",
+        "to": "ce",
+        "kind": "data"
+      },
+      {
+        "from": "ce",
+        "to": "betrieb",
+        "kind": "data",
+        "label": "Übergabe"
+      },
+      {
+        "from": "betrieb",
+        "to": "pms",
+        "kind": "signal",
+        "label": "Meldungen"
+      },
+      {
+        "from": "pms",
+        "to": "entw",
+        "kind": "signal",
+        "label": "Rückkopplung"
+      },
+      {
+        "from": "betrieb",
+        "to": "ende",
+        "kind": "data",
+        "label": "Aussonderung"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

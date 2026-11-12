@@ -1,0 +1,629 @@
+{
+  "id": "dialysegeraet",
+  "type": "device",
+  "title": "Hämodialysegerät",
+  "aliases": [
+    "Dialysegerät",
+    "Dialysemaschine",
+    "Künstliche Niere",
+    "Hämodialysemaschine",
+    "Hämodiafiltrationsgerät",
+    "HD-Gerät",
+    "Haemodialysis machine",
+    "Dialysis machine"
+  ],
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 13,
+  "domains": [
+    "nephrologie",
+    "intensivmedizin"
+  ],
+  "summary": "Ein Hämodialysegerät leitet das Blut von Patienten mit Nierenversagen über einen Dialysator, in dem harnpflichtige Substanzen durch Diffusion und Konvektion ins Dialysat übergehen. Es bereitet das Dialysat zu, entzieht volumetrisch bilanziert Flüssigkeit und überwacht den extrakorporalen Kreislauf.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Die Klasse ergibt sich aus [[mdr|MDR]] Anhang VIII. Maßgeblich ist vor allem **Regel 12**: Aktive Produkte, die dazu bestimmt sind, Körperflüssigkeiten oder andere Stoffe aus dem Körper zu entfernen bzw. an ihn abzugeben, gehören zur Klasse IIa – zur Klasse IIb, wenn dies unter Berücksichtigung der Art der Stoffe, des betroffenen Körperteils und der Art der Anwendung in potenziell gefährlicher Weise erfolgt [@mdr-2017]. Beim extrakorporalen Blutkreislauf mit Blutvolumina von mehreren zehn Litern pro Behandlung ist diese Bedingung nach gängiger Auslegung erfüllt. Hämodialysegeräte werden von den Herstellern üblicherweise als **Klasse IIb** in Verkehr gebracht. Die Einstufung des konkreten Produkts liegt beim Hersteller und ist der Konformitätserklärung zu entnehmen. Einmalprodukte haben eigene Klassen: [[dialysator|Dialysatoren]] werden nach gängiger Auslegung über Regel 3 (nicht invasive Produkte zur Veränderung der biologischen oder chemischen Zusammensetzung von Blut – Klasse IIb) eingestuft; maßgeblich ist auch hier die Herstellerangabe.",
+    "sources": [
+      "mdr-2017",
+      "mdcg-2021-24"
+    ]
+  },
+  "sections": {
+    "purpose": "## Medizinischer Zweck\n\nDas Hämodialysegerät ist das zentrale Gerät der **extrakorporalen Nierenersatztherapie**. Es übernimmt bei Patientinnen und Patienten mit akutem oder chronischem Nierenversagen zwei Hauptaufgaben der gesunden [[niere|Niere]]: die **Entfernung harnpflichtiger Substanzen** (z. B. Harnstoff, Kreatinin, Kalium, Phosphat) und die **Entfernung überschüssigen Wassers** [@daugirdas-2015][@kramme-2017]. Zusätzlich korrigiert die Behandlung den [[saeure-basen-haushalt|Säure-Basen-Haushalt]] (Pufferzufuhr über Bicarbonat) und den Elektrolythaushalt.\n\nDas Gerät selbst reinigt das Blut nicht – das geschieht im [[dialysator|Dialysator]], einem Einmal-Filter mit semipermeabler Membran. Das Gerät stellt die Bedingungen her, unter denen der Stoffaustausch sicher und reproduzierbar abläuft:\n\n* Es fördert das Blut kontrolliert aus dem Gefäßzugang durch den Dialysator und zurück (**Blutkreislauf**, extrakorporaler Kreislauf).\n* Es bereitet aus aufbereitetem Wasser und Konzentraten die **Dialysierflüssigkeit** (Dialysat) in der verordneten Zusammensetzung und Temperatur zu.\n* Es **bilanziert** zu- und abfließendes Dialysat so genau, dass dem Körper exakt das verordnete Flüssigkeitsvolumen entzogen wird (**Ultrafiltration**).\n* Es **überwacht** Drücke, Luft, Blutverlust, Leitfähigkeit und Temperatur und versetzt das System bei Abweichungen in einen sicheren Zustand.\n\n> [!hinweis] Nierenersatzverfahren ersetzen nur die Ausscheidungsfunktion der Niere. Hormonelle Funktionen (z. B. Erythropoetin-Bildung, Vitamin-D-Aktivierung) müssen medikamentös ersetzt werden [@schmidt-lang-2019].\n\nDa der extrakorporale Kreislauf direkt mit dem [[blutkreislauf|Blutkreislauf]] verbunden ist und große Volumina umgesetzt werden (bei einer typischen Behandlung zirkulieren mehrere zehn Liter Blut durch den Dialysator), sind Fehlfunktionen potenziell lebensbedrohlich: Luftembolie, Blutverlust durch Diskonnektion, Hämolyse durch falsch zusammengesetztes oder überhitztes Dialysat oder eine Fehlbilanz mit Volumenüberladung bzw. Hypovolämie. Hämodialysegeräte sind daher [[medizinprodukt|Medizinprodukte]] mit hohem Gefährdungspotenzial und umfangreichen Schutzsystemen nach der gerätespezifischen Norm [[iec-60601-2-16|IEC 60601-2-16]] [@iec-60601-2-16].",
+    "applications": "## Einsatzgebiete\n\n### Chronische Dialyse\n\nDer Hauptanwendungsbereich ist die **chronische intermittierende Hämodialyse** bei terminaler Niereninsuffizienz in der [[nephrologie|Nephrologie]]. Die Behandlung erfolgt typischerweise dreimal pro Woche für etwa vier bis fünf Stunden in einem Dialysezentrum [@daugirdas-2015]. Die Geräte stehen dort in großer Zahl und sind an eine zentrale **Wasseraufbereitung** (Umkehrosmose-Ringleitung) und häufig an eine zentrale Konzentratversorgung angeschlossen.\n\n### Akutdialyse auf der Intensivstation\n\nIn der [[intensivmedizin|Intensivmedizin]] werden bei akutem Nierenversagen sowohl intermittierende Verfahren mit konventionellen Dialysegeräten als auch kontinuierliche Verfahren eingesetzt. Für die kontinuierliche Behandlung über 24 Stunden und mehr gibt es eigene Geräte, siehe [[crrt-geraet|CRRT-Gerät]]. Mobile Wasseraufbereitungsanlagen ermöglichen die intermittierende Dialyse am Intensivbett.\n\n### Heimdialyse und weitere Indikationen\n\n* **Heimhämodialyse:** speziell für Laienanwendung ausgelegte Geräte mit vereinfachter Bedienung; hier gelten zusätzlich die Anforderungen an die häusliche Umgebung nach [[iec-60601-1-11|IEC 60601-1-11]] [@iec-60601-1-11].\n* **Vergiftungen:** Entfernung dialysierbarer Toxine (kleine, wasserlösliche, gering proteingebundene Substanzen).\n* **Therapierefraktäre Überwässerung und Elektrolytentgleisungen** (z. B. lebensbedrohliche Hyperkaliämie).\n\n### Behandlungsmodi\n\n| Modus | Hauptmechanismus | Substitution | Typische Indikation |\n|---|---|---|---|\n| **Hämodialyse (HD)** | [[diffusion-osmose|Diffusion]] | keine | Standardverfahren |\n| **Hämofiltration (HF)** | Konvektion | ja, große Volumina | selten intermittierend, häufiger kontinuierlich |\n| **Hämodiafiltration (HDF)** | Diffusion + Konvektion | ja, online aus Dialysat | verbesserte Entfernung mittelgroßer Moleküle |\n| **Isolierte Ultrafiltration** | Ultrafiltration ohne Dialysat | keine | reine Volumenentfernung |\n| **Single-Needle** | wechselnd arteriell/venös über eine Kanüle | – | eingeschränkter Gefäßzugang |\n\nDie **Online-Hämodiafiltration** hat in Europa stark an Bedeutung gewonnen. In der randomisierten CONVINCE-Studie war eine hochvolumige HDF gegenüber der High-Flux-HD mit einer geringeren Gesamtmortalität assoziiert [@convince-2023].",
+    "principle": "## Funktionsprinzip\n\nDas Funktionsprinzip lässt sich in vier Teilsysteme gliedern: den **Stoffaustausch im Dialysator** (Physik), den **Blutkreislauf** (Förderung und Überwachung), die **Dialysataufbereitung** (Mischung, Temperierung, Leitfähigkeitsregelung) und die **Bilanzierung/Ultrafiltration**.\n\n### Physik des Stoffaustauschs\n\nIm Dialysator strömen Blut und Dialysat, getrennt durch eine semipermeable Membran, im **Gegenstrom** aneinander vorbei. Drei physikalische Mechanismen wirken (siehe [[diffusion-osmose|Diffusion, Osmose und Konvektion]]) [@daugirdas-2015][@kramme-2017]:\n\n1. **Diffusion:** Gelöste Teilchen wandern entlang ihres Konzentrationsgradienten durch die Membranporen. Nach dem 1. Fickschen Gesetz gilt für den Stofffluss `J = −D · A · dc/dx` (D Diffusionskoeffizient, A Fläche, dc/dx Konzentrationsgradient). Diffusion ist für **kleine Moleküle** (Harnstoff 60 Da, Kreatinin 113 Da, Kalium) sehr effektiv, nimmt aber mit steigender Molekülgröße stark ab.\n2. **Konvektion (Solvent Drag):** Wird durch einen Druckunterschied Wasser durch die Membran gepresst, reißt es gelöste Stoffe mit, solange diese kleiner als die Poren sind. Konvektion entfernt auch **mittelgroße Moleküle** (z. B. β₂-Mikroglobulin, ca. 11,8 kDa) wirksam.\n3. **Ultrafiltration:** der Wassertransport selbst, angetrieben durch den **Transmembrandruck (TMP)**. Er dient dem Flüssigkeitsentzug und ist zugleich der Motor der Konvektion.\n\nDie Membran hält Blutzellen und große Proteine (Albumin, ca. 66 kDa) zurück. Durch den Gegenstrom bleibt der Konzentrationsgradient über die gesamte Länge der Kapillaren erhalten; Frischdialysat enthält keinen Harnstoff, sodass das Gefälle maximal ist.\n\n> [!vereinfacht] In der Realität überlagern sich die Mechanismen: Selbst bei „reiner“ HD findet in High-Flux-Dialysatoren eine interne Filtration im blutseitigen Eingangsbereich und eine Rückfiltration am Ausgang statt.\n\n### Clearance und Dialysance\n\nDie Leistung wird über die **Clearance** K beschrieben – das Blutvolumen pro Zeit, das vollständig von einer Substanz befreit wird. Für den Dialysator (ohne Ultrafiltration) gilt:\n\n`K = Q_B · (C_Bi − C_Bo) / C_Bi`\n\nmit Blutfluss Q_B, Konzentration am Blut-Einlass C_Bi und am Auslass C_Bo. Ist die Substanz auch im Frischdialysat enthalten (z. B. Natrium, Bicarbonat), verwendet man die **Dialysance** D, bei der im Nenner die Differenz zur Dialysat-Eingangskonzentration steht: `D = Q_B · (C_Bi − C_Bo) / (C_Bi − C_Di)`.\n\nDie Clearance hängt vom Blutfluss Q_B, vom Dialysatfluss Q_D und von der Membrankenngröße **K₀A** (Stoffübergangskoeffizient × Fläche) ab. Für den Gegenstrom liefert die Michaels-Gleichung [@daugirdas-2015]:\n\n`K = Q_B · (Z − 1) / (Z − Q_B/Q_D)` mit `Z = exp[K₀A · (1/Q_B − 1/Q_D)]`\n\n> [!beispiel] **Rechenbeispiel Clearance:** Dialysator mit K₀A = 1 000 ml/min (Harnstoff), Q_B = 300 ml/min, Q_D = 500 ml/min. Dann ist Z = exp[1 000 · (1/300 − 1/500)] = exp(1,333) ≈ 3,79 und K = 300 · 2,79 / (3,79 − 0,60) ≈ **262 ml/min**. Erhöht man nur Q_D auf 800 ml/min, ergibt sich Z ≈ 8,03 und K ≈ **276 ml/min** – ein Plus von nur etwa 5 %. Eine Erhöhung des Blutflusses auf 400 ml/min bringt dagegen deutlich mehr. Die Clearance kann nie größer werden als der kleinere der beiden Flüsse.\n\n### Dialysedosis: Kt/V\n\nKlinisch wird die Dialysedosis als dimensionslose Größe **Kt/V** angegeben: Clearance K mal Behandlungszeit t, bezogen auf das Harnstoff-Verteilungsvolumen V (etwa das Körperwasser). Aus Harnstoff-Blutproben vor und nach der Behandlung berechnet man nach Daugirdas (zweite Generation) [@daugirdas-1993]:\n\n`spKt/V = −ln(R − 0,008 · t) + (4 − 3,5 · R) · UF / W`\n\nmit R = Harnstoff nach/vor, t in Stunden, UF = Ultrafiltrationsvolumen in Litern, W = Körpergewicht nach Dialyse in kg. Die KDOQI-Leitlinie empfiehlt für die dreimal wöchentliche Dialyse einen Zielwert von spKt/V 1,4 pro Behandlung bei einem Mindestwert von 1,2 [@kdoqi-hd-adequacy-2015].\n\n> [!beispiel] **Rechenbeispiel Kt/V:** Harnstoff vor Dialyse 150 mg/dl, nach Dialyse 45 mg/dl → R = 0,30. Dauer t = 4 h, UF = 3 l, Gewicht nach Dialyse 70 kg. spKt/V = −ln(0,30 − 0,032) + (4 − 1,05) · 3/70 = −ln(0,268) + 0,126 ≈ 1,317 + 0,126 ≈ **1,44**. Der Zielwert wäre damit erreicht.\n\n### Blutkreislauf: Förderung und Druckmessung\n\nEine [[peristaltikpumpe|Rollenpumpe]] fördert das Blut, indem zwei Rollen ein Pumpsegment des Schlauchsystems gegen ein Kreisbogenbett quetschen. Der theoretische Fluss ist `Q_B = n · V_Hub` (Drehzahl × Segmentvolumen pro Umdrehung). Weil vor der Pumpe ein **Unterdruck** herrscht (Ansaugen durch die arterielle Kanüle), füllt sich das Segment bei stark negativem Druck nicht vollständig – der reale Fluss liegt dann unter dem angezeigten Wert [@daugirdas-2015]. Viele Geräte korrigieren die Anzeige deshalb über den gemessenen Vordruck.\n\nMehrere [[drucksensor|Druckaufnehmer]] überwachen den Kreislauf ([[druckmessung|Druckmessung]] über Transducerschutz-Filter, die das Blut hydrophob vom Sensor trennen):\n\n| Messstelle | Typischer Bereich | Aussage |\n|---|---|---|\n| **Arterieller Druck** P_art (vor Pumpe) | negativ, etwa −50 bis −250 mmHg | Ansaugverhältnisse, Lage der arteriellen Kanüle |\n| **Druck vor Dialysator** P_BE (nach Pumpe) | positiv | Strömungswiderstand Dialysator, Gerinnung |\n| **Venöser Druck** P_ven (Luftfalle) | positiv, etwa +50 bis +250 mmHg | Rückgabewiderstand, venöse Kanüle, Gerinnung |\n| **Dialysatdruck** P_D | herstellerabhängig | Berechnung des TMP |\n\nDer **Transmembrandruck** wird gerätespezifisch aus den Drücken berechnet, im einfachsten Fall `TMP = (P_BE + P_ven)/2 − P_D`. Alarmfenster um den aktuellen Arbeitspunkt erkennen Abweichungen (z. B. Abknicken, Gerinnung, Kanülenprobleme).\n\n> [!warnung] Ein Herausrutschen der venösen Kanüle führt oft nur zu einem **geringen Abfall** des venösen Drucks, weil der Großteil des Drucks am Kanülenwiderstand entsteht. Die venöse Druckalarmgrenze erkennt eine Diskonnektion daher nicht zuverlässig. Kanülen und Schläuche müssen gut sichtbar und fixiert sein; ergänzende Sensoren (z. B. Feuchtigkeitsdetektoren) können helfen [@daugirdas-2015].\n\nHinter der venösen Luftfalle prüft ein Ultraschall-[[luftblasendetektor|Luftdetektor]] den Schlauch. Erkennt er Luft oder Mikroschaum, stoppt die Blutpumpe und die **venöse Schlauchklemme** schließt – eine der wichtigsten Schutzfunktionen gegen Luftembolie. Die Detektion beruht auf der stark unterschiedlichen akustischen Impedanz von Blut und Luft ([[schallwellen|Ultraschallphysik]]): Luftblasen dämpfen bzw. reflektieren das Ultraschallsignal zwischen Sender und Empfänger.\n\nEine Spritzenpumpe (siehe [[spritzenpumpe]]) gibt kontinuierlich Heparin zur Antikoagulation in den arteriellen Schenkel nach der Blutpumpe.\n\n### Dialysataufbereitung: Mischung, Temperatur, Leitfähigkeit\n\nDas Gerät entgast aufbereitetes Wasser (Unterdruck), erwärmt es mit einem [[heizelement|Heizelement]] auf die Solltemperatur (typisch 35–37 °C) und mischt **zwei Konzentrate** zu: ein saures Konzentrat (NaCl, KCl, CaCl₂, MgCl₂, Säure, ggf. Glucose) und Bicarbonat (flüssig oder als Trockenkartusche). Getrennte Konzentrate sind nötig, weil Calcium und Bicarbonat zusammen als Calciumcarbonat ausfallen würden.\n\nDie Zusammensetzung wird über die **elektrische Leitfähigkeit** κ überwacht und geregelt ([[leitfaehigkeitssensor|Leitfähigkeitsmessung]]). Da Natrium den Hauptanteil der Ionen stellt, ist κ ein gutes Maß für die Natriumkonzentration; Dialysat mit etwa 140 mmol/l Na⁺ hat eine Leitfähigkeit in der Größenordnung von 14 mS/cm (bei 25 °C). Gemessen wird mit Elektroden- oder induktiven Zellen; da κ um etwa 2 % pro Kelvin steigt, wird auf 25 °C kompensiert:\n\n`κ₂₅ = κ_T / [1 + α · (T − 25 °C)]` mit α ≈ 0,02 /K\n\nEin [[regelkreis|Regelkreis]] stellt die Konzentratpumpen so ein, dass κ dem Sollwert entspricht; eine **unabhängige zweite Leitfähigkeits- und Temperaturmessung** (Schutzsystem) leitet bei Grenzwertverletzung das Dialysat am Dialysator vorbei (**Bypass**). So wird verhindert, dass hypo- oder hypertones Dialysat das Blut erreicht (Hämolyse bzw. Hypernatriämie).\n\n> [!beispiel] **Temperaturkompensation:** Eine Zelle misst bei 37 °C κ_T = 17,3 mS/cm. Mit α = 0,02 /K folgt κ₂₅ = 17,3 / (1 + 0,02 · 12) = 17,3 / 1,24 ≈ **13,95 mS/cm** – passend zu einem Dialysat mit etwa 140 mmol/l Natrium. Ohne Kompensation würde die Steuerung einen um 24 % zu hohen Wert sehen.\n\n### Bilanzierung und Ultrafiltration\n\nBei High-Flux-Dialysatoren ist der Ultrafiltrationskoeffizient K_UF so groß (mehrere zehn ml/(h·mmHg)), dass bereits wenige mmHg TMP-Abweichung große Volumenfehler verursachen würden. Die Ultrafiltration wird daher **nicht über den Druck**, sondern **volumetrisch** gesteuert:\n\n* **Bilanzkammerprinzip:** Zwei starre Kammern sind jeweils durch eine bewegliche Membran in eine Frisch- und eine Verbrauchtseite geteilt. Füllt sich die Frischseite, wird dasselbe Volumen verbrauchtes Dialysat aus der Kammer verdrängt – zu- und abfließendes Volumen sind konstruktiv identisch. Magnetventile schalten die beiden Kammern wechselweise um.\n* **Differenz-Durchflussmessung:** Andere Bauarten messen Zu- und Ablauf mit hochgenauen [[flowsensor|Durchflusssensoren]] und regeln die Differenz.\n\nDas Netto-Ultrafiltrat entnimmt eine separate **UF-Pumpe** (Membran- oder Kolbenpumpe) aus dem geschlossenen Kreis; das entzogene Volumen ergibt sich aus Hubzahl × Hubvolumen. Weil der Kreis geschlossen ist, stellt sich der nötige TMP von selbst ein [@kramme-2017].\n\n> [!beispiel] **Rechenbeispiel Ultrafiltration:** Verordnet sind 3,0 l Entzug in 4 h → UF-Rate 750 ml/h. Bei einem High-Flux-Dialysator mit K_UF = 50 ml/(h·mmHg) genügt ein TMP von nur 750 / 50 = **15 mmHg**. Eine Druckmessabweichung von 5 mmHg entspräche bereits 250 ml/h bzw. 1 l Fehlbilanz in 4 h – deshalb ist die volumetrische Bilanzierung unverzichtbar.\n\nVor jeder Behandlung prüft das Gerät die Dichtheit des Bilanzsystems in einem automatischen **Druckhaltetest**: Ventile werden geschlossen und der Druckverlauf ausgewertet. Undichtigkeiten würden unbemerkte Fehlbilanzen verursachen.\n\n### Online-Hämodiafiltration und Mikrobiologie\n\nBei der Online-HDF entnimmt das Gerät einen Teil des Frischdialysats, filtert es über zwei hintereinandergeschaltete **Dialysatfilter** (Ultrafilter) und infundiert es als Substitutionslösung vor (Prädilution) oder hinter (Postdilution) dem Dialysator. Voraussetzung ist eine Flüssigkeit in **Infusionsqualität**. Die Normenreihe ISO 23500 legt Grenzwerte fest; für ultrareine Dialysierflüssigkeit gelten weniger als 0,1 KBE/ml und weniger als 0,03 EU/ml Endotoxin [@iso-23500-5], für Dialysewasser weniger als 100 KBE/ml und weniger als 0,25 EU/ml [@iso-23500-3] (jeweils gültige Ausgabe beachten; Aktionswerte liegen niedriger). Online hergestellte Substitutionsflüssigkeit muss darüber hinaus steril und pyrogenfrei sein; dies wird durch validierte Ultrafiltration im Gerät sichergestellt, nicht durch Stichproben allein [@iso-23500-5].\n\n### Weitere Messverfahren\n\n* **[[blutleckdetektor|Blutleckdetektor]]:** Eine optische Messstrecke im Dialysatablauf erkennt Hämoglobin anhand der Lichtabsorption ([[lambert-beer|Lambert-Beer-Gesetz]]). Ein Faserriss im Dialysator wird so als Blutleck erkannt.\n* **Online-Clearance-Messung:** Viele Geräte ändern kurzzeitig die Leitfähigkeit des Frischdialysats und messen die Antwort im Ablauf. Aus den beiden Stufen folgt die ionische Dialysance `D = Q_D · [1 − (κ_Do2 − κ_Do1) / (κ_Di2 − κ_Di1)]`, die näherungsweise der Harnstoff-Clearance entspricht – so lässt sich Kt/V ohne Blutentnahme abschätzen.\n* **Relative Blutvolumenmessung:** Optische oder Ultraschallsensoren am arteriellen Schlauch messen Hämatokrit bzw. Proteinkonzentration. Der Anstieg zeigt die Hämokonzentration durch Ultrafiltration und kann vor Blutdruckabfällen warnen.\n* **Temperaturmessung** ([[temperatursensor|Temperatursensoren]], meist NTC oder Pt-Elemente) an Heizung und Dialysatzulauf; Übertemperatur führt zu Bypass, weil Hämolyse droht.",
+    "construction": "## Technischer Aufbau\n\nEin Hämodialysegerät ist ein [[medizinisches-elektrisches-geraet|ME-Gerät]] mit drei großen Baugruppen: **Blutmodul** (Frontseite), **Hydraulik** (Dialysatsystem, im Inneren) und **Elektronik** mit [[display-bedienoberflaeche|Bedienoberfläche]].\n\n### Blutmodul (extrakorporaler Kreislauf)\n\n* **Blutpumpe:** Rollenpumpe mit Schrittmotor- oder [[bldc-motor|BLDC]]-Antrieb und Drehzahlüberwachung (z. B. über [[hall-sensor|Hall-Sensoren]]); für Single-Needle-Betrieb ggf. eine zweite Pumpe.\n* **Heparinpumpe:** integrierte Spritzenpumpe.\n* **Druckaufnehmer:** arteriell, vor Dialysator und venös; Anschluss über Transducerschutz.\n* **Venöse Luftfalle** mit Füllstandserkennung, **Luftdetektor** (Ultraschall) und **venöse Schlauchklemme**.\n* **Optionale Sensoren:** Blutvolumen-/Hämatokritsensor, Blutsensoren zur Erkennung von Blut/Kochsalz im Schlauch, Temperatur-Messung im Blutweg.\n* **Schlauchsystem** und **[[dialysator|Dialysator]]** als Einmalprodukte; teilweise als Kassettensystem.\n\n### Hydraulik (Dialysatsystem)\n\n| Baugruppe | Funktion |\n|---|---|\n| Wasser-Eingang mit Druckminderer und Wärmetauscher | Anschluss an Umkehrosmose-Ringleitung; Vorwärmung durch Ablaufwärme |\n| Heizung und Entgasung | Temperierung, Entfernung gelöster Gase (sonst Blasen im Dialysator) |\n| Konzentratpumpen / Mischkammern | proportionale Dosierung von Säure- und Bicarbonatkonzentrat |\n| Leitfähigkeits- und Temperaturzellen | Regelung (Steuerkanal) und unabhängige Überwachung (Schutzkanal) |\n| Bilanzkammern oder Differenz-Flowmeter | volumetrische Bilanzierung |\n| UF-Pumpe | Netto-Flüssigkeitsentzug |\n| Dialysatfilter | Rückhaltung von Bakterien und Endotoxinen, Online-Substitution |\n| Bypassventil | Umleitung des Dialysats bei Alarm |\n| [[blutleckdetektor|Blutleckdetektor]] | Erkennung von Membranrupturen |\n| Ablauf mit Rückflussverhinderer | Ableitung in den Abfluss, freier Auslauf |\n| Desinfektionseinrichtung | thermische und chemothermische Desinfektion |\n\nDie Ventile sind meist [[magnetventil|Magnetventile]], Pumpen häufig Zahnrad- oder Membranpumpen.\n\n### Elektronik und Software\n\nCharakteristisch ist eine **zweikanalige Architektur**: Ein Steuersystem regelt die Therapie, ein unabhängiges **Schutzsystem** mit eigenen Sensoren und eigenem [[mikrocontroller|Mikrocontroller]] überwacht sicherheitsrelevante Größen (Leitfähigkeit, Temperatur, Luft, venöser Druck, Blutleck, Bilanz) und kann Blutpumpe stoppen, Venenklemme schließen und Bypass schalten [@iec-60601-2-16]. Die Software wird nach dem Lebenszyklusmodell der [[iec-62304|IEC 62304]] entwickelt.\n\nWeitere Elemente: [[medizinisches-netzteil|medizinisches Netzteil]], häufig ein Akku zur Überbrückung von Netzausfällen (um mindestens den Blutkreislauf aufrechtzuerhalten bzw. die Blutrückgabe zu ermöglichen – Umfang herstellerabhängig), ein [[alarmsystem|Alarmsystem]] nach [[iec-60601-1-8|IEC 60601-1-8]], Patientenkarten- oder Netzwerkschnittstellen zur Dokumentation (z. B. über [[hl7-fhir|HL7]]) sowie ein Blutdruckmodul ([[oszillometrie|oszillometrisch]]).\n\n### Elektrische Sicherheit\n\nDas Dialysat und das Blut sind elektrisch leitend und bilden über den Gefäßzugang – bei zentralvenösen Kathetern bis in Herznähe – eine leitende Verbindung zum Patienten. Die [[anwendungsteile|Anwendungsteil]]-Klassifizierung (Typ B, BF oder CF) und die zulässigen [[ableitstrom|Ableitströme]] richten sich nach Herstellerangabe und [[iec-60601-1|IEC 60601-1]] [@iec-60601-1]. Für die Installation sind die Anforderungen an [[medizinisch-genutzte-bereiche|medizinisch genutzte Bereiche]] (z. B. zusätzlicher Potentialausgleich) zu beachten.",
+    "maintenance": "## Wartung und Instandhaltung\n\nHämodialysegeräte gehören zu den wartungsintensivsten Geräten im Krankenhaus: Sie laufen in Dialysezentren oft in zwei bis drei Schichten pro Tag, enthalten zahlreiche flüssigkeitsführende Bauteile und unterliegen Verkalkung, Verschleiß und mikrobieller Kontamination. Die [[instandhaltung-grundlagen|Instandhaltung]] gliedert sich nach [[din-31051|DIN 31051]] in Wartung, Inspektion, Instandsetzung und Verbesserung [@din-31051].\n\n### Tägliche und behandlungsbezogene Maßnahmen\n\n* **Automatischer Selbsttest** vor jeder Behandlung (Druckhaltetest des Bilanzsystems, Prüfung der Schutzsysteme, Alarme, Luftdetektor, Leitfähigkeit).\n* **[[desinfektion|Desinfektion]]** nach jeder Behandlung nach Herstellervorgabe: thermisch (heißes Wasser), chemothermisch (z. B. mit Zitronensäure, zugleich entkalkend) oder chemisch. Bicarbonat begünstigt Kalkablagerungen, daher regelmäßige Entkalkung.\n* **Oberflächendesinfektion** des Gehäuses und Kontrolle der Transducerschutz-Filter auf Benetzung.\n\n> [!warnung] Ist ein Transducerschutz durchnässt oder mit Blut kontaminiert, kann Blut in die Gerätedruckleitung gelangen. Dann ist das Gerät nach Herstellervorgabe von befugtem Fachpersonal zu prüfen und ggf. aufzubereiten, bevor es wieder verwendet wird.\n\n### Wartung durch die Medizintechnik\n\nDie **[[wartung|Wartung]]** erfolgt nach Herstellerangaben, oft nach Betriebsstunden oder Kalenderintervallen. Typische Tätigkeiten:\n\n* Tausch von Verschleißteilen (Dichtungen, Membranen der Bilanzkammern, Ventile, Pumpenteile, Filter)\n* Austausch der Dialysatfilter nach Standzeit bzw. Behandlungszahl\n* [[kalibrierung|Kalibrierung und Justierung]] von Druckaufnehmern, Leitfähigkeits- und Temperaturmessung, UF-Bilanz\n* Prüfung der Blutpumpe (Okklusion, Förderrate), der Heparinpumpe und des Luftdetektors\n* Akku-Prüfung und -tausch\n\n### Gesetzliche Pflichten (Deutschland)\n\nNach der [[mpbetreibv|MPBetreibV]] (Neufassung 2025) gelten Hämodialysegeräte als nichtimplantierbare aktive Produkte zur unmittelbaren Einbringung von Flüssigkeiten in den Blutkreislauf unter potentiellem Druckaufbau, wobei die Einbringung mit einer Entnahmefunktion gekoppelt ist; sie fallen damit nach üblicher Auslegung unter **Anlage 1 Nr. 1.4**. Daraus folgt die Pflicht zur **[[stk|Sicherheitstechnischen Kontrolle]]** nach § 12 MPBetreibV in den vom Hersteller angegebenen Fristen, fehlen solche Angaben, spätestens alle zwei Jahre [@mpbetreibv]. Eine [[mtk|Messtechnische Kontrolle]] ist nicht vorgeschrieben, da Dialysegeräte nicht in Anlage 2 aufgeführt sind. Für Anlage-1-Produkte sieht die MPBetreibV zusätzliche Betreiberpflichten vor, insbesondere zur [[einweisung|Einweisung]] der Anwender und zur Dokumentation im [[medizinproduktebuch|Medizinproduktebuch]]; als aktives nichtimplantierbares Medizinprodukt ist das Gerät zudem im [[bestandsverzeichnis|Bestandsverzeichnis]] zu führen. Die Einzelheiten sind der jeweils geltenden Fassung der Verordnung zu entnehmen [@mpbetreibv].\n\n> [!praxis] Die **Wasseraufbereitung** (Umkehrosmose, Ringleitung) ist zwar ein eigenes System, entscheidet aber maßgeblich über die Dialysatqualität. Mikrobiologische und chemische Kontrollen von Wasser und Dialysat werden in Dialysezentren regelmäßig nach einem Hygiene- und Probenplan durchgeführt; Grenz- und Aktionswerte orientieren sich an der Normenreihe ISO 23500 [@iso-23500-3][@iso-23500-5].",
+    "testing": "## Prüfverfahren\n\n### Sicherheitstechnische Kontrolle (STK)\n\nDie [[stk|STK]] folgt der Prüfanweisung des Herstellers und umfasst typischerweise [@mpbetreibv]:\n\n1. **Sichtprüfung:** Gehäuse, Netzkabel, Schlauchführungen, Pumpenbett, Klemmen, Typschild, Gebrauchsanweisung, Leckagespuren im Gehäuse.\n2. **[[elektrische-sicherheitspruefung|Elektrische Sicherheitsprüfung]]** nach [[iec-62353|IEC 62353]]: [[schutzleiterwiderstand|Schutzleiterwiderstand]], ggf. [[isolationswiderstand|Isolationswiderstand]], Geräteableitstrom und – bei Geräten mit Anwendungsteilen vom Typ BF/CF – Ableitstrom vom Anwendungsteil (Kontaktierung über die flüssigkeitsführenden Anschlüsse, Verfahren nach Herstellerangabe) [@iec-62353]. Der in [[iec-60601-1|IEC 60601-1]] definierte Patientenableitstrom wird bei der Wiederholungsprüfung nach IEC 62353 in dieser Form nicht gemessen.\n3. **Prüfung der Schutzsysteme:** Luftdetektor mit Prüfschlauch bzw. definierter Luftmenge, Auslösung der Venenklemme, Blutleckdetektor mit Testfilter oder Testlösung, Leitfähigkeits- und Temperaturalarme mit Bypass-Funktion, Druckalarme.\n4. **Messgenauigkeit:** Temperatur und Leitfähigkeit mit kalibriertem Referenzmessgerät, Druckaufnehmer mit Referenzmanometer, Blutpumpenfluss volumetrisch, UF-Bilanz gravimetrisch.\n5. **Dokumentation** im Medizinproduktebuch, Prüfplakette.\n\n### Bilanz- und Ultrafiltrationsprüfung\n\nDie UF-Genauigkeit wird geprüft, indem das Gerät mit einem Testaufbau (Beutel bzw. Behälter auf Präzisionswaage anstelle des Patienten) eine definierte UF-Menge entzieht. Die Abweichung zwischen eingestellter und gewogener Menge muss innerhalb der Herstellertoleranz liegen.\n\n### Leitfähigkeits- und Temperaturprüfung\n\nEin externes, kalibriertes Leitfähigkeits-/Temperaturmessgerät ([[pruefgeraete|Prüfgerät]]) wird über einen Adapter an die Dialysatkupplungen angeschlossen. Verglichen werden Anzeige des Geräts und Referenzwert; zusätzlich wird die Plausibilität mit dem verordneten Natrium geprüft.\n\n### Funktionsprüfung vor Anwendung\n\nDie [[funktionspruefung|Funktionsprüfung]] vor jeder Behandlung übernimmt im Wesentlichen der automatische Selbsttest. Die Anwender prüfen zusätzlich korrekte Konzentrate (Verwechslungsgefahr), Desinfektionsmittelfreiheit (Teststreifen nach chemischer Desinfektion), Schlauchführung und Alarmgrenzen.\n\n### Hygienische Prüfungen\n\nProbennahme von Dialysat und ggf. Substitutionslösung zur Bestimmung der Koloniezahl und der Endotoxine nach Hygieneplan; Ergebnisse werden gerätebezogen dokumentiert [@iso-23500-5].\n\n> [!hinweis] Prüfumfang, Toleranzen und Hilfsmittel (Adapter, Testfilter, Serviceprogramme) sind gerätespezifisch. Maßgeblich ist stets die aktuelle Serviceanleitung des Herstellers."
+  },
+  "body": "## Geschichte\n\nDie erste klinisch erfolgreiche „künstliche Niere“ entwickelte Willem Kolff in den 1940er-Jahren in den Niederlanden: eine rotierende Trommel mit Zellophanschlauch in einem Dialysatbad [@kolff-1944]. Die chronische Dialyse wurde erst möglich, als in den 1960er-Jahren dauerhafte Gefäßzugänge (Scribner-Shunt, später die arteriovenöse Fistel) zur Verfügung standen. Es folgten Spulen- und Plattendialysatoren, dann – seit Ende der 1960er-Jahre entwickelt und ab den 1970er-Jahren verbreitet – Kapillardialysatoren aus Hohlfasern, die Bicarbonat- statt Acetatdialyse, volumetrisch bilanzierende Geräte und schließlich die Online-Hämodiafiltration [@kramme-2017][@daugirdas-2015].\n\n## Aktuelle Entwicklungen\n\n* **Hochvolumige Online-HDF** als Standardoption, gestützt durch neuere Studienergebnisse [@convince-2023].\n* **Biofeedback-Regelungen:** Ultrafiltrationsrate oder Dialysat-Natrium werden anhand des relativen Blutvolumens oder anderer Messgrößen automatisch angepasst, um Blutdruckabfälle zu vermeiden.\n* **Konnektivität:** Anbindung an klinische Informationssysteme, Fernwartung, automatische Dokumentation – mit Anforderungen an IT-Sicherheit.\n* **Heim- und Kompaktgeräte** mit reduziertem Wasserbedarf oder Dialysatregeneration (Sorbenttechnik).\n* **Nachhaltigkeit:** Hämodialyse verbraucht pro Behandlung große Mengen Wasser und Energie; Rückgewinnung von Ablaufwärme und eine bedarfsgerechte Dialysatflussregelung gewinnen an Bedeutung.\n\n## Abgrenzung zu verwandten Geräten\n\n| Gerät | Unterschied |\n|---|---|\n| [[crrt-geraet|CRRT-Gerät]] | kontinuierlich, Beutel statt Online-Aufbereitung, gravimetrische Bilanzierung mit Waagen |\n| [[zellseparator|Zellseparator]] | trennt Blutbestandteile per Zentrifugation oder Membran |\n| [[ecmo|ECMO]] / [[herz-lungen-maschine|Herz-Lungen-Maschine]] | Gasaustausch statt Stoffaustausch über Dialyse |",
+  "components": [
+    {
+      "ref": "dialysator",
+      "role": "Einmal-Kapillarfilter mit semipermeabler Membran; Ort des diffusiven und konvektiven Stoffaustauschs zwischen Blut und Dialysat."
+    },
+    {
+      "ref": "peristaltikpumpe",
+      "role": "Blutpumpe (Rollenpumpe) für den extrakorporalen Kreislauf; Förderung über Drehzahl × Segmentvolumen."
+    },
+    {
+      "ref": "spritzenpumpe",
+      "role": "Integrierte Heparinpumpe zur kontinuierlichen Antikoagulation im arteriellen Schenkel."
+    },
+    {
+      "ref": "heizelement",
+      "role": "Erwärmt das Dialysat auf die eingestellte Temperatur (typisch 35–37 °C); überwacht durch einen unabhängigen Temperaturkanal."
+    },
+    {
+      "ref": "magnetventil",
+      "role": "Steuert die Flüssigkeitswege der Hydraulik: Umschalten der Bilanzkammern, Bypass, Desinfektion."
+    },
+    {
+      "ref": "mikrocontroller",
+      "role": "Getrennte Steuer- und Schutzrechner: Therapieregelung bzw. unabhängige Überwachung sicherheitsrelevanter Größen."
+    },
+    {
+      "ref": "display-bedienoberflaeche",
+      "role": "Touchscreen zur Eingabe der Verordnung, Darstellung von Drücken, Bilanz und Alarmen."
+    },
+    {
+      "ref": "medizinisches-netzteil",
+      "role": "Energieversorgung der Elektronik und Antriebe; Heizung meist direkt netzversorgt."
+    },
+    {
+      "ref": "lithium-ionen-akku",
+      "role": "Überbrückung bei Netzausfall, je nach Gerät für Blutpumpe und Überwachung bzw. die Blutrückgabe (Bauart herstellerabhängig)."
+    }
+  ],
+  "sensors": [
+    {
+      "ref": "drucksensor",
+      "role": "Arterieller, prädialysatorischer und venöser Druck sowie Dialysatdruck; Basis für Druckalarme und TMP-Berechnung."
+    },
+    {
+      "ref": "leitfaehigkeitssensor",
+      "role": "Steuer- und Schutzzelle für die Leitfähigkeit des Dialysats (Maß für die Natriumkonzentration); Online-Clearance-Messung."
+    },
+    {
+      "ref": "temperatursensor",
+      "role": "Dialysattemperatur in Steuer- und Schutzkanal; Übertemperatur führt zum Bypass."
+    },
+    {
+      "ref": "luftblasendetektor",
+      "role": "Ultraschall-Luftdetektor an der venösen Leitung; stoppt die Blutpumpe und schließt die Venenklemme."
+    },
+    {
+      "ref": "blutleckdetektor",
+      "role": "Optische Erkennung von Blut im Dialysatablauf (Membranruptur)."
+    },
+    {
+      "ref": "flowsensor",
+      "role": "Bei Geräten mit Differenz-Durchflussmessung zur Bilanzierung; bei anderen zur Plausibilisierung der Dialysatflüsse."
+    },
+    {
+      "ref": "hall-sensor",
+      "role": "Überwachung von Drehzahl und Rotorstellung der Blutpumpe sowie Deckelerkennung (bauartabhängig)."
+    }
+  ],
+  "specs": [
+    {
+      "param": "Blutfluss (Einstellbereich)",
+      "value": "etwa 50–500 ml/min, im klinischen Alltag meist 200–450 ml/min",
+      "note": "Oberer Wert gerätespezifisch, praktisch begrenzt durch Gefäßzugang und arteriellen Unterdruck.",
+      "evidence": "typisch",
+      "sources": [
+        "daugirdas-2015"
+      ]
+    },
+    {
+      "param": "Dialysatfluss",
+      "value": "etwa 300–800 ml/min, Standard häufig 500 ml/min",
+      "note": "Manche Geräte passen den Dialysatfluss automatisch an den Blutfluss an.",
+      "evidence": "typisch",
+      "sources": [
+        "daugirdas-2015"
+      ]
+    },
+    {
+      "param": "Dialysattemperatur",
+      "value": "etwa 35–39 °C einstellbar",
+      "note": "Kühleres Dialysat kann die Kreislaufstabilität verbessern.",
+      "evidence": "typisch",
+      "sources": [
+        "daugirdas-2015"
+      ]
+    },
+    {
+      "param": "Dialysat-Natrium",
+      "value": "etwa 130–150 mmol/l einstellbar, Standard um 138–140 mmol/l",
+      "note": "Geregelt über die Leitfähigkeit.",
+      "evidence": "typisch",
+      "sources": [
+        "daugirdas-2015"
+      ]
+    },
+    {
+      "param": "Leitfähigkeit des Dialysats",
+      "value": "Größenordnung 13–15 mS/cm (bezogen auf 25 °C)",
+      "note": "Abhängig von Natrium und Konzentratrezeptur; Alarmfenster um den Sollwert.",
+      "evidence": "typisch",
+      "sources": [
+        "kramme-2017"
+      ]
+    },
+    {
+      "param": "Dialysat-Bicarbonat",
+      "value": "etwa 25–40 mmol/l einstellbar",
+      "note": "Herstellerabhängig.",
+      "evidence": "typisch",
+      "sources": [
+        "daugirdas-2015"
+      ]
+    },
+    {
+      "param": "Arterieller Druck (Betriebsbereich)",
+      "value": "etwa −50 bis −250 mmHg",
+      "note": "Stärker negative Drücke senken den effektiven Blutfluss und erhöhen die Hämolysegefahr.",
+      "evidence": "typisch",
+      "sources": [
+        "daugirdas-2015"
+      ]
+    },
+    {
+      "param": "Venöser Druck (Betriebsbereich)",
+      "value": "etwa +50 bis +250 mmHg",
+      "note": "Abhängig von Kanüle, Blutfluss und Gefäßzugang; Alarmfenster um den Arbeitspunkt.",
+      "evidence": "typisch",
+      "sources": [
+        "daugirdas-2015"
+      ]
+    },
+    {
+      "param": "Ultrafiltrationsrate",
+      "value": "einstellbar von 0 bis einige l/h; klinisch meist deutlich unter 1 l/h",
+      "note": "Hohe UF-Raten begünstigen Blutdruckabfälle; Höchstwert gerätespezifisch.",
+      "evidence": "typisch",
+      "sources": [
+        "daugirdas-2015"
+      ]
+    },
+    {
+      "param": "Mikrobiologie ultrareines Dialysat",
+      "value": "< 0,1 KBE/ml und < 0,03 EU/ml Endotoxin",
+      "note": "Voraussetzung für Online-HDF; Prüfung nach Hygieneplan.",
+      "evidence": "belegt",
+      "sources": [
+        "iso-23500-5"
+      ]
+    },
+    {
+      "param": "Dialysedosis (Zielwert)",
+      "value": "spKt/V 1,4 pro Behandlung (Minimum 1,2) bei dreimal wöchentlicher HD",
+      "note": "Klinische Zielgröße, keine Geräteeigenschaft; online über ionische Dialysance abschätzbar.",
+      "evidence": "belegt",
+      "sources": [
+        "kdoqi-hd-adequacy-2015"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "ref": "fresenius-medical-care",
+      "models": [
+        "6008 CAREsystem",
+        "5008S CorDiax",
+        "4008 S"
+      ],
+      "note": "Einer der weltweit führenden Anbieter von Dialysegeräten und -verbrauchsmaterial; Systeme mit volumetrischer Bilanzkammer und Online-HDF."
+    },
+    {
+      "ref": "b-braun",
+      "models": [
+        "Dialog iQ",
+        "Dialog+"
+      ],
+      "note": "Hämodialyse- und HDF-Systeme der Dialog-Familie."
+    },
+    {
+      "ref": "baxter",
+      "models": [
+        "AK 98",
+        "Artis Physio"
+      ],
+      "note": "Ursprünglich aus der Gambro-Linie; das Nierengeschäft wird seit 2025 als eigenständiges Unternehmen Vantive weitergeführt."
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "Flexya (Bellco)"
+      ],
+      "note": "Hämodialyse-/HDF-System der Tochter Bellco; aktuelle Vertriebsstruktur (u. a. Mozarc Medical) regional prüfen."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Für Hämodialysegeräte gibt es keine öffentlich überprüfbaren Listenpreise; Dialysezentren beschaffen sie meist über Ausschreibungen, Rahmen- oder Systemverträge, oft gebündelt mit Dialysatoren, Schlauchsystemen und Konzentraten. Der Preis hängt ab von: Therapiemodi (HD, Online-HDF, Single-Needle), Optionen (Blutvolumen- und Clearance-Messung, Biofeedback, Blutdruckmodul), IT-Anbindung, Stückzahl, Servicevertrag und Laufzeit. Entscheidend sind die **Gesamtbetriebskosten**: Verbrauchsmaterial pro Behandlung, Wasser- und Energieverbrauch, Desinfektionsmittel, Dialysatfilter, Wartung und STK übersteigen über die Nutzungsdauer den Anschaffungspreis meist deutlich."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.4 – nichtimplantierbare aktive Produkte zur unmittelbaren Einbringung von Flüssigkeiten in den Blutkreislauf unter potentiellem Druckaufbau (mit gekoppelter Entnahmefunktion); nicht in Anlage 2 aufgeführt",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); Wartung nach Herstellerangabe (Betriebsstunden/Kalenderintervall); Desinfektion nach jeder Behandlung; Dialysatfilterwechsel nach Standzeit"
+  },
+  "faults": [
+    {
+      "title": "Arterieller Druck zu niedrig (Ansaugproblem)",
+      "ref": "okklusionsalarm",
+      "cause": "Kanüle liegt an der Gefäßwand an, Shuntstenose, zu hoher Blutfluss für den Zugang, abgeknickter arterieller Schlauch, Klemme geschlossen.",
+      "action": "Schlauchweg prüfen, Kanülenlage korrigieren (ärztlich/pflegerisch), Blutfluss reduzieren; Shuntfunktion abklären lassen."
+    },
+    {
+      "title": "Venöser Druck zu hoch",
+      "ref": "okklusionsalarm",
+      "cause": "Gerinnsel in der venösen Luftfalle oder im Dialysator, venöse Kanüle fehlplatziert, Abknickung, Stenose im venösen Abfluss.",
+      "action": "Schlauchsystem und Luftfalle auf Gerinnsel prüfen, Kanülenlage kontrollieren, Antikoagulation überprüfen; ggf. System wechseln."
+    },
+    {
+      "title": "Venöser Druck zu niedrig / Diskonnektion",
+      "ref": "diskonnektion",
+      "cause": "Lösen einer Verbindung, Herausrutschen der venösen Kanüle, Transducerschutz benetzt.",
+      "action": "Sofort Patientenseite kontrollieren; Blutverlust verhindern. Beachten: Eine Kanülendislokation wird durch den venösen Druck nicht sicher erkannt."
+    },
+    {
+      "title": "Luftalarm",
+      "ref": "luft-im-system",
+      "cause": "Undichte Verbindung im arteriellen Schenkel (Unterdruck saugt Luft an), niedriger Füllstand der Luftfalle, Mikroschaum, Infusion leergelaufen.",
+      "action": "Ursache finden und beseitigen, Luftfalle auffüllen; Luft nach Herstellervorgabe entfernen, bevor die Klemme freigegeben wird. Schutzfunktion niemals überbrücken."
+    },
+    {
+      "title": "Blutleckalarm",
+      "ref": "blutleck-alarm",
+      "cause": "Membranruptur im Dialysator; Fehlalarm durch Luftblasen im Dialysat, verschmutzten oder dejustierten Detektor.",
+      "action": "Dialysatablauf auf Rotfärbung prüfen (ggf. Teststreifen), bei echtem Leck Behandlung nach Vorgabe beenden bzw. Dialysator wechseln; bei Fehlalarmen Detektor durch Technik prüfen/reinigen/kalibrieren."
+    },
+    {
+      "title": "Leitfähigkeitsalarm",
+      "ref": "leitfaehigkeitsalarm",
+      "cause": "Konzentratkanister leer, falsches Konzentrat, Ansaugstab nicht eingetaucht, Bicarbonatkartusche erschöpft, Luft in der Konzentratleitung, Wasserversorgung gestört, Sensordrift.",
+      "action": "Konzentrate und Anschlüsse prüfen; Gerät bleibt im Bypass, bis die Werte stabil sind. Bei wiederkehrenden Alarmen Leitfähigkeitsmessung durch Technik kalibrieren."
+    },
+    {
+      "title": "Temperaturalarm",
+      "ref": "sensordrift",
+      "cause": "Heizungsdefekt, unzureichender Wasserzulauf, Sensorfehler oder -drift.",
+      "action": "Wasserversorgung prüfen; bei Persistenz Gerät außer Betrieb nehmen und Heizung/Temperaturfühler prüfen lassen."
+    },
+    {
+      "title": "Fehler im Druckhaltetest / Bilanzfehler",
+      "ref": "fehlercodes",
+      "cause": "Undichte Ventile oder Bilanzkammermembran, Kalkablagerungen, defekte UF-Pumpe.",
+      "action": "Gerät nicht zur Behandlung verwenden; Fehlerspeicher auslesen und Hydraulik durch befugtes Fachpersonal instand setzen."
+    },
+    {
+      "title": "Falsche Konzentrat- oder Programmwahl",
+      "ref": "anwendungsfehler",
+      "cause": "Verwechslung von Konzentraten, fehlerhafte Eingabe von UF-Ziel oder Dialysezeit.",
+      "action": "Vier-Augen-Prinzip, Barcode-/Kartensysteme nutzen, Plausibilitätskontrolle; Schulung im Rahmen der Einweisung."
+    }
+  ],
+  "tests": [
+    {
+      "name": "Sicherheitstechnische Kontrolle",
+      "ref": "stk",
+      "description": "Pflichtprüfung nach § 12 MPBetreibV (Anlage 1 Nr. 1.4) nach Herstellerprüfanweisung: Sichtprüfung, elektrische Sicherheit, Prüfung der Schutzsysteme (Luft, Blutleck, Leitfähigkeit, Temperatur, Druck), Bilanzgenauigkeit, Dokumentation."
+    },
+    {
+      "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+      "ref": "elektrische-sicherheitspruefung",
+      "description": "Schutzleiterwiderstand, ggf. Isolationswiderstand, Geräteableitstrom und Ableitstrom vom Anwendungsteil (Direkt-, Ersatz- oder Differenzstrommessverfahren); Kontaktierung des Anwendungsteils nach Herstellervorgabe."
+    },
+    {
+      "name": "Ultrafiltrations- und Bilanzprüfung",
+      "ref": "pruefgeraete",
+      "description": "Gravimetrischer Vergleich von eingestellter und tatsächlich entzogener Flüssigkeitsmenge mit Präzisionswaage und Testaufbau."
+    },
+    {
+      "name": "Leitfähigkeits- und Temperaturprüfung",
+      "ref": "kalibrierung",
+      "description": "Vergleich mit kalibriertem externen Leitfähigkeits-/Temperaturmessgerät an den Dialysatkupplungen; Prüfung der Alarmauslösung und des Bypass."
+    },
+    {
+      "name": "Prüfung von Luft- und Blutleckdetektor",
+      "ref": "luftblasendetektor",
+      "description": "Auslösen mit Prüfmitteln bzw. Testschlauch nach Herstellervorgabe; Kontrolle von Pumpenstopp und Venenklemme."
+    },
+    {
+      "name": "Funktionsprüfung vor Anwendung",
+      "ref": "funktionspruefung",
+      "description": "Automatischer Selbsttest einschließlich Druckhaltetest; Kontrolle von Konzentraten, Desinfektionsmittelfreiheit und Alarmgrenzen durch die Anwender."
+    },
+    {
+      "name": "Mikrobiologische Dialysatkontrolle",
+      "description": "Bestimmung von Koloniezahl und Endotoxin in Dialysat bzw. Substitutionslösung nach Hygieneplan, Bewertung anhand der ISO-23500-Grenzwerte."
+    }
+  ],
+  "diagram": {
+    "title": "Funktionsschema eines Hämodialysegeräts",
+    "caption": "Vereinfachtes Funktionsschema: Blutkreislauf (oben), Dialysatkreislauf (unten) und Schutzsystem. Die Steuerung ist in Wirklichkeit mit allen Sensoren und Aktoren verbunden; dargestellt sind nur ausgewählte Signalwege. Kein Abbild eines konkreten Modells.",
+    "width": 960,
+    "height": 500,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Patient\n(Gefäßzugang)",
+        "ref": "blutkreislauf",
+        "kind": "patient",
+        "x": 90,
+        "y": 200
+      },
+      {
+        "id": "pa",
+        "label": "Arterieller\nDruck",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 280,
+        "y": 70
+      },
+      {
+        "id": "bp",
+        "label": "Blutpumpe\n(Rollenpumpe)",
+        "ref": "peristaltikpumpe",
+        "kind": "actuator",
+        "x": 470,
+        "y": 70
+      },
+      {
+        "id": "hep",
+        "label": "Heparinpumpe",
+        "ref": "spritzenpumpe",
+        "kind": "actuator",
+        "x": 660,
+        "y": 70
+      },
+      {
+        "id": "dial",
+        "label": "Dialysator",
+        "ref": "dialysator",
+        "kind": "process",
+        "x": 660,
+        "y": 200
+      },
+      {
+        "id": "pv",
+        "label": "Venöser Druck\n+ Luftfalle",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 470,
+        "y": 200
+      },
+      {
+        "id": "luft",
+        "label": "Luftdetektor\n+ Venenklemme",
+        "ref": "luftblasendetektor",
+        "kind": "sensor",
+        "x": 280,
+        "y": 200
+      },
+      {
+        "id": "bld",
+        "label": "Blutleck-\ndetektor",
+        "ref": "blutleckdetektor",
+        "kind": "sensor",
+        "x": 850,
+        "y": 200
+      },
+      {
+        "id": "wasser",
+        "label": "Aufbereitetes\nWasser (UO)",
+        "ref": "diffusion-osmose",
+        "kind": "source",
+        "x": 90,
+        "y": 330
+      },
+      {
+        "id": "heiz",
+        "label": "Heizung +\nEntgasung",
+        "ref": "heizelement",
+        "kind": "process",
+        "x": 280,
+        "y": 330
+      },
+      {
+        "id": "konz",
+        "label": "Konzentrat-\nmischung",
+        "kind": "process",
+        "x": 470,
+        "y": 330
+      },
+      {
+        "id": "lf",
+        "label": "Leitfähigkeit +\nTemperatur",
+        "ref": "leitfaehigkeitssensor",
+        "kind": "sensor",
+        "x": 660,
+        "y": 330
+      },
+      {
+        "id": "bil",
+        "label": "Bilanzkammern +\nUF-Pumpe",
+        "kind": "actuator",
+        "x": 850,
+        "y": 330
+      },
+      {
+        "id": "ctrl",
+        "label": "Steuer- und\nSchutzsystem",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 660,
+        "y": 450
+      }
+    ],
+    "edges": [
+      {
+        "from": "pat",
+        "to": "pa",
+        "kind": "fluid",
+        "label": "arteriell"
+      },
+      {
+        "from": "pa",
+        "to": "bp",
+        "kind": "fluid"
+      },
+      {
+        "from": "bp",
+        "to": "dial",
+        "kind": "fluid",
+        "label": "Blut"
+      },
+      {
+        "from": "hep",
+        "to": "dial",
+        "kind": "fluid",
+        "label": "Heparin"
+      },
+      {
+        "from": "dial",
+        "to": "pv",
+        "kind": "fluid"
+      },
+      {
+        "from": "pv",
+        "to": "luft",
+        "kind": "fluid"
+      },
+      {
+        "from": "luft",
+        "to": "pat",
+        "kind": "fluid",
+        "label": "venös"
+      },
+      {
+        "from": "wasser",
+        "to": "heiz",
+        "kind": "fluid"
+      },
+      {
+        "from": "heiz",
+        "to": "konz",
+        "kind": "fluid"
+      },
+      {
+        "from": "konz",
+        "to": "lf",
+        "kind": "fluid"
+      },
+      {
+        "from": "lf",
+        "to": "bil",
+        "kind": "fluid",
+        "label": "Frischdialysat"
+      },
+      {
+        "from": "bil",
+        "to": "dial",
+        "kind": "fluid"
+      },
+      {
+        "from": "dial",
+        "to": "bld",
+        "kind": "fluid",
+        "label": "verbraucht"
+      },
+      {
+        "from": "bld",
+        "to": "bil",
+        "kind": "fluid"
+      },
+      {
+        "from": "lf",
+        "to": "ctrl",
+        "kind": "signal",
+        "label": "κ, T"
+      },
+      {
+        "from": "bil",
+        "to": "ctrl",
+        "kind": "signal",
+        "label": "Bilanz"
+      }
+    ]
+  },
+  "images": [
+    {
+      "src": "img/devices/dialysegeraet-aufbau.svg",
+      "kind": "schema",
+      "caption": "Schematischer Aufbau eines Hämodialysegeräts mit Blutmodul, Dialysator, Hydraulik und Konzentratanschlüssen (eigene Darstellung, kein reales Modell)."
+    },
+    {
+      "src": "img/devices/dialysegeraet-prinzip.svg",
+      "kind": "schema",
+      "caption": "Prinzip des Stoffaustauschs im Gegenstrom (Diffusion, Konvektion) und der volumetrischen Bilanzierung mit Bilanzkammer und UF-Pumpe (eigene Darstellung, vereinfacht)."
+    }
+  ],
+  "paths": [
+    [
+      "dialysegeraet",
+      "dialysator",
+      "diffusion-osmose",
+      "niere"
+    ],
+    [
+      "dialysegeraet",
+      "leitfaehigkeitssensor",
+      "spannung-strom-widerstand",
+      "blut"
+    ],
+    [
+      "dialysegeraet",
+      "luftblasendetektor",
+      "schallwellen",
+      "piezoelektrischer-effekt"
+    ]
+  ],
+  "related": [
+    "crrt-geraet",
+    "zellseparator",
+    "ecmo",
+    "herz-lungen-maschine",
+    "spritzenpumpe",
+    "dialysator",
+    "peristaltikpumpe",
+    "leitfaehigkeitssensor",
+    "blutleckdetektor",
+    "luftblasendetektor",
+    "iec-60601-2-16",
+    "blutleck-alarm",
+    "leitfaehigkeitsalarm",
+    "niere",
+    "diffusion-osmose",
+    "nephrologie",
+    "mpbetreibv",
+    "stk"
+  ],
+  "sources": [
+    "daugirdas-2015",
+    "kramme-2017",
+    "schmidt-lang-2019",
+    "iec-60601-2-16",
+    "iso-23500-3",
+    "iso-23500-5",
+    "kdoqi-hd-adequacy-2015",
+    "daugirdas-1993",
+    "convince-2023",
+    "kolff-1944",
+    "iec-60601-1",
+    "iec-60601-1-11",
+    "iec-62353",
+    "mdr-2017",
+    "mdcg-2021-24",
+    "mpbetreibv",
+    "din-31051",
+    "fmc-6008",
+    "vantive-ak98"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

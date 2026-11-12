@@ -1,0 +1,150 @@
+{
+  "id": "ableitstrommessung",
+  "type": "term",
+  "title": "Ableitstrommessung",
+  "aliases": [
+    "Ableitstromprüfung",
+    "Leakage current measurement",
+    "Leakage current test",
+    "Geräteableitstrommessung",
+    "Differenzstrommessung",
+    "Ersatzableitstrommessung",
+    "Alternative method",
+    "Direct method"
+  ],
+  "category": "stk-mtk",
+  "summary": "Die Ableitstrommessung bestimmt die nicht funktionsbedingten Ströme, die von einem Gerät über Gehäuse, Schutzleiter oder Anwendungsteile zur Erde fließen. Bei Wiederholungsprüfungen nach IEC 62353 werden Geräteableitstrom und Ableitstrom vom Anwendungsteil nach dem direkten, dem Differenzstrom- oder dem Ersatzableitstromverfahren gemessen.",
+  "body": "## Ziel der Messung\n\nJedes netzbetriebene Gerät erzeugt [[ableitstrom|Ableitströme]] – überwiegend kapazitiv über Isolierungen und Entstörkondensatoren, zu einem kleinen Teil ohmsch über den endlichen [[isolationswiderstand|Isolationswiderstand]]. Die **Ableitstrommessung** prüft, ob diese Ströme so klein sind, dass sie weder Anwender noch Patienten gefährden. Weil Patienten über Elektroden, Katheter oder Flüssigkeitssäulen direkt mit einem Gerät verbunden sein können, sind die Grenzwerte für Anwendungsteile besonders streng (siehe [[elektrische-stromwirkung]]) [@iec-60601-1] [@iec-60479-1].\n\n## Messgrößen nach IEC 62353\n\nDie [[iec-62353|IEC 62353]] fasst die Ableitströme der Typprüfung für die Praxis zu zwei Messgrößen zusammen [@iec-62353]:\n\n| Messgröße | Strompfad | Bedeutung |\n|---|---|---|\n| **Geräteableitstrom** | Summe der Ströme von Netzteil über Gehäuse, Schutzleiter und Anwendungsteile zur Erde | Gefährdung von Anwender und Patient bei Schutzleiterunterbrechung |\n| **Ableitstrom vom Anwendungsteil** | Strom, der bei Netzspannung am Anwendungsteil (bei BF und CF) über das Anwendungsteil zur Erde fließt | Güte der Patiententrennung |\n\nBei Anwendungsteilen vom Typ B entfällt die Messung des Anwendungsteilableitstroms, da diese nicht vom Erdpotential isoliert sind; sie sind im Geräteableitstrom enthalten. Mehrere Anwendungsteile gleicher Funktion (z. B. alle EKG-Elektroden) werden zusammengeschaltet und gemeinsam gemessen [@iec-62353].\n\n## Die Messeinrichtung (MD)\n\nAbleitströme werden über eine genormte **Messeinrichtung** (*measuring device*, MD) gemessen, die die Körperimpedanz und die Frequenzabhängigkeit der Stromwirkung nachbildet: eine Eingangsimpedanz von etwa 1 kΩ (Widerstand R2) mit einem frequenzbewertenden RC-Glied (R1 = 10 kΩ, C1 = 15 nF). Gemessen wird die Spannung über C1; bei niedriger Frequenz entspricht sie der Spannung über dem 1-kΩ-Widerstand, also 1 mV pro 1 µA. Die Grenzfrequenz des Bewertungsglieds liegt bei f = 1 / (2π · 10 kΩ · 15 nF) ≈ 1 kHz; darüber fällt die Anzeige mit etwa 20 dB pro Dekade [@iec-60601-1].\n\nI = U_MD / 1 kΩ\n\n> [!vereinfacht] Das RC-Netzwerk sorgt dafür, dass hochfrequente Anteile (z. B. aus Schaltnetzteilen) geringer gewichtet werden – sie reizen Nerven und Herzmuskel weniger stark als 50-Hz-Ströme. Ein einfaches Multimeter ohne diese Bewertung würde bei Geräten mit Schaltnetzteil zu hohe oder schwer vergleichbare Werte liefern.\n\n## Messverfahren\n\n### Direktmessung\n\nDer Prüfling wird über das Prüfgerät mit Netzspannung versorgt, der Schutzleiter wird unterbrochen und der Strom über die MD zur Erde geführt. Das Verfahren entspricht am ehesten der realen Gefährdung bei Schutzleiterbruch und erfasst alle Betriebszustände. Der Prüfling muss **isoliert** aufgestellt sein, damit keine Nebenwege zur Erde bestehen (z. B. über Wasseranschlüsse, Datenleitungen, Metallregale) [@iec-62353].\n\n### Differenzstrommessung\n\nDas Prüfgerät misst die Differenz der Ströme in Außen- und Neutralleiter. Jeder Strom, der nicht über L und N zurückfließt, ist ein Ableitstrom. Vorteil: Der Schutzleiter bleibt angeschlossen, das Gerät kann eingebunden bleiben. Da die Differenzmessung nur den Geräteableitstrom erfasst, ist sie für den Ableitstrom vom Anwendungsteil nicht vorgesehen. Nachteil: Die Auflösung ist im unteren Mikroampere-Bereich begrenzt, sodass das Verfahren für Schutzklasse II und für CF-Anwendungsteile weniger geeignet ist [@iec-62353].\n\n### Ersatzableitstrommessung (alternatives Verfahren)\n\nAußen- und Neutralleiter werden kurzgeschlossen, und eine Prüfspannung in Höhe der Netzspannung wird über eine strombegrenzte Quelle zwischen Netzteil und Schutzleiter bzw. Gehäuse oder Anwendungsteil angelegt. Der Prüfling ist **nicht in Betrieb**. Das Verfahren ist sicher, gut reproduzierbar und unabhängig von Netzpolarität und Netzspannungsschwankungen, erfasst aber Teile hinter netzseitigen Schaltern oder Relais nicht immer vollständig [@iec-62353].\n\n| Verfahren | Gerät in Betrieb | Schutzleiter | Eignung |\n|---|---|---|---|\n| Direkt | ja | unterbrochen | alle Schutzklassen, empfindlich |\n| Differenzstrom | ja | angeschlossen | Schutzklasse I, Festinstallation |\n| Ersatzableitstrom | nein | angeschlossen | Geräte ohne netzseitig geschaltete Teile, hohe Reproduzierbarkeit |\n\n## Grenzwerte (Auswahl)\n\n> [!belegt] Die IEC 62353 nennt in der verbreiteten Ausgabe folgende Grenzwerte: Geräteableitstrom bei Direkt- oder Differenzstrommessung 500 µA (Schutzklasse I) bzw. 100 µA (Schutzklasse II), beim Ersatzverfahren 1 000 µA bzw. 500 µA; Ableitstrom vom Anwendungsteil (direkt oder Ersatzverfahren) 5 000 µA (Typ BF) bzw. 50 µA (Typ CF). Besondere Gerätenormen und Herstellerangaben können abweichende Festlegungen treffen; maßgeblich ist die jeweils gültige Normausgabe [@iec-62353].\n\nBei der Direktmessung wird bei Netzbetrieb in **beiden Netzpolaritäten** gemessen, weil die Kapazitäten zu Außen- und Neutralleiter unterschiedlich sein können; der höhere Wert ist maßgeblich.\n\n> [!beispiel] Ein [[patientenmonitor|Patientenmonitor]] (Schutzklasse I, EKG-Eingang Typ CF) liefert bei der Direktmessung einen Geräteableitstrom von 180 µA in Polarität 1 und 210 µA in Polarität 2 (maßgeblich: 210 µA < 500 µA). Der Ableitstrom vom EKG-Anwendungsteil beträgt 12 µA (< 50 µA). Beim Vorwert vor zwei Jahren lagen 9 µA vor – der Anstieg liegt im Rahmen der Messunsicherheit. Werte beispielhaft.\n\n## Bedeutung in der Medizintechnik\n\nDie Ableitstrommessung ist der elektrisch aussagekräftigste Teil der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] und Pflichtbestandteil der [[stk|STK]]. Kritisch sind vor allem Geräte mit CF-Anwendungsteilen und Herznähe: [[ekg-geraet]], [[defibrillator]], [[patientenmonitor]], [[invasive-druckmessung]], [[externer-schrittmacher]], [[herz-lungen-maschine]] und [[ecmo]]. Auch bei [[dialysegeraet|Dialysegeräten]] (leitfähiges Dialysat) und [[hf-chirurgiegeraet|HF-Chirurgiegeräten]] ist die Messung zentral; für letztere kommen zusätzlich HF-Ableitströme nach Gerätenorm hinzu.\n\nTypische Ursachen erhöhter Werte sind gealterte Y-Kondensatoren im Netzfilter ([[medizinisches-netzteil]]), Feuchtigkeit, beschädigte Patientenkabel und nicht freigegebenes Zubehör. Bei ME-Systemen addieren sich die Erdableitströme mehrerer Geräte an einer Mehrfachsteckdose – ein Grund, warum Mehrfachsteckdosen in der Patientenumgebung nur unter Bedingungen der [[iec-60601-1]] verwendet werden dürfen [@iec-60601-1].\n\n> [!warnung] Während der Direktmessung ist der Schutzleiter unterbrochen, und bei der Prüfung des Anwendungsteils liegt Netzspannung am Anwendungsteil an. Das Gerät darf nicht mit einem Patienten verbunden sein und nicht berührt werden. Die Messung gehört in die Hand befugter Elektrofachkräfte bzw. entsprechend qualifizierter Medizintechniker:innen.",
+  "related": [
+    "ableitstrom",
+    "elektrische-sicherheitspruefung",
+    "anwendungsteile",
+    "schutzklassen",
+    "schutzleiterwiderstand",
+    "isolationswiderstand",
+    "elektrische-stromwirkung",
+    "pruefgeraete",
+    "stk",
+    "galvanische-trennung",
+    "iec-62353"
+  ],
+  "paths": [
+    [
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "ableitstrommessung",
+      "ableitstrom"
+    ],
+    [
+      "ableitstrommessung",
+      "anwendungsteile",
+      "elektrische-stromwirkung",
+      "herz"
+    ]
+  ],
+  "diagram": {
+    "title": "Messkette der Ableitstrommessung",
+    "caption": "Der Ableitstrom fließt über die genormte Messeinrichtung (MD), deren Spannungsabfall gemessen und in µA angezeigt wird. Didaktisches Schema.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "netz",
+        "label": "Netzversorgung\nüber Prüfgerät",
+        "ref": "pruefgeraete",
+        "kind": "source",
+        "x": 110,
+        "y": 90
+      },
+      {
+        "id": "nt",
+        "label": "Netzteil des\nPrüflings",
+        "ref": "medizinisches-netzteil",
+        "kind": "process",
+        "x": 330,
+        "y": 90
+      },
+      {
+        "id": "cap",
+        "label": "Isolations- und\nY-Kapazitäten",
+        "ref": "kondensator",
+        "kind": "process",
+        "x": 550,
+        "y": 90
+      },
+      {
+        "id": "teil",
+        "label": "Gehäuse bzw.\nAnwendungsteil",
+        "ref": "anwendungsteile",
+        "kind": "output",
+        "x": 770,
+        "y": 90
+      },
+      {
+        "id": "md",
+        "label": "Messeinrichtung MD\n(1 kΩ + Bewertung)",
+        "kind": "sensor",
+        "x": 770,
+        "y": 240,
+        "w": 170
+      },
+      {
+        "id": "v",
+        "label": "Spannungsmessung\n1 mV ≙ 1 µA",
+        "kind": "sensor",
+        "x": 550,
+        "y": 240
+      },
+      {
+        "id": "anz",
+        "label": "Anzeige und\nGrenzwertvergleich",
+        "kind": "control",
+        "x": 330,
+        "y": 240
+      }
+    ],
+    "edges": [
+      {
+        "from": "netz",
+        "to": "nt",
+        "kind": "power"
+      },
+      {
+        "from": "nt",
+        "to": "cap",
+        "kind": "power"
+      },
+      {
+        "from": "cap",
+        "to": "teil",
+        "kind": "power",
+        "label": "I_Ableit"
+      },
+      {
+        "from": "teil",
+        "to": "md",
+        "kind": "power"
+      },
+      {
+        "from": "md",
+        "to": "v",
+        "kind": "signal",
+        "label": "U_MD"
+      },
+      {
+        "from": "v",
+        "to": "anz",
+        "kind": "data"
+      }
+    ]
+  },
+  "sources": [
+    "iec-62353",
+    "iec-60601-1",
+    "iec-61557-16",
+    "iec-60479-1",
+    "webster-2010"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

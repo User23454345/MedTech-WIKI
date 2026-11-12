@@ -1,0 +1,167 @@
+{
+  "id": "medizinisch-genutzte-bereiche",
+  "type": "term",
+  "title": "Elektrische Anlagen in medizinisch genutzten Bereichen",
+  "aliases": [
+    "Medizinisch genutzte Bereiche",
+    "Medical locations",
+    "Anwendungsgruppe 0",
+    "Anwendungsgruppe 1",
+    "Anwendungsgruppe 2",
+    "Gruppe 2",
+    "Medizinisches IT-System",
+    "IT-System",
+    "IT-Netz",
+    "Isolationsüberwachung",
+    "IMD",
+    "Insulation Monitoring Device",
+    "Sicherheitsstromversorgung",
+    "Notstromversorgung",
+    "zusätzlicher Schutzpotentialausgleich",
+    "VDE 0100-710"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Für die elektrische Installation in Räumen, in denen Patienten mit ME-Geräten behandelt werden, gilt DIN VDE 0100-710. Sie teilt die Räume in Anwendungsgruppen 0, 1 und 2 ein und fordert je nach Gruppe Fehlerstrom-Schutzeinrichtungen, ein überwachtes medizinisches IT-System, zusätzlichen Potentialausgleich und eine Sicherheitsstromversorgung mit festgelegten Umschaltzeiten.",
+  "body": "## Begriff und Normgrundlage\n\n**Medizinisch genutzte Bereiche** sind Räume, in denen Patienten mit [[medizinisches-elektrisches-geraet|medizinischen elektrischen Geräten]] untersucht oder behandelt werden. Für die elektrische Gebäudeinstallation in diesen Räumen gilt in Deutschland die Errichtungsnorm [[din-vde-0100-710|DIN VDE 0100-710]], die auf der internationalen IEC 60364-7-710 beruht [@din-vde-0100-710].\n\nDie Norm ergänzt die allgemeinen Errichtungsbestimmungen für Niederspannungsanlagen um zwei Ziele:\n\n1. **Patientenschutz:** Patienten sind durch Narkose, Medikamente, Katheter oder geöffnete Haut besonders empfindlich gegenüber elektrischem Strom (siehe [[elektrische-stromwirkung]]).\n2. **Versorgungssicherheit:** Lebenserhaltende Geräte dürfen bei einem ersten Isolationsfehler oder einem Netzausfall nicht unkontrolliert abgeschaltet werden.\n\nDie Anlage ist damit das „Gegenstück“ zur Gerätesicherheit nach [[iec-60601-1]]: Die Gerätenorm geht von einer normgerechten Installation aus, die Installationsnorm von normgerechten Geräten.\n\n## Anwendungsgruppen\n\nKernstück ist die Einteilung der Räume in **Anwendungsgruppen** nach Art des Patientenkontakts und nach den Folgen einer Stromunterbrechung [@din-vde-0100-710]:\n\n| Gruppe | Merkmal | Typische Räume (Beispiele) |\n|---|---|---|\n| 0 | keine Anwendungsteile vorgesehen, bzw. Unterbrechung der Versorgung ohne Gefahr für den Patienten | Massageräume, Bettenräume ohne ME-Geräteanwendung |\n| 1 | Anwendungsteile äußerlich oder invasiv (nicht am Herzen); Unterbrechung der Versorgung gefährdet den Patienten nicht | allgemeine Bettenräume, Untersuchungsräume, Dialyseräume |\n| 2 | Anwendungsteile für intrakardiale Verfahren, chirurgische Eingriffe oder lebenswichtige Behandlungen; Unterbrechung der Versorgung kann lebensbedrohlich sein | OP-Säle, Intensivstation, Herzkatheterlabor, Aufwachraum |\n\n> [!hinweis] Die Zuordnung eines Raums zu einer Anwendungsgruppe trifft der Betreiber gemeinsam mit dem medizinischen Personal und dem Planer; die Norm enthält dazu nur eine informative Beispielliste. Die Tabelle zeigt typische Zuordnungen, keine verbindlichen Festlegungen.\n\n## Schutzmaßnahmen nach Gruppen\n\n### Gruppe 1: Fehlerstrom-Schutzeinrichtungen\n\nIn Räumen der Gruppe 1 werden Endstromkreise typischerweise über **Fehlerstrom-Schutzeinrichtungen** (RCD) mit einem Bemessungsdifferenzstrom von höchstens 30 mA geschützt; die Norm verlangt Bauarten, die auch pulsierende Gleichfehlerströme erfassen (Typ A bzw. bei glatten Gleichfehlerströmen Typ B), Einzelheiten und Ausnahmen regelt die jeweils gültige Fassung. Bei einem Körperschluss schaltet die RCD innerhalb von Sekundenbruchteilen ab – das ist sicher, bedeutet aber eine Unterbrechung der Versorgung.\n\n### Gruppe 2: Das medizinische IT-System\n\nIn Räumen der Gruppe 2 werden Stromkreise für lebenswichtige ME-Geräte aus einem **medizinischen IT-System** versorgt [@din-vde-0100-710]. Ein Trenntransformator ([[transformator]]) speist ein Netz, dessen aktive Leiter nicht geerdet sind.\n\nPhysikalischer Hintergrund: Im geerdeten TN-System schließt ein Körperschluss den Stromkreis über den Schutzleiter, es fließt ein großer Fehlerstrom und die Schutzeinrichtung löst aus. Im IT-System fehlt die Rückleitung über Erde. Beim ersten Isolationsfehler fließt daher nur ein kleiner Strom über die Isolationswiderstände und Leitungskapazitäten des nicht fehlerbehafteten Leiters:\n\n`I_F ≈ U / Z_iso`\n\n> [!beispiel] Beträgt die Impedanz des zweiten Leiters gegen Erde 50 kΩ, so fließt beim ersten satten Erdschluss etwa I_F = 230 V / 50 kΩ ≈ 4,6 mA. Das ist für eine Abschaltung zu wenig – und soll es auch sein: Das Beatmungsgerät läuft weiter, gemeldet wird der Fehler optisch und akustisch. Die Zahlen sind beispielhaft.\n\nErst ein **zweiter** Fehler am anderen Leiter würde zu einem Kurzschluss führen. Deshalb muss der erste Fehler sofort erkannt und zeitnah behoben werden. Das leistet die **Isolationsüberwachungseinrichtung** (*Insulation Monitoring Device*, IMD): Sie legt eine kleine Messspannung zwischen IT-Netz und Erde und misst kontinuierlich den Isolationswiderstand. Unterschreitet dieser den Ansprechwert, löst eine Meldekombination im Raum optischen und akustischen Alarm aus. Der Ansprechwert darf nach DIN VDE 0100-710 nicht unter 50 kΩ eingestellt werden, die Meldung muss also spätestens bei 50 kΩ erfolgen; in der Praxis wird häufig genau dieser Wert verwendet [@din-vde-0100-710]. Zusätzlich werden Überlast und Übertemperatur des IT-Transformators überwacht.\n\n### Zusätzlicher Schutzpotentialausgleich\n\nIn Räumen der Gruppen 1 und 2 werden fremde leitfähige Teile (Metallrohre, Deckenversorgungseinheiten, OP-Tisch-Säule) und die Schutzleiter der Steckdosen über eine **Potentialausgleichsschiene** in Patientennähe verbunden. Ziel ist, Potentialunterschiede zwischen gleichzeitig berührbaren Teilen klein zu halten – entscheidend für den Schutz vor Mikroschock bei Patienten mit Herzkathetern (siehe [[anwendungsteile]] und [[ableitstrom]]).\n\n## Sicherheitsstromversorgung\n\nFällt die allgemeine Stromversorgung aus, muss eine **Sicherheitsstromversorgung** (z. B. Netzersatzanlage, Batteriesystem) bestimmte Verbraucher innerhalb festgelegter Zeiten übernehmen [@din-vde-0100-710]:\n\n| Umschaltzeit | Typische Verbraucher |\n|---|---|\n| ≤ 0,5 s | OP-Leuchten und weitere unterbrechungsempfindliche, lebenswichtige Verbraucher |\n| ≤ 15 s | Sicherheitsbeleuchtung, sonstige ME-Geräte der Gruppe 2, wichtige technische Einrichtungen |\n| > 15 s | Verbraucher, die eine längere Unterbrechung tolerieren (z. B. Sterilisation, Kühlung) |\n\n> [!vereinfacht] Die Tabelle fasst die Systematik der Umschaltzeiten vereinfacht zusammen. Welche Verbraucher welcher Klasse zuzuordnen sind und welche Mindestversorgungsdauern gelten, ist der jeweils gültigen Fassung der DIN VDE 0100-710 und den zugehörigen Normen für Sicherheitsstromversorgungen zu entnehmen.\n\nViele ME-Geräte überbrücken kurze Ausfälle zusätzlich über einen internen [[lithium-ionen-akku|Akku]] – das ersetzt die Sicherheitsstromversorgung aber nicht.\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechniker:innen ist die Schnittstelle zwischen Gebäudeinstallation und Gerät wichtig:\n\n* **Zuständigkeit:** Die Prüfung der Anlage (z. B. IMD-Funktion, Potentialausgleich, Umschaltung) gehört zur Elektrotechnik des Hauses und erfolgt nach den einschlägigen Errichtungs- und Betriebsnormen sowie [[dguv-vorschrift-3|DGUV Vorschrift 3]] [@dguv-v3]. Die Geräte selbst werden über [[stk|STK]] und [[elektrische-sicherheitspruefung|Prüfungen nach IEC 62353]] geprüft.\n* **Isolationsfehlermeldung im OP:** Häufige Ursache ist ein einzelnes Gerät mit Feuchtigkeit oder Isolationsschaden. Systematisches Abziehen der Verbraucher (nach Rücksprache, ohne Patientengefährdung) grenzt den Fehler ein – siehe [[fehlersuche]].\n* **Geräte mit hohem Ableitstrom:** Große Verbraucher wie [[angiographieanlage|Angiographieanlagen]] oder [[computertomograph|CT]] werden wegen ihrer hohen Anschlussleistung in der Regel nicht aus dem medizinischen IT-System (dessen Transformatorleistung begrenzt ist), sondern über eigene, entsprechend geschützte Stromkreise versorgt; ihr hoher [[ableitstrom|Erdableitstrom]] ist bei der Auswahl der Schutzeinrichtungen zu berücksichtigen.\n* **Anschluss:** Lebenswichtige Geräte wie [[beatmungsgeraet]], [[herz-lungen-maschine]], [[ecmo]] oder [[patientenmonitor]] gehören an die gekennzeichneten Steckdosen des IT-Systems bzw. der Sicherheitsstromversorgung; [[op-leuchte|OP-Leuchten]] und [[op-tisch|OP-Tische]] werden nach Planungsvorgaben versorgt.\n\n> [!praxis] Steckdosen des IT-Systems und der Sicherheitsstromversorgung sind in vielen Häusern farblich oder durch Beschriftung gekennzeichnet. Die Kennzeichnung ist hausintern festgelegt – im Zweifel die Haustechnik fragen.\n\n> [!warnung] Eine Isolationsfehlermeldung darf nicht dauerhaft quittiert und ignoriert werden. Solange der erste Fehler besteht, ist das IT-System nicht mehr gegen einen zweiten Fehler geschützt.\n\nSiehe auch: [[schutzklassen]], [[medizintechnik-management]], [[betreiberpflichten]], [[elektrotechnik]].\n",
+  "related": [
+    "din-vde-0100-710",
+    "schutzklassen",
+    "ableitstrom",
+    "anwendungsteile",
+    "transformator",
+    "elektrische-stromwirkung",
+    "dguv-vorschrift-3",
+    "betreiberpflichten",
+    "fehlersuche",
+    "medizintechnik-management"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "medizinisch-genutzte-bereiche",
+      "transformator",
+      "elektromagnetische-induktion"
+    ],
+    [
+      "medizinisch-genutzte-bereiche",
+      "schutzklassen",
+      "ableitstrom"
+    ]
+  ],
+  "diagram": {
+    "title": "Versorgung eines Raums der Anwendungsgruppe 2",
+    "caption": "Vereinfachtes Funktionsschema eines medizinischen IT-Systems mit Isolationsüberwachung und Sicherheitsstromversorgung. Keine konkrete Anlage.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "av",
+        "label": "Allgemeine\nStromversorgung",
+        "kind": "source",
+        "x": 100,
+        "y": 80
+      },
+      {
+        "id": "sv",
+        "label": "Sicherheits-\nstromversorgung",
+        "kind": "source",
+        "x": 100,
+        "y": 260
+      },
+      {
+        "id": "us",
+        "label": "Umschalt-\neinrichtung",
+        "kind": "control",
+        "x": 300,
+        "y": 170
+      },
+      {
+        "id": "trafo",
+        "label": "IT-Trenn-\ntransformator",
+        "ref": "transformator",
+        "kind": "process",
+        "x": 500,
+        "y": 170
+      },
+      {
+        "id": "imd",
+        "label": "Isolations-\nüberwachung (IMD)",
+        "kind": "sensor",
+        "x": 500,
+        "y": 300
+      },
+      {
+        "id": "sd",
+        "label": "IT-Steckdosen /\nPotentialausgleich",
+        "kind": "process",
+        "x": 700,
+        "y": 170
+      },
+      {
+        "id": "me",
+        "label": "ME-Gerät\n(z. B. Beatmung)",
+        "ref": "beatmungsgeraet",
+        "kind": "output",
+        "x": 700,
+        "y": 60
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 830,
+        "y": 300,
+        "w": 110
+      }
+    ],
+    "edges": [
+      {
+        "from": "av",
+        "to": "us",
+        "kind": "power"
+      },
+      {
+        "from": "sv",
+        "to": "us",
+        "kind": "power",
+        "label": "bei Netzausfall"
+      },
+      {
+        "from": "us",
+        "to": "trafo",
+        "kind": "power"
+      },
+      {
+        "from": "trafo",
+        "to": "sd",
+        "kind": "power",
+        "label": "ungeerdet"
+      },
+      {
+        "from": "imd",
+        "to": "trafo",
+        "kind": "signal",
+        "label": "Messspannung"
+      },
+      {
+        "from": "sd",
+        "to": "me",
+        "kind": "power"
+      },
+      {
+        "from": "me",
+        "to": "pat",
+        "kind": "energy"
+      }
+    ]
+  },
+  "sources": [
+    "din-vde-0100-710",
+    "dguv-v3",
+    "iec-60601-1",
+    "iec-60479-1",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

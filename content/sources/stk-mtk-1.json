@@ -1,0 +1,62 @@
+[
+  {
+    "id": "lmkm-ptb",
+    "kind": "behoerde",
+    "authors": "Mieke, S.; Schade, T. (Hrsg.)",
+    "title": "Leitfaden zu messtechnischen Kontrollen von Medizinprodukten mit Messfunktion (LMKM)",
+    "edition": "Ausgabe 3.0",
+    "publisher": "Physikalisch-Technische Bundesanstalt (PTB), Braunschweig und Berlin",
+    "year": "2016",
+    "url": "https://oar.ptb.de/files/download/110.20170130.pdf",
+    "note": "Von der PTB herausgegebener Leitfaden; nach MPBetreibV wird bei seiner Beachtung eine ordnungsgemäße Durchführung der MTK vermutet. Maßgeblich ist die jeweils auf der PTB-Website bekannt gemachte Fassung."
+  },
+  {
+    "id": "din-en-50678",
+    "kind": "norm",
+    "title": "DIN EN 50678 (VDE 0701) – Allgemeines Verfahren zur Überprüfung der Wirksamkeit der Schutzmaßnahmen von elektrischen Geräten nach der Reparatur",
+    "publisher": "DIN / VDE; DIN Media bzw. VDE Verlag",
+    "year": "2021",
+    "note": "Löste zusammen mit DIN EN 50699 (VDE 0702) die frühere DIN VDE 0701-0702 ab. Titel sinngemäß; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "din-en-50699",
+    "kind": "norm",
+    "title": "DIN EN 50699 (VDE 0702) – Wiederholungsprüfung für elektrische Geräte",
+    "publisher": "DIN / VDE; DIN Media bzw. VDE Verlag",
+    "year": "2021",
+    "note": "Wiederholungsprüfung elektrischer Geräte außerhalb der Medizintechnik; für ME-Geräte gilt IEC 62353. Titel sinngemäß; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-61557-16",
+    "kind": "norm",
+    "title": "IEC 61557-16 – Elektrische Sicherheit in Niederspannungsnetzen bis AC 1000 V und DC 1500 V – Geräte zum Prüfen, Messen oder Überwachen von Schutzmaßnahmen – Teil 16: Geräte zur Prüfung der Wirksamkeit der Schutzmaßnahmen von elektrischen Geräten und/oder medizinischen elektrischen Geräten",
+    "publisher": "IEC; in Deutschland als DIN EN 61557-16 (VDE 0413-16)",
+    "note": "Anforderungen an Prüfgeräte für Prüfungen nach IEC 62353 bzw. DIN EN 50678/50699. Titel sinngemäß; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "betrsichv",
+    "kind": "gesetz",
+    "title": "Verordnung über Sicherheit und Gesundheitsschutz bei der Verwendung von Arbeitsmitteln (Betriebssicherheitsverordnung – BetrSichV)",
+    "publisher": "Bundesrepublik Deutschland",
+    "year": "2015",
+    "url": "https://www.gesetze-im-internet.de/betrsichv_2015/",
+    "note": "Maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "messeg",
+    "kind": "gesetz",
+    "title": "Gesetz über das Inverkehrbringen und die Bereitstellung von Messgeräten auf dem Markt, ihre Verwendung und Eichung sowie über Fertigpackungen (Mess- und Eichgesetz – MessEG)",
+    "publisher": "Bundesrepublik Deutschland",
+    "year": "2013",
+    "url": "https://www.gesetze-im-internet.de/messeg/",
+    "note": "Regelt das gesetzliche Messwesen (Eichung); Medizinprodukte mit Messfunktion unterliegen stattdessen der MTK nach MPBetreibV. Maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "din-6868-157",
+    "kind": "norm",
+    "title": "DIN 6868-157 – Sicherung der Bildqualität in röntgendiagnostischen Betrieben – Teil 157: Abnahme- und Konstanzprüfung an Bildwiedergabesystemen in ihrer Umgebung",
+    "publisher": "DIN; DIN Media, Berlin",
+    "year": "2014",
+    "note": "Prüfung von Befundungs- und Betrachtungsmonitoren. Titel sinngemäß; maßgeblich ist die jeweils gültige Ausgabe."
+  }
+]

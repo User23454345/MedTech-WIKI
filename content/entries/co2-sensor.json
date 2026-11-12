@@ -1,0 +1,142 @@
+{
+  "id": "co2-sensor",
+  "type": "term",
+  "title": "CO₂-Sensor (NDIR)",
+  "aliases": [
+    "Kohlendioxidsensor",
+    "CO2-Sensor",
+    "NDIR-Sensor",
+    "Infrarot-Gassensor",
+    "CO₂-Messküvette",
+    "capnography sensor",
+    "Hauptstromsensor",
+    "Nebenstromsensor",
+    "etCO2-Sensor"
+  ],
+  "category": "sensorik",
+  "summary": "Sensor zur Bestimmung der CO₂-Konzentration im Atemgas über die Absorption infraroter Strahlung bei etwa 4,26 µm (nichtdispersive Infrarotspektroskopie). Grundlage der Kapnometrie und Kapnographie im Haupt- oder Nebenstromverfahren.",
+  "body": "## Begriff\n\nEin **CO₂-Sensor** in der Medizintechnik bestimmt meist die Kohlendioxidkonzentration im Atemgas. Fast alle Atemgas-CO₂-Sensoren arbeiten nach dem **NDIR-Prinzip** (nichtdispersive Infrarotabsorption): Gemessen wird, wie stark ein schmalbandiger Infrarotstrahl beim Durchgang durch die Gasprobe geschwächt wird. Das Ergebnis ist die Grundlage der Kapnometrie (Zahlenwert, z. B. endtidales CO₂) und Kapnographie (Kurvenverlauf) am [[kapnometer|Kapnometer]] und am [[patientenmonitor|Patientenmonitor]] [@jaffe-2008] [@dorsch-2008].\n\n## Physikalisches Prinzip\n\n### Infrarotabsorption\n\nMehratomige Gase mit veränderlichem Dipolmoment absorbieren Infrarotstrahlung bei charakteristischen Wellenlängen. CO₂ besitzt eine starke Absorptionsbande bei etwa **4,26 µm** (asymmetrische Streckschwingung). O₂ und N₂ als symmetrische zweiatomige Moleküle absorbieren im Infraroten praktisch nicht – sie stören die Messung deshalb nicht direkt.\n\nDie Schwächung folgt dem **[[lambert-beer|Lambert-Beer-Gesetz]]**:\n\n`I = I₀ · exp(−ε · c · l)` bzw. `A = lg(I₀ / I) ∝ c · l`\n\nmit Intensität ohne (I₀) und mit Absorber (I), Absorptionskoeffizient ε, Konzentration c und optischer Weglänge l [@fraden-2016].\n\n### Aufbau eines NDIR-Sensors\n\n| Baugruppe | Funktion |\n|---|---|\n| IR-Strahler | thermischer Breitbandstrahler, gepulst oder mit Chopper moduliert |\n| Küvette | Messstrecke mit IR-durchlässigen Fenstern (z. B. Saphir) |\n| Interferenzfilter | wählt die CO₂-Bande; ein zweiter Kanal außerhalb der Bande dient als Referenz |\n| Detektor | Thermosäule, pyroelektrischer Detektor oder Bleiselenid-Photodetektor |\n| Auswertung | Verhältnis Mess-/Referenzkanal, Temperatur- und Druckkompensation, Kalibrierkennlinie |\n\nDer **Referenzkanal** gleicht Alterung des Strahlers, Verschmutzung der Fenster und Temperaturgänge aus, weil diese beide Kanäle gleichermaßen betreffen.\n\n### Störeinflüsse\n\n* **Lachgas (N₂O)** absorbiert in der Nähe der CO₂-Bande und verbreitert durch Molekülstöße die CO₂-Absorptionslinien (Stoßverbreiterung); auch hohe O₂-Konzentrationen beeinflussen die Linienform. Monitore kompensieren dies rechnerisch, wenn die Gaszusammensetzung bekannt ist [@dorsch-2008].\n* **Wasserdampf** kondensiert an Fenstern und streut bzw. absorbiert Licht; Hauptstromküvetten werden deshalb beheizt, Nebenstromsysteme nutzen Wasserfallen und feuchtedurchlässige Schläuche.\n* **Druck:** Gemessen wird physikalisch die Teilchendichte, also der Partialdruck. Die Umrechnung in Volumenprozent erfolgt mit dem Umgebungsdruck ([[gasgesetze|Dalton]]): `p_CO₂ = F_CO₂ · p_amb`.\n\n> [!beispiel] Bei p_amb = 760 mmHg und einer CO₂-Fraktion von 5,0 % ergibt sich p_CO₂ = 0,05 · 760 mmHg = 38 mmHg (≈ 5,1 kPa) – ein Wert im physiologischen Bereich des endtidalen CO₂. In 2 000 m Höhe (p_amb ≈ 600 mmHg) entspräche derselbe Partialdruck rund 6,3 %.\n\n## Hauptstrom- und Nebenstromverfahren\n\n| Merkmal | Hauptstrom (*mainstream*) | Nebenstrom (*sidestream*) |\n|---|---|---|\n| Messort | Küvette direkt im Atemweg am Y-Stück | Gasprobe wird über Absaugleitung zum Gerät transportiert |\n| Ansprechzeit | sehr kurz, keine Transportverzögerung | Verzögerung durch Transportzeit und Vermischung |\n| Totraum, Gewicht | zusätzlicher Totraum und Gewicht am Tubus | gering |\n| Nicht intubierte Patienten | eingeschränkt | gut möglich (Nasenbrillen mit Probennahme) |\n| Probengasbilanz | keine Gasentnahme | entnommener Probengasfluss (typischerweise in der Größenordnung von einigen zehn bis wenigen hundert mL/min) fehlt dem System bzw. muss zurückgeführt werden |\n| Störanfälligkeit | Fensterbeschlag, mechanische Belastung | Okklusion der Probenleitung durch Wasser oder Sekret |\n\n[@jaffe-2008] [@dorsch-2008]\n\n> [!praxis] Im Anästhesie-Kreissystem wird das Nebenstrom-Probengas meist in das System zurückgeführt; bei Niedrigflussnarkose wäre der Verlust sonst relevant. Eine verstopfte Probenleitung ist eine der häufigsten Ursachen für eine flache oder fehlende Kapnographiekurve.\n\n## Kenngrößen\n\n* **Anstiegszeit** (T₁₀–₉₀): Zeit, in der das Signal bei einem Konzentrationssprung von 10 % auf 90 % steigt. Sie bestimmt, ob bei hoher Atemfrequenz – etwa bei Neugeborenen ([[neonatologie]]) – das endtidale Plateau noch korrekt erfasst wird.\n* **Verzögerungszeit:** Transportzeit beim Nebenstrom.\n* **Genauigkeit und Drift:** werden über Nullabgleich mit CO₂-freiem Gas und Kalibrierung mit Prüfgas kontrolliert ([[kalibrierung]], [[sensordrift]]).\n\nDie Anforderungen an CO₂-Monitore, einschließlich Messgenauigkeit und Alarmen, sind in der ISO 80601-2-55 geregelt ([[iso-80601-2-55]]) [@iso-80601-2-55].\n\n## Klinische Bedeutung\n\nDer CO₂-Partialdruck am Ende der Exspiration (etCO₂) spiegelt Ventilation, Kreislauf (Lungenperfusion) und Stoffwechsel ([[gasaustausch]], [[saeure-basen-haushalt]]). Kapnographie dient\n\n* zur **Lagekontrolle des Endotrachealtubus** – fehlendes CO₂ nach Intubation spricht für eine Fehlintubation,\n* zur Überwachung von Beatmung und Narkose,\n* in der Reanimation zur Beurteilung der Thoraxkompressionen und als Hinweis auf eine Rückkehr des Spontankreislaufs [@erc-2021].\n\n> [!belegt] Die Leitlinien des European Resuscitation Council empfehlen die Kapnographie zur Bestätigung und kontinuierlichen Überwachung der Tubuslage während der Reanimation [@erc-2021].\n\nNeben NDIR gibt es **kolorimetrische CO₂-Detektoren** (pH-Indikator ändert seine Farbe) als einfache Einweghilfe zur Tubuslagekontrolle. Im Blut wird der pCO₂ dagegen elektrochemisch mit der Severinghaus-Elektrode (pH-Elektrode hinter einer CO₂-durchlässigen Membran) im [[blutgasanalysator|Blutgasanalysator]] bestimmt [@webster-2010].\n\n## Anwendung in Geräten\n\n* [[kapnometer]] und CO₂-Module am [[patientenmonitor]]\n* [[anaesthesiegeraet]] (Atemgasmonitoring zusammen mit [[sauerstoffsensor|O₂]] und Narkosegasen)\n* [[beatmungsgeraet]] und [[transportbeatmungsgeraet]]\n* [[defibrillator|Defibrillatoren]] bzw. Monitor-Defibrillatoren mit Kapnographie in der Notfallmedizin ([[notfallmedizin]])\n* [[polysomnograph|Polysomnographie]] (Ventilationsbeurteilung)\n",
+  "related": [
+    "kapnometer",
+    "lambert-beer",
+    "gasgesetze",
+    "gasaustausch",
+    "sauerstoffsensor",
+    "anaesthesiegeraet",
+    "patientenmonitor",
+    "iso-80601-2-55",
+    "kalibrierung",
+    "sensordrift"
+  ],
+  "paths": [
+    [
+      "kapnometer",
+      "co2-sensor",
+      "lambert-beer"
+    ],
+    [
+      "anaesthesiegeraet",
+      "co2-sensor",
+      "gasaustausch"
+    ]
+  ],
+  "sources": [
+    "jaffe-2008",
+    "dorsch-2008",
+    "fraden-2016",
+    "iso-80601-2-55",
+    "erc-2021",
+    "webster-2010"
+  ],
+  "diagram": {
+    "title": "NDIR-Messprinzip",
+    "caption": "Funktionsschema eines Zweikanal-NDIR-Sensors (Hauptstrom).",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "ir",
+        "label": "IR-Strahler\n(gepulst)",
+        "kind": "source",
+        "x": 90,
+        "y": 150
+      },
+      {
+        "id": "kuv",
+        "label": "Küvette mit\nAtemgas",
+        "kind": "process",
+        "x": 280,
+        "y": 150,
+        "ref": "lambert-beer"
+      },
+      {
+        "id": "f1",
+        "label": "Filter\n4,26 µm",
+        "kind": "process",
+        "x": 480,
+        "y": 80
+      },
+      {
+        "id": "f2",
+        "label": "Referenzfilter",
+        "kind": "process",
+        "x": 480,
+        "y": 220
+      },
+      {
+        "id": "d",
+        "label": "Detektoren\n(Thermosäule)",
+        "kind": "sensor",
+        "x": 680,
+        "y": 150,
+        "ref": "co2-sensor"
+      },
+      {
+        "id": "mcu",
+        "label": "Verhältnis,\nKompensation\nN₂O / Druck",
+        "kind": "control",
+        "x": 870,
+        "y": 150,
+        "ref": "mikrocontroller"
+      }
+    ],
+    "edges": [
+      {
+        "from": "ir",
+        "to": "kuv",
+        "kind": "energy",
+        "label": "IR"
+      },
+      {
+        "from": "kuv",
+        "to": "f1",
+        "kind": "energy"
+      },
+      {
+        "from": "kuv",
+        "to": "f2",
+        "kind": "energy"
+      },
+      {
+        "from": "f1",
+        "to": "d",
+        "kind": "energy",
+        "label": "I"
+      },
+      {
+        "from": "f2",
+        "to": "d",
+        "kind": "energy",
+        "label": "I_ref"
+      },
+      {
+        "from": "d",
+        "to": "mcu",
+        "kind": "signal",
+        "label": "→ etCO₂"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "iec-60601-2-19",
+    "kind": "norm",
+    "title": "IEC 60601-2-19 – Medizinische elektrische Geräte – Teil 2-19: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Säuglingsinkubatoren",
+    "publisher": "IEC / in Deutschland als DIN EN IEC 60601-2-19 (VDE 0750-2-19)",
+    "note": "Besondere Festlegungen für Säuglingsinkubatoren (u. a. Temperaturregelung, Übertemperaturschutz, Sauerstoff, Schallpegel, Luftgeschwindigkeit). Edition 3.0 von 2020 mit Änderung 2023; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60601-2-20",
+    "kind": "norm",
+    "title": "IEC 60601-2-20 – Medizinische elektrische Geräte – Teil 2-20: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Transportinkubatoren",
+    "publisher": "IEC / in Deutschland als DIN EN IEC 60601-2-20 (VDE 0750-2-20)",
+    "note": "Gerätespezifische Norm für Transportinkubatoren; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "draeger-babyleo",
+    "kind": "hersteller",
+    "title": "Dräger Babyleo TN500 – Produktinformation",
+    "authors": "Drägerwerk AG & Co. KGaA",
+    "publisher": "Drägerwerk",
+    "url": "https://www.draeger.com/en_uk/Products/Babyleo-TN500-Release-2",
+    "note": "Herstellerseite zum Hybridinkubator (Inkubator und offene Wärmeeinheit)."
+  },
+  {
+    "id": "ge-giraffe",
+    "kind": "hersteller",
+    "title": "GE HealthCare – Neonatal solutions (Giraffe Carestation-Familie)",
+    "authors": "GE HealthCare",
+    "publisher": "GE HealthCare",
+    "url": "https://www.gehealthcare.com/products/maternal-infant-care/neonatal-solutions",
+    "note": "Produktübersicht u. a. Giraffe OmniBed Carestation (Hybridinkubator) und Giraffe Incubator Carestation."
+  }
+]

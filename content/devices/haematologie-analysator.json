@@ -1,0 +1,83 @@
+{
+  "id": "haematologie-analysator",
+  "type": "device",
+  "title": "Hämatologie-Analysator",
+  "aliases": [
+    "Hämatologiesystem",
+    "Blutbildautomat",
+    "Zellzähler",
+    "Hematology analyzer",
+    "Coulter-Counter"
+  ],
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 61,
+  "domains": [
+    "labormedizin",
+    "intensivmedizin"
+  ],
+  "summary": "Hämatologie-Analysatoren bestimmen automatisiert das kleine und große Blutbild aus antikoaguliertem Vollblut: Zahl und Größe der Erythrozyten, Leukozyten und Thrombozyten, den Hämoglobingehalt und die Leukozyten-Differenzierung. Sie kombinieren Impedanzmessung, Photometrie und Durchflusszytometrie.",
+  "riskClass": {
+    "value": "A (IVDR)",
+    "evidence": "typisch",
+    "note": "Analysegeräte, die vom Hersteller speziell für In-vitro-diagnostische Verfahren bestimmt sind, fallen als Instrumente nach Regel 5 der [[ivdr|IVDR]] Anhang VIII in der Regel in **Klasse A**. Reagenzien, Kalibratoren und Kontrollmaterialien werden eigenständig klassifiziert und können höheren Klassen angehören [@ivdr-2017].",
+    "sources": [
+      "ivdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Das Blutbild gehört zu den am häufigsten angeforderten Laboruntersuchungen. Es dient der Diagnostik von Anämien, Infektionen, Entzündungen, Blutungs- und Gerinnungsstörungen sowie hämatologischen Erkrankungen und der Therapieüberwachung (z. B. Chemotherapie). Geräte reichen vom Kompaktsystem für die Praxis bis zur verketteten Laborstraße mit Ausstrichautomat; untersucht wird in der Regel EDTA-Vollblut ([[blut]]) [@kramme-2017].",
+    "principle": "## Impedanzmessung (Coulter-Prinzip)\n\nDie verdünnte Blutprobe wird durch eine enge Messöffnung (Apertur) gesaugt, an der zwischen zwei Elektroden ein konstanter Strom fließt. Jede nichtleitende Zelle verdrängt Elektrolyt und erhöht kurzzeitig den elektrischen Widerstand – es entsteht ein Spannungsimpuls nach dem Ohmschen Gesetz ([[spannung-strom-widerstand]]). Die **Zahl** der Impulse entspricht der Zellzahl, ihre **Höhe** dem Zellvolumen. Aus der Volumenverteilung ergeben sich u. a. MCV und die Erythrozytenverteilungsbreite; Hämatokrit, MCH und MCHC werden je nach Gerät gemessen oder berechnet. Die Impulse werden verstärkt und über einen [[analog-digital-wandler]] klassiert.\n\n## Hämoglobin-Photometrie\n\nIn einem separaten Kanal werden die Erythrozyten lysiert, das freigesetzte [[haemoglobin|Hämoglobin]] in ein stabiles Derivat überführt (heute meist cyanidfrei) und photometrisch nach dem [[lambert-beer|Lambert-Beer-Gesetz]] gemessen.\n\n## Durchflusszytometrie\n\nFür die Leukozyten-Differenzierung werden die Zellen durch **hydrodynamische Fokussierung** einzeln durch einen Laserstrahl ([[laser]]) geführt. Vorwärtsstreulicht korreliert mit der Zellgröße, Seitwärtsstreulicht mit der inneren Struktur (Granularität), Fluoreszenz nach Anfärbung mit dem Nukleinsäuregehalt ([[optik]]). Aus der Lage der Zellen in diesen Streudiagrammen klassifiziert die Software Neutrophile, Lymphozyten, Monozyten, Eosinophile und Basophile und markiert auffällige Proben (Flags) zur mikroskopischen Nachprüfung.\n\n> [!vereinfacht] Die Darstellung beschreibt das Grundprinzip. Die konkreten Kanäle, Reagenzien und Auswertealgorithmen sind herstellerspezifisch.\n\n> [!praxis] Häufige Störquellen sind Gerinnsel in der Probe, Thrombozytenaggregate (z. B. EDTA-induzierte Pseudothrombozytopenie), Kälteagglutinine und Lipämie – plausibilisieren statt blind übernehmen ([[messunsicherheit]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "sysmex",
+      "models": [
+        "XN-Serie"
+      ],
+      "note": "Schwerpunkt Hämatologie, Durchflusszytometrie mit Fluoreszenz."
+    },
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "ADVIA 2120i"
+      ]
+    },
+    {
+      "ref": "abbott",
+      "models": [
+        "Alinity hq"
+      ]
+    },
+    {
+      "ref": "mindray",
+      "models": [],
+      "note": "Hämatologiesysteme der BC-Serie."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Als In-vitro-Diagnostikum unterliegt das Gerät zusätzlich der laborinternen Qualitätssicherung nach [[betreiberpflichten|Betreiberpflichten]] und Rili-BÄK (interne und externe Qualitätskontrolle).",
+    "intervals": "Wartung und Reinigung (Aperturen, Fluidik, Ventile) nach Herstellerangabe; tägliche interne Qualitätskontrolle mit Kontrollblut, Kalibrierung nach Herstellerangabe bzw. bei QK-Abweichung; elektrische Wiederholungsprüfung nach [[dguv-vorschrift-3|DGUV Vorschrift 3]] gemäß Gefährdungsbeurteilung."
+  },
+  "related": [
+    "klinisch-chemischer-analysator",
+    "gerinnungsanalysator",
+    "blutgasanalysator",
+    "laborzentrifuge",
+    "blut",
+    "kalibrierung"
+  ],
+  "sources": [
+    "kramme-2017",
+    "ivdr-2017",
+    "rili-baek"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

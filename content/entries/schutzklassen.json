@@ -1,0 +1,59 @@
+{
+  "id": "schutzklassen",
+  "type": "term",
+  "title": "Schutzklassen",
+  "aliases": [
+    "Schutzklasse I",
+    "Schutzklasse II",
+    "Schutzklasse III",
+    "Protection class",
+    "Class I equipment",
+    "Class II equipment",
+    "intern gespeistes Gerät",
+    "internally powered",
+    "MOOP",
+    "MOPP",
+    "doppelte Isolierung",
+    "SK I",
+    "SK II"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Schutzklassen teilen elektrische Betriebsmittel danach ein, wie der Schutz gegen elektrischen Schlag im Fehlerfall erreicht wird: über den Schutzleiter (Schutzklasse I), über doppelte oder verstärkte Isolierung (Schutzklasse II) oder über Schutzkleinspannung (Schutzklasse III). Medizinische elektrische Geräte sind nach IEC 60601-1 Schutzklasse I, Schutzklasse II oder intern gespeist.",
+  "body": "## Begriff und Abgrenzung\n\nEine **Schutzklasse** beschreibt, auf welche Weise ein elektrisches Betriebsmittel den Schutz gegen elektrischen Schlag im Fehlerfall sicherstellt – also dann, wenn die Basisisolierung versagt und ein normalerweise berührbares Teil plötzlich Spannung führen könnte. Die Einteilung geht auf die Grundnorm IEC 61140 zurück [@iec-61140]. Die Sicherheitsnorm für [[medizinisches-elektrisches-geraet|medizinische elektrische Geräte]], die [[iec-60601-1]], übernimmt dieses Konzept und passt es an die besonderen Bedingungen am Patienten an [@iec-60601-1].\n\nSchutzklassen werden häufig mit anderen Einteilungen verwechselt:\n\n| Begriff | Frage, die er beantwortet | Beispiel |\n|---|---|---|\n| Schutzklasse | Wie wird der Schutz gegen elektrischen Schlag im Fehlerfall erreicht? | Schutzklasse I, II |\n| Typ des [[anwendungsteile|Anwendungsteils]] | Wie stark ist der Patient gegen Ableitströme geschützt? | Typ B, BF, CF |\n| Schutzart (IP-Code) | Wie gut ist das Gehäuse gegen Fremdkörper und Wasser geschützt? | IPX1, IP44 |\n| [[risikoklassen|Risikoklasse]] | Welches Konformitätsbewertungsverfahren gilt nach [[mdr|MDR]]? | Klasse IIa, IIb |\n\nEin Gerät trägt also immer mehrere, voneinander unabhängige Kennzeichnungen.\n\n## Prinzip: zwei unabhängige Schutzmaßnahmen\n\nGrundgedanke aller Schutzklassen ist die **Einfehlersicherheit**: Ein einzelner Fehler darf nicht zu einer gefährlichen Berührungsspannung führen. Dazu werden zwei Ebenen kombiniert [@iec-61140]:\n\n* **Basisschutz** (Schutz gegen direktes Berühren): Isolierung, Abdeckungen und Gehäuse verhindern im Normalbetrieb den Kontakt mit aktiven Teilen.\n* **Fehlerschutz** (Schutz bei indirektem Berühren): Eine zweite, unabhängige Maßnahme greift, wenn der Basisschutz versagt.\n\nDie Schutzklasse sagt aus, *welche* zweite Maßnahme gewählt wurde. In der IEC 60601-1 heißen die einzelnen Maßnahmen **Schutzmaßnahmen** (*Means of Protection*, MOP); unterschieden wird zwischen Maßnahmen zum Schutz des Bedieners (MOOP) und des Patienten (MOPP) [@iec-60601-1].\n\n## Die Schutzklassen im Überblick\n\n| Klasse | Fehlerschutz durch | Kennzeichnung | Bedeutung für ME-Geräte |\n|---|---|---|---|\n| 0 | keinen (nur Basisisolierung) | – | in Deutschland nicht zulässig, für ME-Geräte ausgeschlossen |\n| I | Schutzleiteranschluss aller berührbaren leitfähigen Teile | Schutzleitersymbol am Anschlusspunkt | sehr verbreitet, v. a. bei leistungsstarken Geräten mit Metallgehäuse |\n| II | doppelte oder verstärkte Isolierung, kein Schutzleiter | Symbol „Quadrat im Quadrat“ | verbreitet bei Kleingeräten, Netzteilen, Kunststoffgehäusen |\n| III | Versorgung mit Schutzkleinspannung (SELV) | Symbol „III in einer Raute“ | in der IEC 60601-1 nicht als eigene ME-Geräteklasse vorgesehen |\n\n> [!belegt] Nach IEC 60601-1 werden ME-Geräte, die aus einer externen elektrischen Energiequelle versorgt werden, als Schutzklasse I oder Schutzklasse II eingestuft; alle anderen gelten als **intern gespeist** [@iec-60601-1]. Ein Gerät, das mit einem externen Kleinspannungsnetzteil betrieben wird, wird daher zusammen mit diesem Netzteil bewertet.\n\n### Schutzklasse I\n\nAlle berührbaren leitfähigen Teile sind mit dem **Schutzleiter** (PE) verbunden. Berührt ein spannungsführender Leiter das Gehäuse (Körperschluss), fließt ein großer Fehlerstrom über den Schutzleiter, und die vorgeschaltete Schutzeinrichtung (Sicherung, Leitungsschutzschalter oder Fehlerstrom-Schutzeinrichtung) schaltet ab. Bis dahin bleibt die Berührungsspannung am Gehäuse klein, weil der Schutzleiter niederohmig ist:\n\n`U_B ≈ I_F · R_PE`\n\n> [!beispiel] Fließt bei einem Körperschluss ein Fehlerstrom von I_F = 100 A und beträgt der Schutzleiterwiderstand R_PE = 0,1 Ω, so liegt das Gehäuse kurzzeitig auf etwa U_B = 100 A · 0,1 Ω = 10 V gegenüber dem Erdpotential. Bei einem hochohmigen oder unterbrochenen Schutzleiter wäre die Gehäusespannung dagegen nahezu die volle Netzspannung.\n\nDeshalb ist die Messung des [[schutzleiterwiderstand|Schutzleiterwiderstands]] Kernbestandteil jeder [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] nach [[iec-62353]]. Der Schutzleiter führt außerdem den betriebsmäßigen Erdableitstrom ab (siehe [[ableitstrom]]); ist er unterbrochen, fließt dieser Strom über eine berührende Person. Das ist der wichtigste „erste Fehler“, den die Norm für Schutzklasse-I-Geräte betrachtet.\n\nIn Räumen der Anwendungsgruppe 2 werden Schutzklasse-I-Geräte häufig aus einem **medizinischen IT-System** versorgt. Dort führt ein erster Isolationsfehler bewusst *nicht* zur Abschaltung, sondern nur zu einer Meldung – lebenswichtige Geräte laufen weiter (siehe [[medizinisch-genutzte-bereiche]]).\n\n### Schutzklasse II\n\nGeräte der Schutzklasse II besitzen keinen Schutzleiteranschluss. Stattdessen ist zwischen Netzteilen und berührbaren Teilen eine **doppelte Isolierung** (Basisisolierung + zusätzliche Isolierung) oder eine gleichwertige **verstärkte Isolierung** vorhanden. Ein einzelner Isolationsfehler führt damit nicht zu einer gefährlichen Gehäusespannung. Ein Funktionserdanschluss kann vorhanden sein, dient aber nicht dem Schutz.\n\nVorteil: Der Schutz hängt nicht von der Qualität der Hausinstallation oder des Netzkabels ab. Nachteil: Die Isolation muss dauerhaft intakt bleiben; Gehäuserisse, gequetschte Leitungen oder eingedrungene Flüssigkeit sind daher sicherheitsrelevant.\n\n### Intern gespeiste Geräte\n\nGeräte mit eingebauter Energiequelle – etwa einem [[lithium-ionen-akku|Lithium-Ionen-Akku]] – gelten im Akkubetrieb als intern gespeist. Sobald sie an ein Ladegerät oder an das Netz angeschlossen sind, gelten zusätzlich die Anforderungen der Schutzklasse, nach der die Netzversorgung ausgeführt ist [@iec-60601-1]. Typische Beispiele sind [[defibrillator|Defibrillatoren]], [[transportbeatmungsgeraet|Transportbeatmungsgeräte]] oder [[pulsoxymeter|Handpulsoxymeter]].\n\n## Isolationskoordination: MOOP und MOPP\n\nDie IEC 60601-1 legt für jede Schutzmaßnahme Prüfspannungen sowie Mindest-Luft- und Kriechstrecken fest. Maßnahmen zum Schutz des Patienten sind strenger ausgelegt als solche zum Schutz des Bedieners [@iec-60601-1].\n\n| Schutzmaßnahme | Prüfspannung (eff.) | Kriechstrecke | Luftstrecke |\n|---|---|---|---|\n| 1 MOOP | 1 500 V | 2,5 mm | 2,0 mm |\n| 2 MOOP | 3 000 V | 5,0 mm | 4,0 mm |\n| 1 MOPP | 1 500 V | 4,0 mm | 2,5 mm |\n| 2 MOPP | 4 000 V | 8,0 mm | 5,0 mm |\n\n> [!vereinfacht] Die Tabelle zeigt typische Werte für eine Arbeitsspannung bis etwa 250 V eff. nach der 3. Ausgabe der IEC 60601-1. Die tatsächlichen Anforderungen hängen von Arbeitsspannung, Verschmutzungsgrad, Höhenlage und Isolierstoffgruppe ab; maßgeblich ist die jeweils gültige Normfassung.\n\nMedizinische Netzteile werden deshalb häufig ausdrücklich mit „2 × MOPP“ spezifiziert (siehe [[medizinisches-netzteil]] und [[galvanische-trennung]]).\n\n## Bedeutung in der Medizintechnik\n\nDie Schutzklasse bestimmt unmittelbar den **Prüfumfang** bei [[stk|sicherheitstechnischen Kontrollen]] und Wiederholungsprüfungen:\n\n| Prüfschritt nach IEC 62353 | Schutzklasse I | Schutzklasse II |\n|---|---|---|\n| Sichtprüfung | ja | ja |\n| [[schutzleiterwiderstand|Schutzleiterwiderstand]] | ja | entfällt |\n| [[isolationswiderstand|Isolationswiderstand]] | nach Herstellerangabe/Prüfkonzept | nach Herstellerangabe/Prüfkonzept |\n| [[ableitstrommessung|Geräteableitstrom]] | ja | ja (strengere Grenzwerte) |\n| [[funktionspruefung|Funktionsprüfung]] | ja | ja |\n\nTypische Zuordnungen in der Praxis:\n\n* **Schutzklasse I:** [[computertomograph]], [[dialysegeraet]], [[beatmungsgeraet]], [[inkubator]], [[hf-chirurgiegeraet]] – Geräte mit hoher Leistungsaufnahme und Metallteilen.\n* **Schutzklasse II:** viele Steckernetzteile, kleine [[patientenmonitor|Monitore]], [[spritzenpumpe|Spritzen-]] und [[infusionspumpe|Infusionspumpen]] mit Akkupufferung.\n\n> [!hinweis] Die Zuordnungen sind typisch, aber herstellerabhängig. Verbindlich ist allein die Kennzeichnung auf dem Typschild und in der Gebrauchsanweisung.\n\n> [!praxis] Häufige Ursache für Schutzleiterfehler sind beschädigte Netzleitungen, ausgeschlagene Gerätestecker und Mehrfachsteckdosen. Werden mehrere Geräte über eine Mehrfachsteckdose betrieben, entsteht ein ME-System, für das eigene Anforderungen der IEC 60601-1 gelten – die Ableitströme der Geräte addieren sich auf dem gemeinsamen Schutzleiter.\n\n> [!warnung] Schutzleiterverbindungen dürfen niemals unterbrochen oder überbrückt werden (z. B. durch Adapter ohne Schutzkontakt). Prüfungen und Instandsetzungen nur durch befugtes Fachpersonal.\n\nSiehe auch: [[elektrische-stromwirkung]], [[dguv-vorschrift-3]], [[elektrotechnik]].\n",
+  "related": [
+    "anwendungsteile",
+    "ableitstrom",
+    "schutzleiterwiderstand",
+    "isolationswiderstand",
+    "elektrische-sicherheitspruefung",
+    "medizinisch-genutzte-bereiche",
+    "galvanische-trennung",
+    "medizinisches-netzteil",
+    "iec-60601-1",
+    "iec-62353",
+    "elektrische-stromwirkung"
+  ],
+  "paths": [
+    [
+      "medizinisches-elektrisches-geraet",
+      "schutzklassen",
+      "schutzleiterwiderstand",
+      "elektrische-sicherheitspruefung",
+      "stk"
+    ],
+    [
+      "schutzklassen",
+      "ableitstrom",
+      "ableitstrommessung"
+    ]
+  ],
+  "sources": [
+    "iec-61140",
+    "iec-60601-1",
+    "iec-62353",
+    "kramme-2017",
+    "webster-2010"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

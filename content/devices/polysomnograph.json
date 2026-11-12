@@ -1,0 +1,65 @@
+{
+  "id": "polysomnograph",
+  "type": "device",
+  "title": "Polysomnograph",
+  "aliases": [
+    "PSG",
+    "Polysomnographie",
+    "Schlaflabor-System",
+    "Polygraphie",
+    "Schlafapnoe-Screening"
+  ],
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 55,
+  "domains": [
+    "pneumologie",
+    "neurologie"
+  ],
+  "summary": "Ein Polysomnograph zeichnet während des Schlafs gleichzeitig zahlreiche Biosignale auf – Hirnströme, Augenbewegungen, Muskelaktivität, Atmung, Sauerstoffsättigung und EKG. Die Auswertung liefert Schlafstadien und Atmungsstörungen wie die Schlafapnoe.",
+  "sections": {
+    "purpose": "Die Polysomnographie im Schlaflabor ist der Referenzstandard zur Diagnostik schlafbezogener Atmungsstörungen (z. B. obstruktive Schlafapnoe), Insomnien, Narkolepsie und Bewegungsstörungen im Schlaf. Vereinfachte ambulante Systeme (Polygraphie) ohne EEG dienen vor allem dem Screening auf Schlafapnoe. Die Ergebnisse begründen u. a. eine Therapie mit dem [[cpap-geraet]] [@aasm-scoring-manual].",
+    "principle": "## Kanäle\n\n| Signal | Sensor/Prinzip |\n|---|---|\n| EEG, EOG, Kinn-EMG | Oberflächenelektroden, Differenzverstärker ([[eeg-geraet]]) |\n| EKG | [[ekg-elektrode|EKG-Elektroden]] |\n| Atemfluss | Staudruck über Nasenbrille ([[drucksensor]]) und Thermistor/Thermoelement ([[temperatursensor]]) |\n| Atemanstrengung | Thorax- und Abdomengurte, meist Induktionsplethysmographie |\n| Sauerstoffsättigung | [[pulsoxymeter|Pulsoxymetrie]] ([[photoplethysmographie]]) |\n| Bein-EMG, Lage, Schnarchen | Elektroden, Lagesensor, Mikrofon |\n| Video | synchronisierte Infrarotkamera |\n\nAlle Kanäle werden über [[instrumentenverstaerker|Verstärker]], [[filter]] und [[analog-digital-wandler|A/D-Wandler]] zeitsynchron erfasst ([[biosignale]]).\n\n## Auswertung\n\nDie Aufzeichnung wird in **30-Sekunden-Epochen** gegliedert und nach den Regeln der AASM den Stadien Wach, N1, N2, N3 und REM zugeordnet. Atmungsereignisse (Apnoen, Hypopnoen) werden nach definierten Kriterien zu Fluss und Sättigung erkannt; daraus folgt der **Apnoe-Hypopnoe-Index** (AHI, Ereignisse pro Stunde Schlaf) [@aasm-scoring-manual].\n\n> [!vereinfacht] Eine Apnoe ist ein weitgehendes Sistieren des Atemflusses über mindestens etwa 10 s; die genauen Kriterien (Signalabfall, Dauer, Entsättigung, Arousal) legt das jeweils gültige Regelwerk fest.\n\n> [!praxis] Viele Ereignisse werden halbautomatisch erkannt; die Software-Ergebnisse müssen fachkundig überprüft werden, da Elektrodenablösung oder verrutschte Sensoren über eine lange Nacht häufig sind."
+  },
+  "manufacturers": [
+    {
+      "ref": "philips",
+      "models": [
+        "Alice"
+      ],
+      "note": "Schlafdiagnostiksysteme der Respironics-Sparte."
+    },
+    {
+      "ref": "resmed",
+      "models": [
+        "ApneaLink"
+      ],
+      "note": "Ambulantes Screening (Polygraphie), keine vollständige Polysomnographie."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Kanalzahl, stationäres oder ambulantes System, Videoausstattung, Auswertesoftware und Lizenzen, Sensoren als Verbrauchsmaterial, Vernetzung mehrerer Messplätze."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Polysomnographen sind in Anlage 1 der MPBetreibV (2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) genannt.",
+    "intervals": "Vom Hersteller vorgeschriebene Kontrollen nach Herstellerangabe; Biokalibrierung und Signalprüfung zu Beginn jeder Ableitung; Aufbereitung wiederverwendbarer Sensoren; elektrische Wiederholungsprüfung nach IEC 62353 gemäß Herstellervorgabe."
+  },
+  "related": [
+    "eeg-geraet",
+    "cpap-geraet",
+    "pulsoxymeter",
+    "biosignale",
+    "emg-geraet",
+    "pneumologie"
+  ],
+  "sources": [
+    "aasm-scoring-manual",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

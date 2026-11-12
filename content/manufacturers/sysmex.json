@@ -1,0 +1,50 @@
+{
+  "id": "sysmex",
+  "type": "manufacturer",
+  "title": "Sysmex",
+  "aliases": [
+    "Sysmex Corporation",
+    "TOA Medical Electronics",
+    "Sysmex Europe"
+  ],
+  "category": "hersteller",
+  "summary": "Sysmex Corporation mit Sitz in Kobe (Japan) ist ein auf In-vitro-Diagnostik spezialisierter Hersteller. Das Unternehmen ist besonders in der Hämatologie bekannt und bietet außerdem Systeme für Gerinnung, Urinanalyse und Laborautomation an.",
+  "headquarters": "Kobe, Japan",
+  "founded": "1968",
+  "website": "https://www.sysmex.com/",
+  "productLines": [
+    {
+      "device": "haematologie-analysator",
+      "models": [
+        "XN-Serie",
+        "XN-L-Serie"
+      ],
+      "note": "Durchflusszytometrie mit Fluoreszenzfärbung und Impedanzmessung."
+    },
+    {
+      "device": "gerinnungsanalysator",
+      "models": [
+        "CS-Serie"
+      ],
+      "note": "In einigen Märkten über Vertriebskooperationen vertrieben."
+    }
+  ],
+  "body": "## Überblick\n\n**Sysmex** ist ein japanischer Diagnostikhersteller mit Hauptsitz in Kobe [@sysmex-web]. Kerngebiet ist die automatisierte **Hämatologie**, also die Zählung und Differenzierung von Blutzellen. Das europäische Geschäft wird von einer Regionalgesellschaft in Norderstedt bei Hamburg gesteuert.\n\n## Geschichte in Stichpunkten\n\n* **1968:** Gründung als TOA Medical Electronics in Kobe; Ausgangspunkt waren elektronische Blutzellzähler.\n* **1970er–1990er Jahre:** Ausbau zu einem internationalen Anbieter von Hämatologie- und Gerinnungssystemen.\n* **1998:** Umfirmierung in **Sysmex Corporation** (der Name stand bereits zuvor für die Produkte).\n* **heute:** Hämatologie, Gerinnung, Urinanalyse, Laborautomation und Life-Science-Anwendungen.\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Hämatologie | [[haematologie-analysator|Hämatologie-Analysatoren]] vom Kompaktgerät bis zur Laborstraße |\n| Hämostaseologie | [[gerinnungsanalysator|Gerinnungsanalysatoren]] |\n| Urinanalyse | Partikel- und Teststreifenanalyse |\n| IT und Automation | Middleware, Probenverteilung, Validierungssoftware |\n\n## Bedeutung für die Medizintechnik\n\nModerne Hämatologie-Analysatoren kombinieren mehrere Messprinzipien: Die **Impedanzmethode** zählt Zellen über Widerstandsänderungen beim Durchtritt durch eine Messöffnung; die **Durchflusszytometrie** bewertet Streulicht und Fluoreszenz einzelner Zellen in einem fokussierten Probenstrom; das Hämoglobin wird photometrisch nach dem [[lambert-beer|Lambert-Beer-Gesetz]] bestimmt. Sysmex hat insbesondere die fluoreszenzbasierte Differenzierung in Routinegeräte gebracht.\n\n> [!vereinfacht] Beim Impedanzprinzip erzeugt jede Zelle, die durch eine kleine Öffnung zwischen zwei Elektroden tritt, einen kurzen Spannungsimpuls. Anzahl der Impulse ≈ Zellzahl, Impulshöhe ≈ Zellvolumen.\n\nAnalysatoren sind In-vitro-Diagnostika nach [[ivdr|IVDR]]. Für die Technik im Labor stehen [[wartung]], [[kalibrierung]] und die Kontrolle der Fluidik (Ventile, Pumpen, Schläuche) im Vordergrund; Störungen äußern sich häufig als Verstopfungen, Blasen oder Abweichungen in der Qualitätskontrolle.\n\n> [!praxis] Wartung und Instandsetzung erfolgen meist über Serviceverträge mit dem Hersteller; tägliche und wöchentliche Anwenderwartung (Reinigung, Kontrollmessungen) ist Aufgabe des Labors.\n\nDie Anbindung an Laborinformationssysteme und die automatische Befundvalidierung über Regelwerke (Middleware) gehören heute zum Standard; dadurch werden Analysator, Probenverteilung und IT zu einem gemeinsamen System, das bei Updates und Störungen als Ganzes betrachtet werden muss.\n\n## Einordnung im Markt\n\nWettbewerber in der Hämatologie sind u. a. [[abbott]], [[siemens-healthineers]] und [[mindray]]; in der Gerinnung zudem [[roche-diagnostics]].",
+  "related": [
+    "haematologie-analysator",
+    "gerinnungsanalysator",
+    "labormedizin",
+    "lambert-beer",
+    "ivdr",
+    "blut",
+    "kalibrierung",
+    "roche-diagnostics",
+    "abbott",
+    "mindray"
+  ],
+  "sources": [
+    "sysmex-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

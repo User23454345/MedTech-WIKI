@@ -1,0 +1,42 @@
+{
+  "id": "benannte-stelle",
+  "type": "term",
+  "title": "Benannte Stelle",
+  "aliases": [
+    "Notified Body",
+    "NB",
+    "Benannte Stellen",
+    "Konformitätsbewertungsstelle",
+    "Kennnummer der Benannten Stelle"
+  ],
+  "category": "recht",
+  "summary": "Eine Benannte Stelle ist eine unabhängige, staatlich benannte und überwachte Konformitätsbewertungsstelle, die bei Medizinprodukten ab Klasse IIa (sowie Is, Im, Ir) das Qualitätsmanagementsystem und die technische Dokumentation des Herstellers prüft und Bescheinigungen ausstellt. Ihre vierstellige Kennnummer steht neben dem CE-Zeichen.",
+  "body": "## Begriff und Rolle\n\nEine **Benannte Stelle** (englisch *Notified Body*, NB) ist eine Konformitätsbewertungsstelle, die nach der [[mdr|MDR]] benannt wurde [@mdr-2017]. Sie ist meist ein privatwirtschaftliches Unternehmen – etwa aus dem Prüf- und Zertifizierungswesen –, wird aber von einer staatlichen Behörde benannt, überwacht und kann wieder entbenannt werden. Sie ist dem Hersteller gegenüber **unabhängig** und darf ihn nicht gleichzeitig beraten.\n\nIhre Hauptaufgabe ist die Mitwirkung an der [[konformitaetsbewertung|Konformitätsbewertung]]: Sie prüft, ob der Hersteller die Anforderungen der MDR erfüllt, und stellt bei positivem Ergebnis **Bescheinigungen** aus. Erst danach darf der Hersteller die [[ce-kennzeichnung|CE-Kennzeichnung]] zusammen mit der Kennnummer der Benannten Stelle anbringen.\n\n| Akteur | Rolle |\n|---|---|\n| Hersteller | verantwortet Produkt und Konformität, wählt die Benannte Stelle |\n| Benannte Stelle | prüft und bescheinigt; überwacht den Hersteller während der Gültigkeit |\n| Behörde für Benannte Stellen | benennt und überwacht die Benannte Stelle (in Deutschland die ZLG) [@zlg] |\n| EU-Kommission / MDCG | koordiniert, veröffentlicht die Liste der Stellen (NANDO) [@nando] |\n| Zuständige Behörden der Mitgliedstaaten | Marktüberwachung, Vigilanz (in Deutschland u. a. [@bfarm]) |\n\n## Wann ist eine Benannte Stelle nötig?\n\nDie Beteiligung hängt von der [[risikoklassen|Risikoklasse]] ab [@mdr-2017]:\n\n| Klasse | Beteiligung |\n|---|---|\n| I | keine – Herstellererklärung in eigener Verantwortung |\n| Is / Im / Ir | begrenzt auf Sterilität, Messfunktion bzw. Aufbereitung |\n| IIa | ja; Prüfung des QM-Systems, Stichproben der technischen Dokumentation |\n| IIb | ja; zusätzlich repräsentative Prüfung der technischen Dokumentation; bei implantierbaren IIb-Produkten (mit Ausnahmen) jedes Produkt |\n| III | ja; Prüfung der technischen Dokumentation jedes Produkts, ggf. Konsultationsverfahren mit einem Expertengremium |\n\n## Benennung und Überwachung\n\nDie Anforderungen an Benannte Stellen stehen in Art. 35 ff. und Anhang VII der MDR [@mdr-2017]. Sie betreffen unter anderem:\n\n* **Organisation und Unabhängigkeit:** keine Beratung des Herstellers, Schutz vor Interessenkonflikten, Haftpflichtversicherung.\n* **Qualitätsmanagement** der Stelle selbst.\n* **Personal:** nachgewiesene Kompetenz in den Produktbereichen (z. B. aktive Produkte, Software, Implantate), einschließlich klinischer Expertise.\n* **Verfahren:** dokumentierte Prüfprozesse, Entscheidungen durch Personen, die nicht selbst geprüft haben.\n\nDie Benennung erfolgt nach einer gemeinsamen Begutachtung durch die nationale Behörde und Sachverständige anderer Mitgliedstaaten und der Kommission. Jede Benannte Stelle erhält eine **vierstellige Kennnummer** und einen festgelegten **Benennungsumfang** (welche Produktarten und Verfahren sie bewerten darf). Beides ist in der öffentlichen Datenbank NANDO einsehbar [@nando].\n\n> [!belegt] In Deutschland ist die Zentralstelle der Länder für Gesundheitsschutz bei Arzneimitteln und Medizinprodukten (ZLG) die für Benannte Stellen im Medizinproduktebereich zuständige Behörde [@zlg] [@mpdg].\n\n## Tätigkeiten im Detail\n\n### Erstzertifizierung\n\n1. **Antrag und Vertrag** – der Hersteller beauftragt eine Stelle mit passendem Benennungsumfang.\n2. **Audit des QM-Systems** beim Hersteller und ggf. bei kritischen Zulieferern, typischerweise auf Basis von [[iso-13485]].\n3. **Bewertung der technischen Dokumentation** einschließlich [[iso-14971|Risikomanagement]], Verifizierung (z. B. Prüfberichte nach [[iec-60601-1]], [[iec-60601-1-2]]), [[iec-62304|Softwarelebenszyklus]], [[gebrauchstauglichkeit]] und [[klinische-bewertung|klinischer Bewertung]].\n4. **Bescheinigung** mit einer Gültigkeit von höchstens fünf Jahren [@mdr-2017].\n\n### Überwachung während der Gültigkeit\n\n* regelmäßige **Überwachungsaudits** (mindestens jährlich),\n* **unangekündigte Audits** beim Hersteller in festgelegten Abständen,\n* Bewertung von Änderungen am Produkt oder QM-System,\n* Auswertung von Daten aus Post-Market-Surveillance und [[vigilanz|Vigilanz]]; bei Bedarf Einschränkung, Aussetzung oder Widerruf der Bescheinigung [@mdr-2017].\n\n> [!vereinfacht] Die Schritte sind hier linear dargestellt. In der Praxis laufen Dokumentenprüfung, Audits und Rückfragen (sogenannte Nichtkonformitäten und deren Behebung) über Monate parallel und iterativ.\n\n## Abgrenzung\n\n| Begriff | Unterschied zur Benannten Stelle |\n|---|---|\n| Behörde (z. B. BfArM, Landesbehörde) | hoheitliche Aufgaben: Marktüberwachung, Risikobewertung, Genehmigung klinischer Prüfungen |\n| Akkreditierte Prüflabore | prüfen z. B. nach [[iec-60601-1]] und liefern Prüfberichte – stellen aber keine MDR-Bescheinigung aus |\n| Zertifizierer nach [[iso-13485]] | zertifizieren das QM-System; die ISO-Zertifizierung allein ist keine MDR-Konformitätsbewertung |\n| Sachverständige für STK/MTK | Prüfungen im Betrieb nach [[mpbetreibv|MPBetreibV]], nicht Teil des Inverkehrbringens |\n\n## Bedeutung in der Medizintechnik\n\nFür Betreiber und Medizintechniker:innen ist die Benannte Stelle meist nur indirekt sichtbar – über die Kennnummer neben dem CE-Zeichen und über Angaben in der EU-Konformitätserklärung. Praktische Berührungspunkte:\n\n* **Beschaffung:** Bei Geräten wie [[beatmungsgeraet]], [[defibrillator]], [[infusionspumpe]] oder [[dialysegeraet]] (typisch Klasse IIb; ein AED nach Regel 22 sogar Klasse III) sollte die Konformitätserklärung eine gültige Bescheinigung einer Benannten Stelle ausweisen.\n* **Lieferfähigkeit:** Engpässe bei Benannten Stellen in der Übergangsphase zur MDR haben dazu geführt, dass einzelne Produkte vom Markt genommen wurden; die Übergangsfristen wurden deshalb verlängert [@vo-2023-607].\n* **Sicherheitsinformationen:** Erkenntnisse aus Vorkommnissen fließen über den Hersteller auch zur Benannten Stelle und können Produktänderungen auslösen, die im Betrieb umzusetzen sind (z. B. Software-Updates).\n\n## Hinweis\n\nMaßgeblich sind die MDR und die nationalen Vorschriften in der jeweils gültigen Fassung. Der aktuelle Benennungsstatus einer Stelle ist ausschließlich in NANDO verbindlich ersichtlich.",
+  "related": [
+    "konformitaetsbewertung",
+    "ce-kennzeichnung",
+    "risikoklassen",
+    "mdr",
+    "iso-13485",
+    "klinische-bewertung",
+    "mpdg"
+  ],
+  "paths": [
+    [
+      "risikoklassen",
+      "konformitaetsbewertung",
+      "benannte-stelle",
+      "ce-kennzeichnung"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "zlg",
+    "nando",
+    "mpdg",
+    "bfarm",
+    "vo-2023-607"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

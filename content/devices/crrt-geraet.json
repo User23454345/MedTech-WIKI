@@ -1,0 +1,79 @@
+{
+  "id": "crrt-geraet",
+  "type": "device",
+  "title": "Gerät zur kontinuierlichen Nierenersatztherapie (CRRT)",
+  "aliases": [
+    "CRRT",
+    "kontinuierliche Nierenersatztherapie",
+    "CVVH",
+    "CVVHD",
+    "CVVHDF",
+    "Hämofiltrationsgerät",
+    "Akutdialysegerät"
+  ],
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 22,
+  "domains": [
+    "intensivmedizin",
+    "nephrologie"
+  ],
+  "summary": "CRRT-Geräte führen auf der Intensivstation eine kontinuierliche, über Stunden bis Tage laufende Blutreinigung bei akutem Nierenversagen durch. Durch den langsamen Flüssigkeitsentzug sind sie für kreislaufinstabile Patienten besser verträglich als die intermittierende Hämodialyse. Mehrere Pumpen und Waagen bilanzieren dabei Blut, Dialysat, Substitutionslösung und Filtrat.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Wie beim [[dialysegeraet|Hämodialysegerät]]: aktives Produkt, das Körperflüssigkeiten in potenziell gefährlicher Weise entzieht und zuführt – [[mdr|MDR]] Anhang VIII **Regel 12** (Klasse IIb). Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die kontinuierliche Nierenersatztherapie entfernt harnpflichtige Substanzen, korrigiert Elektrolyt- und [[saeure-basen-haushalt|Säure-Basen-Störungen]] und entzieht kontrolliert Flüssigkeit, wenn die [[niere|Nierenfunktion]] akut ausgefallen ist. Die verordnete Dosis wird als Effluentfluss bezogen auf das Körpergewicht angegeben; die KDIGO-Leitlinie nennt dafür 20–25 ml/kg/h [@kdigo-aki-2012].",
+    "principle": "## Verfahren\n\n| Verfahren | Haupttransportmechanismus |\n|---|---|\n| SCUF | nur Ultrafiltration (Flüssigkeitsentzug) |\n| CVVH | Konvektion – Filtrat wird durch Substitutionslösung ersetzt |\n| CVVHD | Diffusion – Dialysat im Gegenstrom |\n| CVVHDF | Kombination aus Diffusion und Konvektion |\n\nDie physikalischen Grundlagen ([[diffusion-osmose|Diffusion, Osmose, Konvektion]]) und der Aufbau des [[dialysator|Hämofilters]] entsprechen denen der intermittierenden [[dialysegeraet|Hämodialyse]] [@daugirdas-2015].\n\n## Pumpen und Bilanzierung\n\nBlut-, Dialysat-, Substitutions- und Effluentpumpe sind [[peristaltikpumpe|Rollerpumpen]]. Die Flüssigkeitsbilanz wird meist gravimetrisch über [[kraftsensor|Wägezellen]] geregelt: Die Steuerung vergleicht zugeführte und abgeführte Massen und korrigiert die Pumpenraten im [[regelkreis]]. Bilanzfehler summieren sich über die lange Laufzeit – Beutelwechsel und Waagen sind daher sicherheitsrelevant.\n\n## Antikoagulation und Überwachung\n\nNeben Heparin ist die **regionale Citrat-Antikoagulation** verbreitet: Citrat bindet ionisiertes Calcium im extrakorporalen Kreislauf; über eine eigene Pumpe wird Calcium patientennah zurückgegeben. [[drucksensor|Drucksensoren]] erfassen Zugangs-, Rückgabe-, Filter- und Effluentdruck, daraus Transmembrandruck und Filterdruckabfall (Hinweis auf Filterclotting). [[luftblasendetektor]] und [[blutleckdetektor]] schützen vor Luftembolie und Membranruptur; ein Blutwärmer gleicht Wärmeverluste aus.\n\n> [!praxis] Häufige Alarme betreffen Zugangsdruck (Katheterlage), Filterclotting und Bilanzfehler durch falsch eingehängte oder berührte Beutel."
+  },
+  "manufacturers": [
+    {
+      "ref": "baxter",
+      "models": [
+        "PrisMax",
+        "Prismaflex"
+      ],
+      "note": "Ursprünglich Gambro."
+    },
+    {
+      "ref": "fresenius-medical-care",
+      "models": [
+        "multiFiltratePRO"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "b-braun",
+      "models": [
+        "Diapact CRRT"
+      ],
+      "note": ""
+    }
+  ],
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.4 – nichtimplantierbare aktive Produkte zur unmittelbaren Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potenziellem Druckaufbau; erfasst sind auch aufbereitete körpereigene Flüssigkeiten (hier: Blut), deren Einbringen mit einer Entnahmefunktion direkt gekoppelt ist; nicht in Anlage 2 aufgeführt.",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); Wartung und Kalibrierung der Waagen und Drucksensoren nach Herstellerangabe; Einmalsets nach Herstellerangabe (begrenzte Standzeit)."
+  },
+  "related": [
+    "dialysegeraet",
+    "dialysator",
+    "peristaltikpumpe",
+    "blutleckdetektor",
+    "luftblasendetektor",
+    "nephrologie"
+  ],
+  "sources": [
+    "daugirdas-2015",
+    "kdigo-aki-2012",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

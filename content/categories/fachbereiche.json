@@ -6,7 +6,26 @@
   "order": 2,
   "icon": "stethoscope",
   "summary": "Klinische Disziplinen und die Medizintechnik, auf die sie angewiesen sind – von der Intensivmedizin bis zur Zahnmedizin.",
-  "body": "",
+  "body": "Diese Kategorie beschreibt die **klinischen Fachbereiche** aus Sicht der Medizintechnik: Welche Aufgaben hat die Disziplin, welche Geräte prägen ihren Alltag, und welche technischen Anforderungen ergeben sich daraus? Ein und derselbe Gerätetyp kann in mehreren Bereichen eingesetzt werden – ein [[patientenmonitor]] findet sich in der [[intensivmedizin]] ebenso wie in der [[anaesthesiologie]] und [[notfallmedizin]] –, doch Umgebung, Patientengruppe und Risiko unterscheiden sich [@kramme-2017].\n\nFür Medizintechnikerinnen und Medizintechniker ist dieses Wissen wichtig, weil es Prioritäten bestimmt: Ein Ausfall am Intensivbett ist anders zu bewerten als an einem Therapiegerät der Rehabilitation. Wer weiß, wie ein Bereich arbeitet, kann Geräteauswahl, Einweisung, Ersatzgerätevorhaltung und Prüfplanung besser auf die klinische Realität abstimmen.\n\n> [!praxis] Gute Zusammenarbeit beginnt mit Verständnis für den klinischen Ablauf: Termine für Prüfungen und Wartungen werden mit der Station abgestimmt, kritische Geräte möglichst ohne Versorgungslücke getauscht.\n\n## Überblick\n\n| Fachbereich | Typische Medizintechnik |\n|---|---|\n| [[intensivmedizin]] | [[beatmungsgeraet]], [[patientenmonitor]], [[infusionspumpe]], [[spritzenpumpe]], [[crrt-geraet]], [[ecmo]] |\n| [[anaesthesiologie]] | [[anaesthesiegeraet]], [[kapnometer]], [[videolaryngoskop]], [[patientenwaermesystem]] |\n| [[notfallmedizin]] | [[defibrillator]], [[transportbeatmungsgeraet]], [[thoraxkompressionsgeraet]], [[absauggeraet]] |\n| [[kardiologie]] | [[ekg-geraet]], [[langzeit-ekg]], [[ergometer]], [[angiographieanlage]], [[herzschrittmacher]], [[icd]], [[iabp]] |\n| [[herzchirurgie]] | [[herz-lungen-maschine]], [[vad]], [[ecmo]] |\n| [[radiologie]] | [[roentgengeraet]], [[computertomograph]], [[mrt]], [[mammographiegeraet]], [[ultraschallgeraet]] |\n| [[nuklearmedizin]] | [[gammakamera]], [[pet-ct]] |\n| [[strahlentherapie]] | [[linearbeschleuniger]], [[afterloader]] |\n| [[nephrologie]] | [[dialysegeraet]], [[crrt-geraet]], [[zellseparator]] |\n| [[chirurgie]] | [[hf-chirurgiegeraet]], [[op-tisch]], [[op-leuchte]], [[ultraschalldissektor]], [[op-roboter]], [[insufflator]] |\n| [[orthopaedie-unfallchirurgie]] | [[c-bogen]], [[chirurgisches-motorsystem]], [[knochendichtemessung]] |\n| [[gastroenterologie]] | [[endoskop]], [[kapselendoskop]], [[enterale-ernaehrungspumpe]] |\n| [[neonatologie]] | [[inkubator]], [[waermebett]], [[phototherapiegeraet]] |\n| [[geburtshilfe]] | [[ctg]], [[ultraschallgeraet]] |\n| [[neurologie]] | [[eeg-geraet]], [[emg-geraet]], [[polysomnograph]] |\n| [[pneumologie]] | [[spirometer]], [[bodyplethysmograph]], [[cpap-geraet]], [[heimbeatmungsgeraet]], [[sauerstoffkonzentrator]] |\n| [[labormedizin]] | [[klinisch-chemischer-analysator]], [[haematologie-analysator]], [[gerinnungsanalysator]], [[laborzentrifuge]] |\n| [[augenheilkunde]] | [[spaltlampe]], [[tonometer]], [[oct]], [[phakoemulsifikation]], [[op-mikroskop]] |\n| [[hno-heilkunde]] | [[audiometer]], [[hoergeraet]], [[cochlea-implantat]] |\n| [[zahnmedizin]] | [[dentaleinheit]], [[dvt]] |\n| [[diabetologie]] | [[insulinpumpe]], [[blutzuckermessgeraet]] |\n| [[physikalische-medizin]] | [[reizstromgeraet]], [[ultraschalltherapiegeraet]], [[ipk-geraet]] |\n\n> [!vereinfacht] Die Zuordnung ist exemplarisch. Viele Geräte – etwa Infusionstechnik oder Ultraschall – werden fachübergreifend eingesetzt; die Gerätedatensätze nennen jeweils alle relevanten Fachbereiche.\n\n## Was die Fachbereichsartikel enthalten\n\nJeder Fachbereichsartikel beschreibt kurz die medizinischen Aufgaben, die besonders gerätelastigen Arbeitsplätze, typische technische Risiken (z. B. lebenserhaltende Funktionen, ionisierende Strahlung, hohe Energien) und die Bezüge zu Anatomie und Physiologie. Von dort führen Links zu den Geräten und weiter zu Komponenten, Sensoren und Prüfpflichten.\n\n## Lernpfad-Empfehlung\n\n1. **Hochtechnisierte Akutbereiche zuerst:** [[intensivmedizin]], [[anaesthesiologie]] und [[notfallmedizin]] – hier ist die Gerätedichte am höchsten und die Bedeutung lebenserhaltender Systeme am größten.\n2. **Organbezogene Disziplinen:** [[kardiologie]], [[pneumologie]], [[nephrologie]] – jeweils zusammen mit [[herz]], [[lunge]] und [[niere]] aus der Kategorie [[anatomie]].\n3. **Bildgebung und Strahlung:** [[radiologie]], [[nuklearmedizin]], [[strahlentherapie]] – parallel [[strahlenschutz]] lesen.\n4. **Operative Fächer:** [[chirurgie]], [[herzchirurgie]], [[orthopaedie-unfallchirurgie]], [[gastroenterologie]].\n5. **Spezialbereiche:** [[neonatologie]], [[augenheilkunde]], [[hno-heilkunde]], [[zahnmedizin]], [[labormedizin]], [[diabetologie]], [[physikalische-medizin]].",
+  "paths": [
+    [
+      "intensivmedizin",
+      "beatmungsgeraet",
+      "atemmechanik",
+      "flowsensor"
+    ],
+    [
+      "nephrologie",
+      "dialysegeraet",
+      "diffusion-osmose",
+      "dialysator"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "larsen-2018",
+    "oczenski-2017"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

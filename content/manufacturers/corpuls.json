@@ -1,0 +1,60 @@
+{
+  "id": "corpuls",
+  "type": "manufacturer",
+  "title": "corpuls",
+  "aliases": [
+    "GS Elektromedizinische Geräte G. Stemple GmbH",
+    "GS corpuls",
+    "corpuls3"
+  ],
+  "category": "hersteller",
+  "summary": "corpuls ist die Marke der GS Elektromedizinische Geräte G. Stemple GmbH aus Kaufering (Bayern). Das Familienunternehmen stellt Defibrillatoren, Monitoring-Defibrillator-Systeme und mechanische Thoraxkompressionsgeräte für Rettungsdienst und Klinik her.",
+  "headquarters": "Kaufering, Deutschland",
+  "founded": "1982",
+  "website": "https://corpuls.world/",
+  "productLines": [
+    {
+      "device": "defibrillator",
+      "models": [
+        "corpuls3",
+        "corpuls1",
+        "corpuls aed"
+      ],
+      "note": "corpuls3 als modulares System aus Monitor, Patientenbox und Defibrillator."
+    },
+    {
+      "device": "thoraxkompressionsgeraet",
+      "models": [
+        "corpuls cpr"
+      ],
+      "note": "Stempelsystem zur mechanischen Thoraxkompression."
+    },
+    {
+      "device": "patientenmonitor",
+      "models": [
+        "corpuls3"
+      ],
+      "note": "Monitoring-Funktionen im Defibrillatorsystem für Notfall und Intensivtransport."
+    }
+  ],
+  "body": "## Überblick\n\nHinter der Marke **corpuls** steht die **GS Elektromedizinische Geräte G. Stemple GmbH** mit Sitz in Kaufering bei Landsberg am Lech [@corpuls-web]. Das Unternehmen ist in Familienbesitz und konzentriert sich auf Geräte für die Notfall- und Intensivmedizin, insbesondere für den Rettungsdienst.\n\n## Geschichte in Stichpunkten\n\n* **1982:** Gründung durch Günter Stemple in Kaufering.\n* **1980er/1990er Jahre:** Entwicklung von Defibrillatoren und Monitoring-Systemen für den Rettungsdienst.\n* **2000er Jahre:** Einführung des modularen Systems **corpuls3**, bei dem Monitor, Patientenbox und Defibrillator getrennt voneinander genutzt werden können.\n* **2010er/2020er Jahre:** Ergänzung um Kompaktgeräte, AED, mechanische Thoraxkompression und telemedizinische Datenübertragung (u. a. für Telenotarztsysteme); Ausbau des Standorts Kaufering.\n\n## Produktbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Defibrillation und Monitoring | [[defibrillator|Defibrillatoren]] mit [[patientenmonitor|Monitoring]] (EKG, [[pulsoxymeter|SpO₂]], [[nibp-messgeraet|NIBP]], [[kapnometer|Kapnographie]], invasive Drücke) |\n| Laien- und Ersthelferdefibrillation | Automatisierte externe Defibrillatoren (AED) |\n| Reanimation | [[thoraxkompressionsgeraet|Mechanische Thoraxkompression]] |\n| Telemedizin | Datenübertragung von Einsatzdaten und Live-Daten an Leitstelle und Klinik |\n\n## Bedeutung für die Medizintechnik\n\nMonitor-Defibrillatoren für den Rettungsdienst vereinen mehrere Gerätefunktionen in einem tragbaren Gehäuse und müssen sowohl den Anforderungen an [[iec-60601-2-4|Defibrillatoren]] als auch an die jeweiligen Monitoringparameter genügen. Hinzu kommen die besonderen Umgebungsbedingungen im Rettungsdienst (Vibration, Temperatur, Feuchte, Stürze) sowie die Stromversorgung über [[lithium-ionen-akku|Akkus]].\n\n> [!vereinfacht] Ein modulares System erlaubt es, den Patienten mit der Patientenbox am Körper zu überwachen, während der Monitor getrennt im Fahrzeug oder bei der Ärztin bleibt – die Daten werden drahtlos übertragen.\n\n> [!hinweis] [[defibrillator|Defibrillatoren]] gehören zu den Geräten, für die die [[mpbetreibv|MPBetreibV]] eine [[stk]] vorsieht; Fristen spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 i. V. m. Anlage 1 MPBetreibV 2025) [@mpbetreibv].\n\n> [!praxis] Akkus, Elektroden und Verbrauchsmaterial haben eigene Haltbarkeits- und Austauschintervalle; ein großer Teil der Einsatzstörungen im Rettungsdienst geht auf Zubehör und Energieversorgung zurück, siehe [[akkufehler]] und [[elektrodenproblem]].\n\n## Einordnung im Markt\n\nWettbewerber sind u. a. [[zoll]], [[stryker]] (Physio-Control), [[philips]], [[schiller]] und [[weinmann]].",
+  "related": [
+    "defibrillator",
+    "thoraxkompressionsgeraet",
+    "patientenmonitor",
+    "notfallmedizin",
+    "stk",
+    "akkufehler",
+    "weinmann",
+    "zoll",
+    "stryker",
+    "schiller",
+    "iec-60601-2-4"
+  ],
+  "sources": [
+    "corpuls-web",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,179 @@
+{
+  "id": "alarmsystem",
+  "type": "term",
+  "title": "Alarmsysteme medizinischer Geräte",
+  "aliases": [
+    "Alarmsystem",
+    "Alarm system",
+    "Alarmmanagement",
+    "Alarmpriorität",
+    "physiologischer Alarm",
+    "technischer Alarm",
+    "Alarmgrenze",
+    "Alarmverzögerung",
+    "verteiltes Alarmsystem",
+    "Distributed alarm system",
+    "Latching alarm",
+    "IEC 60601-1-8"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Ein Alarmsystem erkennt in einem medizinischen elektrischen Gerät Alarmbedingungen und macht das Personal durch optische und akustische Signale darauf aufmerksam. Die Ergänzungsnorm IEC 60601-1-8 legt Prioritäten, Signalgestaltung, Alarmzustände und Anforderungen an verteilte Alarmsysteme fest; zu viele nicht relevante Alarme führen zu Alarmmüdigkeit.",
+  "body": "## Begriff und Aufgabe\n\nEin **Alarmsystem** ist der Teil eines [[medizinisches-elektrisches-geraet|ME-Geräts]] oder ME-Systems, der eine Alarmbedingung erkennt und die Anwender durch Alarmsignale darauf aufmerksam macht. Die Anforderungen sind in der Ergänzungsnorm [[iec-60601-1-8]] festgelegt; besondere Festlegungen, etwa für [[beatmungsgeraet|Beatmungsgeräte]] ([[iso-80601-2-12]]) oder [[patientenmonitor|Monitore]] ([[iec-60601-2-27]]), ergänzen sie um gerätespezifische Alarme [@iec-60601-1-8].\n\nAufgabe des Alarmsystems ist es, eine **Reaktion des Personals** auszulösen, wenn der Zustand des Patienten oder des Geräts dies erfordert – nicht mehr und nicht weniger. Zu viele Alarme sind ebenso gefährlich wie zu wenige (siehe [[alarmmuedigkeit]]).\n\n## Grundbegriffe\n\n| Begriff | Bedeutung |\n|---|---|\n| Alarmbedingung | vom Alarmsystem festgestellter Zustand, der eine Gefährdung anzeigt |\n| Alarmsignal | optisches, akustisches oder sonstiges Signal, das die Alarmbedingung anzeigt |\n| Physiologische Alarmbedingung | betrifft eine Patientengröße, z. B. SpO₂ unter Grenzwert, Asystolie |\n| Technische Alarmbedingung | betrifft das Gerät, z. B. [[okklusionsalarm|Okklusion]], [[elektrodenproblem|Elektrode ab]], Akku leer, Sensorfehler |\n| Alarmgrenze | Schwellenwert, bei dessen Über- oder Unterschreitung eine Alarmbedingung entsteht |\n| Alarmverzögerung | Zeit zwischen Eintreten des Zustands und Erzeugung des Alarmsignals |\n| Informationssignal | Signal ohne Alarmcharakter, z. B. Tastenton oder Erinnerung |\n\n## Signalkette\n\nEin Alarm ist das Ende einer Kette, deren Glieder jeweils Verzögerungen und Fehlerquellen enthalten:\n\n1. **Erfassung:** Sensor bzw. Messkette ([[messkette]], [[drucksensor]], [[photoplethysmographie]], [[ekg-elektrode]]).\n2. **Signalverarbeitung:** Verstärkung, [[filter|Filterung]], Mittelwertbildung, Artefakterkennung im [[mikrocontroller]].\n3. **Bedingungserkennung:** Vergleich mit Alarmgrenzen oder Algorithmen (z. B. Arrhythmieerkennung).\n4. **Priorisierung:** Zuordnung einer Priorität.\n5. **Signalerzeugung:** Anzeige am Gerät, Tonsignal, ggf. Weiterleitung an Zentrale oder Mobilgerät (**verteiltes Alarmsystem**).\n6. **Reaktion:** Wahrnehmung, Bewertung und Handeln des Personals.\n\n> [!vereinfacht] Die Gesamtverzögerung setzt sich aus Mittelungszeit des Messwerts, Alarmbedingungsverzögerung, Signalerzeugungsverzögerung und gegebenenfalls Übertragungszeit im Netzwerk zusammen. Die IEC 60601-1-8 verlangt, dass Hersteller diese Verzögerungen angeben bzw. begrenzen [@iec-60601-1-8].\n\n## Prioritäten\n\nDie Norm unterscheidet drei Prioritäten. Maßgeblich für die Einstufung ist, welche Folgen es hätte, wenn niemand auf die Alarmbedingung reagiert, und wie schnell diese Folgen eintreten können [@iec-60601-1-8]:\n\n| Mögliche Folge bei ausbleibender Reaktion | sofort | zeitnah | verzögert |\n|---|---|---|---|\n| Tod oder irreversible Schädigung | hoch | hoch | mittel |\n| reversible Schädigung | hoch | mittel | niedrig |\n| geringfügiges Unbehagen oder leichte Verletzung | mittel | niedrig | niedrig oder kein Alarm |\n\n> [!hinweis] Vereinfachte Darstellung der Zuordnungssystematik der IEC 60601-1-8; die genaue Tabelle und ihre Auslegung sind der jeweils gültigen Normfassung zu entnehmen. Die Zuordnung im Einzelfall ist Ergebnis des [[iso-14971|Risikomanagements]] des Herstellers.\n\n### Optische und akustische Kennzeichnung\n\n| Priorität | Farbe der Anzeige | Blinken (typisch) | Akustisches Signal (typisch) |\n|---|---|---|---|\n| hoch | rot | blinkend, ca. 1,4–2,8 Hz | Folge („Burst“) aus 10 Pulsen, wiederholt |\n| mittel | gelb | blinkend, ca. 0,4–0,8 Hz | Burst aus 3 Pulsen |\n| niedrig | gelb oder cyan | konstant | 1–2 Pulse, optional |\n\n> [!belegt] Die IEC 60601-1-8 legt Farben, Blinkfrequenzen sowie den zeitlichen Aufbau der akustischen Alarmsignale je Priorität fest, damit Alarme unabhängig vom Hersteller eindeutig erkannt werden können [@iec-60601-1-8].\n\n> [!hinweis] Die Zahlenwerte der Tabelle (Blinkfrequenzen, Pulszahlen) sind typische Werte zur Orientierung und nicht gegen den aktuellen Normtext geprüft. Die Norm wurde mehrfach geändert (Änderungen 2012 und 2020); dabei wurden u. a. die Vorgaben zu akustischen Alarmsignalen überarbeitet. Maßgeblich ist die jeweils gültige Fassung.\n\nAus physikalischer Sicht sind akustische Alarmsignale so gestaltet, dass sie gut **lokalisierbar** und **unterscheidbar** sind: Pulse mit mehreren Harmonischen im Bereich weniger hundert Hertz bis einige Kilohertz sind besser zu orten als reine Sinustöne. Die Lautstärke muss einstellbar sein, darf aber nicht unbemerkt unter einen wirksamen Wert absinken.\n\n## Alarmzustände und Bedienung\n\nDie Norm unterscheidet verschiedene Arten, ein Alarmsignal vorübergehend oder dauerhaft zu unterdrücken [@iec-60601-1-8]:\n\n| Zustand | Wirkung |\n|---|---|\n| Audio pausiert | Tonsignal für begrenzte Zeit stumm, optische Anzeige bleibt |\n| Alarm pausiert | Alarmsignale (optisch und akustisch) für begrenzte Zeit unterdrückt |\n| Audio aus / Alarm aus | dauerhaft deaktiviert – muss deutlich angezeigt werden |\n| Quittiert | Signal bis zum Ende der Alarmbedingung oder einer Zeitspanne beendet |\n\nWeitere Begriffe: **Selbsthaltende** (*latching*) Alarme bleiben bestehen, bis sie bestätigt werden, auch wenn die Bedingung bereits vorbei ist – sinnvoll z. B. bei kurzen Asystolien. **Nicht selbsthaltende** Alarme enden automatisch mit der Alarmbedingung.\n\n> [!warnung] Werkseitige Alarmgrenzen und Voreinstellungen (*Default*-Konfiguration) beeinflussen die Sicherheit aller Patienten einer Station. Sie sollten vom Betreiber bewusst festgelegt, dokumentiert und vor Änderungen geschützt werden. Alarmfunktionen dürfen bei Instandhaltung oder Konfiguration niemals dauerhaft deaktiviert werden.\n\n## Verteilte Alarmsysteme\n\nModerne Stationen leiten Alarme über eine **Zentrale**, Rufsysteme oder Mobilgeräte weiter. Die IEC 60601-1-8 verlangt dafür, dass ein Ausfall der Übertragung erkannt und angezeigt wird. Unterschieden wird, ob das verteilte System die Alarmverantwortung tatsächlich übernimmt (dann gelten erhöhte Anforderungen) oder nur informierend arbeitet [@iec-60601-1-8]. Für die Datenübertragung kommen Herstellerprotokolle, [[hl7-fhir|HL7]] oder IEEE 11073 SDC zum Einsatz.\n\n## Alarmmüdigkeit\n\nIn Studien und Übersichtsarbeiten erweist sich ein großer Teil der Monitoralarme auf Intensivstationen als klinisch nicht handlungsrelevant (Artefakte, zu enge Grenzen, kurzzeitige Ausreißer) [@sendelbach-funk-2013]. Die Folge: Personal wird desensibilisiert, reagiert verzögert oder schaltet Alarme ab. Die US-amerikanische Joint Commission hat 2013 eine Sicherheitswarnung zur Alarmsicherheit veröffentlicht [@joint-commission-sea-50].\n\nWirksame Gegenmaßnahmen kombinieren Technik und Organisation:\n\n* patientenindividuelle Alarmgrenzen und sinnvolle Standardgrenzen,\n* kurze, angemessene Alarmverzögerungen (z. B. für SpO₂-Abfälle),\n* tägliches Wechseln bzw. Prüfen von Elektroden, korrekte Sensorplatzierung (vgl. [[bewegungsartefakt]]),\n* intelligente Alarmalgorithmen (Trend- und Kombinationsalarme),\n* Schulung und klare Zuständigkeiten (siehe [[einweisung]], [[gebrauchstauglichkeit]]).\n\n> [!praxis] Wird über „zu viele Alarme“ geklagt, lohnt eine Auswertung der Alarmprotokolle: Häufig verursachen wenige Alarmarten (z. B. SpO₂-Sensor ab, EKG-Ableitung gestört) den Großteil der Meldungen. Gezielte Maßnahmen an diesen Ursachen wirken stärker als pauschales Erweitern der Grenzen.\n\n## Anwendung in Geräten\n\n| Gerät | Typische physiologische Alarme | Typische technische Alarme |\n|---|---|---|\n| [[patientenmonitor]] | Asystolie, Kammerflimmern, SpO₂ niedrig, Blutdruckgrenzen | Elektrode ab, Sensor ab, Netzausfall |\n| [[beatmungsgeraet]] | Atemwegsdruck hoch, Minutenvolumen niedrig, Apnoe | [[leckage]], [[diskonnektion]], Gasversorgung ausgefallen |\n| [[infusionspumpe]], [[spritzenpumpe]] | – | [[okklusionsalarm|Okklusion]], [[luft-im-system|Luft im System]], Spritze/Infusion fast leer |\n| [[dialysegeraet]] | – | [[blutleck-alarm|Blutleck]], [[leitfaehigkeitsalarm|Leitfähigkeit]], venöser Druck |\n| [[anaesthesiegeraet]] | Apnoe, Narkosemittelkonzentration | O₂-Versorgungsdruck niedrig |\n\nWeitere Beispiele: [[atemwegsdruck-hoch]], [[akkufehler]].\n\n## Bedeutung in der Medizintechnik\n\nBei der [[funktionspruefung|Funktionsprüfung]] und der [[stk|STK]] wird geprüft, ob Alarme korrekt ausgelöst, angezeigt und akustisch hörbar ausgegeben werden – häufig mit [[pruefgeraete|Simulatoren]], die Patientensignale oder Fehlerzustände nachbilden. Nach Software-Updates oder Konfigurationsänderungen ist zu kontrollieren, ob Alarmvoreinstellungen erhalten geblieben sind.\n\nSiehe auch: [[alarmmuedigkeit]], [[patientensicherheit]], [[anwendungsfehler]], [[elektrotechnik]].\n",
+  "related": [
+    "iec-60601-1-8",
+    "alarmmuedigkeit",
+    "patientenmonitor",
+    "beatmungsgeraet",
+    "infusionspumpe",
+    "messkette",
+    "filter",
+    "mikrocontroller",
+    "hl7-fhir",
+    "gebrauchstauglichkeit",
+    "patientensicherheit",
+    "funktionspruefung"
+  ],
+  "paths": [
+    [
+      "patientenmonitor",
+      "photoplethysmographie",
+      "filter",
+      "alarmsystem",
+      "alarmmuedigkeit"
+    ],
+    [
+      "beatmungsgeraet",
+      "druckmessung",
+      "alarmsystem",
+      "atemwegsdruck-hoch"
+    ]
+  ],
+  "diagram": {
+    "title": "Signalkette eines Alarmsystems",
+    "caption": "Vom Messwert zur Reaktion des Personals. Funktionsschema, kein konkretes Gerät.",
+    "width": 900,
+    "height": 320,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Patient /\nGerätezustand",
+        "kind": "patient",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "sen",
+        "label": "Sensor /\nMesskette",
+        "ref": "messkette",
+        "kind": "sensor",
+        "x": 290,
+        "y": 80
+      },
+      {
+        "id": "sv",
+        "label": "Signal-\nverarbeitung",
+        "ref": "filter",
+        "kind": "process",
+        "x": 490,
+        "y": 80
+      },
+      {
+        "id": "erk",
+        "label": "Alarmbedingung\n(Grenzwert, Algorithmus)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 700,
+        "y": 80,
+        "w": 180
+      },
+      {
+        "id": "prio",
+        "label": "Priorisierung\nhoch / mittel / niedrig",
+        "ref": "iec-60601-1-8",
+        "kind": "control",
+        "x": 700,
+        "y": 230,
+        "w": 180
+      },
+      {
+        "id": "sig",
+        "label": "Alarmsignal\n(optisch, akustisch)",
+        "ref": "display-bedienoberflaeche",
+        "kind": "output",
+        "x": 470,
+        "y": 230,
+        "w": 170
+      },
+      {
+        "id": "vert",
+        "label": "Verteiltes\nAlarmsystem",
+        "ref": "hl7-fhir",
+        "kind": "output",
+        "x": 270,
+        "y": 230
+      },
+      {
+        "id": "pers",
+        "label": "Personal",
+        "kind": "patient",
+        "x": 90,
+        "y": 230,
+        "w": 110
+      }
+    ],
+    "edges": [
+      {
+        "from": "pat",
+        "to": "sen",
+        "kind": "signal"
+      },
+      {
+        "from": "sen",
+        "to": "sv",
+        "kind": "signal"
+      },
+      {
+        "from": "sv",
+        "to": "erk",
+        "kind": "data"
+      },
+      {
+        "from": "erk",
+        "to": "prio",
+        "kind": "data"
+      },
+      {
+        "from": "prio",
+        "to": "sig",
+        "kind": "signal"
+      },
+      {
+        "from": "sig",
+        "to": "vert",
+        "kind": "data",
+        "label": "Weiterleitung"
+      },
+      {
+        "from": "vert",
+        "to": "pers",
+        "kind": "signal"
+      },
+      {
+        "from": "sig",
+        "to": "pers",
+        "kind": "signal",
+        "label": "am Bett"
+      }
+    ]
+  },
+  "sources": [
+    "iec-60601-1-8",
+    "sendelbach-funk-2013",
+    "joint-commission-sea-50",
+    "iso-80601-2-12",
+    "iec-60601-1",
+    "webster-2010"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

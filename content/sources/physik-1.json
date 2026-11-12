@@ -1,0 +1,29 @@
+[
+  {
+    "id": "curie-1880",
+    "kind": "artikel",
+    "authors": "Curie, J.; Curie, P.",
+    "title": "Développement, par compression, de l'électricité polaire dans les cristaux hémièdres à faces inclinées",
+    "publisher": "Bulletin de la Société minéralogique de France 3, S. 90–93",
+    "year": "1880",
+    "note": "Erstbeschreibung des (direkten) piezoelektrischen Effekts"
+  },
+  {
+    "id": "doppler-1842",
+    "kind": "artikel",
+    "authors": "Doppler, C.",
+    "title": "Ueber das farbige Licht der Doppelsterne und einiger anderer Gestirne des Himmels",
+    "publisher": "Abhandlungen der Königlich Böhmischen Gesellschaft der Wissenschaften, Prag",
+    "year": "1842",
+    "note": "Originalarbeit zum Doppler-Effekt; 1842 in Prag vorgetragen, in den Abhandlungen (V. Folge, Bd. 2) 1843 gedruckt."
+  },
+  {
+    "id": "beer-1852",
+    "kind": "artikel",
+    "authors": "Beer, A.",
+    "title": "Bestimmung der Absorption des rothen Lichts in farbigen Flüssigkeiten",
+    "publisher": "Annalen der Physik und Chemie 86, S. 78–88",
+    "year": "1852",
+    "note": "Konzentrationsabhängigkeit der Lichtabsorption (Beer'sches Gesetz)"
+  }
+]

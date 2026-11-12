@@ -1,1 +1,1710 @@
-[]
+[
+  {
+    "abbr": "ABDM",
+    "full": "Ambulante Langzeit-Blutdruckmessung",
+    "en": "Ambulatory Blood Pressure Monitoring",
+    "area": "medizinisch",
+    "ref": "langzeit-blutdruck"
+  },
+  {
+    "abbr": "AC",
+    "full": "Wechselstrom / Wechselspannung",
+    "en": "Alternating Current",
+    "area": "technisch",
+    "ref": "spannung-strom-widerstand"
+  },
+  {
+    "abbr": "ADC",
+    "full": "Analog-Digital-Umsetzer",
+    "en": "Analog-to-Digital Converter",
+    "area": "technisch",
+    "ref": "analog-digital-wandler"
+  },
+  {
+    "abbr": "AED",
+    "full": "Automatisierter externer Defibrillator",
+    "en": "Automated External Defibrillator",
+    "area": "medizinisch",
+    "ref": "defibrillator"
+  },
+  {
+    "abbr": "AEMP",
+    "full": "Aufbereitungseinheit für Medizinprodukte",
+    "en": "Reprocessing Unit for Medical Devices",
+    "area": "medizinisch",
+    "ref": "aufbereitung"
+  },
+  {
+    "abbr": "AF",
+    "full": "Atemfrequenz",
+    "en": "Respiratory Rate",
+    "area": "medizinisch",
+    "ref": "atemmechanik"
+  },
+  {
+    "abbr": "AF",
+    "full": "Vorhofflimmern (engl. Abkürzung)",
+    "en": "Atrial Fibrillation",
+    "area": "medizinisch",
+    "ref": "erregungsleitungssystem"
+  },
+  {
+    "abbr": "AHI",
+    "full": "Apnoe-Hypopnoe-Index",
+    "en": "Apnea-Hypopnea Index",
+    "area": "medizinisch",
+    "ref": "polysomnograph"
+  },
+  {
+    "abbr": "AIMDD",
+    "full": "Richtlinie 90/385/EWG über aktive implantierbare medizinische Geräte (historisch, abgelöst durch MDR)",
+    "en": "Active Implantable Medical Device Directive",
+    "area": "regulatorisch",
+    "ref": "mdr"
+  },
+  {
+    "abbr": "AMV",
+    "full": "Atemminutenvolumen",
+    "en": "Minute Volume",
+    "area": "medizinisch",
+    "ref": "atemmechanik"
+  },
+  {
+    "abbr": "APRV",
+    "full": "Beatmung mit Druckentlastung der Atemwege",
+    "en": "Airway Pressure Release Ventilation",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "ARDS",
+    "full": "Akutes Lungenversagen (akutes Atemnotsyndrom)",
+    "en": "Acute Respiratory Distress Syndrome",
+    "area": "medizinisch",
+    "ref": "intensivmedizin"
+  },
+  {
+    "abbr": "ASB",
+    "full": "Assistierte Spontanatmung (druckunterstützte Spontanatmung)",
+    "en": "Assisted Spontaneous Breathing",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "AV",
+    "full": "Atrioventrikulär (z. B. AV-Knoten, AV-Block)",
+    "en": "Atrioventricular",
+    "area": "medizinisch",
+    "ref": "erregungsleitungssystem"
+  },
+  {
+    "abbr": "A₀",
+    "full": "A₀-Wert (Maß für die Letalität einer thermischen Desinfektion mit feuchter Hitze, Konzept nach DIN EN ISO 15883)",
+    "en": "A0 Value",
+    "area": "technisch",
+    "ref": "iso-15883"
+  },
+  {
+    "abbr": "BE",
+    "full": "Basenüberschuss",
+    "en": "Base Excess",
+    "area": "medizinisch",
+    "ref": "saeure-basen-haushalt"
+  },
+  {
+    "abbr": "BetrSichV",
+    "full": "Betriebssicherheitsverordnung",
+    "area": "regulatorisch",
+    "ref": "betreiberpflichten"
+  },
+  {
+    "abbr": "BF",
+    "full": "Anwendungsteil Typ BF (gebräuchliche, normativ nicht festgelegte Deutung: Body Floating)",
+    "en": "Type BF Applied Part",
+    "area": "technisch",
+    "ref": "anwendungsteile"
+  },
+  {
+    "abbr": "BfArM",
+    "full": "Bundesinstitut für Arzneimittel und Medizinprodukte",
+    "en": "Federal Institute for Drugs and Medical Devices",
+    "area": "regulatorisch",
+    "ref": "vigilanz"
+  },
+  {
+    "abbr": "BfS",
+    "full": "Bundesamt für Strahlenschutz",
+    "en": "Federal Office for Radiation Protection",
+    "area": "regulatorisch",
+    "ref": "strahlenschutz"
+  },
+  {
+    "abbr": "BGA",
+    "full": "Blutgasanalyse",
+    "en": "Blood Gas Analysis",
+    "area": "medizinisch",
+    "ref": "blutgasanalysator"
+  },
+  {
+    "abbr": "BI",
+    "full": "Bioindikator",
+    "en": "Biological Indicator",
+    "area": "technisch",
+    "ref": "sterilisation"
+  },
+  {
+    "abbr": "BIPAP",
+    "full": "Biphasischer positiver Atemwegsdruck – Gattungsbegriff für Beatmung zwischen zwei Druckniveaus mit möglicher Spontanatmung auf beiden Niveaus; Schreibweisen wie „BIPAP“ bzw. „BiPAP“ sind teils herstellerspezifische Bezeichnungen bzw. Marken, die Modi verschiedener Hersteller sind nicht identisch",
+    "en": "Biphasic/Bilevel Positive Airway Pressure",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "BLDC",
+    "full": "Bürstenloser Gleichstrommotor",
+    "en": "Brushless DC Motor",
+    "area": "technisch",
+    "ref": "bldc-motor"
+  },
+  {
+    "abbr": "BMS",
+    "full": "Batteriemanagementsystem",
+    "en": "Battery Management System",
+    "area": "technisch",
+    "ref": "lithium-ionen-akku"
+  },
+  {
+    "abbr": "BZ",
+    "full": "Blutzucker (Blutglukose)",
+    "en": "Blood Glucose",
+    "area": "medizinisch",
+    "ref": "blutzuckermessgeraet"
+  },
+  {
+    "abbr": "CAPA",
+    "full": "Korrektur- und Vorbeugungsmaßnahmen",
+    "en": "Corrective and Preventive Action",
+    "area": "regulatorisch",
+    "ref": "iso-13485"
+  },
+  {
+    "abbr": "CE",
+    "full": "CE-Kennzeichnung (Konformitätskennzeichen, frz. Conformité Européenne)",
+    "en": "CE Marking",
+    "area": "regulatorisch",
+    "ref": "ce-kennzeichnung"
+  },
+  {
+    "abbr": "CENELEC",
+    "full": "Europäisches Komitee für elektrotechnische Normung",
+    "en": "European Committee for Electrotechnical Standardization",
+    "area": "regulatorisch"
+  },
+  {
+    "abbr": "CER",
+    "full": "Bericht über die klinische Bewertung",
+    "en": "Clinical Evaluation Report",
+    "area": "regulatorisch",
+    "ref": "klinische-bewertung"
+  },
+  {
+    "abbr": "CF",
+    "full": "Anwendungsteil Typ CF (gebräuchliche, normativ nicht festgelegte Deutung: Cardiac Floating)",
+    "en": "Type CF Applied Part",
+    "area": "technisch",
+    "ref": "anwendungsteile"
+  },
+  {
+    "abbr": "CGM",
+    "full": "Kontinuierliche Glukosemessung",
+    "en": "Continuous Glucose Monitoring",
+    "area": "medizinisch",
+    "ref": "diabetologie"
+  },
+  {
+    "abbr": "CMRR",
+    "full": "Gleichtaktunterdrückung",
+    "en": "Common-Mode Rejection Ratio",
+    "area": "technisch",
+    "ref": "instrumentenverstaerker"
+  },
+  {
+    "abbr": "COPD",
+    "full": "Chronisch obstruktive Lungenerkrankung",
+    "en": "Chronic Obstructive Pulmonary Disease",
+    "area": "medizinisch",
+    "ref": "pneumologie"
+  },
+  {
+    "abbr": "CPAP",
+    "full": "Kontinuierlicher positiver Atemwegsdruck",
+    "en": "Continuous Positive Airway Pressure",
+    "area": "medizinisch",
+    "ref": "cpap-geraet"
+  },
+  {
+    "abbr": "CPR",
+    "full": "Kardiopulmonale Reanimation",
+    "en": "Cardiopulmonary Resuscitation",
+    "area": "medizinisch",
+    "ref": "thoraxkompressionsgeraet"
+  },
+  {
+    "abbr": "CRP",
+    "full": "C-reaktives Protein",
+    "en": "C-Reactive Protein",
+    "area": "medizinisch",
+    "ref": "klinisch-chemischer-analysator"
+  },
+  {
+    "abbr": "CRRT",
+    "full": "Kontinuierliches Nierenersatzverfahren",
+    "en": "Continuous Renal Replacement Therapy",
+    "area": "medizinisch",
+    "ref": "crrt-geraet"
+  },
+  {
+    "abbr": "CRT",
+    "full": "Kardiale Resynchronisationstherapie",
+    "en": "Cardiac Resynchronization Therapy",
+    "area": "medizinisch",
+    "ref": "herzschrittmacher"
+  },
+  {
+    "abbr": "CT",
+    "full": "Computertomographie / Computertomograph",
+    "en": "Computed Tomography",
+    "area": "medizinisch",
+    "ref": "computertomograph"
+  },
+  {
+    "abbr": "CTDI",
+    "full": "Computertomographie-Dosisindex",
+    "en": "Computed Tomography Dose Index",
+    "area": "technisch",
+    "ref": "computertomograph"
+  },
+  {
+    "abbr": "CTG",
+    "full": "Kardiotokographie",
+    "en": "Cardiotocography",
+    "area": "medizinisch",
+    "ref": "ctg"
+  },
+  {
+    "abbr": "DAkkS",
+    "full": "Deutsche Akkreditierungsstelle",
+    "area": "regulatorisch",
+    "ref": "kalibrierung"
+  },
+  {
+    "abbr": "DC",
+    "full": "Gleichstrom / Gleichspannung",
+    "en": "Direct Current",
+    "area": "technisch",
+    "ref": "spannung-strom-widerstand"
+  },
+  {
+    "abbr": "DFP",
+    "full": "Dosisflächenprodukt",
+    "en": "Dose-Area Product (DAP)",
+    "area": "technisch",
+    "ref": "roentgengeraet"
+  },
+  {
+    "abbr": "DGBMT",
+    "full": "Deutsche Gesellschaft für Biomedizinische Technik im VDE",
+    "area": "regulatorisch",
+    "ref": "berufe-medizintechnik"
+  },
+  {
+    "abbr": "DGSV",
+    "full": "Deutsche Gesellschaft für Sterilgutversorgung",
+    "area": "regulatorisch",
+    "ref": "aufbereitung"
+  },
+  {
+    "abbr": "DGUV",
+    "full": "Deutsche Gesetzliche Unfallversicherung",
+    "en": "German Social Accident Insurance",
+    "area": "regulatorisch",
+    "ref": "dguv-vorschrift-3"
+  },
+  {
+    "abbr": "DGUV V3",
+    "full": "DGUV Vorschrift 3 „Elektrische Anlagen und Betriebsmittel“",
+    "area": "regulatorisch",
+    "ref": "dguv-vorschrift-3"
+  },
+  {
+    "abbr": "DICOM",
+    "full": "Standard für digitale Bildgebung und Kommunikation in der Medizin",
+    "en": "Digital Imaging and Communications in Medicine",
+    "area": "technisch",
+    "ref": "dicom"
+  },
+  {
+    "abbr": "DIN",
+    "full": "Deutsches Institut für Normung",
+    "area": "regulatorisch"
+  },
+  {
+    "abbr": "DKE",
+    "full": "Deutsche Kommission Elektrotechnik Elektronik Informationstechnik in DIN und VDE",
+    "area": "regulatorisch"
+  },
+  {
+    "abbr": "DLP",
+    "full": "Dosislängenprodukt",
+    "en": "Dose-Length Product",
+    "area": "technisch",
+    "ref": "computertomograph"
+  },
+  {
+    "abbr": "DMS",
+    "full": "Dehnungsmessstreifen",
+    "en": "Strain Gauge",
+    "area": "technisch",
+    "ref": "kraftsensor"
+  },
+  {
+    "abbr": "DoC",
+    "full": "EU-Konformitätserklärung",
+    "en": "Declaration of Conformity",
+    "area": "regulatorisch",
+    "ref": "konformitaetsbewertung"
+  },
+  {
+    "abbr": "DRL",
+    "full": "Rechtes-Bein-Treiber (aktive Gleichtaktrückführung beim EKG)",
+    "en": "Driven Right Leg",
+    "area": "technisch",
+    "ref": "ekg-geraet"
+  },
+  {
+    "abbr": "DRW",
+    "full": "Diagnostischer Referenzwert",
+    "en": "Diagnostic Reference Level (DRL)",
+    "area": "regulatorisch",
+    "ref": "strahlenschutz"
+  },
+  {
+    "abbr": "DSA",
+    "full": "Digitale Subtraktionsangiographie",
+    "en": "Digital Subtraction Angiography",
+    "area": "medizinisch",
+    "ref": "angiographieanlage"
+  },
+  {
+    "abbr": "DVT",
+    "full": "Digitale Volumentomographie",
+    "en": "Cone Beam Computed Tomography (CBCT)",
+    "area": "medizinisch",
+    "ref": "dvt"
+  },
+  {
+    "abbr": "DVT",
+    "full": "Tiefe Venenthrombose",
+    "en": "Deep Vein Thrombosis",
+    "area": "medizinisch",
+    "ref": "ipk-geraet"
+  },
+  {
+    "abbr": "DXA",
+    "full": "Dual-Röntgen-Absorptiometrie (Knochendichtemessung)",
+    "en": "Dual-Energy X-ray Absorptiometry",
+    "area": "medizinisch",
+    "ref": "knochendichtemessung"
+  },
+  {
+    "abbr": "ECMO",
+    "full": "Extrakorporale Membranoxygenierung",
+    "en": "Extracorporeal Membrane Oxygenation",
+    "area": "medizinisch",
+    "ref": "ecmo"
+  },
+  {
+    "abbr": "EEG",
+    "full": "Elektroenzephalogramm / Elektroenzephalographie",
+    "en": "Electroencephalography",
+    "area": "medizinisch",
+    "ref": "eeg-geraet"
+  },
+  {
+    "abbr": "EKG",
+    "full": "Elektrokardiogramm / Elektrokardiographie",
+    "en": "Electrocardiogram (ECG)",
+    "area": "medizinisch",
+    "ref": "ekg-geraet"
+  },
+  {
+    "abbr": "EMDN",
+    "full": "Europäische Nomenklatur für Medizinprodukte",
+    "en": "European Medical Device Nomenclature",
+    "area": "regulatorisch",
+    "ref": "medizinprodukt"
+  },
+  {
+    "abbr": "EMG",
+    "full": "Elektromyogramm / Elektromyographie",
+    "en": "Electromyography",
+    "area": "medizinisch",
+    "ref": "emg-geraet"
+  },
+  {
+    "abbr": "EMI",
+    "full": "Elektromagnetische Störung",
+    "en": "Electromagnetic Interference",
+    "area": "technisch",
+    "ref": "emv-stoerung"
+  },
+  {
+    "abbr": "EMV",
+    "full": "Elektromagnetische Verträglichkeit",
+    "en": "Electromagnetic Compatibility (EMC)",
+    "area": "technisch",
+    "ref": "emv"
+  },
+  {
+    "abbr": "EN",
+    "full": "Europäische Norm",
+    "en": "European Standard",
+    "area": "regulatorisch"
+  },
+  {
+    "abbr": "EO",
+    "full": "Ethylenoxid (Sterilisationsgas)",
+    "en": "Ethylene Oxide (EtO)",
+    "area": "technisch",
+    "ref": "sterilisation"
+  },
+  {
+    "abbr": "ESD",
+    "full": "Elektrostatische Entladung",
+    "en": "Electrostatic Discharge",
+    "area": "technisch",
+    "ref": "emv"
+  },
+  {
+    "abbr": "ESWL",
+    "full": "Extrakorporale Stoßwellenlithotripsie",
+    "en": "Extracorporeal Shock Wave Lithotripsy",
+    "area": "medizinisch",
+    "ref": "lithotripter"
+  },
+  {
+    "abbr": "etCO₂",
+    "full": "Endtidale Kohlendioxid-Konzentration bzw. -Partialdruck",
+    "en": "End-tidal Carbon Dioxide",
+    "area": "medizinisch",
+    "ref": "kapnometer"
+  },
+  {
+    "abbr": "EUDAMED",
+    "full": "Europäische Datenbank für Medizinprodukte",
+    "en": "European Database on Medical Devices",
+    "area": "regulatorisch",
+    "ref": "udi"
+  },
+  {
+    "abbr": "FDA",
+    "full": "US-amerikanische Lebensmittel- und Arzneimittelbehörde",
+    "en": "Food and Drug Administration",
+    "area": "regulatorisch"
+  },
+  {
+    "abbr": "FEV1",
+    "full": "Forciertes exspiratorisches Volumen in der ersten Sekunde (Einsekundenkapazität)",
+    "en": "Forced Expiratory Volume in 1 Second",
+    "area": "medizinisch",
+    "ref": "spirometer"
+  },
+  {
+    "abbr": "FHIR",
+    "full": "Fast Healthcare Interoperability Resources (HL7-Standard)",
+    "en": "Fast Healthcare Interoperability Resources",
+    "area": "technisch",
+    "ref": "hl7-fhir"
+  },
+  {
+    "abbr": "FI",
+    "full": "Fehlerstrom(-Schutzschalter), ältere Bezeichnung für RCD",
+    "en": "Residual Current Circuit Breaker",
+    "area": "technisch",
+    "ref": "din-vde-0100-710"
+  },
+  {
+    "abbr": "FiO₂",
+    "full": "Inspiratorische Sauerstofffraktion",
+    "en": "Fraction of Inspired Oxygen",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "FMEA",
+    "full": "Fehlermöglichkeits- und Einflussanalyse",
+    "en": "Failure Mode and Effects Analysis",
+    "area": "regulatorisch",
+    "ref": "iso-14971"
+  },
+  {
+    "abbr": "FRC",
+    "full": "Funktionelle Residualkapazität",
+    "en": "Functional Residual Capacity",
+    "area": "medizinisch",
+    "ref": "lunge"
+  },
+  {
+    "abbr": "FSCA",
+    "full": "Sicherheitskorrekturmaßnahme im Feld",
+    "en": "Field Safety Corrective Action",
+    "area": "regulatorisch",
+    "ref": "vigilanz"
+  },
+  {
+    "abbr": "FSN",
+    "full": "Sicherheitsanweisung im Feld (Kundeninformation zur FSCA)",
+    "en": "Field Safety Notice",
+    "area": "regulatorisch",
+    "ref": "vigilanz"
+  },
+  {
+    "abbr": "FVC",
+    "full": "Forcierte Vitalkapazität",
+    "en": "Forced Vital Capacity",
+    "area": "medizinisch",
+    "ref": "spirometer"
+  },
+  {
+    "abbr": "GMDN",
+    "full": "Globale Nomenklatur für Medizinprodukte",
+    "en": "Global Medical Device Nomenclature",
+    "area": "regulatorisch",
+    "ref": "medizinprodukt"
+  },
+  {
+    "abbr": "GSPR",
+    "full": "Grundlegende Sicherheits- und Leistungsanforderungen (Anhang I MDR)",
+    "en": "General Safety and Performance Requirements",
+    "area": "regulatorisch",
+    "ref": "mdr"
+  },
+  {
+    "abbr": "Hb",
+    "full": "Hämoglobin",
+    "en": "Haemoglobin",
+    "area": "medizinisch",
+    "ref": "haemoglobin"
+  },
+  {
+    "abbr": "HD",
+    "full": "Hämodialyse",
+    "en": "Haemodialysis",
+    "area": "medizinisch",
+    "ref": "dialysegeraet"
+  },
+  {
+    "abbr": "HF",
+    "full": "Herzfrequenz",
+    "en": "Heart Rate",
+    "area": "medizinisch",
+    "ref": "patientenmonitor"
+  },
+  {
+    "abbr": "HF",
+    "full": "Hochfrequenz (z. B. HF-Chirurgie)",
+    "en": "High Frequency / Radio Frequency",
+    "area": "technisch",
+    "ref": "hf-chirurgiegeraet"
+  },
+  {
+    "abbr": "HFNC",
+    "full": "High-Flow-Sauerstofftherapie über Nasenkanüle",
+    "en": "High-Flow Nasal Cannula",
+    "area": "medizinisch",
+    "ref": "high-flow-geraet"
+  },
+  {
+    "abbr": "HFOV",
+    "full": "Hochfrequenz-Oszillationsbeatmung",
+    "en": "High-Frequency Oscillatory Ventilation",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "Hkt",
+    "full": "Hämatokrit",
+    "en": "Haematocrit",
+    "area": "medizinisch",
+    "ref": "blut"
+  },
+  {
+    "abbr": "HL7",
+    "full": "Health Level Seven (Kommunikationsstandard im Gesundheitswesen)",
+    "en": "Health Level Seven",
+    "area": "technisch",
+    "ref": "hl7-fhir"
+  },
+  {
+    "abbr": "HLM",
+    "full": "Herz-Lungen-Maschine",
+    "en": "Heart-Lung Machine",
+    "area": "medizinisch",
+    "ref": "herz-lungen-maschine"
+  },
+  {
+    "abbr": "HLW",
+    "full": "Herz-Lungen-Wiederbelebung",
+    "en": "Cardiopulmonary Resuscitation (CPR)",
+    "area": "medizinisch",
+    "ref": "thoraxkompressionsgeraet"
+  },
+  {
+    "abbr": "HMI",
+    "full": "Mensch-Maschine-Schnittstelle (Bedienoberfläche)",
+    "en": "Human-Machine Interface",
+    "area": "technisch",
+    "ref": "display-bedienoberflaeche"
+  },
+  {
+    "abbr": "HNO",
+    "full": "Hals-Nasen-Ohren-Heilkunde",
+    "en": "Otorhinolaryngology (ENT)",
+    "area": "medizinisch",
+    "ref": "hno-heilkunde"
+  },
+  {
+    "abbr": "HSM",
+    "full": "Herzschrittmacher",
+    "en": "Pacemaker",
+    "area": "medizinisch",
+    "ref": "herzschrittmacher"
+  },
+  {
+    "abbr": "HU",
+    "full": "Hounsfield-Einheit (CT-Zahl)",
+    "en": "Hounsfield Unit",
+    "area": "technisch",
+    "ref": "computertomograph"
+  },
+  {
+    "abbr": "HZV",
+    "full": "Herzzeitvolumen",
+    "en": "Cardiac Output",
+    "area": "medizinisch",
+    "ref": "blutkreislauf"
+  },
+  {
+    "abbr": "I:E",
+    "full": "Verhältnis von Inspirations- zu Exspirationszeit",
+    "en": "Inspiratory-to-Expiratory Ratio",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "IABP",
+    "full": "Intraaortale Ballonpumpe (Ballongegenpulsation)",
+    "en": "Intra-Aortic Balloon Pump",
+    "area": "medizinisch",
+    "ref": "iabp"
+  },
+  {
+    "abbr": "IBP",
+    "full": "Invasive Blutdruckmessung",
+    "en": "Invasive Blood Pressure",
+    "area": "medizinisch",
+    "ref": "invasive-druckmessung"
+  },
+  {
+    "abbr": "ICD",
+    "full": "Implantierbarer Kardioverter-Defibrillator",
+    "en": "Implantable Cardioverter-Defibrillator",
+    "area": "medizinisch",
+    "ref": "icd"
+  },
+  {
+    "abbr": "ICD",
+    "full": "Internationale statistische Klassifikation der Krankheiten und verwandter Gesundheitsprobleme",
+    "en": "International Statistical Classification of Diseases and Related Health Problems",
+    "area": "medizinisch"
+  },
+  {
+    "abbr": "IEC",
+    "full": "Internationale Elektrotechnische Kommission",
+    "en": "International Electrotechnical Commission",
+    "area": "regulatorisch",
+    "ref": "iec-60601-1"
+  },
+  {
+    "abbr": "IFU",
+    "full": "Gebrauchsanweisung",
+    "en": "Instructions for Use",
+    "area": "regulatorisch",
+    "ref": "einweisung"
+  },
+  {
+    "abbr": "IMC",
+    "full": "Intermediate-Care-Station (Überwachungsstation)",
+    "en": "Intermediate Care",
+    "area": "medizinisch",
+    "ref": "intensivmedizin"
+  },
+  {
+    "abbr": "INR",
+    "full": "International Normalized Ratio (standardisierter Gerinnungswert der Thromboplastinzeit)",
+    "en": "International Normalized Ratio",
+    "area": "medizinisch",
+    "ref": "gerinnungsanalysator"
+  },
+  {
+    "abbr": "IP",
+    "full": "IP-Code: Schutzart von Gehäusen gegen Fremdkörper/Berührung und Wasser (IEC 60529)",
+    "en": "International Protection (oft auch: Ingress Protection)",
+    "area": "technisch"
+  },
+  {
+    "abbr": "IPK",
+    "full": "Intermittierende pneumatische Kompression",
+    "en": "Intermittent Pneumatic Compression",
+    "area": "medizinisch",
+    "ref": "ipk-geraet"
+  },
+  {
+    "abbr": "IPPV",
+    "full": "Intermittierende Überdruckbeatmung",
+    "en": "Intermittent Positive Pressure Ventilation",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "IR",
+    "full": "Infrarot",
+    "en": "Infrared",
+    "area": "technisch",
+    "ref": "optik"
+  },
+  {
+    "abbr": "ISO",
+    "full": "Internationale Organisation für Normung",
+    "en": "International Organization for Standardization",
+    "area": "regulatorisch",
+    "ref": "iso-13485"
+  },
+  {
+    "abbr": "IT-Netz",
+    "full": "Isoliertes (ungeerdetes) Stromversorgungssystem (frz. Isolé-Terre)",
+    "en": "IT System (IT Earthing System)",
+    "area": "technisch",
+    "ref": "din-vde-0100-710"
+  },
+  {
+    "abbr": "ITS",
+    "full": "Intensivstation",
+    "en": "Intensive Care Unit (ICU)",
+    "area": "medizinisch",
+    "ref": "intensivmedizin"
+  },
+  {
+    "abbr": "IVD",
+    "full": "In-vitro-Diagnostikum",
+    "en": "In Vitro Diagnostic Medical Device",
+    "area": "regulatorisch",
+    "ref": "ivdr"
+  },
+  {
+    "abbr": "IVDD",
+    "full": "Richtlinie 98/79/EG über In-vitro-Diagnostika (historisch, abgelöst durch IVDR)",
+    "en": "In Vitro Diagnostic Medical Devices Directive",
+    "area": "regulatorisch",
+    "ref": "ivdr"
+  },
+  {
+    "abbr": "IVDR",
+    "full": "Verordnung (EU) 2017/746 über In-vitro-Diagnostika",
+    "en": "In Vitro Diagnostic Medical Devices Regulation",
+    "area": "regulatorisch",
+    "ref": "ivdr"
+  },
+  {
+    "abbr": "KIS",
+    "full": "Krankenhausinformationssystem",
+    "en": "Hospital Information System (HIS)",
+    "area": "technisch",
+    "ref": "hl7-fhir"
+  },
+  {
+    "abbr": "KRINKO",
+    "full": "Kommission für Krankenhaushygiene und Infektionsprävention (beim RKI)",
+    "area": "regulatorisch",
+    "ref": "aufbereitung"
+  },
+  {
+    "abbr": "LCD",
+    "full": "Flüssigkristallanzeige",
+    "en": "Liquid Crystal Display",
+    "area": "technisch",
+    "ref": "display-bedienoberflaeche"
+  },
+  {
+    "abbr": "LED",
+    "full": "Leuchtdiode",
+    "en": "Light-Emitting Diode",
+    "area": "technisch",
+    "ref": "photoplethysmographie"
+  },
+  {
+    "abbr": "Li-Ion",
+    "full": "Lithium-Ionen(-Akkumulator)",
+    "en": "Lithium-Ion",
+    "area": "technisch",
+    "ref": "lithium-ionen-akku"
+  },
+  {
+    "abbr": "LINAC",
+    "full": "Linearbeschleuniger",
+    "en": "Linear Accelerator",
+    "area": "technisch",
+    "ref": "linearbeschleuniger"
+  },
+  {
+    "abbr": "LIS",
+    "full": "Laborinformationssystem",
+    "en": "Laboratory Information System",
+    "area": "technisch",
+    "ref": "hl7-fhir"
+  },
+  {
+    "abbr": "LVAD",
+    "full": "Linksventrikuläres Herzunterstützungssystem",
+    "en": "Left Ventricular Assist Device",
+    "area": "medizinisch",
+    "ref": "vad"
+  },
+  {
+    "abbr": "LZ-EKG",
+    "full": "Langzeit-Elektrokardiogramm",
+    "en": "Holter ECG",
+    "area": "medizinisch",
+    "ref": "langzeit-ekg"
+  },
+  {
+    "abbr": "MAC",
+    "full": "Minimale alveoläre Konzentration (eines Inhalationsanästhetikums)",
+    "en": "Minimum Alveolar Concentration",
+    "area": "medizinisch",
+    "ref": "anaesthesiegeraet"
+  },
+  {
+    "abbr": "MAP",
+    "full": "Mittlerer arterieller Druck",
+    "en": "Mean Arterial Pressure",
+    "area": "medizinisch",
+    "ref": "blutdruck"
+  },
+  {
+    "abbr": "MCU",
+    "full": "Mikrocontroller",
+    "en": "Microcontroller Unit",
+    "area": "technisch",
+    "ref": "mikrocontroller"
+  },
+  {
+    "abbr": "MDCG",
+    "full": "Koordinierungsgruppe Medizinprodukte (EU)",
+    "en": "Medical Device Coordination Group",
+    "area": "regulatorisch",
+    "ref": "mdr"
+  },
+  {
+    "abbr": "MDD",
+    "full": "Medizinprodukte-Richtlinie 93/42/EWG (historisch, abgelöst durch MDR)",
+    "en": "Medical Device Directive",
+    "area": "regulatorisch",
+    "ref": "mdr"
+  },
+  {
+    "abbr": "MDR",
+    "full": "Medizinprodukte-Verordnung (EU) 2017/745",
+    "en": "Medical Device Regulation",
+    "area": "regulatorisch",
+    "ref": "mdr"
+  },
+  {
+    "abbr": "MDSAP",
+    "full": "Programm für ein gemeinsames Audit von Medizinprodukte-QM-Systemen",
+    "en": "Medical Device Single Audit Program",
+    "area": "regulatorisch",
+    "ref": "iso-13485"
+  },
+  {
+    "abbr": "MDSW",
+    "full": "Medizinprodukte-Software",
+    "en": "Medical Device Software",
+    "area": "regulatorisch",
+    "ref": "software-medizinprodukt"
+  },
+  {
+    "abbr": "ME-Gerät",
+    "full": "Medizinisches elektrisches Gerät",
+    "en": "ME Equipment (Medical Electrical Equipment)",
+    "area": "technisch",
+    "ref": "medizinisches-elektrisches-geraet"
+  },
+  {
+    "abbr": "ME-System",
+    "full": "Medizinisches elektrisches System",
+    "en": "ME System (Medical Electrical System)",
+    "area": "technisch",
+    "ref": "medizinisches-elektrisches-geraet"
+  },
+  {
+    "abbr": "MEMS",
+    "full": "Mikroelektromechanisches System",
+    "en": "Micro-Electro-Mechanical System",
+    "area": "technisch",
+    "ref": "drucksensor"
+  },
+  {
+    "abbr": "MessEG",
+    "full": "Mess- und Eichgesetz",
+    "area": "regulatorisch",
+    "ref": "kalibrierung"
+  },
+  {
+    "abbr": "MIC",
+    "full": "Minimal-invasive Chirurgie",
+    "en": "Minimally Invasive Surgery",
+    "area": "medizinisch",
+    "ref": "endoskop"
+  },
+  {
+    "abbr": "MLC",
+    "full": "Multileaf-Kollimator (Lamellenkollimator)",
+    "en": "Multileaf Collimator",
+    "area": "technisch",
+    "ref": "linearbeschleuniger"
+  },
+  {
+    "abbr": "MOOP",
+    "full": "Schutzmaßnahme für den Bediener",
+    "en": "Means of Operator Protection",
+    "area": "technisch",
+    "ref": "iec-60601-1"
+  },
+  {
+    "abbr": "MOP",
+    "full": "Schutzmaßnahme (Oberbegriff für MOPP und MOOP)",
+    "en": "Means of Protection",
+    "area": "technisch",
+    "ref": "iec-60601-1"
+  },
+  {
+    "abbr": "MOPP",
+    "full": "Schutzmaßnahme für den Patienten",
+    "en": "Means of Patient Protection",
+    "area": "technisch",
+    "ref": "iec-60601-1"
+  },
+  {
+    "abbr": "MPAMIV",
+    "full": "Medizinprodukte-Anwendermelde- und Informationsverordnung",
+    "area": "regulatorisch",
+    "ref": "vigilanz"
+  },
+  {
+    "abbr": "MPB",
+    "full": "Medizinproduktebuch (gebräuchliche, nicht amtliche Abkürzung)",
+    "area": "regulatorisch",
+    "ref": "medizinproduktebuch"
+  },
+  {
+    "abbr": "MPBetreibV",
+    "full": "Medizinprodukte-Betreiberverordnung",
+    "area": "regulatorisch",
+    "ref": "mpbetreibv"
+  },
+  {
+    "abbr": "MPDG",
+    "full": "Medizinprodukterecht-Durchführungsgesetz",
+    "area": "regulatorisch",
+    "ref": "mpdg"
+  },
+  {
+    "abbr": "MPG",
+    "full": "Medizinproduktegesetz (historisch; seit 26.05.2021 bzw. für IVD seit 26.05.2022 außer Kraft, abgelöst durch MDR/IVDR und MPDG)",
+    "area": "regulatorisch",
+    "ref": "mpdg"
+  },
+  {
+    "abbr": "MPSV",
+    "full": "Medizinprodukte-Sicherheitsplanverordnung (historisch, abgelöst durch MPAMIV)",
+    "area": "regulatorisch",
+    "ref": "vigilanz"
+  },
+  {
+    "abbr": "MRT",
+    "full": "Magnetresonanztomographie",
+    "en": "Magnetic Resonance Imaging (MRI)",
+    "area": "medizinisch",
+    "ref": "mrt"
+  },
+  {
+    "abbr": "MTBF",
+    "full": "Mittlere Betriebsdauer zwischen Ausfällen",
+    "en": "Mean Time Between Failures",
+    "area": "technisch",
+    "ref": "instandhaltung-grundlagen"
+  },
+  {
+    "abbr": "MTK",
+    "full": "Messtechnische Kontrolle",
+    "en": "Metrological Inspection",
+    "area": "regulatorisch",
+    "ref": "mtk"
+  },
+  {
+    "abbr": "NB",
+    "full": "Benannte Stelle",
+    "en": "Notified Body",
+    "area": "regulatorisch",
+    "ref": "benannte-stelle"
+  },
+  {
+    "abbr": "NDIR",
+    "full": "Nichtdispersive Infrarot-Absorptionsmessung",
+    "en": "Non-Dispersive Infrared",
+    "area": "technisch",
+    "ref": "co2-sensor"
+  },
+  {
+    "abbr": "NE",
+    "full": "Neutralelektrode (HF-Chirurgie)",
+    "en": "Neutral Electrode / Patient Return Electrode",
+    "area": "technisch",
+    "ref": "neutralelektrode"
+  },
+  {
+    "abbr": "NIBP",
+    "full": "Nichtinvasive Blutdruckmessung",
+    "en": "Non-invasive Blood Pressure",
+    "area": "medizinisch",
+    "ref": "nibp-messgeraet"
+  },
+  {
+    "abbr": "NIV",
+    "full": "Nichtinvasive Beatmung (über Maske statt Tubus)",
+    "en": "Non-invasive Ventilation",
+    "area": "medizinisch",
+    "ref": "heimbeatmungsgeraet"
+  },
+  {
+    "abbr": "NLG",
+    "full": "Nervenleitgeschwindigkeit",
+    "en": "Nerve Conduction Velocity",
+    "area": "medizinisch",
+    "ref": "emg-geraet"
+  },
+  {
+    "abbr": "NMR",
+    "full": "Kernspinresonanz",
+    "en": "Nuclear Magnetic Resonance",
+    "area": "technisch",
+    "ref": "kernspinresonanz"
+  },
+  {
+    "abbr": "NPWT",
+    "full": "Unterdruck-Wundtherapie",
+    "en": "Negative Pressure Wound Therapy",
+    "area": "medizinisch",
+    "ref": "npwt-geraet"
+  },
+  {
+    "abbr": "NTC",
+    "full": "Heißleiter (Widerstand mit negativem Temperaturkoeffizienten)",
+    "en": "Negative Temperature Coefficient Thermistor",
+    "area": "technisch",
+    "ref": "temperatursensor"
+  },
+  {
+    "abbr": "OCT",
+    "full": "Optische Kohärenztomographie",
+    "en": "Optical Coherence Tomography",
+    "area": "medizinisch",
+    "ref": "oct"
+  },
+  {
+    "abbr": "OP",
+    "full": "Operationssaal bzw. Operation",
+    "area": "medizinisch",
+    "ref": "chirurgie"
+  },
+  {
+    "abbr": "OPV",
+    "full": "Operationsverstärker",
+    "en": "Operational Amplifier (Op-Amp)",
+    "area": "technisch",
+    "ref": "operationsverstaerker"
+  },
+  {
+    "abbr": "OSAS",
+    "full": "Obstruktives Schlafapnoe-Syndrom",
+    "en": "Obstructive Sleep Apnea Syndrome",
+    "area": "medizinisch",
+    "ref": "cpap-geraet"
+  },
+  {
+    "abbr": "PACS",
+    "full": "Bildarchivierungs- und Kommunikationssystem",
+    "en": "Picture Archiving and Communication System",
+    "area": "technisch",
+    "ref": "dicom"
+  },
+  {
+    "abbr": "PAP",
+    "full": "Pulmonalarterieller Druck",
+    "en": "Pulmonary Artery Pressure",
+    "area": "medizinisch",
+    "ref": "invasive-druckmessung"
+  },
+  {
+    "abbr": "Paw",
+    "full": "Atemwegsdruck",
+    "en": "Airway Pressure",
+    "area": "medizinisch",
+    "ref": "atemmechanik"
+  },
+  {
+    "abbr": "PCA",
+    "full": "Patientenkontrollierte Analgesie",
+    "en": "Patient-Controlled Analgesia",
+    "area": "medizinisch",
+    "ref": "pca-pumpe"
+  },
+  {
+    "abbr": "PCI",
+    "full": "Perkutane Koronarintervention",
+    "en": "Percutaneous Coronary Intervention",
+    "area": "medizinisch",
+    "ref": "kardiologie"
+  },
+  {
+    "abbr": "pCO₂",
+    "full": "Kohlendioxidpartialdruck",
+    "en": "Partial Pressure of Carbon Dioxide",
+    "area": "medizinisch",
+    "ref": "gasaustausch"
+  },
+  {
+    "abbr": "PCV",
+    "full": "Druckkontrollierte Beatmung",
+    "en": "Pressure-Controlled Ventilation",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "PE",
+    "full": "Schutzleiter",
+    "en": "Protective Earth",
+    "area": "technisch",
+    "ref": "schutzleiterwiderstand"
+  },
+  {
+    "abbr": "PEA",
+    "full": "Pulslose elektrische Aktivität",
+    "en": "Pulseless Electrical Activity",
+    "area": "medizinisch",
+    "ref": "notfallmedizin"
+  },
+  {
+    "abbr": "PEEP",
+    "full": "Positiver endexspiratorischer Druck",
+    "en": "Positive End-Expiratory Pressure",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "PEI",
+    "full": "Paul-Ehrlich-Institut",
+    "area": "regulatorisch"
+  },
+  {
+    "abbr": "PEMS",
+    "full": "Programmierbares elektrisches medizinisches System",
+    "en": "Programmable Electrical Medical System",
+    "area": "technisch",
+    "ref": "iec-60601-1"
+  },
+  {
+    "abbr": "PET",
+    "full": "Positronen-Emissions-Tomographie",
+    "en": "Positron Emission Tomography",
+    "area": "medizinisch",
+    "ref": "pet-ct"
+  },
+  {
+    "abbr": "PID",
+    "full": "Proportional-Integral-Differential-Regler",
+    "en": "Proportional-Integral-Derivative Controller",
+    "area": "technisch",
+    "ref": "regelkreis"
+  },
+  {
+    "abbr": "PIP",
+    "full": "Inspiratorischer Spitzendruck",
+    "en": "Peak Inspiratory Pressure",
+    "area": "medizinisch",
+    "ref": "atemmechanik"
+  },
+  {
+    "abbr": "PMCF",
+    "full": "Klinische Nachbeobachtung nach dem Inverkehrbringen",
+    "en": "Post-Market Clinical Follow-up",
+    "area": "regulatorisch",
+    "ref": "klinische-bewertung"
+  },
+  {
+    "abbr": "PMS",
+    "full": "Überwachung nach dem Inverkehrbringen",
+    "en": "Post-Market Surveillance",
+    "area": "regulatorisch",
+    "ref": "vigilanz"
+  },
+  {
+    "abbr": "POCT",
+    "full": "Patientennahe Sofortdiagnostik",
+    "en": "Point-of-Care Testing",
+    "area": "medizinisch",
+    "ref": "blutgasanalysator"
+  },
+  {
+    "abbr": "pO₂",
+    "full": "Sauerstoffpartialdruck",
+    "en": "Partial Pressure of Oxygen",
+    "area": "medizinisch",
+    "ref": "gasaustausch"
+  },
+  {
+    "abbr": "PPG",
+    "full": "Photoplethysmographie",
+    "en": "Photoplethysmography",
+    "area": "technisch",
+    "ref": "photoplethysmographie"
+  },
+  {
+    "abbr": "Pplat",
+    "full": "Plateaudruck (endinspiratorischer Druck bei Flow null)",
+    "en": "Plateau Pressure",
+    "area": "medizinisch",
+    "ref": "atemmechanik"
+  },
+  {
+    "abbr": "PRRC",
+    "full": "Für die Einhaltung der Regulierungsvorschriften verantwortliche Person (Art. 15 MDR)",
+    "en": "Person Responsible for Regulatory Compliance",
+    "area": "regulatorisch",
+    "ref": "mdr"
+  },
+  {
+    "abbr": "PSG",
+    "full": "Polysomnographie",
+    "en": "Polysomnography",
+    "area": "medizinisch",
+    "ref": "polysomnograph"
+  },
+  {
+    "abbr": "PSUR",
+    "full": "Regelmäßig aktualisierter Bericht über die Sicherheit",
+    "en": "Periodic Safety Update Report",
+    "area": "regulatorisch",
+    "ref": "vigilanz"
+  },
+  {
+    "abbr": "PSV",
+    "full": "Druckunterstützte Beatmung",
+    "en": "Pressure Support Ventilation",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "Pt100",
+    "full": "Platin-Messwiderstand mit 100 Ω bei 0 °C",
+    "en": "Platinum Resistance Thermometer",
+    "area": "technisch",
+    "ref": "temperatursensor"
+  },
+  {
+    "abbr": "PTB",
+    "full": "Physikalisch-Technische Bundesanstalt",
+    "area": "regulatorisch",
+    "ref": "kalibrierung"
+  },
+  {
+    "abbr": "PTC",
+    "full": "Kaltleiter (Widerstand mit positivem Temperaturkoeffizienten)",
+    "en": "Positive Temperature Coefficient Thermistor",
+    "area": "technisch",
+    "ref": "temperatursensor"
+  },
+  {
+    "abbr": "PWM",
+    "full": "Pulsweitenmodulation",
+    "en": "Pulse-Width Modulation",
+    "area": "technisch",
+    "ref": "pwm"
+  },
+  {
+    "abbr": "QM",
+    "full": "Qualitätsmanagement",
+    "en": "Quality Management",
+    "area": "regulatorisch",
+    "ref": "iso-13485"
+  },
+  {
+    "abbr": "QMS",
+    "full": "Qualitätsmanagementsystem",
+    "en": "Quality Management System",
+    "area": "regulatorisch",
+    "ref": "iso-13485"
+  },
+  {
+    "abbr": "RCD",
+    "full": "Fehlerstrom-Schutzeinrichtung",
+    "en": "Residual Current Device",
+    "area": "technisch",
+    "ref": "din-vde-0100-710"
+  },
+  {
+    "abbr": "RDG",
+    "full": "Reinigungs- und Desinfektionsgerät",
+    "en": "Washer-Disinfector",
+    "area": "technisch",
+    "ref": "rdg"
+  },
+  {
+    "abbr": "RIS",
+    "full": "Radiologie-Informationssystem",
+    "en": "Radiology Information System",
+    "area": "technisch",
+    "ref": "dicom"
+  },
+  {
+    "abbr": "RKI",
+    "full": "Robert Koch-Institut",
+    "area": "regulatorisch",
+    "ref": "aufbereitung"
+  },
+  {
+    "abbr": "RR",
+    "full": "Blutdruck nach Riva-Rocci (Blutdruckmessung mit Manschette)",
+    "area": "medizinisch",
+    "ref": "blutdruck"
+  },
+  {
+    "abbr": "RöV",
+    "full": "Röntgenverordnung (historisch, Ende 2018 abgelöst durch StrlSchG und StrlSchV)",
+    "area": "regulatorisch",
+    "ref": "strahlenschutz"
+  },
+  {
+    "abbr": "SAL",
+    "full": "Sterilitätssicherheitsniveau",
+    "en": "Sterility Assurance Level",
+    "area": "technisch",
+    "ref": "sterilisation"
+  },
+  {
+    "abbr": "SaMD",
+    "full": "Software als Medizinprodukt (eigenständige Software)",
+    "en": "Software as a Medical Device",
+    "area": "regulatorisch",
+    "ref": "software-medizinprodukt"
+  },
+  {
+    "abbr": "SaO₂",
+    "full": "Arterielle Sauerstoffsättigung (blutgasanalytisch gemessen)",
+    "en": "Arterial Oxygen Saturation",
+    "area": "medizinisch",
+    "ref": "blutgasanalysator"
+  },
+  {
+    "abbr": "SAR",
+    "full": "Spezifische Absorptionsrate",
+    "en": "Specific Absorption Rate",
+    "area": "technisch",
+    "ref": "mrt"
+  },
+  {
+    "abbr": "SELV",
+    "full": "Sicherheitskleinspannung",
+    "en": "Safety Extra-Low Voltage",
+    "area": "technisch",
+    "ref": "schutzklassen"
+  },
+  {
+    "abbr": "SFC",
+    "full": "Erstfehlerbedingung (Zustand, in dem genau eine Schutzmaßnahme versagt bzw. ein einzelner abnormaler Zustand vorliegt)",
+    "en": "Single Fault Condition",
+    "area": "technisch",
+    "ref": "iec-60601-1"
+  },
+  {
+    "abbr": "SIMV",
+    "full": "Synchronisierte intermittierende mandatorische Beatmung",
+    "en": "Synchronized Intermittent Mandatory Ventilation",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "SIP/SOP",
+    "full": "Signaleingangs-/Signalausgangsteil",
+    "en": "Signal Input/Output Part",
+    "area": "technisch",
+    "ref": "iec-60601-1"
+  },
+  {
+    "abbr": "SK",
+    "full": "Schutzklasse",
+    "en": "Protection Class",
+    "area": "technisch",
+    "ref": "schutzklassen"
+  },
+  {
+    "abbr": "SNR",
+    "full": "Signal-Rausch-Verhältnis",
+    "en": "Signal-to-Noise Ratio",
+    "area": "technisch",
+    "ref": "biosignale"
+  },
+  {
+    "abbr": "SOP",
+    "full": "Standardarbeitsanweisung",
+    "en": "Standard Operating Procedure",
+    "area": "regulatorisch",
+    "ref": "iso-13485"
+  },
+  {
+    "abbr": "SOUP",
+    "full": "Software unbekannter Herkunft",
+    "en": "Software of Unknown Provenance",
+    "area": "regulatorisch",
+    "ref": "iec-62304"
+  },
+  {
+    "abbr": "SPECT",
+    "full": "Einzelphotonen-Emissionscomputertomographie",
+    "en": "Single Photon Emission Computed Tomography",
+    "area": "medizinisch",
+    "ref": "gammakamera"
+  },
+  {
+    "abbr": "SpO₂",
+    "full": "Periphere (pulsoxymetrisch gemessene) Sauerstoffsättigung",
+    "en": "Peripheral Oxygen Saturation",
+    "area": "medizinisch",
+    "ref": "pulsoxymeter"
+  },
+  {
+    "abbr": "SRN",
+    "full": "Einmalige Registrierungsnummer (Wirtschaftsakteur in EUDAMED)",
+    "en": "Single Registration Number",
+    "area": "regulatorisch",
+    "ref": "mdr"
+  },
+  {
+    "abbr": "SSCP",
+    "full": "Kurzbericht über Sicherheit und klinische Leistung",
+    "en": "Summary of Safety and Clinical Performance",
+    "area": "regulatorisch",
+    "ref": "klinische-bewertung"
+  },
+  {
+    "abbr": "STK",
+    "full": "Sicherheitstechnische Kontrolle",
+    "en": "Safety Inspection",
+    "area": "regulatorisch",
+    "ref": "stk"
+  },
+  {
+    "abbr": "StrlSchG",
+    "full": "Strahlenschutzgesetz",
+    "area": "regulatorisch",
+    "ref": "strlschg"
+  },
+  {
+    "abbr": "StrlSchV",
+    "full": "Strahlenschutzverordnung",
+    "area": "regulatorisch",
+    "ref": "strahlenschutz"
+  },
+  {
+    "abbr": "TD",
+    "full": "Technische Dokumentation",
+    "en": "Technical Documentation",
+    "area": "regulatorisch",
+    "ref": "konformitaetsbewertung"
+  },
+  {
+    "abbr": "TE",
+    "full": "Echozeit (MRT)",
+    "en": "Echo Time",
+    "area": "technisch",
+    "ref": "mrt"
+  },
+  {
+    "abbr": "TEE",
+    "full": "Transösophageale Echokardiographie",
+    "en": "Transesophageal Echocardiography",
+    "area": "medizinisch",
+    "ref": "ultraschallgeraet"
+  },
+  {
+    "abbr": "TENS",
+    "full": "Transkutane elektrische Nervenstimulation",
+    "en": "Transcutaneous Electrical Nerve Stimulation",
+    "area": "medizinisch",
+    "ref": "reizstromgeraet"
+  },
+  {
+    "abbr": "TIVA",
+    "full": "Totale intravenöse Anästhesie",
+    "en": "Total Intravenous Anaesthesia",
+    "area": "medizinisch",
+    "ref": "anaesthesiologie"
+  },
+  {
+    "abbr": "TN-S-Netz",
+    "full": "Geerdetes Stromversorgungssystem mit getrenntem Neutral- und Schutzleiter (frz. Terre-Neutre séparé)",
+    "en": "TN-S System",
+    "area": "technisch",
+    "ref": "din-vde-0100-710"
+  },
+  {
+    "abbr": "TR",
+    "full": "Repetitionszeit (MRT)",
+    "en": "Repetition Time",
+    "area": "technisch",
+    "ref": "mrt"
+  },
+  {
+    "abbr": "UDI",
+    "full": "Einmalige Produktkennung",
+    "en": "Unique Device Identification",
+    "area": "regulatorisch",
+    "ref": "udi"
+  },
+  {
+    "abbr": "UDI-DI",
+    "full": "Produkt-Identifikator der UDI (Modell-/Versionsebene)",
+    "en": "UDI Device Identifier",
+    "area": "regulatorisch",
+    "ref": "udi"
+  },
+  {
+    "abbr": "UDI-PI",
+    "full": "Herstellungs-Identifikator der UDI (z. B. Charge, Seriennummer, Verfallsdatum)",
+    "en": "UDI Production Identifier",
+    "area": "regulatorisch",
+    "ref": "udi"
+  },
+  {
+    "abbr": "US",
+    "full": "Ultraschall / Sonographie",
+    "en": "Ultrasound",
+    "area": "medizinisch",
+    "ref": "ultraschallgeraet"
+  },
+  {
+    "abbr": "USV",
+    "full": "Unterbrechungsfreie Stromversorgung",
+    "en": "Uninterruptible Power Supply (UPS)",
+    "area": "technisch",
+    "ref": "medizinisch-genutzte-bereiche"
+  },
+  {
+    "abbr": "VAD",
+    "full": "Herzunterstützungssystem",
+    "en": "Ventricular Assist Device",
+    "area": "medizinisch",
+    "ref": "vad"
+  },
+  {
+    "abbr": "VC",
+    "full": "Vitalkapazität",
+    "en": "Vital Capacity",
+    "area": "medizinisch",
+    "ref": "spirometer"
+  },
+  {
+    "abbr": "VCV",
+    "full": "Volumenkontrollierte Beatmung",
+    "en": "Volume-Controlled Ventilation",
+    "area": "medizinisch",
+    "ref": "beatmungsgeraet"
+  },
+  {
+    "abbr": "VDE",
+    "full": "Verband der Elektrotechnik Elektronik Informationstechnik",
+    "area": "regulatorisch"
+  },
+  {
+    "abbr": "VF",
+    "full": "Kammerflimmern",
+    "en": "Ventricular Fibrillation",
+    "area": "medizinisch",
+    "ref": "defibrillator"
+  },
+  {
+    "abbr": "VHF",
+    "full": "Vorhofflimmern",
+    "en": "Atrial Fibrillation",
+    "area": "medizinisch",
+    "ref": "erregungsleitungssystem"
+  },
+  {
+    "abbr": "Vt",
+    "full": "Tidalvolumen (Atemzugvolumen)",
+    "en": "Tidal Volume",
+    "area": "medizinisch",
+    "ref": "atemmechanik"
+  },
+  {
+    "abbr": "VT",
+    "full": "Ventrikuläre Tachykardie (Kammertachykardie)",
+    "en": "Ventricular Tachycardia",
+    "area": "medizinisch",
+    "ref": "defibrillator"
+  },
+  {
+    "abbr": "ZLG",
+    "full": "Zentralstelle der Länder für Gesundheitsschutz bei Arzneimitteln und Medizinprodukten",
+    "area": "regulatorisch",
+    "ref": "benannte-stelle"
+  },
+  {
+    "abbr": "ZNA",
+    "full": "Zentrale Notaufnahme",
+    "area": "medizinisch",
+    "ref": "notfallmedizin"
+  },
+  {
+    "abbr": "ZSVA",
+    "full": "Zentrale Sterilgutversorgungsabteilung (ältere Bezeichnung der AEMP)",
+    "en": "Central Sterile Services Department (CSSD)",
+    "area": "medizinisch",
+    "ref": "aufbereitung"
+  },
+  {
+    "abbr": "ZVD",
+    "full": "Zentraler Venendruck",
+    "en": "Central Venous Pressure",
+    "area": "medizinisch",
+    "ref": "invasive-druckmessung"
+  },
+  {
+    "abbr": "ZVK",
+    "full": "Zentraler Venenkatheter",
+    "en": "Central Venous Catheter",
+    "area": "medizinisch",
+    "ref": "invasive-druckmessung"
+  }
+]

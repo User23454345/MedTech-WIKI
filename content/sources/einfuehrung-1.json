@@ -1,0 +1,59 @@
+[
+  {
+    "id": "iom-to-err-is-human-2000",
+    "kind": "buch",
+    "authors": "Kohn, L. T.; Corrigan, J. M.; Donaldson, M. S. (Hrsg.), Institute of Medicine",
+    "title": "To Err Is Human: Building a Safer Health System",
+    "publisher": "National Academies Press",
+    "year": "2000",
+    "note": "Bericht des Committee on Quality of Health Care in America; Ausgangspunkt der modernen Patientensicherheitsbewegung."
+  },
+  {
+    "id": "reason-2000-human-error",
+    "kind": "artikel",
+    "authors": "Reason, J.",
+    "title": "Human error: models and management",
+    "publisher": "BMJ 320 (7237): 768–770",
+    "year": "2000",
+    "note": "Personen- vs. Systemansatz; „Schweizer-Käse-Modell“ der Unfallentstehung."
+  },
+  {
+    "id": "who-gpsap-2021",
+    "kind": "leitlinie",
+    "authors": "World Health Organization",
+    "title": "Global Patient Safety Action Plan 2021–2030: Towards eliminating avoidable harm in health care",
+    "publisher": "WHO",
+    "year": "2021"
+  },
+  {
+    "id": "fda-human-factors-2016",
+    "kind": "behoerde",
+    "authors": "U.S. Food and Drug Administration",
+    "title": "Applying Human Factors and Usability Engineering to Medical Devices – Guidance for Industry and Food and Drug Administration Staff",
+    "publisher": "FDA/CDRH",
+    "year": "2016"
+  },
+  {
+    "id": "mtbg",
+    "kind": "gesetz",
+    "title": "Gesetz über die Berufe in der medizinischen Technologie (MT-Berufe-Gesetz – MTBG)",
+    "note": "In Kraft seit 1. Januar 2023; neue Berufsbezeichnungen u. a. Medizinische Technologin/Medizinischer Technologe für Radiologie (MTR). Maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "mpamiv",
+    "kind": "gesetz",
+    "title": "Verordnung über die Meldung von mutmaßlichen schwerwiegenden Vorkommnissen bei Medizinprodukten sowie zum Informationsaustausch der zuständigen Behörden (Medizinprodukte-Anwendermelde- und Informationsverordnung – MPAMIV)",
+    "year": "2021",
+    "note": "Regelt u. a. die Meldepflichten von Anwendern und Betreibern in Deutschland. Maßgeblich ist die jeweils gültige Fassung.",
+    "publisher": "BGBl. I 2021, S. 833",
+    "url": "https://www.gesetze-im-internet.de/mpamiv/"
+  },
+  {
+    "id": "medgv-1985",
+    "kind": "gesetz",
+    "title": "Verordnung über die Sicherheit medizinisch-technischer Geräte (Medizingeräteverordnung – MedGV) vom 14. Januar 1985",
+    "publisher": "BGBl. I 1985, S. 93",
+    "year": "1985",
+    "note": "Historisch; durch das Medizinproduktegesetz (MPG) abgelöst."
+  }
+]

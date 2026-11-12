@@ -1,0 +1,40 @@
+{
+  "id": "strahlentherapie",
+  "type": "domain",
+  "title": "Strahlentherapie (Radioonkologie)",
+  "aliases": [
+    "Radioonkologie",
+    "Radiotherapie",
+    "Strahlenheilkunde",
+    "Radiation Oncology",
+    "Bestrahlung",
+    "Teletherapie",
+    "Brachytherapie"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Strahlentherapie behandelt vor allem bösartige Tumoren mit ionisierender Strahlung, entweder von außen mit Linearbeschleunigern (Teletherapie) oder von innen mit umschlossenen radioaktiven Quellen (Brachytherapie). Sie ist eines der technikintensivsten Fächer der Medizin und eng an Strahlenschutzrecht, Dosimetrie und Medizinphysik gebunden.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Strahlentherapie** (Radioonkologie) nutzt [[ionisierende-strahlung|ionisierende Strahlung]], um Tumorzellen zu schädigen und dabei das umliegende Normalgewebe so weit wie möglich zu schonen. Nach gängigen Schätzungen erhält etwa die Hälfte aller Krebspatient:innen im Verlauf ihrer Erkrankung eine Bestrahlung – kurativ, adjuvant nach einer Operation oder palliativ zur Schmerzlinderung. Wirksam ist vor allem die Schädigung der DNA; gesundes Gewebe kann subletale Schäden zwischen zwei Sitzungen besser reparieren als viele Tumorzellen. Daraus folgt das Prinzip der **Fraktionierung**: Die Gesamtdosis wird auf viele Einzelsitzungen verteilt [@krieger-strahlungsquellen-2018] [@kramme-2017].\n\n> [!vereinfacht] Bei der konventionellen Fraktionierung werden typischerweise etwa 1,8–2 Gy pro Sitzung an fünf Tagen pro Woche appliziert. Hypofraktionierte und stereotaktische Konzepte verwenden wenige, deutlich höhere Einzeldosen – sie verlangen eine besonders präzise Lagerung und Bildführung.\n\n## Typische Indikationen und Verfahren\n\n| Verfahren | Prinzip | Typische Anwendung |\n|---|---|---|\n| Perkutane Teletherapie | Photonen- oder Elektronenstrahl aus einem [[linearbeschleuniger]] | Mamma-, Prostata-, Lungen-, Kopf-Hals-Tumoren |\n| Stereotaxie (Radiochirurgie) | sehr kleine, hochpräzise Felder mit hohen Einzeldosen | Hirnmetastasen, kleine Lungentumoren |\n| Brachytherapie | radioaktive Quelle im oder am Tumor, gesteuert durch einen [[afterloader]] | Zervix-, Prostata-, Endometriumkarzinom |\n| Ganzkörperbestrahlung | großflächige Bestrahlung vor Stammzelltransplantation | hämatologische Erkrankungen |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[linearbeschleuniger]] | Erzeugung hochenergetischer Photonen (Bremsstrahlung, typisch einige MV) und Elektronen; Feldformung über Multileaf-[[kollimator]] |\n| [[afterloader]] | ferngesteuertes Ein- und Ausfahren einer umschlossenen Quelle (häufig Iridium-192) in Applikatoren |\n| [[computertomograph]] | Planungs-CT: liefert Geometrie und Elektronendichte für die Dosisberechnung |\n| [[mrt]] | Weichteilkontrast für die Konturierung von Zielvolumen und Risikoorganen |\n| [[pet-ct]] | Darstellung stoffwechselaktiver Tumoranteile für die Zielvolumendefinition |\n| [[roentgendetektor]] (EPID, kV-Bildgebung am Beschleuniger) | bildgeführte Strahlentherapie (IGRT): Lagekontrolle vor jeder Sitzung |\n| [[patientenmonitor]] | Überwachung sedierter oder narkotisierter Patient:innen, z. B. bei Kindern |\n\nDie Technik eines Beschleunigers umfasst Hochfrequenz-Leistungsquelle (Magnetron oder Klystron), Beschleunigerrohr, Umlenkmagnet, Target bzw. Streufolie, Ausgleichsfilter oder FFF-Betrieb, Dosismonitorkammern und die drehbare [[gantry]]. Die Sicherheitsanforderungen beschreibt die Norm IEC 60601-2-1 [@iec-60601-2-1], für Afterloader die IEC 60601-2-17 [@iec-60601-2-17] – beide als besondere Festlegungen zur Grundnorm [[iec-60601-1]].\n\n## Besondere technische Anforderungen\n\n### Strahlenschutz und bauliche Abschirmung\n\nBestrahlungsräume („Bunker“) haben meterdicke Betonwände, ein Labyrinth oder eine schwere Schutztür sowie Türkontakte, die die Strahlung beim Öffnen sofort abschalten. Oberhalb von etwa 10 MV entstehen im Beschleunigerkopf zusätzlich Photoneutronen, die bei der Abschirmung berücksichtigt werden müssen [@krieger-strahlenschutz-2019]. Rechtlicher Rahmen sind das [[strlschg|Strahlenschutzgesetz]] und die Strahlenschutzverordnung [@strlschg] [@strlschv]; Grundlagen siehe [[strahlenschutz]].\n\n> [!warnung] Verriegelungen (Interlocks) an Tür, Gantry, Kollimator und Dosismonitoren sind sicherheitskritisch. Sie dürfen weder überbrückt noch „vorübergehend“ deaktiviert werden. Historische Unfälle mit Überdosierungen gingen auf Software- und Verriegelungsfehler zurück.\n\n### Dosimetrie und Qualitätssicherung\n\n* **Medizinphysik:** Bei Behandlungen mit ionisierender Strahlung ist eine Medizinphysik-Expertin bzw. ein Medizinphysik-Experte eng einzubinden – für Bestrahlungsplanung, Dosimetrie und Qualitätssicherung [@strlschg] [@strlschv].\n* **Konstanzprüfungen:** Dosisleistung, Strahlhomogenität, Feldgröße, Isozentrum, Lichtfeld-Strahlfeld-Übereinstimmung und Bildführung werden täglich bis jährlich geprüft ([[konstanzpruefung]]).\n* **Therapiedosimeter** gehören zu den Medizinprodukten mit Messfunktion in Anlage 2 der [[mpbetreibv|MPBetreibV]]; die [[mtk|messtechnische Kontrolle]] richtet sich nach § 15 i. V. m. Anlage 2, wobei die Anlage für Therapiedosimeter Sonderregelungen im Zusammenhang mit deren Kalibrierung enthält; maßgeblich ist der Wortlaut der jeweils geltenden Fassung [@mpbetreibv].\n* **Software:** Planungssysteme und Record-&-Verify-Systeme sind [[software-medizinprodukt|Software-Medizinprodukte]]; Schnittstellen laufen meist über [[dicom]] (DICOM-RT).\n\n### Elektrische Sicherheit und Verfügbarkeit\n\nEine [[stk|sicherheitstechnische Kontrolle]] nach § 12 MPBetreibV ist durchzuführen, soweit der Hersteller sie vorschreibt oder die Geräteart in Anlage 1 erfasst ist [@mpbetreibv]; daneben stehen die strahlenschutzrechtlichen Pflichten wie Abnahmeprüfung, Sachverständigenprüfung und Konstanzprüfung [@strlschv]. Wegen der Fraktionierung sind Ausfälle besonders kritisch: Unterbrechungen verlängern die Gesamtbehandlungszeit. Häufig werden mehrere baugleiche Beschleuniger („beam matching“) betrieben, damit Patient:innen bei Störungen umgesetzt werden können. Kühlwasserkreislauf, Vakuum, SF₆- oder Druckluftversorgung und Klimatisierung sind typische Wartungsschwerpunkte ([[wartung]], [[instandhaltung-grundlagen]]).\n\n> [!praxis] Medizintechniker:innen arbeiten in der Strahlentherapie eng mit dem Herstellerservice und der Medizinphysik zusammen. Nach jedem Eingriff in strahlrelevante Baugruppen ist vor der Wiederaufnahme der Patientenbehandlung eine dosimetrische Freigabe durch die Medizinphysik erforderlich.\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[radiologie]]: Bildgebung, Fachkunde und gemeinsame physikalische Grundlagen ([[roentgenstrahlung]]).\n* [[nuklearmedizin]]: PET-CT für die Zielvolumendefinition, Umgang mit offenen und umschlossenen Radionukliden ([[radioaktivitaet]]).\n* [[chirurgie]], [[hno-heilkunde]], [[geburtshilfe]] (gynäkologische Onkologie): multimodale Tumortherapie, intraoperative Bestrahlung.\n* [[anaesthesiologie]]: Narkose bei Kindern und bei unruhigen Patient:innen; [[labormedizin]]: Verlaufskontrolle von Blutbild und Tumormarkern.\n",
+  "related": [
+    "linearbeschleuniger",
+    "afterloader",
+    "strahlenschutz",
+    "ionisierende-strahlung",
+    "strlschg",
+    "radiologie",
+    "nuklearmedizin",
+    "konstanzpruefung",
+    "mtk"
+  ],
+  "sources": [
+    "krieger-strahlungsquellen-2018",
+    "krieger-strahlenschutz-2019",
+    "kramme-2017",
+    "strlschg",
+    "strlschv",
+    "iec-60601-2-1",
+    "iec-60601-2-17",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

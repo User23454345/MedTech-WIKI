@@ -1,0 +1,74 @@
+{
+  "id": "blutgasanalysator",
+  "type": "device",
+  "title": "Blutgasanalysator",
+  "aliases": [
+    "BGA",
+    "Blutgasanalyse",
+    "Blutgasgerät",
+    "Astrup",
+    "Blutgas-Elektrolyt-Analysator"
+  ],
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 60,
+  "domains": [
+    "intensivmedizin",
+    "anaesthesiologie",
+    "labormedizin",
+    "neonatologie"
+  ],
+  "summary": "Blutgasanalysatoren messen in einer arteriellen, venösen oder kapillären Blutprobe pH-Wert, Sauerstoff- und Kohlendioxidpartialdruck, meist zusätzlich Elektrolyte, Glukose, Laktat und Hämoglobinfraktionen. Die Ergebnisse liegen innerhalb weniger Minuten vor und steuern Beatmung und Säure-Basen-Therapie.",
+  "sections": {
+    "purpose": "Die Blutgasanalyse beurteilt [[gasaustausch]] und [[saeure-basen-haushalt|Säure-Basen-Haushalt]] und ist in [[intensivmedizin]], Anästhesie, Notaufnahme und Neonatologie unverzichtbar, z. B. zur Einstellung des [[beatmungsgeraet|Beatmungsgeräts]]. Die Geräte stehen als Point-of-Care-Systeme häufig direkt auf Station und unterliegen der Qualitätssicherung nach Rili-BÄK [@rili-baek].",
+    "principle": "## Elektrochemische Sensoren\n\n| Messgröße | Sensor | Prinzip |\n|---|---|---|\n| pH | Glaselektrode gegen Referenzelektrode | potentiometrisch (Nernst-Gleichung) |\n| pCO₂ | Severinghaus-Elektrode | pH-Elektrode hinter CO₂-durchlässiger Membran mit Bicarbonatlösung ([[co2-sensor]]) |\n| pO₂ | Clark-Elektrode | amperometrisch; O₂ wird an einer polarisierten Edelmetallkathode reduziert ([[sauerstoffsensor]]) |\n| Na⁺, K⁺, Ca²⁺, Cl⁻ | ionenselektive Elektroden | potentiometrisch |\n| Glukose, Laktat | Enzymelektroden | amperometrisch |\n\nDie Messkammer wird auf **37 °C** thermostatisiert, da Partialdrücke und pH temperaturabhängig sind [@kramme-2017].\n\n## CO-Oxymetrie\n\nEin Spektralphotometer misst die Absorption des hämolysierten Bluts bei vielen Wellenlängen. Über das Gesetz von [[lambert-beer|Lambert-Beer]] werden Gesamthämoglobin und die Fraktionen Oxy-, Desoxy-, Carboxy- und Methämoglobin berechnet ([[haemoglobin]]). Anders als die [[pulsoxymeter|Pulsoxymetrie]] erkennt die CO-Oxymetrie so eine Kohlenmonoxidvergiftung.\n\n## Kalibrierung und berechnete Größen\n\nDie Sensoren werden automatisch mit Kalibriergasen bzw. -lösungen bekannter Zusammensetzung kalibriert ([[kalibrierung]]); viele Geräte arbeiten mit Kassetten, die Sensoren und Reagenzien enthalten. Bicarbonat, Basenüberschuss und berechnete Sättigung werden aus den Messwerten abgeleitet.\n\n> [!praxis] Die meisten Fehlmessungen entstehen präanalytisch: Luftblasen in der Spritze verfälschen pO₂ und pCO₂, verzögerte Messung lässt den Stoffwechsel der Blutzellen weiterlaufen, unzureichende Heparinisierung führt zu Gerinnseln in der Messkammer."
+  },
+  "manufacturers": [
+    {
+      "ref": "roche-diagnostics",
+      "models": [
+        "cobas b 123"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "RAPIDPoint 500"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "abbott",
+      "models": [
+        "i-STAT"
+      ],
+      "note": "Handgerät mit Einmalkartuschen."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Messparameterumfang (Elektrolyte, Metabolite, CO-Oxymetrie), Kassetten- bzw. Kartuschensystem und deren Standzeit, Probendurchsatz, Qualitätskontrollmaterial, Datenmanagement und Fernwartung, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025): weder in Anlage 1 (STK, § 12) noch in Anlage 2 (MTK, § 15) aufgeführt. Als In-vitro-Diagnostikum gilt die Qualitätssicherung nach der Richtlinie der Bundesärztekammer (Rili-BÄK) mit interner und externer Qualitätskontrolle (Ringversuche).",
+    "intervals": "Automatische Kalibrierungen nach Gerätevorgabe; interne Qualitätskontrollen nach Rili-BÄK und Herstellerangabe; Ringversuchsteilnahme nach Rili-BÄK; Wechsel von Kassetten, Sensoren und Verbrauchsmaterial nach Herstellerangabe; elektrische Sicherheitsprüfung nach Herstellervorgabe."
+  },
+  "related": [
+    "saeure-basen-haushalt",
+    "gasaustausch",
+    "sauerstoffsensor",
+    "co2-sensor",
+    "pulsoxymeter",
+    "beatmungsgeraet"
+  ],
+  "sources": [
+    "kramme-2017",
+    "rili-baek",
+    "ivdr-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

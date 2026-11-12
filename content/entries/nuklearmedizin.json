@@ -1,0 +1,38 @@
+{
+  "id": "nuklearmedizin",
+  "type": "domain",
+  "title": "Nuklearmedizin",
+  "aliases": [
+    "Nuclear Medicine",
+    "Szintigraphie",
+    "Molekulare Bildgebung",
+    "Radionuklidtherapie",
+    "Radiojodtherapie"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Nuklearmedizin nutzt offene radioaktive Stoffe, die als Radiopharmaka in den Körper gebracht werden, für die funktionelle Bildgebung und die gezielte Strahlentherapie von innen. Gammakamera, SPECT und PET/CT sind ihre zentralen Geräte; Strahlenschutz und Kontaminationsvermeidung bestimmen die Infrastruktur.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Nuklearmedizin** setzt offene [[radioaktivitaet|radioaktive]] Stoffe zu Diagnostik und Therapie ein. Ein Radiopharmakon besteht aus einem Radionuklid und einem Trägermolekül, das sich je nach Stoffwechselweg in bestimmten Organen oder Tumoren anreichert. Anders als in der [[radiologie]], die vorwiegend die Anatomie abbildet, zeigt die Nuklearmedizin **Funktion und Stoffwechsel** [@bushberg-2020].\n\nTypische Untersuchungen sind die Schilddrüsenszintigraphie, die Skelettszintigraphie, die Myokardszintigraphie, die Lungenperfusionsszintigraphie und die PET/CT, z. B. mit radioaktiv markierter Glukose (¹⁸F-FDG) in der Onkologie. Therapeutisch ist die Radiojodtherapie bei Schilddrüsenerkrankungen das klassische Verfahren; hinzu kommen Radionuklidtherapien bei bestimmten Tumoren.\n\n> [!belegt] Das in der Diagnostik am häufigsten eingesetzte Nuklid Technetium-99m sendet Gammaquanten von etwa 140 keV aus und hat eine Halbwertszeit von rund 6 Stunden; Fluor-18 für die PET hat eine Halbwertszeit von rund 110 Minuten [@bushberg-2020][@krieger-strahlungsquellen-2018].\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[gammakamera]] | planare Szintigraphie und SPECT (Einzelphotonen-Tomographie) |\n| [[pet-ct]] | Positronen-Emissions-Tomographie kombiniert mit CT |\n| [[computertomograph]] | Schwächungskorrektur und anatomische Zuordnung in Hybridgeräten |\n| [[ultraschallgeraet]] | Schilddrüsensonographie |\n| [[patientenmonitor]] / [[ergometer]] | Überwachung bei Belastungsuntersuchungen (Myokardszintigraphie) |\n| [[infusionspumpe]] | Applikation von Radiopharmaka bzw. pharmakologischer Belastung |\n\nZur Ausstattung gehören darüber hinaus Aktivimeter (zur Messung der verabreichten Aktivität), Kontaminationsmonitore, Sondenmessplätze, abgeschirmte Arbeitsplätze für die Radiopharmaka-Herstellung und – bei Therapiestationen – Abklinganlagen für Abwasser.\n\n## Funktionsprinzip der Bildgebung (Kurzüberblick)\n\nDie Gammakamera fängt Gammaquanten mit einem Szintillationskristall auf, der sie in Lichtblitze umwandelt; Photodetektoren bestimmen Ort und Energie jedes Ereignisses. Ein Parallelloch-Kollimator aus Blei lässt nur annähernd senkrecht einfallende Quanten durch und erzeugt so ein Projektionsbild [@bushberg-2020]. Bei der PET zerstrahlt ein Positron mit einem Elektron in zwei Gammaquanten von je 511 keV, die nahezu entgegengesetzt ausgesandt werden. Ringförmig angeordnete Detektoren registrieren beide in **Koinzidenz** und legen dadurch eine Linie (Line of Response) fest, auf der die Vernichtung stattfand ([[ionisierende-strahlung]]). Weil das Positron vor der Vernichtung noch eine kurze Strecke im Gewebe zurücklegt (Positronenreichweite, nuklidabhängig) und die beiden Quanten nicht exakt antiparallel auslaufen, ist die erreichbare Ortsauflösung der PET physikalisch begrenzt [@bushberg-2020].\n\n> [!vereinfacht] Gammakamera und PET „sehen“ die Strahlung, die aus dem Patienten kommt (Emission). Röntgen und CT messen die Schwächung von Strahlung, die von außen durch den Körper geschickt wird (Transmission).\n\n## Besondere technische Anforderungen\n\n### Strahlenschutz mit offenen radioaktiven Stoffen\n\nAnders als bei Röntgenstrahlung lässt sich die Quelle nicht „abschalten“: Patienten, Ausscheidungen und Abfälle sind radioaktiv. Der [[strahlenschutz]] stützt sich deshalb auf Abstand, Abschirmung, Aufenthaltszeit und die Vermeidung von **Kontamination** und Inkorporation. Rechtsgrundlagen sind [[strlschg]] und Strahlenschutzverordnung mit Anforderungen an Genehmigung, Fachkunde, Dosimetrie, Hinzuziehung von Medizinphysik-Experten und Entsorgung [@strlschg][@strlschv][@krieger-strahlenschutz-2019].\n\n> [!warnung] Bei Wartung und Reparatur an Gammakamera, PET oder Abzügen ist vorab zu klären, ob Kontamination vorliegen kann. Arbeiten im Kontrollbereich nur nach Einweisung und mit Dosimetrie.\n\n### Qualitätskontrolle\n\nGammakameras und PET-Systeme benötigen regelmäßige Qualitätsprüfungen, z. B. Homogenität, Energiefenster, räumliche Auflösung und Abbildungsgeometrie; Aktivimeter werden auf Konstanz geprüft. Für das CT-Teil von Hybridsystemen gelten zusätzlich die Regeln der Röntgendiagnostik ([[konstanzpruefung]]) [@qs-rl-roentgendiagnostik-2024].\n\n### Raum- und Logistikanforderungen\n\nNuklearmedizinische Abteilungen gliedern sich in Kontroll- und Überwachungsbereiche mit eigener Lüftung, abwaschbaren Oberflächen, Abschirmungen und Abfalllagern zum Abklingen. Kurzlebige PET-Nuklide wie Fluor-18 werden überwiegend in einem Zyklotron erzeugt und müssen zeitnah geliefert oder vor Ort produziert werden; Technetium-99m wird aus einem Molybdän-Generator gewonnen [@krieger-strahlungsquellen-2018].\n\n### Bildkommunikation\n\nFusionierte PET/CT- oder SPECT/CT-Datensätze werden im [[dicom]]-Format gespeichert und gemeinsam mit radiologischen Bildern befundet [@nema-dicom].\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[radiologie]]**: Hybridbildgebung, gemeinsame Nutzung von CT und PACS.\n- **[[strahlentherapie]]**: PET-basierte Bestrahlungsplanung, gemeinsame Medizinphysik.\n- **[[kardiologie]]**: Myokardperfusionsszintigraphie.\n- **[[pneumologie]]**: Lungenperfusionsszintigraphie bei Verdacht auf Lungenembolie.\n- **[[neurologie]]**: Hirnstoffwechsel- und Dopamintransporter-Bildgebung.\n- **[[orthopaedie-unfallchirurgie]]**: Skelettszintigraphie.\n",
+  "related": [
+    "gammakamera",
+    "pet-ct",
+    "radioaktivitaet",
+    "ionisierende-strahlung",
+    "strahlenschutz",
+    "strlschg",
+    "radiologie",
+    "strahlentherapie",
+    "siemens-healthineers",
+    "ge-healthcare"
+  ],
+  "sources": [
+    "bushberg-2020",
+    "krieger-strahlungsquellen-2018",
+    "krieger-strahlenschutz-2019",
+    "strlschg",
+    "strlschv",
+    "qs-rl-roentgendiagnostik-2024",
+    "nema-dicom"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

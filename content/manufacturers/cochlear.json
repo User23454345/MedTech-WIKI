@@ -1,0 +1,42 @@
+{
+  "id": "cochlear",
+  "type": "manufacturer",
+  "title": "Cochlear",
+  "aliases": [
+    "Cochlear Limited",
+    "Nucleus",
+    "Baha"
+  ],
+  "category": "hersteller",
+  "summary": "Cochlear Limited mit Sitz in Sydney (Australien) ist ein auf implantierbare Hörsysteme spezialisierter Hersteller. Hauptprodukte sind Cochlea-Implantate der Marke Nucleus sowie knochenverankerte Hörsysteme (Baha, Osia).",
+  "headquarters": "Sydney, Australien",
+  "founded": "1981",
+  "website": "https://www.cochlear.com/",
+  "productLines": [
+    {
+      "device": "cochlea-implantat",
+      "models": [
+        "Nucleus",
+        "Kanso"
+      ],
+      "note": "Nucleus-Implantate mit Hinter-dem-Ohr-Soundprozessoren; Kanso als Off-the-Ear-Soundprozessor."
+    }
+  ],
+  "body": "## Überblick\n\n**Cochlear Limited** ist ein australisches Medizintechnikunternehmen mit Hauptsitz in Sydney (Campus der Macquarie University) [@cochlear-web]. Es gilt als weltweit größter Hersteller von [[cochlea-implantat|Cochlea-Implantaten]] und bietet zusätzlich knochenverankerte Hörsysteme an.\n\n## Geschichte in Stichpunkten\n\n* **1970er Jahre:** Forschung an der University of Melbourne unter Graeme Clark zum mehrkanaligen Cochlea-Implantat; erste Implantation 1978.\n* **frühe 1980er Jahre:** Industrielle Umsetzung mit Unterstützung der australischen Regierung; **1981** Gründung von Cochlear als Unternehmen zur Vermarktung.\n* **1990er–2000er Jahre:** Börsengang, internationale Expansion und Übernahme des schwedischen Herstellers knochenverankerter Hörsysteme (Marke Baha).\n* **2024:** Übernahme des Cochlea-Implantat-Geschäfts von Oticon Medical (Demant) [@cochlear-oticon-2024]; die knochenverankerten Systeme von Oticon Medical waren aus kartellrechtlichen Gründen nicht Teil der Transaktion.\n\n## Produktbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Cochlea-Implantate | Implantat mit Elektrodenträger, externe Soundprozessoren, Fernbedienung und App |\n| Knochenleitung | Perkutane und passive transkutane (Baha) sowie aktive transkutane (Osia) Systeme |\n| Software/Service | Programmiersoftware für Kliniken, Fernanpassung |\n\n## Bedeutung für die Medizintechnik\n\nEin Cochlea-Implantat ersetzt die Funktion der Haarzellen im Innenohr ([[ohr]]): Der externe Soundprozessor nimmt Schall auf, zerlegt ihn in Frequenzbänder und überträgt Energie und Daten induktiv durch die Haut ([[elektromagnetische-induktion]]). Das Implantat stimuliert über einen Elektrodenträger in der Hörschnecke den Hörnerv direkt elektrisch.\n\n> [!vereinfacht] Jede Elektrode entlang der Hörschnecke entspricht grob einem Frequenzbereich – basal liegen hohe, apikal tiefe Frequenzen (tonotope Anordnung).\n\n> [!hinweis] Cochlea-Implantate sind aktive Implantate der höchsten [[risikoklassen|Risikoklasse]]. Bei [[mrt|MRT-Untersuchungen]] gelten implantatspezifische Bedingungen (z. B. zum Magneten im Implantat); maßgeblich sind die Herstellerangaben.\n\n> [!praxis] Für Medizintechnik und [[hno-heilkunde|HNO-Kliniken]] relevant sind vor allem Anpass- und Messplätze (Programmierschnittstellen, [[audiometer|Audiometrie]]) sowie die Interaktion mit [[hf-chirurgiegeraet|HF-Chirurgie]] bei Folgeeingriffen.\n\nDie externen Soundprozessoren werden regelmäßig durch neuere Generationen ersetzt, während das Implantat im Körper verbleibt. Die Abwärtskompatibilität neuer Prozessoren zu älteren Implantaten ist daher ein wichtiges technisches Merkmal der Plattform.\n\n## Einordnung im Markt\n\nWeitere Hersteller von Cochlea-Implantaten sind u. a. MED-EL (Österreich) und Advanced Bionics (Teil der Sonova-Gruppe). Konventionelle [[hoergeraet|Hörgeräte]] stellt Cochlear nicht her.",
+  "related": [
+    "cochlea-implantat",
+    "hoergeraet",
+    "audiometer",
+    "ohr",
+    "hno-heilkunde",
+    "elektromagnetische-induktion",
+    "risikoklassen",
+    "mrt"
+  ],
+  "sources": [
+    "cochlear-web",
+    "cochlear-oticon-2024"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "draeger-web",
+    "kind": "hersteller",
+    "authors": "Drägerwerk AG & Co. KGaA",
+    "title": "Drägerwerk AG & Co. KGaA – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.draeger.com/"
+  },
+  {
+    "id": "hamilton-medical-web",
+    "kind": "hersteller",
+    "authors": "Hamilton Medical AG",
+    "title": "Hamilton Medical AG – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.hamilton-medical.com/"
+  },
+  {
+    "id": "philips-web",
+    "kind": "hersteller",
+    "authors": "Koninklijke Philips N.V.",
+    "title": "Koninklijke Philips N.V. – Unternehmenswebsite (Produkte, Unternehmensinformationen)",
+    "url": "https://www.philips.com/"
+  },
+  {
+    "id": "ge-healthcare-web",
+    "kind": "hersteller",
+    "authors": "GE HealthCare Technologies Inc.",
+    "title": "GE HealthCare Technologies Inc. – Unternehmenswebsite (Produkte, Unternehmensinformationen)",
+    "url": "https://www.gehealthcare.com/"
+  },
+  {
+    "id": "siemens-healthineers-web",
+    "kind": "hersteller",
+    "authors": "Siemens Healthineers AG",
+    "title": "Siemens Healthineers AG – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.siemens-healthineers.com/"
+  },
+  {
+    "id": "medtronic-web",
+    "kind": "hersteller",
+    "authors": "Medtronic plc",
+    "title": "Medtronic plc – Unternehmenswebsite (Produkte, Unternehmensinformationen)",
+    "url": "https://www.medtronic.com/"
+  },
+  {
+    "id": "zoll-web",
+    "kind": "hersteller",
+    "authors": "ZOLL Medical Corporation",
+    "title": "ZOLL Medical Corporation – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.zoll.com/"
+  },
+  {
+    "id": "stryker-web",
+    "kind": "hersteller",
+    "authors": "Stryker Corporation",
+    "title": "Stryker Corporation – Unternehmenswebsite (Produkte, Unternehmensinformationen)",
+    "url": "https://www.stryker.com/"
+  },
+  {
+    "id": "b-braun-web",
+    "kind": "hersteller",
+    "authors": "B. Braun SE",
+    "title": "B. Braun SE – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.bbraun.com/"
+  },
+  {
+    "id": "fresenius-medical-care-web",
+    "kind": "hersteller",
+    "authors": "Fresenius Medical Care AG",
+    "title": "Fresenius Medical Care AG – Unternehmenswebsite (Produkte, Unternehmensinformationen)",
+    "url": "https://www.freseniusmedicalcare.com/"
+  },
+  {
+    "id": "fresenius-kabi-web",
+    "kind": "hersteller",
+    "authors": "Fresenius Kabi AG",
+    "title": "Fresenius Kabi AG – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.fresenius-kabi.com/"
+  },
+  {
+    "id": "baxter-web",
+    "kind": "hersteller",
+    "authors": "Baxter International Inc.",
+    "title": "Baxter International Inc. – Unternehmenswebsite (Produkte, Unternehmensinformationen)",
+    "url": "https://www.baxter.com/"
+  },
+  {
+    "id": "nihon-kohden-web",
+    "kind": "hersteller",
+    "authors": "Nihon Kohden Corporation",
+    "title": "Nihon Kohden Corporation – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.nihonkohden.com/"
+  },
+  {
+    "id": "mindray-web",
+    "kind": "hersteller",
+    "authors": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
+    "title": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd. – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.mindray.com/"
+  }
+]

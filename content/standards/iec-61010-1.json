@@ -1,0 +1,41 @@
+{
+  "id": "iec-61010-1",
+  "type": "standard",
+  "title": "IEC 61010-1",
+  "code": "IEC 61010-1",
+  "kind": "norm",
+  "fullTitle": "Sicherheitsbestimmungen für elektrische Mess-, Steuer-, Regel- und Laborgeräte – Teil 1: Allgemeine Anforderungen",
+  "scope": "Legt allgemeine Sicherheitsanforderungen an elektrische Mess-, Steuer-, Regel- und Laborgeräte fest, einschließlich Laboranalysegeräten, Zentrifugen, Sterilisatoren und Prüfgeräten.",
+  "aliases": [
+    "DIN EN 61010-1",
+    "EN 61010-1",
+    "Laborgerätenorm",
+    "61010-1"
+  ],
+  "category": "normen",
+  "summary": "Die IEC 61010-1 ist die Grundnorm für die Sicherheit elektrischer Mess-, Steuer-, Regel- und Laborgeräte. In der Medizintechnik betrifft sie vor allem Laboranalysegeräte, Laborzentrifugen, Sterilisatoren und Reinigungs-Desinfektionsgeräte sowie Prüfgeräte – also Geräte ohne bestimmungsgemäßen Patientenkontakt, für die nicht die IEC 60601-1 gilt.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 61010-1** regelt die Basissicherheit von elektrischen **Mess-, Steuer-, Regel- und Laborgeräten** [@iec-61010-1]. Sie ist die Grundnorm einer eigenen Normenreihe und damit das Gegenstück zur [[iec-60601-1|IEC 60601-1]] für Geräte, die **nicht** am Patienten angewendet werden.\n\n> [!vereinfacht] Faustregel: Hat ein Gerät bestimmungsgemäß Kontakt zum Patienten oder überträgt Energie zu oder von ihm, ist es ein [[medizinisches-elektrisches-geraet|ME-Gerät]] nach IEC 60601-1. Verarbeitet es dagegen nur Proben, Materialien oder Messsignale im Labor oder in der Aufbereitung, kommt in der Regel die IEC 61010-Reihe zur Anwendung.\n\nFür die Medizintechnik relevante Bereiche:\n\n| Gerätegruppe | Beispiel | ergänzender Teil 2 |\n|---|---|---|\n| In-vitro-Diagnostik | [[blutgasanalysator]], [[haematologie-analysator]], [[klinisch-chemischer-analysator]], [[gerinnungsanalysator]] | IEC 61010-2-101 [@iec-61010-2-101] |\n| Laborzentrifugen | [[laborzentrifuge]] | IEC 61010-2-020 [@iec-61010-2-020] |\n| Sterilisatoren und RDG | [[dampfsterilisator]], [[rdg]], [[niedertemperatursterilisator]] | IEC 61010-2-040 [@iec-61010-2-040] |\n| Mess- und Prüfgeräte | [[pruefgeraete|Sicherheitsprüfgeräte, Multimeter]] | weitere Teile 2-0xx |\n\n## Zentrale Konzepte und Anforderungen\n\n### Schutz gegen elektrischen Schlag\n\nWie in der IEC 60601-1 gilt das Prinzip der **Sicherheit im ersten Fehlerfall**: Auch wenn eine Schutzmaßnahme versagt (z. B. Unterbrechung des Schutzleiters, Isolationsfehler), dürfen berührbare Teile nicht gefährlich werden. Grundlagen sind Basis- und zusätzliche Isolierung, Schutzleiterverbindung (siehe [[schutzklassen]], [[schutzleiterwiderstand]]), Luft- und Kriechstrecken sowie Grenzwerte für berührbare Spannungen und Ströme.\n\nAnders als die 60601-Reihe kennt die IEC 61010-1 keine [[anwendungsteile|Anwendungsteile]] und keine patientenbezogenen [[ableitstrom|Ableitstrom]]-Grenzwerte – sie geht von gesunden Anwendern aus, nicht von Patienten mit herabgesetzter Hautimpedanz oder direktem Herzzugang (vgl. [[elektrische-stromwirkung]]).\n\n### Umgebungsbedingungen und Kategorien\n\n* **Überspannungskategorie** der Netzversorgung und **Verschmutzungsgrad** der Umgebung bestimmen die nötigen Isolationsabstände.\n* **Messkategorien** (CAT II, III, IV) für Messeingänge legen fest, welchen Überspannungen ein Messgerät an verschiedenen Punkten der Elektroinstallation standhalten muss – wichtig für Prüfgeräte und Multimeter in der Haustechnik. In der aktuellen Systematik der Reihe sind die Messkategorien nicht mehr im Teil 1, sondern im Teil 2-030 (Mess- und Prüfstromkreise) geregelt; für Prüfgeräte zur elektrischen Sicherheit gelten zusätzlich eigene Gerätenormen (z. B. Reihe IEC 61557).\n\n### Weitere Gefährdungen\n\n* mechanische Gefährdungen (bewegte Teile, Rotoren, Stabilität),\n* Brandausbreitung und zu hohe Oberflächentemperaturen,\n* Strahlung (z. B. Laser, UV), freigesetzte Gase und Stoffe,\n* Druck in Behältern und Flüssigkeiten (relevant für Sterilisatoren),\n* Schutz bei Fehlbedienung und Kennzeichnung (Warnsymbole, Begleitpapiere).\n\n> [!hinweis] Konkrete Grenzwerte und Prüfspannungen sind der jeweils gültigen Ausgabe zu entnehmen.\n\n## Bezug zu anderen Normen\n\n| Norm | Verhältnis zur IEC 61010-1 |\n|---|---|\n| [[iec-60601-1]] und Familie (Ergänzungsnormen 1-x, besondere Festlegungen 2-x) | Parallelreihe für ME-Geräte mit Patientenbezug; strengere Grenzwerte für [[ableitstrom|Ableitströme]] |\n| IEC 61010-2-xxx | besondere Anforderungen für Gerätegruppen (z. B. 2-020, 2-040, 2-101) |\n| IEC 61326-Reihe | [[emv|EMV]]-Anforderungen für Mess-, Steuer- und Laborgeräte (statt [[iec-60601-1-2]]); für IVD-Geräte mit eigenem Teil 2-6 |\n| [[iso-14971]], [[iso-15883]], [[iso-17665]] | Risikomanagement bzw. Leistungs- und Verfahrensanforderungen für RDG und Sterilisation |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** von IVD-Analysegeräten und Aufbereitungstechnik nutzen die IEC 61010-Reihe zum Nachweis der elektrischen Sicherheit im Rahmen der [[ivdr|IVDR]] bzw. [[mdr|MDR]]. Leistung und Zweckerfüllung (Messrichtigkeit, Desinfektions- oder Sterilisationswirkung) werden durch andere Normen abgedeckt.\n\n**Betreiber** müssen beachten, dass ein Laborgerät nach IEC 61010-1 nicht ohne Weiteres in der **Patientenumgebung** betrieben werden darf. Wird es dort mit ME-Geräten verbunden, entsteht ein ME-System, für das die Anforderungen der [[iec-60601-1]] an Ableitströme einzuhalten sind (z. B. durch Trenntransformator oder [[galvanische-trennung]]).\n\n> [!praxis] Die wiederkehrende elektrische Prüfung von Laborgeräten erfolgt in der Praxis häufig nach den Regeln für ortsveränderliche Betriebsmittel ([[dguv-vorschrift-3]]), soweit der Hersteller nichts anderes vorgibt; bei IVD-Medizinprodukten gelten zusätzlich die Herstellervorgaben im Rahmen der [[betreiberpflichten]].\n\n## Betroffene Geräte\n\n* Labor: [[blutgasanalysator]], [[haematologie-analysator]], [[klinisch-chemischer-analysator]], [[gerinnungsanalysator]], [[laborzentrifuge]], [[blutkuehlschrank]]\n* Aufbereitung: [[dampfsterilisator]], [[niedertemperatursterilisator]], [[rdg]]\n* Prüftechnik: [[pruefgeraete]]\n* Fachbereich: [[labormedizin]]\n",
+  "related": [
+    "iec-60601-1",
+    "medizinisches-elektrisches-geraet",
+    "laborzentrifuge",
+    "blutgasanalysator",
+    "klinisch-chemischer-analysator",
+    "dampfsterilisator",
+    "rdg",
+    "pruefgeraete",
+    "ivdr",
+    "schutzklassen",
+    "ableitstrom",
+    "labormedizin"
+  ],
+  "sources": [
+    "iec-61010-1",
+    "iec-61010-2-101",
+    "iec-61010-2-020",
+    "iec-61010-2-040",
+    "iec-60601-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

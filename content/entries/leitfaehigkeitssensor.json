@@ -1,0 +1,161 @@
+{
+  "id": "leitfaehigkeitssensor",
+  "type": "term",
+  "title": "Leitfähigkeitsmessung",
+  "aliases": [
+    "Leitfähigkeitssensor",
+    "Konduktometrie",
+    "Leitfähigkeitszelle",
+    "conductivity measurement",
+    "conductivity sensor",
+    "Leitwertmessung",
+    "κ-Messung"
+  ],
+  "category": "sensorik",
+  "summary": "Messung der elektrolytischen Leitfähigkeit einer Flüssigkeit mit Elektroden- oder induktiven Messzellen und Temperaturkompensation. Zentrale Überwachungsgröße für die Zusammensetzung der Dialysierflüssigkeit und die Qualität von Dialysewasser.",
+  "body": "## Begriff\n\nDie **Leitfähigkeitsmessung** (Konduktometrie) bestimmt, wie gut eine Flüssigkeit elektrischen Strom leitet. In wässrigen Lösungen tragen gelöste Ionen den Strom; die gemessene **elektrolytische Leitfähigkeit κ** ist deshalb ein Summenmaß für die Konzentration und Beweglichkeit aller Ionen. In der Medizintechnik ist sie vor allem die zentrale Überwachungsgröße der Dialysierflüssigkeit im [[dialysegeraet|Hämodialysegerät]] und der Wasserqualität in der Dialysewasseraufbereitung [@daugirdas-2015] [@hering-2018].\n\n## Physikalische Grundlagen\n\nDie Leitfähigkeit ist der Kehrwert des spezifischen Widerstands ρ (siehe [[spannung-strom-widerstand]]):\n\n`κ = 1 / ρ`  (Einheit S/m; in der Praxis mS/cm oder µS/cm)\n\nEine Messzelle mit zwei Elektroden der Fläche A im Abstand l misst den Leitwert G = I / U. Die geometrische **Zellkonstante** K = l / A verknüpft beide Größen:\n\n`κ = K · G`\n\nFür verdünnte Lösungen ist κ näherungsweise die Summe der Beiträge aller Ionensorten (Konzentration × molare Leitfähigkeit). In der Dialysierflüssigkeit dominiert Natriumchlorid; die Leitfähigkeit ist deshalb ein guter Ersatzwert für die Natriumkonzentration – aber kein Ersatz für eine chemische Analyse, denn sie unterscheidet nicht zwischen Ionensorten.\n\n### Temperaturabhängigkeit\n\nDie Ionenbeweglichkeit steigt mit der Temperatur stark an. Für Elektrolytlösungen liegt der Temperaturkoeffizient typischerweise bei etwa 2 % pro Kelvin [@hering-2018]. Leitfähigkeitswerte werden deshalb auf eine Bezugstemperatur (meist 25 °C) umgerechnet:\n\n`κ₂₅ = κ_T / (1 + α · (T − 25 °C))`\n\nJede Leitfähigkeitszelle benötigt daher einen [[temperatursensor|Temperatursensor]] in unmittelbarer Nähe.\n\n> [!beispiel] Eine Dialysierflüssigkeit zeigt bei 37 °C einen Rohwert von 17,0 mS/cm. Mit α = 0,02 /K ergibt sich κ₂₅ = 17,0 / (1 + 0,02 · 12) ≈ 13,7 mS/cm. Umgekehrt verursacht ein Messfehler des Temperatursensors von nur 1 K nach der Kompensation bereits einen Leitfähigkeitsfehler von rund 2 % – die Temperaturmessung ist damit Teil der Leitfähigkeitsmessung.\n\n## Messverfahren\n\n| Verfahren | Prinzip | Vor- und Nachteile |\n|---|---|---|\n| Zwei-Elektroden-Zelle | Wechselspannung an zwei Elektroden, Strommessung | einfach; Polarisation und Beläge an den Elektroden verfälschen das Ergebnis |\n| Vier-Elektroden-Zelle | äußeres Paar speist Strom ein, inneres Paar misst den Spannungsabfall nahezu stromlos | Übergangswiderstände und Polarisation weitgehend eliminiert; robust gegen Ablagerungen |\n| Induktive (toroidale) Messung | Primärspule induziert einen Ringstrom in der Flüssigkeit, Sekundärspule misst ihn | berührungslos, keine Elektrodenkorrosion; geringere Empfindlichkeit bei sehr niedrigen Leitfähigkeiten |\n\nGemessen wird grundsätzlich mit **Wechselspannung**: Gleichstrom würde an den Elektroden Elektrolyse und Polarisationsspannungen erzeugen, die den Messwert verfälschen und die Elektroden angreifen [@fraden-2016]. Die induktive Variante beruht auf der [[elektromagnetische-induktion|elektromagnetischen Induktion]] – die Flüssigkeit bildet gewissermaßen eine Kurzschlusswindung zwischen zwei Ringkernen.\n\n> [!vereinfacht] Die Darstellung κ = K · G setzt ein homogenes elektrisches Feld voraus. Reale Zellen haben Streufelder; die Zellkonstante wird deshalb nicht aus der Geometrie berechnet, sondern mit Referenzlösungen bekannter Leitfähigkeit bestimmt und im Gerät hinterlegt.\n\n## Typische Messbereiche\n\n| Medium | Typische Leitfähigkeit (25 °C) |\n|---|---|\n| Permeat aus Umkehrosmose (Dialysewasser) | wenige µS/cm |\n| Trinkwasser | einige hundert µS/cm |\n| Bicarbonat-Teilmischung im Dialysegerät | einige mS/cm |\n| fertige Dialysierflüssigkeit | etwa 13–15 mS/cm |\n\n> [!hinweis] Die Werte sind typische Größenordnungen aus der Fachliteratur, keine Grenzwerte. Maßgeblich sind Verordnung, Rezeptur und Herstellerangaben; die Anforderungen an Dialysewasser regelt [@iso-23500-3].\n\n## Anwendung in Geräten\n\n### Hämodialysegerät\n\nDas [[dialysegeraet|Dialysegerät]] stellt die Dialysierflüssigkeit online aus aufbereitetem Wasser sowie Säure- und Bicarbonatkonzentrat her. Die Leitfähigkeit ist dabei zugleich **Regelgröße** und **Schutzgröße**:\n\n1. Nach Zumischung des Bicarbonatkonzentrats misst eine Zelle die Teilleitfähigkeit; der Mischregler ([[regelkreis]]) korrigiert die Konzentratförderung.\n2. Nach Zumischung des Säurekonzentrats misst eine weitere Zelle die Endleitfähigkeit.\n3. Eine unabhängige Schutzmessung überwacht die Endleitfähigkeit. Liegt sie außerhalb des Fensters, schaltet das Gerät die Dialysierflüssigkeit in den **Bypass** am [[dialysator|Dialysator]] vorbei und löst einen [[leitfaehigkeitsalarm|Leitfähigkeitsalarm]] aus.\n\nHintergrund ist das hohe Gefährdungspotenzial: Eine falsch gemischte Dialysierflüssigkeit verändert über [[diffusion-osmose|Diffusion]] binnen kurzer Zeit die Elektrolytkonzentration im [[blut|Blut]] des Patienten (Hypo- oder Hypernatriämie, Hämolyse). Die gerätespezifische Norm [[iec-60601-2-16|IEC 60601-2-16]] fordert deshalb Schutzmaßnahmen gegen eine fehlerhafte Zusammensetzung der Dialysierflüssigkeit [@iec-60601-2-16].\n\nViele Geräte nutzen die Leitfähigkeit zusätzlich zur **Online-Clearance-Messung**: Ein kurzer Leitfähigkeitssprung am Dialysatoreingang und die Antwort am Ausgang erlauben eine Abschätzung der effektiven Dialysance (ionische Dialysance) ohne Blutentnahme [@daugirdas-2015].\n\n### Weitere Geräte\n\n| Gerät | Aufgabe der Leitfähigkeitsmessung |\n|---|---|\n| [[crrt-geraet]] | Plausibilität von Dialysat- und Substitutionslösung (je nach Gerät) |\n| Wasseraufbereitung (Umkehrosmose) | Permeatqualität, Rückhalterate der Membran |\n| [[rdg]], [[dampfsterilisator]] | Überwachung der Qualität von Prozess- und Speisewasser (je nach Ausstattung) |\n| [[blutgasanalysator]] | Hämatokritbestimmung über die Leitfähigkeit der Blutprobe (bei einigen Analysatoren) |\n\n## Prüfung und Instandhaltung\n\nLeitfähigkeitszellen altern durch Beläge (Kalk, Bicarbonat-Ausfällungen) und Desinfektionsmittel. Im Rahmen der [[wartung|Wartung]] werden sie mit einem **kalibrierten Referenzleitfähigkeitsmessgerät** verglichen und gegebenenfalls justiert ([[kalibrierung]]); der Temperatursensor wird mitgeprüft. Ein schleichender Nullpunkt- oder Steigungsfehler ist eine typische Form der [[sensordrift|Sensordrift]].\n\n> [!praxis] Häufige Ursachen eines Leitfähigkeitsalarms sind keine Sensordefekte, sondern ein leerer oder falscher Konzentratkanister, ein abgeknickter Ansaugschlauch, Luft in der Hydraulik oder eine nicht abgeschlossene Desinfektion. Erst wenn diese Ursachen ausgeschlossen sind, ist ein Vergleich mit dem Referenzmessgerät angezeigt – siehe [[fehlersuche]].\n\n> [!warnung] Die Grenzen des Leitfähigkeitsfensters und die Schutzfunktionen dürfen nur nach Herstellervorgabe durch befugtes Fachpersonal verändert werden. Eine unbemerkt falsche Dialysierflüssigkeit kann lebensbedrohlich sein.\n\n## Einordnung in die Messkette\n\nDie Leitfähigkeitszelle ist ein typisches Beispiel für eine [[messkette|Messkette]] mit Störgrößenkompensation: Wechselspannungsanregung, Strommessung über einen [[operationsverstaerker|Operationsverstärker]], Gleichrichtung bzw. Synchrondemodulation, Temperaturkompensation im [[mikrocontroller|Mikrocontroller]] und Vergleich mit Alarmgrenzen. Die [[messunsicherheit|Messunsicherheit]] wird dabei meist vom Temperaturfehler und vom Zustand der Elektroden dominiert.\n",
+  "related": [
+    "dialysegeraet",
+    "leitfaehigkeitsalarm",
+    "temperatursensor",
+    "dialysator",
+    "crrt-geraet",
+    "diffusion-osmose",
+    "messkette",
+    "messunsicherheit",
+    "sensordrift",
+    "kalibrierung",
+    "blutleckdetektor",
+    "iec-60601-2-16"
+  ],
+  "paths": [
+    [
+      "dialysegeraet",
+      "leitfaehigkeitssensor",
+      "temperatursensor",
+      "messkette",
+      "mikrocontroller"
+    ],
+    [
+      "dialysegeraet",
+      "leitfaehigkeitssensor",
+      "leitfaehigkeitsalarm",
+      "fehlersuche"
+    ]
+  ],
+  "sources": [
+    "daugirdas-2015",
+    "hering-2018",
+    "fraden-2016",
+    "iec-60601-2-16",
+    "iso-23500-3",
+    "webster-2010"
+  ],
+  "diagram": {
+    "title": "Leitfähigkeitsüberwachung im Dialysegerät",
+    "caption": "Vereinfachtes Funktionsschema: Mischung, Messung mit Temperaturkompensation und Schutzabschaltung.",
+    "width": 960,
+    "height": 280,
+    "nodes": [
+      {
+        "id": "wasser",
+        "label": "Dialysewasser +\nKonzentrate",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "misch",
+        "label": "Mischsystem",
+        "kind": "actuator",
+        "x": 280,
+        "y": 80,
+        "ref": "dialysegeraet"
+      },
+      {
+        "id": "zelle",
+        "label": "Leitfähigkeits-\nzelle",
+        "kind": "sensor",
+        "x": 470,
+        "y": 80,
+        "ref": "leitfaehigkeitssensor"
+      },
+      {
+        "id": "temp",
+        "label": "Temperatur-\nsensor",
+        "kind": "sensor",
+        "x": 470,
+        "y": 210,
+        "ref": "temperatursensor"
+      },
+      {
+        "id": "mcu",
+        "label": "Kompensation\nauf 25 °C",
+        "kind": "control",
+        "x": 670,
+        "y": 145,
+        "ref": "mikrocontroller"
+      },
+      {
+        "id": "bypass",
+        "label": "Bypass-Ventil",
+        "kind": "actuator",
+        "x": 860,
+        "y": 80,
+        "ref": "magnetventil"
+      },
+      {
+        "id": "alarm",
+        "label": "Leitfähigkeits-\nalarm",
+        "kind": "output",
+        "x": 860,
+        "y": 210,
+        "ref": "leitfaehigkeitsalarm"
+      }
+    ],
+    "edges": [
+      {
+        "from": "wasser",
+        "to": "misch",
+        "kind": "fluid"
+      },
+      {
+        "from": "misch",
+        "to": "zelle",
+        "kind": "fluid",
+        "label": "Dialysat"
+      },
+      {
+        "from": "zelle",
+        "to": "mcu",
+        "kind": "signal",
+        "label": "G"
+      },
+      {
+        "from": "temp",
+        "to": "mcu",
+        "kind": "signal",
+        "label": "T"
+      },
+      {
+        "from": "mcu",
+        "to": "bypass",
+        "kind": "signal",
+        "label": "außerhalb Fenster"
+      },
+      {
+        "from": "mcu",
+        "to": "alarm",
+        "kind": "signal"
+      },
+      {
+        "from": "mcu",
+        "to": "misch",
+        "kind": "signal",
+        "label": "Regelung"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "sauerstoffkonzentrator",
+  "type": "device",
+  "title": "Sauerstoffkonzentrator",
+  "aliases": [
+    "O₂-Konzentrator",
+    "Oxygen concentrator",
+    "mobiler Sauerstoffkonzentrator",
+    "POC",
+    "Langzeitsauerstofftherapie-Gerät"
+  ],
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 35,
+  "domains": [
+    "pneumologie"
+  ],
+  "summary": "Sauerstoffkonzentratoren gewinnen aus Umgebungsluft sauerstoffangereichertes Gas, indem ein Molekularsieb Stickstoff adsorbiert. Sie werden vor allem für die Langzeit-Sauerstofftherapie zu Hause eingesetzt und ersetzen dort Druckgasflaschen oder Flüssigsauerstoff.",
+  "sections": {
+    "purpose": "Patienten mit chronischer Hypoxämie, z. B. bei fortgeschrittener COPD oder Lungenfibrose, erhalten über viele Stunden täglich Sauerstoff über eine Nasenbrille. Stationäre Geräte liefern einen kontinuierlichen Fluss; tragbare Geräte (POC) ermöglichen Mobilität, meist im bedarfsgesteuerten Pulsmodus. Der Konzentrator kann auch die Sauerstoffeinspeisung für ein [[heimbeatmungsgeraet]] liefern.",
+    "principle": "## Druckwechseladsorption (PSA)\n\nEin Kompressor verdichtet gefilterte Raumluft und leitet sie in einen von zwei Behältern mit Zeolith-Molekularsieb. Unter erhöhtem Druck adsorbiert das Zeolith bevorzugt Stickstoff, Sauerstoff (und Argon) passieren und gelangen in einen Produkttank. Bevor das Sieb gesättigt ist, schalten [[magnetventil|Magnetventile]] auf den zweiten Behälter um; der erste wird entspannt und mit etwas Produktgas gespült, wodurch der Stickstoff wieder desorbiert (Pressure Swing Adsorption). Die Beladung des Adsorbens steigt mit dem Stickstoff-Partialdruck (Adsorptionsisotherme); der periodische Wechsel zwischen hohem und niedrigem Druck nutzt diesen Zusammenhang aus (zu Partialdrücken siehe [[gasgesetze]]) [@kramme-2017].\n\n> [!vereinfacht] Da Argon nicht abgetrennt wird, erreicht das Produktgas keinen reinen Sauerstoff; die Konzentration liegt typischerweise im Bereich um 90–96 % und nimmt bei höherem Fluss ab (*typisch*).\n\n## Regelung und Überwachung\n\nEin Flussregler (Nadelventil mit Schwebekörper-Anzeige oder elektronisch) stellt den Fluss in l/min ein. Ein integrierter [[sauerstoffsensor]] überwacht die Konzentration und löst bei Unterschreitung einen Alarm aus ([[alarmsystem]]). Tragbare Geräte erkennen über einen [[drucksensor]] den Unterdruck zu Beginn der Einatmung und geben einen Sauerstoffbolus ab. Anforderungen legt ISO 80601-2-69 fest [@iso-80601-2-69].\n\n> [!warnung] Sauerstoffangereicherte Atmosphäre fördert die Verbrennung: Rauchen und offene Flammen in der Nähe sind lebensgefährlich; fetthaltige Pflegemittel im Gesicht sind zu vermeiden."
+  },
+  "manufacturers": [
+    {
+      "ref": "philips",
+      "models": [
+        "EverFlo",
+        "SimplyGo"
+      ],
+      "note": "Philips Respironics; stationär bzw. tragbar."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Wartung nach Herstellerangabe, u. a. Prüfung der Sauerstoffkonzentration und des Flusses, Wechsel von Grob- und Feinfiltern sowie Betriebsstundenkontrolle (Molekularsieb, Kompressor); regelmäßige Reinigung der Ansaugfilter durch die Anwender."
+  },
+  "related": [
+    "sauerstoffsensor",
+    "gasgesetze",
+    "heimbeatmungsgeraet",
+    "gasaustausch",
+    "haemoglobin",
+    "iec-60601-1-11"
+  ],
+  "sources": [
+    "iso-80601-2-69",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

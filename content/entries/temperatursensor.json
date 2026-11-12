@@ -1,0 +1,160 @@
+{
+  "id": "temperatursensor",
+  "type": "term",
+  "title": "Temperatursensor",
+  "aliases": [
+    "Temperaturfühler",
+    "Temperaturaufnehmer",
+    "temperature sensor",
+    "Thermistor",
+    "NTC",
+    "Pt100",
+    "Pt1000",
+    "Thermoelement",
+    "Thermopile",
+    "Widerstandsthermometer"
+  ],
+  "category": "sensorik",
+  "summary": "Sensor, der die Temperatur in ein elektrisches Signal wandelt – in der Medizintechnik meist als NTC-Thermistor, Platin-Messwiderstand, Thermoelement oder Infrarot-Thermosäule. Er misst Körpertemperaturen und schützt Heizungen, Akkus und Motoren vor Überhitzung.",
+  "body": "## Begriff\n\nEin **Temperatursensor** wandelt die Temperatur in eine elektrisch auswertbare Größe um. In Medizingeräten erfüllt er zwei grundverschiedene Aufgaben: die **Messung einer Patientengröße** (Körpertemperatur, siehe [[thermoregulation]]) und die **Überwachung technischer Temperaturen** – Heizelemente, Atemgas, Dialysat, Akkus, Motoren. Im zweiten Fall ist er häufig Teil einer Schutzfunktion gegen Verbrennung oder Überhitzung [@hering-2018] [@fraden-2016].\n\n## Messprinzipien im Überblick\n\n| Prinzip | Messeffekt | Typischer Bereich in der Medizintechnik | Merkmale |\n|---|---|---|---|\n| NTC-Thermistor | Widerstand sinkt stark mit steigender Temperatur | Körpertemperatur, Atemgas, Inkubator, Akku | hohe Empfindlichkeit, nichtlinear, preiswert |\n| Platin-Widerstand (Pt100, Pt1000) | Widerstand steigt nahezu linear | Sterilisatoren, Referenzmessungen, Dialysat | genormt, langzeitstabil, austauschbar |\n| Thermoelement | Seebeck-Spannung an der Verbindungsstelle zweier Metalle | hohe Temperaturen, sehr kleine Fühler | robust, schnell, braucht Vergleichsstellenkompensation |\n| Halbleiter (Bandlücke) | Temperaturabhängigkeit der Basis-Emitter-Spannung | Leiterplatte, integrierte Sensoren | linear, digital auslesbar, nur Elektronikbereich |\n| Infrarot (Thermopile) | empfangene Wärmestrahlung | Ohr- und Stirnthermometer | berührungslos, Emissionsgrad und Messort kritisch |\n\n## NTC-Thermistor\n\nNTC-Widerstände (*negative temperature coefficient*) bestehen aus halbleitenden Metalloxidkeramiken. Näherungsweise gilt die **B-Gleichung**:\n\n`R(T) = R₂₅ · exp[B · (1/T − 1/T₂₅)]`\n\nmit dem Nennwiderstand R₂₅ bei 25 °C (T₂₅ = 298,15 K) und der Materialkonstante B (typisch einige tausend Kelvin). Genauer ist die **Steinhart-Hart-Gleichung** `1/T = a + b · ln R + c · (ln R)³` [@fraden-2016]. Der Temperaturkoeffizient liegt im Körpertemperaturbereich bei einigen Prozent pro Kelvin – rund zehnmal mehr als bei Platin. Deshalb sind NTC die Standardsensoren in klinischen [[thermometer|Thermometern]] und Temperatursonden am [[patientenmonitor|Patientenmonitor]].\n\n## Platin-Messwiderstand\n\nFür Platin-Sensoren legt keine Medizinnorm, sondern die Industrienorm IEC 60751 die Kennlinie fest. Für 0 °C ≤ t ≤ 850 °C gilt die Callendar-Van-Dusen-Gleichung [@iec-60751]:\n\n`R(t) = R₀ · (1 + A · t + B · t²)`\n\nmit A = 3,9083 · 10⁻³ °C⁻¹ und B = −5,775 · 10⁻⁷ °C⁻². Ein Pt100 hat bei 0 °C genau 100 Ω und ändert sich um etwa 0,385 Ω/K.\n\n| Toleranzklasse (IEC 60751) | Grenzabweichung |\n|---|---|\n| A | ±(0,15 °C + 0,002 · \\|t\\|) |\n| B | ±(0,30 °C + 0,005 · \\|t\\|) |\n\n> [!beispiel] Ein Pt100 bei 134 °C (Sterilisationstemperatur): R ≈ 100 Ω · (1 + 0,0039083 · 134 − 5,775 · 10⁻⁷ · 134²) ≈ 151,3 Ω. Die Grenzabweichung der Klasse A beträgt dort ±(0,15 + 0,268) °C ≈ ±0,42 °C.\n\nBei kleinen Widerständen verfälschen Leitungswiderstände das Ergebnis; Abhilfe schafft die **Drei- oder Vierleiterschaltung**.\n\n## Thermoelement und Infrarot\n\nEin Thermoelement liefert die Spannung `U ≈ S · (T_M − T_V)` zwischen Mess- und Vergleichsstelle; für Typ K beträgt die Empfindlichkeit S rund 41 µV/K. Die Vergleichsstelle wird mit einem zweiten Sensor gemessen und rechnerisch kompensiert.\n\nInfrarotthermometer messen die Wärmestrahlung mit einer Thermosäule (*thermopile*). Maßgeblich ist der Netto-Strahlungsaustausch nach dem Stefan-Boltzmann-Gesetz `P ≈ ε · σ · A · (T_O⁴ − T_S⁴)` zwischen Objekt (T_O) und Sensor (T_S); die Sensortemperatur wird deshalb mit einem zusätzlichen Thermistor gemessen und eingerechnet. Das Messergebnis hängt vom Emissionsgrad ε, vom Messort (Trommelfell, Stirn, Schläfenarterie) und von der Ausrichtung ab ([[waermeuebertragung]]) [@fraden-2016].\n\n> [!vereinfacht] Ein Infrarot-Ohrthermometer misst keine „Kerntemperatur“, sondern die Strahlungstemperatur im Gehörgang. Geräte rechnen über Algorithmen auf eine Bezugsstelle (z. B. oral oder rektal) um – Werte verschiedener Messorte sind daher nicht direkt vergleichbar.\n\n## Messtechnische Besonderheiten\n\n* **Eigenerwärmung:** Der Messstrom erwärmt den Sensor um `ΔT = P / δ` (δ: Wärmeabgabekoeffizient in mW/K). Kleine Messströme oder gepulste Messung reduzieren den Fehler.\n* **Ansprechzeit:** Die thermische Zeitkonstante τ bestimmt, wie schnell der Sensor folgt; Atemgasfühler müssen deutlich schneller sein als Körpertemperaturfühler.\n* **Thermischer Kontakt:** Bei Hautsensoren entscheiden Auflagedruck und Abdeckung über den Messwert – ein gelöster Hautsensor am [[inkubator|Inkubator]] führt zu falscher Regelung.\n* **Redundanz:** Für sicherheitsrelevante Heizungen werden Regelfühler und unabhängiger Übertemperaturschutz getrennt ausgeführt, damit ein einzelner Fehler (z. B. [[sensordrift]] oder Fühlerbruch) nicht zur Überhitzung führt.\n\n> [!warnung] Fällt ein Regelfühler aus, kann eine Heizung ungebremst weiterheizen. Die Gerätenormen für Säuglingsinkubatoren (IEC 60601-2-19) und Säuglings-Wärmestrahler (IEC 60601-2-21) enthalten deshalb Anforderungen an eine vom Regelkreis unabhängige Übertemperaturbegrenzung; Einzelheiten sind der jeweils gültigen Fassung zu entnehmen [@iec-60601-2-19] [@iec-60601-2-21]. Schutzfunktionen dürfen nie überbrückt werden.\n\n## Anwendung in Geräten\n\n| Gerät | Aufgabe |\n|---|---|\n| [[thermometer]], [[patientenmonitor]] | Messung der Körpertemperatur (NTC-Sonden, Infrarot) |\n| [[inkubator]], [[waermebett]] | Haut- und Lufttemperatur als Regelgröße, Übertemperaturschutz |\n| [[atemgasbefeuchter]], [[high-flow-geraet]] | Temperatur am Kammerausgang und am Y-Stück |\n| [[dialysegeraet]] | Dialysattemperatur |\n| [[infusionswaermer]], [[patientenwaermesystem]], [[hypothermiegeraet]] | Regelung und Begrenzung der Temperatur von Flüssigkeit, Luft oder Wasser |\n| [[herz-lungen-maschine]] | Blut- und Wassertemperatur am Wärmetauscher |\n| [[dampfsterilisator]] | Kammer- und Kondensattemperatur, Prozessnachweis ([[sterilisation]]) |\n| [[beatmungsgeraet]] | Überwachung von [[turbine]] und Motor, Kompensation von [[flowsensor]] und [[drucksensor]] |\n| Akkubetriebene Geräte | Temperaturüberwachung des [[lithium-ionen-akku|Lithium-Ionen-Akkus]] |\n\n## Prüfung\n\nDie Messgenauigkeit wird mit kalibrierten Referenzthermometern bzw. Präzisionswiderständen (Simulation eines Pt100 oder NTC) geprüft ([[kalibrierung]]). Für Fieberthermometer legt die ISO 80601-2-56 Anforderungen an Genauigkeit und klinische Validierung fest [@iso-80601-2-56]; Medizinprodukte zur Bestimmung der Körpertemperatur (medizinische Elektrothermometer, Infrarot-Strahlungsthermometer) gehören traditionell zu den Produktarten der Anlage 2 der [[mpbetreibv|MPBetreibV]], die der [[mtk|messtechnischen Kontrolle]] nach § 15 unterliegen. Da Anlage 2 im Jahr 2025 durch eine Änderungsverordnung neu gefasst wurde, sind Produktliste, Fristen und Ausnahmen der jeweils gültigen Fassung zu entnehmen [@mpbetreibv].\n",
+  "related": [
+    "thermometer",
+    "thermoregulation",
+    "waermeuebertragung",
+    "inkubator",
+    "atemgasbefeuchter",
+    "heizelement",
+    "joulesche-waerme",
+    "kalibrierung",
+    "sensordrift",
+    "messkette"
+  ],
+  "paths": [
+    [
+      "inkubator",
+      "temperatursensor",
+      "regelkreis",
+      "heizelement"
+    ],
+    [
+      "thermometer",
+      "temperatursensor",
+      "waermeuebertragung"
+    ]
+  ],
+  "sources": [
+    "hering-2018",
+    "fraden-2016",
+    "iec-60751",
+    "iec-60601-2-19",
+    "iec-60601-2-21",
+    "iso-80601-2-56",
+    "mpbetreibv"
+  ],
+  "diagram": {
+    "title": "Temperaturregelung mit unabhängigem Übertemperaturschutz",
+    "caption": "Funktionsschema am Beispiel einer Heizung (Inkubator, Befeuchter, Wärmesystem).",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "hz",
+        "label": "Heizelement",
+        "kind": "actuator",
+        "x": 110,
+        "y": 80,
+        "ref": "heizelement"
+      },
+      {
+        "id": "med",
+        "label": "Medium\n(Luft, Wasser, Gas)",
+        "kind": "process",
+        "x": 320,
+        "y": 80,
+        "ref": "waermeuebertragung"
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 530,
+        "y": 80
+      },
+      {
+        "id": "s1",
+        "label": "Regelfühler\n(NTC)",
+        "kind": "sensor",
+        "x": 320,
+        "y": 220,
+        "ref": "temperatursensor"
+      },
+      {
+        "id": "s2",
+        "label": "Schutzfühler\n(unabhängig)",
+        "kind": "sensor",
+        "x": 530,
+        "y": 220,
+        "ref": "temperatursensor"
+      },
+      {
+        "id": "reg",
+        "label": "Temperatur-\nregler",
+        "kind": "control",
+        "x": 110,
+        "y": 220,
+        "ref": "regelkreis"
+      },
+      {
+        "id": "al",
+        "label": "Abschaltung +\nAlarm",
+        "kind": "output",
+        "x": 780,
+        "y": 220,
+        "ref": "alarmsystem"
+      }
+    ],
+    "edges": [
+      {
+        "from": "hz",
+        "to": "med",
+        "kind": "energy",
+        "label": "Wärme"
+      },
+      {
+        "from": "med",
+        "to": "pat",
+        "kind": "energy"
+      },
+      {
+        "from": "med",
+        "to": "s1",
+        "kind": "energy"
+      },
+      {
+        "from": "med",
+        "to": "s2",
+        "kind": "energy"
+      },
+      {
+        "from": "s1",
+        "to": "reg",
+        "kind": "signal",
+        "label": "T_ist"
+      },
+      {
+        "from": "reg",
+        "to": "hz",
+        "kind": "power",
+        "label": "Heizleistung"
+      },
+      {
+        "from": "s2",
+        "to": "al",
+        "kind": "signal",
+        "label": "T > T_max"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "langzeit-blutdruck",
+  "type": "device",
+  "title": "Langzeit-Blutdruckmessgerät",
+  "aliases": [
+    "ABDM",
+    "ABPM",
+    "24-Stunden-Blutdruckmessung",
+    "ambulante Blutdruckmessung",
+    "Langzeit-RR"
+  ],
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 30,
+  "domains": [
+    "kardiologie",
+    "nephrologie"
+  ],
+  "summary": "Langzeit-Blutdruckmessgeräte messen den Blutdruck über 24 Stunden in festgelegten Abständen automatisch am Oberarm, auch während des Schlafs. Die Messungen erfolgen fast immer oszillometrisch. Die Auswertung liefert Mittelwerte für Tag, Nacht und 24 Stunden sowie den nächtlichen Blutdruckabfall.",
+  "riskClass": {
+    "value": "IIa",
+    "evidence": "typisch",
+    "note": "Aktives Diagnoseprodukt zur Überwachung einer vitalen Körperfunktion nach [[mdr|MDR]] Anhang VIII **Regel 10** (Klasse IIa). Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die ambulante 24-Stunden-Blutdruckmessung dient der Diagnose und Therapiekontrolle der arteriellen Hypertonie. Sie erkennt Weißkittel- und maskierte Hypertonie sowie fehlende nächtliche Blutdrucksenkung („Non-Dipping“), die mit einzelnen Praxismessungen am [[nibp-messgeraet]] nicht erfassbar sind.",
+    "principle": "## Messprinzip\n\nDas Gerät arbeitet wie ein automatisches [[oszillometrie|oszillometrisches]] Blutdruckmessgerät: Eine Miniaturpumpe bläst die Manschette auf, ein [[drucksensor]] erfasst Manschettendruck und pulssynchrone Oszillationen während der kontrollierten Entlüftung, und ein [[mikrocontroller]] bestimmt daraus mittleren, systolischen und diastolischen [[blutdruck]]. Einige Geräte nutzen zusätzlich ein Mikrofon zur auskultatorischen Erkennung der Korotkow-Geräusche [@webster-2010].\n\n## Besonderheiten des Langzeitbetriebs\n\n* **Messintervalle:** tagsüber typischerweise alle 15–30 Minuten, nachts alle 30–60 Minuten (*typisch*, einstellbar).\n* **Energie und Gewicht:** Batterie- oder Akkubetrieb ([[lithium-ionen-akku]]), geringe Größe und leiser Betrieb sind für die Akzeptanz während des Schlafs entscheidend.\n* **Artefakte:** Messungen während Bewegung werden verworfen oder wiederholt ([[bewegungsartefakt]]); das Protokoll vermerkt Fehlmessungen.\n* **Sicherheit:** Maximaldruck und maximale Manschettenzeit sind begrenzt ([[iec-80601-2-30]]).\n\nDie Genauigkeit wird – wie bei allen automatischen Geräten – nach ISO 81060-2 klinisch validiert [@iso-81060-2].\n\n> [!praxis] Manschette am nicht dominanten Arm anlegen, Größe nach Oberarmumfang wählen und Patienten anweisen, während der Messung den Arm ruhig und locker zu halten. Ein Aktivitätsprotokoll erleichtert die Interpretation."
+  },
+  "manufacturers": [
+    {
+      "ref": "schiller",
+      "models": [
+        "BR-102 plus"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "hillrom",
+      "models": [
+        "Welch Allyn ABPM 7100"
+      ],
+      "note": "Marke Welch Allyn."
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "Tonoport"
+      ],
+      "note": ""
+    }
+  ],
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "ja",
+    "basis": "MTK: MPBetreibV (2025) § 15 i. V. m. Anlage 2 Nr. 1.3 – Messgeräte zur nichtinvasiven Blutdruckmessung. STK: nicht in Anlage 1 aufgeführt; vom Hersteller vorgeschriebene Kontrollen sind dennoch durchzuführen.",
+    "intervals": "MTK alle 2 Jahre (Frist nach Anlage 2; Fristberechnung nach § 15 MPBetreibV 2025); Sicht- und Dichtheitsprüfung von Manschette und Schlauch vor jeder Anlage."
+  },
+  "related": [
+    "nibp-messgeraet",
+    "oszillometrie",
+    "blutdruck",
+    "langzeit-ekg",
+    "mtk"
+  ],
+  "sources": [
+    "webster-2010",
+    "iso-81060-2",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

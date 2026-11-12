@@ -1,0 +1,72 @@
+{
+  "id": "chirurgisches-motorsystem",
+  "type": "device",
+  "title": "Chirurgisches Motorsystem",
+  "aliases": [
+    "Chirurgisches Antriebssystem",
+    "Power Tools",
+    "Knochensäge",
+    "Chirurgische Bohrmaschine",
+    "Akku-Antriebssystem",
+    "Hochgeschwindigkeitsfräse",
+    "Surgical Power System"
+  ],
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 76,
+  "domains": [
+    "orthopaedie-unfallchirurgie",
+    "chirurgie",
+    "hno-heilkunde",
+    "neurologie"
+  ],
+  "summary": "Chirurgische Motorsysteme sind motorisch angetriebene Handstücke mit Steuergerät oder Akku zum Bohren, Sägen, Fräsen und Aufbohren von Knochen. Sie werden vor allem in Unfallchirurgie, Orthopädie, Neuro- und HNO-Chirurgie eingesetzt und müssen als wiederverwendbare Instrumente sterilisierbar sein.",
+  "sections": {
+    "purpose": "Motorsysteme ersetzen in der Knochenchirurgie Handbohrer, Meißel und Handsägen: Sie ermöglichen Bohrungen für Schrauben und Drähte, Osteotomien mit Säge, das Aufraspeln des Markraums bei Gelenkersatz und das Abtragen von Knochen mit Fräsen (z. B. am Felsenbein oder an der Schädelkalotte). Ziel ist ein präziser, reproduzierbarer Schnitt bei möglichst geringer thermischer und mechanischer Schädigung des umliegenden Gewebes [@kramme-2017][@wintermantel-2009].",
+    "principle": "## Antrieb\n\nIn heutigen Systemen arbeitet überwiegend ein [[elektromotor|Elektromotor]], meist ein bürstenloser Gleichstrommotor ([[bldc-motor|BLDC-Motor]]), im Handstück. Die Versorgung erfolgt entweder über ein Kabel von einer **Steuerkonsole** oder über einen gekapselten [[lithium-ionen-akku|Akku]] am Handstück. Daneben gibt es pneumatische Systeme, die mit Druckluft oder Stickstoff aus der Gasversorgung betrieben werden. Die Drehzahl wird per Fußschalter oder Fingerabzug vorgegeben und elektronisch über [[pwm|PWM]] und Rückmeldung der Rotorlage (z. B. mit [[hall-sensor|Hall-Sensoren]]) geregelt ([[drehzahlregelung]]).\n\n## Werkzeugaufsätze\n\n| Aufsatz | Bewegung | Typische Anwendung |\n|---|---|---|\n| Bohrer/Drahtantrieb | rotierend | Schraubenlöcher, Kirschner-Drähte |\n| Sagittal-/Oszillationssäge | oszillierend | Osteotomien, Gelenkersatz |\n| Stichsäge (reziprok) | hin- und hergehend | Sternotomie, schmale Schnitte |\n| Fräse (High-Speed) | sehr schnell rotierend | Neuro-, Wirbelsäulen-, HNO-Chirurgie |\n| Raspel/Reamer | langsam, hohes Drehmoment | Markraum, Acetabulum |\n\nDas Getriebe im Aufsatz setzt Drehzahl und Drehmoment um. Bei (näherungsweise) konstanter mechanischer Leistung gilt P = M · ω: Eine Untersetzung erhöht das Drehmoment M um denselben Faktor, um den sie die Winkelgeschwindigkeit ω verringert. Raspeln und Reamer brauchen daher hohe Drehmomente bei niedriger Drehzahl, Hochgeschwindigkeitsfräsen kleine Drehmomente bei sehr hoher Drehzahl.\n\n> [!vereinfacht] Die Reibungswärme beim Bohren und Sägen kann Knochen thermisch schädigen (Hitzenekrose); in der Literatur wird häufig eine Schwelle von etwa 47 °C bei einer Einwirkdauer im Bereich einer Minute genannt. Die Wärme entsteht mechanisch durch Reibung und Spanbildung – nicht elektrisch wie die [[joulesche-waerme|Joulesche Wärme]] im Motor. Scharfe Werkzeuge, angepasste Drehzahl und Vorschubkraft sowie Spülung mit gekühlter Kochsalzlösung begrenzen die Temperaturerhöhung ([[waermeuebertragung]]).\n\n## Aufbereitung\n\nHandstücke und Aufsätze sind wiederverwendbare kritische Medizinprodukte, die nach validierten Verfahren gemäß Herstellerangabe gereinigt und [[sterilisation|sterilisiert]] werden ([[aufbereitung]]) [@krinko-bfarm-2012]. Bei manchen Akkusystemen ist der Akku selbst nicht dampfsterilisierbar; er wird dann laut Herstellerangabe in ein sterilisiertes Gehäuse eingesetzt (aseptische Übergabe). Innenliegende Kanäle und Getriebe erschweren die Reinigung; Pflegeöle dürfen nur nach Herstellervorgabe verwendet werden."
+  },
+  "manufacturers": [
+    {
+      "ref": "stryker",
+      "models": [],
+      "note": "Antriebssysteme für Orthopädie, Unfall- und Neurochirurgie"
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "Midas Rex"
+      ],
+      "note": "Hochgeschwindigkeits-Fräsensysteme für Neuro- und Wirbelsäulenchirurgie"
+    },
+    {
+      "ref": "b-braun",
+      "models": [],
+      "note": "über die Sparte Aesculap"
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Akku- oder Kabelsystem, Anzahl der Handstücke und Aufsätze, Ladegeräte und Akkus, Sterilgut-Container, Einmal-Sägeblätter und Fräsköpfe, Reparatur- und Servicevertrag, Austauschzyklen der Akkus."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) aufgeführt. Prüfung der elektrischen Sicherheit von Konsole und Ladegeräten nach [[iec-62353|IEC 62353]] bzw. [[dguv-vorschrift-3|DGUV Vorschrift 3]] gemäß Herstellervorgabe.",
+    "intervals": "Wartung und Funktionsprüfung nach Herstellerangabe; Sicht- und Funktionsprüfung nach jeder Aufbereitung; Akkus nach Ladezyklen bzw. Herstellerempfehlung ersetzen."
+  },
+  "related": [
+    "bldc-motor",
+    "drehzahlregelung",
+    "lithium-ionen-akku",
+    "aufbereitung",
+    "op-roboter",
+    "ultraschalldissektor"
+  ],
+  "sources": [
+    "kramme-2017",
+    "wintermantel-2009",
+    "krinko-bfarm-2012"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

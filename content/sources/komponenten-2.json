@@ -1,0 +1,66 @@
+[
+  {
+    "id": "iec-60384-14",
+    "kind": "norm",
+    "title": "IEC 60384-14 – Fixed capacitors for use in electronic equipment – Part 14: Sectional specification – Fixed capacitors for electromagnetic interference suppression and connection to the supply mains",
+    "publisher": "International Electrotechnical Commission (IEC); in Deutschland als DIN EN IEC 60384-14 (VDE 0565-1-1)",
+    "note": "Rahmenspezifikation für Funkentstörkondensatoren der Klassen X und Y (Netzanschluss bis 1 000 V AC). Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "kalender-1990",
+    "kind": "artikel",
+    "authors": "Kalender WA, Seissler W, Klotz E, Vock P",
+    "title": "Spiral volumetric CT with single-breath-hold technique, continuous transport, and continuous scanner rotation",
+    "publisher": "Radiology 176(1): 181–183",
+    "year": "1990",
+    "note": "Grundlegende Veröffentlichung zur Spiral-CT, ermöglicht durch kontinuierlich rotierende Gantry mit Schleifringtechnik."
+  },
+  {
+    "id": "oppelt-2005",
+    "kind": "buch",
+    "authors": "Oppelt A (Hrsg.)",
+    "title": "Imaging Systems for Medical Diagnostics: Fundamentals, Technical Solutions and Applications for Systems Applying Ionizing Radiation, Nuclear Magnetic Resonance and Ultrasound",
+    "edition": "2nd edition",
+    "publisher": "Publicis Corporate Publishing, Erlangen",
+    "year": "2005"
+  },
+  {
+    "id": "roemer-1990",
+    "kind": "artikel",
+    "authors": "Roemer PB, Edelstein WA, Hayes CE, Souza SP, Mueller OM",
+    "title": "The NMR phased array",
+    "publisher": "Magnetic Resonance in Medicine 16(2): 192–225",
+    "year": "1990"
+  },
+  {
+    "id": "hayes-1985",
+    "kind": "artikel",
+    "authors": "Hayes CE, Edelstein WA, Schenck JF, Mueller OM, Eash M",
+    "title": "An efficient, highly homogeneous radiofrequency coil for whole-body NMR imaging at 1.5 T",
+    "publisher": "Journal of Magnetic Resonance 63(3): 622–628",
+    "year": "1985",
+    "note": "Beschreibung der Birdcage-Spule."
+  },
+  {
+    "id": "pruessmann-1999",
+    "kind": "artikel",
+    "authors": "Pruessmann KP, Weiger M, Scheidegger MB, Boesiger P",
+    "title": "SENSE: sensitivity encoding for fast MRI",
+    "publisher": "Magnetic Resonance in Medicine 42(5): 952–962",
+    "year": "1999"
+  },
+  {
+    "id": "iec-61558-2-15",
+    "kind": "norm",
+    "title": "IEC 61558-2-15 – Safety of transformers, reactors, power supply units and combinations thereof – Part 2-15: Particular requirements and tests for isolating transformers for the supply of medical locations",
+    "publisher": "International Electrotechnical Commission (IEC); in Deutschland als DIN EN 61558-2-15 (VDE 0570-2-15)",
+    "note": "Anforderungen an Trenntransformatoren zur Versorgung medizinisch genutzter Bereiche (medizinisches IT-System). Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-62494-1",
+    "kind": "norm",
+    "title": "IEC 62494-1 – Medical electrical equipment – Exposure index of digital X-ray imaging systems – Part 1: Definitions and requirements for general radiography",
+    "publisher": "International Electrotechnical Commission (IEC); in Deutschland als DIN EN 62494-1",
+    "note": "Definiert den Expositionsindex (EI), den Ziel-Expositionsindex und den Abweichungsindex (DI) für digitale Radiographiesysteme. Maßgeblich ist die jeweils gültige Ausgabe."
+  }
+]

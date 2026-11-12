@@ -1,0 +1,153 @@
+{
+  "id": "emv",
+  "type": "term",
+  "title": "Elektromagnetische Verträglichkeit (EMV)",
+  "aliases": [
+    "EMV",
+    "EMC",
+    "Electromagnetic compatibility",
+    "Störfestigkeit",
+    "Störaussendung",
+    "Immunity",
+    "Emission",
+    "elektromagnetische Störung",
+    "EMI"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Elektromagnetische Verträglichkeit bezeichnet die Fähigkeit eines Geräts, in seiner elektromagnetischen Umgebung bestimmungsgemäß zu funktionieren, ohne selbst unzulässige Störungen auszusenden. Für medizinische elektrische Geräte legt die Ergänzungsnorm IEC 60601-1-2 Prüfpegel für Störfestigkeit und Störaussendung fest, abhängig von der Einsatzumgebung.",
+  "body": "## Begriff\n\n**Elektromagnetische Verträglichkeit** (EMV) ist die Fähigkeit eines Geräts, in seiner elektromagnetischen Umgebung zufriedenstellend zu arbeiten, ohne selbst unzulässige elektromagnetische Störungen in diese Umgebung einzubringen. Sie hat damit zwei Seiten:\n\n* **Störaussendung** (*Emission*): Was strahlt bzw. leitet das Gerät selbst an Störungen ab?\n* **Störfestigkeit** (*Immunity*): Wie robust ist das Gerät gegen Störungen von außen?\n\nFür [[medizinisches-elektrisches-geraet|ME-Geräte]] und ME-Systeme regelt die Ergänzungsnorm [[iec-60601-1-2]] die Anforderungen [@iec-60601-1-2]. Sie verweist für die Prüfverfahren auf die EMV-Grundnormen der Reihe IEC 61000-4 und für die Störaussendung auf CISPR 11 [@cispr-11].\n\n## Das Störmodell: Quelle – Kopplung – Senke\n\nJede EMV-Störung lässt sich als Kette beschreiben: Eine **Störquelle** erzeugt ein elektromagnetisches Signal, das über einen **Kopplungspfad** zu einer **Störsenke** gelangt.\n\n| Kopplungsart | Mechanismus | Typisches Beispiel |\n|---|---|---|\n| galvanisch (leitungsgebunden) | gemeinsame Impedanz, z. B. gemeinsamer Masseleiter | Motorstrom erzeugt Spannungsabfall auf Messmasse |\n| kapazitiv (elektrisches Feld) | `i = C · du/dt` | Netzleitung neben ungeschirmter Patientenleitung |\n| induktiv (magnetisches Feld) | `u = −M · di/dt` ([[elektromagnetische-induktion]]) | Leiterschleife eines EKG-Kabels im Streufeld eines Transformators |\n| Strahlung (Fernfeld) | elektromagnetische Welle | Mobilfunk, WLAN, Funkgeräte des Rettungsdienstes |\n\n> [!vereinfacht] Die Trennung in Nah- und Fernfeld sowie in kapazitive und induktive Kopplung ist eine didaktische Vereinfachung. In der Praxis treten oft mehrere Kopplungsarten gleichzeitig auf, und die Grenzen hängen von Frequenz und Abstand ab.\n\n## Warum EMV in der Medizintechnik besonders kritisch ist\n\n* **Kleine Nutzsignale:** [[biosignale|Biosignale]] liegen im Mikro- bis Millivoltbereich (EEG, EKG). Eingekoppelte Störungen können Artefakte erzeugen, die Herzrhythmusstörungen vortäuschen oder verdecken (siehe [[netzstoerung]]).\n* **Starke Störquellen im selben Raum:** Das [[hf-chirurgiegeraet]] arbeitet mit HF-Leistungen im Bereich hunderter Watt; [[mrt|MRT-Anlagen]] erzeugen starke HF- und Gradientenfelder; [[defibrillator|Defibrillatoren]] Impulse im Kilovoltbereich.\n* **Lebenserhaltende Funktionen:** Bei [[beatmungsgeraet|Beatmungsgeräten]], [[infusionspumpe|Infusionspumpen]] oder [[herzschrittmacher|Schrittmachern]] darf eine Störung keine gefährliche Fehlfunktion auslösen.\n* **Neue Umgebungen:** Heimtherapie, Rettungsdienst und Funkvernetzung erhöhen die Vielfalt der Störquellen.\n\n## Anforderungen der IEC 60601-1-2\n\nKern der Norm ist, dass das ME-Gerät seine **Basissicherheit** und seine **wesentlichen Leistungsmerkmale** (*essential performance*) bei den festgelegten Störpegeln beibehält. Welche Funktionen wesentlich sind, legt der Hersteller im [[iso-14971|Risikomanagement]] fest [@iec-60601-1-2].\n\nDie Prüfpegel richten sich nach der vorgesehenen Einsatzumgebung (professionelle Gesundheitseinrichtung, häusliche Umgebung, besondere Umgebungen):\n\n| Phänomen (Grundnorm) | Professionelle Einrichtung | Häusliche Umgebung |\n|---|---|---|\n| Elektrostatische Entladung (IEC 61000-4-2) | ±8 kV Kontakt, ±15 kV Luft | ±8 kV Kontakt, ±15 kV Luft |\n| Gestrahlte HF-Felder, 80 MHz–2,7 GHz (IEC 61000-4-3) | 3 V/m | 10 V/m |\n| Nahfelder drahtloser Kommunikationsgeräte | bis 28 V/m bei ausgewählten Frequenzen | bis 28 V/m bei ausgewählten Frequenzen |\n| Schnelle Transienten/Burst (IEC 61000-4-4) | ±2 kV an Netzleitungen | ±2 kV an Netzleitungen |\n| Netzfrequente Magnetfelder (IEC 61000-4-8) | 30 A/m | 30 A/m |\n\n> [!hinweis] Typische Prüfpegel der 4. Ausgabe der IEC 60601-1-2 (2014, mit Änderung 2020), stark verkürzt. Weitere Prüfungen betreffen u. a. Stoßspannungen, leitungsgeführte HF-Störungen und Spannungseinbrüche. Besondere Festlegungen (IEC 60601-2-x) können strengere Pegel verlangen; maßgeblich ist die jeweils gültige Fassung [@iec-60601-1-2].\n\nFür die **Störaussendung** wird das Gerät nach CISPR 11 eingeordnet: Gruppe 1 (HF-Energie nur intern genutzt) oder Gruppe 2 (HF-Energie wird bestimmungsgemäß abgegeben, z. B. HF-Chirurgie), sowie Klasse A (gewerbliche Umgebung) oder Klasse B (Wohnbereich, strengere Grenzwerte) [@cispr-11].\n\n> [!belegt] Die IEC 60601-1-2 verlangt, dass der Hersteller in den Begleitpapieren Informationen zur EMV bereitstellt, damit Betreiber und Anwender die Geräte in einer geeigneten elektromagnetischen Umgebung einsetzen können [@iec-60601-1-2]. Die früheren Tabellen mit berechneten Schutzabständen wurden in der 4. Ausgabe durch einen Warnhinweis ersetzt, tragbare HF-Kommunikationsgeräte nicht näher als etwa 30 cm am ME-Gerät einschließlich seiner Leitungen zu betreiben.\n\n## Konstruktive Maßnahmen\n\n| Maßnahme | Wirkung | Zielkonflikt |\n|---|---|---|\n| Netzfilter mit X- und Y-[[kondensator|Kondensatoren]] | leitet leitungsgebundene HF-Störungen ab | Y-Kondensatoren erhöhen den [[ableitstrom|Ableitstrom]] |\n| Schirmung von Gehäusen und Kabeln | reduziert kapazitive Kopplung und Abstrahlung | Gewicht, Kosten, Schirmanbindung |\n| Verdrillte Leitungspaare, kleine Schleifenflächen | reduziert induktive Einkopplung | Konstruktionsaufwand |\n| Differenzielle Messung mit [[instrumentenverstaerker|Instrumentenverstärker]] | unterdrückt Gleichtaktstörungen | Abhängigkeit von Elektrodenimpedanzen |\n| [[filter|Analoge und digitale Filter]] | entfernen Störanteile außerhalb des Nutzbands | können Signalform verfälschen |\n| [[galvanische-trennung|Galvanische Trennung]] | unterbricht Masseschleifen | Koppelkapazität bleibt |\n| Software-Plausibilitätsprüfung | erkennt gestörte Messwerte | Erkennungsverzögerung |\n\n> [!beispiel] Ein 50-Hz-Kerbfilter im [[ekg-geraet]] entfernt Netzbrumm, kann aber bei bestimmten Signalformen Überschwinger erzeugen. Deshalb lässt sich das Filter meist zu- und abschalten – die Bewertung erfolgt im Kontext der Diagnosefragestellung.\n\n## Bedeutung in der Medizintechnik\n\nFür Betreiber und Medizintechnik ergeben sich konkrete Aufgaben:\n\n* **Beschaffung:** Prüfen, ob die vorgesehene Einsatzumgebung (z. B. Rettungswagen, Heimbereich, Nähe zum [[mrt|MRT]]) durch die EMV-Angaben des Herstellers abgedeckt ist.\n* **Installation:** Empfohlene Abstände zu Funkgeräten, Mobilteilen und Sendern beachten; Kabelführungen nicht parallel zu Leistungsleitungen.\n* **Instandhaltung:** Nach [[instandsetzung|Instandsetzungen]] Schirmungen, Ferrite und Erdverbindungen wieder vollständig herstellen; nur freigegebene Ersatzteile und Kabel verwenden.\n* **Störungsanalyse:** Treten sporadische Fehlfunktionen auf, systematisch nach zeitlich korrelierten Störquellen suchen (siehe [[emv-stoerung]] und [[fehlersuche]]).\n\nBesonders EMV-relevante Gerätegruppen sind [[patientenmonitor|Patientenmonitore]], [[eeg-geraet|EEG-Geräte]], [[infusionspumpe|Infusionspumpen]], [[beatmungsgeraet|Beatmungsgeräte]] sowie aktive Implantate wie [[herzschrittmacher]] und [[icd]].\n\n> [!praxis] Sporadische Fehlalarme, die nur im OP auftreten, hängen auffallend oft mit dem Einsatz des HF-Chirurgiegeräts zusammen. Eine Dokumentation, wann genau die Störung auftrat und welche Geräte gleichzeitig aktiv waren, ist die wichtigste Grundlage der Fehlersuche. Schwerwiegende Vorkommnisse sind im Rahmen der [[vigilanz]] zu melden.\n\n> [!warnung] EMV-Maßnahmen wie Schirmungen, Filter oder Ferrite dürfen bei Reparaturen nicht entfernt oder weggelassen werden. Ein Gerät kann danach im Normalbetrieb scheinbar fehlerfrei funktionieren und erst unter Störeinfluss versagen.\n\nSiehe auch: [[iec-60601-1-2]], [[elektrotechnik]].\n",
+  "related": [
+    "iec-60601-1-2",
+    "emv-stoerung",
+    "netzstoerung",
+    "filter",
+    "galvanische-trennung",
+    "instrumentenverstaerker",
+    "kondensator",
+    "ableitstrom",
+    "elektromagnetische-induktion",
+    "hf-chirurgiegeraet",
+    "mrt"
+  ],
+  "paths": [
+    [
+      "hf-chirurgiegeraet",
+      "emv",
+      "instrumentenverstaerker",
+      "filter",
+      "patientenmonitor"
+    ],
+    [
+      "emv",
+      "emv-stoerung",
+      "fehlersuche"
+    ]
+  ],
+  "diagram": {
+    "title": "EMV-Störmodell: Quelle – Kopplung – Senke",
+    "caption": "Funktionsschema einer Störeinkopplung in einen Biosignalkanal und der Gegenmaßnahmen. Kein konkretes Gerät.",
+    "width": 900,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "hf",
+        "label": "Störquelle\n(z. B. HF-Chirurgie)",
+        "ref": "hf-chirurgiegeraet",
+        "kind": "source",
+        "x": 100,
+        "y": 80
+      },
+      {
+        "id": "netz",
+        "label": "Störquelle\nNetz 50 Hz",
+        "ref": "netzstoerung",
+        "kind": "source",
+        "x": 100,
+        "y": 240
+      },
+      {
+        "id": "kopp",
+        "label": "Kopplung\n(kapazitiv, induktiv,\nStrahlung)",
+        "kind": "process",
+        "x": 310,
+        "y": 160,
+        "h": 70
+      },
+      {
+        "id": "kabel",
+        "label": "Patientenkabel /\nElektroden",
+        "ref": "ekg-elektrode",
+        "kind": "sensor",
+        "x": 520,
+        "y": 80
+      },
+      {
+        "id": "ina",
+        "label": "Instrumenten-\nverstärker",
+        "ref": "instrumentenverstaerker",
+        "kind": "process",
+        "x": 520,
+        "y": 240
+      },
+      {
+        "id": "flt",
+        "label": "Filter",
+        "ref": "filter",
+        "kind": "process",
+        "x": 730,
+        "y": 240
+      },
+      {
+        "id": "mon",
+        "label": "Monitor /\nAuswertung",
+        "ref": "patientenmonitor",
+        "kind": "output",
+        "x": 730,
+        "y": 80
+      }
+    ],
+    "edges": [
+      {
+        "from": "hf",
+        "to": "kopp",
+        "kind": "energy"
+      },
+      {
+        "from": "netz",
+        "to": "kopp",
+        "kind": "energy"
+      },
+      {
+        "from": "kopp",
+        "to": "kabel",
+        "kind": "energy",
+        "label": "Störung"
+      },
+      {
+        "from": "kabel",
+        "to": "ina",
+        "kind": "signal"
+      },
+      {
+        "from": "ina",
+        "to": "flt",
+        "kind": "signal",
+        "label": "Gleichtakt unterdrückt"
+      },
+      {
+        "from": "flt",
+        "to": "mon",
+        "kind": "signal"
+      }
+    ]
+  },
+  "sources": [
+    "iec-60601-1-2",
+    "cispr-11",
+    "iec-60601-1",
+    "webster-2010",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

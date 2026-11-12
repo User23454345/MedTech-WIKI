@@ -1,0 +1,82 @@
+{
+  "id": "chirurgischer-laser",
+  "type": "device",
+  "title": "Chirurgisches Lasersystem",
+  "aliases": [
+    "Medizinischer Laser",
+    "OP-Laser",
+    "Chirurgielaser",
+    "Surgical laser",
+    "Holmiumlaser",
+    "CO₂-Laser"
+  ],
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 74,
+  "domains": [
+    "chirurgie",
+    "augenheilkunde",
+    "hno-heilkunde",
+    "gastroenterologie"
+  ],
+  "summary": "Chirurgische Lasersysteme schneiden, verdampfen oder koagulieren Gewebe bzw. zertrümmern Steine mit gebündeltem Licht hoher Leistungsdichte. Die Wirkung hängt entscheidend von Wellenlänge, Pulsform und Leistung ab.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktive therapeutische Produkte, die Energie in potenziell gefährlicher Weise an den Körper abgeben, fallen nach Regel 9 der [[mdr|MDR]] Anhang VIII in Klasse IIb [@mdr-2017]. Die konkrete Klassifizierung legt der Hersteller fest.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Laser werden u. a. in Urologie (Steinlithotripsie, Prostataenukleation), Augenheilkunde (refraktive Chirurgie, Netzhautkoagulation, Kataraktchirurgie), HNO, Dermatologie und Gastroenterologie eingesetzt. Vorteile sind präzise, oft berührungsfreie Wirkung, gleichzeitige Blutstillung und die Möglichkeit, Energie über flexible Fasern durch Endoskope zu leiten [@kramme-2017]. Die besonderen Sicherheitsanforderungen beschreibt [[iec-60601-1|IEC 60601]] Teil 2-22 [@iec-60601-2-22].",
+    "principle": "## Lichterzeugung und Wellenlänge\n\nIm [[laser]] wird ein aktives Medium (Gas, Festkörperkristall, Faser oder Halbleiter) durch Pumpenergie in eine Besetzungsinversion gebracht; stimulierte Emission in einem optischen Resonator erzeugt kohärentes, monochromatisches Licht ([[optik]]). Die Wellenlänge bestimmt, von welchem Gewebebestandteil das Licht absorbiert wird:\n\n| Laser | Wellenlänge | Typische Wirkung |\n|---|---|---|\n| CO₂-Laser | 10,6 µm | sehr starke Wasserabsorption, oberflächliches Schneiden und Verdampfen |\n| Holmium:YAG | ca. 2,1 µm | gepulst, Wasserabsorption; Steinzertrümmerung, Gewebeenukleation |\n| Thulium (Faser- oder Festkörperlaser) | ca. 1,9–2,0 µm | starke Wasserabsorption; Vaporisation, Enukleation, Lithotripsie |\n| Nd:YAG | 1 064 nm | geringe Absorption, tiefe Koagulation |\n| Diodenlaser | je nach Typ ca. 800–1 000 nm, auch um 1 470 nm | Koagulation, Vaporisation (Eindringtiefe wellenlängenabhängig) |\n| Excimer (ArF) | 193 nm | Photoablation der Hornhaut ohne nennenswerte thermische Schädigung |\n\n> [!vereinfacht] Die Wellenlängen sind gerundete Lehrbuchwerte; konkrete Geräte können abweichen. Entscheidend für die Gewebewirkung ist das Zusammenspiel aus Absorption (Wasser, Hämoglobin, Melanin), Streuung, Leistungsdichte und Pulsdauer.\n\n## Gewebewirkung und Applikation\n\nJe nach Leistungsdichte und Einwirkzeit überwiegt die **photothermische** Wirkung (Koagulation ab etwa 60 °C, Vaporisation bei 100 °C, [[joulesche-waerme|Wärmeentstehung]] durch Absorption, [[waermeuebertragung]]), die **Photoablation** (UV-Photonen spalten Molekülbindungen) oder die **Photodisruption** durch ultrakurze Pulse (Femtosekundenlaser). Das Licht wird über Lichtwellenleiter, Spiegelgelenkarme (CO₂) oder Scanner zum Gewebe geführt; ein Pilotstrahl zeigt die Zielstelle an.\n\n> [!warnung] Chirurgische Laser gehören meist der Laserklasse 4 an [@iec-60825-1]: Direkte und gestreute Strahlung gefährdet Augen und Haut, der Strahl kann Abdecktücher und Tuben entzünden – besonders bei erhöhter Sauerstoffkonzentration im Atemweg. Erforderlich sind ein Laserbereich mit Kennzeichnung, Laserschutzbrillen passend zur Wellenlänge und ein Laserschutzbeauftragter nach Arbeitsschutzrecht [@ostrv]. Rauchgas ist abzusaugen."
+  },
+  "manufacturers": [
+    {
+      "ref": "boston-scientific",
+      "models": [],
+      "note": "Holmiumlaser (u. a. mit MOSES-Pulstechnologie) für Urologie und HNO aus dem 2021 übernommenen chirurgischen Geschäft von Lumenis."
+    },
+    {
+      "ref": "olympus",
+      "models": [
+        "SOLTIVE"
+      ],
+      "note": "Thulium-Faserlaser."
+    },
+    {
+      "ref": "zeiss",
+      "models": [
+        "VisuMax",
+        "MEL 90"
+      ],
+      "note": "Femtosekunden- bzw. Excimerlaser für die refraktive Chirurgie."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (Fassung 2025) Anlage 1 – Produktgruppe „Erzeugung und Anwendung jeglicher Energie zur unmittelbaren Koagulation, Gewebezerstörung oder Zertrümmerung von Ablagerungen in Organen“ (sinngemäß; Nummerierung der Neufassung hier nicht angegeben, maßgeblich ist der aktuelle Wortlaut); nicht in Anlage 2 aufgeführt.",
+    "intervals": "[[stk|STK]] spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025), u. a. mit Messung der abgegebenen Leistung/Energie und Prüfung der Sicherheitseinrichtungen (Not-Aus, Türkontakt, Fußschalter); Wartung von Kühlsystem, Optik und Resonator nach Herstellerangabe; Faserprüfung vor jeder Anwendung."
+  },
+  "related": [
+    "laser",
+    "hf-chirurgiegeraet",
+    "ultraschalldissektor",
+    "lithotripter",
+    "phakoemulsifikation",
+    "optik"
+  ],
+  "sources": [
+    "iec-60601-2-22",
+    "iec-60825-1",
+    "ostrv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

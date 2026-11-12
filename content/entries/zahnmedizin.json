@@ -1,0 +1,39 @@
+{
+  "id": "zahnmedizin",
+  "type": "domain",
+  "title": "Zahnmedizin",
+  "aliases": [
+    "Zahnheilkunde",
+    "Zahn-, Mund- und Kieferheilkunde",
+    "Dentistry",
+    "Zahnarztpraxis",
+    "Dentalmedizin"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Zahnmedizin behandelt Erkrankungen der Zähne, des Zahnhalteapparats und des Kausystems. Typisch sind die Behandlungseinheit mit schnelllaufenden Antrieben und Wasserversorgung, dentale Röntgentechnik bis zur digitalen Volumentomographie sowie eine hohe Zahl aufzubereitender Instrumente.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Zahnmedizin** (Zahn-, Mund- und Kieferheilkunde) befasst sich mit Vorbeugung, Erkennung und Behandlung von Erkrankungen der Zähne, des Zahnhalteapparats (Parodont), der Mundschleimhaut und des Kausystems. Sie wird überwiegend in Praxen ausgeübt, an Kliniken ergänzt durch die Mund-, Kiefer- und Gesichtschirurgie. Typisch ist die sehr hohe Zahl kurzer Behandlungen pro Tag – mit entsprechend vielen Aufbereitungszyklen und Röntgenaufnahmen.\n\n## Typische Krankheitsbilder und Eingriffe\n\n| Bereich | Beispiele |\n|---|---|\n| Konservierende Zahnheilkunde | Kariestherapie, Füllungen, Wurzelkanalbehandlung (Endodontie) |\n| Parodontologie | Behandlung der Parodontitis, Zahnsteinentfernung mit Ultraschall |\n| Prothetik | Kronen, Brücken, Prothesen, digitale Abformung und CAD/CAM |\n| Chirurgie und Implantologie | Zahnentfernung, Implantation, Knochenaufbau |\n| Kieferorthopädie | Fehlstellungsdiagnostik mit Fernröntgenseitenbild, Zahnspangen |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[dentaleinheit]] | Behandlungsplatz mit Patientenstuhl, Instrumentenablage, Antrieben, Wasser-, Druckluft- und Absaugversorgung |\n| Dentalturbine (Bestandteil der Einheit) | luftgetriebener Antrieb mit Drehzahlen von mehreren hunderttausend Umdrehungen pro Minute zur Präparation |\n| [[elektromotor]] (Mikromotor mit Hand- und Winkelstück) | drehzahl- und drehmomentgeregelter Antrieb, u. a. für Endodontie und Implantologie |\n| [[roentgengeraet]] (intraoral, Panoramaschicht) | Zahnfilme, Orthopantomogramm, Fernröntgenseitenbild |\n| [[dvt]] | dreidimensionale Darstellung von Kiefer, Zähnen und Nasennebenhöhlen |\n| [[chirurgisches-motorsystem]] | Implantatbohrungen mit Drehmomentbegrenzung und Kühlung |\n| [[chirurgischer-laser]] | Weichgewebschirurgie, Parodontaltherapie |\n| [[absauggeraet]] | Speichel- und Sprühnebelabsaugung (Saugmaschine) |\n| [[dampfsterilisator]], [[rdg]] | Aufbereitung von Instrumenten, Hand- und Winkelstücken |\n\nDie Behandlungseinheit ist nach ISO 7494-1 genormt [@iso-7494-1]. Ultraschall-Zahnsteinentfernungsgeräte arbeiten mit [[piezoelektrischer-effekt|piezoelektrischen]] oder magnetostriktiven Schwingern.\n\n## Besondere technische Anforderungen\n\n### Strahlenschutz\n\nDentale Röntgengeräte machen einen großen Teil aller Röntgeneinrichtungen aus. Für extraorale Geräte (Panoramaschicht, DVT) gilt IEC 60601-2-63, für intraorale IEC 60601-2-65 [@iec-60601-2-63] [@iec-60601-2-65]. Jede Aufnahme braucht eine rechtfertigende Indikation durch fachkundige Zahnärzt:innen; Abnahme- und [[konstanzpruefung|Konstanzprüfungen]] sichern Bildqualität und Dosis [@strlschg] [@strlschv]. Zum Prinzip siehe [[strahlenschutz]] und [[roentgenstrahlung]].\n\n### Wasser- und Luftqualität\n\n> [!warnung] In den dünnen Wasserleitungen einer Behandlungseinheit bilden sich bei Stagnation Biofilme; auch Legionellen und Pseudomonaden wurden nachgewiesen. Gegenmaßnahmen sind Entkeimungsanlagen in der Einheit, regelmäßiges Durchspülen vor Behandlungsbeginn und zwischen Patienten sowie mikrobiologische Kontrollen. Eine freie Fallstrecke bzw. Systemtrennung schützt das Trinkwassernetz vor Rückfluss [@krinko-zahn-2006].\n\nDruckluft für Turbinen und Luft-Wasser-Spritzen muss trocken, ölfrei und hygienisch einwandfrei sein. Abwasser aus der Absaugung durchläuft einen Amalgamabscheider, bevor es in die Kanalisation gelangt; die Anforderungen an amalgamhaltiges Abwasser aus Zahnarztpraxen regelt Anhang 50 der Abwasserverordnung [@abwv].\n\n### Aufbereitung\n\nHand- und Winkelstücke sowie Turbinen haben innenliegende Kanäle und Getriebe. Sie werden innen und außen gereinigt, gepflegt (geölt) und – sofern als kritisch eingestuft – in einem Dampfsterilisator mit fraktioniertem Vakuum sterilisiert ([[sterilisation]]), weil nur so Luft aus Hohlkörpern zuverlässig entfernt wird [@krinko-bfarm-2012]. Die Validierung der Prozesse und die Dokumentation der Freigabe sind auch in kleinen Praxen verpflichtend.\n\n> [!praxis] Häufigste technische Störungen der Einheit sind verschlissene Turbinenlager (Lagergeräusche, Drehzahlabfall), undichte Kupplungen, verstopfte Absaugfilter und Druckluftprobleme. Lagerschäden werden oft durch unzureichende Pflege nach der Aufbereitung begünstigt.\n\n### Elektrische Sicherheit und Prüfungen\n\nDie Dentaleinheit ist ein [[medizinisches-elektrisches-geraet|medizinisches elektrisches Gerät]] mit vielen angeschlossenen Komponenten. Für Wiederholungsprüfungen gilt die Herstellerangabe; die [[elektrische-sicherheitspruefung]] erfolgt in der Regel nach IEC 62353 [@iec-62353].\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[hno-heilkunde]]: Nasennebenhöhlen, DVT-Diagnostik, Kiefer- und Gesichtsschädel.\n* [[radiologie]]: Röntgentechnik, Strahlenschutz, Befundung komplexer Volumendatensätze.\n* [[anaesthesiologie]]: Narkose bei Kindern, Menschen mit Behinderung und großen kieferchirurgischen Eingriffen.\n* [[kardiologie]]: Endokarditisprophylaxe; Rücksicht auf Patient:innen mit [[herzschrittmacher|Herzschrittmacher]] bei elektrischen Geräten.\n* [[diabetologie]]: Wechselwirkung von Diabetes und Parodontitis.\n",
+  "related": [
+    "dentaleinheit",
+    "dvt",
+    "roentgengeraet",
+    "elektromotor",
+    "dampfsterilisator",
+    "aufbereitung",
+    "strahlenschutz",
+    "dentsply-sirona"
+  ],
+  "sources": [
+    "iso-7494-1",
+    "iec-60601-2-63",
+    "iec-60601-2-65",
+    "strlschg",
+    "strlschv",
+    "krinko-bfarm-2012",
+    "iec-62353",
+    "kramme-2017",
+    "krinko-zahn-2006",
+    "abwv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

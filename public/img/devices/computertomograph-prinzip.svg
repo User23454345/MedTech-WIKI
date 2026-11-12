@@ -26,16 +26,17 @@
   <text x="250" y="88" font-size="13">I₀</text>
   <!-- Objekt -->
   <ellipse cx="130" cy="140" rx="82" ry="40" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
-  <circle cx="100" cy="140" r="14" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="100" cy="140" r="14" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
   <circle cx="165" cy="138" r="9" fill="#0b2545"/>
   <text x="250" y="145" font-size="13">μ(x, y)</text>
   <!-- Detektorzeile -->
   <rect x="30" y="204" width="200" height="8" fill="#0b2545"/>
   <text x="250" y="212" font-size="13">I</text>
   <!-- Profil -->
-  <polyline points="30,262 48,262 58,250 80,236 100,228 120,236 140,240 158,222 172,222 186,240 204,250 214,262 230,262" fill="none" stroke="#0d9488" stroke-width="2"/>
+  <polyline points="30,262.0 34,262.0 38,262.0 42,262.0 46,262.0 50,257.1 54,253.6 58,251.3 62,249.5 66,248.0 70,246.7 74,245.6 78,244.7 82,243.8 86,243.1 90,247.3 94,248.2 98,248.3 102,247.9 106,246.9 110,245.2 114,240.0 118,239.8 122,239.7 126,239.6 130,239.6 134,239.6 138,239.7 142,239.8 146,240.0 150,240.3 154,240.6 158,228.5 162,222.7 166,222.2 170,226.0 174,243.1 178,243.8 182,244.7 186,245.6 190,246.7 194,248.0 198,249.5 202,251.3 206,253.6 210,257.1 214,262.0 218,262.0 222,262.0 226,262.0 230,262.0" fill="none" stroke="#0d9488" stroke-width="2"/>
   <line x1="30" y1="262" x2="236" y2="262" stroke="#0b2545" stroke-width="1" marker-end="url(#arrd)"/>
   <text x="242" y="266" font-size="13">t</text>
+  <text x="14" y="236" font-size="13" font-style="italic">p</text>
   <text x="130" y="284" text-anchor="middle" font-size="13">p(θ, t) = ln(I₀ / I) = ∫ μ ds</text>
 
   <!-- 2: Sinogramm -->

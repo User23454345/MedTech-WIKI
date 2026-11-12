@@ -1,0 +1,68 @@
+{
+  "id": "bd",
+  "type": "manufacturer",
+  "title": "BD (Becton, Dickinson and Company)",
+  "aliases": [
+    "BD",
+    "Becton Dickinson",
+    "Becton, Dickinson and Company",
+    "CareFusion",
+    "Bard"
+  ],
+  "category": "hersteller",
+  "summary": "US-amerikanischer Medizintechnikkonzern mit Sitz in Franklin Lakes (New Jersey), gegründet 1897. BD ist ein großer Anbieter von Injektions- und Infusionstechnik, Medikationsmanagement sowie interventionellen Produkten; das Diagnostik- und Biowissenschaftsgeschäft wurde 2026 mit Waters zusammengeführt.",
+  "headquarters": "Franklin Lakes, USA",
+  "founded": "1897",
+  "website": "https://www.bd.com/",
+  "productLines": [
+    {
+      "device": "infusionspumpe",
+      "models": [
+        "BD Alaris GP Plus",
+        "BD Alaris neXus GP"
+      ],
+      "note": "Alaris-Pumpen mit Medikamentenbibliothek (Guardrails); ursprünglich CareFusion."
+    },
+    {
+      "device": "spritzenpumpe",
+      "models": [
+        "BD Alaris CC Plus",
+        "BD Alaris GH Plus",
+        "BD Alaris PK Plus"
+      ]
+    },
+    {
+      "device": "pca-pumpe",
+      "models": [
+        "Alaris PCA-Modul"
+      ]
+    },
+    {
+      "device": "hypothermiegeraet",
+      "models": [
+        "Arctic Sun"
+      ],
+      "note": "Oberflächen-Temperaturmanagement mit Hydrogel-Pads; ursprünglich Bard."
+    }
+  ],
+  "body": "## Überblick\n\nBD (Becton, Dickinson and Company) ist einer der weltweit größten Medizintechnikkonzerne. Das Unternehmen ist bekannt für Spritzen, Kanülen und Gefäßzugänge, für Infusionstechnik und Medikationsmanagement sowie für interventionelle Produkte (urologisch, vaskulär, chirurgisch) [@hst-bd].\n\n## Geschichte in Stichpunkten\n\n* **1897** – Gründung durch Maxwell W. Becton und Fairleigh S. Dickinson; anfangs Handel mit und Fertigung von Spritzen und Thermometern.\n* **20. Jahrhundert** – Aufstieg zum großen Anbieter von Einwegspritzen, Kanülen und Blutentnahmesystemen; später Firmensitz in Franklin Lakes, New Jersey.\n* **2015** – Übernahme von CareFusion; damit kommen die Alaris-Infusionspumpen und Pyxis-Medikationsschränke zu BD.\n* **2017** – Übernahme von C. R. Bard (u. a. Gefäßzugänge, Urologie, das Temperaturmanagementsystem Arctic Sun).\n* **2022** – Abspaltung des Diabetesgeschäfts (Pen-Nadeln, Insulinspritzen) als eigenständiges Unternehmen Embecta.\n* **2026** – Das Geschäft mit Biowissenschaften und Diagnostik wird mit der Waters Corporation zusammengeführt [@hst-waters-bd-2026].\n\n## Geschäftsbereiche (Stand 2026)\n\nDie folgende Gliederung folgt der Segmentstruktur, die BD für das verbleibende Medizintechnikgeschäft kommuniziert; Segmentnamen können sich ändern.\n\n| Bereich | Beispiele | Wiki-Geräte |\n|---|---|---|\n| Medical Essentials | Spritzen, Kanülen, periphere Venenkatheter | – |\n| Connected Care | Infusionspumpen, Medikationsmanagement, Software | [[infusionspumpe]], [[spritzenpumpe]], [[pca-pumpe]] |\n| BioPharma Systems | vorfüllbare Spritzen für Arzneimittelhersteller | – |\n| Interventional | Gefäßzugänge, Urologie, Chirurgie, Temperaturmanagement | [[hypothermiegeraet]] |\n\n## Bedeutung für die Medizintechnik\n\nIn vielen europäischen Kliniken bilden Alaris-Pumpen einen großen Teil des Infusionspumpen-Bestands. Für die Medizintechnik relevant:\n\n* Infusions- und Spritzenpumpen unterliegen der [[stk]] nach [[mpbetreibv|MPBetreibV]] (§ 12 i. V. m. Anlage 1) [@mpbetreibv]; die gerätespezifischen Anforderungen definiert [[iec-60601-2-24|IEC 60601-2-24]].\n* Medikamentenbibliotheken („Dose Error Reduction Software“) müssen gepflegt und versioniert auf die Pumpen verteilt werden; dies ist eine Schnittstelle zwischen Medizintechnik, Pharmazie und IT.\n* Infusionspumpen waren in den vergangenen Jahren mehrfach Gegenstand von Sicherheitsinformationen verschiedener Hersteller; die [[vigilanz]] und die Umsetzung von Sicherheitskorrekturmaßnahmen sind Teil der [[betreiberpflichten]].\n\n> [!hinweis] Mit der Zusammenführung des Diagnostikgeschäfts mit Waters (2026) sind Produkte wie Blutkultur- und Mikrobiologiesysteme nicht mehr Teil von BD. Bei der Zuordnung von Laborgeräten im [[bestandsverzeichnis]] ist der aktuelle Hersteller zu prüfen.\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "infusionspumpe",
+    "spritzenpumpe",
+    "pca-pumpe",
+    "hypothermiegeraet",
+    "iec-60601-2-24",
+    "vigilanz",
+    "icu-medical",
+    "b-braun",
+    "fresenius-kabi",
+    "baxter"
+  ],
+  "sources": [
+    "hst-bd",
+    "hst-waters-bd-2026",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

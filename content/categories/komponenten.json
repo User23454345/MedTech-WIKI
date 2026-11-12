@@ -6,7 +6,28 @@
   "order": 5,
   "icon": "cog",
   "summary": "Baugruppen, aus denen Medizingeräte aufgebaut sind: Antriebe, Ventile, Pumpen, Energiespeicher, Röhren, Detektoren und Wandler.",
-  "body": "",
+  "body": "Medizingeräte bestehen aus wiederkehrenden **Baugruppen**: Antriebe bewegen Spritzenkolben und Gantrys, Ventile dosieren Gase, Pumpen fördern Blut und Infusionslösungen, Akkus und Netzteile versorgen das Gerät, Röhren und Detektoren erzeugen und erfassen Strahlung. Diese Kategorie erklärt solche Komponenten **geräteübergreifend** – Aufbau, physikalisches Prinzip, typische Ausfallarten und Prüfpunkte [@kramme-2017].\n\nFür die Medizintechnik lohnt sich dieser Blick, weil sich Wissen übertragen lässt: Wer die [[peristaltikpumpe]] verstanden hat, versteht ihre Rolle in [[infusionspumpe]], [[dialysegeraet]] und [[herz-lungen-maschine]]. Viele Fehlerbilder und Verschleißerscheinungen entstehen an Komponenten – etwa die Alterung von [[lithium-ionen-akku|Akkus]] oder Lagerverschleiß von Motoren und [[turbine|Turbinen]] – und viele Wartungsmaßnahmen zielen auf sie.\n\n## Überblick\n\n| Funktionsgruppe | Komponenten | Beispielgeräte |\n|---|---|---|\n| Antriebe | [[elektromotor]], [[bldc-motor]], [[schrittmotor]], [[spindelantrieb]] | [[spritzenpumpe]], [[op-tisch]], [[pflegebett]] |\n| Gasförderung und -steuerung | [[turbine]], [[magnetventil]], [[proportionalventil]], [[exspirationsventil]] | [[beatmungsgeraet]], [[cpap-geraet]], [[anaesthesiegeraet]] |\n| Flüssigkeitsförderung | [[peristaltikpumpe]] | [[infusionspumpe]], [[dialysegeraet]] |\n| Energieversorgung | [[lithium-ionen-akku]], [[medizinisches-netzteil]], [[transformator]], [[kondensator]] | [[defibrillator]], [[transportbeatmungsgeraet]] |\n| Röntgen- und CT-Technik | [[roentgenroehre]], [[roentgendetektor]], [[kollimator]], [[gantry]] | [[roentgengeraet]], [[computertomograph]], [[c-bogen]] |\n| MRT-Technik | [[supraleitender-magnet]], [[gradientenspule]], [[hf-spule]] | [[mrt]] |\n| Schallwandlung | [[ultraschallwandler]] | [[ultraschallgeraet]], [[ultraschalltherapiegeraet]] |\n| Stoffaustausch und Atemgasaufbereitung | [[dialysator]], [[narkosemittelverdampfer]], [[co2-absorber]], [[atemgasbefeuchter]] | [[dialysegeraet]], [[anaesthesiegeraet]] |\n| Patientenkopplung und Wärme | [[neutralelektrode]], [[defibrillationselektroden]], [[heizelement]] | [[hf-chirurgiegeraet]], [[defibrillator]], [[inkubator]] |\n| Mensch-Maschine-Schnittstelle | [[display-bedienoberflaeche]] | nahezu alle Geräte |\n\n> [!beispiel] Eine [[spritzenpumpe]] kombiniert einen [[schrittmotor]] mit einem [[spindelantrieb]], der den Spritzenkolben vorschiebt; ein [[kraftsensor]] an der Kolbenhalterung erkennt einen Druckanstieg und löst den [[okklusionsalarm]] aus. Drei Komponentenartikel erklären so gemeinsam ein Gerät.\n\n## Komponenten im Zusammenspiel\n\nKomponenten arbeiten selten allein. Antriebe werden über [[pwm]] und [[drehzahlregelung]] angesteuert, Ventile in einem [[regelkreis]] mit Signalen aus [[flowsensor|Flow-]] und [[drucksensor|Drucksensoren]] geführt, Röntgenröhren aus der [[hochspannungserzeugung]] gespeist. Die Komponentenartikel verweisen deshalb eng auf [[elektrotechnik]] und [[sensorik]]; die Funktionsschemata der Geräteartikel zeigen, wo eine Komponente im Signal- und Energiefluss sitzt.\n\n> [!warnung] Der Tausch sicherheitsrelevanter Komponenten (z. B. Akkus, Netzteile, Röntgenröhren, Ventile) ist Instandsetzung und darf nur durch befugtes Fachpersonal nach Herstellervorgaben erfolgen; anschließend sieht die [[iec-62353]] eine Prüfung nach Instandsetzung vor, sofern die Herstellervorgaben nicht weitergehende Prüfungen verlangen.\n\n## Lernpfad-Empfehlung\n\n1. **Energie:** [[medizinisches-netzteil]], [[transformator]], [[lithium-ionen-akku]] – Grundlage fast jedes Geräts.\n2. **Bewegung:** [[elektromotor]] → [[bldc-motor]] → [[schrittmotor]] → [[spindelantrieb]].\n3. **Fluidik:** [[magnetventil]], [[proportionalventil]], [[turbine]], [[peristaltikpumpe]].\n4. **Gerätespezifische Baugruppen:** [[exspirationsventil]], [[narkosemittelverdampfer]], [[co2-absorber]], [[dialysator]].\n5. **Bildgebung:** [[roentgenroehre]], [[roentgendetektor]], [[kollimator]], [[gantry]], dann [[supraleitender-magnet]], [[gradientenspule]], [[hf-spule]] und [[ultraschallwandler]].\n6. **Patientenkontakt:** [[neutralelektrode]], [[defibrillationselektroden]], [[heizelement]].",
+  "paths": [
+    [
+      "spritzenpumpe",
+      "schrittmotor",
+      "spindelantrieb",
+      "kraftsensor",
+      "okklusionsalarm"
+    ],
+    [
+      "roentgengeraet",
+      "hochspannungserzeugung",
+      "roentgenroehre",
+      "kollimator",
+      "roentgendetektor"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "webster-2010",
+    "tietze-schenk-2019"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

@@ -1,0 +1,156 @@
+{
+  "id": "strahlenschutz",
+  "type": "term",
+  "title": "Strahlenschutz in der Medizin",
+  "aliases": [
+    "Strahlenschutz",
+    "Radiation Protection",
+    "Medizinischer Strahlenschutz",
+    "ALARA",
+    "3-A-Regel",
+    "Abstandsquadratgesetz"
+  ],
+  "category": "recht",
+  "summary": "Strahlenschutz umfasst alle Maßnahmen zum Schutz von Patient:innen, Personal und Bevölkerung vor ionisierender Strahlung. Er beruht auf Rechtfertigung, Optimierung und Dosisbegrenzung und nutzt physikalisch die Prinzipien Abstand, Abschirmung und Aufenthaltsdauer.",
+  "body": "## Begriff\n\n**Strahlenschutz** umfasst alle physikalischen, technischen, organisatorischen und rechtlichen Maßnahmen, die Patient:innen, Personal und Bevölkerung vor den schädlichen Wirkungen [[ionisierende-strahlung|ionisierender Strahlung]] schützen. In der Medizin entsteht diese Strahlung vor allem in [[roentgenroehre|Röntgenröhren]], in Beschleunigern der [[strahlentherapie|Strahlentherapie]] und beim Zerfall radioaktiver Nuklide ([[radioaktivitaet]]) in der [[nuklearmedizin|Nuklearmedizin]]. Rechtsgrundlage in Deutschland sind das [[strlschg|Strahlenschutzgesetz]] und die Strahlenschutzverordnung [@strlschg] [@strlschv].\n\n## Biologische Wirkung: zwei Effektarten\n\n| Effektart | Mechanismus | Dosis-Wirkungs-Beziehung | Beispiele |\n|---|---|---|---|\n| **Deterministisch** (Gewebereaktionen) | Absterben vieler Zellen | Schwellendosis; oberhalb steigt der Schweregrad mit der Dosis | Hauterythem nach langer Durchleuchtung, Linsentrübung |\n| **Stochastisch** | DNA-Schäden einzelner Zellen | keine sichere Schwelle angenommen; Wahrscheinlichkeit steigt mit der Dosis | strahleninduzierte Krebserkrankung, genetische Effekte |\n\nFür den Strahlenschutz wird für stochastische Effekte konservativ ein linearer Zusammenhang ohne Schwellenwert (LNT-Modell) angenommen [@icrp-103].\n\n## Dosisgrößen\n\n| Größe | Formel | Einheit | Bedeutung |\n|---|---|---|---|\n| Energiedosis D | D = dE / dm | Gray (Gy = J/kg) | absorbierte Energie pro Masse |\n| Organ-Äquivalentdosis H_T | H_T = Σ w_R · D_T,R | Sievert (Sv) | berücksichtigt Strahlenart (Wichtungsfaktor w_R; für Photonen 1) |\n| Effektive Dosis E | E = Σ w_T · H_T | Sievert (Sv) | gewichtet nach Organempfindlichkeit (w_T); Schutzgröße für stochastisches Risiko |\n\nHinzu kommen geräte­spezifische Messgrößen wie das **Dosisflächenprodukt** (DFP) in der Projektionsradiographie und Durchleuchtung oder **CTDIvol** und **Dosislängenprodukt** (DLP) in der Computertomographie [@krieger-strahlenschutz-2019].\n\n> [!vereinfacht] Die effektive Dosis eignet sich, um Expositionen verschiedener Untersuchungen miteinander zu vergleichen. Sie ist nicht dafür gedacht, das individuelle Krebsrisiko einer einzelnen Patientin oder eines einzelnen Patienten exakt zu berechnen [@icrp-103].\n\n## Die drei Grundprinzipien\n\n1. **Rechtfertigung** – Jede Anwendung muss einen Nettonutzen haben. In der Medizin bedeutet das die **rechtfertigende Indikation** durch eine fachkundige Person [@strlschg].\n2. **Optimierung (ALARA)** – *as low as reasonably achievable*: Exposition so gering wie vernünftigerweise erreichbar, bei ausreichender Bildqualität.\n3. **Dosisbegrenzung** – Grenzwerte für beruflich exponierte Personen (effektive Dosis 20 mSv pro Kalenderjahr) und die Bevölkerung (1 mSv pro Kalenderjahr aus genehmigten Tätigkeiten). Für Patient:innen gibt es keine Grenzwerte, sondern diagnostische Referenzwerte als Orientierung [@bfs-drw].\n\n## Physikalischer Strahlenschutz: die „3 A“\n\n### Abstand\n\nFür eine punktförmige Quelle nimmt die Dosisleistung mit dem Quadrat des Abstands ab (**Abstandsquadratgesetz**):\n\nḊ₂ = Ḋ₁ · (r₁ / r₂)²\n\n> [!beispiel] Tritt eine Person von 0,5 m auf 1 m Abstand zur Streustrahlungsquelle (dem Patienten) zurück, sinkt die Dosisleistung auf (0,5/1)² = ¼, also auf 25 %. Die Zahlen sind beispielhaft; in der Praxis ist der Patient keine ideale Punktquelle.\n\n### Abschirmung\n\nDie Schwächung eines schmalen Photonenstrahls beschreibt das exponentielle **Schwächungsgesetz** (vgl. [[roentgenstrahlung]]):\n\nI(x) = I₀ · e^(−μ·x)\n\nmit dem linearen Schwächungskoeffizienten μ. Die **Halbwertschichtdicke** HWS = ln 2 / μ gibt an, nach welcher Materialdicke die Intensität halbiert ist. Blei ist wegen seiner hohen Ordnungszahl und Dichte für Röntgenstrahlung besonders wirksam; deshalb bestehen Schutzschürzen, Schilddrüsenschutz und Raumabschirmungen aus Blei oder bleiäquivalenten Materialien. Die Schutzwirkung wird als **Bleigleichwert** (mm Pb) angegeben; Schutzschürzen liegen typischerweise im Bereich von 0,25 bis 0,5 mm Pb. Weil μ stark von der Photonenenergie abhängt, gilt ein Bleigleichwert immer nur für die angegebene Röhrenspannung bzw. Strahlenqualität.\n\n### Aufenthaltsdauer\n\nDie Dosis ist das Produkt aus Dosisleistung und Zeit: D = Ḋ · t. Kurze Durchleuchtungszeiten, gepulste Durchleuchtung und das Verlassen des Raums während der Aufnahme reduzieren die Exposition proportional.\n\n## Organisatorischer Strahlenschutz\n\n* **Strahlenschutzbereiche:** Überwachungsbereich, Kontrollbereich und Sperrbereich werden nach der zu erwartenden Exposition abgegrenzt und gekennzeichnet [@strlschv].\n* **Personendosimetrie:** Beruflich exponierte Personen im Kontrollbereich tragen amtliche Dosimeter; ergänzend werden elektronische Dosimeter eingesetzt.\n* **Fachkunde und Kenntnisse:** Wer Strahlung am Menschen anwendet oder technisch durchführt, braucht die erforderliche Fachkunde bzw. Kenntnisse und muss diese regelmäßig aktualisieren.\n* **Unterweisung** des Personals und **Strahlenschutzanweisungen**.\n* **Qualitätssicherung:** Abnahme- und [[konstanzpruefung|Konstanzprüfungen]] sichern, dass Geräte mit der vorgesehenen Dosis und Bildqualität arbeiten [@qs-rl-roentgendiagnostik-2024].\n\n## Technischer Strahlenschutz am Gerät\n\n| Maßnahme | Wirkung | Gerätebeispiel |\n|---|---|---|\n| Kollimation (Einblendung) | kleineres bestrahltes Volumen, weniger Streustrahlung | [[kollimator]] am [[roentgengeraet|Röntgengerät]] |\n| Zusatzfilterung (Al, Cu) | entfernt niederenergetische Photonen, die überwiegend in oberflächennahem Gewebe absorbiert werden und kaum zum Bild beitragen (Senkung der Hauteintrittsdosis) | [[c-bogen|C-Bogen]], [[angiographieanlage|Angiographie]] |\n| Gepulste Durchleuchtung, Last-Image-Hold | weniger Strahlzeit | C-Bogen |\n| Dosismodulation | Röhrenstrom an Patientengeometrie angepasst | [[computertomograph|CT]] |\n| Empfindliche Detektoren | geringere Dosis bei gleicher Bildqualität | [[roentgendetektor|Flachdetektor]] |\n| Deckenschutzschild, Tischschutz | schirmt Streustrahlung zum Personal ab | Herzkatheterlabor |\n\nDie konstruktiven Anforderungen an Röntgengeräte stehen in der Ergänzungsnorm IEC 60601-1-3 und gerätespezifischen Normen wie [[iec-60601-2-54]] [@iec-60601-1-3-strahlenschutz].\n\n> [!warnung] Schutzeinrichtungen wie Dosisbegrenzungen, Türkontakte oder Strahlungsanzeigen dürfen nicht überbrückt oder außer Funktion gesetzt werden. Eingriffe an strahlungsrelevanten Baugruppen sind nur durch befugtes Fachpersonal zulässig und erfordern anschließend die vorgeschriebenen Prüfungen.\n\n## Bedeutung in der Medizintechnik\n\nStrahlenschutz betrifft die Medizintechnik bei allen Geräten mit ionisierender Strahlung: [[roentgengeraet|Röntgengerät]], [[computertomograph|Computertomograph]], [[c-bogen|C-Bogen]], [[angiographieanlage|Angiographieanlage]], [[mammographiegeraet|Mammographiegerät]], [[dvt|DVT]], [[knochendichtemessung|Knochendichtemessung]], [[pet-ct|PET/CT]], [[gammakamera|Gammakamera]], [[linearbeschleuniger|Linearbeschleuniger]] und [[afterloader|Afterloader]]. Medizintechniker:innen sind beteiligt an Abnahme und Konstanzprüfung, an der Wartung von Strahlenquelle und [[hochspannungserzeugung|Hochspannungserzeugung]], an der Pflege von Dosismanagement-Systemen (Dosiswerte aus [[dicom|DICOM]]-Strukturen) und an der Prüfung von Schutzkleidung.\n\n> [!praxis] Bleischürzen werden in vielen Häusern regelmäßig durchleuchtet, um Risse und Brüche im Schutzmaterial zu erkennen. Das Intervall ist in der Regel in internen Vorgaben festgelegt; beschädigte Schürzen müssen ausgesondert werden.\n",
+  "related": [
+    "strlschg",
+    "ionisierende-strahlung",
+    "roentgenstrahlung",
+    "radioaktivitaet",
+    "konstanzpruefung",
+    "kollimator",
+    "roentgengeraet",
+    "computertomograph",
+    "c-bogen",
+    "radiologie",
+    "strahlentherapie",
+    "nuklearmedizin"
+  ],
+  "paths": [
+    [
+      "roentgengeraet",
+      "roentgenroehre",
+      "roentgenstrahlung",
+      "ionisierende-strahlung",
+      "strahlenschutz"
+    ],
+    [
+      "strahlenschutz",
+      "strlschg",
+      "konstanzpruefung"
+    ]
+  ],
+  "sources": [
+    "strlschg",
+    "strlschv",
+    "icrp-103",
+    "krieger-strahlenschutz-2019",
+    "bfs-drw",
+    "qs-rl-roentgendiagnostik-2024",
+    "iec-60601-1-3-strahlenschutz"
+  ],
+  "diagram": {
+    "title": "Strahlenweg und Schutzmaßnahmen bei der Röntgenaufnahme",
+    "caption": "Vereinfachtes Funktionsschema: Nutzstrahlung zum Detektor, Streustrahlung zum Personal und die jeweils greifenden Schutzmaßnahmen.",
+    "width": 900,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "hv",
+        "label": "Hochspannungs-\nerzeugung",
+        "ref": "hochspannungserzeugung",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "roe",
+        "label": "Röntgenröhre",
+        "ref": "roentgenroehre",
+        "kind": "actuator",
+        "x": 290,
+        "y": 90
+      },
+      {
+        "id": "kol",
+        "label": "Kollimator /\nFilter",
+        "ref": "kollimator",
+        "kind": "control",
+        "x": 480,
+        "y": 90
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 670,
+        "y": 90
+      },
+      {
+        "id": "det",
+        "label": "Röntgendetektor",
+        "ref": "roentgendetektor",
+        "kind": "sensor",
+        "x": 830,
+        "y": 230,
+        "w": 130
+      },
+      {
+        "id": "str",
+        "label": "Streustrahlung",
+        "ref": "ionisierende-strahlung",
+        "kind": "process",
+        "x": 560,
+        "y": 250
+      },
+      {
+        "id": "per",
+        "label": "Personal\n(Abstand, Schürze,\nDosimeter)",
+        "ref": "strahlenschutz",
+        "kind": "output",
+        "x": 310,
+        "y": 250,
+        "h": 64
+      }
+    ],
+    "edges": [
+      {
+        "from": "hv",
+        "to": "roe",
+        "kind": "power",
+        "label": "kV, mA"
+      },
+      {
+        "from": "roe",
+        "to": "kol",
+        "kind": "energy",
+        "label": "Nutzstrahl"
+      },
+      {
+        "from": "kol",
+        "to": "pat",
+        "kind": "energy"
+      },
+      {
+        "from": "pat",
+        "to": "det",
+        "kind": "energy",
+        "label": "geschwächt"
+      },
+      {
+        "from": "pat",
+        "to": "str",
+        "kind": "energy"
+      },
+      {
+        "from": "str",
+        "to": "per",
+        "kind": "energy",
+        "label": "Exposition"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

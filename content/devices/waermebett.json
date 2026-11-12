@@ -1,0 +1,70 @@
+{
+  "id": "waermebett",
+  "type": "device",
+  "title": "Säuglingswärmebett / Reanimationseinheit",
+  "aliases": [
+    "Wärmebett",
+    "Säuglings-Wärmestrahler",
+    "Offenes Wärmebett",
+    "Reanimationseinheit",
+    "Erstversorgungseinheit",
+    "Infant Radiant Warmer",
+    "Wärmetherapieeinheit"
+  ],
+  "category": "geraete",
+  "deviceGroup": "neonatologie",
+  "rank": 80,
+  "domains": [
+    "neonatologie",
+    "geburtshilfe",
+    "intensivmedizin",
+    "notfallmedizin"
+  ],
+  "summary": "Ein Säuglingswärmebett ist eine offene Liegefläche mit darüber angeordnetem Infrarot-Wärmestrahler, die das Neugeborene warm hält und gleichzeitig von allen Seiten zugänglich lässt. Als Reanimationseinheit ist es zusätzlich mit Absaugung, Gasversorgung und Beatmungshilfe für die Erstversorgung im Kreißsaal ausgestattet.",
+  "sections": {
+    "purpose": "Neugeborene, besonders Frühgeborene, kühlen nach der Geburt rasch aus: Sie sind nass, haben eine große Körperoberfläche im Verhältnis zur Masse und eine unreife [[thermoregulation|Thermoregulation]]. Das Wärmebett ermöglicht Erstversorgung, Reanimation und Eingriffe, ohne das Kind wie im [[inkubator|Inkubator]] abzuschirmen [@who-thermal-1997][@erc-2021].",
+    "principle": "## Strahlungswärme\n\nEin Heizstrahler oberhalb der Liegefläche gibt Infrarotstrahlung ab, die von der [[haut|Haut]] absorbiert wird ([[waermeuebertragung]]). Anders als beim Inkubator wird nicht die Luft erwärmt; Verluste durch Konvektion und Verdunstung bleiben bestehen. Viele Geräte haben zusätzlich eine beheizte Matratze ([[heizelement]]).\n\n## Regelung\n\n| Betriebsart | Stellgröße | Führungsgröße |\n|---|---|---|\n| manuell | Heizleistung in Prozent | keine, Bediener überwacht |\n| Servo/Haut-geregelt | Heizleistung | Hauttemperatur über [[temperatursensor|Hautfühler]] (meist am Abdomen) |\n\nIm Servobetrieb vergleicht der Regler die gemessene Hauttemperatur mit dem Sollwert und passt die Heizleistung an ([[regelkreis]]). Alarme melden Abweichungen, abgelöste Fühler und im manuellen Modus eine abgelaufene Zeit ohne Quittierung ([[alarmsystem]]).\n\n> [!warnung] Ein abgelöster oder abgedeckter Hautfühler misst zu niedrige Werte – der Regler heizt dann weiter. Fühlerlage regelmäßig kontrollieren. Die besonderen Sicherheitsanforderungen an Wärmestrahler legt [@iec-60601-2-21] fest.\n\n## Reanimationseinheit\n\nFür die Erstversorgung kommen Gasanschlüsse für O₂ und Druckluft mit Mischer, ein Beatmungsmodul (z. B. T-Stück-System), eine [[absauggeraet|Absaugung]], ein Zeitgeber (Apgar-Uhr) und häufig ein [[pulsoxymeter|Pulsoxymeter]] hinzu."
+  },
+  "manufacturers": [
+    {
+      "ref": "draeger",
+      "models": [
+        "Babytherm",
+        "Resuscitaire"
+      ],
+      "note": "Wärmetherapie- und Erstversorgungseinheiten"
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "Panda"
+      ],
+      "note": "Wärmestrahler und Erstversorgungseinheiten"
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Wand-, Stand- oder fahrbare Ausführung, beheizte Matratze, integrierte Beatmungs- und Absaugmodule, Überwachungsoptionen, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Offene Wärmebetten sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht ausdrücklich genannt (Anlage 1 nennt Säuglingsinkubatoren, nicht jedoch offene Wärmestrahler); Kontrollen nach § 12, wenn der Hersteller sie vorschreibt. Ein integriertes Gerät zur maschinellen Beatmung kann als Produkt zur maschinellen Beatmung unter Anlage 1 fallen – Zuordnung anhand der Zweckbestimmung klären. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Wartung und Prüfung der Temperaturregelung nach Herstellerangabe; tägliche Funktionskontrolle der Erstversorgungseinheit (Gasversorgung, Absaugung, Beatmungsmodul)."
+  },
+  "related": [
+    "inkubator",
+    "thermoregulation",
+    "temperatursensor",
+    "absauggeraet",
+    "phototherapiegeraet",
+    "neonatologie"
+  ],
+  "sources": [
+    "iec-60601-2-21",
+    "who-thermal-1997",
+    "erc-2021"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

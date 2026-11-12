@@ -1,0 +1,86 @@
+{
+  "id": "stryker",
+  "type": "manufacturer",
+  "title": "Stryker",
+  "aliases": [
+    "Stryker Corporation",
+    "Physio-Control",
+    "LIFEPAK"
+  ],
+  "category": "hersteller",
+  "summary": "Die Stryker Corporation mit Sitz in Portage (Michigan, USA) ist ein Medizintechnikkonzern mit Schwerpunkten in Orthopädie, chirurgischer Technik, Neurotechnik und Akutversorgung. Über die 2016 übernommene Physio-Control gehören auch die LIFEPAK-Defibrillatoren und das LUCAS-Thoraxkompressionssystem dazu.",
+  "headquarters": "Portage, Michigan, USA",
+  "founded": "1941",
+  "website": "https://www.stryker.com/",
+  "productLines": [
+    {
+      "device": "defibrillator",
+      "models": [
+        "LIFEPAK 15",
+        "LIFEPAK 1000",
+        "LIFEPAK CR2"
+      ],
+      "note": "LIFEPAK-Produktlinie (ehemals Physio-Control)."
+    },
+    {
+      "device": "thoraxkompressionsgeraet",
+      "models": [
+        "LUCAS"
+      ],
+      "note": "Stempelsystem mit Saugglocke."
+    },
+    {
+      "device": "op-roboter",
+      "models": [
+        "Mako"
+      ],
+      "note": "Robotersystem für die Endoprothetik."
+    },
+    {
+      "device": "insufflator",
+      "models": [
+        "PneumoClear"
+      ]
+    },
+    {
+      "device": "chirurgisches-motorsystem",
+      "models": [],
+      "note": "Antriebssysteme für Orthopädie, Unfall- und Neurochirurgie."
+    },
+    {
+      "device": "pflegebett",
+      "models": [
+        "ProCuity"
+      ],
+      "note": "Klinik- und Intensivbetten."
+    },
+    {
+      "device": "hypothermiegeraet",
+      "models": [],
+      "note": "Systeme zum Patiententemperaturmanagement."
+    },
+    {
+      "device": "patientenwaermesystem",
+      "models": [],
+      "note": "Systeme zum Temperaturmanagement."
+    }
+  ],
+  "body": "## Überblick\n\nDie **Stryker Corporation** ist ein US-amerikanischer Medizintechnikkonzern mit Sitz in Portage (Michigan) [@stryker-web]. Das Portfolio umfasst orthopädische Implantate, chirurgische Instrumente und Antriebe, Endoskopie, Neurotechnik, Klinikbetten sowie – seit der Übernahme von Physio-Control – Notfall- und Reanimationstechnik.\n\n## Geschichte in Stichpunkten\n\n* **1941:** Der Orthopäde Homer Stryker gründet in Kalamazoo (Michigan) ein Unternehmen zur Herstellung eigener Erfindungen, darunter ein Drehbett für immobilisierte Patienten und eine oszillierende Gipssäge.\n* **1998:** Übernahme von Howmedica (Endoprothetik und Traumatologie).\n* **2013:** Übernahme von MAKO Surgical (robotergestützte Endoprothetik, [[op-roboter]]).\n* **2016:** Übernahme von Physio-Control mit den Produktlinien LIFEPAK ([[defibrillator]]) und LUCAS ([[thoraxkompressionsgeraet]]); im selben Jahr Übernahme von Sage Products.\n* **2020:** Übernahme von Wright Medical (Extremitäten- und biologische Orthopädie).\n* **2022:** Übernahme von Vocera (klinische Kommunikation).\n* **2025:** Übernahme von Inari Medical (mechanische Thrombektomie); Verkauf des Wirbelsäulenimplantatgeschäfts.\n\n## Geschäftsbereiche\n\n| Segment | Inhalte (Auswahl) |\n|---|---|\n| MedSurg and Neurotechnology | [[chirurgisches-motorsystem|Chirurgische Antriebe]], Endoskopie und [[insufflator|Insufflation]], [[pflegebett|Klinikbetten]] und Patiententransport, [[defibrillator|Notfalltechnik]], Neurovaskulär |\n| Orthopaedics | Knie- und Hüftendoprothetik, Trauma und Extremitäten, Robotik (Mako) |\n\n## Bedeutung für die Medizintechnik\n\nStryker ist in zwei sehr unterschiedlichen Feldern prägend: In der **Notfallmedizin** gehören LIFEPAK-Defibrillatoren und LUCAS-Geräte zur Standardausstattung vieler Rettungsdienste. In der **Orthopädie** hat das Mako-System die robotergestützte Endoprothetik verbreitet: Auf Basis eines präoperativen CT-Modells begrenzt der Roboterarm die Bewegung der Säge auf den geplanten Resektionsbereich (haptische Grenzen).\n\n> [!vereinfacht] Der Mako-Roboter operiert nicht selbstständig; der Chirurg führt das Instrument, und der Roboterarm verhindert lediglich Bewegungen außerhalb der geplanten Grenzen.\n\n> [!praxis] Im Klinikalltag begegnen Medizintechniker:innen Stryker-Produkten vor allem bei [[pflegebett|Betten]] und Tragen, [[chirurgisches-motorsystem|Akkuantrieben]] (Akku- und Ladegerätprüfung, [[aufbereitung]]) sowie bei Defibrillatoren und Reanimationshilfen im Notfallbereich. Für Defibrillatoren ist die [[stk]] nach [[mpbetreibv]] vorgeschrieben.\n\n## Einordnung im Markt\n\nDie Defibrillatoren konkurrieren vor allem mit [[zoll]], [[corpuls]] und [[philips]], die Klinikbetten u. a. mit Produkten aus dem Portfolio von [[baxter]] (Hillrom) und [[arjo]]. Weil Stryker durch Übernahmen gewachsen ist, finden sich im Bestand vieler Kliniken noch Geräte mit dem Herstellernamen Physio-Control; für Ersatzteile, Software und Sicherheitsinformationen ist heute Stryker zuständig.",
+  "related": [
+    "defibrillator",
+    "thoraxkompressionsgeraet",
+    "op-roboter",
+    "chirurgisches-motorsystem",
+    "pflegebett",
+    "zoll",
+    "medtronic",
+    "orthopaedie-unfallchirurgie",
+    "notfallmedizin",
+    "chirurgie"
+  ],
+  "sources": [
+    "stryker-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

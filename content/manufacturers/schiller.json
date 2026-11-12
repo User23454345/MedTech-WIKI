@@ -1,0 +1,92 @@
+{
+  "id": "schiller",
+  "type": "manufacturer",
+  "title": "Schiller",
+  "aliases": [
+    "SCHILLER AG",
+    "Schiller Medizintechnik"
+  ],
+  "category": "hersteller",
+  "summary": "Schweizer Familienunternehmen mit Sitz in Baar, gegründet 1974. Schwerpunkte sind kardiologische Diagnostik (EKG, Belastungs- und Langzeit-EKG), Lungenfunktionsdiagnostik sowie Defibrillatoren und Notfall-Monitoring.",
+  "headquarters": "Baar, Schweiz",
+  "founded": "1974",
+  "website": "https://www.schiller.ch/",
+  "productLines": [
+    {
+      "device": "ekg-geraet",
+      "models": [
+        "CARDIOVIT AT-102 G2",
+        "CARDIOVIT FT-1"
+      ],
+      "note": "Ruhe-EKG-Geräte (12 Kanäle) mit automatischer Befundinterpretation."
+    },
+    {
+      "device": "ergometer",
+      "models": [
+        "CARDIOVIT CS-200"
+      ],
+      "note": "Belastungs-EKG-System."
+    },
+    {
+      "device": "langzeit-ekg",
+      "models": [
+        "MEDILOG"
+      ]
+    },
+    {
+      "device": "langzeit-blutdruck",
+      "models": [
+        "BR-102 plus"
+      ]
+    },
+    {
+      "device": "defibrillator",
+      "models": [
+        "DEFIGARD Touch 7",
+        "FRED easy"
+      ],
+      "note": "DEFIGARD Touch 7: kombinierter Monitor/Defibrillator für Rettungsdienst und Klinik; FRED easy: AED-Linie."
+    },
+    {
+      "device": "patientenmonitor",
+      "models": [
+        "PHYSIOGARD Touch 7"
+      ],
+      "note": "Monitorvariante der Touch-7-Plattform ohne Defibrillationseinheit."
+    },
+    {
+      "device": "spirometer",
+      "models": [],
+      "note": "Spirometrie als eigenständiges Gerät oder als Modul der Diagnostiksysteme."
+    },
+    {
+      "device": "bodyplethysmograph",
+      "models": [],
+      "note": "Über die Tochtergesellschaft Ganshorn Medizin Electronic (Lungenfunktionsdiagnostik)."
+    }
+  ],
+  "body": "## Überblick\n\nDie SCHILLER AG ist ein Schweizer Medizintechnikhersteller mit Sitz in Baar (Kanton Zug). Das Unternehmen ist in Familienbesitz und auf **nichtinvasive Diagnostik** sowie **Notfallmedizin** spezialisiert. Im Klinik- und Praxisalltag begegnet man Schiller-Geräten vor allem in der [[kardiologie|Kardiologie]], in der [[pneumologie|Pneumologie]] (Lungenfunktion) und im Rettungsdienst [@hst-schiller].\n\n## Geschichte in Stichpunkten\n\n* **1974** – Gründung durch den Physiker Alfred E. Schiller; als erstes Produkt gilt der tragbare EKG-Schreiber MINISCOPE MS-1 [@hst-schiller-50].\n* **Ende der 1970er-Jahre** – Bezug eines eigenen Firmengebäudes in Baar, das bis heute Hauptsitz ist [@hst-schiller-50].\n* **Folgejahrzehnte** – Ausbau von Ruhe-, Belastungs- und Langzeit-EKG, Ergänzung um Defibrillatoren, Patientenmonitoring und Lungenfunktionsdiagnostik.\n* **Ganshorn** – Die deutsche Ganshorn Medizin Electronic, spezialisiert auf Bodyplethysmographie und Lungenfunktionsprüfung, gehört zur Schiller-Gruppe (Zeitpunkt des Erwerbs hier nicht belegt).\n* **2024** – 50-jähriges Firmenjubiläum [@hst-schiller-50].\n\n## Geschäftsbereiche\n\n| Bereich | Typische Geräte im Wiki |\n|---|---|\n| Kardiologische Diagnostik | [[ekg-geraet]], [[ergometer]], [[langzeit-ekg]], [[langzeit-blutdruck]] |\n| Notfall und Monitoring | [[defibrillator]], [[patientenmonitor]] |\n| Lungenfunktion | [[spirometer]], [[bodyplethysmograph]] |\n\nDie EKG-Geräte erfassen die [[biosignale]] des [[erregungsleitungssystem|Erregungsleitungssystems]] über [[ekg-elektrode|EKG-Elektroden]] und verarbeiten sie mit [[instrumentenverstaerker|Instrumentenverstärkern]], [[filter|Filtern]] und [[analog-digital-wandler|A/D-Wandlern]]. Viele Systeme unterstützen die Anbindung an Krankenhausinformationssysteme, etwa über [[dicom]] oder [[hl7-fhir|HL7]].\n\n## Bedeutung für die Medizintechnik\n\nSchiller gehört im deutschsprachigen Raum zu den etablierten Anbietern von Ruhe- und Belastungs-EKG-Systemen. Für Medizintechniker:innen relevant sind insbesondere:\n\n* **Defibrillatoren** unterliegen der [[stk|sicherheitstechnischen Kontrolle]] nach [[mpbetreibv|MPBetreibV]] (§ 12 i. V. m. Anlage 1) [@mpbetreibv].\n* **EKG- und Monitoring-Geräte** sind [[medizinisches-elektrisches-geraet|medizinische elektrische Geräte]] mit [[anwendungsteile|Anwendungsteilen]] vom Typ CF bzw. BF; die [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] erfolgt in der Regel nach [[iec-62353|IEC 62353]] [@iec-62353].\n* **Defibrillationsfeste Eingänge** der EKG-Verstärker sind ein zentrales Konstruktionsmerkmal, da Patienten während der Ableitung defibrilliert werden können.\n\n> [!praxis] Bei Defibrillatoren gehören Akkuzustand, Elektrodenablaufdatum und die Prüfung der abgegebenen Energie mit einem Defibrillator-Analysator zu den häufigsten Instandhaltungsaufgaben; Vorgaben des Herstellers zur Prüfung sind zu beachten.\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "ekg-geraet",
+    "defibrillator",
+    "ergometer",
+    "langzeit-ekg",
+    "spirometer",
+    "bodyplethysmograph",
+    "kardiologie",
+    "pneumologie",
+    "notfallmedizin",
+    "philips",
+    "ge-healthcare",
+    "zoll",
+    "corpuls"
+  ],
+  "sources": [
+    "hst-schiller",
+    "hst-schiller-50",
+    "mpbetreibv",
+    "iec-62353"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

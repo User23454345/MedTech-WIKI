@@ -1,0 +1,55 @@
+{
+  "id": "spirometer",
+  "type": "device",
+  "title": "Spirometer",
+  "aliases": [
+    "Spirometrie",
+    "Lungenfunktionsmessgerät",
+    "Pneumotachograph",
+    "Fluss-Volumen-Messgerät",
+    "kleine Lungenfunktion"
+  ],
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 53,
+  "domains": [
+    "pneumologie"
+  ],
+  "summary": "Spirometer messen den Atemfluss am Mund und berechnen daraus durch Integration die ein- und ausgeatmeten Volumina. Kernparameter sind die forcierte Vitalkapazität (FVC), die Einsekundenkapazität (FEV1) und deren Verhältnis. Die Spirometrie ist die Basisuntersuchung bei Asthma und COPD.",
+  "sections": {
+    "purpose": "Die Spirometrie erkennt und quantifiziert **obstruktive** Ventilationsstörungen (z. B. Asthma, COPD: erniedrigtes FEV1/FVC) und gibt Hinweise auf **restriktive** Störungen (erniedrigte Vitalkapazität). Sie wird in der [[pneumologie]], in der Arbeitsmedizin und zur Verlaufskontrolle eingesetzt [@ats-ers-spirometry-2019].",
+    "principle": "## Flussmessung\n\nModerne Spirometer messen den Volumenstrom ([[flowsensor]]) und integrieren ihn über die Zeit: V = ∫ V̇ dt. Gängige Messprinzipien:\n\n| Prinzip | Funktionsweise |\n|---|---|\n| Pneumotachograph (Fleisch, Lilly) | definierter Strömungswiderstand; Druckdifferenz proportional zum Fluss bei laminarer Strömung ([[stroemungslehre]], [[drucksensor]]) |\n| Turbine | Drehzahl eines Flügelrads proportional zum Fluss, optisch abgetastet |\n| Ultraschall-Laufzeit | Laufzeitdifferenz von Schallimpulsen mit und gegen die Strömung ([[ultraschallwandler]]) |\n| Hitzdraht | Wärmeabfuhr eines beheizten Drahts hängt vom Fluss ab ([[waermeuebertragung]]) |\n\n## Volumenkorrektur\n\nAusgeatmete Luft ist körperwarm und wasserdampfgesättigt, die Umgebungsluft nicht. Volumina werden daher auf **BTPS**-Bedingungen (Körpertemperatur, Umgebungsdruck, Wasserdampfsättigung) umgerechnet – eine Anwendung der [[gasgesetze]].\n\n## Messgrößen\n\nAus der forcierten Ausatmung nach maximaler Einatmung entsteht die **Fluss-Volumen-Kurve**. Wichtige Größen sind FVC, FEV1, der Tiffeneau-Index FEV1/FVC und der Spitzenfluss (PEF). Die Werte werden mit Referenzwerten verglichen, die von Alter, Größe, Geschlecht und Herkunft abhängen (verbreitet sind die Referenzgleichungen der Global Lung Function Initiative, GLI); beurteilt wird zunehmend der z-Score bzw. die untere Normgrenze (LLN) statt fester Prozentgrenzen ([[atemmechanik]], [[lunge]]).\n\n> [!belegt] Die ATS/ERS-Empfehlungen fordern eine regelmäßige Kalibrierprüfung mit einer 3-Liter-Kalibrierpumpe, mindestens arbeitstäglich (zulässige Abweichung des gemessenen Volumens: ±3 %), sowie Qualitätskriterien für Akzeptanz und Reproduzierbarkeit der Manöver [@ats-ers-spirometry-2019].\n\n> [!praxis] Die Qualität der Messung hängt stark von der Mitarbeit des Patienten und der Anleitung durch das Personal ab."
+  },
+  "manufacturers": [
+    {
+      "ref": "schiller",
+      "models": [],
+      "note": "Spirometrie als Gerät oder Modul im Diagnostikportfolio."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Messprinzip, Einweg- oder Mehrwegsensoren und Bakterienfilter (Verbrauchsmaterial), Referenzwert- und Auswertesoftware, Anbindung an das Praxis- oder Kliniksystem, Kalibrierpumpe."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Spirometer sind in Anlage 1 der MPBetreibV (2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) genannt. Die messtechnische Qualität wird über die Kalibrierprüfung gesichert.",
+    "intervals": "Kalibrierprüfung mit 3-Liter-Pumpe mindestens arbeitstäglich (ATS/ERS); Kalibrierung der Pumpe nach Herstellerangabe; Aufbereitung bzw. Wechsel von Sensoren und Filtern nach Herstellerangabe; elektrische Wiederholungsprüfung nach IEC 62353 gemäß Herstellervorgabe."
+  },
+  "related": [
+    "bodyplethysmograph",
+    "flowsensor",
+    "atemmechanik",
+    "lunge",
+    "kalibrierung",
+    "pneumologie"
+  ],
+  "sources": [
+    "ats-ers-spirometry-2019",
+    "schmidt-lang-2019",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

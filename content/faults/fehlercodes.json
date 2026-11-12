@@ -1,0 +1,71 @@
+{
+  "id": "fehlercodes",
+  "type": "fault",
+  "title": "Fehlercodes und Fehlerspeicher",
+  "aliases": [
+    "Fehlerspeicher",
+    "Event-Log",
+    "Ereignisprotokoll",
+    "Error codes",
+    "Service-Log",
+    "Logbuch",
+    "Fehlermeldungen"
+  ],
+  "category": "fehler",
+  "summary": "Medizinische Geräte melden erkannte Fehler über Fehlercodes und speichern Ereignisse, Alarme und Zustände in Fehlerspeichern und Event-Logs. Diese Daten sind die wichtigste Grundlage für Fehlersuche, Vorfallanalyse und vorausschauende Instandhaltung; die konkreten Codes sind herstellerspezifisch.",
+  "devices": [
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "patientenmonitor",
+    "infusionspumpe",
+    "spritzenpumpe",
+    "defibrillator",
+    "dialysegeraet",
+    "hf-chirurgiegeraet",
+    "computertomograph",
+    "mrt",
+    "ultraschallgeraet",
+    "inkubator"
+  ],
+  "causes": [
+    "Fehlgeschlagener Selbsttest beim Einschalten (Power-On-Self-Test) von Speicher, Prozessor, Sensoren oder Aktoren",
+    "Laufzeitüberwachung erkennt Grenzwertverletzungen oder Plausibilitätsfehler, z. B. widersprüchliche redundante Messkanäle oder [[sensordrift|Sensordrift]]",
+    "Watchdog- oder Kommunikationsfehler zwischen Steuer- und Überwachungsprozessor ([[mikrocontroller]]), etwa durch Softwarefehler oder [[emv-stoerung|EMV-Störung]]",
+    "Fehler der Energieversorgung: [[akkufehler|Akkudefekt]], Netzausfall, Fehler im [[medizinisches-netzteil|Netzteil]]",
+    "Übertemperatur durch verstopfte Lüfter oder Filter, Ausfall von Lüftern",
+    "Mechanische oder pneumatische Fehler an Pumpen, Ventilen und Motoren ([[magnetventil]], [[elektromotor]])",
+    "Überschrittene Wartungs- oder Betriebsstundenintervalle, die als Servicehinweis gemeldet werden"
+  ],
+  "actions": [
+    "Zuerst Patientensicherheit: Bei Gerätefehler mit Therapieausfall sofort auf Ersatzgerät oder alternative Versorgung wechseln",
+    "Fehlermeldung vollständig notieren (Text, Code, Uhrzeit, Betriebszustand) und Gerät nicht unnötig neu starten oder zurücksetzen",
+    "Gerät mit Hinweis auf den Fehler kennzeichnen und der Medizintechnik übergeben; Zubehör und Verbrauchsmaterial beilegen",
+    "Fehlerspeicher und Event-Log mit Servicesoftware oder Exportfunktion auslesen und sichern, bevor Bauteile getauscht werden",
+    "Fehlercode anhand der Service-Unterlagen des Herstellers einordnen; bei unklarer Bedeutung Herstellerservice kontaktieren",
+    "Nach Instandsetzung Funktions- und ggf. Sicherheitsprüfung durchführen und Eintrag in die Gerätedokumentation (z. B. [[medizinproduktebuch|Medizinproduktebuch]]) vornehmen",
+    "Wiederkehrende oder sicherheitsrelevante Fehler auswerten; bei Vorkommnisverdacht Meldepflicht prüfen ([[vigilanz]])"
+  ],
+  "body": "## Technischer Hintergrund\n\nModerne [[medizinisches-elektrisches-geraet|ME-Geräte]] sind softwaregesteuerte Systeme mit eingebetteten Prozessoren ([[mikrocontroller]]). Ihre Software überwacht fortlaufend Hardware, Sensoren und Programmablauf. Erkennt sie eine Abweichung, löst sie eine Reaktion aus – Meldung, Alarm oder Übergang in einen sicheren Zustand – und schreibt einen Eintrag in einen nichtflüchtigen Speicher. Die Software selbst wird nach [[iec-62304]] entwickelt; die Überwachungsfunktionen leiten sich aus dem Risikomanagement nach [[iso-14971]] ab [@iec-62304][@iso-14971].\n\n### Bausteine der Fehlerdiagnose\n\n| Baustein | Inhalt | Nutzen |\n|---|---|---|\n| Selbsttest (POST) | Prüfung von Speicher, Prozessor, Sensoren und Aktoren beim Einschalten | erkennt Fehler vor der Anwendung |\n| Laufzeitüberwachung | Grenzwerte, Plausibilität, Redundanzvergleich, Watchdog | erkennt Fehler während der Therapie |\n| Fehlercode | kurze, eindeutige Kennung eines erkannten Fehlerzustands | schnelle Zuordnung über Service-Unterlagen |\n| Fehlerspeicher | Liste aufgetretener Fehler, oft mit Häufigkeit und erstem/letztem Auftreten | Erkennen sporadischer Fehler |\n| Event-Log/Ereignisprotokoll | zeitgestempelte Folge von Bedienhandlungen, Alarmen, Einstellungen und Zuständen | Rekonstruktion eines Vorfalls |\n| Betriebsdaten | Betriebsstunden, Zyklenzähler, Akkuladezyklen, Temperaturen | vorausschauende Instandhaltung |\n\n### Typische Systematik von Fehlercodes\n\nHersteller strukturieren Fehlercodes unterschiedlich; häufig enthalten sie Informationen zu:\n\n* **Baugruppe oder Subsystem** (z. B. Energieversorgung, Pneumatik, Sensorik, Steuerung),\n* **Fehlerart** (Grenzwert, Kommunikation, Selbsttest, Kalibrierung),\n* **Schweregrad** (Hinweis, Warnung, schwerer Gerätefehler mit Betriebsverbot).\n\nFür den Anwender wird meist ein Klartext angezeigt; der zugehörige Code ist für den Service bestimmt. Nach [[iec-60601-1-8]] sind gerätebezogene Störungen **technische Alarmbedingungen**, die – je nach möglichem Schaden – hohe, mittlere oder niedrige Priorität erhalten; der Ausfall einer lebenserhaltenden Funktion wird in der Regel mit hoher Priorität signalisiert. Die Zuordnung legt der Hersteller im Risikomanagement fest [@iec-60601-1-8].\n\n> [!warnung] Fehlercodes sind **herstellerspezifisch** und oft sogar modell- und softwareversionsabhängig. Gleiche Zahlen können bei verschiedenen Geräten völlig unterschiedliche Bedeutungen haben. Die Interpretation erfolgt ausschließlich mit den gültigen Service-Unterlagen; das MedTech Wiki nennt bewusst keine konkreten Codes.\n\n### Fehlerspeicher in der Vorfallanalyse\n\nNach einem Zwischenfall ist das Event-Log oft der einzige objektive Beleg für Einstellungen, Alarme und Bedienhandlungen. Voraussetzungen für die Verwertbarkeit sind eine **korrekte Systemzeit**, die Sicherung **vor** Neustart, Software-Update oder Bauteiltausch und eine nachvollziehbare Dokumentation der Auslesung. Event-Logs können personenbezogene Patientendaten enthalten; ihre Weitergabe an Hersteller muss datenschutzkonform erfolgen.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Fehler beim Selbsttest | Code und Klartext, angeschlossenes Zubehör, Umgebungsbedingungen | Zubehör prüfen, Test wiederholen; bei Fortbestehen Gerät sperren |\n| sporadischer Fehler ohne Muster | Fehlerspeicher: Häufigkeit, Zeitpunkte, Begleitereignisse | Korrelation mit Netz, Temperatur, Bewegung, EMV-Quellen |\n| Fehler nach Software-Update | Versionsstand, Konfiguration, Kompatibilität des Zubehörs | Herstellerinformation, ggf. Rücksprache mit Service |\n| Servicehinweis Wartung fällig | Betriebsstundenzähler, Wartungsplan | Wartung durchführen, Zähler nach Vorgabe zurücksetzen |\n| identischer Fehler bei mehreren Geräten | Charge, Software, Infrastruktur (Netz, Gase, Netzwerk) | systemische Ursache suchen, Hersteller informieren |\n\n> [!praxis] Ein dokumentierter Fehlercode mit Uhrzeit spart in der Instandsetzung oft mehr Zeit als jede Beschreibung. Bewährt hat sich ein Begleitzettel, auf dem das Klinikpersonal Meldungstext, Zeitpunkt und Situation notiert.\n\n## Prävention\n\n* Systemzeit der Geräte regelmäßig prüfen bzw. synchronisieren.\n* Fehlerspeicher bei [[wartung|Wartung]], [[inspektion|Inspektion]] und [[stk|STK]] auslesen und Auffälligkeiten dokumentieren ([[din-31051]] beschreibt die Instandhaltungsmaßnahmen begrifflich) [@din-31051].\n* Fehlerstatistiken im [[medizintechnik-management|Medizintechnik-Management]] auswerten, um Schwachstellen und Schulungsbedarf zu erkennen.\n* Zugriff auf Servicesoftware und Servicemodi auf befugtes Fachpersonal beschränken.\n* Bei vernetzten Geräten Log-Daten in das IT-Risikomanagement einbeziehen [@iec-80001-1].\n\n> [!hinweis] Die Bedeutung einzelner Fehlercodes, die Bedienung der Servicesoftware und die Freigabe zum Weiterbetrieb regeln ausschließlich die Service-Unterlagen und Schulungen des jeweiligen Herstellers.",
+  "related": [
+    "fehlersuche",
+    "instandsetzung",
+    "wartung",
+    "mikrocontroller",
+    "iec-62304",
+    "software-medizinprodukt",
+    "alarmsystem",
+    "iec-60601-1-8",
+    "medizinproduktebuch",
+    "vigilanz",
+    "medizintechnik-management"
+  ],
+  "sources": [
+    "iec-62304",
+    "iso-14971",
+    "iec-60601-1-8",
+    "din-31051",
+    "iec-80001-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

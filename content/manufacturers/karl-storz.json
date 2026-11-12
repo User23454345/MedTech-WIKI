@@ -1,0 +1,67 @@
+{
+  "id": "karl-storz",
+  "type": "manufacturer",
+  "title": "KARL STORZ",
+  "aliases": [
+    "Karl Storz",
+    "KARL STORZ SE & Co. KG",
+    "Storz Endoskope"
+  ],
+  "category": "hersteller",
+  "summary": "Familienunternehmen aus Tuttlingen, gegründet 1945. KARL STORZ ist einer der weltweit führenden Hersteller starrer und flexibler Endoskope, endoskopischer Videosysteme und Instrumente für nahezu alle chirurgischen Fachgebiete.",
+  "headquarters": "Tuttlingen, Deutschland",
+  "founded": "1945",
+  "website": "https://www.karlstorz.com/",
+  "productLines": [
+    {
+      "device": "endoskop",
+      "models": [],
+      "note": "Flexible Endoskope u. a. für Urologie, HNO und Pneumologie; Schwerpunkt des Portfolios sind starre Optiken mit HOPKINS-Stablinsensystem."
+    },
+    {
+      "device": "videolaryngoskop",
+      "models": [
+        "C-MAC"
+      ]
+    },
+    {
+      "device": "insufflator",
+      "models": [
+        "ENDOFLATOR"
+      ]
+    },
+    {
+      "device": "hf-chirurgiegeraet",
+      "models": [
+        "AUTOCON III 400"
+      ]
+    },
+    {
+      "device": "op-mikroskop",
+      "models": [
+        "VITOM"
+      ],
+      "note": "Exoskop-System als Alternative zum klassischen Operationsmikroskop."
+    }
+  ],
+  "body": "## Überblick\n\nKARL STORZ mit Sitz in Tuttlingen ist ein familiengeführtes Unternehmen, das sich auf die **Endoskopie** spezialisiert hat. Das Portfolio reicht von starren Optiken über Kamerasysteme und Lichtquellen bis zu Insufflation, HF-Chirurgie und vernetzten OP-Lösungen [@hst-karl-storz].\n\n## Geschichte in Stichpunkten\n\n* **1945** – Karl Storz gründet das Unternehmen in Tuttlingen; anfangs Instrumente, Stirnlampen und Lupenbrillen für die [[hno-heilkunde|HNO-Heilkunde]] [@hst-karl-storz-history].\n* **1965** – Einführung des **HOPKINS-Stablinsensystems** in Zusammenarbeit mit dem britischen Physiker Harold H. Hopkins [@hst-karl-storz-history].\n* **1996** – Nach dem Tod des Gründers übernimmt seine Tochter Sybill Storz die Leitung.\n* **Ende der 2010er-Jahre** – Übergang der Unternehmensführung an die dritte Generation (Karl-Christian Storz).\n\n## Das HOPKINS-Stablinsensystem\n\nKlassische starre Endoskope übertrugen das Bild über viele dünne Linsen mit dazwischenliegenden Luftstrecken. Hopkins kehrte das Prinzip um: lange **Glasstäbe** übernehmen die Funktion des optischen Mediums, die dünnen Luftspalte wirken als Linsen. Ergebnis sind ein höherer Lichtdurchsatz, besserer Kontrast und ein größeres Bildfeld bei gleichem Durchmesser (siehe [[optik]]).\n\n> [!vereinfacht] Der Lichtleitwert (Étendue) eines optischen Kanals wächst mit dem Quadrat des Brechungsindex des Mediums. Mit Glas (n ≈ 1,5) statt Luft (n = 1) kann ein Stab gleichen Durchmessers daher grob das Doppelte an Licht übertragen; zusätzlich verringern weniger Glas-Luft-Grenzflächen und vergütete Oberflächen Reflexionsverluste und Streulicht.\n\n## Geschäftsbereiche\n\n| Bereich | Beispiele | Wiki-Geräte |\n|---|---|---|\n| Starre und flexible Endoskopie | Optiken, Videoendoskope, Lichtquellen | [[endoskop]] |\n| Bildgebung | modulare Kameraplattform IMAGE1 S (Full HD/4K, 2D/3D, Fluoreszenz) | – |\n| Laparoskopie-Peripherie | Insufflation, Spül-/Saugsysteme, HF-Chirurgie | [[insufflator]], [[hf-chirurgiegeraet]] |\n| Atemwegsmanagement | Videolaryngoskopie | [[videolaryngoskop]] |\n| Visualisierung in der offenen Chirurgie | Exoskop | [[op-mikroskop]] |\n\n## Bedeutung für die Medizintechnik\n\nKARL STORZ prägt die [[chirurgie|minimalinvasive Chirurgie]], Urologie, Gynäkologie und HNO-Heilkunde. Für Medizintechniker:innen relevant sind die Systemprüfung kompletter Endoskopietürme ([[elektrische-sicherheitspruefung]] nach [[iec-62353|IEC 62353]] [@iec-62353]), die [[aufbereitung]] und [[sterilisation]] starrer Optiken sowie die Prüfung von Lichtleitkabeln und Optiken auf Bruch und Transmissionsverlust.\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "endoskop",
+    "insufflator",
+    "videolaryngoskop",
+    "hf-chirurgiegeraet",
+    "optik",
+    "aufbereitung",
+    "chirurgie",
+    "hno-heilkunde",
+    "olympus",
+    "stryker"
+  ],
+  "sources": [
+    "hst-karl-storz",
+    "hst-karl-storz-history",
+    "iec-62353"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

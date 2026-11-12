@@ -1,0 +1,60 @@
+{
+  "id": "funktionspruefung",
+  "type": "term",
+  "title": "Funktionsprüfung",
+  "aliases": [
+    "Funktionskontrolle",
+    "Funktionstest",
+    "Functional test",
+    "Performance verification",
+    "Performance test",
+    "Funktionsprüfung am Betriebsort",
+    "Leistungsprüfung"
+  ],
+  "category": "stk-mtk",
+  "summary": "Die Funktionsprüfung stellt fest, ob ein Medizinprodukt seine sicherheitsrelevanten Funktionen und wesentlichen Leistungsmerkmale erfüllt – etwa Förderrate, abgegebene Energie, Beatmungsdruck oder Alarmauslösung. Sie ist Teil der STK und jeder Prüfung nach Instandsetzung und ist für Anlage-1-Produkte vor der ersten Inbetriebnahme am Betriebsort vorgeschrieben.",
+  "body": "## Begriff\n\nEine **Funktionsprüfung** stellt fest, ob ein Gerät die Funktionen erfüllt, für die es bestimmt ist – insbesondere jene, deren Ausfall oder Abweichung zu einer Gefährdung führen kann. In der [[iec-60601-1|IEC 60601-1]] heißen diese Eigenschaften **wesentliche Leistungsmerkmale** (*essential performance*): Leistungsmerkmale, deren Verlust oder Beeinträchtigung zu einem unvertretbaren Risiko führen würde [@iec-60601-1]. Bei einer [[infusionspumpe|Infusionspumpe]] ist das etwa die Genauigkeit der Förderrate, bei einem [[defibrillator|Defibrillator]] die abgegebene Energie.\n\nDer Begriff wird in drei Zusammenhängen verwendet:\n\n| Zusammenhang | Wer prüft? | Rechtsgrundlage |\n|---|---|---|\n| Funktionsprüfung am Betriebsort vor der ersten Inbetriebnahme (Anlage-1-Produkte) | Hersteller oder von ihm befugte Person | [[mpbetreibv|MPBetreibV]] [@mpbetreibv] |\n| Funktionsprüfung als Teil der [[stk|STK]] und nach [[instandsetzung|Instandsetzung]] | Medizintechnik, Service, Prüfdienstleister | MPBetreibV, [[iec-62353]] [@iec-62353] |\n| Prüfung vor der Anwendung (Selbsttest, Sicht- und Alarmkontrolle) | Anwender | MPBetreibV, Gebrauchsanweisung |\n\n## Funktionsprüfung bei der ersten Inbetriebnahme\n\n> [!belegt] Medizinprodukte nach Anlage 1 der MPBetreibV darf der Betreiber erst betreiben, wenn der Hersteller oder eine dazu befugte Person das Produkt am Betriebsort einer **Funktionsprüfung** unterzogen und die vom Betreiber beauftragte Person in die sachgerechte Handhabung **eingewiesen** hat [@mpbetreibv].\n\nDiese Prüfung stellt sicher, dass das Gerät nach Transport, Aufstellung und Anschluss an die Infrastruktur (Strom, medizinische Gase, Wasser, Netzwerk) bestimmungsgemäß funktioniert. Sie ist eng mit der [[einweisung|Einweisung]] verknüpft und wird im [[medizinproduktebuch|Medizinproduktebuch]] dokumentiert.\n\n## Funktionsprüfung in STK und nach Instandsetzung\n\nDie [[iec-62353]] verlangt nach den elektrischen Messungen eine Prüfung der Funktion nach Herstellerangaben [@iec-62353]. Der Umfang ergibt sich aus Servicehandbuch und Prüfanweisung des Herstellers. Nach einer Instandsetzung werden vorrangig die Funktionen geprüft, die von der Reparatur betroffen sein können.\n\n### Typische Prüfpunkte\n\n| Gerät | Typische Prüfungen | Prüfmittel |\n|---|---|---|\n| [[beatmungsgeraet]] | abgegebenes Volumen, Drücke, PEEP, O₂-Konzentration, Atemwegs- und Diskonnektionsalarme | Testlunge, Gasflow-Analysator |\n| [[defibrillator]] | abgegebene Energie an 50 Ω, Ladezeit, Synchronisation, ggf. Schrittmacherfunktion | Defibrillator-Analysator |\n| [[infusionspumpe]], [[spritzenpumpe]] | Förderrate, Bolusvolumen, Okklusionsdruck und -alarm, Luftdetektion | Infusionspumpen-Analysator |\n| [[hf-chirurgiegeraet]] | Ausgangsleistung an Lastwiderständen, Überwachung der Neutralelektrode, HF-Ableitstrom | HF-Analysator |\n| [[patientenmonitor]] | EKG-, NIBP-, SpO₂-, Temperatur- und Druckkanäle, Alarmgrenzen | Patientensimulator |\n| [[inkubator]] | Lufttemperatur, Übertemperatur- und Stromausfallalarm, Luftfeuchte | Temperaturmesssystem |\n| [[dialysegeraet]] | Leitfähigkeit, Temperatur, Blutleck- und Luftdetektor, Ultrafiltration | Leitfähigkeits- und Temperaturmessgerät |\n\nDie passenden Messgeräte beschreibt der Artikel [[pruefgeraete]].\n\n### Bewertung\n\nFür Mengen- und Raten-Funktionen wird die relative Abweichung berechnet:\n\nδ = (x_ist − x_soll) / x_soll · 100 %\n\nSie wird mit der vom Hersteller spezifizierten Genauigkeit verglichen.\n\n> [!beispiel] Eine [[spritzenpumpe|Spritzenpumpe]] soll 10 ml/h fördern. Der Analysator ermittelt über 60 Minuten 9,72 ml, also δ = (9,72 − 10) / 10 · 100 % = −2,8 %. Liegt die Herstellerspezifikation bei ±5 %, ist die Prüfung bestanden. Die Zahlen sind beispielhaft.\n\n> [!belegt] Für Defibrillatoren legt die Gerätenorm Anforderungen an die Genauigkeit der abgegebenen Energie an einem 50-Ω-Lastwiderstand fest; die Funktionsprüfung prüft deshalb bei mehreren Energiestufen gegen einen Analysator mit dieser Last [@iec-60601-2-4]. Für HF-Chirurgiegeräte nennt die Gerätenorm Anforderungen an die Ausgangsleistung über definierten Lastwiderständen [@iec-60601-2-2].\n\n## Alarme\n\nAlarme sind bei vielen Geräten das wichtigste Sicherheitsmerkmal. Die Funktionsprüfung umfasst daher das gezielte Auslösen der relevanten Alarmbedingungen – akustisch und optisch, mit korrekter Priorität – im Sinne der [[iec-60601-1-8]] [@iec-60601-1-8]. Bei einem [[beatmungsgeraet|Beatmungsgerät]] wird z. B. die Diskonnektion durch Abziehen der Testlunge und der hohe Atemwegsdruck durch Abklemmen des Schlauchsystems provoziert; der Druckalarm hängt dabei an der [[druckmessung|Druckmessung]] und deren [[drucksensor|Drucksensor]] [@iso-80601-2-12]. Siehe auch [[alarmsystem]], [[diskonnektion]] und [[atemwegsdruck-hoch]].\n\n> [!praxis] Alarmprüfungen sollten auch die Weiterleitung umfassen, wenn Geräte an eine Zentrale oder ein Alarmierungssystem angebunden sind. Ein lokal korrekt ausgelöster Alarm, der auf der Zentrale nicht ankommt, ist ein Sicherheitsrisiko.\n\n## Selbsttests und Prüfung vor der Anwendung\n\nViele moderne Geräte führen beim Einschalten **Selbsttests** durch – etwa Prüfung von Speicher, Prozessor, [[lithium-ionen-akku|Akku]], Sensoren und Dichtheit des Schlauchsystems. Diese ersetzen die Funktionsprüfung durch Fachpersonal nicht, unterstützen aber die Pflicht der Anwender, sich vor der Anwendung vom ordnungsgemäßen Zustand zu überzeugen [@mpbetreibv]. Ein fehlgeschlagener Selbsttest muss zur Außerbetriebnahme und zur [[fehlersuche|Fehlersuche]] führen; Fehlermeldungen sind anhand der Herstellerunterlagen zu interpretieren (siehe [[fehlercodes]]).\n\n> [!vereinfacht] Die elektrische Sicherheitsprüfung beantwortet „Kann das Gerät jemanden elektrisch gefährden?“, die Funktionsprüfung „Tut das Gerät, was es soll – und warnt es, wenn nicht?“. Erst beide zusammen ergeben die Aussage der [[stk|STK]].\n\n## Bedeutung in der Medizintechnik\n\nDie Funktionsprüfung ist das Bindeglied zwischen Technik und klinischer Wirkung. Sie macht Verschleiß sichtbar, der elektrisch unauffällig bleibt – etwa nachlassende Leistung einer [[turbine]] im Beatmungsgerät, gealterte [[sauerstoffsensor|Sauerstoffsensoren]], verschlissene Pumpensegmente einer [[peristaltikpumpe]] oder einen schwächer werdenden Kondensator im Defibrillator. Zusammen mit [[wartung]] und [[mtk]] bildet sie den Kern der präventiven Instandhaltung.",
+  "related": [
+    "stk",
+    "elektrische-sicherheitspruefung",
+    "pruefgeraete",
+    "einweisung",
+    "alarmsystem",
+    "instandsetzung",
+    "wartung",
+    "betreiberpflichten",
+    "mtk",
+    "fehlersuche",
+    "iec-60601-1"
+  ],
+  "paths": [
+    [
+      "stk",
+      "funktionspruefung",
+      "pruefgeraete"
+    ],
+    [
+      "beatmungsgeraet",
+      "funktionspruefung",
+      "alarmsystem",
+      "druckmessung"
+    ],
+    [
+      "einweisung",
+      "funktionspruefung",
+      "betreiberpflichten"
+    ]
+  ],
+  "sources": [
+    "mpbetreibv",
+    "iec-62353",
+    "iec-60601-1",
+    "iec-60601-2-4",
+    "iec-60601-2-2",
+    "iec-60601-1-8",
+    "iso-80601-2-12",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

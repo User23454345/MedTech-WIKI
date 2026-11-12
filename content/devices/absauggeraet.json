@@ -1,0 +1,64 @@
+{
+  "id": "absauggeraet",
+  "type": "device",
+  "title": "Medizinisches Absauggerät",
+  "aliases": [
+    "Sekretabsaugung",
+    "Absaugpumpe",
+    "Vakuumabsaugung",
+    "Suction unit"
+  ],
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 32,
+  "domains": [
+    "intensivmedizin",
+    "notfallmedizin",
+    "anaesthesiologie",
+    "chirurgie"
+  ],
+  "summary": "Medizinische Absauggeräte erzeugen einen regelbaren Unterdruck, um Sekrete, Blut, Spülflüssigkeit oder Luft aus Atemwegen, Körperhöhlen und Wunden zu entfernen. Es gibt netz- und akkubetriebene Geräte mit eigener Vakuumpumpe sowie Regler für die zentrale Vakuumversorgung.",
+  "sections": {
+    "purpose": "Absauggeräte halten die Atemwege frei (z. B. bei Bewusstlosigkeit, Erbrechen, Intubation oder [[beatmungsgeraet|maschineller Beatmung]]), räumen das Operationsfeld von Blut und Spülflüssigkeit und dienen mit niedrigem, konstantem Sog der Thoraxdrainage. Im Rettungsdienst gehören tragbare Absaugpumpen zur Pflichtausstattung, in der Klinik ist an jedem Intensiv- und Narkosebettplatz eine Absaugung vorhanden.",
+    "principle": "## Unterdruckerzeugung\n\nDer Sog entsteht als Differenz zum Umgebungs[[druck]] und wird in kPa, mbar oder mmHg angegeben. Drei Prinzipien sind üblich [@iso-10079-1]:\n\n| Prinzip | Funktionsweise |\n|---|---|\n| Elektrische Pumpe | Membran-, Kolben- oder Drehschieberpumpe, angetrieben von einem [[elektromotor]]; netz- oder akkubetrieben ([[lithium-ionen-akku]]) |\n| Zentrale Vakuumversorgung | Wandanschluss der Gasversorgung, Sog über einen einstellbaren Vakuumregler mit Manometer |\n| Injektor (Venturi) | Druckgas (Sauerstoff oder Druckluft) strömt durch eine Düse und erzeugt nach dem Bernoulli-Prinzip einen Unterdruck ([[stroemungslehre]]) |\n\nEin Regelventil oder eine Drehzahlregelung begrenzt den maximalen Unterdruck; ein Manometer bzw. [[drucksensor]] zeigt ihn an. Die Saugleistung (Volumenstrom in l/min) hängt von Pumpe, Schlauchquerschnitt und Katheter ab.\n\n## Sekretmanagement und Schutz\n\nZwischen Patient und Pumpe liegt ein Sekretbehälter (Mehrweg-Glas/Kunststoff oder Einweg-Beutel). Ein Überlaufschutz (Schwimmerventil) und ein hydrophober Bakterienfilter verhindern, dass Flüssigkeit und Keime in die Pumpe oder die zentrale Vakuumleitung gelangen.\n\n> [!warnung] Zu hoher Sog kann Schleimhäute verletzen; insbesondere bei Neugeborenen, Kindern und Thoraxdrainagen sind niedrige, ärztlich festgelegte Unterdrücke einzustellen.\n\n> [!praxis] Ein ausgelöster Überlaufschutz oder ein feuchter Filter ist eine häufige Ursache für „keinen Sog“ – Filter sind nach Herstellerangabe zu wechseln, die Geräte nach Gebrauch [[aufbereitung|aufzubereiten]]."
+  },
+  "manufacturers": [
+    {
+      "ref": "weinmann",
+      "models": [
+        "ACCUVAC"
+      ],
+      "note": "Tragbare Absaugpumpen für den Rettungsdienst."
+    },
+    {
+      "ref": "draeger",
+      "models": [],
+      "note": "Vakuumregler und Absaugzubehör für die zentrale Gasversorgung."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Prüfungen nach Herstellerangabe (Endvakuum, Saugleistung, Dichtheit, Überlaufschutz, Filterwechsel, Akkuzustand); elektrische Wiederholungsprüfung nach IEC 62353 bzw. DGUV Vorschrift 3 gemäß Gefährdungsbeurteilung; tägliche Funktionskontrolle am Bettplatz bzw. im Fahrzeug."
+  },
+  "related": [
+    "druck",
+    "stroemungslehre",
+    "beatmungsgeraet",
+    "npwt-geraet",
+    "aufbereitung",
+    "funktionspruefung"
+  ],
+  "sources": [
+    "iso-10079-1",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

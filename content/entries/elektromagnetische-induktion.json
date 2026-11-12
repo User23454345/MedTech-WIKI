@@ -1,0 +1,175 @@
+{
+  "id": "elektromagnetische-induktion",
+  "type": "term",
+  "title": "Elektromagnetische Induktion",
+  "aliases": [
+    "Induktion",
+    "Faraday’sches Induktionsgesetz",
+    "Induktionsgesetz",
+    "Lenz’sche Regel",
+    "Selbstinduktion",
+    "Gegeninduktion",
+    "Gegen-EMK",
+    "Back-EMF",
+    "Wirbelströme",
+    "electromagnetic induction",
+    "Induktivität"
+  ],
+  "category": "physik",
+  "summary": "Elektromagnetische Induktion ist die Entstehung einer elektrischen Spannung durch einen sich zeitlich ändernden magnetischen Fluss. Sie ist Arbeitsprinzip von Transformatoren, Elektromotoren und Generatoren, liefert das Signal im MRT und die Gegen-EMK zur Drehzahlerfassung von BLDC-Motoren, verursacht aber auch Wirbelströme, Spannungsspitzen und Störeinkopplungen.",
+  "body": "## Das Induktionsgesetz\n\nMichael Faraday zeigte 1831, dass in einem Leiter eine Spannung entsteht, wenn sich das ihn durchsetzende Magnetfeld ändert [@faraday-1832]. Für eine Spule mit N Windungen gilt das **Faraday’sche Induktionsgesetz**:\n\n`u_ind = −N · dΦ/dt`   mit   `Φ = B · A · cos φ`\n\nΦ ist der **magnetische Fluss** (Einheit Weber, Wb = V·s), B die magnetische Flussdichte (Tesla), A die durchsetzte Fläche und φ der Winkel zwischen Feld und Flächennormale. Eine Spannung entsteht also immer dann, wenn sich **B**, **A** oder **φ** zeitlich ändern [@tipler-2019].\n\nDas Minuszeichen drückt die **Lenz’sche Regel** aus: Der induzierte Strom ist so gerichtet, dass sein eigenes Magnetfeld der Ursache entgegenwirkt. Das ist eine Folge der Energieerhaltung.\n\n### Bewegungsinduktion\n\nBewegt sich ein Leiter der Länge l mit der Geschwindigkeit v senkrecht durch ein Feld B, entsteht\n\n`u_ind = B · l · v`\n\nDieses Prinzip nutzen Generatoren und elektromagnetische Durchflussmesser.\n\n## Selbst- und Gegeninduktion\n\nÄndert sich der Strom in einer Spule, ändert sich ihr eigenes Feld – und damit wird in ihr selbst eine Spannung induziert:\n\n`u_L = L · di/dt`\n\nL ist die **Induktivität** (Henry, H = V·s/A). Eine Spule „wehrt sich“ gegen schnelle Stromänderungen. Sind zwei Spulen magnetisch gekoppelt, induziert die Stromänderung der einen eine Spannung in der anderen (**Gegeninduktivität** M) – das Prinzip des [[transformator|Transformators]]:\n\n`u₂ / u₁ ≈ N₂ / N₁`   (idealer Transformator)\n\n> [!beispiel] Wird ein [[magnetventil|Magnetventil]] mit L = 50 mH und 0,2 A in 10 µs abgeschaltet, ergäbe sich rechnerisch u = 0,05 H · 0,2 A / 10⁻⁵ s = 1000 V. Deshalb liegt parallel zur Spule eine **Freilaufdiode**, die den Strom langsam abklingen lässt und die Treiberelektronik schützt.\n\n## Wirbelströme\n\nIn massiven Leitern induziert ein veränderliches Feld kreisförmige **Wirbelströme**. Sie erwärmen das Material ([[joulesche-waerme|Joule’sche Wärme]]) und erzeugen ein Gegenfeld. Deshalb bestehen Transformator- und Motorkerne aus gegeneinander isolierten Blechen oder Ferrit. In der Medizintechnik treten Wirbelströme an mehreren Stellen auf:\n\n* In den Metallstrukturen eines [[mrt|MRT]] beim Schalten der [[gradientenspule|Gradienten]] (Bildartefakte, Kompensation durch Vorverzerrung und aktiv abgeschirmte Gradientenspulen).\n* In leitfähigen Implantaten oder Kabeln im MRT – Erwärmungsrisiko.\n* Nutzbringend bei Wirbelstrombremsen und induktiver Erwärmung.\n\n## Induktion im Elektromotor: Gegen-EMK\n\nJeder [[elektromotor|Elektromotor]] ist zugleich ein Generator. Dreht sich der Rotor, induzieren seine Magnete in den Statorwicklungen eine Spannung, die **Gegen-EMK** (Back-EMF):\n\n`u_EMK = k_e · ω`\n\nSie ist proportional zur Winkelgeschwindigkeit ω; k_e ist die Spannungskonstante des Motors. Für Elektromotoren gilt näherungsweise\n\n`U = R · I + k_e · ω`\n\nMit zunehmender Drehzahl wächst die Gegenspannung und begrenzt den Strom – daraus ergibt sich die Leerlaufdrehzahl [@hughes-drury-2019].\n\n> [!praxis] Bürstenlose Motoren ([[bldc-motor|BLDC]]) in der [[turbine|Turbine]] eines [[beatmungsgeraet|Beatmungsgeräts]] werden entweder über [[hall-sensor|Hall-Sensoren]] oder **sensorlos** kommutiert: Die Elektronik misst die Gegen-EMK in der gerade unbestromten Phase, erkennt ihren Nulldurchgang und berechnet daraus Rotorlage und Drehzahl. Diese Information ist der Istwert der [[drehzahlregelung|Drehzahlregelung]], die ihrerseits über den [[druckmessung|gemessenen Druck]] geführt wird.\n\n## Messprinzipien auf Induktionsbasis\n\n| Prinzip | physikalische Grundlage | Beispiel |\n|---|---|---|\n| MR-Signalempfang | präzedierende Magnetisierung induziert Spannung in Spule | [[hf-spule]] im [[mrt]] ([[kernspinresonanz]]) |\n| Elektromagnetische Durchflussmessung | leitfähige Flüssigkeit bewegt sich im Magnetfeld, u = B · d · v | Blutflussmessung (historisch/Labor), Wasseraufbereitung |\n| Induktive Wegaufnehmer, Drehgeber | Änderung der Kopplung zwischen Spulen | Positionserfassung in Antrieben |\n| Gegen-EMK-Messung | u_EMK ∝ ω | Drehzahlerfassung an [[bldc-motor|BLDC-Motoren]] |\n| Induktive Energie- und Datenübertragung | Gegeninduktion zweier Spulen durch die Haut | [[cochlea-implantat]], Nahfeld-Telemetrie über Programmierköpfe bei aktiven Implantaten (neuere Systeme zusätzlich mit Funkübertragung) |\n\n> [!vereinfacht] Bei der transkutanen Übertragung ist die Kopplung zweier Spulen schwach und abstandsabhängig. Reale Systeme arbeiten mit Resonanzkreisen, um trotzdem genug Energie zu übertragen.\n\n## Induktion als Störquelle\n\nJede Leiterschleife, die von einem veränderlichen Magnetfeld durchsetzt wird, wirkt als Empfangsantenne. Die induzierte Spannung wächst mit der eingeschlossenen Fläche und der Änderungsgeschwindigkeit des Feldes:\n\n* **Netzbrumm:** Magnetfelder von Netzleitungen und Transformatoren induzieren 50-Hz-Störungen in Messleitungen ([[netzstoerung]]). Gegenmaßnahme: Leitungen verdrillen, Schleifenflächen klein halten.\n* **EMV:** Schaltvorgänge in Motoren und Netzteilen erzeugen schnelle Feldänderungen ([[emv]], [[iec-60601-1-2]]).\n* **MRT:** Gradientenfelder induzieren Spannungen in Elektrodenkabeln – EKG-Artefakte und Verbrennungsgefahr bei Kabelschleifen.\n\n## Anwendung in Geräten\n\n* [[transformator]] und [[medizinisches-netzteil|medizinische Netzteile]] – Spannungsanpassung und [[galvanische-trennung]].\n* [[hochspannungserzeugung]] für die [[roentgenroehre]] (Hochfrequenz-Generator mit Hochspannungstransformator).\n* [[elektromotor|Elektromotoren]] in [[turbine|Turbinen]], [[peristaltikpumpe|Peristaltikpumpen]] und [[spindelantrieb|Spindelantrieben]].\n* [[mrt]] – Signalempfang und Gradiententechnik.\n* [[defibrillator]] – ältere monophasische Geräte mit gedämpfter Sinuskurvenform (Kondensatorentladung über einen RLC-Kreis) nutzten eine Induktivität zur Impulsformung; heutige biphasische Geräte formen den Impuls elektronisch über Halbleiterschalter.\n\n## Bedeutung in der Medizintechnik\n\nInduktion verbindet die Kette **[[beatmungsgeraet|Beatmungsgerät]] → [[turbine|Turbine]] → [[elektromotor|Elektromotor]] → [[elektrotechnik|Elektrotechnik]] → [[drehzahlregelung|Drehzahlregelung]] → [[sensorik|Sensorik]] → [[druckmessung|Druckmessung]]**: Ohne Induktion gäbe es weder Drehmoment im Motor noch den Gegen-EMK-Istwert für den Drehzahlregler; der übergeordnete Druckregler vergleicht den gemessenen Atemwegsdruck mit dem Sollwert und gibt die Solldrehzahl vor. Gleichzeitig erklärt sie viele Fehlerbilder, etwa Spannungsspitzen beim Abschalten von Spulen oder Störungen auf Biosignalleitungen.\n\n> [!belegt] Die induzierte Spannung ist proportional zur zeitlichen Änderung des magnetischen Flusses; ihr Strom wirkt der Änderung entgegen (Faraday, Lenz) [@tipler-2019].",
+  "related": [
+    "transformator",
+    "elektromotor",
+    "bldc-motor",
+    "drehzahlregelung",
+    "hall-sensor",
+    "magnetventil",
+    "mrt",
+    "kernspinresonanz",
+    "emv",
+    "netzstoerung",
+    "joulesche-waerme",
+    "turbine"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "bldc-motor",
+      "elektromagnetische-induktion",
+      "drehzahlregelung",
+      "druckmessung"
+    ],
+    [
+      "mrt",
+      "hf-spule",
+      "elektromagnetische-induktion"
+    ],
+    [
+      "medizinisches-netzteil",
+      "transformator",
+      "elektromagnetische-induktion",
+      "galvanische-trennung"
+    ]
+  ],
+  "sources": [
+    "faraday-1832",
+    "tipler-2019",
+    "hughes-drury-2019",
+    "fischer-nolle-elektrische-maschinen-2022",
+    "iec-60601-1-2"
+  ],
+  "diagram": {
+    "title": "Gegen-EMK als Drehzahl-Istwert im Turbinenantrieb",
+    "caption": "Induktion im BLDC-Motor liefert Drehmoment und zugleich das Messsignal für die Drehzahlregelung (vereinfacht).",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "reg",
+        "label": "Drehzahlregler",
+        "ref": "drehzahlregelung",
+        "kind": "control",
+        "x": 100,
+        "y": 80
+      },
+      {
+        "id": "pwm",
+        "label": "Endstufe / PWM",
+        "ref": "pwm",
+        "kind": "process",
+        "x": 310,
+        "y": 80
+      },
+      {
+        "id": "mot",
+        "label": "BLDC-Motor\n(Statorwicklung)",
+        "ref": "bldc-motor",
+        "kind": "actuator",
+        "x": 520,
+        "y": 80
+      },
+      {
+        "id": "tur",
+        "label": "Turbine",
+        "ref": "turbine",
+        "kind": "actuator",
+        "x": 740,
+        "y": 80
+      },
+      {
+        "id": "emk",
+        "label": "Gegen-EMK\nu = kₑ · ω",
+        "ref": "elektromagnetische-induktion",
+        "kind": "sensor",
+        "x": 520,
+        "y": 220
+      },
+      {
+        "id": "p",
+        "label": "Druckmessung",
+        "ref": "druckmessung",
+        "kind": "sensor",
+        "x": 740,
+        "y": 220
+      },
+      {
+        "id": "auswert",
+        "label": "Nulldurchgangs-\nerkennung",
+        "ref": "mikrocontroller",
+        "kind": "process",
+        "x": 310,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "reg",
+        "to": "pwm",
+        "kind": "signal",
+        "label": "Stellgröße"
+      },
+      {
+        "from": "pwm",
+        "to": "mot",
+        "kind": "power"
+      },
+      {
+        "from": "mot",
+        "to": "tur",
+        "kind": "energy",
+        "label": "Drehmoment"
+      },
+      {
+        "from": "mot",
+        "to": "emk",
+        "kind": "signal"
+      },
+      {
+        "from": "emk",
+        "to": "auswert",
+        "kind": "signal"
+      },
+      {
+        "from": "auswert",
+        "to": "reg",
+        "kind": "data",
+        "label": "Istdrehzahl"
+      },
+      {
+        "from": "tur",
+        "to": "p",
+        "kind": "gas"
+      },
+      {
+        "from": "p",
+        "to": "reg",
+        "kind": "data",
+        "label": "Druck-Istwert"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,166 @@
+{
+  "id": "blutkreislauf",
+  "type": "term",
+  "title": "Blutkreislauf",
+  "aliases": [
+    "Kreislauf",
+    "Herz-Kreislauf-System",
+    "kardiovaskuläres System",
+    "circulatory system",
+    "Körperkreislauf",
+    "Lungenkreislauf",
+    "Hämodynamik",
+    "Hochdrucksystem",
+    "Niederdrucksystem"
+  ],
+  "category": "anatomie",
+  "summary": "Geschlossenes Gefäßsystem aus Körper- und Lungenkreislauf, in dem das Herz das Blut zu den Organen und zurück pumpt. Druck, Fluss und Widerstand folgen vereinfacht einem Ohmschen Gesetz und bilden die Grundlage für Druckmessung, Doppler-Diagnostik und extrakorporale Kreisläufe.",
+  "body": "## Überblick\n\nDer **Blutkreislauf** ist ein geschlossenes Röhrensystem, in dem das [[herz|Herz]] das [[blut|Blut]] zu allen Organen und zurück pumpt. Er transportiert Sauerstoff, Kohlendioxid, Nährstoffe, Stoffwechselprodukte, Hormone und Wärme. Ein Erwachsener besitzt rund 70 ml Blut pro kg Körpergewicht, also etwa 5 l; in Ruhe wird dieses Volumen ungefähr einmal pro Minute umgewälzt [@schmidt-lang-2019] [@guyton-2021].\n\n## Aufbau: zwei Kreisläufe in Serie\n\n| Kreislauf | Pumpe | Weg | Aufgabe |\n|---|---|---|---|\n| Körperkreislauf (großer Kreislauf) | linker Ventrikel | Aorta → Arterien → Arteriolen → Kapillaren → Venolen → Venen → Hohlvenen → rechter Vorhof | Versorgung aller Organe |\n| Lungenkreislauf (kleiner Kreislauf) | rechter Ventrikel | Truncus pulmonalis → Lungenkapillaren → Lungenvenen → linker Vorhof | [[gasaustausch|Gasaustausch]] in der [[lunge|Lunge]] |\n\nDa beide Kreisläufe hintereinander geschaltet sind, müssen rechter und linker Ventrikel im zeitlichen Mittel dasselbe Volumen fördern. Die Organe des Körperkreislaufs sind dagegen überwiegend **parallel** geschaltet; das ermöglicht eine bedarfsgerechte Verteilung des Herzzeitvolumens.\n\n### Hoch- und Niederdrucksystem\n\n* **Hochdrucksystem:** linker Ventrikel in der Systole, Aorta und Arterien bis zu den Arteriolen. Hier herrscht der arterielle [[blutdruck|Blutdruck]] von typischerweise etwa 120/80 mmHg.\n* **Niederdrucksystem:** Kapillaren, Venen, rechtes Herz, Lungenkreislauf und linker Vorhof. Es enthält den weitaus größten Teil des Blutvolumens (rund 85 %) und dient als Volumenspeicher [@schmidt-lang-2019].\n\n## Hämodynamik\n\n### Ohmsches Gesetz des Kreislaufs\n\nAnalog zum elektrischen Stromkreis (siehe [[spannung-strom-widerstand]]) gilt für den Kreislauf:\n\n`Δp = Q · R`  bzw.  `TPR = (MAP − ZVD) / HZV`\n\nmit Druckdifferenz Δp, Volumenstrom Q, Strömungswiderstand R, totalem peripherem Widerstand (TPR), mittlerem arteriellem Druck (MAP) und zentralvenösem Druck (ZVD).\n\n> [!beispiel] MAP = 93 mmHg, ZVD = 3 mmHg, HZV = 5 l/min → TPR = 90 mmHg / 5 l/min = 18 mmHg·min/l. In der Einheit dyn·s·cm⁻⁵ (Faktor 80) entspricht das 1440 dyn·s·cm⁻⁵. Die Zahlen sind Beispielwerte zur Veranschaulichung.\n\n### Gesetz von Hagen-Poiseuille\n\nFür laminare Strömung einer newtonschen Flüssigkeit durch ein starres Rohr gilt (siehe [[stroemungslehre]]):\n\n`Q = (π · r⁴ · Δp) / (8 · η · l)`  ⇒  `R = 8 · η · l / (π · r⁴)`\n\nDer Widerstand hängt von der **vierten Potenz des Radius** ab: Halbiert sich der Radius, steigt der Widerstand auf das 16-Fache. Deshalb regulieren die Arteriolen als „Widerstandsgefäße“ mit geringen Durchmesseränderungen die Durchblutung.\n\n> [!vereinfacht] Blut ist eine nicht-newtonsche Suspension (Viskosität abhängig von Hämatokrit und Schergeschwindigkeit), Gefäße sind elastisch und die Strömung ist pulsatil. Hagen-Poiseuille beschreibt daher nur Tendenzen, nicht exakte Werte [@guyton-2021].\n\n### Kontinuitätsgleichung und Strömungsgeschwindigkeit\n\nDer Volumenstrom ist in jedem Querschnitt des Gefäßbaums gleich: `Q = A · v`. Weil der Gesamtquerschnitt aller Kapillaren rund tausendmal größer ist als der Aortenquerschnitt, sinkt die mittlere Geschwindigkeit von Größenordnung 20–30 cm/s in der Aorta auf etwa 0,3 mm/s in den Kapillaren – lange Kontaktzeit für den Stoffaustausch.\n\n### Laminar und turbulent\n\nOb eine Strömung turbulent wird, beschreibt die Reynolds-Zahl `Re = ρ · v · d / η`. In den meisten Gefäßen ist die Strömung laminar; Turbulenzen treten an Stenosen, Klappenfehlern und bei hohen Geschwindigkeiten in der Aorta auf. Sie erzeugen Geräusche (z. B. Korotkoff-Geräusche bei der auskultatorischen Blutdruckmessung) und lassen sich im Farbdoppler darstellen (siehe [[doppler-effekt]]).\n\n### Windkesselfunktion\n\nDie elastische Aorta speichert während der Systole einen Teil des Schlagvolumens und gibt ihn in der Diastole ab. Dadurch wird der stoßweise Auswurf in einen kontinuierlicheren Fluss umgewandelt. Mit zunehmendem Alter nimmt die Dehnbarkeit (Compliance) ab; systolischer Druck und Pulsdruck steigen.\n\n## Verteilung des Herzzeitvolumens\n\n| Organ | Anteil am Ruhe-HZV (Größenordnung) |\n|---|---|\n| Gehirn | ca. 15 % |\n| Herzmuskel (Koronarien) | ca. 5 % |\n| Nieren | ca. 20 % |\n| Magen-Darm-Trakt und Leber | ca. 25 % |\n| Skelettmuskulatur | ca. 15–20 % |\n| Haut und übrige | Rest |\n\n> [!hinweis] Die Anteile sind gerundete Lehrbuchangaben für Ruhebedingungen [@guyton-2021] [@schmidt-lang-2019]. Bei körperlicher Arbeit kann der Anteil der Muskulatur auf ein Vielfaches steigen, die Hautdurchblutung dient zusätzlich der [[thermoregulation]].\n\nDie hohe Nierendurchblutung erklärt, warum die [[niere]] und damit die [[dialysegeraet|Hämodialyse]] eng mit dem Kreislauf verknüpft sind.\n\n## Stoffaustausch in den Kapillaren\n\nIm Kapillarbett findet der eigentliche Austausch statt – über [[diffusion-osmose|Diffusion]] (Gase, kleine Moleküle) und Filtration. Der hydrostatische Kapillardruck presst Flüssigkeit hinaus, der kolloidosmotische Druck der Plasmaproteine hält sie zurück (Starling-Gleichgewicht). Überwiegt die Filtration, entstehen Ödeme.\n\n## Bedeutung in der Medizintechnik\n\n| Thema | Geräte | Bezug |\n|---|---|---|\n| Druckmessung | [[invasive-druckmessung]], [[nibp-messgeraet]], [[langzeit-blutdruck]], [[patientenmonitor]] | Druck als treibende Größe, Messort und Bezugshöhe |\n| Fluss- und Gefäßdiagnostik | [[ultraschallgeraet]] mit Doppler, [[angiographieanlage]] | Geschwindigkeit, Stenosen, Gefäßanatomie |\n| Periphere Perfusion | [[pulsoxymeter]], [[photoplethysmographie]] | pulsatile Volumenänderung in Arteriolen und Kapillaren |\n| Extrakorporale Kreisläufe | [[herz-lungen-maschine]], [[ecmo]], [[dialysegeraet]], [[crrt-geraet]] | Blut wird aus dem Kreislauf entnommen, behandelt und zurückgegeben |\n| Kreislaufunterstützung | [[iabp]], [[vad]], [[thoraxkompressionsgeraet]] | Entlastung oder Ersatz der Pumpfunktion |\n| Infusionstherapie | [[infusionspumpe]], [[spritzenpumpe]] | Förderung gegen den venösen Druck, Okklusionserkennung |\n\n> [!warnung] In extrakorporalen Kreisläufen ist Luft im Blut lebensgefährlich (Luftembolie). [[herz-lungen-maschine|Herz-Lungen-Maschinen]], [[dialysegeraet|Dialysegeräte]] und [[infusionspumpe|Infusionspumpen]] überwachen daher die Leitungen mit einem [[luftblasendetektor]].\n\n> [!praxis] Ein [[okklusionsalarm]] einer Infusionspumpe bedeutet, dass der Förderdruck eine Grenze überschreitet – Ursachen können geschlossene Klemmen, abgeknickte Leitungen oder ein verlegter venöser Zugang sein. Das Verständnis von Druck, Fluss und Widerstand hilft bei der Fehlersuche.\n",
+  "related": [
+    "herz",
+    "blutdruck",
+    "blut",
+    "lunge",
+    "gasaustausch",
+    "stroemungslehre",
+    "druck",
+    "invasive-druckmessung",
+    "herz-lungen-maschine",
+    "ecmo",
+    "dialysegeraet",
+    "ultraschallgeraet",
+    "luftblasendetektor"
+  ],
+  "paths": [
+    [
+      "blutkreislauf",
+      "stroemungslehre",
+      "doppler-effekt",
+      "ultraschallgeraet"
+    ],
+    [
+      "blutkreislauf",
+      "herz-lungen-maschine",
+      "ecmo",
+      "luftblasendetektor"
+    ],
+    [
+      "blutkreislauf",
+      "blutdruck",
+      "druckmessung",
+      "drucksensor"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021"
+  ],
+  "diagram": {
+    "title": "Körper- und Lungenkreislauf",
+    "caption": "Reihenschaltung von Lungen- und Körperkreislauf mit den beiden Herzhälften als Pumpen (Funktionsschema).",
+    "width": 900,
+    "height": 400,
+    "nodes": [
+      {
+        "id": "lv",
+        "label": "Linker Ventrikel",
+        "ref": "herz",
+        "kind": "actuator",
+        "x": 450,
+        "y": 200
+      },
+      {
+        "id": "ao",
+        "label": "Aorta / Arterien\n(Hochdrucksystem)",
+        "ref": "blutdruck",
+        "kind": "process",
+        "x": 720,
+        "y": 200,
+        "w": 170
+      },
+      {
+        "id": "kk",
+        "label": "Kapillaren\nder Organe",
+        "ref": "diffusion-osmose",
+        "kind": "patient",
+        "x": 720,
+        "y": 340
+      },
+      {
+        "id": "ve",
+        "label": "Venen / Hohlvenen\n(Niederdrucksystem)",
+        "kind": "process",
+        "x": 450,
+        "y": 340,
+        "w": 170
+      },
+      {
+        "id": "rv",
+        "label": "Rechtes Herz",
+        "ref": "herz",
+        "kind": "actuator",
+        "x": 180,
+        "y": 340
+      },
+      {
+        "id": "lk",
+        "label": "Lungenkapillaren\n(Gasaustausch)",
+        "ref": "gasaustausch",
+        "kind": "patient",
+        "x": 180,
+        "y": 70
+      },
+      {
+        "id": "lav",
+        "label": "Lungenvenen /\nlinker Vorhof",
+        "kind": "process",
+        "x": 450,
+        "y": 70
+      }
+    ],
+    "edges": [
+      {
+        "from": "lv",
+        "to": "ao",
+        "kind": "fluid",
+        "label": "Auswurf"
+      },
+      {
+        "from": "ao",
+        "to": "kk",
+        "kind": "fluid",
+        "label": "O₂-reich"
+      },
+      {
+        "from": "kk",
+        "to": "ve",
+        "kind": "fluid",
+        "label": "O₂-arm"
+      },
+      {
+        "from": "ve",
+        "to": "rv",
+        "kind": "fluid"
+      },
+      {
+        "from": "rv",
+        "to": "lk",
+        "kind": "fluid",
+        "label": "Truncus pulmonalis"
+      },
+      {
+        "from": "lk",
+        "to": "lav",
+        "kind": "fluid",
+        "label": "O₂-reich"
+      },
+      {
+        "from": "lav",
+        "to": "lv",
+        "kind": "fluid"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,154 @@
+{
+  "id": "kollimator",
+  "type": "term",
+  "title": "Kollimator und Blende",
+  "aliases": [
+    "Tiefenblende",
+    "Primärblende",
+    "Collimator",
+    "Multi-Leaf-Kollimator",
+    "MLC",
+    "Lamellenkollimator",
+    "Streustrahlenraster",
+    "Lichtvisier",
+    "Einblendung"
+  ],
+  "category": "komponenten",
+  "summary": "Strahlenbegrenzende Bauteile aus Blei oder Wolfram, die Röntgen- oder Gammastrahlung auf ein definiertes Feld bzw. eine Richtung beschränken. Sie verbessern die Bildqualität, reduzieren die Patientendosis und formen in der Strahlentherapie das Bestrahlungsfeld.",
+  "body": "## Begriff\n\nEin **Kollimator** (von lat. *collineare*, „in gerader Linie ausrichten“) begrenzt ein Strahlenbündel räumlich oder lässt nur Strahlung aus bestimmten Richtungen passieren. In der Röntgentechnik spricht man meist von der **Blende** oder **Tiefenblende**: Sie sitzt unmittelbar am Strahlenaustrittsfenster der [[roentgenroehre|Röntgenröhre]] und formt das Nutzstrahlenfeld auf die gewünschte Größe. Weitere Kollimatoren finden sich vor dem Detektor (Streustrahlenraster), im [[computertomograph|CT]], in der [[gammakamera]] und im [[linearbeschleuniger|Linearbeschleuniger]] der Strahlentherapie [@bushberg-2020] [@krieger-strahlungsquellen-2018].\n\nKollimatoren sind passive Bauteile ohne Energiezufuhr – und dennoch eines der wirksamsten Mittel des [[strahlenschutz|Strahlenschutzes]]: Jeder Quadratzentimeter, der nicht bestrahlt wird, reduziert die Patientendosis und die Streustrahlung, die Bildqualität und Personal belastet.\n\n## Physikalische Grundlagen\n\n### Absorption\n\nKollimatoren bestehen aus Werkstoffen hoher Ordnungszahl und Dichte – Blei, Wolfram, Wolframlegierungen –, in denen [[roentgenstrahlung|Röntgen-]] und Gammastrahlung durch Photoeffekt stark geschwächt wird (siehe [[ionisierende-strahlung]]). Die Intensität fällt exponentiell mit der Materialdicke x:\n\n`I = I₀ · e^(−μ · x)`\n\nDer Schwächungskoeffizient μ hängt stark von Photonenenergie und Material ab; für Therapieenergien im Megavoltbereich sind deshalb Wolframblöcke von mehreren Zentimetern Dicke nötig [@krieger-strahlungsquellen-2018].\n\n### Geometrie: Feldgröße und Halbschatten\n\nWeil die Strahlung von einem nahezu punktförmigen Brennfleck divergent ausgeht, gilt der Strahlensatz: Eine Blendenöffnung a im Abstand d_B vom Fokus erzeugt in der Bildebene (Abstand d_F) ein Feld der Breite\n\n`b = a · d_F / d_B`\n\nDie Feldfläche wächst entsprechend mit dem Quadrat des Abstandsverhältnisses.\n\nDa der Brennfleck eine endliche Größe s hat, entsteht am Feldrand ein **Halbschatten** (Penumbra) der Breite\n\n`P ≈ s · (d_F − d_B) / d_B`\n\n> [!beispiel] Brennfleck s = 1,2 mm, Blende im Abstand d_B = 10 cm, Bildebene bei d_F = 115 cm: P ≈ 1,2 mm · 105 / 10 ≈ 12,6 mm. Eine zweite, weiter vom Fokus entfernte Lamellenebene (d_B = 25 cm) verkleinert den Halbschatten auf ≈ 1,2 mm · 90 / 25 ≈ 4,3 mm. Die Zahlen sind didaktisch gewählt.\n\nDas ist der Grund für den mehrstufigen Aufbau der Tiefenblende.\n\n## Tiefenblende in der Röntgendiagnostik\n\n### Aufbau\n\n| Element | Funktion |\n|---|---|\n| fokusnahe Blende | fängt Strahlung außerhalb des Fokus ab (extrafokale Strahlung) |\n| Lamellenpaare (oft zwei Ebenen) | begrenzen das Feld rechteckig in zwei Richtungen; motorisch oder manuell verstellbar |\n| Filter (Aluminium, Kupfer) | entfernen niederenergetische Strahlungsanteile, die nur die Hautdosis erhöhen, aber nicht zum Bild beitragen |\n| Lichtvisier | Lampe und Spiegel projizieren ein Lichtfeld, das dem Strahlenfeld entspricht |\n| Dosisflächenprodukt-Messkammer | misst das Dosisflächenprodukt (DFP) zur Dokumentation der Patientenexposition |\n\nModerne Geräte begrenzen das Feld automatisch auf das eingelegte Detektorformat oder auf die eingestellte Organregion; motorische Blenden werden dazu über [[schrittmotor|Schrittmotoren]] oder Servoantriebe mit Positionsrückmeldung verstellt.\n\n> [!belegt] Anforderungen an Strahlenqualität, Filterung, die Begrenzung des Nutzstrahlenfeldes und die Übereinstimmung von Licht- und Strahlenfeld sind in der Ergänzungsnorm IEC 60601-1-3 bzw. in den Gerätenormen festgelegt [@iec-60601-1-3-strahlenschutz] [@iec-60601-2-54-2022].\n\n### Streustrahlenraster\n\nHinter dem Patienten liegt vor dem [[roentgendetektor|Detektor]] häufig ein **Streustrahlenraster**: dünne Bleilamellen mit strahlendurchlässigen Zwischenräumen, auf den Fokus ausgerichtet (fokussiertes Raster). Es lässt Primärstrahlung durch und absorbiert schräg einfallende Streustrahlung. Kenngröße ist das **Schachtverhältnis** r = h / D (Lamellenhöhe zu Lamellenabstand). Ein Raster verbessert den Kontrast, erfordert aber eine höhere Dosis, weil es auch einen Teil der Primärstrahlung schluckt [@bushberg-2020].\n\n> [!vereinfacht] Streng genommen ist das Streustrahlenraster kein Kollimator des Nutzstrahlenbündels, sondern ein „Richtungsfilter“ auf der Detektorseite. Es folgt aber demselben Prinzip: Nur Strahlung aus der Richtung des Fokus wird durchgelassen.\n\n## Kollimation in anderen Modalitäten\n\n### Computertomographie\n\nIm [[computertomograph|CT]] legt ein röhrenseitiger Kollimator die Schichtbreite bzw. die gesamte Strahlbreite in z-Richtung fest. Adaptive Blenden schließen sich am Anfang und Ende eines Spiralscans, um überflüssige Bestrahlung („Overranging“) zu vermeiden. Detektorseitig unterdrücken Lamellen- oder zweidimensionale Gitter die Streustrahlung [@kalender-2011] [@hsieh-2015].\n\n### Nuklearmedizin\n\nIn der [[gammakamera|Gammakamera]] (planare Szintigraphie und SPECT) bestimmt der Kollimator überhaupt erst die Bildentstehung, denn Gammaquanten lassen sich nicht wie Licht mit Linsen fokussieren. Ein **Parallellochkollimator** aus Blei oder Wolfram lässt nur Quanten senkrecht zur Detektorfläche passieren; daneben gibt es konvergierende, divergierende und Pinhole-Kollimatoren. Zwischen Empfindlichkeit (große Löcher, kurze Kanäle) und Ortsauflösung (kleine Löcher, lange Kanäle) muss abgewogen werden; Kollimatoren werden nach Energiebereich und Auflösung ausgewählt und gewechselt [@bushberg-2020].\n\n### Strahlentherapie\n\nDer [[linearbeschleuniger]] formt das Therapiefeld mehrstufig: Primärkollimator, bewegliche Blockblenden (Jaws) und ein **Multi-Leaf-Kollimator (MLC)** aus vielen schmalen, einzeln motorisch verfahrbaren Wolframlamellen. Der MLC passt das Feld der Tumorkontur an und moduliert bei der intensitätsmodulierten Strahlentherapie die Fluenz während der Bestrahlung. Die Lamellenpositionen werden durch redundante Positionssensoren überwacht [@krieger-strahlungsquellen-2018].\n\n## Anwendung in Geräten\n\n| Gerät | Kollimator / Blende |\n|---|---|\n| [[roentgengeraet]] | Tiefenblende mit Lichtvisier, Filterwahl, DFP-Kammer; Streustrahlenraster |\n| [[mammographiegeraet]] | formatgebundene Blende, Kompressionsplatte, bewegtes Raster |\n| [[c-bogen]], [[angiographieanlage]] | Iris- und Schlitzblenden, halbtransparente Keilfilter, Kupferfilter |\n| [[computertomograph]], [[dvt]] | Schichtkollimator, adaptive z-Blenden, Detektorgitter |\n| [[gammakamera]] | Parallelloch-, Pinhole- oder Fächerstrahlkollimator |\n| [[linearbeschleuniger]] | Primärkollimator, Jaws, Multi-Leaf-Kollimator |\n\n## Prüfung und Instandhaltung\n\n* Die **Übereinstimmung von Licht- und Strahlenfeld** sowie die korrekte Formatbegrenzung werden bei der Abnahme- und [[konstanzpruefung|Konstanzprüfung]] kontrolliert [@din-6868-4-2021].\n* Ausgefallene Lampen im Lichtvisier, verstellte Spiegel und schwergängige Lamellen sind häufige Mängel; ein verschobener Spiegel kann dazu führen, dass Lichtfeld und Strahlenfeld nicht mehr übereinstimmen.\n* Gammakamera-Kollimatoren sind schwer und mechanisch empfindlich: Verbogene Septen erzeugen Inhomogenitäten. Die Homogenität wird regelmäßig mit Flutquellen geprüft.\n* Fehlerhafte Kollimation zeigt sich im Bild als abgeschnittene Anatomie oder als Inhomogenität (siehe [[bildartefakte]]).\n\n> [!praxis] Konsequentes Einblenden auf die interessierende Region ist eine der einfachsten Maßnahmen, um Patientendosis und Streustrahlung zu senken. Nachträgliches „Einblenden“ am Bildschirm (elektronischer Bildausschnitt) reduziert die Dosis dagegen nicht.\n",
+  "related": [
+    "roentgenroehre",
+    "roentgendetektor",
+    "strahlenschutz",
+    "roentgenstrahlung",
+    "ionisierende-strahlung",
+    "gammakamera",
+    "linearbeschleuniger",
+    "konstanzpruefung",
+    "strlschg",
+    "schrittmotor",
+    "elektromotor"
+  ],
+  "paths": [
+    [
+      "roentgenroehre",
+      "kollimator",
+      "roentgendetektor"
+    ],
+    [
+      "linearbeschleuniger",
+      "kollimator",
+      "elektromotor",
+      "strahlenschutz"
+    ]
+  ],
+  "sources": [
+    "bushberg-2020",
+    "krieger-strahlungsquellen-2018",
+    "iec-60601-1-3-strahlenschutz",
+    "iec-60601-2-54-2022",
+    "din-6868-4-2021",
+    "kalender-2011",
+    "hsieh-2015"
+  ],
+  "diagram": {
+    "title": "Strahlbegrenzung in der Röntgenaufnahme",
+    "caption": "Funktionsschema vom Fokus bis zum Detektor; Kollimation vor und Streustrahlenreduktion hinter dem Patienten.",
+    "width": 960,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "fokus",
+        "label": "Brennfleck\n(Röntgenröhre)",
+        "ref": "roentgenroehre",
+        "kind": "source",
+        "x": 90,
+        "y": 100
+      },
+      {
+        "id": "filter",
+        "label": "Filter\n(Al, Cu)",
+        "kind": "process",
+        "x": 270,
+        "y": 100
+      },
+      {
+        "id": "blende",
+        "label": "Tiefenblende\n(Lamellen)",
+        "ref": "kollimator",
+        "kind": "actuator",
+        "x": 450,
+        "y": 100
+      },
+      {
+        "id": "pat",
+        "label": "Patient\n(Streuung)",
+        "kind": "patient",
+        "x": 630,
+        "y": 100
+      },
+      {
+        "id": "raster",
+        "label": "Streustrahlen-\nraster",
+        "kind": "process",
+        "x": 810,
+        "y": 100
+      },
+      {
+        "id": "det",
+        "label": "Detektor",
+        "ref": "roentgendetektor",
+        "kind": "sensor",
+        "x": 810,
+        "y": 230
+      },
+      {
+        "id": "licht",
+        "label": "Lichtvisier /\nFormaterkennung",
+        "kind": "control",
+        "x": 450,
+        "y": 230,
+        "w": 160
+      }
+    ],
+    "edges": [
+      {
+        "from": "fokus",
+        "to": "filter",
+        "kind": "energy"
+      },
+      {
+        "from": "filter",
+        "to": "blende",
+        "kind": "energy",
+        "label": "aufgehärtet"
+      },
+      {
+        "from": "blende",
+        "to": "pat",
+        "kind": "energy",
+        "label": "Nutzfeld"
+      },
+      {
+        "from": "pat",
+        "to": "raster",
+        "kind": "energy",
+        "label": "Primär + Streu"
+      },
+      {
+        "from": "raster",
+        "to": "det",
+        "kind": "energy",
+        "label": "v. a. Primär"
+      },
+      {
+        "from": "licht",
+        "to": "blende",
+        "kind": "signal",
+        "label": "Feldgröße"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

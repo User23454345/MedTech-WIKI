@@ -40,8 +40,8 @@
     <line x1="195" y1="200" x2="215" y2="290"/>
   </g>
   <text x="145" y="70" text-anchor="middle" font-size="13">Temperatur-Stellglied</text>
-  <text x="14" y="132" font-size="13">FGF</text>
-  <text x="246" y="132" font-size="13">c_out</text>
+  <text x="14" y="128" font-size="13">FGF</text>
+  <text x="244" y="128" font-size="13">c_out</text>
   <text x="70" y="304" text-anchor="middle" font-size="13">Anästhetikum</text>
   <text x="70" y="319" text-anchor="middle" font-size="13">(flüssig)</text>
   <text x="225" y="304" text-anchor="middle" font-size="13">Dochte</text>
@@ -54,8 +54,8 @@
   <!-- Kreis -->
   <rect x="330" y="90" width="200" height="190" rx="24" fill="none" stroke="#0b2545" stroke-width="5"/>
   <!-- Richtungsventile -->
-  <circle cx="380" cy="90" r="13" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
-  <path d="M374,84 L388,90 L374,96 Z" fill="#14b8a6"/>
+  <circle cx="480" cy="90" r="13" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M474,84 L488,90 L474,96 Z" fill="#14b8a6"/>
   <circle cx="380" cy="280" r="13" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
   <path d="M388,274 L374,280 L388,286 Z" fill="#14b8a6"/>
   <!-- Absorber -->
@@ -67,25 +67,25 @@
   <!-- Patient -->
   <rect x="510" y="160" width="40" height="50" rx="8" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
   <!-- Frischgas -->
-  <line x1="440" y1="60" x2="440" y2="84" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="410" y1="60" x2="410" y2="84" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arr)"/>
   <!-- APL / Beutel -->
   <line x1="460" y1="280" x2="460" y2="310" stroke="#0b2545" stroke-width="3"/>
   <ellipse cx="460" cy="330" rx="16" ry="20" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
   <rect x="482" y="268" width="22" height="22" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
   <line x1="504" y1="279" x2="570" y2="279" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr)"/>
   <!-- Strömungsrichtung -->
-  <path d="M470,106 L500,106" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M420,106 L450,106" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
   <path d="M500,264 L470,264" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
   <path d="M362,238 L362,212" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
 
   <!-- Beschriftung rechts -->
   <g stroke="#0b2545" stroke-width="1">
-    <line x1="380" y1="77" x2="370" y2="66"/>
+    <line x1="480" y1="77" x2="490" y2="66"/>
     <line x1="380" y1="293" x2="372" y2="318"/>
     <line x1="348" y1="160" x2="368" y2="150"/>
   </g>
-  <text x="448" y="72" font-size="13">Frischgas</text>
-  <text x="360" y="64" text-anchor="end" font-size="13">Insp.-Ventil</text>
+  <text x="398" y="72" text-anchor="end" font-size="13">Frischgas</text>
+  <text x="494" y="64" font-size="13">Insp.-Ventil</text>
   <text x="372" y="334" text-anchor="end" font-size="13">Exsp.-Ventil</text>
   <text x="372" y="152" font-size="13">CO₂-Absorber</text>
   <text x="553" y="232" font-size="13">Patient</text>

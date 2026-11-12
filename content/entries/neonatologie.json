@@ -1,0 +1,42 @@
+{
+  "id": "neonatologie",
+  "type": "domain",
+  "title": "Neonatologie",
+  "aliases": [
+    "Neugeborenenmedizin",
+    "Neonatology",
+    "Frühgeborenenmedizin",
+    "NICU",
+    "Neugeborenen-Intensivstation",
+    "Perinatalmedizin"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Neonatologie versorgt kranke Neugeborene und Frühgeborene. Ihre Medizintechnik ist auf sehr kleine Körpermaße, hohe Temperaturempfindlichkeit und extrem geringe Volumina ausgelegt: Inkubator, Wärmebett, Phototherapie und Neonatalbeatmung prägen den Fachbereich.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Neonatologie** ist ein Schwerpunkt der Kinder- und Jugendmedizin. Sie betreut Frühgeborene (Geburt vor der vollendeten 37. Schwangerschaftswoche) und kranke reife Neugeborene, häufig auf einer neonatologischen Intensivstation (NICU). Typische Krankheitsbilder sind Atemnotsyndrom durch Surfactantmangel, Apnoen, Neugeborenengelbsucht (Hyperbilirubinämie), Infektionen, Unterkühlung und Anpassungsstörungen nach der Geburt [@schmidt-lang-2019].\n\nFrühgeborene haben eine im Verhältnis zur Körpermasse große Körperoberfläche, wenig Unterhautfettgewebe und eine unreife [[haut]]. Sie verlieren daher schnell Wärme und Wasser. Die Aufrechterhaltung einer stabilen Körpertemperatur ist eine Kernaufgabe [@who-thermal-1997].\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[inkubator]] | geschlossene, temperatur- und feuchtegeregelte Umgebung |\n| [[waermebett]] | offene Wärmeeinheit mit Heizstrahler für Erstversorgung und Eingriffe |\n| [[phototherapiegeraet]] | Abbau von Bilirubin durch blaues Licht |\n| [[beatmungsgeraet]] (Neonatalmodus) | invasive Beatmung, Hochfrequenzoszillation je nach Gerät |\n| [[cpap-geraet]] / [[high-flow-geraet]] | nichtinvasive Atemunterstützung |\n| [[patientenmonitor]] | EKG, Atmung (Impedanz), SpO₂, Temperatur, Blutdruck |\n| [[pulsoxymeter]] | Steuerung der Sauerstofftherapie |\n| [[spritzenpumpe]] | Infusion kleinster Volumina, parenterale Ernährung |\n| [[absauggeraet]] | Atemwegsabsaugung mit niedrigem Sog |\n| [[hypothermiegeraet]] | therapeutische Hypothermie bei Sauerstoffmangel unter der Geburt |\n| [[blutgasanalysator]] | Blutgase aus Kleinstmengen |\n| [[ultraschallgeraet]] | Schädel- und Herzsonographie am Inkubator |\n| [[ctg]] | fetale Überwachung vor der Geburt (Geburtshilfe) |\n\nDie besonderen Sicherheitsanforderungen regeln u. a. [[iec-60601-2-19]] (Inkubatoren), IEC 60601-2-20 (Transportinkubatoren), IEC 60601-2-21 (Wärmestrahler) und IEC 60601-2-50 (Phototherapie) [@iec-60601-2-19][@iec-60601-2-20][@iec-60601-2-21][@iec-60601-2-50].\n\n## Besondere technische Anforderungen\n\n### Thermomanagement\n\nInkubatoren regeln entweder die Lufttemperatur oder – über einen Hautsensor – die Hauttemperatur des Kindes ([[temperatursensor]], [[regelkreis]]). Zusätzlich wird die Luftfeuchte geregelt, um Verdunstungsverluste zu begrenzen ([[waermeuebertragung]], [[thermoregulation]]). Wärmebetten heizen über Infrarotstrahler und regeln die Leistung anhand der Hauttemperatur.\n\n> [!warnung] Ein abgelöster Hauttemperatursensor misst die kühlere Umgebung – die Regelung erhöht dann die Heizleistung. Normgerechte Geräte begrenzen Temperaturen und alarmieren; dennoch ist der korrekte Sitz des Sensors eine Pflegeaufgabe mit Sicherheitsrelevanz.\n\n### Phototherapie\n\nBilirubin absorbiert Licht im blauen Spektralbereich und wird dabei in wasserlösliche, ausscheidbare Isomere umgewandelt. Wirksam sind vor allem Wellenlängen um 460–490 nm; die Wirkung hängt von der Bestrahlungsstärke und der bestrahlten Körperoberfläche ab [@aap-hyperbilirubinemia-2004]. Die Bestrahlungsstärke nimmt mit der Alterung von Lampen ab und sollte daher gemessen werden.\n\n### Beatmung kleinster Volumina\n\nTidalvolumina von Frühgeborenen liegen im Bereich weniger Milliliter. Dadurch werden Totraum von Sensoren und Schläuchen, Leckagen am ungeblockten Tubus und die Genauigkeit des [[flowsensor|Flowsensors]] am Patienten-Y-Stück besonders kritisch [@oczenski-2017]. Sauerstoff ist in der Neonatologie ein „Medikament“: Zu hohe Sauerstoffpartialdrücke können u. a. die Netzhaut schädigen.\n\n### Volumengenauigkeit bei Infusionen\n\nBei Infusionsraten unter 1 ml/h wirken sich Anlaufverzögerung, Spritzenmechanik und Bolus nach Okklusion stark aus. [[spritzenpumpe|Spritzenpumpen]] und deren Okklusionsalarme ([[okklusionsalarm]]) müssen für diese Anwendung geeignet sein [@iec-60601-2-24].\n\n### Lärm, Licht, Hygiene\n\nFrühgeborene reagieren empfindlich auf Lärm und Licht; Alarmlautstärken und Gerätegeräusche im Inkubator sind deshalb begrenzt. Inkubatoren werden nach jedem Patienten vollständig aufbereitet, Befeuchterwasser ist eine mögliche Keimquelle [@krinko-bfarm-2012].\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[geburtshilfe]]**: Perinatalzentrum, gemeinsame Versorgung von Mutter und Kind, Erstversorgung im Kreißsaal.\n- **[[intensivmedizin]]**: gemeinsame Technologien bei Beatmung und Monitoring.\n- **[[notfallmedizin]]**: Neugeborenen-Transport im Transportinkubator.\n- **[[augenheilkunde]]**: Screening auf Frühgeborenen-Retinopathie.\n- **[[radiologie]]**: Röntgen am Inkubator mit besonderem Strahlenschutz.\n- **[[hno-heilkunde]]**: Neugeborenen-Hörscreening.\n",
+  "related": [
+    "inkubator",
+    "waermebett",
+    "phototherapiegeraet",
+    "thermoregulation",
+    "geburtshilfe",
+    "intensivmedizin",
+    "cpap-geraet",
+    "iec-60601-2-19",
+    "temperatursensor",
+    "draeger"
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "who-thermal-1997",
+    "iec-60601-2-19",
+    "iec-60601-2-20",
+    "iec-60601-2-21",
+    "iec-60601-2-50",
+    "aap-hyperbilirubinemia-2004",
+    "oczenski-2017",
+    "iec-60601-2-24",
+    "krinko-bfarm-2012"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

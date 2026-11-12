@@ -1,0 +1,154 @@
+{
+  "id": "roentgenstrahlung",
+  "type": "term",
+  "title": "Röntgenstrahlung",
+  "aliases": [
+    "X-Strahlung",
+    "X-rays",
+    "X-ray radiation",
+    "Bremsstrahlung",
+    "charakteristische Röntgenstrahlung",
+    "Röntgenspektrum",
+    "Photonenstrahlung"
+  ],
+  "category": "physik",
+  "summary": "Röntgenstrahlung ist hochenergetische elektromagnetische Strahlung mit Photonenenergien von etwa 1 keV bis einige 100 keV, die in der Röntgenröhre beim Abbremsen schneller Elektronen in der Anode entsteht. Sie besteht aus einem kontinuierlichen Bremsspektrum und charakteristischen Linien und ist die Grundlage von Projektionsradiographie, Durchleuchtung, Mammographie und Computertomographie.",
+  "body": "## Einordnung\n\nRöntgenstrahlung ist **elektromagnetische Strahlung** wie Licht oder Radiowellen, jedoch mit sehr kurzer Wellenlänge (etwa 10 nm bis 1 pm) und entsprechend hoher Photonenenergie. Wilhelm Conrad Röntgen beschrieb sie Ende 1895 als „neue Art von Strahlen“, die Materie durchdringen und Fotoplatten schwärzen [@roentgen-1895]. Weil ihre Photonen Atome ionisieren können, gehört sie zur [[ionisierende-strahlung|ionisierenden Strahlung]] und unterliegt dem [[strahlenschutz|Strahlenschutz]] nach [[strlschg|Strahlenschutzgesetz]].\n\nZwischen Energie E, Frequenz f und Wellenlänge λ gilt:\n\n`E = h · f = h · c / λ`   bzw. in praktischen Einheiten   `λ [nm] ≈ 1,24 / E [keV]`\n\nRöntgen- und [[radioaktivitaet|Gammastrahlung]] unterscheiden sich physikalisch nicht in der Art, sondern in der **Herkunft**: Röntgenstrahlung entsteht in der Elektronenhülle bzw. beim Abbremsen von Elektronen, Gammastrahlung im Atomkern [@krieger-strahlungsquellen-2018].\n\n## Erzeugung in der Röntgenröhre\n\nIn der [[roentgenroehre|Röntgenröhre]] treten Elektronen aus einer geheizten Glühkathode aus (Glühemission) und werden im Vakuum durch die Röhrenspannung U (in der Diagnostik etwa 25–150 kV) zur Anode beschleunigt. Jedes Elektron trägt dann die kinetische Energie `E_kin = e · U`. Die [[hochspannungserzeugung|Hochspannung]] liefert heute meist ein Hochfrequenz- bzw. Multipuls-Generator mit [[transformator|Hochspannungstransformator]] und Gleichrichtung; die Restwelligkeit der Spannung ist damit deutlich kleiner als bei älteren Ein- oder Zweipuls-Generatoren. In der Anode laufen zwei Prozesse ab [@krieger-strahlungsquellen-2018] [@bushberg-2020]:\n\n### Bremsstrahlung\n\nEin Elektron wird im elektrischen Feld eines Atomkerns abgelenkt und abgebremst; die verlorene Energie wird als Photon abgestrahlt. Da ein Elektron seine Energie in einem Schritt oder in vielen kleinen Schritten abgeben kann, entsteht ein **kontinuierliches Spektrum**. Seine obere Grenze ist erreicht, wenn die gesamte kinetische Energie in ein Photon übergeht (Duane-Hunt-Gesetz):\n\n`E_max = e · U`   →   `λ_min = h · c / (e · U)`\n\nBei 100 kV beträgt die maximale Photonenenergie also 100 keV, die kürzeste Wellenlänge rund 0,0124 nm.\n\n### Charakteristische Strahlung\n\nSchlägt ein Elektron ein Hüllenelektron aus einer inneren Schale (z. B. K-Schale) des Anodenmaterials heraus, füllt ein Elektron aus einer äußeren Schale die Lücke. Die Energiedifferenz wird als Photon fester Energie abgegeben – es entstehen **Spektrallinien**, die für das Element charakteristisch sind.\n\n| Anodenmaterial | Ordnungszahl Z | Kα-Linien (ca.) | Typischer Einsatz |\n|---|---|---|---|\n| Wolfram (W) | 74 | 58–59 keV | Radiographie, Durchleuchtung, CT |\n| Molybdän (Mo) | 42 | 17,5 keV | [[mammographiegeraet|Mammographie]] |\n| Rhodium (Rh) | 45 | 20,2 keV | Mammographie (dichtere Brust) |\n\n> [!belegt] Die K-Linien von Wolfram können nur entstehen, wenn die Elektronenenergie die K-Schalen-Bindungsenergie (rund 69,5 keV) übersteigt – bei Röhrenspannungen unter etwa 70 kV besteht das Wolframspektrum daher fast nur aus Bremsstrahlung [@bushberg-2020].\n\n## Wirkungsgrad und Wärme\n\nNur ein sehr kleiner Teil der Elektronenenergie wird zu Röntgenstrahlung; der Rest wird zu Wärme. Näherungsweise gilt für den Wirkungsgrad\n\n`η ≈ k · Z · U`   mit k ≈ 1 · 10⁻⁹ V⁻¹ (je nach Lehrbuch etwa 0,9–1,1 · 10⁻⁹ V⁻¹; empirische Näherung)\n\n> [!beispiel] Wolframanode (Z = 74) bei 100 kV: η ≈ 10⁻⁹ · 74 · 100 000 ≈ 0,7 %. Über 99 % der eingebrachten elektrischen Leistung müssen als Wärme abgeführt werden – deshalb Drehanoden, Anodenwärmespeicher und Ölkühlung des Strahlers ([[waermeuebertragung]]).\n\n## Einflussgrößen auf das Spektrum\n\n| Parameter | Wirkung auf Intensität | Wirkung auf Strahlenqualität („Härte“) |\n|---|---|---|\n| Röhrenstrom I (mA) | proportional | keine |\n| Belichtungszeit t | Produkt I · t (mAs) bestimmt Photonenanzahl | keine |\n| Röhrenspannung U (kV) | steigt etwa mit U² (Faustregel) | höhere mittlere Energie, durchdringender |\n| Anodenmaterial Z | proportional zu Z (Bremsstrahlung) | andere charakteristische Linien |\n| Filterung (Al, Cu, Mo, Rh) | sinkt | weiche Anteile entfernt → härter |\n\nDie **Eigenfilterung** (Glas bzw. Metallfenster, Öl) und die **Zusatzfilterung** entfernen niederenergetische Photonen, die den Körper ohnehin nicht durchdringen und nur die Hautdosis erhöhen würden. Die Strahlenqualität wird über die **Halbwertsschichtdicke** (HWS, englisch HVL) in mm Aluminium angegeben [@krieger-strahlenschutz-2019].\n\n> [!vereinfacht] „Harte“ und „weiche“ Strahlung sind Laborjargon für höhere bzw. niedrigere mittlere Photonenenergie. Eine Röntgenröhre liefert immer ein breites Spektrum; die kV-Angabe nennt nur dessen Obergrenze.\n\n## Wechselwirkung und Bildentstehung\n\nBeim Durchgang durch den Körper wird der Strahl nach dem exponentiellen Schwächungsgesetz abgeschwächt:\n\n`I(x) = I₀ · e^(−μ · x)`\n\nDer Schwächungskoeffizient μ hängt von Photonenenergie, Ordnungszahl und Dichte des Gewebes ab. Im diagnostischen Bereich dominieren **Photoeffekt** (stark Z-abhängig, Kontrast zwischen Knochen und Weichteil) und **Compton-Streuung** (Hauptursache der Streustrahlung). Details beschreibt [[ionisierende-strahlung]]. Das Schwächungsrelief wird von einem [[roentgendetektor|Röntgendetektor]] in ein Bild umgesetzt; Streustrahlenraster und [[kollimator|Blenden]] verbessern den Kontrast und senken die Dosis.\n\nIn der [[computertomograph|Computertomographie]] werden aus vielen Projektionen die lokalen Schwächungskoeffizienten rekonstruiert und als CT-Werte in Hounsfield-Einheiten dargestellt [@kalender-2011].\n\n## Anwendung in Geräten\n\n| Gerät | Besonderheit der Strahlerzeugung |\n|---|---|\n| [[roentgengeraet]] | Wolframanode, ca. 40–150 kV, kurze Aufnahmezeiten |\n| [[c-bogen]], [[angiographieanlage]] | Durchleuchtung im Pulsbetrieb, Kupferfilterung zur Dosisreduktion |\n| [[mammographiegeraet]] | niedrige Spannungen (ca. 25–35 kV), Mo/Rh/W-Anoden mit K-Kanten-Filtern |\n| [[computertomograph]] | Dauerbetrieb über Sekunden, sehr hohe Anodenwärmebelastung |\n| [[dvt]] | Kegelstrahlgeometrie, meist niedrigere Leistung |\n| [[knochendichtemessung]] | zwei Energiespektren (Dual-Energy) zur Materialtrennung |\n\n> [!hinweis] Die Spannungsbereiche in der Tabelle sind **typische** Größenordnungen aus der Fachliteratur, keine Gerätedaten. Konkrete Werte stehen in der Gebrauchsanweisung.\n\nHochenergetische Photonen der Strahlentherapie (Megavolt-Bereich) werden nicht in Röntgenröhren, sondern im [[linearbeschleuniger|Linearbeschleuniger]] als Bremsstrahlung an einem Target erzeugt [@krieger-strahlungsquellen-2018].\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechniker:innen ist Röntgenstrahlung vor allem unter drei Aspekten relevant:\n\n1. **Bildqualität und Dosis** – kV, mAs, Filterung und Detektorempfindlichkeit bestimmen Kontrast, Rauschen und Patientendosis. Deshalb sind Abnahme- und [[konstanzpruefung|Konstanzprüfungen]] vorgeschrieben.\n2. **Thermische Belastung** – der geringe Wirkungsgrad macht Kühlung und Überlastschutz der Röhre zu zentralen Wartungsthemen.\n3. **Strahlenschutz** – Arbeiten an Röntgeneinrichtungen erfordern Fachkunde bzw. Kenntnisse im Strahlenschutz nach [[strlschg|StrlSchG]] und [@strlschv]; bei Prüfungen an eingeschalteten Anlagen gelten Abstand, Abschirmung und Aufenthaltszeit als Grundregeln.\n\n> [!warnung] Röntgenstrahlung ist mit den Sinnen nicht wahrnehmbar. Messungen an laufenden Anlagen dürfen nur mit geeigneten Dosimetern, Schutzausrüstung und durch befugtes Personal erfolgen.",
+  "related": [
+    "roentgenroehre",
+    "ionisierende-strahlung",
+    "radioaktivitaet",
+    "roentgendetektor",
+    "kollimator",
+    "hochspannungserzeugung",
+    "strahlenschutz",
+    "roentgengeraet",
+    "computertomograph",
+    "konstanzpruefung",
+    "waermeuebertragung"
+  ],
+  "paths": [
+    [
+      "roentgengeraet",
+      "roentgenroehre",
+      "roentgenstrahlung",
+      "ionisierende-strahlung",
+      "strahlenschutz"
+    ],
+    [
+      "computertomograph",
+      "hochspannungserzeugung",
+      "roentgenroehre",
+      "roentgenstrahlung",
+      "roentgendetektor"
+    ]
+  ],
+  "sources": [
+    "roentgen-1895",
+    "krieger-strahlungsquellen-2018",
+    "krieger-strahlenschutz-2019",
+    "bushberg-2020",
+    "kalender-2011",
+    "strlschv"
+  ],
+  "diagram": {
+    "title": "Vom Netzstrom zum Röntgenbild",
+    "caption": "Funktionsschema der Erzeugung und Nutzung von Röntgenstrahlung (vereinfacht).",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "gen",
+        "label": "Hochspannungs-\ngenerator",
+        "ref": "hochspannungserzeugung",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "roe",
+        "label": "Röntgenröhre\n(Kathode → Anode)",
+        "ref": "roentgenroehre",
+        "kind": "process",
+        "x": 290,
+        "y": 80
+      },
+      {
+        "id": "str",
+        "label": "Bremsstrahlung +\ncharakt. Linien",
+        "ref": "roentgenstrahlung",
+        "kind": "output",
+        "x": 490,
+        "y": 80
+      },
+      {
+        "id": "kol",
+        "label": "Filter /\nKollimator",
+        "ref": "kollimator",
+        "kind": "process",
+        "x": 690,
+        "y": 80
+      },
+      {
+        "id": "pat",
+        "label": "Patient\n(Schwächung)",
+        "ref": "ionisierende-strahlung",
+        "kind": "patient",
+        "x": 690,
+        "y": 220
+      },
+      {
+        "id": "det",
+        "label": "Röntgendetektor",
+        "ref": "roentgendetektor",
+        "kind": "sensor",
+        "x": 450,
+        "y": 220
+      },
+      {
+        "id": "bild",
+        "label": "Bildverarbeitung\n/ Befundung",
+        "ref": "dicom",
+        "kind": "output",
+        "x": 210,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "gen",
+        "to": "roe",
+        "kind": "power",
+        "label": "kV, mA"
+      },
+      {
+        "from": "roe",
+        "to": "str",
+        "kind": "energy"
+      },
+      {
+        "from": "str",
+        "to": "kol",
+        "kind": "energy"
+      },
+      {
+        "from": "kol",
+        "to": "pat",
+        "kind": "energy"
+      },
+      {
+        "from": "pat",
+        "to": "det",
+        "kind": "energy",
+        "label": "Schwächungsrelief"
+      },
+      {
+        "from": "det",
+        "to": "bild",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

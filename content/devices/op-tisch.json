@@ -1,0 +1,66 @@
+{
+  "id": "op-tisch",
+  "type": "device",
+  "title": "Operationstisch",
+  "aliases": [
+    "OP-Tisch",
+    "Operationstischsystem",
+    "Operating table",
+    "Surgical table",
+    "OP-Lagerungssystem"
+  ],
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 71,
+  "domains": [
+    "chirurgie",
+    "orthopaedie-unfallchirurgie",
+    "anaesthesiologie",
+    "herzchirurgie"
+  ],
+  "summary": "Der Operationstisch trägt und lagert den Patienten während eines Eingriffs und erlaubt es, Höhe, Neigung und einzelne Segmente motorisch zu verstellen. Moderne Systeme bestehen oft aus einer fest installierten Säule und austauschbaren Tischplatten.",
+  "sections": {
+    "purpose": "Eine korrekte Lagerung verschafft dem Operationsteam optimalen Zugang zum Operationsgebiet, unterstützt die Anästhesie (z. B. Kopftief- oder Kopfhochlage) und muss gleichzeitig Druckschäden an Haut und Nerven vermeiden. Spezialtische gibt es für Orthopädie und Unfallchirurgie (Extensionstische), Neurochirurgie, Urologie oder bildgeführte Eingriffe mit [[c-bogen|C-Bogen]] (röntgendurchlässige Liegeflächen). Die besonderen Sicherheitsanforderungen beschreibt [[iec-60601-1|IEC 60601]] mit einem eigenen Teil für Operationstische [@iec-60601-2-46].",
+    "principle": "## Antriebe\n\nHöhenverstellung, Trendelenburg-Neigung, Seitenkippung und Segmentverstellung werden **elektrohydraulisch** (Elektromotor treibt eine Hydraulikpumpe, Zylinder bewegen die Gelenke, Ventile halten die Position) oder **elektromechanisch** über [[elektromotor|Elektromotoren]] mit [[spindelantrieb|Spindelantrieben]] realisiert. Positionssensoren und eine Steuerung auf Basis von [[mikrocontroller|Mikrocontrollern]] überwachen Endlagen und Kollisionen zwischen Segmenten und Boden. Die Bedienung erfolgt über Kabel- oder Funkhandbedienung, Fußschalter oder eine Wandbedieneinheit; eine Notbedienung erlaubt Grundfunktionen bei Ausfall der Hauptsteuerung.\n\n## Systemaufbau\n\n| Bauform | Merkmal |\n|---|---|\n| Mobiler OP-Tisch | Fahrgestell mit Feststellung, Akkubetrieb ([[lithium-ionen-akku]]) und Netzbetrieb |\n| Stationäre Säule mit Transferplatte | Tischplatte wird mit einem Transporter zwischen Einleitung, OP-Saal und Ausleitung bewegt; der Patient bleibt auf derselben Liegefläche |\n\nDie Standsicherheit hängt von Last, Lastverteilung und Auslenkung ab; Herstellerangaben zur zulässigen Patientenlast gelten nur für die beschriebenen Konfigurationen ([[kraftsensor]], [[druck]]).\n\n> [!warnung] Ungewollte Bewegungen sind ein zentrales Risiko: Vor jeder Verstellung müssen Zubehör, Leitungen und Personen außerhalb des Bewegungsbereichs sein. Der Tisch ist an den [[medizinisch-genutzte-bereiche|Potentialausgleich]] des OP anzuschließen, wenn der Hersteller dies vorsieht.\n\n> [!praxis] Häufige Wartungsbefunde sind Hydraulikleckagen, verschlissene Lagerungspolster und ausgeschlagene Zubehörschienen."
+  },
+  "manufacturers": [
+    {
+      "ref": "getinge",
+      "models": [
+        "Maquet Magnus",
+        "Maquet Alphamaxx"
+      ]
+    },
+    {
+      "ref": "hillrom",
+      "models": [
+        "TruSystem"
+      ],
+      "note": "Ursprünglich TRUMPF Medical."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Wartung von Hydraulik, Antrieben, Bremsen, Akkus und Zubehöraufnahmen nach Herstellerangabe; Funktions- und Sichtprüfung vor Gebrauch; elektrische Sicherheitsprüfung nach [[iec-62353|IEC 62353]] bzw. [[dguv-vorschrift-3|DGUV Vorschrift 3]]."
+  },
+  "related": [
+    "op-leuchte",
+    "c-bogen",
+    "hf-chirurgiegeraet",
+    "spindelantrieb",
+    "medizinisch-genutzte-bereiche",
+    "pflegebett"
+  ],
+  "sources": [
+    "iec-60601-2-46",
+    "kramme-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

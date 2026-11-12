@@ -1,0 +1,83 @@
+{
+  "id": "baxter",
+  "type": "manufacturer",
+  "title": "Baxter",
+  "aliases": [
+    "Baxter International Inc.",
+    "Baxter International",
+    "Hillrom",
+    "Welch Allyn"
+  ],
+  "category": "hersteller",
+  "summary": "Baxter International Inc. mit Sitz in Deerfield (Illinois, USA) ist ein Medizintechnik- und Pharmaunternehmen mit Schwerpunkten in Infusionstherapie, Injektabilia, chirurgischen Produkten sowie – über die 2021 übernommene Hillrom – Klinikbetten und Vitaldatenmessung. Das Nierengeschäft wurde 2025 als Vantive verkauft.",
+  "headquarters": "Deerfield, Illinois, USA",
+  "founded": "1931",
+  "website": "https://www.baxter.com/",
+  "productLines": [
+    {
+      "device": "infusionspumpe",
+      "models": [
+        "Novum IQ",
+        "Spectrum IQ"
+      ],
+      "note": "Verfügbarkeit regional unterschiedlich."
+    },
+    {
+      "device": "spritzenpumpe",
+      "models": [
+        "Novum IQ Syringe Pump"
+      ]
+    },
+    {
+      "device": "pflegebett",
+      "models": [
+        "Progressa",
+        "Centrella"
+      ],
+      "note": "Marken der übernommenen Hillrom."
+    },
+    {
+      "device": "nibp-messgeraet",
+      "models": [
+        "Connex Spot Monitor"
+      ],
+      "note": "Marke Welch Allyn (über Hillrom)."
+    },
+    {
+      "device": "crrt-geraet",
+      "models": [
+        "PrisMax",
+        "Prismaflex"
+      ],
+      "note": "Ursprünglich Gambro; seit 2025 bei Vantive."
+    },
+    {
+      "device": "dialysegeraet",
+      "models": [
+        "AK 98",
+        "Artis Physio"
+      ],
+      "note": "Ursprünglich Gambro; seit 2025 bei Vantive."
+    }
+  ],
+  "body": "## Überblick\n\n**Baxter International Inc.** ist ein US-amerikanisches Unternehmen mit Sitz in Deerfield (Illinois) [@baxter-web]. Es verbindet Pharma (Infusionslösungen, injizierbare Arzneimittel, Narkosegase), Medizintechnik (Infusionspumpen, chirurgische Hämostyptika) und – seit der Übernahme von Hillrom – Klinikbetten, Vitaldatenmessung und klinische Kommunikation. Das traditionsreiche Nierengeschäft gehört seit 2025 nicht mehr zu Baxter.\n\n## Geschichte in Stichpunkten\n\n* **1931:** Gründung als erster Hersteller kommerziell produzierter intravenöser Lösungen in den USA.\n* **Mitte 20. Jahrhundert:** Baxter trägt zur Verbreitung der Hämodialyse bei und entwickelt sich zu einem großen Anbieter von Dialyse- und Peritonealdialyseprodukten.\n* **2013:** Übernahme des schwedischen Dialyseherstellers Gambro (Dialysegeräte AK, [[crrt-geraet|CRRT]]-Systeme Prismaflex/PrisMax).\n* **2021:** Übernahme von Hillrom mit den Marken Hill-Rom (Betten) und Welch Allyn (Diagnostik- und Vitaldatengeräte).\n* **2025:** Abschluss des Verkaufs des Nierengeschäfts an Finanzinvestoren; es firmiert seitdem als eigenständiges Unternehmen **Vantive** [@vantive-ak98].\n\n## Geschäftsbereiche\n\n| Segment | Inhalte (Auswahl) |\n|---|---|\n| Medical Products & Therapies | Infusionslösungen, [[infusionspumpe|Infusions-]] und [[spritzenpumpe|Spritzenpumpen]], chirurgische Produkte |\n| Healthcare Systems & Technologies | [[pflegebett|Klinikbetten]], Vitaldatenmessung ([[nibp-messgeraet]], [[thermometer]]), Kommunikationssysteme (ehemals Hillrom) |\n| Pharmaceuticals | Injizierbare Arzneimittel, Narkosegase |\n\n## Bedeutung für die Medizintechnik\n\nBaxter ist historisch eng mit der Entwicklung der Infusionstherapie und der Nierenersatztherapie verbunden. Viele in Kliniken betriebene [[crrt-geraet|CRRT-Geräte]] und [[dialysegeraet|Dialysegeräte]] tragen noch den Namen Baxter oder Gambro, werden aber inzwischen von Vantive betreut – ein typisches Beispiel dafür, wie Konzernumbauten die Zuständigkeit für Service, Ersatzteile und Sicherheitsinformationen verändern. Für Betten und Vitaldatengeräte siehe auch [[hillrom]].\n\n> [!praxis] Bei Herstellerwechseln durch Verkauf oder Abspaltung sollten Betreiber im [[bestandsverzeichnis]] und in den Serviceverträgen den neuen Ansprechpartner hinterlegen, damit Sicherheitsmitteilungen ([[vigilanz]]) zuverlässig ankommen.\n\n> [!hinweis] Für Infusionspumpen sind sicherheitsrelevante Korrekturmaßnahmen des Herstellers zu beachten; der jeweils aktuelle Stand ist beim Hersteller und beim BfArM einsehbar [@bfarm].\n\n## Einordnung im Markt\n\nIn der Infusionstechnik konkurriert Baxter vor allem mit [[b-braun]], [[fresenius-kabi]] und [[icu-medical]]. Das Infusionspumpen-Programm von Baxter ist regional unterschiedlich verfügbar und in Nordamerika stärker vertreten als in Deutschland; deutlich präsenter sind hierzulande die Produkte aus der Hillrom-Übernahme (Betten, Vitaldatengeräte) sowie die Akutdialysesysteme, die inzwischen zu Vantive gehören. Für Medizintechniker:innen ist daher bei jedem Gerät zu klären, welcher Rechtsträger aktuell als Hersteller auftritt und Service, Ersatzteile sowie Sicherheitsinformationen verantwortet.",
+  "related": [
+    "infusionspumpe",
+    "crrt-geraet",
+    "dialysegeraet",
+    "pflegebett",
+    "hillrom",
+    "b-braun",
+    "fresenius-kabi",
+    "icu-medical",
+    "fresenius-medical-care",
+    "nephrologie"
+  ],
+  "sources": [
+    "baxter-web",
+    "vantive-ak98",
+    "bfarm"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "belimed",
+  "type": "manufacturer",
+  "title": "Belimed",
+  "aliases": [
+    "Belimed AG",
+    "SteelcoBelimed",
+    "Belimed Infection Control"
+  ],
+  "category": "hersteller",
+  "summary": "Belimed ist ein Schweizer Hersteller von Geräten für die Aufbereitung von Medizinprodukten, insbesondere Reinigungs- und Desinfektionsgeräten sowie Dampfsterilisatoren. Seit 2024 gehört Belimed zum Joint Venture SteelcoBelimed von Miele und Metall Zug.",
+  "headquarters": "Zug, Schweiz",
+  "founded": "1990",
+  "website": "https://www.belimed.com/",
+  "productLines": [
+    {
+      "device": "rdg",
+      "models": [],
+      "note": "Reinigungs- und Desinfektionsgeräte für Instrumente, Container und Zubehör, einschließlich Durchlade- und Mehrkammeranlagen."
+    },
+    {
+      "device": "dampfsterilisator",
+      "models": [],
+      "note": "Groß-Dampfsterilisatoren für die Aufbereitungseinheit für Medizinprodukte (AEMP)."
+    }
+  ],
+  "body": "## Überblick\n\n**Belimed** entwickelt und fertigt Geräte und Systeme für die **Aufbereitung von Medizinprodukten** in Krankenhäusern sowie – über eine eigenständige Schwestergesellschaft – für Pharma und Labor [@belimed-web]. Hauptsitz ist Zug in der Schweiz; Fertigungsstandorte bestehen u. a. in der Schweiz (Sulgen) und in Europa.\n\n## Geschichte in Stichpunkten\n\n* **1968:** Ein Vorgängerunternehmen liefert die erste Spülmaschine für Laborglas – darauf führt Belimed seine Wurzeln zurück.\n* **1990:** Gründung der **Belimed AG**.\n* **1990er Jahre:** Übernahme durch die Schweizer Industriegruppe **Metall Zug**; Aufbau der Belimed-Gruppe, später als Geschäftsbereich „Infection Control“ der Metall-Zug-Gruppe geführt.\n* **Ende der 2010er Jahre:** Trennung des Medizingeschäfts (Belimed) vom Pharma- und Laborgeschäft (Belimed Life Science).\n* **2024:** Zusammenführung mit der Steelco-Gruppe von Miele zum Joint Venture **SteelcoBelimed** (Mehrheit bei Miele) [@steelcobelimed-2024].\n\n## Produktbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Reinigung und Desinfektion | [[rdg|Reinigungs- und Desinfektionsgeräte]] für Instrumente, Container, Betten- und Wagenwaschanlagen |\n| Sterilisation | [[dampfsterilisator|Dampfsterilisatoren]] |\n| Prozess-IT | Chargendokumentation und Rückverfolgung |\n| Service | Validierung, Wartung, Ersatzteile |\n\n## Bedeutung für die Medizintechnik\n\nDie [[aufbereitung]] von Medizinprodukten ist ein streng regulierter Prozess: Reinigung und [[desinfektion]] im RDG und anschließende [[sterilisation]] müssen validiert sein. Maßgeblich sind u. a. die Normenreihen [[iso-15883|ISO 15883]] (RDG) und [[iso-17665|ISO 17665]] (Dampfsterilisation) sowie die gemeinsame Empfehlung von KRINKO und BfArM [@krinko-bfarm-2012].\n\n| Prozessschritt | Typische Prüfung im Betrieb | Ziel |\n|---|---|---|\n| Reinigung/Desinfektion im RDG | Sichtprüfung, Reinigungsindikatoren, Überwachung von Temperatur und Haltezeit | Entfernung von Rückständen, thermische Desinfektion (A0-Konzept) |\n| Dampfsterilisation | Dampfdurchdringungstest (z. B. Bowie-Dick-Typ), Vakuumtest, Chargendokumentation | Luftfreiheit und gesättigter Dampf an allen Oberflächen |\n| Freigabe | Prüfung der Prozessparameter und Indikatoren durch qualifiziertes Personal | Dokumentierte Chargenfreigabe |\n\n> [!vereinfacht] Ein Dampfsterilisator entfernt zunächst die Luft aus Kammer und Beladung (fraktioniertes Vorvakuum), damit gesättigter Dampf alle Oberflächen erreicht; anschließend wird eine definierte Temperatur für eine definierte Zeit gehalten, danach getrocknet.\n\n> [!praxis] Neben der Validierung durch Fachfirmen gehören tägliche Routineprüfungen (z. B. Dampfdurchdringungstest) und die Chargendokumentation zum Betrieb einer AEMP. Druckbehälter von Sterilisatoren unterliegen zusätzlich Prüfpflichten nach Betriebssicherheitsrecht.\n\n## Einordnung im Markt\n\nWettbewerber in der Sterilgutversorgung sind u. a. [[getinge]] und weitere Hersteller von Aufbereitungstechnik. Durch das Joint Venture mit Steelco ist Belimed heute Teil eines der größeren Anbieter in diesem Segment.",
+  "related": [
+    "rdg",
+    "dampfsterilisator",
+    "aufbereitung",
+    "sterilisation",
+    "desinfektion",
+    "iso-15883",
+    "iso-17665",
+    "getinge"
+  ],
+  "sources": [
+    "belimed-web",
+    "steelcobelimed-2024",
+    "krinko-bfarm-2012"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

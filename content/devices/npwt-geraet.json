@@ -1,0 +1,50 @@
+{
+  "id": "npwt-geraet",
+  "type": "device",
+  "title": "Unterdruck-Wundtherapiegerät (NPWT)",
+  "aliases": [
+    "NPWT",
+    "Vakuumtherapie",
+    "Vakuumversiegelung",
+    "VAC-Therapie",
+    "Unterdruckwundtherapie",
+    "Negative Pressure Wound Therapy"
+  ],
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 87,
+  "domains": [
+    "chirurgie",
+    "orthopaedie-unfallchirurgie",
+    "intensivmedizin"
+  ],
+  "summary": "Unterdruck-Wundtherapiegeräte saugen über einen luftdicht abgeklebten Schaumstoff- oder Gazeverband kontinuierlich oder intermittierend Wundflüssigkeit ab. Der Unterdruck hält die Wunde sauber, reduziert Ödeme und fördert die Bildung von Granulationsgewebe.",
+  "sections": {
+    "purpose": "Die Unterdrucktherapie wird bei großen, stark sezernierenden oder schlecht heilenden Wunden eingesetzt, z. B. nach Trauma, bei offenem Abdomen, bei Dekubitus oder diabetischen Fußulzera sowie prophylaktisch auf geschlossenen Operationswunden. Sie schafft ein feuchtes, geschlossenes Wundmilieu und verringert die Häufigkeit von Verbandwechseln [@kramme-2017].",
+    "principle": "## Aufbau\n\n| Komponente | Funktion |\n|---|---|\n| Wundfüller | offenporiger Polyurethan- oder Polyvinylalkoholschaum bzw. Gaze; verteilt den Unterdruck in der Wunde |\n| Folie | transparente, luftdichte Abdeckung |\n| Schlauch mit Anschlusspad | Verbindung zum Gerät, häufig mit separatem Messlumen |\n| Pumpeneinheit | Membranpumpe mit [[elektromotor|Motor]], [[drucksensor|Drucksensor]] und Steuerung |\n| Kanister | sammelt Exsudat, mit Filter und ggf. Geliermittel |\n\n## Funktionsprinzip\n\nDie Pumpe erzeugt einen Unterdruck gegenüber der Umgebung, der über den Drucksensor auf den eingestellten Sollwert geregelt wird ([[regelkreis]]). Ein häufig genannter Standardwert ist –125 mmHg; je nach Wundart, Füller und Patient werden niedrigere oder abweichende Werte verwendet. Betriebsarten sind kontinuierlich, intermittierend oder variabel; einige Systeme können Spüllösung instillieren.\n\n> [!vereinfacht] Als Wirkmechanismen werden die Makrodeformation (Zusammenziehen der Wundränder), die Mikrodeformation der Zellen an der Schaumoberfläche, die Entfernung von Exsudat und Ödemflüssigkeit sowie eine veränderte Durchblutung beschrieben.\n\n## Überwachung\n\nDie Regelung erkennt über Druck- und Durchflusswerte typische Störungen: **Leckage** (Pumpe läuft ständig, Solldruck wird nicht gehalten), **Verstopfung** von Schlauch oder Kanister und **voller Kanister** ([[leckage]], [[alarmsystem]]). Tragbare Geräte werden über [[lithium-ionen-akku|Akkus]] betrieben; daneben gibt es mechanische oder batteriebetriebene Einmalsysteme.\n\n> [!warnung] Ungeeignet ist die Therapie z. B. über freiliegenden großen Gefäßen oder Organen ohne Schutz sowie bei unbehandelten Blutungsrisiken; Blutverlust in den Kanister ist zu überwachen. Maßgeblich sind die Herstellerangaben."
+  },
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: stationäres oder tragbares Gerät, Kauf oder Miete, Verbandsets und Kanister als laufende Kosten, Instillationsfunktion, Einmalsysteme, Dauer der Therapie."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) aufgeführt. Prüfung der Druckgenauigkeit und Alarmfunktionen gemäß Herstellervorgabe; Geräte werden häufig im Mietmodell vom Anbieter instand gehalten.",
+    "intervals": "Wartung nach Herstellerangabe; Aufbereitung (Wischdesinfektion) nach jedem Patienten; Akku- und Alarmtest vor Anwendung."
+  },
+  "related": [
+    "drucksensor",
+    "regelkreis",
+    "leckage",
+    "absauggeraet",
+    "haut",
+    "chirurgie"
+  ],
+  "sources": [
+    "kramme-2017",
+    "wintermantel-2009"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

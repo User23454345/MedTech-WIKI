@@ -1,0 +1,125 @@
+[
+  {
+    "id": "abbott-web",
+    "kind": "hersteller",
+    "authors": "Abbott Laboratories",
+    "title": "Abbott Laboratories – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.abbott.com/"
+  },
+  {
+    "id": "boston-scientific-web",
+    "kind": "hersteller",
+    "authors": "Boston Scientific Corporation",
+    "title": "Boston Scientific Corporation – Unternehmenswebsite (Produkte, Unternehmensinformationen)",
+    "url": "https://www.bostonscientific.com/"
+  },
+  {
+    "id": "biotronik-web",
+    "kind": "hersteller",
+    "authors": "BIOTRONIK SE & Co. KG",
+    "title": "BIOTRONIK – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.biotronik.com/"
+  },
+  {
+    "id": "roche-web",
+    "kind": "hersteller",
+    "authors": "F. Hoffmann-La Roche AG",
+    "title": "Roche – Unternehmenswebsite (Diagnostics, Unternehmensgeschichte)",
+    "url": "https://www.roche.com/"
+  },
+  {
+    "id": "sysmex-web",
+    "kind": "hersteller",
+    "authors": "Sysmex Corporation",
+    "title": "Sysmex Corporation – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.sysmex.com/"
+  },
+  {
+    "id": "weinmann-web",
+    "kind": "hersteller",
+    "authors": "WEINMANN Emergency Medical Technology GmbH + Co. KG",
+    "title": "WEINMANN Emergency – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.weinmann-emergency.com/"
+  },
+  {
+    "id": "corpuls-web",
+    "kind": "hersteller",
+    "authors": "GS Elektromedizinische Geräte G. Stemple GmbH",
+    "title": "corpuls – Unternehmenswebsite (Produkte, Pressemitteilungen)",
+    "url": "https://corpuls.world/"
+  },
+  {
+    "id": "fujifilm-web",
+    "kind": "hersteller",
+    "authors": "FUJIFILM Holdings Corporation",
+    "title": "FUJIFILM – Unternehmenswebsite (Healthcare, Unternehmensgeschichte)",
+    "url": "https://www.fujifilm.com/"
+  },
+  {
+    "id": "dentsply-sirona-web",
+    "kind": "hersteller",
+    "authors": "Dentsply Sirona Inc.",
+    "title": "Dentsply Sirona – Unternehmenswebsite (Produkte, Unternehmensinformationen)",
+    "url": "https://www.dentsplysirona.com/"
+  },
+  {
+    "id": "cochlear-web",
+    "kind": "hersteller",
+    "authors": "Cochlear Limited",
+    "title": "Cochlear Limited – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.cochlear.com/"
+  },
+  {
+    "id": "belimed-web",
+    "kind": "hersteller",
+    "authors": "Belimed AG",
+    "title": "Belimed – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.belimed.com/"
+  },
+  {
+    "id": "arjo-web",
+    "kind": "hersteller",
+    "authors": "Arjo AB",
+    "title": "Arjo AB – Unternehmenswebsite (Produkte, Unternehmensgeschichte)",
+    "url": "https://www.arjo.com/"
+  },
+  {
+    "id": "hillrom-web",
+    "kind": "hersteller",
+    "authors": "Hill-Rom Holdings, Inc. (Baxter)",
+    "title": "Hillrom – Unternehmenswebsite (Produkte; Teil von Baxter)",
+    "url": "https://www.hillrom.com/"
+  },
+  {
+    "id": "teleflex-biotronik-vi-2025",
+    "kind": "hersteller",
+    "authors": "Teleflex Incorporated",
+    "title": "Teleflex Completes Acquisition of BIOTRONIK's Vascular Intervention Business (Pressemitteilung)",
+    "year": "2025",
+    "url": "https://investors.teleflex.com/news/news-details/2025/Teleflex-Completes-Acquisition-of-BIOTRONIKs-Vascular-Intervention-Business/default.aspx"
+  },
+  {
+    "id": "abbott-exact-sciences-2026",
+    "kind": "hersteller",
+    "authors": "Abbott Laboratories",
+    "title": "Abbott completes acquisition of Exact Sciences (Pressemitteilung, 23.03.2026)",
+    "year": "2026",
+    "url": "https://abbott.mediaroom.com/2026-03-23-Abbott-completes-acquisition-of-Exact-Sciences"
+  },
+  {
+    "id": "steelcobelimed-2024",
+    "kind": "hersteller",
+    "authors": "Belimed AG",
+    "title": "SteelcoBelimed – Abschluss des Joint Ventures von Metall Zug und Miele (Unternehmensmitteilung, 2024)",
+    "year": "2024",
+    "url": "https://belimed.com/en/news-steelcobelimed"
+  },
+  {
+    "id": "cochlear-oticon-2024",
+    "kind": "artikel",
+    "authors": "Medical Device Network",
+    "title": "Cochlear concludes Oticon Medical cochlear implant acquisition",
+    "year": "2024",
+    "url": "https://medicaldevice-network.com/news/cochlear-oticon-medical-implant-acquisition"
+  }
+]

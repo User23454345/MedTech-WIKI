@@ -1,0 +1,157 @@
+{
+  "id": "konformitaetsbewertung",
+  "type": "term",
+  "title": "Konformitätsbewertung",
+  "aliases": [
+    "Konformitätsbewertungsverfahren",
+    "Conformity assessment",
+    "Zulassung (umgangssprachlich)",
+    "Grundlegende Sicherheits- und Leistungsanforderungen",
+    "GSPR",
+    "Technische Dokumentation"
+  ],
+  "category": "recht",
+  "summary": "Die Konformitätsbewertung ist das Verfahren, mit dem nachgewiesen wird, dass ein Medizinprodukt die Anforderungen der MDR erfüllt. Art und Tiefe hängen von der Risikoklasse ab; ab Klasse IIa ist eine Benannte Stelle beteiligt, und am Ende stehen EU-Konformitätserklärung und CE-Kennzeichnung.",
+  "body": "## Begriff\n\nDie [[mdr|MDR]] versteht unter **Konformitätsbewertung** das Verfahren, nach dem festgestellt wird, ob die Anforderungen der Verordnung an ein Produkt erfüllt worden sind [@mdr-2017]. Anders als bei Arzneimitteln gibt es in der EU für Medizinprodukte **keine behördliche Zulassung**: Der Hersteller weist die Konformität nach, bei höheren [[risikoklassen|Risikoklassen]] überprüft durch eine [[benannte-stelle|Benannte Stelle]]. Umgangssprachlich wird trotzdem oft von „Zulassung“ gesprochen.\n\n> [!belegt] Die Konformitätsbewertungsverfahren sind in Art. 52 MDR in Verbindung mit den Anhängen IX bis XI geregelt; welches Verfahren in Frage kommt, ergibt sich aus der Klasse des Produkts [@mdr-2017].\n\n## Was wird bewertet?\n\n### Grundlegende Sicherheits- und Leistungsanforderungen\n\nKern ist **Anhang I** der MDR mit den grundlegenden Sicherheits- und Leistungsanforderungen (englisch *General Safety and Performance Requirements*, GSPR). Sie verlangen sinngemäß unter anderem [@mdr-2017]:\n\n* Risiken so weit wie möglich zu verringern, ohne das Nutzen-Risiko-Verhältnis zu verschlechtern – mit einem Risikomanagement über den gesamten [[lebenszyklus-medizinprodukt|Lebenszyklus]] (vgl. [[iso-14971]]),\n* Anforderungen an Konstruktion und Herstellung: chemische, physikalische und biologische Eigenschaften ([[iso-10993-1]]), Infektionsschutz, Strahlenschutz,\n* Anforderungen an elektrische und programmierbare Systeme, einschließlich Software-Lebenszyklus und IT-Sicherheit ([[iec-62304]]),\n* Schutz vor mechanischen, thermischen und elektrischen Risiken (vgl. [[iec-60601-1]], [[emv]]),\n* Gebrauchstauglichkeit ([[iec-62366-1]]) sowie Kennzeichnung und Gebrauchsanweisung.\n\n### Harmonisierte Normen und gemeinsame Spezifikationen\n\nWendet der Hersteller **harmonisierte Normen** an, deren Fundstellen im Amtsblatt der EU veröffentlicht sind, wird vermutet, dass die davon abgedeckten Anforderungen erfüllt sind (Art. 8 MDR). **Gemeinsame Spezifikationen** (Art. 9) können Anforderungen verbindlich konkretisieren [@mdr-2017].\n\n| Anforderungsbereich | Typische Normen |\n|---|---|\n| Qualitätsmanagement | [[iso-13485]] |\n| Risikomanagement | [[iso-14971]] |\n| Elektrische Sicherheit ME-Geräte | [[iec-60601-1]] mit Ergänzungs- und Besonderen Normen, z. B. [[iec-60601-1-2]], [[iec-60601-1-8]] |\n| Software | [[iec-62304]] |\n| Gebrauchstauglichkeit | [[iec-62366-1]], [[iec-60601-1-6]] |\n| Biokompatibilität | [[iso-10993-1]] |\n| Klinische Prüfung | ISO 14155 [@iso-14155] |\n\n## Technische Dokumentation\n\nDie **technische Dokumentation** (Anhänge II und III) bündelt alle Nachweise [@mdr-2017]:\n\n1. Produktbeschreibung, Varianten, [[zweckbestimmung|Zweckbestimmung]], Basis-[[udi|UDI]]-DI,\n2. vom Hersteller bereitzustellende Informationen (Kennzeichnung, Gebrauchsanweisung),\n3. Auslegungs- und Herstellungsinformationen,\n4. Nachweis der GSPR-Erfüllung (oft als Checkliste mit Verweis auf Normen und Prüfberichte),\n5. Nutzen-Risiko-Analyse und Risikomanagement,\n6. Verifizierung und Validierung: Prüfberichte, Softwarevalidierung, [[klinische-bewertung|klinische Bewertung]],\n7. Plan und Berichte zur Überwachung nach dem Inverkehrbringen (Anhang III).\n\n## Verfahren nach Risikoklasse\n\n| Klasse | Verfahren (vereinfacht) | Anhang |\n|---|---|---|\n| **I** | Hersteller erstellt technische Dokumentation und EU-Konformitätserklärung in eigener Verantwortung | II, III, IV |\n| **Is / Im / Ir** | wie I, zusätzlich Benannte Stelle für Sterilität, Messfunktion bzw. Aufbereitung | IX oder XI (Teil A) |\n| **IIa** | QM-System-Bewertung durch Benannte Stelle plus Bewertung der technischen Dokumentation an repräsentativen Produkten; alternativ Produktkonformitätsprüfung | IX bzw. II/III + XI |\n| **IIb** | wie IIa, technische Dokumentation repräsentativ je generischer Produktgruppe; bei implantierbaren Produkten (mit Ausnahmen) jedes Produkt; alternativ Baumusterprüfung + Produktkonformitätsprüfung | IX bzw. X + XI |\n| **III** | QM-System plus Bewertung der technischen Dokumentation jedes Produkts; alternativ Baumusterprüfung + Produktkonformitätsprüfung; ggf. Konsultationsverfahren mit Expertengremium | IX bzw. X + XI |\n\n> [!vereinfacht] Die Tabelle fasst die Wahlmöglichkeiten von Art. 52 stark zusammen. Für Sonderanfertigungen, Kombinationsprodukte mit Arzneimitteln oder Produkte aus Geweben gelten zusätzliche Regeln [@mdr-2017].\n\n### Anhang IX – Qualitätsmanagement und technische Dokumentation\n\nDer in der Praxis häufigste Weg: Die Benannte Stelle auditiert das QM-System (Kapitel I) und bewertet die technische Dokumentation (Kapitel II). Danach überwacht sie den Hersteller mit regelmäßigen Audits, auch unangekündigt.\n\n### Anhang X und XI – Baumuster und Produktkonformität\n\nBei der **Baumusterprüfung** (Anhang X) prüft die Benannte Stelle ein repräsentatives Muster; die **Produktkonformitätsprüfung** (Anhang XI) stellt sicher, dass die Serienproduktion dem Baumuster entspricht – entweder über ein Produktions-QM-System (Teil A) oder Produktprüfungen (Teil B).\n\n## Ablauf als Kette\n\n> [!beispiel] Vereinfachter Ablauf für einen [[patientenmonitor]] der Klasse IIb: Festlegung der Zweckbestimmung → Klassifizierung nach Regel 10 → Entwicklung nach [[iso-13485]] mit Risikomanagement nach [[iso-14971]] → Prüfungen nach [[iec-60601-1]], [[iec-60601-1-2]], [[iec-60601-1-8]] und der Besonderen Norm für EKG-Überwachung → Softwaredokumentation nach [[iec-62304]] → klinische Bewertung → Audit und Dokumentationsprüfung durch die Benannte Stelle → Bescheinigung → EU-Konformitätserklärung → CE-Kennzeichnung mit Kennnummer → Registrierung und [[udi|UDI]]-Daten in EUDAMED.\n\n## Nach dem Inverkehrbringen\n\nDie Konformitätsbewertung ist keine einmalige Hürde. Der Hersteller muss ein System zur **Überwachung nach dem Inverkehrbringen** (Post-Market Surveillance) betreiben, Vorkommnisse melden ([[vigilanz]]), die klinische Bewertung aktualisieren und wesentliche Änderungen der Benannten Stelle vorlegen [@mdr-2017].\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechniker:innen in Kliniken ergeben sich aus der Konformitätsbewertung des Herstellers konkrete Konsequenzen:\n\n* **Prüfvorgaben übernehmen:** Die vom Hersteller im Rahmen der Konformitätsbewertung festgelegten Wartungs- und Prüfintervalle sind Grundlage für [[wartung]], [[stk]] und [[mtk]] – etwa bei [[beatmungsgeraet]], [[defibrillator]] oder [[infusionspumpe]].\n* **Veränderungen vermeiden:** Eigenmächtige Modifikationen (Fremd-Ersatzteile, nicht freigegebene Software, Umbauten) können die Konformitätsaussage gefährden.\n* **Eigenherstellung:** Entwickelt eine Klinik selbst ein Produkt (z. B. Software, Adapter), gelten die Bedingungen für Eigenherstellungen in Gesundheitseinrichtungen nach Art. 5 Abs. 5 MDR [@mdr-2017].\n* **Systeme:** Wer mehrere CE-gekennzeichnete Produkte zu einem System zusammenstellt, muss prüfen, ob die Kombination durch die Zweckbestimmungen der Einzelprodukte gedeckt ist.\n\n## Hinweis\n\nMaßgeblich sind die MDR und ihre Anhänge in der jeweils gültigen Fassung.",
+  "related": [
+    "risikoklassen",
+    "benannte-stelle",
+    "ce-kennzeichnung",
+    "klinische-bewertung",
+    "iso-13485",
+    "iso-14971",
+    "iec-60601-1",
+    "mdr",
+    "udi"
+  ],
+  "paths": [
+    [
+      "medizinprodukt",
+      "zweckbestimmung",
+      "risikoklassen",
+      "konformitaetsbewertung",
+      "ce-kennzeichnung"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "iso-13485",
+    "iso-14971",
+    "iec-60601-1",
+    "iec-62304",
+    "iso-14155"
+  ],
+  "diagram": {
+    "title": "Ablauf der Konformitätsbewertung (vereinfacht)",
+    "caption": "Vereinfachte Darstellung nach Art. 52 und Anhängen II, III, IX–XI MDR.",
+    "width": 900,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "klasse",
+        "label": "Risikoklasse\nfestlegen",
+        "ref": "risikoklassen",
+        "kind": "source",
+        "x": 100,
+        "y": 80
+      },
+      {
+        "id": "gspr",
+        "label": "Anhang I:\nSicherheits- und\nLeistungsanforderungen",
+        "kind": "process",
+        "x": 320,
+        "y": 80,
+        "w": 170,
+        "h": 70
+      },
+      {
+        "id": "td",
+        "label": "Technische\nDokumentation",
+        "kind": "process",
+        "x": 540,
+        "y": 80
+      },
+      {
+        "id": "kb",
+        "label": "Klinische\nBewertung",
+        "ref": "klinische-bewertung",
+        "kind": "process",
+        "x": 760,
+        "y": 80
+      },
+      {
+        "id": "nb",
+        "label": "Benannte Stelle\n(ab IIa)",
+        "ref": "benannte-stelle",
+        "kind": "control",
+        "x": 760,
+        "y": 250
+      },
+      {
+        "id": "doc",
+        "label": "EU-Konformitäts-\nerklärung",
+        "kind": "output",
+        "x": 540,
+        "y": 250
+      },
+      {
+        "id": "ce",
+        "label": "CE-Kennzeichnung",
+        "ref": "ce-kennzeichnung",
+        "kind": "output",
+        "x": 320,
+        "y": 250
+      },
+      {
+        "id": "pms",
+        "label": "Überwachung nach\nInverkehrbringen",
+        "ref": "vigilanz",
+        "kind": "process",
+        "x": 100,
+        "y": 250
+      }
+    ],
+    "edges": [
+      {
+        "from": "klasse",
+        "to": "gspr",
+        "kind": "data"
+      },
+      {
+        "from": "gspr",
+        "to": "td",
+        "kind": "data"
+      },
+      {
+        "from": "td",
+        "to": "kb",
+        "kind": "data"
+      },
+      {
+        "from": "kb",
+        "to": "nb",
+        "kind": "data",
+        "label": "Prüfung"
+      },
+      {
+        "from": "nb",
+        "to": "doc",
+        "kind": "data",
+        "label": "Bescheinigung"
+      },
+      {
+        "from": "doc",
+        "to": "ce",
+        "kind": "data"
+      },
+      {
+        "from": "ce",
+        "to": "pms",
+        "kind": "data",
+        "label": "Inverkehrbringen"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

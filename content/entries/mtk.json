@@ -1,0 +1,158 @@
+{
+  "id": "mtk",
+  "type": "term",
+  "title": "Messtechnische Kontrolle (MTK)",
+  "aliases": [
+    "MTK",
+    "Messtechnische Kontrollen",
+    "metrologische Kontrolle",
+    "Metrological inspection",
+    "Metrological check",
+    "§ 15 MPBetreibV"
+  ],
+  "category": "stk-mtk",
+  "summary": "Die messtechnische Kontrolle (MTK) prüft bei Medizinprodukten mit Messfunktion, ob die zulässigen Fehlergrenzen eingehalten werden. Sie ist in § 15 der 2025 neu gefassten Medizinprodukte-Betreiberverordnung in Verbindung mit Anlage 2 geregelt und betrifft etwa Blutdruckmessgeräte, medizinische Thermometer, Audiometer und Tonometer.",
+  "body": "## Begriff und Zweck\n\nDie **messtechnische Kontrolle (MTK)** stellt fest, ob ein [[medizinprodukt|Medizinprodukt]] mit Messfunktion die **zulässigen maximalen Messabweichungen (Fehlergrenzen)** einhält. Sie ist damit eine metrologische Prüfung: Der Anzeigewert des Prüflings wird unter definierten Bedingungen mit dem Wert eines rückgeführten Normals verglichen [@mpbetreibv] [@lmkm-ptb].\n\nHintergrund ist, dass Diagnose und Therapie unmittelbar auf Messwerten beruhen. Zeigt ein [[nibp-messgeraet|Blutdruckmessgerät]] systematisch zu niedrige Werte, kann eine behandlungsbedürftige Hypertonie übersehen werden; ein falsch messendes [[thermometer|Thermometer]] kann Fieber verschleiern. Die MTK soll solche **systematischen Messabweichungen** rechtzeitig aufdecken.\n\n## Abgrenzung: Eichung, Kalibrierung, MTK\n\n| Begriff | Bedeutung | Rechtsrahmen |\n|---|---|---|\n| Eichung | hoheitliche Prüfung und Kennzeichnung eines Messgeräts im gesetzlichen Messwesen | Mess- und Eichgesetz (MessEG) [@messeg] |\n| [[kalibrierung|Kalibrierung]] | Ermittlung des Zusammenhangs zwischen Anzeige und richtigem Wert inklusive [[messunsicherheit|Messunsicherheit]], ohne Bewertung | metrologische Grundbegriffe nach VIM [@jcgm-200-2012] |\n| Justierung | Einstellen des Geräts, sodass die Abweichung minimal wird | Herstellerangaben |\n| MTK | Kalibrierung plus Bewertung gegen Fehlergrenzen, mit Kennzeichnung | § 15 i. V. m. Anlage 2 MPBetreibV [@mpbetreibv] |\n\n> [!vereinfacht] Umgangssprachlich wird die MTK oft „Eichung“ genannt. Das ist rechtlich ungenau: Medizinprodukte mit Messfunktion werden im Betrieb nicht geeicht, sondern messtechnisch kontrolliert. Eine Justierung ist ausdrücklich nicht Teil der MTK – wird justiert, ist das eine Instandhaltungsmaßnahme, nach der die MTK erneut durchgeführt wird.\n\n## Rechtsgrundlage\n\n> [!belegt] Die MTK ist in **§ 15 der Medizinprodukte-Betreiberverordnung** ([[mpbetreibv|MPBetreibV]]) vom 14. Februar 2025 (BGBl. 2025 I Nr. 38) in Verbindung mit **Anlage 2** geregelt. Der Betreiber hat für die in Anlage 2 genannten Medizinprodukte sowie für Produkte, für die der Hersteller MTK vorsieht, messtechnische Kontrollen durchführen zu lassen. Die Fristen ergeben sich aus Anlage 2 bzw. aus den Herstellerangaben; sie beginnen mit Ablauf des Jahres, in dem das Produkt in Betrieb genommen oder zuletzt kontrolliert wurde [@mpbetreibv].\n\nDie Anlage 2 wurde nach der Neufassung im Herbst 2025 durch eine Änderungsverordnung berichtigt. Für die konkrete Frist eines Geräts ist daher stets die **aktuelle konsolidierte Fassung** heranzuziehen [@mpbetreibv].\n\n> [!warnung] In älteren Unterlagen erscheint die MTK als „§ 14 MPBetreibV“. Diese Nummerierung gehört zur Fassung von 2002/2017 und ist überholt.\n\nFür die Durchführung hat die Physikalisch-Technische Bundesanstalt (PTB) den **Leitfaden zu messtechnischen Kontrollen von Medizinprodukten mit Messfunktion (LMKM)** veröffentlicht. Wird er beachtet, wird eine ordnungsgemäße Durchführung vermutet. Der Leitfaden beschreibt je Gerätegruppe Prüfpunkte, Prüfmittel und Fehlergrenzen [@lmkm-ptb].\n\n## Betroffene Gerätegruppen\n\nAnlage 2 nennt sinngemäß folgende Gruppen [@mpbetreibv] [@lmkm-ptb]:\n\n| Gerätegruppe | Messgröße | Typische Prüfung | Wiki-Artikel |\n|---|---|---|---|\n| Ton- und Sprachaudiometer | Schalldruckpegel, Frequenz | Kopfhörer am akustischen Kuppler, Schallpegelmessung | [[audiometer]] |\n| Produkte zur Bestimmung der Körpertemperatur (u. a. elektrische Thermometer, Infrarot-Strahlungsthermometer) | Temperatur | Flüssigkeitsbad bzw. Hohlraumstrahler als Referenz | [[thermometer]] |\n| Nichtinvasive Blutdruckmessgeräte | Manschettendruck | statischer Druckvergleich mit Referenzmanometer, Dichtheit | [[nibp-messgeraet]], [[langzeit-blutdruck]], [[patientenmonitor]] |\n| Augentonometer | Augeninnendruck | Prüfkörper bzw. Vergleichsmessung | [[tonometer]] |\n| Therapie- und Diagnostikdosimeter | Dosis bzw. Dosisleistung | Vergleich mit Referenzdosimeter | Einsatzumfeld: [[linearbeschleuniger]] (Therapie), [[roentgengeraet]] (Diagnostik) – geprüft wird das Dosimeter, nicht die Strahlenquelle |\n| Tretkurbelergometer | mechanische Leistung | Drehmoment- und Drehzahlmessung | [[ergometer]] |\n\nFür nichtinvasive Blutdruckmessgeräte beträgt die Nachprüffrist nach Anlage 2 **zwei Jahre** [@mpbetreibv]. Die Fristen der übrigen Gruppen sowie Sonderregelungen für einzelne Gruppen (etwa für Dosimeter) sind der Anlage selbst in der berichtigten Fassung zu entnehmen.\n\n> [!hinweis] Produkte, die ausschließlich für den privaten Gebrauch bestimmt sind, fallen nicht unter die MPBetreibV. Für Geräte, die Laien im Rahmen der Versorgung überlassen werden, enthält § 15 eine besondere Regelung, die an eine Herstellerbescheinigung über die Einhaltung der Fehlergrenzen während der Nutzungsdauer anknüpft [@mpbetreibv].\n\n## Durchführung\n\nDie MTK dürfen die für das Messwesen zuständige Behörde oder Personen durchführen, die die Voraussetzungen der Verordnung erfüllen und über geeignete, rückgeführte Messnormale verfügen. Der Ablauf folgt in der Regel diesem Muster [@lmkm-ptb]:\n\n1. Sichtprüfung und Prüfung der Kennzeichnung,\n2. Vergleichsmessung an mehreren Prüfpunkten über den Messbereich,\n3. ggf. weitere Prüfungen (z. B. Dichtheit, Druckablass),\n4. Bewertung gegen die Fehlergrenzen,\n5. Kennzeichnung mit dem Jahr der nächsten MTK und Eintrag ins [[medizinproduktebuch|Medizinproduktebuch]].\n\n### Bewertung\n\nFür jeden Prüfpunkt wird die **Messabweichung** berechnet:\n\ne = x_anz − x_ref\n\nDabei ist x_anz der angezeigte Wert und x_ref der Wert des Normals. Das Gerät besteht, wenn |e| die Fehlergrenze nicht überschreitet. Die [[messunsicherheit|Messunsicherheit]] des Normals muss deutlich kleiner sein als die Fehlergrenze, damit die Konformitätsaussage belastbar ist [@jcgm-100-2008].\n\n> [!beispiel] MTK eines oszillometrischen [[nibp-messgeraet|NIBP-Geräts]] (Zahlen beispielhaft): Referenzmanometer und Prüfling werden über ein T-Stück an ein starres Volumen angeschlossen. Bei 0, 50, 100, 150, 200 und 250 mmHg zeigt der Prüfling 0, 51, 101, 152, 202 und 251 mmHg. Größte Abweichung: +2 mmHg. Bei einer angenommenen Fehlergrenze der Manschettendruckanzeige von ±3 mmHg wäre das Gerät bestanden; maßgeblich ist die im LMKM für die MTK festgelegte Fehlergrenze.\n\n> [!belegt] Für die Manschettendruckanzeige automatisierter nichtinvasiver Blutdruckmessgeräte fordert die Gerätenorm IEC 80601-2-30 eine maximale Abweichung von ±3 mmHg über den Nenn-Messbereich [@iec-80601-2-30-2018]. Diese Bauartanforderung gilt für neue Geräte; welche Fehlergrenze bei der MTK im Betrieb anzuwenden ist, legt der LMKM fest [@lmkm-ptb].\n\n## Was die MTK nicht prüft\n\nDie MTK prüft die **Messkette bis zur Anzeige** unter Laborbedingungen, nicht die klinische Messgenauigkeit am Patienten. Beim [[oszillometrie|oszillometrischen]] Blutdruckgerät wird etwa nur der [[drucksensor|Drucksensor]] mit Auswerteelektronik kontrolliert – der Algorithmus, der aus den Oszillationen systolischen und diastolischen Druck berechnet, wurde im Rahmen der [[klinische-bewertung|klinischen Bewertung]] des Herstellers validiert. Ebenso prüft die MTK eines Thermometers die [[temperatursensor|Sensorik]], nicht die korrekte Messtechnik der Anwender.\n\n> [!vereinfacht] Merksatz: Die [[stk|STK]] fragt „Ist das Gerät sicher?“, die MTK fragt „Misst das Gerät richtig?“ – bezogen auf die messtechnische Kette ([[messkette]]) vom Sensor bis zur Anzeige.\n\n## Bedeutung in der Medizintechnik\n\nMTK-pflichtige Geräte sind im Klinikalltag zahlreich: Jede [[patientenmonitor|Überwachungseinheit]] mit NIBP-Modul, jedes [[nibp-messgeraet|Blutdruckmessgerät]] auf Station und jedes elektronische [[thermometer|Thermometer]] gehört dazu. Hinzu kommen Spezialgeräte wie [[audiometer|Audiometer]] in der HNO, [[tonometer|Tonometer]] in der Augenheilkunde, [[ergometer|Ergometer]] in der Kardiologie und Dosimeter in [[strahlentherapie|Strahlentherapie]] und [[radiologie|Radiologie]].\n\nTypische Ursachen für Abweichungen sind [[sensordrift|Sensordrift]], Undichtigkeiten in Schläuchen und Manschetten sowie gealterte Referenzelemente in der Elektronik. Die messtechnische Kette eines Blutdruckgeräts reicht dabei von der [[druckmessung|Druckmessung]] über [[instrumentenverstaerker|Verstärkung]] und [[analog-digital-wandler|A/D-Wandlung]] bis zur Anzeige.\n\n> [!praxis] MTK-Termine eignen sich gut zur Kombination mit der STK, wenn ein Gerät beiden Anlagen unterliegt (z. B. ein Patientenmonitor mit invasiver Druckmessung und NIBP). Wichtig ist, die abweichenden Fristlogiken – MTK nach Kalenderjahr, STK nach Herstellerfrist – im Prüfplan sauber abzubilden.",
+  "related": [
+    "stk",
+    "kalibrierung",
+    "messunsicherheit",
+    "messkette",
+    "pruefgeraete",
+    "betreiberpflichten",
+    "mpbetreibv",
+    "nibp-messgeraet",
+    "thermometer",
+    "audiometer",
+    "tonometer",
+    "medizinproduktebuch"
+  ],
+  "paths": [
+    [
+      "betreiberpflichten",
+      "mtk",
+      "kalibrierung",
+      "messunsicherheit"
+    ],
+    [
+      "nibp-messgeraet",
+      "mtk",
+      "druckmessung",
+      "drucksensor"
+    ],
+    [
+      "thermometer",
+      "mtk",
+      "temperatursensor",
+      "messkette"
+    ]
+  ],
+  "diagram": {
+    "title": "Prinzip der messtechnischen Kontrolle",
+    "caption": "Vergleich des Prüflings mit einem rückgeführten Normal und Bewertung gegen die Fehlergrenze; didaktisches Schema.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "norm",
+        "label": "Rückgeführtes\nNormal",
+        "ref": "kalibrierung",
+        "kind": "source",
+        "x": 110,
+        "y": 90
+      },
+      {
+        "id": "groesse",
+        "label": "Messgröße\n(z. B. Druck, Temp.)",
+        "kind": "process",
+        "x": 330,
+        "y": 90
+      },
+      {
+        "id": "pruef",
+        "label": "Prüfling\n(z. B. NIBP-Gerät)",
+        "ref": "nibp-messgeraet",
+        "kind": "sensor",
+        "x": 560,
+        "y": 90
+      },
+      {
+        "id": "anz",
+        "label": "Anzeige\ndes Prüflings",
+        "kind": "output",
+        "x": 780,
+        "y": 90
+      },
+      {
+        "id": "abw",
+        "label": "Messabweichung\ne = x_anz − x_ref",
+        "ref": "messunsicherheit",
+        "kind": "control",
+        "x": 780,
+        "y": 240,
+        "w": 170
+      },
+      {
+        "id": "bew",
+        "label": "Vergleich mit\nFehlergrenze",
+        "kind": "control",
+        "x": 540,
+        "y": 240
+      },
+      {
+        "id": "doku",
+        "label": "Protokoll,\nPrüfmarke",
+        "ref": "medizinproduktebuch",
+        "kind": "output",
+        "x": 320,
+        "y": 240
+      }
+    ],
+    "edges": [
+      {
+        "from": "norm",
+        "to": "groesse",
+        "kind": "signal",
+        "label": "x_ref"
+      },
+      {
+        "from": "groesse",
+        "to": "pruef",
+        "kind": "signal"
+      },
+      {
+        "from": "pruef",
+        "to": "anz",
+        "kind": "data"
+      },
+      {
+        "from": "anz",
+        "to": "abw",
+        "kind": "data",
+        "label": "x_anz"
+      },
+      {
+        "from": "abw",
+        "to": "bew",
+        "kind": "data"
+      },
+      {
+        "from": "bew",
+        "to": "doku",
+        "kind": "data"
+      }
+    ]
+  },
+  "sources": [
+    "mpbetreibv",
+    "lmkm-ptb",
+    "messeg",
+    "jcgm-200-2012",
+    "jcgm-100-2008",
+    "din-1319-1",
+    "iec-80601-2-30-2018",
+    "kramme-2017"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

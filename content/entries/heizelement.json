@@ -1,0 +1,162 @@
+{
+  "id": "heizelement",
+  "type": "term",
+  "title": "Heizelement",
+  "aliases": [
+    "Heizung",
+    "Heizwiderstand",
+    "Heizleiter",
+    "Heating element",
+    "Heizplatte",
+    "Heizfolie",
+    "PTC-Heizer",
+    "Infrarotstrahler"
+  ],
+  "category": "komponenten",
+  "summary": "Komponente, die elektrische Energie über Joulesche Wärme in Wärme umsetzt. In Inkubatoren, Befeuchtern, Wärmesystemen, Infusionswärmern, Sterilisatoren und Analysatoren eingesetzt; immer kombiniert mit Temperaturregelung und unabhängigem Übertemperaturschutz.",
+  "body": "## Begriff\n\nEin **Heizelement** wandelt elektrische Energie in Wärme um. In der Medizintechnik ist es eine der am weitesten verbreiteten Komponenten: Es wärmt Frühgeborene im [[inkubator|Inkubator]], befeuchtet Atemgas, temperiert Infusionen und Blut, erzeugt Dampf im [[dampfsterilisator|Sterilisator]] und hält Laborproben auf 37 °C. So unterschiedlich die Geräte sind – fast immer wird die Wärme nach demselben Grundprinzip erzeugt und von einem [[regelkreis|Regelkreis]] mit [[temperatursensor|Temperatursensor]] überwacht [@kramme-2017] [@tipler-2019].\n\n## Physikalisches Prinzip\n\n### Joulesche Wärme\n\nFließt ein Strom I durch einen Leiter mit dem Widerstand R, wird die Leistung\n\n`P = U · I = I² · R = U² / R`\n\nvollständig in Wärme umgesetzt ([[joulesche-waerme]], Grundlagen in [[spannung-strom-widerstand]]). Die in der Zeit t abgegebene Wärmemenge ist `Q = P · t` [@tipler-2019].\n\n> [!beispiel] Ein Heizelement mit R = 52,9 Ω an 230 V nimmt `P = 230² / 52,9 ≈ 1 000 W` auf. Soll eine Heizplatte bei 24 V Kleinspannung 100 W liefern, braucht sie `R = 24² / 100 ≈ 5,8 Ω` und führt `I = 100 / 24 ≈ 4,2 A`. Die Werte sind beispielhaft gerechnet.\n\n### Temperaturabhängigkeit des Widerstands\n\nDer Widerstand vieler Materialien ändert sich mit der Temperatur, näherungsweise `R(ϑ) = R₂₀ · (1 + α · (ϑ − 20 °C))`. Heizleiterlegierungen (z. B. Nickel-Chrom) haben einen sehr kleinen Temperaturkoeffizienten α, damit die Leistung stabil bleibt. **PTC-Heizelemente** (Kaltleiter, meist dotierte Bariumtitanat-Keramik) nutzen dagegen einen sehr starken Widerstandsanstieg oberhalb einer Sprungtemperatur und begrenzen ihre Temperatur dadurch weitgehend selbst [@hering-2018].\n\n### Wärmeübertragung\n\nDie erzeugte Wärme gelangt über **Wärmeleitung**, **Konvektion** und **Wärmestrahlung** zum Ziel (siehe [[waermeuebertragung]]). Welche Form dominiert, bestimmt die Bauform:\n\n| Übertragungsart | Beispiel |\n|---|---|\n| Wärmeleitung | Heizplatte unter einer Befeuchterkammer, Wärmematte unter dem Patienten |\n| Konvektion | Warmluft im Inkubator oder in Warmluft-Wärmesystemen |\n| Strahlung | Infrarot-Heizstrahler über dem offenen Wärmebett |\n\n## Bauformen\n\n| Bauform | Aufbau | Typische Anwendung |\n|---|---|---|\n| Rohrheizkörper | Heizwendel in Metallrohr, elektrisch isoliert eingebettet (z. B. Magnesiumoxid) | Dampferzeuger, Wasserbäder |\n| Folien- und Flächenheizung | Leiterbahnen auf Polyimid- oder Silikonfolie | Wärmematten, Blutwärmer, Analysatoren |\n| Dickschicht-Heizer | Widerstandspaste auf Keramik oder Metall | Heizplatten, kompakte Wärmeübertrager |\n| Heizdraht | Dünner Draht in Schlauch oder Gewebe | Beheizte Beatmungsschläuche, Wärmedecken |\n| PTC-Element | Keramischer Kaltleiter | Selbstbegrenzende Lüfterheizungen |\n| Infrarotstrahler | Glühwendel oder Keramikstrahler mit Reflektor | Heizstrahler am [[waermebett|Wärmebett]] |\n\n> [!hinweis] Peltier-Elemente können sowohl heizen als auch kühlen und werden z. B. in Geräten zur Temperaturführung eingesetzt. Sie arbeiten thermoelektrisch und sind kein Heizelement im engeren Sinn.\n\n## Ansteuerung und Regelung\n\n### Leistungsstellung\n\n| Verfahren | Prinzip | Bemerkung |\n|---|---|---|\n| Zweipunktregelung | Ein/Aus bei Unter-/Überschreiten einer Schwelle | Einfach, aber Temperaturpendeln |\n| Schwingungspaketsteuerung | Triac oder Halbleiterrelais schaltet ganze Netzhalbwellen im Nulldurchgang | Geringe Störaussendung ([[emv]]) |\n| Phasenanschnitt | Teilweise Halbwellen | Feinere Stellung, aber mehr Oberwellen |\n| [[pwm|PWM]] bei Gleichspannung | MOSFET schaltet mit hoher Frequenz | Kleinspannungsheizungen, Akkubetrieb |\n\nDer eigentliche Regler ist meist ein PI- oder PID-Algorithmus auf einem [[mikrocontroller|Mikrocontroller]]. Thermische Systeme sind träge: Zwischen Heizleistung und gemessener Temperatur liegen Totzeiten und Speicherwirkungen, die beim Reglerentwurf berücksichtigt werden müssen.\n\n> [!vereinfacht] In der Praxis wird ein Heizsystem oft als Verzögerungsglied erster Ordnung mit Totzeit modelliert. Reale Systeme haben mehrere gekoppelte Wärmespeicher (Heizer, Luft, Patient, Wasser).\n\n### Schutzkonzept\n\nWeil ein Heizelement bei Fehlern Patienten verbrennen kann, folgt das Sicherheitskonzept dem Prinzip der **Redundanz**:\n\n1. Regelkreis mit Temperatursensor (Normalbetrieb).\n2. Davon **unabhängige** Übertemperaturabschaltung – eigener Sensor, eigener Schaltweg, bei manchen Geräten zusätzlich eine thermische Sicherung oder ein Temperaturbegrenzer.\n3. Alarme bei Sensorfehler, Abweichung von der Solltemperatur und Übertemperatur ([[alarmsystem]]).\n\n> [!belegt] Die Basisnorm [[iec-60601-1|IEC 60601-1]] begrenzt die Oberflächentemperaturen von Anwendungsteilen und fordert den Schutz gegen Übertemperatur auch im Erstfehlerfall. Partikularnormen konkretisieren dies für Wärmegeräte, z. B. IEC 60601-2-19 für Säuglingsinkubatoren, IEC 60601-2-21 für Säuglings-Wärmestrahler und IEC 80601-2-35 für Wärmedecken, -matten und -matratzen [@iec-60601-1] [@iec-60601-2-19] [@iec-60601-2-21] [@iec-80601-2-35].\n\n> [!warnung] Besonders gefährdet sind Patienten, die Wärme nicht wahrnehmen oder nicht ausweichen können: Neugeborene, narkotisierte und sedierte Patienten sowie Menschen mit Sensibilitätsstörungen. Wärmegeräte nie zweckentfremden (z. B. Warmluftschlauch ohne Decke).\n\n## Prüfung und Fehler\n\n| Befund | Mögliche Ursache |\n|---|---|\n| Solltemperatur wird nicht erreicht | Heizelement hochohmig/unterbrochen, Ansteuerung defekt, Lüfter ausgefallen |\n| Übertemperaturalarm | Regler- oder Sensorfehler, blockierte Luftführung, Fühler nicht am Messort |\n| Temperatur schwankt stark | Reglerparameter, Wackelkontakt, [[sensordrift|Sensordrift]] |\n| Isolationsfehler | Feuchte im Rohrheizkörper, beschädigte Folienheizung |\n\nBei der Prüfung werden Widerstand des Heizelements, Funktion des unabhängigen Übertemperaturschutzes und die Temperaturgenauigkeit mit einem kalibrierten Referenzthermometer kontrolliert. Hinzu kommen [[schutzleiterwiderstand|Schutzleiter-]], [[isolationswiderstand|Isolations-]] und [[ableitstrommessung|Ableitstrommessung]] nach [[iec-62353|IEC 62353]] – Heizelemente mit großer Fläche können nennenswerte kapazitive [[ableitstrom|Ableitströme]] verursachen [@iec-62353].\n\n## Anwendung in Geräten\n\n| Gerät | Heizelement |\n|---|---|\n| [[inkubator]] | Heizung der Umluft, geregelt nach Luft- oder Hauttemperatur |\n| [[waermebett]] | Infrarotstrahler über dem Neugeborenen |\n| [[patientenwaermesystem]] | Warmluftgebläse oder leitende Wärmematten |\n| [[infusionswaermer]] | Wärmeübertrager für Infusionen und Blutprodukte |\n| [[atemgasbefeuchter]] | Heizplatte und Heizdraht im Schlauch |\n| [[high-flow-geraet]] | Integrierte beheizte Befeuchtung |\n| [[hypothermiegeraet]] | Heiz- und Kühlaggregat für gezieltes Temperaturmanagement |\n| [[dampfsterilisator]] | Elektrischer Dampferzeuger (bauartabhängig) |\n| [[herz-lungen-maschine]] und [[ecmo]] | Wärmetauscher über temperiertes Wasser |\n| [[klinisch-chemischer-analysator]] und [[blutgasanalysator]] | Thermostatisierung von Messzellen und Reaktionsküvetten auf 37 °C |\n\n## Bedeutung in der Medizintechnik\n\nDas Heizelement ist physikalisch einfach, aber sicherheitstechnisch anspruchsvoll. An ihm lassen sich die Kette [[elektrotechnik|Elektrotechnik]] → Leistungsstellung → [[temperatursensor|Temperaturmessung]] → [[regelkreis|Regelung]] → unabhängiger Schutz sowie die Grundsätze der Einfehlersicherheit nach [[iec-60601-1|IEC 60601-1]] besonders anschaulich lernen [@kramme-2017] [@iec-60601-1].\n",
+  "related": [
+    "joulesche-waerme",
+    "waermeuebertragung",
+    "temperatursensor",
+    "regelkreis",
+    "pwm",
+    "inkubator",
+    "waermebett",
+    "patientenwaermesystem",
+    "infusionswaermer",
+    "atemgasbefeuchter",
+    "iec-60601-1",
+    "thermoregulation"
+  ],
+  "paths": [
+    [
+      "inkubator",
+      "heizelement",
+      "joulesche-waerme",
+      "spannung-strom-widerstand"
+    ],
+    [
+      "heizelement",
+      "temperatursensor",
+      "regelkreis",
+      "mikrocontroller"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "tipler-2019",
+    "hering-2018",
+    "iec-60601-1",
+    "iec-60601-2-19",
+    "iec-60601-2-21",
+    "iec-80601-2-35",
+    "iec-62353"
+  ],
+  "diagram": {
+    "title": "Geregeltes Heizelement mit unabhängigem Übertemperaturschutz",
+    "caption": "Funktionsschema: Regelkreis und Schutzkanal arbeiten mit getrennten Sensoren und getrennten Schaltwegen.",
+    "width": 900,
+    "height": 320,
+    "nodes": [
+      {
+        "id": "netz",
+        "label": "Netzteil",
+        "ref": "medizinisches-netzteil",
+        "kind": "source",
+        "x": 90,
+        "y": 70
+      },
+      {
+        "id": "sw",
+        "label": "Leistungsschalter\n(Triac / MOSFET)",
+        "ref": "pwm",
+        "kind": "actuator",
+        "x": 300,
+        "y": 70
+      },
+      {
+        "id": "hz",
+        "label": "Heizelement",
+        "ref": "heizelement",
+        "kind": "actuator",
+        "x": 510,
+        "y": 70
+      },
+      {
+        "id": "pat",
+        "label": "Patient / Medium",
+        "kind": "patient",
+        "x": 750,
+        "y": 70
+      },
+      {
+        "id": "ts",
+        "label": "Temperatur-\nsensor (Regelung)",
+        "ref": "temperatursensor",
+        "kind": "sensor",
+        "x": 750,
+        "y": 250
+      },
+      {
+        "id": "reg",
+        "label": "PID-Regler\n(Mikrocontroller)",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 510,
+        "y": 250
+      },
+      {
+        "id": "ot",
+        "label": "Unabhängige\nÜbertemperatur-\nabschaltung",
+        "kind": "control",
+        "x": 300,
+        "y": 250,
+        "h": 64
+      }
+    ],
+    "edges": [
+      {
+        "from": "netz",
+        "to": "sw",
+        "kind": "power"
+      },
+      {
+        "from": "sw",
+        "to": "hz",
+        "kind": "power"
+      },
+      {
+        "from": "hz",
+        "to": "pat",
+        "kind": "energy",
+        "label": "Wärme"
+      },
+      {
+        "from": "pat",
+        "to": "ts",
+        "kind": "signal",
+        "label": "ϑ_ist"
+      },
+      {
+        "from": "ts",
+        "to": "reg",
+        "kind": "signal"
+      },
+      {
+        "from": "reg",
+        "to": "sw",
+        "kind": "signal",
+        "label": "Stellgröße"
+      },
+      {
+        "from": "ot",
+        "to": "sw",
+        "kind": "signal",
+        "label": "Abschaltung"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

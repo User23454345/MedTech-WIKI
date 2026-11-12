@@ -1,0 +1,167 @@
+{
+  "id": "druckmessung",
+  "type": "term",
+  "title": "Druckmessung",
+  "aliases": [
+    "Druckmesstechnik",
+    "pressure measurement",
+    "Druckerfassung",
+    "Manometrie",
+    "Relativdruckmessung",
+    "Differenzdruckmessung"
+  ],
+  "category": "sensorik",
+  "summary": "Erfassung des Drucks von Gasen und Flüssigkeiten als Kraft pro Fläche. In der Medizintechnik eine Kernmessaufgabe – vom Atemwegsdruck im Beatmungsgerät über den invasiven Blutdruck bis zur Okklusionserkennung in Infusionspumpen.",
+  "body": "## Begriff\n\n**Druckmessung** bezeichnet die Erfassung der Kraft, die ein Gas oder eine Flüssigkeit pro Flächeneinheit auf eine Begrenzung ausübt. Physikalische Grundlage ist die Definition des [[druck|Drucks]] `p = F / A` mit der SI-Einheit Pascal (1 Pa = 1 N/m²). In der Medizintechnik ist die Druckmessung eine der häufigsten Messaufgaben überhaupt: Atemwegsdruck im [[beatmungsgeraet|Beatmungsgerät]], arterieller [[blutdruck|Blutdruck]] am [[patientenmonitor|Patientenmonitor]], Förderdruck in der [[infusionspumpe|Infusionspumpe]] oder Kammerdruck im [[dampfsterilisator|Dampfsterilisator]] werden alle mit Drucksensoren erfasst [@webster-2010] [@hering-2018].\n\n## Druckarten\n\n| Druckart | Bezugspunkt | Typische Anwendung |\n|---|---|---|\n| Absolutdruck | Vakuum (p = 0) | Umgebungsluftdruck, Sterilisatorkammer, Korrektur von Gasmessungen |\n| Relativdruck (Überdruck) | aktueller Umgebungsdruck | Atemwegsdruck, Blutdruck, Infusionsleitungsdruck |\n| Differenzdruck | zweiter Messpunkt | Flowmessung mit Pneumotachograph, Transmembrandruck an der Dialysemembran |\n\nFast alle physiologischen Drücke werden als **Relativdruck** angegeben: Ein arterieller Mitteldruck von 90 mmHg bedeutet 90 mmHg *über* dem Atmosphärendruck. Deshalb besitzen Relativdrucksensoren eine Belüftung der Membranrückseite zur Umgebung, und deshalb muss ein invasiver Messaufnehmer vor der Messung gegen Atmosphäre „genullt“ werden [@webster-2010].\n\n## Einheiten\n\nHistorisch gewachsen werden in der Klinik mehrere Einheiten parallel verwendet:\n\n| Einheit | Umrechnung in Pa | Typischer Einsatz |\n|---|---|---|\n| mmHg (Millimeter Quecksilbersäule) | 1 mmHg ≈ 133,322 Pa | Blutdruck, Blutgase |\n| cmH₂O (Zentimeter Wassersäule) | 1 cmH₂O = 98,0665 Pa | Beatmung, Liquordruck |\n| mbar | 1 mbar = 100 Pa ≈ 1,02 cmH₂O | Beatmung, Gasversorgung |\n| kPa | 1 kPa ≈ 7,50 mmHg ≈ 10,2 cmH₂O | SI-konforme Angabe, Blutgase |\n| bar | 1 bar = 10⁵ Pa | Druckgasflaschen, zentrale Gasversorgung |\n\n> [!hinweis] Im Beatmungsalltag werden mbar und cmH₂O oft gleichgesetzt. Die Abweichung beträgt rund 2 % – für die Therapie meist unerheblich, bei Kalibrierung und Prüfung aber zu beachten.\n\n## Messprinzipien\n\nNahezu alle elektrischen Druckaufnehmer arbeiten zweistufig: Der Druck verformt eine **Membran**, und die Verformung wird in eine elektrische Größe umgesetzt [@hering-2018] [@fraden-2016].\n\n| Prinzip | Wandlung | Eigenschaften |\n|---|---|---|\n| Piezoresistiv | Dehnung ändert den Widerstand dotierter Siliziumwiderstände | hohe Empfindlichkeit, statisch und dynamisch, kostengünstig, temperaturabhängig – Standard in der Medizintechnik ([[drucksensor]]) |\n| Dehnungsmessstreifen (Metall) | Dehnung ändert Länge und Querschnitt eines Metallfilms | robust, geringere Empfindlichkeit |\n| Kapazitiv | Membranauslenkung ändert den Plattenabstand: `C = ε · A / d` | sehr geringe Temperaturdrift, geringe Leistungsaufnahme |\n| Piezoelektrisch | Kraft erzeugt Ladung ([[piezoelektrischer-effekt]]) | nur für dynamische Drücke, nicht für statische Messung |\n| Optisch (Faseroptik) | Membranauslenkung moduliert Licht | elektrisch passiv, z. B. für Katheterspitzen oder MRT-Umgebung |\n\nDaneben gibt es indirekte Verfahren: Die nichtinvasive Blutdruckmessung ([[nibp-messgeraet]]) bestimmt den arteriellen Druck über die [[oszillometrie|Oszillometrie]] an einer Manschette, deren Innendruck wiederum ein piezoresistiver Sensor misst.\n\n## Die Messkette\n\nEin Druckmesswert entsteht in einer [[messkette|Messkette]]: Sensor → Brückenschaltung → [[instrumentenverstaerker|Instrumentenverstärker]] → [[filter|Filter]] → [[analog-digital-wandler|A/D-Wandler]] → [[mikrocontroller|Mikrocontroller]] mit Linearisierung, Temperaturkompensation und Kalibrierdaten → Anzeige, Alarm oder Regler. Jedes Glied trägt zur [[messunsicherheit|Messunsicherheit]] bei; besonders kritisch sind **Nullpunktdrift** (Offset) und **Empfindlichkeitsdrift** (Steigung), die sich als [[sensordrift|Sensordrift]] bemerkbar machen.\n\n> [!vereinfacht] In der Darstellung als lineare Kette fehlen Rückwirkungen: Bei Beatmungs- und Dialysegeräten ist der gemessene Druck zugleich Regelgröße eines [[regelkreis|Regelkreises]] und Eingang für Alarme. Ein Sensorfehler wirkt dann doppelt – auf die Therapie und auf die Überwachung.\n\n## Hydrostatik und Nullabgleich\n\nBei flüssigkeitsgefüllten Systemen addiert sich zum gesuchten Druck der hydrostatische Druck der Flüssigkeitssäule:\n\n`Δp = ρ · g · h`\n\n> [!beispiel] Ein Druckaufnehmer liegt 10 cm unterhalb des Referenzpunkts (Herzhöhe). Mit ρ ≈ 1 000 kg/m³ und g ≈ 9,81 m/s² ergibt sich Δp ≈ 981 Pa ≈ 7,4 mmHg. Der angezeigte Blutdruck ist um diesen Betrag zu hoch – bei einem zentralen Venendruck von wenigen mmHg ein klinisch relevanter Fehler.\n\nDeshalb wird der Messaufnehmer der [[invasive-druckmessung|invasiven Druckmessung]] auf Höhe des Referenzpunkts (üblicherweise phlebostatische Achse) positioniert und dort gegen Atmosphäre genullt.\n\n## Dynamisches Verhalten\n\nFür schnell veränderliche Drücke ist nicht nur die statische Genauigkeit wichtig, sondern auch das **Frequenzverhalten**. Ein flüssigkeitsgefülltes Kathetersystem verhält sich näherungsweise wie ein schwingungsfähiges System zweiter Ordnung mit Eigenfrequenz f₀ und Dämpfungsgrad ζ. Lange, weiche oder luftblasenhaltige Schläuche senken f₀; die Folge sind überschießende Systolenwerte (unterdämpft) oder abgeflachte Kurven (überdämpft) [@webster-2010]. Geprüft wird das am Patienten mit dem **Schnellspültest** (*fast flush test*): Aus der Ausschwingkurve nach einem Rechtecksprung lassen sich Eigenfrequenz und Dämpfung abschätzen.\n\n> [!praxis] Kleine Luftblasen im Druckschlauch sind die häufigste Ursache für eine gedämpfte arterielle Kurve. Sie wirken als nachgiebiges Element und senken die Eigenfrequenz deutlich.\n\nBei Gasen ist die Dynamik weniger kritisch, dafür spielen Schlauchwiderstand und Messort eine Rolle: Ein im Gerät gemessener Atemwegsdruck unterscheidet sich vom Druck an der Trachea um den Druckabfall über Schlauchsystem und Tubus ([[stroemungslehre]]).\n\n## Anwendung in Geräten\n\n| Gerät | Gemessener Druck | Bedeutung |\n|---|---|---|\n| [[beatmungsgeraet]], [[transportbeatmungsgeraet]], [[cpap-geraet]] | Atemwegsdruck (inspiratorisch, exspiratorisch, PEEP) | Regelgröße und Alarmquelle, z. B. [[atemwegsdruck-hoch]], [[diskonnektion]] |\n| [[anaesthesiegeraet]] | Atemwegsdruck, Gasversorgungsdruck | Überwachung von Kreissystem und Versorgung |\n| [[patientenmonitor]], [[invasive-druckmessung]] | arterieller, zentralvenöser, pulmonalarterieller Druck | kontinuierliche Kreislaufüberwachung |\n| [[nibp-messgeraet]] | Manschettendruck | oszillometrische Blutdruckbestimmung |\n| [[infusionspumpe]] | Leitungsdruck vor/nach der Pumpe | [[okklusionsalarm|Okklusionserkennung]] |\n| [[dialysegeraet]], [[crrt-geraet]] | arterieller, venöser Druck, Transmembrandruck | Schutz vor Diskonnektion, Gerinnung, Membranüberlastung |\n| [[herz-lungen-maschine]], [[ecmo]] | Drücke vor und nach Pumpe und Oxygenator | Erkennung von Okklusion und Oxygenatorthrombose |\n| [[insufflator]] | intraabdomineller Druck | Druckregelung des Pneumoperitoneums |\n| [[absauggeraet]], [[npwt-geraet]] | Unterdruck | Einstellung und Überwachung des Sogs |\n| [[dampfsterilisator]] | Kammerdruck (absolut) | Prozessüberwachung, Zusammenhang Druck/Temperatur des Sattdampfs |\n\n## Die Kette vom Beatmungsgerät zur Druckmessung\n\nAm Beispiel des Turbinenbeatmungsgeräts lässt sich zeigen, wie eng Mechanik, Elektrotechnik und Sensorik verknüpft sind: Das [[beatmungsgeraet|Beatmungsgerät]] erzeugt den Arbeitsdruck mit einer [[turbine|Turbine]], die von einem [[elektromotor|Elektromotor]] (meist [[bldc-motor|BLDC-Motor]]) angetrieben wird. Die Leistungselektronik aus dem Bereich [[elektrotechnik|Elektrotechnik]] stellt über [[pwm|PWM]] die Motorspannung, die [[drehzahlregelung|Drehzahlregelung]] hält die geforderte Drehzahl. Welche Drehzahl gefordert ist, entscheidet der übergeordnete Druckregler – und der braucht als Istwert den Messwert eines [[drucksensor|Drucksensors]] aus dem Bereich [[sensorik|Sensorik]]. Ohne zuverlässige Druckmessung ist eine druckkontrollierte Beatmung daher nicht möglich.\n\n## Normative Einordnung\n\nGerätespezifische Normen legen fest, welche Druckgrenzen überwacht und alarmiert werden müssen, etwa [[iso-80601-2-12]] für Intensivbeatmungsgeräte oder IEC 60601-2-34 für invasive Blutdrucküberwachungsgeräte [@iso-80601-2-12] [@iec-60601-2-34]. Die Rückführbarkeit von Druckmessungen wird bei der [[kalibrierung|Kalibrierung]] und bei der messtechnischen Kontrolle ([[mtk]]) nichtinvasiver Blutdruckmessgeräte geprüft; die MTK ist in § 15 in Verbindung mit Anlage 2 der [[mpbetreibv|MPBetreibV]] geregelt [@mpbetreibv].\n\n> [!hinweis] Anlage 2 der MPBetreibV listet die MTK-pflichtigen Produktarten samt Nachprüffristen; nichtinvasive Blutdruckmessgeräte gehören traditionell dazu. Die Verordnung selbst nennt keine Prüfverfahren – in der Praxis wird bei der MTK unter anderem die Abweichung der Manschettendruckanzeige gegenüber einem rückgeführten Referenzmanometer bei mehreren Prüfdrücken sowie die Dichtheit des pneumatischen Systems geprüft. Da Anlage 2 im Jahr 2025 durch eine Änderungsverordnung neu gefasst wurde, sind Produktliste und Fristen der jeweils gültigen Fassung zu entnehmen [@mpbetreibv].\n",
+  "related": [
+    "drucksensor",
+    "druck",
+    "invasive-druckmessung",
+    "nibp-messgeraet",
+    "oszillometrie",
+    "messkette",
+    "messunsicherheit",
+    "kalibrierung",
+    "flowsensor",
+    "beatmungsgeraet",
+    "turbine",
+    "drehzahlregelung",
+    "sensordrift",
+    "mtk"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "elektrotechnik",
+      "drehzahlregelung",
+      "sensorik",
+      "druckmessung"
+    ],
+    [
+      "patientenmonitor",
+      "invasive-druckmessung",
+      "drucksensor",
+      "druckmessung"
+    ],
+    [
+      "nibp-messgeraet",
+      "oszillometrie",
+      "druckmessung",
+      "mtk"
+    ]
+  ],
+  "sources": [
+    "webster-2010",
+    "hering-2018",
+    "fraden-2016",
+    "kramme-2017",
+    "iso-80601-2-12",
+    "iec-60601-2-34",
+    "mpbetreibv"
+  ],
+  "diagram": {
+    "title": "Messkette der Druckmessung",
+    "caption": "Funktionsschema: vom Druck an der Membran bis zu Anzeige, Alarm und Regelung.",
+    "width": 960,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "p",
+        "label": "Druck p\n(Gas/Flüssigkeit)",
+        "kind": "source",
+        "x": 90,
+        "y": 80,
+        "ref": "druck"
+      },
+      {
+        "id": "mem",
+        "label": "Membran +\nWandler",
+        "kind": "sensor",
+        "x": 280,
+        "y": 80,
+        "ref": "drucksensor"
+      },
+      {
+        "id": "amp",
+        "label": "Brücke +\nInstrumenten-\nverstärker",
+        "kind": "process",
+        "x": 470,
+        "y": 80,
+        "ref": "instrumentenverstaerker"
+      },
+      {
+        "id": "adc",
+        "label": "Filter +\nA/D-Wandler",
+        "kind": "process",
+        "x": 660,
+        "y": 80,
+        "ref": "analog-digital-wandler"
+      },
+      {
+        "id": "mcu",
+        "label": "Mikrocontroller\n(Kalibrierung)",
+        "kind": "control",
+        "x": 860,
+        "y": 80,
+        "ref": "mikrocontroller"
+      },
+      {
+        "id": "anz",
+        "label": "Anzeige /\nAlarm",
+        "kind": "output",
+        "x": 860,
+        "y": 220,
+        "ref": "alarmsystem"
+      },
+      {
+        "id": "reg",
+        "label": "Regelkreis\n(z. B. Turbine)",
+        "kind": "control",
+        "x": 620,
+        "y": 220,
+        "ref": "regelkreis"
+      }
+    ],
+    "edges": [
+      {
+        "from": "p",
+        "to": "mem",
+        "kind": "gas",
+        "label": "p = F/A"
+      },
+      {
+        "from": "mem",
+        "to": "amp",
+        "kind": "signal",
+        "label": "ΔR, mV"
+      },
+      {
+        "from": "amp",
+        "to": "adc",
+        "kind": "signal",
+        "label": "Volt"
+      },
+      {
+        "from": "adc",
+        "to": "mcu",
+        "kind": "data",
+        "label": "digital"
+      },
+      {
+        "from": "mcu",
+        "to": "anz",
+        "kind": "data"
+      },
+      {
+        "from": "mcu",
+        "to": "reg",
+        "kind": "data",
+        "label": "Istwert"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

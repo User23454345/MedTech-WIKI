@@ -1,0 +1,54 @@
+{
+  "id": "medizinprodukt",
+  "type": "term",
+  "title": "Medizinprodukt (Begriff)",
+  "aliases": [
+    "Medizinprodukte",
+    "Medical Device",
+    "MP",
+    "Produkt im Sinne der MDR",
+    "Aktives Medizinprodukt",
+    "Zubehör eines Medizinprodukts"
+  ],
+  "category": "recht",
+  "summary": "Ein Medizinprodukt ist ein Gerät, eine Software, ein Implantat, Material oder anderer Gegenstand, den der Hersteller für einen medizinischen Zweck am Menschen bestimmt und dessen Hauptwirkung nicht pharmakologisch, immunologisch oder metabolisch erreicht wird. Die Definition steht in Art. 2 Nr. 1 der MDR.",
+  "body": "## Begriff und Rechtsgrundlage\n\nDer Begriff **Medizinprodukt** ist ein Rechtsbegriff. Seit dem 26. Mai 2021 gilt in der Europäischen Union die [[mdr|Medizinprodukteverordnung (MDR)]], Verordnung (EU) 2017/745, unmittelbar in allen Mitgliedstaaten [@mdr-2017]. Sie definiert in Art. 2 Nr. 1, was ein Medizinprodukt ist. In Deutschland ergänzen das [[mpdg|Medizinprodukterecht-Durchführungsgesetz (MPDG)]] und die [[mpbetreibv|Medizinprodukte-Betreiberverordnung (MPBetreibV)]] die europäischen Vorgaben [@mpdg] [@mpbetreibv]. Für Labordiagnostik gilt mit der [[ivdr|IVDR]] eine eigene Verordnung [@ivdr-2017].\n\nOb ein Gegenstand ein Medizinprodukt ist, hat weitreichende Folgen: Nur dann sind [[risikoklassen|Klassifizierung]], [[konformitaetsbewertung|Konformitätsbewertung]], [[klinische-bewertung|klinische Bewertung]], [[ce-kennzeichnung|CE-Kennzeichnung]], [[udi|UDI]], [[vigilanz|Vigilanz]] und die [[betreiberpflichten|Betreiberpflichten]] anzuwenden.\n\n## Die drei Elemente der Definition\n\nMit eigenen Worten zusammengefasst, verlangt die Definition der MDR drei Bedingungen [@mdr-2017]:\n\n| Element | Inhalt | Beispiel |\n|---|---|---|\n| **1. Gegenstand** | Instrument, Apparat, Gerät, Software, Implantat, Reagenz, Material oder anderer Gegenstand – allein oder in Kombination | [[beatmungsgeraet]], Hüftimplantat, Wundauflage, Diagnosesoftware |\n| **2. Medizinische Zweckbestimmung durch den Hersteller** | Anwendung am Menschen für mindestens einen medizinischen Zweck (siehe Tabelle unten) | Überwachung der Herzfrequenz mit einem [[patientenmonitor]] |\n| **3. Physikalischer Wirkmechanismus** | Die bestimmungsgemäße Hauptwirkung wird **nicht** durch pharmakologische, immunologische oder metabolische Mittel erreicht; solche Mittel dürfen die Wirkung aber unterstützen | Ein heparinbeschichteter Katheter wirkt hauptsächlich mechanisch |\n\nDie medizinischen Zwecke umfassen sinngemäß:\n\n* Diagnose, Verhütung, Überwachung, Vorhersage, Prognose, Behandlung oder Linderung von **Krankheiten**,\n* Diagnose, Überwachung, Behandlung, Linderung oder Kompensierung von **Verletzungen oder Behinderungen**,\n* Untersuchung, Ersatz oder Veränderung der **Anatomie** oder eines physiologischen oder pathologischen Vorgangs oder Zustands,\n* Gewinnung von Informationen durch **In-vitro-Untersuchung** von Proben aus dem menschlichen Körper (diese Produkte fallen meist unter die IVDR).\n\nAusdrücklich ebenfalls als Medizinprodukte gelten Produkte zur Empfängnisregelung sowie Produkte, die speziell für die [[aufbereitung|Reinigung]], [[desinfektion|Desinfektion]] oder [[sterilisation|Sterilisation]] von Medizinprodukten bestimmt sind – etwa ein [[dampfsterilisator]] oder ein [[rdg|Reinigungs- und Desinfektionsgerät]] [@mdr-2017].\n\n> [!belegt] Maßgeblich ist die **vom Hersteller festgelegte** [[zweckbestimmung|Zweckbestimmung]], nicht die technische Bauart. Ein Temperatursensor kann Teil eines Medizinprodukts sein oder eines Industriegeräts – entscheidend ist, wofür der Hersteller das Produkt bestimmt [@mdr-2017].\n\n## Verwandte Begriffe\n\n### Zubehör\n\n**Zubehör** ist ein Gegenstand, der selbst kein Medizinprodukt ist, aber vom Hersteller dafür bestimmt ist, zusammen mit einem Medizinprodukt verwendet zu werden, damit dieses seiner Zweckbestimmung entsprechend genutzt werden kann. Zubehör fällt ebenfalls unter die MDR und wird eigenständig klassifiziert [@mdr-2017]. Beispiele: Patientenleitungen eines [[ekg-geraet|EKG-Geräts]], Atemschlauchsysteme, wiederverwendbare [[defibrillationselektroden]].\n\n### Aktives Medizinprodukt\n\nEin **aktives Produkt** ist auf eine Energiequelle angewiesen, die nicht vom menschlichen Körper oder von der Schwerkraft stammt, und wirkt durch Umwandlung dieser Energie. Software gilt nach der MDR ebenfalls als aktives Produkt [@mdr-2017]. Fast alle Geräte, mit denen Medizintechniker:innen arbeiten – vom [[infusionspumpe|Infusionsgerät]] bis zum [[computertomograph]] –, sind aktive Medizinprodukte und gleichzeitig [[medizinisches-elektrisches-geraet|medizinische elektrische Geräte]] im Sinne der [[iec-60601-1]].\n\n### Software\n\nSoftware mit eigener medizinischer Zweckbestimmung kann selbst ein Medizinprodukt sein („Medical Device Software“). Die Abgrenzung erläutert der Artikel [[software-medizinprodukt]] und die Leitlinie MDCG 2019-11 [@mdcg-2019-11].\n\n## Abgrenzung zu anderen Produktgruppen\n\n| Produktgruppe | Hauptwirkung bzw. Unterschied | Rechtsrahmen |\n|---|---|---|\n| Arzneimittel | pharmakologisch, immunologisch oder metabolisch | Arzneimittelrecht |\n| In-vitro-Diagnostikum | Untersuchung von Proben außerhalb des Körpers | [[ivdr|IVDR]] |\n| Persönliche Schutzausrüstung | Schutz des Anwenders, nicht des Patienten | PSA-Verordnung |\n| Wellness-/Fitnessprodukt | kein medizinischer Zweck | allgemeines Produktrecht |\n| Produkte ohne medizinische Zweckbestimmung nach Anhang XVI MDR | z. B. bestimmte ästhetische Produkte | MDR (teilweise) |\n\n> [!vereinfacht] Die Tabelle stellt typische Grenzfälle stark verkürzt dar. In der Praxis gibt es zahlreiche Kombinationsprodukte (z. B. vorgefüllte Spritzen, arzneimittelfreisetzende Stents), bei denen die Hauptwirkung und damit der Rechtsrahmen im Einzelfall bestimmt werden muss.\n\n> [!beispiel] Eine Smartwatch, die nur Schritte zählt, ist kein Medizinprodukt. Bestimmt der Hersteller dieselbe Hardware mit einer Funktion zur Erkennung von Vorhofflimmern für diesen diagnostischen Zweck, wird diese Funktion zum Medizinprodukt – mit allen Pflichten von der Klassifizierung bis zur Vigilanz.\n\n## Bedeutung in der Medizintechnik\n\nFür die Klinik folgt aus dem Begriff, welche Geräte in das [[bestandsverzeichnis|Bestandsverzeichnis]] gehören, für welche Geräte [[stk|sicherheitstechnische Kontrollen]] oder [[mtk|messtechnische Kontrollen]] erforderlich sein können und wer [[einweisung|eingewiesen]] werden muss. Typische Medizinprodukte im Krankenhaus sind:\n\n* **Therapie:** [[beatmungsgeraet]], [[defibrillator]], [[infusionspumpe]], [[spritzenpumpe]], [[hf-chirurgiegeraet]], [[dialysegeraet]]\n* **Diagnostik und Überwachung:** [[patientenmonitor]], [[pulsoxymeter]], [[ekg-geraet]], [[ultraschallgeraet]], [[mrt]], [[roentgengeraet]]\n* **Infrastruktur mit medizinischer Zweckbestimmung:** [[pflegebett]], [[op-tisch]], [[dampfsterilisator]]\n\n> [!praxis] Nicht jedes Gerät auf Station ist ein Medizinprodukt: Ein handelsüblicher Kühlschrank für Lebensmittel ist keines, ein [[blutkuehlschrank|Blutkonservenkühlschrank]] mit entsprechender Zweckbestimmung dagegen schon. Im Zweifel geben Kennzeichnung, Gebrauchsanweisung und [[ce-kennzeichnung|EU-Konformitätserklärung]] Auskunft.\n\nIm [[lebenszyklus-medizinprodukt|Lebenszyklus]] eines Medizinprodukts wechseln die Verantwortlichkeiten: Der Hersteller trägt die Verantwortung für Auslegung, [[risikoklassen|Klassifizierung]] und Konformität (unter anderem mit [[iso-13485]] und [[iso-14971]]); Betreiber und Anwender sind für den sicheren Betrieb nach [[mpbetreibv|MPBetreibV]] verantwortlich [@mpbetreibv]. Die [[patientensicherheit]] hängt davon ab, dass beide Seiten ineinandergreifen.\n\n## Hinweis zur Rechtslage\n\nDiese Zusammenfassung ersetzt nicht den Gesetzestext. Maßgeblich ist die jeweils gültige Fassung der MDR und der nationalen Vorschriften; Abgrenzungsfragen beantworten im Zweifel die zuständigen Behörden, in Deutschland unter anderem das [@bfarm].",
+  "related": [
+    "zweckbestimmung",
+    "risikoklassen",
+    "mdr",
+    "ivdr",
+    "mpdg",
+    "software-medizinprodukt",
+    "medizinisches-elektrisches-geraet",
+    "lebenszyklus-medizinprodukt",
+    "ce-kennzeichnung",
+    "betreiberpflichten"
+  ],
+  "paths": [
+    [
+      "medizinprodukt",
+      "zweckbestimmung",
+      "risikoklassen",
+      "konformitaetsbewertung",
+      "ce-kennzeichnung"
+    ],
+    [
+      "medizinprodukt",
+      "betreiberpflichten",
+      "stk",
+      "mtk"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "ivdr-2017",
+    "mpdg",
+    "mpbetreibv",
+    "mdcg-2019-11",
+    "bfarm",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

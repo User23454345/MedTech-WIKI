@@ -1,0 +1,74 @@
+{
+  "id": "afterloader",
+  "type": "device",
+  "title": "Afterloading-Gerät (Brachytherapie)",
+  "aliases": [
+    "Afterloader",
+    "HDR-Afterloader",
+    "Brachytherapiegerät",
+    "Nachladegerät",
+    "Remote Afterloading"
+  ],
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 48,
+  "domains": [
+    "strahlentherapie"
+  ],
+  "summary": "Ein Afterloading-Gerät fährt eine umschlossene radioaktive Strahlenquelle ferngesteuert durch zuvor platzierte Applikatoren in oder an den Tumor und wieder zurück in einen abgeschirmten Tresor. So lässt sich eine hohe Dosis auf kurze Distanz applizieren, ohne dass das Personal dem Strahler ausgesetzt ist.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives therapeutisches Produkt zur Steuerung einer Strahlenquelle mit potenziell gefährlicher Energieabgabe – [[mdr|MDR]] Anhang VIII **Regel 9** (aktive therapeutische Produkte, die ionisierende Strahlung für therapeutische Zwecke abgeben, einschließlich Produkten, die solche Produkte steuern oder überwachen): Klasse IIb. Die Strahlenquelle selbst unterliegt zusätzlich dem Strahlenschutzrecht. Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die Brachytherapie („Kurzdistanztherapie“) bestrahlt Tumoren aus nächster Nähe, etwa beim Zervix-, Prostata-, Mamma- oder Ösophaguskarzinom. Wegen des steilen Dosisabfalls mit dem Abstand (Abstandsquadratgesetz) wird das umliegende Gewebe geschont. Beim **Afterloading** werden zuerst leere Applikatoren gelegt und erst danach – „nachgeladen“ – die Quelle eingefahren [@krieger-strahlungsquellen-2018].",
+    "principle": "## Quelle und Antrieb\n\nVerbreitet ist das **HDR-Verfahren** (High Dose Rate) mit einer miniaturisierten Iridium-192-Quelle (Halbwertszeit rund 74 Tage, siehe [[radioaktivitaet]]); alternativ wird Cobalt-60 eingesetzt. Die Quelle ist am Ende eines Stahldrahts verschweißt und ruht in einem **Tresor** aus Wolfram oder Blei. Ein [[schrittmotor]] schiebt den Draht über einen Kanalwähler (Indexer) und Transferschläuche in den jeweiligen Applikator. Vor jeder Quellfahrt prüft eine **Dummy-Quelle** (Prüfdraht) die freie Durchgängigkeit des Kanals.\n\n## Bestrahlungsplanung\n\nDie Dosisverteilung wird nicht über die Intensität, sondern über **Haltepositionen** und **Haltezeiten** der Quelle gesteuert. Das Planungssystem berechnet sie auf Basis von CT-, MRT- oder Ultraschallbildern. Wegen des Zerfalls der Quelle korrigiert das Gerät die Haltezeiten automatisch auf die aktuelle Aktivität; Ir-192-Quellen werden in der Regel nach einigen Monaten getauscht [@krieger-strahlungsquellen-2018].\n\n## Sicherheitstechnik\n\n* Türverriegelung und Strahlungsmonitor im abgeschirmten Behandlungsraum ([[strahlenschutz]])\n* automatischer Quellrückzug bei Störung, Stromausfall (Akku) oder Türöffnung; zusätzlich manuelle Notrückholung\n* Erkennung von Knicken oder Fehlanschlüssen über Reibungs- bzw. Kraftüberwachung des Antriebs\n\n> [!warnung] Verbleibt die Quelle nach einer Störung im Patienten, gilt ein festgelegter Notfallplan. Das Training dieser Abläufe ist Teil der Betreiber- und Strahlenschutzpflichten."
+  },
+  "manufacturers": [
+    {
+      "ref": "elekta",
+      "models": [
+        "Flexitron",
+        "microSelectron"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "GammaMedplus",
+        "Bravos"
+      ],
+      "note": "Über die Tochter Varian."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Kanalzahl, Quellentyp und regelmäßiger Quellwechsel, Applikatorsortiment, Planungssystem und Bildgebung, baulicher Strahlenschutz, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025): Afterloading-Geräte sind weder in Anlage 1 (STK, § 12) noch als Messgerät in Anlage 2 aufgeführt. Für die Dosimetrie (z. B. Quellstärkemessung mit Schachtionisationskammer) verwendete Therapiedosimeter sind eigenständige Messgeräte und unterliegen der MTK nach § 15 i. V. m. Anlage 2. Maßgeblich sind die strahlenschutzrechtlichen Pflichten für Bestrahlungsvorrichtungen und hochradioaktive Strahlenquellen nach StrlSchG/StrlSchV (Abnahme-, Konstanz- und Sachverständigenprüfung, Dichtheitsprüfung der Quelle).",
+    "intervals": "Tägliche Funktions- und Sicherheitsprüfungen (Türverriegelung, Notstopp, Quellpositionierung) vor Behandlungsbeginn; Messung der Quellstärke (Referenz-Luftkermaleistung) nach jedem Quellwechsel und Abgleich mit dem Quellenzertifikat; Sachverständigenprüfung in behördlich festgelegten Abständen; Wartung nach Herstellerangabe."
+  },
+  "related": [
+    "linearbeschleuniger",
+    "radioaktivitaet",
+    "ionisierende-strahlung",
+    "strahlenschutz",
+    "schrittmotor",
+    "strlschg"
+  ],
+  "sources": [
+    "krieger-strahlungsquellen-2018",
+    "strlschv",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

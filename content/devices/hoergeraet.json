@@ -1,0 +1,59 @@
+{
+  "id": "hoergeraet",
+  "type": "device",
+  "title": "Hörgerät",
+  "aliases": [
+    "Hörsystem",
+    "Hörhilfe",
+    "Hearing Aid",
+    "HdO-Gerät",
+    "IdO-Gerät",
+    "RIC-Hörgerät",
+    "Im-Ohr-Hörgerät",
+    "Hinter-dem-Ohr-Hörgerät"
+  ],
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 89,
+  "domains": [
+    "hno-heilkunde"
+  ],
+  "summary": "Ein Hörgerät nimmt Schall mit Mikrofonen auf, verarbeitet ihn digital frequenzabhängig und gibt ihn verstärkt über einen kleinen Lautsprecher in den Gehörgang ab. Es gleicht so eine Schallempfindungs- oder Schallleitungsschwerhörigkeit teilweise aus.",
+  "riskClass": {
+    "value": "IIa",
+    "evidence": "typisch",
+    "note": "Luftleitungshörgeräte werden üblicherweise als aktive Produkte der Klasse IIa eingestuft (vgl. [[mdr|MDR]] Anhang VIII, Regel 9) [@mdr-2017]. Verbindlich ist die Einstufung des Herstellers; implantierbare Hörsysteme sind anders klassifiziert. Siehe [[risikoklassen]].",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Hörgeräte versorgen Menschen mit Hörminderung, die das Sprachverstehen im Alltag beeinträchtigt. Die Verordnung erfolgt nach [[audiometer|Audiometrie]] durch HNO-Ärztinnen und -Ärzte, Anpassung und Feineinstellung übernehmen in Deutschland Hörakustiker. Bei sehr hochgradiger Schwerhörigkeit wird ein [[cochlea-implantat|Cochlea-Implantat]] erwogen.",
+    "principle": "## Signalkette\n\n| Stufe | Funktion |\n|---|---|\n| Mikrofone | meist zwei MEMS- oder Elektretmikrofone für Richtwirkung |\n| [[analog-digital-wandler|A/D-Wandler]] | Digitalisierung |\n| digitaler Signalprozessor | Filterbank, Verstärkung, Kompression, Störgeräuschunterdrückung |\n| D/A-Wandlung, Hörer | Rückwandlung in Schall im Gehörgang |\n| Energieversorgung | Zink-Luft-Batterie oder [[lithium-ionen-akku|Lithium-Ionen-Akku]] |\n\n## Verarbeitung\n\nDer Prozessor zerlegt das Signal in Frequenzkanäle ([[filter]]) und verstärkt jeden Kanal entsprechend dem Hörverlust aus dem Audiogramm. Weil bei Innenohrschwerhörigkeit der Bereich zwischen Hör- und Unbehaglichkeitsschwelle eingeengt ist, arbeiten Hörgeräte mit **Dynamikkompression**: Leise Signale werden stärker verstärkt als laute. Weitere Funktionen sind Richtmikrofonie durch Verrechnen der zwei Mikrofonsignale (Beamforming), Störgeräuschreduktion und **Rückkopplungsunterdrückung**, die das Pfeifen durch Schall vom Hörer zurück zum Mikrofon verhindert ([[schallwellen]], [[ohr]]).\n\n## Bauformen\n\nHinter-dem-Ohr-Geräte (HdO) mit Schallschlauch, HdO-Geräte mit Ex-Hörer im Gehörgang (RIC) und Im-Ohr-Geräte (IdO) mit individueller Schale. Viele Geräte haben Funkanbindung an Smartphone oder Zubehör und eine Induktionsspule für Höranlagen ([[elektromagnetische-induktion]]). Sicherheitsanforderungen beschreibt [@iec-60601-2-66].\n\n> [!hinweis] Die Anpassung erfolgt per Software; die Zielverstärkung wird nach Anpassformeln berechnet und mit Messungen im Gehörgang und Höreindruck verfeinert."
+  },
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Technikstufe der Signalverarbeitung, Bauform, Akku oder Batterie, Funk- und Zubehöroptionen, Anpassleistung und Nachbetreuung, Zuzahlungsregeln der Kostenträger."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) aufgeführt. Hörgeräte sind keine Medizinprodukte zur Bestimmung der Hörfähigkeit im Sinne der Anlage 2 (diese erfasst Audiometer).",
+    "intervals": "Regelmäßige Reinigung, Wechsel von Filtern und Schläuchen sowie Nachkontrolle beim Hörakustiker nach Herstellerangabe."
+  },
+  "related": [
+    "ohr",
+    "audiometer",
+    "cochlea-implantat",
+    "filter",
+    "schallwellen",
+    "hno-heilkunde"
+  ],
+  "sources": [
+    "iec-60601-2-66",
+    "kramme-2017",
+    "mdr-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

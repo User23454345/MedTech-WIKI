@@ -1,0 +1,40 @@
+{
+  "id": "nephrologie",
+  "type": "domain",
+  "title": "Nephrologie",
+  "aliases": [
+    "Nierenheilkunde",
+    "Nephrology",
+    "Dialyse",
+    "Nierenersatztherapie",
+    "Dialysezentrum"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Nephrologie behandelt Erkrankungen der Nieren, Störungen des Wasser-, Elektrolyt- und Säure-Basen-Haushalts sowie den Bluthochdruck renaler Ursache. Technisch dominiert die Nierenersatztherapie mit Dialysegeräten, Wasseraufbereitung und kontinuierlichen Verfahren auf der Intensivstation.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Nephrologie** ist ein Teilgebiet der Inneren Medizin. Sie befasst sich mit der [[niere|Nierenfunktion]] und deren Störungen, mit dem Wasser- und Elektrolythaushalt, dem [[saeure-basen-haushalt|Säure-Basen-Haushalt]] und mit renal bedingtem Bluthochdruck [@schmidt-lang-2019]. Typische Krankheitsbilder sind die chronische Nierenkrankheit (CKD), deren Stadien nach glomerulärer Filtrationsrate und Albuminurie eingeteilt werden [@kdigo-ckd-2024], das akute Nierenversagen bzw. die akute Nierenschädigung (AKI) [@kdigo-aki-2012], Glomerulonephritiden, diabetische und hypertensive Nephropathie sowie die Betreuung nach Nierentransplantation.\n\nBei terminaler Niereninsuffizienz müssen die Entgiftungs- und Ausscheidungsfunktionen ersetzt werden: durch Hämodialyse, Hämodiafiltration, Peritonealdialyse oder Transplantation. Die Hämodialyse wird bei chronischen Patienten typischerweise mehrmals pro Woche für einige Stunden durchgeführt [@daugirdas-2015].\n\n## Medizintechnik im Fachbereich\n\n| Gerät / Komponente | Einsatzzweck |\n|---|---|\n| [[dialysegeraet]] | intermittierende Hämodialyse und Hämodiafiltration |\n| [[dialysator]] | Kapillarfilter, Stoffaustausch über semipermeable Membran ([[diffusion-osmose]]) |\n| [[crrt-geraet]] | kontinuierliche Nierenersatztherapie bei Intensivpatienten |\n| [[zellseparator]] | Plasmaaustausch (Plasmapherese) bei bestimmten Nierenerkrankungen |\n| [[leitfaehigkeitssensor]] | Überwachung der Dialysierflüssigkeitszusammensetzung |\n| [[blutleckdetektor]] | Erkennung einer Membranruptur |\n| [[luftblasendetektor]] | Schutz vor Luftembolie im venösen Blutschlauch |\n| [[peristaltikpumpe]] | Blutpumpe im extrakorporalen Kreislauf |\n| [[ultraschallgeraet]] | Nierensonographie, Shuntdiagnostik |\n| [[langzeit-blutdruck]] | Hypertoniediagnostik |\n| [[klinisch-chemischer-analysator]] | Kreatinin, Harnstoff, Elektrolyte |\n\nDie Prinzipien des extrakorporalen Blutreinigungsverfahrens gehen auf die künstliche Niere von Kolff zurück [@kolff-1944]; die Gerätesicherheit regelt [[iec-60601-2-16]] [@iec-60601-2-16].\n\n## Besondere technische Anforderungen\n\n### Wasseraufbereitung\n\nPro Behandlung kommt das Blut über die Membran mit großen Mengen Dialysierflüssigkeit in Kontakt. Deren Qualität bestimmt die Patientensicherheit: Bakterien, Endotoxine und gelöste Stoffe (z. B. Aluminium, Chloramine) müssen sicher ferngehalten werden. Dialyseeinheiten besitzen deshalb eine Wasseraufbereitung, typischerweise mit Vorfiltration, Enthärtung, Aktivkohle und Umkehrosmose sowie einer Ringleitung zu den Behandlungsplätzen. Anforderungen an Dialysewasser und Dialysierflüssigkeit beschreibt die Normenreihe ISO 23500 [@iso-23500-3][@iso-23500-5].\n\n> [!praxis] Bei der Instandhaltung der Wasseraufbereitung gehören mikrobiologische Probennahmen, die Desinfektion der Ringleitung und die Dokumentation der Leitfähigkeit des Permeats zum Routineprogramm. Zuständigkeiten zwischen Medizintechnik, Hygiene und Haustechnik sollten klar geregelt sein.\n\n### Hygiene der Gerätehydraulik\n\nDie Hydraulik des Dialysegeräts wird nach jeder Behandlung bzw. nach Herstellervorgabe thermisch oder chemisch desinfiziert. Fehlgeschlagene Desinfektionsprogramme sind als Störung zu behandeln. Blutführende Schlauchsysteme und Dialysatoren sind Einwegprodukte.\n\n### Sicherheitssysteme im extrakorporalen Kreislauf\n\nEin Dialysegerät überwacht ständig arteriellen und venösen Druck, Transmembrandruck, Temperatur und [[leitfaehigkeitssensor|Leitfähigkeit]] der Dialysierflüssigkeit, Luft im venösen Schlauch und Blut im Dialysat. Bei einem kritischen Alarm wird die Blutpumpe gestoppt und die venöse Klemme geschlossen ([[blutleck-alarm]], [[leitfaehigkeitsalarm]], [[luft-im-system]]) [@daugirdas-2015].\n\n> [!warnung] Die Ultrafiltrationsbilanz muss exakt sein. Das Gerät bilanziert zu- und abfließende Dialysierflüssigkeit gegeneinander; die gewollte Ultrafiltration ist nur eine kleine Differenz zweier großer Volumenströme. Bilanzierungssysteme gehören deshalb zu den sicherheitsrelevanten Prüfpunkten bei Wartung und Kontrolle.\n\n> [!beispiel] Bei einem Dialysatfluss von 500 ml/min fließen in 4 Stunden 120 L durch den Dialysator. Ein systematischer Bilanzfehler von nur 1 % dieses Durchsatzes entspräche rund 1,2 L ungewolltem Flüssigkeitsentzug oder -überschuss – bei einem geplanten Entzug von z. B. 2 L also einer Abweichung von mehr als 50 %.\n\n### Prüfpflichten und Organisation\n\nOb und in welchem Umfang ein Dialysegerät [[stk|sicherheitstechnischen Kontrollen]] nach § 12 i. V. m. Anlage 1 [[mpbetreibv]] unterliegt, richtet sich nach den dort genannten Gerätegruppen und den Herstellerangaben. Nach der aus der Vorgängerfassung bekannten Systematik werden Geräte erfasst, die Flüssigkeiten unter Druck in den Blutkreislauf einbringen, wenn das Einbringen – wie im extrakorporalen Kreislauf – mit einer Entnahmefunktion gekoppelt ist; maßgeblich ist der Wortlaut der geltenden Anlage 1. In der Praxis werden Dialysegeräte regelmäßig sicherheitstechnisch kontrolliert [@mpbetreibv]. Viele Dialysezentren arbeiten mit Herstellerservice oder eigener Dialysetechnik; die Geräte laufen oft im Mehrschichtbetrieb, was planbare Wartungsfenster erfordert.\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[intensivmedizin]]**: akutes Nierenversagen, [[crrt-geraet|CRRT]], Antikoagulation mit Citrat oder Heparin.\n- **[[diabetologie]]**: diabetische Nephropathie als häufige Ursache der Dialysepflicht.\n- **[[kardiologie]]**: Hypertonie, kardiorenales Syndrom.\n- **[[chirurgie]]**: Anlage von Dialyseshunts, Nierentransplantation.\n- **[[labormedizin]]**: Nierenfunktionsparameter, Elektrolyte, [[blutgasanalysator|Blutgase]].\n- **[[radiologie]]**: Kontrastmittel und Nierenfunktion, Shuntangiographie.\n",
+  "related": [
+    "niere",
+    "dialysegeraet",
+    "dialysator",
+    "crrt-geraet",
+    "diffusion-osmose",
+    "leitfaehigkeitssensor",
+    "blutleckdetektor",
+    "intensivmedizin",
+    "fresenius-medical-care",
+    "iec-60601-2-16"
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "kdigo-ckd-2024",
+    "kdigo-aki-2012",
+    "daugirdas-2015",
+    "kolff-1944",
+    "iec-60601-2-16",
+    "iso-23500-3",
+    "iso-23500-5",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

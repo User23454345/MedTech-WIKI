@@ -1,0 +1,35 @@
+{
+  "id": "geburtshilfe",
+  "type": "domain",
+  "title": "Gynäkologie und Geburtshilfe",
+  "aliases": [
+    "Frauenheilkunde",
+    "Gynäkologie",
+    "Geburtshilfe",
+    "Obstetrics and Gynaecology",
+    "Kreißsaal",
+    "Perinatalmedizin",
+    "Senologie"
+  ],
+  "category": "fachbereiche",
+  "summary": "Gynäkologie und Geburtshilfe umfassen die Frauenheilkunde, die Betreuung von Schwangerschaft und Geburt sowie die gynäkologische Onkologie. Technische Schwerpunkte sind Ultraschall, Kardiotokographie, Mammographie und minimalinvasive Chirurgie.",
+  "body": "## Gegenstand des Fachgebiets\n\nDas Fach **Frauenheilkunde und Geburtshilfe** verbindet zwei Bereiche: Die **Gynäkologie** befasst sich mit Erkrankungen der weiblichen Geschlechtsorgane und der Brust, einschließlich gynäkologischer Onkologie, Endokrinologie und Reproduktionsmedizin. Die **Geburtshilfe** begleitet Schwangerschaft, Geburt und Wochenbett und arbeitet dabei eng mit der Neonatologie zusammen (Perinatalmedizin). Medizintechnisch steht die Überwachung zweier Patient:innen gleichzeitig – Mutter und Kind – im Vordergrund [@kramme-2017].\n\n## Typische Krankheitsbilder und Eingriffe\n\n| Bereich | Beispiele |\n|---|---|\n| Schwangerschaftsvorsorge | Ultraschall-Screening, Doppler-Untersuchung, Gestationsdiabetes-Test |\n| Geburt | Kardiotokographie (CTG), vaginal-operative Entbindung, Kaiserschnitt (Sectio) |\n| Gynäkologische Chirurgie | Laparoskopie (Endometriose, Myome, Zysten), Hysteroskopie, Hysterektomie |\n| Gynäkologische Onkologie | Mamma-, Ovarial-, Zervix- und Endometriumkarzinom |\n| Brustdiagnostik | Mammographie, Mammasonographie, Biopsie |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[ultraschallgeraet]] | Fetometrie, Fehlbildungsdiagnostik, Doppler der Gefäße, Mammasonographie |\n| [[ctg]] | gleichzeitige Aufzeichnung der fetalen Herzfrequenz und der Wehentätigkeit |\n| [[mammographiegeraet]] | Röntgen der Brust, Screening, Tomosynthese, stereotaktische Biopsie |\n| [[endoskop]], [[insufflator]] | Laparoskopie und Hysteroskopie |\n| [[hf-chirurgiegeraet]] | Schneiden und Koagulieren bei offenen und endoskopischen Eingriffen |\n| [[op-tisch]] | Lagerung, z. B. Steinschnittlage |\n| [[infusionspumpe]] | Wehenmittel- und Tokolyse-Infusion, Analgesie |\n| [[patientenmonitor]], [[nibp-messgeraet]] | Überwachung der Mutter, z. B. bei Präeklampsie oder unter Periduralanästhesie |\n| [[waermebett]], [[inkubator]] | Erstversorgung und Transport des Neugeborenen |\n| [[phototherapiegeraet]] | Behandlung der Neugeborenengelbsucht auf der Wochenstation |\n\n### Kardiotokographie\n\nDas CTG misst die **fetale Herzfrequenz** meist mit einem Doppler-[[ultraschallwandler]] auf dem Bauch der Mutter; die Herzfrequenz wird aus dem periodischen Doppler-Signal mittels Autokorrelation ermittelt ([[doppler-effekt]]). Die **Wehentätigkeit** erfasst ein Tokodynamometer mit Dehnungs- oder Kraftaufnehmer ([[kraftsensor]]). Nach Blasensprung kann intern über eine Kopfschwartenelektrode (fetales EKG) und einen intrauterinen Druckkatheter gemessen werden.\n\n> [!warnung] Ein bekanntes Risiko ist die **Verwechslung der mütterlichen mit der kindlichen Herzfrequenz**: Bei schlecht positioniertem Schallkopf kann das Gerät den mütterlichen Puls registrieren und so eine kindliche Gefährdung verdecken. Viele Geräte vergleichen deshalb die fetale Kurve mit einem mütterlichen Pulssignal (z. B. aus der Pulsoxymetrie) und warnen bei Übereinstimmung.\n\n## Besondere technische Anforderungen\n\n### Ultraschall-Sicherheit\n\nUltraschall gilt als sehr sicher, kann aber Gewebe erwärmen und mechanisch wirken. Geräte zeigen dazu thermischen und mechanischen Index (TI, MI) an; Untersuchende sollen die Exposition nach dem ALARA-Prinzip gering halten [@iec-60601-2-37]. In Deutschland ist die Anwendung von Ultraschall am Fetus zu nichtmedizinischen Zwecken („Babykino“) durch die NiSV untersagt [@nisv].\n\n### Strahlenschutz in der Mammographie\n\nMammographiegeräte arbeiten mit niedrigen Röhrenspannungen und speziellen Anoden-Filter-Kombinationen, um den geringen Weichteilkontrast der Brust darzustellen ([[roentgenroehre]], [[roentgenstrahlung]]). Hohe Anforderungen an Bildqualität und Dosis werden durch Abnahme- und [[konstanzpruefung|Konstanzprüfungen]] sichergestellt; im Screening gelten zusätzliche Qualitätssicherungsanforderungen [@iec-60601-2-45] [@strlschv].\n\n### Flüssigkeitsmanagement in der Hysteroskopie\n\nZur Aufdehnung der Gebärmutter wird Spülflüssigkeit unter Druck eingebracht. Wird mit monopolarer Technik gearbeitet, sind elektrolytfreie Lösungen notwendig, deren Einschwemmung zu einer gefährlichen Hyponatriämie führen kann; bipolare Systeme erlauben physiologische Kochsalzlösung. Pumpensysteme bilanzieren daher kontinuierlich Ein- und Ausfuhr und alarmieren bei Überschreiten eines Defizits ([[alarmsystem]]).\n\n### Verfügbarkeit im Kreißsaal\n\nGeburten sind nicht planbar. CTG-Zentralüberwachung, Notsectio-Bereitschaft, Neugeborenen-Reanimationseinheit und funktionsfähige Absaugung müssen rund um die Uhr verfügbar sein. CTG-Kurven sind Teil der medizinischen Dokumentation und werden digital archiviert.\n\n> [!praxis] Bei CTG-Geräten sind Aufnehmerkabel, Gurte und Steckverbinder Verschleißteile. Gestörte Kurven haben häufig mechanische Ursachen (Kabelbruch, Wackelkontakt) oder Bewegungsartefakte ([[bewegungsartefakt]]) und keine elektronische.\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[neonatologie]]: Erstversorgung, Frühgeborene, gemeinsame Perinatalzentren.\n* [[anaesthesiologie]]: Periduralanästhesie, Narkose zur Sectio.\n* [[radiologie]]: Mammographie-Befundung, MRT der Brust und des Beckens.\n* [[diabetologie]] und [[labormedizin]]: Gestationsdiabetes, Blutgruppenserologie.\n* [[strahlentherapie]]: Mamma- und Zervixkarzinom, Brachytherapie.\n",
+  "related": [
+    "ctg",
+    "ultraschallgeraet",
+    "mammographiegeraet",
+    "neonatologie",
+    "doppler-effekt",
+    "kraftsensor",
+    "waermebett"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iec-60601-2-37",
+    "nisv",
+    "iec-60601-2-45",
+    "strlschv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

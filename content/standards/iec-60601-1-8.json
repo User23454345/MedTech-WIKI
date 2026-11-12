@@ -1,0 +1,36 @@
+{
+  "id": "iec-60601-1-8",
+  "type": "standard",
+  "title": "IEC 60601-1-8",
+  "code": "IEC 60601-1-8",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 1-8: Allgemeine Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale – Ergänzungsnorm: Alarmsysteme – Allgemeine Festlegungen, Prüfungen und Richtlinien für Alarmsysteme in medizinischen elektrischen Geräten und in medizinischen elektrischen Systemen",
+  "scope": "Legt Anforderungen an Entwurf, Prüfung und Verhalten von Alarmsystemen in medizinischen elektrischen Geräten und Systemen fest, insbesondere an Alarmprioritäten sowie optische und akustische Alarmsignale.",
+  "aliases": [
+    "DIN EN 60601-1-8",
+    "EN 60601-1-8",
+    "Alarmnorm",
+    "60601-1-8"
+  ],
+  "category": "normen",
+  "summary": "IEC 60601-1-8 ist die Ergänzungsnorm für Alarmsysteme medizinischer elektrischer Geräte. Sie vereinheitlicht Alarmprioritäten, optische und akustische Alarmsignale, Alarmgrenzen und Zustände der Alarmunterdrückung, damit Anwender Alarme geräteübergreifend schnell und richtig einordnen können.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-1-8** regelt [[alarmsystem|Alarmsysteme]] in [[medizinisches-elektrisches-geraet|medizinischen elektrischen Geräten]] und ME-Systemen [@iec-60601-1-8]. Sie gilt immer dann, wenn ein Gerät Alarmbedingungen erkennt und den Anwender durch Signale zum Handeln auffordern soll – vom [[patientenmonitor|Patientenmonitor]] über die [[infusionspumpe|Infusionspumpe]] bis zum [[beatmungsgeraet|Beatmungsgerät]]. Ziel ist eine **herstellerübergreifend einheitliche Alarmsprache**, damit Pflegende und Ärzt:innen die Dringlichkeit eines Alarms unabhängig vom Gerät sofort erkennen.\n\n## Zentrale Konzepte und Anforderungen\n\n### Alarmbedingungen\n\n| Art | Bedeutung | Beispiel |\n|---|---|---|\n| Physiologische Alarmbedingung | Patientenzustand verlässt festgelegte Grenzen | SpO₂ unter Alarmgrenze, Asystolie |\n| Technische Alarmbedingung | Zustand des Geräts oder Zubehörs gefährdet die Funktion | [[okklusionsalarm|Okklusion]], [[elektrodenproblem|Elektrode ab]], [[akkufehler|Akku leer]], [[diskonnektion]] |\n\n### Alarmprioritäten\n\nDie Priorität ergibt sich aus der Kombination von **Dringlichkeit** (wie schnell muss reagiert werden?) und **möglichem Schaden**. Die Norm kennt drei Stufen:\n\n| Priorität | erforderliche Reaktion | optisches Signal (vereinfacht) |\n|---|---|---|\n| hoch | sofort | rot, schnell blinkend |\n| mittel | zeitnah | gelb, langsamer blinkend |\n| niedrig | Aufmerksamkeit erforderlich | gelb oder cyan, nicht blinkend |\n\n> [!vereinfacht] Die Norm legt Farben, Blinkfrequenzen und Tastverhältnisse sowie die Pulsfolgen der akustischen Signale (Anzahl, Abstand, Tonhöhe) im Detail fest. Hochpriore akustische Alarmsignale bestehen aus mehr Einzelpulsen pro Folge (Burst) als mittelpriore, niedrigpriore aus den wenigsten. Exakte Werte sind der jeweils gültigen Fassung zu entnehmen.\n\nOptische Alarmsignale müssen so gestaltet sein, dass Vorhandensein und Priorität eines Alarms auch aus einigen Metern Abstand vom Gerät erkennbar sind; Einzelheiten zu Betrachtungsabstand und Anzeige legt die Norm fest. Zusätzlich zu Tönen können Sprachausgaben oder verteilte Alarmsysteme (Weiterleitung an Zentrale, Pager, Smartphones) eingesetzt werden; deren Zuverlässigkeit muss der Hersteller betrachten.\n\n### Alarmgrenzen und Alarmvoreinstellungen\n\nAlarmgrenzen können vom Hersteller, vom Betreiber (als Voreinstellung) oder vom Anwender festgelegt werden. Die Norm verlangt u. a., dass aktuelle Grenzwerte erkennbar sind, dass das Verhalten der Alarmeinstellungen nach einer Unterbrechung der Stromversorgung festgelegt ist (kurze Unterbrechungen dürfen die Einstellungen nicht verändern) und dass Änderungen der Betreiber-Voreinstellungen gegen unbefugten Zugriff geschützt sind.\n\n### Zustände der Alarmunterdrückung\n\nDie Norm unterscheidet, ob nur das akustische Signal oder der ganze Alarm unterdrückt wird und ob dies zeitlich begrenzt oder unbegrenzt geschieht (z. B. „Audio pausiert“, „Alarm pausiert“, „Audio aus“, „Alarm aus“). Diese Zustände müssen am Gerät eindeutig angezeigt werden.\n\n### Selbsthaltende Alarme\n\nBei **selbsthaltenden** (*latching*) Alarmen bleibt das Signal bestehen, bis der Anwender es quittiert – auch wenn die Ursache inzwischen verschwunden ist. So werden kurze, aber relevante Ereignisse (z. B. eine vorübergehende Arrhythmie) nicht übersehen.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | verweist für Alarmsysteme auf diese Ergänzungsnorm |\n| Ergänzungsnormen | IEC 60601-1-8, [[iec-60601-1-6]] | Alarmsignale sind Teil der Benutzerschnittstelle |\n| Besondere Festlegungen | [[iec-60601-2-27]] (EKG-Überwachung), [[iso-80601-2-12]] (Intensivbeatmung), [[iso-80601-2-61]] (Pulsoxymetrie), [[iec-60601-2-24]] (Infusionspumpen) | legen fest, welche Alarme ein Gerätetyp mindestens haben muss und mit welcher Priorität |\n| Prozessnormen | [[iso-14971]], [[iec-62366-1]] | Priorisierung ist eine Risikoentscheidung |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen Alarmbedingungen aus dem [[iso-14971|Risikomanagement]] ableiten, Prioritäten begründen und die Signale normgerecht gestalten.\n\n**Betreiber** tragen Verantwortung für die Konfiguration: Stationsspezifische Alarmvoreinstellungen, Lautstärken und die Anbindung an Rufanlagen oder Zentralen beeinflussen unmittelbar die Patientensicherheit. Zu viele, klinisch nicht relevante Alarme führen zur [[alarmmuedigkeit|Alarmmüdigkeit]] – Alarme werden überhört oder vorschnell unterdrückt.\n\n> [!praxis] Wirksame Maßnahmen gegen Alarmmüdigkeit sind patientenindividuell angepasste Alarmgrenzen, Verzögerungszeiten für kurze Artefakte, sorgfältige Elektrodenpflege ([[bewegungsartefakt]]) und ein abgestimmtes Alarmmanagement-Konzept zwischen Pflege, Ärzteschaft und Medizintechnik.\n\n## Betroffene Geräte\n\n[[patientenmonitor]], [[beatmungsgeraet]], [[transportbeatmungsgeraet]], [[heimbeatmungsgeraet]], [[anaesthesiegeraet]], [[infusionspumpe]], [[spritzenpumpe]], [[pulsoxymeter]], [[kapnometer]], [[dialysegeraet]], [[ecmo]], [[herz-lungen-maschine]], [[inkubator]] und [[ctg]].\n",
+  "related": [
+    "alarmsystem",
+    "alarmmuedigkeit",
+    "iec-60601-1",
+    "iec-60601-1-6",
+    "iec-60601-2-27",
+    "iso-80601-2-12",
+    "patientenmonitor",
+    "beatmungsgeraet",
+    "infusionspumpe",
+    "okklusionsalarm"
+  ],
+  "sources": [
+    "iec-60601-1-8",
+    "iec-60601-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

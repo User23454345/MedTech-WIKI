@@ -1,0 +1,57 @@
+{
+  "id": "medizintechnik-management",
+  "type": "term",
+  "title": "Medizintechnik-Management",
+  "aliases": [
+    "Healthcare Technology Management",
+    "HTM",
+    "Clinical Engineering",
+    "Medizintechnik-Abteilung",
+    "Gerätemanagement",
+    "Asset Management",
+    "Technisches Gerätemanagement"
+  ],
+  "category": "instandhaltung",
+  "summary": "Medizintechnik-Management plant, steuert und überwacht alle Medizinprodukte einer Gesundheitseinrichtung über ihren Lebenszyklus – von Beschaffung und Inbetriebnahme über Instandhaltung und Prüfungen bis zur Aussonderung. Es sichert Patientensicherheit, Rechtskonformität, Verfügbarkeit und Wirtschaftlichkeit.",
+  "body": "## Begriff und Aufgaben\n\n**Medizintechnik-Management** (international: *Healthcare Technology Management*, *Clinical Engineering*) bezeichnet die Planung, Steuerung und Überwachung aller Medizinprodukte einer Gesundheitseinrichtung über ihren gesamten [[lebenszyklus-medizinprodukt|Lebenszyklus]] – von der Bedarfsplanung über Beschaffung, Inbetriebnahme und [[instandhaltung-grundlagen|Instandhaltung]] bis zur Aussonderung. Ziel ist es, **Patientensicherheit**, **Rechtskonformität**, **Verfügbarkeit** und **Wirtschaftlichkeit** gleichzeitig zu gewährleisten [@kramme-2017] [@bronzino-2015].\n\nOrganisatorisch übernimmt diese Aufgabe meist eine Abteilung Medizintechnik bzw. ein Klinik-Engineering, ergänzt durch Herstellerservice und externe Dienstleister. Rechtlich bleibt der **Betreiber** verantwortlich (siehe [[betreiberpflichten]]).\n\n## Aufgabenfelder\n\n| Phase | Aufgaben | Bezug |\n|---|---|---|\n| Planung | Bedarfsanalyse, Standardisierung von Gerätetypen, Investitionsplanung | Gerätealter, Ausfallstatistik, medizinische Entwicklung |\n| Beschaffung | Leistungsbeschreibung, Ausschreibung, Bewertung inkl. Gesamtbetriebskosten | Service, Verbrauchsmaterial, Schulung, IT-Integration |\n| Inbetriebnahme | Eingangsprüfung, Funktionsprüfung, [[einweisung|Einweisung]], Aufnahme ins [[bestandsverzeichnis|Bestandsverzeichnis]] | [[mpbetreibv|MPBetreibV]] |\n| Betrieb | [[wartung|Wartung]], [[inspektion|Inspektion]], [[stk|STK]], [[mtk|MTK]], [[instandsetzung|Instandsetzung]] | Herstellerangaben, § 7, § 12, § 15 MPBetreibV |\n| Sicherheit | Bearbeitung von Rückrufen und Sicherheitsmitteilungen, Vorkommnismeldungen | [[vigilanz]], [[beauftragter-medizinproduktesicherheit|Beauftragte:r für Medizinproduktesicherheit]] |\n| Vernetzung | Risikomanagement für Medizinprodukte im IT-Netz, Software-Updates | IEC 80001-1, [[hl7-fhir|HL7/FHIR]], [[dicom]] |\n| Aussonderung | Datenlöschung, Entsorgung, Dokumentation | Ersatzbeschaffung |\n\n> [!belegt] Die MPBetreibV 2025 verpflichtet den Betreiber u. a. zur Instandhaltung durch sachkundige Stellen (§ 7), zu sicherheitstechnischen Kontrollen nach § 12 i. V. m. Anlage 1 (Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind) und zu messtechnischen Kontrollen nach § 15 i. V. m. Anlage 2 [@mpbetreibv]. Für vernetzte Medizinprodukte beschreibt IEC 80001-1 die Pflichten der verantwortlichen Organisation im Risikomanagement [@iec-80001-1].\n\n## Gerätebestand und Dokumentation\n\nGrundlage jedes Managements ist ein vollständiger, aktueller **Gerätebestand** in einer Datenbank (häufig als Medizintechnik- oder Instandhaltungssoftware bezeichnet). Je Gerät werden u. a. erfasst: Gerätetyp, Hersteller, Seriennummer, [[udi|UDI]], Standort, Betreiberverantwortung, Prüf- und Wartungsfristen, Instandhaltungshistorie, Einweisungen. Daraus werden das [[bestandsverzeichnis|Bestandsverzeichnis]] und das [[medizinproduktebuch|Medizinproduktebuch]] geführt sowie Termine automatisch geplant.\n\n## Instandhaltungsstrategie und Priorisierung\n\nNicht jedes Gerät benötigt denselben Aufwand. Ein klassischer Ansatz zur **risikobasierten Priorisierung** stammt von Fennigkoh und Smith: Für jeden Gerätetyp werden Punktwerte für die **Funktion** (therapeutisch, diagnostisch, sonstige), das **Risiko** bei Ausfall und den **Wartungsbedarf** vergeben und zu einer Kennzahl addiert; oberhalb eines Schwellenwerts wird das Gerät in das geplante Instandhaltungsprogramm aufgenommen [@fennigkoh-smith-1989].\n\n> [!vereinfacht] Risikobasierte Modelle helfen, Ressourcen zu verteilen, ersetzen aber keine gesetzlichen Pflichten: STK, MTK und Herstellervorgaben gelten unabhängig von einer internen Punktbewertung.\n\n| Geräteklasse (Beispiele) | Typische Prioritätsstufe |\n|---|---|\n| lebenserhaltend: [[beatmungsgeraet|Beatmungsgerät]], [[herz-lungen-maschine|Herz-Lungen-Maschine]], [[defibrillator|Defibrillator]], [[ecmo|ECMO]] | höchste – vorbeugend, kurze Reaktionszeiten, Ersatzgeräte |\n| therapeutisch mit Energieabgabe: [[hf-chirurgiegeraet|HF-Chirurgiegerät]], [[infusionspumpe|Infusionspumpe]], [[linearbeschleuniger|Linearbeschleuniger]] | hoch |\n| diagnostisch: [[patientenmonitor|Patientenmonitor]], [[ekg-geraet|EKG-Gerät]], [[ultraschallgeraet|Ultraschallgerät]], [[computertomograph|CT]] | mittel bis hoch (je nach Ausfallfolgen) |\n| Pflege und Lagerung: [[pflegebett|Pflegebett]], [[patientenlifter|Patientenlifter]] | mittel (mechanische Sicherheit) |\n\n## Kennzahlen\n\n| Kennzahl | Formel / Definition | Aussage |\n|---|---|---|\n| Verfügbarkeit | A = MTBF / (MTBF + MTTR) | Einsatzbereitschaft |\n| Termintreue Prüfungen | fristgerecht durchgeführte STK/MTK ÷ fällige STK/MTK | Rechtskonformität |\n| Instandhaltungskostenquote | jährliche Instandhaltungskosten ÷ Wiederbeschaffungswert | Wirtschaftlichkeit, Ersatzentscheidung |\n| Anteil Anwendungsfehler | Störungen ohne technischen Defekt ÷ alle Störungen | Schulungsbedarf ([[anwendungsfehler]]) |\n| Gerätealter | Mittelwert bzw. Anteil über der geplanten Nutzungsdauer | Investitionsstau |\n\n> [!beispiel] Ein Pool von 200 Infusionspumpen hat im Jahr 160 Störungsmeldungen; 64 davon erweisen sich als Bedien- oder Zubehörprobleme ohne technischen Defekt. Der Anteil von 40 % spricht eher für Schulungen und Standardisierung von Zubehör als für zusätzliche technische Wartung. Die Zahlen sind frei gewählt.\n\n## Gesamtbetriebskosten\n\nBei Beschaffungsentscheidungen ist nicht der Kaufpreis, sondern die **Total Cost of Ownership** maßgeblich: Anschaffung, Installation, Software-Lizenzen und -Updates, Serviceverträge, Ersatzteile, Verbrauchsmaterial, Prüfungen, Schulungen, Energie und Entsorgung. Asset-Management-Normen wie ISO 55000 liefern dafür einen allgemeinen Rahmen [@iso-55000].\n\n## Medizintechnik und IT\n\nImmer mehr Medizinprodukte sind vernetzt: Monitore im zentralen Überwachungssystem, Infusionspumpen mit Medikamentenbibliotheken, Modalitäten mit [[dicom|DICOM]]-Anbindung. Das Management muss daher Software-Stände, Sicherheitsupdates und Netzwerkänderungen steuern; die MPBetreibV 2025 bezieht sicherheitsrelevante Softwareaktualisierungen ausdrücklich in die Instandhaltung ein [@mpbetreibv]. Die Rolle von [[software-medizinprodukt|Software als Medizinprodukt]] und von Cybersicherheit wächst entsprechend.\n\n## Bedeutung in der Medizintechnik\n\nDas Medizintechnik-Management verbindet Technik, Recht und Ökonomie. Es übersetzt Herstellerangaben und Normen ([[iec-62353]], [[din-31051]]) in konkrete Prüf- und Wartungspläne, stellt die [[patientensicherheit|Patientensicherheit]] organisatorisch sicher und liefert Daten für Investitionsentscheidungen. Für Medizintechniker:innen ist es ein zentrales Berufsfeld (siehe [[berufe-medizintechnik]]).",
+  "related": [
+    "instandhaltung-grundlagen",
+    "betreiberpflichten",
+    "bestandsverzeichnis",
+    "medizinproduktebuch",
+    "beauftragter-medizinproduktesicherheit",
+    "stk",
+    "mtk",
+    "vigilanz",
+    "lebenszyklus-medizinprodukt",
+    "berufe-medizintechnik",
+    "software-medizinprodukt",
+    "mpbetreibv"
+  ],
+  "paths": [
+    [
+      "medizintechnik-management",
+      "bestandsverzeichnis",
+      "stk",
+      "elektrische-sicherheitspruefung"
+    ],
+    [
+      "medizintechnik-management",
+      "instandhaltung-grundlagen",
+      "wartung",
+      "inspektion",
+      "instandsetzung"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "bronzino-2015",
+    "mpbetreibv",
+    "iec-80001-1",
+    "fennigkoh-smith-1989",
+    "iso-55000",
+    "din-31051"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

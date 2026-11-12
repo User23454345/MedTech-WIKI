@@ -1,0 +1,69 @@
+{
+  "id": "sensordrift",
+  "type": "fault",
+  "title": "Sensordrift",
+  "aliases": [
+    "Drift",
+    "Nullpunktdrift",
+    "Empfindlichkeitsdrift",
+    "Sensor drift",
+    "Kalibrierfehler"
+  ],
+  "category": "fehler",
+  "summary": "Langsame, systematische Veränderung des Ausgangssignals eines Sensors bei unveränderter Messgröße. Drift führt zu falschen Messwerten, Fehlalarmen oder unterdrückten Alarmen und wird durch Nullabgleich, Kalibrierung und regelmäßige messtechnische Kontrollen beherrscht.",
+  "devices": [
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "patientenmonitor",
+    "invasive-druckmessung",
+    "kapnometer",
+    "blutgasanalysator",
+    "inkubator",
+    "dialysegeraet",
+    "thermometer",
+    "nibp-messgeraet",
+    "transportbeatmungsgeraet"
+  ],
+  "causes": [
+    "Alterung verbrauchender Sensoren, z. B. galvanischer [[sauerstoffsensor|Sauerstoffzellen]], deren Elektrolyt und Anode sich mit der Zeit erschöpfen",
+    "Nullpunktdrift von [[drucksensor|piezoresistiven Drucksensoren]] durch Temperaturänderung, mechanische Verspannung oder Feuchte",
+    "Ablagerungen und Verschmutzung (Sekret, Feuchtigkeit, Kalk, Proteine) an [[flowsensor|Flowsensoren]], optischen Fenstern und Elektroden",
+    "Temperatureinfluss auf Sensor und Messverstärker ([[operationsverstaerker|Offset- und Verstärkungsdrift]]), unzureichende Temperaturkompensation",
+    "Alterung von Lichtquellen und Detektoren in optischen Sensoren, z. B. im [[co2-sensor|NDIR-CO₂-Sensor]]",
+    "Versäumter oder falsch durchgeführter Nullabgleich bzw. falsches Referenzniveau bei der [[invasive-druckmessung|invasiven Druckmessung]]",
+    "Überschrittene Kalibrier- oder Wechselintervalle, fehlende [[mtk|messtechnische Kontrolle]]",
+    "Mechanische Belastung, Sturz oder Feuchteeintritt mit schleichender Schädigung des Sensorelements"
+  ],
+  "actions": [
+    "Patientenzustand klinisch prüfen und Messwert mit einem unabhängigen Verfahren plausibilisieren (z. B. Blutgasanalyse, manuelle Blutdruckmessung, Referenzthermometer)",
+    "Bei unplausiblen Werten das Gerät nicht allein zur Therapiesteuerung nutzen; bei lebenswichtigen Funktionen auf Ersatzgerät wechseln",
+    "Nullabgleich bzw. Anwenderkalibrierung nach Gebrauchsanweisung durchführen (z. B. Druckaufnehmer auf Herzhöhe, O₂-Kalibrierung mit Raumluft/100 % O₂)",
+    "Verbrauchssensoren auf Ablaufdatum und Betriebszeit prüfen und gegebenenfalls tauschen",
+    "Sensor und Messstrecke auf Verschmutzung, Feuchtigkeit und Beschädigung kontrollieren",
+    "Durch die Medizintechnik eine Vergleichsmessung mit rückgeführten [[pruefgeraete|Prüfmitteln]] durchführen und bei Bedarf [[kalibrierung|kalibrieren bzw. justieren]] lassen",
+    "Wiederkehrende Drift dokumentieren, Trend auswerten und Sensortausch oder Intervallanpassung veranlassen"
+  ],
+  "body": "## Technischer Hintergrund\n\nEin Sensor wandelt eine physikalische oder chemische Messgröße in ein elektrisches Signal um. Die Zuordnung zwischen Messgröße und Signal wird durch die Kennlinie beschrieben, im einfachsten Fall durch **Nullpunkt (Offset)** und **Empfindlichkeit (Steigung)**. Als **Drift** bezeichnet man eine langsame, zeitabhängige Veränderung dieser Kennlinie bei gleichbleibender Messgröße [@jcgm-200-2012][@fraden-2016]. Man unterscheidet:\n\n| Driftart | Wirkung | typisches Beispiel |\n|---|---|---|\n| Nullpunktdrift | konstanter Versatz über den ganzen Messbereich | Druckaufnehmer zeigt bei offenem Dreiwegehahn nicht 0 mmHg |\n| Empfindlichkeitsdrift | Fehler wächst mit dem Messwert | gealterte O₂-Zelle liefert bei 100 % O₂ zu wenig Signal |\n| Linearitätsänderung | Fehler nur in Teilbereichen | verschmutzter Flowsensor bei hohen Flüssen |\n\nDrift ist ein **systematischer** Fehleranteil der [[messunsicherheit|Messabweichung]] und lässt sich – anders als Rauschen – nicht durch Mittelung beseitigen. Sie betrifft jedes Glied der [[messkette|Messkette]]: Sensorelement, [[instrumentenverstaerker|Verstärker]], [[analog-digital-wandler|A/D-Wandler]] und die gespeicherten Kalibrierkoeffizienten [@hering-2018].\n\n### Wie das Gerät Drift erkennt\n\nViele Geräte überwachen sich selbst, erkennen Drift aber nur teilweise:\n\n* **Automatischer Nullabgleich:** Kapnometer oder Beatmungsgeräte schalten den Sensor zyklisch auf Raumluft bzw. drucklosen Zustand und speichern den neuen Nullpunkt. Liegt der Korrekturwert außerhalb eines zulässigen Fensters, erscheint eine Meldung wie „Kalibrierung erforderlich“.\n* **Plausibilitäts- und Redundanzprüfung:** Zwei unabhängige Sensoren (z. B. zwei Leitfähigkeits- oder Temperaturmessungen im [[dialysegeraet|Dialysegerät]]) werden verglichen; eine Differenz oberhalb eines Schwellwerts löst einen technischen Alarm aus.\n* **Kalibrierroutinen beim Selbsttest:** Beim Geräteeinschalttest des [[anaesthesiegeraet|Anästhesiegeräts]] werden z. B. O₂-Sensor und Flowsensoren gegen Referenzzustände geprüft.\n\nSolche Meldungen sind nach [[iec-60601-1-8]] **technische Alarmbedingungen**, meist niedriger oder mittlerer Priorität [@iec-60601-1-8]. Gefährlich ist die Drift, die das Gerät **nicht** erkennt: Ein schleichend zu niedrig anzeigender Sauerstoffsensor kann eine Hypoxie maskieren, ein verschobener Druck-Nullpunkt kann zu falschen Therapieentscheidungen führen.\n\n> [!vereinfacht] Die Kennlinie wird hier als Gerade y = a + b · x betrachtet. Drift bedeutet, dass sich a (Offset) und/oder b (Empfindlichkeit) mit der Zeit ändern. Reale Sensoren haben zusätzlich Nichtlinearität, Hysterese und Querempfindlichkeiten.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Messwert weicht konstant vom Referenzwert ab | Nullpunkt unter definierten Bedingungen kontrollieren (drucklos, Raumluft, Referenztemperatur) | Nullabgleich wiederholen; bei Überschreiten des Korrekturbereichs Sensor tauschen |\n| Abweichung wächst mit dem Messwert | Zwei-Punkt-Vergleich mit Prüfgas, Prüfdruck oder Referenzthermometer | Kalibrierung/Justierung durch Fachpersonal, ggf. Sensortausch |\n| Wert „wandert“ während der Anwendung | Temperaturänderung, Feuchtigkeit, Lage des Aufnehmers, Kabel und Steckverbinder prüfen | Aufnehmer fixieren, vor Feuchte schützen, Sensor erneut abgleichen |\n| Kalibrierung schlägt wiederholt fehl | Betriebszeit, Ablaufdatum, Verschmutzung des Sensors | Verbrauchssensor ersetzen, Messstrecke reinigen nach Herstellervorgabe |\n| Zwei Kanäle widersprechen sich | Beide Kanäle gegen externe Referenz prüfen | defekten Kanal identifizieren, Instandsetzung durch Service |\n\n> [!praxis] Bei der invasiven Blutdruckmessung ist eine scheinbare „Drift“ häufig ein Lagefehler: Wird der Druckaufnehmer gegenüber dem Referenzniveau (Höhe des rechten Vorhofs) verschoben, ändert sich der angezeigte Druck um etwa 0,74 mmHg pro Zentimeter Höhenunterschied. Das folgt aus dem hydrostatischen Druck Δp = ρ · g · h: Für die wassergefüllte Messleitung (ρ ≈ 1 000 kg/m³) ergibt 1 cm rund 98 Pa ≈ 0,74 mmHg. Ein 10 cm zu tief hängender Aufnehmer zeigt also rund 7 mmHg zu viel an – beim zentralen Venendruck ein klinisch erheblicher Fehler. Erst nach Prüfung der Lage sollte von einem Sensordefekt ausgegangen werden.\n\n## Prävention\n\n* Herstellervorgaben zu Anwenderkalibrierung, Nullabgleich und Sensorwechsel konsequent umsetzen; Wechselintervalle von Verbrauchssensoren erfassen.\n* Für Geräte mit Messfunktion, die in Anlage 2 der [[mpbetreibv|MPBetreibV]] aufgeführt sind, [[mtk|messtechnische Kontrollen]] nach § 15 fristgerecht durchführen; für alle anderen Messgeräte [[kalibrierung|Kalibrierung]] im Rahmen der [[wartung|Wartung]] planen [@mpbetreibv].\n* Prüfmittel selbst regelmäßig rückgeführt kalibrieren lassen.\n* Messwert-Trends und Kalibrierprotokolle auswerten: Eine zunehmende Korrektur beim Nullabgleich kündigt den Ausfall eines Sensors oft frühzeitig an.\n* Sensoren vor Feuchte, Stoß und Temperaturschock schützen.\n\n> [!hinweis] Konkrete Grenzwerte für zulässige Abweichungen, Kalibrierprozeduren und herstellerspezifische Fehlercodes stehen in der Gebrauchsanweisung und den Service-Unterlagen des jeweiligen Geräts. Siehe auch [[fehlercodes]] und [[fehlersuche]].",
+  "related": [
+    "kalibrierung",
+    "messunsicherheit",
+    "messkette",
+    "mtk",
+    "sauerstoffsensor",
+    "drucksensor",
+    "flowsensor",
+    "co2-sensor",
+    "temperatursensor",
+    "fehlersuche",
+    "pruefgeraete"
+  ],
+  "sources": [
+    "jcgm-200-2012",
+    "fraden-2016",
+    "hering-2018",
+    "iec-60601-1-8",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

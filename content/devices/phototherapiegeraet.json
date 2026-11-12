@@ -1,0 +1,66 @@
+{
+  "id": "phototherapiegeraet",
+  "type": "device",
+  "title": "Phototherapiegerät (Neugeborenenikterus)",
+  "aliases": [
+    "Phototherapie",
+    "Fototherapiegerät",
+    "Blaulichttherapie",
+    "Bilirubinlampe",
+    "Infant Phototherapy",
+    "Phototherapiematte"
+  ],
+  "category": "geraete",
+  "deviceGroup": "neonatologie",
+  "rank": 81,
+  "domains": [
+    "neonatologie",
+    "geburtshilfe"
+  ],
+  "summary": "Phototherapiegeräte bestrahlen die Haut von Neugeborenen mit blauem Licht, um erhöhtes Bilirubin abzubauen. Das Licht wandelt Bilirubin in der Haut in wasserlösliche Isomere um, die ohne Umbau in der Leber ausgeschieden werden können.",
+  "sections": {
+    "purpose": "Bei vielen Neugeborenen steigt das unkonjugierte Bilirubin in den ersten Lebenstagen an (Neugeborenenikterus), weil fetales [[haemoglobin|Hämoglobin]] abgebaut wird und die Leber Bilirubin noch nicht ausreichend konjugiert. Sehr hohe Werte können das Gehirn schädigen (Kernikterus). Die Phototherapie ist die Standardbehandlung, wenn Bilirubin altersabhängige Schwellen überschreitet [@aap-hyperbilirubinemia-2004].",
+    "principle": "## Photochemie\n\nBilirubin absorbiert Licht am stärksten im blauen Spektralbereich (Absorptionsmaximum um etwa 450–460 nm); blaugrünes Licht dringt etwas tiefer in die Haut ein. Die in der Haut absorbierten Photonen bewirken eine **Photoisomerisierung**: Es entstehen Konfigurations- und Strukturisomere (u. a. Lumirubin), die wasserlöslicher sind und über Galle und Urin ausgeschieden werden. Die Wirkung hängt ab von\n\n| Größe | Bedeutung |\n|---|---|\n| Wellenlänge | blaues bis blaugrünes Licht; die AAP nennt für die intensive Phototherapie den Bereich etwa 430–490 nm |\n| spektrale Bestrahlungsstärke | in µW/cm²/nm; für intensive Phototherapie nennt die AAP mindestens 30 µW/cm²/nm |\n| bestrahlte Hautfläche | je größer, desto wirksamer (ggf. Bestrahlung von oben und unten) |\n\n> [!belegt] Für die intensive Phototherapie empfiehlt die AAP eine spektrale Bestrahlungsstärke von mindestens 30 µW/cm²/nm im Wellenlängenbereich von etwa 430–490 nm, auf möglichst großer Körperfläche [@aap-hyperbilirubinemia-2004].\n\n## Lichtquellen und Bauformen\n\nFrüher waren Leuchtstoffröhren und Halogenlampen üblich; heute dominieren blaue **LEDs** mit schmalem Spektrum und geringer Wärmeabgabe ([[optik]]). Bauformen sind Deckenstrahler über Bett oder [[inkubator|Inkubator]], Phototherapiematten bzw. -decken mit LED-Feldern oder Lichtleitern (Glasfasern) unter dem Kind und kombinierte Systeme. Die Bestrahlungsstärke nimmt mit dem Abstand ab und ist zur Mitte der Liegefläche hin meist am höchsten; sie wird mit einem für das Spektrum der Lichtquelle geeigneten **Radiometer** in Höhe der Haut des Kindes geprüft. Radiometer verschiedener Hersteller messen wegen unterschiedlicher spektraler Empfindlichkeit nicht unbedingt vergleichbar.\n\n> [!warnung] Die Augen des Kindes werden mit einer Augenschutzmaske geschützt. Wärmeeintrag, Flüssigkeitsverlust und Körpertemperatur sind zu überwachen ([[thermoregulation]]). Sicherheitsanforderungen enthält [@iec-60601-2-50]."
+  },
+  "manufacturers": [
+    {
+      "ref": "draeger",
+      "models": [
+        "BiliLux"
+      ],
+      "note": "LED-Phototherapieleuchte"
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "BiliSoft"
+      ],
+      "note": "Phototherapiematte"
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Lichtquelle (LED, konventionell), Strahler oder Matte, Stativ bzw. Inkubator-Integration, Radiometer, Einmalauflagen und Augenmasken, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) aufgeführt. Die therapeutische Wirksamkeit hängt von der Bestrahlungsstärke ab; deren regelmäßige Messung mit einem geeigneten Radiometer gehört zur Instandhaltung nach Herstellerangabe.",
+    "intervals": "Messung der Bestrahlungsstärke und Prüfung der Lichtquellen nach Herstellerangabe bzw. vor Anwendung; elektrische Wiederholungsprüfung nach [[iec-62353|IEC 62353]]."
+  },
+  "related": [
+    "inkubator",
+    "waermebett",
+    "haemoglobin",
+    "optik",
+    "neonatologie",
+    "haut"
+  ],
+  "sources": [
+    "aap-hyperbilirubinemia-2004",
+    "iec-60601-2-50",
+    "kramme-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,173 @@
+{
+  "id": "ableitstrom",
+  "type": "term",
+  "title": "Ableitstrom",
+  "aliases": [
+    "Leakage current",
+    "Erdableitstrom",
+    "Berührungsstrom",
+    "Gehäuseableitstrom",
+    "Patientenableitstrom",
+    "Patientenhilfsstrom",
+    "Geräteableitstrom",
+    "Ersatzableitstrom",
+    "Touch current",
+    "Earth leakage current",
+    "Patient leakage current",
+    "Patient auxiliary current"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Ableitstrom ist jeder nicht funktionsbedingte Strom, der von einem elektrischen Gerät über Isolierungen, Gehäuse, Schutzleiter oder den Patienten zur Erde abfließt. Er entsteht vor allem kapazitiv und wird für ME-Geräte nach IEC 60601-1 und bei Wiederholungsprüfungen nach IEC 62353 streng begrenzt, weil schon Ströme im Mikroamperebereich am Herzen gefährlich sein können.",
+  "body": "## Begriff\n\nAls **Ableitstrom** bezeichnet die [[iec-60601-1]] jeden Strom, der nicht funktionsbedingt ist [@iec-60601-1]. Gemeint sind Ströme, die – ohne dass ein Fehler vorliegen muss – vom netzbezogenen Teil eines Geräts über Isolierungen, Gehäuse, Schutzleiter oder den Patienten zur Erde abfließen. Ableitströme sind bei jedem netzbetriebenen Gerät vorhanden; sie lassen sich nicht vermeiden, wohl aber begrenzen.\n\nAbleitströme sind in der Medizintechnik besonders bedeutsam, weil Patienten oft geschwächt, narkotisiert oder über Katheter direkt mit dem Herzen verbunden sind. Schon Ströme, die ein gesunder Mensch nicht spürt, können dann gefährlich werden (siehe [[elektrische-stromwirkung]]).\n\n## Ursachen\n\n### Kapazitive Ableitströme\n\nDer größte Anteil entsteht kapazitiv. Jede Isolierung zwischen Netzspannung und geerdeten oder berührbaren Teilen bildet einen [[kondensator|Kondensator]]. Für eine Kapazität C gilt bei sinusförmiger Spannung:\n\n`I = U · ω · C = U · 2π · f · C`\n\nTypische Kapazitäten sind:\n\n* **Y-Kondensatoren** im Netzfilter, die hochfrequente Störungen zum Schutzleiter ableiten und für die [[emv|EMV]] unverzichtbar sind,\n* Wicklungskapazitäten im [[transformator|Netztransformator]] bzw. im Übertrager des [[medizinisches-netzteil|Netzteils]],\n* Leitungskapazitäten langer Netz- und Patientenkabel.\n\n> [!beispiel] Zwei Y-Kondensatoren von je 2,2 nF zwischen Außenleiter bzw. Neutralleiter und Schutzleiter: Am Außenleiter liegen 230 V, damit fließen I = 230 V · 2π · 50 Hz · 2,2 nF ≈ 0,16 mA zum Schutzleiter. Das ist im Normalzustand unkritisch, solange der Schutzleiter intakt ist. Die Werte sind beispielhaft.\n\nDaraus folgt ein Zielkonflikt: Größere Filterkapazitäten verbessern die Störunterdrückung, erhöhen aber den Ableitstrom. Medizinische Netzteile verwenden deshalb kleinere Y-Kapazitäten als vergleichbare Industrienetzteile.\n\n### Ohmsche Ableitströme\n\nEin kleinerer Anteil fließt resistiv über den endlichen [[isolationswiderstand|Isolationswiderstand]]. Dieser Anteil nimmt mit Alterung, Feuchtigkeit, Verschmutzung und Beschädigung zu – ein ansteigender Ableitstrom über mehrere Prüfungen ist daher ein Frühwarnzeichen.\n\n## Arten von Ableitströmen\n\nDie IEC 60601-1 unterscheidet nach dem Strompfad [@iec-60601-1]:\n\n| Bezeichnung | Strompfad | Wer ist gefährdet? |\n|---|---|---|\n| **Erdableitstrom** | vom Netzteil über die Isolierung in den Schutzleiter | indirekt: fließt bei Schutzleiterunterbrechung über Personen |\n| **Berührungsstrom** (früher Gehäuseableitstrom) | von berührbaren Teilen über eine Person zur Erde | Bediener und Patient |\n| **Patientenableitstrom** | von den Patientenanschlüssen über den Patienten zur Erde | Patient |\n| **Patientenhilfsstrom** | zwischen Patientenanschlüssen über den Patienten, nicht zur Erhaltung einer physiologischen Wirkung bestimmt (z. B. Messstrom einer Impedanzmessung) | Patient |\n| **Gesamt-Patientenableitstrom** | Summe der Patientenableitströme aller Anwendungsteile gleichen Typs | Patient |\n\nFür die Wiederholungsprüfung fasst die [[iec-62353]] diese Größen zu zwei Messgrößen zusammen: dem **Geräteableitstrom** (Summe aller Ableitströme von Gehäuse und Anwendungsteilen gegen Erde) und dem **Ableitstrom vom Anwendungsteil** [@iec-62353].\n\n## Normalzustand und erster Fehler\n\nDie Grenzwerte werden jeweils für den **Normalzustand** (NC, *normal condition*) und für den **ersten Fehler** (SFC, *single fault condition*) festgelegt. Typische erste Fehler bei der Typprüfung sind [@iec-60601-1]:\n\n* Unterbrechung des Schutzleiters (Schutzklasse I),\n* Unterbrechung eines Netzleiters,\n* Netzspannung an einem F-Typ-[[anwendungsteile|Anwendungsteil]] (z. B. durch ein fehlerhaftes Fremdgerät am selben Patienten).\n\n## Grenzwerte\n\n### Typprüfung nach IEC 60601-1\n\n| Ableitstrom (Wechselstrom) | Normalzustand | Erster Fehler |\n|---|---|---|\n| Erdableitstrom | 5 mA | 10 mA |\n| Berührungsstrom | 100 µA | 500 µA |\n| Patientenableitstrom Typ B / BF | 100 µA | 500 µA |\n| Patientenableitstrom Typ CF | 10 µA | 50 µA |\n| Patientenableitstrom bei Netzspannung am Anwendungsteil, Typ BF / CF | – | 5 000 µA / 50 µA |\n\n> [!hinweis] Auszug nach der 3. Ausgabe der IEC 60601-1 (typische Werte); für Gleichstromanteile, Patientenhilfsströme, Gesamt-Patientenableitströme und einige Sonderfälle (z. B. fest angeschlossene Geräte) gelten weitere Festlegungen. Besondere Festlegungen (Normen der Reihe IEC 60601-2-x) können abweichen. Maßgeblich ist die jeweils gültige Fassung [@iec-60601-1].\n\n### Wiederholungsprüfung nach IEC 62353\n\nBei der Wiederholungsprüfung werden geringere Anforderungen an den Messaufwand gestellt. Für die direkte bzw. Differenzstrommessung des Geräteableitstroms gelten typischerweise 500 µA (Schutzklasse I) und 100 µA (Schutzklasse II); für den Ableitstrom vom Anwendungsteil 5 000 µA (Typ BF) bzw. 50 µA (Typ CF) [@iec-62353]. Für das Ersatzableitstrom-Messverfahren nennt die Norm eigene Werte.\n\n> [!hinweis] Die hier genannten Grenzwerte der IEC 62353 sind typische Werte zur Orientierung und nicht gegen den aktuellen Normtext geprüft. Maßgeblich sind die jeweils gültige Normfassung und – sofern strenger – die Vorgaben des Herstellers.\n\n> [!belegt] Die IEC 62353 ist ausdrücklich für Prüfungen vor der Inbetriebnahme, Wiederholungsprüfungen und Prüfungen nach Instandsetzung vorgesehen; sie ersetzt nicht die Typprüfung nach IEC 60601-1 [@iec-62353].\n\n## Messung\n\n### Messeinrichtung (MD)\n\nAbleitströme werden nicht mit einem einfachen Amperemeter gemessen, sondern über eine genormte **Messeinrichtung** (*Measuring Device*, MD), die die Impedanz des menschlichen Körpers und die Frequenzabhängigkeit der Stromwirkung nachbildet. Sie besteht im Kern aus einem 1-kΩ-Widerstand (Nachbildung der Körperimpedanz), dem ein RC-Tiefpass aus 10 kΩ in Reihe mit 15 nF parallel geschaltet ist; das Voltmeter misst die Spannung am Kondensator [@iec-60601-1]. Bei niedrigen Frequenzen ist die Kondensatorimpedanz groß gegenüber 10 kΩ, die angezeigte Spannung entspricht dann praktisch der Spannung am 1-kΩ-Widerstand, also 1 mV pro 1 µA. Oberhalb der Grenzfrequenz `f_g = 1 / (2π · 10 kΩ · 15 nF) ≈ 1 kHz` werden Anteile zunehmend abgeschwächt, weil höherfrequente Ströme den Körper weniger stark reizen.\n\n> [!vereinfacht] Die Beschreibung gibt die Grundschaltung der Messeinrichtung wieder; Toleranzen, Anforderungen an das Voltmeter (Effektivwertmessung, Eingangsimpedanz) und alternative Messanordnungen sind der jeweils gültigen Normfassung zu entnehmen.\n\n### Messverfahren nach IEC 62353\n\n| Verfahren | Prinzip | Vorteile / Grenzen |\n|---|---|---|\n| Direktmessung | Gerät im Betrieb, Strom über MD von Gehäuse/Schutzleiter zur Erde | realistisch; der Schutzleiter des Prüflings ist während der Messung nicht niederohmig geerdet, sondern über die MD geführt, das Gerät muss isoliert aufgestellt sein |\n| Differenzstrommessung | Differenz der Ströme in Außen- und Neutralleiter | Gerät bleibt geerdet; Auflösung im unteren µA-Bereich begrenzt |\n| Ersatzableitstrom (alternatives Verfahren) | Netzleiter kurzgeschlossen, Prüfspannung zwischen Netzteil und Schutzleiter/Anwendungsteil | Gerät nicht in Betrieb, sicher und reproduzierbar; erfasst netzseitig geschaltete Teile nur teilweise |\n\nDetails zur praktischen Durchführung: [[ableitstrommessung]] und [[pruefgeraete]].\n\n## Ableitströme in ME-Systemen\n\nWerden mehrere Geräte zu einem **ME-System** kombiniert, etwa über eine Mehrfachsteckdose am Intensivbett, addieren sich ihre Erdableitströme auf dem gemeinsamen Schutzleiter. Fällt der Schutzleiter der Mehrfachsteckdose aus, fließt die Summe über eine berührende Person. Die IEC 60601-1 begrenzt deshalb den Berührungsstrom in der Patientenumgebung auch für ME-Systeme und verlangt für Mehrfachsteckdosen besondere Maßnahmen, etwa einen Trenntransformator [@iec-60601-1].\n\n> [!vereinfacht] Ableitströme verschiedener Geräte addieren sich nicht streng arithmetisch, weil sie unterschiedliche Phasenlagen haben können. Für eine Abschätzung im Sinne der Sicherheit wird jedoch meist mit der Summe gerechnet.\n\n## Bedeutung in der Medizintechnik\n\nAbleitströme sind ein Schlüsselkriterium der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] und damit der [[stk|STK]] und der Prüfung nach [[dguv-vorschrift-3|DGUV Vorschrift 3]]. Besonders kritisch sind Geräte mit CF-Anwendungsteilen oder Verbindung zum Herzen:\n\n* [[ekg-geraet]], [[patientenmonitor]] und [[defibrillator]] (EKG-Eingänge),\n* [[invasive-druckmessung]] und [[herz-lungen-maschine]] (Flüssigkeitssäule bzw. Blutkontakt),\n* [[externer-schrittmacher]] (Elektroden am Myokard),\n* [[dialysegeraet]] und [[ecmo]] (leitfähige Flüssigkeiten in Kontakt mit dem Blutkreislauf).\n\nTypische Ursachen erhöhter Ableitströme bei der Prüfung:\n\n* gealterte oder defekte Y-Kondensatoren im Netzfilter,\n* eingedrungene Flüssigkeit, Verschmutzung, Feuchtigkeit,\n* beschädigte Patientenkabel oder Sensoren,\n* nachgerüstete, nicht freigegebene Zusatzgeräte.\n\n> [!praxis] Messwerte sollten nicht nur gegen den Grenzwert, sondern auch gegen die Vorwerte desselben Geräts verglichen werden. Ein sprunghafter Anstieg weist auf eine beginnende Isolationsschwäche hin, auch wenn der Grenzwert noch eingehalten ist.\n\n> [!warnung] Bei der Direktmessung ist der Prüfling nicht mehr niederohmig über den Schutzleiter geerdet, weil der Strompfad über die Messeinrichtung des Prüfgeräts führt. Das Gerät darf währenddessen weder vom Patienten noch von Personen berührt werden. Messungen nur durch Elektrofachkräfte bzw. entsprechend befugtes Fachpersonal.\n\nSiehe auch: [[schutzklassen]], [[anwendungsteile]], [[galvanische-trennung]], [[medizinisch-genutzte-bereiche]], [[elektrotechnik]].\n",
+  "related": [
+    "ableitstrommessung",
+    "anwendungsteile",
+    "schutzklassen",
+    "isolationswiderstand",
+    "schutzleiterwiderstand",
+    "elektrische-sicherheitspruefung",
+    "elektrische-stromwirkung",
+    "kondensator",
+    "emv",
+    "pruefgeraete",
+    "iec-60601-1",
+    "iec-62353"
+  ],
+  "paths": [
+    [
+      "patientenmonitor",
+      "anwendungsteile",
+      "ableitstrom",
+      "ableitstrommessung",
+      "elektrische-sicherheitspruefung",
+      "stk"
+    ],
+    [
+      "medizinisches-netzteil",
+      "kondensator",
+      "ableitstrom",
+      "elektrische-stromwirkung"
+    ]
+  ],
+  "diagram": {
+    "title": "Ableitstrompfade eines Schutzklasse-I-Geräts",
+    "caption": "Funktionsschema: Ableitströme fließen kapazitiv über Netzfilter und Isolierungen zum Schutzleiter, zum Gehäuse und über das Anwendungsteil zum Patienten. Kein konkretes Gerät.",
+    "width": 900,
+    "height": 400,
+    "nodes": [
+      {
+        "id": "netz",
+        "label": "Netz\n230 V / 50 Hz",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "nt",
+        "label": "Netzteil mit\nY-Kondensatoren",
+        "ref": "medizinisches-netzteil",
+        "kind": "process",
+        "x": 300,
+        "y": 80
+      },
+      {
+        "id": "geh",
+        "label": "Gehäuse\n(berührbar)",
+        "kind": "process",
+        "x": 520,
+        "y": 80
+      },
+      {
+        "id": "pe",
+        "label": "Schutzleiter",
+        "ref": "schutzleiterwiderstand",
+        "kind": "output",
+        "x": 740,
+        "y": 80
+      },
+      {
+        "id": "iso",
+        "label": "Isolationsbarriere",
+        "ref": "galvanische-trennung",
+        "kind": "process",
+        "x": 300,
+        "y": 220
+      },
+      {
+        "id": "ap",
+        "label": "Anwendungsteil\n(B / BF / CF)",
+        "ref": "anwendungsteile",
+        "kind": "process",
+        "x": 520,
+        "y": 220
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 740,
+        "y": 220
+      },
+      {
+        "id": "md",
+        "label": "Messeinrichtung MD\n(Prüfgerät)",
+        "ref": "ableitstrommessung",
+        "kind": "sensor",
+        "x": 740,
+        "y": 340
+      }
+    ],
+    "edges": [
+      {
+        "from": "netz",
+        "to": "nt",
+        "kind": "power"
+      },
+      {
+        "from": "nt",
+        "to": "geh",
+        "kind": "energy",
+        "label": "Berührungsstrom"
+      },
+      {
+        "from": "nt",
+        "to": "pe",
+        "kind": "energy",
+        "label": "Erdableitstrom"
+      },
+      {
+        "from": "nt",
+        "to": "iso",
+        "kind": "energy",
+        "label": "Koppelkapazität"
+      },
+      {
+        "from": "iso",
+        "to": "ap",
+        "kind": "energy"
+      },
+      {
+        "from": "ap",
+        "to": "pat",
+        "kind": "energy",
+        "label": "Patientenableitstrom"
+      },
+      {
+        "from": "pat",
+        "to": "md",
+        "kind": "signal",
+        "label": "zur Erde"
+      }
+    ]
+  },
+  "sources": [
+    "iec-60601-1",
+    "iec-62353",
+    "iec-60479-1",
+    "webster-2010",
+    "kramme-2017",
+    "bronzino-2015"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

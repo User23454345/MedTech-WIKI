@@ -1,0 +1,141 @@
+{
+  "id": "transformator",
+  "type": "term",
+  "title": "Transformator",
+  "aliases": [
+    "Trafo",
+    "Übertrager",
+    "Transformer",
+    "Trenntransformator",
+    "Hochspannungstransformator",
+    "Netztransformator",
+    "HF-Übertrager",
+    "Isolating Transformer"
+  ],
+  "category": "komponenten",
+  "summary": "Ruhende elektrische Maschine, die Wechselspannungen über ein gemeinsames Magnetfeld zwischen galvanisch getrennten Wicklungen überträgt und umsetzt. In der Medizintechnik dient sie der Spannungsanpassung, der Isolation zum Schutz des Patienten und der Hochspannungserzeugung für Röntgenröhren.",
+  "body": "## Begriff\n\nEin **Transformator** (Trafo, Übertrager) ist eine ruhende elektrische Maschine, die Wechselspannungen über ein gemeinsames Magnetfeld von einem Stromkreis in einen anderen überträgt und dabei in ihrer Höhe umsetzt. Er besteht aus mindestens zwei Wicklungen – **Primär-** und **Sekundärwicklung** –, die auf einen gemeinsamen Kern aus weichmagnetischem Material gewickelt sind. Zwischen den Wicklungen besteht keine leitende Verbindung: Der Transformator stellt eine [[galvanische-trennung|galvanische Trennung]] her [@fischer-nolle-elektrische-maschinen-2022].\n\nIn der Medizintechnik erfüllt der Transformator drei Kernaufgaben:\n\n1. **Spannungsanpassung** – vom Netz auf Kleinspannung im [[medizinisches-netzteil|Netzteil]] oder auf viele Kilovolt im Röntgengenerator ([[hochspannungserzeugung]]).\n2. **Isolation** – Schutz von Patient und Bedienpersonal durch galvanische Trennung.\n3. **Signalübertragung** – Übertrager in Datenschnittstellen, Impulsübertrager zur isolierten Ansteuerung von Leistungshalbleitern.\n\n## Physikalisches Prinzip\n\nDer Transformator beruht auf der [[elektromagnetische-induktion|elektromagnetischen Induktion]]. Der Wechselstrom in der Primärwicklung erzeugt einen zeitlich veränderlichen magnetischen Fluss Φ im Kern. Dieser durchsetzt die Sekundärwicklung und induziert dort nach dem Induktionsgesetz eine Spannung:\n\n`u = N · dΦ/dt`\n\nFür sinusförmige Größen ergibt sich die **Transformatorhauptgleichung**:\n\n`U = 4,44 · f · N · A_Fe · B̂`\n\nmit Frequenz f, Windungszahl N, Kernquerschnitt A_Fe und Scheitelwert der magnetischen Flussdichte B̂ [@fischer-nolle-elektrische-maschinen-2022].\n\n### Übersetzungsverhältnis\n\nBeim **idealen Transformator** (verlustfrei, ohne Streufluss) gilt:\n\n| Größe | Beziehung |\n|---|---|\n| Spannung | U₁ / U₂ = N₁ / N₂ = ü |\n| Strom | I₁ / I₂ = N₂ / N₁ = 1 / ü |\n| Leistung | U₁ · I₁ = U₂ · I₂ |\n| Impedanz | Z₁ = ü² · Z₂ |\n\n> [!beispiel] Ein Netztransformator mit N₁ = 1 150 und N₂ = 60 Windungen setzt 230 V auf 230 V · 60 / 1 150 = 12 V herab. Fließen sekundär 5 A, so nimmt er primär (ideal) 5 A · 60 / 1 150 ≈ 0,26 A auf. Die Zahlen sind didaktisch gewählt.\n\n### Reale Effekte\n\nEin realer Transformator weicht vom Ideal ab durch:\n\n* **Kupferverluste** (Joulesche Wärme in den Wicklungen, P = I² · R, siehe [[joulesche-waerme]]),\n* **Eisenverluste** (Hysterese- und Wirbelstromverluste im Kern; daher geblechte Kerne oder Ferrite),\n* **Streuinduktivität** (nicht der gesamte Fluss koppelt beide Wicklungen),\n* **Magnetisierungsstrom** und **Einschaltstromstoß** (Inrush): Je nach Schaltzeitpunkt kann der Kern beim Einschalten kurzzeitig in die Sättigung geraten; der Strom kann dann ein Vielfaches des Nennstroms betragen.\n\n> [!vereinfacht] Die Darstellung über das Übersetzungsverhältnis vernachlässigt Verluste und Streuung. Für die Auslegung werden Ersatzschaltbilder mit Wicklungswiderständen, Streu- und Hauptinduktivität verwendet.\n\n## Bauformen und Kernmaterialien\n\n| Bauform | Frequenz | Kern | Beispiel in der Medizintechnik |\n|---|---|---|---|\n| Netztransformator | 50/60 Hz | Elektroblech (Schnittband-, Ringkern) | lineare Netzteile, ältere Geräte |\n| Medizinischer Trenntransformator | 50 Hz | Elektroblech | Einspeisung medizinischer IT-Systeme |\n| HF-Übertrager | kHz bis MHz | Ferrit | Schaltnetzteile, Generator-Wechselrichter |\n| Hochspannungstransformator | kHz (Mittelfrequenz) | Ferrit oder Blech, ölisoliert | Röntgengenerator, CT |\n| Signal- und Impulsübertrager | breitbandig | Ferrit | isolierte Ansteuerung, Datenschnittstellen |\n\n## Anwendung in Geräten\n\n### Netzteil\n\nIm Schaltnetzteil ist der HF-Übertrager das zentrale Element der Isolationsbarriere. Seine Wicklungen müssen so getrennt sein, dass die von der [[iec-60601-1]] geforderte doppelte oder verstärkte Isolierung (für Patientenschutz z. B. 2 × MOPP) eingehalten wird – durch Isolierfolien, dreifach isolierten Draht und ausreichende Kriech- und Luftstrecken [@iec-60601-1]. Details beschreibt der Artikel [[medizinisches-netzteil]].\n\n### Hochspannungserzeugung für die Röntgenröhre\n\nModerne Röntgengeneratoren für [[roentgengeraet|Röntgenanlagen]], [[c-bogen|C-Bögen]], [[angiographieanlage|Angiographieanlagen]] und [[computertomograph|Computertomographen]] arbeiten als **Hochfrequenz- oder Mittelfrequenzgeneratoren**: Ein Wechselrichter erzeugt aus der gleichgerichteten Netzspannung eine Wechselspannung im kHz-Bereich, ein Hochspannungstransformator setzt sie hoch, Hochspannungsgleichrichter (teils als Vervielfacherkaskade ausgeführt) richten sie gleich, und [[kondensator|Kondensatoren]] sowie die Kabelkapazität glätten sie. Die hohe Frequenz erlaubt kleine Transformatoren und eine nahezu welligkeitsfreie Röhrenspannung [@krieger-strahlungsquellen-2018] [@kramme-2017]. Mehr dazu unter [[hochspannungserzeugung]] und [[roentgenroehre]].\n\n> [!belegt] Bei Hochfrequenzgeneratoren ist die Welligkeit der Röhrenspannung deutlich geringer als bei klassischen 6- oder 12-Puls-Generatoren mit 50-Hz-Transformatoren; dadurch wird die Strahlenqualität konstanter und die Dosisausbeute besser reproduzierbar [@krieger-strahlungsquellen-2018].\n\nBei CT-Systemen sitzen Generator und Hochspannungstransformator oft direkt auf dem rotierenden Teil der [[gantry]] und werden über den Schleifring versorgt.\n\n### Medizinischer Trenntransformator im IT-System\n\nIn Räumen der Anwendungsgruppe 2 (z. B. OP-Säle, Intensivstationen) werden medizinische elektrische Geräte für lebenserhaltende und operative Anwendungen in der Patientenumgebung nach [[din-vde-0100-710]] aus einem **medizinischen IT-System** versorgt: Ein Trenntransformator nach IEC 61558-2-15 speist ein Netz, dessen Leiter nicht geerdet sind [@din-vde-0100-710] [@iec-61558-2-15]. Ein erster Isolationsfehler führt daher nicht zum Auslösen einer Sicherung – die Versorgung von [[beatmungsgeraet|Beatmungsgeräten]], [[herz-lungen-maschine|Herz-Lungen-Maschinen]] oder [[patientenmonitor|Monitoren]] bleibt erhalten. Eine Isolationsüberwachungseinrichtung meldet den Fehler, und Last sowie Temperatur des Transformators werden überwacht. Näheres unter [[medizinisch-genutzte-bereiche]].\n\n> [!hinweis] Grenzwerte und Ausführungsdetails des medizinischen IT-Systems (Ansprechwert der Isolationsüberwachung, Leistungsbereich des Transformators, Lastüberwachung) sind der jeweils gültigen Fassung der DIN VDE 0100-710 und der DIN EN 61558-2-15 zu entnehmen.\n\n### Weitere Einsatzorte\n\n* [[hf-chirurgiegeraet|HF-Chirurgiegeräte]]: Ausgangsübertrager trennen den Patientenkreis vom Generator und passen die Impedanz an (Anwendungsteil vom Typ BF oder CF, „floating output“) [@kramme-2017].\n* [[defibrillator|Defibrillatoren]]: Sperrwandler-Übertrager laden den Energiespeicher-[[kondensator]].\n* [[patientenmonitor|Patientenmonitore]]: kleine Übertrager versorgen isolierte Messkanäle ([[anwendungsteile|Typ CF]]).\n* [[pflegebett|Klinikbetten]] und [[op-tisch|OP-Tische]]: Netzteile für Stellmotoren.\n\n## Prüfung und Instandhaltung\n\n* Transformatoren selbst sind meist wartungsfrei; geprüft werden Isolation und Erwärmung im Rahmen der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] ([[isolationswiderstand]], [[ableitstrommessung]]) [@iec-62353].\n* Brummgeräusche, Geruch nach überhitztem Lack oder Verfärbungen deuten auf Überlast oder Windungsschluss hin.\n* Ölisolierte Hochspannungstransformatoren in Röntgen- und CT-Anlagen werden nach Herstellervorgabe auf Dichtheit und Ölzustand kontrolliert.\n* Die Prüfung medizinischer IT-Systeme ist Aufgabe der Elektrofachkraft im Rahmen der Anlagenprüfung (siehe auch [[dguv-vorschrift-3]]).\n\n> [!warnung] Hochspannungstransformatoren und -kabel von Röntgenanlagen führen im Betrieb Spannungen von bis zu über 100 kV. Arbeiten daran sind ausschließlich vom Hersteller autorisiertem Fachpersonal vorbehalten.\n",
+  "related": [
+    "elektromagnetische-induktion",
+    "galvanische-trennung",
+    "medizinisches-netzteil",
+    "hochspannungserzeugung",
+    "roentgenroehre",
+    "medizinisch-genutzte-bereiche",
+    "din-vde-0100-710",
+    "kondensator",
+    "isolationswiderstand",
+    "schutzklassen"
+  ],
+  "paths": [
+    [
+      "elektromagnetische-induktion",
+      "transformator",
+      "hochspannungserzeugung",
+      "roentgenroehre",
+      "roentgenstrahlung"
+    ],
+    [
+      "transformator",
+      "medizinisch-genutzte-bereiche",
+      "din-vde-0100-710"
+    ]
+  ],
+  "sources": [
+    "fischer-nolle-elektrische-maschinen-2022",
+    "krieger-strahlungsquellen-2018",
+    "kramme-2017",
+    "iec-60601-1",
+    "iec-62353",
+    "din-vde-0100-710",
+    "iec-61558-2-15"
+  ],
+  "diagram": {
+    "title": "Wirkkette des Transformators",
+    "caption": "Vom Primärstrom über den magnetischen Fluss zur induzierten Sekundärspannung; die Isolation trennt beide Stromkreise galvanisch.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "u1",
+        "label": "Primärspannung\nU₁ (Wechsel)",
+        "kind": "source",
+        "x": 90,
+        "y": 100
+      },
+      {
+        "id": "w1",
+        "label": "Primärwicklung\nN₁",
+        "kind": "process",
+        "x": 280,
+        "y": 100
+      },
+      {
+        "id": "kern",
+        "label": "Kern:\nmagn. Fluss Φ",
+        "ref": "elektromagnetische-induktion",
+        "kind": "process",
+        "x": 470,
+        "y": 100
+      },
+      {
+        "id": "w2",
+        "label": "Sekundärwicklung\nN₂",
+        "kind": "process",
+        "x": 660,
+        "y": 100,
+        "w": 160
+      },
+      {
+        "id": "last",
+        "label": "Last, z. B.\nRöntgenröhre",
+        "ref": "roentgenroehre",
+        "kind": "output",
+        "x": 820,
+        "y": 220
+      },
+      {
+        "id": "iso",
+        "label": "Isolation\n(galv. Trennung)",
+        "ref": "galvanische-trennung",
+        "kind": "control",
+        "x": 470,
+        "y": 230
+      }
+    ],
+    "edges": [
+      {
+        "from": "u1",
+        "to": "w1",
+        "kind": "power",
+        "label": "I₁"
+      },
+      {
+        "from": "w1",
+        "to": "kern",
+        "kind": "energy",
+        "label": "Magnetisierung"
+      },
+      {
+        "from": "kern",
+        "to": "w2",
+        "kind": "energy",
+        "label": "dΦ/dt"
+      },
+      {
+        "from": "w2",
+        "to": "last",
+        "kind": "power",
+        "label": "U₂ = U₁·N₂/N₁"
+      },
+      {
+        "from": "iso",
+        "to": "kern",
+        "kind": "signal",
+        "label": "trennt"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

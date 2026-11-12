@@ -1,0 +1,55 @@
+{
+  "id": "blutleck-alarm",
+  "type": "fault",
+  "title": "Blutleckalarm",
+  "aliases": [
+    "Blood leak alarm",
+    "Blutleck",
+    "Blutleckage",
+    "BLD-Alarm",
+    "Membranruptur"
+  ],
+  "category": "fehler",
+  "summary": "Alarm eines Hämodialyse- oder Nierenersatzgeräts, wenn der optische Blutleckdetektor im Dialysatablauf Blut erkennt. Ursache kann eine Membranruptur im Dialysator sein oder eine optische Störung, die einen Fehlalarm erzeugt.",
+  "devices": [
+    "dialysegeraet",
+    "crrt-geraet"
+  ],
+  "causes": [
+    "Ruptur einzelner Kapillaren oder Faserbündel im [[dialysator|Dialysator]] (Herstellungsfehler, Transportschaden, zu hoher Transmembrandruck)",
+    "Luftblasen oder Mikroschaum im Dialysatablauf, die das Licht in der Messstrecke streuen",
+    "Verschmutzte, belegte oder verkalkte Messküvette des [[blutleckdetektor|Blutleckdetektors]] (z. B. Kalkablagerungen bei Bicarbonatdialyse, unzureichende Entkalkung)",
+    "[[sensordrift|Drift]] oder Dejustage des Detektors, gealterte Lichtquelle oder Photodiode",
+    "Verfärbung des Dialysats durch Substanzen mit Absorption im Messwellenlängenbereich (in Einzelfällen bei bestimmten Medikamenten beschrieben)",
+    "Fehler beim Aufrüsten, z. B. unzureichend entlüfteter Dialysator oder undichte Dialysatkupplungen, sodass Luft in den Dialysatablauf gelangt"
+  ],
+  "actions": [
+    "Patienten beurteilen; das Gerät hat die Behandlung in einen sicheren Zustand versetzt – Alarm nicht ohne Prüfung übergehen",
+    "Dialysatablauf und Dialysator visuell auf Rotfärbung prüfen; bei Unklarheit Ablaufprobe mit Teststreifen auf Blut untersuchen",
+    "Bei bestätigtem Blutleck Behandlung nach ärztlicher Anordnung und Klinikstandard beenden oder Dialysator wechseln; Blut wegen Kontaminationsgefahr in der Regel nicht zurückgeben",
+    "Bei Fehlalarm: Luft im Dialysatkreis, Entgasung und Schlauchverbindungen prüfen; Vorgehen zur Fortsetzung strikt nach Gebrauchsanweisung",
+    "Dialysator, Charge und Schlauchsystem sichern und dokumentieren; Produktfehler dem Hersteller melden und Meldepflicht prüfen ([[vigilanz]])",
+    "Bei wiederholten Fehlalarmen Detektor durch die Medizintechnik reinigen, prüfen und nach Herstellervorgabe [[kalibrierung|kalibrieren]] lassen; Entkalkungs- und Desinfektionsprogramme kontrollieren"
+  ],
+  "body": "## Technischer Hintergrund\n\nIm [[dialysator|Dialysator]] trennt eine semipermeable Membran Blut und Dialysat. Durch eine intakte Membran treten Wasser und gelöste kleine bis mittelgroße Moleküle, aber keine Blutzellen ([[diffusion-osmose|Diffusion]] und Konvektion). Reißt eine Kapillare, gelangt Blut in das Dialysat. Das bedeutet **Blutverlust** und gleichzeitig ein **Kontaminationsrisiko**, weil die Barriere zwischen nicht sterilem Dialysat und Blut aufgehoben ist [@daugirdas-2015]. Die gerätespezifische Norm [[iec-60601-2-16]] verlangt deshalb eine Schutzeinrichtung, die Blutverlust in das Dialysat erkennt und eine Gefährdung verhindert [@iec-60601-2-16].\n\n### Messprinzip\n\nDer [[blutleckdetektor|Blutleckdetektor]] sitzt im Dialysatablauf hinter dem Dialysator. Eine Lichtquelle (LED) durchstrahlt eine transparente Messstrecke; eine Photodiode misst die transmittierte Intensität. Hämoglobin absorbiert Licht bestimmter Wellenlängen stark; nach dem [[lambert-beer|Lambert-Beer-Gesetz]] sinkt die Transmission mit steigender Konzentration. Unterschreitet das Signal einen Schwellwert gegenüber dem Referenzzustand (klares Dialysat), meldet das Gerät „Blutleck“ [@daugirdas-2015].\n\n> [!vereinfacht] Vereinfacht misst der Detektor die „Trübung und Färbung“ des Dialysats. Je nach Bauart werden eine oder mehrere Wellenlängen genutzt und Streueffekte (Luft, Partikel) rechnerisch von echter Hämoglobinabsorption unterschieden. Genau deshalb können Luftblasen oder Beläge einen Fehlalarm auslösen.\n\n### Alarmreaktion\n\nEin Blutleckalarm ist eine sicherheitsrelevante Alarmbedingung hoher Dringlichkeit im Sinne von [[iec-60601-1-8]] [@iec-60601-1-8]. Typischerweise stoppt das Gerät die [[peristaltikpumpe|Blutpumpe]] und die Ultrafiltration, um weiteren Blutübertritt zu begrenzen; die genaue Reaktion ist herstellerspezifisch und in der Gebrauchsanweisung beschrieben.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Ablauf sichtbar rötlich | Dialysator und Ablaufschlauch inspizieren | echtes Blutleck: Vorgehen nach Standard, Dialysator sichern |\n| Ablauf klar, Alarm kurz nach Behandlungsstart | Luft im Dialysatkreis, Entgasung, Füllzustand | Entlüftung abwarten bzw. nach Anweisung, Dialysatkreis prüfen |\n| Ablauf klar, Teststreifen negativ, Alarm wiederkehrend | Zustand der Messküvette, Entkalkung, Detektorsignal im Servicemodus | Detektor reinigen, Kalibrierung, ggf. Detektor tauschen |\n| Alarm gleich nach Desinfektion | Rückstände von Desinfektions- oder Entkalkungsmittel | Spülzeiten einhalten, Programmablauf prüfen |\n| Blutleck bei mehreren Dialysatoren derselben Charge | Lagerung, Transport, Charge | Charge sperren, Hersteller informieren, Meldepflicht prüfen |\n\n> [!praxis] Ein negativer Teststreifen bei klarem Ablauf spricht für einen Fehlalarm, schließt ein sehr kleines Leck aber nicht sicher aus. Die Entscheidung über die Fortsetzung der Behandlung trifft das ärztliche Team nach Klinikstandard.\n\n## Prävention\n\n* Dialysatoren nach Herstellervorgabe lagern, aufrüsten und spülen; Transmembrandruck innerhalb der zulässigen Grenzen halten [@iso-8637-1].\n* Entkalkungs- und Desinfektionsprogramme konsequent nach Plan durchführen, um Beläge in der Messstrecke zu vermeiden.\n* Funktionsprüfung des Blutleckdetektors im Rahmen von [[wartung|Wartung]] und [[stk|STK]] nach § 12 [[mpbetreibv|MPBetreibV]]; Dialysegeräte sind in Anlage 1 aufgeführt [@mpbetreibv].\n* Fehlalarmhäufigkeit pro Gerät erfassen – sie ist ein guter Frühindikator für Verschmutzung oder Alterung des Detektors.\n\n> [!hinweis] Herstellerspezifische Fehlercodes, Kalibrierprozeduren und Grenzwerte des Blutleckdetektors stehen in den Service-Unterlagen des Herstellers. Siehe auch [[fehlercodes]].",
+  "related": [
+    "blutleckdetektor",
+    "dialysegeraet",
+    "dialysator",
+    "lambert-beer",
+    "haemoglobin",
+    "leitfaehigkeitsalarm",
+    "luft-im-system",
+    "iec-60601-2-16",
+    "nephrologie"
+  ],
+  "sources": [
+    "daugirdas-2015",
+    "iec-60601-2-16",
+    "iec-60601-1-8",
+    "iso-8637-1",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

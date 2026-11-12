@@ -1,0 +1,96 @@
+{
+  "id": "b-braun",
+  "type": "manufacturer",
+  "title": "B. Braun",
+  "aliases": [
+    "B. Braun SE",
+    "B. Braun Melsungen",
+    "Aesculap",
+    "B. Braun Avitum"
+  ],
+  "category": "hersteller",
+  "summary": "B. Braun SE ist ein familiengeführtes Medizintechnik- und Pharmaunternehmen mit Sitz in Melsungen (Hessen). Bekannt ist es für Infusionstherapie (Infusomat, Perfusor), chirurgische Instrumente und Systeme der Marke Aesculap sowie Dialyseprodukte (B. Braun Avitum).",
+  "headquarters": "Melsungen, Deutschland",
+  "founded": "1839",
+  "website": "https://www.bbraun.com/",
+  "productLines": [
+    {
+      "device": "infusionspumpe",
+      "models": [
+        "Infusomat Space"
+      ],
+      "note": "Teil des Space-Systems mit Perfusor Space und Dockingstation."
+    },
+    {
+      "device": "spritzenpumpe",
+      "models": [
+        "Perfusor Space",
+        "Perfusor compact plus"
+      ]
+    },
+    {
+      "device": "pca-pumpe",
+      "models": [
+        "Perfusor Space PCA"
+      ]
+    },
+    {
+      "device": "invasive-druckmessung",
+      "models": [
+        "Combitrans"
+      ],
+      "note": "Einweg-Druckmesssysteme."
+    },
+    {
+      "device": "dialysegeraet",
+      "models": [
+        "Dialog iQ",
+        "Dialog+"
+      ]
+    },
+    {
+      "device": "crrt-geraet",
+      "models": [
+        "Diapact CRRT"
+      ]
+    },
+    {
+      "device": "hf-chirurgiegeraet",
+      "models": [
+        "Lektrafuse",
+        "Caiman"
+      ],
+      "note": "Marke Aesculap; bipolare Gefäßversiegelung."
+    },
+    {
+      "device": "op-mikroskop",
+      "models": [
+        "Aesculap Aeos"
+      ],
+      "note": "Robotisches digitales Operationsmikroskop."
+    },
+    {
+      "device": "chirurgisches-motorsystem",
+      "models": [],
+      "note": "Über die Sparte Aesculap."
+    }
+  ],
+  "body": "## Überblick\n\nDie **B. Braun SE** mit Sitz im nordhessischen Melsungen ist ein nicht börsennotiertes, von der Familie Braun geführtes Unternehmen [@b-braun-web]. Es verbindet Pharma (Infusionslösungen), Einmalprodukte, Medizintechnik und Dienstleistungen. In deutschen Kliniken ist B. Braun vor allem durch die Infusionstechnik allgegenwärtig: „Perfusor“ wird im Klinikjargon oft synonym für Spritzenpumpe verwendet, ist aber ein Markenname.\n\n## Geschichte in Stichpunkten\n\n* **1839:** Julius Wilhelm Braun erwirbt die Rosen-Apotheke in Melsungen; daraus entwickelt sich ein Handel mit Arzneipflanzen und später eine pharmazeutische Fertigung.\n* **Anfang 20. Jahrhundert:** Einstieg in die Herstellung chirurgischen Nahtmaterials.\n* **Zweite Hälfte 20. Jahrhundert:** Aufbau der Infusionstherapie mit Infusionslösungen, Kanülen und Infusionstechnik ([[infusionspumpe]], [[spritzenpumpe]]).\n* **1976:** Mehrheitsbeteiligung an der Aesculap AG in Tuttlingen, einem traditionsreichen Hersteller chirurgischer Instrumente (gegründet 1867).\n* **Dialyse:** Unter der Marke B. Braun Avitum werden Dialysegeräte, [[dialysator|Dialysatoren]] und Dialysezentren betrieben.\n* **2020:** Markteinführung des robotischen digitalen Operationsmikroskops Aesculap Aeos.\n\n## Geschäftsbereiche\n\n| Sparte | Inhalte (Auswahl) |\n|---|---|\n| Hospital Care | Infusionslösungen, [[infusionspumpe|Infusions-]] und [[spritzenpumpe|Spritzenpumpen]] (Space-System), Katheter, Kanülen, [[invasive-druckmessung|Druckmesssysteme]] |\n| Aesculap | Chirurgische Instrumente, Sterilcontainer, [[hf-chirurgiegeraet|HF-Chirurgie]], [[chirurgisches-motorsystem|Motorsysteme]], Endoprothetik, [[op-mikroskop|Neurochirurgie]] |\n| Avitum | [[dialysegeraet|Dialysegeräte]], [[crrt-geraet|CRRT]], Dialysatoren, Dialysezentren |\n\n## Bedeutung für die Medizintechnik\n\nB. Braun deckt mit Infusionstechnik, Chirurgie und Dialyse drei klinische Kernbereiche ab. Technisch typisch ist das **Space-System**: Volumetrische Pumpe ([[peristaltikpumpe|Peristaltik-Prinzip]]) und Spritzenpumpe ([[spindelantrieb]]) teilen sich Bedienkonzept, Akkus, Dockingstation und Medikamentenbibliothek. Für Aesculap-Instrumente spielt die [[aufbereitung]] eine zentrale Rolle; Sterilcontainer-Systeme sind eng mit der [[sterilisation]] im Dampfsterilisator verknüpft.\n\n> [!praxis] Infusionspumpen gehören nach [[mpbetreibv]] zu den Geräten mit vorgeschriebener [[stk]] (Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind). Bei großen Pumpenflotten lohnt sich eine zentrale Verwaltung von Softwareständen und Medikamentenbibliotheken.\n\n> [!hinweis] Die Sparten- und Markenstruktur wurde in den letzten Jahren mehrfach angepasst; maßgeblich ist die aktuelle Darstellung des Herstellers [@b-braun-web].\n\n## Einordnung im Markt\n\nIn der Infusionstechnik konkurriert B. Braun vor allem mit [[fresenius-kabi]], [[baxter]] und [[icu-medical]], in der Dialyse mit [[fresenius-medical-care]]. Eine Besonderheit ist die hohe Fertigungstiefe: Viele Verbrauchsmaterialien wie Infusionsleitungen, Spritzen und Kanülen stammen aus eigener Produktion und sind auf die eigenen Pumpen abgestimmt. Für die Fördergenauigkeit ist die Kombination aus Pumpe und freigegebenem Verbrauchsmaterial entscheidend.",
+  "related": [
+    "infusionspumpe",
+    "spritzenpumpe",
+    "dialysegeraet",
+    "hf-chirurgiegeraet",
+    "fresenius-kabi",
+    "fresenius-medical-care",
+    "baxter",
+    "icu-medical",
+    "nephrologie",
+    "chirurgie"
+  ],
+  "sources": [
+    "b-braun-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

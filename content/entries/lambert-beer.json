@@ -1,0 +1,160 @@
+{
+  "id": "lambert-beer",
+  "type": "term",
+  "title": "Lambert-Beer-Gesetz",
+  "aliases": [
+    "Lambert-Beer'sches Gesetz",
+    "Bouguer-Lambert-Beer-Gesetz",
+    "Beer-Lambert law",
+    "Beer's law",
+    "Extinktion",
+    "Absorbanz",
+    "optische Dichte",
+    "Absorptionsgesetz",
+    "Photometrie",
+    "Extinktionskoeffizient"
+  ],
+  "category": "physik",
+  "summary": "Das Lambert-Beer-Gesetz beschreibt die exponentielle Abschwächung von Licht in einem absorbierenden Medium in Abhängigkeit von Schichtdicke und Konzentration. Es ist das Grundprinzip der Pulsoxymetrie, der Infrarot-Kapnometrie, der Hämoglobin- und CO-Oxymetrie sowie der Photometrie in Laboranalysatoren.",
+  "body": "## Aussage des Gesetzes\n\nDurchläuft monochromatisches Licht der Intensität I₀ eine Schicht der Dicke d, die eine absorbierende Substanz der Konzentration c enthält, nimmt die Intensität exponentiell ab:\n\n`I = I₀ · 10^(−ε · c · d)`\n\nLogarithmiert ergibt sich die **Extinktion** (Absorbanz) A:\n\n`A = log₁₀(I₀ / I) = ε · c · d`\n\n| Größe | Bedeutung | Typische Einheit |\n|---|---|---|\n| I₀, I | eingestrahlte bzw. austretende Intensität | – (Verhältnis) |\n| A | Extinktion, Absorbanz, „optische Dichte“ | dimensionslos |\n| ε | (dekadischer) molarer Extinktionskoeffizient – stoff- und wellenlängenabhängig | L/(mol·cm) |\n| c | Stoffmengenkonzentration | mol/L |\n| d | Schichtdicke (optische Weglänge) | cm |\n| T = I/I₀ | Transmission | % |\n\nDer lineare Zusammenhang zwischen Extinktion und Konzentration ist das, was das Gesetz so nützlich macht: Kennt man ε und d, lässt sich c aus einer Intensitätsmessung bestimmen [@hering-2018] [@webster-2010].\n\nHistorisch gehen die Abhängigkeit von der Schichtdicke auf Bouguer und Lambert (18. Jahrhundert) und die Abhängigkeit von der Konzentration auf August Beer (1852) zurück [@beer-1852].\n\n> [!beispiel] Eine Probe lässt 10 % des Lichts durch (T = 0,1). Ihre Extinktion beträgt A = log₁₀(1/0,1) = 1. Verdoppelt man die Konzentration, verdoppelt sich A auf 2 – es kommen nur noch 1 % durch. Die Transmission sinkt also exponentiell, die Extinktion steigt linear.\n\n## Mehrere Substanzen: Additivität\n\nEnthält eine Probe mehrere absorbierende Stoffe, addieren sich ihre Extinktionen:\n\n`A(λ) = d · Σ εᵢ(λ) · cᵢ`\n\nMisst man bei mindestens so vielen Wellenlängen, wie Stoffe unbekannt sind, entsteht ein lineares Gleichungssystem. Das ist das Prinzip der **Mehrwellenlängen-Oxymetrie**: Die CO-Oxymetrie im [[blutgasanalysator|Blutgasanalysator]] bestimmt so Oxy-, Desoxy-, Carboxy- und Methämoglobin aus einer hämolysierten Blutprobe ([[haemoglobin]]) [@webster-2010].\n\n## Gültigkeitsgrenzen\n\n> [!vereinfacht] Das Gesetz gilt streng nur für monochromatisches Licht, verdünnte homogene Lösungen, fehlende Streuung und Wechselwirkungsfreiheit der Moleküle. Gewebe streut Licht stark; der Lichtweg ist dort länger als die geometrische Dicke und nicht genau bekannt. In der Pulsoxymetrie wird das Gesetz deshalb nur als Modell verwendet und die Kennlinie empirisch an Probanden kalibriert [@jubran-2015] [@iso-80601-2-61].\n\nWeitere Abweichungen entstehen durch Streulicht im Gerät, zu breitbandige Lichtquellen, sehr hohe Konzentrationen (Sättigung des Detektors, Wechselwirkungen) sowie Trübungen (Lipämie, Hämolyse in Laborproben).\n\n## Pulsoxymetrie\n\nIm [[pulsoxymeter|Pulsoxymeter]] durchstrahlen zwei Leuchtdioden – typischerweise im Rotbereich um 660 nm und im Infrarotbereich um 900–940 nm – ein durchblutetes Gewebe (Finger, Ohrläppchen). Oxygeniertes und desoxygeniertes Hämoglobin absorbieren bei diesen Wellenlängen unterschiedlich stark [@jubran-2015] [@allen-2007].\n\nDas Problem: Gewebe, Knochen, venöses Blut und Haut absorbieren ebenfalls – und zwar weit mehr als das arterielle Blut. Die Lösung liefert die [[photoplethysmographie|Photoplethysmographie]]: Mit jedem Pulsschlag nimmt die arterielle Schichtdicke kurz zu. Nur dieser pulsierende Anteil (AC) stammt aus dem arteriellen Blut, der konstante Anteil (DC) aus allem anderen. Gebildet wird das **Verhältnis der Verhältnisse**:\n\n`R = (AC_rot / DC_rot) / (AC_IR / DC_IR)`\n\nR hängt in erster Linie von der arteriellen Sauerstoffsättigung ab; Hautdicke, Pigmentierung und Lichtstärke kürzen sich durch die Normierung auf den DC-Anteil weitgehend – aber nicht vollständig – heraus. Die Zuordnung R → SpO₂ erfolgt über eine empirische Kalibrierkurve.\n\n> [!belegt] Die Pulsoxymetrie kombiniert das Lambert-Beer-Gesetz mit der Auswertung des pulsatilen Signalanteils; die Genauigkeit wird nach ISO 80601-2-61 in Studien gegen arterielle Blutgasproben (CO-Oxymetrie) bestimmt [@iso-80601-2-61] [@jubran-2015].\n\n> [!warnung] Carboxyhämoglobin absorbiert im Rotbereich ähnlich wie Oxyhämoglobin. Zweiwellenlängen-Pulsoxymeter zeigen bei CO-Vergiftung deshalb fälschlich hohe Werte. Weitere Fehlerquellen sind Bewegung ([[bewegungsartefakt]]), Minderperfusion, Nagellack, Fremdlicht und – wie Studien zeigen – eine systematische Überschätzung bei dunkler Hautpigmentierung [@sjoding-2020].\n\n## Infrarot-Gasanalyse (Kapnometrie)\n\nKohlendioxid absorbiert Infrarotstrahlung stark bei einer Wellenlänge um 4,26 µm. Ein [[co2-sensor|CO₂-Sensor]] nach dem NDIR-Prinzip (nichtdispersive Infrarotabsorption) misst die Abschwächung in einer Messküvette mit definierter Schichtdicke und berechnet daraus den CO₂-Anteil – im Hauptstrom direkt am Tubus oder im Nebenstrom über eine Absaugleitung ([[kapnometer]]). Volatile Anästhetika werden im [[anaesthesiegeraet|Anästhesiegerät]] nach dem gleichen Prinzip bei anderen Wellenlängen erfasst [@jaffe-2008].\n\n> [!hinweis] Im Gas ist die „Konzentration“ c proportional zum Partialdruck ([[gasgesetze]]). Infrarotsensoren werden deshalb auf Luftdruck und Querempfindlichkeiten (z. B. Lachgas, Wasserdampf) korrigiert.\n\n## Photometrie im Labor\n\nKlinisch-chemische Analysatoren messen die Extinktion farbiger Reaktionsprodukte in Küvetten mit definierter Schichtdicke, meist kinetisch oder als Endpunkt gegen einen Leerwert. Auch die Hämoglobinbestimmung im [[haematologie-analysator|Hämatologie-Analysator]] erfolgt photometrisch nach Umwandlung des Hämoglobins in ein stabiles Farbderivat ([[klinisch-chemischer-analysator]], [[labormedizin]]).\n\n## Verwandte Absorptionsgesetze\n\nFormal gleich gebaut ist die Schwächung von [[roentgenstrahlung|Röntgenstrahlung]] in Materie: `I = I₀ · e^(−μ · d)` mit dem linearen Schwächungskoeffizienten μ. Daraus berechnet der [[computertomograph|Computertomograph]] Schwächungswerte für jedes Volumenelement. Der Unterschied: Bei Röntgenstrahlung wird der natürliche Logarithmus verwendet, und neben Absorption trägt die Compton-Streuung wesentlich zur Schwächung bei [@bushberg-2020].\n\n## Anwendung in Geräten\n\n| Gerät / Sensor | Messgröße | Wellenlängenbereich |\n|---|---|---|\n| [[pulsoxymeter]], [[patientenmonitor]] | SpO₂, Pulsfrequenz | rot / nahes Infrarot |\n| [[kapnometer]], [[co2-sensor]] | CO₂ im Atemgas | mittleres Infrarot (≈ 4,26 µm) |\n| [[anaesthesiegeraet]] | Narkosegase | mittleres Infrarot |\n| [[blutgasanalysator]] | Hämoglobinfraktionen (CO-Oxymetrie) | sichtbarer Bereich, mehrere Wellenlängen |\n| [[klinisch-chemischer-analysator]], [[haematologie-analysator]] | Substratkonzentrationen, Hämoglobin | UV/sichtbar |\n| [[blutleckdetektor]] im [[dialysegeraet]] | Blut im Dialysat (optische Absorption) | sichtbar/NIR |\n\nWeiterführend: [[photoplethysmographie]], [[optik]], [[haemoglobin]], [[sauerstoffsensor]].\n",
+  "related": [
+    "photoplethysmographie",
+    "pulsoxymeter",
+    "co2-sensor",
+    "kapnometer",
+    "blutgasanalysator",
+    "haemoglobin",
+    "optik",
+    "roentgenstrahlung",
+    "blutleckdetektor",
+    "iso-80601-2-61",
+    "bewegungsartefakt",
+    "klinisch-chemischer-analysator"
+  ],
+  "paths": [
+    [
+      "patientenmonitor",
+      "pulsoxymeter",
+      "photoplethysmographie",
+      "lambert-beer",
+      "haemoglobin"
+    ],
+    [
+      "kapnometer",
+      "co2-sensor",
+      "lambert-beer",
+      "gasgesetze"
+    ]
+  ],
+  "sources": [
+    "beer-1852",
+    "hering-2018",
+    "webster-2010",
+    "jubran-2015",
+    "allen-2007",
+    "iso-80601-2-61",
+    "sjoding-2020",
+    "jaffe-2008",
+    "bushberg-2020"
+  ],
+  "diagram": {
+    "title": "Messprinzip der Pulsoxymetrie",
+    "caption": "Funktionsschema: Absorption nach Lambert-Beer, Trennung von pulsatilem und konstantem Anteil, Kalibrierkurve.",
+    "width": 900,
+    "height": 280,
+    "nodes": [
+      {
+        "id": "led",
+        "label": "LEDs\nrot / IR",
+        "kind": "source",
+        "x": 90,
+        "y": 70
+      },
+      {
+        "id": "gew",
+        "label": "Gewebe +\narterielles Blut",
+        "kind": "patient",
+        "x": 290,
+        "y": 70,
+        "ref": "haemoglobin"
+      },
+      {
+        "id": "pd",
+        "label": "Photodiode",
+        "kind": "sensor",
+        "x": 500,
+        "y": 70,
+        "ref": "photoplethysmographie"
+      },
+      {
+        "id": "amp",
+        "label": "Verstärker +\nA/D-Wandler",
+        "kind": "process",
+        "x": 710,
+        "y": 70,
+        "ref": "analog-digital-wandler"
+      },
+      {
+        "id": "acdc",
+        "label": "AC/DC-Trennung\n(Filter)",
+        "kind": "process",
+        "x": 710,
+        "y": 210,
+        "ref": "filter"
+      },
+      {
+        "id": "ratio",
+        "label": "Ratio R +\nKalibrierkurve",
+        "kind": "control",
+        "x": 500,
+        "y": 210,
+        "ref": "mikrocontroller"
+      },
+      {
+        "id": "spo2",
+        "label": "SpO₂ / Puls\nAnzeige",
+        "kind": "output",
+        "x": 290,
+        "y": 210,
+        "ref": "pulsoxymeter"
+      }
+    ],
+    "edges": [
+      {
+        "from": "led",
+        "to": "gew",
+        "kind": "energy",
+        "label": "I₀"
+      },
+      {
+        "from": "gew",
+        "to": "pd",
+        "kind": "energy",
+        "label": "I"
+      },
+      {
+        "from": "pd",
+        "to": "amp",
+        "kind": "signal",
+        "label": "Photostrom"
+      },
+      {
+        "from": "amp",
+        "to": "acdc",
+        "kind": "data"
+      },
+      {
+        "from": "acdc",
+        "to": "ratio",
+        "kind": "data"
+      },
+      {
+        "from": "ratio",
+        "to": "spo2",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

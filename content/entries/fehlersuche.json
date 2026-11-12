@@ -1,0 +1,170 @@
+{
+  "id": "fehlersuche",
+  "type": "term",
+  "title": "Systematische Fehlersuche",
+  "aliases": [
+    "Troubleshooting",
+    "Fehlerdiagnose",
+    "Fehlereingrenzung",
+    "Halbierungsmethode",
+    "Signalverfolgung",
+    "Störungssuche"
+  ],
+  "category": "instandhaltung",
+  "summary": "Systematische Fehlersuche ist das strukturierte Vorgehen, um bei einer Gerätestörung die Ursache sicher und mit wenigen Schritten zu finden: Symptom erfassen, Anwendungsfehler ausschließen, Informationen sammeln, Hypothesen entlang der Wirkkette bilden und prüfen, beheben, verifizieren und dokumentieren.",
+  "body": "## Ziel und Grundsatz\n\n**Systematische Fehlersuche** (*Troubleshooting*) ist das strukturierte Vorgehen, um bei einer Störung eines Geräts mit möglichst wenigen, sicheren Schritten die **Ursache** zu finden – nicht nur das Symptom. Sie ist der Diagnoseschritt der [[instandsetzung|Instandsetzung]]. Grundsatz: erst verstehen, dann messen, dann tauschen. Wer ohne Hypothese Baugruppen tauscht, verursacht Kosten, verschleppt die Ursache und kann neue Fehler einbringen [@kramme-2017] [@bronzino-2015].\n\n## Vorgehensmodell\n\n| Schritt | Leitfrage | Werkzeuge |\n|---|---|---|\n| 1. Symptom erfassen | Was genau passiert, wann, unter welchen Bedingungen? Reproduzierbar? | Gespräch mit Anwendern, Alarmhistorie |\n| 2. Anwendung prüfen | Liegt ein Bedien- oder Zubehörproblem vor? | Gebrauchsanweisung, Zubehörtausch ([[anwendungsfehler]]) |\n| 3. Informationen sammeln | Was sagen Selbsttest und Fehlerspeicher? | [[fehlercodes|Fehlercodes und Logbuch]], Servicehandbuch, Serviceinformationen |\n| 4. Hypothesen bilden | Welche Funktionsblöcke können das Symptom erklären? | Blockschaltbild, Wirkkette, Erfahrung |\n| 5. Hypothesen prüfen | Wo ist das Signal noch richtig, wo nicht mehr? | Messgeräte, [[pruefgeraete|Simulatoren]], Signalverfolgung |\n| 6. Ursache beheben | Welche Baugruppe bzw. welches Bauteil ist defekt – und warum? | freigegebene Ersatzteile |\n| 7. Verifizieren | Ist das Symptom beseitigt, ist das Gerät sicher? | [[funktionspruefung|Funktionsprüfung]], [[elektrische-sicherheitspruefung|Prüfung nach IEC 62353]] |\n| 8. Dokumentieren | Was war die Ursache, was wurde getan? | Instandhaltungshistorie, ggf. [[vigilanz|Vorkommnismeldung]] |\n\n> [!warnung] Vor Messungen an geöffneten Geräten: Netzstecker ziehen, Akkus trennen, auf geladene [[kondensator|Kondensatoren]] achten (z. B. im [[defibrillator|Defibrillator]] oder im [[medizinisches-netzteil|Netzteil]]). Messungen unter Spannung nur durch befugte Elektrofachkräfte mit geeigneten Messmitteln und Schutzmaßnahmen. Gerät vor Arbeiten hygienisch [[aufbereitung|aufbereiten]] bzw. desinfizieren.\n\n## Suchstrategien\n\n### Signalverfolgung entlang der Wirkkette\n\nJedes Gerät lässt sich als Kette von Funktionsblöcken darstellen – Energieversorgung, Sensorik, Signalverarbeitung, Steuerung, Aktorik (siehe [[messkette]] und [[regelkreis]]). Man prüft an Schnittstellen, ob das Signal dort noch dem Sollwert entspricht. Der Fehler liegt zwischen dem letzten „guten“ und dem ersten „schlechten“ Messpunkt.\n\n### Halbierungsmethode\n\nBei einer langen Kette aus N gleichwertigen Gliedern misst man zuerst in der Mitte und halbiert so den Suchraum mit jeder Messung. Die Zahl der nötigen Messungen beträgt höchstens\n\nn = ⌈log₂ N⌉\n\n> [!beispiel] Eine Signalkette mit 16 Stufen erfordert bei Prüfung von vorn nach hinten im ungünstigsten Fall 15 Messungen, mit der Halbierungsmethode höchstens log₂ 16 = 4. In realen Geräten sind die Stufen aber unterschiedlich zugänglich und unterschiedlich fehleranfällig; dann beginnt man sinnvollerweise am wahrscheinlichsten und am leichtesten prüfbaren Punkt.\n\n### Weitere Methoden\n\n* **Substitution:** Verdächtige Baugruppe gegen eine bekannt gute tauschen – schnell, aber nur bei klarer Hypothese und vorhandenen Teilen sinnvoll.\n* **Vergleichsmessung:** Werte mit einem baugleichen, funktionierenden Gerät vergleichen.\n* **Provokation:** Bei sporadischen Fehlern Bedingungen gezielt herstellen (Temperatur, Erschütterung, Kabelbewegung) – typisch für Wackelkontakte und Kabelbrüche.\n* **Ausschlussprinzip:** Einfache, häufige Ursachen zuerst prüfen: Netzanschluss, Sicherung, Akku ([[akkufehler]]), Steckverbinder, Zubehör, Filter.\n\n> [!vereinfacht] In der Praxis kombiniert man die Methoden. Die Reihenfolge richtet sich nach der Wahrscheinlichkeit einer Ursache, dem Prüfaufwand und dem Risiko des Prüfschritts – nicht nach einem starren Schema.\n\n## Fallbeispiel: Druck wird nicht erreicht\n\nEin [[beatmungsgeraet|Intensivbeatmungsgerät]] mit [[turbine|Turbinenantrieb]] meldet, dass der eingestellte Inspirationsdruck nicht erreicht wird. Die Wirkkette lautet:\n\n**Beatmungsgerät → Turbine → [[elektromotor|Elektromotor]] (meist [[bldc-motor|BLDC]]) → [[drehzahlregelung|Drehzahlregelung]] (mit [[pwm|PWM]], häufig mit [[hall-sensor|Hall-Sensoren]] als Lagegeber) → Sensorik → [[druckmessung|Druckmessung]] über [[drucksensor|Drucksensoren]]**\n\n| Hypothese | Prüfschritt | Hinweis auf Ursache |\n|---|---|---|\n| Leckage im Patientensystem | Selbsttest mit Dichtheitsprüfung, Schlauchsystem tauschen | Fehler verschwindet → [[leckage|Leckage]], [[exspirationsventil|Exspirationsventil]] |\n| Verstopfter Ansaugfilter | Sichtprüfung, Differenzdruck bzw. Filter tauschen | Druck bzw. Flow bleibt trotz hoher Drehzahl zu niedrig; nach Filtertausch normal |\n| Turbine/Motor erreicht Drehzahl nicht | Drehzahl- und Stromwerte im Servicemodus | Lagerverschleiß, Motor- oder Treiberdefekt |\n| Drehzahlregelung fehlerhaft | Soll- und Istdrehzahl vergleichen | Abweichung trotz plausibler Last |\n| Druckmessung fehlerhaft | Druckanzeige bei Umgebungsdruck und mit Referenzmanometer prüfen | Offset oder Steilheitsfehler → [[sensordrift]], [[kalibrierung]] |\n\nLiegt der gemessene Druck am Referenzmanometer korrekt an, aber das Gerät zeigt zu wenig an, regelt der [[regelkreis|Regelkreis]] auf einen falschen Istwert – der Fehler liegt dann nicht in Turbine oder Motor, sondern in der Messkette. Diese Unterscheidung ist nur durch eine unabhängige Referenzmessung möglich.\n\n> [!praxis] Fehlerspeicher und Servicemodi sind hersteller- und modellspezifisch. Fehlercodes dürfen nur anhand der Originalunterlagen des Herstellers interpretiert werden; allgemeine Listen aus dem Internet sind keine verlässliche Grundlage.\n\n## Typische Fehlerbilder\n\n| Fehlerbild | Häufige Ursachen | Siehe |\n|---|---|---|\n| Netzbrumm im EKG | Erdungs- und Leitungsführung, Elektrodenkontakt | [[netzstoerung]], [[elektrodenproblem]] |\n| Sporadische Störungen bei Funkbetrieb | elektromagnetische Einkopplung | [[emv-stoerung]] |\n| Langsames Weglaufen von Messwerten | Alterung, Temperatur, Verschmutzung | [[sensordrift]] |\n| Kurze Akkulaufzeit | Kapazitätsverlust, Ladeelektronik | [[akkufehler]] |\n| Okklusionsalarme an Pumpen | abgeknickte Leitungen, Sensorfehler | [[okklusionsalarm]] |\n\n## Ursachenanalyse und Lernen\n\nNach der Behebung lohnt die Frage nach dem **Warum**: Werkzeuge wie die „5-Why“-Fragetechnik oder Ursache-Wirkungs-Diagramme (Ishikawa) helfen, technische, organisatorische und menschliche Faktoren zu trennen. Dahinter steht der Systemansatz der Fehlerforschung: Ein Anwendungsfehler ist meist nicht die alleinige Ursache, sondern trifft auf latente Schwächen in Gerätegestaltung, Organisation oder Schulung [@reason-2000-human-error]. Häufen sich gleiche Fehler, sind Wartungsintervalle, Zubehör oder Schulungen anzupassen – eine Aufgabe des [[medizintechnik-management|Medizintechnik-Managements]]. Besteht der Verdacht auf ein schwerwiegendes Vorkommnis, ist das Gerät unverändert zu sichern und zu melden [@mpamiv].\n\n## Bedeutung in der Medizintechnik\n\nSystematische Fehlersuche verkürzt Ausfallzeiten, senkt Ersatzteilkosten und verhindert, dass Geräte mit unerkannter Ursache wieder in Betrieb gehen. Sie setzt Verständnis von Physik, [[elektrotechnik|Elektrotechnik]], [[sensorik|Sensorik]] und Gerätefunktion voraus – deshalb verknüpft dieses Wiki Geräte wie das [[beatmungsgeraet|Beatmungsgerät]], die [[infusionspumpe|Infusionspumpe]] oder den [[patientenmonitor|Patientenmonitor]] mit ihren Komponenten und Fehlerbildern.",
+  "related": [
+    "instandsetzung",
+    "fehlercodes",
+    "anwendungsfehler",
+    "messkette",
+    "regelkreis",
+    "pruefgeraete",
+    "sensordrift",
+    "beatmungsgeraet",
+    "turbine",
+    "drehzahlregelung",
+    "druckmessung",
+    "medizintechnik-management"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "drehzahlregelung",
+      "druckmessung"
+    ],
+    [
+      "fehlersuche",
+      "beatmungsgeraet",
+      "turbine",
+      "bldc-motor",
+      "hall-sensor"
+    ],
+    [
+      "fehlersuche",
+      "messkette",
+      "drucksensor",
+      "kalibrierung"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "bronzino-2015",
+    "iec-62353",
+    "reason-2000-human-error",
+    "mpamiv"
+  ],
+  "diagram": {
+    "title": "Ablauf der systematischen Fehlersuche",
+    "caption": "Schema des Vorgehens; die Schleife zwischen Hypothese und Prüfung wird so oft durchlaufen, bis die Ursache eindeutig ist.",
+    "width": 960,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "sym",
+        "label": "Symptom\nerfassen",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "anw",
+        "label": "Anwendungsfehler\nausschließen",
+        "kind": "process",
+        "ref": "anwendungsfehler",
+        "x": 330,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "info",
+        "label": "Fehlerspeicher,\nUnterlagen",
+        "kind": "process",
+        "ref": "fehlercodes",
+        "x": 580,
+        "y": 90
+      },
+      {
+        "id": "hyp",
+        "label": "Hypothese\n(Wirkkette)",
+        "kind": "control",
+        "ref": "messkette",
+        "x": 830,
+        "y": 90
+      },
+      {
+        "id": "mess",
+        "label": "Prüfen / Messen",
+        "kind": "sensor",
+        "ref": "pruefgeraete",
+        "x": 830,
+        "y": 250
+      },
+      {
+        "id": "beh",
+        "label": "Ursache\nbeheben",
+        "kind": "actuator",
+        "ref": "instandsetzung",
+        "x": 580,
+        "y": 250
+      },
+      {
+        "id": "ver",
+        "label": "Verifizieren\n(IEC 62353)",
+        "kind": "sensor",
+        "ref": "elektrische-sicherheitspruefung",
+        "x": 330,
+        "y": 250
+      },
+      {
+        "id": "doku",
+        "label": "Dokumentation",
+        "kind": "output",
+        "x": 100,
+        "y": 250
+      }
+    ],
+    "edges": [
+      {
+        "from": "sym",
+        "to": "anw",
+        "kind": "data"
+      },
+      {
+        "from": "anw",
+        "to": "info",
+        "kind": "data"
+      },
+      {
+        "from": "info",
+        "to": "hyp",
+        "kind": "data"
+      },
+      {
+        "from": "hyp",
+        "to": "mess",
+        "kind": "data"
+      },
+      {
+        "from": "mess",
+        "to": "beh",
+        "kind": "data",
+        "label": "bestätigt"
+      },
+      {
+        "from": "beh",
+        "to": "ver",
+        "kind": "data"
+      },
+      {
+        "from": "ver",
+        "to": "doku",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

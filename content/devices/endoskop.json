@@ -1,0 +1,72 @@
+{
+  "id": "endoskop",
+  "type": "device",
+  "title": "Flexibles Videoendoskop",
+  "aliases": [
+    "Videoendoskop",
+    "Gastroskop",
+    "Koloskop",
+    "Bronchoskop",
+    "Flexible endoscope",
+    "Videoskop"
+  ],
+  "category": "geraete",
+  "deviceGroup": "endoskopie",
+  "rank": 67,
+  "domains": [
+    "gastroenterologie",
+    "pneumologie",
+    "chirurgie",
+    "intensivmedizin"
+  ],
+  "summary": "Flexible Videoendoskope ermöglichen die Betrachtung von Hohlorganen wie Magen, Darm oder Bronchien über natürliche Körperöffnungen. Ein Bildsensor an der abwinkelbaren Spitze liefert das Bild an einen Videoprozessor; Arbeitskanäle erlauben Biopsien und Eingriffe.",
+  "sections": {
+    "purpose": "Endoskope dienen der Diagnostik (Inspektion, Biopsie, Färbeverfahren) und zunehmend der Therapie: Polypektomie, Blutstillung, Steinentfernung aus den Gallenwegen, Stentimplantation oder endoskopische Resektionen. Typische Bauformen sind Gastroskop, Koloskop, Duodenoskop und Bronchoskop. Ein Endoskopiearbeitsplatz umfasst Videoprozessor, Lichtquelle, Monitor, Spül- und Absaugeinrichtung und oft ein [[hf-chirurgiegeraet|HF-Chirurgiegerät]] [@kramme-2017].",
+    "principle": "## Bildgebung\n\nAn der distalen Spitze sitzt ein Objektiv mit einem **CCD- oder CMOS-Bildsensor**. Das Bild wird elektrisch zum Videoprozessor übertragen, dort aufbereitet (Weißabgleich, Rauschunterdrückung, Kontrastanhebung) und auf dem Monitor dargestellt. Licht wird von einer externen Xenon- oder LED-Lichtquelle über **Glasfaserbündel** zur Spitze geleitet ([[optik]]); bei neueren Systemen sitzen LEDs auch direkt in der Spitze. Schmalbandige Beleuchtung im blauen und grünen Spektralbereich hebt Gefäß- und Schleimhautmuster hervor (virtuelle Chromoendoskopie), weil diese Wellenlängen stark von [[haemoglobin|Hämoglobin]] absorbiert werden.\n\n## Mechanik und Kanäle\n\nDie Spitze wird über Bowdenzüge abgewinkelt, die über Steuerräder am Handstück bedient werden. Im Einführungsschlauch verlaufen Lichtleiter, Kabel, Bowdenzüge, ein Luft-/Wasserkanal zur Insufflation und Linsenspülung sowie der **Arbeitskanal** für Instrumente und Absaugung ([[absauggeraet]]). Die Biegsamkeit erfordert eine aufwendige Konstruktion aus Spiralband, Drahtgeflecht und Kunststoffmantel.\n\n## Aufbereitung\n\nFlexible Endoskope sind thermolabil und werden nach Dichtheitstest, manueller Vorreinigung und Bürstung der Kanäle in einem Reinigungs- und Desinfektionsgerät für Endoskope chemothermisch aufbereitet ([[rdg]], [[iso-15883]], [[aufbereitung]]) [@krinko-bfarm-2012].\n\n> [!warnung] Komplex aufgebaute Endoskope, insbesondere Duodenoskope mit Albarranhebel, sind schwer zu reinigen; Lücken in der Aufbereitung haben Ausbrüche mit multiresistenten Erregern verursacht. Undichte Endoskope dürfen nicht weiter aufbereitet werden, weil Flüssigkeit die Elektronik und die Hygiene gefährdet."
+  },
+  "manufacturers": [
+    {
+      "ref": "olympus",
+      "models": [
+        "EVIS X1",
+        "EVIS EXERA III"
+      ]
+    },
+    {
+      "ref": "fujifilm",
+      "models": [
+        "ELUXEO"
+      ]
+    },
+    {
+      "ref": "karl-storz",
+      "models": [],
+      "note": "Flexible Endoskope u. a. für Urologie, HNO und Pneumologie."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Dichtheitstest vor jeder Aufbereitung; Sichtprüfung von Biegeteil, Optik und Kanälen; Instandsetzung nur durch Hersteller oder autorisierte Werkstätten; elektrische Sicherheitsprüfung von Videoprozessor und Lichtquelle nach [[iec-62353|IEC 62353]]; hygienisch-mikrobiologische Kontrollen der Aufbereitung nach den Vorgaben der Einrichtung."
+  },
+  "related": [
+    "kapselendoskop",
+    "insufflator",
+    "rdg",
+    "aufbereitung",
+    "hf-chirurgiegeraet",
+    "optik"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iec-60601-2-18",
+    "krinko-bfarm-2012"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

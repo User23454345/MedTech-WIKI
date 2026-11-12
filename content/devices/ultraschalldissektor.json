@@ -1,0 +1,68 @@
+{
+  "id": "ultraschalldissektor",
+  "type": "device",
+  "title": "Ultraschall-Dissektionsgerät",
+  "aliases": [
+    "Ultraschallskalpell",
+    "Ultraschallschere",
+    "Ultraschallaspirator",
+    "Ultrasonic dissector",
+    "Harmonisches Skalpell",
+    "CUSA"
+  ],
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 75,
+  "domains": [
+    "chirurgie",
+    "neurologie",
+    "gastroenterologie",
+    "geburtshilfe"
+  ],
+  "summary": "Ultraschall-Dissektionsgeräte nutzen mechanische Schwingungen im Ultraschallbereich, um Gewebe zu schneiden, Gefäße zu verschließen oder parenchymatöses Gewebe selektiv zu zertrümmern und abzusaugen. Sie ergänzen die HF-Chirurgie, kommen aber ohne Stromfluss durch den Patienten aus.",
+  "sections": {
+    "purpose": "Es gibt zwei Hauptgruppen: **Ultraschallscheren bzw. -skalpelle** schneiden und koagulieren gleichzeitig, z. B. in der laparoskopischen Viszeralchirurgie, Gynäkologie und Schilddrüsenchirurgie. **Ultraschallaspiratoren** fragmentieren weiches, wasserreiches Gewebe (Leberparenchym, Hirntumoren) und schonen dabei kollagenreiche Strukturen wie Gefäße und Nerven, die anschließend gezielt versorgt werden können [@kramme-2017].",
+    "principle": "## Erzeugung der Schwingung\n\nEin Generator liefert eine hochfrequente Wechselspannung an einen Wandler im Handstück, der sie über den [[piezoelektrischer-effekt|inversen piezoelektrischen Effekt]] in mechanische Längsschwingungen umsetzt. Ein Horn (Sonotrode) verstärkt die Schwingungsamplitude und überträgt sie auf die Instrumentenspitze. Typisch sind Frequenzen im unteren Ultraschallbereich von einigen zehn Kilohertz ([[schallwellen]]). Da sich die Resonanzfrequenz mit Temperatur, Belastung und Instrument ändert, regelt der Generator die Frequenz laufend nach ([[regelkreis]]).\n\n## Gewebewirkung\n\n| Gerätetyp | Mechanismus |\n|---|---|\n| Ultraschallschere/-skalpell | Die schwingende Klinge erzeugt durch Reibung Wärme; Proteine denaturieren zu einem Koagulum, das kleine Gefäße verschließt, während die Klinge schneidet. Die Temperaturen liegen meist unter denen der monopolaren HF-Chirurgie. |\n| Ultraschallaspirator | Die Spitze schwingt mit hoher Beschleunigung; Kavitation und mechanische Einwirkung fragmentieren wasserreiches Gewebe, das gleichzeitig gespült und abgesaugt wird ([[absauggeraet]]). |\n\nIm Unterschied zum [[hf-chirurgiegeraet|HF-Chirurgiegerät]] fließt kein Strom durch den Patienten; eine [[neutralelektrode]] entfällt. Kombinationsinstrumente vereinen Ultraschall mit bipolarer HF-Energie.\n\n> [!warnung] Die aktive Klinge bleibt nach der Aktivierung noch einige Zeit heiß; Kontakt mit benachbarten Strukturen kann thermische Schäden verursachen. Zulässige Gefäßdurchmesser für den Verschluss gibt der Hersteller je Instrument an.\n\n> [!vereinfacht] Die Gewebewirkung hängt von Leistungsstufe, Anpressdruck, Gewebespannung und Einwirkzeit ab; die Tabelle zeigt nur die Grundprinzipien."
+  },
+  "manufacturers": [
+    {
+      "ref": "olympus",
+      "models": [
+        "THUNDERBEAT",
+        "SONICBEAT"
+      ],
+      "note": "THUNDERBEAT kombiniert Ultraschall- und bipolare HF-Energie."
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "Sonicision"
+      ],
+      "note": "Akkubetriebenes Ultraschall-Dissektionssystem."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (Fassung 2025) Anlage 1 – Produktgruppe „Erzeugung und Anwendung jeglicher Energie zur unmittelbaren Koagulation, Gewebezerstörung …“ (sinngemäß). Die Zuordnung von Ultraschall-Dissektionsgeräten zu dieser Gruppe ist eine Auslegung über die Gewebewirkung (mechanische Energie mit Koagulation bzw. Gewebefragmentierung), kein ausdrücklich genannter Gerätetyp; maßgeblich bleiben der aktuelle Wortlaut, die Herstellerangaben und die Einstufung im Einzelfall. Nicht in Anlage 2 aufgeführt.",
+    "intervals": "[[stk|STK]] spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025); Selbsttest von Generator und Handstück vor jeder Anwendung; Aufbereitung wiederverwendbarer Handstücke nach Herstellerangabe ([[aufbereitung]]); elektrische Sicherheitsprüfung nach [[iec-62353|IEC 62353]]."
+  },
+  "related": [
+    "hf-chirurgiegeraet",
+    "chirurgischer-laser",
+    "piezoelektrischer-effekt",
+    "schallwellen",
+    "absauggeraet",
+    "lithotripter"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

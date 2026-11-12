@@ -1,0 +1,150 @@
+{
+  "id": "luftblasendetektor",
+  "type": "term",
+  "title": "Luftblasendetektor",
+  "aliases": [
+    "Luftdetektor",
+    "Luftblasenerkennung",
+    "air-in-line detector",
+    "AIL-Sensor",
+    "bubble detector",
+    "Ultraschall-Luftdetektor",
+    "venöser Luftdetektor",
+    "Luftfalle-Überwachung"
+  ],
+  "category": "sensorik",
+  "summary": "Sensor, der Luft in flüssigkeits- oder blutführenden Schläuchen erkennt und Pumpenstopp, Schlauchklemme und Alarm auslöst. Meist nach dem Ultraschall-Transmissionsprinzip, das den extremen Impedanzunterschied zwischen Flüssigkeit und Luft nutzt; Schutz vor Luftembolie.",
+  "body": "## Begriff\n\nEin **Luftblasendetektor** (*air-in-line detector*) erkennt Luft in einer flüssigkeits- oder blutführenden Schlauchleitung und löst einen Alarm sowie eine Schutzreaktion aus – in der Regel den Stopp der Pumpe und, bei extrakorporalen Kreisläufen, das Schließen einer Schlauchklemme. Er schützt vor der **Luftembolie**, bei der Gas in das Gefäßsystem gelangt und Gefäße verlegt. Luftblasendetektoren sind sicherheitsrelevante Sensoren in [[infusionspumpe|Infusionspumpen]], [[dialysegeraet|Dialysegeräten]] und Geräten der extrakorporalen Zirkulation [@kramme-2017] [@webster-2010].\n\n## Messprinzipien\n\n### Ultraschall-Transmission (Standard)\n\nDer Schlauch wird zwischen einem Ultraschallsender und einem Empfänger eingelegt. Flüssigkeit leitet den Schall gut, Luft dagegen kaum. Grund ist der extreme Unterschied der **akustischen Impedanz** `Z = ρ · c` ([[schallwellen]]):\n\n| Medium | Dichte ρ | Schallgeschwindigkeit c | Z (näherungsweise) |\n|---|---|---|---|\n| Wasser / Infusionslösung | ≈ 1 000 kg/m³ | ≈ 1 480 m/s | ≈ 1,5 · 10⁶ kg/(m²·s) |\n| Luft | ≈ 1,2 kg/m³ | ≈ 343 m/s | ≈ 4 · 10² kg/(m²·s) |\n\nFür den Intensitäts-Reflexionsgrad an einer Grenzfläche gilt\n\n`R = ((Z₂ − Z₁) / (Z₂ + Z₁))²`\n\n> [!beispiel] Mit Z₁ ≈ 1,5 · 10⁶ und Z₂ ≈ 4 · 10² kg/(m²·s) ergibt sich R ≈ 0,999. Praktisch die gesamte Schallintensität wird an einer Luftblase reflektiert; am Empfänger bricht das Signal ein, solange die Blase den Schallweg kreuzt.\n\nDie Elektronik wertet die Amplitude des Empfangssignals aus. Aus Dauer des Signaleinbruchs und bekannter Fördergeschwindigkeit lässt sich das **Blasenvolumen** abschätzen; viele Geräte summieren zusätzlich kleine Blasen über ein Zeitfenster (kumulierte Luftmenge). Die Ansprechschwellen sind gerätespezifisch und teilweise konfigurierbar [@webster-2010].\n\n### Weitere Prinzipien\n\n| Prinzip | Funktionsweise | Einsatz |\n|---|---|---|\n| Optisch (Infrarot) | Luft und Flüssigkeit brechen bzw. absorbieren Licht im Schlauch unterschiedlich | Infusionstechnik, Tropfkammer- und Leererkennung |\n| Kapazitiv | Luft hat eine viel kleinere Permittivität als Wasser – die Kapazität einer Elektrodenanordnung sinkt | einfache Leer-/Füllstandserkennung |\n| Füllstandsdetektor | Ultraschall oder optisch an der Tropfkammer bzw. dem venösen Blasenfänger | Dialyse: zu niedriger Blutspiegel in der Kammer |\n\n## Systemintegration\n\nDer Sensor allein schützt nicht; entscheidend ist die **Schutzkette**:\n\n1. Erkennung der Luft im Sensor,\n2. Bewertung (Einzelblase, kumulierte Luftmenge, Plausibilität),\n3. Abschaltung der Förderung und – wo vorhanden – Schließen der Schlauchklemme,\n4. Alarm nach [[alarmsystem|Alarmsystem]]-Logik ([[iec-60601-1-8]]),\n5. bewusstes Quittieren und Entlüften durch das Personal.\n\nBei [[dialysegeraet|Dialysegeräten]] sitzt der Detektor im venösen Rücklauf hinter dem Blasenfänger, unmittelbar vor der venösen Schlauchklemme; Gerätenormen für Hämodialysegeräte enthalten Anforderungen an den Schutz gegen Luftinfusion [@iec-60601-2-16]; die Funktion des Detektors wird in der Praxis vor jeder Behandlung im Selbsttest des Geräts überprüft. Auch die Gerätenorm für Infusionspumpen behandelt den Schutz gegen Luftinfusion [@iec-60601-2-24]. Einzelheiten (Klauseln, Grenzwerte) sind der jeweils gültigen Fassung der Normen zu entnehmen.\n\n> [!vereinfacht] Ob eine Luftmenge gefährlich ist, hängt von Volumen, Infusionsweg (venös/arteriell), Geschwindigkeit, Patientenalter und Vorerkrankungen (z. B. offenes Foramen ovale) ab. Feste „sichere“ Grenzwerte gibt es klinisch nicht; Gerätegrenzwerte sind technische Festlegungen des Herstellers im Rahmen des [[iso-14971|Risikomanagements]].\n\n> [!warnung] Luftblasendetektoren dürfen nicht überbrückt, abgeklebt oder durch Einlegen eines falschen Schlauchs „ruhiggestellt“ werden. Ein deaktivierter Luftdetektor kann eine tödliche Luftembolie zur Folge haben.\n\n## Fehlerquellen\n\n* **Falscher Schlauch oder schlecht eingelegter Schlauch:** Schlauchgeometrie und Wandstärke beeinflussen die Schallkopplung; nur freigegebene Überleitsysteme verwenden.\n* **Trockene Kopplung:** Manche Sensoren benötigen guten mechanischen Kontakt; Verschmutzung durch eingetrocknete Lösungen verfälscht das Signal.\n* **Ausgasung:** Kalte Lösungen setzen beim Erwärmen gelöste Gase frei; Mikroblasen entstehen z. B. nach [[infusionswaermer|Infusionswärmern]] – häufige Ursache wiederholter Alarme ([[luft-im-system]]).\n* **Mikroblasen:** sehr kleine Blasen unterhalb der Ansprechschwelle werden nicht einzeln erkannt, deshalb ergänzend die kumulierte Bewertung und Filter bzw. Blasenfänger im System.\n* **Schaum und trübe Lösungen:** Schaum in Blutkreisläufen dämpft den Ultraschall ähnlich wie Luft; bei optischen Sensoren können trübe Lösungen wie Lipidemulsionen die Auswertung zusätzlich beeinflussen.\n\n> [!praxis] Wiederkehrende Luftalarme an einer Infusionspumpe haben meist eine Systemursache (ungenügend entlüftetes Set, Ausgasung, undichte Konnektion, leerer Beutel). Die [[fehlersuche|Fehlersuche]] beginnt am Überleitsystem, nicht am Sensor.\n\n## Anwendung in Geräten\n\n| Gerät | Rolle des Luftblasendetektors |\n|---|---|\n| [[infusionspumpe]], [[pca-pumpe]] | Erkennung von Luft im Pumpensegment, Stopp und Alarm |\n| [[dialysegeraet]], [[crrt-geraet]] | venöser Luftdetektor mit Schlauchklemme, Füllstandsüberwachung |\n| [[herz-lungen-maschine]] | Blasenerkennung in der arteriellen Linie, Pumpenstopp |\n| [[ecmo]] | Überwachung des extrakorporalen Kreislaufs |\n| [[zellseparator]] | Schutz bei Rückgabe von Blutbestandteilen |\n| [[infusionswaermer]] | je nach Bauart Luftdetektion und -abscheidung |\n\n[[spritzenpumpe|Spritzenpumpen]] besitzen in der Regel keinen Luftdetektor in der Leitung; hier ist sorgfältiges Entlüften von Spritze und Leitung vor Therapiebeginn entscheidend.\n\n## Prüfung\n\nDie Funktion des Luftdetektors ist Bestandteil von [[funktionspruefung|Funktionsprüfung]] und [[stk]]: Mit einem definierten Testschlauch wird Luft eingebracht und geprüft, ob Alarm und Förderstopp ausgelöst werden; Dialysegeräte prüfen den Detektor zusätzlich in ihrem Selbsttest. Prüfintervalle und -verfahren richten sich nach Herstellerangaben und § 12 der [[mpbetreibv|MPBetreibV]] [@mpbetreibv].\n",
+  "related": [
+    "luft-im-system",
+    "infusionspumpe",
+    "dialysegeraet",
+    "herz-lungen-maschine",
+    "schallwellen",
+    "ultraschallwandler",
+    "okklusionsalarm",
+    "alarmsystem",
+    "blutleckdetektor",
+    "iec-60601-2-24",
+    "iec-60601-2-16"
+  ],
+  "paths": [
+    [
+      "infusionspumpe",
+      "luftblasendetektor",
+      "luft-im-system"
+    ],
+    [
+      "dialysegeraet",
+      "luftblasendetektor",
+      "schallwellen"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "webster-2010",
+    "iec-60601-2-16",
+    "iec-60601-2-24",
+    "mpbetreibv"
+  ],
+  "diagram": {
+    "title": "Schutzkette des Ultraschall-Luftblasendetektors",
+    "caption": "Funktionsschema am Beispiel des venösen Rücklaufs eines Dialysegeräts.",
+    "width": 960,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "sch",
+        "label": "Schlauch mit\nBlut / Lösung",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "tx",
+        "label": "US-Sender",
+        "kind": "actuator",
+        "x": 290,
+        "y": 80,
+        "ref": "ultraschallwandler"
+      },
+      {
+        "id": "rx",
+        "label": "US-Empfänger",
+        "kind": "sensor",
+        "x": 490,
+        "y": 80,
+        "ref": "luftblasendetektor"
+      },
+      {
+        "id": "aus",
+        "label": "Auswertung\n(Blase, kumuliert)",
+        "kind": "control",
+        "x": 700,
+        "y": 80,
+        "ref": "mikrocontroller"
+      },
+      {
+        "id": "kl",
+        "label": "Schlauchklemme\n+ Pumpenstopp",
+        "kind": "actuator",
+        "x": 700,
+        "y": 220,
+        "ref": "peristaltikpumpe"
+      },
+      {
+        "id": "al",
+        "label": "Alarm",
+        "kind": "output",
+        "x": 880,
+        "y": 220,
+        "ref": "alarmsystem"
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 290,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "sch",
+        "to": "tx",
+        "kind": "fluid"
+      },
+      {
+        "from": "tx",
+        "to": "rx",
+        "kind": "energy",
+        "label": "Ultraschall"
+      },
+      {
+        "from": "rx",
+        "to": "aus",
+        "kind": "signal",
+        "label": "Amplitude"
+      },
+      {
+        "from": "aus",
+        "to": "kl",
+        "kind": "signal",
+        "label": "Stopp"
+      },
+      {
+        "from": "aus",
+        "to": "al",
+        "kind": "signal"
+      },
+      {
+        "from": "kl",
+        "to": "pat",
+        "kind": "fluid",
+        "label": "nur luftfrei"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

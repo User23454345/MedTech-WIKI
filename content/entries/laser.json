@@ -1,0 +1,163 @@
+{
+  "id": "laser",
+  "type": "term",
+  "title": "Laser",
+  "aliases": [
+    "LASER",
+    "Light Amplification by Stimulated Emission of Radiation",
+    "stimulierte Emission",
+    "Besetzungsinversion",
+    "Laserresonator",
+    "CO₂-Laser",
+    "Nd:YAG-Laser",
+    "Ho:YAG-Laser",
+    "Er:YAG-Laser",
+    "Diodenlaser",
+    "Excimerlaser",
+    "Femtosekundenlaser",
+    "Laserklassen",
+    "Laserschutz"
+  ],
+  "category": "physik",
+  "summary": "Ein Laser erzeugt durch stimulierte Emission in einem optischen Resonator monochromatisches, kohärentes und stark gebündeltes Licht hoher Leistungsdichte. Wellenlänge, Leistung und Pulsdauer bestimmen die Wirkung auf Gewebe – von Koagulation und Schneiden über Ablation und Photodisruption bis zu photochemischen Effekten – und die Anforderungen an den Laserschutz.",
+  "body": "## Prinzip: Stimulierte Emission\n\nAtome und Moleküle können Licht auf drei Arten mit Materie austauschen [@eichler-2015]:\n\n1. **Absorption** – ein Photon hebt ein Elektron auf ein höheres Energieniveau.\n2. **Spontane Emission** – das angeregte System fällt zufällig zurück und sendet ein Photon in beliebige Richtung (Glühlampe, LED).\n3. **Stimulierte Emission** – ein einfallendes Photon passender Energie löst die Emission eines zweiten Photons aus, das in Frequenz, Phase, Richtung und Polarisation **identisch** ist.\n\nAlbert Einstein beschrieb die stimulierte Emission 1917 theoretisch [@einstein-1917]; Theodore Maiman baute 1960 den ersten Laser, einen Rubinlaser [@maiman-1960]. Die Photonenenergie ist durch den Abstand der Energieniveaus festgelegt:\n\n`E = h · f = h · c / λ`\n\n## Aufbau eines Lasers\n\n| Baugruppe | Funktion |\n|---|---|\n| **Aktives Medium** | Gas (CO₂, Argon), Festkörper (Nd:YAG, Ho:YAG, Er:YAG), Halbleiter (Diode), Excimer, Faser |\n| **Pumpquelle** | bringt Energie ein: Blitzlampe, Diodenlaser, elektrische Gasentladung, Strom (Diode) |\n| **Resonator** | zwei Spiegel, einer teildurchlässig (Auskoppelspiegel); Photonen durchlaufen das Medium vielfach |\n| **Strahlführung** | Lichtleitfaser, Spiegelgelenkarm (CO₂), Handstück, Scanner |\n| **Pilotstrahl** | sichtbarer, schwacher Zielstrahl zur Markierung des Behandlungsortes |\n\nDamit stimulierte Emission die Absorption überwiegt, müssen mehr Teilchen im oberen als im unteren Laserniveau sein – die **Besetzungsinversion**. Im thermischen Gleichgewicht ist das unmöglich; sie gelingt nur in Drei- oder Vierniveausystemen mit einem langlebigen (metastabilen) oberen Niveau.\n\n> [!vereinfacht] Das Bild „ein Photon erzeugt ein identisches zweites“ beschreibt die Lichtverstärkung anschaulich. Die vollständige Beschreibung erfordert die Quantenelektrodynamik und die Modenstruktur des Resonators.\n\n## Eigenschaften der Laserstrahlung\n\n* **Monochromasie** – sehr schmales Spektrum; ermöglicht gezielte Absorption in bestimmten Gewebebestandteilen.\n* **Kohärenz** – feste Phasenbeziehung; Grundlage interferometrischer Verfahren wie der [[oct|optischen Kohärenztomographie]] (die allerdings bewusst breitbandige Lichtquellen geringer Kohärenzlänge nutzt).\n* **Geringe Divergenz** – der Strahl lässt sich auf sehr kleine Flecken fokussieren.\n* **Hohe Leistungsdichte (Bestrahlungsstärke)** `E = P / A`.\n\n> [!beispiel] Ein Laser mit 10 W Leistung wird auf einen Fleck von 0,3 mm Durchmesser fokussiert: A = π · (0,015 cm)² ≈ 7 · 10⁻⁴ cm², E ≈ 10 W / 7 · 10⁻⁴ cm² ≈ 14 000 W/cm². Dieselbe Leistung auf 1 cm² verteilt ergibt nur 10 W/cm² – Fokussierung entscheidet zwischen Schneiden und Erwärmen.\n\n## Betriebsarten\n\n| Betriebsart | Pulsdauer (Größenordnung) | typische Wirkung |\n|---|---|---|\n| Dauerstrich (cw) | kontinuierlich | Koagulation, Vaporisation |\n| gepulst / Superpuls | ms bis µs | Ablation mit weniger thermischem Schaden |\n| gütegeschaltet (Q-switch) | ns | Photodisruption, Tattoo-/Pigmententfernung |\n| Ultrakurzpuls (Femtosekunden) | fs | präzise Schnitte im Auge |\n\n## Laser-Gewebe-Wechselwirkung\n\nDie Wirkung hängt von **Wellenlänge** (Absorption in Wasser, Hämoglobin, Melanin, Proteinen), **Bestrahlungsstärke** und **Einwirkdauer** ab [@eichler-2015]. Der Energietransport im Gewebe folgt der [[optik|Optik]] (Absorption und Streuung, [[lambert-beer]]) und anschließend der [[waermeuebertragung|Wärmeleitung]].\n\n| Mechanismus | Prinzip | Beispiel |\n|---|---|---|\n| photothermisch | Erwärmung: Koagulation (ab ca. 60 °C), Vaporisation (ca. 100 °C), Karbonisation | chirurgisches Schneiden, Gefäßverschluss |\n| Photoablation | UV-Photonen spalten Molekülbindungen direkt | Hornhautchirurgie mit Excimerlaser |\n| Photodisruption | Plasmabildung und Stoßwelle bei extrem hoher Bestrahlungsstärke | Nachstar-Kapsulotomie, Femtosekunden-Schnitte |\n| photochemisch | Licht aktiviert einen Photosensibilisator | Photodynamische Therapie |\n\n| Lasertyp | Wellenlänge | Eigenschaft im Gewebe | Einsatzbeispiele |\n|---|---|---|---|\n| CO₂ | 10,6 µm | sehr starke Wasserabsorption, geringe Eindringtiefe | Schneiden, HNO, Dermatologie |\n| Er:YAG | 2,94 µm | Maximum der Wasserabsorption | Zahnmedizin, Hautabtragung |\n| Ho:YAG | 2,1 µm | gute Wasserabsorption, faserführbar | Steinzertrümmerung (Urologie) |\n| Nd:YAG | 1064 nm | geringe Absorption, tiefe Eindringtiefe | Koagulation, Endoskopie |\n| frequenzverdoppelter Nd:YAG („KTP“) | 532 nm | Hämoglobinabsorption | Netzhaut, Gefäße |\n| Diodenlaser | ca. 800–1000 nm | kompakt, faserführbar | Weichgewebe, Zahnmedizin |\n| Thulium (Tm:YAG bzw. Thulium-Faserlaser) | ca. 1,9–2,0 µm | starke Wasserabsorption, faserführbar | Urologie (Prostata, Steinbehandlung) |\n| ArF-Excimer | 193 nm | UV, Photoablation | refraktive Hornhautchirurgie |\n\n> [!hinweis] Die Einsatzbeispiele sind typische Anwendungsfelder aus der Fachliteratur. Welche Indikationen ein konkretes Gerät hat, regelt allein seine Zweckbestimmung.\n\n## Laserschutz\n\nDie Norm [@iec-60825-1] teilt Lasereinrichtungen nach ihrem Gefährdungspotenzial in **Klassen 1, 1M, 2, 2M, 3R, 3B und 4** ein (die Ausgabe von 2014 ergänzt zusätzlich die Klasse 1C für bestimmte Hautanwendungsgeräte). Chirurgische und therapeutische Laser gehören praktisch immer zur **Klasse 4** – direkte und diffus reflektierte Strahlung kann Augen und Haut schädigen und Brände auslösen. Besondere Festlegungen für therapeutische und chirurgische Laser enthält [@iec-60601-2-22]; der Arbeitsschutz richtet sich nach der Arbeitsschutzverordnung zu künstlicher optischer Strahlung [@ostrv], die u. a. vor dem Betrieb von Lasereinrichtungen der Klassen 3R, 3B und 4 die schriftliche Bestellung eines sachkundigen Laserschutzbeauftragten vorsieht, sofern der Arbeitgeber nicht selbst sachkundig ist.\n\n> [!warnung] Laserschutzbrillen müssen für die **jeweilige Wellenlänge** und Leistung ausgelegt sein – eine CO₂-Schutzbrille schützt nicht vor Nd:YAG-Strahlung. Weitere Maßnahmen: gekennzeichneter Laserbereich, Türwarnleuchte, schwer entflammbare Abdeckungen, Rauchabsaugung (chirurgischer Rauch).\n\n## Anwendung in Geräten\n\n* [[chirurgischer-laser]] – CO₂-, Nd:YAG-, Ho:YAG-, Dioden- und Thulium-Systeme (um 2 µm) in OP und Endoskopie, z. B. Laserlithotripsie in der Urologie (im Unterschied zur extrakorporalen Stoßwellenlithotripsie mit dem [[lithotripter]]).\n* [[oct]] und [[spaltlampe]] – Augenheilkunde (Diagnostik bzw. Laseradaption an der Spaltlampe).\n* [[endoskop]] – Laserfasern über den Arbeitskanal.\n* [[dentaleinheit]] – Er:YAG- und Diodenlaser in der Zahnmedizin.\n* Zielhilfen und Positionierlaser an [[computertomograph]] und [[linearbeschleuniger]] (meist Klasse 1–2).\n\n## Bedeutung in der Medizintechnik\n\nFür die Instandhaltung relevant sind die Messung der **Ausgangsleistung** am Applikator (Leistungsmessgerät), die Prüfung der Faser- und Spiegelarm-Transmission, die Justierung des Pilotstrahls, die Funktion von Not-Aus und Türkontakt sowie die Kühlung der Laserquelle. Arbeiten bei geöffnetem Gehäuse sind ausschließlich geschultem und befugtem Fachpersonal vorbehalten.\n\n> [!belegt] Lasertätigkeit setzt stimulierte Emission und Besetzungsinversion in einem optischen Resonator voraus [@einstein-1917] [@eichler-2015].",
+  "related": [
+    "chirurgischer-laser",
+    "optik",
+    "lambert-beer",
+    "waermeuebertragung",
+    "oct",
+    "endoskop",
+    "augenheilkunde",
+    "dentaleinheit",
+    "chirurgie"
+  ],
+  "paths": [
+    [
+      "chirurgischer-laser",
+      "laser",
+      "optik",
+      "waermeuebertragung"
+    ],
+    [
+      "oct",
+      "laser",
+      "optik",
+      "auge"
+    ]
+  ],
+  "sources": [
+    "einstein-1917",
+    "maiman-1960",
+    "eichler-2015",
+    "iec-60825-1",
+    "iec-60601-2-22",
+    "ostrv"
+  ],
+  "diagram": {
+    "title": "Aufbau eines medizinischen Lasersystems",
+    "caption": "Funktionsschema; konkrete Bauformen unterscheiden sich je nach Lasertyp.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "pump",
+        "label": "Pumpquelle\n(Diode, Lampe,\nGasentladung)",
+        "kind": "source",
+        "x": 100,
+        "y": 90,
+        "h": 64
+      },
+      {
+        "id": "med",
+        "label": "Aktives Medium\n(Besetzungsinversion)",
+        "ref": "laser",
+        "kind": "process",
+        "x": 330,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "res",
+        "label": "Resonator\n(Spiegel)",
+        "kind": "process",
+        "x": 560,
+        "y": 90
+      },
+      {
+        "id": "fuehr",
+        "label": "Strahlführung\n(Faser / Spiegelarm)",
+        "ref": "optik",
+        "kind": "process",
+        "x": 780,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "gew",
+        "label": "Gewebe\n(Absorption)",
+        "ref": "waermeuebertragung",
+        "kind": "patient",
+        "x": 780,
+        "y": 230
+      },
+      {
+        "id": "pm",
+        "label": "Leistungs-\nmonitor",
+        "kind": "sensor",
+        "x": 560,
+        "y": 230
+      },
+      {
+        "id": "ctl",
+        "label": "Steuerung /\nSicherheitskreis",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 330,
+        "y": 230
+      }
+    ],
+    "edges": [
+      {
+        "from": "pump",
+        "to": "med",
+        "kind": "energy"
+      },
+      {
+        "from": "med",
+        "to": "res",
+        "kind": "energy",
+        "label": "stim. Emission"
+      },
+      {
+        "from": "res",
+        "to": "fuehr",
+        "kind": "energy",
+        "label": "Auskopplung"
+      },
+      {
+        "from": "fuehr",
+        "to": "gew",
+        "kind": "energy"
+      },
+      {
+        "from": "res",
+        "to": "pm",
+        "kind": "signal"
+      },
+      {
+        "from": "pm",
+        "to": "ctl",
+        "kind": "data"
+      },
+      {
+        "from": "ctl",
+        "to": "pump",
+        "kind": "signal",
+        "label": "Freigabe/Leistung"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

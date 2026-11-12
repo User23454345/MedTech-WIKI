@@ -1,0 +1,71 @@
+{
+  "id": "bildartefakte",
+  "type": "fault",
+  "title": "Bildartefakte",
+  "aliases": [
+    "Artefakte",
+    "Image artifacts",
+    "Ringartefakt",
+    "Metallartefakt",
+    "Suszeptibilitätsartefakt",
+    "Spiegelartefakt"
+  ],
+  "category": "fehler",
+  "summary": "Bildstrukturen in der medizinischen Bildgebung, die im Objekt nicht vorhanden sind oder es verfälscht darstellen. Artefakte entstehen durch Physik des Verfahrens, Patient, Bedienung oder Gerätefehler und können Diagnosen verfälschen.",
+  "devices": [
+    "computertomograph",
+    "mrt",
+    "roentgengeraet",
+    "ultraschallgeraet",
+    "c-bogen",
+    "angiographieanlage",
+    "dvt",
+    "mammographiegeraet",
+    "pet-ct",
+    "endoskop"
+  ],
+  "causes": [
+    "Physikalische Effekte des Verfahrens, z. B. Strahlaufhärtung in der [[computertomograph|CT]], Schallschatten und Wiederholungsechos im [[ultraschallgeraet|Ultraschall]] ([[schallwellen]])",
+    "Patientenbewegung, Atmung, Herzschlag oder Peristaltik während der Datenaufnahme (siehe [[bewegungsartefakt]])",
+    "Metall- und Fremdkörper (Implantate, Schmuck, Elektroden), die Röntgenstrahlung stark schwächen oder das Magnetfeld im [[mrt|MRT]] verzerren",
+    "Detektorfehler: fehlerhaft kalibrierte oder defekte Detektorelemente des [[roentgendetektor|Flachdetektors]] oder CT-Detektors (Ringartefakte, Pixelfehler)",
+    "HF-Störungen im MRT durch undichte HF-Kabine, offene Tür oder eingebrachte elektronische Geräte",
+    "Fehlerhafte Einstellungen: falsches Protokoll, zu kleines Messfeld (Einfaltung), ungeeigneter Schallkopf oder falsche Verstärkung",
+    "Defekte Komponenten wie Schallkopfelemente des [[ultraschallwandler|Ultraschallwandlers]], [[gradientenspule|Gradientenspulen]], [[hf-spule|HF-Spulen]] oder Raster/[[kollimator|Kollimator]]"
+  ],
+  "actions": [
+    "Bei diagnostisch relevanter Bildstörung Untersuchung nach Rücksprache mit der ärztlichen Leitung wiederholen bzw. mit angepasstem Protokoll fortsetzen; unnötige zusätzliche Strahlenexposition vermeiden ([[strahlenschutz]])",
+    "Artefakt einordnen: patientenbedingt, anwendungsbedingt oder gerätebedingt (tritt es auch am Phantom auf?)",
+    "Patientenseitige Ursachen beseitigen: Metall entfernen, Lagerung und Atemkommando, Bewegung minimieren",
+    "Einstellungen prüfen: Protokoll, Messfeld, Rekonstruktionsparameter, Schallkopf und Verstärkung",
+    "Bei Verdacht auf Gerätefehler Phantommessung durchführen und Gerät ggf. bis zur Klärung sperren; Service informieren",
+    "Bei Röntgen- und CT-Anlagen Ergebnisse mit der [[konstanzpruefung|Konstanzprüfung]] abgleichen und Kalibrierung (z. B. Detektor-Gain- und Offset-Kalibrierung) nach Herstellervorgabe veranlassen",
+    "Ereignis und Bildbeispiele dokumentieren (Seriennummer, Protokoll, Zeitpunkt) für Service und Qualitätssicherung"
+  ],
+  "body": "## Technischer Hintergrund\n\nJedes bildgebende Verfahren beruht auf Modellannahmen: Die CT-Rekonstruktion nimmt monoenergetische Strahlung und ein ruhendes Objekt an, der Ultraschall eine konstante Schallgeschwindigkeit und geradlinige Ausbreitung, das MRT ein homogenes Grundfeld und lineare Gradienten. Wird eine Annahme verletzt, entstehen **Artefakte** [@hsieh-2015][@bushberg-2020][@doessel-2016].\n\n### Typische Artefakte nach Modalität\n\n| Modalität | Artefakt | Ursache | Erscheinungsbild |\n|---|---|---|---|\n| CT | Strahlaufhärtung | Polychromatisches Spektrum, weiche Anteile werden bevorzugt absorbiert ([[roentgenstrahlung]]) | dunkle Streifen zwischen dichten Strukturen, „Cupping“ |\n| CT | Metallartefakt | Photonenmangel und Aufhärtung hinter Metall | helle und dunkle Streifen |\n| CT | Ringartefakt | fehlerhaft kalibriertes oder defektes Detektorelement | konzentrische Ringe um das Rotationszentrum |\n| CT | Partialvolumeneffekt | mehrere Gewebe in einem Voxel | verwaschene Grenzen |\n| Röntgen | Pixel- und Zeilenfehler | defekte Detektorelemente, veraltete Gain-Kalibrierung | Punkte, Linien, Inhomogenität |\n| Röntgen | Rasterlinien/Moiré | Streustrahlenraster schlecht ausgerichtet oder bewegt sich nicht | Linien- oder Interferenzmuster |\n| MRT | Suszeptibilitätsartefakt | Feldverzerrung an Metall oder Gewebe-Luft-Grenzen | Signalauslöschung, Verzerrung |\n| MRT | Chemische Verschiebung | unterschiedliche Resonanzfrequenz von Fett und Wasser ([[kernspinresonanz]]) | helle/dunkle Säume an Grenzflächen |\n| MRT | Einfaltung (Aliasing) | Messfeld kleiner als Objekt | Körperteile auf der Gegenseite eingeblendet |\n| MRT | „Zipper“/Linien | HF-Einstreuung, undichte HF-Kabine | Linie konstanter Frequenz durch das Bild |\n| Ultraschall | Wiederholungsecho (Reverberation) | Mehrfachreflexion zwischen starken Reflektoren | parallele Linien in gleichen Abständen |\n| Ultraschall | Schallschatten/-verstärkung | starke bzw. schwache Schwächung durch Absorption und Reflexion ([[schallwellen]]) | dunkler bzw. heller Bereich hinter einer Struktur |\n| Ultraschall | Spiegelartefakt | Reflexion an starker Grenzfläche | Struktur doppelt dargestellt |\n| Ultraschall | Elementausfall | defekte Elemente im Schallkopf | senkrechte dunkle Streifen |\n\nEinige Artefakte sind diagnostisch sogar nützlich (Schallschatten hinter Steinen), andere sind **Leitsymptome eines Gerätefehlers** – vor allem Ringartefakte, Pixelfehler, Streifen durch Schallkopfelemente und HF-Linien im MRT [@kalender-2011][@szabo-2014][@mcrobbie-2017].\n\n### Wie das Gerät Fehler erkennt\n\nBildgebende Systeme überwachen Röhrenstrom, Hochspannung, Detektortemperatur, Gradienten- und HF-Leistung und melden Abweichungen als technische Fehler im Event-Log. Ob ein Bild **diagnostisch brauchbar** ist, kann das System dagegen nur begrenzt beurteilen. Deshalb sind tägliche Qualitätskontrollen (z. B. Wasserphantom beim CT, Homogenitäts- und SNR-Messung beim MRT) und die [[konstanzpruefung|Konstanzprüfung]] bei Röntgeneinrichtungen zentral.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Ringe im CT | Wasserphantom-Scan, Detektor-Kalibrierstatus | Luft-/Detektorkalibrierung nach Vorgabe; bei Fortbestehen Service |\n| Artefakt nur bei einem Patienten | Metall, Bewegung, Lagerung | Metallartefaktreduktion, Bewegungsreduktion, Protokoll anpassen |\n| Linien/Pixelfehler im Röntgenbild | Flatfield-Aufnahme, Defektpixelkarte | Detektorkalibrierung, Detektor prüfen lassen |\n| Linie konstanter Frequenz im MRT | HF-Kabinentür, eingebrachte Geräte, Filterplatte | Tür schließen, Störquelle entfernen, HF-Dichtigkeit prüfen lassen |\n| dunkle Längsstreifen im Ultraschall | Schallkopf am Phantom bzw. in Luft prüfen, Kabel, Linse | Schallkopf instandsetzen oder tauschen |\n| allgemein erhöhtes Rauschen | Dosis-/Protokollparameter, Röhren- und Detektorzustand | Protokoll prüfen; Konstanzprüfung, Service |\n\n## Prävention\n\n* Herstellerseitig vorgesehene tägliche Kalibrierungen und Phantommessungen konsequent durchführen.\n* Für Röntgen- und CT-Anlagen die Abnahme- und Konstanzprüfungen nach den Vorgaben des [[strlschg|Strahlenschutzrechts]] einhalten [@strlschv].\n* Schallköpfe schonend behandeln (Sturz, Kabelknick, Desinfektionsmittelverträglichkeit), regelmäßig Elementtests durchführen.\n* MRT-Untersuchungsraum frei von nicht freigegebenen elektronischen Geräten halten; HF-Kabine regelmäßig prüfen lassen.\n* Standardisierte Protokolle und Schulung zu Lagerung und Atemkommandos.\n\n> [!hinweis] Kalibrierroutinen, Toleranzen der Qualitätskontrollen und herstellerspezifische Fehlercodes sind in den Service-Unterlagen und Qualitätssicherungshandbüchern des Herstellers festgelegt. Siehe auch [[fehlercodes]].",
+  "related": [
+    "computertomograph",
+    "mrt",
+    "roentgengeraet",
+    "ultraschallgeraet",
+    "roentgendetektor",
+    "ultraschallwandler",
+    "konstanzpruefung",
+    "bewegungsartefakt",
+    "schallwellen",
+    "kernspinresonanz",
+    "dicom",
+    "radiologie"
+  ],
+  "sources": [
+    "hsieh-2015",
+    "bushberg-2020",
+    "doessel-2016",
+    "kalender-2011",
+    "szabo-2014",
+    "mcrobbie-2017",
+    "strlschv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "iec-60601-2-44",
+  "type": "standard",
+  "title": "IEC 60601-2-44",
+  "code": "IEC 60601-2-44",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-44: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Röntgeneinrichtungen für die Computertomographie",
+  "scope": "Legt besondere Sicherheits- und Leistungsanforderungen an Röntgeneinrichtungen für die Computertomographie fest, insbesondere an Dosisangaben, Dosiswarnfunktionen, Strahlenschutz und mechanische Sicherheit.",
+  "aliases": [
+    "DIN EN 60601-2-44",
+    "EN 60601-2-44",
+    "VDE 0750-2-44",
+    "60601-2-44",
+    "CT-Sicherheitsnorm"
+  ],
+  "category": "normen",
+  "summary": "IEC 60601-2-44 ist die besondere Festlegung der Normenfamilie IEC 60601 für Computertomographen. Sie fordert u. a. die Anzeige der Dosisgrößen CTDIvol und DLP vor und nach der Untersuchung, Dosisbenachrichtigungs- und Dosisalarmwerte, Dosisdokumentation, Strahlenschutz für Patient und Personal sowie mechanische Sicherheit von Gantry und Patientenliege.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-2-44** gilt für Röntgeneinrichtungen zur [[computertomograph|Computertomographie]] (CT) [@iec-60601-2-44]. Sie umfasst die gesamte CT-Anlage mit [[roentgenroehre|Röntgenröhre]], [[hochspannungserzeugung|Hochspannungserzeuger]], [[roentgendetektor|Detektorsystem]], [[gantry]], Patientenliege und Bedienkonsole. Andere Röntgenanlagen (Radiographie und Durchleuchtung) regelt [[iec-60601-2-54]]; Systeme, die CT mit anderen Modalitäten kombinieren ([[pet-ct]]), unterliegen zusätzlich den jeweiligen Normen.\n\nDie CT trägt einen erheblichen Anteil zur medizinischen Strahlenexposition der Bevölkerung bei. Deshalb steht neben der klassischen Gerätesicherheit vor allem die **Transparenz und Kontrolle der Patientendosis** im Mittelpunkt ([[ionisierende-strahlung]], [[strahlenschutz]]).\n\n## Zentrale Konzepte und Anforderungen\n\n### Dosisgrößen und Dosisanzeige\n\nDie Norm definiert die in der CT üblichen Dosisgrößen und verlangt deren Anzeige:\n\n| Größe | Bedeutung |\n|---|---|\n| CTDIvol (volumengewichteter CT-Dosisindex, mGy) | mittlere Dosis im Scanvolumen eines genormten Phantoms, bezogen auf die Schicht bzw. Rotation |\n| DLP (Dosislängenprodukt, mGy·cm) | CTDIvol multipliziert mit der Scanlänge; Maß für die Gesamtexposition einer Serie |\n\nBeide Werte müssen **vor** dem Scan (aus den Protokollparametern berechnet) und **nach** der Untersuchung angezeigt werden.\n\n> [!vereinfacht] CTDIvol beschreibt die Dosis in einem Plexiglas-Phantom (16 cm Kopf bzw. 32 cm Körper), nicht die tatsächliche Organdosis eines Patienten. Bei schlanken Patienten und Kindern liegt die tatsächliche Dosis bei gleichem CTDIvol höher. CTDIvol ist daher ein Vergleichs- und Optimierungsmaß, keine individuelle Dosis ([[roentgenstrahlung]]).\n\n### Dosisbenachrichtigung und Dosisalarm\n\nDurch Ergänzungen der Norm wurden zwei Schutzfunktionen eingeführt:\n\n- **Benachrichtigungswert (Notification Value):** Überschreitet ein geplanter Scan einen vom Betreiber festgelegten Wert, erscheint vor dem Start eine Meldung; der Anwender muss bewusst bestätigen.\n- **Alarmwert (Alert Value):** bezieht sich auf die kumulierte Dosis an einer Körperstelle innerhalb einer Untersuchung; ein Überschreiten erfordert eine dokumentierte Begründung bzw. Autorisierung.\n\nDiese Funktionen sollen Fehlbedienungen, z. B. versehentlich falsche Protokollparameter bei Perfusionsuntersuchungen, vor dem Scan abfangen ([[anwendungsfehler]]).\n\n### Dosisdokumentation\n\nDie Dosisdaten sind zu dokumentieren und elektronisch bereitzustellen, sodass sie im Bildarchiv bzw. in Dosismanagementsystemen ausgewertet werden können ([[dicom]]).\n\n### Strahlenschutz und Mechanik\n\n- Anzeige des Strahlungsstatus (Strahlung ein) an Konsole und im Untersuchungsraum,\n- Begrenzung von Leck- und Streustrahlung, Angaben zur Streustrahlungsverteilung im Raum für die bauliche Planung,\n- Ausblendung und Strahlfilterung ([[kollimator]]),\n- mechanische Sicherheit von Gantry-Kippung und Liegenbewegung (Quetschgefahr, Lastgrenzen).\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Sicherheit |\n| Ergänzungsnormen | IEC 60601-1-3 (Strahlenschutz in der diagnostischen Röntgentechnik), [[iec-60601-1-2]], [[iec-60601-1-6]] | Strahlenschutz, EMV, Gebrauchstauglichkeit |\n| Besondere Festlegungen | [[iec-60601-2-54]] | Radiographie und Durchleuchtung |\n| Recht in Deutschland | [[strlschg]], Strahlenschutzverordnung [@strlschv] | Genehmigung/Anzeige, Abnahme- und [[konstanzpruefung]], Sachverständigenprüfung, diagnostische Referenzwerte |\n\n> [!hinweis] Grundprinzip der Familie IEC 60601: Die besondere Festlegung (-2-x) hat Vorrang vor Ergänzungsnormen (-1-x) und der Basisnorm. Sie gibt jeweils an, welche Abschnitte der Basisnorm gelten, ergänzt oder ersetzt werden.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen die Dosisangaben mit festgelegter Genauigkeit bereitstellen und die Dosiswarnfunktionen implementieren.\n\n**Betreiber** legen Benachrichtigungswerte für ihre Protokolle fest, überwachen die Dosis im Rahmen der Qualitätssicherung und führen die strahlenschutzrechtlich vorgeschriebenen Prüfungen durch. CT-Anlagen sind in Anlage 1 der [[mpbetreibv]] nicht aufgeführt; eine [[stk]] ist nur durchzuführen, soweit der Hersteller sie vorschreibt [@mpbetreibv]. Im Vordergrund stehen die Abnahme- und Konstanzprüfungen sowie die Sachverständigenprüfung nach Strahlenschutzrecht ([[betreiberpflichten]]).\n\n> [!praxis] Eine sinnvolle Festlegung der Benachrichtigungswerte erfolgt gemeinsam durch Radiologie, Medizinphysik-Experten und Medizintechnik. Zu niedrige Werte erzeugen viele Meldungen und führen dazu, dass sie routinemäßig wegbestätigt werden ([[alarmmuedigkeit]]).\n\n## Betroffene Geräte\n\n[[computertomograph]], [[pet-ct]] (CT-Teil); zur Abgrenzung [[dvt]] und [[c-bogen]] mit 3D-Funktion, deren Normzuordnung sich nach Bauart und Zweckbestimmung richtet. Hersteller sind u. a. [[siemens-healthineers]], [[ge-healthcare]], [[philips]], [[canon-medical]] und [[fujifilm]].\n",
+  "related": [
+    "computertomograph",
+    "roentgenroehre",
+    "roentgendetektor",
+    "gantry",
+    "roentgenstrahlung",
+    "ionisierende-strahlung",
+    "strahlenschutz",
+    "konstanzpruefung",
+    "iec-60601-2-54",
+    "strlschg",
+    "radiologie"
+  ],
+  "sources": [
+    "iec-60601-2-44",
+    "iec-60601-1",
+    "kalender-2011",
+    "strlschg",
+    "strlschv",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

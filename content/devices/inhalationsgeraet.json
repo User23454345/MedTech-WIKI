@@ -1,0 +1,61 @@
+{
+  "id": "inhalationsgeraet",
+  "type": "device",
+  "title": "Inhalationsgerät (Vernebler)",
+  "aliases": [
+    "Vernebler",
+    "Nebulizer",
+    "Aerosoltherapiegerät",
+    "Düsenvernebler",
+    "Ultraschallvernebler",
+    "Membranvernebler",
+    "Mesh-Vernebler"
+  ],
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 36,
+  "domains": [
+    "pneumologie",
+    "intensivmedizin",
+    "hno-heilkunde"
+  ],
+  "summary": "Inhalationsgeräte wandeln flüssige Arzneimittel in ein lungengängiges Aerosol um, das über Mundstück oder Maske eingeatmet wird. Je nach Bauart wird das Aerosol mit Druckluft (Düse), Ultraschall oder einer schwingenden Lochmembran erzeugt.",
+  "sections": {
+    "purpose": "Die Inhalation bringt Wirkstoffe wie Bronchodilatatoren, Kortikosteroide, Antibiotika oder Kochsalzlösung direkt an die Atemwege, mit schnellem Wirkeintritt und geringer systemischer Belastung. Vernebler werden bei Asthma, COPD, Mukoviszidose sowie in der Intensivmedizin (Inline-Vernebelung im Beatmungskreis des [[beatmungsgeraet|Beatmungsgeräts]]) eingesetzt, besonders wenn Dosieraerosole nicht korrekt angewendet werden können.",
+    "principle": "## Aerosolerzeugung\n\n| Bauart | Prinzip | Merkmale |\n|---|---|---|\n| Düsenvernebler | Ein Kompressor liefert Druckluft, die an einer Düse nach dem Venturi-Prinzip Flüssigkeit ansaugt und zerstäubt ([[stroemungslehre]]); Prallkörper scheiden große Tropfen ab | robust, laut, relativ hohes Restvolumen |\n| Ultraschallvernebler | Ein [[piezoelektrischer-effekt|piezoelektrischer]] Schwinger im MHz-Bereich erzeugt an der Flüssigkeitsoberfläche Kapillarwellen, von denen Tröpfchen abreißen | leise; Erwärmung der Lösung möglich, für manche Wirkstoffe ungeeignet |\n| Membranvernebler (Mesh) | Eine piezoelektrisch angeregte Lochmembran mit sehr vielen feinen Öffnungen presst die Flüssigkeit in Tröpfchen | leise, klein, geringes Restvolumen, akkubetrieben |\n\n## Partikelgröße und Deposition\n\nWo sich ein Tröpfchen im Atemtrakt ablagert, hängt vor allem vom aerodynamischen Durchmesser ab: Große Partikel prallen im Rachen ab (Impaktion), mittlere sedimentieren bei langsamer Strömung vor allem in kleinen Atemwegen und Alveolen, sehr kleine bewegen sich überwiegend durch Diffusion und werden zum Teil wieder ausgeatmet. Als Kennwert dient der massenbezogene mediane aerodynamische Durchmesser (MMAD) [@iso-27427].\n\n> [!vereinfacht] Für die Deposition in den tieferen Atemwegen gelten Tröpfchengrößen von etwa 1–5 µm als günstig (*typisch*); Atemmuster (langsame, tiefe Einatmung) beeinflusst die Deposition ebenso stark wie das Gerät.\n\n> [!praxis] Vernebler und Zubehör werden nach jeder Anwendung gereinigt und nach Herstellerangabe [[desinfektion|desinfiziert]] – verkeimte Verneblerkammern sind eine bekannte Infektionsquelle."
+  },
+  "manufacturers": [
+    {
+      "ref": "philips",
+      "models": [
+        "InnoSpire"
+      ],
+      "note": "Philips Respironics."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Prüfung und Wartung nach Herstellerangabe (z. B. Kompressorleistung, Ansaugfilter); Verneblerkammern und Membranen als Verschleißteile regelmäßig ersetzen; elektrische Wiederholungsprüfung nach IEC 62353 bzw. DGUV Vorschrift 3 gemäß Gefährdungsbeurteilung."
+  },
+  "related": [
+    "lunge",
+    "stroemungslehre",
+    "piezoelektrischer-effekt",
+    "beatmungsgeraet",
+    "atemgasbefeuchter",
+    "desinfektion"
+  ],
+  "sources": [
+    "iso-27427",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

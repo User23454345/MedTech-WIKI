@@ -1,0 +1,42 @@
+{
+  "id": "iec-60601-2-19",
+  "type": "standard",
+  "title": "IEC 60601-2-19",
+  "code": "IEC 60601-2-19",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-19: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Säuglingsinkubatoren",
+  "scope": "Legt besondere Anforderungen an die Basissicherheit und die wesentlichen Leistungsmerkmale von Säuglingsinkubatoren fest, die Früh- und Neugeborenen eine geregelte, geschlossene Umgebung bieten.",
+  "aliases": [
+    "DIN EN IEC 60601-2-19",
+    "EN IEC 60601-2-19",
+    "Inkubatornorm",
+    "60601-2-19"
+  ],
+  "category": "normen",
+  "summary": "Die IEC 60601-2-19 ist die besondere Festlegung der Normenfamilie IEC 60601 für stationäre Säuglingsinkubatoren. Sie regelt vor allem die sichere Temperaturregelung, einen unabhängigen Übertemperaturschutz, Alarme, Sauerstoffzufuhr, Schallpegel und Luftströmung im Patientenraum.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-2-19** gilt für den [[inkubator|Säuglingsinkubator]]: ein [[medizinisches-elektrisches-geraet|ME-Gerät]] mit geschlossenem Patientenraum („Haube“), in dem Luft erwärmt, umgewälzt und in der Regel befeuchtet wird, um Früh- und Neugeborenen eine thermisch stabile Umgebung zu bieten [@iec-60601-2-19]. Sie ist eine **besondere Festlegung** (Teil 2) zur [[iec-60601-1|Basisnorm IEC 60601-1]] und ergänzt bzw. ersetzt deren Abschnitte dort, wo der Inkubator besondere Gefährdungen mit sich bringt.\n\nNicht erfasst sind verwandte Gerätearten, für die eigene Teil-2-Normen bestehen:\n\n| Gerät | Norm |\n|---|---|\n| Transportinkubator | IEC 60601-2-20 [@iec-60601-2-20] |\n| offenes [[waermebett|Säuglingswärmebett]] (Wärmestrahler) | IEC 60601-2-21 [@iec-60601-2-21] |\n| [[phototherapiegeraet|Phototherapiegerät]] | IEC 60601-2-50 [@iec-60601-2-50] |\n\n## Zentrale Konzepte und Anforderungen\n\n### Temperaturregelung\n\nFrühgeborene haben eine große Körperoberfläche im Verhältnis zur Masse, wenig Unterhautfettgewebe und eine unreife [[thermoregulation|Thermoregulation]]. Sowohl Auskühlung als auch Überwärmung sind gefährlich. Die Norm unterscheidet deshalb zwei Regelungsarten, die beide gerätetechnisch beherrscht sein müssen:\n\n| Regelungsart | Führungsgröße | Messung |\n|---|---|---|\n| Lufttemperaturregelung | Lufttemperatur im Patientenraum | Lufttemperatursensor im Gerät |\n| Hauttemperaturregelung (Servo-/Baby-Control) | Hauttemperatur des Kindes | [[temperatursensor|Hauttemperatursensor]] am Kind |\n\nGefordert werden u. a. Grenzen für die Temperaturabweichung vom Sollwert, für die Gleichmäßigkeit im Patientenraum und für das Überschwingen nach Sollwertänderungen. Die Regelung selbst ist ein klassischer [[regelkreis|Regelkreis]] mit [[heizelement|Heizelement]], Lüfter und Sensoren.\n\n> [!vereinfacht] Bei der Hauttemperaturregelung wird das Kind selbst Teil des Regelkreises. Löst sich der Hautsensor, misst er die (kühlere) Umgebungsluft – der Regler würde weiterheizen. Deshalb verlangt die Norm Schutzmaßnahmen und Alarme für Sensorfehler.\n\n### Unabhängiger Übertemperaturschutz\n\nEin zentrales Element ist eine **vom Regelkreis unabhängige Schutzeinrichtung**, die bei Übertemperatur die Heizung abschaltet und alarmiert. Ein einzelner Fehler im Regler (z. B. Sensordefekt, festhängendes Relais) darf nicht zur Überhitzung des Kindes führen – eine direkte Anwendung des Einfehlersicherheitsprinzips der Basisnorm.\n\n### Weitere Gefährdungen\n\n* **Alarme** für Über- und Untertemperatur, Ausfall der Luftumwälzung, Stromausfall und Sensorfehler; Gestaltung nach [[iec-60601-1-8]] (siehe [[alarmsystem]]).\n* **Sauerstoff:** Begrenzung bzw. Überwachung der O₂-Konzentration und Brandschutz in sauerstoffangereicherter Atmosphäre (vgl. [[sauerstoffsensor]]).\n* **Schallpegel** im Patientenraum, da das Gehör Frühgeborener empfindlich ist; auch Alarmtöne dürfen innen nicht übermäßig laut sein.\n* **Luftgeschwindigkeit** über der Matratze und **CO₂-Anreicherung** im geschlossenen Raum.\n* Mechanische Sicherheit von Hauben, Klappen und Zugangsöffnungen (Herausfallen, Einklemmen).\n\n> [!hinweis] Konkrete Grenzwerte (z. B. Temperaturdifferenzen, Schalldruckpegel) hängen von der Ausgabe der Norm ab und sind der jeweils gültigen Fassung zu entnehmen.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Rolle |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Basissicherheit (Schutz gegen elektrischen Schlag, [[ableitstrom|Ableitströme]], Temperaturen) |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-6]], [[iec-60601-1-8]] | [[emv|EMV]], [[gebrauchstauglichkeit]], Alarmsysteme |\n| Besondere Festlegung | IEC 60601-2-19 | Säuglingsinkubator |\n| Prozessnormen | [[iso-14971]], [[iec-62304]] | Risikomanagement, Software |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** weisen die Konformität im Rahmen der [[konformitaetsbewertung]] nach der [[mdr|MDR]] nach; harmonisierte Normen begründen dabei eine Konformitätsvermutung. Für Inkubatoren sind besonders die thermischen Prüfungen und die Prüfung der unabhängigen Schutzeinrichtung aufwendig.\n\n**Betreiber** müssen nach der [[mpbetreibv|MPBetreibV]] u. a. die vom Hersteller vorgegebenen Prüfungen beachten; Säuglingsinkubatoren gehören zu den aktiven Medizinprodukten, für die [[stk|sicherheitstechnische Kontrollen]] nach § 12 i. V. m. Anlage 1 vorgeschrieben sind – Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind [@mpbetreibv]. Die Norm liefert dafür den technischen Hintergrund (Übertemperaturabschaltung, Alarme), auch wenn die Prüfung im Betrieb meist nach [[iec-62353]] und Herstelleranweisung erfolgt.\n\n> [!praxis] Bei STK und [[wartung]] von Inkubatoren stehen typischerweise die Funktion der Übertemperaturabschaltung, die Alarmfunktionen, die Genauigkeit der Temperaturanzeige, der Zustand von Dichtungen und Luftfiltern sowie die [[elektrische-sicherheitspruefung]] im Vordergrund. Ein Hauttemperatursensor mit [[sensordrift|Drift]] fällt oft erst im Vergleich mit einem Referenzthermometer auf.\n\n## Betroffene Geräte\n\n* [[inkubator]] (primärer Anwendungsbereich)\n* verwandt: [[waermebett]], [[phototherapiegeraet]], [[patientenwaermesystem]]\n* Fachbereich: [[neonatologie]], [[intensivmedizin]]\n",
+  "related": [
+    "inkubator",
+    "waermebett",
+    "phototherapiegeraet",
+    "neonatologie",
+    "thermoregulation",
+    "temperatursensor",
+    "heizelement",
+    "regelkreis",
+    "alarmsystem",
+    "iec-60601-1",
+    "iec-60601-1-8",
+    "stk"
+  ],
+  "sources": [
+    "iec-60601-2-19",
+    "iec-60601-1",
+    "iec-60601-2-20",
+    "iec-60601-2-21",
+    "iec-60601-2-50",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

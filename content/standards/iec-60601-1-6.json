@@ -1,0 +1,37 @@
+{
+  "id": "iec-60601-1-6",
+  "type": "standard",
+  "title": "IEC 60601-1-6",
+  "code": "IEC 60601-1-6",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 1-6: Allgemeine Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale – Ergänzungsnorm: Gebrauchstauglichkeit",
+  "scope": "Legt fest, wie der Prozess zur Gebrauchstauglichkeit nach IEC 62366-1 auf medizinische elektrische Geräte anzuwenden ist, um Risiken durch Benutzungsfehler zu beherrschen.",
+  "aliases": [
+    "DIN EN 60601-1-6",
+    "EN 60601-1-6",
+    "Usability-Ergänzungsnorm",
+    "60601-1-6"
+  ],
+  "category": "normen",
+  "summary": "Die Ergänzungsnorm IEC 60601-1-6 überträgt das Gebrauchstauglichkeits-Engineering nach IEC 62366-1 auf medizinische elektrische Geräte. Sie dient dazu, Benutzungsfehler als Risikoquelle systematisch zu analysieren und durch Gestaltung der Benutzerschnittstelle zu vermeiden.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-1-6** ist die Ergänzungsnorm der 60601-Familie zur [[gebrauchstauglichkeit|Gebrauchstauglichkeit (Usability)]] von [[medizinisches-elektrisches-geraet|medizinischen elektrischen Geräten]] [@iec-60601-1-6]. Sie ist bewusst schlank gehalten: Inhaltlich verweist sie weitgehend auf die produktübergreifende Prozessnorm [[iec-62366-1|IEC 62366-1]] und legt fest, wie deren Prozess im Kontext der [[iec-60601-1|Basisnorm IEC 60601-1]] anzuwenden ist [@iec-62366-1].\n\nHintergrund ist die Erkenntnis, dass ein erheblicher Teil unerwünschter Ereignisse mit Medizinprodukten nicht auf technisches Versagen, sondern auf Probleme an der Schnittstelle zwischen Mensch und Gerät zurückgeht ([[anwendungsfehler]], [[patientensicherheit]]).\n\n## Zentrale Konzepte und Anforderungen\n\n### Benutzungsfehler als Gefährdung\n\nEin **Benutzungsfehler** (*use error*) ist eine Handlung oder Unterlassung des Anwenders, die zu einem anderen Ergebnis führt als vom Hersteller beabsichtigt oder vom Anwender erwartet. Die Norm verlangt, Benutzungsfehler wie andere Gefährdungsursachen im [[iso-14971|Risikomanagement]] zu behandeln. Davon abzugrenzen ist die **bestimmungswidrige Verwendung** (*abnormal use*), z. B. das bewusste Umgehen von Sicherheitsfunktionen – sie liegt außerhalb dessen, was der Hersteller durch Gestaltung beherrschen muss.\n\n### Prozess der Gebrauchstauglichkeit\n\n| Schritt | Inhalt (vereinfacht) |\n|---|---|\n| Nutzungsspezifikation | Wer bedient das Gerät (Profile, Ausbildung), wo (Umgebung), wofür (Anwendung, Patientengruppe)? |\n| Sicherheitsrelevante Merkmale | Welche Eigenschaften der Benutzerschnittstelle beeinflussen die Sicherheit? |\n| Gefährdungsbezogene Nutzungsszenarien | Welche Abläufe können bei Fehlbedienung zu Schaden führen? |\n| Spezifikation der Benutzerschnittstelle | Anforderungen an Anzeigen, Bedienelemente, Alarme, Begleitpapiere |\n| Formative Evaluierung | iterative Tests während der Entwicklung (z. B. Expertenreviews, Prototypentests) |\n| Summative Evaluierung | abschließender Nachweis mit repräsentativen Anwendern, dass gefährdungsbezogene Szenarien sicher beherrscht werden |\n| Gebrauchstauglichkeitsakte | Dokumentation aller Ergebnisse |\n\n> [!beispiel] Bei einer [[infusionspumpe|Infusionspumpe]] ist die Eingabe der Förderrate ein typisches gefährdungsbezogenes Szenario: Eine Kommaverschiebung (z. B. 10,0 statt 1,0 ml/h) kann zu einer Überdosierung führen. Gestaltungsmaßnahmen sind z. B. Plausibilitätsabfragen, Medikamentenbibliotheken mit Grenzwerten und eine eindeutige Anzeige der Einheit.\n\n### Benutzerschnittstelle im weiten Sinn\n\nZur Benutzerschnittstelle zählen nicht nur [[display-bedienoberflaeche|Display und Bedienelemente]], sondern auch Anschlüsse (Verwechslungssicherheit), [[alarmsystem|Alarmsignale]], Kennzeichnungen, Gebrauchsanweisung und Schulungsunterlagen.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | verweist für die Gebrauchstauglichkeit auf diese Ergänzungsnorm |\n| Ergänzungsnormen | IEC 60601-1-6, [[iec-60601-1-8]] (Alarme), [[iec-60601-1-11]] (Laienanwender) | Alarm- und Heimanwendungsaspekte sind eng mit Usability verknüpft |\n| Besondere Festlegungen | z. B. [[iec-60601-2-24]], [[iso-80601-2-12]] | enthalten oft gerätespezifische Anforderungen an Bedienung und Anzeige |\n| Prozessnormen | [[iec-62366-1]], [[iso-14971]] | Usability-Engineering und Risikomanagement |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen eine Gebrauchstauglichkeitsakte führen, die bei der [[konformitaetsbewertung]] durch die [[benannte-stelle|Benannte Stelle]] geprüft werden kann. Die [[mdr|MDR]] fordert ausdrücklich, Risiken durch Anwendungsfehler aufgrund ergonomischer Merkmale so weit wie möglich zu verringern [@mdr-2017].\n\n**Betreiber** profitieren von gebrauchstauglichen Geräten, tragen aber eigene Verantwortung: Die [[einweisung|Einweisung]] der Anwender, eine einheitliche Gerätelandschaft und klare Standardeinstellungen reduzieren Fehlbedienungen. Rückmeldungen über wiederkehrende Bedienprobleme sollten über das [[vigilanz|Vigilanzsystem]] bzw. an den Hersteller gemeldet werden.\n\n> [!praxis] Gerätevielfalt ist ein Usability-Risiko: Werden auf einer Station Infusionspumpen verschiedener Hersteller mit unterschiedlicher Menülogik eingesetzt, steigt die Verwechslungsgefahr. Standardisierung ist daher auch eine Aufgabe des [[medizintechnik-management|Medizintechnik-Managements]].\n\n## Betroffene Geräte\n\nAlle ME-Geräte, insbesondere solche mit komplexer Bedienung oder hoher Gefährdung bei Fehlbedienung: [[infusionspumpe]], [[spritzenpumpe]], [[pca-pumpe]], [[beatmungsgeraet]], [[anaesthesiegeraet]], [[defibrillator]], [[patientenmonitor]], [[hf-chirurgiegeraet]], [[dialysegeraet]] und [[insulinpumpe]].\n",
+  "related": [
+    "gebrauchstauglichkeit",
+    "iec-62366-1",
+    "anwendungsfehler",
+    "display-bedienoberflaeche",
+    "alarmsystem",
+    "einweisung",
+    "iso-14971",
+    "iec-60601-1",
+    "infusionspumpe",
+    "beatmungsgeraet"
+  ],
+  "sources": [
+    "iec-60601-1-6",
+    "iec-62366-1",
+    "mdr-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

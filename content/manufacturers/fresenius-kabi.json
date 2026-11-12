@@ -1,0 +1,60 @@
+{
+  "id": "fresenius-kabi",
+  "type": "manufacturer",
+  "title": "Fresenius Kabi",
+  "aliases": [
+    "Fresenius Kabi AG",
+    "Kabi"
+  ],
+  "category": "hersteller",
+  "summary": "Die Fresenius Kabi AG mit Sitz in Bad Homburg vor der Höhe ist ein Unternehmensbereich des Gesundheitskonzerns Fresenius. Sie bietet intravenös zu verabreichende Arzneimittel, klinische Ernährung, Biosimilars sowie Medizintechnik für Infusion, Ernährung und Transfusion an.",
+  "headquarters": "Bad Homburg vor der Höhe, Deutschland",
+  "founded": "1999",
+  "website": "https://www.fresenius-kabi.com/",
+  "productLines": [
+    {
+      "device": "infusionspumpe",
+      "models": [
+        "Agilia VP",
+        "Ivenix Infusion System"
+      ],
+      "note": "Agilia-Plattform; Ivenix-System vor allem für den US-Markt."
+    },
+    {
+      "device": "spritzenpumpe",
+      "models": [
+        "Agilia SP"
+      ]
+    },
+    {
+      "device": "enterale-ernaehrungspumpe",
+      "models": [
+        "Applix"
+      ]
+    },
+    {
+      "device": "zellseparator",
+      "models": [
+        "COM.TEC",
+        "AMICUS"
+      ]
+    }
+  ],
+  "body": "## Überblick\n\nDie **Fresenius Kabi AG** ist einer der operativen Unternehmensbereiche der Fresenius SE mit Sitz in Bad Homburg vor der Höhe [@fresenius-kabi-web]. Anders als die rechtlich eigenständige [[fresenius-medical-care]] ist Fresenius Kabi vollständig in den Fresenius-Konzern integriert. Der Schwerpunkt liegt auf der Versorgung kritisch und chronisch kranker Patientinnen und Patienten mit Arzneimitteln, Ernährung und der dazugehörigen Applikationstechnik.\n\n## Geschichte in Stichpunkten\n\n* **1912:** Gründung der Muttergesellschaft Fresenius aus der Hirsch-Apotheke in Frankfurt am Main.\n* **Kabi:** Der Namensteil geht auf das schwedische Pharmaunternehmen Kabi zurück, dessen Infusions- und Ernährungsgeschäft später zu Pharmacia & Upjohn gehörte.\n* **1998/1999:** Fresenius übernimmt dieses Geschäft und führt es mit dem eigenen Pharmageschäft zur Fresenius Kabi zusammen [@fresenius-kabi-web].\n* **2008:** Übernahme von APP Pharmaceuticals (USA, generische injizierbare Arzneimittel).\n* **2012:** Übernahme von Fenwal (Transfusionstechnologie, u. a. Apheresesystem AMICUS).\n* **2022:** Übernahme von Ivenix (Infusionssystem) und Mehrheitsbeteiligung an mAbxience (Biosimilars).\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Pharma | Generische i. v. Arzneimittel, Infusionslösungen, Anästhetika |\n| Nutrition | Parenterale und enterale Ernährung |\n| Biopharma | Biosimilars |\n| MedTech | [[infusionspumpe|Infusions-]] und [[spritzenpumpe|Spritzenpumpen]], [[enterale-ernaehrungspumpe|enterale Ernährungspumpen]], Transfusions- und Zelltherapietechnik ([[zellseparator]]) |\n\n## Bedeutung für die Medizintechnik\n\nFresenius Kabi verbindet Arzneimittel und Applikationstechnik: Medikamentenbibliotheken in den Pumpen ([[infusionspumpe|Dosisfehlerreduktion]]) und die Abstimmung von Überleitsystemen und Lösungen sind Beispiele dafür. In der Transfusionsmedizin sind die [[zellseparator|Zellseparatoren]] COM.TEC und AMICUS verbreitet, die nach dem Prinzip der [[laborzentrifuge|Zentrifugation]] Blutbestandteile trennen.\n\n> [!praxis] Infusions- und Spritzenpumpen unterliegen der [[stk]] nach [[mpbetreibv]]. Bei der Prüfung werden u. a. Förderrate, [[okklusionsalarm|Okklusionsalarm]] und [[luftblasendetektor|Luftdetektion]] kontrolliert; die Vorgaben des Herstellers zu Prüfmitteln und Prüfabläufen sind maßgeblich.\n\n> [!hinweis] Die Unternehmensstruktur des Fresenius-Konzerns wurde in den letzten Jahren umfassend neu geordnet (u. a. Entkonsolidierung von Fresenius Medical Care 2023). Aktuelle Angaben beim Hersteller prüfen [@fresenius-kabi-web].\n\n## Einordnung im Markt\n\nIn der Infusionstechnik steht Fresenius Kabi im Wettbewerb mit [[b-braun]], [[baxter]] und [[icu-medical]]. In der Transfusions- und Zelltherapietechnik sind die Zellseparatoren ein wichtiges Standbein, etwa für die Gewinnung von Thrombozyten- und Stammzellpräparaten. Für die Medizintechnik bedeutet das breite Portfolio, dass Pumpen, Überleitsysteme und Lösungen oft vom selben Hersteller stammen und gemeinsam validiert sind.",
+  "related": [
+    "infusionspumpe",
+    "spritzenpumpe",
+    "enterale-ernaehrungspumpe",
+    "zellseparator",
+    "fresenius-medical-care",
+    "b-braun",
+    "baxter",
+    "icu-medical",
+    "intensivmedizin"
+  ],
+  "sources": [
+    "fresenius-kabi-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

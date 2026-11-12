@@ -1,0 +1,80 @@
+{
+  "id": "icd",
+  "type": "device",
+  "title": "Implantierbarer Kardioverter-Defibrillator (ICD)",
+  "aliases": [
+    "ICD",
+    "implantierbarer Defibrillator",
+    "Kardioverter-Defibrillator",
+    "S-ICD",
+    "subkutaner ICD",
+    "CRT-D"
+  ],
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 26,
+  "domains": [
+    "kardiologie"
+  ],
+  "summary": "Der implantierbare Kardioverter-Defibrillator erkennt lebensbedrohliche ventrikuläre Tachykardien und Kammerflimmern und beendet sie durch antitachykarde Stimulation oder einen Hochspannungsschock. Transvenöse ICDs besitzen zusätzlich die Funktionen eines Herzschrittmachers.",
+  "riskClass": {
+    "value": "III",
+    "evidence": "belegt",
+    "note": "Aktives implantierbares Produkt; nach [[mdr|MDR]] Anhang VIII **Regel 8** gehören aktive implantierbare Produkte und ihr Zubehör zur Klasse III.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Der ICD dient der Vorbeugung des plötzlichen Herztods – sekundärprophylaktisch nach überlebtem Kreislaufstillstand oder anhaltender ventrikulärer Tachykardie, primärprophylaktisch bei hohem Risiko, z. B. bei stark eingeschränkter Pumpfunktion. In Kombination mit kardialer Resynchronisation spricht man vom CRT-D. Als Überbrückung kann eine tragbare Defibrillatorweste dienen.",
+    "principle": "## Erkennung\n\nDer ICD misst über die Sonden kontinuierlich die Herzfrequenz und teilt sie in programmierbare **Frequenzzonen** ein (z. B. VT- und VF-Zone). Zusatzkriterien (Diskriminatoren) wie plötzlicher Beginn, Regelmäßigkeit, Morphologie des intrakardialen Elektrogramms und Vorhof-Kammer-Beziehung unterscheiden ventrikuläre von supraventrikulären Tachykardien, um inadäquate Schocks zu vermeiden [@kramme-2017].\n\n## Therapie\n\n| Therapie | Prinzip |\n|---|---|\n| Antitachykarde Stimulation (ATP) | kurze Salve schneller Stimuli unterbricht Reentry-Kreise, schmerzfrei |\n| Kardioversion | R-Zacken-synchroner Schock niedriger bis mittlerer Energie |\n| Defibrillation | Hochenergieschock (bei transvenösen ICDs maximal typischerweise im Bereich von 35–40 J; der subkutane ICD benötigt wegen des längeren Strompfads deutlich mehr, bis etwa 80 J) |\n\nFür den Schock wandelt ein Spannungswandler die Batteriespannung von wenigen Volt in eine Kondensatorspannung von mehreren hundert Volt um ([[hochspannungserzeugung]], [[kondensator]]); das Laden dauert einige Sekunden. Der Schock wird beim transvenösen ICD biphasisch zwischen einer Schockwendel in der rechten Herzkammer und dem Gehäuse (ggf. zusätzlich einer Wendel in der oberen Hohlvene) abgegeben – physikalisch wie beim externen [[defibrillator]], jedoch mit deutlich geringerer Energie, da der Strom direkt am Herzen fließt.\n\n## Bauformen\n\nNeben transvenösen Systemen gibt es den **subkutanen ICD** (Elektrode unter der Haut neben dem Brustbein, keine Sonde im Herzen, aber keine dauerhafte Schrittmacherfunktion) und extravaskuläre Systeme mit substernaler Elektrode.\n\n> [!warnung] Bei Operationen mit [[hf-chirurgiegeraet|HF-Chirurgie]] kann Störsignal als Kammerflimmern fehlinterpretiert werden. Die Detektion wird daher nach ärztlicher Anordnung deaktiviert und der Patient währenddessen mit externem Defibrillator überwacht."
+  },
+  "manufacturers": [
+    {
+      "ref": "boston-scientific",
+      "models": [
+        "EMBLEM S-ICD"
+      ],
+      "note": "Subkutanes ICD-System."
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "Aurora EV-ICD"
+      ],
+      "note": "Extravaskuläres ICD-System; daneben transvenöse ICDs."
+    },
+    {
+      "ref": "abbott",
+      "models": [
+        "Gallant"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "biotronik",
+      "models": [],
+      "note": "Transvenöse ICDs und CRT-D-Systeme."
+    }
+  ],
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "Das Implantat selbst unterliegt keiner STK; Funktion und Batteriestatus werden in der ärztlichen ICD-Nachsorge kontrolliert. MPBetreibV (2025) Anlage 1 Nr. 3 erfasst externe aktive Komponenten aktiver Implantate – welche Zusatzgeräte darunter fallen, ist anhand der Herstellerangaben zu klären. Nicht in Anlage 2 aufgeführt.",
+    "intervals": "Nachsorge nach ärztlicher Festlegung und Herstellerempfehlung, ergänzt durch Fernnachsorge; STK externer Komponenten, soweit pflichtig, spätestens alle 2 Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025)."
+  },
+  "related": [
+    "herzschrittmacher",
+    "defibrillator",
+    "kondensator",
+    "hochspannungserzeugung",
+    "erregungsleitungssystem"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mdr-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

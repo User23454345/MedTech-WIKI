@@ -1,0 +1,162 @@
+{
+  "id": "lithium-ionen-akku",
+  "type": "term",
+  "title": "Lithium-Ionen-Akkumulator",
+  "aliases": [
+    "Li-Ionen-Akku",
+    "Li-Ion-Akku",
+    "Lithium-ion battery",
+    "Li-ion",
+    "Akkupack",
+    "Lithium-Polymer-Akku",
+    "LiFePO4",
+    "LFP",
+    "NMC"
+  ],
+  "category": "komponenten",
+  "summary": "Wiederaufladbarer elektrochemischer Energiespeicher, in dem Lithium-Ionen zwischen zwei Elektroden wandern. Er versorgt tragbare und transportfähige Medizingeräte und erfordert Batteriemanagement, abgestimmte Ladetechnik sowie Zustandsüberwachung, weil Alterung und thermisches Durchgehen sicherheitsrelevant sind.",
+  "body": "## Begriff\n\nEin **Lithium-Ionen-Akkumulator** (Li-Ionen-Akku, englisch *lithium-ion battery*) ist ein wiederaufladbarer elektrochemischer Energiespeicher, in dem Lithium-Ionen beim Laden und Entladen zwischen zwei Elektroden wandern und dort in ein Wirtsgitter eingelagert werden (**Interkalation**). Wegen hoher Energiedichte, geringer Selbstentladung und fehlendem Memory-Effekt ist er heute der Standard-Energiespeicher tragbarer Medizingeräte – vom [[patientenmonitor|Patientenmonitor]] über [[infusionspumpe|Infusions-]] und [[spritzenpumpe|Spritzenpumpen]] bis zum [[transportbeatmungsgeraet|Transportbeatmungsgerät]] [@reddy-linden-2011].\n\n## Aufbau und elektrochemisches Prinzip\n\nEine Zelle besteht aus:\n\n| Bestandteil | Typische Materialien | Funktion |\n|---|---|---|\n| Negative Elektrode (Anode beim Entladen) | Graphit auf Kupferfolie; seltener Lithiumtitanat | nimmt beim Laden Lithium auf |\n| Positive Elektrode (Kathode beim Entladen) | Lithium-Metalloxide oder -phosphate auf Aluminiumfolie | gibt beim Laden Lithium ab |\n| Elektrolyt | Lithiumsalz in organischem Lösungsmittel | leitet Ionen, nicht Elektronen |\n| Separator | mikroporöse Polymerfolie | trennt die Elektroden elektrisch, lässt Ionen passieren |\n| Gehäuse | zylindrisch, prismatisch oder Pouch-Folie | mechanischer Schutz, z. T. mit Sicherheitsventil |\n\nBeim **Entladen** gibt das in Graphit eingelagerte Lithium ein Elektron ab; das Lithium-Ion wandert durch den Elektrolyten zur positiven Elektrode, das Elektron fließt über den äußeren Stromkreis und verrichtet dort Arbeit. Vereinfacht für eine Graphit/Lithiumcobaltoxid-Zelle:\n\n`LiC₆ → C₆ + Li⁺ + e⁻`  (negative Elektrode)\n\n`Li₁₋ₓCoO₂ + x Li⁺ + x e⁻ → LiCoO₂`  (positive Elektrode)\n\nBeim **Laden** laufen die Reaktionen umgekehrt. Beim ersten Laden bildet sich auf dem Graphit eine Deckschicht (*solid electrolyte interphase*, SEI), die die Zelle stabilisiert, aber dauerhaft etwas Lithium bindet [@reddy-linden-2011].\n\n## Zellchemien im Vergleich\n\n| Chemie | Nennspannung (typisch) | Eigenschaften |\n|---|---|---|\n| Lithiumcobaltoxid (LCO) | ca. 3,6–3,7 V | hohe Energiedichte, empfindlicher gegenüber Überladung und Wärme |\n| Nickel-Mangan-Cobalt (NMC) | ca. 3,6–3,7 V | guter Kompromiss aus Energie, Leistung und Lebensdauer |\n| Lithiumeisenphosphat (LFP) | ca. 3,2–3,3 V | thermisch stabiler, hohe Zyklenfestigkeit, geringere Energiedichte |\n| Lithiummanganoxid (LMO) | ca. 3,7 V | hohe Belastbarkeit, oft in Mischungen |\n\n> [!belegt] Die Ladeschlussspannung typischer Zellen mit Metalloxid-Kathode liegt bei etwa 4,2 V, bei Lithiumeisenphosphat deutlich niedriger; die Werte sind chemie- und herstellerabhängig und dem Zelldatenblatt zu entnehmen [@reddy-linden-2011].\n\n## Elektrische Kenngrößen\n\n* **Kapazität** Q in Amperestunden (Ah) – die bei definierten Bedingungen entnehmbare Ladung.\n* **Energie** `E = U_N · Q` in Wattstunden (Wh).\n* **C-Rate:** Entladestrom bezogen auf die Kapazität; `I = C · Q` (1 C entlädt den vollen Akku rechnerisch in einer Stunde).\n* **Innenwiderstand** R_i: Unter Last sinkt die Klemmenspannung um `ΔU = I · R_i`, zugleich entsteht die Verlustwärme `P = I² · R_i` ([[joulesche-waerme]], [[spannung-strom-widerstand]]).\n\nAkkupacks bestehen aus Zellen in Reihe (Spannung addiert sich) und parallel (Kapazität addiert sich). Ein Pack „4s2p“ hat vier Zellgruppen in Reihe mit je zwei parallelen Zellen.\n\n> [!beispiel] Ein Pack mit 14,4 V Nennspannung und 6 Ah speichert E = 14,4 V · 6 Ah ≈ 86 Wh. Nimmt ein Gerät im Mittel 40 W auf, ergibt sich rechnerisch eine Laufzeit von gut 2 h. Ist der Akku auf 80 % seiner Nennkapazität gealtert und berücksichtigt man Wandlerverluste, bleiben eher 1,5 h. Die Zahlen sind beispielhaft.\n\n## Laden\n\nLi-Ionen-Zellen werden nach dem **CC-CV-Verfahren** geladen: Zuerst mit konstantem Strom (*constant current*) bis zur Ladeschlussspannung, dann mit konstanter Spannung (*constant voltage*), bis der Strom auf einen kleinen Abschaltwert gesunken ist. Eine Erhaltungsladung wie bei Bleiakkus ist nicht vorgesehen.\n\n> [!warnung] Überladung, Tiefentladung, Laden bei Frost oder Überhitzung schädigen die Zelle und können zur Lithiumabscheidung (*lithium plating*) oder zum thermischen Durchgehen führen. Ladegerät und Akku bilden deshalb ein abgestimmtes System; es dürfen nur vom Hersteller freigegebene Akkus und Ladegeräte verwendet werden.\n\n## Batteriemanagement und Schutz\n\nMedizinische Li-Ionen-Akkupacks enthalten eine **Schutzschaltung** bzw. ein **Batteriemanagementsystem (BMS)**:\n\n| Funktion | Zweck |\n|---|---|\n| Über- und Unterspannungsabschaltung je Zelle | Schutz vor Überladung und Tiefentladung |\n| Überstrom- und Kurzschlussabschaltung | Schutz vor Überhitzung |\n| Temperaturüberwachung ([[temperatursensor|NTC]]) | Lade- und Entladefreigabe nur im zulässigen Fenster |\n| Zellbalancing | gleicht Ladungsunterschiede in Reihenschaltungen aus |\n| Ladezustandsbestimmung (*fuel gauge*) | Coulomb-Zählung und Spannungsmodell für die Restlaufzeitanzeige |\n| Datenspeicher | Zyklenzahl, Kapazität, Fehlerereignisse; Kommunikation mit dem Gerät |\n\nZusätzlich besitzen viele Zellen passive Schutzelemente wie Stromunterbrecher und Überdruckventile. Das Gerät selbst wertet die BMS-Daten aus und erzeugt Akku-Alarme nach der Logik des [[alarmsystem|Alarmsystems]].\n\n### Thermisches Durchgehen\n\nBei innerem Kurzschluss, mechanischer Beschädigung oder starker Überhitzung können exotherme Zersetzungsreaktionen einsetzen, die sich selbst beschleunigen (*thermal runaway*): Die Zelle gast aus, kann sich entzünden und Nachbarzellen mitreißen. Konstruktion, Schutzschaltung, die Anforderungen an Batterien in [[iec-60601-1|IEC 60601-1]] sowie Zellnormen wie IEC 62133-2 sollen dies verhindern [@iec-62133-2] [@iec-60601-1].\n\n> [!belegt] Für den Transport müssen Lithiumzellen und -batterien die jeweils auf Zelle bzw. Batterie anwendbaren Prüfungen aus der Reihe T.1 bis T.8 nach Unterabschnitt 38.3 des UN-Handbuchs über Prüfungen und Kriterien bestehen – u. a. Höhensimulation, Temperaturwechsel, Vibration, Schock und externen Kurzschluss; Aufprall/Quetschung und erzwungene Entladung betreffen Zellen, die Überladeprüfung wiederaufladbare Batterien [@un-38-3].\n\n## Alterung\n\nLi-Ionen-Akkus altern auf zwei Arten:\n\n* **Kalendarische Alterung:** schreitet auch ohne Nutzung fort; beschleunigt durch hohe Temperatur und hohen Ladezustand.\n* **Zyklische Alterung:** Folge von Lade-/Entladezyklen; beschleunigt durch hohe Ströme, tiefe Entladungen und Laden bei niedrigen Temperaturen.\n\nFolgen sind Kapazitätsverlust und steigender Innenwiderstand – das Gerät schaltet unter Last früher ab, als die Ladezustandsanzeige erwarten lässt. Als Lebensdauerende wird häufig eine verbleibende Kapazität von etwa 80 % der Nennkapazität definiert; maßgeblich ist jedoch die Herstellerangabe [@reddy-linden-2011].\n\n> [!praxis] Geräte, die dauerhaft am Netz hängen (z. B. Infusionspumpen in der Dockingstation), halten den Akku ständig bei hohem Ladezustand und erhöhter Temperatur – das fördert die kalendarische Alterung. Eine regelmäßige Kapazitätsprüfung deckt schwache Akkus auf, bevor sie beim Patiententransport versagen ([[akkufehler]]).\n\n## Instandhaltung und Prüfung\n\n* **Kapazitätstest:** definierte Entladung und Vergleich mit der Nennkapazität, oft geräteintern als „Akkutest“ oder über Servicesoftware.\n* **Austausch:** nach Herstellerintervall oder bei Unterschreiten der Mindestkapazität; nur freigegebene Originalakkus verwenden.\n* **Lagerung:** kühl und teilgeladen; Tiefentladung bei langer Lagerung vermeiden.\n* **Sichtprüfung:** Aufblähung (*swelling*), Beschädigung, Verfärbung, Korrosion an Kontakten – betroffene Akkus sofort aussondern.\n* **Entsorgung und Transport:** Kontakte gegen Kurzschluss sichern; Gefahrgutvorschriften beachten.\n\nDer Akkuzustand wird bei der [[stk|STK]] und bei der [[wartung|Wartung]] nach Herstellervorgabe mitgeprüft, die elektrische Sicherheit am Gesamtgerät nach [[elektrische-sicherheitspruefung|IEC 62353]].\n\n## Abgrenzung\n\nNicht jede „Lithiumbatterie“ in der Medizintechnik ist ein Akku. Viele [[defibrillator|AED]] verwenden nicht wiederaufladbare Lithium-Primärbatterien mit langer Lagerfähigkeit, und aktive Implantate wie [[herzschrittmacher|Herzschrittmacher]] und [[icd|ICD]] nutzen speziell entwickelte Lithium-Primärzellen. Diese Systeme folgen eigenen Auslegungs- und Austauschregeln.\n\n## Anwendung in Geräten\n\n| Gerät | Rolle des Akkus |\n|---|---|\n| [[infusionspumpe]], [[spritzenpumpe]] | Netzunabhängiger Betrieb bei Transport und Netzausfall |\n| [[beatmungsgeraet]], [[transportbeatmungsgeraet]], [[heimbeatmungsgeraet]] | Überbrückung und Transportbetrieb; Laufzeit ist sicherheitsrelevant |\n| [[patientenmonitor]], [[pulsoxymeter]] | Transportmonitoring |\n| [[defibrillator]] | Energiequelle bei manuellen Geräten (bauartabhängig) |\n| [[thoraxkompressionsgeraet]] | Antriebsenergie für die Kompression |\n| [[vad]] | Energieversorgung des externen Controllers |\n| [[ultraschallgeraet]], [[inkubator]] | Mobiler Betrieb, Transportinkubatoren |\n\n## Bedeutung in der Medizintechnik\n\nDer Akku entscheidet darüber, ob ein lebenserhaltendes Gerät beim Transport oder Netzausfall weiterarbeitet. Er verbindet Elektrochemie, Leistungselektronik ([[medizinisches-netzteil]]), Sensorik ([[temperatursensor]]) und Software. Gealterte oder nicht geladene Akkus sind im mobilen Einsatz eine praktisch bedeutsame Ausfallursache – entsprechend wichtig sind Zustandsüberwachung, rechtzeitiger Austausch und die Schulung der Anwender im Rahmen der [[einweisung|Einweisung]] [@kramme-2017].",
+  "related": [
+    "medizinisches-netzteil",
+    "akkufehler",
+    "temperatursensor",
+    "alarmsystem",
+    "joulesche-waerme",
+    "spannung-strom-widerstand",
+    "infusionspumpe",
+    "transportbeatmungsgeraet",
+    "defibrillator",
+    "iec-60601-1",
+    "wartung",
+    "stk"
+  ],
+  "paths": [
+    [
+      "transportbeatmungsgeraet",
+      "lithium-ionen-akku",
+      "akkufehler",
+      "wartung"
+    ],
+    [
+      "lithium-ionen-akku",
+      "medizinisches-netzteil",
+      "galvanische-trennung"
+    ],
+    [
+      "infusionspumpe",
+      "lithium-ionen-akku",
+      "temperatursensor"
+    ]
+  ],
+  "sources": [
+    "reddy-linden-2011",
+    "iec-62133-2",
+    "un-38-3",
+    "iec-60601-1",
+    "kramme-2017"
+  ],
+  "diagram": {
+    "title": "Akkupack mit Batteriemanagement im Medizingerät",
+    "caption": "Funktionsschema: Energie- und Informationsfluss zwischen Zellen, BMS, Ladeschaltung und Geräteelektronik.",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "netz",
+        "label": "Netzteil /\nLadeschaltung",
+        "ref": "medizinisches-netzteil",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "bms",
+        "label": "Schutzschaltung\n(BMS)",
+        "kind": "control",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "zel",
+        "label": "Li-Ionen-Zellen\n(z. B. 4s2p)",
+        "ref": "lithium-ionen-akku",
+        "kind": "process",
+        "x": 470,
+        "y": 80
+      },
+      {
+        "id": "ger",
+        "label": "Geräteelektronik\nund Antriebe",
+        "kind": "output",
+        "x": 850,
+        "y": 80
+      },
+      {
+        "id": "ntc",
+        "label": "Temperatur-\nsensor (NTC)",
+        "ref": "temperatursensor",
+        "kind": "sensor",
+        "x": 470,
+        "y": 220
+      },
+      {
+        "id": "fg",
+        "label": "Ladezustands-\nbestimmung",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 660,
+        "y": 220
+      },
+      {
+        "id": "al",
+        "label": "Akku-Alarm /\nRestlaufzeit",
+        "ref": "alarmsystem",
+        "kind": "output",
+        "x": 850,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "netz",
+        "to": "bms",
+        "kind": "power",
+        "label": "CC-CV"
+      },
+      {
+        "from": "bms",
+        "to": "zel",
+        "kind": "power"
+      },
+      {
+        "from": "zel",
+        "to": "ger",
+        "kind": "power",
+        "label": "Entladung"
+      },
+      {
+        "from": "zel",
+        "to": "ntc",
+        "kind": "signal"
+      },
+      {
+        "from": "ntc",
+        "to": "bms",
+        "kind": "signal"
+      },
+      {
+        "from": "bms",
+        "to": "fg",
+        "kind": "data",
+        "label": "Strom, Spannung"
+      },
+      {
+        "from": "fg",
+        "to": "al",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

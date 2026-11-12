@@ -6,7 +6,29 @@
   "order": 8,
   "icon": "atom",
   "summary": "Die Physik hinter den Geräten: Druck und Strömung, Schall, Licht, Strahlung, Magnetismus, Wärme und Stromwirkungen.",
-  "body": "",
+  "body": "Jedes Medizingerät beruht auf physikalischen Prinzipien. Beatmung ist angewandte Strömungsmechanik, Dialyse angewandte Diffusion, Ultraschall angewandte Akustik, die Magnetresonanztomographie angewandte Kernspinphysik und Elektrodynamik. Diese Kategorie erklärt die **physikalischen Grundlagen** so weit, wie sie zum Verständnis von Geräten, Messverfahren und Risiken nötig sind [@tipler-2019] [@kramme-2017].\n\nPhysikalisches Verständnis hilft in der Praxis: Wer das Gesetz von Hagen-Poiseuille kennt, versteht, warum ein enger Katheter den Fluss stark begrenzt; wer die [[joulesche-waerme]] kennt, versteht, warum eine schlecht anliegende [[neutralelektrode]] zu Verbrennungen führen kann. Auch Sicherheitsthemen wie [[strahlenschutz]] und [[elektrische-stromwirkung|Stromwirkungen]] sind physikalisch begründet.\n\n> [!vereinfacht] Bei laminarer Strömung durch ein Rohr ist der Volumenstrom proportional zur vierten Potenz des Radius (Q ∝ r⁴). Halbiert sich der Radius, sinkt der Fluss bei gleichem Druck auf ein Sechzehntel. Reale Strömungen in Atemwegen und Gefäßen weichen davon ab.\n\n## Überblick\n\n| Gebiet | Artikel | Anwendung in Geräten |\n|---|---|---|\n| Druck und Gase | [[druck]], [[gasgesetze]] | [[beatmungsgeraet]], [[anaesthesiegeraet]], [[druckkammer]] |\n| Strömung | [[stroemungslehre]] | Beatmung, Infusion, [[herz-lungen-maschine]] |\n| Stofftransport | [[diffusion-osmose]] | [[dialysegeraet]], [[dialysator]], [[ecmo]] |\n| Wärme | [[waermeuebertragung]], [[joulesche-waerme]] | [[inkubator]], [[hf-chirurgiegeraet]], [[patientenwaermesystem]] |\n| Elektrizität und Magnetismus | [[elektromagnetische-induktion]], [[elektrische-stromwirkung]] | [[mrt]], [[transformator]], [[defibrillator]] |\n| Akustik | [[schallwellen]], [[doppler-effekt]], [[piezoelektrischer-effekt]] | [[ultraschallgeraet]], [[lithotripter]] |\n| Optik | [[optik]], [[lambert-beer]], [[laser]] | [[pulsoxymeter]], [[endoskop]], [[chirurgischer-laser]], [[oct]] |\n| Ionisierende Strahlung | [[roentgenstrahlung]], [[ionisierende-strahlung]], [[radioaktivitaet]] | [[roentgengeraet]], [[computertomograph]], [[linearbeschleuniger]], [[pet-ct]] |\n| Kernspin | [[kernspinresonanz]] | [[mrt]] |\n\n## Physik und Bildgebung\n\nDie bildgebenden Verfahren nutzen verschiedene Wechselwirkungen: Röntgenbild und CT beruhen auf der unterschiedlichen Schwächung von [[roentgenstrahlung]] im Gewebe, Ultraschall auf der Reflexion von [[schallwellen]] an Impedanzsprüngen, die MRT auf der [[kernspinresonanz]] von Wasserstoffkernen, die Nuklearmedizin auf dem Zerfall radioaktiver Nuklide [@bushberg-2020] [@doessel-2016]. Die Artikel dieser Kategorie legen die Grundlage; die Gerätedetails stehen in [[geraete]], die Baugruppen in [[komponenten]].\n\n> [!warnung] Ionisierende Strahlung, starke Magnetfelder, Laserstrahlung und hochfrequente Ströme sind mit spezifischen Gefahren verbunden. Die Schutzmaßnahmen sind in [[strahlenschutz]], [[mrt]], [[laser]] und [[hf-chirurgiegeraet]] beschrieben.\n\n## Lernpfad-Empfehlung\n\n1. **Mechanik der Fluide:** [[druck]] → [[gasgesetze]] → [[stroemungslehre]] → [[diffusion-osmose]].\n2. **Wärme und Strom:** [[waermeuebertragung]] → [[joulesche-waerme]] → [[elektrische-stromwirkung]] → [[elektromagnetische-induktion]].\n3. **Wellen:** [[schallwellen]] → [[piezoelektrischer-effekt]] → [[doppler-effekt]]; danach [[optik]] → [[lambert-beer]] → [[laser]].\n4. **Strahlung:** [[roentgenstrahlung]] → [[ionisierende-strahlung]] → [[radioaktivitaet]], ergänzt durch [[strahlenschutz]].\n5. **Kernspin:** [[kernspinresonanz]] als Vorbereitung auf [[mrt]].",
+  "paths": [
+    [
+      "druck",
+      "gasgesetze",
+      "stroemungslehre",
+      "atemmechanik",
+      "beatmungsgeraet"
+    ],
+    [
+      "schallwellen",
+      "piezoelektrischer-effekt",
+      "ultraschallwandler",
+      "doppler-effekt",
+      "ultraschallgeraet"
+    ]
+  ],
+  "sources": [
+    "tipler-2019",
+    "kramme-2017",
+    "bushberg-2020",
+    "doessel-2016"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

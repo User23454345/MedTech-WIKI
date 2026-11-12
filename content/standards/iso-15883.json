@@ -1,0 +1,42 @@
+{
+  "id": "iso-15883",
+  "type": "standard",
+  "title": "ISO 15883",
+  "code": "ISO 15883",
+  "kind": "norm",
+  "fullTitle": "Reinigungs-Desinfektionsgeräte (Normenreihe, Teile 1 bis 7)",
+  "scope": "Legt in mehreren Teilen Anforderungen und Prüfverfahren für Reinigungs-Desinfektionsgeräte fest, die Medizinprodukte und Zubehör maschinell reinigen und desinfizieren.",
+  "aliases": [
+    "DIN EN ISO 15883",
+    "EN ISO 15883",
+    "ISO 15883-1",
+    "ISO 15883-4",
+    "RDG-Norm",
+    "15883"
+  ],
+  "category": "normen",
+  "summary": "Die Normenreihe ISO 15883 legt Anforderungen und Prüfverfahren für Reinigungs-Desinfektionsgeräte (RDG) fest – von der allgemeinen Grundnorm über RDG für chirurgische Instrumente bis zu Geräten für thermolabile Endoskope. Kernkonzept der thermischen Desinfektion ist der A0-Wert.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **ISO 15883** ist eine mehrteilige Normenreihe für **[[rdg|Reinigungs-Desinfektionsgeräte (RDG)]]** [@iso-15883]. Diese Maschinen reinigen und desinfizieren Medizinprodukte im Rahmen der [[aufbereitung|Aufbereitung]] – z. B. chirurgische Instrumente vor der [[sterilisation|Sterilisation]] oder flexible [[endoskop|Endoskope]], die nicht dampfsterilisiert werden können.\n\n| Teil | Gegenstand (sinngemäß) |\n|---|---|\n| 1 | allgemeine Anforderungen, Begriffe und Prüfverfahren [@iso-15883-1] |\n| 2 | RDG mit thermischer Desinfektion für chirurgische Instrumente, Anästhesiezubehör u. Ä. |\n| 3 | RDG mit thermischer Desinfektion für Behälter für menschliche Ausscheidungen (Steckbeckenspüler) |\n| 4 | RDG mit chemischer Desinfektion für thermolabile Endoskope |\n| 5 | Prüfanschmutzungen und Methoden zum Nachweis der Reinigungswirkung |\n| 6 | thermische Desinfektion für nicht invasive, unkritische Produkte |\n| 7 | chemische Desinfektion für nicht invasive, thermolabile, unkritische Produkte |\n\n> [!hinweis] Die Teilung und der Status der einzelnen Teile (Norm bzw. technische Spezifikation) können sich mit neuen Ausgaben ändern; maßgeblich ist die jeweils gültige Fassung.\n\n## Zentrale Konzepte und Anforderungen\n\n### Prozessablauf\n\nEin typischer RDG-Zyklus umfasst Vorspülen (kalt, gegen Proteinfixierung), Reinigen mit Reinigungsmittel, ggf. Neutralisieren, Zwischenspülen, [[desinfektion|Desinfektion]] (thermisch oder chemothermisch), Schlussspülen und Trocknen. Die Norm verlangt, dass jede Phase überwacht wird und Abweichungen zu einem Prozessabbruch mit Meldung führen.\n\n### Das A0-Konzept\n\nFür die thermische Desinfektion definiert Teil 1 den **A0-Wert**: die einer Haltezeit bei 80 °C äquivalente Zeit in Sekunden.\n\n`A0 = Σ 10^((T − 80 °C) / z) · Δt`  mit z = 10 K, Δt in Sekunden\n\nDer Wert z = 10 K beschreibt, um wie viel die Temperatur steigen muss, damit dieselbe Abtötungswirkung in einem Zehntel der Zeit erreicht wird. Gezählt werden nur Zeitabschnitte oberhalb einer unteren Temperaturgrenze (nach Teil 1 typischerweise 65 °C), weil darunter keine nennenswerte thermische Desinfektionswirkung angenommen wird.\n\n> [!beispiel] 10 Minuten bei 80 °C ergeben A0 = 600; 5 Minuten bei 90 °C ergeben A0 = 10 · 300 s = 3000. Eine Temperaturerhöhung um 10 K verkürzt also die notwendige Zeit auf ein Zehntel.\n\n> [!hinweis] Welcher A0-Wert für welche Produktgruppe gefordert ist, ergibt sich aus der Risikobewertung und den nationalen Hygieneempfehlungen; A0 = 600 gilt als Mindestwert für unkritische Produkte mit Kontakt nur zu intakter Haut. Für semikritische und kritische Medizinprodukte wird in Deutschland üblicherweise A0 ≥ 3000 (z. B. 90 °C für 5 Minuten) angesetzt, u. a. wegen hitzeresistenterer Viren wie des Hepatitis-B-Virus [@krinko-bfarm-2012].\n\n### Nachweis der Wirksamkeit\n\n* **Reinigungsleistung:** Prüfung mit standardisierten Prüfanschmutzungen und Nachweis von Restverschmutzung (z. B. Protein) an realen Instrumenten.\n* **Thermometrische Prüfung:** Temperaturlogger in der Beladung belegen, dass überall die Desinfektionsbedingungen erreicht werden.\n* **Wasserqualität** der Schlussspülung, Dosiergenauigkeit der Prozesschemikalien, Trocknung.\n* Bei Endoskop-RDG (Teil 4): Durchspülung und Überwachung aller Kanäle, Selbstdesinfektion des Geräts, Vermeidung einer Rekontamination durch das Schlussspülwasser.\n\n## Bezug zu anderen Normen\n\n| Norm | Rolle |\n|---|---|\n| ISO 15883-Reihe | Leistung und Prüfung von RDG |\n| [[iso-17665]] | anschließende Dampfsterilisation |\n| [[iec-61010-1]] mit IEC 61010-2-040 | elektrische Sicherheit von RDG und Sterilisatoren [@iec-61010-2-040] |\n| [[iso-14971]], [[iso-13485]] | Risikomanagement und QM des Herstellers |\n\nDie IEC-60601-Familie (Basisnorm IEC 60601-1, Ergänzungsnormen 1-x, besondere Festlegungen 2-x) gilt für RDG nicht, da kein Patientenkontakt besteht.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** von RDG weisen die Leistungsfähigkeit ihrer Programme nach den Prüfverfahren der Reihe nach (Typprüfung).\n\n**Betreiber** müssen nach der [[mpbetreibv|MPBetreibV]] Medizinprodukte mit **validierten Verfahren** aufbereiten [@mpbetreibv]. Für RDG bedeutet das eine Validierung am Aufstellort mit den tatsächlich verwendeten Beladungen und Chemikalien sowie periodische Requalifizierung. Die Medizintechnik betreut Installation, [[wartung]], Kalibrierung der Temperatursensoren ([[kalibrierung]], [[temperatursensor]]) und Dosiersysteme.\n\n> [!praxis] Typische Störquellen sind verstopfte Sprüharme, defekte oder falsch angeschlossene Spülwagen-Konnektoren (Hohlkörperinstrumente werden dann nicht durchspült), leere Chemikaliengebinde, verkalkte Heizungen und driftende Temperaturfühler (siehe [[sensordrift]]).\n\n## Betroffene Geräte\n\n* [[rdg]] (primär), Endoskop-RDG für [[endoskop|flexible Endoskope]]\n* Prozesskette: [[dampfsterilisator]], [[niedertemperatursterilisator]], [[aufbereitung]], [[desinfektion]]\n* aufbereitete Produkte u. a. aus [[dentaleinheit|Zahnmedizin]], [[anaesthesiegeraet|Anästhesie]] und [[chirurgie]]\n",
+  "related": [
+    "rdg",
+    "endoskop",
+    "dampfsterilisator",
+    "aufbereitung",
+    "desinfektion",
+    "sterilisation",
+    "iso-17665",
+    "iec-61010-1",
+    "temperatursensor",
+    "kalibrierung",
+    "medizintechnik-management"
+  ],
+  "sources": [
+    "iso-15883",
+    "iso-15883-1",
+    "iec-61010-2-040",
+    "mpbetreibv",
+    "krinko-bfarm-2012"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

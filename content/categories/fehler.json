@@ -6,7 +6,26 @@
   "order": 13,
   "icon": "alert",
   "summary": "Herstellerübergreifende Fehlerbilder und Alarme, ihre technischen Ursachen und das systematische Vorgehen bei der Fehlersuche.",
-  "body": "",
+  "body": "Diese Kategorie beschreibt **herstellerübergreifende Fehlerbilder und Alarme**: Was bedeutet ein [[okklusionsalarm]] physikalisch, warum entsteht [[netzstoerung|Netzbrumm]] im EKG, woran erkennt man [[sensordrift]]? Zu jedem Fehlerbild werden betroffene Geräte, technische Ursachen und ein systematisches Vorgehen beschrieben.\n\nFür Medizintechnik und Klinikpersonal ist dieses Wissen zentral: Viele Alarme haben harmlose, behebbare Ursachen (lose Elektrode, abgeknickte Leitung), andere zeigen echte Gerätedefekte oder Gefährdungen des Patienten an. Wer die Ursachenkette kennt, reagiert schneller und richtiger – und vermeidet unnötige Gerätetausche ebenso wie das Übersehen eines echten Problems.\n\n> [!hinweis] **Zu Fehlercodes:** Numerische Fehlercodes sind herstellerspezifisch und stehen in den Serviceunterlagen des jeweiligen Herstellers. Dieses Wiki erfindet oder sammelt keine Fehlercodes, sondern erklärt, wie Fehlerspeicher und Codes grundsätzlich aufgebaut sind und genutzt werden ([[fehlercodes]]).\n\n## Überblick\n\n| Bereich | Fehlerbilder | Typische Geräte |\n|---|---|---|\n| Förderung von Flüssigkeiten | [[okklusionsalarm]], [[luft-im-system]] | [[infusionspumpe]], [[spritzenpumpe]], [[dialysegeraet]] |\n| Beatmung | [[leckage]], [[atemwegsdruck-hoch]], [[diskonnektion]] | [[beatmungsgeraet]], [[anaesthesiegeraet]], [[heimbeatmungsgeraet]] |\n| Biosignalableitung | [[elektrodenproblem]], [[bewegungsartefakt]], [[netzstoerung]] | [[ekg-geraet]], [[patientenmonitor]], [[eeg-geraet]] |\n| Energie und Elektronik | [[akkufehler]], [[emv-stoerung]] | [[defibrillator]], Transport- und Heimgeräte |\n| Messtechnik | [[sensordrift]] | [[kapnometer]], [[beatmungsgeraet]], [[invasive-druckmessung]] |\n| Extrakorporale Verfahren | [[blutleck-alarm]], [[leitfaehigkeitsalarm]] | [[dialysegeraet]], [[crrt-geraet]] |\n| HF-Chirurgie | [[neutralelektroden-verbrennung]] | [[hf-chirurgiegeraet]] |\n| Bildgebung | [[bildartefakte]] | [[computertomograph]], [[mrt]], [[ultraschallgeraet]] |\n| Mensch und Organisation | [[anwendungsfehler]], [[alarmmuedigkeit]] | alle Geräte |\n| Allgemein | [[fehlercodes]] | alle Geräte mit Fehlerspeicher |\n\n## Systematisches Vorgehen\n\nDie [[fehlersuche|systematische Fehlersuche]] folgt einem festen Muster: zuerst die Sicherheit des Patienten herstellen, dann das Problem eingrenzen (Anwendung – Zubehör – Gerät – Umgebung), Hypothesen prüfen, beheben, Funktion kontrollieren und dokumentieren.\n\n> [!warnung] Bei einem Alarm am Patienten gilt: **Patient vor Gerät.** Zuerst den Zustand des Patienten prüfen und die Versorgung sichern (ggf. Ersatzgerät, manuelle Beatmung), erst danach die technische Ursache suchen. Schutz- und Alarmfunktionen dürfen nicht umgangen werden.\n\n> [!belegt] Schwerwiegende Vorkommnisse mit Medizinprodukten unterliegen dem Meldesystem der [[vigilanz]] nach der MDR [@mdr-2017]. Betroffene Geräte und Zubehörteile sollten bis zur Klärung gesichert und nicht verändert werden.\n\nAlarme selbst sind ein technisches System mit eigenen Regeln: Die [[iec-60601-1-8]] legt u. a. Alarmprioritäten und Signalisierung fest [@iec-60601-1-8]. Zu viele, nicht handlungsrelevante Alarme führen zur [[alarmmuedigkeit]] – einem anerkannten Risiko für die [[patientensicherheit]].\n\n## Lernpfad-Empfehlung\n\n1. **Methodik:** [[fehlersuche]] und [[fehlercodes]].\n2. **Häufige Alarme am Bett:** [[elektrodenproblem]] → [[bewegungsartefakt]] → [[netzstoerung]] → [[okklusionsalarm]] → [[luft-im-system]].\n3. **Beatmung:** [[leckage]] → [[diskonnektion]] → [[atemwegsdruck-hoch]].\n4. **Technische Ursachen:** [[akkufehler]], [[sensordrift]], [[emv-stoerung]].\n5. **Spezialgebiete:** [[blutleck-alarm]], [[leitfaehigkeitsalarm]], [[neutralelektroden-verbrennung]], [[bildartefakte]].\n6. **Faktor Mensch:** [[anwendungsfehler]], [[alarmmuedigkeit]], [[gebrauchstauglichkeit]].",
+  "paths": [
+    [
+      "ekg-elektrode",
+      "elektrodenproblem",
+      "netzstoerung",
+      "bewegungsartefakt"
+    ],
+    [
+      "alarmsystem",
+      "alarmmuedigkeit",
+      "anwendungsfehler",
+      "patientensicherheit"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "iec-60601-1-8",
+    "mdr-2017"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

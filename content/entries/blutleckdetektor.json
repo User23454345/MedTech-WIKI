@@ -1,0 +1,150 @@
+{
+  "id": "blutleckdetektor",
+  "type": "term",
+  "title": "Blutleckdetektor",
+  "aliases": [
+    "Blutleck-Detektor",
+    "Blutlecksensor",
+    "BLD",
+    "blood leak detector",
+    "Blood-Leak-Detektor",
+    "Hämoglobindetektor"
+  ],
+  "category": "sensorik",
+  "summary": "Optischer Sensor im Dialysat- oder Effluentweg von Dialyse- und Nierenersatzgeräten, der Blut nach einem Membranriss im Dialysator über die Lichtabsorption des Hämoglobins erkennt und eine Schutzreaktion mit Alarm auslöst.",
+  "body": "## Begriff und Aufgabe\n\nDer **Blutleckdetektor** (englisch *blood leak detector*, BLD) ist ein optischer Sensor im Dialysat- bzw. Effluentweg extrakorporaler Blutreinigungsgeräte. Er erkennt, ob Blut durch eine undichte Membran des [[dialysator|Dialysators]] oder Hämofilters auf die Dialysatseite übertritt. Ein solches **Blutleck** bedeutet Blutverlust und – wichtiger noch – eine durchbrochene Barriere zwischen Blut und nicht sterilem Dialysat mit Infektionsrisiko [@daugirdas-2015]. Er gehört zusammen mit dem [[luftblasendetektor|Luftblasendetektor]], der venösen und arteriellen [[druckmessung|Druckmessung]] und der [[leitfaehigkeitssensor|Leitfähigkeitsmessung]] zu den zentralen Schutzsystemen des [[dialysegeraet|Hämodialysegeräts]].\n\n## Messprinzip\n\nDer Detektor nutzt die Lichtabsorption des [[haemoglobin|Hämoglobins]]. Eine Lichtquelle (LED) durchstrahlt eine transparente Messkammer, durch die das verbrauchte Dialysat fließt; ein Photodetektor auf der Gegenseite misst die transmittierte Intensität. Gelangt Blut ins Dialysat, absorbieren die roten Blutkörperchen bzw. freies Hämoglobin einen Teil des Lichts, und das Detektorsignal sinkt.\n\nPhysikalische Grundlage ist das [[lambert-beer|Lambert-Beer-Gesetz]]:\n\n`I = I₀ · 10^(−ε · c · d)`  bzw.  `E = lg(I₀ / I) = ε · c · d`\n\nmit der Eingangsintensität I₀, der Extinktion E, dem (dekadischen) molaren Extinktionskoeffizienten ε, der Konzentration c und der Schichtdicke d. Für kleine Konzentrationen gilt näherungsweise `ΔI / I₀ ≈ −ln 10 · ε · c · d ≈ −2,3 · ε · c · d` – die relative Signaländerung ist der Blutkonzentration proportional.\n\n> [!vereinfacht] Lambert-Beer gilt streng nur für klare, nicht streuende Lösungen. Erythrozyten streuen Licht stark; das Signal hängt deshalb auch von Hämatokrit, Zellform und Strömung ab. Reale Detektoren werden empirisch mit definierten Blutverdünnungen abgeglichen und arbeiten mit Schwellenwerten, nicht mit einer exakten Konzentrationsberechnung [@webster-2010].\n\n### Wellenlängenwahl\n\nHämoglobin absorbiert am stärksten im violetten Bereich (Soret-Bande um etwa 415 nm) und deutlich im grün-gelben Bereich (Q-Banden um etwa 540–580 nm), im Roten und nahen Infrarot dagegen um Größenordnungen schwächer; klares Dialysat ist im sichtbaren Bereich nahezu transparent. Häufig wird deshalb mit grünem Licht gemessen, oft kombiniert mit einem Referenzkanal (Bauweise herstellerabhängig):\n\n| Kanal | Zweck |\n|---|---|\n| Messwellenlänge (stark von Hb absorbiert) | eigentliches Blutlecksignal |\n| Referenzwellenlänge (wenig von Hb absorbiert) oder Referenzempfänger | Kompensation von LED-Alterung, Verschmutzung der Messkammer, Trübung und Luftblasen |\n\nAus dem Verhältnis von Mess- zu Referenzsignal ergibt sich eine robuste Größe, die gegen gleichsinnige Störungen weitgehend unempfindlich ist – dasselbe Grundprinzip der Verhältnisbildung, das auch die [[photoplethysmographie|Photoplethysmographie]] und das [[pulsoxymeter|Pulsoxymeter]] nutzen.\n\n## Signalverarbeitung\n\nDie [[messkette|Messkette]] des Blutleckdetektors besteht typischerweise aus:\n\n1. getakteter LED-Ansteuerung (Unterdrückung von Fremdlicht durch Synchrondemodulation),\n2. Photodiode mit Transimpedanzverstärker ([[operationsverstaerker]]),\n3. [[analog-digital-wandler|A/D-Wandlung]] und Mittelwertbildung ([[filter]]),\n4. Nullabgleich mit klarem Dialysat zu Therapiebeginn,\n5. Schwellenvergleich mit Zeitverzögerung, um kurze Störungen (z. B. einzelne Luftblasen) nicht als Blutleck zu werten.\n\nDie Detektionsschwelle ist ein Kompromiss: Zu empfindlich führt zu Fehlalarmen und [[alarmmuedigkeit|Alarmmüdigkeit]], zu unempfindlich lässt kleine Membranlecks unentdeckt. Anforderungen an die Erkennung eines Blutverlusts in das Dialysat legt die Gerätenorm [[iec-60601-2-16|IEC 60601-2-16]] fest [@iec-60601-2-16].\n\n> [!belegt] Ein Blutleck in das Dialysat ist bei Hämodialysegeräten eine Gefährdung, gegen die die gerätespezifische Norm eine Schutzeinrichtung mit Alarm verlangt [@iec-60601-2-16]. Konkrete Ansprechschwellen sind herstellerspezifisch und der Gebrauchsanweisung zu entnehmen.\n\n## Reaktion des Geräts\n\nLöst der Detektor aus, erzeugt das Gerät einen [[blutleck-alarm|Blutleckalarm]] hoher Priorität ([[alarmsystem]]). Typische Schutzreaktionen sind das Anhalten der Ultrafiltration und der Dialysatfluss-Bypass, häufig auch das Stoppen der Blutpumpe; die genaue Reaktion ist gerätespezifisch. Das Personal prüft dann visuell den Dialysatablauf; bei bestätigtem Leck wird die Behandlung nach Klinikstandard beendet oder der Dialysator gewechselt. Ob das extrakorporale Blut zurückgegeben wird, entscheidet die Ärztin bzw. der Arzt nach Klinikstandard – es kann mit nicht sterilem Dialysat in Kontakt gekommen sein.\n\n## Anwendung in Geräten\n\n| Gerät | Einbauort des Blutleckdetektors |\n|---|---|\n| [[dialysegeraet]] | Dialysatablauf hinter dem Dialysator |\n| [[crrt-geraet]] | Effluentleitung hinter dem Hämofilter |\n| [[zellseparator]] | je nach Gerät optische Überwachung von Plasma- bzw. Abfallleitungen |\n| [[ecmo]], [[herz-lungen-maschine]] | kein Dialysat; hier übernehmen Luftblasen- und Drucküberwachung die Schutzfunktion, ein Plasmaleck am Oxygenator wird klinisch erkannt |\n\n## Fehlerquellen und Fehlalarme\n\n| Ursache | Wirkung | Hinweis |\n|---|---|---|\n| Luftblasen im Dialysat | kurzzeitiger Signaleinbruch | Zeitfilter, Entgasung der Hydraulik prüfen |\n| Verschmutzte oder verkalkte Messkammer | schleichende Signalabnahme | Entkalkung/Desinfektion nach Herstellervorgabe |\n| Gefärbtes Dialysat (z. B. durch dialysierbare Farbstoffe oder Medikamente) | falsch-positiver Alarm | in der Literatur beschrieben; Plausibilisierung durch Sichtprüfung oder Teststreifen auf Blut |\n| Hämolyse | freies Hämoglobin kann je nach Molekülgröße und Membran ins Dialysat gelangen | Ursachenabklärung (Pumpe, Temperatur, Leitfähigkeit) |\n| Alternde LED, Fremdlicht | Drift des Arbeitspunkts | Referenzkanal, Nullabgleich, [[sensordrift]] |\n\n> [!praxis] Bei einem Blutleckalarm lohnt sich vor jeder weiteren Maßnahme der Blick auf den Dialysatablauf und gegebenenfalls ein Urin-Teststreifen auf Blut am Dialysat. Ein rosa oder rötlich verfärbtes Effluat bestätigt das Leck; klares Dialysat bei wiederholtem Alarm spricht eher für Luft oder eine verschmutzte Messkammer.\n\n## Prüfung und Instandhaltung\n\nIm Rahmen von [[wartung|Wartung]] und [[stk|sicherheitstechnischer Kontrolle]] wird die Funktion des Blutleckdetektors geprüft – je nach Hersteller mit Prüffiltern bzw. Prüfflüssigkeiten definierter Absorption oder über einen Abgleich- und Selbsttest. Die [[funktionspruefung|Funktionsprüfung]] umfasst die Alarmauslösung und die korrekte Schutzreaktion des Geräts. Eingriffe in Schwellenwerte bleiben befugtem Fachpersonal nach Herstellervorgabe vorbehalten.\n\n> [!warnung] Ein Blutleckdetektor darf nicht überbrückt oder dauerhaft stummgeschaltet werden. Wiederholte Fehlalarme sind ein Wartungsfall, kein Bedienproblem.\n",
+  "related": [
+    "dialysegeraet",
+    "crrt-geraet",
+    "dialysator",
+    "blutleck-alarm",
+    "lambert-beer",
+    "haemoglobin",
+    "luftblasendetektor",
+    "leitfaehigkeitssensor",
+    "photoplethysmographie",
+    "messkette",
+    "alarmsystem",
+    "iec-60601-2-16"
+  ],
+  "paths": [
+    [
+      "dialysegeraet",
+      "dialysator",
+      "blutleckdetektor",
+      "lambert-beer",
+      "haemoglobin"
+    ],
+    [
+      "dialysegeraet",
+      "blutleckdetektor",
+      "blutleck-alarm",
+      "fehlersuche"
+    ]
+  ],
+  "sources": [
+    "daugirdas-2015",
+    "webster-2010",
+    "iec-60601-2-16",
+    "fraden-2016"
+  ],
+  "diagram": {
+    "title": "Blutleckdetektor: Funktionsschema",
+    "caption": "Optische Durchlichtmessung im Dialysatablauf mit Referenzkanal und Schutzreaktion.",
+    "width": 960,
+    "height": 280,
+    "nodes": [
+      {
+        "id": "dia",
+        "label": "Dialysator\n(Membran)",
+        "kind": "process",
+        "x": 90,
+        "y": 80,
+        "ref": "dialysator"
+      },
+      {
+        "id": "led",
+        "label": "LED\n(grün/Referenz)",
+        "kind": "source",
+        "x": 290,
+        "y": 210
+      },
+      {
+        "id": "kam",
+        "label": "Messkammer\nDialysatablauf",
+        "kind": "process",
+        "x": 290,
+        "y": 80
+      },
+      {
+        "id": "pd",
+        "label": "Photodiode +\nVerstärker",
+        "kind": "sensor",
+        "x": 490,
+        "y": 80,
+        "ref": "blutleckdetektor"
+      },
+      {
+        "id": "mcu",
+        "label": "Verhältnisbildung\nSchwelle, Zeitfilter",
+        "kind": "control",
+        "x": 690,
+        "y": 80,
+        "ref": "mikrocontroller"
+      },
+      {
+        "id": "alarm",
+        "label": "Blutleckalarm",
+        "kind": "output",
+        "x": 870,
+        "y": 80,
+        "ref": "blutleck-alarm"
+      },
+      {
+        "id": "stop",
+        "label": "Bypass /\nPumpenstopp",
+        "kind": "actuator",
+        "x": 870,
+        "y": 210,
+        "ref": "dialysegeraet"
+      }
+    ],
+    "edges": [
+      {
+        "from": "dia",
+        "to": "kam",
+        "kind": "fluid",
+        "label": "Dialysat"
+      },
+      {
+        "from": "led",
+        "to": "kam",
+        "kind": "energy",
+        "label": "Licht"
+      },
+      {
+        "from": "kam",
+        "to": "pd",
+        "kind": "energy",
+        "label": "I = I₀·10^(−εcd)"
+      },
+      {
+        "from": "pd",
+        "to": "mcu",
+        "kind": "signal"
+      },
+      {
+        "from": "mcu",
+        "to": "alarm",
+        "kind": "signal"
+      },
+      {
+        "from": "mcu",
+        "to": "stop",
+        "kind": "signal"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

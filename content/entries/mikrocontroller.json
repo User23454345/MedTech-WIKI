@@ -1,0 +1,150 @@
+{
+  "id": "mikrocontroller",
+  "type": "term",
+  "title": "Mikrocontroller und Embedded-Systeme",
+  "aliases": [
+    "µC",
+    "MCU",
+    "Microcontroller",
+    "Embedded System",
+    "Eingebettetes System",
+    "Firmware",
+    "Watchdog",
+    "RTOS",
+    "Echtzeitbetriebssystem",
+    "Steuerplatine"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Ein Mikrocontroller vereint Prozessor, Speicher und Peripherie wie Timer, PWM-Einheiten, Analog-Digital-Wandler und Schnittstellen auf einem Chip. Als Kern eingebetteter Systeme steuert, regelt und überwacht er nahezu jedes aktive Medizinprodukt; seine Firmware ist Software im Sinne des Medizinprodukterechts und unterliegt einem geregelten Entwicklungsprozess.",
+  "body": "## Begriff\n\nEin **Mikrocontroller** (µC, engl. *microcontroller unit*, MCU) ist ein Ein-Chip-Computer: Rechenkern (CPU), Programmspeicher (Flash), Arbeitsspeicher (RAM) und zahlreiche Peripheriemodule sind in einem Baustein integriert. Ein **eingebettetes System** (engl. *embedded system*) ist ein Rechner, der fest in ein technisches Gerät eingebaut ist und dort eine spezielle Aufgabe erfüllt – meist unsichtbar für den Anwender und häufig unter Echtzeitbedingungen [@white-embedded-2011] [@horowitz-hill-2015].\n\n## Aufbau\n\n| Baugruppe | Funktion | Beispiel im Medizingerät |\n|---|---|---|\n| CPU | führt das Programm aus | Regelalgorithmen, Alarmlogik |\n| Flash | Programmspeicher, nichtflüchtig | Firmware, Kalibrierdaten |\n| RAM | Arbeitsspeicher, flüchtig | Messwertpuffer, Variablen |\n| EEPROM / Daten-Flash | nichtflüchtige Parameter | Betriebsstunden, Fehlerspeicher, Einstellungen |\n| GPIO | digitale Ein-/Ausgänge | Tasten, Ventile, Status-LEDs |\n| Timer / [[pwm|PWM]] | Zeitbasis, Pulsweitenmodulation | Motoransteuerung, Heizung |\n| [[analog-digital-wandler|ADC]] / DAC | Analog-Schnittstelle | Druck-, Temperatur-, Stromsignale |\n| Serielle Schnittstellen (UART, SPI, I²C, CAN, USB, Ethernet) | Kommunikation | Sensoren, Display, Zweitprozessor, Netzwerk |\n| Watchdog | Überwachung des Programmlaufs | Neustart bzw. sicherer Zustand bei Absturz |\n\nFür rechenintensive Aufgaben wie Bildgebung oder umfangreiche Benutzeroberflächen kommen zusätzlich Mikroprozessoren mit Betriebssystem, digitale Signalprozessoren (DSP) oder programmierbare Logik (FPGA) zum Einsatz.\n\n## Echtzeit und Software-Struktur\n\nViele Aufgaben in Medizingeräten sind **zeitkritisch**: Ein [[regelkreis|Regelkreis]] muss in festem Takt rechnen, eine Druckgrenze muss innerhalb weniger Millisekunden erkannt werden. Dafür arbeitet die Firmware mit **Interrupts** (Unterbrechungen bei Ereignissen) und häufig mit einem **Echtzeitbetriebssystem** (RTOS), das Aufgaben nach Priorität und Zeitschranken ausführt. Entscheidend ist nicht die mittlere, sondern die **garantierte maximale Reaktionszeit** [@white-embedded-2011].\n\n> [!vereinfacht] Eine typische Firmware lässt sich in Schichten denken: Hardware-Treiber (ADC, PWM, Schnittstellen) – Signalverarbeitung ([[filter|digitale Filter]], Kalibrierung) – Regel- und Überwachungslogik – Benutzeroberfläche und Kommunikation. Reale Architekturen sind herstellerspezifisch.\n\n## Sicherheitsarchitektur\n\nEin Rechner kann ausfallen, hängen bleiben oder falsch rechnen. Sicherheitskritische Geräte begegnen dem mit mehreren Maßnahmen:\n\n* **Watchdog:** Ein unabhängiger Zeitgeber muss von der Software regelmäßig zurückgesetzt werden. Bleibt das aus, wird ein Neustart oder ein definierter sicherer Zustand ausgelöst.\n* **Selbsttests:** Prüfsummen über den Programmspeicher, RAM-Tests, Plausibilitätsprüfungen von Sensorwerten beim Einschalten und im Betrieb.\n* **Zweikanaligkeit:** Ein zweiter, unabhängiger Prozessor überwacht wichtige Größen und Alarme (z. B. Haupt- und Überwachungsprozessor). Fällt einer aus, kann der andere einen Alarm auslösen und das Gerät in einen sicheren Zustand bringen.\n* **Fehlerspeicher:** Ereignisse und Fehler werden protokolliert und unterstützen die [[fehlersuche|Fehlersuche]]; siehe [[fehlercodes]].\n\n> [!belegt] Software in Medizinprodukten – auch Firmware eines eingebetteten Systems – ist nach einem definierten Lebenszyklusprozess zu entwickeln und zu pflegen. IEC 62304 ordnet Software dabei in die Sicherheitsklassen A, B und C ein, je nachdem, ob ein Softwarefehler zu keiner Verletzung oder Gesundheitsschädigung, zu einer nicht schwerwiegenden Verletzung oder zu einer schwerwiegenden Verletzung bzw. zum Tod beitragen kann; seit der Änderung 1 (2015) werden dabei auch softwareexterne Risikobeherrschungsmaßnahmen berücksichtigt. Der Umfang der geforderten Aktivitäten (z. B. Detailentwurf, Unit-Verifizierung) richtet sich nach der Klasse [@iec-62304].\n\nDas Risikomanagement nach [[iso-14971|ISO 14971]] bestimmt, welche Hardware- und Softwaremaßnahmen nötig sind [@iso-14971]. Die [[mdr|MDR]] stellt in Anhang I Abschnitt 17 eigene Anforderungen an Produkte, zu deren Bestandteilen elektronische programmierbare Systeme gehören, und an Software, die selbst ein Medizinprodukt ist: Entwicklung nach dem Stand der Technik unter Berücksichtigung von Lebenszyklus, Risikomanagement, Verifizierung und Validierung sowie Mindestanforderungen an Hardware, IT-Netze und IT-Sicherheitsmaßnahmen [@mdr-2017].\n\n## Kommunikation und Vernetzung\n\nModerne Geräte tauschen Daten mit Patientendatenmanagementsystemen, Zentralen und Krankenhausinformationssystemen aus, etwa über [[hl7-fhir|HL7/FHIR]] oder in der Bildgebung über [[dicom|DICOM]]. Damit werden Software-Updates, Netzwerksegmentierung und Cybersicherheit Teil des Betriebs. Updates dürfen nur nach Freigabe des Herstellers und gemäß seinen Vorgaben eingespielt werden.\n\n## Anwendung in Geräten\n\n| Gerät | Aufgaben des eingebetteten Systems |\n|---|---|\n| [[beatmungsgeraet]] | Druck- und Flowregelung, [[drehzahlregelung|Turbinendrehzahl]], Alarme, Bedienoberfläche |\n| [[infusionspumpe]], [[spritzenpumpe]] | Förderratenregelung, Okklusions- und Luftblasenerkennung, Medikamentenbibliothek |\n| [[patientenmonitor]] | Biosignalerfassung, Alarmalgorithmen, Vernetzung |\n| [[defibrillator]] | Rhythmusanalyse, Ladesteuerung, Selbsttest, Ereignisprotokoll |\n| [[herzschrittmacher]], [[icd]] | stromsparende Erkennungs- und Stimulationslogik über Jahre aus einer Batterie |\n| [[dialysegeraet]] | Ablaufsteuerung, Bilanzierung, zahlreiche Schutzsysteme |\n| [[inkubator]] | Temperatur- und Feuchteregelung |\n\n> [!praxis] Viele „Hardware-Fehler“ werden über Softwarefunktionen sichtbar: Selbsttestmeldungen beim Einschalten, Fehlerspeichereinträge oder Plausibilitätsalarme. Die Interpretation erfordert die Herstellerdokumentation; Fehlercodes sind herstellerspezifisch und nicht übertragbar.\n\n> [!hinweis] Nach dem Tausch von Platinen oder Software-Updates sind in der Regel Funktionsprüfungen und gegebenenfalls Kalibrierungen nach Herstellervorgabe erforderlich; siehe [[funktionspruefung]] und [[kalibrierung]].",
+  "related": [
+    "analog-digital-wandler",
+    "pwm",
+    "regelkreis",
+    "filter",
+    "software-medizinprodukt",
+    "fehlercodes",
+    "alarmsystem",
+    "display-bedienoberflaeche",
+    "iec-62304"
+  ],
+  "paths": [
+    [
+      "sensorik",
+      "analog-digital-wandler",
+      "mikrocontroller",
+      "pwm",
+      "elektromotor"
+    ],
+    [
+      "mikrocontroller",
+      "software-medizinprodukt",
+      "iec-62304"
+    ]
+  ],
+  "diagram": {
+    "title": "Eingebettetes System im Medizingerät",
+    "caption": "Funktionsschema eines mikrocontrollerbasierten Geräts mit Überwachungskanal; kein konkretes Gerät.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "sen",
+        "label": "Sensoren",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "adc",
+        "label": "ADC",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 300,
+        "y": 90
+      },
+      {
+        "id": "mcu",
+        "label": "Haupt-\nMikrocontroller",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 500,
+        "y": 90
+      },
+      {
+        "id": "act",
+        "label": "PWM / Treiber\n→ Aktoren",
+        "ref": "pwm",
+        "kind": "actuator",
+        "x": 730,
+        "y": 90
+      },
+      {
+        "id": "ui",
+        "label": "Display /\nBedienung",
+        "ref": "display-bedienoberflaeche",
+        "kind": "output",
+        "x": 730,
+        "y": 260
+      },
+      {
+        "id": "sup",
+        "label": "Überwachungs-\nprozessor",
+        "kind": "control",
+        "x": 500,
+        "y": 260
+      },
+      {
+        "id": "alarm",
+        "label": "Alarmsystem",
+        "ref": "alarmsystem",
+        "kind": "output",
+        "x": 250,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "sen",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "mcu",
+        "kind": "data"
+      },
+      {
+        "from": "mcu",
+        "to": "act",
+        "kind": "signal"
+      },
+      {
+        "from": "mcu",
+        "to": "ui",
+        "kind": "data"
+      },
+      {
+        "from": "mcu",
+        "to": "sup",
+        "kind": "data",
+        "label": "Lebenszeichen"
+      },
+      {
+        "from": "sup",
+        "to": "alarm",
+        "kind": "signal"
+      }
+    ]
+  },
+  "sources": [
+    "white-embedded-2011",
+    "horowitz-hill-2015",
+    "iec-62304",
+    "iso-14971",
+    "mdr-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "dentaleinheit",
+  "type": "device",
+  "title": "Zahnärztliche Behandlungseinheit",
+  "aliases": [
+    "Dentaleinheit",
+    "Behandlungseinheit",
+    "Dental Unit",
+    "Behandlungsplatz",
+    "Behandlungsstuhl",
+    "Dental-Behandlungszentrum"
+  ],
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 94,
+  "domains": [
+    "zahnmedizin"
+  ],
+  "summary": "Die zahnärztliche Behandlungseinheit vereint Patientenstuhl, Arztelement mit Antriebs- und Übertragungsinstrumenten, Helferinnenelement mit Absaugung, Wasser- und Druckluftversorgung sowie Behandlungsleuchte zu einem Arbeitsplatz. Sie ist das zentrale Gerät jeder Zahnarztpraxis.",
+  "sections": {
+    "purpose": "An der Behandlungseinheit werden nahezu alle zahnärztlichen Eingriffe durchgeführt: Kariesentfernung und Füllungstherapie, Präparation für Kronen, Wurzelkanalbehandlung, Zahnsteinentfernung, Parodontal- und chirurgische Eingriffe. Sie stellt die Antriebsenergie für die Instrumente bereit, kühlt Zahn und Instrument mit Spraywasser und hält das Arbeitsfeld durch Absaugung trocken.",
+    "principle": "## Medienversorgung\n\nDie Einheit wird mit Druckluft (Kompressor), Trinkwasser, Strom und Saugleistung (zentrale Sauganlage) versorgt. Magnet- und Pneumatikventile ([[magnetventil]]) schalten die Medien zum jeweils abgelegten Instrument; die Steuerung erfolgt über Fußanlasser und [[display-bedienoberflaeche|Bedienelement]]. Eine Sicherungseinrichtung nach DIN EN 1717 – in der Regel ein freier Auslauf innerhalb der Einheit – verhindert, dass kontaminiertes Wasser aus der Einheit in das Trinkwassernetz zurückfließt.\n\n## Antriebe\n\n| Antrieb | Prinzip | Charakteristik |\n|---|---|---|\n| Luftturbine | Druckluft treibt ein Flügelrad im Kopf des Handstücks an | sehr hohe Drehzahl (typisch mehrere 100 000 min⁻¹), Drehmoment fällt unter Last ab |\n| Elektrischer Mikromotor | [[bldc-motor|bürstenloser Gleichstrommotor]] mit [[drehzahlregelung|Drehzahlregelung]], Übersetzung über Winkelstück (z. B. 1:5 ins Schnelle) | konstantes Drehmoment, präzise Drehzahl, Drehmomentbegrenzung für die Endodontie |\n| Ultraschall-Scaler | [[piezoelektrischer-effekt|piezoelektrischer]] oder magnetostriktiver Schwinger | Zahnsteinentfernung |\n\nDie Spraykühlung (Wasser-Luft-Gemisch) begrenzt die Erwärmung der Zahnhartsubstanz durch Reibung.\n\n## Absaugung und Hygiene\n\nDie Saugkanüle (Hochvolumen) und der Speichelsauger werden über die zentrale Sauganlage betrieben; Abscheider trennen Luft und Flüssigkeit, ein Amalgamabscheider hält Amalgampartikel aus dem Abwasser zurück.\n\n> [!warnung] Die dünnen Wasserleitungen der Einheit neigen zur Biofilmbildung. Integrierte Entkeimungsanlagen, regelmäßiges Durchspülen und mikrobiologische Kontrollen nach den Hygieneempfehlungen sind daher unerlässlich; Hand- und Winkelstücke sind nach jedem Patienten [[aufbereitung|aufzubereiten]] [@krinko-zahn-2006] [@krinko-bfarm-2012]."
+  },
+  "manufacturers": [
+    {
+      "ref": "dentsply-sirona",
+      "models": [
+        "Axano",
+        "Sinius",
+        "Intego"
+      ],
+      "note": "Behandlungseinheiten in mehreren Ausstattungslinien."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software- und Zusatzmodulen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Behandlungseinheiten sind als solche in Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; integrierte Module können jedoch darunter fallen (z. B. HF-Chirurgie oder Laser nach Anlage 1 Nr. 1.3). Im Übrigen Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Wartung nach Herstellerangabe (u. a. Filter, Dichtungen, Wasserentkeimung, Absaugung, Amalgamabscheider); elektrische Wiederholungsprüfung nach IEC 62353 bzw. DGUV Vorschrift 3; tägliche bzw. patientenbezogene Hygienemaßnahmen (Durchspülen der Wasserwege, Aufbereitung der Übertragungsinstrumente)."
+  },
+  "related": [
+    "bldc-motor",
+    "druck",
+    "aufbereitung",
+    "dvt",
+    "dampfsterilisator",
+    "absauggeraet"
+  ],
+  "sources": [
+    "iso-7494-1",
+    "krinko-zahn-2006",
+    "krinko-bfarm-2012",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

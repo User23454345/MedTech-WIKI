@@ -1,0 +1,52 @@
+{
+  "id": "ivdr",
+  "type": "standard",
+  "title": "In-vitro-Diagnostika-Verordnung (IVDR)",
+  "code": "Verordnung (EU) 2017/746",
+  "kind": "verordnung",
+  "fullTitle": "Verordnung (EU) 2017/746 des Europäischen Parlaments und des Rates vom 5. April 2017 über In-vitro-Diagnostika und zur Aufhebung der Richtlinie 98/79/EG und des Beschlusses 2010/227/EU der Kommission",
+  "scope": "Regelt das Inverkehrbringen, die Bereitstellung und die Inbetriebnahme von In-vitro-Diagnostika und deren Zubehör in der EU sowie die Leistungsstudien und die Überwachung nach dem Inverkehrbringen.",
+  "aliases": [
+    "IVDR",
+    "In Vitro Diagnostic Regulation",
+    "IVD-Verordnung",
+    "Verordnung (EU) 2017/746",
+    "In-vitro-Diagnostikum",
+    "IVD"
+  ],
+  "category": "recht",
+  "summary": "Die Verordnung (EU) 2017/746 (IVDR) gilt seit dem 26. Mai 2022 für In-vitro-Diagnostika wie Laboranalysatoren, Reagenzien und Schnelltests. Sie führt die Risikoklassen A bis D ein, verlangt eine Leistungsbewertung und bindet deutlich mehr Produkte an eine Benannte Stelle als die frühere Richtlinie 98/79/EG.",
+  "body": "## Überblick\n\nDie **Verordnung (EU) 2017/746 über In-vitro-Diagnostika** – kurz **IVDR** (*In Vitro Diagnostic Medical Devices Regulation*) – regelt in der EU alle Produkte, die zur Untersuchung von **Proben aus dem menschlichen Körper** außerhalb des Körpers bestimmt sind: Analysegeräte, Reagenzien, Kalibratoren, Kontrollmaterialien, Probenbehältnisse und Software [@ivdr-2017]. Sie wurde zusammen mit der [[mdr|MDR]] am 5. April 2017 erlassen, gilt seit dem **26. Mai 2022** und hat die Richtlinie 98/79/EG abgelöst.\n\n> [!belegt] Ein In-vitro-Diagnostikum ist ein [[medizinprodukt|Medizinprodukt]], das vom Hersteller zur In-vitro-Untersuchung von aus dem menschlichen Körper stammenden Proben bestimmt ist, um Informationen etwa über physiologische oder pathologische Zustände, Prädispositionen, die Sicherheit und Verträglichkeit bei potenziellen Empfängern oder die Wirkung einer Therapie zu liefern (sinngemäß nach Art. 2 IVDR) [@ivdr-2017].\n\nDer Aufbau ähnelt stark der MDR: Pflichten der Wirtschaftsakteure, [[udi|UDI]], Registrierung in EUDAMED [@eudamed], [[benannte-stelle|Benannte Stellen]], [[konformitaetsbewertung|Konformitätsbewertung]], Überwachung nach dem Inverkehrbringen und [[vigilanz|Vigilanz]]. Der wichtigste Unterschied liegt in der **Leistungsbewertung** statt der klinischen Bewertung.\n\n## Risikoklassen A bis D\n\nDie IVDR führt ein regelbasiertes Klassifizierungssystem mit vier Klassen ein (Anhang VIII). Unter der alten Richtlinie gab es dagegen nur Listen (Liste A, Liste B, Eigenanwendung) – der Großteil der Produkte konnte ohne Benannte Stelle in Verkehr gebracht werden.\n\n| Klasse | Individual-/Public-Health-Risiko | Typische Beispiele | Benannte Stelle |\n|---|---|---|---|\n| A | gering | vom Hersteller für IVD-Verfahren bestimmte Laborreagenzien, Puffer- und Waschlösungen, Probenbehältnisse sowie Instrumente, die speziell für IVD-Verfahren bestimmt sind (z. B. eine [[laborzentrifuge|Laborzentrifuge]] mit entsprechender Zweckbestimmung) | nein (außer steril) |\n| B | mäßig | viele Routineparameter der [[klinisch-chemischer-analysator|klinischen Chemie]] | ja |\n| C | hoch individuell / mäßig öffentlich | Blutzuckermessung zur Eigenanwendung ([[blutzuckermessgeraet]]), Tumormarker, Begleitdiagnostika, genetische Tests | ja |\n| D | hoch individuell und öffentlich | Blutgruppenbestimmung (AB0), Tests auf transfusionsrelevante Infektionen (z. B. HIV, Hepatitis) | ja, ggf. EU-Referenzlabor |\n\n> [!vereinfacht] Die Zuordnung der Beispiele ist eine Orientierung. Reine Produkte für den allgemeinen Laborbedarf ohne IVD-Zweckbestimmung fallen gar nicht unter die IVDR (Art. 1 IVDR); umgekehrt gelten für Eigenanwendung differenzierte Regeln (Regel 4: grundsätzlich Klasse C, z. B. Schwangerschafts- oder Harnzuckertests aber Klasse B). Entscheidend sind die Klassifizierungsregeln in Anhang VIII und die genaue [[zweckbestimmung]]; bei Produkten zur Eigenanwendung oder patientennahen Tests gelten zusätzliche Anforderungen.\n\n> [!hinweis] In Fachkreisen wird häufig geschätzt, dass unter der Richtlinie 98/79/EG nur ein kleiner Teil (oft genannt: etwa 10–20 %) der IVD eine Benannte Stelle benötigte, unter der IVDR dagegen die große Mehrheit. Diese Zahlen sind Schätzungen, keine amtlichen Werte.\n\n## Leistungsbewertung\n\nAn die Stelle der klinischen Bewertung tritt bei IVD die **Leistungsbewertung**. Sie stützt sich auf drei Säulen:\n\n1. **Wissenschaftliche Validität** – Ist der gemessene Analyt (z. B. Troponin) mit dem klinischen Zustand (Herzinfarkt) verknüpft?\n2. **Analytische Leistung** – Richtigkeit, Präzision, Nachweis- und Bestimmungsgrenze, Linearität, Messbereich, Störsubstanzen. Hier greifen die messtechnischen Grundbegriffe aus [[messunsicherheit]] und [[kalibrierung]].\n3. **Klinische Leistung** – diagnostische Sensitivität und Spezifität, prädiktive Werte.\n\nDie diagnostischen Kenngrößen lassen sich aus einer Vierfeldertafel berechnen:\n\n* Sensitivität = RP / (RP + FN)\n* Spezifität = RN / (RN + FP)\n\n(RP = richtig positiv, FN = falsch negativ, RN = richtig negativ, FP = falsch positiv)\n\n> [!beispiel] Ein Schnelltest erkennt bei 100 Erkrankten 95 als positiv (Sensitivität 95 %) und bei 1 000 Gesunden 980 als negativ (Spezifität 98 %). Bei 1 100 Getesteten gibt es dann 95 richtig positive und 20 falsch positive Ergebnisse – der positive prädiktive Wert beträgt also nur 95 / 115 ≈ 83 %. Die Zahlen sind frei gewählt.\n\n## Hausinterne Produkte (Laborentwickelte Tests)\n\nGesundheitseinrichtungen dürfen Tests selbst herstellen und anwenden („In-house“- oder LDT-Produkte), wenn die Bedingungen des **Art. 5 Abs. 5 IVDR** erfüllt sind: u. a. geeignetes Qualitätsmanagement, Begründung, dass der Bedarf nicht durch ein gleichwertiges CE-gekennzeichnetes Produkt gedeckt werden kann, Dokumentation und öffentliche Erklärung [@ivdr-2017]. Einige dieser Bedingungen gelten gestaffelt später [@vo-2022-112].\n\n## Übergangsfristen\n\nWegen fehlender Kapazitäten bei Benannten Stellen wurden die Übergangsfristen für Altprodukte mehrfach verlängert – zuerst durch die Verordnung (EU) 2022/112 [@vo-2022-112], dann durch die Verordnung (EU) 2024/1860. Danach gelten unter Bedingungen (u. a. eingeführtes QM-System, fristgerechte Antragstellung) gestaffelte Fristen bis Ende 2027 (Klasse D), Ende 2028 (Klasse C) und Ende 2029 (Klasse B und sterile Klasse A) [@vo-2024-1860].\n\n> [!hinweis] Die Fristen und Bedingungen sind komplex und wurden wiederholt geändert. Maßgeblich ist die aktuelle konsolidierte Fassung der IVDR.\n\n## Nationale Ergänzung\n\nIn Deutschland regelt das [[mpdg|MPDG]] die Durchführung der IVDR (Behörden, Leistungsstudien, Sanktionen) [@mpdg]. Der Betrieb von Laborgeräten unterliegt – soweit es sich um Medizinprodukte handelt – der [[mpbetreibv|MPBetreibV]]; für die Qualitätssicherung quantitativer Laboruntersuchungen ist zusätzlich die Richtlinie der Bundesärztekammer (Rili-BÄK) maßgeblich [@rili-baek].\n\n## Bedeutung in der Medizintechnik\n\nFür die Medizintechnik in Klinik und Labor betrifft die IVDR besonders:\n\n* **Laboranalysatoren:** [[haematologie-analysator|Hämatologie-Analysatoren]], [[gerinnungsanalysator|Gerinnungsanalysatoren]], [[klinisch-chemischer-analysator|klinisch-chemische Analysatoren]] und [[blutgasanalysator|Blutgasanalysatoren]] sind IVD-Geräte; Zuverlässigkeit hängt von [[kalibrierung]], Qualitätskontrolle und Wartung ab.\n* **Patientennahe Sofortdiagnostik (POCT):** Geräte wie das [[blutzuckermessgeraet|Blutzuckermessgerät]] auf Station unterliegen sowohl der IVDR (Hersteller) als auch Betreiberpflichten und der Rili-BÄK (Anwender).\n* **Software:** Auswertesoftware für Laborergebnisse kann selbst ein IVD sein – siehe [[software-medizinprodukt]].\n* **Abgrenzung:** Geräte, die am Patienten messen (z. B. [[pulsoxymeter|Pulsoxymeter]]), fallen unter die MDR, nicht unter die IVDR.\n\n> [!praxis] Bei der Beschaffung eines Analysators sollte geklärt werden, ob Gerät **und** zugehörige Reagenzien unter der IVDR zertifiziert sind; ein Gerät ohne verfügbare Reagenzien ist im Laboralltag wertlos.\n",
+  "related": [
+    "mdr",
+    "mpdg",
+    "medizinprodukt",
+    "risikoklassen",
+    "konformitaetsbewertung",
+    "benannte-stelle",
+    "labormedizin",
+    "blutgasanalysator",
+    "klinisch-chemischer-analysator",
+    "software-medizinprodukt",
+    "messunsicherheit"
+  ],
+  "paths": [
+    [
+      "labormedizin",
+      "klinisch-chemischer-analysator",
+      "ivdr",
+      "risikoklassen",
+      "benannte-stelle"
+    ]
+  ],
+  "sources": [
+    "ivdr-2017",
+    "vo-2022-112",
+    "vo-2024-1860",
+    "mpdg",
+    "rili-baek",
+    "eudamed"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

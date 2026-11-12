@@ -1,0 +1,39 @@
+{
+  "id": "iso-14971",
+  "type": "standard",
+  "title": "ISO 14971",
+  "code": "ISO 14971",
+  "kind": "norm",
+  "fullTitle": "Medizinprodukte – Anwendung des Risikomanagements auf Medizinprodukte",
+  "scope": "Legt einen Prozess fest, mit dem Hersteller Gefährdungen von Medizinprodukten identifizieren, Risiken einschätzen, bewerten und beherrschen sowie die Wirksamkeit der Maßnahmen über den gesamten Lebenszyklus überwachen.",
+  "aliases": [
+    "DIN EN ISO 14971",
+    "EN ISO 14971",
+    "Risikomanagementnorm",
+    "14971"
+  ],
+  "category": "normen",
+  "summary": "ISO 14971 ist die international anerkannte Prozessnorm für das Risikomanagement von Medizinprodukten. Sie beschreibt Risikoanalyse, Risikobewertung, Risikobeherrschung, Bewertung des Gesamtrestrisikos und die Auswertung von Informationen aus Herstellung und Markt.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **ISO 14971** beschreibt einen Prozess, mit dem Hersteller die Risiken ihrer [[medizinprodukt|Medizinprodukte]] systematisch beherrschen – einschließlich Software und In-vitro-Diagnostika [@iso-14971]. Sie gilt für alle Phasen des [[lebenszyklus-medizinprodukt|Lebenszyklus]], von der Konzeption bis zur Außerbetriebnahme. Die Norm legt **keine** Akzeptanzgrenzen fest; diese muss der Hersteller in einer Richtlinie zur Risikoakzeptanz selbst definieren und begründen.\n\nDie [[mdr|MDR]] verlangt in Anhang I ein über den gesamten Lebenszyklus geführtes Risikomanagementsystem [@mdr-2017]; die ISO 14971 ist der etablierte Weg, diese Anforderung zu erfüllen.\n\n## Zentrale Konzepte\n\n### Begriffe\n\n| Begriff | Bedeutung (eigene Worte) |\n|---|---|\n| Schaden | Verletzung oder Beeinträchtigung der Gesundheit von Menschen, Schäden an Sachen oder Umwelt |\n| Gefährdung | potenzielle Schadensquelle (z. B. elektrische Energie, Strahlung, falsche Dosis) |\n| Gefährdungssituation | Umstand, in dem Menschen einer Gefährdung ausgesetzt sind |\n| Risiko | Kombination aus Wahrscheinlichkeit des Schadens und seinem Schweregrad |\n| Restrisiko | Risiko, das nach Maßnahmen zur Risikobeherrschung verbleibt |\n\n> [!beispiel] Gefährdung: Netzspannung. Ereignisfolge: Isolation altert, Schutzleiter ist unterbrochen. Gefährdungssituation: Patient berührt spannungsführendes Gehäuse. Schaden: Stromunfall ([[elektrische-stromwirkung]]). Maßnahmen: doppelte Isolierung, [[galvanische-trennung]], regelmäßige [[elektrische-sicherheitspruefung]].\n\n### Prozessschritte\n\n1. **Risikoanalyse:** [[zweckbestimmung]] und vernünftigerweise vorhersehbare Fehlanwendung beschreiben, sicherheitsrelevante Merkmale identifizieren, Gefährdungen und Gefährdungssituationen ermitteln, Risiken einschätzen.\n2. **Risikobewertung:** Vergleich mit den Akzeptanzkriterien des Herstellers.\n3. **Risikobeherrschung** in fester Rangfolge:\n   * inhärent sichere Auslegung und Herstellung,\n   * Schutzmaßnahmen im Produkt oder Herstellungsprozess (z. B. [[alarmsystem|Alarme]], Abschaltungen),\n   * Sicherheitsinformationen und ggf. Schulung.\n4. **Bewertung des Restrisikos** jeder Maßnahme, Prüfung auf neu entstandene Risiken.\n5. **Nutzen-Risiko-Analyse**, falls Restrisiken nicht akzeptabel sind.\n6. **Bewertung des Gesamtrestrisikos** und Freigabe.\n7. **Risikomanagementbericht** vor dem Inverkehrbringen.\n8. **Tätigkeiten in Herstellung und nach Herstellung:** Informationen aus Reklamationen, [[vigilanz|Vigilanz]] und Literatur fließen zurück in die Risikoanalyse.\n\nAlle Ergebnisse werden in der **Risikomanagementakte** dokumentiert. Typische Analysemethoden sind FMEA, Fehlerbaumanalyse (FTA) und Gefährdungsanalysen; Hinweise dazu enthält der begleitende technische Bericht ISO/TR 24971.\n\n> [!vereinfacht] Risiko wird oft als Matrix aus Schweregrad und Wahrscheinlichkeit dargestellt. Die Norm schreibt aber weder eine Matrix noch bestimmte Stufen vor.\n\n## Bezug zu anderen Normen\n\nISO 14971 ist die **Querschnittsnorm**, auf die fast alle anderen Medizinproduktenormen aufbauen:\n\n| Norm | Bezug |\n|---|---|\n| [[iec-60601-1]] und Ergänzungsnormen | Wesentliche Leistungsmerkmale und viele Prüfentscheidungen werden aus dem Risikomanagement abgeleitet |\n| [[iec-62366-1]] / [[iec-60601-1-6]] | Benutzungsfehler als Gefährdungsquelle |\n| [[iec-62304]] | Software-Sicherheitsklassen ergeben sich aus der Risikoanalyse |\n| [[iso-10993-1]] | biologische Beurteilung innerhalb des Risikomanagements |\n| [[iso-13485]] | QM-System, in das der Risikomanagementprozess eingebettet ist |\n| [[iec-60601-1-8]] | Alarmprioritäten als Ergebnis der Risikoeinschätzung |\n\n## Bedeutung für Hersteller und Betreiber\n\nFür **Hersteller** ist die Anwendung der ISO 14971 formal freiwillig, faktisch aber der Regelfall, weil sie den anerkannten Stand der Technik für das von der MDR geforderte Risikomanagement beschreibt; [[benannte-stelle|Benannte Stellen]] prüfen die Risikomanagementakte im Rahmen der [[konformitaetsbewertung]].\n\nFür **Betreiber** ist die Norm nicht direkt anzuwenden, ihre Denkweise aber übertragbar: Bei der Vernetzung von Medizinprodukten verlangt IEC 80001-1 ein eigenes Risikomanagement des Betreibers [@iec-80001-1]. Auch die Bewertung von Vorkommnissen, Rückrufen und Sicherheitsmitteilungen folgt der Logik Gefährdung – Gefährdungssituation – Schaden.\n\n> [!praxis] Die Sicherheitshinweise in Gebrauchsanweisungen stehen in der Rangfolge der Risikobeherrschung an letzter Stelle. Ein Warnhinweis bedeutet also meist, dass konstruktive Maßnahmen nicht ausreichten – solche Hinweise verdienen in der [[einweisung]] besondere Aufmerksamkeit.\n\n## Betroffene Geräte\n\nAlle Medizinprodukte – vom [[thermometer]] bis zum [[linearbeschleuniger]], einschließlich [[software-medizinprodukt|Software als Medizinprodukt]], z. B. [[beatmungsgeraet]], [[infusionspumpe]], [[herzschrittmacher]], [[op-roboter]] und [[dialysegeraet]].\n",
+  "related": [
+    "patientensicherheit",
+    "zweckbestimmung",
+    "risikoklassen",
+    "vigilanz",
+    "konformitaetsbewertung",
+    "iec-60601-1",
+    "iec-62366-1",
+    "iec-62304",
+    "iso-13485",
+    "iso-10993-1",
+    "mdr",
+    "lebenszyklus-medizinprodukt"
+  ],
+  "sources": [
+    "iso-14971",
+    "mdr-2017",
+    "iec-80001-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

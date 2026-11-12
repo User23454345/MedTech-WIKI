@@ -1,0 +1,73 @@
+{
+  "id": "kapnometer",
+  "type": "device",
+  "title": "Kapnometer / Kapnograph",
+  "aliases": [
+    "Kapnometrie",
+    "Kapnographie",
+    "etCO₂-Monitor",
+    "CO₂-Monitor",
+    "capnography"
+  ],
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 18,
+  "domains": [
+    "anaesthesiologie",
+    "intensivmedizin",
+    "notfallmedizin"
+  ],
+  "summary": "Kapnometer messen die CO₂-Konzentration im Atemgas; Kapnographen stellen sie zusätzlich als Kurve über die Zeit dar. Der endexspiratorische CO₂-Partialdruck (etCO₂) dient zur Lagekontrolle des Endotrachealtubus, zur Beatmungssteuerung und zur Beurteilung der Reanimationsqualität.",
+  "sections": {
+    "purpose": "Die Kapnographie überwacht Ventilation und indirekt Perfusion: Ein plötzlicher Verlust der CO₂-Kurve weist auf [[diskonnektion]], Tubusfehllage oder Kreislaufstillstand hin. Sie ist Standard in der [[anaesthesiologie|Anästhesie]], bei beatmeten Intensivpatienten, im Rettungsdienst und zunehmend bei Sedierungen. Kapnometer sind als eigenständige Geräte, als Modul im [[patientenmonitor]], im [[defibrillator]] sowie im [[anaesthesiegeraet]] oder [[beatmungsgeraet]] integriert.",
+    "principle": "## Nichtdispersive Infrarotabsorption\n\nCO₂ absorbiert Infrarotstrahlung charakteristisch bei etwa 4,26 µm. Ein [[co2-sensor|NDIR-Sensor]] durchstrahlt eine Messküvette mit dem Atemgas; über einen schmalbandigen optischen Filter trifft das Licht auf einen Detektor. Die Abschwächung folgt dem [[lambert-beer|Lambert-Beer-Gesetz]], sodass sich aus dem Verhältnis zu einem Referenzkanal der CO₂-Partialdruck berechnen lässt [@webster-2010]. Querempfindlichkeiten (z. B. gegenüber Lachgas) und Druckeinflüsse werden rechnerisch kompensiert.\n\n## Hauptstrom und Nebenstrom\n\n| Verfahren | Prinzip | Vor-/Nachteile |\n|---|---|---|\n| Hauptstrom (mainstream) | Küvette direkt im Atemsystem am Tubus | keine Verzögerung, aber Totraum und Gewicht am Tubus |\n| Nebenstrom (sidestream) | Pumpe saugt kontinuierlich Probengas über eine dünne Leitung ab | auch bei nicht intubierten Patienten, aber Laufzeitverzögerung, Wasserfalle nötig |\n\n## Kapnogramm\n\nDie Kurve gliedert sich in Totraum-Exspiration (Phase I), steilen Anstieg (Phase II), alveoläres Plateau (Phase III) und Inspiration. Der Plateauendwert ist das etCO₂; die Differenz zum arteriellen pCO₂ hängt von Totraum und [[gasaustausch|Ventilations-Perfusions-Verhältnis]] ab. Anforderungen an Atemgasmonitore beschreibt [[iso-80601-2-55]].\n\n> [!praxis] Ein ansteigendes Plateau („Haifischflosse“) deutet auf eine Obstruktion hin, eine Grundlinie über null auf Rückatmung, z. B. bei erschöpftem [[co2-absorber|CO₂-Absorber]]."
+  },
+  "manufacturers": [
+    {
+      "ref": "medtronic",
+      "models": [
+        "Microstream",
+        "Capnostream"
+      ],
+      "note": "Nebenstrom-Technologie mit geringem Probenfluss."
+    },
+    {
+      "ref": "masimo",
+      "models": [
+        "EMMA"
+      ],
+      "note": "Kompakter Hauptstromkapnometer."
+    },
+    {
+      "ref": "philips",
+      "models": [],
+      "note": "CO₂-Module für Patientenmonitore."
+    },
+    {
+      "ref": "draeger",
+      "models": [],
+      "note": "In Anästhesie- und Beatmungsgeräten integriert."
+    }
+  ],
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Eigenständige Kapnometer sind in Anlage 1 der MPBetreibV (2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. Als Funktion eines Beatmungs- oder Anästhesiegeräts (Anlage 1 Nr. 1.5) wird die Messfunktion im Rahmen der STK des Gesamtgeräts geprüft. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Kalibrierung bzw. Kalibrierprüfung mit Prüfgas nach Herstellerangabe; Wechsel von Wasserfallen und Probenleitungen nach Herstellerangabe; elektrische Wiederholungsprüfung nach IEC 62353 gemäß Herstellervorgabe."
+  },
+  "related": [
+    "co2-sensor",
+    "lambert-beer",
+    "patientenmonitor",
+    "anaesthesiegeraet",
+    "beatmungsgeraet",
+    "iso-80601-2-55"
+  ],
+  "sources": [
+    "webster-2010",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

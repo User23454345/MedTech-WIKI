@@ -1,0 +1,179 @@
+{
+  "id": "hf-spule",
+  "type": "term",
+  "title": "HF-Spule (MRT)",
+  "aliases": [
+    "Hochfrequenzspule",
+    "RF Coil",
+    "Radiofrequency Coil",
+    "Sendespule",
+    "Empfangsspule",
+    "Oberflächenspule",
+    "Phased-Array-Spule",
+    "Birdcage-Spule",
+    "Körperspule",
+    "Lokalspule"
+  ],
+  "category": "komponenten",
+  "summary": "Antennensystem des MRT, das mit einem hochfrequenten Magnetfeld bei der Larmor-Frequenz die Kernspins anregt und das schwache MR-Signal empfängt. Patientennahe Mehrkanal-Empfangsspulen bestimmen maßgeblich Bildqualität und Messzeit; die eingestrahlte Leistung wird über die SAR begrenzt.",
+  "body": "## Begriff und Aufgabe\n\n**HF-Spulen** (Hochfrequenzspulen, engl. *RF coils*) sind die „Antennen“ des [[mrt|Magnetresonanztomographen]]. Sie haben zwei Aufgaben [@weishaupt-2014] [@haacke-2014]:\n\n1. **Senden:** Ein kurzer Hochfrequenzpuls erzeugt ein magnetisches Wechselfeld B₁ senkrecht zum Grundfeld B₀, das mit der Larmor-Frequenz der Protonen schwingt und die Magnetisierung aus ihrer Ruhelage auslenkt (Anregung, siehe [[kernspinresonanz]]).\n2. **Empfangen:** Die anschließend präzedierende Magnetisierung induziert in der Spule eine sehr schwache Wechselspannung im Mikrovoltbereich – das MR-Signal (siehe [[elektromagnetische-induktion]]).\n\nSende- und Empfangsfunktion können in einer Spule vereint oder auf getrennte Spulen verteilt sein. Typisch ist eine fest eingebaute **Körperspule** zum Senden und eine Vielzahl patientennaher **Empfangsspulen** (Kopf-, Wirbelsäulen-, Körper-, Knie-, Brustspulen).\n\n## Physikalische Grundlagen\n\n### Resonanzfrequenz\n\nDie Spule muss auf die Larmor-Frequenz abgestimmt sein:\n\n`f₀ = (γ / 2π) · B₀` mit γ/2π ≈ 42,58 MHz/T für ¹H\n\nDas ergibt etwa 63,9 MHz bei 1,5 T und 127,7 MHz bei 3 T – Frequenzen im VHF-Bereich (Ultrakurzwelle, 30–300 MHz), also in der Nähe von Rundfunk- und Funkdiensten. Elektrisch ist jede HF-Spule ein Schwingkreis aus der Induktivität der Leiterschleife und Abstimm-[[kondensator|Kondensatoren]]:\n\n`f₀ = 1 / (2π · √(L · C))`\n\nEin Anpassnetzwerk transformiert die Impedanz der Spule auf den Wellenwiderstand der Leitung (meist 50 Ω), damit Leistung möglichst verlustfrei übertragen wird.\n\n### Flipwinkel\n\nDer Auslenkwinkel (Flipwinkel) α hängt von der Amplitude B₁ und der Dauer τ des Pulses ab:\n\n`α = γ · B₁ · τ` mit γ ≈ 2,675 · 10⁸ rad/(s·T)\n\n> [!beispiel] Für einen 90°-Puls (α = π/2) mit B₁ = 10 µT ergibt sich τ = (π/2) / (2,675 · 10⁸ · 10⁻⁵) s ≈ 0,59 ms. Halbiert man die Pulsdauer, muss B₁ verdoppelt werden – und die eingestrahlte Leistung steigt auf das Vierfache, weil sie mit B₁² wächst. Die Werte sind didaktisch gewählt.\n\n## Sendespulen\n\n### Birdcage-Spule\n\nDie klassische Körperspule ist die **Birdcage-Spule** („Vogelkäfig“): zwei Endringe, verbunden durch viele parallele Stäbe mit Kondensatoren. Sie erzeugt ein über das Messvolumen sehr homogenes B₁-Feld [@hayes-1985]. Wird sie an zwei um 90° versetzten Punkten phasenverschoben gespeist (**Quadraturbetrieb**), entsteht ein zirkular polarisiertes Feld, das mit den präzedierenden Spins mitrotiert; die benötigte Sendeleistung sinkt gegenüber linearer Polarisation etwa auf die Hälfte.\n\n### Parallele Sendetechnik\n\nBei 3 T und darüber ist die Wellenlänge im Gewebe mit der Körpergröße vergleichbar; es entstehen stehende Wellen und ein inhomogenes B₁-Feld (helle und dunkle Bildbereiche). Systeme mit mehreren unabhängig angesteuerten Sendekanälen gleichen dies patientenspezifisch aus.\n\n### HF-Leistungsverstärker\n\nDie Sendepulse werden von HF-Verstärkern im Kilowattbereich erzeugt; ein Teil der Leistung wird im Körper absorbiert und in Wärme umgesetzt. Ein Monitoring misst vor- und rücklaufende Leistung und berechnet daraus die **spezifische Absorptionsrate (SAR)**.\n\n## Empfangsspulen\n\n### Oberflächenspulen und Phased Arrays\n\nDas Signal-Rausch-Verhältnis (SNR) ist umso besser, je näher die Spule am Untersuchungsgebiet liegt und je kleiner sie ist – eine kleine Spule „sieht“ weniger Rauschen aus dem Körper. Große Messfelder mit hoher Empfindlichkeit erreicht man durch **Phased-Array-Spulen**: viele kleine, gegeneinander entkoppelte Spulenelemente mit je eigenem Empfangskanal, deren Signale zu einem Bild kombiniert werden [@roemer-1990].\n\n### Parallele Bildgebung\n\nWeil jedes Spulenelement eine eigene räumliche Empfindlichkeit hat, lässt sich ein Teil der Ortskodierung durch die Spulengeometrie statt durch [[gradientenspule|Gradienten]] leisten. Verfahren wie SENSE oder GRAPPA verkürzen so die Messzeit, kosten aber SNR [@pruessmann-1999].\n\n### Signalkette\n\nDirekt an jedem Element sitzt ein rauscharmer HF-Vorverstärker – in der Regel diskret mit rauscharmen Transistoren aufgebaut, nicht als Operationsverstärker (Verstärkerprinzip siehe [[operationsverstaerker]]) –, denn das erste Glied bestimmt das Rauschen der ganzen [[messkette|Messkette]]. Danach folgen Digitalisierung ([[analog-digital-wandler]]), Demodulation und [[filter|Filterung]]; moderne Spulen digitalisieren teilweise bereits in der Spule.\n\n> [!belegt] Empfangsspulen müssen während des Sendepulses **verstimmt** (entkoppelt) werden, z. B. über PIN-Dioden. Versagt die Verstimmung, können sich in der Spule hohe Ströme ausbilden, die Spule beschädigen und am Patienten Verbrennungen verursachen [@mcrobbie-2017] [@kanal-2013].\n\n## Sicherheit: SAR und Verbrennungen\n\nDie vom Körper absorbierte HF-Leistung wird als SAR in W/kg angegeben. Die Gerätenorm IEC 60601-2-33 legt Betriebsarten mit Grenzwerten fest; im **Normalbetrieb** gelten z. B. 2 W/kg gemittelt über den Ganzkörper und 3,2 W/kg für den Kopf, im **kontrollierten Betrieb erster Stufe** 4 W/kg für den Ganzkörper [@iec-60601-2-33].\n\n> [!vereinfacht] Bei sonst gleichen Bedingungen steigt die SAR näherungsweise mit dem Quadrat der Feldstärke B₀ und dem Quadrat des Flipwinkels. Eine Sequenz, die bei 1,5 T unkritisch ist, kann bei 3 T die Grenzwerte erreichen. Reale SAR-Werte hängen zusätzlich von Patientengröße, Position und Spulentyp ab.\n\n> [!warnung] Leitfähige Schleifen – Hautkontakt zwischen Oberschenkeln oder Armen und Rumpf, Kabelschlaufen von Spulen, [[ekg-elektrode|EKG-Elektroden]] und Leitungen – können im HF-Feld Ströme führen und Verbrennungen verursachen. Lagerungspolster, Abstand zur Tunnelwand und ausschließlich MR-geeignetes Zubehör sind verpflichtend [@kanal-2013].\n\n## HF-Kabine\n\nDer Untersuchungsraum ist als **Faradayscher Käfig** (HF-Kabine) ausgeführt. Er schirmt das extrem empfindliche Empfangssystem gegen Rundfunk und andere Störquellen ab und hält umgekehrt die Sendeleistung im Raum. Leitungen werden über eine Filterplatte eingeführt; die Tür besitzt Kontaktfedern. Undichte Stellen zeigen sich als Störlinien („Zipper“) im Bild (siehe [[bildartefakte]], [[emv]]).\n\n## Anwendung in Geräten\n\n| Spule | Bauform | Typische Verwendung |\n|---|---|---|\n| Körperspule | Birdcage, im Tunnel fest eingebaut | Senden, Übersichtsaufnahmen |\n| Kopfspule | Birdcage oder Array | Neuro-Untersuchungen |\n| Wirbelsäulenspule | Array im Patiententisch | Wirbelsäule, Rückenlage |\n| Körper-Array | flexible Matte | Abdomen, Thorax, Becken |\n| Extremitätenspulen | zylindrisch oder flexibel | Knie, Schulter, Hand |\n| Endoluminale Spulen | sehr klein | Prostata, Rektum (spezielle Anwendungen) |\n\nDie HF-Spule arbeitet im [[mrt]] eng mit dem [[supraleitender-magnet|Grundfeldmagneten]] (bestimmt die Frequenz) und den [[gradientenspule|Gradientenspulen]] (Ortskodierung) zusammen.\n\n## Prüfung und Instandhaltung\n\n* **Spulentests** mit Phantomen messen SNR und Homogenität; Abweichungen zeigen defekte Elemente, Vorverstärker oder Stecker [@iec-62464-1].\n* Häufige Mängel sind beschädigte Kabel, verbogene Steckerkontakte, gebrochene Gehäuse und Flüssigkeitseintritt. Defekte Spulen werden in der Regel komplett getauscht.\n* Reinigung und Desinfektion nur mit vom Hersteller freigegebenen Mitteln.\n\n> [!praxis] Fällt im Bild ein Bereich mit deutlich schlechterem SNR auf, lohnt zuerst der Blick auf Spulenauswahl, Lagerung und Steckverbindung. Bleibt das Problem bei korrekter Handhabung, ist ein Spulentest durch den Service angezeigt.\n",
+  "related": [
+    "mrt",
+    "kernspinresonanz",
+    "supraleitender-magnet",
+    "gradientenspule",
+    "kondensator",
+    "operationsverstaerker",
+    "analog-digital-wandler",
+    "messkette",
+    "iec-60601-2-33",
+    "emv",
+    "bildartefakte"
+  ],
+  "paths": [
+    [
+      "mrt",
+      "hf-spule",
+      "kernspinresonanz",
+      "elektromagnetische-induktion"
+    ],
+    [
+      "hf-spule",
+      "operationsverstaerker",
+      "analog-digital-wandler",
+      "messkette"
+    ]
+  ],
+  "sources": [
+    "weishaupt-2014",
+    "haacke-2014",
+    "mcrobbie-2017",
+    "hayes-1985",
+    "roemer-1990",
+    "pruessmann-1999",
+    "iec-60601-2-33",
+    "kanal-2013",
+    "iec-62464-1"
+  ],
+  "diagram": {
+    "title": "Sende- und Empfangskette der HF-Spulen",
+    "caption": "Funktionsschema; während des Sendens werden die Empfangsspulen verstimmt.",
+    "width": 960,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "seq",
+        "label": "Sequenz-\nsteuerung",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "id": "amp",
+        "label": "HF-Verstärker\n(kW)",
+        "kind": "actuator",
+        "x": 280,
+        "y": 90
+      },
+      {
+        "id": "body",
+        "label": "Sendespule\n(Birdcage)",
+        "ref": "hf-spule",
+        "kind": "actuator",
+        "x": 470,
+        "y": 90
+      },
+      {
+        "id": "pat",
+        "label": "Patient\n(Kernspins)",
+        "ref": "kernspinresonanz",
+        "kind": "patient",
+        "x": 680,
+        "y": 160
+      },
+      {
+        "id": "rx",
+        "label": "Empfangs-Array",
+        "ref": "hf-spule",
+        "kind": "sensor",
+        "x": 870,
+        "y": 260
+      },
+      {
+        "id": "pre",
+        "label": "Vorverstärker",
+        "ref": "operationsverstaerker",
+        "kind": "process",
+        "x": 660,
+        "y": 280
+      },
+      {
+        "id": "adc",
+        "label": "A/D-Wandlung,\nRekonstruktion",
+        "ref": "analog-digital-wandler",
+        "kind": "output",
+        "x": 450,
+        "y": 280
+      },
+      {
+        "id": "sar",
+        "label": "SAR-Monitor",
+        "kind": "control",
+        "x": 280,
+        "y": 210
+      }
+    ],
+    "edges": [
+      {
+        "from": "seq",
+        "to": "amp",
+        "kind": "signal",
+        "label": "Pulsform"
+      },
+      {
+        "from": "amp",
+        "to": "body",
+        "kind": "power",
+        "label": "f₀"
+      },
+      {
+        "from": "body",
+        "to": "pat",
+        "kind": "energy",
+        "label": "B₁"
+      },
+      {
+        "from": "pat",
+        "to": "rx",
+        "kind": "energy",
+        "label": "MR-Signal"
+      },
+      {
+        "from": "rx",
+        "to": "pre",
+        "kind": "signal",
+        "label": "µV"
+      },
+      {
+        "from": "pre",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "amp",
+        "to": "sar",
+        "kind": "signal",
+        "label": "Leistung"
+      },
+      {
+        "from": "sar",
+        "to": "seq",
+        "kind": "signal",
+        "label": "Grenzwert"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

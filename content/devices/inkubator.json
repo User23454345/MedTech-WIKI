@@ -1,0 +1,630 @@
+{
+ "id": "inkubator",
+ "type": "device",
+ "title": "Säuglingsinkubator",
+ "aliases": [
+  "Inkubator",
+  "Brutkasten",
+  "Neonatal-Inkubator",
+  "Infant Incubator",
+  "Isolette",
+  "Transportinkubator",
+  "Hybridinkubator"
+ ],
+ "category": "geraete",
+ "deviceGroup": "neonatologie",
+ "rank": 15,
+ "domains": [
+  "neonatologie",
+  "intensivmedizin",
+  "geburtshilfe",
+  "notfallmedizin"
+ ],
+ "summary": "Ein Säuglingsinkubator ist ein geschlossenes, transparentes Pflegesystem, in dem Früh- und Neugeborene in einer geregelten Umgebung aus erwärmter, befeuchteter und optional mit Sauerstoff angereicherter Luft versorgt werden. Ein Regelkreis hält Luft- oder Hauttemperatur konstant, ein unabhängiger Schutzkreis verhindert Überwärmung; Ziel ist die Thermoneutralität des Kindes.",
+ "riskClass": {
+  "value": "IIb",
+  "evidence": "typisch",
+  "note": "Inkubatoren sind aktive therapeutische Produkte, die dem Körper Energie (Wärme) zuführen. Nach [[mdr|MDR]] Anhang VIII **Regel 9** gehören solche Produkte zur Klasse IIa, zur Klasse **IIb**, wenn die Energiezufuhr unter Berücksichtigung von Art, Dichte und Körperstelle in potenziell gefährlicher Weise erfolgen kann [@mdr-2017]. Da Fehlregelungen bei Früh- und Neugeborenen zu lebensbedrohlicher Über- oder Unterwärmung führen können, werden Säuglingsinkubatoren in der Praxis üblicherweise der Klasse IIb zugeordnet. Die verbindliche Einstufung trifft der Hersteller (Konformitätserklärung); Auslegungshilfen enthält MDCG 2021-24 [@mdcg-2021-24]. Siehe [[risikoklassen|Risikoklassen]]. Die Klassenangabe ist daher als typische Einstufung zu verstehen; im Einzelfall die Konformitätserklärung bzw. Kennzeichnung des konkreten Produkts prüfen.",
+  "sources": [
+   "mdr-2017",
+   "mdcg-2021-24"
+  ]
+ },
+ "sections": {
+  "purpose": "## Medizinischer Zweck\n\nEin [[inkubator|Säuglingsinkubator]] (umgangssprachlich „Brutkasten“) ist ein [[medizinisches-elektrisches-geraet|medizinisches elektrisches Gerät]] mit einer weitgehend geschlossenen, durchsichtigen Haube, in der ein Neugeborenes in einer kontrollierten Umgebung gepflegt wird. Er erzeugt und regelt vor allem **Lufttemperatur**, **relative Luftfeuchte** und – optional – die **Sauerstoffkonzentration** im Patientenraum. Die Normenreihe beschreibt ihn als Gerät, dessen Patientenraum über erwärmte Luft temperiert wird; die gerätespezifischen Anforderungen enthält [[iec-60601-2-19|IEC 60601-2-19]] [@iec-60601-2-19].\n\nDas zentrale Therapieziel ist die **Thermoneutralität**: Das Kind soll seine Körpertemperatur mit minimalem Energie- und Sauerstoffverbrauch halten können. Gerade Frühgeborene sind dazu aus eigener Kraft kaum in der Lage, weil ihre [[thermoregulation|Thermoregulation]] unreif ist und ihr Körper im Verhältnis zur Masse sehr viel Wärme an die Umgebung verliert [@who-thermal-1997][@schmidt-lang-2019].\n\n> [!belegt] Unterkühlung (Hypothermie) ist bei Neugeborenen mit erhöhter Morbidität und Mortalität verbunden; die WHO beschreibt den Wärmeschutz – Abtrocknen, Wärmeerhalt, warme Umgebung, Vermeiden von Wärmeverlusten bei Pflege und Transport – als eine Kernmaßnahme der Neugeborenenversorgung [@who-thermal-1997].\n\nNeben dem Wärmeschutz erfüllt der Inkubator weitere Aufgaben:\n\n* **Schutz vor Wasserverlust:** Hohe Luftfeuchte verringert die Verdunstung über die noch sehr durchlässige [[haut|Haut]] extrem unreifer Frühgeborener.\n* **Kontrollierte Sauerstoffgabe** in die Umgebungsluft (heute seltener genutzt, da die Atemunterstützung meist über [[cpap-geraet|CPAP]], [[high-flow-geraet|High-Flow]] oder [[beatmungsgeraet|Beatmung]] erfolgt).\n* **Abschirmung** gegenüber Zugluft, Lärm, Licht und – eingeschränkt – Keimen aus der Raumluft (gefilterte Zuluft).\n* **Pflege- und Überwachungsplattform:** Zugang über Durchgriffsöffnungen, integrierte Waage, Kopplung an [[patientenmonitor|Patientenmonitor]], [[pulsoxymeter|Pulsoxymetrie]] und [[phototherapiegeraet|Phototherapie]].\n\n> [!hinweis] Der Inkubator ist ein Gerät zur **Unterstützung** der Temperaturhomöostase. Er ersetzt weder die klinische Beobachtung noch eine unabhängige Kontrolle der Körpertemperatur des Kindes mit einem geeigneten [[thermometer|Thermometer]].\n",
+  "applications": "## Einsatzgebiete\n\nInkubatoren gehören zur Grundausstattung jeder [[neonatologie|neonatologischen]] Intensivstation (NICU) und vieler Geburtskliniken. Typische Einsatzsituationen:\n\n| Einsatz | Ziel | Besonderheiten |\n|---|---|---|\n| Frühgeborene, insbesondere sehr kleine Frühgeborene | Thermoneutralität, Reduktion von Verdunstungsverlusten | hohe Luftfeuchte in den ersten Lebenstagen, Hauttemperaturregelung |\n| Reife Neugeborene mit Anpassungsstörungen, Infektion, Hypoglykämie | Wärmeerhalt, Beobachtung | meist Lufttemperaturregelung, kurze Verweildauer |\n| Postoperative Versorgung (z. B. Bauchwanddefekte) | Wärme- und Flüssigkeitsbilanz | große Verdunstungsflächen, enge Abstimmung mit Wärmestrahler |\n| Kombination mit Phototherapie | Behandlung des Neugeborenenikterus | Wärmeeintrag durch die Lichtquelle beachten |\n| Isolation | Schutz vor bzw. von Erregern | gefilterte Zuluft, Hygieneregime |\n| Intra- und interklinischer Transport | Wärmeschutz unterwegs | Transportinkubator nach IEC 60601-2-20 [@iec-60601-2-20] mit Akku, Gasversorgung, ggf. [[transportbeatmungsgeraet|Transportbeatmungsgerät]] |\n\n**Abgrenzung zu verwandten Geräten:**\n\n* Das [[waermebett|Säuglingswärmebett]] (offene Reanimationseinheit) wärmt mit einem Infrarot-Wärmestrahler von oben; es bietet maximalen Zugang (z. B. Erstversorgung im Kreißsaal, Interventionen), aber keinen Schutz vor Verdunstung und Konvektion.\n* **Hybridgeräte** kombinieren beide Prinzipien: Die Haube lässt sich anheben, dann übernimmt ein Wärmestrahler; abgesenkt arbeitet das Gerät als geschlossener Inkubator. Beispiele sind Geräte der Giraffe-OmniBed-Familie von [[ge-healthcare|GE HealthCare]] und der Babyleo TN500 von [[draeger|Dräger]] [@ge-giraffe][@draeger-babyleo].\n* [[hypothermiegeraet|Temperaturmanagementsysteme]] dienen der **therapeutischen Hypothermie** (z. B. bei hypoxisch-ischämischer Enzephalopathie) – also dem gegenteiligen Ziel – und werden nicht mit einem Inkubator verwechselt.\n\nFachlich sind neben der [[neonatologie|Neonatologie]] die [[intensivmedizin|Intensivmedizin]], die [[geburtshilfe|Geburtshilfe]] und – beim Transport – die [[notfallmedizin|Notfallmedizin]] berührt.\n\n> [!praxis] Im Stationsalltag wird oft vom „Air-Modus“ (Lufttemperaturregelung) und „Baby-“ oder „Skin-Modus“ (Hauttemperaturregelung) gesprochen. Welche Betriebsart gewählt wird, ist eine ärztlich-pflegerische Entscheidung nach Stationsstandard; die Technik muss beide Modi sicher beherrschen.\n",
+  "principle": "## Funktionsprinzip\n\nDer Inkubator ist im Kern ein **geregeltes Klimasystem** im Kleinformat: Ein Lüfter wälzt Luft über ein [[heizelement|Heizelement]] und eine Befeuchtungseinrichtung um, die konditionierte Luft strömt in den Patientenraum und wieder zurück. Ein [[regelkreis|Regelkreis]] hält die gewählte Führungsgröße (Luft- oder Hauttemperatur) konstant; ein **unabhängiger Übertemperaturschutz** begrenzt die Temperatur auch bei Fehlern der Regelung [@iec-60601-2-19][@kramme-2017].\n\n### Wärmebilanz des Neugeborenen\n\nDie Körpertemperatur bleibt konstant, wenn Wärmeproduktion und Wärmeabgabe im Gleichgewicht sind. Vereinfacht gilt die Wärmebilanz\n\n`S = M − (Q_K + Q_C + Q_R + Q_E)`\n\nmit S = Wärmespeicherung (S > 0: Erwärmung), M = metabolische Wärmeproduktion, Q_K = Konduktion (Wärmeleitung an die Liegefläche), Q_C = Konvektion, Q_R = Wärmestrahlung, Q_E = Verdunstung [@schmidt-lang-2019][@tipler-2019]. Die Physik der einzelnen Terme behandelt der Artikel [[waermeuebertragung|Wärmeübertragung]].\n\n| Mechanismus | Gleichung (vereinfacht) | Einflussgröße im Inkubator |\n|---|---|---|\n| Konduktion | Q_K = (λ / d) · A_K · (T_Haut − T_Matratze) | Matratzenmaterial, vorgewärmte Liegefläche |\n| Konvektion | Q_C = h_c · A · (T_Haut − T_Luft) | Lufttemperatur, Luftgeschwindigkeit, geschlossene Klappen |\n| Strahlung | Q_R = ε · σ · A · (T_Haut⁴ − T_Wand⁴) | Temperatur der Innenwand (Doppelwand!), Raumtemperatur, Sonneneinstrahlung |\n| Verdunstung | Q_E = r · ṁ, ṁ ~ (p_D,Haut − p_D,Luft) | relative Feuchte, Hautreife |\n\nDabei ist h_c der Wärmeübergangskoeffizient, ε ≈ 0,97 der Emissionsgrad der Haut, σ = 5,67 · 10⁻⁸ W/(m² · K⁴) die Stefan-Boltzmann-Konstante, r ≈ 2,4 kJ/g die Verdampfungsenthalpie von Wasser bei Körpertemperatur und p_D der Wasserdampfpartialdruck.\n\nWarum Frühgeborene besonders gefährdet sind [@who-thermal-1997][@schmidt-lang-2019]:\n\n* **Großes Oberflächen-Masse-Verhältnis:** Wärmeabgabe skaliert mit der Fläche A, Wärmeproduktion und Wärmespeicher mit der Masse.\n* **Dünne, unreife Haut:** Die Hornschicht ist bei extrem unreifen Kindern kaum ausgebildet, der transepidermale Wasserverlust (TEWL) und damit Q_E sind in den ersten Lebenstagen sehr hoch.\n* **Wenig isolierendes Unterhautfett** und eingeschränkte Fähigkeit zur zitterfreien Thermogenese im braunen Fettgewebe.\n* **Keine Verhaltensregulation:** Das Kind kann sich weder zudecken noch die Umgebung wechseln.\n\n> [!beispiel] **Strahlungsverlust an Einfach- und Doppelwand.** Annahmen: Körperoberfläche eines ca. 1 kg schweren Frühgeborenen A ≈ 0,1 m² (vereinfachend als vollständig strahlende Fläche angenommen; real verringern Auflagefläche und Körperhaltung die effektive Strahlungsfläche), Hauttemperatur 36,5 °C (309,65 K), ε = 0,97.\n> Einwandige Haube mit Innenwandtemperatur 28 °C (301,15 K): Q_R = 0,97 · 5,67 · 10⁻⁸ · 0,1 · (309,65⁴ − 301,15⁴) W ≈ **5,3 W**.\n> Doppelwand, innere Wand auf 34 °C (307,15 K) erwärmt: Q_R ≈ **1,6 W**.\n> Zum Vergleich liegt die Ruhewärmeproduktion eines Frühgeborenen in der Größenordnung von etwa 2–3 W pro kg Körpergewicht. Allein der Strahlungsverlust an eine kalte Wand kann also die gesamte Wärmeproduktion übersteigen – obwohl die **Luft** im Inkubator warm ist. Alle Zahlen sind Beispielwerte.\n\nDieses Beispiel erklärt, warum moderne Inkubatoren **doppelwandige Hauben** oder beheizte Wände nutzen und warum ein Inkubator nicht direkt an einem kalten Fenster oder in der Sonne stehen soll: Die gemessene Lufttemperatur allein beschreibt die thermische Belastung des Kindes nur unvollständig. Man spricht von der **operativen Temperatur**, die Luft- und Strahlungstemperatur gewichtet zusammenfasst.\n\n> [!vereinfacht] Die Gleichungen beschreiben stationäre Verhältnisse und mitteln über die Körperoberfläche. In der Realität hängen h_c von Lage, Luftströmung und Kleidung, Q_E stark vom Gestationsalter und vom Lebensalter in Tagen ab.\n\n### Luftführung und Wärmeerzeugung\n\nEin Radialgebläse ([[turbine|Lüfter]]) saugt einen kleinen Anteil **Frischluft** über einen Filter an und mischt ihn mit der Umluft aus dem Patientenraum. Der Luftstrom passiert das [[heizelement|Heizelement]] (meist ein Widerstandsheizkörper; Wärme nach dem [[joulesche-waerme|Jouleschen Gesetz]] P = U² / R bzw. P = I² · R) und die Befeuchtungseinrichtung und tritt über Kanäle seitlich der Liegefläche in den Patientenraum ein. Häufig wird die Luft so geführt, dass beim Öffnen einer Klappe ein **Luftvorhang** den Wärmeverlust begrenzt.\n\nDer Frischluftanteil ist notwendig, damit sich das vom Kind ausgeatmete CO₂ nicht im Patientenraum anreichert. Die Luftgeschwindigkeit über der Matratze muss dagegen klein bleiben, weil sonst h_c und damit der Konvektionsverlust steigen.\n\n### Regelung der Temperatur\n\nDer Inkubator kennt zwei grundsätzliche Regelungsarten:\n\n| Betriebsart | Regelgröße (Istwert) | Stellgröße | Vorteil | Risiko |\n|---|---|---|---|---|\n| **Lufttemperaturregelung** („Air-Modus“) | Lufttemperatur im Patientenraum (Fühler im Luftstrom) | Heizleistung | robust, unabhängig vom Hautfühler | Kind kann trotz konstanter Luft auskühlen oder überwärmen (Strahlung, Fieber) |\n| **Hauttemperaturregelung** („Skin-/Baby-Modus“) | Hauttemperatur, gemessen mit einem [[temperatursensor|Hauttemperaturfühler]] (meist NTC) | Heizleistung | regelt direkt auf die Zielgröße am Kind | gelöster oder abgedeckter Fühler führt zu Fehlregelung |\n\nBeide Modi werden typischerweise als digitaler **PID-Regler** (bzw. PI-Regler mit Zusatzfunktionen) auf einem [[mikrocontroller|Mikrocontroller]]. In zeitdiskreter Form mit Abtastzeit T:\n\n`u_k = K_P · e_k + K_I · T · Σ e_i + K_D · (e_k − e_(k−1)) / T`, mit `e_k = T_soll − T_ist`.\n\nDie Stellgröße u wird in eine Heizleistung umgesetzt. Weil das Heizelement an Netzwechselspannung betrieben wird, nutzt man häufig eine **Schwingungspaketsteuerung**: Ein Triac oder Halbleiterrelais schaltet im Nulldurchgang ganze Netzhalbwellen ein oder aus; die mittlere Leistung ist P = P_max · n_ein / N (n_ein eingeschaltete von N Halbwellen). Dies ist eine Variante der [[pwm|Pulsweitenmodulation]] mit sehr langer Periode und erzeugt kaum Störaussendungen ([[emv|EMV]]).\n\n> [!beispiel] **Thermische Zeitkonstante und Aufheizzeit.** Modelliert man den Inkubator als System erster Ordnung mit Wärmekapazität C und Wärmeleitwert G zur Umgebung, gilt τ = C / G und für das Aufheizen mit konstanter Heizleistung P:\n> `ΔT(t) = (P / G) · (1 − e^(−t/τ))`.\n> Mit den Beispielwerten C = 20 kJ/K, G = 5 W/K und P = 300 W folgt τ = 4 000 s ≈ 67 min und eine theoretische Endübertemperatur P / G = 60 K. Um von 22 °C Raumtemperatur auf 34 °C (ΔT = 12 K) zu kommen, braucht das Gerät t = −τ · ln(1 − 12/60) ≈ 4 000 s · 0,223 ≈ **15 min**. Danach muss der Regler die Heizleistung auf etwa G · ΔT = 60 W zurücknehmen. Die Zahlen sind didaktische Annahmen, keine Daten eines realen Geräts.\n\nDas Beispiel zeigt die regelungstechnischen Herausforderungen: Das System ist **träge**, die Strecke ändert sich stark beim Öffnen von Klappen (G steigt sprunghaft) und die Last „Kind“ produziert selbst Wärme. Ein zu aggressiver Integralanteil führt zu **Überschwingen** nach Störungen; ein zu schwacher Regler stellt Temperaturabfälle nach der Pflege nur langsam aus. Hersteller kombinieren deshalb PID-Regelung mit Vorsteuerung, Begrenzungen (Anti-Windup) und Grenzwerten für die Heizleistung.\n\n**Hauttemperaturregelung im Detail:** Der Fühler wird mit einer reflektierenden Abdeckung auf die Haut (häufig Abdomen oder Flanke) geklebt. Das Regelziel ist meist eine Haut- bzw. Bauchhauttemperatur im Bereich der Thermoneutralität. Kritisch ist die Abhängigkeit vom Fühlersitz: Löst sich der Fühler, misst er die (kühlere) Lufttemperatur, der Regler interpretiert dies als Auskühlung und heizt maximal. Deshalb überwachen Inkubatoren die Plausibilität (z. B. Differenz zwischen Haut- und Lufttemperatur, Fühlerunterbrechung) und begrenzen die Lufttemperatur auch im Hautmodus.\n\n> [!warnung] Wird ein Hauttemperaturfühler mit Pflaster, Decke oder durch die Lage des Kindes **abgedeckt** oder zusätzlich durch Wärmestrahler oder Phototherapie bestrahlt, misst er nicht mehr die Körperoberfläche. Fehlregelungen in beide Richtungen (Über- oder Unterwärmung) sind möglich. Fühlersitz und Körpertemperatur regelmäßig kontrollieren.\n\nGängig sind darüber hinaus zwei getrennte Fühler für die **Lufttemperatur** (Regelfühler und Überwachungsfühler) sowie Kombinationen von Haut- und Peripherietemperatur zur Abschätzung der zentral-peripheren Temperaturdifferenz.\n\n### Unabhängiger Übertemperaturschutz\n\nEin separater, von der Regelung unabhängiger Schutzkreis (eigener Fühler, eigene Auswerteelektronik, eigenes Abschaltorgan) schaltet die Heizung ab und alarmiert, wenn die Lufttemperatur einen festen Grenzwert überschreitet. Dieses Prinzip der **Redundanz** – zwei unabhängige Kanäle, von denen jeder für sich den sicheren Zustand herbeiführen kann – ist eine Kernanforderung der gerätespezifischen Norm [@iec-60601-2-19][@iec-60601-1].\n\n### Befeuchtung\n\nDie Luftfeuchte wird meist durch **Verdampfen** von Wasser aus einem Reservoir über eine geregelte Heizplatte erzeugt. Verdampfer gelten hygienisch als günstiger als Vernebler, weil kein Aerosol mit möglichen Keimen in den Patientenraum gelangt. Ein kapazitiver Feuchtesensor liefert den Istwert für eine geregelte Feuchte („Servo-Feuchte“).\n\nPhysikalisch maßgeblich ist der Wasserdampfpartialdruck. Die relative Feuchte φ = p_D / p_S(T) bezieht ihn auf den Sättigungsdampfdruck p_S, der stark mit der Temperatur steigt (näherungsweise Magnus-Formel: p_S(T) ≈ 611,2 Pa · exp(17,62 · T / (243,12 °C + T)), T in °C) [@tipler-2019]. Daraus folgt der **Taupunkt**: Kühlt Luft an einer Oberfläche unter diese Temperatur ab, kondensiert Wasser.\n\n> [!beispiel] **Taupunkt und Wasserbedarf.** Lufttemperatur 36 °C, relative Feuchte 80 %.\n> p_S(36 °C) ≈ 5,93 kPa → p_D = 0,8 · 5,93 kPa ≈ 4,75 kPa. Dieser Dampfdruck entspricht dem Sättigungsdruck bei **≈ 32 °C** – das ist der Taupunkt. Jede Wandfläche, die kälter als 32 °C ist, beschlägt.\n> Absolute Feuchte im Inkubator: ρ_D = p_D · M_W / (R · T) = 4 750 Pa · 0,018 kg/mol / (8,314 J/(mol · K) · 309 K) ≈ 33 g/m³. Raumluft 22 °C, 40 % rF enthält ≈ 7,7 g/m³.\n> Bei angenommenen 10 l/min Frischluft (0,6 m³/h) müssen (33 − 7,7) g/m³ · 0,6 m³/h ≈ **15 g/h** Wasser verdampft werden – etwa 0,37 l pro Tag – mit einer Verdampfungsleistung von 15 g/h · 2,4 kJ/g ≈ **10 W**. Beispielwerte.\n\nHohe Feuchte reduziert Q_E beim Kind deutlich, führt aber zu **Kondensat** an der Haube (Sichtbehinderung, Hygienerisiko). Doppelwände, beheizte Wandflächen und spezielle Kondensatmanagement-Systeme mindern das Problem.\n\n### Sauerstoffregelung\n\nOptional kann Sauerstoff aus der zentralen Gasversorgung über ein [[proportionalventil|Proportional-]] bzw. [[magnetventil|Magnetventil]] in den Luftkreislauf eingespeist werden. Ein geregeltes System misst die O₂-Konzentration mit meist **zwei** [[sauerstoffsensor|Sauerstoffsensoren]] (galvanische Zellen), vergleicht beide Messwerte und regelt das Ventil auf den Sollwert. Abweichungen zwischen den Zellen lösen einen Alarm aus und erfordern eine [[kalibrierung|Kalibrierung]] oder einen Zellentausch.\n\n> [!warnung] Sauerstoff ist bei Frühgeborenen ein Arzneimittel mit Nebenwirkungen: Hyperoxie ist ein Risikofaktor u. a. für die Frühgeborenen-Retinopathie. Die Zielwerte (in der Regel über die Sauerstoffsättigung, [[pulsoxymeter|SpO₂]]) legt ärztliches Personal fest; die Inkubator-O₂-Konzentration ist nur die Umgebungs-, nicht die Einatemkonzentration bei Atemunterstützung.\n\nPhysikalisch gilt nach den [[gasgesetze|Gasgesetzen]] p_O₂ = F_O₂ · p_gesamt; der Partialdruck bestimmt den [[gasaustausch|Gasaustausch]] in der Lunge. Wegen der Leckagen durch Klappen und Frischluftzufuhr fällt die Konzentration beim Öffnen rasch ab – auch deshalb wird Sauerstoff heute meist gezielt über das Atemunterstützungssystem gegeben.\n\n### Signalverarbeitung und Messkette\n\nDie Temperaturfühler sind überwiegend NTC-Thermistoren. Ihr Widerstand folgt näherungsweise der B-Parameter-Gleichung\n\n`R(T) = R₂₅ · exp(B · (1/T − 1/298,15 K))`.\n\nEin Spannungsteiler setzt R(T) in eine Spannung um, ein [[analog-digital-wandler|Analog-Digital-Wandler]] digitalisiert sie, und der Mikrocontroller linearisiert über die Kennlinie oder eine Tabelle (siehe [[messkette|Messkette]]). Für eine Auflösung von 0,1 °C und eine Genauigkeit im Bereich von wenigen Zehntel Kelvin sind präzise Referenzwiderstände, eine stabile Referenzspannung, digitale [[filter|Tiefpassfilter]] gegen Rauschen und die Kompensation der Eigenerwärmung des Fühlers nötig. Der Hautfühler ist ein [[anwendungsteile|Anwendungsteil]] und daher [[galvanische-trennung|galvanisch getrennt]] auszuführen [@iec-60601-1].\n\n> [!beispiel] **Empfindlichkeit eines NTC.** Ein NTC mit R₂₅ = 10 kΩ und B = 3 500 K hat bei 37 °C (310,15 K) den Widerstand R = 10 kΩ · exp(3 500 · (1/310,15 − 1/298,15)) ≈ 10 kΩ · e^(−0,454) ≈ 6,35 kΩ. Die relative Empfindlichkeit beträgt α = −B / T² ≈ −3,6 %/K. Ein Messfehler von 0,1 °C entspricht also nur etwa 0,36 % Widerstandsänderung (≈ 23 Ω) – ein Grund für die hohen Anforderungen an Kontaktierung, Kabel und Steckverbinder. Beispielwerte.\n\nDie Messwerte werden zusätzlich für **Trends** gespeichert, an Schnittstellen ([[hl7-fhir|HL7]]-Gateways, Patientenmonitor) übergeben und vom [[alarmsystem|Alarmsystem]] ausgewertet: Abweichung vom Sollwert, Fühlerfehler, Übertemperatur, Lüfterausfall, Feuchte- und O₂-Abweichung, Netzausfall [@iec-60601-1-8].\n",
+  "construction": "## Technischer Aufbau\n\nEin stationärer Inkubator besteht aus einem fahrbaren Untergestell, einem Grundgerät mit Klimaeinheit und Elektronik, einer Liegefläche und der transparenten Haube.\n\n### Baugruppen\n\n| Baugruppe | Aufgabe | Technische Umsetzung (typisch) |\n|---|---|---|\n| **Haube** | Abgrenzung des Patientenraums, Sicht auf das Kind | Acrylglas/Polycarbonat, ein- oder doppelwandig, Durchgriffsöffnungen (Irisblenden, Manschetten), Klappen, Kabel-/Schlauchdurchführungen |\n| **Liegefläche** | Lagerung des Kindes | Matratze auf Schale, neig- und ausziehbar, Röntgenkassettenschacht, ggf. integrierte Waage |\n| **Klimaeinheit** | Luftkonditionierung | [[turbine|Radialgebläse]] mit [[elektromotor|Motor]], [[heizelement|Heizelement]], Befeuchter mit Wasserreservoir, Frischluftfilter, Luftkanäle |\n| **Gasmodul** | O₂-Einspeisung | Anschluss an zentrale Gasversorgung, [[magnetventil|Ventil]], [[sauerstoffsensor|O₂-Sensoren]] |\n| **Sensorik** | Istwerte und Überwachung | Luft- und Hauttemperaturfühler, Feuchtesensor, Lüfterdrehzahl, Füllstand, Haubenposition |\n| **Steuerung** | Regelung, Alarme, Bedienung | [[mikrocontroller|Mikrocontroller]] mit Regelalgorithmen, unabhängiger Schutzkreis, [[display-bedienoberflaeche|Display]], [[alarmsystem|Alarmgeber]] |\n| **Energieversorgung** | Netzbetrieb, ggf. Akku | [[medizinisches-netzteil|Netzteil]], Netzteilfilter, Notstromkonzept (Akku nur für Teilfunktionen oder Transport) |\n| **Fahrgestell** | Mobilität, Ergonomie | Höhenverstellung, Bremsen, Halterungen für Monitore und Infusionstechnik |\n\n### Haube und Patientenraum\n\nDie **Doppelwand** besteht aus einer inneren und äußeren Scheibe mit Luftspalt; die innere Scheibe wird von der Umluft angeströmt und dadurch erwärmt. Durchgriffsöffnungen mit Manschetten erlauben Pflege, ohne die Haube zu öffnen; jeder Eingriff verursacht dennoch einen Temperatur- und Feuchteeinbruch. Einige Geräte erzeugen beim Öffnen der Frontklappe einen verstärkten Luftvorhang.\n\n### Integrierte Waage\n\nViele Inkubatoren haben eine Waage unter der Liegefläche. Sie arbeitet mit Wägezellen nach dem Prinzip des [[kraftsensor|Dehnungsmessstreifens]]: Eine Gewichtskraft F = m · g verformt einen Biegebalken, die Widerstandsänderung der DMS in einer Wheatstone-Brücke wird über einen [[instrumentenverstaerker|Instrumentenverstärker]] und A/D-Wandler erfasst. Kabel, Schläuche und Kissen müssen beim Wiegen berücksichtigt werden („Tara“).\n\n### Erweiterungen\n\n* **Wärmestrahler** (Hybridgeräte) über der Liegefläche für den offenen Betrieb.\n* **Phototherapie-Einheit** als Aufsatz oder Unterlage.\n* **Monitoring-Module** (SpO₂, Temperatur) und Schnittstellen zum Patientendatenmanagement.\n* **Abdeckungen** gegen Licht und Lärm, Positionierungshilfen.\n\n### Transportinkubator\n\nEin Transportinkubator ist ein kompaktes, stoßfestes Gerät nach IEC 60601-2-20 [@iec-60601-2-20] mit eigener Energieversorgung ([[lithium-ionen-akku|Akku]], Bordnetz des Fahrzeugs), Gasflaschen und oft einem integrierten [[transportbeatmungsgeraet|Beatmungsgerät]] und Monitor. Wegen der begrenzten Energie sind Doppelwand und Isolation besonders wichtig; die Akkukapazität muss den gesamten Transport einschließlich Wartezeiten abdecken.\n\n> [!praxis] Transportinkubatoren werden häufig auf einem eigenen Fahrgestell betrieben und im Rettungs- oder Intensivtransportwagen auf einem zugelassenen Haltesystem befestigt. Die Kompatibilität von Inkubator, Fahrgestell und Fahrzeughalterung ist Teil der Systemprüfung.\n",
+  "maintenance": "## Wartung und Instandhaltung\n\nDie [[instandhaltung-grundlagen|Instandhaltung]] umfasst nach [[din-31051|DIN 31051]] [[wartung|Wartung]], [[inspektion|Inspektion]], [[instandsetzung|Instandsetzung]] und Verbesserung [@din-31051]. Grundlage sind die Herstellerangaben (Gebrauchsanweisung, Servicehandbuch) und die [[mpbetreibv|MPBetreibV]].\n\n### Rechtlicher Rahmen\n\n> [!belegt] **Säuglingsinkubatoren** sind in **Anlage 1 Nr. 2** der MPBetreibV (Fassung 2025) ausdrücklich aufgeführt. Für sie sind **sicherheitstechnische Kontrollen** nach **§ 12** MPBetreibV durchzuführen – in den vom Hersteller angegebenen Fristen, fehlen solche Angaben, spätestens alle zwei Jahre [@mpbetreibv].\n\nSäuglingsinkubatoren selbst sind nicht in Anlage 2 (messtechnische Kontrollen nach § 15) genannt. Anlage 2 enthält allerdings Produkte zur Bestimmung der Körpertemperatur (u. a. medizinische Elektrothermometer). Ob eine **eigenständige Temperaturmessfunktion** (etwa ein zusätzliches Patiententemperatur-Modul) darunter fällt, ist im Einzelfall anhand von Zweckbestimmung und Herstellerangaben zu klären; der Hauttemperaturfühler als Regelfühler ist typischerweise Teil der Regelung [@mpbetreibv].\n\nZu den allgemeinen [[betreiberpflichten|Betreiberpflichten]] gehören außerdem die [[einweisung|Einweisung]] der Anwender, die Führung von [[bestandsverzeichnis|Bestandsverzeichnis]] und [[medizinproduktebuch|Medizinproduktebuch]] sowie die Meldung von Vorkommnissen ([[vigilanz|Vigilanz]]). Für Anlage-1-Geräte gelten zusätzliche Anforderungen vor dem erstmaligen Betrieb: eine Funktionsprüfung am Betriebsort durch den Hersteller oder eine von ihm befugte Person sowie die Einweisung einer vom Betreiber beauftragten Person; die Einweisungen sind zu dokumentieren. Die genaue Paragraphenzuordnung ist der jeweils gültigen Fassung der MPBetreibV zu entnehmen [@mpbetreibv].\n\n### Wartungsumfang (typisch)\n\n| Bereich | Maßnahme |\n|---|---|\n| Luftfilter | Austausch nach Herstellerintervall bzw. Betriebsstunden |\n| Sauerstoffsensoren | [[kalibrierung|Kalibrierung]] (meist bei 21 % und ggf. 100 % O₂), Austausch nach Lebensdauer (Verschleißteil) |\n| Lüfter und Motor | Laufgeräusch, Drehzahlüberwachung, Lagerverschleiß |\n| Heizelement und Schutzkreis | Funktion der Übertemperaturabschaltung, Steckverbinder, Wärmeschutz |\n| Befeuchter | Dichtigkeit, Heizplatte, Füllstandsüberwachung, Verkalkung |\n| Haube und Dichtungen | Risse (Spannungsrisse durch Desinfektionsmittel!), Manschetten, Scharniere, Verriegelungen |\n| Fühler und Kabel | Hauttemperaturfühler (Verschleißteil), Steckverbinder, Kabelbrüche |\n| Fahrgestell | Bremsen, Höhenverstellung, Neigung |\n| Akku (falls vorhanden) | Kapazitätstest, Austausch nach Herstellerangabe |\n\n### Aufbereitung\n\nDer Inkubator wird zwischen zwei Patienten und bei Langliegern in definierten Abständen [[aufbereitung|aufbereitet]]: Zerlegen nach Herstelleranleitung, Reinigung und [[desinfektion|Wischdesinfektion]] mit freigegebenen Mitteln, Wechsel bzw. Aufbereitung von Matratze, Manschetten, Befeuchter und Filter [@krinko-bfarm-2012]. Nur vom Hersteller freigegebene Desinfektionsmittel verwenden – manche Wirkstoffe führen bei Acrylglas zu Spannungsrissen. Nach der Desinfektion soll der Inkubator gemäß Herstellerangaben gelüftet bzw. ohne Patient betrieben werden, damit Rückstände ausdunsten.\n\n> [!praxis] Beim Befeuchter ist das hygienische Risiko besonders groß: stehendes, warmes Wasser ist ein idealer Nährboden für Wasserkeime. Nur das vom Hersteller vorgegebene Wasser (z. B. steriles Wasser) verwenden und Wechselintervalle strikt einhalten.\n\n> [!warnung] Eingriffe in Heizung, Schutzkreis und Gasmodul sind nur durch befugtes, vom Hersteller geschultes Fachpersonal mit Originalersatzteilen zulässig. Nach jeder Instandsetzung ist eine Prüfung nach [[iec-62353|IEC 62353]] und eine Funktionsprüfung durchzuführen.\n",
+  "testing": "## Prüfverfahren\n\n### Sicherheitstechnische Kontrolle (STK)\n\nDie [[stk|STK]] nach § 12 MPBetreibV i. V. m. Anlage 1 erfolgt nach der Prüfanweisung des Herstellers [@mpbetreibv]. Typischer Ablauf:\n\n1. **Sichtprüfung:** Haube, Klappen, Manschetten, Dichtungen, Liegefläche, Fahrgestell, Netzkabel, Fühler, Filter, Befeuchter; Kennzeichnung und Begleitpapiere.\n2. **Elektrische Sicherheit** nach [[iec-62353|IEC 62353]] (siehe unten).\n3. **Temperaturregelung:** Erreichen und Halten des Sollwerts im Luftmodus, Temperaturverteilung über der Liegefläche, Prüfung des Hautmodus mit Referenztemperatur.\n4. **Übertemperaturschutz:** Auslösung des unabhängigen Schutzkreises bei Überschreitung des Grenzwerts (Prüfung nach Herstellervorgabe, z. B. mit Servicemodus oder Prüfadapter).\n5. **Alarme:** Fühlerunterbrechung, Abweichung vom Sollwert, Lüfterausfall, Netzausfall, Feuchte und O₂ (falls vorhanden); Lautstärke und Priorität ([[alarmsystem|Alarmsystem]]).\n6. **Feuchte und Sauerstoff:** Abgleich der Anzeige mit Referenzmessgeräten, Kalibrierung der O₂-Sensoren.\n7. **Luftgeschwindigkeit und Schallpegel** im Patientenraum (Prüfung nach Herstellerangabe).\n8. **Dokumentation** im Medizinproduktebuch, Prüfplakette.\n\n### Messungen mit Inkubator-Analysator\n\nFür die quantitativen Prüfungen werden spezielle [[pruefgeraete|Prüfgeräte]] eingesetzt. Ein Inkubator-Analysator besitzt mehrere Temperaturfühler, die in definierter Höhe über der Matratze (Mittelpunkt und weitere Punkte über der Liegefläche) angeordnet werden, sowie Sensoren für Feuchte, Luftgeschwindigkeit und Schallpegel; je nach Gerät steht zusätzlich eine Referenz (z. B. ein Referenzfühler oder eine temperierte Kontaktfläche) für die Prüfung der Hauttemperaturanzeige zur Verfügung. Aus den Messreihen werden bestimmt:\n\n* **Temperaturgleichmäßigkeit:** Abweichung der Mittelwerte der äußeren Messpunkte vom Mittelpunkt.\n* **Temperaturstabilität (Variabilität):** Schwankung der Mittelpunkttemperatur im eingeschwungenen Zustand.\n* **Abweichung Anzeige – Messung** für Luft- und Hauttemperatur.\n* **Aufheizzeit** und **Überschwingen** nach Sollwertänderung.\n\nDie Prüfbedingungen und Grenzwerte ergeben sich aus der Prüfanweisung des Herstellers, die sich auf [[iec-60601-2-19|IEC 60601-2-19]] stützt [@iec-60601-2-19].\n\n> [!beispiel] **Auswertung einer Gleichmäßigkeitsmessung.** Mittelpunkt M: 34,0 °C; vier Außenpunkte: 33,6 / 34,3 / 33,8 / 34,4 °C. Größte Abweichung vom Mittelpunkt: |34,4 − 34,0| = 0,4 K. Liegt die zulässige Abweichung laut Prüfanweisung z. B. bei 0,8 K, ist das Kriterium erfüllt. Beispielwerte.\n\n### Elektrische Sicherheitsprüfung\n\nDie [[elektrische-sicherheitspruefung|Wiederholungsprüfung nach IEC 62353]] umfasst für die meist in [[schutzklassen|Schutzklasse I]] ausgeführten Inkubatoren die Messung des [[schutzleiterwiderstand|Schutzleiterwiderstands]] (einschließlich berührbarer leitfähiger Teile wie Fahrgestell und Halterungen), ggf. des [[isolationswiderstand|Isolationswiderstands]] und die [[ableitstrommessung|Messung]] des Geräte- und Patientenableitstroms [@iec-62353]. Als [[anwendungsteile|Anwendungsteil]] gelten insbesondere der Hauttemperaturfühler und Teile, die das Kind berühren; der Anwendungsteiltyp (meist BF) ist der Kennzeichnung zu entnehmen. Wegen der großen, mitunter feuchten Oberfläche und des Befeuchters ist eine sorgfältige Prüfung der Isolation besonders wichtig.\n\n### Funktionsprüfung vor der Anwendung\n\nVor jedem Einsatz prüft das Anwenderpersonal nach Gebrauchsanweisung: Selbsttest nach dem Einschalten, Alarmtest, korrekt montierte Haube und Klappen, Wasserstand im Befeuchter, Sitz von Filter und Matratze, Vorwärmen auf Solltemperatur, Fühler und Kabel unbeschädigt ([[funktionspruefung|Funktionsprüfung]]).\n"
+ },
+ "body": "## Geschichte\n\nWärmeschränke für Frühgeborene wurden im späten 19. Jahrhundert in Frankreich entwickelt und zunächst mit Warmwasser beheizt. In der ersten Hälfte des 20. Jahrhunderts setzten sich elektrisch beheizte Geräte durch. Später erkannte man die Bedeutung der **Luftfeuchte** und der **Strahlungsverluste**; auch die zunächst unkritische Sauerstoffgabe im Inkubator wurde nach der Beobachtung von Netzhautschäden bei Frühgeborenen deutlich restriktiver gehandhabt. Moderne Geräte verbinden Servoregelung von Temperatur, Feuchte und Sauerstoff mit Doppelwand, integrierter Waage und Vernetzung [@kramme-2017].\n\n## Aktuelle Entwicklungen\n\n* **Hybridkonzepte:** Ein Gerät für die gesamte Liegezeit – vom offenen Wärmebett bei Interventionen bis zum geschlossenen Inkubator –, um belastende Umlagerungen zu vermeiden [@ge-giraffe][@draeger-babyleo].\n* **Entwicklungsfördernde Pflege:** Reduktion von Lärm, Licht und Vibrationen; leise Klappen und Lüfter, Abdeckhauben, Einbindung der Eltern (Känguru-Pflege außerhalb des Inkubators).\n* **Erweiterte Temperaturüberwachung:** Messung von zentraler und peripherer Temperatur, Trends und Datenanbindung an Patientendatenmanagementsysteme.\n* **Material- und Produktsicherheit:** In einem geschlossenen, warmen Patientenraum sind Ausdünstungen aus Werkstoffen und Rückstände von Desinfektionsmitteln besonders relevant. Sicherheitsinformationen der Hersteller und Mitteilungen des BfArM [@bfarm] zu Inkubatoren sind vom Betreiber zu verfolgen.\n\n## Marktübersicht\n\nNeben den hier aufgeführten großen Herstellern bieten zahlreiche weitere, teils regional bedeutende Unternehmen Inkubatoren und Transportinkubatoren an. Für Beschaffung und Betrieb sind Servicenetz, Ersatzteilverfügbarkeit und die vom Hersteller angegebene Nutzungsdauer (Ende des garantierten Service) wichtige Kriterien.\n",
+ "components": [
+  {
+   "ref": "heizelement",
+   "role": "Widerstandsheizkörper im Luftkanal; erzeugt die Wärme (P = I² · R), angesteuert über Schwingungspaketsteuerung/Triac durch den Regler und zusätzlich durch den unabhängigen Übertemperaturschutz abschaltbar."
+  },
+  {
+   "ref": "turbine",
+   "role": "Radialgebläse für die Umluft: mischt gefilterte Frischluft mit Rückluft, führt sie über Heizung und Befeuchter in den Patientenraum; Drehzahl wird überwacht (Lüfterausfall-Alarm)."
+  },
+  {
+   "ref": "elektromotor",
+   "role": "Antrieb des Gebläses, bei modernen Geräten häufig als [[bldc-motor|bürstenloser Gleichstrommotor]] mit geringer Geräuschentwicklung."
+  },
+  {
+   "ref": "regelkreis",
+   "role": "PID-Regelung von Luft- bzw. Hauttemperatur, Feuchte und O₂-Konzentration; Begrenzungen und Anti-Windup gegen Überschwingen."
+  },
+  {
+   "ref": "mikrocontroller",
+   "role": "Steuerrechner für Regelalgorithmen, Alarmlogik, Trends, Bedienung und Schnittstellen; getrennt davon ein unabhängiger Schutzkanal."
+  },
+  {
+   "ref": "proportionalventil",
+   "role": "Dosiert Sauerstoff aus der zentralen Gasversorgung in den Luftkreislauf (bei geregelter O₂-Zufuhr)."
+  },
+  {
+   "ref": "display-bedienoberflaeche",
+   "role": "Einstellung von Sollwerten, Anzeige von Ist- und Trendwerten, Alarmanzeige; häufig am Fußende oder seitlich angeordnet."
+  },
+  {
+   "ref": "alarmsystem",
+   "role": "Akustische und optische Alarmsignale für Temperaturabweichung, Fühlerfehler, Übertemperatur, Lüfter, Feuchte, O₂ und Netzausfall."
+  },
+  {
+   "ref": "medizinisches-netzteil",
+   "role": "Energieversorgung der Elektronik; das Heizelement wird meist direkt aus dem Netz über Halbleiterschalter versorgt."
+  },
+  {
+   "ref": "lithium-ionen-akku",
+   "role": "Bei Transportinkubatoren Hauptenergiequelle unterwegs; bei stationären Geräten ggf. Pufferung von Alarm- und Anzeigefunktionen bei Netzausfall."
+  }
+ ],
+ "sensors": [
+  {
+   "ref": "temperatursensor",
+   "role": "NTC-Fühler für Lufttemperatur (Regel- und separater Überwachungsfühler) sowie Hauttemperaturfühler am Kind als Istwertgeber im Hautmodus."
+  },
+  {
+   "ref": "sauerstoffsensor",
+   "role": "Meist zwei galvanische O₂-Zellen zur redundanten Messung der O₂-Konzentration im Patientenraum; regelmäßige Kalibrierung, Verschleißteil."
+  },
+  {
+   "ref": "kraftsensor",
+   "role": "Wägezellen mit Dehnungsmessstreifen für die integrierte Waage unter der Liegefläche."
+  },
+  {
+   "ref": "messkette",
+   "role": "Kapazitiver Feuchtesensor im Luftkreislauf als Istwertgeber der Feuchteregelung; Messkette mit Temperaturkompensation."
+  },
+  {
+   "ref": "hall-sensor",
+   "role": "Drehzahlerfassung des Lüftermotors sowie Positionserkennung von Haube, Klappen oder Wassertank (je nach Bauart auch Mikroschalter oder optische Sensoren)."
+  }
+ ],
+ "specs": [
+  {
+   "param": "Lufttemperatur (Regelbereich)",
+   "value": "etwa 20–23 °C bis 37 °C; mit bewusster Übersteuerung bis etwa 39 °C",
+   "note": "Untere Grenze geräteabhängig; die Übersteuerung (Override) über 37 °C erfordert eine gesonderte Bestätigung.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-19"
+   ]
+  },
+  {
+   "param": "Hauttemperatur-Sollwert (Hautmodus)",
+   "value": "etwa 34–37 °C, mit Übersteuerung bis etwa 38 °C",
+   "note": "Herstellerabhängig; Zielwert legt das Behandlungsteam fest.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Unabhängiger Übertemperaturschutz (Luft)",
+   "value": "Abschaltung bei etwa 38 °C bzw. 40 °C im Übersteuerungsbetrieb",
+   "note": "Fester, vom Regler unabhängiger Grenzwert. Die genannten Werte entsprechen älteren Ausgaben der [[iec-60601-2-19|IEC 60601-2-19]]; neuere Ausgaben bzw. Änderungen können einzelne Grenzwerte angepasst haben – maßgeblich sind die geltende Normausgabe und die Herstellerangabe.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-19"
+   ]
+  },
+  {
+   "param": "Temperaturstabilität (Variabilität im eingeschwungenen Zustand)",
+   "value": "≤ 0,5 K",
+   "note": "Schwankung der Lufttemperatur im Mittelpunkt bei konstantem Sollwert; Prüfung mit Inkubator-Analysator.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-19"
+   ]
+  },
+  {
+   "param": "Temperaturgleichmäßigkeit über der Liegefläche",
+   "value": "≤ 0,8 K (horizontale Liegefläche)",
+   "note": "Abweichung der Messpunkte über der Matratze vom Mittelpunkt; bei geneigter Liegefläche etwas größere Toleranz.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-19"
+   ]
+  },
+  {
+   "param": "Genauigkeit Hauttemperaturmessung",
+   "value": "etwa ± 0,3 K",
+   "note": "Im klinisch relevanten Bereich; einschließlich Fühler.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Relative Luftfeuchte (geregelt)",
+   "value": "etwa 30–40 % bis 85–95 % rF",
+   "note": "Erreichbarer Wert hängt von Lufttemperatur, Raumklima und Kondensation ab.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Sauerstoffkonzentration (geregelt, optional)",
+   "value": "21 % bis etwa 60–65 Vol.-%",
+   "note": "Bei Servo-O₂-Regelung mit zwei Sensoren; ohne Regelung abhängig vom eingestellten Flow.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Luftgeschwindigkeit über der Matratze",
+   "value": "≤ 0,35 m/s",
+   "note": "Begrenzung des konvektiven Wärmeverlusts; Prüfung nach Herstellerangabe.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-19"
+   ]
+  },
+  {
+   "param": "Schalldruckpegel im Patientenraum (Normalbetrieb)",
+   "value": "Größenordnung ≤ 60 dB(A); moderne Geräte meist deutlich darunter",
+   "note": "Lärm ist ein Stressfaktor für Frühgeborene; Klappen und Alarme erzeugen Spitzenpegel. Der normative Grenzwert wurde in neueren Ausgaben der [[iec-60601-2-19|IEC 60601-2-19]] überarbeitet – geltende Ausgabe und Herstellerangabe beachten.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-19"
+   ]
+  },
+  {
+   "param": "Patientengewicht/-größe",
+   "value": "Früh- und Neugeborene bis wenige Kilogramm",
+   "note": "Konkrete Grenze laut Zweckbestimmung des Herstellers.",
+   "evidence": "typisch"
+  }
+ ],
+ "manufacturers": [
+  {
+   "ref": "draeger",
+   "models": [
+    "Babyleo TN500",
+    "Isolette 8000 plus",
+    "Caleo",
+    "Isolette TI500 (Transportinkubator)"
+   ],
+   "note": "Babyleo TN500 ist ein Hybridgerät (Inkubator und offene Wärmeeinheit); die Isolette-Linie stammt ursprünglich von Air-Shields. Caleo ist eine ältere Plattform, die in Kliniken noch verbreitet ist – aktuelles Produktprogramm beim Hersteller prüfen."
+  },
+  {
+   "ref": "ge-healthcare",
+   "models": [
+    "Giraffe OmniBed Carestation",
+    "Giraffe Incubator Carestation"
+   ],
+   "note": "OmniBed ist ein Hybridgerät mit absenkbarer Haube und Wärmestrahler; ergänzend Giraffe Shuttle als Transportlösung der Plattform. Sicherheitsinformationen des Herstellers beachten."
+  }
+ ],
+ "price": {
+  "status": "nicht-verifiziert",
+  "note": "Für Säuglingsinkubatoren gibt es keine öffentlich überprüfbaren Listenpreise; die Beschaffung erfolgt meist über Ausschreibungen oder Rahmenverträge. Einflussfaktoren: Gerätetyp (einwandig, doppelwandig, Hybridgerät mit Wärmestrahler, Transportinkubator mit Fahrgestell und Beatmung), Optionen (Servo-Feuchte, Servo-O₂, integrierte Waage, Phototherapie, Monitoring, Datenanbindung), Zubehör (Hauttemperaturfühler, Matratzen, Abdeckungen, Halterungen), Stückzahl sowie Laufzeit und Umfang des Servicevertrags. Für die **Gesamtbetriebskosten** sind Verbrauchs- und Verschleißteile (Fühler, O₂-Zellen, Filter, Manschetten, Matratzen), Aufbereitung zwischen den Patienten, STK und Wartung, Energie sowie die vom Hersteller zugesicherte Ersatzteil- und Serviceverfügbarkeit über die Nutzungsdauer entscheidend."
+ },
+ "maintenance": {
+  "stk": "ja",
+  "mtk": "nein",
+  "basis": "MPBetreibV (2025) Anlage 1 Nr. 2 – Säuglingsinkubatoren; STK nach § 12. Säuglingsinkubatoren sind nicht in Anlage 2 (MTK, § 15) aufgeführt; eine eigenständige Körpertemperatur-Messfunktion kann im Einzelfall unter Anlage 2 Nr. 1.2 fallen.",
+  "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); Wartung, O₂-Sensor-Kalibrierung und Filterwechsel nach Herstellerangabe; Aufbereitung zwischen Patienten und in festgelegten Intervallen."
+ },
+ "faults": [
+  {
+   "title": "Hauttemperaturfühler gelöst oder abgedeckt",
+   "ref": "anwendungsfehler",
+   "cause": "Fühler hat sich gelöst, liegt unter dem Kind, ist durch Decke oder Pflaster abgedeckt oder wird durch Wärmestrahler bzw. Phototherapie bestrahlt; Hautmodus misst dann nicht mehr die Körperoberfläche.",
+   "action": "Fühlersitz und Abdeckung prüfen, Körpertemperatur unabhängig messen, ggf. in den Luftmodus wechseln; bei wiederholtem Fühleralarm Fühler und Kabel tauschen."
+  },
+  {
+   "title": "Übertemperaturalarm (Luft)",
+   "cause": "Externe Wärmequelle (Sonneneinstrahlung, Wärmestrahler, Phototherapie), Fehlregelung im Hautmodus, Defekt von Regelfühler oder Regelung.",
+   "action": "Kind kontrollieren und Temperatur messen, externe Wärmequellen entfernen; der Schutzkreis hat die Heizung abgeschaltet – Gerät bei unklarer Ursache außer Betrieb nehmen und von der Medizintechnik prüfen lassen."
+  },
+  {
+   "title": "Lufttemperatur erreicht Sollwert nicht / fällt ab",
+   "cause": "Klappen oder Manschetten offen, Haube nicht korrekt verriegelt, kalter Raum oder Zugluft, verstopfter Filter, Lüfter- oder Heizungsdefekt.",
+   "action": "Haube, Klappen und Dichtungen prüfen, Standort (Fenster, Klimaanlage) prüfen, Filter kontrollieren; bei Fortbestehen Technik informieren."
+  },
+  {
+   "title": "Lüfter- bzw. Luftstromalarm",
+   "cause": "Blockierter oder verschmutzter Lüfter, Motordefekt, fehlerhafter Drehzahlgeber, falsch montierte Luftführung nach der Aufbereitung.",
+   "action": "Kind sofort sicher wärmeversorgen und in ein Ersatzgerät umlagern (ohne Luftumwälzung ist eine sichere Temperierung nicht möglich); Montage der Einsätze nach der Aufbereitung prüfen, Instandsetzung durch Fachpersonal."
+  },
+  {
+   "title": "O₂-Abweichung oder Kalibrierfehler",
+   "ref": "sensordrift",
+   "cause": "Verbrauchte galvanische Zelle, Feuchtigkeit am Sensor, unterschiedliche Messwerte der beiden Zellen, Gasversorgung unterbrochen, Klappen offen.",
+   "action": "O₂-Konzentration mit unabhängigem Messgerät prüfen, Kalibrierung nach Herstellerangabe durchführen, Zellen tauschen; SpO₂ des Kindes überwachen."
+  },
+  {
+   "title": "Feuchte zu niedrig / Wassertank leer",
+   "cause": "Leerer oder falsch eingesetzter Wasserbehälter, defekte Heizplatte, Feuchtesensor verschmutzt.",
+   "action": "Tank mit dem vorgeschriebenen Wasser füllen und korrekt einsetzen, Sensor prüfen; bei Defekt Gerät tauschen."
+  },
+  {
+   "title": "Starke Kondensation an der Haube",
+   "cause": "Wandtemperatur unter dem Taupunkt durch hohe Feuchte bei kaltem Raum oder Zugluft, einwandige Haube.",
+   "action": "Raumtemperatur und Standort prüfen, Feuchtesollwert ärztlich überprüfen lassen, Kondensatmanagement nach Hersteller nutzen; Kondenswasser hygienisch entfernen."
+  },
+  {
+   "title": "Akku erschöpft (Transportinkubator)",
+   "ref": "akkufehler",
+   "cause": "Gealterter Akku, unzureichendes Laden zwischen Einsätzen, lange Transport- oder Wartezeiten, defekte Fahrzeugeinspeisung.",
+   "action": "Ladezustand vor jedem Einsatz prüfen, Fahrzeugversorgung nutzen, Akku nach Herstellerangabe testen und tauschen."
+  },
+  {
+   "title": "Häufige Fehlalarme",
+   "ref": "alarmmuedigkeit",
+   "cause": "Ungeeignete Alarmgrenzen, schlecht haftende Fühler, häufiges Öffnen der Haube.",
+   "action": "Alarmgrenzen nach Stationsstandard anpassen, Fühlerfixierung verbessern, Pflege bündeln; Alarme nie dauerhaft unterdrücken."
+  }
+ ],
+ "tests": [
+  {
+   "name": "Sicherheitstechnische Kontrolle",
+   "ref": "stk",
+   "description": "Pflichtprüfung nach § 12 MPBetreibV (Anlage 1 Nr. 2) nach Herstellerprüfanweisung: Sichtprüfung, elektrische Sicherheit, Temperaturregelung, Übertemperaturschutz, Alarme, Feuchte, O₂, Dokumentation."
+  },
+  {
+   "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+   "ref": "elektrische-sicherheitspruefung",
+   "description": "Schutzleiterwiderstand (Schutzklasse I, inkl. Fahrgestell und Halterungen), ggf. Isolationswiderstand, Geräte- und Patientenableitstrom über den Hauttemperaturfühler als Anwendungsteil."
+  },
+  {
+   "name": "Temperaturprüfung mit Inkubator-Analysator",
+   "ref": "pruefgeraete",
+   "description": "Mehrere Temperaturfühler über der Matratze: Temperaturgleichmäßigkeit, Stabilität, Abweichung Anzeige – Messung, Aufheizzeit und Überschwingen; Prüfung der Hauttemperaturanzeige an einer Referenz."
+  },
+  {
+   "name": "Prüfung von Feuchte, Luftgeschwindigkeit und Schallpegel",
+   "ref": "pruefgeraete",
+   "description": "Vergleich der Feuchteanzeige mit Referenzhygrometer, Messung der Luftgeschwindigkeit über der Matratze und des Schalldruckpegels im Patientenraum nach Herstellerangabe."
+  },
+  {
+   "name": "O₂-Messung und Kalibrierung",
+   "ref": "kalibrierung",
+   "description": "Kalibrierung der O₂-Sensoren mit Raumluft (21 %) und ggf. 100 % O₂; Vergleich mit unabhängigem O₂-Messgerät bei eingestelltem Sollwert."
+  },
+  {
+   "name": "Prüfung des Übertemperaturschutzes und der Alarme",
+   "ref": "alarmsystem",
+   "description": "Auslösung des unabhängigen Schutzkreises, Fühlerunterbrechung, Lüfterausfall, Netzausfall, Feuchte- und O₂-Alarme; Lautstärke und Priorität der Alarmsignale."
+  },
+  {
+   "name": "Funktionsprüfung vor Anwendung",
+   "ref": "funktionspruefung",
+   "description": "Selbsttest, Alarmtest, Haube und Klappen, Befeuchter, Filter, Vorwärmen auf Solltemperatur, Zustand von Fühlern und Kabeln."
+  }
+ ],
+ "diagram": {
+  "title": "Funktionsschema eines Säuglingsinkubators",
+  "caption": "Vereinfachtes Funktionsschema: Luftkreislauf mit Frischluft- und O₂-Zufuhr, Lüfter, Heizung und Befeuchter (Mitte), Patientenraum mit Kind (rechts), Regelung mit Sensorik und unabhängigem Übertemperaturschutz (oben). Kein Abbild eines konkreten Modells.",
+  "width": 960,
+  "height": 490,
+  "nodes": [
+   {
+    "id": "ui",
+    "label": "Display und\nBedienung",
+    "ref": "display-bedienoberflaeche",
+    "kind": "output",
+    "x": 100,
+    "y": 60
+   },
+   {
+    "id": "ctrl",
+    "label": "PID-Regler\n(Mikrocontroller)",
+    "ref": "regelkreis",
+    "kind": "control",
+    "x": 340,
+    "y": 60,
+    "w": 170
+   },
+   {
+    "id": "sich",
+    "label": "Unabhängiger Über-\ntemperaturschutz",
+    "ref": "iec-60601-2-19",
+    "kind": "control",
+    "x": 590,
+    "y": 60,
+    "w": 180
+   },
+   {
+    "id": "alarm",
+    "label": "Alarmgeber",
+    "ref": "alarmsystem",
+    "kind": "output",
+    "x": 840,
+    "y": 60
+   },
+   {
+    "id": "luft",
+    "label": "Raumluft über\nFrischluftfilter",
+    "kind": "source",
+    "x": 100,
+    "y": 180
+   },
+   {
+    "id": "sens",
+    "label": "Luft-T, Feuchte,\nO₂-Sensoren",
+    "ref": "sauerstoffsensor",
+    "kind": "sensor",
+    "x": 840,
+    "y": 180,
+    "w": 160
+   },
+   {
+    "id": "heiz",
+    "label": "Heizelement",
+    "ref": "heizelement",
+    "kind": "actuator",
+    "x": 590,
+    "y": 180
+   },
+   {
+    "id": "o2",
+    "label": "O₂-Ventil\n(zentrale Versorgung)",
+    "ref": "proportionalventil",
+    "kind": "actuator",
+    "x": 100,
+    "y": 300,
+    "w": 170
+   },
+   {
+    "id": "fan",
+    "label": "Lüfter\n(Radialgebläse)",
+    "ref": "turbine",
+    "kind": "actuator",
+    "x": 340,
+    "y": 300
+   },
+   {
+    "id": "befeu",
+    "label": "Befeuchter\n(Verdampfer)",
+    "kind": "actuator",
+    "x": 590,
+    "y": 300
+   },
+   {
+    "id": "raum",
+    "label": "Patientenraum\n(Doppelwandhaube)",
+    "ref": "waermeuebertragung",
+    "kind": "process",
+    "x": 840,
+    "y": 300,
+    "w": 160
+   },
+   {
+    "id": "netz",
+    "label": "Netzteil /\nAkku (Transport)",
+    "ref": "medizinisches-netzteil",
+    "kind": "source",
+    "x": 100,
+    "y": 420
+   },
+   {
+    "id": "skin",
+    "label": "Hauttemperatur-\nfühler",
+    "ref": "temperatursensor",
+    "kind": "sensor",
+    "x": 590,
+    "y": 420
+   },
+   {
+    "id": "pat",
+    "label": "Früh-/Neu-\ngeborenes",
+    "ref": "thermoregulation",
+    "kind": "patient",
+    "x": 840,
+    "y": 420
+   }
+  ],
+  "edges": [
+   {
+    "from": "ui",
+    "to": "ctrl",
+    "kind": "data",
+    "label": "Sollwerte"
+   },
+   {
+    "from": "luft",
+    "to": "fan",
+    "kind": "gas",
+    "label": "Frischluft"
+   },
+   {
+    "from": "o2",
+    "to": "fan",
+    "kind": "gas",
+    "label": "O₂"
+   },
+   {
+    "from": "fan",
+    "to": "heiz",
+    "kind": "gas",
+    "label": "Umluft"
+   },
+   {
+    "from": "fan",
+    "to": "befeu",
+    "kind": "gas"
+   },
+   {
+    "from": "heiz",
+    "to": "raum",
+    "kind": "gas",
+    "label": "Warmluft"
+   },
+   {
+    "from": "befeu",
+    "to": "raum",
+    "kind": "gas",
+    "label": "Wasserdampf"
+   },
+   {
+    "from": "raum",
+    "to": "pat",
+    "kind": "energy",
+    "label": "Konvektion, Strahlung"
+   },
+   {
+    "from": "pat",
+    "to": "skin",
+    "kind": "signal",
+    "label": "T_Haut"
+   },
+   {
+    "from": "raum",
+    "to": "sens",
+    "kind": "signal"
+   },
+   {
+    "from": "sens",
+    "to": "ctrl",
+    "kind": "signal",
+    "label": "Istwerte"
+   },
+   {
+    "from": "skin",
+    "to": "ctrl",
+    "kind": "signal"
+   },
+   {
+    "from": "sens",
+    "to": "sich",
+    "kind": "signal",
+    "label": "T_Luft (2. Fühler)"
+   },
+   {
+    "from": "ctrl",
+    "to": "heiz",
+    "kind": "signal",
+    "label": "Heizleistung"
+   },
+   {
+    "from": "ctrl",
+    "to": "fan",
+    "kind": "signal"
+   },
+   {
+    "from": "ctrl",
+    "to": "o2",
+    "kind": "signal"
+   },
+   {
+    "from": "ctrl",
+    "to": "befeu",
+    "kind": "signal"
+   },
+   {
+    "from": "sich",
+    "to": "heiz",
+    "kind": "signal",
+    "label": "Abschaltung"
+   },
+   {
+    "from": "sich",
+    "to": "alarm",
+    "kind": "signal"
+   },
+   {
+    "from": "netz",
+    "to": "fan",
+    "kind": "power"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "img/devices/inkubator-aufbau.svg",
+   "kind": "schema",
+   "caption": "Schematischer Aufbau eines Säuglingsinkubators im Schnitt: doppelwandige Haube mit Durchgriffsöffnungen, Liegefläche mit Waage, Klimaeinheit mit Lüfter, Heizelement und Befeuchter, Luftführung und Bedieneinheit (eigene Darstellung, kein reales Modell)."
+  },
+  {
+   "src": "img/devices/inkubator-prinzip.svg",
+   "kind": "schema",
+   "caption": "Prinzip: Wärmeverluste des Neugeborenen über Konduktion, Konvektion, Strahlung und Verdunstung sowie Temperaturregelkreis mit unabhängigem Übertemperaturschutz (eigene Darstellung, vereinfacht)."
+  }
+ ],
+ "paths": [
+  [
+   "inkubator",
+   "heizelement",
+   "joulesche-waerme",
+   "waermeuebertragung",
+   "thermoregulation"
+  ],
+  [
+   "inkubator",
+   "temperatursensor",
+   "messkette",
+   "regelkreis"
+  ],
+  [
+   "inkubator",
+   "sauerstoffsensor",
+   "gasgesetze",
+   "gasaustausch",
+   "lunge"
+  ],
+  [
+   "inkubator",
+   "waermeuebertragung",
+   "haut",
+   "thermoregulation"
+  ]
+ ],
+ "related": [
+  "waermebett",
+  "phototherapiegeraet",
+  "patientenmonitor",
+  "pulsoxymeter",
+  "cpap-geraet",
+  "high-flow-geraet",
+  "beatmungsgeraet",
+  "transportbeatmungsgeraet",
+  "thermometer",
+  "hypothermiegeraet",
+  "patientenwaermesystem",
+  "iec-60601-2-19",
+  "thermoregulation",
+  "waermeuebertragung",
+  "haut",
+  "heizelement",
+  "temperatursensor",
+  "mpbetreibv",
+  "stk",
+  "alarmsystem"
+ ],
+ "sources": [
+  "iec-60601-2-19",
+  "iec-60601-2-20",
+  "who-thermal-1997",
+  "schmidt-lang-2019",
+  "kramme-2017",
+  "tipler-2019",
+  "mdr-2017",
+  "mdcg-2021-24",
+  "mpbetreibv",
+  "iec-60601-1",
+  "iec-60601-1-8",
+  "iec-62353",
+  "din-31051",
+  "krinko-bfarm-2012",
+  "bfarm",
+  "draeger-babyleo",
+  "ge-giraffe"
+ ],
+ "status": "ausfuehrlich",
+ "updated": "2026-11-11"
+}

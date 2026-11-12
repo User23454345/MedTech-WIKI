@@ -1,0 +1,44 @@
+{
+  "id": "udi",
+  "type": "term",
+  "title": "UDI – Unique Device Identification",
+  "aliases": [
+    "Unique Device Identification",
+    "Eindeutige Produktidentifizierung",
+    "Einmalige Produktkennung",
+    "UDI-DI",
+    "UDI-PI",
+    "Basis-UDI-DI",
+    "Basic UDI-DI",
+    "UDI-Träger",
+    "EUDAMED"
+  ],
+  "category": "recht",
+  "summary": "Die UDI ist eine eindeutige, maschinenlesbare und menschenlesbare Kennung, mit der Medizinprodukte über die gesamte Lieferkette identifiziert und rückverfolgt werden. Sie besteht aus einem statischen Produktteil (UDI-DI) und einem variablen Produktionsteil (UDI-PI) und wird zusammen mit Produktdaten in der europäischen Datenbank EUDAMED erfasst.",
+  "body": "## Zweck\n\nDie **Unique Device Identification** (UDI, deutsch: einmalige Produktkennung) soll jedes [[medizinprodukt|Medizinprodukt]] eindeutig identifizierbar machen – vom Hersteller über Händler bis zur Anwendung am Patienten. Die [[mdr|MDR]] regelt das UDI-System in Art. 27 und Anhang VI [@mdr-2017]. Ziele sind:\n\n* **Rückverfolgbarkeit** bei Rückrufen und Sicherheitskorrekturmaßnahmen ([[vigilanz]]),\n* bessere **Vorkommnismeldungen**, weil das betroffene Produkt eindeutig benannt werden kann,\n* Bekämpfung von **Fälschungen**,\n* effizientere Logistik, Beschaffung und Bestandsführung in Gesundheitseinrichtungen.\n\n## Aufbau der UDI\n\n| Bestandteil | Inhalt | Eigenschaft |\n|---|---|---|\n| **UDI-DI** (*Device Identifier*) | identifiziert Hersteller und Produktmodell bzw. -ausführung (einschließlich Verpackungsebene) | statisch – ändert sich bei jeder neuen Produktvariante |\n| **UDI-PI** (*Production Identifier*) | Produktionsdaten wie Los-/Chargennummer, Seriennummer, Herstell- und Verfallsdatum, bei Software die Version | variabel – je Einheit oder Charge |\n| **Basis-UDI-DI** (*Basic UDI-DI*) | übergeordneter Schlüssel für eine Produktgruppe mit gleicher Zweckbestimmung, Risikoklasse und gleichen wesentlichen Merkmalen | erscheint nicht auf dem Etikett, sondern in Konformitätserklärung, Bescheinigungen und EUDAMED |\n\n```\nUDI  =  UDI-DI (Wer? Welches Modell?)  +  UDI-PI (Welche Charge/Seriennummer?)\n```\n\n> [!vereinfacht] Die Formel zeigt nur die Logik. Tatsächlich werden die Bestandteile nach den Regeln der jeweiligen Zuteilungsstelle mit Datenbezeichnern (Application Identifiers) codiert und können je nach Verpackungsebene unterschiedlich sein.\n\n### Zuteilungsstellen\n\nUDIs dürfen nur nach den Standards von der EU-Kommission benannter **Zuteilungsstellen** vergeben werden. Benannt wurden GS1, HIBCC, ICCBBA und die IFA [@durchfuehrungsbeschluss-2019-939]. Für Geräte ist in der Praxis häufig das GS1-System mit der GTIN als UDI-DI anzutreffen.\n\n## Der UDI-Träger\n\nDer **UDI-Träger** ist die Darstellung der UDI auf Etikett, Verpackung oder Produkt. Er umfasst immer [@mdr-2017]:\n\n1. eine **automatische Identifikations- und Datenerfassungstechnik** (AIDC) – z. B. linearer Barcode, 2D-Code (DataMatrix) oder RFID,\n2. eine **menschenlesbare Klarschrift** (*Human Readable Interpretation*, HRI).\n\nWiederverwendbare Produkte, die zwischen den Anwendungen aufbereitet werden – etwa chirurgische Instrumente –, müssen den UDI-Träger **direkt auf dem Produkt** tragen, damit die Rückverfolgbarkeit über viele Aufbereitungszyklen erhalten bleibt [@mdr-2017].\n\n### Fristen für den UDI-Träger\n\n| Produktgruppe | Pflicht zur Anbringung auf der Kennzeichnung ab |\n|---|---|\n| Implantierbare Produkte und Klasse III | 26. Mai 2021 |\n| Klasse IIa und IIb | 26. Mai 2023 |\n| Klasse I | 26. Mai 2025 |\n\nFür die Direktmarkierung wiederverwendbarer Produkte gelten jeweils um zwei Jahre spätere Fristen [@mdr-2017].\n\n> [!belegt] Die Fristen ergeben sich aus den Übergangsbestimmungen der MDR (Art. 123). Für Altprodukte, die nach den früheren Richtlinien in Verkehr gebracht werden, können abweichende Regeln gelten [@mdr-2017] [@vo-2023-607].\n\n## EUDAMED\n\nDie Europäische Datenbank für Medizinprodukte **EUDAMED** ist das zentrale Informationssystem der MDR [@eudamed]. Sie besteht aus mehreren Modulen, unter anderem für Akteursregistrierung, UDI- und Produktregistrierung, [[benannte-stelle|Benannte Stellen]] und Bescheinigungen, klinische Prüfungen, [[vigilanz|Vigilanz]] und Marktüberwachung. In der UDI-Datenbank hinterlegt der Hersteller zu jedem UDI-DI Kerndaten wie Produktbezeichnung, [[risikoklassen|Risikoklasse]], Sterilität oder Latexgehalt.\n\n> [!hinweis] EUDAMED wurde schrittweise eingeführt; die verbindliche Nutzung einzelner Module hängt von deren offizieller Funktionsfähigkeit ab. Der aktuelle Stand ist bei der Europäischen Kommission nachzulesen [@eudamed].\n\n## Pflichten der Gesundheitseinrichtungen\n\nDie UDI ist nicht nur Herstellersache. Nach Art. 27 MDR speichern und bewahren Gesundheitseinrichtungen – vorzugsweise elektronisch – die UDI der ihnen gelieferten **implantierbaren Produkte der Klasse III** auf; die Mitgliedstaaten können dies auf weitere Produkte ausdehnen bzw. dazu ermutigen [@mdr-2017]. Für Implantate erhalten Patient:innen außerdem einen **Implantationsausweis**, auf dem die UDI angegeben ist.\n\n## Technischer Hintergrund\n\n| Technik | Kapazität / Eigenschaft | Typischer Einsatz |\n|---|---|---|\n| Linearer Barcode (z. B. GS1-128) | begrenzte Datenmenge, einfache Scanner | Umverpackungen |\n| DataMatrix (2D) | hohe Datendichte, fehlerkorrigierend, sehr klein darstellbar | Etiketten, Lasermarkierung auf Instrumenten |\n| RFID | berührungslos, ohne Sichtverbindung lesbar | Logistik, Instrumentenmanagement |\n\n> [!beispiel] Ein Etikett einer [[infusionspumpe|Infusionspumpe]] kann einen DataMatrix-Code tragen, der UDI-DI und Seriennummer enthält, und darunter dieselben Daten in Klarschrift. Beim Wareneingang liest die Medizintechnik den Code ein und übernimmt Hersteller, Modell und Seriennummer automatisch in das [[bestandsverzeichnis]].\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechnik-Abteilungen ist die UDI ein Werkzeug zur Datenqualität im [[medizintechnik-management]]:\n\n* **Bestandsführung:** fehlerfreie Erfassung von Modell und Seriennummer für [[bestandsverzeichnis]] und [[medizinproduktebuch]] – etwa für [[beatmungsgeraet|Beatmungsgeräte]], [[defibrillator|Defibrillatoren]] oder [[spritzenpumpe|Spritzenpumpen]].\n* **Rückrufe:** schnelle Prüfung, ob Geräte oder Zubehör aus einer betroffenen Charge im Haus sind.\n* **Vorkommnismeldung:** eindeutige Angabe des Produkts bei Meldungen an Behörde und Hersteller.\n* **Instrumentenaufbereitung:** Rückverfolgung chirurgischer Instrumente über den [[aufbereitung|Aufbereitungskreislauf]] bis zum Patienten.\n* **Software:** Auch [[software-medizinprodukt|Software als Medizinprodukt]] erhält eine UDI; Versionsänderungen können je nach Art eine neue UDI-DI oder nur einen neuen UDI-PI erfordern [@mdr-2017].\n\n## Hinweis\n\nMaßgeblich sind Art. 27, Anhang VI und die Übergangsbestimmungen der MDR in der jeweils gültigen Fassung sowie die Regeln der Zuteilungsstellen.",
+  "related": [
+    "vigilanz",
+    "bestandsverzeichnis",
+    "medizinproduktebuch",
+    "ce-kennzeichnung",
+    "mdr",
+    "medizintechnik-management",
+    "aufbereitung",
+    "software-medizinprodukt"
+  ],
+  "paths": [
+    [
+      "konformitaetsbewertung",
+      "udi",
+      "vigilanz"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "durchfuehrungsbeschluss-2019-939",
+    "eudamed",
+    "vo-2023-607"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

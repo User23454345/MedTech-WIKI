@@ -1,0 +1,160 @@
+{
+  "id": "bldc-motor",
+  "type": "term",
+  "title": "Bürstenloser Gleichstrommotor (BLDC)",
+  "aliases": [
+    "BLDC",
+    "BLDC-Motor",
+    "Brushless DC Motor",
+    "EC-Motor",
+    "Elektronisch kommutierter Motor",
+    "Bürstenloser Motor",
+    "PMSM",
+    "Permanentmagnet-Synchronmotor"
+  ],
+  "category": "komponenten",
+  "summary": "Permanentmagneterregter Motor, dessen Wicklungen elektronisch statt über Bürsten umgeschaltet werden. Er ist verschleißarm, funkenfrei und hochdynamisch und treibt in Medizingeräten vor allem Turbinen, chirurgische Handstücke, Zentrifugen und Blutpumpen an.",
+  "body": "## Begriff\n\nDer **bürstenlose Gleichstrommotor** (englisch *Brushless DC Motor*, BLDC; auch *EC-Motor* für „elektronisch kommutiert“) ist ein permanenterregter Synchronmotor, dessen Wicklungen von einer Elektronik statt von einem mechanischen Kommutator umgeschaltet werden. Er verbindet die einfache Regelbarkeit des Gleichstrommotors mit der Verschleißfreiheit einer Drehfeldmaschine und ist deshalb der dominierende Antrieb für schnell drehende, langlebige Komponenten in Medizingeräten – allen voran die [[turbine|Turbine]] im [[beatmungsgeraet|Beatmungsgerät]] [@hughes-drury-2019] [@fischer-nolle-elektrische-maschinen-2022].\n\nAls Spezialfall des [[elektromotor|Elektromotors]] gelten für ihn dieselben Grundgleichungen: Drehmoment `M = k · I`, Gegenspannung `U_i = k · ω`.\n\n## Aufbau\n\n| Baugruppe | Ausführung |\n|---|---|\n| Stator | Drei Wicklungsstränge (meist Sternschaltung), in Nuten eines Blechpakets oder als eisenlose (nutenlose) Wicklung |\n| Rotor | Permanentmagnete, häufig Neodym-Eisen-Bor (NdFeB) wegen hoher Energiedichte |\n| Lagegeber | Drei [[hall-sensor|Hall-Sensoren]] im Abstand von 120° elektrisch, alternativ Drehgeber oder sensorlose Erfassung |\n| Leistungsteil | Dreiphasige Brücke aus sechs Halbleiterschaltern (B6-Brücke, meist MOSFETs) |\n| Steuerung | [[mikrocontroller|Mikrocontroller]] oder spezialisierter Motortreiber-IC |\n\nMan unterscheidet **Innenläufer** (Rotor innen, geringes Trägheitsmoment, hohe Dynamik – typisch für Turbinen und Handstücke) und **Außenläufer** (Magnetring außen, großes Drehmoment bei moderater Drehzahl – typisch für Lüfter). Nutenlose Wicklungen vermeiden das **Rastmoment** (*cogging*), das durch die Wechselwirkung der Magnete mit den Statorzähnen entsteht, und ermöglichen besonders ruhigen Lauf.\n\n## Elektronische Kommutierung\n\n### Blockkommutierung (Six-Step)\n\nBei der klassischen Ansteuerung sind in jedem Moment zwei der drei Stränge bestromt, der dritte ist offen. Die drei Hall-Sensoren liefern sechs gültige Zustandskombinationen pro elektrischer Umdrehung; jedem Zustand ist eine Schalterkombination der Brücke zugeordnet. Der Winkel zwischen Statorfeld und Rotorfeld pendelt dabei innerhalb jedes 60°-Sektors zwischen etwa 120° und 60° elektrisch und liegt im Mittel bei 90° – dem Winkel maximalen Drehmoments [@hughes-drury-2019].\n\nZwischen elektrischer und mechanischer Drehzahl vermittelt die **Polpaarzahl** p:\n\n`f_el = p · n`  und  Kommutierungsschritte pro Sekunde = `6 · p · n`\n\n> [!beispiel] Ein Turbinenmotor mit p = 2 Polpaaren dreht mit 30 000 min⁻¹ = 500 s⁻¹. Die elektrische Frequenz beträgt f_el = 1 000 Hz, die Brücke muss 6 000-mal pro Sekunde umschalten – alle rund 167 µs. Die Werte sind beispielhaft gewählt.\n\n### Sinuskommutierung und feldorientierte Regelung\n\nDie Blockkommutierung erzeugt bei jedem Umschalten einen kleinen Drehmomentsprung (Drehmomentwelligkeit), hörbar als Pfeifen. Für leisen, gleichmäßigen Lauf werden die Strangströme sinusförmig eingeprägt. Die **feldorientierte Regelung** (FOC, *field oriented control*) transformiert die drei Strangströme in ein mit dem Rotor umlaufendes Koordinatensystem (Clarke- und Park-Transformation). Dort lassen sich ein drehmomentbildender Strom i_q und ein feldbildender Strom i_d getrennt regeln; bei Permanentmagnetmotoren wird meist i_d = 0 gesetzt. FOC erfordert eine genaue Rotorlage, also einen Drehgeber oder einen Beobachteralgorithmus [@hughes-drury-2019].\n\n> [!vereinfacht] Häufig wird „BLDC“ für Motoren mit trapezförmiger Gegen-EMK und Blockkommutierung verwendet, „PMSM“ (*permanent magnet synchronous motor*) für sinusförmige Gegen-EMK und Sinuskommutierung. In Datenblättern und im Sprachgebrauch werden beide Begriffe oft vermischt.\n\n### Sensorlose Kommutierung\n\nOhne Hall-Sensoren kann die Rotorlage aus der **Gegen-EMK** am jeweils offenen Strang bestimmt werden: Ihr Nulldurchgang markiert den Kommutierungszeitpunkt. Da U_i ∝ ω ist, funktioniert das erst ab einer Mindestdrehzahl; der Motor wird deshalb gesteuert angefahren. Für Turbinen, die ohnehin ständig drehen, ist das unproblematisch; für Positionierantriebe mit Stillstand ist ein Lagegeber nötig.\n\n## Leistungselektronik und Drehzahlregelung\n\nDie mittlere Strangspannung wird über [[pwm|Pulsweitenmodulation]] der Brückenschalter eingestellt; typische PWM-Frequenzen liegen oberhalb des Hörbereichs. Die [[drehzahlregelung|Drehzahlregelung]] ist meist kaskadiert: Ein innerer Stromregler begrenzt Drehmoment und Wicklungserwärmung, ein äußerer Drehzahlregler gibt den Sollstrom vor, und bei Beatmungsgeräten gibt ein überlagerter Druck- oder Flowregler die Solldrehzahl vor ([[regelkreis]]). Die Ist-Drehzahl ergibt sich direkt aus der Frequenz der Hall-Signale [@tietze-schenk-2019].\n\n## Vorteile und Grenzen\n\n| Vorteil | Begründung |\n|---|---|\n| Lange Lebensdauer | Kein Bürstenverschleiß; Lebensdauer wird durch die Lager bestimmt |\n| Hohe Drehzahlen | Keine mechanische Kommutierungsgrenze |\n| Keine Bürstenfunken | Wichtig in sauerstoffangereicherter Umgebung und für die [[emv|EMV]] |\n| Guter Wirkungsgrad, gute Kühlung | Keine Bürsten- und Erregerverluste (Permanentmagnete); die Wicklung liegt im Stator und gibt ihre Wärme direkt an das Gehäuse ab |\n| Integrierte Drehzahlinformation | Hall- oder EMK-Signale dienen zugleich der Überwachung |\n\n| Grenze | Folge |\n|---|---|\n| Elektronik zwingend | Mehr Bauteile, Software nach [[iec-62304|IEC 62304]] im Gerät |\n| Permanentmagnete | Temperaturgrenze (Entmagnetisierung), Rohstoffabhängigkeit |\n| Schaltflanken der Endstufe | Leitungsgebundene und gestrahlte Störungen, Filterung nötig |\n\n> [!belegt] Bürstenlose Motoren ersetzen in vielen Anwendungen bürstenbehaftete Gleichstrommotoren, weil der Wegfall von Kommutator und Bürsten Verschleiß, Funkenbildung und Wartungsbedarf beseitigt; der Preis ist die notwendige Ansteuerelektronik [@hughes-drury-2019] [@fischer-nolle-elektrische-maschinen-2022].\n\n## Fehlerbilder und Prüfung\n\n* **Lagerverschleiß:** zunehmendes Laufgeräusch, steigender Leerlaufstrom, Vibration.\n* **Hall-Sensor-Ausfall:** ungültige Zustandskombination, ruckelnder Anlauf oder Stillstand; Geräte melden einen Antriebs- oder Lüfterfehler ([[fehlercodes]]).\n* **Übertemperatur:** zugesetzte Filter oder blockierte Kühlung erhöhen die Last.\n* **Endstufendefekt:** Kurzschluss eines Brückenschalters, meist durch Überstromabschaltung erkannt.\n\nIm Rahmen der [[funktionspruefung|Funktionsprüfung]] werden Drehzahl- bzw. Druckaufbau gegen Herstellervorgaben geprüft; Instandsetzungen am Antrieb sind befugtem Fachpersonal vorbehalten ([[instandsetzung]]).\n\n## Anwendung in Geräten\n\n| Gerät | Aufgabe des BLDC-Motors |\n|---|---|\n| [[beatmungsgeraet]], [[heimbeatmungsgeraet]], [[cpap-geraet]], [[transportbeatmungsgeraet]] | Antrieb der [[turbine|Turbine]]; Druck- und Flowerzeugung über die Drehzahl |\n| [[high-flow-geraet]] | Gebläseantrieb (bauartabhängig) |\n| [[chirurgisches-motorsystem]] | Antrieb von Bohr- und Sägehandstücken; muss Aufbereitungszyklen überstehen |\n| [[dentaleinheit]] | Elektrische Mikromotoren für Hand- und Winkelstücke |\n| [[laborzentrifuge]] | Rotorantrieb mit hoher Drehzahl und Unwuchtüberwachung |\n| [[vad]], [[ecmo]], [[herz-lungen-maschine]] | Antrieb von Rotations- bzw. Zentrifugalblutpumpen |\n| [[inkubator]] | Leiser Lüfterantrieb für die Umluft |\n\n## Bedeutung in der Medizintechnik\n\nDer BLDC-Motor ist das konkrete Glied zwischen [[turbine|Turbine]] und [[drehzahlregelung|Drehzahlregelung]] in der Wissenskette des Beatmungsgeräts. Seine Hall-Signale liefern die Ist-Drehzahl, die PWM-Endstufe setzt die Stellgröße um, und der überlagerte Regler schließt den Kreis über die [[druckmessung|Druckmessung]]. Damit vereint er Mechanik, Leistungselektronik, Sensorik und Software in einer Baugruppe [@kramme-2017].",
+  "related": [
+    "elektromotor",
+    "turbine",
+    "drehzahlregelung",
+    "pwm",
+    "hall-sensor",
+    "regelkreis",
+    "mikrocontroller",
+    "emv",
+    "beatmungsgeraet",
+    "chirurgisches-motorsystem",
+    "vad",
+    "schrittmotor"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "bldc-motor",
+      "drehzahlregelung",
+      "druckmessung"
+    ],
+    [
+      "bldc-motor",
+      "hall-sensor",
+      "drehzahlregelung",
+      "pwm"
+    ]
+  ],
+  "sources": [
+    "hughes-drury-2019",
+    "fischer-nolle-elektrische-maschinen-2022",
+    "tietze-schenk-2019",
+    "kramme-2017"
+  ],
+  "diagram": {
+    "title": "Elektronische Kommutierung eines BLDC-Motors",
+    "caption": "Blockschaltbild mit Hall-Sensoren; bei sensorloser Kommutierung ersetzt die Gegen-EMK-Auswertung die Hall-Sensoren.",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "dc",
+        "label": "DC-Versorgung\n(Netzteil/Akku)",
+        "ref": "medizinisches-netzteil",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "mc",
+        "label": "Mikrocontroller\n(Kommutierung, PWM)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 280,
+        "y": 220
+      },
+      {
+        "id": "br",
+        "label": "B6-Brücke\n(6 MOSFETs)",
+        "ref": "pwm",
+        "kind": "control",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "st",
+        "label": "Statorwicklung\n(3 Stränge)",
+        "kind": "actuator",
+        "x": 470,
+        "y": 80
+      },
+      {
+        "id": "ro",
+        "label": "Rotor mit\nPermanentmagneten",
+        "ref": "bldc-motor",
+        "kind": "actuator",
+        "x": 660,
+        "y": 80
+      },
+      {
+        "id": "last",
+        "label": "Last, z. B.\nTurbine",
+        "ref": "turbine",
+        "kind": "output",
+        "x": 850,
+        "y": 80
+      },
+      {
+        "id": "hall",
+        "label": "Hall-Sensoren\n(Rotorlage)",
+        "ref": "hall-sensor",
+        "kind": "sensor",
+        "x": 660,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "dc",
+        "to": "br",
+        "kind": "power"
+      },
+      {
+        "from": "br",
+        "to": "st",
+        "kind": "power",
+        "label": "Strangströme"
+      },
+      {
+        "from": "st",
+        "to": "ro",
+        "kind": "energy",
+        "label": "Drehfeld"
+      },
+      {
+        "from": "ro",
+        "to": "last",
+        "kind": "energy",
+        "label": "Drehmoment"
+      },
+      {
+        "from": "ro",
+        "to": "hall",
+        "kind": "signal"
+      },
+      {
+        "from": "hall",
+        "to": "mc",
+        "kind": "signal",
+        "label": "Lage/Drehzahl"
+      },
+      {
+        "from": "mc",
+        "to": "br",
+        "kind": "signal",
+        "label": "Gate-Signale"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

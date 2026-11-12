@@ -1,0 +1,154 @@
+{
+  "id": "proportionalventil",
+  "type": "term",
+  "title": "Proportionalventil",
+  "aliases": [
+    "Proportional valve",
+    "Proportional-Magnetventil",
+    "Stetigventil",
+    "Dosierventil",
+    "Flow control valve",
+    "Inspirationsventil"
+  ],
+  "category": "komponenten",
+  "summary": "Elektrisch angesteuertes Ventil, dessen Öffnung sich stufenlos über den Steuerstrom einstellen lässt. Es dosiert in Beatmungs- und Anästhesiegeräten Sauerstoff, Druckluft und Lachgas und arbeitet als Stellglied in einem Regelkreis mit Flow- und Drucksensoren.",
+  "body": "## Begriff\n\nEin **Proportionalventil** ist ein elektrisch angesteuertes Ventil, dessen Öffnungsquerschnitt sich **stufenlos** und – im Arbeitsbereich – annähernd proportional zum Steuerstrom einstellen lässt. Während ein [[magnetventil|Magnetventil]] nur „auf“ oder „zu“ kennt, kann das Proportionalventil einen Gasfluss oder Druck kontinuierlich dosieren. Es ist damit das zentrale Stellglied ventilgesteuerter [[beatmungsgeraet|Beatmungsgeräte]] und elektronischer Gasmischer in [[anaesthesiegeraet|Anästhesiegeräten]] [@tobin-2013] [@dorsch-2008].\n\n## Aufbau und Antriebsarten\n\n| Antrieb | Prinzip | Eigenschaften |\n|---|---|---|\n| Proportionalmagnet | Elektromagnet mit speziell geformtem Polkern, dessen Kraft über den Hub nahezu konstant ist | robust, verbreitet; Hysterese durch Reibung und Eisen |\n| Tauchspule (Voice Coil) | Spule im Feld eines Permanentmagneten, Lorentzkraft `F = B · I · l` | sehr schnell, kaum Hysterese, kleiner Hub |\n| Piezoaktor | Längenänderung eines Piezokristalls ([[piezoelektrischer-effekt]]) | sehr geringe Leistungsaufnahme, kleiner Hub |\n| Schrittmotor mit Nadel | [[schrittmotor|Schrittmotor]] verstellt eine Dosiernadel | langsam, aber stromlos stabil |\n\nDas bewegliche Element (Kegel, Kugel, Membran oder Klappe) gibt einen Ringspalt frei, dessen Fläche A(x) vom Hub x abhängt.\n\n## Funktionsprinzip\n\n### Kräftegleichgewicht\n\nBeim Proportionalmagneten ist die Magnetkraft im Arbeitsbereich näherungsweise proportional zum Strom und unabhängig vom Hub: `F_mag ≈ k_I · I`. Ihr wirkt eine Feder mit der Steifigkeit c entgegen. Im Gleichgewicht stellt sich der Hub\n\n`x = k_I · I / c`\n\nein. Strömungskräfte und Reibung verschieben dieses Gleichgewicht; deshalb wird das Ventil in der Praxis fast immer **im geschlossenen Regelkreis** betrieben ([[regelkreis]]).\n\n### Durchfluss\n\nFür eine inkompressible Strömung durch die Öffnung gilt die Blendengleichung ([[stroemungslehre]]):\n\n`Q = α · A(x) · √(2 · Δp / ρ)`\n\nmit Durchflusszahl α, Differenzdruck Δp und Dichte ρ. Für Gase bei großem Druckverhältnis wird die Strömung im engsten Querschnitt **kritisch** (Schallgeschwindigkeit). Für Luft und Sauerstoff (Isentropenexponent κ ≈ 1,4) ist das der Fall, wenn der Gegendruck unter etwa 53 % des absoluten Vordrucks liegt (kritisches Druckverhältnis ≈ 0,528). Der Massenstrom hängt dann nur noch von Vordruck, Gastemperatur und Querschnitt ab, nicht mehr vom Druck auf der Patientenseite. Diese Eigenschaft nutzen Beatmungsgeräte, indem sie die Ventile mit einem konstant geregelten Vordruck aus einem Druckminderer speisen – der Flow wird dann über den Querschnitt allein eingestellt [@tobin-2013].\n\n> [!vereinfacht] Reale Ventilkennlinien sind nichtlinear, temperaturabhängig und zeigen Hysterese. Hersteller hinterlegen deshalb Kennlinien oder Kennfelder und korrigieren sie über Selbstkalibrierungen und den [[flowsensor|Flowsensor]].\n\n### Hysterese und Dither\n\nHaft- und Gleitreibung sowie magnetische Hysterese führen dazu, dass beim Öffnen und Schließen unterschiedliche Ströme für denselben Hub nötig sind. Ein überlagertes, kleines Wechselsignal (**Dither**) hält den Ventilkörper in minimaler Bewegung und verringert den Reibungseinfluss. Die Ansteuerung erfolgt meist stromgeregelt über [[pwm|PWM]], weil der Spulenwiderstand mit der Temperatur steigt.\n\n## Anwendung: Gasmischung und Flowregelung\n\nIn einem ventilgesteuerten Beatmungsgerät dosieren zwei Proportionalventile Sauerstoff und Druckluft. Der Regler berechnet aus dem gewünschten Gesamtflow und der eingestellten Sauerstoffkonzentration (FiO₂) die Teilflüsse:\n\n`FiO₂ = (V̇_O₂ · 1,0 + V̇_Luft · 0,21) / (V̇_O₂ + V̇_Luft)`\n\n> [!beispiel] Gesucht: 10 l/min mit FiO₂ = 0,40. Aufgelöst ergibt sich V̇_O₂ = 10 · (0,40 − 0,21)/(1 − 0,21) ≈ 2,4 l/min Sauerstoff und ≈ 7,6 l/min Druckluft. Die Werte sind beispielhaft gerechnet; reale Geräte korrigieren zusätzlich Druck, Temperatur und Gasart.\n\nDie [[sauerstoffsensor|O₂-Messung]] überwacht das Ergebnis unabhängig. Bei Turbinengeräten mit Hochdruck-Sauerstoffanschluss dosiert ein Proportionalventil nur den Sauerstoff, während die [[turbine|Turbine]] die Raumluft fördert; beim Niederdruckanschluss wird O₂ dagegen meist auf der Ansaugseite zugeführt (bauartabhängig).\n\n> [!belegt] In modernen Intensivbeatmungsgeräten werden Inspirationsflow und Gasgemisch über schnelle, elektronisch angesteuerte Proportionalventile erzeugt, die in einem Regelkreis mit Flow- und Drucksensoren arbeiten [@tobin-2013] [@oczenski-2017].\n\n## Kenngrößen\n\n| Kenngröße | Bedeutung |\n|---|---|\n| Nenndurchfluss | maximaler Flow bei definiertem Vordruck |\n| Ansprechzeit | Zeit bis zum Erreichen eines Sollwertsprungs; bestimmt Druckanstiegszeit und Triggerantwort |\n| Hysterese | Differenz der Kennlinien beim Öffnen und Schließen |\n| Leckrate im geschlossenen Zustand | relevant für Genauigkeit bei kleinen Flows und für O₂-Verbrauch |\n| Auflösung / Stellbereich | Verhältnis von größtem zu kleinstem regelbaren Flow (z. B. für Neonatalbeatmung) |\n\nKonkrete Zahlenwerte sind bauart- und herstellerspezifisch und werden hier bewusst nicht angegeben.\n\n## Sicherheit und Instandhaltung\n\n* **Sichere Ruhelage:** Stromlos geschlossene Ventile verhindern ungewollten Gasfluss; Sicherheits- und Notatemventile sichern zusätzlich ab ([[iso-80601-2-12|ISO 80601-2-12]]).\n* **Sauerstoffeignung:** öl- und fettfreie Ausführung, sauerstoffbeständige Dichtungen.\n* **Partikel und Feuchte:** verschmutzte Druckluft kann Ventilsitze beschädigen; Eingangsfilter gehören zur [[wartung|Wartung]].\n* **Kalibrierung:** Driftende Ventilkennlinien äußern sich in FiO₂- oder Volumenabweichungen; die Geräte führen Selbsttests durch, Abweichungen werden über [[kalibrierung|Kalibrierung]] oder Ventiltausch behoben.\n\n## Anwendung in Geräten\n\n| Gerät | Aufgabe |\n|---|---|\n| [[beatmungsgeraet]] | Inspirationsflow aus O₂ und Druckluft (Ventilgeräte) bzw. O₂-Zumischung (Turbinengeräte) |\n| [[transportbeatmungsgeraet]] | Flowerzeugung aus Druckgas (bauartabhängig) |\n| [[anaesthesiegeraet]] | Elektronischer Gasmischer für O₂, Luft und N₂O |\n| [[inkubator]] | O₂-Dosierung in den Luftkreislauf bei servogeregelter Sauerstoffzufuhr (bauartabhängig) |\n| [[high-flow-geraet]] | O₂-Zumischung (bauartabhängig) |\n| [[insufflator]] | Druck- und Flowregelung des CO₂ (bauartabhängig) |\n\n## Bedeutung in der Medizintechnik\n\nDas Proportionalventil ist das klassische **Stellglied** eines Regelkreises in der Gastechnik. Zusammen mit [[druckmessung|Druck-]] und [[flowsensor|Flowmessung]] bildet es die Grundlage druck- und volumenkontrollierter Beatmungsformen und der präzisen Gasdosierung in der Anästhesie [@kramme-2017].",
+  "related": [
+    "magnetventil",
+    "exspirationsventil",
+    "flowsensor",
+    "drucksensor",
+    "druckmessung",
+    "regelkreis",
+    "stroemungslehre",
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "sauerstoffsensor",
+    "turbine",
+    "iso-80601-2-12"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "proportionalventil",
+      "regelkreis",
+      "flowsensor"
+    ],
+    [
+      "anaesthesiegeraet",
+      "proportionalventil",
+      "stroemungslehre"
+    ]
+  ],
+  "sources": [
+    "tobin-2013",
+    "oczenski-2017",
+    "dorsch-2008",
+    "kramme-2017",
+    "iso-80601-2-12"
+  ],
+  "diagram": {
+    "title": "Flowregelung mit Proportionalventil",
+    "caption": "Funktionsschema eines Gaskanals (z. B. O₂) in einem ventilgesteuerten Beatmungsgerät.",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "gas",
+        "label": "O₂-Versorgung\n(Wandanschluss)",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "dm",
+        "label": "Druckminderer\n(konstanter Vordruck)",
+        "kind": "process",
+        "x": 280,
+        "y": 80,
+        "w": 160
+      },
+      {
+        "id": "pv",
+        "label": "Proportionalventil",
+        "ref": "proportionalventil",
+        "kind": "actuator",
+        "x": 470,
+        "y": 80
+      },
+      {
+        "id": "fs",
+        "label": "Flowsensor",
+        "ref": "flowsensor",
+        "kind": "sensor",
+        "x": 660,
+        "y": 80
+      },
+      {
+        "id": "pat",
+        "label": "Mischung →\nPatient",
+        "kind": "patient",
+        "x": 850,
+        "y": 80
+      },
+      {
+        "id": "reg",
+        "label": "Flowregler",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 660,
+        "y": 220
+      },
+      {
+        "id": "stu",
+        "label": "Stromregelung\n(PWM)",
+        "ref": "pwm",
+        "kind": "control",
+        "x": 470,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "gas",
+        "to": "dm",
+        "kind": "gas"
+      },
+      {
+        "from": "dm",
+        "to": "pv",
+        "kind": "gas"
+      },
+      {
+        "from": "pv",
+        "to": "fs",
+        "kind": "gas"
+      },
+      {
+        "from": "fs",
+        "to": "pat",
+        "kind": "gas"
+      },
+      {
+        "from": "fs",
+        "to": "reg",
+        "kind": "signal",
+        "label": "Q_ist"
+      },
+      {
+        "from": "reg",
+        "to": "stu",
+        "kind": "signal",
+        "label": "I_soll"
+      },
+      {
+        "from": "stu",
+        "to": "pv",
+        "kind": "power",
+        "label": "Spulenstrom"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

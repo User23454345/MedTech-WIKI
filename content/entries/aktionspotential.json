@@ -1,0 +1,171 @@
+{
+  "id": "aktionspotential",
+  "type": "term",
+  "title": "Aktionspotential",
+  "aliases": [
+    "AP",
+    "action potential",
+    "Ruhemembranpotential",
+    "Membranpotential",
+    "Nernst-Gleichung",
+    "Goldman-Gleichung",
+    "Erregung",
+    "Refraktärzeit",
+    "Chronaxie",
+    "Rheobase"
+  ],
+  "category": "anatomie",
+  "summary": "Kurzzeitige, nach dem Alles-oder-nichts-Prinzip ablaufende Umkehr des Membranpotentials erregbarer Zellen durch Ionenströme. Es ist Ursprung aller bioelektrischen Signale wie EKG, EEG und EMG und Angriffspunkt von Schrittmachern, Reizstromgeräten und Defibrillatoren.",
+  "body": "## Begriff\n\nEin **Aktionspotential** (AP) ist eine kurzzeitige, nach dem Alles-oder-nichts-Prinzip ablaufende Umkehr des Membranpotentials erregbarer Zellen – Nerven-, Skelettmuskel- und Herzmuskelzellen. Es ist das elementare Signal, mit dem der Körper Information weiterleitet und Kontraktionen auslöst [@schmidt-lang-2019]. Für die Medizintechnik ist es in zweifacher Hinsicht zentral: Die Ionenströme vieler Aktionspotentiale erzeugen messbare [[biosignale|Biosignale]] (EKG, EEG, EMG), und technische Stromimpulse können gezielt Aktionspotentiale auslösen (Schrittmacher, Reizstrom, Defibrillation).\n\n## Ruhemembranpotential\n\nZwischen Zellinnerem und Extrazellularraum besteht in Ruhe eine Spannung von etwa −70 bis −90 mV (innen negativ). Ursache sind ungleiche Ionenkonzentrationen, die von der Na⁺/K⁺-ATPase aufrechterhalten werden (pro Zyklus 3 Na⁺ nach außen, 2 K⁺ nach innen), und die in Ruhe überwiegende Durchlässigkeit der Membran für Kalium.\n\n### Nernst-Gleichung\n\nFür ein einzelnes Ion, für das die Membran allein durchlässig wäre, ergibt sich das Gleichgewichtspotential:\n\n`E_X = (R · T) / (z · F) · ln(c_außen / c_innen)`\n\nmit Gaskonstante R = 8,314 J/(mol·K), absoluter Temperatur T, Ladungszahl z und Faraday-Konstante F = 96 485 C/mol. Bei 37 °C (T = 310 K) gilt für einwertige Ionen näherungsweise `E_X ≈ 61,5 mV · log₁₀(c_außen / c_innen)`.\n\n| Ion | außen (mmol/l, typisch) | innen (mmol/l, typisch) | Gleichgewichtspotential (ca.) |\n|---|---|---|---|\n| K⁺ | 4,5 | 150 | −94 mV |\n| Na⁺ | 145 | 12 | +67 mV |\n| Ca²⁺ (frei) | ca. 1,2 | ca. 0,0001 | über +120 mV |\n\n> [!beispiel] Für Kalium: log₁₀(4,5 / 150) ≈ −1,52, also E_K ≈ 61,5 mV · (−1,52) ≈ −94 mV. Die Konzentrationen sind typische Lehrbuchwerte; reale Werte unterscheiden sich je nach Zelltyp [@schmidt-lang-2019].\n\n### Goldman-Hodgkin-Katz-Gleichung\n\nDas tatsächliche Membranpotential ergibt sich aus der gewichteten Durchlässigkeit (Permeabilität P) für mehrere Ionen:\n\n`V_m = (R · T / F) · ln[(P_K·[K⁺]a + P_Na·[Na⁺]a + P_Cl·[Cl⁻]i) / (P_K·[K⁺]i + P_Na·[Na⁺]i + P_Cl·[Cl⁻]a)]`\n\nDa in Ruhe P_K dominiert, liegt das Ruhepotential nahe E_K. Öffnen sich Natriumkanäle, verschiebt sich V_m in Richtung E_Na – das ist der Kern des Aktionspotentials.\n\n> [!praxis] Die Abhängigkeit von E_K erklärt, warum Störungen des Kaliumspiegels (Hyper- und Hypokaliämie) Herzrhythmusstörungen verursachen und im EKG sichtbar werden.\n\n## Ablauf des Aktionspotentials\n\n### Nerv und Skelettmuskel\n\n1. **Reiz und Schwelle:** Eine Depolarisation bis zur Schwelle (etwa −50 bis −60 mV) öffnet spannungsgesteuerte Na⁺-Kanäle.\n2. **Aufstrich:** Der Na⁺-Einstrom depolarisiert die Membran selbstverstärkend (positive Rückkopplung) bis zum „Overshoot“ von etwa +30 mV.\n3. **Repolarisation:** Na⁺-Kanäle inaktivieren, verzögert öffnende K⁺-Kanäle treiben das Potential zurück.\n4. **Nachhyperpolarisation:** kurzzeitig negativer als das Ruhepotential.\n\nDie Dauer beträgt beim Nerv etwa 1–2 ms. Hodgkin und Huxley beschrieben diese Vorgänge 1952 am Riesenaxon des Tintenfischs mit einem quantitativen Modell aus spannungs- und zeitabhängigen Leitfähigkeiten, das bis heute Grundlage der Elektrophysiologie ist [@hodgkin-huxley-1952].\n\n> [!vereinfacht] Elektrotechnisch kann man die Membran als Kondensator (ca. 1 µF/cm²) parallel zu mehreren spannungsabhängigen Leitwerten mit je einer Batterie (dem Nernst-Potential) darstellen. Der Strom über die Membran ist dann `I = C_m · dV/dt + Σ g_X · (V − E_X)`. Dieses Ersatzschaltbild ist eine Vereinfachung des Hodgkin-Huxley-Modells.\n\n### Herzmuskel\n\nDas Aktionspotential der Arbeitsmuskulatur des [[herz|Herzens]] dauert mit etwa 200–400 ms rund hundertmal länger als beim Nerv:\n\n| Phase | Ionenmechanismus | Vorgang |\n|---|---|---|\n| 0 | schneller Na⁺-Einstrom | steiler Aufstrich |\n| 1 | transienter K⁺-Ausstrom | frühe, kurze Repolarisation |\n| 2 | Ca²⁺-Einstrom (L-Typ) ≈ K⁺-Ausstrom | Plateau |\n| 3 | K⁺-Ausstrom überwiegt | Repolarisation |\n| 4 | K⁺-Leitfähigkeit | Ruhepotential ca. −90 mV |\n\nDas Plateau hat zwei Funktionen: Der Ca²⁺-Einstrom löst die Kontraktion aus (elektromechanische Kopplung), und die lange **Refraktärzeit** verhindert eine Dauerkontraktion (Tetanus) und schützt vor zu schneller Wiedererregung. Schrittmacherzellen des [[erregungsleitungssystem|Erregungsleitungssystems]] besitzen dagegen eine langsame diastolische Depolarisation (Phase 4) und einen calciumgetragenen, flacheren Aufstrich [@guyton-2021].\n\n## Fortleitung\n\nEin Aktionspotential breitet sich aus, weil die lokalen Ausgleichsströme benachbarte Membranabschnitte bis zur Schwelle depolarisieren. Markhaltige (myelinisierte) Nervenfasern leiten saltatorisch von Schnürring zu Schnürring und erreichen bis etwa 100 m/s, marklose Fasern nur rund 1 m/s [@schmidt-lang-2019]. Die Nervenleitgeschwindigkeit wird mit dem [[emg-geraet|EMG/NLG-Gerät]] gemessen, die Verbindung zum Gesamtsystem beschreibt der Artikel [[nervensystem]].\n\n## Elektrische Reizung\n\nEin äußerer Strom kann eine Zelle bis zur Schwelle depolarisieren. Die nötige Reizstärke hängt von der Impulsdauer ab (Reizzeit-Spannungs-Kurve). Eine gebräuchliche Näherung ist die hyperbolische Reizzeit-Strom-Beziehung nach Weiss (die Begriffe Rheobase und Chronaxie gehen auf Lapicque zurück; Lapicques eigene Formulierung ist exponentiell):\n\n`I_Schwelle = I_Rh · (1 + t_Chr / t)`\n\nmit der **Rheobase** I_Rh (Schwellenstrom bei sehr langen Impulsen) und der **Chronaxie** t_Chr (Impulsdauer, bei der der doppelte Rheobasenstrom nötig ist).\n\n> [!vereinfacht] Die Gleichung beschreibt den Grundzusammenhang „kurze Impulse brauchen mehr Strom“. Reale Reizschwellen hängen zusätzlich von Elektrodengeometrie, Gewebe, Impulsform und Polarität ab [@webster-2010].\n\n## Bedeutung in der Medizintechnik\n\n| Anwendung | Bezug zum Aktionspotential | Gerät |\n|---|---|---|\n| Ableitung bioelektrischer Signale | Feldpotentiale vieler Zellen im Volumenleiter | [[ekg-geraet]], [[eeg-geraet]], [[emg-geraet]], [[patientenmonitor]] |\n| Stimulation | Auslösen überschwelliger APs durch Stromimpulse | [[herzschrittmacher]], [[externer-schrittmacher]], [[reizstromgeraet]], [[cochlea-implantat]] |\n| Defibrillation | gleichzeitige Erregung einer kritischen Myokardmasse, die dann refraktär ist | [[defibrillator]], [[icd]] |\n| Gefährdung durch Strom | unbeabsichtigte Reizung von Nerv und Herz; 50 Hz ist besonders wirksam | [[elektrische-stromwirkung]], [[ableitstrom]] |\n| HF-Chirurgie | Wechselstrom oberhalb von ca. 100 kHz reizt Nerven und Muskeln praktisch nicht mehr | [[hf-chirurgiegeraet]] |\n\nFür die Messung werden die nur mV- bis µV-großen Signale an der Hautoberfläche über [[ekg-elektrode|Ag/AgCl-Elektroden]] aufgenommen, mit einem [[instrumentenverstaerker|Instrumentenverstärker]] verstärkt, [[filter|gefiltert]] und mit dem [[analog-digital-wandler|Analog-Digital-Wandler]] digitalisiert.\n\n> [!belegt] Die Wirkung von Körperströmen auf Herz und Muskulatur – bis hin zum Kammerflimmern – ist frequenz-, dauer- und stromstärkeabhängig und in IEC/TS 60479-1 beschrieben; darauf beruhen die Grenzwerte medizinischer elektrischer Geräte [@iec-60479-1] [@iec-60601-1].\n",
+  "related": [
+    "erregungsleitungssystem",
+    "herz",
+    "nervensystem",
+    "biosignale",
+    "ekg-elektrode",
+    "instrumentenverstaerker",
+    "ekg-geraet",
+    "eeg-geraet",
+    "emg-geraet",
+    "herzschrittmacher",
+    "defibrillator",
+    "reizstromgeraet",
+    "elektrische-stromwirkung"
+  ],
+  "paths": [
+    [
+      "aktionspotential",
+      "biosignale",
+      "ekg-elektrode",
+      "instrumentenverstaerker",
+      "filter",
+      "analog-digital-wandler",
+      "ekg-geraet"
+    ],
+    [
+      "aktionspotential",
+      "elektrische-stromwirkung",
+      "ableitstrom",
+      "anwendungsteile"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021",
+    "hodgkin-huxley-1952",
+    "webster-2010",
+    "iec-60479-1",
+    "iec-60601-1"
+  ],
+  "diagram": {
+    "title": "Vom Ionenstrom zum digitalen Biosignal",
+    "caption": "Entstehung eines Aktionspotentials und seine Erfassung als Biosignal (Funktionsschema).",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "reiz",
+        "label": "Reiz /\nSchwelle erreicht",
+        "kind": "source",
+        "x": 110,
+        "y": 90
+      },
+      {
+        "id": "na",
+        "label": "Na⁺-Einstrom\n(Depolarisation)",
+        "kind": "process",
+        "x": 340,
+        "y": 90
+      },
+      {
+        "id": "k",
+        "label": "K⁺-Ausstrom\n(Repolarisation)",
+        "kind": "process",
+        "x": 570,
+        "y": 90
+      },
+      {
+        "id": "vl",
+        "label": "Feldpotential im\nVolumenleiter",
+        "ref": "biosignale",
+        "kind": "patient",
+        "x": 790,
+        "y": 90
+      },
+      {
+        "id": "el",
+        "label": "Ag/AgCl-Elektrode",
+        "ref": "ekg-elektrode",
+        "kind": "sensor",
+        "x": 790,
+        "y": 260
+      },
+      {
+        "id": "inv",
+        "label": "Instrumenten-\nverstärker",
+        "ref": "instrumentenverstaerker",
+        "kind": "process",
+        "x": 560,
+        "y": 260
+      },
+      {
+        "id": "adc",
+        "label": "A/D-Wandler",
+        "ref": "analog-digital-wandler",
+        "kind": "control",
+        "x": 340,
+        "y": 260
+      },
+      {
+        "id": "out",
+        "label": "EKG / EEG / EMG",
+        "ref": "ekg-geraet",
+        "kind": "output",
+        "x": 110,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "reiz",
+        "to": "na",
+        "kind": "signal"
+      },
+      {
+        "from": "na",
+        "to": "k",
+        "kind": "signal",
+        "label": "ca. 1 ms (Nerv)"
+      },
+      {
+        "from": "k",
+        "to": "vl",
+        "kind": "signal",
+        "label": "Ionenströme"
+      },
+      {
+        "from": "vl",
+        "to": "el",
+        "kind": "signal",
+        "label": "µV–mV"
+      },
+      {
+        "from": "el",
+        "to": "inv",
+        "kind": "signal"
+      },
+      {
+        "from": "inv",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "out",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

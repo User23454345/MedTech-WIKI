@@ -1,0 +1,50 @@
+{
+  "id": "berufe-medizintechnik",
+  "type": "term",
+  "title": "Berufe in der Medizintechnik",
+  "aliases": [
+    "Medizintechniker",
+    "Medizintechnikerin",
+    "Biomedical Engineer",
+    "Clinical Engineer",
+    "Medizintechnik-Ingenieur",
+    "Berufsbilder Medizintechnik"
+  ],
+  "category": "einfuehrung",
+  "summary": "Medizintechnische Tätigkeiten reichen von Ausbildungsberufen und Technikerfortbildung über Studiengänge bis zu gesetzlich geregelten Rollen wie Medizinprodukteberater, PRRC oder Prüfpersonen für STK und MTK.",
+  "body": "## Überblick\n\n„Medizintechniker:in“ ist in Deutschland **keine einheitlich geschützte Berufsbezeichnung**. Unter dem Begriff werden sehr unterschiedliche Tätigkeiten zusammengefasst – von der Wartung eines [[defibrillator|Defibrillators]] im Krankenhaus über die Entwicklung von [[software-medizinprodukt|Medizinprodukte-Software]] bis zur Zulassung eines Implantats. Gemeinsam ist allen Wegen, dass sie technische Kompetenz mit medizinischem Grundverständnis und Kenntnis des Medizinprodukterechts verbinden [@kramme-2017].\n\n> [!hinweis] Ausbildungsordnungen, Studiengänge und Fortbildungen unterscheiden sich zwischen Bundesländern und Hochschulen und werden regelmäßig überarbeitet. Dieser Artikel beschreibt typische Wege; maßgeblich sind die jeweils aktuellen Ordnungen der zuständigen Kammern, Schulen und Hochschulen.\n\n## Qualifikationswege\n\n| Ebene | Typischer Weg | Typische Tätigkeiten |\n|---|---|---|\n| Duale Berufsausbildung | elektrotechnische oder mechatronische Ausbildungsberufe (z. B. im Bereich Geräte und Systeme), anschließend Spezialisierung beim Hersteller oder im Krankenhaus | Montage, Prüfung, [[instandsetzung]], [[stk]] nach Einarbeitung |\n| Fortbildung | staatlich geprüfte:r Techniker:in (Fachschule, je nach Bundesland mit Schwerpunkt Medizintechnik) | Service, technische Leitung kleiner Abteilungen, Prüfungen |\n| Studium | Bachelor/Master Medizintechnik, Biomedizinische Technik, Medizininformatik, Medizinphysik | Entwicklung, Qualitäts- und Risikomanagement, Regulatory Affairs, Leitung Medizintechnik |\n| Gesundheitsfachberufe mit Technikbezug | z. B. Medizinische Technologin/Technologe für Radiologie (MTR) | Bedienung bildgebender und strahlentherapeutischer Geräte |\n| Weiterbildungen | z. B. Kurse für Medizinprodukteberater, Sachkunde für Aufbereitung, Strahlenschutz-Fachkunde | spezielle gesetzlich geregelte Funktionen |\n\n> [!belegt] Seit dem 1. Januar 2023 gilt das MT-Berufe-Gesetz. Es hat unter anderem die frühere Bezeichnung MTRA durch „Medizinische Technologin/Medizinischer Technologe für Radiologie“ (MTR) ersetzt [@mtbg].\n\n## Arbeitsfelder\n\n### Medizintechnik im Krankenhaus (Clinical Engineering)\n\nDie Abteilung Medizintechnik eines Krankenhauses betreut oft mehrere tausend Geräte – vom [[thermometer]] bis zum [[computertomograph|Computertomographen]]. Typische Aufgaben im [[medizintechnik-management|Medizintechnik-Management]]:\n\n* Führen von [[bestandsverzeichnis|Bestandsverzeichnis]] und [[medizinproduktebuch|Medizinproduktebüchern]],\n* Planung und Durchführung von [[stk|sicherheitstechnischen]] und [[mtk|messtechnischen Kontrollen]] sowie [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfungen]] nach [[iec-62353]] [@iec-62353],\n* [[wartung]], [[inspektion]], [[instandsetzung]] und [[fehlersuche]] nach den Begriffen der [[din-31051|DIN 31051]] [@din-31051],\n* Organisation von [[einweisung|Einweisungen]] und Bearbeitung von Vorkommnissen ([[vigilanz]]),\n* Beratung bei Beschaffung, Gerätestandardisierung und Integration in IT-Netze ([[dicom]], [[hl7-fhir]]).\n\n### Industrie: Entwicklung, Fertigung, Service\n\nHersteller wie [[draeger]], [[siemens-healthineers]], [[b-braun]] oder [[medtronic]] beschäftigen Ingenieur:innen und Techniker:innen in\n\n* **Entwicklung** – Elektronik ([[operationsverstaerker]], [[analog-digital-wandler]]), Mechanik, Software nach [[iec-62304]], Gebrauchstauglichkeit nach [[iec-62366-1]],\n* **Qualitäts- und Risikomanagement** – [[iso-13485]], [[iso-14971]],\n* **Regulatory Affairs** – [[konformitaetsbewertung]], technische Dokumentation, [[klinische-bewertung]], Kontakt zu [[benannte-stelle|Benannten Stellen]],\n* **Technischem Außendienst** – Installation, Prüfung und Reparatur beim Kunden.\n\n### Weitere Felder\n\nPrüforganisationen und Benannte Stellen, Behörden (z. B. Landesüberwachungsbehörden, BfArM [@bfarm]), unabhängige Servicedienstleister, Aufbereitungseinheiten für Medizinprodukte ([[aufbereitung]], [[sterilisation]]) sowie Forschungseinrichtungen.\n\n## Gesetzlich geregelte Rollen\n\nMehrere Funktionen sind direkt im Medizinprodukterecht verankert. Sie können von Personen unterschiedlicher Grundausbildung wahrgenommen werden, verlangen aber nachgewiesene Qualifikation:\n\n| Rolle | Rechtsgrundlage | Kernaufgabe |\n|---|---|---|\n| Person für die Einhaltung der Regulierungsvorschriften (PRRC) | Art. 15 [[mdr|MDR]] [@mdr-2017] | stellt beim Hersteller u. a. die Konformitätsprüfung vor Freigabe und die Vigilanzpflichten sicher |\n| Medizinprodukteberater:in | § 83 [[mpdg|MPDG]] [@mpdg] | informiert Fachkreise fachlich und weist in die Handhabung ein; muss regelmäßig geschult werden |\n| Prüfende Person für STK | § 12 i. V. m. Anlage 1 [[mpbetreibv|MPBetreibV]] [@mpbetreibv] | führt sicherheitstechnische Kontrollen durch; braucht passende Ausbildung, Kenntnisse, Erfahrung und geeignete [[pruefgeraete|Prüfmittel]] |\n| Prüfende Person für MTK | § 15 i. V. m. Anlage 2 MPBetreibV [@mpbetreibv] | führt messtechnische Kontrollen durch |\n| [[beauftragter-medizinproduktesicherheit|Beauftragte:r für Medizinproduktesicherheit]] | MPBetreibV (Gesundheitseinrichtungen ab einer bestimmten Größe) [@mpbetreibv] | Kontaktstelle für Behörden und Hersteller, Koordination von Meldungen und Rückrufen |\n| Elektrofachkraft | [[dguv-vorschrift-3|DGUV Vorschrift 3]] [@dguv-v3] | Prüfung und Instandsetzung elektrischer Betriebsmittel |\n\n> [!warnung] Instandsetzung und Prüfung von Medizinprodukten dürfen nur Personen übernehmen, die die erforderliche Sachkenntnis, Ausbildung und Ausstattung besitzen. Eingriffe ohne Herstellerunterlagen, Ersatzteile und Prüfmittel gefährden Patienten und können haftungsrechtliche Folgen haben.\n\n## Kompetenzprofil\n\nGute Medizintechniker:innen verbinden mehrere Wissensebenen:\n\n1. **Elektrotechnik und Elektronik** – [[spannung-strom-widerstand]], [[schutzklassen]], [[ableitstrom]], [[emv]], [[galvanische-trennung]].\n2. **Mechanik, Pneumatik, Hydraulik** – [[druck]], [[stroemungslehre]], [[gasgesetze]], Antriebe wie [[elektromotor]] und [[peristaltikpumpe]].\n3. **Sensorik und Messtechnik** – [[messkette]], [[messunsicherheit]], [[kalibrierung]].\n4. **Medizinische Grundlagen** – [[herz]], [[lunge]], [[blutkreislauf]], [[niere]] – genug, um Funktion und Risiko eines Geräts zu beurteilen.\n5. **Recht und Normen** – [[mdr]], [[mpbetreibv]], [[iec-60601-1]].\n6. **Kommunikation** – [[einweisung|Einweisungen]] geben, Störungsmeldungen strukturiert aufnehmen, mit Pflege und Ärzteschaft auf Augenhöhe sprechen.\n\n> [!praxis] Die häufigste Frage in der Klinik lautet nicht „Wie ist der Schaltplan?“, sondern „Darf ich das Gerät weiter benutzen?“. Diese Entscheidung verlangt Wissen über Risiko, Rechtslage und den konkreten klinischen Einsatz – reine Elektronikkenntnis genügt nicht.\n\n## Anwendung in Geräten\n\nAm Beispiel des [[beatmungsgeraet|Beatmungsgeräts]] zeigt sich die Arbeitsteilung: Entwickler:innen dimensionieren [[turbine]], [[elektromotor]] und [[drehzahlregelung]]; Regulatory Affairs klassifiziert das Gerät nach den [[risikoklassen|Risikoklassen]] der MDR; Medizinprodukteberater:innen weisen das Personal ein; die Medizintechnik der Klinik führt [[stk]] und [[funktionspruefung|Funktionsprüfungen]] durch, prüft [[drucksensor|Druck-]] und [[flowsensor|Flowsensoren]] und bearbeitet Meldungen wie [[leckage]] oder [[atemwegsdruck-hoch|hohen Atemwegsdruck]]. Weitere Beispiele: [[infusionspumpe]] (Prüfung der Fördergenauigkeit, [[okklusionsalarm]]), [[dialysegeraet]] ([[leitfaehigkeitssensor]], [[blutleckdetektor]]), [[roentgengeraet]] ([[konstanzpruefung]]).",
+  "related": [
+    "medizintechnik",
+    "medizintechnik-management",
+    "stk",
+    "mtk",
+    "einweisung",
+    "beauftragter-medizinproduktesicherheit",
+    "betreiberpflichten",
+    "instandhaltung-grundlagen",
+    "mpdg",
+    "mdr"
+  ],
+  "paths": [
+    [
+      "berufe-medizintechnik",
+      "medizintechnik-management",
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "ableitstrommessung"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "mtbg",
+    "mdr-2017",
+    "mpdg",
+    "mpbetreibv",
+    "iec-62353",
+    "din-31051",
+    "dguv-v3",
+    "bfarm"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

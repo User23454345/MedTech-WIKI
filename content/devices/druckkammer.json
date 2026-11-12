@@ -1,0 +1,51 @@
+{
+  "id": "druckkammer",
+  "type": "device",
+  "title": "Druckkammer (Hyperbare Oxygenation)",
+  "aliases": [
+    "Druckkammer",
+    "Hyperbare Sauerstofftherapie",
+    "HBO",
+    "HBOT",
+    "Überdruckkammer",
+    "Therapiedruckkammer",
+    "Hyperbaric Chamber"
+  ],
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 83,
+  "domains": [
+    "notfallmedizin",
+    "intensivmedizin"
+  ],
+  "summary": "In einer Therapiedruckkammer atmet der Patient bei erhöhtem Umgebungsdruck nahezu reinen Sauerstoff. Dadurch steigt die im Blutplasma physikalisch gelöste Sauerstoffmenge stark an, und Gasblasen im Körper werden verkleinert.",
+  "sections": {
+    "purpose": "Die hyperbare Oxygenation (HBO) wird u. a. bei Dekompressionskrankheit von Tauchern, arterieller Gasembolie und Kohlenmonoxidvergiftung eingesetzt; weitere Indikationen wie bestimmte Wundheilungsstörungen oder Strahlenspätschäden werden fachlich unterschiedlich bewertet. Die Behandlung erfordert ärztliche Leitung und speziell geschultes Personal [@kramme-2017].",
+    "principle": "## Physikalische Grundlagen\n\nNach dem **Gesetz von Henry** ist die in einer Flüssigkeit gelöste Gasmenge proportional zum Partialdruck des Gases ([[gasgesetze]]). Wird reiner Sauerstoff bei einem Vielfachen des Atmosphärendrucks geatmet, steigt der O₂-Partialdruck in der Lunge und damit der physikalisch im Plasma gelöste Sauerstoff deutlich an – zusätzlich zum an [[haemoglobin|Hämoglobin]] gebundenen Anteil ([[gasaustausch]]). Nach dem **Gesetz von Boyle-Mariotte** (p · V = konst. bei konstanter Temperatur) schrumpfen Gasblasen bei steigendem [[druck|Druck]]: Bei Verdopplung des Absolutdrucks halbiert sich ihr Volumen. Zusätzlich wird der Stickstoff in der Blase bei Sauerstoffatmung schneller ausgewaschen.\n\n> [!beispiel] Die Löslichkeit von Sauerstoff im Plasma beträgt etwa 0,003 ml O₂ pro dl Blut und mmHg Partialdruck. Bei Luftatmung unter Normaldruck (arterieller pO₂ ≈ 100 mmHg) sind das nur rund 0,3 ml/dl. Bei Atmung von reinem Sauerstoff unter etwa 2,8 bar absolut kann der arterielle pO₂ in die Größenordnung von 1 500–2 000 mmHg steigen; dann sind rund 4,5–6 ml/dl physikalisch gelöst – grob die Menge, die das Gewebe in Ruhe dem Blut entnimmt.\n\n> [!vereinfacht] Therapiedrücke liegen typischerweise im Bereich von etwa 2 bis 3 bar absolut; Behandlungsschemata (Druck, Dauer, Luftpausen) legen Fachgesellschaften fest.\n\n## Bauformen\n\n| Typ | Füllgas | Sauerstoffzufuhr |\n|---|---|---|\n| Einpersonenkammer (Monoplace) | meist reiner Sauerstoff | Patient atmet die Kammeratmosphäre |\n| Mehrpersonenkammer (Multiplace) | Druckluft | O₂ über Maske oder Kopfhaube, Begleitpersonal in der Kammer |\n\nZur Anlage gehören Druckbehälter mit Schleuse, Kompressoren und Druckluftspeicher, Gasversorgung, Steuerpult mit Druckregelung, Kommunikationseinrichtung, Brandschutz und Notabsenkung. Für Mehrplatzkammern gilt [@en-14931]. Medizinische Geräte in der Kammer (z. B. [[beatmungsgeraet|Beatmungsgerät]], [[patientenmonitor|Monitor]]) müssen für den Überdruckbetrieb geeignet sein.\n\n> [!warnung] Erhöhter Sauerstoffpartialdruck steigert die Brandgefahr erheblich; Zündquellen und ungeeignete Materialien sind strikt auszuschließen. Hohe O₂-Partialdrücke können zudem toxisch wirken (zentralnervöse Sauerstofftoxizität mit Krampfanfällen); Behandlungsschemata begrenzen deshalb Druck und Dauer und sehen Luftpausen vor. Druckänderungen können Barotraumen an Ohr und Nasennebenhöhlen verursachen ([[ohr]])."
+  },
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Einplatz- oder Mehrplatzkammer, Anzahl der Behandlungsplätze, Gebäudeintegration, Kompressor- und Gasversorgung, Brandschutztechnik, Personal- und Betriebskosten."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "STK: MPBetreibV (Fassung 2025) Anlage 1 – nichtimplantierbare aktive Produkte zur Therapie mit Druckkammern (Wortlaut der amtlichen Fassung maßgeblich; in der Fassung von 2002/2017 Anlage 1 Nr. 1.7); Kontrollen nach § 12. MTK: nicht in Anlage 2 aufgeführt. Daneben gelten für den Druckbehälter die Prüfpflichten des Druckgeräte- und Betriebssicherheitsrechts.",
+    "intervals": "STK spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025); wiederkehrende Druckbehälterprüfungen nach den einschlägigen Vorschriften; Prüfung der Brandschutz- und Gasanlagen."
+  },
+  "related": [
+    "gasgesetze",
+    "druck",
+    "gasaustausch",
+    "haemoglobin",
+    "stk",
+    "notfallmedizin"
+  ],
+  "sources": [
+    "kramme-2017",
+    "en-14931",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

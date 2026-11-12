@@ -1,0 +1,161 @@
+{
+  "id": "niere",
+  "type": "term",
+  "title": "Niere",
+  "aliases": [
+    "Ren",
+    "Nephros",
+    "kidney",
+    "Nieren",
+    "Nephron",
+    "glomeruläre Filtrationsrate",
+    "GFR",
+    "eGFR",
+    "Clearance",
+    "Nierenfunktion"
+  ],
+  "category": "anatomie",
+  "summary": "Paariges Ausscheidungsorgan, das über rund eine Million Nephrone das Blut filtert und Wasser-, Elektrolyt- und Säure-Basen-Haushalt sowie den Blutdruck reguliert. Ihre Filtrationsfunktion ist das physiologische Vorbild von Hämodialyse und Hämofiltration.",
+  "body": "## Überblick\n\nDie **Nieren** (lat. *ren*, griech. *nephros*) sind paarige, bohnenförmige Organe im Retroperitonealraum beiderseits der Wirbelsäule. Jede Niere wiegt beim Erwachsenen etwa 120–200 g, gemeinsam erhalten sie jedoch rund 20–25 % des [[herz|Herzzeitvolumens]] – etwa 1,0–1,2 l Blut pro Minute [@schmidt-lang-2019] [@guyton-2021]. Diese überproportionale Durchblutung dient nicht dem Eigenbedarf, sondern der Filterfunktion: Die Nieren reinigen das [[blut|Blut]] von Stoffwechselendprodukten, regulieren Wasser- und Elektrolythaushalt, den [[saeure-basen-haushalt|Säure-Basen-Haushalt]] und den [[blutdruck|Blutdruck]] und bilden Hormone.\n\nFür die Medizintechnik ist die Niere das Vorbild der extrakorporalen Blutreinigung: [[dialysegeraet|Hämodialysegerät]], [[crrt-geraet|CRRT-Gerät]] und [[dialysator|Dialysator]] ersetzen Teile ihrer Ausscheidungsfunktion, wenn diese versagt.\n\n## Aufbau\n\n### Makroskopische Gliederung\n\n| Struktur | Funktion |\n|---|---|\n| Nierenrinde (Cortex) | enthält die Glomeruli und gewundenen Tubulusabschnitte |\n| Nierenmark (Medulla) | Henle-Schleifen und Sammelrohre; Aufbau des osmotischen Gradienten |\n| Nierenbecken | sammelt den Endharn und leitet ihn in den Harnleiter |\n| Nierenarterie/-vene | Zu- und Abfluss; Arterie entspringt direkt der Aorta |\n\n### Das Nephron als Funktionseinheit\n\nJede Niere enthält rund eine Million **Nephrone** [@guyton-2021]. Ein Nephron besteht aus:\n\n1. **Glomerulus** – Kapillarknäuel, umgeben von der Bowman-Kapsel; hier wird Plasma ultrafiltriert.\n2. **Proximaler Tubulus** – resorbiert den Großteil von Natrium, Wasser, Glukose, Aminosäuren und Bicarbonat.\n3. **Henle-Schleife** – erzeugt nach dem Gegenstromprinzip den osmotischen Gradienten des Marks.\n4. **Distaler Tubulus und Sammelrohr** – hormonell gesteuerte Feinregulation (Aldosteron, ADH).\n\n## Glomeruläre Filtration\n\nDie Filtration folgt den Starling-Kräften. Die effektive Filtrationsrate ergibt sich vereinfacht aus\n\n`GFR = Kf · (P_GC − P_BK − π_GC)`\n\nmit dem Filtrationskoeffizienten `Kf` (Produkt aus hydraulischer Leitfähigkeit und Filterfläche), dem hydrostatischen Druck in den glomerulären Kapillaren `P_GC`, dem Druck in der Bowman-Kapsel `P_BK` und dem kolloidosmotischen Druck des Plasmas `π_GC` [@guyton-2021]. > [!beispiel] Mit typischen Lehrbuchwerten (`P_GC` ≈ 60 mmHg, `P_BK` ≈ 18 mmHg, `π_GC` ≈ 32 mmHg) ergibt sich ein effektiver Filtrationsdruck von nur etwa 10 mmHg [@guyton-2021]. Ein Abfall des glomerulären Kapillardrucks – etwa bei Schock – senkt die GFR deshalb überproportional. Dieselbe Logik gilt am Dialysator: Der Filtratfluss ist proportional zum Transmembrandruck abzüglich des onkotischen Drucks des Blutes.\n\nDie glomeruläre Filtrationsbarriere (gefenstertes Endothel, Basalmembran, Podozyten) hält Zellen und große Proteine wie Albumin weitgehend zurück – sie wirkt also wie eine Membran mit Größen- und Ladungsselektivität.\n\n| Größe | typischer Wert beim gesunden Erwachsenen |\n|---|---|\n| renaler Plasmafluss | ca. 600–650 ml/min |\n| glomeruläre Filtrationsrate (GFR) | ca. 120 ml/min ≈ 180 l/Tag |\n| Filtrationsfraktion (GFR/RPF) | ca. 20 % |\n| Endharn | ca. 1–2 l/Tag |\n\n> [!hinweis] Typische Lehrbuchwerte für junge, gesunde Erwachsene [@schmidt-lang-2019] [@guyton-2021]. Die GFR sinkt physiologisch mit dem Alter und wird klinisch auf 1,73 m² Körperoberfläche normiert.\n\nÜber 99 % des Primärharns werden also wieder resorbiert. Die **Autoregulation** (myogene Antwort der zuführenden Arteriole und tubuloglomeruläres Feedback) hält Nierendurchblutung und GFR über einen weiten Bereich des mittleren arteriellen Drucks annähernd konstant – ein physiologischer [[regelkreis|Regelkreis]].\n\n### Clearance\n\nDie **Clearance** beschreibt das Plasmavolumen, das pro Zeiteinheit vollständig von einer Substanz befreit wird:\n\n`C = (U · V̇) / P`\n\n(`U` Urinkonzentration, `V̇` Urinzeitvolumen, `P` Plasmakonzentration). Eine Substanz, die frei filtriert, aber weder resorbiert noch sezerniert wird (z. B. Inulin), hat eine Clearance gleich der GFR. Klinisch wird die GFR meist aus dem Serumkreatinin geschätzt (eGFR), z. B. mit den CKD-EPI-Gleichungen [@levey-2009] [@inker-2021].\n\n> [!beispiel] Ein Patient scheidet in 24 h 1,44 l Urin aus (V̇ = 1 ml/min). Kreatinin im Urin 120 mg/dl, im Plasma 1,0 mg/dl: C = 120 · 1 / 1,0 = 120 ml/min. (Kreatinin wird zusätzlich gering sezerniert und überschätzt die GFR daher leicht.)\n\n## Weitere Funktionen\n\n| Funktion | Mechanismus | technischer Ersatz durch Dialyse? |\n|---|---|---|\n| Ausscheidung harnpflichtiger Substanzen (Harnstoff, Kreatinin) | Filtration, Sekretion | ja (Diffusion, Konvektion) |\n| Wasser- und Natriumhaushalt | Resorption, ADH/Aldosteron | teilweise (Ultrafiltration, Dialysat-Natrium) |\n| Kaliumhaushalt | distale Sekretion | ja, intermittierend |\n| Säure-Basen-Haushalt | Bicarbonat-Resorption, H⁺-Ausscheidung | teilweise (Bicarbonat im Dialysat) |\n| Blutdruckregulation | Renin-Angiotensin-Aldosteron-System | nein |\n| Blutbildung | Erythropoetin (EPO) | nein (medikamentös) |\n| Knochenstoffwechsel | Aktivierung von Vitamin D (Calcitriol) | nein (medikamentös) |\n\n> [!vereinfacht] Die Tabelle stellt die Nierenfunktionen stark verkürzt dar. Ein Dialyseverfahren ersetzt im Wesentlichen die exkretorische Funktion, und das nur intermittierend – die endokrinen Funktionen müssen medikamentös ersetzt werden [@daugirdas-2015].\n\n## Nierenversagen\n\nMan unterscheidet die **akute Nierenschädigung** (AKI), definiert über Kreatininanstieg und Urinausscheidung [@kdigo-aki-2012], und die **chronische Nierenerkrankung** (CKD), die nach GFR- und Albuminurie-Kategorien eingeteilt wird [@kdigo-ckd-2024]:\n\n| GFR-Kategorie | GFR (ml/min/1,73 m²) | Bezeichnung |\n|---|---|---|\n| G1 | ≥ 90 | normal oder hoch |\n| G2 | 60–89 | leicht vermindert |\n| G3a | 45–59 | leicht bis mäßig vermindert |\n| G3b | 30–44 | mäßig bis stark vermindert |\n| G4 | 15–29 | stark vermindert |\n| G5 | < 15 | Nierenversagen |\n\n> [!belegt] Die Kategorien G1–G5 entsprechen der KDIGO-Klassifikation der chronischen Nierenerkrankung [@kdigo-ckd-2024]. Die Indikation zur Nierenersatztherapie richtet sich nicht allein nach der GFR, sondern nach Symptomen und Komplikationen (z. B. Hyperkaliämie, Überwässerung, Azidose).\n\n## Anwendung in Geräten\n\nDer [[dialysator|Dialysator]] bildet das Nephron technisch nach: Eine semipermeable Hohlfasermembran trennt Blut und Dialysat. Der Stofftransport erfolgt durch [[diffusion-osmose|Diffusion]] entlang des Konzentrationsgradienten und durch Konvektion (Ultrafiltration über einen Transmembrandruck) – also über dieselben physikalischen Prinzipien wie im Glomerulus und Tubulus [@daugirdas-2015].\n\n| Organfunktion | Entsprechung im Gerät |\n|---|---|\n| Glomeruläre Filtration | Ultrafiltration über Transmembrandruck (Hämofiltration, [[crrt-geraet|CRRT]]) |\n| Tubuläre Feinregulation | Zusammensetzung des Dialysats, überwacht über [[leitfaehigkeitssensor|Leitfähigkeitsmessung]] |\n| Barriere für Blutzellen | Membran; Überwachung durch den [[blutleckdetektor|Blutleckdetektor]] |\n| Autoregulation des Drucks | [[druckmessung|Druckmessung]] arteriell, venös und Transmembrandruck |\n\nTypische Störungen in diesem Zusammenhang sind der [[leitfaehigkeitsalarm|Leitfähigkeitsalarm]] und der [[blutleck-alarm|Blutleckalarm]]. Auch für andere Geräte ist die Nierenfunktion relevant: Bei eingeschränkter Nierenfunktion sind Dosierungen in [[infusionspumpe|Infusions-]] und [[spritzenpumpe|Spritzenpumpen]] anzupassen, und Kontrastmittel in [[computertomograph|CT]] und [[angiographieanlage|Angiographie]] werden über die Nieren ausgeschieden.\n\n> [!praxis] Für die Effektivität der Dialyse wird klinisch u. a. die Kennzahl Kt/V verwendet (Harnstoff-Clearance K des Dialysators × Behandlungszeit t, bezogen auf das Harnstoff-Verteilungsvolumen V) [@daugirdas-2015]. Technische Störungen wie verminderter Blutfluss oder Rezirkulation am Gefäßzugang senken die effektive Clearance.\n\n## Bedeutung in der Medizintechnik\n\nDie Niere zeigt exemplarisch, wie Medizintechnik ein Organ nur teilweise ersetzen kann: Physikalische Transportprozesse lassen sich technisch gut nachbilden, Regel- und Hormonfunktionen dagegen nicht. Wer die Physiologie von Filtration, Clearance und Säure-Basen-Regulation versteht, kann Einstellungen und Alarme eines [[dialysegeraet|Dialysegeräts]] fachlich einordnen – ein Kerngebiet der [[nephrologie|Nephrologie]] und der [[intensivmedizin|Intensivmedizin]]. Für die Instandhaltung bedeutet das: Jede Abweichung von Dialysatzusammensetzung, Temperatur oder Druck wirkt unmittelbar auf das Blut des Patienten zurück, weshalb Dialysegeräte mehrfach redundante Schutzsysteme (Leitfähigkeits-, Temperatur-, Druck-, Blutleck- und Luftüberwachung) besitzen, deren Funktion bei Wartung und Prüfung nach Herstellervorgaben nachzuweisen ist.\n",
+  "related": [
+    "dialysegeraet",
+    "crrt-geraet",
+    "dialysator",
+    "diffusion-osmose",
+    "blut",
+    "saeure-basen-haushalt",
+    "blutdruck",
+    "leitfaehigkeitssensor",
+    "blutleckdetektor",
+    "nephrologie",
+    "blutkreislauf"
+  ],
+  "paths": [
+    [
+      "niere",
+      "dialysegeraet",
+      "dialysator",
+      "diffusion-osmose"
+    ],
+    [
+      "niere",
+      "saeure-basen-haushalt",
+      "blutgasanalysator"
+    ],
+    [
+      "niere",
+      "dialysegeraet",
+      "leitfaehigkeitssensor",
+      "leitfaehigkeitsalarm"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021",
+    "daugirdas-2015",
+    "kdigo-ckd-2024",
+    "kdigo-aki-2012",
+    "levey-2009",
+    "inker-2021"
+  ],
+  "diagram": {
+    "title": "Nephron und technisches Gegenstück",
+    "caption": "Vereinfachte Funktionskette der Harnbildung und ihre Entsprechung im Dialysegerät.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "art",
+        "label": "Nierenarterie\n(Blutzufluss)",
+        "ref": "blutkreislauf",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "glo",
+        "label": "Glomerulus\n(Ultrafiltration)",
+        "kind": "process",
+        "x": 310,
+        "y": 90
+      },
+      {
+        "id": "tub",
+        "label": "Tubulus\n(Resorption/Sekretion)",
+        "kind": "process",
+        "x": 530,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "harn",
+        "label": "Sammelrohr /\nEndharn",
+        "kind": "output",
+        "x": 770,
+        "y": 90
+      },
+      {
+        "id": "dia",
+        "label": "Dialysator\n(Membran)",
+        "ref": "dialysator",
+        "kind": "process",
+        "x": 310,
+        "y": 260
+      },
+      {
+        "id": "dif",
+        "label": "Diffusion /\nKonvektion",
+        "ref": "diffusion-osmose",
+        "kind": "process",
+        "x": 530,
+        "y": 260
+      },
+      {
+        "id": "lf",
+        "label": "Leitfähigkeits-\nüberwachung",
+        "ref": "leitfaehigkeitssensor",
+        "kind": "sensor",
+        "x": 770,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "art",
+        "to": "glo",
+        "kind": "fluid",
+        "label": "Blut"
+      },
+      {
+        "from": "glo",
+        "to": "tub",
+        "kind": "fluid",
+        "label": "Primärharn"
+      },
+      {
+        "from": "tub",
+        "to": "harn",
+        "kind": "fluid"
+      },
+      {
+        "from": "glo",
+        "to": "dia",
+        "kind": "signal",
+        "label": "technisches Vorbild"
+      },
+      {
+        "from": "dia",
+        "to": "dif",
+        "kind": "fluid"
+      },
+      {
+        "from": "dif",
+        "to": "lf",
+        "kind": "signal",
+        "label": "Dialysat"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

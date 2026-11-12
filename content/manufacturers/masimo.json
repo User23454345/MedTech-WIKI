@@ -1,0 +1,60 @@
+{
+  "id": "masimo",
+  "type": "manufacturer",
+  "title": "Masimo",
+  "aliases": [
+    "Masimo Corporation",
+    "Masimo SET"
+  ],
+  "category": "hersteller",
+  "summary": "US-amerikanischer Medizintechnikhersteller mit Sitz in Irvine (Kalifornien), gegründet 1989. Masimo ist vor allem für die bewegungstolerante Pulsoximetrie (Masimo SET) und nichtinvasive Mehrwellenlängen-Messverfahren bekannt.",
+  "headquarters": "Irvine, USA",
+  "founded": "1989",
+  "website": "https://www.masimo.com/",
+  "productLines": [
+    {
+      "device": "pulsoxymeter",
+      "models": [
+        "Radical-7",
+        "Rad-97",
+        "MightySat Rx"
+      ],
+      "note": "Signalverarbeitung „Masimo SET“; Puls-CO-Oximetrie mit „rainbow SET“."
+    },
+    {
+      "device": "patientenmonitor",
+      "models": [
+        "Root"
+      ],
+      "note": "Monitoring- und Konnektivitätsplattform, in die z. B. Radical-7 eingesetzt wird; erweiterbar u. a. um NIBP und Temperatur."
+    },
+    {
+      "device": "kapnometer",
+      "models": [
+        "EMMA"
+      ],
+      "note": "Kompakter Hauptstromkapnometer."
+    }
+  ],
+  "body": "## Überblick\n\nMasimo ist ein börsennotierter Hersteller nichtinvasiver Monitoring-Technologien mit Sitz in Irvine, Kalifornien. Bekannt wurde das Unternehmen durch ein Signalverarbeitungsverfahren für die [[pulsoxymeter|Pulsoximetrie]], das Messungen auch bei Patientenbewegung und niedriger Perfusion stabil halten soll [@hst-masimo].\n\n## Geschichte in Stichpunkten\n\n* **1989** – Gründung durch Joe Kiani; Entwicklung der Signal Extraction Technology (SET).\n* **1990er/2000er** – Einführung der SET-Pulsoximetrie und Lizenzierung der Technologie an Monitor-Hersteller.\n* **2000er/2010er** – Erweiterung zu „rainbow SET“ mit mehr als zwei Wellenlängen (u. a. Messung von Carboxy- und Methämoglobin), Einführung der Plattform Root.\n* **2022** – Übernahme des Unterhaltungselektronik-Herstellers Sound United.\n* **2024** – Führungswechsel nach einer Auseinandersetzung mit aktivistischen Aktionären; Joe Kiani scheidet als CEO aus.\n* **2025** – Verkauf von Sound United an Harman International; Rückkonzentration auf die Medizintechnik [@hst-masimo-harman-2025].\n\n## Technologie\n\nKlassische Pulsoximeter bestimmen die Sauerstoffsättigung über das Verhältnis der pulsatilen Absorptionen bei rotem und infrarotem Licht ([[photoplethysmographie]], [[lambert-beer|Lambert-Beer-Gesetz]], [[haemoglobin]]). Bewegungen erzeugen jedoch ebenfalls pulsatile Signalanteile, insbesondere durch venöses Blut.\n\n> [!vereinfacht] SET betrachtet das Messsignal als Summe aus arteriellem Anteil und einem „Störanteil“ (v. a. bewegtes venöses Blut). Mit adaptiven Filtern werden mehrere mögliche Sättigungswerte durchgerechnet; der Wert, der zum arteriellen Signal passt, wird ausgegeben. Details sind herstellereigen.\n\nMehrwellenlängen-Sensoren erweitern die Zwei-Wellenlängen-Messung, um zusätzliche Hämoglobinfraktionen abzuschätzen. Solche Werte sind Trend- und Screeninginformationen und ersetzen nicht die Blutgasanalyse ([[blutgasanalysator]]).\n\n## Geschäftsbereiche\n\n| Bereich | Wiki-Geräte |\n|---|---|\n| Pulsoximetrie und Puls-CO-Oximetrie | [[pulsoxymeter]] |\n| Monitoring-Plattformen | [[patientenmonitor]] |\n| Atemgasmonitoring | [[kapnometer]] |\n\n## Bedeutung für die Medizintechnik\n\nSET-Module sind auch in Monitoren anderer Hersteller verbaut, sodass Masimo-Sensoren und -Kabel in vielen Kliniken herstellerübergreifend anzutreffen sind. Für die Praxis gilt: Sensoren, Kabel und Monitor müssen kompatibel sein; die Messgenauigkeit wird nach [[iso-80601-2-61|ISO 80601-2-61]] bewertet. Bei [[bewegungsartefakt|Bewegungsartefakten]] und [[sensordrift|Sensorproblemen]] sind Sensorsitz und Kabelzustand zuerst zu prüfen.\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "pulsoxymeter",
+    "patientenmonitor",
+    "kapnometer",
+    "photoplethysmographie",
+    "lambert-beer",
+    "iso-80601-2-61",
+    "bewegungsartefakt",
+    "medtronic",
+    "philips",
+    "nihon-kohden"
+  ],
+  "sources": [
+    "hst-masimo",
+    "hst-masimo-harman-2025",
+    "masimo-rad97",
+    "jubran-2015"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

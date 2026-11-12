@@ -1,0 +1,66 @@
+{
+  "id": "elektrodenproblem",
+  "type": "fault",
+  "title": "Elektrode ab / schlechter Elektrodenkontakt",
+  "aliases": [
+    "Elektrode ab",
+    "Lead off",
+    "Ableitung ab",
+    "Elektroden prüfen",
+    "Check Electrodes",
+    "schlechter Elektrodenkontakt"
+  ],
+  "category": "fehler",
+  "summary": "Technischer Alarm, wenn eine Elektrode keinen ausreichenden Kontakt zur Haut hat. Das Gerät erkennt dies über eine Impedanz- oder Gleichstromüberwachung; betroffen sind EKG- und EEG-Ableitungen, Defibrillationselektroden und geteilte Neutralelektroden der HF-Chirurgie.",
+  "devices": [
+    "patientenmonitor",
+    "ekg-geraet",
+    "langzeit-ekg",
+    "ergometer",
+    "defibrillator",
+    "eeg-geraet",
+    "emg-geraet",
+    "hf-chirurgiegeraet"
+  ],
+  "causes": [
+    "Ausgetrocknetes Elektrodengel durch abgelaufene, falsch gelagerte oder zu lange verwendete [[ekg-elektrode|Elektroden]].",
+    "Unzureichende Hautvorbereitung: Behaarung, Schweiß, Hautfett, Lotion, Feuchtigkeit oder Hornhaut.",
+    "Elektrode durch Bewegung, Zug am Kabel oder Lagerung teilweise abgelöst.",
+    "Kabelbruch oder Wackelkontakt in Ableitungskabel, Stammkabel oder Steckverbinder.",
+    "Mischung von Elektrodentypen oder -herstellern mit unterschiedlicher Polarisation (Offsetspannung).",
+    "Bei [[defibrillationselektroden|Defibrillationspads]]: Pads nicht vollflächig geklebt, überlappend, abgelaufen oder nicht angeschlossen.",
+    "Bei geteilten [[neutralelektrode|Neutralelektroden]]: Elektrode nur teilweise aufliegend, ungeeignete Stelle (Knochenvorsprung, Narbe, Behaarung) oder nicht kompatibler Elektrodentyp."
+  ],
+  "actions": [
+    "**Patienten zuerst:** Rhythmus und Vitalzeichen anderweitig beurteilen (Puls tasten, zweiter Parameter wie SpO₂-Kurve); „Elektrode ab“ ist kein Rhythmus.",
+    "Betroffene Ableitung am Monitor identifizieren und die zugehörige Elektrode prüfen.",
+    "Haut vorbereiten (ggf. kürzen statt rasieren, trocknen, entfetten) und frische Elektroden derselben Sorte anbringen.",
+    "Bei Defibrillatoren Pads fest und vollflächig andrücken, Steckverbindung prüfen; bei abgelaufenen Pads ersetzen.",
+    "Bei HF-Chirurgie Neutralelektrode vollflächig auf gut durchblutetes Muskelgewebe nahe dem OP-Feld kleben; Alarm nie durch Überbrücken umgehen (Verbrennungsgefahr, siehe [[neutralelektroden-verbrennung]]).",
+    "Bleibt der Alarm bestehen, Kabel tauschen und mit [[pruefgeraete|Patientensimulator]] prüfen; defekte Kabel aussondern und der Medizintechnik melden."
+  ],
+  "body": "## Technischer Hintergrund\n\nDie Übertragung bioelektrischer Signale ([[biosignale]]) gelingt nur über eine niederohmige, stabile Grenzfläche zwischen Haut und Elektrode. Bei der [[ekg-elektrode|Ag/AgCl-Elektrode]] übernimmt das Gel die Ionenleitung zur Haut [@webster-2010].\n\n### Erkennung beim EKG und EEG\n\nDie Lead-off-Erkennung arbeitet typischerweise mit einem von zwei Verfahren [@webster-2010] [@iec-60601-2-27]:\n\n| Verfahren | Prinzip | Erkennungsmerkmal |\n|---|---|---|\n| Gleichstrom-Methode | sehr kleiner Gleichstrom wird über die Elektroden eingeprägt | bei abgelöster Elektrode treibt der Strom den Eingang des [[instrumentenverstaerker|Instrumentenverstärkers]] in die Sättigung; ein Komparator meldet „Elektrode ab“ |\n| Wechselstrom-Methode | kleines Wechselstromsignal außerhalb des EKG-Bandes | gemessene Impedanz übersteigt eine Schwelle |\n\nDie eingeprägten Ströme sind so klein, dass sie die zulässigen Patientenableitströme ([[ableitstrom]], [[anwendungsteile|Typ CF]]) einhalten [@iec-60601-1].\n\n> [!vereinfacht] Die Elektrode mit Haut lässt sich als Widerstand mit parallel geschaltetem Kondensator und in Reihe liegender Polarisationsspannung modellieren. Trocknet das Gel aus, steigt die Impedanz; unterschiedliche Elektrodenimpedanzen verschlechtern zusätzlich die Gleichtaktunterdrückung und machen die Ableitung anfällig für [[netzstoerung|Netzbrumm]].\n\nEin schlechter, aber nicht vollständig gelöster Kontakt löst oft noch **keinen** Alarm aus, erzeugt aber Rauschen, Grundlinienschwankungen und Fehlalarme (z. B. Pseudo-Asystolie oder Pseudo-Kammerflimmern), siehe [[bewegungsartefakt]].\n\n### Defibrillator\n\nEin [[defibrillator]] misst die transthorakale Impedanz über die Pads mit einem kleinen Messstrom. Liegt sie außerhalb des plausiblen Bereichs (z. B. Pads nicht geklebt oder nicht angeschlossen), fordert das Gerät zum Prüfen der Elektroden auf; ein [[defibrillator|AED]] führt dann keine Analyse durch und gibt keinen Schock frei, bei manuellen Geräten ist das Verhalten herstellerabhängig [@iec-60601-2-4]. Bei biphasischen Geräten wird die gemessene Impedanz außerdem zur **Impedanzkompensation** genutzt: Je nach Hersteller werden Spannung, Strom oder Phasendauer des Schocks angepasst.\n\n### HF-Chirurgie\n\nBei geteilten [[neutralelektrode|Neutralelektroden]] misst das [[hf-chirurgiegeraet|HF-Chirurgiegerät]] die Impedanz zwischen den beiden Elektrodenhälften. Steigt sie (Ablösung) oder weicht sie zu stark vom Ausgangswert ab, wird die HF-Ausgabe gesperrt [@iec-60601-2-2]. Ungeteilte Neutralelektroden erlauben nur eine Kabel-Durchgangsprüfung.\n\n### Alarmpriorität\n\n„Elektrode ab“ ist eine technische Alarmbedingung. Weil die Überwachung damit ausfällt, kann der Hersteller sie je nach Kontext unterschiedlich priorisieren; physiologische Alarme dieser Ableitung sind während des Zustands nicht verfügbar [@iec-60601-1-8].\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Einzelne Ableitung „ab“ | zugehörige Elektrode, Gel, Haftung | Elektrode erneuern |\n| Alle Ableitungen „ab“ | Stammkabel, Stecker, Referenzelektrode (N/RL) | Kabel tauschen, RL-Elektrode prüfen |\n| Alarm intermittierend bei Bewegung | Kabelbruch nahe Stecker, Zugbelastung | Kabel mit Simulator testen, ersetzen |\n| Verrauschtes Signal ohne Alarm | Hautvorbereitung, Elektrodentyp gemischt | Haut vorbereiten, einheitliche Elektroden |\n| Defibrillator: „Elektroden prüfen“ | Pads, Haltbarkeit, Kabel | Neue Pads, Hautkontakt verbessern |\n| HF-Gerät: Neutralelektrodenalarm | Sitz, Lage, Elektrodentyp | Neu platzieren, kompatible Elektrode |\n\n## Prävention\n\n- Elektroden kühl, trocken und verschlossen lagern; Verfallsdatum beachten.\n- Hautvorbereitung standardisieren; Elektroden nach Herstellerangabe regelmäßig wechseln.\n- Kabel nicht knicken oder aufwickeln, Zugentlastung nutzen.\n- Kabel und Lead-off-Erkennung im Rahmen von [[stk]] und [[funktionspruefung]] mit Simulator prüfen [@mpbetreibv].\n\n> [!hinweis] Herstellerspezifische Alarmtexte, Impedanzgrenzen und Fehlercodes stehen in den Service-Unterlagen (siehe [[fehlercodes]]).",
+  "related": [
+    "ekg-elektrode",
+    "defibrillationselektroden",
+    "neutralelektrode",
+    "neutralelektroden-verbrennung",
+    "netzstoerung",
+    "bewegungsartefakt",
+    "instrumentenverstaerker",
+    "biosignale",
+    "patientenmonitor",
+    "iec-60601-2-27"
+  ],
+  "sources": [
+    "webster-2010",
+    "iec-60601-2-27",
+    "iec-60601-2-4",
+    "iec-60601-2-2",
+    "iec-60601-1",
+    "iec-60601-1-8",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

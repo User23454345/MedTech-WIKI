@@ -1,0 +1,152 @@
+{
+  "id": "roentgendetektor",
+  "type": "term",
+  "title": "Röntgendetektor (Flachdetektor)",
+  "aliases": [
+    "Flachdetektor",
+    "Flat Panel Detector",
+    "FPD",
+    "Festkörperdetektor",
+    "Digitaler Röntgendetektor",
+    "DR-Detektor",
+    "Bildempfänger",
+    "CsI-Detektor",
+    "a-Se-Detektor"
+  ],
+  "category": "komponenten",
+  "summary": "Bildempfänger, der die Röntgenstrahlung hinter dem Patienten in ein digitales Bild umwandelt – indirekt über einen Szintillator und Photodioden oder direkt über einen Fotoleiter wie amorphes Selen. Seine Quanteneffizienz bestimmt maßgeblich die benötigte Patientendosis.",
+  "body": "## Begriff\n\nEin **Röntgendetektor** wandelt die nach dem Durchgang durch den Patienten verbliebene [[roentgenstrahlung|Röntgenstrahlung]] in ein auswertbares Signal um. In der digitalen Projektionsradiographie hat sich der **Flachdetektor** (Flat Panel Detector, FPD) durchgesetzt: eine großflächige, flache Matrix aus Millionen Bildelementen (Pixeln), die das Röntgenbild unmittelbar nach der Aufnahme digital ausgibt. Er hat Film-Folien-Systeme und Speicherfolien (Computed Radiography, CR) in den meisten Anwendungen abgelöst [@bushberg-2020] [@doessel-2016].\n\nDer Detektor ist das zweite Ende der Bildkette, die mit der [[roentgenroehre|Röntgenröhre]] beginnt. Seine Effizienz bestimmt unmittelbar, welche Patientendosis für ein Bild bestimmter Qualität nötig ist – ein zentraler Punkt im [[strahlenschutz|Strahlenschutz]].\n\n## Wandlungsprinzipien\n\n### Indirekte Konversion\n\nBei der **indirekten Konversion** absorbiert zunächst ein Szintillator die Röntgenquanten und gibt sichtbares Licht ab. Eine darunterliegende Matrix aus Photodioden aus amorphem Silizium (a-Si:H) wandelt das Licht in elektrische Ladung, die in jedem Pixel gespeichert wird [@bushberg-2020].\n\n* **Cäsiumiodid (CsI:Tl)** wird in nadelförmigen Kristallsäulen aufgedampft. Die Säulen wirken wie Lichtleiter und begrenzen die seitliche Lichtstreuung – so kann eine dickere, absorptionsstärkere Schicht ohne großen Schärfeverlust verwendet werden.\n* **Gadoliniumoxysulfid (Gd₂O₂S:Tb, „GOS“)** ist ein pulverförmiger Leuchtstoff; günstiger, aber mit stärkerer Lichtstreuung.\n\n### Direkte Konversion\n\nBei der **direkten Konversion** absorbiert ein Fotoleiter – in Flachdetektoren meist **amorphes Selen (a-Se)** – die Röntgenquanten und erzeugt unmittelbar Elektron-Loch-Paare. Eine angelegte Hochspannung zieht die Ladungen senkrecht zu den Pixelelektroden. Weil kein Licht gestreut wird, ist die Ortsauflösung sehr hoch; wegen der niedrigen Ordnungszahl von Selen eignet sich das Verfahren besonders für die niedrigen Energien der [[mammographiegeraet|Mammographie]] [@bushberg-2020].\n\n### Auslesen\n\nIn beiden Fällen sitzt in jedem Pixel ein Dünnschichttransistor (TFT) als Schalter. Nach der Belichtung werden die Pixelzeilen nacheinander durchgeschaltet; Ladungsverstärker an den Spalten wandeln die Ladung in Spannung, [[analog-digital-wandler|Analog-Digital-Wandler]] digitalisieren sie (typisch 14–16 bit). Neben a-Si-TFT-Matrizen werden für kleinere Formate und hohe Bildraten auch **CMOS-Detektoren** aus kristallinem Silizium eingesetzt.\n\n| Merkmal | indirekt (CsI + a-Si) | direkt (a-Se) |\n|---|---|---|\n| Wandlungsschritte | Röntgen → Licht → Ladung | Röntgen → Ladung |\n| Ortsauflösung | gut (begrenzt durch Lichtstreuung) | sehr gut |\n| Absorption bei hohen Energien | hoch (hohe Ordnungszahl von Cs, I) | geringer |\n| Haupteinsatz | Radiographie, Durchleuchtung, Angiographie | Mammographie |\n\n## Kenngrößen der Bildqualität\n\n### Modulationsübertragungsfunktion (MTF)\n\nDie **MTF** beschreibt, wie gut der Detektor Kontraste in Abhängigkeit von der Ortsfrequenz (Linienpaare pro mm) überträgt. Die theoretische Grenze setzt der Pixelabstand p über die Nyquist-Frequenz:\n\n`f_Nyquist = 1 / (2 · p)`\n\n> [!beispiel] Ein Detektor mit p = 150 µm hat eine Nyquist-Frequenz von 1 / (2 · 0,15 mm) ≈ 3,3 Lp/mm. Bei p = 75 µm, wie es eher in der Mammographie vorkommt, sind es ≈ 6,7 Lp/mm. Die Pixelabstände sind beispielhaft; typische Werte liegen in der Radiographie bei etwa 100–200 µm.\n\n### Detektive Quanteneffizienz (DQE)\n\nDie **DQE** beschreibt, wie viel vom Signal-Rausch-Verhältnis (SNR) des einfallenden Strahlenfelds im Bild erhalten bleibt:\n\n`DQE(f) = SNR²_aus(f) / SNR²_ein(f)`\n\nEin idealer Detektor hätte DQE = 1. Reale Detektoren verlieren Information durch unvollständige Absorption, Streuung und elektronisches Rauschen. Die DQE ist der wichtigste Kennwert für die **Dosiseffizienz**: Ein Detektor mit höherer DQE erreicht dieselbe Bildqualität mit weniger Dosis. Ihr Messverfahren ist in der IEC 62220-1-1 genormt [@iec-62220-1-1-2015].\n\n> [!vereinfacht] Die DQE wird oft als einzelne Zahl bei niedriger Ortsfrequenz angegeben. Für einen fairen Vergleich müssen Strahlenqualität, Dosis und der gesamte Frequenzverlauf berücksichtigt werden.\n\n### Dynamikbereich und Expositionsindex\n\nFlachdetektoren haben einen sehr großen linearen Dynamikbereich; Über- oder Unterbelichtung ist im Bild nicht mehr an Schwärzung zu erkennen, sondern nur am Rauschen. Damit sich keine schleichende Dosiserhöhung einschleicht („dose creep“), geben moderne Systeme einen **Expositionsindex (EI)** und einen Abweichungsindex aus [@iec-62494-1].\n\n## Bildkorrekturen und Kalibrierung\n\nJedes Rohbild wird pixelweise korrigiert:\n\n1. **Offset-Korrektur** – Abzug eines Dunkelbilds (Dunkelstrom, Elektronikoffset).\n2. **Gain-Korrektur** – Ausgleich der unterschiedlichen Empfindlichkeit der Pixel anhand homogen belichteter Flatfield-Aufnahmen.\n3. **Defektpixelkorrektur** – Interpolation fehlerhafter Pixel oder Zeilen aus der Nachbarschaft.\n\nDie Korrekturtabellen werden bei der [[kalibrierung|Kalibrierung]] erstellt und müssen nach Herstellervorgabe erneuert werden. Veraltete Kalibrierungen zeigen sich als Streifen, Gittermuster oder Geisterbilder – siehe [[bildartefakte]].\n\n## Weitere Detektortypen\n\n* **CT-Detektoren:** Im [[computertomograph|CT]] sind die Detektoren als gekrümmte, vielzeilige Arrays aus keramischen Szintillatoren mit Photodioden aufgebaut und rotieren mit der [[gantry]] [@kalender-2011] [@hsieh-2015].\n* **Photonenzählende Detektoren:** Halbleiter wie Cadmiumtellurid (CdTe) zählen einzelne Röntgenquanten und ordnen sie Energieschwellen zu. Seit Anfang der 2020er-Jahre sind erste photonenzählende CT-Systeme klinisch zugelassen; sie ermöglichen spektrale Bildgebung und eine höhere Ortsauflösung, weil keine Szintillator-Lichtstreuung auftritt und elektronisches Rauschen unterhalb der niedrigsten Energieschwelle verworfen wird.\n* **Bildverstärker:** In älteren [[c-bogen|C-Bögen]] wandelt ein Röntgenbildverstärker die Strahlung in ein Lichtbild, das eine Kamera aufnimmt; Flachdetektoren ersetzen ihn zunehmend.\n* **Gammakamera-Detektoren:** In der [[gammakamera]] dienen Szintillationskristalle mit Photomultipliern oder Halbleiterdetektoren dem Nachweis von Gammaquanten.\n\n## Anwendung in Geräten\n\n| Gerät | Detektor |\n|---|---|\n| [[roentgengeraet]] | stationäre oder mobile, oft kabellose Flachdetektoren im Rasterwandgerät oder Tisch |\n| [[mammographiegeraet]] | a-Se- oder CsI-Flachdetektor mit kleinem Pixelabstand, Tomosynthese |\n| [[c-bogen]], [[angiographieanlage]] | dynamische Flachdetektoren mit hohen Bildraten |\n| [[computertomograph]] | Mehrzeilen-Szintillationsdetektor oder photonenzählender Detektor |\n| [[dvt]] | Flachdetektor für Kegelstrahl-Volumenaufnahmen |\n| [[knochendichtemessung]] | Detektoren für die Zwei-Spektren-Technik – je nach Verfahren mit Spannungsumschaltung der Röhre oder mit K-Kanten-Filter und energieauflösendem Detektor |\n\n## Handhabung und Instandhaltung\n\n> [!praxis] Kabellose Flachdetektoren sind empfindlich gegen Stürze, Biegung und Flüssigkeiten. Ein heruntergefallener Detektor muss vor der weiteren Nutzung geprüft werden; Glasbruch im Inneren ist äußerlich oft nicht sichtbar. Akkus, WLAN-Verbindung und Desinfektion nach Herstellerangabe gehören zur täglichen Routine.\n\n* Die Bildqualität wird regelmäßig im Rahmen der **[[konstanzpruefung|Konstanzprüfung]]** mit Prüfkörpern kontrolliert [@din-6868-4-2021].\n* Nach Austausch oder Reparatur eines Detektors ist eine Abnahme- bzw. Teilabnahmeprüfung erforderlich (siehe [[strahlenschutz]]).\n* Temperatur- und Feuchtebedingungen beeinflussen Dunkelstrom und Lebensdauer, insbesondere bei a-Se-Detektoren.\n\n> [!belegt] Gerätetechnische Anforderungen an Röntgeneinrichtungen einschließlich der Bildempfänger enthält die IEC 60601-2-54 [@iec-60601-2-54-2022].\n",
+  "related": [
+    "roentgenroehre",
+    "roentgenstrahlung",
+    "kollimator",
+    "analog-digital-wandler",
+    "kalibrierung",
+    "konstanzpruefung",
+    "bildartefakte",
+    "strahlenschutz",
+    "ionisierende-strahlung",
+    "dicom"
+  ],
+  "paths": [
+    [
+      "roentgengeraet",
+      "roentgenroehre",
+      "roentgenstrahlung",
+      "roentgendetektor",
+      "analog-digital-wandler",
+      "dicom"
+    ]
+  ],
+  "sources": [
+    "bushberg-2020",
+    "doessel-2016",
+    "iec-62220-1-1-2015",
+    "iec-62494-1",
+    "iec-60601-2-54-2022",
+    "din-6868-4-2021",
+    "kalender-2011",
+    "hsieh-2015"
+  ],
+  "diagram": {
+    "title": "Signalkette im indirekten Flachdetektor",
+    "caption": "Funktionsschema; beim direkten Detektor entfällt der Zwischenschritt über Licht.",
+    "width": 960,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "ray",
+        "label": "Röntgenstrahlung\n(nach Patient)",
+        "ref": "roentgenstrahlung",
+        "kind": "source",
+        "x": 90,
+        "y": 90,
+        "w": 160
+      },
+      {
+        "id": "szint",
+        "label": "Szintillator\n(CsI:Tl)",
+        "kind": "sensor",
+        "x": 290,
+        "y": 90
+      },
+      {
+        "id": "diode",
+        "label": "a-Si-Photodiode\n(Ladung)",
+        "kind": "sensor",
+        "x": 480,
+        "y": 90
+      },
+      {
+        "id": "tft",
+        "label": "TFT-Matrix\n(zeilenweise)",
+        "kind": "process",
+        "x": 670,
+        "y": 90
+      },
+      {
+        "id": "adc",
+        "label": "Ladungsverstärker\n+ A/D-Wandler",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 860,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "korr",
+        "label": "Offset-, Gain-,\nDefektkorrektur",
+        "ref": "kalibrierung",
+        "kind": "control",
+        "x": 670,
+        "y": 220,
+        "w": 160
+      },
+      {
+        "id": "bild",
+        "label": "Bild (DICOM)",
+        "ref": "dicom",
+        "kind": "output",
+        "x": 420,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "ray",
+        "to": "szint",
+        "kind": "energy"
+      },
+      {
+        "from": "szint",
+        "to": "diode",
+        "kind": "energy",
+        "label": "Licht"
+      },
+      {
+        "from": "diode",
+        "to": "tft",
+        "kind": "signal",
+        "label": "Ladung"
+      },
+      {
+        "from": "tft",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "korr",
+        "kind": "data",
+        "label": "Rohbild"
+      },
+      {
+        "from": "korr",
+        "to": "bild",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

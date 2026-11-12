@@ -1,0 +1,177 @@
+{
+  "id": "gasaustausch",
+  "type": "term",
+  "title": "Gasaustausch",
+  "aliases": [
+    "pulmonaler Gasaustausch",
+    "äußere Atmung",
+    "gas exchange",
+    "alveoläre Gasgleichung",
+    "Partialdruck",
+    "Ventilations-Perfusions-Verhältnis",
+    "V/Q",
+    "Shunt",
+    "Totraumventilation",
+    "Horovitz-Index",
+    "Oxygenierungsindex"
+  ],
+  "category": "anatomie",
+  "summary": "Austausch von Sauerstoff und Kohlendioxid zwischen Alveolarluft und Blut durch Diffusion entlang von Partialdruckdifferenzen. Ventilation, Diffusion und Perfusion bestimmen arterielles pO₂ und pCO₂ – Messgrößen von Blutgasanalyse, Kapnometrie und Pulsoxymetrie und Grundlage des Membranoxygenators.",
+  "body": "## Begriff\n\nAls **Gasaustausch** bezeichnet man die Aufnahme von Sauerstoff (O₂) aus der Alveolarluft ins [[blut|Blut]] und die Abgabe von Kohlendioxid (CO₂) aus dem Blut in die Alveolarluft (äußere Atmung) sowie den entsprechenden Austausch zwischen Kapillarblut und Gewebe (innere Atmung). Treibende Kraft ist allein die **Partialdruckdifferenz**; der Transport über die Blut-Luft-Schranke erfolgt passiv durch Diffusion [@west-luks-2021] [@schmidt-lang-2019].\n\nDamit Gasaustausch funktioniert, müssen drei Teilprozesse zusammenspielen: **Ventilation** (Belüftung der Alveolen, siehe [[atemmechanik]]), **Diffusion** (über die Membran) und **Perfusion** (Durchblutung der Lungenkapillaren, siehe [[blutkreislauf]]).\n\n## Partialdrücke\n\n### Gesetz von Dalton\n\nIn einem Gasgemisch trägt jedes Gas entsprechend seinem Volumenanteil zum Gesamtdruck bei (siehe [[gasgesetze]]):\n\n`p_i = F_i · p_gesamt`\n\nIn den Atemwegen ist die Luft mit Wasserdampf gesättigt (bei 37 °C ca. 47 mmHg). Der inspiratorische O₂-Partialdruck beträgt daher auf Meereshöhe:\n\n`p_IO₂ = F_IO₂ · (p_B − p_H₂O) ≈ 0,21 · (760 − 47) mmHg ≈ 150 mmHg`\n\n### Alveoläre Gasgleichung\n\nWeil in den Alveolen ständig O₂ entnommen und CO₂ zugeführt wird, ist der alveoläre O₂-Partialdruck niedriger. Vereinfacht gilt:\n\n`p_AO₂ ≈ p_IO₂ − p_ACO₂ / RQ`\n\nmit dem respiratorischen Quotienten RQ (typisch ca. 0,8).\n\n> [!beispiel] p_IO₂ = 150 mmHg, p_ACO₂ = 40 mmHg, RQ = 0,8 → p_AO₂ ≈ 150 − 50 = 100 mmHg. Mit F_IO₂ = 0,5 steigt p_IO₂ auf ≈ 357 mmHg und p_AO₂ auf ≈ 307 mmHg. Die Zahlen sind Rechenbeispiele.\n\n### Typische Partialdrücke\n\n| Ort | pO₂ (mmHg, ca.) | pCO₂ (mmHg, ca.) |\n|---|---|---|\n| eingeatmete Luft (feucht, 37 °C) | 150 | ≈ 0 |\n| Alveolarluft | 100 | 40 |\n| arterielles Blut | 75–100 (altersabhängig) | 35–45 |\n| gemischt-venöses Blut | 40 | 46 |\n\n> [!hinweis] Referenzbereiche der Blutgasanalyse variieren mit Alter, Höhe über dem Meer und Labor; die Tabelle zeigt Lehrbuchgrößenordnungen [@west-luks-2021] [@schmidt-lang-2019].\n\n## Diffusion über die Blut-Luft-Schranke\n\nDer Gasfluss durch eine Membran folgt dem Fickschen Diffusionsgesetz (siehe [[diffusion-osmose]]) [@fick-1855]:\n\n`V̇_Gas = D · (A / d) · (p₁ − p₂)`\n\nmit Fläche A, Dicke d und einem Diffusionskoeffizienten D, der von Löslichkeit und Molekülgröße des Gases abhängt. Die Lunge ist hierfür optimal gebaut: große Fläche (Größenordnung 50–100 m²) und sehr dünne Barriere (siehe [[lunge]]).\n\n* **CO₂** hat zwar eine viel kleinere Partialdruckdifferenz (ca. 6 mmHg) als O₂ (ca. 60 mmHg zu Beginn der Kapillare), diffundiert aber wegen seiner rund zwanzigmal höheren Löslichkeit etwa zwanzigmal schneller; der CO₂-Austausch ist deshalb unter normalen Bedingungen nicht diffusionslimitiert.\n* Ein Erythrozyt verweilt in Ruhe etwa 0,75 s in der Lungenkapillare; der O₂-Ausgleich ist normalerweise schon nach etwa einem Drittel dieser Zeit erreicht. Diese Reserve geht bei verdickter Membran (Fibrose) unter Belastung verloren [@west-luks-2021].\n\nDer Sauerstoff wird im Blut fast vollständig an [[haemoglobin|Hämoglobin]] gebunden; physikalisch gelöst ist nach dem Henry-Gesetz nur ein kleiner Anteil (ca. 0,003 ml O₂ pro dl Blut und mmHg). CO₂ wird überwiegend als Bicarbonat transportiert, ein kleinerer Teil an Proteine gebunden bzw. physikalisch gelöst – eng verknüpft mit dem [[saeure-basen-haushalt|Säure-Basen-Haushalt]].\n\n## Ventilation und CO₂\n\nFür den Gasaustausch zählt nur die **alveoläre Ventilation** V̇_A = (V_T − V_D) · f, nicht der Anteil, der im Totraum verbleibt. Der arterielle CO₂-Partialdruck ist umgekehrt proportional zu V̇_A:\n\n`p_aCO₂ ≈ 0,863 · V̇CO₂ / V̇_A`  (V̇CO₂ in ml/min, V̇_A in l/min, p in mmHg)\n\n> [!beispiel] V̇CO₂ = 200 ml/min, V̇_A = 4,3 l/min → p_aCO₂ ≈ 0,863 · 200 / 4,3 ≈ 40 mmHg. Halbiert sich die alveoläre Ventilation, verdoppelt sich p_aCO₂ (Hypoventilation).\n\nBei Beatmung ist daher das Atemminutenvolumen die wichtigste Stellgröße für das CO₂, während die Oxygenierung vor allem über F_IO₂ und PEEP beeinflusst wird.\n\n## Ventilations-Perfusions-Verhältnis\n\nEin guter Austausch setzt voraus, dass Belüftung und Durchblutung zueinander passen. Für die gesamte Lunge beträgt V̇_A/Q̇ etwa 4–5 l/min zu 5 l/min, also rund 0,8–1. Regional schwankt es; Extremfälle sind:\n\n| Situation | V̇_A/Q̇ | Folge |\n|---|---|---|\n| Shunt (perfundiert, nicht belüftet, z. B. Atelektase) | 0 | venöses Blut gelangt unoxygeniert in den Kreislauf; O₂-Gabe hilft wenig |\n| normale Einheit | ≈ 0,8–1 | effizienter Austausch |\n| Totraum (belüftet, nicht perfundiert, z. B. Lungenembolie) | ∞ | verschwendete Ventilation, Differenz zwischen p_aCO₂ und endtidalem CO₂ steigt |\n\n> [!vereinfacht] Reale Lungen besitzen eine kontinuierliche Verteilung von V̇_A/Q̇-Werten; die Einteilung in Shunt, Normal- und Totraumeinheiten ist ein didaktisches Drei-Kompartiment-Modell.\n\n### Oxygenierungsindex\n\nKlinisch wird die Oxygenierung häufig mit dem Quotienten p_aO₂/F_IO₂ (Horovitz-Index) beschrieben. Die Berlin-Definition des ARDS stuft den Schweregrad bei einem PEEP von mindestens 5 cmH₂O mit Grenzen von 300, 200 und 100 mmHg ein [@ards-berlin-2012].\n\n## Bedeutung in der Medizintechnik\n\n| Messgröße / Aufgabe | Gerät bzw. Komponente | Prinzip |\n|---|---|---|\n| p_aO₂, p_aCO₂, pH | [[blutgasanalysator]] | elektrochemische Elektroden, siehe [[sauerstoffsensor]] |\n| endtidales CO₂ | [[kapnometer]] mit [[co2-sensor|NDIR-CO₂-Sensor]] | Infrarotabsorption |\n| Sauerstoffsättigung | [[pulsoxymeter]] | [[photoplethysmographie|Photoplethysmographie]], siehe [[haemoglobin]] |\n| F_IO₂ im Beatmungsgas | [[sauerstoffsensor]] in [[beatmungsgeraet]] und [[anaesthesiegeraet]] | galvanische oder paramagnetische Messung |\n| Ventilation sicherstellen | [[beatmungsgeraet]], [[transportbeatmungsgeraet]] | Atemminutenvolumen bestimmt p_aCO₂ |\n| künstlicher Gasaustausch | [[ecmo]], [[herz-lungen-maschine]] | Membranoxygenator: Blut und Gas getrennt durch eine Membran |\n| Sauerstoffzufuhr | [[sauerstoffkonzentrator]], [[high-flow-geraet]], [[druckkammer]] | Erhöhung von F_IO₂ bzw. p_IO₂ |\n\n> [!praxis] Im Membranoxygenator der ECMO bestimmt der Gasfluss über die Membran („Sweep-Gas“) vor allem die CO₂-Elimination, der Sauerstoffanteil des Sweep-Gases zusammen mit dem Blutfluss die Oxygenierung – eine direkte technische Umsetzung der hier beschriebenen Diffusions- und Ventilationsprinzipien. Einstellungen erfolgen nach ärztlicher Vorgabe und Herstellerangaben.\n\n> [!praxis] Die Kapnographie ist das schnellste technische Signal für Probleme der Ventilation: Ein plötzlicher Abfall des endtidalen CO₂ auf (nahezu) null spricht für [[diskonnektion|Diskonnektion]], Tubusfehllage bzw. ösophageale Intubation oder komplette Atemwegsverlegung; ein abrupter starker Abfall kann auch auf Kreislaufstillstand oder massive Lungenembolie hinweisen. Plausibilität immer mit Klinik, Druck- und Flusskurven abgleichen.\n",
+  "related": [
+    "lunge",
+    "atemmechanik",
+    "haemoglobin",
+    "blut",
+    "diffusion-osmose",
+    "gasgesetze",
+    "blutgasanalysator",
+    "kapnometer",
+    "pulsoxymeter",
+    "co2-sensor",
+    "sauerstoffsensor",
+    "ecmo",
+    "beatmungsgeraet",
+    "saeure-basen-haushalt"
+  ],
+  "paths": [
+    [
+      "gasaustausch",
+      "haemoglobin",
+      "photoplethysmographie",
+      "pulsoxymeter"
+    ],
+    [
+      "gasaustausch",
+      "co2-sensor",
+      "kapnometer"
+    ],
+    [
+      "gasaustausch",
+      "diffusion-osmose",
+      "ecmo"
+    ]
+  ],
+  "sources": [
+    "west-luks-2021",
+    "schmidt-lang-2019",
+    "fick-1855",
+    "ards-berlin-2012"
+  ],
+  "diagram": {
+    "title": "Sauerstoffweg und Messpunkte",
+    "caption": "Weg des Sauerstoffs von der Luft bis zum Gewebe mit den zugehörigen Messverfahren (Funktionsschema).",
+    "width": 900,
+    "height": 380,
+    "nodes": [
+      {
+        "id": "luft",
+        "label": "Inspirationsgas\n(F_IO₂)",
+        "ref": "sauerstoffsensor",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "alv",
+        "label": "Alveole\np_AO₂ ≈ 100 mmHg",
+        "ref": "lunge",
+        "kind": "process",
+        "x": 320,
+        "y": 90
+      },
+      {
+        "id": "mem",
+        "label": "Blut-Luft-Schranke\n(Diffusion)",
+        "ref": "diffusion-osmose",
+        "kind": "process",
+        "x": 550,
+        "y": 90
+      },
+      {
+        "id": "hb",
+        "label": "Hämoglobin\n(Bindung)",
+        "ref": "haemoglobin",
+        "kind": "process",
+        "x": 780,
+        "y": 90
+      },
+      {
+        "id": "gew",
+        "label": "Gewebe\n(innere Atmung)",
+        "kind": "patient",
+        "x": 780,
+        "y": 290
+      },
+      {
+        "id": "spo2",
+        "label": "Pulsoxymeter\n(SpO₂)",
+        "ref": "pulsoxymeter",
+        "kind": "sensor",
+        "x": 550,
+        "y": 290
+      },
+      {
+        "id": "etco2",
+        "label": "Kapnometer\n(etCO₂)",
+        "ref": "kapnometer",
+        "kind": "sensor",
+        "x": 320,
+        "y": 290
+      },
+      {
+        "id": "bga",
+        "label": "Blutgasanalyse\n(p_aO₂, p_aCO₂)",
+        "ref": "blutgasanalysator",
+        "kind": "output",
+        "x": 100,
+        "y": 290
+      }
+    ],
+    "edges": [
+      {
+        "from": "luft",
+        "to": "alv",
+        "kind": "gas",
+        "label": "Ventilation"
+      },
+      {
+        "from": "alv",
+        "to": "mem",
+        "kind": "gas",
+        "label": "O₂"
+      },
+      {
+        "from": "mem",
+        "to": "hb",
+        "kind": "fluid"
+      },
+      {
+        "from": "hb",
+        "to": "gew",
+        "kind": "fluid",
+        "label": "Perfusion"
+      },
+      {
+        "from": "hb",
+        "to": "spo2",
+        "kind": "signal",
+        "label": "optisch"
+      },
+      {
+        "from": "alv",
+        "to": "etco2",
+        "kind": "gas",
+        "label": "CO₂ exspiriert"
+      },
+      {
+        "from": "hb",
+        "to": "bga",
+        "kind": "fluid",
+        "label": "Blutprobe"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

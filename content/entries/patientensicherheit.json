@@ -1,0 +1,140 @@
+{
+  "id": "patientensicherheit",
+  "type": "term",
+  "title": "Patientensicherheit und Medizintechnik",
+  "aliases": [
+    "Patientensicherheit",
+    "Patient Safety",
+    "Gerätesicherheit",
+    "Schweizer-Käse-Modell",
+    "Swiss Cheese Model"
+  ],
+  "category": "einfuehrung",
+  "summary": "Patientensicherheit ist das Vermeiden vermeidbarer Schäden in der Versorgung. Medizintechnik erhöht sie durch Überwachung und Präzision, bringt aber eigene Gefährdungen mit, die durch Risikomanagement, Gebrauchstauglichkeit, Alarme und Prüfungen beherrscht werden.",
+  "body": "## Begriff\n\n**Patientensicherheit** bezeichnet das Vermeiden, Erkennen und Begrenzen vermeidbarer Schäden, die Patientinnen und Patienten im Zusammenhang mit ihrer Versorgung entstehen. Die Weltgesundheitsorganisation hat Patientensicherheit zu einer globalen Gesundheitspriorität erklärt und mit dem *Global Patient Safety Action Plan 2021–2030* einen Handlungsrahmen vorgelegt [@who-gpsap-2021].\n\nDie Medizintechnik ist dabei in doppelter Rolle beteiligt: Geräte **erhöhen** die Sicherheit – ein [[patientenmonitor|Patientenmonitor]] erkennt eine Hypoxie früher als jeder Mensch, eine [[infusionspumpe|Infusionspumpe]] dosiert genauer als ein Tropfenzähler – und sie **schaffen neue Gefährdungen**: elektrischer Strom, ionisierende Strahlung, Fehlfunktionen, Bedienfehler, Fehlalarme.\n\n## Wie Fehler entstehen: Personen- und Systemansatz\n\nDer Bericht *To Err Is Human* des US-amerikanischen Institute of Medicine schätzte, dass in US-Krankenhäusern jährlich zwischen 44 000 und 98 000 Menschen infolge medizinischer Fehler (*medical errors*) sterben – eine auf Hochrechnungen zweier Studien beruhende, später methodisch diskutierte Schätzung; er markiert den Beginn der modernen Patientensicherheitsbewegung [@iom-to-err-is-human-2000].\n\nJames Reason unterscheidet zwei Sichtweisen [@reason-2000-human-error]:\n\n| Ansatz | Annahme | Typische Reaktion |\n|---|---|---|\n| **Personenansatz** | Fehler entstehen durch Unaufmerksamkeit, Nachlässigkeit, mangelndes Wissen einzelner | Schuldzuweisung, Ermahnung, Schulung des Einzelnen |\n| **Systemansatz** | Menschen machen unvermeidlich Fehler; Systeme müssen so gestaltet sein, dass Fehler abgefangen werden | Barrieren verstärken, Prozesse und Geräte umgestalten |\n\nIm **Schweizer-Käse-Modell** besitzt jede Schutzbarriere (Konstruktion, Alarm, Bedienung, Kontrolle) „Löcher“. Ein Schaden entsteht erst, wenn die Löcher mehrerer Barrieren zufällig hintereinander liegen. Reason unterscheidet dabei **aktive Fehler** am „scharfen Ende“ (z. B. falsche Eingabe einer Förderrate) von **latenten Bedingungen** im System (z. B. unübersichtliche Bedienoberfläche, fehlende [[einweisung|Einweisung]], Zeitdruck) [@reason-2000-human-error].\n\n> [!vereinfacht] Das Schweizer-Käse-Modell ist eine Denkfigur, keine quantitative Methode. Für die rechnerische Bewertung von Risiken nutzt die Medizintechnik das Risikomanagement nach ISO 14971.\n\n## Gefährdungen durch Medizintechnik\n\n| Gefährdungsart | Beispiel | Schutzkonzept | Vertiefung |\n|---|---|---|---|\n| Elektrisch | Ableitstrom über Herzkatheter löst Kammerflimmern aus | Anwendungsteile Typ CF, galvanische Trennung, STK | [[elektrische-stromwirkung]], [[ableitstrom]], [[anwendungsteile]] |\n| Thermisch | Verbrennung unter der Neutralelektrode | Überwachung der Elektrodenanlage | [[hf-chirurgiegeraet]], [[neutralelektroden-verbrennung]] |\n| Strahlung | unnötige Dosis bei Röntgen/CT | Rechtfertigung, Optimierung, Konstanzprüfung | [[ionisierende-strahlung]], [[strahlenschutz]], [[konstanzpruefung]] |\n| Mechanisch/pneumatisch | Barotrauma durch zu hohen Beatmungsdruck | Druckbegrenzung, Alarm | [[beatmungsgeraet]], [[atemwegsdruck-hoch]] |\n| Fluidisch | Luftembolie, Überinfusion | Luftblasendetektor, Okklusionsüberwachung | [[luft-im-system]], [[luftblasendetektor]], [[okklusionsalarm]] |\n| Funktionsausfall | Akku leer während des Transports | Akku-Management, Ladezustandsanzeige | [[akkufehler]], [[lithium-ionen-akku]] |\n| Bedienung | Zehnerstellen-Fehler bei der Dosiseingabe | Plausibilitätsgrenzen, Dosisbibliothek, Usability-Engineering | [[anwendungsfehler]], [[gebrauchstauglichkeit]] |\n| Alarmierung | relevante Alarme gehen unter vielen Fehlalarmen unter | Alarmmanagement, Priorisierung | [[alarmmuedigkeit]], [[alarmsystem]] |\n| Hygiene | Infektion durch unzureichend aufbereitetes Endoskop | validierte Aufbereitung | [[aufbereitung]], [[endoskop]] |\n| Elektromagnetisch | Störung eines Geräts durch Funksender | EMV-Prüfung | [[emv]], [[emv-stoerung]] |\n\n## Risiko und Risikobeherrschung\n\nGrundlage ist das Risikomanagement nach [[iso-14971]]. Risiko wird dort als Kombination aus Wahrscheinlichkeit eines Schadens und dessen Schwere verstanden [@iso-14971]. Häufig wird dies didaktisch als Produkt geschrieben:\n\nR = P × S\n\n> [!beispiel] Ein Hersteller bewertet die Gefährdung „Luft gelangt in die Infusionsleitung“. Ohne Schutzmaßnahme ist die Wahrscheinlichkeit eines Schadens als „gelegentlich“, die Schwere als „kritisch“ eingestuft – das Risiko ist nicht akzeptabel. Nach Einbau eines Ultraschall-[[luftblasendetektor|Luftblasendetektors]] mit Pumpenstopp sinkt die Wahrscheinlichkeit auf „unwahrscheinlich“; das Restrisiko wird erneut bewertet. Die Kategorien sind beispielhaft; jeder Hersteller legt eigene Akzeptanzkriterien fest.\n\nMaßnahmen werden in einer festen Rangfolge gewählt [@iso-14971] [@mdr-2017]:\n\n1. **inhärent sichere Konstruktion** (z. B. Stecker, die nicht verwechselt werden können),\n2. **Schutzmaßnahmen** im Gerät oder im Herstellungsprozess (z. B. [[alarmsystem|Alarme]], Abschaltungen, [[galvanische-trennung]]),\n3. **Informationen zur Sicherheit** (Gebrauchsanweisung, Warnhinweise, Schulung).\n\n> [!belegt] Die MDR verpflichtet Hersteller, Risiken so weit wie möglich zu verringern, ohne das Nutzen-Risiko-Verhältnis zu beeinträchtigen, und dabei die genannte Rangfolge der Maßnahmen einzuhalten (Anhang I, Kapitel I, Abschnitte 2 und 4) [@mdr-2017].\n\n## Beitrag von Betreiber und Anwender\n\nAuch das sicherste Gerät kann falsch betrieben werden. Die [[mpbetreibv|MPBetreibV]] verpflichtet Betreiber und Anwender u. a. zu [[einweisung|Einweisung]], Funktionsprüfung vor der Anwendung, [[stk|sicherheitstechnischen Kontrollen]] (§ 12 i. V. m. Anlage 1), [[mtk|messtechnischen Kontrollen]] (§ 15 i. V. m. Anlage 2) und sachgerechter [[instandhaltung-grundlagen|Instandhaltung]] [@mpbetreibv]. Mutmaßliche schwerwiegende Vorkommnisse sind an die Behörde zu melden ([[vigilanz]]) [@mpamiv]. Gesundheitseinrichtungen ab einer bestimmten Beschäftigtenzahl benennen zudem eine:n [[beauftragter-medizinproduktesicherheit|Beauftragte:n für Medizinproduktesicherheit]] als zentrale Kontaktstelle.\n\n> [!praxis] Viele kritische Ereignisse kündigen sich an: wiederholte Fehlalarme, provisorisch geflickte Kabel, Zubehör anderer Hersteller, „Workarounds“ an der Bedienoberfläche. Ein offenes Fehlermeldesystem (CIRS) und eine Kultur, in der Meldungen nicht bestraft werden, sind für die Medizintechnik ebenso wichtig wie Prüfgeräte.\n\n## Bedeutung in der Medizintechnik\n\nPatientensicherheit ist das übergeordnete Ziel aller Normen und Prüfungen im Wiki:\n\n* Beim [[defibrillator]] sichern Selbsttest, Akku-Management und Energieabgabeprüfung die Verfügbarkeit im Notfall.\n* Bei [[infusionspumpe]] und [[spritzenpumpe]] verhindern [[okklusionsalarm|Okklusionserkennung]], Luftdetektion und Dosisgrenzen Über- und Unterdosierung.\n* Beim [[beatmungsgeraet]] überwachen [[druckmessung]] und [[flowsensor|Flowmessung]] die Beatmung; [[diskonnektion]] und [[leckage]] werden alarmiert.\n* Beim [[hf-chirurgiegeraet]] schützt die Überwachung der [[neutralelektrode]] vor Verbrennungen.\n* Bei [[roentgengeraet]] und [[computertomograph]] begrenzen Dosismanagement und [[konstanzpruefung]] die Strahlenexposition.\n* Beim [[dialysegeraet]] überwachen [[leitfaehigkeitssensor]], [[blutleckdetektor]] und Luftdetektor den extrakorporalen Kreislauf.\n\nSiehe auch [[gebrauchstauglichkeit]], [[lebenszyklus-medizinprodukt]] und [[medizinisches-elektrisches-geraet]].",
+  "related": [
+    "gebrauchstauglichkeit",
+    "anwendungsfehler",
+    "alarmmuedigkeit",
+    "iso-14971",
+    "vigilanz",
+    "stk",
+    "elektrische-stromwirkung",
+    "alarmsystem",
+    "betreiberpflichten",
+    "medizinisches-elektrisches-geraet"
+  ],
+  "paths": [
+    [
+      "patientensicherheit",
+      "elektrische-stromwirkung",
+      "ableitstrom",
+      "anwendungsteile",
+      "ableitstrommessung"
+    ],
+    [
+      "patientensicherheit",
+      "alarmsystem",
+      "alarmmuedigkeit",
+      "gebrauchstauglichkeit"
+    ]
+  ],
+  "sources": [
+    "who-gpsap-2021",
+    "iom-to-err-is-human-2000",
+    "reason-2000-human-error",
+    "iso-14971",
+    "mdr-2017",
+    "mpbetreibv",
+    "mpamiv"
+  ],
+  "diagram": {
+    "title": "Schutzbarrieren zwischen Gefährdung und Patient",
+    "caption": "Vereinfachte Darstellung des Barrierenprinzips (nach dem Schweizer-Käse-Modell). Ein Schaden entsteht erst, wenn alle Barrieren versagen.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "gef",
+        "label": "Gefährdung\n(Energie, Fehler)",
+        "kind": "source",
+        "x": 90,
+        "y": 150
+      },
+      {
+        "id": "konst",
+        "label": "Sichere\nKonstruktion",
+        "ref": "iso-14971",
+        "kind": "process",
+        "x": 270,
+        "y": 150
+      },
+      {
+        "id": "alarm",
+        "label": "Schutz- und\nAlarmsysteme",
+        "ref": "alarmsystem",
+        "kind": "sensor",
+        "x": 450,
+        "y": 150
+      },
+      {
+        "id": "bed",
+        "label": "Gebrauchs-\ntauglichkeit",
+        "ref": "gebrauchstauglichkeit",
+        "kind": "control",
+        "x": 630,
+        "y": 80
+      },
+      {
+        "id": "stk",
+        "label": "Prüfung im\nBetrieb (STK)",
+        "ref": "stk",
+        "kind": "control",
+        "x": 630,
+        "y": 220
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 820,
+        "y": 150
+      }
+    ],
+    "edges": [
+      {
+        "from": "gef",
+        "to": "konst",
+        "kind": "energy"
+      },
+      {
+        "from": "konst",
+        "to": "alarm",
+        "kind": "energy",
+        "label": "Restrisiko"
+      },
+      {
+        "from": "alarm",
+        "to": "bed",
+        "kind": "signal"
+      },
+      {
+        "from": "alarm",
+        "to": "stk",
+        "kind": "signal"
+      },
+      {
+        "from": "bed",
+        "to": "pat",
+        "kind": "energy"
+      },
+      {
+        "from": "stk",
+        "to": "pat",
+        "kind": "energy"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

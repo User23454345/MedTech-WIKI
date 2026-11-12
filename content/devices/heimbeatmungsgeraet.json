@@ -1,0 +1,73 @@
+{
+  "id": "heimbeatmungsgeraet",
+  "type": "device",
+  "title": "Heimbeatmungsgerät",
+  "aliases": [
+    "außerklinische Beatmung",
+    "Home-Ventilator",
+    "NIV-Gerät",
+    "Langzeitbeatmungsgerät",
+    "Heimrespirator"
+  ],
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 34,
+  "domains": [
+    "pneumologie",
+    "intensivmedizin",
+    "neurologie"
+  ],
+  "summary": "Heimbeatmungsgeräte ermöglichen die langfristige nicht-invasive oder invasive Beatmung außerhalb der Klinik, etwa bei COPD mit Hyperkapnie, neuromuskulären Erkrankungen oder nach Langzeitintensivtherapie. Sie sind kompakt, turbinengetrieben und für die Anwendung durch Angehörige und Pflegedienste ausgelegt.",
+  "sections": {
+    "purpose": "Ziel ist die Entlastung der Atemmuskulatur und die Normalisierung des Gasaustauschs bei chronischer ventilatorischer Insuffizienz. Je nach Krankheitsbild reicht eine nächtliche Maskenbeatmung (NIV) oder es ist eine kontinuierliche Beatmung über Tracheostoma erforderlich. Bei beatmungsabhängigen Patienten müssen Gerät, Alarme und Ersatzversorgung (Zweitgerät, Akku) die Lebenserhaltung sicherstellen [@iso-80601-2-72].",
+    "principle": "## Gaserzeugung und Regelung\n\nAnders als ein Intensivgerät mit Druckgasanschluss nutzt das Heimbeatmungsgerät eine [[turbine]] als Gasquelle. Ein [[drucksensor]] und ein [[flowsensor]] erfassen Druck und Fluss; der [[regelkreis]] steuert Drehzahl und ggf. ein [[exspirationsventil]]. Sauerstoff wird meist niederdruckseitig aus einem [[sauerstoffkonzentrator]] oder Flüssigsauerstoff eingespeist.\n\n| Schlauchsystem | Ausatmung | Typische Anwendung |\n|---|---|---|\n| Einschlauch mit Leckage | über definierte Leckage an Maske oder Schlauch | NIV über Maske |\n| Einschlauch mit Ausatemventil | aktiv gesteuertes Patientenventil | invasive Beatmung, Messung des exspiratorischen Volumens eingeschränkt |\n| Doppelschlauch | Rückführung ins Gerät | invasive Beatmung mit exspiratorischer Volumenmessung |\n\n## Modi und Sicherheit\n\nÜblich sind druckkontrollierte Modi mit inspiratorischem und exspiratorischem Druck (IPAP/EPAP) und Backup-Frequenz, volumenkontrollierte bzw. volumengarantierte Modi sowie Triggerfunktionen, die den Atemantrieb erkennen ([[atemmechanik]]). Integrierte [[lithium-ionen-akku|Akkus]], optionale Wechselakkus und ein [[alarmsystem]] (u. a. [[diskonnektion]], [[leckage]], [[atemwegsdruck-hoch|hoher Druck]]) sind bei lebenserhaltender Anwendung unverzichtbar. Ein [[atemgasbefeuchter]] (aktiv oder HME) ist bei invasiver Beatmung erforderlich.\n\n> [!praxis] Die [[einweisung]] von Angehörigen und Pflegediensten sowie ein Notfallplan bei Geräteausfall sind in der außerklinischen Beatmung ebenso wichtig wie die Gerätetechnik."
+  },
+  "manufacturers": [
+    {
+      "ref": "resmed",
+      "models": [
+        "Astral"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "loewenstein-medical",
+      "models": [
+        "prisma VENT"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "philips",
+      "models": [
+        "Trilogy"
+      ],
+      "note": "Philips Respironics."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "STK: MPBetreibV (Fassung 2025) Anlage 1 Nr. 1.5 – nichtimplantierbare aktive Produkte zur maschinellen Beatmung; Kontrollen nach § 12. MTK: nicht in Anlage 2 aufgeführt. Für Anlage-1-Produkte gelten zusätzliche Betreiberpflichten (u. a. Funktionsprüfung am Betriebsort und Einweisung).",
+    "intervals": "STK spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025); Wartung (z. B. Turbine, Filter, Akku) nach Herstellerangabe; Funktionsprüfung vor der Anwendung."
+  },
+  "related": [
+    "beatmungsgeraet",
+    "cpap-geraet",
+    "transportbeatmungsgeraet",
+    "high-flow-geraet",
+    "iso-80601-2-12",
+    "iec-60601-1-11"
+  ],
+  "sources": [
+    "iso-80601-2-72",
+    "oczenski-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

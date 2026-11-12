@@ -1,0 +1,71 @@
+{
+  "id": "vad",
+  "type": "device",
+  "title": "Herzunterstützungssystem (VAD)",
+  "aliases": [
+    "VAD",
+    "ventricular assist device",
+    "LVAD",
+    "RVAD",
+    "BiVAD",
+    "mechanische Kreislaufunterstützung"
+  ],
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 24,
+  "domains": [
+    "kardiologie",
+    "herzchirurgie",
+    "intensivmedizin"
+  ],
+  "summary": "Herzunterstützungssysteme (Ventricular Assist Devices) sind Blutpumpen, die einen versagenden Ventrikel entlasten, meist den linken (LVAD). Moderne implantierbare Systeme sind magnetisch gelagerte Rotationspumpen, die über eine Kabelverbindung durch die Haut (Driveline) von einem externen Controller und Akkus versorgt werden.",
+  "riskClass": {
+    "value": "III",
+    "evidence": "belegt",
+    "note": "Implantierbare VADs sind aktive implantierbare Produkte; nach [[mdr|MDR]] Anhang VIII **Regel 8** gehören aktive implantierbare Produkte und ihr Zubehör zur Klasse III.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "VADs werden bei terminaler Herzinsuffizienz eingesetzt: als Überbrückung bis zur Herztransplantation (Bridge to Transplant), als Dauertherapie (Destination Therapy) oder bis zur Erholung des Herzens. Kurzzeitsysteme (extrakorporale Zentrifugalpumpen, katheterbasierte Mikroaxialpumpen) überbrücken akute Kreislaufversagen auf der [[intensivmedizin|Intensivstation]].",
+    "principle": "## Funktionsprinzip\n\nDas LVAD saugt über eine Einflusskanüle Blut aus der Spitze des linken Ventrikels an und pumpt es über eine Gefäßprothese in die Aorta – parallel zum eigenen Herzen. Heutige Langzeitsysteme sind **Rotationspumpen** (Zentrifugal- oder Axialprinzip) mit kontinuierlichem Fluss: Ein [[bldc-motor|bürstenloser Gleichstrommotor]] treibt einen Rotor an, der berührungsfrei magnetisch oder hydrodynamisch gelagert ist, um Verschleiß und Blutschädigung zu verringern [@kramme-2017]. Der Fluss hängt bei konstanter Drehzahl vom Druckunterschied zwischen Ventrikel und Aorta ab (Pumpenkennlinie, [[stroemungslehre]]).\n\n## Externe Komponenten\n\nDer **Controller** regelt die Drehzahl ([[drehzahlregelung]]), überwacht Leistungsaufnahme und geschätzten Fluss und erzeugt Alarme ([[alarmsystem]]). Die Energie kommt aus zwei am Körper getragenen [[lithium-ionen-akku|Akkus]] oder einem Netzteil. Die Driveline ist Infektionsrisiko und mechanische Schwachstelle zugleich.\n\n> [!praxis] Wegen des kontinuierlichen Flusses ist der Puls oft schwach oder nicht tastbar; Pulsoxymetrie und automatische [[nibp-messgeraet|oszillometrische Blutdruckmessung]] können versagen. Der Blutdruck wird dann häufig mit Manschette und Doppler-Sonde bestimmt (Druck beim Wiederauftreten des Doppler-Signals); dieser Wert liegt meist nahe am mittleren arteriellen Druck.\n\n> [!warnung] Die Stromversorgung darf nie gleichzeitig vollständig getrennt werden – bei Akkuwechsel immer nur eine Quelle tauschen. Defibrillation und Reanimation folgen speziellen Algorithmen."
+  },
+  "manufacturers": [
+    {
+      "ref": "abbott",
+      "models": [
+        "HeartMate 3"
+      ],
+      "note": "Magnetisch gelagerte Zentrifugalpumpe."
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "HVAD"
+      ],
+      "note": "Vertrieb 2021 eingestellt; implantierte Systeme werden weiter betreut."
+    }
+  ],
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025) Anlage 1 Nr. 3 – externe aktive Komponenten aktiver Implantate (Controller, Netz- und Ladegeräte); die implantierte Pumpe selbst ist keiner STK zugänglich. Kurzzeitsysteme mit extrakorporaler Pumpe können unter Anlage 1 Nr. 1.4 fallen; maßgeblich sind jeweils die Zweckbestimmung und die Herstellerangaben. Nicht in Anlage 2 aufgeführt.",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025) für die externen Komponenten; Akkus nach Herstellerangabe tauschen; tägliche Kontrolle von Controller, Akkus und Driveline-Austrittsstelle durch Patient bzw. Pflege; Systemkontrollen in der VAD-Ambulanz."
+  },
+  "related": [
+    "iabp",
+    "ecmo",
+    "herz-lungen-maschine",
+    "bldc-motor",
+    "herz",
+    "herzchirurgie"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mdr-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

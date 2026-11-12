@@ -1,0 +1,79 @@
+{
+  "id": "canon-medical",
+  "type": "manufacturer",
+  "title": "Canon Medical Systems",
+  "aliases": [
+    "Canon Medical",
+    "Toshiba Medical Systems",
+    "Toshiba Medical"
+  ],
+  "category": "hersteller",
+  "summary": "Japanischer Hersteller medizinischer Bildgebung mit Sitz in Otawara (Präfektur Tochigi), hervorgegangen aus Toshiba Medical Systems. Seit 2016 gehört das Unternehmen zu Canon; 2018 erfolgte die Umbenennung in Canon Medical Systems.",
+  "headquarters": "Otawara, Japan",
+  "founded": "1930",
+  "website": "https://global.medical.canon/",
+  "productLines": [
+    {
+      "device": "computertomograph",
+      "models": [
+        "Aquilion ONE",
+        "Aquilion Prime SP",
+        "Aquilion Lightning"
+      ],
+      "note": "Aquilion ONE als Breitdetektor-System mit 320 Detektorzeilen."
+    },
+    {
+      "device": "mrt",
+      "models": [
+        "Vantage Orian 1.5T",
+        "Vantage Galan 3T"
+      ]
+    },
+    {
+      "device": "ultraschallgeraet",
+      "models": [
+        "Aplio i-series",
+        "Aplio a-series"
+      ]
+    },
+    {
+      "device": "angiographieanlage",
+      "models": [
+        "Alphenix"
+      ]
+    },
+    {
+      "device": "roentgengeraet",
+      "models": [
+        "Radrex-i"
+      ]
+    },
+    {
+      "device": "pet-ct",
+      "models": [
+        "Cartesion Prime"
+      ]
+    }
+  ],
+  "body": "## Überblick\n\nCanon Medical Systems ist der Medizintechnikbereich des Canon-Konzerns und gehört zu den großen Anbietern **diagnostischer Bildgebung**. Hauptsitz und Hauptwerk liegen in Otawara (Präfektur Tochigi, Japan) [@hst-canon-medical].\n\n## Geschichte in Stichpunkten\n\n* **1914/1915** – Die Tokyo Electric Co. beginnt mit der Erforschung von [[roentgenroehre|Röntgenröhren]] und baut 1915 die erste in Japan gefertigte Röntgenröhre [@hst-canon-medical-history].\n* **1930** – Gründung der Nihon Iryo Denki als Vertriebsgesellschaft für medizinische Geräte, insbesondere Röntgentechnik; sie gilt als Vorläufer von Toshiba Medical [@hst-canon-medical-history].\n* **1939** – Aus Tokyo Electric und Shibaura Seisakusho entsteht Tokyo Shibaura Electric (Toshiba).\n* **Nachkriegszeit** – Neuaufstellung des Medizintechnikgeschäfts im Toshiba-Umfeld; daraus geht später die **Toshiba Medical Systems Corporation** hervor.\n* **2016** – Toshiba verkauft im Zuge seiner Finanzkrise die Medizinsparte; Canon Inc. übernimmt Toshiba Medical Systems (Abschluss Ende 2016).\n* **2018** – Umbenennung in Canon Medical Systems Corporation [@hst-canon-medical-history].\n\n## Geschäftsbereiche\n\n| Modalität | Physikalische Grundlage | Wiki-Geräte |\n|---|---|---|\n| Computertomographie | [[roentgenstrahlung]], rotierende [[gantry]] | [[computertomograph]] |\n| Magnetresonanztomographie | [[kernspinresonanz]], [[supraleitender-magnet]] | [[mrt]] |\n| Ultraschall | [[piezoelektrischer-effekt]], [[ultraschallwandler]] | [[ultraschallgeraet]] |\n| Angiographie/Röntgen | [[roentgendetektor|Flachdetektoren]] | [[angiographieanlage]], [[roentgengeraet]] |\n| Molekulare Bildgebung | Koinzidenzmessung, kombiniert mit CT | [[pet-ct]] |\n\nEin Markenzeichen der CT-Linie ist der Breitdetektor-Ansatz: Mit 320 Detektorzeilen kann ein Organ wie das Herz in einer einzigen Rotation ohne Tischvorschub erfasst werden.\n\n> [!beispiel] Bei 320 Zeilen à 0,5 mm ergibt sich eine Detektorabdeckung von 16 cm in z-Richtung – genug, um das Herz vollständig in einer Umdrehung abzubilden.\n\n## Bedeutung für die Medizintechnik\n\nCanon Medical ist neben [[siemens-healthineers|Siemens Healthineers]], [[ge-healthcare|GE HealthCare]], [[philips|Philips]] und [[fujifilm|Fujifilm Healthcare]] einer der großen Bildgebungsanbieter. Für den Betrieb relevant sind:\n\n* [[strahlenschutz|Strahlenschutz]] und [[konstanzpruefung|Konstanzprüfungen]] bei Röntgen- und CT-Anlagen nach dem [[strlschg|Strahlenschutzgesetz]] und der Strahlenschutzverordnung [@strlschg].\n* Bildkommunikation über [[dicom]].\n* Bei MRT-Systemen: Heliumversorgung, Quench-Sicherheit und Zugangskontrolle im Magnetfeld.\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "computertomograph",
+    "mrt",
+    "ultraschallgeraet",
+    "angiographieanlage",
+    "roentgengeraet",
+    "pet-ct",
+    "radiologie",
+    "siemens-healthineers",
+    "ge-healthcare",
+    "philips",
+    "fujifilm"
+  ],
+  "sources": [
+    "hst-canon-medical",
+    "hst-canon-medical-history",
+    "strlschg"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

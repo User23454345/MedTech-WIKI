@@ -2,8 +2,8 @@
   {
     "id": "iso-80601-2-61",
     "kind": "norm",
-    "title": "ISO 80601-2-61 – Medizinische elektrische Geräte – Teil 2-61: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Pulsoximetriegeräten",
-    "publisher": "ISO / IEC; in Deutschland als DIN EN ISO 80601-2-61",
+    "title": "ISO 80601-2-61 – Medical electrical equipment – Part 2-61: Particular requirements for basic safety and essential performance of pulse oximeter equipment",
+    "publisher": "ISO; in Deutschland übernommen als DIN EN ISO 80601-2-61",
     "note": "Gerätespezifische Norm für Pulsoximeter (u. a. Anforderungen an die SpO₂-Genauigkeit und deren klinische Validierung). Maßgeblich ist die jeweils gültige Ausgabe."
   },
   {

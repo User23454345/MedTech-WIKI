@@ -1,0 +1,146 @@
+{
+  "id": "risikoklassen",
+  "type": "term",
+  "title": "Risikoklassen von Medizinprodukten",
+  "aliases": [
+    "Klassifizierung von Medizinprodukten",
+    "Risikoklasse",
+    "Klasse I",
+    "Klasse IIa",
+    "Klasse IIb",
+    "Klasse III",
+    "Classification of medical devices",
+    "Klassifizierungsregeln",
+    "Anhang VIII MDR"
+  ],
+  "category": "recht",
+  "summary": "Die MDR teilt Medizinprodukte nach ihrem Gefährdungspotenzial in die Klassen I, IIa, IIb und III ein. Die Einstufung erfolgt durch den Hersteller anhand der 22 Klassifizierungsregeln in Anhang VIII und bestimmt, welches Konformitätsbewertungsverfahren nötig ist und wie stark eine Benannte Stelle beteiligt wird.",
+  "body": "## Grundidee\n\nNicht jedes [[medizinprodukt|Medizinprodukt]] birgt dasselbe Risiko: Ein Gehstock gefährdet Patient:innen kaum, ein implantierter [[herzschrittmacher]] hingegen kann bei Versagen lebensbedrohlich sein. Die [[mdr|MDR]] staffelt deshalb den Aufwand für den Konformitätsnachweis nach einem **risikobasierten Klassensystem** [@mdr-2017]:\n\n| Klasse | Risiko (vereinfacht) | Beteiligung einer [[benannte-stelle|Benannten Stelle]] | Beispiele (typisch) |\n|---|---|---|---|\n| **I** | gering | nein (Ausnahmen: Is, Im, Ir) | [[pflegebett]], Gehhilfen, nicht sterile Verbandmittel |\n| **IIa** | mittel | ja | [[ultraschallgeraet|Ultraschallgerät]] zur Diagnostik, Hörgeräte, [[dampfsterilisator]] |\n| **IIb** | erhöht | ja | [[beatmungsgeraet]], [[infusionspumpe]], manueller [[defibrillator]], [[hf-chirurgiegeraet]], [[roentgengeraet]] |\n| **III** | hoch | ja, mit vertiefter Prüfung | Herzklappen, implantierbare Produkte mit Kontakt zum Herzen, [[herzschrittmacher]], [[icd]], automatisierte externe Defibrillatoren (AED, Regel 22) |\n\n> [!vereinfacht] Die Beispielspalte nennt **typische** Einstufungen. Die verbindliche Klasse legt allein der Hersteller anhand seiner konkreten [[zweckbestimmung|Zweckbestimmung]] fest; sie steht in der EU-Konformitätserklärung des Produkts [@mdr-2017] [@mdcg-2021-24].\n\nZusätzlich kennt die MDR Unterkategorien der Klasse I, bei denen eine Benannte Stelle nur bestimmte Aspekte prüft [@mdr-2017]:\n\n* **Is** – steril in Verkehr gebrachte Produkte (Prüfung der Sterilität),\n* **Im** – Produkte mit Messfunktion (Prüfung der messtechnischen Aspekte),\n* **Ir** – wiederverwendbare chirurgische Instrumente (Prüfung der [[aufbereitung|Aufbereitung]]).\n\n## Rechtsgrundlage und Systematik\n\nArt. 51 MDR verpflichtet zur Klassifizierung nach **Anhang VIII**. Der Anhang besteht aus zwei Teilen [@mdr-2017]:\n\n1. **Kapitel I und II – Definitionen und Durchführungsvorschriften**, etwa zur Anwendungsdauer, zur Invasivität und zur Frage, welche Regel bei Überschneidungen gilt.\n2. **Kapitel III – 22 Klassifizierungsregeln**, gegliedert nach nicht invasiven, invasiven und aktiven Produkten sowie besonderen Regeln.\n\nDie Medical Device Coordination Group erläutert die Regeln mit Beispielen in der Leitlinie MDCG 2021-24 [@mdcg-2021-24].\n\n### Entscheidende Kriterien\n\n| Kriterium | Ausprägungen nach MDR |\n|---|---|\n| **Anwendungsdauer** | vorübergehend: normalerweise < 60 min ununterbrochen; kurzzeitig: bis 30 Tage; langzeitig: > 30 Tage |\n| **Invasivität** | nicht invasiv; invasiv über Körperöffnung; chirurgisch-invasiv; implantierbar |\n| **Körperregion** | z. B. Kontakt mit Herz, zentralem Kreislauf oder zentralem Nervensystem führt zu höheren Klassen |\n| **Aktivität** | aktives Produkt (Energiequelle außer Körper/Schwerkraft), inkl. Software |\n| **Wirkung** | Energieabgabe, Abgabe von Stoffen, Diagnose/Überwachung, ionisierende Strahlung |\n\n### Wichtige Durchführungsregeln\n\n* Treffen **mehrere Regeln** zu, gilt die Regel mit der **höchsten** Klasse.\n* **Zubehör** wird unabhängig vom zugehörigen Produkt eigenständig klassifiziert.\n* **Software**, die ein Produkt steuert oder dessen Anwendung beeinflusst, fällt in dieselbe Klasse wie das Produkt; eigenständige Software wird für sich klassifiziert (vgl. [[software-medizinprodukt]]).\n* Maßgeblich ist der **kritischste** bestimmungsgemäße Einsatz.\n\n## Die Regelgruppen im Überblick\n\n| Regeln | Gruppe | Kerngedanke (mit eigenen Worten) |\n|---|---|---|\n| 1–4 | nicht invasive Produkte | Grundsätzlich Klasse I; höher z. B. bei Kanalisierung oder Speicherung von Blut/Körperflüssigkeiten, Veränderung der Zusammensetzung von Blut oder bei Wundauflagen für tiefe Wunden |\n| 5–8 | invasive Produkte | Steigende Klasse mit Anwendungsdauer und Nähe zu Herz, zentralem Kreislauf und ZNS; Implantate meist IIb oder III |\n| 9–13 | aktive Produkte | Energieabgabe (9), Diagnose und Überwachung (10), Software (11), Abgabe/Entzug von Stoffen (12), alle übrigen aktiven Produkte (13: Klasse I) |\n| 14–22 | besondere Regeln | z. B. Produkte mit Arzneimittelanteil, Empfängnisverhütung, Desinfektions- und Sterilisationsprodukte, Nanomaterialien, aktive therapeutische Produkte mit integrierter diagnostischer Funktion |\n\n### Aktive Produkte im Detail\n\nFür die Gerätetechnik sind die Regeln 9 bis 13 am wichtigsten [@mdr-2017] [@mdcg-2021-24]:\n\n* **Regel 9 – aktive therapeutische Produkte:** Produkte, die Energie abgeben oder austauschen, sind grundsätzlich IIa; IIb, wenn die Energieabgabe wegen Art, Dichte und Applikationsort potenziell gefährlich ist. Typisch IIb: manueller [[defibrillator]], [[hf-chirurgiegeraet]], [[chirurgischer-laser|chirurgische Laser]]. Ebenfalls IIb sind Produkte, die ionisierende Strahlung für therapeutische Zwecke abgeben.\n* **Regel 10 – aktive diagnostische und überwachende Produkte:** IIa, wenn sie Energie abgeben, die vom Körper absorbiert wird (außer Beleuchtung im sichtbaren Spektrum), die Verteilung von Radiopharmaka in vivo darstellen oder eine direkte Diagnose bzw. Überwachung vitaler physiologischer Prozesse ermöglichen – andernfalls greift Regel 13 (Klasse I); IIb, wenn vitale physiologische Parameter überwacht werden, deren Veränderung zu unmittelbarer Gefahr führen kann (z. B. Überwachung auf der Intensivstation mit einem [[patientenmonitor]]), sowie bei Produkten, die ionisierende Strahlung für Diagnostik oder interventionelle Radiologie abgeben (z. B. [[computertomograph]], [[angiographieanlage]]).\n* **Regel 11 – Software:** Software, die Informationen für diagnostische oder therapeutische Entscheidungen liefert, ist mindestens IIa; je nach möglichen Folgen IIb oder III [@mdcg-2019-11].\n* **Regel 12 – Abgabe und Entzug von Stoffen:** grundsätzlich IIa; IIb bei potenziell gefährlicher Art der Abgabe. Hierunter fallen z. B. [[infusionspumpe|Infusionspumpen]] und [[dialysegeraet|Dialysegeräte]] – ebenso wie Geräte, die Gase zuführen.\n* **Regel 13 – alle anderen aktiven Produkte:** Klasse I, z. B. ein elektrisches [[pflegebett]] oder eine [[op-leuchte|Operationsleuchte]].\n\n### Besondere Regeln mit Praxisbezug\n\n* **Regel 16:** Produkte speziell zur Desinfektion oder Sterilisation von Medizinprodukten sind IIa; Desinfektionslösungen und [[rdg|Reinigungs- und Desinfektionsgeräte]], die speziell zur Desinfektion invasiver Produkte als Endpunkt der Aufbereitung bestimmt sind, IIb [@mdr-2017].\n* **Regel 22:** Aktive therapeutische Produkte mit integrierter oder eingebauter diagnostischer Funktion, die das Patientenmanagement durch das Produkt maßgeblich bestimmt – etwa geschlossene Regelkreise oder automatisierte externe Defibrillatoren –, sind Klasse III [@mdr-2017]. Deshalb kann ein AED höher eingestuft sein als ein manueller [[defibrillator]] nach Regel 9.\n\n> [!belegt] Aktive implantierbare Produkte, die unter den früheren Richtlinien eine eigene Produktgruppe bildeten, sind unter der MDR in das Klassensystem integriert; implantierbare Produkte mit Kontakt zu Herz, zentralem Kreislauf oder zentralem Nervensystem gehören regelmäßig zur Klasse III [@mdr-2017] [@mdcg-2021-24].\n\n## Klassifizierung Schritt für Schritt\n\n> [!beispiel] **Volumetrische Infusionspumpe** (vereinfachter Gedankengang):\n> 1. Medizinprodukt? Ja – Abgabe von Arzneimitteln an Patient:innen.\n> 2. Aktiv? Ja – elektrischer Antrieb über [[peristaltikpumpe|Peristaltikmechanismus]] mit [[schrittmotor]].\n> 3. Anwendbare Regel: Regel 12 (Abgabe von Stoffen).\n> 4. Potenziell gefährlich? Ja – Fehldosierung von hochwirksamen Medikamenten kann lebensbedrohlich sein → **IIb**.\n> 5. Das Infusionsbesteck wird als eigenes Produkt nach den Regeln für invasive bzw. nicht invasive Produkte klassifiziert.\n\n## Folgen der Klasse\n\nDie Klasse bestimmt vor allem das [[konformitaetsbewertung|Konformitätsbewertungsverfahren]]:\n\n| Klasse | Konformitätsbewertung (vereinfacht) | Weitere Folgen |\n|---|---|---|\n| I | Erklärung des Herstellers in eigener Verantwortung | [[ce-kennzeichnung|CE]] ohne Kennnummer (außer Is/Im/Ir) |\n| IIa | Benannte Stelle prüft QM-System, technische Dokumentation stichprobenartig | Sicherheitsbericht (PSUR) mindestens alle zwei Jahre |\n| IIb | wie IIa, technische Dokumentation repräsentativ je generischer Produktgruppe; bei Implantaten jedes Produkt | PSUR mindestens jährlich |\n| III | QM-System plus Bewertung der technischen Dokumentation jedes Produkts; ggf. Konsultationsverfahren | [[klinische-bewertung|klinische Prüfungen]] in der Regel erforderlich; Kurzbericht über Sicherheit und klinische Leistung |\n\nAuch die Anforderungen an [[udi|UDI]]-Fristen, Post-Market-Surveillance und [[vigilanz|Vigilanz]]-Berichte sind nach Klassen gestaffelt [@mdr-2017].\n\n## Bedeutung in der Medizintechnik\n\n**Wichtig für die Klinik:** Die Risikoklasse nach MDR ist **nicht** dasselbe wie die Pflicht zu [[stk|sicherheitstechnischen]] oder [[mtk|messtechnischen Kontrollen]]. Diese ergibt sich aus der [[mpbetreibv|MPBetreibV]] (Anlage 1 und Anlage 2) bzw. aus den Herstellerangaben [@mpbetreibv]. Ein Klasse-I-Produkt kann wartungsintensiv sein, ein Klasse-IIb-Produkt muss nicht in Anlage 1 stehen.\n\n> [!praxis] Die Risikoklasse findet sich in der EU-Konformitätserklärung des Herstellers, oft auch in der Gebrauchsanweisung. Für das [[bestandsverzeichnis|Bestandsverzeichnis]] und für Risikobewertungen im [[medizintechnik-management]] ist sie eine nützliche Zusatzinformation – ersetzt aber keine eigene Gefährdungsbeurteilung.\n\nDie Risikoklasse ist außerdem Orientierung für die Tiefe des [[iso-14971|Risikomanagements]], die Anforderungen an die [[gebrauchstauglichkeit]] und die Strenge der [[klinische-bewertung|klinischen Bewertung]].\n\n## Abgrenzung\n\n* **In-vitro-Diagnostika** haben unter der [[ivdr|IVDR]] ein eigenes Klassensystem (A bis D) [@ivdr-2017].\n* **Sicherheitsklassen von Software** nach [[iec-62304]] (A, B, C) sind etwas anderes als die MDR-Risikoklasse.\n* **[[schutzklassen|Elektrische Schutzklassen]]** (I, II, III) nach Elektrotechnik haben mit der MDR-Klasse nichts zu tun – eine häufige Verwechslung.\n\n## Hinweis\n\nDiese Darstellung gibt die Regeln vereinfacht wieder. Maßgeblich ist der Wortlaut von Anhang VIII der MDR in der jeweils gültigen Fassung.",
+  "related": [
+    "medizinprodukt",
+    "zweckbestimmung",
+    "konformitaetsbewertung",
+    "benannte-stelle",
+    "ce-kennzeichnung",
+    "mdr",
+    "software-medizinprodukt",
+    "schutzklassen",
+    "iec-62304"
+  ],
+  "paths": [
+    [
+      "medizinprodukt",
+      "zweckbestimmung",
+      "risikoklassen",
+      "konformitaetsbewertung",
+      "benannte-stelle",
+      "ce-kennzeichnung"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "mdcg-2021-24",
+    "mdcg-2019-11",
+    "ivdr-2017",
+    "mpbetreibv"
+  ],
+  "diagram": {
+    "title": "Von der Zweckbestimmung zur Risikoklasse",
+    "caption": "Vereinfachtes Entscheidungsschema nach Anhang VIII MDR; maßgeblich ist der Verordnungstext.",
+    "width": 900,
+    "height": 330,
+    "nodes": [
+      {
+        "id": "zb",
+        "label": "Zweckbestimmung\ndes Herstellers",
+        "ref": "zweckbestimmung",
+        "kind": "source",
+        "x": 100,
+        "y": 80
+      },
+      {
+        "id": "krit",
+        "label": "Kriterien:\nDauer, Invasivität,\nKörperregion, aktiv?",
+        "kind": "process",
+        "x": 310,
+        "y": 80,
+        "h": 70
+      },
+      {
+        "id": "regeln",
+        "label": "Anhang VIII:\n22 Regeln",
+        "ref": "mdr",
+        "kind": "control",
+        "x": 520,
+        "y": 80
+      },
+      {
+        "id": "max",
+        "label": "Strengste Regel\ngilt",
+        "kind": "control",
+        "x": 730,
+        "y": 80
+      },
+      {
+        "id": "klasse",
+        "label": "Klasse I / IIa /\nIIb / III",
+        "ref": "risikoklassen",
+        "kind": "output",
+        "x": 730,
+        "y": 240
+      },
+      {
+        "id": "kb",
+        "label": "Konformitäts-\nbewertung",
+        "ref": "konformitaetsbewertung",
+        "kind": "process",
+        "x": 520,
+        "y": 240
+      },
+      {
+        "id": "ce",
+        "label": "CE-Kennzeichnung",
+        "ref": "ce-kennzeichnung",
+        "kind": "output",
+        "x": 310,
+        "y": 240
+      }
+    ],
+    "edges": [
+      {
+        "from": "zb",
+        "to": "krit",
+        "kind": "data"
+      },
+      {
+        "from": "krit",
+        "to": "regeln",
+        "kind": "data"
+      },
+      {
+        "from": "regeln",
+        "to": "max",
+        "kind": "data",
+        "label": "mehrere Regeln?"
+      },
+      {
+        "from": "max",
+        "to": "klasse",
+        "kind": "data"
+      },
+      {
+        "from": "klasse",
+        "to": "kb",
+        "kind": "data",
+        "label": "bestimmt Verfahren"
+      },
+      {
+        "from": "kb",
+        "to": "ce",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

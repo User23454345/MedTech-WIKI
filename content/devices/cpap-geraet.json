@@ -1,0 +1,75 @@
+{
+  "id": "cpap-geraet",
+  "type": "device",
+  "title": "CPAP-/Schlaftherapiegerät",
+  "aliases": [
+    "CPAP",
+    "APAP",
+    "Auto-CPAP",
+    "Schlafapnoe-Therapiegerät",
+    "BiLevel-Gerät",
+    "Atemtherapiegerät",
+    "PAP-Gerät"
+  ],
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 33,
+  "domains": [
+    "pneumologie",
+    "hno-heilkunde",
+    "neurologie"
+  ],
+  "summary": "CPAP-Geräte erzeugen über eine Maske einen kontinuierlichen positiven Atemwegsdruck, der die oberen Atemwege während des Schlafs offen hält. Sie sind die Standardtherapie der obstruktiven Schlafapnoe; automatische Varianten (APAP) passen den Druck fortlaufend an.",
+  "sections": {
+    "purpose": "Bei der obstruktiven Schlafapnoe kollabiert der Rachen im Schlaf wiederholt, sodass Atemstillstände (Apnoen) und Minderatmungen (Hypopnoen) mit Sauerstoffentsättigung und Weckreaktionen entstehen. Ein positiver Druck wirkt als „pneumatische Schiene“ und verhindert den Kollaps. Die Diagnose stellt in der Regel ein Schlaflabor mit dem [[polysomnograph|Polysomnographen]]; das Gerät wird anschließend in der häuslichen Umgebung genutzt.",
+    "principle": "## Druckerzeugung\n\nEine kompakte [[turbine]] (Radialgebläse mit [[bldc-motor|BLDC-Motor]]) saugt Raumluft über einen Filter an. Ein [[drucksensor]] am Geräteausgang und ein [[flowsensor]] liefern die Istwerte; ein [[regelkreis]] stellt über die Drehzahl ([[drehzahlregelung]]) den Solldruck ein. Da es sich um ein Einschlauchsystem mit **beabsichtigter Leckage** über eine definierte Ausatemöffnung (Leckageöffnung) an Maske oder Winkelstück handelt, wird ausgeatmetes CO₂ kontinuierlich ausgewaschen ([[leckage]]).\n\n| Modus | Prinzip |\n|---|---|\n| CPAP | konstanter Druck über den gesamten Atemzyklus |\n| APAP | Algorithmus erkennt Apnoen, Hypopnoen, Flusslimitierung und Schnarchen aus dem Flowsignal und passt den Druck innerhalb eingestellter Grenzen an |\n| BiLevel | getrennter Inspirations- und Exspirationsdruck, z. B. bei hohem Druckbedarf |\n\n> [!vereinfacht] Die Erkennung von Ereignissen aus dem Atemfluss ist eine herstellerspezifische Signalverarbeitung; die vom Gerät gemeldeten Indizes ersetzen keine Polysomnographie.\n\n## Befeuchtung und Datenmanagement\n\nEin beheizter Warmluftbefeuchter ([[atemgasbefeuchter]], [[heizelement]]) und optional ein beheizter Schlauch verringern Austrocknung der Schleimhäute und Kondensation. Therapiedaten (Nutzungsdauer, Leckage, Restindex) werden gespeichert und häufig telemetrisch übertragen. Sicherheits- und Leistungsanforderungen legt ISO 80601-2-70 fest [@iso-80601-2-70].\n\n> [!hinweis] Schlaftherapiegeräte sind keine lebenserhaltenden [[heimbeatmungsgeraet|Beatmungsgeräte]] und haben keine Alarmierung für Beatmungsabhängigkeit."
+  },
+  "manufacturers": [
+    {
+      "ref": "resmed",
+      "models": [
+        "AirSense"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "philips",
+      "models": [
+        "DreamStation"
+      ],
+      "note": "Philips Respironics; 2021 Rückruf zahlreicher Schlaf- und Beatmungsgeräte wegen sich zersetzenden schalldämmenden PE-PUR-Schaumstoffs."
+    },
+    {
+      "ref": "loewenstein-medical",
+      "models": [
+        "prisma"
+      ],
+      "note": ""
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Anlage 1 Nr. 1.5 der MPBetreibV (Fassung 2025) erfasst Produkte zur maschinellen Beatmung, nimmt dem Wortlaut nach Geräte zur Schlafapnoe-Therapie aber aus; Kontrollen nach § 12 daher nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Maßgeblich ist die jeweils geltende Fassung.",
+    "intervals": "Wartung und Prüfung nach Herstellerangabe (häufig durch den Homecare-Versorger); regelmäßiger Wechsel von Filtern, Schlauch und Maske nach Herstellerangabe; tägliche Reinigung von Maske und Befeuchterkammer durch die Anwender."
+  },
+  "related": [
+    "heimbeatmungsgeraet",
+    "polysomnograph",
+    "turbine",
+    "atemgasbefeuchter",
+    "lunge",
+    "iec-60601-1-11"
+  ],
+  "sources": [
+    "iso-80601-2-70",
+    "oczenski-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

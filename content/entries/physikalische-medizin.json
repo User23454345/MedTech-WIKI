@@ -1,0 +1,36 @@
+{
+  "id": "physikalische-medizin",
+  "type": "domain",
+  "title": "Physikalische und Rehabilitative Medizin",
+  "aliases": [
+    "PRM",
+    "Physikalische Medizin",
+    "Rehabilitationsmedizin",
+    "Physikalische Therapie",
+    "Physiotherapie",
+    "Elektrotherapie",
+    "Physical Medicine and Rehabilitation"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Physikalische und Rehabilitative Medizin behandelt Funktionsstörungen mit physikalischen Mitteln wie Bewegung, Wärme, Kälte, Wasser, elektrischem Strom und Ultraschall und begleitet Patient:innen in der Rehabilitation. Typische Geräte sind Reizstrom- und Ultraschalltherapiegeräte, Ergometer sowie Hilfsmittel für Pflege und Mobilisation.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Physikalische und Rehabilitative Medizin** (PRM) nutzt physikalische Reize – mechanische Kräfte, Wärme und Kälte, Wasser, elektrischen Strom, Ultraschall und Licht –, um Schmerzen zu lindern, Funktionen wiederherzustellen und Teilhabe zu ermöglichen. Sie arbeitet interdisziplinär mit Physio- und Ergotherapie, Logopädie, Pflege und Psychologie zusammen. Anders als in Akutfächern stehen nicht einzelne Eingriffe, sondern **Therapieserien** über Wochen im Vordergrund [@kramme-2017].\n\n## Typische Krankheitsbilder und Behandlungsformen\n\n| Indikation | Typische Behandlung |\n|---|---|\n| Rückenschmerzen, Arthrose | Bewegungstherapie, Wärme, Elektrotherapie |\n| Zustand nach Gelenkersatz oder Fraktur | Mobilisation, Krankengymnastik, Muskelaufbau |\n| Schlaganfall, Querschnittlähmung | neurologische Rehabilitation, funktionelle Elektrostimulation, Gangtraining |\n| Herz- und Lungenerkrankungen | kardiopulmonale Rehabilitation mit Ergometertraining |\n| Lymphödem | manuelle und apparative Lymphdrainage |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[reizstromgeraet]] | Elektrotherapie: Schmerztherapie (TENS), Muskelstimulation, Iontophorese |\n| [[ultraschalltherapiegeraet]] | Tiefenwärme und mechanische Wirkung im Gewebe |\n| [[ergometer]] | dosierte, reproduzierbare Belastung in Diagnostik und Trainingstherapie |\n| [[ipk-geraet]] | intermittierende pneumatische Kompression, z. B. beim Lymphödem |\n| [[emg-geraet]] | Diagnostik der Nerven- und Muskelfunktion, EMG-Biofeedback |\n| [[patientenlifter]] | sicherer Transfer immobiler Patient:innen |\n| [[pflegebett]], [[antidekubitussystem]] | Lagerung und Dekubitusprophylaxe in der Frührehabilitation |\n| [[spirometer]] | Verlaufskontrolle der Lungenfunktion in der pneumologischen Rehabilitation |\n\n### Elektrotherapie nach Frequenzbereichen\n\n| Bereich | Frequenz | Beispiele | Wirkprinzip |\n|---|---|---|---|\n| Gleichstrom | 0 Hz | Galvanisation, Iontophorese | Ionenwanderung, Durchblutungsförderung |\n| Niederfrequenz | bis etwa 1 kHz | TENS, neuromuskuläre Elektrostimulation | Auslösen von [[aktionspotential|Aktionspotentialen]] in Nerven und Muskeln |\n| Mittelfrequenz | etwa 1–100 kHz | Interferenzstrom | geringere Hautimpedanz, Wirkung durch Schwebung bzw. Modulation |\n| Hochfrequenz | über 100 kHz | Kurzwelle (27,12 MHz), Mikrowelle | keine Nervenreizung, Erwärmung durch dielektrische und induktive Verluste ([[joulesche-waerme]]) |\n\n> [!vereinfacht] Die Frequenzgrenzen dieser klassischen Einteilung sind didaktische Richtwerte. Physiologisch entscheidend ist, dass Nerven- und Muskelfasern nur auf ausreichend lange Strompulse reagieren; bei sehr hohen Frequenzen bleibt die Reizwirkung aus und nur die Wärmewirkung übrig ([[elektrische-stromwirkung]]).\n\n## Besondere technische Anforderungen\n\n### Elektrische Sicherheit und Stromdichte\n\nBei der Elektrotherapie fließt Strom bewusst durch den Körper. Entscheidend für die Gewebeschonung ist die **Stromdichte** unter den Elektroden: Kleine oder schlecht anliegende Elektroden konzentrieren den Strom und können Hautschäden verursachen. Bei Gleichstrom kommen elektrolytische Effekte hinzu, die zu Verätzungen führen können [@iec-60601-2-10]. Grundlagen siehe [[spannung-strom-widerstand]] und [[anwendungsteile]].\n\n> [!warnung] Elektrotherapie und Hochfrequenzwärme sind bei aktiven Implantaten wie [[herzschrittmacher|Herzschrittmachern]] und [[icd|ICDs]] nur nach sorgfältiger Prüfung der Herstellerangaben zulässig. Kurzwellentherapie ist bei Metallimplantaten im Behandlungsfeld wegen der Gefahr lokaler Erwärmung kontraindiziert.\n\nReizstromgeräte als aktive Medizinprodukte zur Anwendung elektrischer Energie zur unmittelbaren Beeinflussung von Nerven und Muskeln zählen zu den Gerätearten, für die die [[mpbetreibv|MPBetreibV]] in Anlage 1 [[stk|sicherheitstechnische Kontrollen]] vorsieht; die Fristen richten sich nach den Herstellerangaben, sonst gilt nach § 12 eine Frist von höchstens zwei Jahren [@mpbetreibv]. Maßgeblich ist der Wortlaut der jeweils geltenden Anlage 1.\n\n### Ultraschalltherapie\n\nTherapeutischer Ultraschall arbeitet typischerweise mit etwa 1 MHz (größere Eindringtiefe) oder 3 MHz (oberflächennahe Wirkung). Wesentliche Kenngrößen sind die effektive Strahlungsfläche des Schallkopfs, die Leistung und die Ungleichförmigkeit des Schallfelds; ein Koppelmedium ist zwingend erforderlich, da Luft den Schall nahezu vollständig reflektiert ([[schallwellen]], [[piezoelektrischer-effekt]]) [@iec-60601-2-5].\n\n> [!praxis] Bei Ultraschalltherapieköpfen lohnt sich eine regelmäßige Leistungsmessung mit einer Schallleistungswaage. Beschädigte Wandlerkristalle, etwa nach einem Sturz, zeigen sich oft nur durch verringerte Ausgangsleistung, nicht durch eine Fehlermeldung.\n\n### Ergometer als Messgerät\n\nTretkurbelergometer zur definierten und reproduzierbaren Belastung von Patient:innen sind in Anlage 2 der MPBetreibV aufgeführt und unterliegen der [[mtk|messtechnischen Kontrolle]] nach § 15 [@mpbetreibv]. Geprüft wird, ob die angezeigte Leistung der tatsächlich abgegebenen entspricht.\n\n### Hilfsmittel und Mechanik\n\nLifter, Pflegebetten und Gehhilfen unterliegen hohen mechanischen Belastungen. Gurte, Aufhängungen und Bremsen sind regelmäßig zu prüfen; für Personenlifter gilt ISO 10535 [@iso-10535], für Pflegebetten IEC 60601-2-52 [@iec-60601-2-52]. In der Hydrotherapie sind Wasserhygiene (z. B. Legionellen) und elektrische Sicherheit in Nassbereichen besonders zu beachten.\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[orthopaedie-unfallchirurgie]]: Rehabilitation nach Operationen und Verletzungen.\n* [[neurologie]]: Rehabilitation nach Schlaganfall, Elektrostimulation, EMG.\n* [[kardiologie]] und [[pneumologie]]: Belastungstests und Trainingstherapie.\n* [[intensivmedizin]]: Frühmobilisation beatmeter Patient:innen.\n* [[diabetologie]]: Bewegungstherapie, Behandlung von Folgeschäden am Fuß.\n",
+  "related": [
+    "reizstromgeraet",
+    "ultraschalltherapiegeraet",
+    "ergometer",
+    "ipk-geraet",
+    "elektrische-stromwirkung",
+    "patientenlifter",
+    "orthopaedie-unfallchirurgie"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iec-60601-2-10",
+    "iec-60601-2-5",
+    "mpbetreibv",
+    "iso-10535",
+    "iec-60601-2-52"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

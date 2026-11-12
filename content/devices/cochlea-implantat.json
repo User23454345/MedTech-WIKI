@@ -1,0 +1,68 @@
+{
+  "id": "cochlea-implantat",
+  "type": "device",
+  "title": "Cochlea-Implantat-System",
+  "aliases": [
+    "Cochlea-Implantat",
+    "CI",
+    "Cochlear Implant",
+    "Innenohrprothese",
+    "Hörprothese",
+    "Sprachprozessor",
+    "Audioprozessor"
+  ],
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 88,
+  "domains": [
+    "hno-heilkunde",
+    "neurologie"
+  ],
+  "summary": "Ein Cochlea-Implantat ersetzt die Funktion der Haarsinneszellen im Innenohr, indem es den Hörnerv direkt elektrisch reizt. Ein außen getragener Audioprozessor wandelt Schall in Stimulationsmuster um und überträgt sie drahtlos durch die Haut an das Implantat, dessen Elektrodenträger in der Hörschnecke liegt.",
+  "riskClass": {
+    "value": "III",
+    "evidence": "belegt",
+    "note": "Aktive implantierbare Produkte und ihr Zubehör gehören nach [[mdr|MDR]] Anhang VIII Regel 8 zur Klasse III [@mdr-2017]. Für die externen Komponenten (Audioprozessor) ist die Einstufung des Herstellers maßgeblich. Siehe [[risikoklassen]].",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Cochlea-Implantate werden bei hochgradiger Schwerhörigkeit oder Taubheit eingesetzt, wenn [[hoergeraet|Hörgeräte]] keinen ausreichenden Nutzen mehr bringen, der Hörnerv aber funktionsfähig ist. Bei gehörlos geborenen Kindern ermöglicht eine frühe Versorgung den Spracherwerb. Die Indikation wird in der [[hno-heilkunde|HNO-Heilkunde]] u. a. mit [[audiometer|Audiometrie]] und Bildgebung gestellt [@kramme-2017].",
+    "principle": "## Systemaufbau\n\n| Teil | Lage | Funktion |\n|---|---|---|\n| Audioprozessor | hinter dem Ohr oder am Kopf | Mikrofone, Signalverarbeitung, Batterie |\n| Sendespule mit Magnet | auf der Kopfhaut | transkutane Übertragung von Energie und Daten |\n| Empfänger-Stimulator | unter der Haut im Knochenbett | Dekodierung, Erzeugung der Stromimpulse |\n| Elektrodenträger | in der Scala tympani der Cochlea | Reizung der Hörnervenfasern über mehrere Kontakte |\n\nDie Übertragung erfolgt induktiv über ein hochfrequentes Signal zwischen zwei Spulen ([[elektromagnetische-induktion]]); das Implantat hat keine eigene Batterie.\n\n## Signalverarbeitung\n\nDie Cochlea ist **tonotop** organisiert: Hohe Frequenzen werden an der Basis, tiefe an der Spitze abgebildet ([[ohr]]). Der Prozessor zerlegt das Mikrofonsignal nach [[analog-digital-wandler|A/D-Wandlung]] mit einer Filterbank in Frequenzbänder ([[filter]]), bestimmt deren Hüllkurven und ordnet jedes Band einem Elektrodenkontakt zu. Die Hüllkurve wird auf den individuellen elektrischen Dynamikbereich des Patienten abgebildet und moduliert biphasische, ladungsausgeglichene Stromimpulse. Bei verbreiteten Strategien wie CIS (Continuous Interleaved Sampling) werden die Kanäle zeitlich versetzt und nicht gleichzeitig stimuliert, damit sich die elektrischen Felder benachbarter Kontakte nicht überlagern (Kanalinteraktion). Diese lösen in den Fasern des Hörnervs [[aktionspotential|Aktionspotenziale]] aus.\n\n> [!vereinfacht] Die Anzahl der Elektrodenkontakte ist begrenzt; das Hören mit CI ist daher spektral gröber als natürliches Hören und erfordert eine Hörrehabilitation.\n\n## Anpassung\n\nNach der Operation werden Schwellen und Komfortpegel je Elektrode ermittelt (**Fitting**); Telemetrie prüft Elektrodenimpedanzen und Nervenantworten. Anforderungen an CI-Systeme beschreibt [@iso-14708-7].\n\n> [!warnung] Wegen des Implantatmagneten ist eine [[mrt|MRT]] nur unter den vom Hersteller angegebenen Bedingungen zulässig. Monopolare [[hf-chirurgiegeraet|HF-Chirurgie]] im Kopf-Hals-Bereich ist nach Herstellerangaben in der Regel kontraindiziert, da Ströme über die Elektroden geleitet werden und Implantat oder Gewebe schädigen können; Ausnahmen (z. B. bipolar) regelt die Gebrauchsanweisung."
+  },
+  "manufacturers": [
+    {
+      "ref": "cochlear",
+      "models": [
+        "Nucleus"
+      ],
+      "note": "Implantate und Soundprozessoren"
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Implantat und Prozessor, Operation und stationärer Aufenthalt, Hörrehabilitation, lebenslange Nachsorge, Austausch des Prozessors in Abständen, Ersatzteile und Batterien."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Das Implantat selbst ist keiner STK zugänglich; es wird in der klinischen Nachsorge (Telemetrie, Fitting) kontrolliert. MPBetreibV (Fassung 2025) Anlage 1 erfasst auch externe aktive Komponenten aktiver Implantate – ob und wie das für Audioprozessoren in der Eigenanwendung umgesetzt wird, ist anhand der Herstellerangaben zu klären. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Nachsorgetermine und Prozessor-Überprüfung nach Vorgabe der implantierenden Klinik bzw. des Herstellers."
+  },
+  "related": [
+    "ohr",
+    "hoergeraet",
+    "audiometer",
+    "aktionspotential",
+    "elektromagnetische-induktion",
+    "hno-heilkunde"
+  ],
+  "sources": [
+    "mdr-2017",
+    "iso-14708-7",
+    "kramme-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

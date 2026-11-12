@@ -6,7 +6,22 @@
   "order": 4,
   "icon": "factory",
   "summary": "Unternehmen der Medizintechnik, ihre Produktbereiche und bekannte Gerätelinien.",
-  "body": "",
+  "body": "Diese Kategorie stellt **Unternehmen der Medizintechnik** vor: Firmensitz, Gründungsjahr, Produktbereiche und bekannte Gerätelinien. Die Auswahl reicht von breit aufgestellten Konzernen mit Bildgebung, Monitoring und Diagnostik bis zu spezialisierten Mittelständlern, etwa für HF-Chirurgie, Endoskopie oder Notfallbeatmung.\n\nHerstellerwissen ist im Klinikalltag unverzichtbar: Gebrauchsanweisungen, Serviceunterlagen, Schulungen, Ersatzteile, Software-Updates und Sicherheitsinformationen kommen vom Hersteller. Bei der Beschaffung, bei Wartungsverträgen und beim Umgang mit Rückrufen oder Sicherheitsmitteilungen im Rahmen der [[vigilanz]] ist es hilfreich zu wissen, welches Unternehmen hinter einer Gerätelinie steht. Rechtlich trägt der Hersteller nach der [[mdr|MDR]] die Verantwortung für [[konformitaetsbewertung]], [[ce-kennzeichnung]] und Überwachung nach dem Inverkehrbringen [@mdr-2017].\n\n> [!hinweis] Die Nennung von Unternehmen und Modellen ist keine Empfehlung. Genannt werden nur real existierende, öffentlich bekannte Produktlinien. Die Medizintechnikbranche ist von Übernahmen, Ausgliederungen und Umbenennungen geprägt – maßgeblich ist der jeweils aktuelle Stand auf der Herstellerseite.\n\n## Überblick nach Schwerpunkten\n\n| Schwerpunkt | Hersteller (Auswahl) |\n|---|---|\n| Bildgebung und Großgeräte | [[siemens-healthineers]], [[ge-healthcare]], [[philips]], [[canon-medical]], [[fujifilm]] |\n| Beatmung, Anästhesie, Monitoring | [[draeger]], [[hamilton-medical]], [[loewenstein-medical]], [[mindray]], [[nihon-kohden]], [[masimo]] |\n| Schlaf- und Heimtherapie | [[resmed]], [[loewenstein-medical]], [[philips]] |\n| Notfallmedizin und Defibrillation | [[zoll]], [[corpuls]], [[weinmann]], [[schiller]], [[stryker]] |\n| Kardiologische Implantate und Interventionen | [[medtronic]], [[biotronik]], [[boston-scientific]], [[abbott]] |\n| Infusion, Ernährung und Dialyse | [[b-braun]], [[fresenius-kabi]], [[baxter]], [[bd]], [[icu-medical]], [[fresenius-medical-care]] |\n| Chirurgie, Endoskopie, OP-Ausstattung | [[erbe]], [[olympus]], [[karl-storz]], [[getinge]], [[intuitive]], [[stryker]] |\n| Optik und Ophthalmologie | [[zeiss]] |\n| Strahlentherapie | [[elekta]] |\n| Labor- und In-vitro-Diagnostik | [[roche-diagnostics]], [[sysmex]], [[abbott]] |\n| Zahnmedizin und Hörsysteme | [[dentsply-sirona]], [[cochlear]] |\n| Aufbereitung, Pflege- und Patientenhandling | [[belimed]], [[getinge]], [[arjo]], [[hillrom]] |\n\n> [!vereinfacht] Die Zuordnung zeigt nur Schwerpunkte. Viele Unternehmen sind in mehreren Bereichen tätig; die Produktlinien stehen im jeweiligen Herstellerartikel.\n\n## Aufbau eines Herstellerartikels\n\n* **Stammdaten:** Hauptsitz, Gründungsjahr, offizielle Website.\n* **Produktlinien:** Zuordnung zu Gerätetypen aus [[geraete]] mit Beispielmodellen.\n* **Einordnung:** historische Entwicklung, wesentliche Übernahmen, Bedeutung für bestimmte [[fachbereiche]].\n\nUmgekehrt nennt jeder Geräteartikel im Abschnitt „Hersteller“ typische Anbieter. So lässt sich sowohl vom Gerät zum Hersteller als auch vom Hersteller zum Gerät navigieren.\n\n## Lernpfad-Empfehlung\n\n1. Zuerst die Hersteller der Geräte lesen, mit denen man im eigenen Arbeitsbereich zu tun hat – auf der Intensivstation etwa [[draeger]], [[hamilton-medical]], [[b-braun]] oder [[philips]].\n2. Danach die großen Bildgebungsanbieter [[siemens-healthineers]], [[ge-healthcare]] und [[philips]] vergleichen.\n3. Spezialisierte Anbieter über die zugehörigen Geräte erschließen, z. B. [[erbe]] über das [[hf-chirurgiegeraet]] oder [[fresenius-medical-care]] über das [[dialysegeraet]].\n4. Abschließend die regulatorische Seite mit [[mdr]], [[konformitaetsbewertung]] und [[udi]] verknüpfen.",
+  "paths": [
+    [
+      "draeger",
+      "beatmungsgeraet",
+      "anaesthesiegeraet"
+    ],
+    [
+      "siemens-healthineers",
+      "computertomograph",
+      "mrt"
+    ]
+  ],
+  "sources": [
+    "kramme-2017"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

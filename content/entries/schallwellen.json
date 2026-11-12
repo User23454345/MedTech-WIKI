@@ -1,0 +1,58 @@
+{
+  "id": "schallwellen",
+  "type": "term",
+  "title": "Schallwellen und Ultraschallphysik",
+  "aliases": [
+    "Schall",
+    "Ultraschall",
+    "Ultraschallphysik",
+    "ultrasound physics",
+    "akustische Impedanz",
+    "Schallkennimpedanz",
+    "Schallgeschwindigkeit",
+    "Dämpfung",
+    "Reflexion",
+    "Schalldruckpegel",
+    "dB SPL",
+    "Mechanischer Index",
+    "Thermischer Index",
+    "MI",
+    "TI"
+  ],
+  "category": "physik",
+  "summary": "Schall ist eine mechanische Welle, die sich als Druck- und Dichteschwankung in einem Medium ausbreitet. Ausbreitungsgeschwindigkeit, akustische Impedanz, Reflexion und frequenzabhängige Dämpfung bestimmen, wie Ultraschallgeräte Bilder erzeugen, wie tief sie sehen und wie fein sie auflösen – und begründen die Sicherheitsindizes MI und TI.",
+  "body": "## Schall als mechanische Welle\n\n**Schall** ist die Ausbreitung von Druck- und Dichteschwankungen in einem elastischen Medium. In Gasen und Flüssigkeiten – und in guter Näherung in Weichgewebe – schwingen die Teilchen in Ausbreitungsrichtung: Schall ist dort eine **Longitudinalwelle**. Im Knochen treten zusätzlich Scherwellen auf. Im Vakuum gibt es keinen Schall [@tipler-2019].\n\nNach der Frequenz unterscheidet man:\n\n| Bereich | Frequenz | Medizintechnische Beispiele |\n|---|---|---|\n| Infraschall | unter 20 Hz | – |\n| Hörschall | 20 Hz bis 20 kHz | [[audiometer]], [[hoergeraet]], Alarmtöne ([[alarmsystem]]), [[ohr]] |\n| Ultraschall (niederfrequent) | ca. 20 kHz bis einige 100 kHz | [[ultraschalldissektor]], [[phakoemulsifikation]], Reinigungsbäder |\n| Ultraschall (therapeutisch/diagnostisch) | ca. 1 bis über 20 MHz | [[ultraschalltherapiegeraet]], [[ultraschallgeraet]], [[ctg]] |\n\n## Grundgrößen\n\nFür jede Welle gilt die Grundgleichung\n\n`c = λ · f`\n\nmit Ausbreitungsgeschwindigkeit c, Wellenlänge λ und Frequenz f. Die Schallgeschwindigkeit hängt von der Kompressibilität (Kompressionsmodul K) und der Dichte ρ des Mediums ab:\n\n`c = √(K / ρ)`\n\nUltraschallgeräte rechnen für Weichgewebe mit einem **festen Mittelwert von 1540 m/s**. Daraus folgt die Tiefe d eines Reflektors aus der Laufzeit t des Echos (Hin- und Rückweg):\n\n`d = c · t / 2`\n\n> [!belegt] Die Annahme c = 1540 m/s ist die Standard-Kalibrierung diagnostischer Ultraschallgeräte; tatsächliche Gewebewerte weichen ab (Fett langsamer, Muskel etwas schneller, Knochen deutlich schneller), was zu Lage- und Größenfehlern im Bild führen kann [@szabo-2014] [@bushberg-2020].\n\n> [!beispiel] Ein Echo aus 10 cm Tiefe trifft nach t = 2 · 0,10 m / 1540 m/s ≈ 130 µs ein. Bei 5 MHz beträgt die Wellenlänge im Gewebe λ = 1540 / (5 · 10⁶) m ≈ 0,31 mm.\n\n## Akustische Impedanz und Reflexion\n\nDie **akustische Impedanz** (Schallkennimpedanz) eines Mediums ist\n\n`Z = ρ · c`   Einheit: kg/(m²·s) = Rayl\n\nAn einer Grenzfläche zwischen zwei Medien wird ein Teil der Schallintensität reflektiert. Bei senkrechtem Einfall gilt für den Intensitäts-Reflexionsfaktor:\n\n`R = ((Z₂ − Z₁) / (Z₂ + Z₁))²`\n\n| Medium | Z (ca., in 10⁶ Rayl) |\n|---|---|\n| Luft | ≈ 0,0004 |\n| Fett | ≈ 1,3 |\n| Wasser | ≈ 1,5 |\n| Weichgewebe, Blut | ≈ 1,6–1,7 |\n| Knochen (kortikal) | ≈ 6–8 |\n\n> [!vereinfacht] Die Tabelle nennt gerundete Literaturwerte als Größenordnung; Gewebe ist inhomogen, und Werte schwanken je nach Quelle [@szabo-2014].\n\nDaraus folgen die Grundregeln der Sonographie: Grenzflächen zwischen Weichgeweben reflektieren nur etwa 0,1 bis 1 % der Intensität (z. B. Fett/Muskel: ((1,7 − 1,4)/(1,7 + 1,4))² ≈ 1 %) – genug für ein Bild, aber der Großteil dringt tiefer ein. An Gewebe/Luft wird praktisch alles reflektiert; deshalb ist **Ultraschallgel** nötig, und luftgefüllte Organe (Lunge, Darm) sind kaum einsehbar. An Knochen entsteht ein starkes Echo mit **Schallschatten** dahinter. Auch der [[luftblasendetektor|Luftblasendetektor]] nutzt diesen Effekt: Eine Luftblase in der Leitung unterbricht die Schallübertragung zwischen Sender und Empfänger ([[luft-im-system]]).\n\n## Dämpfung\n\nAuf dem Weg durch Gewebe verliert die Welle Energie durch **Absorption** (Umwandlung in Wärme), **Streuung** an Strukturen kleiner als λ und Reflexion. Die Dämpfung wird in Dezibel angegeben und steigt in Weichgewebe etwa linear mit der Frequenz:\n\n`α ≈ α₀ · f`   mit α₀ ≈ 0,5 dB/(cm · MHz) als typischem Mittelwert für Weichgewebe\n\n> [!beispiel] Bei 5 MHz und 10 cm Tiefe (20 cm Laufweg) ergibt sich eine Gesamtdämpfung von etwa 0,5 · 5 · 20 = 50 dB. Das Gerät gleicht diese tiefenabhängige Abschwächung mit dem **Tiefenausgleich (TGC)** aus. Die Rechnung nutzt den typischen Mittelwert, nicht gewebespezifische Daten.\n\n## Auflösung und Frequenzwahl\n\n| Auflösung | Bestimmt durch | Zusammenhang |\n|---|---|---|\n| axial (in Schallrichtung) | Pulslänge | ca. halbe räumliche Pulslänge; höhere Frequenz, kürzerer Puls → besser |\n| lateral (quer) | Strahlbreite | Fokussierung, Apertur, Frequenz |\n| elevational (Schichtdicke) | Strahlbreite senkrecht zur Bildebene | Linse bzw. Matrixwandler |\n| zeitlich (Bildrate) | Laufzeit und Zeilenzahl | Tiefe ↑ → Bildrate ↓ |\n\nDaraus folgt der grundlegende **Zielkonflikt**: Hohe Frequenz bedeutet gute Auflösung, aber geringe Eindringtiefe. Oberflächliche Strukturen (Gefäße, Schilddrüse, Sehnen) werden deshalb mit Linearsonden höherer Frequenz, Abdomen und Herz mit niedrigeren Frequenzen untersucht [@szabo-2014].\n\n## Erzeugung und Empfang\n\nUltraschall wird in Medizingeräten nahezu ausschließlich mit dem [[piezoelektrischer-effekt|piezoelektrischen Effekt]] erzeugt und empfangen. Ein [[ultraschallwandler|Ultraschallwandler]] mit vielen Einzelelementen formt und lenkt den Strahl elektronisch durch zeitversetzte Ansteuerung (Phased Array, Beamforming). Bewegte Reflektoren verschieben die Frequenz des Echos – das ist die Grundlage der Blutflussmessung ([[doppler-effekt]]).\n\n## Schalldruckpegel im Hörbereich\n\nIm Hörschall wird der Schalldruck logarithmisch als Pegel angegeben:\n\n`L_p = 20 · log₁₀(p / p₀)`   mit p₀ = 20 µPa (Hörschwelle bei 1 kHz)\n\nEine Verdopplung des Schalldrucks entspricht +6 dB. Audiometer, Hörgeräte und die Lautstärke akustischer Alarme werden in dieser Größe spezifiziert [@tipler-2019].\n\n## Biologische Wirkungen und Sicherheit\n\nUltraschall kann Gewebe auf zwei Wegen beeinflussen:\n\n- **thermisch:** absorbierte Energie erwärmt das Gewebe, besonders an Knochen; beschrieben durch den **Thermischen Index (TI)**,\n- **mechanisch:** hohe Unterdruckspitzen können Gasbläschen zum Schwingen oder Kollabieren bringen (Kavitation); beschrieben durch den **Mechanischen Index (MI)**.\n\n> [!belegt] Die Anzeige von MI und TI sowie Prüfverfahren zu ihrer Bestimmung sind in IEC 60601-2-37 und IEC 62359 geregelt; Anwender sollen nach dem ALARA-Prinzip mit möglichst geringer Exposition untersuchen [@iec-60601-2-37] [@iec-62359].\n\nTherapeutisch werden genau diese Wirkungen genutzt: Gewebeerwärmung im [[ultraschalltherapiegeraet|Ultraschalltherapiegerät]], fokussierte Stoßwellen im [[lithotripter|Lithotripter]] und mechanische Fragmentation beim [[ultraschalldissektor|Ultraschalldissektor]].\n\n## Anwendung in Geräten\n\n| Gerät | Genutzte Ultraschallphysik |\n|---|---|\n| [[ultraschallgeraet]] | Puls-Echo-Prinzip, Laufzeit, Reflexion, Doppler |\n| [[ctg]] | Doppler-Ultraschall zur fetalen Herzfrequenz |\n| [[luftblasendetektor]] | Durchschallung, Impedanzsprung an Luft |\n| [[lithotripter]] | fokussierte Stoßwellen |\n| [[inhalationsgeraet]] | Ultraschall- und Membranvernebelung |\n| [[phakoemulsifikation]], [[ultraschalldissektor]] | niederfrequente Längsschwingung, Kavitation |\n| [[ultraschalltherapiegeraet]] | Absorption → Wärme |\n\nWeiterführend: [[piezoelektrischer-effekt]], [[doppler-effekt]], [[ultraschallwandler]], [[iec-60601-2-37]], [[bildartefakte]].\n",
+  "related": [
+    "piezoelektrischer-effekt",
+    "doppler-effekt",
+    "ultraschallwandler",
+    "ultraschallgeraet",
+    "iec-60601-2-37",
+    "bildartefakte",
+    "luftblasendetektor",
+    "lithotripter",
+    "ctg",
+    "ohr",
+    "audiometer",
+    "ultraschalltherapiegeraet"
+  ],
+  "paths": [
+    [
+      "ultraschallgeraet",
+      "ultraschallwandler",
+      "piezoelektrischer-effekt",
+      "schallwellen",
+      "doppler-effekt"
+    ]
+  ],
+  "sources": [
+    "szabo-2014",
+    "bushberg-2020",
+    "tipler-2019",
+    "iec-60601-2-37",
+    "iec-62359",
+    "webster-2010"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

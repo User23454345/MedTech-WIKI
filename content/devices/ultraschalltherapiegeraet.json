@@ -1,0 +1,47 @@
+{
+  "id": "ultraschalltherapiegeraet",
+  "type": "device",
+  "title": "Ultraschalltherapiegerät",
+  "aliases": [
+    "Ultraschalltherapie",
+    "Therapeutischer Ultraschall",
+    "Ultraschall-Physiotherapiegerät",
+    "Therapeutic Ultrasound"
+  ],
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 85,
+  "domains": [
+    "physikalische-medizin",
+    "orthopaedie-unfallchirurgie"
+  ],
+  "summary": "Ultraschalltherapiegeräte übertragen über einen Schallkopf mechanische Schwingungen im Megahertzbereich ins Gewebe, wo sie absorbiert werden und Wärme sowie mechanische Effekte erzeugen. Sie werden in der Physiotherapie vor allem bei Erkrankungen von Muskeln, Sehnen und Gelenken angewendet.",
+  "sections": {
+    "purpose": "Die Ultraschalltherapie gehört zu den Verfahren der [[physikalische-medizin|physikalischen Medizin]]. Sie soll durch Tiefenerwärmung und mechanische Mikrovibration die Durchblutung fördern, Schmerzen lindern und Heilungsprozesse an Weichteilen unterstützen; die Evidenz für einzelne Indikationen ist unterschiedlich [@kramme-2017].",
+    "principle": "## Schallerzeugung\n\nEin Generator speist einen [[ultraschallwandler|Ultraschallwandler]] mit einer Piezokeramik, die nach dem inversen [[piezoelektrischer-effekt|piezoelektrischen Effekt]] mit ihrer Resonanzfrequenz schwingt. Üblich sind Frequenzen um 1 MHz und um 3 MHz. Anders als in der Diagnostik ([[ultraschallgeraet]]) wird keine Bildinformation ausgewertet; ausgegeben wird eine definierte Schallleistung.\n\n## Wechselwirkung mit Gewebe\n\nDie [[schallwellen|Schallwelle]] wird im Gewebe absorbiert; der Absorptionskoeffizient von Weichgewebe steigt näherungsweise proportional zur Frequenz. Die Intensität fällt daher exponentiell mit der Tiefe ab (I(x) = I₀ · e^(−2αx)), und zwar bei 3 MHz etwa dreimal so schnell wie bei 1 MHz. Daraus folgt:\n\n| Frequenz | Eindringtiefe | Einsatz |\n|---|---|---|\n| ≈ 1 MHz | tiefer | tiefer liegende Strukturen |\n| ≈ 3 MHz | geringer | oberflächennahe Strukturen |\n\nIm **Dauerschall** überwiegt die thermische Wirkung ([[waermeuebertragung]]); im **Impulsschall** mit geringem Tastverhältnis wird die mittlere Wärmeleistung reduziert, sodass mechanische Effekte (Mikrovibration, akustische Strömung) im Vordergrund stehen sollen.\n\n## Kenngrößen des Schallkopfs\n\nDie **effektive Strahlungsfläche** (ERA) und das **Strahlungsungleichförmigkeitsverhältnis** (BNR) beschreiben, wie gleichmäßig der Schallkopf abstrahlt; ein hoher BNR bedeutet lokale Intensitätsspitzen. Die Intensität wird als Schallleistung pro effektiver Strahlungsfläche in W/cm² angegeben; übliche therapeutische Einstellbereiche reichen typischerweise bis etwa 2–3 W/cm². Im Impulsbetrieb ist zwischen Spitzen- und zeitlich gemittelter Intensität zu unterscheiden (mittlere Intensität = Spitzenintensität × Tastverhältnis). Anforderungen enthält [@iec-60601-2-5].\n\n> [!praxis] Zwischen Schallkopf und Haut muss ein Koppelmedium (Gel oder Wasser) liegen, weil Luft den Schall fast vollständig reflektiert. Der Schallkopf wird in Bewegung gehalten, um Wärmespitzen zu vermeiden."
+  },
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Einzel- oder Kombinationsgerät (mit Reizstrom), Anzahl und Größe der Schallköpfe, Frequenzen, Praxis- oder Klinikausführung, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) aufgeführt. Kombinationsgeräte mit Reizstromteil unterliegen mit diesem Teil der STK nach Anlage 1 (Produkte zur Beeinflussung der Funktion von Nerven und/oder Muskeln). Da die abgegebene Schallleistung therapierelevant ist, empfehlen Hersteller regelmäßige Leistungsmessungen (z. B. mit einer Schallleistungswaage).",
+    "intervals": "Leistungsprüfung und elektrische Wiederholungsprüfung nach [[iec-62353|IEC 62353]] gemäß Herstellerangabe; Sichtprüfung des Schallkopfs auf Risse vor Anwendung."
+  },
+  "related": [
+    "ultraschallwandler",
+    "piezoelektrischer-effekt",
+    "schallwellen",
+    "reizstromgeraet",
+    "ultraschallgeraet",
+    "physikalische-medizin"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iec-60601-2-5"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

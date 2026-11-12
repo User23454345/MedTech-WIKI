@@ -1,0 +1,41 @@
+{
+  "id": "iso-80601-2-13",
+  "type": "standard",
+  "title": "ISO 80601-2-13",
+  "code": "ISO 80601-2-13",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-13: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Anästhesie-Arbeitsplätzen",
+  "scope": "Legt besondere Sicherheits- und Leistungsanforderungen an Anästhesie-Arbeitsplätze und ihre Module fest, die zur Inhalationsanästhesie unter ständiger Aufsicht eines Anwenders eingesetzt werden.",
+  "aliases": [
+    "DIN EN ISO 80601-2-13",
+    "EN ISO 80601-2-13",
+    "VDE 0750-2-13",
+    "80601-2-13",
+    "Anästhesie-Arbeitsplatz-Norm"
+  ],
+  "category": "normen",
+  "summary": "ISO 80601-2-13 ist die besondere Festlegung der Normenfamilie IEC 60601 für Anästhesie-Arbeitsplätze. Sie betrachtet den Arbeitsplatz als System aus Gasdosierung, Narkosemittelverdampfer, Atemsystem, Beatmungsgerät, Überwachungseinrichtungen und Anästhesiegas-Fortleitung und stellt Anforderungen an jedes Modul und an ihr Zusammenspiel.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **ISO 80601-2-13** gilt für **Anästhesie-Arbeitsplätze**, also für die Kombination von Geräten, mit denen Patienten unter ständiger Aufsicht eines Anwenders Inhalationsanästhetika und Atemgase erhalten [@iso-80601-2-13-2022]. Sie ist als gemeinsame ISO/IEC-Norm Teil der Familie [[iec-60601-1|IEC 60601]].\n\nBesonders ist der **modulare Ansatz**: Ein [[anaesthesiegeraet]] besteht aus mehreren Funktionsblöcken, die von einem oder mehreren Herstellern stammen können. Die Norm stellt Anforderungen an jedes Modul und legt fest, welche Module mindestens vorhanden sein müssen, damit ein vollständiger, sicherer Arbeitsplatz entsteht.\n\n| Modul | Aufgabe | verlinkte Inhalte |\n|---|---|---|\n| Gasdosiersystem | Mischen von O₂, Air und ggf. N₂O | [[proportionalventil]], [[flowsensor]] |\n| Narkosemittel-Dosiereinrichtung | Zugabe des volatilen Anästhetikums | [[narkosemittelverdampfer]] |\n| Anästhesie-Atemsystem | Kreissystem mit CO₂-Elimination | [[co2-absorber]], [[exspirationsventil]] |\n| Anästhesie-Beatmungsgerät | maschinelle Beatmung | [[beatmungsgeraet]] |\n| Überwachung | Druck, Volumen, O₂, CO₂, Anästhetika | [[sauerstoffsensor]], [[co2-sensor]], [[iso-80601-2-55]] |\n| Anästhesiegas-Fortleitung | Absaugung überschüssiger Gase | Arbeitsschutz |\n| Alarmsystem | Priorisierte Alarmierung | [[iec-60601-1-8]] |\n\n## Zentrale Konzepte und Anforderungen\n\n### Schutz vor hypoxischen Gemischen\n\nDas wichtigste Schutzziel ist, dass der Patient kein sauerstoffarmes Gasgemisch erhält. Die Norm fordert daher Schutzeinrichtungen, die bei Gemischen mit Lachgas eine Mindest-Sauerstoffkonzentration sicherstellen, sowie eine kontinuierliche Messung der inspiratorischen O₂-Konzentration mit Alarm.\n\n> [!vereinfacht] Ein „Hypoxie-Schutz“ koppelt die Lachgas- an die Sauerstoffdosierung – mechanisch oder elektronisch. Er schützt jedoch nicht vor allen Fehlern, etwa einer Verwechslung von Gasen in der Versorgung. Deshalb bleibt die O₂-Messung im Atemgas unverzichtbar.\n\n### Gasversorgung und Verwechslungsschutz\n\nAnschlüsse an die zentrale Gasversorgung müssen gasartspezifisch und unverwechselbar sein; der Ausfall der O₂-Versorgung muss alarmiert werden. Eine O₂-Bypass-Funktion („O₂-Flush“) erlaubt die schnelle Füllung des Atemsystems.\n\n### Narkosemitteldosierung\n\nBei mehreren angeschlossenen [[narkosemittelverdampfer|Verdampfern]] muss verhindert werden, dass gleichzeitig mehr als ein Anästhetikum zugeführt wird. Außerdem werden Genauigkeit der Abgabe und Schutz vor Fehlbefüllung betrachtet. Die Konzentration volatiler Anästhetika wird im Atemgas überwacht, wenn ein Verdampfer genutzt wird.\n\n### Atemsystem und Beatmung\n\nFür das Kreissystem fordert die Norm u. a. Druckbegrenzung, Dichtheit, Überwachung von Atemwegsdruck und Volumen ([[atemwegsdruck-hoch]], [[leckage]], [[diskonnektion]]) sowie Kennzeichnung der Gasflussrichtung. Für das integrierte Beatmungsgerät gelten viele Gedanken der [[iso-80601-2-12]] sinngemäß, angepasst an die Anästhesie.\n\n> [!hinweis] Nach Angaben des Herausgebers berücksichtigt die Ausgabe 2022 u. a. Arbeitsplätze, die mit Sauerstoff 93 (aus Sauerstoffkonzentratoren) versorgt werden [@iso-80601-2-13-2022]. Maßgeblich ist die jeweils gültige Ausgabe.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Sicherheit, durch -2-13 ergänzt |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-6]], [[iec-60601-1-8]] | EMV, Gebrauchstauglichkeit, Alarme |\n| Besondere Festlegungen | [[iso-80601-2-12]], [[iso-80601-2-55]] | Intensivbeatmung als Vergleich, Atemgasmonitore |\n| Prozessnormen | [[iso-14971]], [[iec-62304]] | Risiko- und Softwareprozesse |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen nicht nur das eigene Gerät, sondern das Zusammenwirken mit Modulen anderer Hersteller betrachten und in den Begleitpapieren angeben, welche Kombinationen zulässig sind.\n\n**Betreiber** tragen die Verantwortung, dass ein Arbeitsplatz vollständig ist – etwa dass ein Gasmonitor tatsächlich vorhanden und angeschlossen ist. Vor jeder Anwendung ist ein **Gerätecheck** nach Herstellerangabe durchzuführen (Dichtheit, Gasversorgung, Verdampfer, Alarme). Als Geräte zur maschinellen Beatmung mit oder ohne Anästhesie sind Anästhesiegeräte in Anlage 1 der [[mpbetreibv]] erfasst und unterliegen der [[stk]] nach § 12 (Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind) [@mpbetreibv].\n\n> [!praxis] Viele moderne Anästhesie-Arbeitsplätze führen einen automatisierten Selbsttest durch. Er ersetzt nicht die Sichtprüfung von Schläuchen, [[co2-absorber|Atemkalk]], Verdampferfüllstand und Notfall-Beatmungsbeutel durch das Anwenderteam.\n\n> [!warnung] Arbeiten an Gasführungen, Verdampfern und Gasanschlüssen dürfen nur befugtes, geschultes Fachpersonal nach Herstellervorgaben durchführen.\n\n## Betroffene Geräte\n\n[[anaesthesiegeraet]] mit Modulen wie [[narkosemittelverdampfer]] und [[co2-absorber]]; im Umfeld [[patientenmonitor]], [[kapnometer]], [[absauggeraet]] und [[patientenwaermesystem]]. Hersteller sind u. a. [[draeger]], [[ge-healthcare]], [[mindray]] und [[getinge]].\n",
+  "related": [
+    "anaesthesiegeraet",
+    "narkosemittelverdampfer",
+    "co2-absorber",
+    "iso-80601-2-12",
+    "iso-80601-2-55",
+    "iec-60601-1",
+    "iec-60601-1-8",
+    "sauerstoffsensor",
+    "kapnometer",
+    "anaesthesiologie",
+    "proportionalventil"
+  ],
+  "sources": [
+    "iso-80601-2-13-2022",
+    "iec-60601-1",
+    "dorsch-2008",
+    "larsen-2018",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

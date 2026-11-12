@@ -1,0 +1,43 @@
+{
+  "id": "iec-62353",
+  "type": "standard",
+  "title": "IEC 62353",
+  "code": "IEC 62353",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Wiederholungsprüfungen und Prüfung nach Instandsetzung von medizinischen elektrischen Geräten",
+  "scope": "Legt Prüfungen zur Beurteilung der elektrischen Sicherheit von medizinischen elektrischen Geräten und Systemen vor der Inbetriebnahme, bei Wiederholungsprüfungen und nach Instandsetzung fest.",
+  "aliases": [
+    "DIN EN 62353",
+    "EN 62353",
+    "VDE 0751-1",
+    "Wiederholungsprüfung ME-Geräte",
+    "62353"
+  ],
+  "category": "normen",
+  "summary": "IEC 62353 ist die maßgebliche Norm für die elektrische Sicherheitsprüfung von ME-Geräten im Betrieb. Sie beschreibt Sichtprüfung, Schutzleiterwiderstand, Isolationswiderstand, Ableitstrommessung nach verschiedenen Messverfahren, Funktionsprüfung, Bewertung und Dokumentation.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 62353** beschreibt, wie die elektrische Sicherheit von [[medizinisches-elektrisches-geraet|ME-Geräten]] und ME-Systemen **im Betrieb** geprüft wird: vor der Erstinbetriebnahme (zur Ermittlung von Referenzwerten), bei Wiederholungsprüfungen und nach [[instandsetzung|Instandsetzung]] [@iec-62353]. Sie ist damit die zentrale Arbeitsgrundlage für die [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] im Rahmen der [[stk|sicherheitstechnischen Kontrolle (STK)]] und der Prüfungen nach [[dguv-vorschrift-3|DGUV Vorschrift 3]] [@dguv-v3].\n\n> [!hinweis] Die Typprüfung nach [[iec-60601-1]] ist eine Konstruktionsprüfung beim Hersteller unter Laborbedingungen. Sie ist für den Betrieb ungeeignet, weil sie u. a. Geräte belasten oder öffnen müsste. Die IEC 62353 verwendet deshalb vereinfachte, im Feld reproduzierbare Messverfahren, die das Gerät nicht schädigen.\n\n## Zentrale Konzepte und Anforderungen\n\n### Prüfablauf\n\n| Schritt | Inhalt |\n|---|---|\n| 1. Sichtprüfung | Gehäuse, Netzkabel, Stecker, Anwendungsteile, Kennzeichnung, Sicherungen, Zubehör |\n| 2. [[schutzleiterwiderstand|Schutzleiterwiderstand]] | nur bei [[schutzklassen|Schutzklasse I]]: Widerstand zwischen Schutzkontakt des Netzsteckers und berührbaren leitfähigen Teilen, gemessen mit ausreichend hohem Prüfstrom; Netzkabel dabei bewegen |\n| 3. [[isolationswiderstand|Isolationswiderstand]] | Messung mit Gleichspannung, sofern vom Hersteller nicht ausgeschlossen; liefert Trendwerte |\n| 4. [[ableitstrommessung|Ableitstrommessung]] | Geräteableitstrom und Ableitstrom vom Anwendungsteil |\n| 5. [[funktionspruefung|Funktionsprüfung]] | nach Herstellerangaben, inkl. Sicherheitsfunktionen |\n| 6. Bewertung und Dokumentation | Vergleich mit Grenzwerten und Referenzwerten; Prüfprotokoll |\n\n### Messverfahren für Ableitströme\n\n| Verfahren | Prinzip | Einsatz |\n|---|---|---|\n| Ersatzableitstrom (Alternativverfahren) | Gerät nicht am Netz; Prüfspannung in Höhe der Netzspannung zwischen den kurzgeschlossenen Netzleitern bzw. dem Anwendungsteil und Schutzleiter/berührbaren leitfähigen Teilen | sicher für Prüfer, gut reproduzierbar; nicht aussagekräftig, wenn Teile der Schaltung (z. B. über Netzschalter oder Relais) erst im eingeschalteten Zustand angeschlossen sind |\n| Direktverfahren | Gerät am Netz; Strom über Messvorrichtung gegen Erde, Netzpolarität wird gewechselt | realer Betriebszustand, auch für Schutzklasse II |\n| Differenzstromverfahren | Gerät am Netz; Messung der Differenz zwischen Hin- und Rückleiterstrom | erfasst den gesamten Ableitstrom unabhängig vom Ableitweg; geringere Auflösung bei kleinen Strömen, für den Ableitstrom vom Anwendungsteil nicht geeignet |\n\n> [!vereinfacht] Die Grenzwerte der IEC 62353 hängen von [[schutzklassen|Schutzklasse]], [[anwendungsteile|Anwendungsteil-Typ]] (B, BF, CF) und Messverfahren ab. Für Anwendungsteile vom Typ CF gelten die strengsten Grenzen. Die exakten Zahlen sind der jeweils gültigen Fassung der Norm bzw. der Prüfgerätedokumentation zu entnehmen.\n\n### Referenzwerte und Trendbeobachtung\n\nDie Norm empfiehlt, bei der Erstprüfung **Referenzwerte** zu erfassen. Spätere Messungen werden nicht nur gegen Grenzwerte, sondern auch gegen diese Ausgangswerte bewertet: Ein deutlicher Anstieg des Ableitstroms kann auf Alterung der Isolation, Feuchtigkeit oder defekte Entstörkondensatoren ([[kondensator]]) hinweisen, auch wenn der Grenzwert noch eingehalten ist.\n\n## Bezug zu anderen Normen\n\n| Norm | Bezug |\n|---|---|\n| [[iec-60601-1]] | Basisnorm für die Konstruktion; definiert Schutzklassen und Anwendungsteile |\n| IEC 60601-1-x / -2-x | Ergänzungsnormen und besondere Festlegungen gelten für die Konstruktion, nicht für die Wiederholungsprüfung |\n| DIN EN 50678 / DIN EN 50699 | Prüfung nicht-medizinischer elektrischer Geräte nach Reparatur bzw. Wiederholungsprüfung [@din-en-50678] [@din-en-50699] |\n| [[din-vde-0100-710]] | Prüfung der Elektroinstallation in [[medizinisch-genutzte-bereiche|medizinisch genutzten Bereichen]] |\n| [[iec-61010-1]] | Laborgeräte – nicht Gegenstand der IEC 62353 |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Betreiber** müssen nach [[mpbetreibv|MPBetreibV]] STK für die in Anlage 1 genannten Medizinprodukte sowie für Produkte durchführen lassen, für die der Hersteller sie vorschreibt – spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 i. V. m. Anlage 1) [@mpbetreibv]. Die elektrische Prüfung nach IEC 62353 ist dabei regelmäßig Bestandteil. Prüfende benötigen die erforderliche Sachkenntnis und geeignete [[pruefgeraete|Prüfgeräte]], die selbst regelmäßig [[kalibrierung|kalibriert]] werden.\n\n**Hersteller** geben in der Begleitdokumentation an, welche Prüfungen, Messverfahren und Intervalle für ihr Gerät gelten, und ob z. B. die Isolationswiderstandsmessung zulässig ist.\n\n> [!warnung] Die Messung darf Patient:innen nicht gefährden: Geräte werden für die Prüfung vom Patienten getrennt. Instandsetzung und Prüfung bleiben befugtem Fachpersonal vorbehalten.\n\n> [!praxis] Häufigste Befunde sind beschädigte Netzkabel, erhöhte Schutzleiterwiderstände durch Steckerverschleiß und auffällige Ableitströme nach Flüssigkeitseintritt. Beim Direktverfahren immer beide Netzpolaritäten messen und den höheren Wert bewerten.\n\n## Betroffene Geräte\n\nAlle netzbetriebenen ME-Geräte, z. B. [[patientenmonitor]], [[defibrillator]], [[infusionspumpe]], [[spritzenpumpe]], [[beatmungsgeraet]], [[ekg-geraet]], [[hf-chirurgiegeraet]], [[dialysegeraet]], [[inkubator]], [[op-tisch]], [[op-leuchte]], [[pflegebett]] und [[ultraschallgeraet]].\n",
+  "related": [
+    "elektrische-sicherheitspruefung",
+    "stk",
+    "schutzleiterwiderstand",
+    "isolationswiderstand",
+    "ableitstrommessung",
+    "ableitstrom",
+    "pruefgeraete",
+    "dguv-vorschrift-3",
+    "schutzklassen",
+    "anwendungsteile",
+    "iec-60601-1",
+    "mpbetreibv",
+    "funktionspruefung"
+  ],
+  "sources": [
+    "iec-62353",
+    "mpbetreibv",
+    "dguv-v3",
+    "din-en-50678",
+    "din-en-50699"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

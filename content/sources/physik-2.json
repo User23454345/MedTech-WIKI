@@ -1,0 +1,83 @@
+[
+  {
+    "id": "einstein-1917",
+    "kind": "artikel",
+    "authors": "Einstein, A.",
+    "title": "Zur Quantentheorie der Strahlung",
+    "publisher": "Physikalische Zeitschrift 18, S. 121–128",
+    "year": "1917",
+    "note": "Einführung der stimulierten (induzierten) Emission – theoretische Grundlage des Lasers"
+  },
+  {
+    "id": "maiman-1960",
+    "kind": "artikel",
+    "authors": "Maiman, T. H.",
+    "title": "Stimulated optical radiation in ruby",
+    "publisher": "Nature 187, S. 493–494",
+    "year": "1960",
+    "note": "Erster funktionsfähiger Laser (Rubinlaser)"
+  },
+  {
+    "id": "purcell-1946",
+    "kind": "artikel",
+    "authors": "Purcell, E. M.; Torrey, H. C.; Pound, R. V.",
+    "title": "Resonance Absorption by Nuclear Magnetic Moments in a Solid",
+    "publisher": "Physical Review 69, S. 37–38",
+    "year": "1946",
+    "note": "Nachweis der Kernspinresonanz in kondensierter Materie (parallel zu Bloch 1946)"
+  },
+  {
+    "id": "hahn-1950",
+    "kind": "artikel",
+    "authors": "Hahn, E. L.",
+    "title": "Spin Echoes",
+    "publisher": "Physical Review 80, S. 580–594",
+    "year": "1950",
+    "note": "Entdeckung des Spinechos"
+  },
+  {
+    "id": "faraday-1832",
+    "kind": "artikel",
+    "authors": "Faraday, M.",
+    "title": "Experimental Researches in Electricity",
+    "publisher": "Philosophical Transactions of the Royal Society of London 122, S. 125–162",
+    "year": "1832",
+    "note": "Erste Reihe der Experimental Researches; Beschreibung der elektromagnetischen Induktion (Versuche 1831)"
+  },
+  {
+    "id": "fick-1855",
+    "kind": "artikel",
+    "authors": "Fick, A.",
+    "title": "Ueber Diffusion",
+    "publisher": "Annalen der Physik und Chemie 94, S. 59–86",
+    "year": "1855",
+    "note": "Formulierung des Diffusionsgesetzes (Fick’sche Gesetze)"
+  },
+  {
+    "id": "becquerel-1896",
+    "kind": "artikel",
+    "authors": "Becquerel, H.",
+    "title": "Sur les radiations émises par phosphorescence",
+    "publisher": "Comptes rendus de l’Académie des sciences 122, S. 420–421",
+    "year": "1896",
+    "note": "Entdeckung der von Uransalzen ausgehenden Strahlung (Radioaktivität)"
+  },
+  {
+    "id": "pennes-1948",
+    "kind": "artikel",
+    "authors": "Pennes, H. H.",
+    "title": "Analysis of tissue and arterial blood temperatures in the resting human forearm",
+    "publisher": "Journal of Applied Physiology 1(2), S. 93–122",
+    "year": "1948",
+    "note": "Ursprung der Bioheat-Gleichung (Wärmetransport im durchbluteten Gewebe)"
+  },
+  {
+    "id": "icrp-103",
+    "kind": "leitlinie",
+    "authors": "International Commission on Radiological Protection (ICRP)",
+    "title": "The 2007 Recommendations of the International Commission on Radiological Protection (ICRP Publication 103)",
+    "publisher": "Annals of the ICRP 37(2–4)",
+    "year": "2007",
+    "note": "Strahlungs- und Gewebewichtungsfaktoren, Dosisgrößen, Grundprinzipien des Strahlenschutzes"
+  }
+]

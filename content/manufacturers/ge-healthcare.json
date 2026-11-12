@@ -1,0 +1,182 @@
+{
+  "id": "ge-healthcare",
+  "type": "manufacturer",
+  "title": "GE HealthCare",
+  "aliases": [
+    "GE HealthCare Technologies Inc.",
+    "GE Healthcare",
+    "GE Medical Systems",
+    "GEHC"
+  ],
+  "category": "hersteller",
+  "summary": "GE HealthCare Technologies Inc. mit Sitz in Chicago ist ein US-amerikanischer Hersteller für Bildgebung, Ultraschall, Patientenmonitoring, Anästhesie und pharmazeutische Diagnostika. Das Unternehmen wurde 2023 vom Mischkonzern General Electric abgespalten.",
+  "headquarters": "Chicago, Illinois, USA",
+  "founded": "2023",
+  "website": "https://www.gehealthcare.com/",
+  "productLines": [
+    {
+      "device": "computertomograph",
+      "models": [
+        "Revolution Apex",
+        "Revolution CT",
+        "Revolution Maxima"
+      ]
+    },
+    {
+      "device": "mrt",
+      "models": [
+        "SIGNA Artist",
+        "SIGNA Premier",
+        "SIGNA Hero"
+      ]
+    },
+    {
+      "device": "roentgengeraet",
+      "models": [
+        "Definium 656 HD",
+        "AMX Navigate"
+      ]
+    },
+    {
+      "device": "mammographiegeraet",
+      "models": [
+        "Senographe"
+      ]
+    },
+    {
+      "device": "c-bogen",
+      "models": [
+        "OEC"
+      ]
+    },
+    {
+      "device": "angiographieanlage",
+      "models": [
+        "Allia"
+      ]
+    },
+    {
+      "device": "pet-ct",
+      "models": [
+        "Discovery MI",
+        "Omni Legend"
+      ]
+    },
+    {
+      "device": "gammakamera",
+      "models": [
+        "Discovery NM/CT 670"
+      ]
+    },
+    {
+      "device": "knochendichtemessung",
+      "models": [
+        "Lunar iDXA",
+        "Lunar Prodigy"
+      ]
+    },
+    {
+      "device": "ultraschallgeraet",
+      "models": [
+        "LOGIQ",
+        "Voluson",
+        "Vivid",
+        "Venue",
+        "Vscan Air"
+      ]
+    },
+    {
+      "device": "patientenmonitor",
+      "models": [
+        "CARESCAPE B450",
+        "CARESCAPE B650",
+        "CARESCAPE B850"
+      ]
+    },
+    {
+      "device": "nibp-messgeraet",
+      "models": [
+        "DINAMAP"
+      ]
+    },
+    {
+      "device": "ekg-geraet",
+      "models": [
+        "MAC 2000",
+        "MAC 5500 HD",
+        "MAC VU360",
+        "MAC 5"
+      ]
+    },
+    {
+      "device": "langzeit-ekg",
+      "models": [
+        "SEER"
+      ]
+    },
+    {
+      "device": "ergometer",
+      "models": [
+        "CASE"
+      ]
+    },
+    {
+      "device": "anaesthesiegeraet",
+      "models": [
+        "Aisys CS²",
+        "Carestation 750",
+        "Carestation 650"
+      ]
+    },
+    {
+      "device": "beatmungsgeraet",
+      "models": [
+        "CARESCAPE R860"
+      ]
+    },
+    {
+      "device": "inkubator",
+      "models": [
+        "Giraffe OmniBed Carestation",
+        "Giraffe Incubator Carestation"
+      ]
+    },
+    {
+      "device": "waermebett",
+      "models": [
+        "Panda"
+      ]
+    },
+    {
+      "device": "phototherapiegeraet",
+      "models": [
+        "BiliSoft"
+      ]
+    },
+    {
+      "device": "ctg",
+      "models": [
+        "Corometrics"
+      ]
+    }
+  ],
+  "body": "## Überblick\n\n**GE HealthCare Technologies Inc.** ist ein US-amerikanischer Medizintechnikhersteller mit Hauptsitz in Chicago. Bis Anfang 2023 war das Geschäft eine Sparte des Mischkonzerns General Electric (GE); seit der Abspaltung ist GE HealthCare ein eigenständiges, an der Nasdaq notiertes Unternehmen [@ge-healthcare-web]. Das Gründungsjahr 2023 bezieht sich auf diese Verselbstständigung – die Wurzeln reichen bis ins späte 19. Jahrhundert zurück.\n\n## Geschichte in Stichpunkten\n\n* **1893/1896:** Die Victor Electric Company (Chicago) wird gegründet und stellt kurz nach der Entdeckung der [[roentgenstrahlung|Röntgenstrahlung]] Röntgengeräte her; das Unternehmen geht später in GE auf.\n* **1990er-Jahre:** Die Medizinsparte firmiert als GE Medical Systems; 1998 wird u. a. Marquette Medical Systems (EKG und Monitoring, Interpretationsprogramm 12SL) übernommen.\n* **2003:** Übernahme von Instrumentarium einschließlich Datex-Ohmeda – Basis des heutigen Anästhesie- und Monitoringgeschäfts (Aisys, Tec-Verdampfer).\n* **2004:** Übernahme des britischen Unternehmens Amersham (Kontrastmittel, Radiopharmaka); seitdem Name GE Healthcare.\n* **Ultraschall:** Die Voluson-Linie geht auf die österreichische Kretztechnik zurück.\n* **2023:** Abspaltung von General Electric; neue Schreibweise „GE HealthCare“.\n\n## Geschäftsbereiche\n\n| Segment (bei der Abspaltung 2023) | Inhalte (Auswahl) |\n|---|---|\n| Imaging | [[computertomograph|CT]], [[mrt|MRT]], [[roentgengeraet|Röntgen]], [[mammographiegeraet|Mammographie]], [[pet-ct|PET/CT]], [[gammakamera|SPECT]] |\n| Ultrasound | [[ultraschallgeraet|Ultraschallsysteme]] für Radiologie, Kardiologie, Frauenheilkunde, Point-of-Care |\n| Patient Care Solutions | [[patientenmonitor|Monitoring]], [[anaesthesiegeraet|Anästhesie]], [[ekg-geraet|Diagnostische Kardiologie]], [[inkubator|Neonatologie]] |\n| Pharmaceutical Diagnostics | Kontrastmittel und Radiopharmaka |\n\n## Bedeutung für die Medizintechnik\n\nGE HealthCare ist einer der drei großen Systemanbieter der Bildgebung neben [[siemens-healthineers]] und [[philips]]. Einige Produktlinien prägen ganze Gerätekategorien: DINAMAP steht historisch für die automatische [[oszillometrie|oszillometrische]] Blutdruckmessung ([[nibp-messgeraet]]), das Marquette-12SL-Programm für die computergestützte EKG-Interpretation. Durch das Pharmageschäft verbindet GE HealthCare Geräte und Kontrastmittel bzw. Radiopharmaka.\n\n> [!praxis] In vielen Kliniken laufen Monitoring- und Anästhesiegeräte von GE HealthCare im Verbund (Netzwerk, Zentrale, Datenexport über [[hl7-fhir|HL7]]). Bei Instandhaltung und Softwareupdates sind deshalb Netzwerkabhängigkeiten und die [[emv]] der Gesamtinstallation zu berücksichtigen.\n\n> [!hinweis] Für Neonatologie-Produkte (Giraffe-Familie) sind die jeweils aktuellen Sicherheitsinformationen des Herstellers zu beachten [@ge-giraffe].\n\n## Einordnung im Markt\n\nViele Produktnamen von GE HealthCare spiegeln die Übernahmehistorie wider: „Datex-Ohmeda“ in der Anästhesie, „Marquette“ in der EKG-Technik oder „Corometrics“ im Fetalmonitoring. In Ausschreibungen und Bestandsverzeichnissen tauchen daher für dieselbe Produktfamilie unterschiedliche Herstellerbezeichnungen auf. Bei Narkosegeräten ist zudem die Kombination mit Verdampfern ([[narkosemittelverdampfer]]) und Atemkalk ([[co2-absorber]]) als Gesamtsystem zu betrachten.",
+  "related": [
+    "computertomograph",
+    "mrt",
+    "ultraschallgeraet",
+    "patientenmonitor",
+    "anaesthesiegeraet",
+    "ekg-geraet",
+    "philips",
+    "siemens-healthineers",
+    "radiologie",
+    "nuklearmedizin"
+  ],
+  "sources": [
+    "ge-healthcare-web",
+    "ge-giraffe"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

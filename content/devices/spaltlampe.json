@@ -1,0 +1,54 @@
+{
+  "id": "spaltlampe",
+  "type": "device",
+  "title": "Spaltlampe",
+  "aliases": [
+    "Spaltlampenmikroskop",
+    "Slit Lamp",
+    "Biomikroskop",
+    "Spaltlampenuntersuchung"
+  ],
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 90,
+  "domains": [
+    "augenheilkunde"
+  ],
+  "summary": "Die Spaltlampe kombiniert ein binokulares Stereomikroskop mit einer Beleuchtungseinheit, die einen schmalen, hellen Lichtspalt auf das Auge projiziert. So lassen sich die durchsichtigen Strukturen des vorderen Augenabschnitts in einem optischen Schnitt vergrößert beurteilen.",
+  "sections": {
+    "purpose": "Die Spaltlampe ist das zentrale Untersuchungsgerät der [[augenheilkunde|Augenheilkunde]]. Mit ihr werden Lider, Bindehaut, Hornhaut, Vorderkammer, Iris und Linse untersucht; mit Zusatzlinsen und Kontaktgläsern auch Kammerwinkel, Glaskörper und Netzhaut. Häufig ist ein Applanationstonometer zur Messung des Augeninnendrucks angebaut ([[tonometer]]) [@kramme-2017].",
+    "principle": "## Optischer Aufbau\n\n| Baugruppe | Funktion |\n|---|---|\n| Beleuchtungssystem | Lichtquelle (heute meist LED, früher Halogen), Spaltblende mit einstellbarer Breite und Höhe, Filter (z. B. Kobaltblau, rotfrei), Projektionsoptik |\n| Stereomikroskop | binokulare Beobachtung mit Vergrößerungswechsler in Stufen ([[optik]]) |\n| Kreuzschlitten mit Joystick | Positionierung und Fokussierung |\n| Kopfstütze | Fixierung des Patienten |\n\nBeleuchtung und Mikroskop sind um eine **gemeinsame Drehachse** schwenkbar und auf denselben Punkt fokussiert. Dadurch bleibt der beleuchtete Spalt immer scharf im Blickfeld, während der Einfallswinkel verändert wird.\n\n## Optischer Schnitt\n\nTrifft ein schmaler Lichtspalt schräg auf die transparenten Medien des [[auge|Auges]], wird an Gewebestrukturen Licht gestreut. Aus dem seitlichen Blickwinkel erscheint ein leuchtender Schnitt durch Hornhaut und Linse, in dem Dicke, Trübungen und Fremdkörper beurteilbar sind. Weitere Techniken sind diffuse Beleuchtung, Retroillumination und die Untersuchung der Vorderkammer auf Zellen und Eiweiß (Tyndall-Effekt).\n\n> [!hinweis] Mit Fluoreszein und Kobaltblaufilter werden Hornhautdefekte sichtbar. Für Untersuchungen des hinteren Augenabschnitts dienen Zusatzoptiken: Vorsatzlinsen hoher Brechkraft (z. B. 78 oder 90 dpt) erzeugen vor dem Auge ein reelles, seitenverkehrtes und auf dem Kopf stehendes Zwischenbild des Fundus, das mit dem Mikroskop betrachtet wird; Kontaktgläser (z. B. Dreispiegelglas nach Goldmann) heben die Brechkraft der Hornhautvorderfläche weitgehend auf und erlauben über Spiegel den Blick in den Kammerwinkel und die Netzhautperipherie.\n\n> [!warnung] Intensive Beleuchtung kann die Netzhaut photochemisch belasten; Beleuchtungsstärke und Untersuchungsdauer sollten so gering wie möglich gewählt werden. Anforderungen an Spaltlampen beschreibt [@iso-10939].\n\nModerne Geräte bieten Kameras zur Dokumentation und Anbindung an Praxissysteme ([[dicom]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "zeiss",
+      "models": [],
+      "note": "Spaltlampen für die augenärztliche Diagnostik"
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Vergrößerungsstufen, Lichtquelle, Video- und Bilddokumentation, Applanationstonometer, Arbeitsplatz (Tisch, Instrumentenkombination), Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "abhaengig",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: Die Spaltlampe selbst ist nicht in Anlage 2 aufgeführt; ein angebautes Applanationstonometer zur Bestimmung des Augeninnendrucks unterliegt jedoch der MTK nach § 15 i. V. m. Anlage 2 (Medizinprodukte zur Bestimmung des Augeninnendrucks – Augentonometer; Nachprüffrist allgemein 2 Jahre). Da Anlage 2 im Herbst 2025 berichtigt wurde, sind Nummer und Frist am amtlichen Text zu prüfen.",
+    "intervals": "MTK des angebauten Tonometers nach der Frist der Anlage 2 (allgemein zwei Jahre); Reinigung, Justierung und Leuchtmittelprüfung nach Herstellerangabe; Desinfektion von Kinn- und Stirnstütze sowie Tonometermesskörpern nach jedem Patienten."
+  },
+  "related": [
+    "auge",
+    "optik",
+    "tonometer",
+    "op-mikroskop",
+    "oct",
+    "augenheilkunde"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iso-10939",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "klinische-bewertung",
+  "type": "term",
+  "title": "Klinische Bewertung",
+  "aliases": [
+    "Clinical Evaluation",
+    "CER",
+    "Clinical Evaluation Report",
+    "Klinischer Bewertungsbericht",
+    "PMCF",
+    "Post-Market Clinical Follow-up",
+    "Klinische Nachbeobachtung nach dem Inverkehrbringen",
+    "Gleichartigkeit",
+    "Äquivalenz"
+  ],
+  "category": "recht",
+  "summary": "Die klinische Bewertung ist der fortlaufende Prozess, mit dem ein Hersteller anhand klinischer Daten Sicherheit, Leistung und ein vertretbares Nutzen-Risiko-Verhältnis seines Medizinprodukts nachweist. Sie ist in Art. 61 und Anhang XIV der MDR geregelt und wird durch die klinische Nachbeobachtung (PMCF) aktualisiert.",
+  "body": "## Begriff\n\nDie **klinische Bewertung** ist nach der [[mdr|MDR]] ein systematischer und geplanter Prozess zur kontinuierlichen Generierung, Sammlung, Analyse und Bewertung der **klinischen Daten** zu einem Produkt, um Sicherheit und Leistung einschließlich des klinischen Nutzens bei bestimmungsgemäßer Verwendung zu überprüfen [@mdr-2017]. Sie ist für **alle** [[risikoklassen|Risikoklassen]] Pflicht – auch für Klasse I – und Teil der technischen Dokumentation für die [[konformitaetsbewertung|Konformitätsbewertung]].\n\n> [!belegt] Die zentralen Vorschriften sind Art. 61 MDR (klinische Bewertung), Anhang XIV Teil A (Durchführung) und Teil B (klinische Nachbeobachtung nach dem Inverkehrbringen) sowie Art. 62 ff. für klinische Prüfungen [@mdr-2017].\n\n## Was beweist die klinische Bewertung?\n\n| Nachweisziel | Leitfrage |\n|---|---|\n| **Sicherheit** | Treten bei bestimmungsgemäßer Verwendung unvertretbare Risiken oder Nebenwirkungen auf? |\n| **Leistung** | Erreicht das Produkt die vom Hersteller beanspruchte Wirkung (z. B. Messgenauigkeit, Therapiewirkung)? |\n| **Klinischer Nutzen** | Hat die Anwendung positive Auswirkungen auf die Gesundheit von Patient:innen? |\n| **Nutzen-Risiko-Verhältnis** | Überwiegt der Nutzen die verbleibenden Risiken – im Vergleich zum Stand der Technik? |\n\nAusgangspunkt ist die [[zweckbestimmung|Zweckbestimmung]]: Jede beanspruchte Indikation, Patientengruppe und Anwendungsumgebung muss durch klinische Daten gedeckt sein.\n\n## Quellen klinischer Daten\n\nKlinische Daten können nach der MDR stammen aus [@mdr-2017]:\n\n1. **klinischen Prüfungen** mit dem Produkt selbst (durchgeführt nach den Art. 62 ff. und in der Praxis nach ISO 14155 [@iso-14155]),\n2. **wissenschaftlicher Fachliteratur** über das Produkt oder ein nachweislich gleichartiges Produkt,\n3. **Erfahrungen aus der Überwachung nach dem Inverkehrbringen**, insbesondere aus der klinischen Nachbeobachtung (PMCF).\n\n### Gleichartigkeit (Äquivalenz)\n\nEin Hersteller darf Daten eines anderen Produkts nur verwenden, wenn **Gleichartigkeit** in drei Dimensionen nachgewiesen ist [@mdr-2017] [@mdcg-2020-5]:\n\n| Dimension | Beispiele für Vergleichsmerkmale |\n|---|---|\n| technisch | Konstruktion, Spezifikationen, Funktionsprinzip, Software-Algorithmen, Einsatzbedingungen |\n| biologisch | gleiche Werkstoffe bzw. Stoffe mit gleichem Körperkontakt |\n| klinisch | gleiche klinische Situation, Indikation, Körperstelle, Patientengruppe, Anwender |\n\nFür implantierbare Produkte und Klasse-III-Produkte verschärft die MDR die Anforderungen: Wird Gleichartigkeit mit dem Produkt eines anderen Herstellers beansprucht, ist unter anderem ein Vertrag mit vollständigem Zugang zur technischen Dokumentation erforderlich. Für diese Produkte sind grundsätzlich **eigene klinische Prüfungen** durchzuführen; die MDR nennt Ausnahmen [@mdr-2017].\n\n> [!hinweis] Die Methodik der Literaturrecherche und -bewertung wird in der Praxis weiterhin häufig an der Leitlinie MEDDEV 2.7/1 Rev. 4 ausgerichtet, die noch unter den früheren Richtlinien entstand [@meddev-2-7-1-rev4]. Für die Äquivalenz unter der MDR ist MDCG 2020-5 maßgeblich [@mdcg-2020-5].\n\n## Ablauf\n\nDie klinische Bewertung folgt einem dokumentierten Plan (*Clinical Evaluation Plan*) und mündet in einen Bericht (*Clinical Evaluation Report*, CER) [@mdr-2017] [@meddev-2-7-1-rev4]:\n\n1. **Planung:** Zweckbestimmung, Zielgruppen, Indikationen, beanspruchte Leistung und Nutzen, Parameter für Sicherheit, Akzeptanzkriterien, Stand der Technik.\n2. **Identifikation** relevanter Daten (Literatur, eigene Daten, klinische Prüfungen).\n3. **Bewertung** jeder Datenquelle nach methodischer Qualität und Relevanz.\n4. **Analyse:** Erreicht das Produkt die festgelegten Akzeptanzkriterien? Ist das Nutzen-Risiko-Verhältnis vertretbar? Bleiben Lücken?\n5. **Bericht** mit Schlussfolgerungen – Input für [[iso-14971|Risikomanagement]], Gebrauchsanweisung und PMCF-Plan.\n6. **Aktualisierung** über den gesamten [[lebenszyklus-medizinprodukt|Lebenszyklus]].\n\n> [!vereinfacht] Die Darstellung als Schrittfolge ist eine didaktische Vereinfachung. Klinische Bewertung, Risikomanagement und Post-Market Surveillance bilden in der Praxis einen geschlossenen Kreislauf.\n\n## Klinische Nachbeobachtung (PMCF)\n\nDie **klinische Nachbeobachtung nach dem Inverkehrbringen** (*Post-Market Clinical Follow-up*, PMCF) sammelt proaktiv klinische Daten aus der Anwendung im Markt – etwa über Register, Anwenderbefragungen oder gezielte Studien. Ziel ist, Sicherheit und Leistung über die gesamte erwartete Lebensdauer zu bestätigen, unbekannte Nebenwirkungen zu erkennen und systematische Fehlanwendungen aufzudecken [@mdr-2017].\n\nFür implantierbare Produkte und Produkte der Klasse III erstellt der Hersteller zusätzlich einen **Kurzbericht über Sicherheit und klinische Leistung** (*Summary of Safety and Clinical Performance*, SSCP), der über EUDAMED öffentlich zugänglich gemacht werden soll [@mdr-2017] [@eudamed].\n\n## Besonderheiten bei Geräten\n\nBei aktiven Medizingeräten stehen oft **technische Leistungsdaten** im Vordergrund, deren klinische Relevanz nachgewiesen werden muss:\n\n| Gerät | Typische Fragen der klinischen Bewertung |\n|---|---|\n| [[pulsoxymeter]] | Genauigkeit der SpO₂-Messung im Vergleich zur arteriellen Sauerstoffsättigung (SaO₂, CO-Oxymetrie arterieller Blutproben), auch bei unterschiedlicher Hautpigmentierung und Perfusion |\n| [[nibp-messgeraet]] | Übereinstimmung der [[oszillometrie|oszillometrischen Messung]] mit Referenzverfahren |\n| [[beatmungsgeraet]] | Sicherheit und Wirksamkeit der Beatmungsmodi bei der vorgesehenen Patientengruppe |\n| [[defibrillator]] | Wirksamkeit der Schockform und Sensitivität/Spezifität der Rhythmusanalyse |\n| [[software-medizinprodukt|Diagnosesoftware]] | Validität, analytische und klinische Leistung des Algorithmus [@mdcg-2019-11] |\n\n## Bedeutung in der Medizintechnik\n\nKliniken sind an der klinischen Bewertung oft beteiligt, ohne es bewusst wahrzunehmen:\n\n* als **Prüfzentren** klinischer Prüfungen (mit Genehmigung durch die Behörde und zustimmender Bewertung einer Ethikkommission),\n* als **Datenquelle** für PMCF-Studien und Register,\n* über **Vorkommnismeldungen** im Rahmen der [[vigilanz]], die in die Aktualisierung der klinischen Bewertung einfließen.\n\n> [!praxis] Bei der Beschaffung neuartiger Produkte (z. B. Algorithmen zur Frühwarnung auf dem [[patientenmonitor]]) lohnt die Frage an den Hersteller, auf welchen klinischen Daten die beworbene Leistung beruht – und für welche Patientengruppen sie belegt ist.\n\n## Hinweis\n\nMaßgeblich sind MDR, die einschlägigen MDCG-Leitlinien und Normen in der jeweils gültigen Fassung.",
+  "related": [
+    "konformitaetsbewertung",
+    "zweckbestimmung",
+    "risikoklassen",
+    "vigilanz",
+    "iso-14971",
+    "software-medizinprodukt",
+    "mdr",
+    "patientensicherheit"
+  ],
+  "paths": [
+    [
+      "zweckbestimmung",
+      "klinische-bewertung",
+      "konformitaetsbewertung",
+      "ce-kennzeichnung"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "mdcg-2020-5",
+    "meddev-2-7-1-rev4",
+    "iso-14155",
+    "mdcg-2019-11",
+    "eudamed"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

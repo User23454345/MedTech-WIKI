@@ -1,0 +1,168 @@
+{
+  "id": "erregungsleitungssystem",
+  "type": "term",
+  "title": "Erregungsbildungs- und -leitungssystem",
+  "aliases": [
+    "Reizleitungssystem",
+    "Erregungsleitungssystem",
+    "kardiales Reizleitungssystem",
+    "cardiac conduction system",
+    "Sinusknoten",
+    "AV-Knoten",
+    "His-Bündel",
+    "Purkinje-Fasern",
+    "Tawara-Schenkel"
+  ],
+  "category": "anatomie",
+  "summary": "Spezialisierte Herzmuskelzellen, die elektrische Impulse selbst erzeugen (Sinusknoten) und über AV-Knoten, His-Bündel, Tawara-Schenkel und Purkinje-Fasern geordnet verteilen. Ihre Aktivität bildet das EKG ab; Störungen werden mit Schrittmacher, Defibrillator und ICD behandelt.",
+  "body": "## Überblick\n\nDas **Erregungsbildungs- und -leitungssystem** des [[herz|Herzens]] besteht aus spezialisierten Herzmuskelzellen, die elektrische Impulse selbstständig erzeugen (Autorhythmie) und in einer festgelegten zeitlichen Abfolge über Vorhöfe und Kammern verteilen. Es sorgt dafür, dass sich zuerst die Vorhöfe und – nach einer kurzen Verzögerung – die Kammern koordiniert zusammenziehen [@schmidt-lang-2019] [@guyton-2021]. Die dabei entstehenden Ionenströme erzeugen an der Körperoberfläche messbare Potenzialdifferenzen: das Elektrokardiogramm ([[ekg-geraet|EKG]]).\n\n## Bestandteile\n\n| Struktur | Lage | Eigenfrequenz (typisch) | Funktion |\n|---|---|---|---|\n| Sinusknoten | rechter Vorhof, Einmündung der oberen Hohlvene | ca. 60–80 /min | primärer Schrittmacher |\n| Vorhofmyokard | beide Vorhöfe | – | Ausbreitung über die Vorhöfe |\n| AV-Knoten | Vorhof-Kammer-Grenze im Septum | ca. 40–60 /min | Verzögerung der Überleitung, Frequenzfilter |\n| His-Bündel | durchbricht das bindegewebige Herzskelett | – | einzige leitende Verbindung Vorhof–Kammer |\n| Tawara-Schenkel (rechts, links) | Kammerseptum | – | Aufteilung auf beide Kammern |\n| Purkinje-Fasern | subendokardial in den Kammern | ca. 20–40 /min | schnelle Verteilung im Kammermyokard |\n\n> [!belegt] Die Hierarchie der Eigenfrequenzen ist das Prinzip der Schrittmacherfunktion: Das Zentrum mit der höchsten Frequenz (normalerweise der Sinusknoten) bestimmt den Rhythmus. Fällt es aus, übernehmen nachgeordnete Zentren mit niedrigerer Frequenz als Ersatzrhythmus [@schmidt-lang-2019] [@guyton-2021].\n\n## Erregungsbildung\n\nSchrittmacherzellen besitzen kein stabiles Ruhepotential. Nach jedem [[aktionspotential|Aktionspotential]] depolarisieren sie langsam von selbst (diastolische Depolarisation), getragen u. a. von einem durch Hyperpolarisation aktivierten Kationenstrom (I_f, „funny current“) und Calciumströmen. Erreicht das Membranpotential die Schwelle, wird ein neues Aktionspotential ausgelöst. Die Steilheit der diastolischen Depolarisation bestimmt damit die Herzfrequenz:\n\n* **Sympathikus** (Noradrenalin) → steilere Depolarisation → höhere Frequenz (positiv chronotrop),\n* **Parasympathikus** (Acetylcholin, N. vagus) → flachere Depolarisation, negativeres Maximalpotential → niedrigere Frequenz.\n\n> [!vereinfacht] Technisch lässt sich der Sinusknoten als spannungsgesteuerter Relaxationsoszillator auffassen: Eine „Kondensatorspannung“ steigt bis zu einer Schwelle, entlädt sich und beginnt von vorn. Die Steilheit der Rampe wird vom vegetativen [[nervensystem|Nervensystem]] verstellt. Das Bild ignoriert die komplexe Ionenkanalkinetik, erklärt aber anschaulich die Frequenzsteuerung.\n\n## Erregungsleitung\n\nDie Leitungsgeschwindigkeit unterscheidet sich stark zwischen den Abschnitten. Die langsame Leitung im AV-Knoten erzeugt die Verzögerung, die den Kammern Zeit zur Füllung durch die Vorhofkontraktion gibt; die schnelle Leitung im His-Purkinje-System sorgt für eine nahezu gleichzeitige Kontraktion der Kammern.\n\n| Abschnitt | Leitungsgeschwindigkeit (Größenordnung) |\n|---|---|\n| Vorhofmyokard | ca. 1 m/s |\n| AV-Knoten | ca. 0,05 m/s |\n| His-Bündel, Purkinje-Fasern | ca. 2–4 m/s |\n| Kammermyokard | ca. 0,5–1 m/s |\n\n> [!hinweis] Die Geschwindigkeiten sind Größenordnungen aus der Physiologie-Literatur; Einzelwerte unterscheiden sich je nach Quelle und Messmethode [@schmidt-lang-2019] [@guyton-2021].\n\nDie Kammererregung verläuft vom Septum über die Herzspitze zur Basis und vom Endokard zum Epikard; die Repolarisation verläuft in den Kammern überwiegend in umgekehrter Richtung. Deshalb hat die T-Welle im EKG normalerweise dieselbe Polarität wie der QRS-Komplex.\n\n## Abbildung im EKG\n\nDas Oberflächen-EKG ist die Projektion des zeitlich veränderlichen elektrischen Summenvektors auf die jeweilige Ableitungsachse. Jedem Abschnitt der Erregung entspricht ein EKG-Element:\n\n| EKG-Element | Physiologisches Korrelat | Normwert Erwachsene (typisch) |\n|---|---|---|\n| P-Welle | Erregungsausbreitung in den Vorhöfen | Dauer bis ca. 0,10–0,11 s |\n| PQ-Zeit | Vorhoferregung + AV-Überleitung | ca. 0,12–0,20 s |\n| QRS-Komplex | Erregungsausbreitung in den Kammern | unter ca. 0,10–0,12 s |\n| ST-Strecke | Kammern vollständig erregt (Plateau) | isoelektrisch |\n| T-Welle | Erregungsrückbildung der Kammern | – |\n| QT-Zeit | gesamte Kammeraktion, frequenzabhängig | wird frequenzkorrigiert (QTc) |\n\nDie Sinusknoten-Depolarisation selbst ist wegen der geringen Zellmasse im Oberflächen-EKG nicht sichtbar. Die Signalamplituden liegen im Bereich von etwa 0,5–4 mV, weshalb [[ekg-elektrode|Ag/AgCl-Elektroden]], ein [[instrumentenverstaerker|Instrumentenverstärker]] mit hoher Gleichtaktunterdrückung und geeignete [[filter]] erforderlich sind (siehe [[biosignale]]). Anforderungen an Bandbreite und Messgenauigkeit diagnostischer Elektrokardiographen regelt [[iec-60601-2-25|IEC 60601-2-25]], Empfehlungen zur Standardisierung geben Fachgesellschaften [@iec-60601-2-25] [@kligfield-2007].\n\n## Störungen der Erregungsbildung und -leitung\n\n| Störung | Mechanismus | Typische technische Therapie |\n|---|---|---|\n| Sinusknotensyndrom, Bradykardie | Sinusknoten bildet zu wenig Impulse | [[herzschrittmacher]], akut [[externer-schrittmacher]] |\n| AV-Block I.–III. Grades | verzögerte oder unterbrochene Überleitung | bei höhergradigem Block Schrittmacher |\n| Schenkelblock | Ausfall eines Tawara-Schenkels → breiter QRS | ggf. kardiale Resynchronisation |\n| Vorhofflimmern | ungeordnete, kreisende Erregungen in den Vorhöfen | medikamentös, elektrische Kardioversion mit [[defibrillator]] |\n| Kammertachykardie, Kammerflimmern | kreisende Erregung (Reentry) im Ventrikel | Defibrillation, [[icd]] |\n\n> [!belegt] Bei Kammerflimmern ist die sofortige Defibrillation die entscheidende Maßnahme; ein Defibrillationsschock depolarisiert eine kritische Myokardmasse gleichzeitig und unterbricht die kreisenden Erregungen, sodass der Sinusknoten den Rhythmus wieder übernehmen kann [@erc-2021] [@guyton-2021].\n\n## Bedeutung in der Medizintechnik\n\n* **Diagnostik:** [[ekg-geraet|12-Kanal-EKG]], [[langzeit-ekg|Langzeit-EKG]], [[ergometer|Belastungs-EKG]] und die EKG-Überwachung am [[patientenmonitor]] messen die Folgen der Erregungsausbreitung. Die Arrhythmieerkennung im Monitor beruht auf der Detektion von QRS-Komplexen und deren Abständen.\n* **Stimulation:** Ein [[herzschrittmacher|Schrittmacher]] ersetzt die Erregungsbildung (Sinusknoten) oder überbrückt die gestörte Überleitung (AV-Block), indem er über Elektroden kurze Stromimpulse abgibt, die überschwellige [[aktionspotential|Aktionspotentiale]] auslösen.\n* **Defibrillation:** [[defibrillator|Defibrillatoren]] und [[icd|ICDs]] synchronisieren das Myokard durch einen energiereichen Impuls; bei Kardioversion wird der Schock R-Zacken-synchron abgegeben, um die vulnerable Phase während der T-Welle zu meiden [@iec-60601-2-4].\n* **Elektrische Sicherheit:** Fremdströme, die in die vulnerable Phase fallen, können Kammerflimmern auslösen – Grundlage der Grenzwerte für [[ableitstrom|Ableitströme]] (siehe [[elektrische-stromwirkung]]).\n\n> [!praxis] „Spikes“ von Schrittmacherimpulsen sind im EKG sehr kurz und können durch Filterung verschwinden. Viele EKG-Geräte und Monitore haben daher eine eigene Schrittmacher-Impulserkennung, die beim Patienten mit Schrittmacher aktiviert sein sollte – Hinweise dazu stehen in der Gebrauchsanweisung des jeweiligen Geräts.\n",
+  "related": [
+    "herz",
+    "aktionspotential",
+    "ekg-geraet",
+    "herzschrittmacher",
+    "defibrillator",
+    "icd",
+    "externer-schrittmacher",
+    "langzeit-ekg",
+    "biosignale",
+    "ekg-elektrode",
+    "nervensystem",
+    "kardiologie"
+  ],
+  "paths": [
+    [
+      "erregungsleitungssystem",
+      "aktionspotential",
+      "biosignale",
+      "ekg-elektrode",
+      "instrumentenverstaerker",
+      "filter",
+      "ekg-geraet"
+    ],
+    [
+      "erregungsleitungssystem",
+      "herzschrittmacher",
+      "icd",
+      "defibrillator"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021",
+    "kligfield-2007",
+    "iec-60601-2-25",
+    "iec-60601-2-4",
+    "erc-2021"
+  ],
+  "diagram": {
+    "title": "Erregungsausbreitung im Herzen",
+    "caption": "Reihenfolge der Erregung vom Sinusknoten bis zum Kammermyokard und ihre Abbildung im EKG (Funktionsschema).",
+    "width": 900,
+    "height": 380,
+    "nodes": [
+      {
+        "id": "sk",
+        "label": "Sinusknoten\n60–80 /min",
+        "kind": "source",
+        "x": 100,
+        "y": 80
+      },
+      {
+        "id": "va",
+        "label": "Vorhofmyokard",
+        "ref": "herz",
+        "kind": "process",
+        "x": 300,
+        "y": 80
+      },
+      {
+        "id": "av",
+        "label": "AV-Knoten\n(Verzögerung)",
+        "kind": "control",
+        "x": 500,
+        "y": 80
+      },
+      {
+        "id": "his",
+        "label": "His-Bündel",
+        "kind": "process",
+        "x": 700,
+        "y": 80
+      },
+      {
+        "id": "taw",
+        "label": "Tawara-Schenkel",
+        "kind": "process",
+        "x": 700,
+        "y": 200
+      },
+      {
+        "id": "pur",
+        "label": "Purkinje-Fasern",
+        "kind": "process",
+        "x": 500,
+        "y": 200
+      },
+      {
+        "id": "km",
+        "label": "Kammermyokard\n(Aktionspotential)",
+        "ref": "aktionspotential",
+        "kind": "actuator",
+        "x": 300,
+        "y": 200
+      },
+      {
+        "id": "ekg",
+        "label": "Oberflächen-EKG\nP – QRS – T",
+        "ref": "ekg-geraet",
+        "kind": "output",
+        "x": 300,
+        "y": 320
+      }
+    ],
+    "edges": [
+      {
+        "from": "sk",
+        "to": "va",
+        "kind": "signal",
+        "label": "ca. 1 m/s"
+      },
+      {
+        "from": "va",
+        "to": "av",
+        "kind": "signal"
+      },
+      {
+        "from": "av",
+        "to": "his",
+        "kind": "signal",
+        "label": "ca. 0,05 m/s"
+      },
+      {
+        "from": "his",
+        "to": "taw",
+        "kind": "signal"
+      },
+      {
+        "from": "taw",
+        "to": "pur",
+        "kind": "signal",
+        "label": "2–4 m/s"
+      },
+      {
+        "from": "pur",
+        "to": "km",
+        "kind": "signal"
+      },
+      {
+        "from": "km",
+        "to": "ekg",
+        "kind": "signal",
+        "label": "Summenvektor"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

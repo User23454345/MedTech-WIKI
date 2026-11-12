@@ -1,0 +1,158 @@
+{
+  "id": "galvanische-trennung",
+  "type": "term",
+  "title": "Galvanische Trennung",
+  "aliases": [
+    "Potentialtrennung",
+    "Galvanic isolation",
+    "Isolation barrier",
+    "Isolationsbarriere",
+    "Optokoppler",
+    "Trenntransformator",
+    "Isolationsverstärker",
+    "Digitaler Isolator",
+    "MOOP",
+    "MOPP",
+    "Floating"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Galvanische Trennung bedeutet, dass zwischen zwei Stromkreisen keine leitende Verbindung besteht; Energie und Signale werden über Magnetfelder, Licht oder elektrische Felder übertragen. In Medizingeräten trennt sie Netz- und Patientenstromkreise, begrenzt Ableitströme, ermöglicht erdfreie Anwendungsteile vom Typ BF und CF und unterdrückt Störungen durch Erdschleifen.",
+  "body": "## Begriff\n\nZwei Stromkreise sind **galvanisch getrennt**, wenn zwischen ihnen kein Gleichstrom fließen kann, weil keine leitende Verbindung besteht. Energie oder Information wird dennoch übertragen – über ein **Magnetfeld** (Transformator), **Licht** (Optokoppler) oder ein **elektrisches Feld** (kapazitiver Koppler). Die Trennstelle heißt **Isolationsbarriere** [@tietze-schenk-2019] [@horowitz-hill-2015].\n\nIn der Medizintechnik ist die galvanische Trennung eines der wichtigsten Schutzprinzipien überhaupt, weil der Patient – anders als ein gewöhnlicher Anwender – über Elektroden, Katheter oder Sonden direkt und oft großflächig mit dem Gerät verbunden ist und sich nicht von ihm lösen kann.\n\n## Warum trennen?\n\n| Ziel | Erläuterung |\n|---|---|\n| Schutz vor Netzspannung | Ein Isolationsfehler im Netzteil darf keine gefährliche Spannung zum Patienten bringen |\n| Begrenzung von Ableitströmen | Der Patient darf nicht zum Strompfad zwischen Gerät, Erde und anderen Geräten werden, siehe [[ableitstrom]] |\n| Erdfreie Anwendungsteile | [[anwendungsteile|Anwendungsteile]] vom Typ BF und CF („F“ für *floating*) sind von anderen Geräteteilen isoliert |\n| Schutz des Geräts | Defibrillationsimpulse oder HF-Chirurgie-Ströme sollen die Elektronik nicht zerstören |\n| Signalqualität | Unterbrechung von Erdschleifen reduziert [[netzstoerung|Netzbrumm]] und [[emv|EMV]]-Störungen |\n\n## Technische Umsetzung\n\n| Element | Übertragungsprinzip | Verwendung |\n|---|---|---|\n| [[transformator|Transformator]] | Magnetfeld | Energieübertragung im [[medizinisches-netzteil|medizinischen Netzteil]], isolierte DC/DC-Wandler, Trenntransformator |\n| Optokoppler | Licht (LED → Phototransistor) | digitale Signale, Rückmeldung im Schaltnetzteil |\n| Digitale Isolatoren | kapazitive oder induktive Kopplung auf dem Chip | schnelle Datenleitungen (SPI, UART) aus dem Patientenfrontend |\n| Isolationsverstärker | Modulation über Barriere | analoge Messsignale, z. B. Strommessung |\n| Lichtwellenleiter | Licht | Datenübertragung über größere Strecken mit vollständiger Trennung |\n\nEin typisches Biosignalgerät besteht deshalb aus zwei Welten: einer **patientenseitigen** Elektronik mit [[instrumentenverstaerker|Instrumentenverstärker]] und [[analog-digital-wandler|ADC]], versorgt über einen isolierten DC/DC-Wandler, und einer **systemseitigen** Elektronik mit [[mikrocontroller|Mikrocontroller]], Display und Netzanschluss. Daten wechseln über digitale Isolatoren die Seite.\n\n## Schutzmaßnahmen nach IEC 60601-1\n\nDie Grundnorm [[iec-60601-1|IEC 60601-1]] unterscheidet **Schutzmaßnahmen für den Bediener** (MOOP, *means of operator protection*) und **für den Patienten** (MOPP, *means of patient protection*). Für den Patientenschutz gelten strengere Anforderungen an Prüfspannung, Kriech- und Luftstrecken. Zwei unabhängige Schutzmaßnahmen sind erforderlich, damit ein einzelner Fehler nicht zu einer Gefährdung führt [@iec-60601-1].\n\n| Schutzmaßnahme | Prüfspannung (Wechselspannung) | Kriechstrecke | Luftstrecke |\n|---|---|---|---|\n| 1 MOOP | 1 500 V | 2,5 mm | 2 mm |\n| 2 MOOP | 3 000 V | 5 mm | 4 mm |\n| 1 MOPP | 1 500 V | 4 mm | 2,5 mm |\n| 2 MOPP | 4 000 V | 8 mm | 5 mm |\n\n> [!hinweis] Die Tabelle zeigt die in Übersichtsdarstellungen häufig zitierten Richtwerte für eine Arbeitsspannung bis etwa 250 V (Effektivwert); sie wurden für dieses Wiki nicht am Normtext geprüft. Die MOOP-Werte leiten sich dabei aus den Isolationsanforderungen der IT-Gerätenorm ab, die MOPP-Werte aus Tabellen der IEC 60601-1 selbst. Die tatsächlich geforderten Werte hängen von Arbeitsspannung, Verschmutzungsgrad, Isolierstoffgruppe und Höhenlage ab und sind der jeweils gültigen Fassung der Norm zu entnehmen [@iec-60601-1].\n\n## Kapazität der Barriere und Ableitstrom\n\nEine Isolationsbarriere ist für Wechselstrom nicht unendlich hochohmig. Wicklungen eines Transformators oder die Strukturen eines Isolatorbausteins bilden eine **Koppelkapazität** C. Über sie fließt bei Wechselspannung der Strom\n\n`I = U · 2π · f · C`\n\n> [!beispiel] Eine Koppelkapazität von 100 pF, an der im ungünstigsten Fall die volle Netzspannung von 230 V bei 50 Hz anliegt, lässt `I = 230 V · 2π · 50 Hz · 100 pF ≈ 7,2 µA` fließen. Das liegt bereits in der Größenordnung des Patientenableitstrom-Grenzwerts für Anwendungsteile vom Typ CF, der im Normalzustand bei 10 µA und im ersten Fehlerfall bei 50 µA liegt [@iec-60601-1]. Die Rechnung ist eine Abschätzung mit beispielhaften Zahlen; welche Spannung tatsächlich über der Barriere liegt, hängt vom Geräteaufbau und von der jeweiligen Messanordnung der Norm ab.\n\nFür CF-Anwendungsteile, die am Herzen eingesetzt werden können (z. B. [[invasive-druckmessung|invasive Druckmessung]] oder Elektroden von [[patientenmonitor|Monitoren]] im kardiologischen Umfeld), werden deshalb isolierte Versorgungen mit sehr kleiner Koppelkapazität und große Abstände verwendet. Gemessen wird das Ergebnis bei der [[ableitstrommessung|Ableitstrommessung]] im Rahmen der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] [@iec-62353].\n\n## Trennung auf Installationsebene\n\nAuch die elektrische Installation nutzt galvanische Trennung: In Räumen der Gruppe 2 (z. B. OP, Intensivstation) werden lebenswichtige Geräte aus einem **medizinischen IT-System** über einen Trenntransformator mit Isolationsüberwachung versorgt. Ein erster Isolationsfehler führt dort nicht zur Abschaltung, sondern zu einer Meldung – siehe [[medizinisch-genutzte-bereiche|elektrische Anlagen in medizinisch genutzten Bereichen]] [@din-vde-0100-710].\n\n> [!belegt] Errichtungsanforderungen für medizinisch genutzte Bereiche einschließlich des medizinischen IT-Systems mit Isolationsüberwachung sind in DIN VDE 0100-710 festgelegt [@din-vde-0100-710].\n\n## Anwendung in Geräten\n\n| Gerät | Rolle der galvanischen Trennung |\n|---|---|\n| [[ekg-geraet]], [[patientenmonitor]], [[eeg-geraet]] | isoliertes Patientenfrontend (BF/CF), Schutz vor Defibrillationsimpulsen |\n| [[invasive-druckmessung]] | CF-Anwendungsteil mit Katheterzugang zum Herzen |\n| [[defibrillator]] | Hochspannungskreis ist vom Bediener- und Netzteil getrennt; Patientenausgang erdfrei |\n| [[hf-chirurgiegeraet]] | erdfreier HF-Ausgang verringert Streuströme auf anderen Wegen als über die [[neutralelektrode]] |\n| [[medizinisches-netzteil]] | Netztrennung mit 2 MOPP bzw. 2 MOOP je nach Anwendung |\n| [[dialysegeraet]] | Trennung von Sensorik in Flüssigkeitskreisläufen |\n\n> [!warnung] Galvanische Trennung wirkt nur, solange die Barriere intakt ist. Feuchtigkeit, Verschmutzung, beschädigte Kabel oder nicht freigegebene Fremdkomponenten (z. B. ungeprüfte USB-Netzteile an Geräten, die mit dem Patienten verbunden sind) können sie überbrücken. Geräte nur mit vom Hersteller freigegebenem Zubehör betreiben und medizinische elektrische Systeme nach [[iec-60601-1|IEC 60601-1]] bewerten.",
+  "related": [
+    "anwendungsteile",
+    "ableitstrom",
+    "schutzklassen",
+    "transformator",
+    "medizinisches-netzteil",
+    "medizinisch-genutzte-bereiche",
+    "instrumentenverstaerker",
+    "elektrische-stromwirkung",
+    "iec-60601-1"
+  ],
+  "paths": [
+    [
+      "ekg-geraet",
+      "instrumentenverstaerker",
+      "galvanische-trennung",
+      "anwendungsteile",
+      "ableitstrom"
+    ],
+    [
+      "medizinisches-netzteil",
+      "transformator",
+      "galvanische-trennung",
+      "ableitstrommessung"
+    ]
+  ],
+  "diagram": {
+    "title": "Isoliertes Patientenfrontend",
+    "caption": "Funktionsschema der Trennstellen zwischen Netz, Systemelektronik und Patient; kein konkretes Gerät.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "netz",
+        "label": "Netz 230 V",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "nt",
+        "label": "Medizinisches\nNetzteil (Trafo)",
+        "ref": "medizinisches-netzteil",
+        "kind": "process",
+        "x": 320,
+        "y": 90
+      },
+      {
+        "id": "sys",
+        "label": "Systemseite\n(Mikrocontroller)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 560,
+        "y": 90
+      },
+      {
+        "id": "dcdc",
+        "label": "Isolierter\nDC/DC-Wandler",
+        "ref": "transformator",
+        "kind": "process",
+        "x": 320,
+        "y": 260
+      },
+      {
+        "id": "iso",
+        "label": "Digitaler\nIsolator",
+        "ref": "galvanische-trennung",
+        "kind": "process",
+        "x": 560,
+        "y": 178
+      },
+      {
+        "id": "fe",
+        "label": "Patientenfrontend\n(INA + ADC)",
+        "ref": "instrumentenverstaerker",
+        "kind": "sensor",
+        "x": 790,
+        "y": 260
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 790,
+        "y": 90
+      }
+    ],
+    "edges": [
+      {
+        "from": "netz",
+        "to": "nt",
+        "kind": "power"
+      },
+      {
+        "from": "nt",
+        "to": "sys",
+        "kind": "power",
+        "label": "Kleinspannung"
+      },
+      {
+        "from": "nt",
+        "to": "dcdc",
+        "kind": "power"
+      },
+      {
+        "from": "dcdc",
+        "to": "fe",
+        "kind": "power",
+        "label": "isolierte Versorgung"
+      },
+      {
+        "from": "pat",
+        "to": "fe",
+        "kind": "signal",
+        "label": "Biosignal"
+      },
+      {
+        "from": "fe",
+        "to": "iso",
+        "kind": "data"
+      },
+      {
+        "from": "iso",
+        "to": "sys",
+        "kind": "data"
+      }
+    ]
+  },
+  "sources": [
+    "iec-60601-1",
+    "iec-62353",
+    "din-vde-0100-710",
+    "tietze-schenk-2019",
+    "horowitz-hill-2015"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

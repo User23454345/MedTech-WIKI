@@ -1,0 +1,80 @@
+{
+  "id": "herzschrittmacher",
+  "type": "device",
+  "title": "Implantierbarer Herzschrittmacher",
+  "aliases": [
+    "Schrittmacher",
+    "Pacemaker",
+    "PM",
+    "Herzschrittmacher-System",
+    "Sondenloser Schrittmacher",
+    "Leadless Pacemaker"
+  ],
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 25,
+  "domains": [
+    "kardiologie"
+  ],
+  "summary": "Implantierbare Herzschrittmacher geben elektrische Impulse an das Herz ab, wenn die körpereigene Erregungsbildung oder -leitung zu langsam ist oder ausfällt. Sie bestehen aus einem batteriebetriebenen Impulsgenerator und einer oder mehreren Elektroden; sondenlose Systeme werden als Kapsel direkt im Herzen verankert – meist im rechten Ventrikel, bei neueren Systemen auch im rechten Vorhof.",
+  "riskClass": {
+    "value": "III",
+    "evidence": "belegt",
+    "note": "Aktives implantierbares Produkt; nach [[mdr|MDR]] Anhang VIII **Regel 8** gehören aktive implantierbare Produkte und ihr Zubehör zur Klasse III.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Hauptindikationen sind symptomatische Bradykardien, etwa durch Sinusknotenerkrankung oder höhergradige AV-Blockierungen im [[erregungsleitungssystem]]. Biventrikuläre Systeme (kardiale Resynchronisationstherapie, CRT) synchronisieren zusätzlich die Kontraktion beider Ventrikel bei Herzinsuffizienz.",
+    "principle": "## Aufbau\n\nDas hermetisch dichte Titangehäuse enthält eine Lithiumbatterie mit einer Laufzeit von vielen Jahren, Wahrnehmungsverstärker, Stimulationsschaltung mit [[kondensator|Ausgangskondensator]], [[mikrocontroller]], Speicher und Telemetrie. Die Sonden werden transvenös im rechten Vorhof und/oder Ventrikel fixiert; bipolare Sonden stimulieren zwischen Spitze und Ring, unipolare gegen das Gehäuse [@kramme-2017].\n\n## Wahrnehmen und Stimulieren\n\nDer Schrittmacher erfasst die intrakardialen Signale ([[aktionspotential|Depolarisation]] als Elektrogramm im mV-Bereich), filtert sie ([[filter]]) und vergleicht sie mit einer einstellbaren Empfindlichkeit. Bleibt eine Eigenaktion innerhalb des Zeitintervalls aus, gibt er einen Rechteckimpuls definierter Amplitude und Dauer ab; die Reizschwelle wird regelmäßig gemessen, viele Geräte passen die Amplitude automatisch an. Die Betriebsart beschreibt der **NBG-Code**:\n\n| Position | Bedeutung | Beispiel DDDR |\n|---|---|---|\n| 1 | stimulierte Kammer | D = Vorhof und Ventrikel |\n| 2 | wahrgenommene Kammer | D |\n| 3 | Reaktion auf Wahrnehmung | D = Inhibition und Triggerung |\n| 4 | Frequenzadaptation | R = über Sensor (z. B. Beschleunigungssensor) |\n\n## Nachsorge und Störbeeinflussung\n\nProgrammiergeräte kommunizieren per induktiver oder funkbasierter Telemetrie ([[elektromagnetische-induktion]]); Fernnachsorge überträgt Daten automatisch. Starke elektromagnetische Felder ([[emv]]), etwa in der [[hf-chirurgiegeraet|HF-Chirurgie]] oder im [[mrt]], können Fehlwahrnehmungen auslösen; viele Systeme sind nur unter definierten Bedingungen MR-tauglich („MR-conditional“).\n\n> [!hinweis] Ein aufgelegter Magnet schaltet die meisten Schrittmacher in eine starrfrequente (asynchrone) Stimulation – das genaue Verhalten ist herstellerspezifisch."
+  },
+  "manufacturers": [
+    {
+      "ref": "medtronic",
+      "models": [
+        "Micra"
+      ],
+      "note": "Sondenloser Schrittmacher; daneben konventionelle Systeme."
+    },
+    {
+      "ref": "abbott",
+      "models": [
+        "Assurity",
+        "AVEIR"
+      ],
+      "note": "AVEIR: sondenloses System."
+    },
+    {
+      "ref": "biotronik",
+      "models": [],
+      "note": "Konventionelle Schrittmacher und Fernnachsorge."
+    },
+    {
+      "ref": "boston-scientific",
+      "models": [],
+      "note": "Konventionelle Schrittmacher und CRT-Systeme."
+    }
+  ],
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "Das Implantat selbst unterliegt keiner STK; seine Funktion wird ärztlich in der Schrittmachernachsorge kontrolliert. MPBetreibV (2025) Anlage 1 Nr. 3 erfasst externe aktive Komponenten aktiver Implantate – welche Zusatzgeräte (z. B. Programmier- oder Fernnachsorgegeräte) darunter fallen, ist anhand der Herstellerangaben zu klären. Nicht in Anlage 2 aufgeführt.",
+    "intervals": "Nachsorge nach ärztlicher Festlegung und Herstellerempfehlung (u. a. Batteriestatus, Reizschwellen, Sondenimpedanz); STK externer Komponenten, soweit pflichtig, spätestens alle 2 Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025)."
+  },
+  "related": [
+    "icd",
+    "externer-schrittmacher",
+    "erregungsleitungssystem",
+    "ekg-geraet",
+    "langzeit-ekg",
+    "emv"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mdr-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

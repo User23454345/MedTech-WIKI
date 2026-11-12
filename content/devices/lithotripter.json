@@ -1,0 +1,66 @@
+{
+  "id": "lithotripter",
+  "type": "device",
+  "title": "Extrakorporaler Stoßwellen-Lithotripter (ESWL)",
+  "aliases": [
+    "Lithotripter",
+    "ESWL",
+    "Stoßwellenlithotripsie",
+    "Nierensteinzertrümmerer",
+    "Extracorporeal Shock Wave Lithotripsy",
+    "SWL"
+  ],
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 79,
+  "domains": [
+    "nephrologie",
+    "chirurgie",
+    "gastroenterologie"
+  ],
+  "summary": "Ein Lithotripter erzeugt außerhalb des Körpers fokussierte Stoßwellen, die durch das Gewebe zu einem Nieren- oder Harnleiterstein laufen und ihn in ausscheidbare Fragmente zerlegen. Der Stein wird dabei per Röntgen und/oder Ultraschall geortet.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktive therapeutische Produkte, die Energie in potenziell gefährlicher Weise abgeben, gehören nach [[mdr|MDR]] Anhang VIII Regel 9 zur Klasse IIb [@mdr-2017]; Lithotripter werden üblicherweise so eingestuft. Verbindlich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die ESWL ist ein nicht-invasives Verfahren zur Behandlung von Harnsteinen in Niere und Harnleiter; seltener wird sie bei Gallengangs- oder Pankreassteinen eingesetzt. Gegenüber endoskopischen Verfahren entfällt der operative Zugang, allerdings sind je nach Steinlage, -größe und -härte teils mehrere Sitzungen nötig [@kramme-2017]. Siehe [[niere]].",
+    "principle": "## Stoßwellenerzeugung\n\nEine Stoßwelle ist ein kurzer akustischer Puls mit steiler Druckflanke und anschließender Zugphase ([[schallwellen]]). Drei Generatorprinzipien sind verbreitet:\n\n| Prinzip | Erzeugung | Fokussierung |\n|---|---|---|\n| elektrohydraulisch | Funkenentladung zwischen Elektroden unter Wasser | Halbellipsoid-Reflektor |\n| elektromagnetisch | Stromimpuls in einer Spule stößt eine Metallmembran ab ([[elektromagnetische-induktion]]) | akustische Linse oder Paraboloid-Reflektor |\n| piezoelektrisch | viele [[piezoelektrischer-effekt|Piezoelemente]] auf einer Kugelschale schwingen gleichzeitig | Geometrie der Kugelschale |\n\nDer Energiespeicher ist ein [[kondensator|Kondensator]], der mit [[hochspannungserzeugung|Hochspannung]] geladen und schlagartig entladen wird. Die Welle wird über ein Wasserkissen und Koppelgel nahezu reflexionsfrei in den Körper eingekoppelt, weil Wasser und Weichgewebe eine ähnliche akustische Impedanz Z = ρ · c haben. An Grenzflächen mit großem Impedanzsprung – Luft im Koppelkissen oder Darmgas – wird die Welle dagegen nahezu vollständig reflektiert; Luftblasen im Koppelbereich mindern die Wirkung deutlich.\n\n## Wirkung am Stein\n\nIm Fokus wirken Druck- und Zugspannungen auf den Stein; an der Rückseite reflektierte Zugwellen führen zu Abplatzungen (Spallation), zusätzlich erodieren kollabierende Kavitationsblasen die Oberfläche. Über viele Hundert bis einige Tausend Impulse zerfällt der Stein schrittweise. Die Impulsfolge wird meist auf etwa ein bis zwei Impulse pro Sekunde begrenzt, weil sich Kavitationsblasen zwischen den Pulsen auflösen müssen und höhere Raten die Fragmentierung eher verschlechtern; bei manchen Systemen erfolgt die Auslösung EKG-getriggert ([[ekg-geraet|EKG]]), um Herzrhythmusstörungen zu vermeiden.\n\n> [!vereinfacht] Die Energie ist im Fokus konzentriert; das durchlaufene Gewebe wird deutlich geringer belastet. Dennoch können Hämatome und Gewebeschäden auftreten, weshalb Impulszahl und Energiestufe begrenzt werden.\n\n## Ortung\n\nDie Steinortung erfolgt mit [[roentgenstrahlung|Röntgen]] (integrierter oder angekoppelter [[c-bogen|C-Bogen]]) und/oder [[ultraschallgeraet|Ultraschall]]. Sicherheitsanforderungen beschreibt [@iec-60601-2-36]."
+  },
+  "manufacturers": [
+    {
+      "ref": "siemens-healthineers",
+      "models": [],
+      "note": "historisch Lithotripsie-Systeme (Lithostar-Reihe); heute vor allem Urologie-Röntgenarbeitsplätze"
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Generatortyp, integrierte Röntgen- und Ultraschallortung, Patiententisch, Verschleißteile (Elektroden, Koppelmembranen), Servicevertrag, Strahlenschutzauflagen."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "STK: MPBetreibV (Fassung 2025) Anlage 1 – nichtimplantierbare aktive Produkte zur Erzeugung und Anwendung jeglicher Energie zur unmittelbaren Koagulation, Gewebezerstörung oder Zertrümmerung von Ablagerungen in Organen; Kontrollen nach § 12. MTK: nicht in Anlage 2 aufgeführt. Für die integrierte Röntgenortung gelten zusätzlich die Prüfpflichten des Strahlenschutzrechts ([[strlschg|StrlSchG]]/StrlSchV, [[konstanzpruefung]]).",
+    "intervals": "STK spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025); Wechsel von Verschleißteilen nach Impulszahl gemäß Herstellerangabe."
+  },
+  "related": [
+    "niere",
+    "schallwellen",
+    "piezoelektrischer-effekt",
+    "c-bogen",
+    "stk",
+    "ultraschalltherapiegeraet"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iec-60601-2-36",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

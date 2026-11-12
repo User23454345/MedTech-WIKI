@@ -1,0 +1,40 @@
+{
+  "id": "iec-60479-1",
+  "type": "standard",
+  "title": "IEC/TS 60479-1",
+  "code": "IEC/TS 60479-1",
+  "kind": "norm",
+  "fullTitle": "Wirkungen des elektrischen Stromes auf Menschen und Nutztiere – Teil 1: Allgemeine Aspekte",
+  "scope": "Beschreibt die physiologischen Wirkungen von Wechsel- und Gleichstrom auf den menschlichen Körper in Abhängigkeit von Stromstärke, Einwirkdauer, Stromweg und Körperimpedanz und liefert damit die Grundlage für Schutzmaßnahmen in anderen Normen.",
+  "aliases": [
+    "IEC 60479-1",
+    "IEC TS 60479-1",
+    "DIN IEC/TS 60479-1",
+    "VDE V 0140-479-1",
+    "Stromwirkungsnorm"
+  ],
+  "category": "normen",
+  "summary": "IEC/TS 60479-1 ist eine Technische Spezifikation, die beschreibt, wie elektrischer Strom auf den menschlichen Körper wirkt. Sie enthält Angaben zur Körperimpedanz und Zeit-Strom-Bereiche für Wahrnehmung, Muskelverkrampfung und Kammerflimmern. Sie ist keine Produktnorm, sondern die physiologische Grundlage für Grenzwerte etwa in IEC 60601-1 und in Errichtungsnormen.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC/TS 60479-1** fasst den Wissensstand darüber zusammen, wie Wechsel- und Gleichstrom auf Menschen (und Nutztiere) wirken [@iec-60479-1]. Der Zusatz **TS** kennzeichnet eine *Technische Spezifikation*: Das Dokument stellt keine Prüfanforderungen an Produkte, sondern liefert Daten und Modelle, auf die sich Normungsgremien beim Festlegen von Schutzmaßnahmen und Grenzwerten stützen. In Deutschland ist sie als Vornorm in das VDE-Vorschriftenwerk übernommen.\n\nFür die Medizintechnik ist sie die **physiologische Basis** für zwei zentrale Schutzkonzepte: die Begrenzung von [[ableitstrom|Ableitströmen]] an Geräten und die Schutzmaßnahmen der Elektroinstallation in [[medizinisch-genutzte-bereiche|medizinisch genutzten Bereichen]]. Weitere Teile der Reihe behandeln besondere Aspekte wie höhere Frequenzen und Impulsströme.\n\n## Zentrale Konzepte\n\n### Körperimpedanz\n\nWie groß der Strom bei einer Berührungsspannung wird, bestimmt die **Körperimpedanz** (`I = U / Z`, siehe [[spannung-strom-widerstand]]). Sie besteht aus den Hautimpedanzen an Ein- und Austrittsstelle und der inneren Körperimpedanz. Die Spezifikation gibt die Impedanz nicht als Einzelwert, sondern als **statistische Verteilung** an, abhängig von:\n\n- Berührungsspannung (mit steigender Spannung sinkt die Hautimpedanz),\n- Kontaktfläche und Hautzustand (trocken, nass, salzwasserfeucht),\n- Stromweg (Hand–Hand, Hand–Fuß usw.),\n- Frequenz (kapazitive Anteile der Haut).\n\n> [!vereinfacht] In Lehrbüchern wird oft mit rund 1000 Ω gerechnet. Diese Zahl ist eine grobe Orientierung; die Spezifikation zeigt, dass reale Werte je nach Bedingungen stark streuen ([[elektrische-stromwirkung]]).\n\n### Zeit-Strom-Bereiche\n\nDie Wirkungen von Wechselstrom 15–100 Hz werden in einem doppelt-logarithmischen Diagramm (Stromstärke gegen Einwirkdauer) in Bereiche eingeteilt:\n\n| Bereich | Wirkung (sinngemäß) |\n|---|---|\n| AC-1 | unterhalb der Wahrnehmungsschwelle (Linie a, 0,5 mA) bzw. Wahrnehmung möglich, meist keine Schreckreaktion |\n| AC-2 | Wahrnehmung und unwillkürliche Muskelkontraktionen, i. d. R. keine schädlichen Folgen |\n| AC-3 | starke Muskelverkrampfung, Atembeschwerden, reversible Herzrhythmusstörungen |\n| AC-4 | zusätzlich Gefahr von **Kammerflimmern**; unterteilt in AC-4.1 (Wahrscheinlichkeit bis etwa 5 %), AC-4.2 (bis etwa 50 %) und AC-4.3 (über 50 %) |\n\nFür Gleichstrom gibt es analoge Bereiche (DC-1 bis DC-4) mit generell höheren Schwellen. Die Grenzkurven zeigen: Je länger der Strom fließt, desto niedriger ist die Flimmerschwelle – besonders, wenn die Einwirkung länger als ein Herzzyklus dauert und damit die **vulnerable Phase** (T-Welle) trifft ([[erregungsleitungssystem]], [[aktionspotential]]).\n\n### Herzstromfaktor\n\nDa die Kurven für den Stromweg linke Hand – Füße gelten, führt die Spezifikation einen **Herzstromfaktor** *F* ein, mit dem andere Stromwege hinsichtlich ihrer Gefährlichkeit für das Herz umgerechnet werden können: Ein Strom *I* auf einem anderen Weg ist etwa so gefährlich wie der Strom *F · I* auf dem Referenzweg.\n\n| Stromweg | Herzstromfaktor (Richtwert) |\n|---|---|\n| linke Hand – Füße (Referenz) | 1,0 |\n| linke Hand – rechte Hand | 0,4 |\n| Brust – linke Hand | 1,5 |\n\nWege, die das Herz direkt durchqueren, sind demnach gefährlicher als der Weg Hand–Hand, bei dem sich der Strom über den Thorax verteilt.\n\n### Makroschock und Mikroschock\n\nDie Spezifikation behandelt Ströme, die über die Körperoberfläche eintreten (**Makroschock**). Gelangt Strom über einen Katheter oder eine Elektrode **direkt** ans Herz (**Mikroschock**), genügen um Größenordnungen kleinere Ströme, um Kammerflimmern auszulösen. Diese Erkenntnis erklärt, warum die Gerätenorm für herznahe Anwendungsteile besonders niedrige Grenzwerte vorsieht.\n\n> [!beispiel] Die Basisnorm [[iec-60601-1]] begrenzt den Patientenableitstrom im Normalzustand für Anwendungsteile Typ CF auf 10 µA, für Typ B und BF auf 100 µA (Wechselstrom) – ein Unterschied um den Faktor 10, der unmittelbar aus der Mikroschock-Problematik folgt ([[anwendungsteile]], [[schutzklassen]]).\n\n## Bezug zu anderen Normen\n\n| Norm | Nutzung der Erkenntnisse |\n|---|---|\n| [[iec-60601-1]] (Basisnorm der Familie IEC 60601) | Grenzwerte für Ableit- und Patientenhilfsströme, Typen B/BF/CF |\n| Ergänzungsnormen -1-x (z. B. [[iec-60601-1-11]]) | übernehmen die Grenzwerte für besondere Umgebungen |\n| Besondere Festlegungen -2-x (z. B. [[iec-60601-2-4]], [[iec-60601-2-2]]) | Defibrillationsfestigkeit, Hochfrequenzströme |\n| [[din-vde-0100-710]] | RCD, medizinisches IT-System, zusätzlicher Potentialausgleich |\n| [[iec-62353]] | Grenzwerte der Wiederholungsprüfung |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** wenden die Spezifikation selten direkt an; sie ist aber die Begründung hinter den Grenzwerten, die sie im [[iso-14971|Risikomanagement]] und bei der Typprüfung nachweisen müssen.\n\n**Betreiber und Medizintechniker:innen** benötigen das Verständnis der Stromwirkungen, um Messergebnisse der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] einzuordnen: Ein erhöhter Ableitstrom ist kein „Messwertproblem“, sondern ein Hinweis auf eine reale Gefährdung, besonders bei herznahen Anwendungen ([[ableitstrommessung]], [[stk]]).\n\n> [!warnung] Die Schwellenwerte gelten für statistische Kollektive. Einzelne Personen – insbesondere Patienten mit Kathetern, unter Narkose oder mit Vorerkrankungen – können deutlich empfindlicher reagieren.\n\n## Betroffene Geräte\n\nMittelbar alle netzbetriebenen ME-Geräte, besonders solche mit herznahen Anwendungsteilen: [[patientenmonitor]], [[invasive-druckmessung]], [[externer-schrittmacher]], [[herz-lungen-maschine]], [[ecmo]], [[iabp]], [[angiographieanlage]], [[ekg-geraet]], [[defibrillator]] sowie [[reizstromgeraet]] und [[hf-chirurgiegeraet]], die gezielt Ströme durch den Körper leiten.\n",
+  "related": [
+    "elektrische-stromwirkung",
+    "ableitstrom",
+    "anwendungsteile",
+    "schutzklassen",
+    "iec-60601-1",
+    "din-vde-0100-710",
+    "medizinisch-genutzte-bereiche",
+    "erregungsleitungssystem",
+    "ableitstrommessung",
+    "elektrische-sicherheitspruefung",
+    "reizstromgeraet",
+    "invasive-druckmessung"
+  ],
+  "sources": [
+    "iec-60479-1",
+    "iec-60601-1",
+    "webster-2010"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

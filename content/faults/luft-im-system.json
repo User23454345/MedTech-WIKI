@@ -1,0 +1,64 @@
+{
+  "id": "luft-im-system",
+  "type": "fault",
+  "title": "Luft-im-System-Alarm",
+  "aliases": [
+    "Luftalarm",
+    "Air-in-Line",
+    "Luft in der Leitung",
+    "Luftblasenalarm",
+    "Luftdetektor-Alarm"
+  ],
+  "category": "fehler",
+  "summary": "Technischer Alarm, der Luftblasen oder Luftsäulen in einer Infusions- oder Blutleitung anzeigt. Die Erkennung erfolgt meist mit einem Ultraschall-Luftblasendetektor; das Gerät stoppt die Förderung, um eine Luftembolie zu verhindern.",
+  "devices": [
+    "infusionspumpe",
+    "pca-pumpe",
+    "enterale-ernaehrungspumpe",
+    "dialysegeraet",
+    "crrt-geraet",
+    "herz-lungen-maschine",
+    "ecmo",
+    "infusionswaermer"
+  ],
+  "causes": [
+    "Unvollständig entlüftetes Infusions- oder Schlauchsystem nach dem Vorbereiten (Priming).",
+    "Leerer Infusionsbehälter oder nicht ausreichend gefüllte Tropfkammer.",
+    "Ausgasen gelöster Gase aus kalten Lösungen beim Erwärmen (z. B. direkt aus dem Kühlschrank), Mikroblasen, die sich zu größeren Blasen vereinigen.",
+    "Undichte Verbindung oder Zuspritzstelle, durch die Luft angesaugt wird – besonders bei Unterdruck vor der Pumpe.",
+    "Bei extrakorporalen Kreisläufen: Luftaufnahme an der arteriellen Nadel bzw. Kanüle, undichte Konnektoren, zu hoher Unterdruck.",
+    "Fehlalarm durch verschmutzte oder feuchte Sensorflächen, falsch eingelegten Schlauch oder nicht freigegebenes Set am [[luftblasendetektor]].",
+    "Defekter Detektor oder Auswerteelektronik (selten; zeigt sich meist im Selbsttest)."
+  ],
+  "actions": [
+    "**Förderung gestoppt lassen** und die Luft keinesfalls in Richtung Patient spülen.",
+    "Bei extrakorporalen Verfahren den Kreislauf gemäß Gebrauchsanweisung sichern (Klemmen geschlossen halten) und den Patienten auf Zeichen einer Luftembolie beobachten; bei Verdacht ärztliches Personal sofort informieren.",
+    "Luft nach Klinikstandard entfernen (z. B. über Zuspritzstelle aspirieren oder Set neu entlüften); bei Zweifeln das Set ersetzen.",
+    "Ursache suchen: Behälter leer? Tropfkammer gefüllt? Verbindungen dicht? Lösung zu kalt?",
+    "Schlauch korrekt in den Detektor einlegen, Sensorflächen nach Herstellerangabe reinigen.",
+    "Bei wiederholten Alarmen ohne sichtbare Luft das Gerät außer Betrieb nehmen und von der Medizintechnik prüfen lassen ([[funktionspruefung]]).",
+    "Den Luftdetektor niemals überbrücken oder abschalten – das wäre eine Umgehung einer Schutzfunktion."
+  ],
+  "body": "## Technischer Hintergrund\n\nGelangt Luft in das Gefäßsystem, droht eine **Luftembolie**. Das Risiko hängt von Volumen, Geschwindigkeit und Ort der Einleitung ab; im extrakorporalen Kreislauf ([[dialysegeraet|Dialyse]], [[herz-lungen-maschine]], [[ecmo]]) ist es wegen der hohen Blutflüsse besonders groß. Deshalb besitzen diese Geräte einen [[luftblasendetektor]] als Schutzeinrichtung [@iec-60601-2-24] [@iec-60601-2-16].\n\n### Erkennung mit Ultraschall\n\nDie meisten Detektoren arbeiten mit zwei [[piezoelektrischer-effekt|piezoelektrischen]] [[ultraschallwandler|Wandlern]], zwischen denen der Schlauch eingeklemmt ist. Ein Wandler sendet Ultraschall, der andere empfängt ihn. Flüssigkeit leitet den Schall gut; an einer Luftblase wird er wegen des großen **Impedanzsprungs** zwischen Flüssigkeit und Gas nahezu vollständig reflektiert. Die Empfangsamplitude bricht ein [@webster-2010].\n\n> [!vereinfacht] Die akustische Impedanz Z = ρ · c von Luft ist um Größenordnungen kleiner als die von Wasser. An der Grenzfläche wird deshalb fast die gesamte Schallenergie reflektiert – eine Blase wirkt für den Empfänger wie eine „Wand“. Grundlagen unter [[schallwellen]].\n\nDie Auswertung erfolgt im [[mikrocontroller]]: Aus Dauer des Signaleinbruchs und Fördergeschwindigkeit wird die Größe der Blase abgeschätzt. Typische Kriterien sind\n\n- eine **Einzelblasengröße** oberhalb einer Schwelle und\n- ein **kumuliertes Luftvolumen** vieler kleiner Blasen innerhalb eines Zeitfensters.\n\nDie konkreten Schwellwerte sind herstellerspezifisch und teils einstellbar. Sehr kleine Mikroblasen werden nicht zuverlässig erfasst.\n\n### Reaktion des Geräts\n\n| Gerät | typische Reaktion |\n|---|---|\n| [[infusionspumpe]] | Förderung stoppt, technischer Alarm |\n| [[dialysegeraet]], [[crrt-geraet]] | Blutpumpe stoppt, venöse Schlauchklemme schließt, Rückfluss in den Patienten wird unterbunden [@daugirdas-2015] |\n| [[herz-lungen-maschine]], [[ecmo]] | Alarm, je nach System Stopp der Pumpe bzw. Klemme; Luftfallen und Filter als zusätzliche Barriere |\n\nWegen der unmittelbaren Gefährdung wird der Alarm in extrakorporalen Systemen in der Regel mit **hoher Priorität** nach [[iec-60601-1-8]] signalisiert; die Einstufung legt der Hersteller im [[iso-14971|Risikomanagement]] fest [@iec-60601-1-8].\n\n> [!hinweis] [[spritzenpumpe|Spritzenpumpen]] besitzen meist keinen Luftdetektor; hier ist sorgfältiges Entlüften der Spritze und Leitung die wesentliche Schutzmaßnahme.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Alarm, Luft sichtbar | Behälter, Tropfkammer, Verbindungen | Luft nach Standard entfernen, Behälter wechseln |\n| Wiederkehrende kleine Blasen | Temperatur der Lösung, Ausgasen | Lösung temperieren lassen, Set neu entlüften |\n| Alarm, keine Luft sichtbar | Schlauchsitz im Detektor, Verschmutzung, Set-Typ | Neu einlegen, reinigen, freigegebenes Set verwenden |\n| Luft in der Blutleitung (Dialyse) | Nadellage, Konnektoren, arterieller Unterdruck | Nach Gebrauchsanweisung entlüften, Ursache an der Punktionsstelle klären |\n| Alarm trotz neuer Sets, mehrere Anwender | Detektorempfindlichkeit, Selbsttest | Gerät zur Medizintechnik, Detektor mit Prüfmittel testen |\n\n## Prävention\n\n- Sets vollständig entlüften, Tropfkammer nach Herstellerangabe füllen (typisch etwa ein Drittel bis zur Hälfte), Behälter rechtzeitig wechseln.\n- Kalte Lösungen vor der Gabe temperieren lassen; bei [[infusionswaermer|Infusionswärmern]] Luftabscheider nach Herstellerangabe nutzen.\n- Luer-Lock-Verbindungen fest verschließen, nicht benutzte Zugänge verschließen.\n- Funktion des Luftdetektors im Rahmen von [[stk]] und [[funktionspruefung]] nach Herstellervorgabe prüfen [@mpbetreibv].\n\n> [!hinweis] Herstellerspezifische Fehlercodes, Detektionsschwellen und Testverfahren stehen in den Service-Unterlagen (siehe [[fehlercodes]]).",
+  "related": [
+    "luftblasendetektor",
+    "okklusionsalarm",
+    "infusionspumpe",
+    "dialysegeraet",
+    "schallwellen",
+    "piezoelektrischer-effekt",
+    "alarmsystem",
+    "iec-60601-2-16",
+    "iec-60601-2-24"
+  ],
+  "sources": [
+    "iec-60601-2-24",
+    "iec-60601-2-16",
+    "iec-60601-1-8",
+    "webster-2010",
+    "daugirdas-2015",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

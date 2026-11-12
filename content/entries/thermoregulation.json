@@ -1,0 +1,166 @@
+{
+  "id": "thermoregulation",
+  "type": "term",
+  "title": "Thermoregulation",
+  "aliases": [
+    "Temperaturregulation",
+    "Wärmeregulation",
+    "thermoregulation",
+    "Körperkerntemperatur",
+    "Körpertemperatur",
+    "Wärmehaushalt",
+    "Hypothermie",
+    "Hyperthermie",
+    "Fieber",
+    "thermoneutrale Umgebung"
+  ],
+  "category": "anatomie",
+  "summary": "Physiologischer Regelkreis, der die Körperkerntemperatur über Hautdurchblutung, Schwitzen und Wärmebildung um etwa 37 °C konstant hält. Inkubatoren, Wärmesysteme, Infusionswärmer und Temperaturmanagementsysteme unterstützen oder ersetzen ihn, wenn er bei Neugeborenen, in Narkose oder bei kritisch Kranken versagt.",
+  "body": "## Überblick\n\nDer Mensch ist **homoiotherm**: Er hält seine Körperkerntemperatur trotz wechselnder Umgebungsbedingungen und Wärmeproduktion in einem engen Bereich um etwa 37 °C [@schmidt-lang-2019] [@guyton-2021]. Diese **Thermoregulation** ist ein biologischer [[regelkreis|Regelkreis]] mit Temperaturfühlern, einem zentralen Regler im Hypothalamus und mehreren Stellgliedern. Viele Medizingeräte greifen in diesen Regelkreis ein oder ersetzen ihn, wenn er versagt – vom [[inkubator|Inkubator]] über das [[patientenwaermesystem|Patientenwärmesystem]] bis zum [[hypothermiegeraet|Temperaturmanagementsystem]].\n\n## Kerntemperatur und Schale\n\nDer Körper lässt sich vereinfacht in einen warmen **Kern** (Rumpf- und Kopfinneres) und eine **Schale** (Haut, Extremitäten) einteilen. Die Kerntemperatur ist streng geregelt, die Schalentemperatur variiert je nach Umgebung und Durchblutung um mehrere Kelvin. Die Kerntemperatur schwankt tageszeitlich (zirkadian) um etwa 0,5–1 K.\n\n| Messort | Bezug zur Kerntemperatur | typischer Einsatz |\n|---|---|---|\n| Pulmonalarterie, Ösophagus (distal), Harnblase | sehr kernnah | Intensivmedizin, Narkose, gezieltes Temperaturmanagement |\n| rektal | kernnah, aber träge | Neonatologie, Hypothermiebehandlung |\n| Trommelfell (Infrarot) | kernnah bei korrekter Technik | Station, Ambulanz |\n| oral, axillär, Stirn | Schalennähe, anwendungsabhängig | Screening |\n\n> [!hinweis] Die Güte eines Messorts hängt stark von Messtechnik und Anwendung ab. Anforderungen an klinische [[thermometer|Thermometer]] regelt ISO 80601-2-56 [@iso-80601-2-56]; Grundlagen zu Fühlern siehe [[temperatursensor|Temperatursensor]].\n\n## Wärmebilanz\n\nIm thermischen Gleichgewicht gilt\n\n`S = M − W − (R + C + K + E) = 0`\n\nmit Wärmespeicherung `S`, Stoffwechsel-Wärmeproduktion `M`, äußerer Arbeit `W` und den Wärmeabgaben durch Strahlung `R`, Konvektion `C`, Leitung (Konduktion) `K` und Verdunstung `E`. Ein ruhender Erwachsener setzt typischerweise grob 80–100 W Wärme frei (Größenordnung des Ruheumsatzes) [@guyton-2021].\n\n| Mechanismus | physikalische Grundlage | Bedeutung |\n|---|---|---|\n| Strahlung | Stefan-Boltzmann, `P = ε·σ·A·(T_H⁴ − T_U⁴)` | in Ruhe bei Raumtemperatur der größte Anteil |\n| Konvektion | `P = h·A·(T_H − T_L)` | stark abhängig von Luftbewegung |\n| Leitung | Kontakt zu Unterlage | klein, außer bei kalten/warmen Auflagen |\n| Verdunstung | Verdampfungswärme von Wasser | einziger Weg, wenn Umgebung wärmer als Haut ist |\n\n> [!vereinfacht] Die Bilanzgleichung fasst die Mechanismen aus [[waermeuebertragung|Wärmeübertragung]] zusammen; prozentuale Anteile hängen stark von Umgebungstemperatur, Luftfeuchte, Bekleidung und Aktivität ab [@guyton-2021] [@schmidt-lang-2019].\n\nDen Wärmetransport im Gewebe einschließlich der Wärmeabfuhr durch die Durchblutung beschreibt die **Bioheat-Gleichung** nach Pennes [@pennes-1948]:\n\n`ρ·c·∂T/∂t = k·∇²T + ω_b·ρ_b·c_b·(T_a − T) + q_m`\n\nDer Perfusionsterm erklärt, warum gut durchblutetes Gewebe lokale Erwärmung (z. B. durch [[hf-chirurgiegeraet|HF-Strom]] oder Ultraschall) schneller abführt.\n\n## Der Regelkreis\n\n| Regelkreis-Element | physiologische Entsprechung |\n|---|---|\n| Regelgröße | Körperkerntemperatur |\n| Messglieder | zentrale (Hypothalamus, Rückenmark) und periphere Thermorezeptoren der [[haut|Haut]] |\n| Regler | Hypothalamus (präoptische Region) mit Sollwert |\n| Stellglieder | Hautdurchblutung (Vasokonstriktion/-dilatation), Schwitzen, Kältezittern, zitterfreie Thermogenese, Verhalten |\n| Störgrößen | Umgebungstemperatur, Arbeit, Fieber, Narkose |\n\nDie Steuerung der Stellglieder läuft über das autonome [[nervensystem|Nervensystem]]. Bei **Fieber** wird der Sollwert durch Pyrogene verstellt – der Körper heizt aktiv auf. Bei **Hyperthermie** (z. B. Hitzschlag) ist der Sollwert normal, aber die Wärmeabgabe reicht nicht aus.\n\n> [!vereinfacht] Die Darstellung als einfacher Regelkreis mit festem Sollwert ist ein Modell. Physiologisch existieren für Wärmeabgabe und Wärmebildung unterschiedliche Schwellen; dazwischen liegt eine „Interthreshold-Zone“, in der keine aktive Gegenregulation stattfindet [@schmidt-lang-2019].\n\n## Besondere Patientengruppen\n\n### Neugeborene\n\nNeugeborene haben ein großes Verhältnis von Oberfläche zu Volumen, wenig isolierendes Fett und eine unreife Haut mit hohem Verdunstungsverlust. Sie können nicht zittern, sondern bilden Wärme vor allem zitterfrei im braunen Fettgewebe. Ziel ist eine **thermoneutrale Umgebung**, in der der Sauerstoffverbrauch für die Wärmebildung minimal ist [@who-thermal-1997]. Technisch umgesetzt wird das im [[inkubator|Inkubator]] (Luft- oder Hauttemperaturregelung, Befeuchtung) und im [[waermebett|Wärmebett]] mit Strahlungsheizer; die besonderen Sicherheitsanforderungen regeln IEC 60601-2-19 für Säuglingsinkubatoren [@iec-60601-2-19] und IEC 60601-2-21 für Säuglings-Wärmestrahler [@iec-60601-2-21].\n\n### Patienten in Narkose\n\nAllgemein- und Regionalanästhesie schwächen die Gegenregulation: Die Schwelle für Vasokonstriktion und Zittern sinkt, durch Vasodilatation verteilt sich Kernwärme in die Peripherie (**Umverteilungshypothermie**). Perioperative Hypothermie (Kerntemperatur unter 36 °C) erhöht das Risiko für Wundinfektionen, Gerinnungsstörungen und kardiale Komplikationen [@awmf-s3-perioperative-hypothermie].\n\n> [!belegt] Die S3-Leitlinie zur Vermeidung perioperativer Hypothermie empfiehlt u. a. Vorwärmen, aktive Wärmung mit Warmluftsystemen und die Erwärmung größerer Infusions- und Transfusionsvolumina [@awmf-s3-perioperative-hypothermie].\n\n> [!beispiel] 1 l Infusionslösung mit 20 °C muss auf 37 °C erwärmt werden: Q = m·c·ΔT ≈ 1 kg · 4,2 kJ/(kg·K) · 17 K ≈ 71 kJ. Das entspricht bei 80 W Wärmeproduktion rund 15 Minuten Stoffwechselwärme – ein Grund für [[infusionswaermer|Blut- und Infusionswärmer]].\n\n### Therapeutische Temperaturkontrolle\n\nNach Herz-Kreislauf-Stillstand wird die Körpertemperatur gezielt kontrolliert, insbesondere wird Fieber vermieden. [[hypothermiegeraet|Temperaturmanagementsysteme]] regeln über Oberflächenpads oder intravasale Katheter die Kerntemperatur – technisch ein geschlossener Regelkreis mit Kerntemperaturfühler als Istwertgeber. Auch die [[herz-lungen-maschine|Herz-Lungen-Maschine]] und die [[ecmo|ECMO]] enthalten Wärmetauscher, über die Bluttemperatur direkt eingestellt wird.\n\n## Anwendung in Geräten\n\n| Gerät | Eingriff in die Wärmebilanz |\n|---|---|\n| [[inkubator|Inkubator]] | Konvektion, Feuchte (reduziert Verdunstung) |\n| [[waermebett|Wärmebett]] | Strahlung |\n| [[patientenwaermesystem|Patientenwärmesystem]] | Konvektion (Warmluft) oder Leitung (Matten) [@iec-80601-2-35] |\n| [[infusionswaermer|Infusionswärmer]] | Wärmezufuhr über Flüssigkeiten |\n| [[hypothermiegeraet|Temperaturmanagement]] | Leitung über Pads oder Blutkontakt |\n| [[atemgasbefeuchter|Atemgasbefeuchter]] | verringert respiratorischen Wärme- und Feuchteverlust |\n| [[thermometer|Thermometer]], [[temperatursensor|Temperatursensor]] | Istwerterfassung |\n\nAllen gemeinsam sind [[heizelement|Heizelemente]] oder Wärmetauscher, eine Temperaturregelung und eine unabhängige Übertemperaturabschaltung, weil die Haut eines sedierten Patienten nicht vor Verbrennung warnt.\n\n## Bedeutung in der Medizintechnik\n\nThermoregulation verbindet Physiologie, [[waermeuebertragung|Wärmeübertragung]] und Regelungstechnik. Wer versteht, über welche Pfade ein Patient Wärme verliert, kann die Wirksamkeit eines Wärmegeräts einschätzen, Messwerte unterschiedlicher Messorte interpretieren und Fehlerbilder wie eine falsch platzierte Hauttemperatursonde am Inkubator erkennen. Fachlich relevant ist das vor allem in [[neonatologie|Neonatologie]], [[anaesthesiologie|Anästhesiologie]] und [[intensivmedizin|Intensivmedizin]].\n",
+  "related": [
+    "waermeuebertragung",
+    "regelkreis",
+    "inkubator",
+    "waermebett",
+    "patientenwaermesystem",
+    "infusionswaermer",
+    "hypothermiegeraet",
+    "thermometer",
+    "temperatursensor",
+    "heizelement",
+    "haut",
+    "neonatologie"
+  ],
+  "paths": [
+    [
+      "thermoregulation",
+      "inkubator",
+      "heizelement",
+      "temperatursensor",
+      "regelkreis"
+    ],
+    [
+      "thermoregulation",
+      "waermeuebertragung",
+      "patientenwaermesystem"
+    ],
+    [
+      "thermoregulation",
+      "hypothermiegeraet",
+      "regelkreis"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021",
+    "pennes-1948",
+    "who-thermal-1997",
+    "awmf-s3-perioperative-hypothermie",
+    "iso-80601-2-56",
+    "iec-60601-2-19",
+    "iec-80601-2-35",
+    "iec-60601-2-21"
+  ],
+  "diagram": {
+    "title": "Thermoregulation als Regelkreis",
+    "caption": "Vereinfachtes Blockschaltbild mit Eingriffspunkten medizinischer Geräte.",
+    "width": 900,
+    "height": 380,
+    "nodes": [
+      {
+        "id": "rez",
+        "label": "Thermorezeptoren\n(Haut, Kern)",
+        "ref": "haut",
+        "kind": "sensor",
+        "x": 110,
+        "y": 90
+      },
+      {
+        "id": "hyp",
+        "label": "Hypothalamus\n(Sollwert, Regler)",
+        "ref": "nervensystem",
+        "kind": "control",
+        "x": 340,
+        "y": 90
+      },
+      {
+        "id": "stell",
+        "label": "Stellglieder:\nGefäße, Schweiß, Zittern",
+        "kind": "actuator",
+        "x": 590,
+        "y": 90,
+        "w": 180
+      },
+      {
+        "id": "kern",
+        "label": "Körperkern-\ntemperatur",
+        "kind": "patient",
+        "x": 810,
+        "y": 200
+      },
+      {
+        "id": "stoer",
+        "label": "Störgrößen:\nUmgebung, Narkose",
+        "kind": "source",
+        "x": 590,
+        "y": 300,
+        "w": 170
+      },
+      {
+        "id": "waerm",
+        "label": "Wärmesystem /\nInkubator",
+        "ref": "patientenwaermesystem",
+        "kind": "actuator",
+        "x": 340,
+        "y": 300
+      },
+      {
+        "id": "sens",
+        "label": "Temperatur-\nsensor",
+        "ref": "temperatursensor",
+        "kind": "sensor",
+        "x": 110,
+        "y": 300
+      }
+    ],
+    "edges": [
+      {
+        "from": "rez",
+        "to": "hyp",
+        "kind": "signal",
+        "label": "Istwert"
+      },
+      {
+        "from": "hyp",
+        "to": "stell",
+        "kind": "signal",
+        "label": "Nerven"
+      },
+      {
+        "from": "stell",
+        "to": "kern",
+        "kind": "energy",
+        "label": "Wärmeabgabe/-bildung"
+      },
+      {
+        "from": "stoer",
+        "to": "kern",
+        "kind": "energy"
+      },
+      {
+        "from": "waerm",
+        "to": "kern",
+        "kind": "energy",
+        "label": "Wärmezufuhr"
+      },
+      {
+        "from": "sens",
+        "to": "waerm",
+        "kind": "signal",
+        "label": "Regelung"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

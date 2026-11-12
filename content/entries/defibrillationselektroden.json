@@ -1,0 +1,152 @@
+{
+  "id": "defibrillationselektroden",
+  "type": "term",
+  "title": "Defibrillationselektroden",
+  "aliases": [
+    "Defi-Pads",
+    "Klebeelektroden",
+    "Multifunktionselektroden",
+    "Defibrillation pads",
+    "Paddles",
+    "Hardpaddles",
+    "Schockelektroden"
+  ],
+  "category": "komponenten",
+  "summary": "Elektroden, über die der Defibrillationsimpuls transthorakal zum Herzen geleitet wird – als selbstklebende Einmal-Elektroden oder Handpaddles. Sie bestimmen über Fläche und Kontakt die transthorakale Impedanz und damit den Strom, leiten zugleich das EKG ab und dienen teils der transkutanen Stimulation.",
+  "body": "## Begriff\n\n**Defibrillationselektroden** leiten den Defibrillationsimpuls eines [[defibrillator|Defibrillators]] über die Brustwand zum Herzen. Sie müssen in wenigen Millisekunden einen Strom von einigen zehn Ampere übertragen, ohne die Haut zu verbrennen, und gleichzeitig das [[ekg-elektrode|EKG]] für die Rhythmusanalyse ableiten. Man unterscheidet\n\n* **selbstklebende Einmal-Elektroden** (*pads*, Klebeelektroden, Multifunktionselektroden) und\n* **Hardpaddles** (Handelektroden aus Metall, mit Gel oder Gelpads angewendet) [@kramme-2017] [@webster-2010].\n\nIn der Notfallmedizin und bei [[defibrillator|AED]] haben sich Klebeelektroden weitgehend durchgesetzt; sie erlauben eine Defibrillation ohne direkten Kontakt des Anwenders zum Patienten und ermöglichen zusätzlich die transkutane Stimulation ([[externer-schrittmacher|externer Schrittmacher]]) [@erc-2021].\n\n## Aufbau einer Klebeelektrode\n\n| Schicht | Aufgabe |\n|---|---|\n| Schaumstoff- oder Folienträger | Mechanischer Träger, Isolation nach außen |\n| Leitfolie (z. B. Zinn- oder Silber-/Silberchloridschicht, herstellerabhängig) | Verteilt den Strom über die Fläche |\n| Leitfähiges Hydrogel | Stellt den elektrolytischen Kontakt zur Haut her, füllt Unebenheiten aus |\n| Isolierender Klebe­rand | Verhindert Stromfluss am Rand und Kurzschluss über die Haut |\n| Kabel mit Stecker (oft vorkonnektiert) | Verbindung zum Gerät, gerätespezifische Kodierung |\n| Schutzfolie und gasdichte Verpackung | Schützen das Gel vor dem Austrocknen; Haltbarkeitsdatum |\n\n## Elektrische Grundlagen\n\n### Transthorakale Impedanz\n\nDer Strom durch das Herz hängt vom Gesamtwiderstand des Stromwegs ab, der **transthorakalen Impedanz** (TTI). Sie setzt sich aus Elektroden-Haut-Übergang, Brustwand, Lunge und Herz zusammen und liegt bei Erwachsenen typischerweise im Bereich von etwa 50 bis 150 Ω [@webster-2010]. Einflussfaktoren:\n\n| Faktor | Wirkung |\n|---|---|\n| Elektrodengröße | Größere Fläche → geringere Impedanz und geringere Stromdichte |\n| Kontakt (Gel, Haare, Feuchtigkeit) | Schlechter Kontakt erhöht die Impedanz und das Risiko von Hautverbrennungen |\n| Atemlage | In Exspiration geringere Impedanz (weniger Luft im Thorax) |\n| Wiederholte Schocks | Impedanz sinkt geringfügig |\n\n### Energie und Strom\n\nDer Defibrillator speichert die Energie in einem [[kondensator|Kondensator]]:\n\n`E = ½ · C · U²`\n\nEntscheidend für den Therapieerfolg ist jedoch der **Strom** durch das Myokard, nach dem ohmschen Gesetz ([[spannung-strom-widerstand]]) `I = U / R`. Bei gleicher Energie fließt bei hoher Impedanz weniger Strom. Biphasische Defibrillatoren messen deshalb die Impedanz über die Elektroden (häufig mit einem kleinen Messstrom vor dem Schock) und passen Spannung, Pulsdauer oder Kurvenform an (**Impedanzkompensation**) [@kramme-2017] [@iec-60601-2-4].\n\n> [!beispiel] Bei 1 500 V Anfangsspannung und 75 Ω TTI ergibt sich ein Spitzenstrom von 20 A, bei 150 Ω nur 10 A. Die Werte sind didaktische Größenordnungen, keine Daten eines bestimmten Geräts.\n\n### Stromdichte und Verbrennungen\n\nWie bei der [[neutralelektrode|Neutralelektrode]] bestimmt die Stromdichte `J = I / A` die thermische Belastung der Haut ([[joulesche-waerme]]). Am Rand der Elektrode ist die Stromdichte am höchsten; deshalb sind kleine Rötungen am Rand nach Defibrillation häufig. Lufteinschlüsse unter der Elektrode reduzieren die wirksame Fläche und erhöhen lokal die Stromdichte.\n\n## Positionierung\n\n> [!belegt] Die Leitlinien des European Resuscitation Council empfehlen beim Erwachsenen die **anterolaterale** Position: eine Elektrode rechts unterhalb des Schlüsselbeins, die andere links in der mittleren Axillarlinie in Höhe der V6-Position; die **anteroposteriore** Position ist eine Alternative [@erc-2021] [@erc-2025-als].\n\n| Situation | Hinweis |\n|---|---|\n| Implantierter [[herzschrittmacher|Schrittmacher]] oder [[icd|ICD]] | Abstand der Elektrode zum Aggregat halten (Leitlinienempfehlung beachten) |\n| Kinder | Kinderelektroden bzw. Energiereduktion nach Herstellerangabe und Leitlinie; ggf. anteroposteriore Anlage |\n| Starke Behaarung | Schnell rasieren, falls ohne Verzögerung möglich |\n| Nasse Haut | Brustkorb abtrocknen |\n| Transdermale Pflaster | Entfernen, nicht über Pflaster kleben |\n\n[@erc-2021]\n\n## Weitere Funktionen\n\nMultifunktionselektroden dienen zugleich als EKG-Ableitung für die Rhythmusanalyse des AED und für das Monitoring, als Stimulationselektroden für die transkutane Schrittmachertherapie sowie bei manchen Systemen zur Messung der Impedanzänderung durch Thoraxkompressionen (Feedback zur Herzdruckmassage). Die Ausstattung ist gerätespezifisch [@erc-2021].\n\n> [!warnung] Elektroden sind nur mit den vom Hersteller freigegebenen Geräten zu verwenden. Abgelaufene oder beschädigte Elektroden (ausgetrocknetes Gel, beschädigte Verpackung) dürfen nicht eingesetzt werden, weil hohe Impedanz und schlechte Haftung die Wirksamkeit mindern und Verbrennungen verursachen können.\n\n## Prüfung und Betrieb\n\n| Maßnahme | Inhalt |\n|---|---|\n| Regelmäßige Sichtkontrolle | Verfallsdatum, Unversehrtheit der Verpackung, Vollständigkeit (inkl. Ersatzsatz) |\n| Gerätetest | Viele Geräte erkennen angeschlossene Elektroden und prüfen deren Zustand; Testschock nur über Prüflast bzw. Testadapter |\n| [[stk|Sicherheitstechnische Kontrolle]] | Defibrillatoren unterliegen der STK nach § 12 i. V. m. Anlage 1 [[mpbetreibv|MPBetreibV]]; dabei wird die abgegebene Energie an einer Prüflast gemessen [@mpbetreibv] |\n| [[elektrische-sicherheitspruefung|Elektrische Sicherheit]] | Elektroden und Patientenkabel bilden das [[anwendungsteile|Anwendungsteil]] des Defibrillators; Isolation und Patientenableitstrom werden nach [[iec-62353|IEC 62353]] geprüft |\n\nProbleme mit Elektroden zeigen sich häufig als Alarm „Elektroden prüfen“ oder als gestörtes EKG; Ursachen und Maßnahmen beschreibt das Fehlerbild [[elektrodenproblem]].\n\n## Anwendung in Geräten\n\n| Gerät | Rolle |\n|---|---|\n| [[defibrillator]] | Abgabe des Schocks, EKG-Analyse, Impedanzmessung |\n| [[externer-schrittmacher]] | Transkutane Stimulation über großflächige Klebeelektroden |\n| [[thoraxkompressionsgeraet]] | Defibrillation während laufender mechanischer Reanimation über Klebeelektroden |\n| [[patientenmonitor]] | Monitor-Defibrillator-Kombinationen; Anzeige des Elektroden-EKG |\n| [[icd]] | Intern: Schockelektroden auf der Sonde – anderes Prinzip, gleiche Physik |\n\n## Bedeutung in der Medizintechnik\n\nAn der Defibrillationselektrode treffen [[elektrotechnik]] (Kondensatorentladung, Impedanz), Physiologie ([[erregungsleitungssystem]], [[haut]]) und Notfallorganisation aufeinander. Die Elektrode ist das schwächste Glied der Kette: Ein perfekt gewarteter Defibrillator nutzt nichts, wenn die Elektroden abgelaufen sind oder falsch kleben [@kramme-2017].\n",
+  "related": [
+    "defibrillator",
+    "externer-schrittmacher",
+    "kondensator",
+    "elektrodenproblem",
+    "neutralelektrode",
+    "ekg-elektrode",
+    "iec-60601-2-4",
+    "notfallmedizin",
+    "erregungsleitungssystem"
+  ],
+  "paths": [
+    [
+      "defibrillator",
+      "defibrillationselektroden",
+      "kondensator",
+      "spannung-strom-widerstand"
+    ],
+    [
+      "defibrillationselektroden",
+      "elektrodenproblem"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "webster-2010",
+    "erc-2021",
+    "erc-2025-als",
+    "iec-60601-2-4",
+    "mpbetreibv"
+  ],
+  "diagram": {
+    "title": "Strompfad der Defibrillation",
+    "caption": "Funktionsschema: Impedanzmessung und Kurvenformsteuerung passen den Impuls an den Patienten an.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "akku",
+        "label": "Akku /\nHochspannungslader",
+        "ref": "hochspannungserzeugung",
+        "kind": "source",
+        "x": 100,
+        "y": 70
+      },
+      {
+        "id": "kond",
+        "label": "Kondensator",
+        "ref": "kondensator",
+        "kind": "process",
+        "x": 310,
+        "y": 70
+      },
+      {
+        "id": "brk",
+        "label": "Schaltbrücke\n(biphasisch)",
+        "kind": "actuator",
+        "x": 520,
+        "y": 70
+      },
+      {
+        "id": "el",
+        "label": "Klebeelektroden",
+        "ref": "defibrillationselektroden",
+        "kind": "process",
+        "x": 730,
+        "y": 70
+      },
+      {
+        "id": "pat",
+        "label": "Thorax / Herz",
+        "kind": "patient",
+        "x": 730,
+        "y": 230
+      },
+      {
+        "id": "imp",
+        "label": "Impedanz- und\nEKG-Messung",
+        "ref": "messkette",
+        "kind": "sensor",
+        "x": 520,
+        "y": 230
+      },
+      {
+        "id": "ctl",
+        "label": "Steuerung\n(Kurvenform)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 310,
+        "y": 230
+      }
+    ],
+    "edges": [
+      {
+        "from": "akku",
+        "to": "kond",
+        "kind": "power",
+        "label": "Laden"
+      },
+      {
+        "from": "kond",
+        "to": "brk",
+        "kind": "power"
+      },
+      {
+        "from": "brk",
+        "to": "el",
+        "kind": "power",
+        "label": "Impuls"
+      },
+      {
+        "from": "el",
+        "to": "pat",
+        "kind": "power"
+      },
+      {
+        "from": "pat",
+        "to": "imp",
+        "kind": "signal"
+      },
+      {
+        "from": "imp",
+        "to": "ctl",
+        "kind": "signal",
+        "label": "TTI, EKG"
+      },
+      {
+        "from": "ctl",
+        "to": "brk",
+        "kind": "signal"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

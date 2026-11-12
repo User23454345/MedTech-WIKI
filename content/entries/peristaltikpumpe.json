@@ -1,0 +1,159 @@
+{
+  "id": "peristaltikpumpe",
+  "type": "term",
+  "title": "Peristaltikpumpe",
+  "aliases": [
+    "Schlauchpumpe",
+    "Rollenpumpe",
+    "Rollerpumpe",
+    "Peristaltic pump",
+    "Roller pump",
+    "Linearperistaltik",
+    "Fingerpumpe",
+    "Blutpumpe"
+  ],
+  "category": "komponenten",
+  "summary": "Verdrängerpumpe, die eine Flüssigkeit durch wanderndes Abquetschen eines elastischen Schlauchs fördert, ohne dass das Medium die Mechanik berührt. Sie dient als Blutpumpe in Dialyse und Herz-Lungen-Maschine und als Fördersystem volumetrischer Infusionspumpen.",
+  "body": "## Begriff\n\nEine **Peristaltikpumpe** (Schlauchpumpe, englisch *peristaltic pump*) fördert eine Flüssigkeit, indem sie einen elastischen Schlauch von außen abquetscht und die Quetschstelle in Förderrichtung weiterbewegt – ähnlich der peristaltischen Bewegung des Darms. Das Fördermedium berührt nur den Schlauch, nie die Pumpenmechanik. Diese Eigenschaft macht sie zur Standardpumpe für sterile Einmalsysteme und für Blut in [[dialysegeraet|Dialysegeräten]], [[herz-lungen-maschine|Herz-Lungen-Maschinen]] und [[infusionspumpe|Infusionspumpen]] [@kramme-2017] [@daugirdas-2015].\n\n## Bauformen\n\n| Bauform | Prinzip | Typischer Einsatz |\n|---|---|---|\n| Rotationsperistaltik (Rollenpumpe) | Rotor mit zwei oder mehr Rollen drückt den Schlauch gegen ein kreisbogenförmiges Bett | Blutpumpe bei Dialyse und CRRT, Rollerpumpen der Herz-Lungen-Maschine, enterale Ernährung |\n| Linearperistaltik (Fingerpumpe) | Nockenwelle bewegt eine Reihe von Fingern (Lamellen) wellenförmig gegen den Schlauch | Volumetrische Infusionspumpen |\n| Mikroperistaltik | Miniaturisierte Rollen- oder Fingerpumpen | Laboranalysatoren, Dosiermodule |\n\nIn beiden Grundformen ist an mindestens einer Stelle der Schlauch vollständig verschlossen. Dadurch verhindert die Pumpe im Stillstand einen freien Durchfluss (*free flow*) – ein wichtiger Sicherheitsaspekt bei Infusionen.\n\n## Funktionsprinzip und Förderleistung\n\n### Verdrängungsprinzip\n\nZwischen zwei Quetschstellen wird ein Flüssigkeitsvolumen eingeschlossen und in Förderrichtung transportiert. Hinter der vorauslaufenden Quetschstelle stellt sich der Schlauch durch seine Elastizität wieder auf und saugt neue Flüssigkeit an.\n\nFür eine Rollenpumpe gilt näherungsweise:\n\n`Q = V_U · n · η_vol`\n\nmit dem pro Umdrehung verdrängten Volumen `V_U ≈ A_i · L_wirk` (Schlauchquerschnitt `A_i = π · d_i² / 4`, wirksame Schlauchlänge pro Umdrehung L_wirk), der Drehzahl n und dem volumetrischen Wirkungsgrad η_vol < 1 [@daugirdas-2015].\n\n> [!beispiel] Ein Blutpumpensegment habe einen Innendurchmesser von 8 mm (A_i ≈ 0,50 cm²) und eine wirksame Länge von 20 cm pro Umdrehung. Dann ist V_U ≈ 10 ml. Bei n = 30 min⁻¹ ergibt sich theoretisch Q ≈ 300 ml/min. Die Zahlen sind beispielhaft; reale Geräte verwenden für jedes Schlauchsegment eine vom Hersteller hinterlegte Kalibrierung.\n\n### Einflüsse auf die Genauigkeit\n\nDer volumetrische Wirkungsgrad hängt ab von:\n\n* **Ansaugdruck:** Ein stark negativer Druck vor der Pumpe (z. B. bei schlecht laufendem Gefäßzugang in der Dialyse) verhindert die vollständige Wiederaufrichtung des Schlauchs – der tatsächliche Blutfluss liegt dann unter dem angezeigten [@daugirdas-2015].\n* **Schlauchmaterial und -alterung:** Elastizität, Wandstärke und Toleranzen bestimmen das verdrängte Volumen; lange Laufzeiten führen zu Ermüdung des Segments.\n* **Okklusion:** Ist der Schlauch nicht vollständig verschlossen, strömt Flüssigkeit zurück (Unterokklusion); zu starke Quetschung erhöht die mechanische Belastung von Blut und Schlauch (Überokklusion).\n* **Gegendruck:** Hoher Druck hinter der Pumpe begünstigt bei unvollständiger Okklusion einen Rückfluss an der Quetschstelle und weitet den Schlauch auf der Druckseite auf; beides verringert die effektive Förderung.\n\n> [!belegt] Die Partikularnorm [[iec-60601-2-24|IEC 60601-2-24]] legt Prüfungen zur Fördergenauigkeit von Infusionspumpen fest – einschließlich der Darstellung als Trompetenkurve und der Prüfung bei unterschiedlichen Gegendrücken; für Blutpumpen in Dialysegeräten gilt [[iec-60601-2-16|IEC 60601-2-16]] [@iec-60601-2-24] [@iec-60601-2-16].\n\n### Pulsatilität\n\nBei jedem Ablösen einer Rolle bzw. eines Fingers entsteht ein kurzer Rückfluss- oder Stillstandsmoment; die Förderung ist daher **pulsierend**. Mehr Rollen, versetzte Finger und hohe Drehzahlen glätten den Fluss. In Infusionspumpen wird die Bewegung der Nockenwelle über den [[schrittmotor|Schrittmotor]] so gesteuert, dass die Förderlücken möglichst kurz bleiben.\n\n## Blutschädigung\n\nBeim Fördern von Blut ist die **Hämolyse** die zentrale Grenze: Scherkräfte im Quetschbereich und eine zu enge Okklusion schädigen Erythrozyten. Deshalb wird die Okklusion von Rollenpumpen in der Kardiotechnik vor dem Einsatz eingestellt und geprüft; in Dialysegeräten ist sie konstruktiv über federbelastete Rollen vorgegeben. Für längere extrakorporale Unterstützung haben sich in vielen Anwendungen Zentrifugalpumpen mit [[bldc-motor|BLDC-Antrieb]] durchgesetzt ([[ecmo]]) [@kramme-2017].\n\n> [!praxis] Beim Einlegen des Pumpensegments müssen Förderrichtung, Sitz in den Führungen und korrekte Lage der Klemmen geprüft werden. Ein verdrehtes oder falsch eingelegtes Segment ist eine typische Ursache für Fehlförderung und Alarme ([[anwendungsfehler]]).\n\n## Überwachung\n\nPeristaltikpumpen in Medizingeräten sind von Sensoren umgeben, die Fehlfunktionen erkennen:\n\n| Sensor | Erkennt |\n|---|---|\n| [[drucksensor|Drucksensor]] vor/hinter der Pumpe | Ansaugprobleme, Abknicken, [[okklusionsalarm|Okklusion]] |\n| [[kraftsensor|Kraftsensor]] am Schlauch | Druckanstieg in Infusionspumpen |\n| [[luftblasendetektor|Luftblasendetektor]] | Luft im Schlauch ([[luft-im-system]]) |\n| Drehgeber am Rotor (optisch oder mit [[hall-sensor|Hall-Sensor]]) | Stillstand, Drehzahlabweichung |\n| Deckel- und Segmentsensoren | korrektes Einlegen, geschlossene Tür |\n\n## Instandhaltung und Prüfung\n\nTypische Prüfungen sind die Fördermengenmessung (gravimetrisch oder mit [[pruefgeraete|Infusionspumpen-Analysatoren]]), die Prüfung der Okklusionsalarme und die Kontrolle der Rollen bzw. Finger auf Verschleiß. Wartungsintervalle legt der Hersteller fest. Infusionspumpen und Dialysegeräte gehören als aktive Produkte zur unmittelbaren Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potenziellem Druckaufbau zu den in Anlage 1 der [[mpbetreibv|MPBetreibV]] genannten Produkten, für die nach § 12 sicherheitstechnische Kontrollen ([[stk|STK]]) vorgeschrieben sind – nach Herstellerangabe, fehlen solche Angaben spätestens alle zwei Jahre [@mpbetreibv].\n\n## Anwendung in Geräten\n\n| Gerät | Aufgabe der Peristaltikpumpe |\n|---|---|\n| [[dialysegeraet]] | Blutpumpe im extrakorporalen Kreislauf, ggf. Substituat- und Konzentratförderung |\n| [[crrt-geraet]] | Blut-, Dialysat-, Substituat- und Filtratpumpen |\n| [[herz-lungen-maschine]] | Rollerpumpen für Sauger, Kardioplegie und – je nach Konzept – den Hauptkreislauf |\n| [[infusionspumpe]] | Linearperistaltisches Fördersystem |\n| [[enterale-ernaehrungspumpe]] | Rotationsperistaltik (bauartabhängig) |\n| [[zellseparator]] | Förderung von Blut, Antikoagulans und Komponenten |\n| [[phakoemulsifikation]] | Peristaltische Aspirationspumpe (alternativ Venturi-System) |\n| [[klinisch-chemischer-analysator]] | Dosierung von Reagenzien und Spülflüssigkeiten (bauartabhängig) |\n\n## Bedeutung in der Medizintechnik\n\nDie Peristaltikpumpe verbindet Hygiene (steriles Einmalsegment), Sicherheit (Schutz vor freiem Durchfluss) und einfache Mechanik. Ihre Genauigkeit hängt jedoch stark vom Verbrauchsmaterial ab – ein Grund, warum Hersteller die Verwendung freigegebener Überleitsysteme vorschreiben und warum die Kombination aus [[elektromotor|Antrieb]], Schlauch und Sensorik immer als System betrachtet werden muss.",
+  "related": [
+    "infusionspumpe",
+    "dialysegeraet",
+    "herz-lungen-maschine",
+    "crrt-geraet",
+    "schrittmotor",
+    "elektromotor",
+    "drucksensor",
+    "luftblasendetektor",
+    "okklusionsalarm",
+    "luft-im-system",
+    "iec-60601-2-24",
+    "iec-60601-2-16"
+  ],
+  "paths": [
+    [
+      "dialysegeraet",
+      "peristaltikpumpe",
+      "drucksensor",
+      "druckmessung"
+    ],
+    [
+      "infusionspumpe",
+      "peristaltikpumpe",
+      "schrittmotor",
+      "elektromotor"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "daugirdas-2015",
+    "iec-60601-2-24",
+    "iec-60601-2-16",
+    "mpbetreibv"
+  ],
+  "diagram": {
+    "title": "Blutpumpe im extrakorporalen Kreislauf",
+    "caption": "Funktionsschema einer Rollenpumpe mit Drucküberwachung (vereinfacht, Dialyse).",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Patient\n(Gefäßzugang)",
+        "kind": "patient",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "pa",
+        "label": "Drucksensor\narteriell",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "pp",
+        "label": "Rollenpumpe",
+        "ref": "peristaltikpumpe",
+        "kind": "actuator",
+        "x": 470,
+        "y": 80
+      },
+      {
+        "id": "dia",
+        "label": "Dialysator",
+        "ref": "dialysator",
+        "kind": "process",
+        "x": 660,
+        "y": 80
+      },
+      {
+        "id": "lb",
+        "label": "Luftblasen-\ndetektor",
+        "ref": "luftblasendetektor",
+        "kind": "sensor",
+        "x": 850,
+        "y": 80
+      },
+      {
+        "id": "mot",
+        "label": "Antriebsmotor",
+        "ref": "elektromotor",
+        "kind": "actuator",
+        "x": 470,
+        "y": 220
+      },
+      {
+        "id": "st",
+        "label": "Steuerung /\nÜberwachung",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 280,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "pat",
+        "to": "pa",
+        "kind": "fluid",
+        "label": "Blut"
+      },
+      {
+        "from": "pa",
+        "to": "pp",
+        "kind": "fluid"
+      },
+      {
+        "from": "pp",
+        "to": "dia",
+        "kind": "fluid"
+      },
+      {
+        "from": "dia",
+        "to": "lb",
+        "kind": "fluid",
+        "label": "Rückgabe"
+      },
+      {
+        "from": "mot",
+        "to": "pp",
+        "kind": "energy"
+      },
+      {
+        "from": "pa",
+        "to": "st",
+        "kind": "signal",
+        "label": "Ansaugdruck"
+      },
+      {
+        "from": "st",
+        "to": "mot",
+        "kind": "power",
+        "label": "Drehzahl"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

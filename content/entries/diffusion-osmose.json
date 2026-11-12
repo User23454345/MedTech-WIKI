@@ -1,0 +1,157 @@
+{
+  "id": "diffusion-osmose",
+  "type": "term",
+  "title": "Diffusion, Osmose und Konvektion",
+  "aliases": [
+    "Diffusion",
+    "Osmose",
+    "Konvektion",
+    "Fick’sches Gesetz",
+    "osmotischer Druck",
+    "Osmolarität",
+    "Osmolalität",
+    "Ultrafiltration",
+    "Umkehrosmose",
+    "Siebkoeffizient",
+    "solvent drag",
+    "Stofftransport über Membranen"
+  ],
+  "category": "physik",
+  "summary": "Diffusion, Osmose und Konvektion sind die drei Grundmechanismen des Stofftransports über Membranen. Sie bestimmen die Wirkung von Dialysatoren, Hämofiltern und Oxygenatoren, die Wasseraufbereitung durch Umkehrosmose, die Verträglichkeit von Infusionslösungen und das Messprinzip membranbedeckter Gassensoren.",
+  "body": "## Überblick\n\nIn der Physiologie wie in der Gerätetechnik müssen Stoffe durch **semipermeable Membranen** gelangen – durch die Alveolarwand der [[lunge]], die Kapillarwand, die Glomeruli der [[niere]] oder die Hohlfasern eines [[dialysator|Dialysators]]. Dafür gibt es drei Mechanismen:\n\n| Mechanismus | Triebkraft | Was wird transportiert? | Gerätebeispiel |\n|---|---|---|---|\n| **Diffusion** | Konzentrations- bzw. Partialdruckgefälle | gelöster Stoff, unabhängig vom Lösungsmittel | Hämodialyse, Oxygenator |\n| **Osmose** | Konzentrationsunterschied nicht membrangängiger Teilchen | Lösungsmittel (Wasser) | Umkehrosmose (umgekehrt genutzt) |\n| **Konvektion** | hydrostatischer Druckunterschied | Lösungsmittel samt darin gelösten, membrangängigen Stoffen („solvent drag“) | Hämofiltration, Ultrafiltration |\n\n## Diffusion\n\nTeilchen bewegen sich durch ungeordnete Wärmebewegung (Brown’sche Bewegung). Bei einem Konzentrationsgefälle wandern im Mittel mehr Teilchen von der hohen zur niedrigen Konzentration. Adolf Fick formulierte 1855 das **erste Fick’sche Gesetz** [@fick-1855]:\n\n`J = −D · dc/dx`\n\nJ ist die Teilchenstromdichte (mol/(m²·s)), D der Diffusionskoeffizient (m²/s), dc/dx das Konzentrationsgefälle. Für eine Membran der Dicke d und Fläche A folgt vereinfacht\n\n`ṅ = D · A · Δc / d`\n\nDer Stofftransport wächst also mit **Fläche** und **Gefälle** und sinkt mit **Membrandicke**. Der Diffusionskoeffizient nimmt mit der Molekülgröße ab – kleine Moleküle diffundieren schnell.\n\nFür Gase wird statt der Konzentration der Partialdruck verwendet. So beschreibt Ficks Gesetz den [[gasaustausch|Gasaustausch]] in der Lunge: große Alveolarfläche, sehr dünne Blut-Luft-Schranke, Partialdruckgefälle von O₂ und CO₂ [@schmidt-lang-2019].\n\n> [!beispiel] In einem [[dialysator|Dialysator]] strömen Blut und Dialysat im **Gegenstrom**. Dadurch bleibt das Konzentrationsgefälle für Harnstoff (Molekülmasse 60 Da) über die gesamte Faserlänge erhalten. Große Moleküle wie β₂-Mikroglobulin (rund 11,8 kDa) diffundieren dagegen kaum und werden besser konvektiv entfernt [@daugirdas-2015].\n\n## Osmose\n\nTrennt eine Membran, die nur für Wasser durchlässig ist, zwei Lösungen unterschiedlicher Konzentration, strömt Wasser zur höher konzentrierten Seite. Der Druck, der diesen Wasserstrom gerade verhindert, ist der **osmotische Druck**, für verdünnte Lösungen nach van ’t Hoff:\n\n`π = c_osm · R · T`\n\nc_osm ist die osmotisch wirksame Teilchenkonzentration, R die Gaskonstante, T die absolute Temperatur. Bei 37 °C (310 K) entspricht 1 mosmol/L rund 19 mmHg (R · T ≈ 2,58 kPa je mmol/L; [[gasgesetze]], [[druck]]).\n\n> [!vereinfacht] Die van-’t-Hoff-Gleichung gilt für ideale, verdünnte Lösungen. Reale Elektrolytlösungen weichen davon ab; klinisch wird deshalb die **Osmolalität** (mosmol pro kg Wasser) gemessen.\n\nDie Plasmaosmolalität liegt beim Gesunden typischerweise bei etwa 280–295 mosmol/kg [@schmidt-lang-2019]. Für die Medizintechnik folgen daraus:\n\n* **Infusionslösungen** müssen annähernd isoton sein; stark hypotone Lösungen führen zur Hämolyse ([[blut]]).\n* Der **kolloidosmotische Druck** der Plasmaproteine hält Wasser im Gefäß (Starling-Gleichgewicht).\n* **Umkehrosmose:** Ein Druck größer als π presst Wasser durch eine dichte Membran, gelöste Salze, Keime und Endotoxine bleiben zurück. So wird Permeat für die Herstellung von Dialysierflüssigkeit aufbereitet [@iso-23500-3].\n\n## Konvektion und Ultrafiltration\n\nEin hydrostatischer Druckunterschied über eine poröse Membran – der **Transmembrandruck** (TMP) – presst Wasser hindurch:\n\n`Q_UF = K_UF · TMP`\n\nK_UF ist der Ultrafiltrationskoeffizient der Membran (z. B. in mL/(h·mmHg)). Mit dem Wasser werden alle gelösten Stoffe mitgerissen, die durch die Poren passen. Wie gut, beschreibt der **Siebkoeffizient**\n\n`S = c_Filtrat / c_Plasma`\n\nS ≈ 1 bedeutet ungehinderter Durchtritt (Elektrolyte, Harnstoff), S ≈ 0 vollständige Rückhaltung (Albumin, Blutzellen). Konvektion entfernt mittelgroße Moleküle wirksamer als Diffusion; die **Hämodiafiltration** kombiniert beide Verfahren [@daugirdas-2015].\n\n## Anwendung in Geräten\n\n| Gerät/Baugruppe | dominierender Mechanismus | technische Steuergrößen |\n|---|---|---|\n| [[dialysegeraet]] mit [[dialysator]] | Diffusion + Ultrafiltration | Blut- und Dialysatfluss, TMP, Dialysatzusammensetzung ([[leitfaehigkeitssensor|Leitfähigkeit]]) |\n| [[crrt-geraet]] | Konvektion (Hämofiltration) und/oder Diffusion | Filtrat- und Substitutionsrate, Bilanzierung |\n| [[ecmo]], [[herz-lungen-maschine]] (Oxygenator) | Gasdiffusion über Hohlfasermembran | Gasfluss (Sweep), FiO₂, Blutfluss |\n| Wasseraufbereitung für die Dialyse | Umkehrosmose | Betriebsdruck, Permeatleitfähigkeit |\n| [[sauerstoffsensor|Clark-Elektrode]], [[blutgasanalysator]] | Diffusion durch gasdurchlässige Membran | Membrandicke, Temperatur |\n| [[npwt-geraet]] | Konvektion von Wundsekret durch Unterdruck | Sogstärke |\n\n> [!praxis] Membranbedeckte Sensoren reagieren träge oder liefern zu niedrige Werte, wenn die Membran verschmutzt oder zu dick ist – Ficks Gesetz erklärt direkt, warum regelmäßiger Membranwechsel und Kalibrierung nötig sind ([[sensordrift]], [[kalibrierung]]).\n\n## Bedeutung in der Medizintechnik\n\nDie Leistungsfähigkeit extrakorporaler Verfahren wird über die **Clearance** K beschrieben – das Blutvolumen, das pro Zeit vollständig von einem Stoff befreit wird. Sie hängt bei der Dialyse vom Blutfluss, vom Dialysatfluss, von der Membranfläche und der Permeabilität ab. Medizintechniker:innen prüfen deshalb nicht nur Elektronik, sondern auch Flussraten, Bilanziergenauigkeit, Druckmessungen (TMP) und die Wasserqualität der Umkehrosmose-Anlage.\n\n> [!belegt] Der diffusive Stofftransport ist proportional zu Fläche und Konzentrationsgefälle und umgekehrt proportional zur Membrandicke (Fick); der konvektive Transport folgt dem Transmembrandruck [@fick-1855] [@daugirdas-2015].",
+  "related": [
+    "dialysator",
+    "dialysegeraet",
+    "crrt-geraet",
+    "ecmo",
+    "herz-lungen-maschine",
+    "gasaustausch",
+    "niere",
+    "sauerstoffsensor",
+    "leitfaehigkeitssensor",
+    "gasgesetze",
+    "druck",
+    "blut"
+  ],
+  "paths": [
+    [
+      "dialysegeraet",
+      "dialysator",
+      "diffusion-osmose",
+      "niere"
+    ],
+    [
+      "ecmo",
+      "diffusion-osmose",
+      "gasaustausch",
+      "lunge"
+    ]
+  ],
+  "sources": [
+    "fick-1855",
+    "daugirdas-2015",
+    "schmidt-lang-2019",
+    "iso-23500-3",
+    "tipler-2019"
+  ],
+  "diagram": {
+    "title": "Stofftransport im Dialysator",
+    "caption": "Diffusion und Konvektion über die Hohlfasermembran (Funktionsschema).",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Patientenblut",
+        "ref": "blut",
+        "kind": "patient",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "bp",
+        "label": "Blutpumpe",
+        "ref": "peristaltikpumpe",
+        "kind": "actuator",
+        "x": 290,
+        "y": 80
+      },
+      {
+        "id": "mem",
+        "label": "Dialysator-\nmembran",
+        "ref": "dialysator",
+        "kind": "process",
+        "x": 510,
+        "y": 150
+      },
+      {
+        "id": "ro",
+        "label": "Umkehrosmose-\nWasser",
+        "ref": "diffusion-osmose",
+        "kind": "source",
+        "x": 290,
+        "y": 230
+      },
+      {
+        "id": "lf",
+        "label": "Leitfähigkeits-\nmessung",
+        "ref": "leitfaehigkeitssensor",
+        "kind": "sensor",
+        "x": 510,
+        "y": 260
+      },
+      {
+        "id": "aus",
+        "label": "Abfluss\n(Diffusat + UF)",
+        "kind": "output",
+        "x": 760,
+        "y": 230
+      },
+      {
+        "id": "rueck",
+        "label": "gereinigtes Blut",
+        "kind": "patient",
+        "x": 760,
+        "y": 70
+      }
+    ],
+    "edges": [
+      {
+        "from": "pat",
+        "to": "bp",
+        "kind": "fluid"
+      },
+      {
+        "from": "bp",
+        "to": "mem",
+        "kind": "fluid",
+        "label": "Blutseite"
+      },
+      {
+        "from": "ro",
+        "to": "lf",
+        "kind": "fluid",
+        "label": "Dialysat"
+      },
+      {
+        "from": "lf",
+        "to": "mem",
+        "kind": "fluid",
+        "label": "Gegenstrom"
+      },
+      {
+        "from": "mem",
+        "to": "rueck",
+        "kind": "fluid"
+      },
+      {
+        "from": "mem",
+        "to": "aus",
+        "kind": "fluid",
+        "label": "Diffusion, TMP"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

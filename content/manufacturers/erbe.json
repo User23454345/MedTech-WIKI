@@ -1,0 +1,47 @@
+{
+  "id": "erbe",
+  "type": "manufacturer",
+  "title": "Erbe Elektromedizin",
+  "aliases": [
+    "Erbe",
+    "ERBE",
+    "Erbe Elektromedizin GmbH"
+  ],
+  "category": "hersteller",
+  "summary": "Familiengeführter Hersteller aus Tübingen, gegründet 1851. Erbe ist auf chirurgische Energiesysteme spezialisiert, vor allem HF-Chirurgie, Argonplasmakoagulation, Wasserstrahlchirurgie und Kryochirurgie.",
+  "headquarters": "Tübingen, Deutschland",
+  "founded": "1851",
+  "website": "https://www.erbe-med.com/",
+  "productLines": [
+    {
+      "device": "hf-chirurgiegeraet",
+      "models": [
+        "VIO 3",
+        "VIO 3n",
+        "VIO 300 D",
+        "APC 3"
+      ],
+      "note": "VIO 3 als modulare Plattform; APC 3 als Argonplasma-Modul; VIO 300 D ist die Vorgängergeneration, die in vielen Kliniken noch im Einsatz ist."
+    }
+  ],
+  "body": "## Überblick\n\nDie Erbe Elektromedizin GmbH mit Sitz in Tübingen ist ein seit seiner Gründung in Familienbesitz befindliches Unternehmen. Es entwickelt und fertigt Systeme für die **[[hf-chirurgiegeraet|Hochfrequenzchirurgie]]** (Elektrochirurgie) sowie verwandte Energieformen für die [[chirurgie|Chirurgie]] und die interventionelle Endoskopie der [[gastroenterologie|Gastroenterologie]] [@hst-erbe].\n\n## Geschichte in Stichpunkten\n\n* **1851** – Christian Heinrich Erbe eröffnet in Tübingen eine Mechanikerwerkstatt; frühe Produkte sind Instrumente für die Galvanokaustik [@hst-erbe-history].\n* **1923** – Erbe bringt seinen ersten Hochfrequenzgenerator für die Chirurgie auf den Markt [@hst-erbe-history].\n* **2. Hälfte des 20. Jahrhunderts** – Ausbau zu einem spezialisierten Anbieter der Elektrochirurgie; Ergänzung um Argonplasmakoagulation (APC), Kryochirurgie und Wasserstrahlchirurgie.\n* **2026** – 175 Jahre seit der Gründung der Werkstatt.\n\n## Geschäftsbereiche und Technologien\n\n| Technologie | Prinzip (Kurzfassung) | Produktbeispiele |\n|---|---|---|\n| HF-Chirurgie | Gewebeerwärmung durch hochfrequenten Wechselstrom ([[joulesche-waerme]]) zum Schneiden und Koagulieren | VIO 3, VIO 3n |\n| Argonplasmakoagulation | berührungsfreie Koagulation über ionisiertes Argongas | APC 3 |\n| Wasserstrahlchirurgie | gewebeselektive Dissektion bzw. Unterspritzung mit Flüssigkeitsstrahl | ERBEJET 2 |\n| Kryochirurgie | Gewebeschädigung bzw. Probenentnahme durch Kälte (Joule-Thomson-Effekt) | ERBECRYO 2 |\n\nDie HF-Generatoren arbeiten typischerweise im Frequenzbereich mehrerer hundert Kilohertz, in dem keine neuromuskuläre Reizung auftritt (siehe [[elektrische-stromwirkung]]). Bei monopolarer Technik fließt der Strom über eine großflächige [[neutralelektrode]] zurück; deren Überwachung (Kontaktqualitätsmessung bei geteilten Elektroden) ist ein zentrales Sicherheitsmerkmal gegen [[neutralelektroden-verbrennung|Verbrennungen an der Neutralelektrode]].\n\n> [!vereinfacht] Ob ein HF-Strom schneidet oder koaguliert, hängt vor allem von Spannungsform, Spitzenspannung und Leistungsdichte ab: Beim Schnitt erzeugt eine weitgehend unmodulierte Sinusspannung (ab etwa 200 V Spitze) Funken zwischen Elektrode und Gewebe, die das Zellwasser explosionsartig verdampfen. Bei der Koagulation wird das Gewebe langsamer erhitzt (ca. 60–100 °C), Eiweiße denaturieren und das Gewebe trocknet aus – entweder funkenfrei mit niedriger Spannung (Kontakt- bzw. „Soft“-Koagulation) oder mit stark modulierten Spannungen hoher Spitzenwerte und niedriger mittlerer Leistung (forcierte bzw. Spray-Koagulation). Hersteller kombinieren diese Grundformen in zahlreichen Modi.\n\n## Bedeutung für die Medizintechnik\n\nErbe gilt als einer der Pioniere der Elektrochirurgie und prägt die HF-Chirurgie im deutschsprachigen Raum maßgeblich. Für die Instandhaltung relevant:\n\n* HF-Chirurgiegeräte sind nach [[mpbetreibv|MPBetreibV]] Anlage 1 STK-pflichtig; die Frist richtet sich spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12) [@mpbetreibv].\n* Die Gerätesicherheit ist in der Ergänzungsnorm [[iec-60601-2-2|IEC 60601-2-2]] geregelt (u. a. HF-Ableitströme, Ausgangsleistung, Neutralelektrodenüberwachung).\n* Prüfungen umfassen neben der [[elektrische-sicherheitspruefung|elektrischen Sicherheit]] die Messung der Ausgangsleistung an definierten Lastwiderständen mit einem HF-Leistungsmessgerät ([[pruefgeraete]]).\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "hf-chirurgiegeraet",
+    "neutralelektrode",
+    "neutralelektroden-verbrennung",
+    "iec-60601-2-2",
+    "chirurgie",
+    "gastroenterologie",
+    "olympus",
+    "karl-storz",
+    "medtronic"
+  ],
+  "sources": [
+    "hst-erbe",
+    "hst-erbe-history",
+    "erbe-vio3",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "akkufehler",
+  "type": "fault",
+  "title": "Akkufehler und Kapazitätsverlust",
+  "aliases": [
+    "Akku schwach",
+    "Batteriefehler",
+    "Battery Low",
+    "Akkualterung",
+    "Kapazitätsverlust",
+    "Batterie leer",
+    "Battery Fault"
+  ],
+  "category": "fehler",
+  "summary": "Fehlerbild netzunabhängig betreibbarer Medizingeräte, bei dem der Akku die erwartete Laufzeit oder Leistung nicht mehr liefert, unplausible Ladezustände meldet oder als defekt erkannt wird. Häufigste Ursache ist die Alterung von Lithium-Ionen-Akkus.",
+  "devices": [
+    "defibrillator",
+    "patientenmonitor",
+    "infusionspumpe",
+    "spritzenpumpe",
+    "beatmungsgeraet",
+    "transportbeatmungsgeraet",
+    "heimbeatmungsgeraet",
+    "pulsoxymeter",
+    "thoraxkompressionsgeraet",
+    "inkubator",
+    "ultraschallgeraet",
+    "patientenlifter"
+  ],
+  "causes": [
+    "Kalendarische und zyklische Alterung des [[lithium-ionen-akku|Lithium-Ionen-Akkus]]: Kapazitätsverlust und Anstieg des Innenwiderstands.",
+    "Lagerung oder Betrieb bei hohen Temperaturen sowie dauerhaftes Halten im voll geladenen Zustand beschleunigen die Alterung.",
+    "Tiefentladung durch lange Lagerung ohne Ladung; das Batteriemanagement sperrt den Akku danach ggf. dauerhaft.",
+    "Abweichende Ladezustandsanzeige, weil die Ladezustandsschätzung (Coulomb-Zählung) nicht neu kalibriert wurde.",
+    "Defekte Ladeelektronik, verschmutzte oder verbogene Kontakte, defekte Ladestation oder defektes [[medizinisches-netzteil]].",
+    "Nicht freigegebene Ersatzakkus oder Akkus unbekannter Herkunft.",
+    "Mechanische Schäden (Sturz, Quetschung) oder Aufblähen des Akkus."
+  ],
+  "actions": [
+    "**Patienten zuerst:** Netzversorgung sofort herstellen oder auf ein Ersatzgerät wechseln – besonders bei lebenserhaltenden Geräten und vor Transporten.",
+    "Bei Defibrillatoren Ersatzakku bzw. Ersatzbatterie einsetzen und Einsatzbereitschaft (Selbsttest) bestätigen.",
+    "Aufgeblähte, beschädigte, heiße oder auslaufende Akkus sofort außer Betrieb nehmen und nach Vorgabe sicher lagern (Brandgefahr).",
+    "Gerät kennzeichnen und der Medizintechnik übergeben; Akkukapazität mit dem vom Hersteller vorgesehenen Verfahren (Kapazitätstest, Lernzyklus) prüfen lassen.",
+    "Kontakte, Ladestation und Netzteil prüfen; nur freigegebene Originalakkus verwenden.",
+    "Akkutausch und Ergebnis dokumentieren; Akkus gesammelt nach Gefahrgut- und Entsorgungsvorschriften zurückgeben."
+  ],
+  "body": "## Technischer Hintergrund\n\nViele Medizingeräte müssen auch ohne Netz funktionieren: beim Transport, bei Netzausfall oder als tragbares Gerät. Die Akkulaufzeit gehört deshalb häufig zu den sicherheitsrelevanten Eigenschaften. Die Basisnorm [[iec-60601-1]] enthält Anforderungen an Geräte mit interner elektrischer Stromquelle, u. a. dass deren Zustand für den Anwender feststellbar ist; besondere Festlegungen für lebenserhaltende Geräte, etwa Intensivbeatmungsgeräte ([[iso-80601-2-12]]), fordern zusätzlich einen technischen Alarm, bevor die interne Stromversorgung erschöpft ist (Einzelheiten und Vorwarnzeiten in der jeweils gültigen Ausgabe) [@iec-60601-1] [@iso-80601-2-12]. Die Alarmsignale folgen [[iec-60601-1-8]] [@iec-60601-1-8].\n\n### Alterung von Lithium-Ionen-Akkus\n\nEin [[lithium-ionen-akku]] altert auf zwei Wegen [@reddy-linden-2011]:\n\n| Alterungsart | Ursache | Begünstigt durch |\n|---|---|---|\n| kalendarisch | Nebenreaktionen, Wachstum der Passivierungsschicht (SEI) an der Anode | hohe Temperatur, hoher Ladezustand |\n| zyklisch | mechanische Belastung der Elektroden, Verlust aktiven Lithiums | hohe Ströme, große Entladetiefe, Laden bei Kälte |\n\nFolgen sind **Kapazitätsverlust** (kürzere Laufzeit) und **Anstieg des Innenwiderstands**. Letzterer ist bei Geräten mit hohen Lastströmen kritisch:\n\n> [!vereinfacht] Unter Last gilt U_Klemme = U₀ − I · Rᵢ. Steigt der Innenwiderstand Rᵢ, bricht die Klemmenspannung bei hohem Strom I stärker ein. Ein [[defibrillator]] beim Laden des Kondensators oder ein [[beatmungsgeraet|Beatmungsgerät]] mit [[turbine]] kann dann abschalten, obwohl die Ladeanzeige noch Restkapazität angibt. Grundlagen unter [[spannung-strom-widerstand]].\n\n### Batteriemanagement\n\nEin Batteriemanagementsystem (BMS) im Akku oder Gerät überwacht Zellspannungen, Strom und Temperatur, begrenzt Lade- und Entladeströme und schätzt den Ladezustand – meist durch Aufintegrieren des Stroms (Coulomb-Zählung) mit Korrektur über die Ruhespannung. Diese Schätzung driftet; viele Hersteller sehen deshalb einen gelegentlichen **Kalibrier- bzw. Lernzyklus** (vollständiges Entladen und Laden) vor. Das BMS speichert häufig Zyklenzahl, Restkapazität und Fehlerereignisse, die im Service ausgelesen werden können (siehe [[fehlercodes]]).\n\nTypische Alarm- und Meldestufen sind:\n\n| Meldung | Bedeutung | Priorität (typisch) |\n|---|---|---|\n| Akkubetrieb | Netz getrennt | Information |\n| Akku schwach | begrenzte Restlaufzeit | mittel |\n| Akku fast leer | Abschaltung steht bevor | hoch |\n| Akkufehler / Akku ersetzen | Defekt oder Lebensdauerende erkannt | technischer Alarm |\n\nDie konkrete Einstufung legt der Hersteller im [[iso-14971|Risikomanagement]] nach [[iec-60601-1-8]] fest. Viele [[defibrillator|AED]] verwenden statt Akkus nicht wiederaufladbare Lithium-Primärbatterien, deren Zustand im automatischen Selbsttest geprüft wird.\n\n> [!warnung] Lithium-Ionen-Akkus können bei Beschädigung, Überladung oder Überhitzung thermisch durchgehen (Brand). Sicherheitsanforderungen an Lithium-Zellen und -Akkus für tragbare Anwendungen enthält z. B. IEC 62133-2 [@iec-62133-2]; für Transport und Versand gelten zusätzlich Gefahrgutvorschriften (Prüfungen nach UN 38.3) [@un-38-3].\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Laufzeit deutlich kürzer als spezifiziert | Kapazitätstest, Zyklenzahl, Alter | Akku tauschen |\n| Gerät schaltet unter Last ab, Anzeige zeigt Restladung | Innenwiderstand, Lastprüfung | Akku tauschen |\n| Anzeige springt, Laufzeit unplausibel | Lernzyklus fällig? | Kalibrierzyklus nach Herstellerangabe |\n| Akku wird nicht geladen | Kontakte, Netzteil, Ladestation, Temperatur | Kontakte reinigen, Netzteil prüfen, Raumtemperatur beachten |\n| Akku nach Lagerung „defekt“ | Tiefentladung | Akku ersetzen, Lagerkonzept anpassen |\n| Akku gewölbt oder heiß | mechanischer/thermischer Schaden | sofort außer Betrieb, sichere Entsorgung |\n\n## Prävention\n\n- Akkuprüfung und -tausch nach Herstellerangabe in [[wartung]] und [[stk]] einplanen; Akkualter im [[medizinproduktebuch]] bzw. Gerätemanagement dokumentieren [@mpbetreibv].\n- Als Austauschkriterium wird häufig eine Restkapazität in der Größenordnung von 80 % der Nennkapazität genannt; maßgeblich ist die Herstellerangabe.\n- Geräte nach Gebrauch wieder an das Netz anschließen; Ersatzakkus kühl und teilgeladen lagern.\n- Transportgeräte vor jedem Einsatz auf Ladezustand prüfen.\n\n> [!hinweis] Herstellerspezifische Akkufehlercodes und Testprozeduren stehen in den Service-Unterlagen (siehe [[fehlercodes]]).",
+  "related": [
+    "lithium-ionen-akku",
+    "medizinisches-netzteil",
+    "defibrillator",
+    "transportbeatmungsgeraet",
+    "wartung",
+    "fehlercodes",
+    "alarmsystem",
+    "spannung-strom-widerstand",
+    "iec-60601-1"
+  ],
+  "sources": [
+    "reddy-linden-2011",
+    "iec-60601-1",
+    "iec-60601-1-8",
+    "iso-80601-2-12",
+    "iec-62133-2",
+    "un-38-3",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

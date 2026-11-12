@@ -1,0 +1,66 @@
+{
+  "id": "op-mikroskop",
+  "type": "device",
+  "title": "Operationsmikroskop",
+  "aliases": [
+    "OP-Mikroskop",
+    "Operating microscope",
+    "Surgical microscope",
+    "Stereo-Operationsmikroskop"
+  ],
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 73,
+  "domains": [
+    "neurologie",
+    "augenheilkunde",
+    "hno-heilkunde",
+    "chirurgie",
+    "zahnmedizin"
+  ],
+  "summary": "Operationsmikroskope liefern dem Chirurgen ein vergrößertes, räumliches und hell ausgeleuchtetes Bild des Operationsfeldes bei großem Arbeitsabstand. Sie sind an ausbalancierten Stativen befestigt und werden in Neurochirurgie, Augenheilkunde, HNO und Zahnmedizin eingesetzt.",
+  "sections": {
+    "purpose": "Mikrochirurgische Eingriffe an Nerven, Gefäßen, Mittelohr, Auge oder Wurzelkanälen erfordern eine Vergrößerung, die das bloße Auge nicht leistet, und gleichzeitig Platz für Instrumente zwischen Optik und Gewebe. Ergänzende Module ermöglichen Dokumentation, Fluoreszenzdarstellung und Bildintegration aus der Navigation. In der Augenheilkunde ist das Operationsmikroskop zentral für die Katarakt-Chirurgie mit [[phakoemulsifikation]] [@kramme-2017].",
+    "principle": "## Optischer Aufbau\n\nDie meisten Operationsmikroskope sind **Stereomikroskope nach dem Fernrohrprinzip mit gemeinsamem Hauptobjektiv**: Ein großes Objektiv bildet das Objekt nach unendlich ab, dahinter liegen zwei parallele Strahlengänge für das linke und rechte Auge. Der Winkel zwischen ihnen erzeugt den räumlichen Eindruck ([[optik]], [[auge]]). Ein Vergrößerungswechsler (stufig oder als Zoom) und die Okulare bestimmen die Gesamtvergrößerung; Objektive mit variabler Brennweite erlauben, den Arbeitsabstand ohne Objektivwechsel anzupassen.\n\n## Beleuchtung und Zusatzmodule\n\nLicht von Xenon-, Halogen- oder LED-Quellen wird über Lichtleiter möglichst koaxial in das Sehfeld eingespiegelt, damit auch tiefe, enge Kanäle ausgeleuchtet sind. Für die Augenchirurgie ist ein koaxialer Rotreflex wichtig. **Fluoreszenzmodule** regen gezielt Farbstoffe an (z. B. Indocyaningrün für die Gefäßdarstellung) und filtern das Emissionslicht. Kamerasysteme übertragen das Bild auf Monitore oder in 3D-Visualisierungssysteme; volldigitale Exoskope ersetzen teilweise das Okular.\n\n## Stativ\n\nDas Stativ hält den optischen Kopf schwerelos ausbalanciert. Elektromagnetische Bremsen fixieren die Gelenke und werden zum Positionieren per Griffschalter gelöst; robotische Stative bewegen den Kopf motorisch ([[elektromotor]]).\n\n> [!warnung] Hohe Lichtintensität bei kleinem Arbeitsabstand kann Gewebe erwärmen und Verbrennungen verursachen; Herstellerangaben zur Begrenzung der Lichtstärke und Dauer sind zu beachten ([[waermeuebertragung]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "zeiss",
+      "models": [
+        "KINEVO 900",
+        "OPMI Lumera"
+      ],
+      "note": "OPMI Lumera: Ophthalmologie."
+    },
+    {
+      "ref": "olympus",
+      "models": [
+        "ORBEYE"
+      ],
+      "note": "Digitales 4K-3D-Exoskop als Alternative zum klassischen Mikroskop."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Wartung von Stativ, Bremsen, Balancierung, Lichtquelle und Optik nach Herstellerangabe; elektrische Sicherheitsprüfung nach [[iec-62353|IEC 62353]] bzw. [[dguv-vorschrift-3|DGUV Vorschrift 3]]."
+  },
+  "related": [
+    "optik",
+    "op-leuchte",
+    "phakoemulsifikation",
+    "spaltlampe",
+    "auge",
+    "endoskop"
+  ],
+  "sources": [
+    "kramme-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "iec-60601-2-25",
+  "type": "standard",
+  "title": "IEC 60601-2-25",
+  "code": "IEC 60601-2-25",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-25: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Elektrokardiographen",
+  "scope": "Legt besondere Anforderungen an Basissicherheit und wesentliche Leistungsmerkmale von diagnostischen Elektrokardiographen fest, einschließlich Aufzeichnung, Darstellung und automatischer Vermessung des EKG.",
+  "aliases": [
+    "DIN EN 60601-2-25",
+    "EN 60601-2-25",
+    "EKG-Gerätenorm",
+    "60601-2-25"
+  ],
+  "category": "normen",
+  "summary": "Die IEC 60601-2-25 ist die besondere Festlegung für diagnostische Elektrokardiographen wie das 12-Kanal-EKG. Sie regelt die Signalqualität (Frequenzgang, Rauschen, Gleichtaktunterdrückung), den Schutz bei Defibrillation, die Genauigkeit der Darstellung und die automatische Vermessung von EKG-Kurven.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-2-25** gilt für **diagnostische Elektrokardiographen** – typischerweise das Ruhe-[[ekg-geraet|12-Kanal-EKG]], mit dem eine Aufzeichnung zur ärztlichen Befundung erstellt wird [@iec-60601-2-25]. Sie ist eine besondere Festlegung zur [[iec-60601-1|Basisnorm IEC 60601-1]]. In die heutige Ausgabe wurde die frühere IEC 60601-2-51 (aufzeichnende und auswertende EKG-Geräte) integriert, sodass Signalaufnahme, Ausdruck und automatische Vermessung in einer Norm geregelt sind.\n\nAbgegrenzt wird sie von zwei Nachbarnormen:\n\n| Anwendung | Norm |\n|---|---|\n| diagnostisches Ruhe-EKG (und Belastungs-EKG) | IEC 60601-2-25 |\n| kontinuierliche EKG-Überwachung am Monitor | [[iec-60601-2-27]] |\n| ambulantes [[langzeit-ekg|Langzeit-EKG]] | IEC 60601-2-47 [@iec-60601-2-47] |\n\n## Zentrale Konzepte und Anforderungen\n\n### Signalqualität\n\nDas EKG ist ein [[biosignale|Biosignal]] im Millivoltbereich, das von deutlich größeren Störungen überlagert sein kann (Netzbrumm, Elektrodenpotentiale, Muskelartefakte). Die Norm stellt daher Anforderungen an die gesamte [[messkette|Messkette]]:\n\n* **Frequenzgang:** Der diagnostische Modus muss einen breiten Frequenzbereich verzerrungsarm übertragen, damit z. B. ST-Strecken (tieffrequent) und QRS-Details (höherfrequent) nicht verfälscht werden. Ein zu hoch gewählter Hochpass verzerrt die ST-Strecke – ein klassischer Diagnosefehler (siehe [[filter]]).\n* **Eingangsimpedanz** und **Gleichtaktunterdrückung** des [[instrumentenverstaerker|Instrumentenverstärkers]], damit unterschiedliche Elektroden-Haut-Impedanzen nicht zu [[netzstoerung|Netzbrumm]] führen.\n* **Rauschen**, Übersprechen zwischen Kanälen und Toleranz gegenüber Elektroden-Offsetspannungen.\n* **Genauigkeit** von Verstärkung, Zeitbasis und Ausdruck.\n\n> [!beispiel] Typisch für diagnostische Ruhe-EKG-Geräte ist eine Bandbreite von etwa 0,05 Hz bis 150 Hz (bei Kindern teils höher), während Monitoring-EKGs häufig mit etwa 0,5 Hz bis 40 Hz arbeiten. Wird ein diagnostisches EKG versehentlich im schmalen Monitoring- oder „Muskelfilter“-Modus aufgezeichnet, können ST-Hebungen bzw. -Senkungen vorgetäuscht oder verdeckt werden. Die verbindlichen Prüfanforderungen enthält die jeweils gültige Normausgabe.\n\n> [!vereinfacht] Die Norm verlangt im Kern: Was auf dem Papier oder Bildschirm erscheint, soll dem tatsächlichen Herzsignal so ähnlich sein, dass Ärztinnen und Ärzte es zuverlässig befunden können – unabhängig vom Gerätehersteller.\n\n### Automatische Vermessung und Interpretation\n\nViele Geräte messen Intervalle (PQ, QRS, QT) und Amplituden automatisch. Die Norm fordert den Nachweis der Messgenauigkeit anhand definierter Referenz-Signale und -Datensätze. Eine automatische **Interpretation** (Befundvorschlag) ist eine Software-Funktion, für die zusätzlich [[iec-62304]] und die Regeln zu [[software-medizinprodukt|Software als Medizinprodukt]] relevant sind.\n\n### Sicherheit\n\n* **Defibrillationsschutz:** [[anwendungsteile|Anwendungsteile]] müssen eine Defibrillation am Patienten ohne Schaden überstehen und sich danach rasch erholen (Typ BF oder CF, defibrillationsgeschützt).\n* **Schutz bei [[hf-chirurgiegeraet|HF-Chirurgie]]**, sofern vom Hersteller vorgesehen.\n* Anforderungen an Patientenkabel und [[ekg-elektrode|Elektrodenanschlüsse]] (z. B. Schutz gegen versehentliches Verbinden mit Netzspannung).\n* Begrenzung der [[ableitstrom|Ableitströme]] entsprechend der Anwendungsteil-Klassifikation.\n\n> [!hinweis] Konkrete Grenzwerte (Frequenzgrenzen, Rauschpegel, Toleranzen) sind der jeweils gültigen Ausgabe der Norm zu entnehmen.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Rolle |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Basissicherheit |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-6]] | [[emv|EMV]], Gebrauchstauglichkeit |\n| Besondere Festlegungen | IEC 60601-2-25, [[iec-60601-2-27]], IEC 60601-2-47 | EKG-Diagnostik, -Monitoring, -Langzeit |\n| Prozessnormen | [[iso-14971]], [[iec-62304]], [[iec-62366-1]] | Risiko, Software, Usability |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen die Leistungsmerkmale mit definierten Testsignalen und Prüfaufbauten nachweisen; das Ergebnis fließt in die technische Dokumentation zur [[konformitaetsbewertung]] nach der [[mdr|MDR]] ein. Harmonisierte Fassungen der Norm begründen dabei eine Vermutung der Konformität mit den entsprechenden grundlegenden Sicherheits- und Leistungsanforderungen. Ändert ein Hersteller Filter oder Vermessungsalgorithmen per Software-Update, müssen die betroffenen Nachweise neu bewertet werden.\n\n**Betreiber** profitieren indirekt: Die Norm schafft eine vergleichbare Signalqualität. Für die Praxis wichtig sind die korrekte Filtereinstellung, intakte Patientenkabel und geeignete Elektroden. Die wiederkehrende Prüfung erfolgt nach Herstellerangabe, typischerweise mit [[elektrische-sicherheitspruefung|elektrischer Sicherheitsprüfung]] nach [[iec-62353]] und einer [[funktionspruefung|Funktionsprüfung]] mit EKG-Simulator (siehe [[pruefgeraete]]).\n\n> [!praxis] Viele „Gerätefehler“ beim EKG sind Elektroden- oder Kabelprobleme: [[elektrodenproblem|schlechter Elektrodenkontakt]], [[bewegungsartefakt|Bewegungsartefakte]] oder Netzbrumm durch unsymmetrische Elektrodenimpedanzen.\n\n## Betroffene Geräte\n\n* [[ekg-geraet]] (primär), [[ergometer|Belastungs-EKG]]\n* abgegrenzt: [[patientenmonitor]] (siehe [[iec-60601-2-27]]), [[langzeit-ekg]]\n* Fachbereich: [[kardiologie]]\n",
+  "related": [
+    "ekg-geraet",
+    "ergometer",
+    "langzeit-ekg",
+    "iec-60601-2-27",
+    "biosignale",
+    "instrumentenverstaerker",
+    "filter",
+    "ekg-elektrode",
+    "anwendungsteile",
+    "netzstoerung",
+    "kardiologie"
+  ],
+  "sources": [
+    "iec-60601-2-25",
+    "iec-60601-1",
+    "iec-60601-2-47"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

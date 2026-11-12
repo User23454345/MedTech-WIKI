@@ -2,9 +2,11 @@
   {
     "id": "iso-80601-2-12",
     "kind": "norm",
-    "title": "ISO 80601-2-12 – Medizinische elektrische Geräte – Teil 2-12: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Beatmungsgeräten für die Intensivpflege",
+    "title": "ISO 80601-2-12 – Medical electrical equipment – Part 2-12: Particular requirements for basic safety and essential performance of critical care ventilators (deutsch: DIN EN ISO 80601-2-12, Beatmungsgeräte für die Intensivpflege)",
     "publisher": "ISO / in Deutschland als DIN EN ISO 80601-2-12 (VDE 0750-2-12)",
-    "note": "Gerätespezifische Norm für Intensivbeatmungsgeräte; maßgeblich ist die jeweils gültige Ausgabe."
+    "note": "Gerätespezifische Norm für Intensivbeatmungsgeräte; maßgeblich ist die jeweils gültige Ausgabe.",
+    "edition": "ISO 80601-2-12:2020; deutsche Ausgabe DIN EN ISO 80601-2-12:2025-03 (ersetzt die Ausgabe 2020-07)",
+    "year": "2020"
   },
   {
     "id": "ardsnet-2000",
@@ -21,6 +23,6 @@
     "title": "S3-Leitlinie Invasive Beatmung und Einsatz extrakorporaler Verfahren bei akuter respiratorischer Insuffizienz (AWMF-Register-Nr. 001-021)",
     "publisher": "AWMF",
     "year": "2017",
-    "note": "Maßgeblich ist die jeweils aktuelle Fassung im AWMF-Leitlinienregister."
+    "note": "Fassung 2017 (Registernummer und Stand bitte im AWMF-Leitlinienregister prüfen); maßgeblich ist die jeweils aktuelle Fassung."
   }
 ]

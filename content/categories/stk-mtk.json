@@ -6,7 +6,29 @@
   "order": 11,
   "icon": "check",
   "summary": "Sicherheitstechnische und messtechnische Kontrollen nach MPBetreibV sowie elektrische Wiederholungsprüfungen.",
-  "body": "",
+  "body": "Medizinprodukte müssen während ihrer gesamten Nutzungsdauer sicher funktionieren. Wiederkehrende Prüfungen sollen Mängel erkennen, bevor sie Patienten, Anwender oder Dritte gefährden. Diese Kategorie behandelt die **Sicherheitstechnische Kontrolle (STK)**, die **Messtechnische Kontrolle (MTK)**, die elektrische Sicherheitsprüfung nach [[iec-62353]] sowie verwandte Prüfungen im Krankenhaus.\n\nFür die Medizintechnik sind diese Prüfungen Kerngeschäft: Sie werden geplant, durchgeführt, dokumentiert und ausgewertet – und ihre Ergebnisse entscheiden, ob ein Gerät weiter betrieben werden darf.\n\n## Rechtsgrundlagen\n\n> [!belegt] Nach der Neufassung der [[mpbetreibv|MPBetreibV]] vom 14.02.2025 sind sicherheitstechnische Kontrollen in § 12 i. V. m. Anlage 1 geregelt; sie sind nach Herstellerangabe, ohne solche Angabe spätestens alle zwei Jahre durchzuführen. Messtechnische Kontrollen sind in § 15 i. V. m. Anlage 2 geregelt [@mpbetreibv].\n\nDie Prüfungen dürfen nur Personen durchführen, die aufgrund ihrer Ausbildung, Kenntnisse und praktischen Erfahrung dazu geeignet sind und über geeignete Mess- und [[pruefgeraete|Prüfeinrichtungen]] verfügen. Die Ergebnisse werden dokumentiert, typischerweise im [[medizinproduktebuch]] bzw. in der Gerätedokumentation des Betreibers.\n\n> [!hinweis] Die genauen Anforderungen der Fassung 2025 an Prüfpersonen, Dokumentation und Aufbewahrung (einschließlich der Paragraphennummern) sind dem Verordnungstext zu entnehmen; die Formulierung hier ist bewusst allgemein gehalten [@mpbetreibv].\n\n> [!hinweis] Ältere Fundstellen (STK nach § 11, MTK nach § 14 der Fassungen 2002/2017) sind überholt. Maßgeblich ist die jeweils geltende Fassung der Verordnung.\n\n## Überblick\n\n| Prüfung | Grundlage | Ziel | Artikel |\n|---|---|---|---|\n| Sicherheitstechnische Kontrolle | MPBetreibV § 12, Anlage 1; Herstellervorgaben | sicherheitsrelevante Mängel rechtzeitig erkennen | [[stk]] |\n| Messtechnische Kontrolle | MPBetreibV § 15, Anlage 2 | Einhaltung der Fehlergrenzen von Messfunktionen | [[mtk]] |\n| Elektrische Sicherheitsprüfung | [[iec-62353]] | Wiederholungsprüfung und Prüfung nach Instandsetzung von ME-Geräten | [[elektrische-sicherheitspruefung]] |\n| Teilprüfungen | [[iec-62353]] | Schutzleiter, Isolation, Ableitströme, Funktion | [[schutzleiterwiderstand]], [[isolationswiderstand]], [[ableitstrommessung]], [[funktionspruefung]] |\n| Prüfung elektrischer Betriebsmittel | DGUV Vorschrift 3 | Arbeitsschutz; v. a. nicht-medizinische Geräte (bei Medizinprodukten wird der Prüfbedarf i. d. R. über MPBetreibV und [[iec-62353]] gedeckt) | [[dguv-vorschrift-3]] |\n| Abnahme- und Konstanzprüfung | Strahlenschutzrecht | Bildqualität und Dosis bei Röntgeneinrichtungen | [[konstanzpruefung]] |\n\n## Typischer Ablauf einer STK\n\n1. **Vorbereitung:** Herstellerunterlagen, Prüfanweisung und Prüfprotokoll; Kalibrierstatus der [[pruefgeraete]] kontrollieren.\n2. **Sichtprüfung:** Gehäuse, Netzkabel, Stecker, Zubehör, Kennzeichnung, Sicherungen.\n3. **Elektrische Messungen** nach [[iec-62353]]: [[schutzleiterwiderstand]] (bei [[schutzklassen|Schutzklasse]] I), ggf. [[isolationswiderstand]], [[ableitstrommessung|Geräte- und Patientenableitstrom]] unter Berücksichtigung der [[anwendungsteile]].\n4. **Funktionsprüfung:** sicherheitsrelevante Funktionen und Alarme, oft mit Simulatoren (z. B. Patienten-, Defibrillator- oder Infusionsanalysatoren).\n5. **Bewertung und Dokumentation:** Ergebnis, Mängel, Prüfplakette, Freigabe oder Sperrung.\n\n> [!praxis] Prüfintervalle, Prüfumfang und Grenzwerte des Herstellers haben Vorrang vor generischen Prüfanweisungen. Abweichungen und Grenzwertüberschreitungen werden nicht „wegdiskutiert“, sondern führen zur Instandsetzung oder Außerbetriebnahme.\n\n## Lernpfad-Empfehlung\n\n1. **Grundlagen:** [[betreiberpflichten]], [[mpbetreibv]], [[stk]], [[mtk]].\n2. **Elektrische Sicherheit:** [[schutzklassen]], [[anwendungsteile]], [[ableitstrom]] aus [[elektrotechnik]], dann [[elektrische-sicherheitspruefung]] mit [[schutzleiterwiderstand]], [[isolationswiderstand]], [[ableitstrommessung]].\n3. **Funktion und Messtechnik:** [[funktionspruefung]], [[pruefgeraete]], [[messunsicherheit]], [[kalibrierung]].\n4. **Abgrenzung und Spezialfälle:** [[dguv-vorschrift-3]], [[konstanzpruefung]].\n5. **Anwendung:** STK-Abschnitte ausgewählter Geräte lesen, etwa [[defibrillator]], [[infusionspumpe]] und [[hf-chirurgiegeraet]].",
+  "paths": [
+    [
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "schutzleiterwiderstand",
+      "isolationswiderstand",
+      "ableitstrommessung",
+      "funktionspruefung"
+    ],
+    [
+      "mtk",
+      "messunsicherheit",
+      "kalibrierung",
+      "pruefgeraete"
+    ]
+  ],
+  "sources": [
+    "mpbetreibv",
+    "iec-62353",
+    "dguv-v3",
+    "strlschv"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

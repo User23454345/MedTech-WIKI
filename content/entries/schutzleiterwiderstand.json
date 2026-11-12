@@ -1,0 +1,148 @@
+{
+  "id": "schutzleiterwiderstand",
+  "type": "term",
+  "title": "Schutzleiterwiderstand",
+  "aliases": [
+    "RPE",
+    "R_PE",
+    "Schutzleiterprüfung",
+    "Schutzleitermessung",
+    "Protective earth resistance",
+    "PE resistance",
+    "Ground bond test",
+    "Earth bond"
+  ],
+  "category": "stk-mtk",
+  "summary": "Der Schutzleiterwiderstand ist der elektrische Widerstand zwischen dem Schutzkontakt des Netzanschlusses und den berührbaren leitfähigen Teilen eines Geräts der Schutzklasse I. Ein niedriger Wert stellt sicher, dass Fehler- und Ableitströme sicher zur Erde abfließen und Schutzeinrichtungen auslösen; er wird bei jeder elektrischen Sicherheitsprüfung gemessen.",
+  "body": "## Begriff\n\nDer **Schutzleiterwiderstand** (R_PE) ist der Widerstand der Schutzleiterverbindung zwischen dem Schutzkontakt des Netzsteckers – bei fest angeschlossenen Geräten der Schutzleiterklemme – und jedem berührbaren leitfähigen Teil, das aus Sicherheitsgründen mit dem Schutzleiter verbunden ist [@iec-62353]. Er ist nur für Geräte der [[schutzklassen|Schutzklasse I]] relevant; Geräte der Schutzklasse II haben keinen Schutzleiter, Geräte mit interner Stromversorgung werden ohne Netzanschluss betrieben.\n\n## Warum ein niedriger Widerstand wichtig ist\n\nBei Schutzklasse I schützt die Kombination aus **Basisisolierung** und **Schutzleiter** gegen elektrischen Schlag [@iec-61140]. Versagt die Isolierung (Körperschluss), soll der Fehlerstrom über den Schutzleiter abfließen und die vorgeschaltete Schutzeinrichtung (Leitungsschutzschalter, Fehlerstromschutzschalter) auslösen. Gleichzeitig führt der Schutzleiter im Normalbetrieb die [[ableitstrom|Erdableitströme]] ab.\n\nDie Spannung, die bei einem Fehler am Gehäuse gegen Erde anliegt, ist näherungsweise\n\nU_B = I_F · R_PE\n\nmit dem Fehlerstrom I_F. Je kleiner R_PE, desto kleiner die Berührungsspannung und desto zuverlässiger die Auslösung. Ein **unterbrochener** Schutzleiter ist besonders gefährlich: Das Gerät funktioniert scheinbar normal, der Ableitstrom fließt aber im Fehlerfall über die berührende Person ab (siehe [[elektrische-stromwirkung]]).\n\n> [!beispiel] Ein Gerät hat einen Erdableitstrom von 0,4 mA. Bei intaktem Schutzleiter (R_PE = 0,1 Ω) entsteht am Gehäuse eine Spannung von 0,4 mA · 0,1 Ω = 40 µV – völlig unbedenklich. Ist der Schutzleiter unterbrochen, kann dieser Strom über eine Person mit rund 1 kΩ Körperwiderstand fließen. Mit 400 µA läge er zwar unter dem Erstfehler-Grenzwert für den Berührungsstrom von 500 µA nach IEC 60601-1, aber deutlich über dem Normalzustandswert von 100 µA – und für einen Patienten mit herznahem Katheter wäre schon ein Bruchteil davon gefährlich. Zahlen beispielhaft.\n\n## Physikalische Grundlage\n\nDer Widerstand eines Leiters ergibt sich aus\n\nR = ρ · l / A\n\nmit dem spezifischen Widerstand ρ (Kupfer bei 20 °C ≈ 0,0178 Ω·mm²/m), der Länge l und dem Querschnitt A [@tipler-2019]. Hinzu kommen Übergangswiderstände an Steckverbindern, Schraubklemmen und Gehäuseverbindungen.\n\n| Leitung | Rechnung | R (Leiter allein) |\n|---|---|---|\n| 3 m, 1,0 mm² Cu | 0,0178 · 3 / 1,0 | ≈ 0,053 Ω |\n| 3 m, 1,5 mm² Cu | 0,0178 · 3 / 1,5 | ≈ 0,036 Ω |\n| 10 m, 1,5 mm² Cu | 0,0178 · 10 / 1,5 | ≈ 0,119 Ω |\n\n> [!vereinfacht] Die Rechnung vernachlässigt Temperaturabhängigkeit und Übergangswiderstände. In der Praxis machen gerade die Übergänge (korrodierte Kontakte, lockere Schrauben, gebrochene Litzen) den Unterschied zwischen „bestanden“ und „nicht bestanden“ aus.\n\n## Messung\n\n### Messprinzip\n\nDas Prüfgerät speist einen definierten Prüfstrom ein und misst den Spannungsfall; der Widerstand folgt aus R = U / I. Gute [[pruefgeraete|Sicherheitstester]] arbeiten nach dem Vierleiterprinzip oder kompensieren den Widerstand der Messleitungen durch einen Nullabgleich [@iec-61557-16].\n\n### Grenzwerte und Prüfstrom\n\n> [!belegt] Nach IEC 62353 darf der Schutzleiterwiderstand eines ME-Geräts einschließlich Netzleitung typischerweise **0,3 Ω** nicht überschreiten; gemessen wird mit einem Prüfstrom von **mindestens 200 mA**. Für Geräteteile ohne Netzleitung, abnehmbare Netzleitungen und ME-Systeme mit Mehrfachsteckdosen nennt die Norm gesonderte Werte [@iec-62353].\n\nEin hoher Prüfstrom (manche Prüfgeräte bieten auch Ströme im Ampere-Bereich an) macht schlechte Kontaktstellen eher sichtbar. Ob hohe Prüfströme zulässig sind, richtet sich nach den Herstellerangaben, da empfindliche Funktionserdverbindungen beschädigt werden können.\n\n### Praktische Durchführung\n\n* Prüfspitze nacheinander an alle schutzleiterverbundenen, berührbaren Metallteile: Gehäuseschrauben, Gerätewagen, Potentialausgleichsbolzen, Metallhalterungen.\n* Während der Messung die Netzleitung entlang ihrer Länge bewegen, insbesondere an Stecker und Knickschutz. Schwankende Werte deuten auf Litzenbruch hin.\n* Lackierte oder eloxierte Flächen kontaktieren schlecht; geeignete blanke Messstellen wählen.\n* Bei Geräten mit Kaltgerätestecker die verwendete Netzleitung mitprüfen und eindeutig dem Gerät zuordnen.\n\n> [!praxis] Wird die Netzleitung bei Geräten mit abnehmbarer Leitung häufig getauscht, sollte die Leitung separat geprüft und gekennzeichnet werden. Sonst wird bei der nächsten STK unbemerkt eine andere, möglicherweise defekte Leitung gemessen.\n\n## Potentialausgleich\n\nIn [[medizinisch-genutzte-bereiche|medizinisch genutzten Bereichen]] der Gruppe 2 (z. B. OP, Intensivstation) wird zusätzlich ein **Potentialausgleich** installiert, an den Geräte über einen Bolzen angeschlossen werden können. Er reduziert Spannungsdifferenzen zwischen leitfähigen Teilen in der Patientenumgebung; die Anforderungen an die Installation regelt [[din-vde-0100-710]] [@din-vde-0100-710]. Die Potentialausgleichsleitung ersetzt den Schutzleiter nicht, wird aber in die Prüfung einbezogen, wenn das Gerät einen entsprechenden Anschluss hat.\n\n## Bedeutung in der Medizintechnik\n\nDie Schutzleiterprüfung gehört zu jeder [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] und damit zu jeder [[stk|STK]] eines Geräts der Schutzklasse I. Typische Geräte mit Schutzleiter sind [[patientenmonitor|Patientenmonitore]], [[beatmungsgeraet|Beatmungsgeräte]], [[hf-chirurgiegeraet|HF-Chirurgiegeräte]], [[dialysegeraet|Dialysegeräte]], [[ultraschallgeraet|Ultraschallgeräte]] und Gerätewagen mit Mehrfachsteckdosen. Häufigste Fehlerursachen sind mechanisch beanspruchte Netzleitungen an fahrbaren Geräten, gelöste Erdungsschrauben nach Reparaturen und nicht angeschlossene Schutzleiter nach dem Austausch von Netzteilen ([[medizinisches-netzteil]]).",
+  "related": [
+    "elektrische-sicherheitspruefung",
+    "schutzklassen",
+    "ableitstrom",
+    "isolationswiderstand",
+    "ableitstrommessung",
+    "medizinisch-genutzte-bereiche",
+    "spannung-strom-widerstand",
+    "stk",
+    "pruefgeraete",
+    "elektrische-stromwirkung"
+  ],
+  "paths": [
+    [
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "schutzleiterwiderstand",
+      "spannung-strom-widerstand"
+    ],
+    [
+      "schutzklassen",
+      "schutzleiterwiderstand",
+      "ableitstrom",
+      "elektrische-stromwirkung"
+    ]
+  ],
+  "diagram": {
+    "title": "Messung des Schutzleiterwiderstands (Vierleitermessung)",
+    "caption": "Prinzip: Konstantstromquelle des Prüfgeräts treibt einen Prüfstrom durch den Schutzleiter, die Spannung wird getrennt abgegriffen; didaktisches Schema.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "quelle",
+        "label": "Prüfstromquelle\n(≥ 200 mA)",
+        "ref": "pruefgeraete",
+        "kind": "source",
+        "x": 110,
+        "y": 90
+      },
+      {
+        "id": "stecker",
+        "label": "Schutzkontakt\nNetzstecker",
+        "kind": "process",
+        "x": 330,
+        "y": 90
+      },
+      {
+        "id": "leitung",
+        "label": "Schutzleiter der\nNetzleitung",
+        "kind": "process",
+        "x": 550,
+        "y": 90
+      },
+      {
+        "id": "geraet",
+        "label": "Geräteinterne\nPE-Verbindung",
+        "kind": "process",
+        "x": 770,
+        "y": 90
+      },
+      {
+        "id": "gehaeuse",
+        "label": "Berührbares\nleitfähiges Teil",
+        "kind": "output",
+        "x": 770,
+        "y": 240
+      },
+      {
+        "id": "umess",
+        "label": "Spannungs-\nmessung",
+        "kind": "sensor",
+        "x": 550,
+        "y": 240
+      },
+      {
+        "id": "rech",
+        "label": "R = U / I\nBewertung",
+        "ref": "spannung-strom-widerstand",
+        "kind": "control",
+        "x": 330,
+        "y": 240
+      }
+    ],
+    "edges": [
+      {
+        "from": "quelle",
+        "to": "stecker",
+        "kind": "power",
+        "label": "I"
+      },
+      {
+        "from": "stecker",
+        "to": "leitung",
+        "kind": "power"
+      },
+      {
+        "from": "leitung",
+        "to": "geraet",
+        "kind": "power"
+      },
+      {
+        "from": "geraet",
+        "to": "gehaeuse",
+        "kind": "power"
+      },
+      {
+        "from": "gehaeuse",
+        "to": "umess",
+        "kind": "signal",
+        "label": "Prüfspitze"
+      },
+      {
+        "from": "umess",
+        "to": "rech",
+        "kind": "data",
+        "label": "U"
+      }
+    ]
+  },
+  "sources": [
+    "iec-62353",
+    "iec-60601-1",
+    "iec-61140",
+    "tipler-2019",
+    "din-vde-0100-710",
+    "iec-61557-16"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

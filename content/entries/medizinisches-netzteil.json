@@ -1,0 +1,176 @@
+{
+  "id": "medizinisches-netzteil",
+  "type": "term",
+  "title": "Medizinisches Netzteil",
+  "aliases": [
+    "Medizinnetzteil",
+    "Medical Power Supply",
+    "Medizinisches Schaltnetzteil",
+    "SMPS",
+    "Switched-Mode Power Supply",
+    "Stromversorgung (ME-Gerät)",
+    "AC/DC-Wandler",
+    "2 × MOPP-Netzteil"
+  ],
+  "category": "komponenten",
+  "summary": "Baugruppe, die die Netzspannung in die internen Gleichspannungen eines Medizingeräts umwandelt und dabei die erhöhten Isolations-, Ableitstrom- und EMV-Anforderungen der IEC 60601-1 erfüllt. Heute fast ausschließlich als Schaltnetzteil mit galvanischer Trennung ausgeführt.",
+  "body": "## Begriff und Aufgabe\n\nEin **medizinisches Netzteil** wandelt die Netzwechselspannung (in Europa 230 V, 50 Hz) in die Gleichspannungen um, die ein [[medizinisches-elektrisches-geraet|medizinisches elektrisches Gerät]] intern benötigt – etwa 24 V für Motoren und Ventile, 12 V für Heizungen, 5 V und 3,3 V für [[mikrocontroller|Mikrocontroller]] und Sensorelektronik. Es unterscheidet sich von einem Standardnetzteil der Informationstechnik nicht im Grundprinzip, sondern in den **Sicherheitsanforderungen**: Isolation, Kriech- und Luftstrecken, [[ableitstrom|Ableitströme]] und [[emv|elektromagnetische Verträglichkeit]] müssen den Festlegungen der [[iec-60601-1]] genügen [@iec-60601-1] [@kramme-2017].\n\nDas Netzteil ist damit die **erste Schutzbarriere** zwischen Versorgungsnetz und Patient. Es ist zugleich häufig die Baugruppe, über die ein Gerät seinen [[lithium-ionen-akku|Akku]] lädt und im Netzausfall unterbrechungsfrei auf Akkubetrieb umschaltet.\n\n## Bauformen\n\n| Bauform | Prinzip | Typische Verwendung |\n|---|---|---|\n| Lineares Netzteil | 50-Hz-[[transformator|Transformator]], Gleichrichter, Glättungs-[[kondensator]], Längsregler | ältere oder sehr rauscharme Geräte, kleine Leistungen |\n| Schaltnetzteil (SMPS) | Gleichrichtung der Netzspannung, Zerhacken mit Transistor im kHz-Bereich, kleiner HF-Übertrager, Gleichrichtung, Regelung über [[pwm|PWM]] | heute Standard in nahezu allen Geräten |\n| Externes Netzteil (Tischnetzteil, Steckernetzteil) | wie SMPS, aber in separatem Gehäuse; Teil des ME-Systems | Pumpen, Monitore, Heimtherapiegeräte |\n| Eingebautes Netzteil (Open Frame, Einbaumodul) | im Gerätegehäuse | Beatmungs-, Dialyse-, Narkosegeräte |\n\n### Warum Schaltnetzteile?\n\nDie Leistung, die ein Transformator übertragen kann, wächst bei gleicher Baugröße etwa proportional zur Frequenz, weil die induzierte Spannung nach dem Induktionsgesetz `U = 4,44 · f · N · A · B̂` mit der Frequenz f steigt ([[elektromagnetische-induktion]]). Ein Schaltnetzteil, das mit einigen zehn bis hunderten Kilohertz arbeitet, kommt deshalb mit einem viel kleineren und leichteren Übertrager aus als ein 50-Hz-Netztransformator. Zudem erreicht es deutlich höhere Wirkungsgrade, weil der Leistungstransistor nur zwischen „voll leitend“ und „gesperrt“ schaltet und kaum Verlustleistung im linearen Bereich umsetzt [@tietze-schenk-2019].\n\n> [!vereinfacht] Die Proportionalität von übertragbarer Leistung und Frequenz gilt nur näherungsweise. Bei hohen Frequenzen begrenzen Kernverluste, Skin- und Proximity-Effekt in den Wicklungen sowie Schaltverluste der Transistoren den Gewinn.\n\n## Aufbau eines Schaltnetzteils\n\n1. **Netzeingang:** Gerätestecker, Sicherungen, ggf. Netzschalter (zweipolig).\n2. **Netzfilter (EMV-Filter):** Stromkompensierte Drossel sowie X- und Y-[[kondensator|Kondensatoren]] unterdrücken leitungsgebundene Störungen in beide Richtungen [@iec-60384-14].\n3. **Gleichrichter und Leistungsfaktorkorrektur (PFC):** Erzeugt einen annähernd sinusförmigen Netzstrom und eine Zwischenkreisspannung von etwa 380–400 V DC (typisch für aktive PFC).\n4. **Leistungsstufe:** Transistor(en) takten die Zwischenkreisspannung auf den Übertrager (Sperrwandler, Durchflusswandler oder Resonanzwandler).\n5. **Übertrager:** Sorgt für die Spannungsanpassung und – sicherheitstechnisch entscheidend – für die [[galvanische-trennung|galvanische Trennung]] zwischen Netz- und Ausgangsseite.\n6. **Sekundärseite:** Gleichrichtung, Glättung, Ausgangsfilter.\n7. **Regelung:** Ein [[regelkreis|Regelkreis]] misst die Ausgangsspannung, überträgt das Fehlersignal über einen Optokoppler isoliert auf die Primärseite und passt das Tastverhältnis an.\n\n## Schutzmaßnahmen nach IEC 60601-1\n\n### MOOP und MOPP\n\nDie dritte Ausgabe der IEC 60601-1 unterscheidet zwischen **Schutzmaßnahmen für den Bediener** (Means of Operator Protection, MOOP) und **für den Patienten** (Means of Patient Protection, MOPP). Für Patientenschutz gelten strengere Prüfspannungen und Abstände [@iec-60601-1].\n\n| Schutzmaßnahme | Isolationsart | Prüfspannung (bei 250 V Arbeitsspannung) | Kriechstrecke |\n|---|---|---|---|\n| 1 × MOOP | Basisisolierung | 1 500 V AC | 2,5 mm |\n| 2 × MOOP | doppelte/verstärkte Isolierung | 3 000 V AC | 5 mm |\n| 1 × MOPP | Basisisolierung | 1 500 V AC | 4 mm |\n| 2 × MOPP | doppelte/verstärkte Isolierung | 4 000 V AC | 8 mm |\n\n> [!hinweis] Die Tabellenwerte sind die in der Fachliteratur und in Herstellerunterlagen häufig zitierten Werte für eine Arbeitsspannung bis 250 V. Maßgeblich sind die Tabellen der jeweils gültigen Ausgabe der IEC 60601-1, in denen Werte u. a. von Arbeitsspannung, Verschmutzungsgrad und Höhenlage abhängen.\n\nEin Netzteil mit **2 × MOPP** zwischen Netz und Ausgang deckt die Isolation zwischen Netzteil und patientenseitiger Elektronik ab und vereinfacht damit den Einsatz in Geräten mit [[anwendungsteile|Anwendungsteilen]]. Es ersetzt aber nicht die Isolation des Anwendungsteils selbst: Anwendungsteile vom Typ BF und CF müssen als „F-Typ“ (floating) auch gegen Erde und andere Geräteteile isoliert sein; bei Typ CF (direkter Herzkontakt) gelten dafür die strengsten Ableitstromgrenzwerte. In der Praxis wird dies meist durch eine zusätzliche Trennstufe im Messkanal (isolierter DC/DC-Wandler, Optokoppler) erreicht.\n\n### Ableitstrom und Y-Kondensatoren\n\nY-Kondensatoren zwischen Primärseite und Schutzleiter bzw. Sekundärseite verbessern die EMV, leiten aber einen kapazitiven Strom ab:\n\n`I_Ableit ≈ U · 2π · f · C_Y`\n\n> [!beispiel] Bei U = 230 V, f = 50 Hz und C_Y = 4,7 nF ergibt sich I ≈ 230 · 314 · 4,7 · 10⁻⁹ A ≈ 0,34 mA. Im Normalzustand fließt dieser Strom über den Schutzleiter ab (Erdableitstrom). Bei unterbrochenem Schutzleiter (Erstfehler) wird er jedoch zum Berührungsstrom, und Y-Kondensatoren über die Trennbarriere können zum Patientenableitstrom beitragen. Medizinische Netzteile verwenden deshalb deutlich kleinere Y-Kapazitäten und erkaufen das mit aufwendigeren Filtern. Die Werte sind didaktisch gewählt.\n\nFür Berührungs- und Patientenableitströme nennt die IEC 60601-1 Grenzwerte im Normalzustand und im Erstfehlerfall, die bei der [[ableitstrommessung|Ableitstrommessung]] überprüft werden. Ein Netzteil mit niedrigem Erdableitstrom („low leakage“) erleichtert die Einhaltung dieser Grenzwerte im Gesamtsystem.\n\n### Schutzklasse\n\nMedizinische Netzteile gibt es in [[schutzklassen|Schutzklasse]] I (mit Schutzleiter) und Schutzklasse II (schutzisoliert, ohne Schutzleiter). Bei Schutzklasse II entfällt die Messung des [[schutzleiterwiderstand|Schutzleiterwiderstands]]; die Sicherheit beruht allein auf doppelter oder verstärkter Isolierung.\n\n## Anwendung in Geräten\n\n| Gerät | Besonderheit der Stromversorgung |\n|---|---|\n| [[beatmungsgeraet|Intensivbeatmungsgerät]] | hohe Spitzenleistung für [[turbine]] und [[elektromotor|Motor]], interner Akku als Pufferung, lückenlose Umschaltung |\n| [[patientenmonitor]] | rauscharme Versorgung der Messverstärker, isolierte Messkanäle (CF) |\n| [[infusionspumpe]], [[spritzenpumpe]] | Netz- und Akkubetrieb, häufig externes oder steckbares Netzteil |\n| [[defibrillator]] | Ladeschaltung für den Energiespeicher-[[kondensator]], Akku als Primärquelle |\n| [[dialysegeraet]] | hohe Heizleistung für das [[heizelement]] des Dialysats |\n| [[computertomograph]], [[mrt]] | eigene Netzanschlussschränke, Hochleistungsversorgungen, [[hochspannungserzeugung]] |\n\nIn der Kette [[beatmungsgeraet]] → [[turbine]] → [[elektromotor]] → [[drehzahlregelung]] ist das Netzteil das Glied, das die elektrische Energie bereitstellt: Die Motorendstufe zieht bei schnellen Drehzahlwechseln kurzzeitig hohe Ströme, die das Netzteil bzw. der Zwischenkreis-Kondensator liefern muss.\n\n## Instandhaltung und typische Fehler\n\n* **Elektrolytkondensatoren** altern temperaturabhängig; ausgetrocknete Elkos führen zu erhöhter Restwelligkeit, Neustarts oder Totalausfall (siehe [[kondensator]]).\n* **Lüfter und Staub** erhöhen die Innentemperatur und beschleunigen die Alterung.\n* **Steckverbinder und Kabel** externer Netzteile sind mechanisch stark belastet; Kabelbrüche sind ein häufiger Grund für [[akkufehler|Akku- und Ladefehler]].\n* Nach jedem Tausch oder jeder Reparatur ist eine [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung nach IEC 62353]] erforderlich [@iec-62353].\n\n> [!warnung] Im Primärkreis eines Schaltnetzteils liegen auch nach dem Trennen vom Netz noch gefährliche Gleichspannungen von mehreren hundert Volt am Zwischenkreis-Kondensator an. Arbeiten am geöffneten Netzteil sind ausschließlich befugtem Fachpersonal vorbehalten; Netzteile werden in der Regel als komplette Baugruppe getauscht.\n\n> [!praxis] Ersatz durch ein „gleichwertiges“ IT-Netzteil ist unzulässig, wenn es nicht vom Hersteller für das Medizinprodukt freigegeben ist: Ein IT-Netzteil erfüllt meist nur die Anforderungen der Informationstechnik, nicht aber 2 × MOPP und die niedrigen Ableitströme.\n\n## Bezug zu Normen\n\nNeben der [[iec-60601-1]] (Isolation, Ableitströme, Erwärmung) ist die [[iec-60601-1-2]] (EMV) maßgeblich [@iec-60601-1-2]. Für Wiederholungsprüfungen gilt die [[iec-62353]]. Die Betreiberpflichten zur [[stk|sicherheitstechnischen Kontrolle]] ergeben sich aus der [[mpbetreibv|MPBetreibV]].\n",
+  "related": [
+    "galvanische-trennung",
+    "ableitstrom",
+    "schutzklassen",
+    "anwendungsteile",
+    "transformator",
+    "kondensator",
+    "lithium-ionen-akku",
+    "emv",
+    "pwm",
+    "iec-60601-1",
+    "elektrische-sicherheitspruefung",
+    "medizinisch-genutzte-bereiche"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "medizinisches-netzteil",
+      "elektromotor",
+      "drehzahlregelung"
+    ],
+    [
+      "medizinisches-netzteil",
+      "galvanische-trennung",
+      "ableitstrom",
+      "ableitstrommessung"
+    ]
+  ],
+  "sources": [
+    "iec-60601-1",
+    "iec-60601-1-2",
+    "iec-62353",
+    "iec-60384-14",
+    "tietze-schenk-2019",
+    "kramme-2017"
+  ],
+  "diagram": {
+    "title": "Signal- und Energiefluss im medizinischen Schaltnetzteil",
+    "caption": "Funktionsschema; die Isolationsbarriere (2 × MOPP) liegt im Übertrager und im Optokoppler der Rückführung.",
+    "width": 960,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "netz",
+        "label": "Netz\n230 V / 50 Hz",
+        "kind": "source",
+        "x": 90,
+        "y": 100
+      },
+      {
+        "id": "filter",
+        "label": "EMV-Filter\n(X/Y-Kondensatoren)",
+        "ref": "emv",
+        "kind": "process",
+        "x": 280,
+        "y": 100,
+        "w": 170
+      },
+      {
+        "id": "pfc",
+        "label": "Gleichrichter\n+ PFC",
+        "kind": "process",
+        "x": 470,
+        "y": 100
+      },
+      {
+        "id": "schalt",
+        "label": "Leistungsstufe\n(PWM)",
+        "ref": "pwm",
+        "kind": "actuator",
+        "x": 660,
+        "y": 100
+      },
+      {
+        "id": "trafo",
+        "label": "HF-Übertrager\n(galv. Trennung)",
+        "ref": "transformator",
+        "kind": "process",
+        "x": 660,
+        "y": 240,
+        "w": 170
+      },
+      {
+        "id": "sek",
+        "label": "Gleichrichtung\n+ Glättung",
+        "ref": "kondensator",
+        "kind": "process",
+        "x": 450,
+        "y": 240
+      },
+      {
+        "id": "last",
+        "label": "Geräteelektronik,\nMotor, Akku",
+        "ref": "elektromotor",
+        "kind": "output",
+        "x": 240,
+        "y": 240,
+        "w": 160
+      },
+      {
+        "id": "regler",
+        "label": "Regler mit\nOptokoppler",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 870,
+        "y": 170
+      }
+    ],
+    "edges": [
+      {
+        "from": "netz",
+        "to": "filter",
+        "kind": "power"
+      },
+      {
+        "from": "filter",
+        "to": "pfc",
+        "kind": "power"
+      },
+      {
+        "from": "pfc",
+        "to": "schalt",
+        "kind": "power",
+        "label": "≈ 400 V DC"
+      },
+      {
+        "from": "schalt",
+        "to": "trafo",
+        "kind": "power",
+        "label": "kHz"
+      },
+      {
+        "from": "trafo",
+        "to": "sek",
+        "kind": "power"
+      },
+      {
+        "from": "sek",
+        "to": "last",
+        "kind": "power",
+        "label": "z. B. 24 V"
+      },
+      {
+        "from": "sek",
+        "to": "regler",
+        "kind": "signal",
+        "label": "Ist-Spannung"
+      },
+      {
+        "from": "regler",
+        "to": "schalt",
+        "kind": "signal",
+        "label": "Tastverhältnis"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

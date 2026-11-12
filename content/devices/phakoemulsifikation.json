@@ -1,0 +1,67 @@
+{
+  "id": "phakoemulsifikation",
+  "type": "device",
+  "title": "Phakoemulsifikationssystem",
+  "aliases": [
+    "Phako",
+    "Phaco",
+    "Phakoemulsifikation",
+    "Phakogerät",
+    "Kataraktsystem",
+    "Phaco-Vitrektomie-System"
+  ],
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 93,
+  "domains": [
+    "augenheilkunde",
+    "chirurgie"
+  ],
+  "summary": "Phakoemulsifikationssysteme zerkleinern die getrübte Augenlinse bei der Kataraktoperation mit ultraschallangeregter Hohlnadel und saugen die Fragmente unter kontrollierter Spülung ab. Sie kombinieren einen piezoelektrischen Ultraschallantrieb mit einem geregelten Fluidiksystem aus Irrigation und Aspiration.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives therapeutisches Produkt, das Energie (Ultraschall) in potenziell gefährlicher Weise an den Körper abgibt – Regel 9 der [[mdr|MDR]] Anhang VIII. Maßgeblich ist die Einstufung des Herstellers.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die Kataraktoperation (Entfernung der getrübten Linse und Implantation einer Kunstlinse) ist einer der häufigsten operativen Eingriffe überhaupt. Die 1967 von Kelman eingeführte Phakoemulsifikation erlaubt dies über Schnitte von wenigen Millimetern Länge [@kelman-1967]. Viele Systeme bieten zusätzlich Module für Vitrektomie (Glaskörperchirurgie) und bipolare Diathermie.",
+    "principle": "## Ultraschallhandstück\n\nIm Handstück regen [[piezoelektrischer-effekt|piezoelektrische]] Keramikscheiben ein Titanhorn zu Schwingungen im Ultraschallbereich (typisch einige zehn Kilohertz) an; das Horn verstärkt die Amplitude an der Hohlnadelspitze. Die Linsensubstanz wird durch den mechanischen Stoß der Spitze und durch Kavitation fragmentiert. Neben der longitudinalen gibt es torsionale bzw. transversale Schwingungsformen, die weniger Abstoßung des Linsenmaterials bewirken. Gepulste Betriebsarten reduzieren die eingebrachte Energie und damit das Risiko thermischer Schäden am Schnitt ([[joulesche-waerme|Wärmeentwicklung]]).\n\n## Fluidik: Irrigation und Aspiration\n\nÜber eine Silikonhülse um die Nadel strömt Spüllösung in die Vorderkammer (Irrigation, per Schwerkraft über die Flaschenhöhe oder aktiv druckgeregelt); durch die Nadel wird abgesaugt (Aspiration). Zwei Pumpenprinzipien sind üblich:\n\n| Pumpe | Regelgröße | Charakteristik |\n|---|---|---|\n| [[peristaltikpumpe|Peristaltikpumpe]] | Flow | Vakuum baut sich erst bei Okklusion der Spitze auf |\n| Venturi-/Membranpumpe | Vakuum | Vakuum liegt sofort an, schnelles Ansaugen |\n\nIn der Einweg-Kassette erfassen [[drucksensor|Drucksensoren]] das Vakuum; ein [[regelkreis|Regelkreis]] begrenzt es. Kritisch ist der **Surge**: Bricht eine Okklusion plötzlich auf, strömt Flüssigkeit schlagartig ab und die Vorderkammer kann kollabieren. Ein Fußschalter steuert stufenweise Irrigation, Irrigation/Aspiration und Ultraschall.\n\n> [!warnung] Vakuum-, Flow- und Leistungsgrenzwerte sind ärztlich festzulegen; ein Ausfall der Irrigation bei laufendem Ultraschall kann den Schnitt thermisch schädigen."
+  },
+  "manufacturers": [
+    {
+      "ref": "zeiss",
+      "models": [
+        "QUATERA 700"
+      ],
+      "note": "Phakoemulsifikationssystem mit integrierter Fluidiksteuerung."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software- und Zusatzmodulen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Anlage 1 Nr. 1.3 der MPBetreibV (Fassung 2025) erfasst Produkte zur Erzeugung und Anwendung jeglicher Energie zur unmittelbaren Koagulation, Gewebezerstörung oder Zertrümmerung von Ablagerungen in Organen; ob Phakoemulsifikationssysteme darunter fallen, ist anhand der Zweckbestimmung und Herstellerangaben zu klären – integrierte HF-Diathermiemodule fallen in der Regel darunter. Im Übrigen Kontrollen nach § 12, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Nach Herstellerangabe, bei Anwendbarkeit von Anlage 1 spätestens alle 2 Jahre (§ 12 MPBetreibV); Prüfung von Ultraschallleistung, Vakuum- und Irrigationsfunktion, Fußschalter; elektrische Sicherheitsprüfung nach IEC 62353; Funktionsprüfung (Tuning/Priming) vor jedem Eingriff."
+  },
+  "related": [
+    "piezoelektrischer-effekt",
+    "peristaltikpumpe",
+    "auge",
+    "hf-chirurgiegeraet",
+    "oct",
+    "ultraschallwandler"
+  ],
+  "sources": [
+    "kelman-1967",
+    "mdr-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

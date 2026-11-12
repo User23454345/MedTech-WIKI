@@ -1,0 +1,159 @@
+{
+  "id": "nervensystem",
+  "type": "term",
+  "title": "Nervensystem",
+  "aliases": [
+    "nervous system",
+    "ZNS",
+    "PNS",
+    "Zentralnervensystem",
+    "peripheres Nervensystem",
+    "vegetatives Nervensystem",
+    "autonomes Nervensystem",
+    "Neuron",
+    "Nervenzelle",
+    "Synapse",
+    "Erregungsleitung"
+  ],
+  "category": "anatomie",
+  "summary": "Gesamtheit der Nervenzellen in Gehirn, Rückenmark und Peripherie, die Reize elektrisch und chemisch aufnehmen, verarbeiten und weiterleiten. Seine Signale werden mit EEG und EMG gemessen, seine Reizbarkeit wird therapeutisch genutzt und begründet zugleich elektrische Sicherheitsanforderungen.",
+  "body": "## Überblick\n\nDas **Nervensystem** nimmt Reize auf, verarbeitet sie und steuert Muskeln, Organe und Drüsen. Es arbeitet elektrisch und chemisch: Informationen laufen als [[aktionspotential|Aktionspotentiale]] entlang der Nervenfasern und werden an Synapsen über Botenstoffe (Neurotransmitter) übertragen [@kandel-2021] [@schmidt-lang-2019]. Weil diese Vorgänge mit messbaren elektrischen Feldern einhergehen, ist das Nervensystem Quelle wichtiger [[biosignale|Biosignale]] (EEG, EMG, evozierte Potentiale) – und zugleich empfindlich gegenüber äußeren elektrischen Strömen.\n\n## Gliederung\n\n### Anatomisch\n\n| Teil | Bestandteile | Aufgabe |\n|---|---|---|\n| Zentralnervensystem (ZNS) | Gehirn, Rückenmark | Integration, Steuerung, Gedächtnis |\n| Peripheres Nervensystem (PNS) | Hirn- und Spinalnerven, Ganglien | Leitung zwischen ZNS und Körper |\n\n### Funktionell\n\n| System | Funktion | Beispiel |\n|---|---|---|\n| somatisches Nervensystem | willkürliche Motorik, bewusste Wahrnehmung | Skelettmuskel, Haut-Sensibilität |\n| autonomes (vegetatives) Nervensystem | unwillkürliche Steuerung der Organe | Herzfrequenz, Atmung, Verdauung, Schweißsekretion |\n| – Sympathikus | Leistungssteigerung („fight or flight“) | Herzfrequenz ↑, Blutdruck ↑ |\n| – Parasympathikus | Erholung, Verdauung | Herzfrequenz ↓ |\n\nDas autonome Nervensystem greift unmittelbar in Messgrößen ein, die Geräte überwachen: Es moduliert die Frequenz des [[erregungsleitungssystem|Sinusknotens]], den Gefäßtonus und damit den [[blutdruck|Blutdruck]] sowie die [[thermoregulation|Thermoregulation]].\n\n## Zelluläre Grundlagen\n\n### Neuron und Gliazellen\n\nEin **Neuron** besteht aus Zellkörper (Soma), Dendriten (Eingänge) und einem Axon (Ausgang). Das menschliche Gehirn enthält größenordnungsmäßig 10¹¹ Neurone sowie eine ähnliche Zahl an Gliazellen [@kandel-2021]. Gliazellen (z. B. Oligodendrozyten im ZNS, Schwann-Zellen im PNS) bilden die **Myelinscheide**, die das Axon elektrisch isoliert.\n\n### Erregungsleitung\n\nDas Ruhemembranpotential von etwa −70 mV entsteht durch ungleiche Ionenverteilung und selektive Membranpermeabilität; das Aktionspotential durch spannungsgesteuerte Na⁺- und K⁺-Kanäle [@hodgkin-huxley-1952]. Elektrotechnisch lässt sich ein Axon als **Kabel** mit Längswiderstand (Axoplasma) und Membrankapazität beschreiben. Die Längskonstante\n\n`λ = √(r_m / r_i)`\n\n(`r_m` Membranwiderstand × Länge, `r_i` Innenlängswiderstand pro Länge) gibt an, wie weit sich eine Spannungsänderung passiv ausbreitet. Myelin erhöht `r_m` und senkt die Membrankapazität; die Erregung springt dann von Schnürring zu Schnürring (**saltatorische Erregungsleitung**).\n\n| Fasertyp (Beispiele) | Myelin | Leitungsgeschwindigkeit (typisch) |\n|---|---|---|\n| Aα (Motoneurone, Muskelspindel) | dick | ca. 70–120 m/s |\n| Aδ (schneller Schmerz, Kälte) | dünn | ca. 5–30 m/s |\n| C (langsamer Schmerz, vegetativ) | keins | ca. 0,5–2 m/s |\n\n> [!hinweis] Richtwerte aus der Lehrbuchliteratur [@schmidt-lang-2019] [@kandel-2021]; die Einteilungen nach Erlanger/Gasser bzw. Lloyd/Hunt überlappen sich.\n\n### Synapse\n\nAn der chemischen Synapse löst das ankommende Aktionspotential die Freisetzung von Neurotransmittern (z. B. Acetylcholin, Glutamat, GABA, Noradrenalin) aus. Die Übertragung ist gerichtet; die synaptische Verzögerung beträgt typisch etwa 0,5–1 ms. Viele Medikamente der Anästhesie (Muskelrelaxanzien, Hypnotika, Opioide) wirken an Synapsen – ihre Wirkung wird u. a. mit Relaxometrie und EEG-basierten Narkosetiefe-Verfahren überwacht.\n\n## Messbare Signale\n\nDie summierten Ströme vieler Neurone erzeugen an der Körperoberfläche Potentiale im Mikro- bis Millivoltbereich:\n\n| Signal | Quelle | Amplitude (typisch) | Frequenzbereich (typisch) | Gerät |\n|---|---|---|---|---|\n| EEG | postsynaptische Potentiale der Hirnrinde | ca. 10–100 µV | ca. 0,5–70 Hz | [[eeg-geraet|EEG]] |\n| EMG (Oberfläche) | Muskelaktionspotentiale | µV bis einige mV | ca. 10–500 Hz | [[emg-geraet|EMG/NLG]] |\n| evozierte Potentiale | reizsynchrone Antwort | < 1 µV bis einige µV | – (Mittelung) | EEG/EMG-System |\n| EKG (zum Vergleich) | Myokard | ca. 1 mV | ca. 0,05–150 Hz | [[ekg-geraet|EKG]] |\n\n> [!vereinfacht] Amplituden und Bandbreiten sind grobe Orientierungswerte [@webster-2010]; sie hängen von Elektrodenart, Ableitort und Filtereinstellung ab.\n\nDie EEG-Rhythmen werden nach Frequenzbändern benannt (Delta < 4 Hz, Theta 4–8 Hz, Alpha 8–13 Hz, Beta 13–30 Hz, Gamma > 30 Hz). Die Elektroden werden standardisiert nach dem **10-20-System** platziert [@jasper-1958].\n\nWegen der kleinen Amplituden stellen Nervensignale hohe Anforderungen an die [[messkette|Messkette]]: [[instrumentenverstaerker|Instrumentenverstärker]] mit hoher Gleichtaktunterdrückung, [[filter|Filter]], rauscharme [[analog-digital-wandler|A/D-Wandler]] und konsequente Vermeidung von [[netzstoerung|50-Hz-Einstreuung]] und [[bewegungsartefakt|Bewegungsartefakten]].\n\n> [!beispiel] Ein EEG-Signal von 20 µV, überlagert von 10 mV Gleichtakt-Netzbrumm: Bei einer Gleichtaktunterdrückung (CMRR) von 100 dB (Faktor 10⁵) bleibt ein Störanteil von 0,1 µV – gegenüber dem Nutzsignal vernachlässigbar. Bei 60 dB wären es 10 µV, also die Hälfte des Signals.\n\n## Elektrische Reizung und Gefährdung\n\nWas zur Messung dient, macht das Nervensystem auch reizbar. Ausreichend große Ströme lösen Aktionspotentiale aus – erwünscht bei [[reizstromgeraet|TENS/EMS]], [[herzschrittmacher|Schrittmachern]] und dem [[cochlea-implantat|Cochlea-Implantat]], unerwünscht bei Körperdurchströmung. Am empfindlichsten reagieren Nerven und Muskeln auf niederfrequente Wechselströme – darunter die Netzfrequenz von 50/60 Hz [@iec-60479-1]. Oberhalb von etwa 1 kHz steigen die Reizschwellen mit der Frequenz an, weil die Dauer einer Halbwelle nicht mehr ausreicht, um die Membrankapazität bis zur Schwelle umzuladen [@iec-60479-2]. Darauf beruht die [[hf-chirurgiegeraet|HF-Chirurgie]], die mit Frequenzen ab etwa 300 kHz arbeitet: Dort wirkt der Strom überwiegend thermisch und kaum noch erregend.\n\nDie Abhängigkeit der Reizschwelle von der Impulsdauer `t` beschreibt näherungsweise die **Reizzeit-Kurve** (Lapicque/Weiss):\n\n`I_S(t) = I_Rh · (1 + t_Ch / t)`\n\nmit der **Rheobase** `I_Rh` (Schwellenstrom bei sehr langen Impulsen) und der **Chronaxie** `t_Ch` (Impulsdauer, bei der der doppelte Rheobasenstrom nötig ist). Kurze Impulse erfordern höhere Ströme; die Ladung `Q = I_S · t` wird dagegen bei kurzen Impulsen minimal. Deshalb arbeiten [[reizstromgeraet|Reizstromgeräte]], Schrittmacher und Cochlea-Implantate mit kurzen, ladungsbalancierten (biphasischen) Impulsen.\n\n> [!vereinfacht] Die Reizzeit-Kurve ist ein empirisches Modell für einen einzelnen Reizort; reale Schwellen hängen von Elektrodengeometrie, Faserdurchmesser und Abstand zur Faser ab [@kandel-2021]. Die Zusammenhänge beschreibt der Artikel [[elektrische-stromwirkung|Wirkung des elektrischen Stroms auf den Körper]].\n\n> [!belegt] Die frequenz- und zeitabhängigen Wirkungen von Strom auf den Menschen (Wahrnehmungs-, Loslass-, Flimmerschwelle) sind für Wechselstrom von 15–100 Hz und Gleichstrom in IEC TS 60479-1 [@iec-60479-1], für höhere Frequenzen und Impulsströme in IEC TS 60479-2 beschrieben [@iec-60479-2]; daraus abgeleitet begrenzt IEC 60601-1 die zulässigen [[ableitstrom|Ableitströme]] von [[anwendungsteile|Anwendungsteilen]] [@iec-60601-1].\n\n## Bedeutung in der Medizintechnik\n\n| Bereich | Geräte | Bezug zum Nervensystem |\n|---|---|---|\n| Diagnostik | [[eeg-geraet|EEG]], [[emg-geraet|EMG/NLG]], [[polysomnograph|Polysomnograph]] | Ableitung bioelektrischer Signale |\n| Therapie | [[reizstromgeraet|Reizstromgerät]], [[cochlea-implantat|Cochlea-Implantat]] | gezielte elektrische Reizung |\n| Anästhesie | [[anaesthesiegeraet|Anästhesiegerät]], [[patientenmonitor|Patientenmonitor]] | Hypnose, Analgesie, Relaxierung überwachen |\n| Bildgebung | [[mrt|MRT]], [[computertomograph|CT]] | Darstellung von Gehirn und Rückenmark |\n| Sicherheit | [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] | Schutz vor ungewollter Nervenreizung; im MRT begrenzt die Norm die Gradientenschaltung wegen peripherer Nervenstimulation [@iec-60601-2-33] |\n\nFachlich zugehörig ist die [[neurologie|Neurologie]]. Wer Biosignalverstärker, Elektroden und Reizgeräte prüft oder wartet, sollte die Kette Reiz → Aktionspotential → Feldpotential → Elektrode → Verstärker verstehen.\n",
+  "related": [
+    "aktionspotential",
+    "biosignale",
+    "eeg-geraet",
+    "emg-geraet",
+    "polysomnograph",
+    "reizstromgeraet",
+    "cochlea-implantat",
+    "elektrische-stromwirkung",
+    "instrumentenverstaerker",
+    "neurologie",
+    "ohr",
+    "auge",
+    "thermoregulation"
+  ],
+  "paths": [
+    [
+      "nervensystem",
+      "aktionspotential",
+      "biosignale",
+      "instrumentenverstaerker",
+      "eeg-geraet"
+    ],
+    [
+      "nervensystem",
+      "elektrische-stromwirkung",
+      "ableitstrom",
+      "elektrische-sicherheitspruefung"
+    ]
+  ],
+  "sources": [
+    "kandel-2021",
+    "schmidt-lang-2019",
+    "hodgkin-huxley-1952",
+    "jasper-1958",
+    "webster-2010",
+    "iec-60479-1",
+    "iec-60601-1",
+    "iec-60601-2-33",
+    "iec-60479-2"
+  ],
+  "diagram": {
+    "title": "Reflexbogen und Messpunkte",
+    "caption": "Vereinfachte Signalkette von der Reizaufnahme bis zur Muskelantwort mit den Ableitorten von EEG und EMG.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "reiz",
+        "label": "Reiz\n(Druck, Temperatur)",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "rez",
+        "label": "Rezeptor /\nSinnesorgan",
+        "ref": "haut",
+        "kind": "sensor",
+        "x": 300,
+        "y": 90
+      },
+      {
+        "id": "aff",
+        "label": "afferente Faser\n(Aktionspotential)",
+        "ref": "aktionspotential",
+        "kind": "process",
+        "x": 520,
+        "y": 90
+      },
+      {
+        "id": "zns",
+        "label": "ZNS\n(Rückenmark/Gehirn)",
+        "kind": "control",
+        "x": 760,
+        "y": 90
+      },
+      {
+        "id": "eff",
+        "label": "efferente Faser /\nMotoneuron",
+        "kind": "process",
+        "x": 760,
+        "y": 260
+      },
+      {
+        "id": "mus",
+        "label": "Muskel\n(Kontraktion)",
+        "kind": "actuator",
+        "x": 520,
+        "y": 260
+      },
+      {
+        "id": "emg",
+        "label": "EMG / NLG",
+        "ref": "emg-geraet",
+        "kind": "output",
+        "x": 300,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "reiz",
+        "to": "rez",
+        "kind": "energy"
+      },
+      {
+        "from": "rez",
+        "to": "aff",
+        "kind": "signal",
+        "label": "Transduktion"
+      },
+      {
+        "from": "aff",
+        "to": "zns",
+        "kind": "signal"
+      },
+      {
+        "from": "zns",
+        "to": "eff",
+        "kind": "signal"
+      },
+      {
+        "from": "eff",
+        "to": "mus",
+        "kind": "signal",
+        "label": "Synapse"
+      },
+      {
+        "from": "mus",
+        "to": "emg",
+        "kind": "signal",
+        "label": "Feldpotential"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

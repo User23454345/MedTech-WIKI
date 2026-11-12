@@ -1,0 +1,55 @@
+{
+  "id": "betreiberpflichten",
+  "type": "term",
+  "title": "Betreiberpflichten",
+  "aliases": [
+    "Pflichten des Betreibers",
+    "Betreiber von Medizinprodukten",
+    "Betreiberverantwortung",
+    "Anwenderpflichten",
+    "Operator obligations",
+    "MPBetreibV-Pflichten"
+  ],
+  "category": "recht",
+  "summary": "Betreiber von Medizinprodukten – in der Regel Krankenhäuser, Praxen und Pflegeeinrichtungen – sind dafür verantwortlich, dass Medizinprodukte sicher betrieben, instand gehalten, geprüft und nur von eingewiesenen, qualifizierten Personen angewendet werden. Die Pflichten ergeben sich in Deutschland vor allem aus der 2025 neu gefassten Medizinprodukte-Betreiberverordnung (MPBetreibV).",
+  "body": "## Wer ist Betreiber?\n\n**Betreiber** ist, wer für den Betrieb einer Gesundheitseinrichtung bzw. für den Einsatz von [[medizinprodukt|Medizinprodukten]] verantwortlich ist – typischerweise der Träger eines Krankenhauses, die Inhaberin einer Praxis oder ein Pflegedienst. **Anwender** ist, wer ein Medizinprodukt am Patienten einsetzt, etwa Ärzt:innen und Pflegefachpersonen. Während der Hersteller für die Konformität des Produkts nach der [[mdr|MDR]] verantwortlich ist, liegt die Verantwortung für den **sicheren Betrieb** beim Betreiber [@mpbetreibv].\n\n> [!belegt] Rechtsgrundlage in Deutschland ist die [[mpbetreibv|Medizinprodukte-Betreiberverordnung]] vom 14. Februar 2025 (BGBl. 2025 I Nr. 38), die die frühere Fassung von 2002/2017 abgelöst hat und seither geändert wurde. Ergänzend gelten das [[mpdg|MPDG]], die MPAMIV und arbeitsschutzrechtliche Vorschriften [@mpbetreibv] [@mpdg] [@mpamiv].\n\n## Pflichten im Überblick\n\n| Pflicht | Inhalt (mit eigenen Worten) | Fundstelle MPBetreibV 2025 |\n|---|---|---|\n| Betrieb nach [[zweckbestimmung|Zweckbestimmung]] | Medizinprodukte nur bestimmungsgemäß und nach den allgemein anerkannten Regeln der Technik betreiben und anwenden lassen | allgemeine Anforderungen |\n| Qualifikation | nur Personen mit der erforderlichen Ausbildung, Kenntnis und Erfahrung einsetzen | allgemeine Anforderungen |\n| [[beauftragter-medizinproduktesicherheit|Beauftragte:r für Medizinproduktesicherheit]] | in Gesundheitseinrichtungen mit regelmäßig mehr als 20 Beschäftigten bestimmen | § 6 |\n| Funktionsprüfung und [[einweisung]] | Produkte nach Anlage 1 erst nach Funktionsprüfung am Betriebsort und Einweisung der beauftragten Person betreiben | § 11 |\n| [[stk|Sicherheitstechnische Kontrollen]] | für Produkte nach Anlage 1 bzw. nach Herstellervorgabe; Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind | § 12 i. V. m. Anlage 1 |\n| [[medizinproduktebuch|Medizinproduktebuch]] | für Produkte nach Anlage 1 und 2 führen | § 13 |\n| [[bestandsverzeichnis|Bestandsverzeichnis]] | für alle aktiven nichtimplantierbaren Medizinprodukte der Betriebsstätte führen | § 14 |\n| [[mtk|Messtechnische Kontrollen]] | für Produkte mit Messfunktion nach Anlage 2 | § 15 i. V. m. Anlage 2 |\n| [[instandhaltung-grundlagen|Instandhaltung]] | nur durch Personen, Betriebe oder Einrichtungen mit der erforderlichen Sachkenntnis und Ausstattung | allgemeine Regelungen |\n| [[aufbereitung|Aufbereitung]] | mit geeigneten validierten Verfahren; Empfehlung von KRINKO und BfArM als Vermutungsgrundlage | eigene Regelungen der MPBetreibV |\n| [[vigilanz|Meldung]] | mutmaßliche schwerwiegende Vorkommnisse an die Behörde melden | MPAMIV |\n\n> [!hinweis] Die Paragraphenangaben beziehen sich auf die Fassung 2025. Zur Instandhaltung, Aufbereitung und zu neuen Anforderungen an die IT-Sicherheit von Software enthält die Verordnung ebenfalls Regelungen; sie werden hier ohne Paragraphennummer zusammengefasst. Maßgeblich ist stets der aktuelle Verordnungstext [@mpbetreibv].\n\n## Betrieb und Anwendung\n\n### Qualifikation und Einweisung\n\nMedizinprodukte dürfen nur von Personen betrieben und angewendet werden, die dafür die erforderliche Ausbildung oder Kenntnis und Erfahrung besitzen. Für Produkte der Anlage 1 – etwa [[beatmungsgeraet|Beatmungsgeräte]], [[defibrillator|Defibrillatoren]], [[infusionspumpe|Infusionspumpen]], [[hf-chirurgiegeraet|HF-Chirurgiegeräte]] oder [[inkubator|Säuglingsinkubatoren]] – gilt ein formalisiertes Verfahren mit Funktionsprüfung am Betriebsort und dokumentierter Einweisung (siehe [[einweisung]]) [@mpbetreibv].\n\n### Prüfung vor der Anwendung\n\nAnwender müssen sich vor jeder Anwendung vom ordnungsgemäßen Zustand des Produkts überzeugen und die Gebrauchsanweisung beachten. Das umfasst typischerweise Sichtprüfung, Selbsttest und Alarmprüfung – etwa den Geräteselbsttest eines [[beatmungsgeraet|Beatmungsgeräts]] vor Anschluss des Patienten.\n\n> [!praxis] Eine kurze Checkliste am Gerät (Gehäuse und Leitungen unbeschädigt? Akku geladen? Prüfplakette gültig? Selbsttest bestanden?) hilft, die Prüfung vor der Anwendung zuverlässig in den Alltag einzubauen.\n\n## Instandhaltung und Prüfungen\n\nDer Betreiber muss die [[instandhaltung-grundlagen|Instandhaltung]] – also [[wartung]], [[inspektion]], [[instandsetzung]] und Verbesserung im Sinne der [[din-31051]] – nach Herstellerangaben sicherstellen. Er darf damit nur Personen und Firmen beauftragen, die die nötige Sachkenntnis, Mittel und Voraussetzungen besitzen [@mpbetreibv] [@din-31051].\n\n| Prüfart | Gegenstand | Rechtsgrundlage |\n|---|---|---|\n| [[stk|STK]] | sicherheitsrelevante Funktionen, [[elektrische-sicherheitspruefung|elektrische Sicherheit]] (z. B. nach [[iec-62353]]) | § 12 i. V. m. Anlage 1 MPBetreibV |\n| [[mtk|MTK]] | Einhaltung der Fehlergrenzen bei Messfunktionen, z. B. [[nibp-messgeraet|Blutdruckmessgeräte]], [[thermometer|Thermometer]] | § 15 i. V. m. Anlage 2 MPBetreibV |\n| Wiederholungsprüfung nach [[dguv-vorschrift-3]] | elektrische Betriebsmittel aus Sicht des Arbeitsschutzes | DGUV Vorschrift 3 [@dguv-v3] |\n| Abnahme-/[[konstanzpruefung|Konstanzprüfung]] | Röntgeneinrichtungen | Strahlenschutzrecht ([[strlschg|StrlSchG]] und Strahlenschutzverordnung) |\n\n> [!belegt] STK sind nach § 12 MPBetreibV für Produkte der Anlage 1 sowie für Produkte, für die der Hersteller sie vorschreibt, durchzuführen – in den vom Hersteller angegebenen Fristen, ohne solche Angaben spätestens alle zwei Jahre [@mpbetreibv].\n\n## Dokumentation\n\nDer Betreiber muss nachweisen können, dass er seine Pflichten erfüllt. Zentral sind:\n\n* das [[bestandsverzeichnis]] mit allen aktiven nichtimplantierbaren Produkten (z. B. Bezeichnung, Typ, Seriennummer, Standort, Prüffristen),\n* das [[medizinproduktebuch]] für Produkte der Anlagen 1 und 2 mit Funktionsprüfung, Einweisungen, Kontrollen, Instandhaltungen und Störungen,\n* Nachweise über Einweisungen, Prüfungen und Vorkommnismeldungen.\n\nIn der Praxis werden diese Unterlagen meist elektronisch in einer Medizintechnik-Software geführt (vgl. [[medizintechnik-management]]); die [[udi|UDI]] erleichtert die fehlerfreie Erfassung.\n\n## Organisation in Gesundheitseinrichtungen\n\n> [!beispiel] Typische Aufgabenteilung in einem Krankenhaus (vereinfacht): Die Geschäftsführung trägt als Betreiber die Gesamtverantwortung. Die Abteilung Medizintechnik organisiert Bestandsverzeichnis, STK, MTK, Wartung und Herstellerkontakte. Die Stationsleitungen sorgen für Einweisungen und die Prüfung vor der Anwendung. Die bzw. der [[beauftragter-medizinproduktesicherheit|Beauftragte für Medizinproduktesicherheit]] koordiniert Vorkommnismeldungen und Sicherheitsinformationen.\n\n## Bedeutung in der Medizintechnik\n\nBetreiberpflichten sind das tägliche Arbeitsfeld von Medizintechniker:innen in Kliniken. Sie betreffen den gesamten Gerätepark: vom [[patientenmonitor]] über [[spritzenpumpe|Spritzenpumpen]] und [[dialysegeraet|Dialysegeräte]] bis zum [[dampfsterilisator]]. Werden Pflichten verletzt, drohen nicht nur Bußgelder, sondern vor allem Risiken für die [[patientensicherheit]] und haftungsrechtliche Folgen für Einrichtung und Verantwortliche.\n\n## Hinweis\n\nDiese Zusammenfassung ersetzt nicht den Verordnungstext. Maßgeblich ist die jeweils gültige Fassung der MPBetreibV und der übrigen genannten Vorschriften.",
+  "related": [
+    "einweisung",
+    "stk",
+    "mtk",
+    "medizinproduktebuch",
+    "bestandsverzeichnis",
+    "beauftragter-medizinproduktesicherheit",
+    "mpbetreibv",
+    "vigilanz",
+    "instandhaltung-grundlagen",
+    "medizintechnik-management"
+  ],
+  "paths": [
+    [
+      "betreiberpflichten",
+      "einweisung",
+      "medizinproduktebuch"
+    ],
+    [
+      "betreiberpflichten",
+      "stk",
+      "elektrische-sicherheitspruefung"
+    ],
+    [
+      "betreiberpflichten",
+      "mtk",
+      "kalibrierung"
+    ]
+  ],
+  "sources": [
+    "mpbetreibv",
+    "mpdg",
+    "mpamiv",
+    "din-31051",
+    "dguv-v3",
+    "krinko-bfarm-2012"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "diabetologie",
+  "type": "domain",
+  "title": "Diabetologie",
+  "aliases": [
+    "Diabetesmedizin",
+    "Diabetology",
+    "Endokrinologie und Diabetologie",
+    "Diabetestechnologie"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Diabetologie befasst sich mit Diagnose, Therapie und Folgeerkrankungen des Diabetes mellitus. Kennzeichnend ist eine stark patientengeführte Medizintechnik: Blutzuckermessgeräte, kontinuierliche Glukosemessung, Insulinpumpen und zunehmend automatisierte Insulindosierung im geschlossenen Regelkreis.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Diabetologie** behandelt Störungen des Glukosestoffwechsels, vor allem den **Diabetes mellitus**. Beim Typ-1-Diabetes fehlt Insulin infolge einer Autoimmunzerstörung der Betazellen, beim Typ-2-Diabetes stehen Insulinresistenz und eine nachlassende Insulinsekretion im Vordergrund; hinzu kommen Gestationsdiabetes und seltene Formen. Ziel ist eine Glukoseeinstellung, die akute Entgleisungen (Hypo- und Hyperglykämie) vermeidet und Spätfolgen an Augen, Nieren, Nerven und Gefäßen verhindert. Ein großer Teil der Therapie wird von den Patient:innen selbst im Alltag durchgeführt – die Medizintechnik ist hier überwiegend **Heimtechnik** [@kramme-2017] [@iec-60601-1-11].\n\n## Typische Krankheitsbilder und Folgeerkrankungen\n\n| Bereich | Beispiele |\n|---|---|\n| Stoffwechsel | Typ-1- und Typ-2-Diabetes, Gestationsdiabetes, Ketoazidose, Hypoglykämie |\n| Mikrovaskuläre Folgen | Retinopathie, Nephropathie, Neuropathie |\n| Makrovaskuläre Folgen | koronare Herzkrankheit, Schlaganfall, periphere arterielle Verschlusskrankheit |\n| Diabetisches Fußsyndrom | Ulzera durch Neuropathie und Durchblutungsstörungen |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[blutzuckermessgeraet]] | Selbstmessung der Kapillarblutglukose mit enzymatischen Teststreifen |\n| Kontinuierliche Glukosemessung (CGM) | Sensor im Unterhautfettgewebe misst die Gewebeglukose fortlaufend und sendet die Werte an ein Empfangsgerät oder Smartphone |\n| [[insulinpumpe]] | kontinuierliche subkutane Insulininfusion (Basalrate und Bolusgaben) |\n| [[klinisch-chemischer-analysator]] | Bestimmung von HbA1c, Nierenwerten und Blutfetten |\n| [[oct]] | Diagnostik des diabetischen Makulaödems |\n| [[npwt-geraet]] | Unterdruck-Wundtherapie beim diabetischen Fußsyndrom |\n| [[emg-geraet]] | Nervenleitungsmessung bei Neuropathie |\n| [[dialysegeraet]] | Nierenersatztherapie bei terminaler diabetischer Nephropathie |\n\n### Messprinzip der Glukosesensoren\n\nTeststreifen und CGM-Sensoren arbeiten meist **elektrochemisch-enzymatisch**: Ein Enzym (Glukoseoxidase oder Glukosedehydrogenase) setzt Glukose um; der dabei entstehende Elektronenfluss wird amperometrisch gemessen und ist der Glukosekonzentration proportional. Die Genauigkeit von Blutzuckermesssystemen zur Eigenanwendung regelt ISO 15197: Nach der Ausgabe 2013 müssen mindestens 95 % der Messwerte bei Glukosekonzentrationen unter 100 mg/dl innerhalb von ±15 mg/dl, ab 100 mg/dl innerhalb von ±15 % des Referenzwerts liegen; zusätzlich müssen 99 % der Werte in den Zonen A und B des Consensus Error Grid liegen [@iso-15197].\n\n> [!vereinfacht] CGM-Sensoren messen nicht im Blut, sondern in der interstitiellen Flüssigkeit. Glukose diffundiert mit einer Verzögerung von typischerweise einigen Minuten dorthin ([[diffusion-osmose]]). Bei schnell fallenden oder steigenden Werten weichen CGM- und Blutzuckerwert daher voneinander ab.\n\n### Automatisierte Insulindosierung\n\nBei **AID-Systemen** (*automated insulin delivery*, „Closed Loop“) berechnet ein Algorithmus aus den CGM-Werten fortlaufend die Insulinabgabe der Pumpe. Technisch ist das ein physiologischer [[regelkreis]] mit dem Menschen als Regelstrecke; Anforderungen an solche Regelkreise beschreibt IEC 60601-1-10 [@iec-60601-1-10]. Mahlzeitenboli müssen bei den meisten Hybridsystemen weiterhin angekündigt werden.\n\n## Besondere technische Anforderungen\n\n### Heimgebrauch und Gebrauchstauglichkeit\n\nDie Geräte werden von Laien rund um die Uhr am Körper getragen – beim Sport, Duschen und Schlafen. [[gebrauchstauglichkeit|Gebrauchstauglichkeit]], verständliche Alarme, Akkulaufzeit, Wasserdichtheit und Robustheit sind deshalb sicherheitsrelevant [@iec-62366-1].\n\n> [!warnung] Eine unbemerkte Unterbrechung der Insulinzufuhr – etwa durch abgeknickten Katheter oder Luft im Reservoir ([[okklusionsalarm]], [[luft-im-system]]) – kann innerhalb weniger Stunden zu einer Ketoazidose führen. Umgekehrt ist eine Überdosierung lebensgefährlich. Alarme der Pumpe dürfen nicht dauerhaft stummgeschaltet werden ([[alarmmuedigkeit]]).\n\n### Software, Vernetzung und Cybersicherheit\n\nApps zur Steuerung von Pumpen, Bolusrechner und Cloudplattformen sind [[software-medizinprodukt|Software-Medizinprodukte]]. Funkverbindungen zwischen Sensor, Pumpe und Smartphone müssen gegen Störungen und Manipulation geschützt sein ([[emv]]) [@mdcg-2019-16] [@iec-62304].\n\n### Qualitätssicherung im Krankenhaus\n\nPatientennahe Blutzuckermessgeräte auf Station unterliegen der internen und externen Qualitätskontrolle nach Rili-BÄK [@rili-baek]. Insulinpumpen und Sensoren müssen vor einer [[mrt|MRT-Untersuchung]], vor CT- oder Röntgenuntersuchungen und bei Diathermie nach Herstellerangabe in der Regel abgelegt werden.\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[augenheilkunde]]: Screening und Therapie der diabetischen Retinopathie.\n* [[nephrologie]]: diabetische Nephropathie, Dialyse.\n* [[kardiologie]] und [[neurologie]]: makrovaskuläre Folgeerkrankungen, Neuropathie.\n* [[geburtshilfe]]: Gestationsdiabetes und Schwangerschaft bei vorbestehendem Diabetes.\n* [[labormedizin]]: HbA1c, oraler Glukosetoleranztest, Qualitätssicherung.\n",
+  "related": [
+    "blutzuckermessgeraet",
+    "insulinpumpe",
+    "regelkreis",
+    "software-medizinprodukt",
+    "iec-60601-1-11",
+    "roche-diagnostics",
+    "abbott",
+    "medtronic"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iso-15197",
+    "iec-60601-1-10",
+    "iec-60601-1-11",
+    "iec-62366-1",
+    "mdcg-2019-16",
+    "iec-62304",
+    "rili-baek"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

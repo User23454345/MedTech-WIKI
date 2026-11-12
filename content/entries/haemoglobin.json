@@ -1,0 +1,158 @@
+{
+  "id": "haemoglobin",
+  "type": "term",
+  "title": "Hämoglobin und Sauerstoffbindung",
+  "aliases": [
+    "Hämoglobin",
+    "Hb",
+    "hemoglobin",
+    "haemoglobin",
+    "Sauerstoffbindungskurve",
+    "Sauerstoffdissoziationskurve",
+    "oxygen dissociation curve",
+    "P50",
+    "Sauerstoffsättigung",
+    "SaO2",
+    "SpO2",
+    "Dyshämoglobin",
+    "COHb",
+    "MetHb",
+    "Hüfner-Zahl"
+  ],
+  "category": "anatomie",
+  "summary": "Eisenhaltiges Protein der Erythrozyten, das Sauerstoff kooperativ bindet und eine S-förmige Bindungskurve besitzt. Sättigung, Hb-Konzentration und die unterschiedlichen Lichtabsorptionen von oxygeniertem und desoxygeniertem Hb sind Grundlage von Pulsoxymetrie, CO-Oxymetrie und Sauerstoffangebotsberechnungen.",
+  "body": "## Überblick\n\n**Hämoglobin** (Hb) ist das sauerstofftransportierende Protein der roten Blutkörperchen (Erythrozyten). Es bindet in der Lunge Sauerstoff und gibt ihn im Gewebe wieder ab; daneben ist es am CO₂-Transport und an der Pufferung des Blutes beteiligt [@schmidt-lang-2019] [@guyton-2021]. Seine optischen Eigenschaften – oxygeniertes und desoxygeniertes Hämoglobin absorbieren Licht unterschiedlich – sind die Grundlage der Pulsoxymetrie und der CO-Oxymetrie.\n\n## Aufbau\n\nAdultes Hämoglobin (HbA) ist ein Tetramer aus zwei α- und zwei β-Globinketten. Jede Kette trägt eine **Häm-Gruppe** mit einem zentralen Eisenion im zweiwertigen Zustand (Fe²⁺), an das reversibel ein O₂-Molekül gebunden werden kann. Ein Hb-Molekül transportiert also bis zu vier O₂-Moleküle.\n\n| Hämoglobinform | Beschreibung | Bedeutung |\n|---|---|---|\n| Oxyhämoglobin (O₂Hb) | O₂ gebunden | Transportform |\n| Desoxyhämoglobin (HHb) | ohne O₂, bindungsfähig | nach Abgabe im Gewebe |\n| Carboxyhämoglobin (COHb) | Kohlenmonoxid gebunden, Affinität rund 200- bis 250-fach höher als für O₂ (Größenordnung, je nach Quelle) | Rauchgas-/CO-Vergiftung |\n| Methämoglobin (MetHb) | Eisen oxidiert (Fe³⁺), bindet kein O₂ | angeboren oder durch Medikamente ausgelöst |\n| fetales Hämoglobin (HbF) | γ- statt β-Ketten, höhere O₂-Affinität | Sauerstoffübernahme vom mütterlichen Blut |\n\nCOHb und MetHb werden als **Dyshämoglobine** bezeichnet: Sie sind vorhanden, transportieren aber keinen Sauerstoff.\n\n> [!hinweis] Referenzbereiche für die Hb-Konzentration liegen für Erwachsene etwa bei 13,5–17,5 g/dl (Männer) bzw. 12–15,5 g/dl (Frauen); sie unterscheiden sich je nach Labor, Methode und Population. Gemessen wird die Konzentration mit dem [[haematologie-analysator|Hämatologie-Analysator]] oder dem [[blutgasanalysator|Blutgasanalysator]].\n\n## Sauerstoffbindungskurve\n\nDie Sauerstoffsättigung S beschreibt den Anteil des bindungsfähigen Hb, der mit O₂ beladen ist, in Abhängigkeit vom Sauerstoffpartialdruck. Die Kurve ist **S-förmig (sigmoid)**, weil die Bindung kooperativ ist: Jedes gebundene O₂ erhöht die Affinität der übrigen Bindungsstellen.\n\n| pO₂ (mmHg) | S (ca.) | Situation |\n|---|---|---|\n| 27 | 50 % | P₅₀ – Kennwert der Affinität |\n| 40 | 75 % | gemischt-venöses Blut in Ruhe |\n| 60 | 90 % | „Knick“ der Kurve |\n| 100 | 97–98 % | arterielles Blut |\n\n> [!belegt] Eine verbreitete empirische Näherung der Normalkurve (pH 7,4, 37 °C, pCO₂ 40 mmHg) stammt von Severinghaus: `S = 1 / (23 400 / (pO₂³ + 150 · pO₂) + 1)` mit pO₂ in mmHg [@severinghaus-1979]. Für pO₂ = 100 mmHg liefert sie S ≈ 97,7 %, für 26,8 mmHg ≈ 50 %.\n\nAlternativ wird die Kurve mit der Hill-Gleichung `S = pO₂ⁿ / (P₅₀ⁿ + pO₂ⁿ)` mit n ≈ 2,7 angenähert.\n\n> [!vereinfacht] Die Hill-Gleichung ist ein phänomenologisches Modell; sie beschreibt den mittleren Kurvenbereich gut, weicht aber bei sehr niedrigen und sehr hohen Sättigungen ab.\n\n### Bedeutung der Kurvenform\n\n* Der **flache obere Teil** sichert die Beladung: Auch wenn der alveoläre pO₂ (siehe [[gasaustausch]]) von 100 auf 70 mmHg fällt, sinkt die Sättigung nur wenig.\n* Der **steile mittlere Teil** erleichtert die Abgabe: Kleine pO₂-Abfälle im Gewebe setzen viel O₂ frei.\n* Für die Überwachung bedeutet das: Die Pulsoxymetrie ist bei hohen Sättigungen wenig empfindlich für Änderungen des pO₂ – eine Sättigung von 98 % sagt kaum etwas darüber aus, ob der pO₂ 100 oder 300 mmHg beträgt.\n\n### Verschiebungen\n\n| Rechtsverschiebung (Affinität sinkt, P₅₀ steigt) | Linksverschiebung (Affinität steigt, P₅₀ sinkt) |\n|---|---|\n| Temperatur ↑ | Temperatur ↓ (Hypothermie) |\n| pCO₂ ↑, pH ↓ (Bohr-Effekt) | pCO₂ ↓, pH ↑ |\n| 2,3-Bisphosphoglycerat ↑ | 2,3-BPG ↓ (z. B. gelagerte Blutkonserven) |\n| – | fetales Hb, COHb |\n\nDie Rechtsverschiebung im arbeitenden Gewebe (warm, sauer, CO₂-reich) fördert die O₂-Abgabe genau dort, wo sie gebraucht wird.\n\n## Sauerstoffgehalt und -angebot\n\nDer Sauerstoffgehalt des arteriellen Blutes setzt sich aus gebundenem und physikalisch gelöstem O₂ zusammen:\n\n`CaO₂ = 1,34 · Hb · SaO₂ + 0,003 · paO₂`  (CaO₂ in ml/dl, Hb in g/dl, paO₂ in mmHg)\n\nDer Faktor 1,34 ml O₂ pro g Hb (Hüfner-Zahl; in der Literatur 1,34–1,39) beschreibt die Bindungskapazität. Das Sauerstoffangebot an den Körper ist\n\n`DO₂ = HZV · CaO₂`\n\n> [!beispiel] Hb = 15 g/dl, SaO₂ = 0,98, paO₂ = 95 mmHg: CaO₂ ≈ 1,34 · 15 · 0,98 + 0,003 · 95 ≈ 19,7 + 0,3 = 20,0 ml/dl = 200 ml/l. Mit HZV = 5 l/min ergibt sich DO₂ ≈ 1000 ml O₂/min. Ein Hb-Abfall auf 7,5 g/dl halbiert das Angebot, obwohl SpO₂ und paO₂ unverändert bleiben.\n\nDas Beispiel zeigt: Sättigung und Partialdruck allein beschreiben die Versorgung nicht – Hämoglobinkonzentration und Herzzeitvolumen ([[herz]]) sind ebenso entscheidend.\n\n## Optische Eigenschaften\n\nO₂Hb und HHb haben unterschiedliche Absorptionsspektren: Im roten Bereich (um 660 nm) absorbiert HHb deutlich stärker, im nahen Infrarot (um 900–940 nm) absorbiert O₂Hb etwas stärker; um etwa 800 nm liegt ein isosbestischer Punkt. Nach dem [[lambert-beer|Lambert-Beer-Gesetz]] lässt sich aus der Absorption bei mehreren Wellenlängen auf die Anteile schließen.\n\n* **Pulsoxymetrie:** Zwei Wellenlängen, Auswertung nur des pulsatilen (arteriellen) Anteils der [[photoplethysmographie|Photoplethysmographie]]. Aus dem Verhältnis `R = (AC_rot / DC_rot) / (AC_IR / DC_IR)` wird SpO₂ über eine **empirisch ermittelte Kalibrierkurve** bestimmt. Gemessen wird die *funktionelle* Sättigung `SpO₂ ≈ O₂Hb / (O₂Hb + HHb)` [@jubran-2015] [@iso-80601-2-61].\n* **CO-Oxymetrie** im [[blutgasanalysator]]: Spektralphotometrie mit vielen Wellenlängen an einer Blutprobe, misst O₂Hb, HHb, COHb und MetHb und damit die *fraktionelle* Sättigung `FO₂Hb = O₂Hb / Hb_gesamt`.\n\n> [!warnung] Konventionelle Zwei-Wellenlängen-Pulsoxymeter erkennen COHb nicht als eigene Fraktion und zeigen bei CO-Vergiftung trügerisch normale Werte an; hohe MetHb-Anteile verfälschen die Anzeige ebenfalls. Auch Hautpigmentierung kann die Messgenauigkeit beeinflussen: Bei Patienten mit dunkler Haut wurde eine verdeckte Hypoxämie häufiger beobachtet [@jubran-2015] [@sjoding-2020]. Im Zweifel ist eine arterielle Blutgasanalyse mit CO-Oxymetrie erforderlich.\n\n## Bedeutung in der Medizintechnik\n\n| Gerät | Bezug zum Hämoglobin |\n|---|---|\n| [[pulsoxymeter]], [[patientenmonitor]] | nichtinvasive Messung der funktionellen Sättigung SpO₂ |\n| [[blutgasanalysator]] | pO₂, pCO₂, pH sowie CO-Oxymetrie (Hb-Fraktionen) |\n| [[haematologie-analysator]] | Hb-Konzentration, Hämatokrit, Erythrozytenindizes |\n| [[ecmo]], [[herz-lungen-maschine]] | Oxygenierung des Hb im Membranoxygenator, Sättigungsüberwachung im Kreislauf |\n| [[blutkuehlschrank]] | Lagerung von Erythrozytenkonzentraten |\n| [[druckkammer]] | hyperbare Sauerstofftherapie erhöht den physikalisch gelösten O₂-Anteil, u. a. bei CO-Vergiftung |\n\nDie technische Wissenskette lautet: [[gasaustausch|Gasaustausch]] → Hämoglobin → [[lambert-beer|Lambert-Beer-Gesetz]] → [[photoplethysmographie|Photoplethysmographie]] → [[pulsoxymeter|Pulsoxymeter]].\n",
+  "related": [
+    "gasaustausch",
+    "blut",
+    "lunge",
+    "pulsoxymeter",
+    "photoplethysmographie",
+    "lambert-beer",
+    "blutgasanalysator",
+    "haematologie-analysator",
+    "ecmo",
+    "iso-80601-2-61",
+    "saeure-basen-haushalt"
+  ],
+  "paths": [
+    [
+      "haemoglobin",
+      "lambert-beer",
+      "photoplethysmographie",
+      "pulsoxymeter"
+    ],
+    [
+      "gasaustausch",
+      "haemoglobin",
+      "blutgasanalysator"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021",
+    "severinghaus-1979",
+    "jubran-2015",
+    "iso-80601-2-61",
+    "sjoding-2020"
+  ],
+  "diagram": {
+    "title": "Messprinzip der Pulsoxymetrie",
+    "caption": "Von der Lichtabsorption des Hämoglobins zur angezeigten SpO₂ (Funktionsschema).",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "led",
+        "label": "LEDs\nrot ~660 nm / IR",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "gew",
+        "label": "Gewebe + Blut\n(O₂Hb / HHb)",
+        "kind": "patient",
+        "x": 320,
+        "y": 90
+      },
+      {
+        "id": "pd",
+        "label": "Photodiode\n(PPG-Signal)",
+        "ref": "photoplethysmographie",
+        "kind": "sensor",
+        "x": 550,
+        "y": 90
+      },
+      {
+        "id": "amp",
+        "label": "Verstärker +\nFilter",
+        "ref": "filter",
+        "kind": "process",
+        "x": 780,
+        "y": 90
+      },
+      {
+        "id": "adc",
+        "label": "A/D-Wandler",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 780,
+        "y": 260
+      },
+      {
+        "id": "ratio",
+        "label": "R = (AC/DC)rot /\n(AC/DC)IR",
+        "ref": "lambert-beer",
+        "kind": "control",
+        "x": 550,
+        "y": 260
+      },
+      {
+        "id": "out",
+        "label": "SpO₂ + Puls\n(Kalibrierkurve)",
+        "ref": "pulsoxymeter",
+        "kind": "output",
+        "x": 320,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "led",
+        "to": "gew",
+        "kind": "energy",
+        "label": "Licht"
+      },
+      {
+        "from": "gew",
+        "to": "pd",
+        "kind": "energy",
+        "label": "Transmission"
+      },
+      {
+        "from": "pd",
+        "to": "amp",
+        "kind": "signal",
+        "label": "Photostrom"
+      },
+      {
+        "from": "amp",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "ratio",
+        "kind": "data"
+      },
+      {
+        "from": "ratio",
+        "to": "out",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

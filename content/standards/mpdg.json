@@ -1,0 +1,46 @@
+{
+  "id": "mpdg",
+  "type": "standard",
+  "title": "Medizinprodukterecht-Durchführungsgesetz (MPDG)",
+  "code": "MPDG",
+  "kind": "gesetz",
+  "fullTitle": "Gesetz zur Durchführung unionsrechtlicher Vorschriften betreffend Medizinprodukte (Medizinprodukterecht-Durchführungsgesetz – MPDG)",
+  "scope": "Ergänzt und konkretisiert in Deutschland die Verordnungen (EU) 2017/745 und (EU) 2017/746, u. a. zu Zuständigkeiten, klinischen Prüfungen, Überwachung, Vigilanz und Sanktionen.",
+  "aliases": [
+    "MPDG",
+    "Medizinprodukterecht-Durchführungsgesetz",
+    "Medical Devices Implementation Act"
+  ],
+  "category": "recht",
+  "summary": "Das MPDG ist das deutsche Durchführungsgesetz zu MDR und IVDR. Es ist seit dem 26. Mai 2021 in Kraft, hat das Medizinproduktegesetz (MPG) abgelöst und regelt nationale Zuständigkeiten, Verfahren, Sanktionen sowie die Ermächtigung für Verordnungen wie die MPBetreibV.",
+  "body": "## Überblick\n\nDas **Medizinprodukterecht-Durchführungsgesetz (MPDG)** ist das deutsche Begleitgesetz zur europäischen [[mdr|Medizinprodukteverordnung (MDR)]] und zur [[ivdr|In-vitro-Diagnostika-Verordnung (IVDR)]]. Es wurde am 28. April 2020 ausgefertigt (BGBl. I S. 960) und trat im Wesentlichen am **26. Mai 2021** in Kraft – zeitgleich mit dem Geltungsbeginn der MDR [@mpdg]. Gleichzeitig trat das bis dahin geltende **Medizinproduktegesetz (MPG)** weitgehend außer Kraft. Für In-vitro-Diagnostika gelten die betreffenden Regelungen seit dem 26. Mai 2022.\n\n> [!belegt] Das MPDG regelt nicht noch einmal die Produktanforderungen – diese stehen unmittelbar in MDR und IVDR. Es füllt die Bereiche aus, die die EU-Verordnungen den Mitgliedstaaten überlassen oder ausdrücklich zuweisen: Zuständigkeiten, Verfahren, Sprache, Sanktionen und nationale Ergänzungen [@mpdg] [@mdr-2017].\n\n## Von der Richtlinie zur Verordnung – warum ein Durchführungsgesetz?\n\n| Zeitraum | EU-Ebene | Deutschland |\n|---|---|---|\n| ab 1985 | – | Medizingeräteverordnung (MedGV) für medizinisch-technische Geräte [@medgv-1985], später durch das MPG abgelöst |\n| 1990er–2021 | Richtlinien 90/385/EWG, 93/42/EWG, 98/79/EG (müssen umgesetzt werden) | **Medizinproduktegesetz (MPG)** setzt die Richtlinien um |\n| seit 26.05.2021 | **MDR** (unmittelbar geltend) | **MPDG** ergänzt und führt durch |\n| seit 26.05.2022 | **IVDR** (unmittelbar geltend) | MPDG gilt auch für IVD |\n\n> [!vereinfacht] Eine EU-*Richtlinie* gibt Ziele vor, die jeder Staat in eigenes Recht übersetzt; eine EU-*Verordnung* gilt direkt wie ein nationales Gesetz. Das MPDG ist deshalb deutlich schlanker als das alte MPG – es darf den Inhalt der MDR nicht wiederholen oder abändern.\n\n## Regelungsinhalte\n\nDas MPDG gliedert sich in mehrere Kapitel. Inhaltlich lassen sich folgende Schwerpunkte zusammenfassen [@mpdg]:\n\n| Bereich | Inhalt (zusammengefasst) |\n|---|---|\n| Anwendungsbereich und Begriffe | Verknüpfung mit den Begriffen von MDR/IVDR, ergänzende nationale Begriffe |\n| Sprachregelungen | Anforderungen an die Sprache von Kennzeichnung, Gebrauchsanweisung und Unterlagen in Deutschland (grundsätzlich Deutsch, für professionelle Anwender teils Ausnahmen) |\n| Zuständigkeiten | Aufgaben des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM) [@bfarm] und des Paul-Ehrlich-Instituts (für bestimmte IVD), Aufgaben der Landesbehörden |\n| Benannte Stellen | Verfahren zur Benennung und Überwachung; in Deutschland ist hierfür die Zentralstelle der Länder (ZLG) zuständig [@zlg] |\n| Klinische Prüfungen und Leistungsstudien | Antragsverfahren, Rolle der Ethik-Kommissionen, Genehmigung durch die Bundesoberbehörde |\n| Überwachung | Marktüberwachung durch die Länder, Befugnisse der Behörden, Risikoverfahren |\n| Vigilanz | nationale Ausgestaltung der Bewertung von Vorkommnissen (konkretisiert durch die MPAMIV) [@mpamiv] |\n| Verordnungsermächtigungen | Grundlage u. a. für die [[mpbetreibv|Medizinprodukte-Betreiberverordnung]] und die MPAMIV |\n| Straf- und Bußgeldvorschriften | Sanktionen bei Verstößen gegen MDR, IVDR und MPDG |\n\n> [!hinweis] Einzelne Paragraphennummern werden hier bewusst nicht genannt, da das MPDG seit 2021 mehrfach geändert wurde. Für konkrete Fragestellungen stets die aktuelle Fassung auf gesetze-im-internet.de heranziehen [@mpdg].\n\n## Behördenstruktur in Deutschland\n\n* **BfArM (Bonn):** Bundesoberbehörde, u. a. zuständig für die wissenschaftliche Risikobewertung von Vorkommnissen, für Genehmigungen klinischer Prüfungen und für Abgrenzungs- und Klassifizierungsfragen [@bfarm].\n* **Paul-Ehrlich-Institut (Langen):** zuständig für bestimmte, z. B. blut- und immunologiebezogene In-vitro-Diagnostika.\n* **ZLG:** benennt und überwacht [[benannte-stelle|Benannte Stellen]] [@zlg].\n* **Landesbehörden** (z. B. Regierungspräsidien, Gewerbeaufsicht): überwachen Hersteller, Händler **und Betreiber** vor Ort – also auch Krankenhäuser, Praxen und Pflegeeinrichtungen.\n\n## Verhältnis zu anderen Rechtsnormen\n\n* **EU-Ebene:** MDR (2017/745) und IVDR (2017/746) – unmittelbar geltend\n* **Bund – Gesetz:** MPDG – Durchführung und Ergänzung\n* **Bund – Rechtsverordnungen auf Grundlage des MPDG:** u. a. MPBetreibV (Betrieb, Einweisung, STK, MTK) und MPAMIV (Meldungen)\n\nFür den Klinikalltag ist deshalb die Kette **MDR → MPDG → MPBetreibV** entscheidend: Die MDR legt fest, welche Produkte in Verkehr kommen; das MPDG schafft den nationalen Rahmen; die MPBetreibV regelt den sicheren **Betrieb** und die Anwendung inklusive [[stk|sicherheitstechnischer Kontrollen]] und [[mtk|messtechnischer Kontrollen]].\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechniker:innen und Betreiber ergeben sich aus dem MPDG vor allem folgende Berührungspunkte:\n\n* **Behördliche Überwachung:** Landesbehörden können Krankenhäuser begehen und Nachweise prüfen – etwa das [[bestandsverzeichnis|Bestandsverzeichnis]], das [[medizinproduktebuch|Medizinproduktebuch]] oder Nachweise der [[einweisung]] für ein [[beatmungsgeraet|Beatmungsgerät]] oder einen [[defibrillator|Defibrillator]].\n* **Eigenherstellung:** Werden im Haus Produkte hergestellt oder Systeme zusammengestellt (z. B. Messplätze, Software für die [[patientenmonitor|Patientenüberwachung]]), greifen MDR-Pflichten mit nationalen Ergänzungen aus dem MPDG.\n* **Sanktionen:** Verstöße – etwa das Betreiben oder Anwenden von Produkten trotz begründeten Verdachts einer Gefährdung von Patient:innen, Anwendern oder Dritten oder Verstöße gegen bußgeldbewehrte Pflichten der MPBetreibV – können nach dem MPDG straf- oder bußgeldbewehrt sein.\n* **Meldewesen:** Schwerwiegende Vorkommnisse, z. B. bei einer [[infusionspumpe|Infusionspumpe]], sind über die etablierten Meldewege an das BfArM zu melden; siehe [[vigilanz]].\n\n> [!praxis] Wer ältere Lehrbücher oder interne Verfahrensanweisungen nutzt, findet häufig noch Verweise auf das MPG. Diese sollten bei der nächsten Überarbeitung auf MDR, MPDG und die MPBetreibV-Fassung von 2025 umgestellt werden.\n",
+  "related": [
+    "mdr",
+    "ivdr",
+    "mpbetreibv",
+    "betreiberpflichten",
+    "vigilanz",
+    "benannte-stelle",
+    "medizinprodukt",
+    "beauftragter-medizinproduktesicherheit"
+  ],
+  "paths": [
+    [
+      "mdr",
+      "mpdg",
+      "mpbetreibv",
+      "stk"
+    ]
+  ],
+  "sources": [
+    "mpdg",
+    "mdr-2017",
+    "ivdr-2017",
+    "bfarm",
+    "zlg",
+    "mpamiv",
+    "medgv-1985"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

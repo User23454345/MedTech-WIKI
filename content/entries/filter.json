@@ -1,0 +1,50 @@
+{
+  "id": "filter",
+  "type": "term",
+  "title": "Analoge und digitale Filter",
+  "aliases": [
+    "Filter",
+    "Tiefpass",
+    "Hochpass",
+    "Bandpass",
+    "Bandsperre",
+    "Notch-Filter",
+    "Kerbfilter",
+    "FIR-Filter",
+    "IIR-Filter",
+    "Lowpass",
+    "Highpass",
+    "Netzfilter",
+    "Signalfilter"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Filter lassen bestimmte Frequenzanteile eines Signals passieren und dämpfen andere. In Medizingeräten trennen sie Biosignale von Drift, Muskelartefakten und Netzbrumm, verhindern Aliasing vor dem Analog-Digital-Wandler und glätten Messwerte für Anzeige und Regelung – können bei falscher Auslegung aber auch diagnostische Information verfälschen.",
+  "body": "## Begriff\n\nEin **Filter** ist ein System mit frequenzabhängiger Übertragung: Es lässt Signalanteile in seinem **Durchlassbereich** nahezu unverändert passieren und dämpft Anteile im **Sperrbereich**. Die Grenze wird durch die **Grenzfrequenz** f_g beschrieben, bei der die Amplitude auf 1/√2 (−3 dB) abgefallen ist. Filter werden **analog** mit Widerständen, Kondensatoren und [[operationsverstaerker|Operationsverstärkern]] oder **digital** als Rechenvorschrift im [[mikrocontroller|Mikrocontroller]] realisiert [@tietze-schenk-2019] [@oppenheim-schafer-2010].\n\n| Filtertyp | Wirkung | Medizintechnisches Beispiel |\n|---|---|---|\n| Tiefpass | lässt tiefe Frequenzen durch | Anti-Aliasing vor dem [[analog-digital-wandler|ADC]], Glättung eines Drucksignals |\n| Hochpass | lässt hohe Frequenzen durch | Entfernen der Elektroden-Gleichspannung und Basisliniendrift im EKG |\n| Bandpass | lässt ein Frequenzband durch | QRS-Erkennung, Pulssignal der [[photoplethysmographie|Photoplethysmographie]] |\n| Bandsperre (Notch) | dämpft ein schmales Band | Unterdrückung von 50-Hz-[[netzstoerung|Netzbrumm]] |\n\n## Analoge Filter\n\nDas einfachste Filter ist das **RC-Glied**. Als Tiefpass gilt:\n\n`f_g = 1 / (2π · R · C)`\n\nOberhalb von f_g fällt die Amplitude mit 20 dB pro Dekade (Filter 1. Ordnung). Höhere Ordnungen erreicht man durch aktive Filterstufen mit OPV; jede Ordnung erhöht die Flankensteilheit um weitere 20 dB/Dekade. Je nach Optimierungsziel unterscheidet man [@tietze-schenk-2019]:\n\n| Charakteristik | Eigenschaft |\n|---|---|\n| Butterworth | maximal flacher Durchlassbereich |\n| Tschebyscheff | steilere Flanke, dafür Welligkeit im Durchlassbereich |\n| Bessel | nahezu konstante Gruppenlaufzeit – Kurvenformen bleiben erhalten, Flanke flacher |\n\nAnaloge Filter sind unverzichtbar, wo das Signal noch nicht digitalisiert ist: als **Anti-Aliasing-Filter**, als Eingangsschutz gegen hochfrequente Einkopplung (etwa durch [[hf-chirurgiegeraet|HF-Chirurgie]]) und zur Entstörung von Versorgungsleitungen im Rahmen der [[emv|EMV]].\n\n## Digitale Filter\n\nEin digitales Filter berechnet aus Abtastwerten x[n] neue Werte y[n]. Die allgemeine Differenzengleichung lautet [@oppenheim-schafer-2010]:\n\n`y[n] = Σ b_k · x[n−k] − Σ a_k · y[n−k]`\n\n* **FIR-Filter** (endliche Impulsantwort) verwenden nur Eingangswerte (alle a_k = 0). Sie sind stets stabil und können eine **lineare Phase** haben – die Kurvenform bleibt bis auf eine konstante Verzögerung erhalten.\n* **IIR-Filter** (unendliche Impulsantwort) verwenden zusätzlich frühere Ausgangswerte. Sie erreichen steile Flanken mit wenigen Koeffizienten, verzerren aber die Phase und können instabil werden.\n\n> [!beispiel] Der gleitende Mittelwert über M Werte, `y[n] = (1/M) · Σ x[n−k]` für k = 0 … M−1, ist das einfachste FIR-Tiefpassfilter. Ein Mittelwert über 10 Abtastwerte bei 500 Hz Abtastrate (20 ms) glättet zum Beispiel ein verrauschtes Atemwegsdrucksignal für die Anzeige. Zahlen beispielhaft.\n\nDigitale Filter lassen sich ohne Bauteiltoleranzen exakt reproduzieren, per Software umschalten (z. B. Monitoring- vs. Diagnosemodus) und auch nicht-kausal, also vorwärts und rückwärts, anwenden, wenn das Signal gespeichert vorliegt.\n\n## Phasengang und Gruppenlaufzeit\n\nEin Filter verändert nicht nur Amplituden, sondern verschiebt auch die Phase der einzelnen Frequenzanteile. Maß dafür ist die **Gruppenlaufzeit**\n\n`τ_g = −dφ / dω`\n\nIst τ_g für alle Frequenzen im Durchlassbereich gleich (lineare Phase), werden alle Anteile gleich verzögert und die Kurvenform bleibt erhalten. Ist sie frequenzabhängig, verschieben sich Anteile gegeneinander – Spitzen werden verschliffen, und hinter steilen Signalanteilen entstehen Unter- oder Überschwinger [@oppenheim-schafer-2010].\n\nBesonders anschaulich ist das beim **Hochpass 1. Ordnung**, dessen Zeitkonstante `τ = R · C = 1 / (2π · f_g)` beträgt:\n\n| Grenzfrequenz f_g | Zeitkonstante τ | Folge für ein EKG |\n|---|---|---|\n| 0,05 Hz | ≈ 3,2 s | langsame Drift wird kaum unterdrückt, ST-Strecke bleibt weitgehend unverfälscht |\n| 0,5 Hz | ≈ 0,32 s | stabile Grundlinie, aber merkliche Phasendrehung bei tiefen Frequenzen |\n| 5 Hz | ≈ 32 ms | Grundlinie „springt“ zurück, Kurvenform stark verändert |\n\n> [!vereinfacht] Die Tabelle betrachtet nur einen analogen Hochpass 1. Ordnung. Ein nach dem großen QRS-Komplex auftretendes Nachschwingen eines solchen Hochpasses kann eine ST-Hebung oder -Senkung vortäuschen; digitale linearphasige oder vorwärts-rückwärts angewendete Filter vermeiden diesen Effekt weitgehend.\n\n## Filter in der EKG-Technik\n\nBeim EKG zeigt sich besonders deutlich, dass Filter Information verändern:\n\n> [!belegt] Die Empfehlungen von AHA/ACCF/HRS zur Standardisierung des EKG nennen für das diagnostische Ruhe-EKG eine untere Grenzfrequenz von 0,05 Hz für herkömmliche Filter (bzw. bis 0,67 Hz bei linearen digitalen Filtern ohne Phasenverzerrung) und eine obere Grenzfrequenz von mindestens 150 Hz bei Erwachsenen, bei Kindern 250 Hz. Ein zu hoch gesetzter Hochpass kann die ST-Strecke verfälschen [@kligfield-2007].\n\nMonitore verwenden im Überwachungsmodus oft engere Bandbreiten, um Bewegungs- und Muskelartefakte ([[bewegungsartefakt]]) zu unterdrücken. Für die ST-Analyse oder die Befundung ist dann der diagnostische Filtermodus maßgeblich.\n\n> [!warnung] Ein 50-Hz-Notchfilter beseitigt Netzbrumm, dämpft aber auch Signalanteile um 50 Hz und kann Einschwingvorgänge erzeugen. Er ersetzt nicht die Beseitigung der Störursache (Elektroden, Kabel, Potentialausgleich).\n\nAuch die Detektion von QRS-Komplexen beginnt typischerweise mit einem Bandpass: Der Algorithmus von Pan und Tompkins filtert das EKG mit einem aus Tief- und Hochpass zusammengesetzten Bandpass auf etwa 5–15 Hz, wo die Energie des QRS-Komplexes gegenüber P- und T-Welle sowie Drift überwiegt [@pan-tompkins-1985].\n\n## Anwendung in Geräten\n\n| Gerät | Filteraufgabe |\n|---|---|\n| [[ekg-geraet]], [[patientenmonitor]], [[langzeit-ekg]] | Drift-, Muskel- und Netzfilter; Diagnose- und Monitoringbandbreite |\n| [[eeg-geraet]] | Frequenzbänder (Delta bis Gamma), Notch, Artefaktunterdrückung |\n| [[pulsoxymeter]] | Trennung von pulsatilem (AC) und konstantem (DC) Anteil |\n| [[beatmungsgeraet]], [[cpap-geraet]] | Glättung von Druck- und Flowsignalen für Anzeige und Triggerung |\n| [[nibp-messgeraet]] | Bandpass zur Gewinnung der Oszillationen aus dem Manschettendruck ([[oszillometrie]]) |\n| [[ultraschallgeraet]] | Demodulation, Wandfilter in der Doppler-Verarbeitung |\n\n> [!praxis] Wirkt eine Kurve ungewohnt „glatt“ oder sind Spitzen abgeflacht, sollte zuerst die eingestellte Filterstufe geprüft werden, bevor ein Defekt vermutet wird.",
+  "related": [
+    "analog-digital-wandler",
+    "operationsverstaerker",
+    "instrumentenverstaerker",
+    "netzstoerung",
+    "bewegungsartefakt",
+    "biosignale",
+    "emv",
+    "mikrocontroller"
+  ],
+  "paths": [
+    [
+      "ekg-geraet",
+      "instrumentenverstaerker",
+      "filter",
+      "analog-digital-wandler"
+    ]
+  ],
+  "sources": [
+    "tietze-schenk-2019",
+    "oppenheim-schafer-2010",
+    "kligfield-2007",
+    "pan-tompkins-1985",
+    "webster-2010"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

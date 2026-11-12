@@ -1,0 +1,40 @@
+{
+  "id": "iec-60601-2-2",
+  "type": "standard",
+  "title": "IEC 60601-2-2",
+  "code": "IEC 60601-2-2",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-2: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Hochfrequenz-Chirurgiegeräten und Hochfrequenz-Chirurgiezubehör",
+  "scope": "Legt besondere Sicherheits- und Leistungsanforderungen an Hochfrequenz-Chirurgiegeräte und deren Zubehör wie Elektroden, Kabel und Neutralelektroden fest.",
+  "aliases": [
+    "DIN EN IEC 60601-2-2",
+    "EN IEC 60601-2-2",
+    "VDE 0750-2-2",
+    "60601-2-2",
+    "HF-Chirurgie-Norm"
+  ],
+  "category": "normen",
+  "summary": "IEC 60601-2-2 ist die besondere Festlegung der Normenfamilie IEC 60601 für HF-Chirurgiegeräte und ihr Zubehör. Sie behandelt die Begrenzung und Genauigkeit der Ausgangsleistung, HF-Ableitströme, die Überwachung der Neutralelektrode, die Isolation aktiver Zubehörteile und die eindeutige Signalisierung der Aktivierung.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-2-2** gilt für [[hf-chirurgiegeraet|Hochfrequenz-Chirurgiegeräte]] und ausdrücklich auch für deren **Zubehör** – aktive Elektroden, Kabel, bipolare Instrumente und [[neutralelektrode|Neutralelektroden]] [@iec-60601-2-2]. Das ist eine Besonderheit: Viele Risiken der HF-Chirurgie entstehen nicht im Generator, sondern im Zubehör und an der Kontaktstelle zum Patienten.\n\nHF-Chirurgie nutzt hochfrequenten Wechselstrom (typischerweise im Bereich einiger hundert Kilohertz bis weniger Megahertz), der keine Nerven- oder Muskelreizung mehr auslöst, aber das Gewebe durch [[joulesche-waerme|Joule'sche Wärme]] schneidet oder koaguliert ([[elektrische-stromwirkung]]). Der Patient wird dabei **absichtlich** Teil des Stromkreises.\n\n## Zentrale Konzepte und Anforderungen\n\n### Ausgangsleistung\n\nDie Norm begrenzt die maximale Bemessungsausgangsleistung (in verbreiteten Ausgaben auf 400 W, mit Ausnahmen für besondere Anwendungen; maßgeblich ist die gültige Ausgabe) und verlangt, dass der Hersteller Leistungskurven in Abhängigkeit vom Lastwiderstand für jede Betriebsart (monopolar, bipolar, Schneiden, Koagulieren) angibt. Die eingestellte Leistung muss innerhalb festgelegter Toleranzen abgegeben werden; eine unbeabsichtigte Erhöhung muss verhindert werden.\n\n> [!vereinfacht] Gewebe hat je nach Art und Austrocknung einen sehr unterschiedlichen Widerstand. Ein Generator liefert daher bei gleicher Einstellung an unterschiedlichen Lasten unterschiedliche Leistung (`P = U² / R`). Die Leistungskurven in den Begleitpapieren zeigen, wie gut die Regelung das ausgleicht ([[regelkreis]]).\n\n### Neutralelektrode und ihre Überwachung\n\nBei monopolarer Technik fließt der Strom über eine großflächige Neutralelektrode zurück. Ist die Kontaktfläche zu klein, steigt die Stromdichte, und es drohen Verbrennungen ([[neutralelektroden-verbrennung]]). Die Norm stellt daher Anforderungen an\n\n- die Erwärmung unter der Neutralelektrode bei festgelegten Prüfbedingungen,\n- die **Kontaktüberwachung** bei geteilten Neutralelektroden, die eine unzureichende Anlage erkennt und die Aktivierung sperrt,\n- die Überwachung der Kabelverbindung bei ungeteilten Elektroden.\n\n### HF-Ableitströme\n\nEin Teil des HF-Stroms fließt kapazitiv über ungewollte Wege, z. B. über EKG-Elektroden, Metallteile am OP-Tisch oder die Haut-zu-Haut-Kontakte des Patienten. Die Norm begrenzt diese **HF-Ableitströme** und fordert Ausgänge, die gegenüber Erde isoliert („floating“) oder erdbezogen klar spezifiziert sind ([[ableitstrom]], [[galvanische-trennung]]).\n\n### Zubehör und Aktivierung\n\n- Isolation aktiver Elektroden muss für die maximale Spitzenspannung der jeweiligen Betriebsart ausgelegt sein; die Bemessungsspannung ist zu kennzeichnen.\n- Jede Aktivierung muss **akustisch und optisch** angezeigt werden, damit unbeabsichtigtes Aktivieren bemerkt wird.\n- Fußschalter und Handgriffe müssen gegen ungewolltes Auslösen und Flüssigkeitseintritt geschützt sein.\n\n> [!warnung] HF-Chirurgie kann aktive Implantate ([[herzschrittmacher]], [[icd]], [[cochlea-implantat]]) stören oder schädigen und brennbare Gase oder Desinfektionsmittel entzünden. Vorgaben des Implantat- und des Geräteherstellers sind zu beachten.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Sicherheit; Anwendungsteile Typ BF/CF ([[anwendungsteile]]) |\n| Ergänzungsnormen | [[iec-60601-1-2]] (EMV), [[iec-60601-1-6]], [[iec-60601-1-8]] | HF-Chirurgie ist eine starke Störquelle für andere Geräte ([[emv-stoerung]]) |\n| Besondere Festlegungen | [[iec-60601-2-27]], [[iec-60601-2-25]] | EKG-Geräte müssen HF-Chirurgie-Störungen tolerieren |\n| Prozessnormen | [[iso-14971]], [[iec-62304]] | Risikomanagement, Generator-Software |\n\n> [!hinweis] Grundprinzip der Familie IEC 60601: Die besondere Festlegung (-2-x) hat Vorrang vor Ergänzungsnormen (-1-x) und der Basisnorm. Sie gibt jeweils an, welche Abschnitte der Basisnorm gelten, ergänzt oder ersetzt werden.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** von Generatoren weisen mit der Norm die Konformität nach [[mdr]] nach; HF-Chirurgiegeräte werden als aktive therapeutische Produkte mit potenziell gefährlicher Energieabgabe in der Regel der Klasse IIb zugeordnet ([[risikoklassen]], Regel 9). Hersteller von Generatoren und Zubehör müssen die Kompatibilität (Spannungsfestigkeit, Steckersysteme) offenlegen. Mehrweg-Zubehör muss zudem die [[aufbereitung]] ohne Isolationsschäden überstehen.\n\n**Betreiber** unterziehen HF-Chirurgiegeräte der [[stk]] nach [[mpbetreibv]] (§ 12 i. V. m. Anlage 1; spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind) [@mpbetreibv]. Geprüft werden mit einem HF-Chirurgie-Analysator u. a. Ausgangsleistung an Lastwiderständen, HF-Ableitströme und die Neutralelektrodenüberwachung ([[pruefgeraete]]).\n\n> [!praxis] Isolationsschäden an laparoskopischen Instrumenten sind mit bloßem Auge oft nicht erkennbar. Viele Kliniken prüfen Mehrweginstrumente nach der Aufbereitung zusätzlich mit Isolationsprüfgeräten ([[isolationswiderstand]]).\n\n## Betroffene Geräte\n\n[[hf-chirurgiegeraet]] mit Zubehör ([[neutralelektrode]]); im Umfeld [[ultraschalldissektor]], [[endoskop]], [[insufflator]], [[op-tisch]], [[op-roboter]] und [[patientenmonitor]]. Hersteller sind u. a. [[erbe]], [[medtronic]], [[olympus]], [[karl-storz]] und [[b-braun]].\n",
+  "related": [
+    "hf-chirurgiegeraet",
+    "neutralelektrode",
+    "neutralelektroden-verbrennung",
+    "joulesche-waerme",
+    "ableitstrom",
+    "emv-stoerung",
+    "iec-60601-1",
+    "iec-60601-1-2",
+    "chirurgie",
+    "erbe",
+    "anwendungsteile"
+  ],
+  "sources": [
+    "iec-60601-2-2",
+    "iec-60601-1",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

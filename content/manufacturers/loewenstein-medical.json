@@ -1,0 +1,77 @@
+{
+  "id": "loewenstein-medical",
+  "type": "manufacturer",
+  "title": "Löwenstein Medical",
+  "aliases": [
+    "Heinen + Löwenstein",
+    "Löwenstein Medical SE & Co. KG",
+    "Löwenstein Medical Technology"
+  ],
+  "category": "hersteller",
+  "summary": "Familiengeführte Unternehmensgruppe aus Bad Ems (Rheinland-Pfalz) mit Schwerpunkten Beatmung, Schlaftherapie und Anästhesie. Das Unternehmen firmierte bis 2017 als Heinen + Löwenstein und übernahm die Homecare-Sparte von Weinmann.",
+  "headquarters": "Bad Ems, Deutschland",
+  "founded": "1986",
+  "website": "https://loewensteinmedical.com/",
+  "productLines": [
+    {
+      "device": "beatmungsgeraet",
+      "models": [
+        "elisa 800",
+        "elisa 600"
+      ],
+      "note": "Intensivbeatmungsgeräte; für die elisa 800 bietet der Hersteller eine Variante mit integrierter elektrischer Impedanztomographie (EIT) an."
+    },
+    {
+      "device": "heimbeatmungsgeraet",
+      "models": [
+        "LUISA",
+        "prisma VENT"
+      ],
+      "note": "LUISA für lebenserhaltende außerklinische Beatmung; prisma VENT für nichtinvasive Heimbeatmung."
+    },
+    {
+      "device": "cpap-geraet",
+      "models": [
+        "prisma SMART",
+        "prisma SOFT"
+      ]
+    },
+    {
+      "device": "high-flow-geraet",
+      "models": [
+        "prisma VENT50-C"
+      ],
+      "note": "Heimbeatmungsgerät mit zusätzlichem High-Flow-Therapiemodus."
+    },
+    {
+      "device": "anaesthesiegeraet",
+      "models": [
+        "Leon plus",
+        "Leon mri"
+      ],
+      "note": "Leon mri für den Einsatz im MRT-Umfeld."
+    }
+  ],
+  "body": "## Überblick\n\nLöwenstein Medical ist eine familiengeführte Unternehmensgruppe mit Sitz in Bad Ems. Das Unternehmen entwickelt, fertigt und vertreibt Geräte für die **Beatmung** (Intensiv-, Heim- und Neonatalbeatmung), die **Schlaftherapie** und die **Anästhesie** und ist zugleich ein großer Versorger im außerklinischen Bereich (Homecare) [@hst-loewenstein-about].\n\n## Geschichte in Stichpunkten\n\n* **Ursprung** – Aus dem traditionsreichen Unternehmen Heinen wird nach dem Eintritt von Reinhard Löwenstein Heinen + Löwenstein, zunächst mit Schwerpunkt Neonatologie [@hst-loewenstein-about].\n* **1986** – Gründung der Heinen + Löwenstein Medizinelektronik mit Fokus auf Schlafdiagnostik [@hst-loewenstein-about].\n* **2000er-Jahre** – Markteinführung der Anästhesiegeräteplattform Leon.\n* **2013–2016** – Die Hamburger Weinmann Geräte für Medizin (Homecare-Bereich) wird Teil der Gruppe und firmiert anschließend als Löwenstein Medical Technology; die Notfallmedizin wird als eigenständiges Unternehmen [[weinmann|Weinmann Emergency]] weitergeführt und gehört nicht zur Löwenstein-Gruppe.\n* **2010er-Jahre** – Einführung der Intensivbeatmungsgeräte elisa 600/800.\n* **2017** – Umbenennung von Heinen + Löwenstein in Löwenstein Medical.\n* **um 2020** – Einführung des Heimbeatmungsgeräts LUISA.\n\n## Geschäftsbereiche\n\n| Bereich | Wiki-Geräte |\n|---|---|\n| Intensivbeatmung | [[beatmungsgeraet]] |\n| Außerklinische Beatmung | [[heimbeatmungsgeraet]], [[high-flow-geraet]] |\n| Schlafmedizin | [[cpap-geraet]], [[polysomnograph]] |\n| Anästhesie | [[anaesthesiegeraet]] |\n\nTechnisch arbeiten die Heim- und Schlaftherapiegeräte mit drehzahlgeregelten [[turbine|Gebläsen (Turbinen)]] auf Basis von [[bldc-motor|BLDC-Motoren]]; Druck und Fluss werden über [[drucksensor|Drucksensoren]] und [[flowsensor|Flowsensoren]] in einem geschlossenen [[regelkreis]] geführt.\n\n## Bedeutung für die Medizintechnik\n\nLöwenstein Medical ist einer der größeren deutschen Anbieter in der [[pneumologie|Pneumologie]] und [[intensivmedizin|Intensivmedizin]]. Für die Praxis wichtig:\n\n* Beatmungs- und Anästhesiegeräte sind [[stk]]-pflichtig (MPBetreibV § 12 i. V. m. Anlage 1) [@mpbetreibv].\n* Heimbeatmungsgeräte werden außerhalb der Klinik betrieben; hier gelten die Anforderungen an medizinische elektrische Geräte für die häusliche Umgebung ([[iec-60601-1-11|IEC 60601-1-11]]) [@iec-60601-1-11].\n* Die [[einweisung]] von Patient:innen und Angehörigen ist bei lebenserhaltender Heimbeatmung besonders bedeutsam.\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "beatmungsgeraet",
+    "heimbeatmungsgeraet",
+    "cpap-geraet",
+    "anaesthesiegeraet",
+    "high-flow-geraet",
+    "pneumologie",
+    "intensivmedizin",
+    "weinmann",
+    "resmed",
+    "draeger",
+    "hamilton-medical"
+  ],
+  "sources": [
+    "hst-loewenstein",
+    "hst-loewenstein-about",
+    "mpbetreibv",
+    "iec-60601-1-11"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

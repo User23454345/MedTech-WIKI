@@ -1,0 +1,159 @@
+{
+  "id": "sterilisation",
+  "type": "term",
+  "title": "Sterilisation",
+  "aliases": [
+    "Sterilization",
+    "Dampfsterilisation",
+    "Autoklavieren",
+    "SAL",
+    "Sterility Assurance Level",
+    "D-Wert",
+    "F0-Wert"
+  ],
+  "category": "instandhaltung",
+  "summary": "Sterilisation ist ein validiertes Verfahren, das ein Produkt von allen vermehrungsfähigen Mikroorganismen einschließlich Sporen befreit; da die Abtötung exponentiell verläuft, wird Sterilität als Wahrscheinlichkeit (SAL 10⁻⁶) definiert. Standardverfahren für Medizinprodukte ist die Dampfsterilisation, für thermolabile Produkte stehen Niedertemperaturverfahren zur Verfügung.",
+  "body": "## Begriff\n\n**Sterilisation** ist ein validiertes Verfahren, mit dem ein Produkt von vermehrungsfähigen Mikroorganismen einschließlich bakterieller **Sporen** befreit wird. Sie geht damit über die [[desinfektion|Desinfektion]] hinaus, die die Keimzahl so weit reduziert, dass keine Infektion mehr ausgehen kann, Sporen aber nicht zwingend erfasst. Sterilisation ist ein Schritt der [[aufbereitung|Aufbereitung]] und für alle **kritischen** Medizinprodukte erforderlich – Produkte, die Haut oder Schleimhaut durchdringen oder mit Blut, inneren Geweben oder Organen in Kontakt kommen [@krinko-bfarm-2012].\n\n## Abtötungskinetik\n\nDie Abtötung von Mikroorganismen folgt näherungsweise einer Kinetik erster Ordnung: In gleichen Zeitabständen wird der gleiche *Anteil* der noch lebenden Keime inaktiviert.\n\nN(t) = N₀ · 10^(−t / D)\n\n* **D-Wert** (dezimale Reduktionszeit): Zeit, in der die Keimzahl bei konstanter Temperatur auf ein Zehntel sinkt.\n* **z-Wert:** Temperaturerhöhung, die den D-Wert auf ein Zehntel verkürzt; für Dampfsterilisation wird üblicherweise z = 10 K angesetzt.\n* **F₀-Wert:** äquivalente Einwirkzeit bei 121,1 °C, aufsummiert über den Temperaturverlauf: F₀ = Σ 10^((T − 121,1 °C) / z) · Δt.\n\nWeil die Kurve nie exakt null erreicht, ist „steril“ eine Wahrscheinlichkeitsaussage. Der **Sterilitätssicherheitswert** (SAL, *sterility assurance level*) gibt die Wahrscheinlichkeit an, dass nach der Sterilisation noch ein lebensfähiger Mikroorganismus auf einer Einheit vorhanden ist. Für die Kennzeichnung „STERIL“ fordert DIN EN 556-1 einen SAL von höchstens 10⁻⁶ [@en-556-1].\n\n> [!beispiel] Ein Instrument trägt nach der Reinigung 10³ Keime eines resistenten Testorganismus mit D = 1,5 min bei 121 °C. Für SAL = 10⁻⁶ sind lg(10³ / 10⁻⁶) = 9 Zehnerpotenzen zu reduzieren, also t = 9 · 1,5 min = 13,5 min. Bei 10⁶ Keimen wären es 12 · 1,5 min = 18 min. Das zeigt, warum gründliche **Reinigung** vor der Sterilisation unverzichtbar ist. Die Zahlen sind beispielhaft.\n\n> [!vereinfacht] Die log-lineare Kinetik ist ein Modell. Reale Überlebenskurven können Schultern oder Ausläufer zeigen, etwa durch Verklumpung oder schützende Rückstände. Validierte Verfahren berücksichtigen dies durch Sicherheitszuschläge („Overkill“-Ansatz).\n\n## Verfahren im Überblick\n\n| Verfahren | Wirkprinzip | Typische Anwendung |\n|---|---|---|\n| Dampfsterilisation | gesättigter Wasserdampf, Kondensation, Denaturierung von Proteinen | Standardverfahren für thermostabile Instrumente ([[dampfsterilisator]]) |\n| Wasserstoffperoxid (Gas/Plasma) | Oxidation; Niedertemperatur | thermolabile Instrumente, Optiken ([[niedertemperatursterilisator]]) |\n| Niedertemperatur-Dampf-Formaldehyd | Alkylierung durch Formaldehyd bei niedriger Temperatur | thermolabile Produkte |\n| Ethylenoxid | Alkylierung; toxisches Gas, lange Desorption | industriell, einzelne Klinikanwendungen |\n| Strahlensterilisation | Gamma- oder Elektronenstrahlung | industriell für Einmalprodukte |\n| Heißluft | trockene Hitze, deutlich längere Zeiten | in Kliniken weitgehend abgelöst |\n\n## Dampfsterilisation im Detail\n\nDampf ist das bevorzugte Verfahren: wirksam, rückstandsfrei, gut validierbar. Entscheidend ist **gesättigter Dampf** im Kontakt mit allen Oberflächen. Beim Kondensieren an der kälteren Oberfläche gibt der Dampf seine Verdampfungsenthalpie (rund 2 200 kJ/kg) ab und erwärmt das Gut sehr schnell (siehe [[waermeuebertragung]]). Restluft wirkt als Isolator: Luftinseln in Hohlkörpern oder Verpackungen verhindern den Dampfkontakt.\n\nZwischen Druck und Temperatur von Sattdampf besteht ein fester Zusammenhang (Dampfdruckkurve). Deshalb überwacht die Steuerung **Druck und Temperatur** gemeinsam; eine Abweichung weist auf Restluft, Fremdgase oder überhitzten Dampf hin.\n\n| Parameter (typisch) | 121 °C-Programm | 134 °C-Programm |\n|---|---|---|\n| Absolutdruck Sattdampf | ca. 2,0 bar | ca. 3,0 bar |\n| Mindest-Haltezeit | ca. 15 min | ca. 3 min |\n\n> [!hinweis] Die Werte sind gerätetypübergreifend typische Größenordnungen; in deutschen Kliniken werden für Instrumente häufig längere Haltezeiten bei 134 °C programmiert. Maßgeblich sind Validierung, Herstellerangaben des Sterilisators und der Instrumente sowie die Anforderungen von ISO 17665 und EN 285 [@iso-17665-2024] [@en-285].\n\n### Ablauf eines Zyklus\n\n1. **Luftentfernung** durch fraktioniertes Vorvakuum: abwechselnd evakuieren und Dampf einlassen.\n2. **Aufheizen** bis zur Sterilisiertemperatur.\n3. **Plateauphase** (Ausgleichs- und Haltezeit) bei konstanter Temperatur.\n4. **Druckentlastung und Trocknung** unter Vakuum – nasse Verpackungen gelten als unsteril.\n5. **Belüften** über Sterilfilter und Freigabe.\n\n## Prozessüberwachung und Validierung\n\n* **Physikalisch:** Protokoll der Druck- und Temperaturverläufe über [[temperatursensor|Temperatursensoren]] und [[drucksensor|Drucksensoren]] (siehe [[druckmessung]]).\n* **Chemisch:** Indikatoren, die bei Erreichen definierter Bedingungen umschlagen; der arbeitstägliche **Bowie-Dick-Test** prüft die Luftentfernung und Dampfdurchdringung.\n* **Biologisch:** Bioindikatoren mit Sporen von *Geobacillus stearothermophilus*.\n* **Validierung:** Installations-, Betriebs- und Leistungsqualifikation (IQ/OQ/PQ) mit realen Beladungsmustern nach ISO 17665; periodische Wiederholung und Wiederholung nach Änderungen [@iso-17665-2024].\n\nFür Niedertemperaturverfahren gelten die allgemeinen Anforderungen an die Charakterisierung eines Sterilisiermittels nach ISO 14937 [@iso-14937].\n\n> [!belegt] Nach MPBetreibV muss die Aufbereitung mit geeigneten validierten Verfahren erfolgen; bei Beachtung der KRINKO-BfArM-Empfehlung wird eine ordnungsgemäße Aufbereitung vermutet [@mpbetreibv] [@krinko-bfarm-2012].\n\n## Anwendung in Geräten\n\n* [[dampfsterilisator|Dampfsterilisator]] und [[niedertemperatursterilisator|Niedertemperatursterilisator]] sind selbst Medizinprodukte; ihre Messkette (Temperatur, Druck) muss regelmäßig überprüft und gegebenenfalls [[kalibrierung|kalibriert]] werden.\n* Sterilisiert werden u. a. Instrumente der [[chirurgie]], Hand- und Winkelstücke des [[chirurgisches-motorsystem|chirurgischen Motorsystems]], Instrumente für [[hf-chirurgiegeraet|HF-Chirurgie]] und Optiken starrer Endoskope.\n* Viele Elektronikbaugruppen und flexible [[endoskop|Endoskope]] sind nicht dampfsterilisierbar und werden desinfiziert oder bei Niedertemperatur sterilisiert.",
+  "related": [
+    "aufbereitung",
+    "desinfektion",
+    "dampfsterilisator",
+    "niedertemperatursterilisator",
+    "iso-17665",
+    "iso-15883",
+    "temperatursensor",
+    "drucksensor",
+    "waermeuebertragung",
+    "gasgesetze"
+  ],
+  "paths": [
+    [
+      "aufbereitung",
+      "sterilisation",
+      "dampfsterilisator",
+      "temperatursensor"
+    ],
+    [
+      "sterilisation",
+      "dampfsterilisator",
+      "drucksensor",
+      "druckmessung"
+    ]
+  ],
+  "sources": [
+    "krinko-bfarm-2012",
+    "en-556-1",
+    "iso-17665-2024",
+    "en-285",
+    "iso-14937",
+    "mpbetreibv",
+    "rutala-cdc-2008",
+    "kramme-2017"
+  ],
+  "diagram": {
+    "title": "Dampfsterilisationszyklus mit Prozessüberwachung",
+    "caption": "Funktionsschema eines Fraktionier-Vakuumverfahrens; Druck und Temperatur werden gemeinsam überwacht.",
+    "width": 960,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "bel",
+        "label": "Beladung\n(verpacktes Gut)",
+        "kind": "source",
+        "x": 100,
+        "y": 80
+      },
+      {
+        "id": "vak",
+        "label": "Luftentfernung\n(Vorvakuum)",
+        "kind": "actuator",
+        "x": 320,
+        "y": 80
+      },
+      {
+        "id": "heiz",
+        "label": "Aufheizen\n(Sattdampf)",
+        "kind": "process",
+        "x": 540,
+        "y": 80
+      },
+      {
+        "id": "plat",
+        "label": "Plateauphase\n(Haltezeit)",
+        "kind": "process",
+        "x": 760,
+        "y": 80
+      },
+      {
+        "id": "trock",
+        "label": "Trocknung,\nBelüftung",
+        "kind": "process",
+        "x": 760,
+        "y": 290
+      },
+      {
+        "id": "ts",
+        "label": "Temperatur-\nsensor",
+        "kind": "sensor",
+        "ref": "temperatursensor",
+        "x": 420,
+        "y": 190
+      },
+      {
+        "id": "ps",
+        "label": "Drucksensor",
+        "kind": "sensor",
+        "ref": "drucksensor",
+        "x": 610,
+        "y": 190
+      },
+      {
+        "id": "frei",
+        "label": "Steuerung /\nChargenfreigabe",
+        "kind": "control",
+        "x": 420,
+        "y": 300
+      }
+    ],
+    "edges": [
+      {
+        "from": "bel",
+        "to": "vak",
+        "kind": "gas"
+      },
+      {
+        "from": "vak",
+        "to": "heiz",
+        "kind": "gas"
+      },
+      {
+        "from": "heiz",
+        "to": "plat",
+        "kind": "gas"
+      },
+      {
+        "from": "plat",
+        "to": "trock",
+        "kind": "gas"
+      },
+      {
+        "from": "ts",
+        "to": "frei",
+        "kind": "signal"
+      },
+      {
+        "from": "ps",
+        "to": "frei",
+        "kind": "signal"
+      },
+      {
+        "from": "trock",
+        "to": "frei",
+        "kind": "data",
+        "label": "Zyklusende"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

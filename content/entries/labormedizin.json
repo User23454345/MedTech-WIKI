@@ -1,0 +1,40 @@
+{
+  "id": "labormedizin",
+  "type": "domain",
+  "title": "Laboratoriumsmedizin",
+  "aliases": [
+    "Labormedizin",
+    "Klinische Chemie",
+    "Labordiagnostik",
+    "Zentrallabor",
+    "Laboratory Medicine",
+    "In-vitro-Diagnostik",
+    "IVD"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Laboratoriumsmedizin untersucht Körperflüssigkeiten und Gewebeproben mit analytischen Verfahren und liefert einen großen Teil der Befunde, auf denen ärztliche Entscheidungen beruhen. Ihre Geräte sind In-vitro-Diagnostika und unterliegen eigenen Regeln für Qualitätssicherung und Zulassung.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Laboratoriumsmedizin** befasst sich mit der Untersuchung von Blut, Urin, Liquor und anderen Körpermaterialien außerhalb des Körpers (*in vitro*). Sie umfasst klinische Chemie, Hämatologie, Hämostaseologie, Immunologie und – je nach Organisation – Teile der Mikrobiologie und der Transfusionsmedizin. Der Untersuchungsprozess gliedert sich in **Präanalytik** (Anforderung, Probennahme, Transport, Zentrifugation), **Analytik** (Messung) und **Postanalytik** (Validierung, Befundübermittlung). Ein großer Teil der Fehler entsteht in der Präanalytik, etwa durch Hämolyse, falsches Röhrchen oder zu lange Transportzeiten.\n\nGeräte dieses Fachs sind meist **In-vitro-Diagnostika** und fallen nicht unter die [[mdr|MDR]], sondern unter die [[ivdr|IVDR]], die vier Risikoklassen A bis D kennt [@ivdr-2017]. Labore können sich nach ISO 15189 akkreditieren lassen [@iso-15189].\n\n## Typische Untersuchungen\n\n| Bereich | Beispiele | Messprinzip |\n|---|---|---|\n| Klinische Chemie | Elektrolyte, Kreatinin, Leberenzyme, Glukose | Photometrie nach [[lambert-beer|Lambert-Beer]], ionenselektive Elektroden, Immunoassays |\n| Hämatologie | Blutbild, Differenzialblutbild | Impedanzmessung (Coulter-Prinzip), Durchflusszytometrie mit Streulicht und Fluoreszenz |\n| Gerinnung | Quick/INR, aPTT, Fibrinogen, D-Dimere | optische oder mechanische Gerinnselerkennung, chromogene Tests |\n| Blutgase | pH, pCO₂, pO₂, Laktat, CO-Oxymetrie | potentiometrische und amperometrische Elektroden, Spektralphotometrie |\n| Transfusionsmedizin | Blutgruppe, Antikörpersuche, Kreuzprobe | Agglutination in Gelkarten oder Mikrotiterplatten |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[klinisch-chemischer-analysator]] | vollautomatische Messung von Substraten, Enzymen, Elektrolyten und Proteinen |\n| [[haematologie-analysator]] | Zählung und Differenzierung von Blutzellen, Hämoglobinbestimmung |\n| [[gerinnungsanalysator]] | Gerinnungszeiten und Einzelfaktoren |\n| [[blutgasanalysator]] | Säure-Basen-Status und Oxygenierung, oft patientennah auf Intensivstation und im OP |\n| [[blutzuckermessgeraet]] | patientennahe Glukosemessung (POCT) |\n| [[laborzentrifuge]] | Trennung von Serum bzw. Plasma und Zellen in der Präanalytik |\n| [[blutkuehlschrank]] | temperaturüberwachte Lagerung von Blutkomponenten |\n| [[zellseparator]] | Gewinnung von Blutbestandteilen (Apherese) in der Transfusionsmedizin |\n\nModerne Zentrallabore verbinden Probenverteilung, Zentrifugation, Analysatoren und Archiv über Transportbänder zu einer **Laborstraße**. Die Analysatoren kommunizieren mit dem Laborinformationssystem (LIS), das wiederum über Standards wie [[hl7-fhir|HL7]] an das Krankenhausinformationssystem angebunden ist.\n\n## Besondere technische Anforderungen\n\n### Qualitätssicherung\n\nIn Deutschland regelt die **Richtlinie der Bundesärztekammer (Rili-BÄK)** die interne Qualitätskontrolle mit Kontrollproben und die externe Qualitätssicherung durch Ringversuche – auch für patientennahe Sofortdiagnostik (POCT) außerhalb des Labors [@rili-baek]. Grundlage jeder Messung ist eine rückführbare [[kalibrierung]]; die [[messunsicherheit]] wird über Präzision und Richtigkeit bewertet.\n\n> [!praxis] Bei auffälligen Kontrollwerten werden Patientenmessungen gesperrt, bis die Ursache – etwa ein gealtertes Reagenz, ein verschmutzter Probennadel-Kanal oder eine driftende Elektrode ([[sensordrift]]) – gefunden und behoben ist. Die Dokumentation gehört zur Postanalytik.\n\n### Geräte- und Arbeitssicherheit\n\n* **Elektrische Sicherheit:** Laboranalysatoren ohne Patientenkontakt werden in der Regel nach der Normenreihe IEC 61010 (Mess-, Steuer-, Regel- und Laborgeräte) gebaut, nicht nach [[iec-60601-1]]. Für Zentrifugen gilt ergänzend IEC 61010-2-020 [@iec-61010-2-020].\n* **Biologische Gefährdung:** Proben gelten als potenziell infektiös. Bei Wartung und [[instandsetzung]] sind Dekontamination und persönliche Schutzausrüstung Pflicht ([[desinfektion]]).\n* **Zentrifugen:** Rotoren und Becher unterliegen mechanischer Ermüdung; Unwucht und Deckelverriegelung sind sicherheitsrelevant.\n* **Kühlkette:** Erythrozytenkonzentrate werden bei +2 bis +6 °C gelagert; Temperaturverlauf und Alarmweiterleitung von Blutkühlschränken sind lückenlos zu überwachen [@richtlinie-haemotherapie].\n\n### Verfügbarkeit und IT\n\nEin Zentrallabor arbeitet rund um die Uhr. Redundante Analysatoren, Notstromversorgung und Ausfallkonzepte für LIS und Schnittstellen sind ebenso wichtig wie die Gerätetechnik selbst. Die Netzwerkintegration fällt unter das Risikomanagement für medizinische IT-Netzwerke [@iec-80001-1].\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[intensivmedizin]], [[anaesthesiologie]] und [[notfallmedizin]]: Blutgasanalyse und POCT am Patientenbett.\n* [[nephrologie]]: Retentionswerte, Elektrolyte und Dialysequalität.\n* [[diabetologie]]: Glukose und HbA1c; Qualitätssicherung von Blutzuckermessgeräten.\n* [[herzchirurgie]] und [[kardiologie]]: Gerinnungsüberwachung, kardiale Marker.\n* [[geburtshilfe]]: Schwangerschaftsvorsorge, Blutgruppenserologie.\n",
+  "related": [
+    "klinisch-chemischer-analysator",
+    "haematologie-analysator",
+    "gerinnungsanalysator",
+    "blutgasanalysator",
+    "laborzentrifuge",
+    "blutkuehlschrank",
+    "ivdr",
+    "kalibrierung",
+    "messunsicherheit",
+    "lambert-beer"
+  ],
+  "sources": [
+    "ivdr-2017",
+    "iso-15189",
+    "rili-baek",
+    "iec-61010-2-020",
+    "richtlinie-haemotherapie",
+    "iec-80001-1",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

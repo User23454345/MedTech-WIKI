@@ -1,0 +1,44 @@
+{
+  "id": "iec-60601-2-54",
+  "type": "standard",
+  "title": "IEC 60601-2-54",
+  "code": "IEC 60601-2-54",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-54: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Röntgeneinrichtungen für Radiographie und Radioskopie",
+  "scope": "Legt besondere Anforderungen an Basissicherheit und wesentliche Leistungsmerkmale von Röntgeneinrichtungen für Aufnahme (Radiographie) und Durchleuchtung (Radioskopie) fest.",
+  "aliases": [
+    "DIN EN IEC 60601-2-54",
+    "EN IEC 60601-2-54",
+    "Röntgennorm Radiographie/Radioskopie",
+    "60601-2-54"
+  ],
+  "category": "normen",
+  "summary": "Die IEC 60601-2-54 ist die besondere Festlegung für Röntgeneinrichtungen zur Aufnahme und Durchleuchtung, etwa Röntgenarbeitsplätze und C-Bögen. Sie regelt elektrische und mechanische Sicherheit, Genauigkeit der Belastungsgrößen, Belichtungsautomatik, Dosisanzeige und – gemeinsam mit IEC 60601-1-3 – den Strahlenschutz.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-2-54** gilt für **Röntgeneinrichtungen für Radiographie und Radioskopie**, also für Geräte, die Röntgenaufnahmen erstellen und/oder eine Durchleuchtung mit Live-Bild ermöglichen [@iec-60601-2-54-2022]. Typische Beispiele sind die stationäre [[roentgengeraet|Röntgenanlage]] (Rasterwandgerät, Röntgentisch), fahrbare Aufnahmegeräte und der [[c-bogen|C-Bogen]].\n\nFür spezialisierte Röntgenmodalitäten gelten eigene besondere Festlegungen:\n\n| Modalität | Norm |\n|---|---|\n| [[computertomograph|Computertomographie]] | [[iec-60601-2-44]] |\n| [[angiographieanlage|Interventionelle Röntgeneinrichtungen]] | IEC 60601-2-43 [@iec-60601-2-43] |\n| [[mammographiegeraet|Mammographie]] | IEC 60601-2-45 [@iec-60601-2-45] |\n| dentale extraorale Geräte, z. B. [[dvt|DVT]] | IEC 60601-2-63 [@iec-60601-2-63] |\n\n## Zentrale Konzepte und Anforderungen\n\n### Strahlenschutz als Querschnittsthema\n\nRöntgengeräte erzeugen gewollt [[ionisierende-strahlung|ionisierende Strahlung]]. Die Strahlenschutz-Grundanforderungen (Strahlenqualität, Filterung, Feldbegrenzung, Leckstrahlung der [[roentgenroehre|Röntgenröhre]]) stehen in der Ergänzungsnorm **IEC 60601-1-3** [@iec-60601-1-3-strahlenschutz]; die IEC 60601-2-54 konkretisiert und ergänzt sie für Aufnahme und Durchleuchtung.\n\n### Belastungsgrößen und Generator\n\nDer [[hochspannungserzeugung|Hochspannungsgenerator]] muss die eingestellten **Belastungsgrößen** – Röhrenspannung (kV), Röhrenstrom (mA), Belichtungszeit bzw. mAs-Produkt – innerhalb festgelegter Toleranzen liefern. Abweichungen verändern Bildkontrast und Patientendosis.\n\n> [!vereinfacht] kV bestimmt vor allem die „Härte“ (Durchdringungsfähigkeit) der [[roentgenstrahlung|Röntgenstrahlung]] und damit den Kontrast, das mAs-Produkt die Menge der Strahlung und damit Dosis und Bildrauschen.\n\n### Belichtungsautomatik und Durchleuchtung\n\n* **Belichtungsautomatik (AEC):** Messkammern bzw. Detektorbereiche beenden die Aufnahme, sobald die gewünschte Dosis am [[roentgendetektor|Detektor]] erreicht ist. Gefordert sind Reproduzierbarkeit und Schutz vor Fehlbelichtung, z. B. durch Sicherheitsabschaltung.\n* **Durchleuchtung:** Anforderungen an die automatische Dosisleistungsregelung, an die Begrenzung der Dosisleistung, an die Anzeige bzw. Überwachung der kumulierten Durchleuchtungszeit (Zeitgeber mit Hinweis; die Anforderungen sind zwischen IEC 60601-1-3 und IEC 60601-2-54 verteilt) und an die Strahlungsauslösung, die nur bei andauernder Betätigung des Auslöseschalters erfolgen darf.\n\n### Dosisinformation und Feldbegrenzung\n\n* Anzeige dosisrelevanter Größen, etwa des Dosisflächenprodukts, damit Anwender und Strahlenschutzverantwortliche die Exposition dokumentieren können (siehe [[strahlenschutz]]),\n* Übereinstimmung von Lichtvisier und Strahlenfeld bzw. automatische Feldbegrenzung durch den [[kollimator|Kollimator]].\n\n### Mechanik\n\nSchwere, bewegliche Komponenten (Stative, Deckenaufhängungen, C-Bögen, Tische) bergen Quetsch- und Kollisionsgefahren. Die Norm stellt Anforderungen an Bewegungsgeschwindigkeiten, Not-Halt und Kollisionsschutz.\n\n> [!hinweis] Konkrete Toleranzen und Zeitgrenzen sind der jeweils gültigen Ausgabe zu entnehmen.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Rolle |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Basissicherheit |\n| Ergänzungsnormen | IEC 60601-1-3, [[iec-60601-1-2]], [[iec-60601-1-6]] | Strahlenschutz, [[emv|EMV]], Usability |\n| Besondere Festlegungen | IEC 60601-2-54 | Radiographie/Radioskopie |\n| | IEC 60601-2-43, -2-44, -2-45, -2-63 | Interventionen, CT, Mammographie, Dental |\n| Bilddaten | [[dicom|DICOM]] | Bildformat und -kommunikation (keine Sicherheitsnorm) |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** weisen die Konformität im Rahmen der [[konformitaetsbewertung]] nach der [[mdr|MDR]] nach; Röntgengeräte sind aktive Produkte, die ionisierende Strahlung für die diagnostische oder interventionelle Radiologie abgeben; sie werden deshalb nach Regel 10 des Anhangs VIII der MDR in der Regel der [[risikoklassen|Risikoklasse]] IIb zugeordnet, sodass eine [[benannte-stelle|Benannte Stelle]] an der Konformitätsbewertung beteiligt ist.\n\n**Betreiber** unterliegen in Deutschland zusätzlich dem Strahlenschutzrecht ([[strlschg|StrlSchG]] und Strahlenschutzverordnung [@strlschv]): Vor Inbetriebnahme ist eine **Abnahmeprüfung**, im Betrieb sind regelmäßige **[[konstanzpruefung|Konstanzprüfungen]]** und wiederkehrende Prüfungen durch behördlich bestimmte Sachverständige (für Röntgeneinrichtungen in der Regel mindestens alle fünf Jahre) erforderlich. Röntgeneinrichtungen werden damit im Wesentlichen über das Strahlenschutzrecht geprüft und nicht über die sicherheitstechnischen Kontrollen der [[mpbetreibv|MPBetreibV]]. Die Norm liefert die technische Grundlage dafür, welche Parameter (Belastungsgrößen, AEC, Feldbegrenzung, Dosisanzeige) überhaupt spezifiziert und prüfbar sind.\n\n> [!praxis] Die Medizintechnik betreut neben der Elektrik vor allem Mechanik, Generator und Detektor. Eingriffe in Röhrenstrahler, Generator, Belichtungsautomatik oder Kollimator erfordern entsprechende Fachkunde bzw. beauftragte Fachfirmen. Nach Reparaturen oder Änderungen, die Bildqualität oder Dosis beeinflussen können, ist vor der Wiederaufnahme des Betriebs eine (Teil-)Abnahmeprüfung erforderlich; die routinemäßigen Konstanzprüfungen führt in der Regel geschultes Personal des Betreibers durch.\n\n## Betroffene Geräte\n\n* [[roentgengeraet]], [[c-bogen]] (primär)\n* abgegrenzt: [[angiographieanlage]], [[computertomograph]], [[mammographiegeraet]], [[dvt]]\n* Komponenten: [[roentgenroehre]], [[roentgendetektor]], [[kollimator]], [[hochspannungserzeugung]]\n* Fachbereiche: [[radiologie]], [[orthopaedie-unfallchirurgie]], [[chirurgie]]\n",
+  "related": [
+    "roentgengeraet",
+    "c-bogen",
+    "angiographieanlage",
+    "computertomograph",
+    "mammographiegeraet",
+    "roentgenroehre",
+    "roentgendetektor",
+    "kollimator",
+    "hochspannungserzeugung",
+    "strahlenschutz",
+    "konstanzpruefung",
+    "strlschg",
+    "iec-60601-2-44"
+  ],
+  "sources": [
+    "iec-60601-2-54-2022",
+    "iec-60601-1-3-strahlenschutz",
+    "iec-60601-2-43",
+    "iec-60601-2-45",
+    "iec-60601-2-63",
+    "iec-60601-1",
+    "strlschv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

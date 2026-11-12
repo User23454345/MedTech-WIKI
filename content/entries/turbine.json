@@ -1,0 +1,180 @@
+{
+  "id": "turbine",
+  "type": "term",
+  "title": "Turbine (Radialgebläse)",
+  "aliases": [
+    "Radialgebläse",
+    "Radialverdichter",
+    "Gebläse",
+    "Blower",
+    "Beatmungsturbine",
+    "Impeller",
+    "Turbinenantrieb"
+  ],
+  "category": "komponenten",
+  "summary": "Kompaktes, elektrisch angetriebenes Radialgebläse, das Raumluft ansaugt und den Arbeitsdruck in Turbinenbeatmungsgeräten, CPAP- und Heimbeatmungsgeräten erzeugt. Druck und Flow werden über die Drehzahl des Motors geregelt.",
+  "body": "## Begriff\n\nAls **Turbine** bezeichnet man in der Medizintechnik umgangssprachlich ein kompaktes, schnell drehendes **Radialgebläse** (Radialverdichter, englisch *blower*), das Umgebungsluft ansaugt und auf einen Überdruck von typischerweise einigen zehn Millibar bringt. Streng strömungsmechanisch ist eine Turbine eine Kraftmaschine, die einem Fluid Energie *entzieht*; das Gebläse im [[beatmungsgeraet|Beatmungsgerät]] ist dagegen eine Arbeitsmaschine, die dem Gas Energie *zuführt*. Der Begriff „Turbinenbeatmungsgerät“ hat sich trotzdem fest eingebürgert und wird hier beibehalten [@kramme-2017] [@carolus-ventilatoren-2020].\n\n> [!hinweis] „Turbine“ meint in Gerätebeschreibungen fast immer ein elektrisch angetriebenes Radialgebläse. Mit Dampf- oder Gasturbinen aus der Energietechnik hat es außer dem Schaufelrad wenig gemein.\n\n## Aufbau\n\nEine Beatmungsturbine besteht aus wenigen, aber hoch belasteten Baugruppen:\n\n| Baugruppe | Funktion |\n|---|---|\n| Laufrad (Impeller) | Radial beschaufeltes Rad, beschleunigt das Gas nach außen; geringes Massenträgheitsmoment für schnelle Drehzahländerungen |\n| Spiralgehäuse (Volute) | Sammelt das Gas am Umfang und wandelt einen Teil der kinetischen Energie in statischen [[druck|Druck]] um |\n| Antrieb | Meist ein [[bldc-motor|bürstenloser Gleichstrommotor]] direkt auf der Laufradwelle |\n| Lagerung | Präzisionskugellager (bauartabhängig); bestimmen Lebensdauer und Geräusch |\n| Ansaugfilter, Schalldämpfer | Schützen vor Partikeln und senken Geräuschemission |\n| Sensorik | Drehzahl (über die Kommutierungssignale, z. B. [[hall-sensor|Hall-Sensoren]]), Temperatur ([[temperatursensor]]), nachgeschaltet Druck und Flow |\n\nDer [[elektromotor|Elektromotor]] sitzt in der Regel direkt auf der Welle; ein Getriebe entfällt. Damit bilden Motor und Laufrad eine träge Masse, die bei jedem Atemzug beschleunigt und wieder abgebremst werden muss.\n\n## Strömungsmechanisches Prinzip\n\n### Euler-Gleichung\n\nDas Laufrad überträgt Energie, indem es dem Gas eine Umfangsgeschwindigkeit aufprägt. Für drallfreie Zuströmung liefert die **Eulersche Turbinengleichung** die theoretische Druckerhöhung [@carolus-ventilatoren-2020]:\n\n`Δp_th = ρ · u₂ · c_u2`\n\nmit Gasdichte ρ, Umfangsgeschwindigkeit am Laufradaustritt `u₂ = π · d₂ · n` (Durchmesser d₂, Drehzahl n) und Umfangskomponente der absoluten Abströmgeschwindigkeit c_u2. Reibungs-, Spalt- und Stoßverluste mindern den real erreichten Druck. Die Formel zeigt die Kernaussage: Der Druck steigt mit dem **Quadrat der Umfangsgeschwindigkeit**, weil c_u2 bei gleichbleibendem Strömungsbild (gleiche Lieferzahl, ähnliche Geschwindigkeitsdreiecke) selbst proportional zu u₂ wächst. Kleine Laufräder müssen deshalb sehr schnell drehen – bei Beatmungsturbinen liegen die Drehzahlen typischerweise im Bereich mehrerer zehntausend Umdrehungen pro Minute.\n\n> [!beispiel] Angenommen d₂ = 50 mm, n = 40 000 min⁻¹ (≈ 667 s⁻¹): u₂ = π · 0,05 m · 667 s⁻¹ ≈ 105 m/s. Mit ρ ≈ 1,2 kg/m³ und c_u2 ≈ 0,5 · u₂ folgt Δp_th ≈ 1,2 · 105 · 52 Pa ≈ 6,6 kPa ≈ 66 mbar (≈ 67 cmH₂O). Das ist die Größenordnung, die ein Intensivbeatmungsgerät für hohe Spitzendrücke bereitstellen muss. Die Zahlen sind didaktisch gewählt und beschreiben kein bestimmtes Gerät.\n\n### Ähnlichkeitsgesetze\n\nFür ein gegebenes Gebläse in einer gegebenen Anlage gelten näherungsweise die **Affinitäts- oder Ähnlichkeitsgesetze** [@carolus-ventilatoren-2020]:\n\n| Größe | Abhängigkeit von der Drehzahl n |\n|---|---|\n| Volumenstrom V̇ | ∝ n |\n| Druckerhöhung Δp | ∝ n² |\n| Wellenleistung P | ∝ n³ |\n\n> [!vereinfacht] Die Ähnlichkeitsgesetze gelten streng nur für geometrisch ähnliche Betriebspunkte bei gleicher Anlagenkennlinie. Am Patienten ändern sich Widerstand und Compliance mit jedem Atemzug, sodass das reale Verhalten über Kennfelder und Regelung beschrieben werden muss.\n\nDie Kubik-Abhängigkeit der Leistung erklärt, warum Spitzendrücke und hohe Flows den [[lithium-ionen-akku|Akku]] eines Transportgeräts überproportional belasten und warum die Turbine thermisch überwacht wird.\n\n## Regelung von Druck und Flow\n\nAnders als ein Ventilgerät, das Druckgas aus der zentralen Versorgung über [[proportionalventil|Proportionalventile]] dosiert, erzeugt das Turbinengerät den Arbeitsdruck selbst. Gestellgröße ist die **Drehzahl** des Motors. Die Regelkette lautet:\n\n1. Der Beatmungsalgorithmus berechnet einen Soll-Druck- oder Soll-Flow-Verlauf.\n2. Ein überlagerter [[regelkreis|Regelkreis]] vergleicht ihn mit den Messwerten aus [[druckmessung|Druckmessung]] ([[drucksensor]]) und [[flowsensor|Flowmessung]].\n3. Die unterlagerte [[drehzahlregelung|Drehzahlregelung]] stellt über die Leistungselektronik ([[pwm|Pulsweitenmodulation]]) den Motorstrom ein.\n4. Das [[exspirationsventil|Exspirationsventil]] hält während der Exspiration den PEEP.\n\nJe nach Konzept variiert das Gerät die Drehzahl atemzugweise oder lässt die Turbine annähernd konstant drehen und regelt zusätzlich über ein Ventil (bauartabhängig). Entscheidend für die Triggerantwort ist das **Massenträgheitsmoment** J des Rotors: Die Drehzahländerung folgt aus `J · dω/dt = M_Motor − M_Last`. Leichte Laufräder und Motoren mit hohem Drehmoment ermöglichen kurze Druckanstiegszeiten [@tobin-2013].\n\n> [!belegt] Turbinengetriebene Beatmungsgeräte sind unabhängig von einer Druckluftversorgung und können Raumluft verwenden; Sauerstoff wird – je nach Gerät – über einen Niederdruck- oder Hochdruckeingang zugemischt [@oczenski-2017] [@kramme-2017].\n\n## Vor- und Nachteile\n\n| Aspekt | Turbine | Druckgas mit Ventilen |\n|---|---|---|\n| Gasquelle | Raumluft, O₂-Zumischung | zentrale Druckluft und O₂ |\n| Mobilität | hoch (Transport, Heim) | an Gasanschluss gebunden |\n| Dynamik | begrenzt durch Trägheit | sehr schnell durch Ventile |\n| Wärme, Geräusch | Eigenerwärmung des Gases, Laufgeräusch | gering |\n| Verschleißteile | Lager, Ansaugfilter | Ventilsitze, Membranen |\n\n> [!praxis] Die Turbine erwärmt das angesaugte Gas messbar. Hersteller berücksichtigen dies bei der Befeuchtung und bei der Flowmessung; ein zugesetzter Ansaugfilter erhöht Leistungsaufnahme und Temperatur. Filterwechsel nach Herstellervorgabe gehören deshalb zur [[wartung|Wartung]].\n\n## Sicherheitsaspekte\n\nWeil die Turbine im Beatmungsgerät die wesentliche Leistung bereitstellt, ist ihr Ausfall sicherheitsrelevant. Die Partikularnorm [[iso-80601-2-12|ISO 80601-2-12]] enthält unter anderem Anforderungen an Alarme, Druckbegrenzung und das Verhalten bei Ausfall der Energieversorgung [@iso-80601-2-12]. Konstruktiv üblich ist zusätzlich ein Notatemventil, über das der Patient bei stehendem Gebläse spontan Raumluft atmen kann (Details nach jeweils gültiger Normfassung und Herstellerangabe). Die Lagerlebensdauer wird über Betriebsstunden verfolgt; ein Tausch erfolgt nach Herstellervorgabe durch befugtes Fachpersonal im Rahmen der [[instandsetzung|Instandsetzung]] oder vorbeugenden Wartung.\n\nTypische Fehlerbilder sind steigende Laufgeräusche (Lagerverschleiß), Drehzahlabweichungen, Übertemperatur und ein unzureichender Druckaufbau, der sich als [[leckage|Leckagealarm]] tarnen kann. Bei der [[fehlersuche|Fehlersuche]] hilft der Vergleich von Soll-Drehzahl, Motorstrom und gemessenem Druck.\n\n## Anwendung in Geräten\n\n| Gerät | Rolle der Turbine |\n|---|---|\n| [[beatmungsgeraet]] | Gasquelle für Inspiration, Druck/Flow über Drehzahl geregelt |\n| [[transportbeatmungsgeraet]] | Netz- und gasunabhängiger Betrieb im Rettungsdienst (bauartabhängig) |\n| [[heimbeatmungsgeraet]] | Standardantrieb in der außerklinischen Beatmung |\n| [[cpap-geraet]] | Erzeugt den kontinuierlichen Überdruck für die Schlaftherapie |\n| [[high-flow-geraet]] | Gebläse für hohe Flows bei Raumluftbetrieb (bauartabhängig) |\n| [[anaesthesiegeraet]] | Bei turbinengetriebenen Narkoseventilatoren |\n| [[inkubator]] | Radiallüfter für die Umluftführung (geringer Druck) |\n| [[patientenwaermesystem]] | Gebläse in Warmluftsystemen |\n\n## Bedeutung in der Medizintechnik\n\nAn der Turbine lässt sich die typische Kette eines Medizingeräts verfolgen: Vom [[beatmungsgeraet|Beatmungsgerät]] führt der Weg über die Turbine zum [[elektromotor|Elektromotor]], über die [[spannung-strom-widerstand|elektrotechnischen Grundlagen]] zur [[drehzahlregelung|Drehzahlregelung]] und über die [[messkette|Sensorik]] zur [[druckmessung|Druckmessung]], die den Regelkreis schließt. Wer diese Kette versteht, kann Alarme interpretieren, Prüfungen nach [[iso-80601-2-12|ISO 80601-2-12]] einordnen und Fehler systematisch eingrenzen [@kramme-2017].",
+  "related": [
+    "beatmungsgeraet",
+    "elektromotor",
+    "bldc-motor",
+    "drehzahlregelung",
+    "druckmessung",
+    "drucksensor",
+    "flowsensor",
+    "regelkreis",
+    "stroemungslehre",
+    "exspirationsventil",
+    "proportionalventil",
+    "cpap-geraet",
+    "heimbeatmungsgeraet",
+    "iso-80601-2-12"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "drehzahlregelung",
+      "druckmessung"
+    ],
+    [
+      "turbine",
+      "bldc-motor",
+      "pwm",
+      "hall-sensor"
+    ],
+    [
+      "turbine",
+      "stroemungslehre",
+      "druck"
+    ]
+  ],
+  "sources": [
+    "carolus-ventilatoren-2020",
+    "kramme-2017",
+    "oczenski-2017",
+    "tobin-2013",
+    "iso-80601-2-12"
+  ],
+  "diagram": {
+    "title": "Turbine im Druckregelkreis eines Beatmungsgeräts",
+    "caption": "Funktionsschema: Die Drehzahl des Motors ist die Stellgröße, der gemessene Atemwegsdruck die Regelgröße.",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "luft",
+        "label": "Raumluft\n(Ansaugfilter)",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "turb",
+        "label": "Laufrad /\nTurbine",
+        "ref": "turbine",
+        "kind": "actuator",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "mot",
+        "label": "BLDC-Motor",
+        "ref": "bldc-motor",
+        "kind": "actuator",
+        "x": 280,
+        "y": 220
+      },
+      {
+        "id": "ps",
+        "label": "Drucksensor",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 470,
+        "y": 80
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 850,
+        "y": 80
+      },
+      {
+        "id": "reg",
+        "label": "Druckregler",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 660,
+        "y": 220
+      },
+      {
+        "id": "drz",
+        "label": "Drehzahlregelung\n+ PWM-Endstufe",
+        "ref": "drehzahlregelung",
+        "kind": "control",
+        "x": 470,
+        "y": 220
+      },
+      {
+        "id": "exv",
+        "label": "Exspirations-\nventil",
+        "ref": "exspirationsventil",
+        "kind": "actuator",
+        "x": 660,
+        "y": 80
+      }
+    ],
+    "edges": [
+      {
+        "from": "luft",
+        "to": "turb",
+        "kind": "gas",
+        "label": "Ansaugung"
+      },
+      {
+        "from": "mot",
+        "to": "turb",
+        "kind": "energy",
+        "label": "Drehmoment"
+      },
+      {
+        "from": "turb",
+        "to": "ps",
+        "kind": "gas"
+      },
+      {
+        "from": "ps",
+        "to": "exv",
+        "kind": "gas"
+      },
+      {
+        "from": "exv",
+        "to": "pat",
+        "kind": "gas",
+        "label": "Atemgas"
+      },
+      {
+        "from": "ps",
+        "to": "reg",
+        "kind": "signal",
+        "label": "p_ist"
+      },
+      {
+        "from": "reg",
+        "to": "drz",
+        "kind": "signal",
+        "label": "n_soll"
+      },
+      {
+        "from": "drz",
+        "to": "mot",
+        "kind": "power",
+        "label": "Phasenströme"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

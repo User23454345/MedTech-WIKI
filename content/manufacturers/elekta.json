@@ -1,0 +1,52 @@
+{
+  "id": "elekta",
+  "type": "manufacturer",
+  "title": "Elekta",
+  "aliases": [
+    "Elekta AB",
+    "Nucletron"
+  ],
+  "category": "hersteller",
+  "summary": "Schwedischer Hersteller von Systemen für die Strahlentherapie und Radiochirurgie mit Sitz in Stockholm, gegründet 1972. Bekannt sind vor allem das Leksell Gamma Knife, Linearbeschleuniger einschließlich MR-Linac sowie Brachytherapiesysteme.",
+  "headquarters": "Stockholm, Schweden",
+  "founded": "1972",
+  "website": "https://www.elekta.com/",
+  "productLines": [
+    {
+      "device": "linearbeschleuniger",
+      "models": [
+        "Versa HD",
+        "Harmony",
+        "Unity",
+        "Evo"
+      ],
+      "note": "Unity: Linearbeschleuniger mit integrierter MRT-Bildgebung (MR-Linac); Evo: Linac mit CT-Bildgebung."
+    },
+    {
+      "device": "afterloader",
+      "models": [
+        "Flexitron",
+        "microSelectron"
+      ],
+      "note": "Brachytherapie, über die Übernahme von Nucletron."
+    }
+  ],
+  "body": "## Überblick\n\nElekta ist ein börsennotiertes schwedisches Unternehmen mit Sitz in Stockholm und gehört zu den großen Anbietern der **[[strahlentherapie|Strahlentherapie]]**. Das Portfolio umfasst Linearbeschleuniger, stereotaktische Radiochirurgie, Brachytherapie sowie Software für Bestrahlungsplanung und onkologisches Informationsmanagement [@hst-elekta].\n\n## Geschichte in Stichpunkten\n\n* **Ende der 1960er-Jahre** – In Stockholm werden die ersten Patienten mit dem Gamma Knife behandelt, das der Neurochirurg Lars Leksell (Karolinska-Institut) gemeinsam mit dem Radiophysiker Börje Larsson entwickelt hatte.\n* **1972** – Lars Leksell und sein Sohn Laurent gründen Elekta, um das stereotaktische Leksell-System und das Gamma Knife zu vermarkten.\n* **1990er** – Einstieg in die Linearbeschleunigertechnik durch Übernahme der Strahlentherapiesparte von Philips (1997).\n* **2005** – Übernahme von IMPAC Medical Systems (onkologische Informationssysteme, MOSAIQ).\n* **2011** – Übernahme des niederländischen Brachytherapie-Spezialisten Nucletron.\n* **2018** – CE-Kennzeichnung des MR-Linac Unity.\n* **2024** – Einführung des CT-Linac Evo.\n\n## Geschäftsbereiche\n\n| Bereich | Prinzip | Wiki-Geräte |\n|---|---|---|\n| Linearbeschleuniger | Elektronenbeschleunigung im Hohlleiter, Bremsstrahlung im MV-Bereich | [[linearbeschleuniger]] |\n| MR-geführte Strahlentherapie | Kombination Linac + MRT ([[kernspinresonanz]]) | [[linearbeschleuniger]] |\n| Radiochirurgie | viele konvergierende Strahlenbündel aus Co-60-Quellen (Gamma Knife) | – |\n| Brachytherapie | Strahlenquelle nahe am oder im Tumor, ferngesteuert eingefahren | [[afterloader]] |\n\n> [!vereinfacht] Beim Gamma Knife treffen sich rund 200 einzelne, für sich genommen schwache Gammastrahlenbündel aus Co-60-Quellen in einem gemeinsamen Fokuspunkt (Isozentrum). Nur dort summiert sich die Dosis auf ein therapeutisches Niveau, das umliegende Gewebe erhält je Bündel nur eine geringe Dosis.\n\n## Bedeutung für die Medizintechnik\n\nElekta ist neben Varian (seit 2021 Teil von [[siemens-healthineers|Siemens Healthineers]]) einer der beiden marktführenden Hersteller von Linearbeschleunigern. Für Medizintechnik und Medizinphysik relevant:\n\n* Anlagen zur Erzeugung [[ionisierende-strahlung|ionisierender Strahlung]] und Afterloader mit radioaktiven Quellen ([[radioaktivitaet]]) unterliegen dem [[strlschg|Strahlenschutzgesetz]] und der Strahlenschutzverordnung [@strlschg] [@strlschv].\n* Abnahme- und [[konstanzpruefung|Konstanzprüfungen]] erfolgen durch die Medizinphysik in enger Abstimmung mit Hersteller und Medizintechnik.\n* Beim MR-Linac kommen zusätzlich die Sicherheitsanforderungen der MRT hinzu.\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "linearbeschleuniger",
+    "afterloader",
+    "strahlentherapie",
+    "ionisierende-strahlung",
+    "strahlenschutz",
+    "siemens-healthineers",
+    "konstanzpruefung"
+  ],
+  "sources": [
+    "hst-elekta",
+    "strlschg",
+    "strlschv",
+    "krieger-strahlungsquellen-2018"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

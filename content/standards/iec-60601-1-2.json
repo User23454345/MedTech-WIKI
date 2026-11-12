@@ -1,0 +1,38 @@
+{
+  "id": "iec-60601-1-2",
+  "type": "standard",
+  "title": "IEC 60601-1-2",
+  "code": "IEC 60601-1-2",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 1-2: Allgemeine Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale – Ergänzungsnorm: Elektromagnetische Störgrößen – Anforderungen und Prüfungen",
+  "scope": "Legt Anforderungen und Prüfungen zur elektromagnetischen Verträglichkeit (Störaussendung und Störfestigkeit) von medizinischen elektrischen Geräten und Systemen fest.",
+  "aliases": [
+    "DIN EN 60601-1-2",
+    "EN 60601-1-2",
+    "EMV-Norm für ME-Geräte",
+    "60601-1-2"
+  ],
+  "category": "normen",
+  "summary": "Die Ergänzungsnorm IEC 60601-1-2 regelt die elektromagnetische Verträglichkeit von medizinischen elektrischen Geräten. Sie verlangt, dass Geräte andere Geräte nicht unzulässig stören und selbst gegenüber den in ihrer Einsatzumgebung zu erwartenden Störgrößen ihre Basissicherheit und wesentlichen Leistungsmerkmale behalten.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-1-2** ist die Ergänzungsnorm zur [[iec-60601-1|Basisnorm IEC 60601-1]] für die [[emv|elektromagnetische Verträglichkeit (EMV)]] [@iec-60601-1-2]. Sie gilt für alle [[medizinisches-elektrisches-geraet|ME-Geräte]] und ME-Systeme, soweit keine besondere Festlegung (IEC 60601-2-x) abweichende EMV-Anforderungen enthält.\n\nEMV umfasst zwei Seiten:\n\n| Aspekt | Frage | Beispiel |\n|---|---|---|\n| Störaussendung (Emission) | Stört das Gerät andere Geräte oder Funkdienste? | Schaltnetzteil eines Monitors koppelt Störungen ins Netz ein |\n| Störfestigkeit (Immunität) | Funktioniert das Gerät trotz äußerer Störungen sicher? | Mobiltelefon neben einer [[infusionspumpe|Infusionspumpe]] |\n\n## Zentrale Konzepte und Anforderungen\n\n### Risikobasierter Ansatz und Einsatzumgebung\n\nDie Norm verknüpft EMV mit dem [[iso-14971|Risikomanagement]]: Der Hersteller muss festlegen, welche [[iec-60601-1|wesentlichen Leistungsmerkmale]] durch elektromagnetische Störungen beeinträchtigt werden könnten, und nachweisen, dass dies bei den Prüfpegeln nicht in unvertretbarer Weise geschieht. Die Prüfpegel richten sich nach der vorgesehenen **Einsatzumgebung**:\n\n* professionelle Einrichtungen des Gesundheitswesens (Krankenhaus, Praxis),\n* häusliche Gesundheitsversorgung (siehe [[iec-60601-1-11]]), einschließlich Einsatz in Fahrzeugen,\n* besondere Umgebungen (z. B. in der Nähe starker Quellen wie [[mrt|MRT]] oder [[hf-chirurgiegeraet|HF-Chirurgie]]), für die der Hersteller eigene Annahmen begründen muss.\n\n> [!vereinfacht] Je weniger kontrolliert die Umgebung ist, desto höher sind die geforderten Störfestigkeitspegel. Im häuslichen Umfeld ist die elektromagnetische Umgebung schlechter vorhersehbar als in einer Klinik mit fachgerecht errichteter Elektroinstallation.\n\n### Prüfphänomene\n\nDie Norm verweist für die eigentlichen Prüfverfahren auf die Grundnormen der Reihe IEC 61000-4-x und für die Störaussendung u. a. auf CISPR 11. Typische Prüfphänomene sind:\n\n* elektrostatische Entladung (ESD) an berührbaren Teilen,\n* gestrahlte hochfrequente Felder, einschließlich Nahfeldern von Funkgeräten,\n* schnelle transiente Störgrößen (Burst) und Stoßspannungen (Surge) auf Netz- und Signalleitungen,\n* leitungsgeführte HF-Störungen,\n* Magnetfelder mit energietechnischer Frequenz,\n* Spannungseinbrüche und Kurzzeitunterbrechungen der Netzversorgung.\n\n> [!hinweis] Konkrete Prüfpegel und Abstände hängen von der Ausgabe der Norm und der Einsatzumgebung ab und sind der jeweils gültigen Fassung zu entnehmen.\n\n### Begleitpapiere\n\nDer Hersteller muss in den Begleitpapieren angeben, für welche Umgebung das Gerät vorgesehen ist, welche Kabel und Zubehörteile zulässig sind und welche Mindestabstände zu tragbaren HF-Kommunikationsgeräten einzuhalten sind. Diese Angaben sind für Betreiber unmittelbar handlungsrelevant.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Rolle |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | verweist für EMV auf diese Ergänzungsnorm |\n| Ergänzungsnorm | IEC 60601-1-2 | EMV für alle ME-Geräte |\n| Besondere Festlegungen | z. B. [[iec-60601-2-2]], [[iec-60601-2-4]], [[iec-60601-2-27]] | können EMV-Anforderungen gerätespezifisch modifizieren |\n\nFür Laborgeräte gilt anstelle dessen die EMV-Norm zur [[iec-61010-1|IEC 61010-1]]-Familie. Die Vernetzung von Medizinprodukten in IT-Netzen behandelt das Risikomanagement nach IEC 80001-1 [@iec-80001-1].\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen EMV-Prüfungen in der Regel in spezialisierten Laboren durchführen und die Ergebnisse in die technische Dokumentation zur [[konformitaetsbewertung]] aufnehmen. Designmaßnahmen sind z. B. Schirmung, Filter, [[galvanische-trennung]] und sorgfältiges Leiterplattenlayout.\n\n**Betreiber** sind für die EMV-gerechte Anwendung verantwortlich: Sie müssen die Herstellerangaben zu Zubehör, Kabeln und Mindestabständen beachten. Nicht freigegebenes Zubehör (z. B. Fremd-Netzteile oder ungeschirmte Kabel) kann die EMV-Eigenschaften verschlechtern.\n\n> [!praxis] Bei unerklärlichen Fehlfunktionen – Artefakte im EKG, sporadische Alarme, Displaystörungen – gehört eine [[emv-stoerung|EMV-Störung]] zur Differentialdiagnose. Typische Verdächtige sind Funkgeräte, HF-Chirurgie, defekte Netzteile und beschädigte Kabelschirme. Vorgehen siehe [[fehlersuche]].\n\n## Betroffene Geräte\n\nGrundsätzlich alle ME-Geräte; besonders kritisch sind Geräte mit empfindlichen Messeingängen oder lebenserhaltender Funktion: [[patientenmonitor]], [[ekg-geraet]], [[eeg-geraet]], [[pulsoxymeter]], [[infusionspumpe]], [[spritzenpumpe]], [[beatmungsgeraet]], [[heimbeatmungsgeraet]] sowie störungsintensive Geräte wie [[hf-chirurgiegeraet]] und [[mrt]].\n\n> [!hinweis] Aktive Implantate wie der [[herzschrittmacher]] fallen nicht unter die 60601-Familie; ihre Störfestigkeit wird in eigenen Produktnormen für aktive implantierbare Medizinprodukte geregelt.\n",
+  "related": [
+    "emv",
+    "emv-stoerung",
+    "iec-60601-1",
+    "iec-60601-1-11",
+    "galvanische-trennung",
+    "patientenmonitor",
+    "ekg-geraet",
+    "infusionspumpe",
+    "hf-chirurgiegeraet",
+    "mrt",
+    "netzstoerung"
+  ],
+  "sources": [
+    "iec-60601-1-2",
+    "iec-60601-1",
+    "iec-80001-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

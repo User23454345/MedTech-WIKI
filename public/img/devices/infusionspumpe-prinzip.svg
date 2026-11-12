@@ -44,7 +44,7 @@
   <!-- Diagramm Druck über Zeit -->
   <line x1="70" y1="370" x2="330" y2="370" stroke="#0b2545" stroke-width="1.5" marker-end="url(#ax)"/>
   <line x1="70" y1="370" x2="70" y2="215" stroke="#0b2545" stroke-width="1.5" marker-end="url(#ax)"/>
-  <text x="330" y="388" text-anchor="end">Zeit t nach Okklusion</text>
+  <text x="140" y="388">Zeit t nach Okklusion</text>
   <text x="62" y="212" text-anchor="end">p</text>
   <line x1="70" y1="250" x2="320" y2="250" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="6 4"/>
   <text x="76" y="244" font-size="12" fill="#0d9488">Alarmgrenze Δp</text>
@@ -53,9 +53,11 @@
   <circle cx="110" cy="250" r="4" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
   <text x="116" y="290" font-size="12">hohe Rate</text>
   <!-- flache Kurve niedrige Rate -->
-  <line x1="70" y1="370" x2="300" y2="256" stroke="#0b2545" stroke-width="2"/>
+  <line x1="70" y1="370" x2="300" y2="250" stroke="#0b2545" stroke-width="2"/>
+  <circle cx="300" cy="250" r="4" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
   <text x="220" y="320" font-size="12">niedrige Rate</text>
-  <text x="96" y="388" font-size="12">t₁</text>
+  <text x="110" y="388" font-size="12" text-anchor="middle">t₁</text>
+  <text x="300" y="388" font-size="12" text-anchor="middle">t₂</text>
 
   <!-- Formeln -->
   <rect x="360" y="215" width="220" height="160" rx="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>

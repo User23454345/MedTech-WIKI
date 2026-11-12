@@ -1,0 +1,43 @@
+{
+  "id": "iso-17665",
+  "type": "standard",
+  "title": "ISO 17665",
+  "code": "ISO 17665",
+  "kind": "norm",
+  "fullTitle": "Sterilisation von Produkten für die Gesundheitsfürsorge – Feuchte Hitze – Anforderungen an die Entwicklung, Validierung und Lenkung der Anwendung eines Sterilisationsverfahrens für Medizinprodukte",
+  "scope": "Legt Anforderungen an Entwicklung, Validierung und Routineüberwachung von Sterilisationsverfahren mit feuchter Hitze (Dampfsterilisation) für Medizinprodukte fest.",
+  "aliases": [
+    "DIN EN ISO 17665",
+    "EN ISO 17665",
+    "ISO 17665-1",
+    "Validierungsnorm Dampfsterilisation",
+    "17665"
+  ],
+  "category": "normen",
+  "summary": "Die ISO 17665 regelt, wie ein Dampfsterilisationsverfahren für Medizinprodukte entwickelt, validiert und im Routinebetrieb überwacht wird. Sie beschreibt nicht den Sterilisator selbst, sondern den Nachweis, dass ein Verfahren reproduzierbar sterile Produkte liefert.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **ISO 17665** behandelt die [[sterilisation|Sterilisation]] mit **feuchter Hitze**, in der Praxis fast immer mit gesättigtem Wasserdampf im [[dampfsterilisator|Dampfsterilisator]] (Autoklav) [@iso-17665-2024]. Sie ist eine **Verfahrensnorm**: Sie legt fest, wie Hersteller und Aufbereiter nachweisen, dass ein Sterilisationsprozess wirksam und reproduzierbar ist. Die aktuelle Ausgabe hat die frühere ISO 17665-1 und die zugehörigen technischen Spezifikationen (Teile 2 und 3) zusammengeführt.\n\nAnders als viele andere Normen in diesem Wiki ist sie **keine Gerätesicherheitsnorm** der Reihe [[iec-60601-1|IEC 60601]]. Anforderungen an den Sterilisator als Maschine stehen in eigenen Gerätenormen – EN 285 für Groß-Sterilisatoren [@en-285], EN 13060 für Klein-Sterilisatoren –, seine elektrische Sicherheit in IEC 61010-2-040 [@iec-61010-2-040].\n\n## Zentrale Konzepte und Anforderungen\n\n### Physikalisches Prinzip\n\nGesättigter Dampf kondensiert an der kälteren Oberfläche des Sterilguts und gibt dabei seine latente Verdampfungswärme ab (siehe [[waermeuebertragung]]). Diese Wärmeübertragung ist sehr effektiv und denaturiert Proteine von Mikroorganismen. Voraussetzung ist, dass der Dampf **alle Oberflächen erreicht** – Luft und andere nicht kondensierbare Gase wirken als Isolierschicht und müssen vorher entfernt werden, meist durch ein fraktioniertes Vorvakuum.\n\n> [!vereinfacht] Temperatur, Zeit und Dampfkontakt bilden das „magische Dreieck“ der Dampfsterilisation. Fehlt eines davon – etwa durch Luftinseln in Hohlkörpern –, ist das Produkt trotz korrekter Anzeige am Gerät möglicherweise nicht steril.\n\n> [!beispiel] Gängige Kombinationen aus Sterilisiertemperatur und Mindesthaltezeit sind typischerweise 134 °C mit mindestens 3 Minuten (in der deutschen Krankenhauspraxis häufig 5 Minuten) und 121 °C mit mindestens 15 Minuten. Gesättigter Dampf hat bei 134 °C einen Absolutdruck von rund 3 bar, bei 121 °C von rund 2 bar – Druck und Temperatur sind im Sattdampf also gekoppelt, was zur Plausibilitätskontrolle genutzt wird. Die konkreten Prozessparameter legt das validierte Verfahren fest, nicht die Faustregel.\n\n### Lebenszyklus des Verfahrens\n\n| Phase | Inhalt |\n|---|---|\n| Charakterisierung | Wirkmechanismus, Sterilisiermittel Dampf |\n| Prozess- und Produktdefinition | Welche Produkte, Verpackungen, Beladungen? Ist Dampfsterilisation geeignet? |\n| **Validierung** | Installationsqualifikation (IQ), Betriebsqualifikation (OQ), Leistungsqualifikation (PQ) mit thermometrischen Messungen in Referenzbeladungen |\n| Routineüberwachung | Prüfung jeder Charge anhand der Prozessparameter, ggf. Indikatoren |\n| Produktfreigabe | dokumentierte Freigabe der Charge |\n| Aufrechterhaltung | Änderungsbewertung, periodische Requalifizierung, [[wartung]] |\n\nFür den Nachweis der Luftentfernung und Dampfdurchdringung werden Prüfkörper und Indikatoren eingesetzt, etwa der tägliche Dampfdurchdringungstest (Bowie-Dick-Test) bei Großsterilisatoren. Ziel ist ein festgelegtes Sterilitätssicherheitsniveau (SAL); für die Kennzeichnung „STERIL“ fordert EN 556-1 eine Wahrscheinlichkeit von höchstens 10⁻⁶ für ein unsteriles Produkt [@en-556-1]. Weil sich dieser Wert nicht durch Prüfung des Endprodukts nachweisen lässt, ist die **Validierung des Prozesses** statt einer Stichprobenprüfung das tragende Prinzip.\n\n## Bezug zu anderen Normen\n\n| Norm | Rolle |\n|---|---|\n| ISO 17665 | Verfahrensvalidierung Dampfsterilisation |\n| ISO 14937 | allgemeine Validierungsanforderungen für Sterilisiermittel ohne eigene Verfahrensnorm, z. B. manche Niedertemperaturverfahren [@iso-14937] |\n| [[iso-15883]] | Reinigung und Desinfektion als vorgelagerter Schritt der [[aufbereitung]] |\n| IEC 61010-2-040 | elektrische Sicherheit von Sterilisatoren |\n| [[iso-13485]] | Qualitätsmanagement, in dem die Validierung verankert ist |\n\nDie IEC-60601-Familie (Basisnorm, Ergänzungsnormen 1-x, besondere Festlegungen 2-x) ist für Sterilisatoren **nicht** einschlägig, weil sie keinen Patientenkontakt haben.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller steriler Medizinprodukte** müssen ihre Sterilisationsverfahren validieren; die ISO 17665 ist dafür die maßgebliche Grundlage für Dampf.\n\n**Betreiber**, die Medizinprodukte selbst aufbereiten (Zentralsterilgutversorgung, Praxen), müssen nach der [[mpbetreibv|MPBetreibV]] geeignete **validierte Verfahren** anwenden; die gemeinsame Empfehlung von KRINKO und BfArM konkretisiert diese Anforderungen und nimmt auf die einschlägigen Normen Bezug [@mpbetreibv] [@krinko-bfarm-2012]. Die Medizintechnik ist an Installation, Wartung, Requalifizierung und an der Dokumentation von Störungen beteiligt.\n\n> [!praxis] Nach Reparaturen an sicherheits- oder prozessrelevanten Baugruppen (Vakuumpumpe, Türdichtung, Dampferzeuger, Temperatur- und Drucksensoren) ist zu prüfen, ob eine erneute Leistungsqualifikation erforderlich ist. Eine nicht bestandene Dampfdurchdringungsprüfung ist ein Freigabestopp, kein Hinweis.\n\n## Betroffene Geräte\n\n* [[dampfsterilisator]] (primär)\n* abgegrenzt: [[niedertemperatursterilisator]] (andere Verfahrensnormen)\n* Prozesskette: [[rdg]], [[aufbereitung]], [[desinfektion]], [[sterilisation]]\n* zu sterilisierende Produkte, z. B. Instrumente zum [[chirurgisches-motorsystem|chirurgischen Motorsystem]] und starre Optiken; flexible [[endoskop|Videoendoskope]] sind in der Regel nicht dampfsterilisierbar\n",
+  "related": [
+    "dampfsterilisator",
+    "niedertemperatursterilisator",
+    "rdg",
+    "sterilisation",
+    "aufbereitung",
+    "desinfektion",
+    "iso-15883",
+    "iec-61010-1",
+    "iso-13485",
+    "waermeuebertragung",
+    "endoskop"
+  ],
+  "sources": [
+    "iso-17665-2024",
+    "iso-14937",
+    "iec-61010-2-040",
+    "mpbetreibv",
+    "krinko-bfarm-2012",
+    "en-285",
+    "en-556-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -6,7 +6,30 @@
   "order": 3,
   "icon": "device",
   "summary": "Gerätedatenbank mit Funktionsprinzip, Aufbau, Komponenten, Sensoren, Kenndaten, Prüfpflichten und typischen Fehlern.",
-  "body": "",
+  "body": "Die Gerätedatenbank ist das Herzstück dieses Wikis. Sie beschreibt **100 Gerätetypen**, die in Krankenhaus, Praxis, Rettungsdienst und häuslicher Versorgung eine zentrale Rolle spielen – vom [[patientenmonitor]] über das [[beatmungsgeraet]] bis zum [[dampfsterilisator]]. Beschrieben werden **Gerätetypen**, nicht einzelne Modelle; konkrete Produktlinien erscheinen nur als Beispiele bei den [[hersteller|Herstellern]].\n\nGeräte sind der Ort, an dem Physik, Elektrotechnik, Sensorik, Physiologie und Recht zusammenkommen. Wer das Funktionsprinzip eines Geräts verstanden hat, kann Alarme richtig deuten, Fehler eingrenzen, Prüfungen sinnvoll durchführen und Anwenderinnen und Anwender kompetent beraten [@kramme-2017] [@webster-2010].\n\n> [!hinweis] Die Reihenfolge der Liste (Rang 1–100) ist eine redaktionelle Gewichtung nach Verbreitung und Bedeutung für Ausbildung und Klinikalltag – keine statistische Marktrangliste.\n\n## Aufbau eines Geräteartikels\n\n| Abschnitt | Inhalt |\n|---|---|\n| Zweck und Einsatzgebiete | medizinische Aufgabe, [[fachbereiche]] |\n| Funktionsprinzip | physikalisch-technischer Kern, mit Verweisen auf [[physik]] und [[anatomie]] |\n| Aufbau, Komponenten, Sensoren | Baugruppen aus [[komponenten]] und [[sensorik]], interaktives Funktionsschema |\n| Kennwerte | gerätetypübergreifende Bereiche mit Belegqualität („belegt“/„typisch“) |\n| Risikoklasse | Einstufung nach [[mdr|MDR]] mit Begründung, siehe [[risikoklassen]] |\n| Hersteller | Beispiele realer Produktlinien |\n| Preis | Einflussfaktoren auf Anschaffungs- und Betriebskosten |\n| Instandhaltung und Prüfung | Pflicht zu [[stk]] und [[mtk]] nach [[mpbetreibv|MPBetreibV]], [[wartung]], [[elektrische-sicherheitspruefung]] |\n| Fehlerbilder | Verweise auf herstellerübergreifende Artikel aus [[fehler]] |\n\n## Überblick nach Gerätegruppen\n\n| Gerätegruppe | Beispiele |\n|---|---|\n| Patientenüberwachung | [[patientenmonitor]], [[pulsoxymeter]], [[nibp-messgeraet]], [[invasive-druckmessung]], [[kapnometer]], [[thermometer]] |\n| Beatmung und Anästhesie | [[beatmungsgeraet]], [[anaesthesiegeraet]], [[cpap-geraet]], [[high-flow-geraet]], [[sauerstoffkonzentrator]] |\n| Kardiologie und Elektrotherapie | [[defibrillator]], [[ekg-geraet]], [[herzschrittmacher]], [[icd]], [[iabp]], [[vad]] |\n| Infusion und Ernährung | [[infusionspumpe]], [[spritzenpumpe]], [[pca-pumpe]], [[insulinpumpe]], [[infusionswaermer]] |\n| Bildgebende Diagnostik | [[roentgengeraet]], [[computertomograph]], [[mrt]], [[ultraschallgeraet]], [[c-bogen]], [[angiographieanlage]] |\n| Strahlentherapie und Nuklearmedizin | [[linearbeschleuniger]], [[afterloader]], [[pet-ct]], [[gammakamera]] |\n| Extrakorporale Verfahren | [[dialysegeraet]], [[crrt-geraet]], [[herz-lungen-maschine]], [[ecmo]], [[zellseparator]] |\n| Funktionsdiagnostik | [[eeg-geraet]], [[emg-geraet]], [[spirometer]], [[polysomnograph]], [[ctg]] |\n| Chirurgie und OP-Technik | [[hf-chirurgiegeraet]], [[op-tisch]], [[op-leuchte]], [[chirurgischer-laser]], [[op-roboter]] |\n| Endoskopie | [[endoskop]], [[kapselendoskop]], [[insufflator]] |\n| Neonatologie | [[inkubator]], [[waermebett]], [[phototherapiegeraet]] |\n| Notfallmedizin | [[transportbeatmungsgeraet]], [[thoraxkompressionsgeraet]] |\n| Labor | [[blutgasanalysator]], [[haematologie-analysator]], [[klinisch-chemischer-analysator]], [[blutkuehlschrank]] |\n| Therapie und Rehabilitation | [[reizstromgeraet]], [[hypothermiegeraet]], [[druckkammer]], [[npwt-geraet]] |\n| Augen, HNO, Zahnmedizin | [[oct]], [[phakoemulsifikation]], [[cochlea-implantat]], [[audiometer]], [[dentaleinheit]], [[dvt]] |\n| Aufbereitung | [[dampfsterilisator]], [[niedertemperatursterilisator]], [[rdg]] |\n| Pflege- und Allgemeintechnik | [[pflegebett]], [[patientenlifter]], [[antidekubitussystem]], [[absauggeraet]] |\n\nAusführliche Artikel enthalten alle Abschnitte und ein Funktionsschema; Kurzartikel konzentrieren sich auf Zweck, Prinzip und Prüfpflichten und werden schrittweise ausgebaut.\n\n> [!belegt] Ob ein Gerät der sicherheitstechnischen Kontrolle unterliegt, ergibt sich aus § 12 MPBetreibV i. V. m. Anlage 1 bzw. aus den Vorgaben des Herstellers; die messtechnische Kontrolle aus § 15 i. V. m. Anlage 2 [@mpbetreibv].\n\n## Lernpfad-Empfehlung\n\n1. **Überwachung:** [[patientenmonitor]] mit [[ekg-geraet]], [[pulsoxymeter]] und [[nibp-messgeraet]] – sie vermitteln die Grundlagen der [[biosignale|Biosignalerfassung]].\n2. **Lebenserhaltung:** [[beatmungsgeraet]], [[anaesthesiegeraet]], [[defibrillator]].\n3. **Fördertechnik:** [[infusionspumpe]] und [[spritzenpumpe]], danach [[dialysegeraet]].\n4. **Bildgebung:** [[roentgengeraet]] → [[computertomograph]] → [[ultraschallgeraet]] → [[mrt]].\n5. **OP und Aufbereitung:** [[hf-chirurgiegeraet]], [[endoskop]], [[dampfsterilisator]].\n6. Danach gezielt nach Gerätegruppe vertiefen und zu jedem Gerät die verlinkten [[komponenten]] und Sensoren lesen.",
+  "paths": [
+    [
+      "patientenmonitor",
+      "ekg-geraet",
+      "pulsoxymeter",
+      "nibp-messgeraet",
+      "invasive-druckmessung",
+      "kapnometer"
+    ],
+    [
+      "infusionspumpe",
+      "spritzenpumpe",
+      "peristaltikpumpe",
+      "okklusionsalarm",
+      "stk"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "webster-2010",
+    "mpbetreibv",
+    "mdr-2017"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

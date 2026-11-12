@@ -1,0 +1,41 @@
+{
+  "id": "einweisung",
+  "type": "term",
+  "title": "Einweisung in Medizinprodukte",
+  "aliases": [
+    "Geräteeinweisung",
+    "Medizinprodukte-Einweisung",
+    "Ersteinweisung",
+    "Einweisung nach MPBetreibV",
+    "Beauftragte Person",
+    "Training on medical devices",
+    "Unterweisung"
+  ],
+  "category": "recht",
+  "summary": "Die Einweisung vermittelt Anwender:innen die sachgerechte Handhabung, Anwendung und den Betrieb eines Medizinprodukts. Für aktive Medizinprodukte der Anlage 1 der MPBetreibV ist ein zweistufiges, dokumentiertes Verfahren vorgeschrieben: Der Hersteller oder eine befugte Person weist die vom Betreiber beauftragte Person ein, die anschließend weitere Anwender einweist.",
+  "body": "## Begriff und Zweck\n\nEine **Einweisung** ist die Unterrichtung von Anwender:innen über die sachgerechte Handhabung, Anwendung und den Betrieb eines [[medizinprodukt|Medizinprodukts]] sowie über zulässige Verbindungen mit anderen Produkten und Zubehör. Sie unterscheidet sich von der arbeitsschutzrechtlichen **Unterweisung**, die Beschäftigte über Gefährdungen am Arbeitsplatz informiert.\n\nHintergrund ist eine einfache Erkenntnis der [[patientensicherheit]]: Ein technisch einwandfreies Gerät kann durch falsche Bedienung gefährlich werden. [[anwendungsfehler|Anwendungsfehler]] sind eine häufige Ursache von Zwischenfällen mit Medizinprodukten; Einweisung und gute [[gebrauchstauglichkeit]] wirken dem gemeinsam entgegen.\n\n## Rechtsgrundlagen\n\n> [!belegt] Die [[mpbetreibv|MPBetreibV]] in der Fassung vom 14. Februar 2025 verlangt allgemein, dass Medizinprodukte nur von Personen angewendet werden, die die dafür erforderliche Ausbildung oder Kenntnis und Erfahrung besitzen. Für die in **Anlage 1** aufgeführten aktiven Medizinprodukte regelt § 11 ein besonderes Verfahren mit Funktionsprüfung und Einweisung, das nach § 11 Abs. 3 zu belegen ist [@mpbetreibv].\n\n## Das zweistufige Verfahren für Anlage-1-Produkte\n\nAnlage 1 der MPBetreibV umfasst Produkte mit erhöhtem Gefährdungspotenzial, die auch der [[stk|sicherheitstechnischen Kontrolle]] unterliegen, sinngemäß Geräte zur Stimulation und Defibrillation, zur intrakardialen bzw. intravasalen Messung, zur Energieabgabe für Koagulation oder Gewebezerstörung, zur Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potenziellem Druckaufbau, zur maschinellen Beatmung, zur Bildgebung mittels Kernspinresonanz ([[mrt]]), zur Therapie mit [[druckkammer|Druckkammern]] und mittels Hypothermie sowie Säuglingsinkubatoren und externe aktive Komponenten aktiver Implantate [@mpbetreibv]. Maßgeblich ist der Wortlaut der Anlage in der aktuellen Fassung (vgl. [[stk]]).\n\n| Stufe | Wer weist ein? | Wer wird eingewiesen? | Voraussetzung |\n|---|---|---|---|\n| **1. Ersteinweisung** | Hersteller oder eine dazu befugte Person, die im Einvernehmen mit dem Hersteller handelt | vom Betreiber **beauftragte Person** | vorherige **Funktionsprüfung am Betriebsort** |\n| **2. Weitere Einweisungen** | Hersteller, befugte Person **oder** die beauftragte Person | alle weiteren Anwender:innen | Produkt ist in Betrieb genommen |\n\nDie Funktionsprüfung am Betriebsort und die Einweisung der beauftragten Person müssen belegt werden; die Angaben werden im [[medizinproduktebuch]] festgehalten, unter anderem mit Name der beauftragten Person und Zeitpunkt der Einweisung [@mpbetreibv].\n\n> [!vereinfacht] Die Tabelle gibt die Struktur der Regelung wieder. Ausnahmen und Detailanforderungen – etwa für Produkte, die bereits identisch im Haus betrieben werden – sind im Verordnungstext nachzulesen.\n\n## Inhalte einer Einweisung\n\nEine gute Einweisung orientiert sich an der Gebrauchsanweisung und der [[zweckbestimmung|Zweckbestimmung]] des Herstellers. Typische Inhalte:\n\n1. **Zweckbestimmung, Indikationen, Kontraindikationen**,\n2. **Aufbau und Funktionsprinzip** in angemessener Tiefe,\n3. **Inbetriebnahme und Prüfung vor der Anwendung** (Selbsttest, Sichtprüfung, Akkuzustand),\n4. **Bedienung** aller relevanten Funktionen und Betriebsarten,\n5. **Alarme**: Bedeutung, Prioritäten, richtige Reaktion (vgl. [[alarmsystem]], [[iec-60601-1-8]]),\n6. **Zubehör und Kombinationen**: freigegebene Verbrauchsmaterialien, Verbindungen mit anderen Geräten,\n7. **Reinigung, Desinfektion, [[aufbereitung]]**,\n8. **Verhalten bei Störungen und Vorkommnissen** (vgl. [[vigilanz]]).\n\n> [!beispiel] Bei einer [[infusionspumpe|Infusionspumpe]] gehören dazu u. a. das Einlegen des Infusionsbestecks, die Programmierung von Rate und Volumen, die Nutzung einer Medikamentenbibliothek, das Verhalten bei [[okklusionsalarm|Okklusions-]] und [[luft-im-system|Luft-im-System-Alarm]] sowie die Gefahr des freien Durchflusses beim Entnehmen des Bestecks.\n\n## Dokumentation\n\nDie Dokumentation einer Einweisung sollte mindestens erkennen lassen:\n\n| Angabe | Zweck |\n|---|---|\n| Produkt (Typ, ggf. Softwarestand) | Einweisung gilt für dieses Modell |\n| Name der eingewiesenen Person | Nachweis der Qualifikation |\n| Name der einweisenden Person und Funktion | Nachweis der Befugnis |\n| Datum | Aktualität |\n| Inhalte | Umfang der Einweisung |\n| Unterschrift(en) | Bestätigung |\n\n> [!praxis] Viele Kliniken führen Einweisungsnachweise elektronisch und verknüpfen sie mit dem [[bestandsverzeichnis]]. So lässt sich bei Dienstplanung oder Personalwechsel prüfen, wer für welches Gerät eingewiesen ist. Nach Software-Updates mit geänderter Bedienung oder bei neuen Gerätegenerationen ist eine erneute Einweisung sinnvoll.\n\n## Gute Einweisungspraxis\n\n* **Praktisch statt nur theoretisch:** Bedienung am Gerät üben, Alarmsituationen simulieren.\n* **Zielgruppengerecht:** Pflegende, Ärzt:innen und Medizintechnik benötigen unterschiedliche Tiefe.\n* **Wiederholen:** Für selten genutzte, kritische Geräte (z. B. [[defibrillator]] auf Normalstationen) regelmäßige Auffrischungen einplanen.\n* **Nicht verwechseln:** Die Einweisung ersetzt keine Ausbildung – etwa in der Beatmungsmedizin. Ein [[beatmungsgeraet]] ist selbst ein Anlage-1-Produkt; die gerätebezogene Einweisung setzt hier die fachliche Qualifikation voraus, ersetzt sie aber nicht.\n\n## Bedeutung in der Medizintechnik\n\nMedizintechniker:innen sind oft selbst **beauftragte Personen**: Sie werden vom Hersteller eingewiesen, führen die Funktionsprüfung bei der Inbetriebnahme durch und geben ihr Wissen an die Anwender weiter. Typische Anlage-1-Geräte, für die das Verfahren relevant ist, sind [[beatmungsgeraet|Beatmungsgeräte]], [[defibrillator|Defibrillatoren]], [[hf-chirurgiegeraet|HF-Chirurgiegeräte]], [[infusionspumpe|Infusionspumpen]], [[spritzenpumpe|Spritzenpumpen]], [[dialysegeraet|Dialysegeräte]] und [[inkubator|Säuglingsinkubatoren]]. Einweisung ist damit Teil der [[betreiberpflichten]] und eng verbunden mit [[medizinproduktebuch]], [[stk]] und der Arbeit der bzw. des [[beauftragter-medizinproduktesicherheit|Beauftragten für Medizinproduktesicherheit]].\n\n## Hinweis\n\nMaßgeblich ist die jeweils gültige Fassung der MPBetreibV einschließlich ihrer Anlagen sowie die Gebrauchsanweisung des Herstellers.",
+  "related": [
+    "betreiberpflichten",
+    "medizinproduktebuch",
+    "stk",
+    "gebrauchstauglichkeit",
+    "anwendungsfehler",
+    "mpbetreibv",
+    "beauftragter-medizinproduktesicherheit",
+    "patientensicherheit"
+  ],
+  "paths": [
+    [
+      "betreiberpflichten",
+      "einweisung",
+      "medizinproduktebuch"
+    ]
+  ],
+  "sources": [
+    "mpbetreibv",
+    "iec-62366-1",
+    "iec-60601-1-8"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

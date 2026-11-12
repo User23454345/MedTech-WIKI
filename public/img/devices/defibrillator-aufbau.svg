@@ -87,9 +87,9 @@
   <line x1="495" y1="166" x2="495" y2="120" stroke="#0b2545" stroke-width="1"/>
   <text x="440" y="74" font-size="13">Klebeelektrode</text>
   <text x="440" y="90" font-size="13">rechts parasternal</text>
-  <text x="440" y="106" font-size="13">(sternal)</text>
-  <line x1="557" y1="314" x2="557" y2="348" stroke="#0b2545" stroke-width="1"/>
-  <text x="470" y="368" font-size="13">Elektrode apikal</text>
+  <text x="440" y="106" font-size="13">(„sternal“)</text>
+  <line x1="557" y1="314" x2="557" y2="336" stroke="#0b2545" stroke-width="1"/>
+  <text x="590" y="352" font-size="13" text-anchor="end">Elektrode apikal</text>
   <line x1="538" y1="258" x2="590" y2="258" stroke="#0b2545" stroke-width="1"/>
   <text x="560" y="250" font-size="13" text-anchor="middle">Herz</text>
 

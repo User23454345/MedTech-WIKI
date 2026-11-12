@@ -1,0 +1,61 @@
+{
+  "id": "elektrische-stromwirkung",
+  "type": "term",
+  "title": "Wirkung des elektrischen Stroms auf den Körper",
+  "aliases": [
+    "Stromwirkung",
+    "Elektrounfall",
+    "Körperstrom",
+    "Makroschock",
+    "Mikroschock",
+    "macroshock",
+    "microshock",
+    "electric shock",
+    "Kammerflimmern durch Strom",
+    "Loslassschwelle",
+    "Wahrnehmungsschwelle"
+  ],
+  "category": "physik",
+  "summary": "Elektrischer Strom wirkt im Körper reizend (Nerven, Muskeln, Herz), thermisch und elektrochemisch. Gefährdung und Schutzkonzepte der Medizintechnik – Anwendungsteile, Ableitstromgrenzen, Schutzklassen und Installationsvorgaben – leiten sich aus Stromstärke, Stromweg, Einwirkdauer und Frequenz ab.",
+  "body": "## Warum der Strom und nicht die Spannung zählt\n\nDie biologische Wirkung hängt in erster Linie von der **Stromstärke** I durch das Gewebe ab, genauer von der Stromdichte in den betroffenen Organen. Die Spannung bestimmt zusammen mit der Körperimpedanz Z, wie groß dieser Strom wird:\n\n`I = U / Z_Körper`\n\nDie Körperimpedanz setzt sich aus den Hautimpedanzen an den Kontaktstellen und der inneren Impedanz des Körpers zusammen. Sie hängt von Berührungsspannung, Kontaktfläche, Hautfeuchte, Frequenz und Stromweg ab und ist **nicht konstant** [@iec-60479-1] [@webster-2010].\n\n> [!vereinfacht] Für Abschätzungen wird häufig eine Körperimpedanz von rund 1000 Ω (Hand–Hand oder Hand–Fuß, große Kontaktfläche) angesetzt. Damit ergäbe eine Berührung von 230 V einen Strom von etwa 230 mA – weit im lebensgefährlichen Bereich. Reale Werte streuen stark; die Norm gibt Verteilungen in Abhängigkeit von Spannung und Kontaktbedingungen an.\n\n## Einflussgrößen\n\n| Einflussgröße | Wirkung |\n|---|---|\n| Stromstärke | bestimmt Wahrnehmung, Muskelverkrampfung, Kammerflimmern |\n| Stromweg | Weg durch den Thorax (Hand–Hand, Hand–Fuß) ist besonders gefährlich |\n| Einwirkdauer | je länger, desto niedriger die Flimmerschwelle |\n| Frequenz | 50/60 Hz liegen im Bereich höchster Empfindlichkeit; mit steigender Frequenz nimmt die Reizwirkung ab |\n| Stromart | Gleichstrom: höhere Reizschwellen, aber elektrolytische Wirkung |\n| Eintrittsort | Strom direkt am Herzen (Katheter) wirkt bei viel kleineren Stärken |\n\n## Die drei Wirkmechanismen\n\n1. **Reizwirkung:** Strom depolarisiert erregbare Membranen und löst [[aktionspotential|Aktionspotentiale]] aus. Folgen reichen von Kribbeln über Muskelkrämpfe bis zu Atemlähmung und **Kammerflimmern**. Besonders empfindlich ist die **vulnerable Phase** des Herzzyklus während der T-Welle, in der Teile des Myokards bereits wieder erregbar sind ([[erregungsleitungssystem]], [[herz]]).\n2. **Thermische Wirkung:** Der Strom setzt im Gewebe [[joulesche-waerme|Joule'sche Wärme]] frei (`P = I² · R`). Strommarken und tiefe Verbrennungen entstehen an Stellen hoher Stromdichte, etwa an kleinen Kontaktflächen.\n3. **Elektrochemische Wirkung:** Gleichstrom zersetzt Elektrolyte; an Elektroden entstehen Säuren und Laugen. Deshalb ist Gleichstromanteil an Patientenelektroden zu vermeiden ([[ekg-elektrode]]).\n\n## Schwellen bei Wechselstrom 50/60 Hz\n\nDie IEC 60479-1 beschreibt die Wirkungen in Zeit-Strom-Bereichen. Grob lassen sich für den Stromweg linke Hand – Füße folgende Größenordnungen nennen:\n\n| Bereich | Typische Größenordnung | Wirkung |\n|---|---|---|\n| Wahrnehmungsschwelle | ≈ 0,5 mA | Kribbeln, meist unabhängig von der Dauer |\n| Loslassschwelle | etwa 5 bis 10 mA (personen- und dauerabhängig) | Muskelverkrampfung, Loslassen des Leiters nicht mehr möglich |\n| Atemstörungen, Herzrhythmusstörungen | darüber, ab einigen 10 mA | reversible Störungen, Blutdruckanstieg |\n| Kammerflimmern | bei langen Einwirkdauern (mehrere Sekunden) in der Größenordnung von 40–50 mA; bei sehr kurzen Einwirkdauern (≈ 10 ms) erst im Bereich mehrerer 100 mA | Kreislaufstillstand ohne Defibrillation |\n\n> [!belegt] Die Zeit-Strom-Bereiche und Schwellen sind in der IEC 60479-1 (Wirkungen des elektrischen Stromes auf Menschen und Nutztiere) festgelegt. Die Tabelle gibt nur gerundete Größenordnungen wieder (Stromweg linke Hand – Füße, Erwachsene); die Grenzen der Zonen AC-1 bis AC-4 sind hier bewusst nicht beziffert; maßgeblich sind die Kurven der jeweils gültigen Fassung der Norm [@iec-60479-1].\n\n## Makroschock und Mikroschock\n\n- **Makroschock:** Der Strom tritt über die Haut ein und aus. Nur ein kleiner Bruchteil fließt durch das Herz; entsprechend sind Ströme im Milliamperebereich nötig, um es zu gefährden.\n- **Mikroschock:** Besteht eine leitfähige Verbindung direkt zum Herzen – Schrittmachersonde, zentraler Venenkatheter mit leitender Flüssigkeitssäule, intrakardiale Messung –, fließt der Strom mit hoher Stromdichte unmittelbar durch ein kleines Myokardareal. Dann können bereits Ströme im **Mikroamperebereich** Kammerflimmern auslösen [@webster-2010].\n\n> [!hinweis] Die in der Literatur genannten Mikroschock-Flimmerschwellen liegen – je nach Elektrodenfläche, Lage und Versuchsbedingungen – in der Größenordnung von einigen 10 µA bis einigen 100 µA und streuen erheblich; die Werte stammen überwiegend aus Tierversuchen und Messungen bei Eingriffen. Die Grenzwerte für Anwendungsteile vom Typ CF sind deshalb mit großem Sicherheitsabstand festgelegt.\n\n## Frequenzabhängigkeit und therapeutische Nutzung\n\nMit steigender Frequenz bleibt der Membran in jeder Halbwelle zu wenig Zeit zur Depolarisation, bevor der Strom die Richtung wechselt; die Reizschwelle steigt mit der Frequenz deutlich an. Im Bereich oberhalb von etwa 100 kHz ist die Reizwirkung bei den üblichen Stromstärken weitgehend vernachlässigbar, und die thermische Wirkung überwiegt.\n\n> [!vereinfacht] Die Grenze „etwa 100 kHz“ ist eine Größenordnung, kein scharfer Schwellenwert. Auch HF-Chirurgie kann über Gleichrichtungseffekte am Funken niederfrequente Anteile erzeugen und dadurch vereinzelt Muskelzuckungen auslösen. Genau das nutzt die [[hf-chirurgiegeraet|HF-Chirurgie]]: Ströme von mehreren hundert Kilohertz schneiden und koagulieren Gewebe, ohne Muskeln zu reizen [@iec-60601-2-2] [@massarweh-2006].\n\nGezielt genutzt wird die Reizwirkung dagegen in:\n- [[defibrillator|Defibrillatoren]]: ein kurzer, hoher Stromimpuls depolarisiert eine kritische Myokardmasse gleichzeitig und beendet das Flimmern [@iec-60601-2-4],\n- [[herzschrittmacher|Herzschrittmachern]], [[externer-schrittmacher|externen Schrittmachern]] und [[icd|ICDs]],\n- [[reizstromgeraet|Reizstromgeräten]] der physikalischen Therapie,\n- [[cochlea-implantat|Cochlea-Implantaten]] (Reizung des Hörnervs).\n\n## Schutzkonzepte in der Medizintechnik\n\nAus den Schwellen leiten sich die Schutzmaßnahmen der IEC 60601-1 und der Elektroinstallation ab [@iec-60601-1]:\n\n| Schutzmaßnahme | Prinzip |\n|---|---|\n| [[schutzklassen|Schutzklassen]] I/II, interne Stromversorgung | Schutz gegen Berührungsspannung durch Schutzleiter oder doppelte Isolierung |\n| [[anwendungsteile|Anwendungsteile]] Typ B, BF, CF | abgestufte Isolation des Patientenkreises; CF für direkte Herzanwendung |\n| Grenzwerte für [[ableitstrom|Ableitströme]] | begrenzen dauerhaft fließende Ströme im Normal- und Erstfehlerfall |\n| [[galvanische-trennung|Galvanische Trennung]] | Patientenkreis über Transformatoren/Optokoppler vom Netz getrennt |\n| [[medizinisch-genutzte-bereiche|Medizinisch genutzte Bereiche]] Gruppe 2 | IT-System mit Isolationsüberwachung, damit ein erster Isolationsfehler nicht zur Abschaltung lebenswichtiger Geräte führt [@din-vde-0100-710] |\n\n> [!belegt] Für Patientenableitströme (Wechselstrom, Effektivwert) nennt die IEC 60601-1 im Normalzustand 100 µA für Anwendungsteile Typ B und BF und 10 µA für Typ CF; im ersten Fehlerfall 500 µA bzw. 50 µA. Weitere Grenzwerte (Gleichstrom, Erdableitstrom, Gesamt-Patientenableitstrom) und Messbedingungen regelt die jeweils gültige Fassung der Norm [@iec-60601-1].\n\n## Bedeutung für Prüfung und Betrieb\n\nDie Wirkungen des Stroms sind der Grund für die [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] nach [[iec-62353|IEC 62353]] mit [[schutzleiterwiderstand|Schutzleiterwiderstand]], [[isolationswiderstand|Isolationswiderstand]] und [[ableitstrommessung|Ableitstrommessung]] sowie für die [[stk|STK]]. Mehrfachsteckdosen in Patientenumgebung, beschädigte Kabel und nicht freigegebene Gerätekombinationen sind typische Ursachen erhöhter Ableitströme.\n\n> [!warnung] Arbeiten an geöffneten Geräten, insbesondere an Defibrillatoren (Hochspannungskondensator) und Röntgengeneratoren ([[hochspannungserzeugung]]), sind ausschließlich befugtem und unterwiesenem Fachpersonal vorbehalten.\n\nWeiterführend: [[spannung-strom-widerstand]], [[joulesche-waerme]], [[iec-60479-1]], [[iec-60601-1]], [[dguv-vorschrift-3]].\n",
+  "related": [
+    "joulesche-waerme",
+    "ableitstrom",
+    "anwendungsteile",
+    "schutzklassen",
+    "galvanische-trennung",
+    "medizinisch-genutzte-bereiche",
+    "iec-60479-1",
+    "iec-60601-1",
+    "elektrische-sicherheitspruefung",
+    "defibrillator",
+    "hf-chirurgiegeraet",
+    "aktionspotential"
+  ],
+  "paths": [
+    [
+      "elektrische-stromwirkung",
+      "anwendungsteile",
+      "ableitstrom",
+      "ableitstrommessung",
+      "iec-62353"
+    ],
+    [
+      "defibrillator",
+      "elektrische-stromwirkung",
+      "erregungsleitungssystem"
+    ]
+  ],
+  "sources": [
+    "iec-60479-1",
+    "iec-60601-1",
+    "webster-2010",
+    "iec-60601-2-2",
+    "massarweh-2006",
+    "iec-60601-2-4",
+    "din-vde-0100-710",
+    "iec-62353"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -31,11 +31,12 @@
   <text x="533" y="69" font-size="13" fill="#0b2545" text-anchor="middle">Isolation +</text>
   <text x="533" y="85" font-size="13" fill="#0b2545" text-anchor="middle">Prozessor</text>
   <text x="533" y="114" font-size="13" fill="#0d9488" text-anchor="middle">Analyse, Alarme</text>
-  <line x1="15" y1="128" x2="585" y2="128" stroke="#f1f5f9" stroke-width="2"/>
+  <line x1="15" y1="128" x2="585" y2="128" stroke="#cbd5e1" stroke-width="1"/>
   <text x="300" y="150" font-size="15" font-weight="600" fill="#0b2545" text-anchor="middle">B  Oszillometrische Blutdruckmessung (vereinfacht)</text>
   <!-- Achsen -->
   <line x1="70" y1="350" x2="560" y2="350" stroke="#0b2545" stroke-width="1.5" marker-end="url(#pfeil)"/>
   <line x1="70" y1="350" x2="70" y2="160" stroke="#0b2545" stroke-width="1.5" marker-end="url(#pfeil)"/>
+  <text x="58" y="255" font-size="13" fill="#0b2545" text-anchor="middle" transform="rotate(-90 58 255)">Druck</text>
   <text x="556" y="368" font-size="13" fill="#0b2545" text-anchor="end">Zeit</text>
   <!-- Manschettendruck -->
   <polyline points="80,168 530,248" fill="none" stroke="#0b2545" stroke-width="2"/>

@@ -1,0 +1,61 @@
+{
+  "id": "videolaryngoskop",
+  "type": "device",
+  "title": "Videolaryngoskop",
+  "aliases": [
+    "Video-Laryngoskop",
+    "Videolaryngoskopie",
+    "Video laryngoscope",
+    "Indirektes Laryngoskop"
+  ],
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 70,
+  "domains": [
+    "anaesthesiologie",
+    "notfallmedizin",
+    "intensivmedizin"
+  ],
+  "summary": "Ein Videolaryngoskop ist ein Laryngoskop mit Kamera nahe der Spatelspitze, das den Kehlkopfeingang auf einem Bildschirm darstellt. Es erleichtert die endotracheale Intubation, weil keine direkte Sichtachse vom Auge zur Stimmritze hergestellt werden muss.",
+  "sections": {
+    "purpose": "Videolaryngoskope werden zur Intubation in Anästhesie, Intensiv- und Notfallmedizin eingesetzt, insbesondere beim erwarteten oder unerwarteten schwierigen Atemweg. Weil das ganze Team das Bild sieht, eignen sie sich auch für Ausbildung und Supervision. In vielen Kliniken gehören sie inzwischen zur Standardausstattung des Narkosearbeitsplatzes am [[anaesthesiegeraet|Anästhesiegerät]] [@larsen-2018].",
+    "principle": "## Optik und Elektronik\n\nAm Ende des Spatels sitzen eine kleine **CMOS-Kamera** und LEDs zur Ausleuchtung ([[optik]]). Das Bild wird per Kabel an einen am Griff befestigten oder separaten Monitor übertragen ([[display-bedienoberflaeche]]). Da die Kamera den Blickwinkel gewissermaßen „um die Ecke“ verlagert, müssen Zunge und Kehldeckel weniger stark verdrängt werden als bei der direkten Laryngoskopie. Ein Beschlagen der Optik wird durch Heizelemente, Beschichtungen oder die Position der Linse reduziert. Die Energieversorgung erfolgt meist über Akkus oder Batterien im Griff ([[lithium-ionen-akku]]).\n\n## Spatelformen\n\n| Spatelform | Eigenschaften |\n|---|---|\n| Macintosh-ähnlich | erlaubt zusätzlich direkte Sicht; Technik wie bei konventioneller Laryngoskopie |\n| Hyperanguliert | stark gebogen, gute Sicht auch bei eingeschränkter Kopfbewegung; der Tubus benötigt meist einen vorgeformten Führungsstab |\n\n> [!praxis] Eine gute Sicht auf die Stimmritze garantiert nicht, dass sich der Tubus leicht vorschieben lässt – besonders bei hyperangulierten Spateln. Die Tubuslage wird unabhängig vom Bild mit der [[kapnometer|Kapnographie]] bestätigt.\n\n> [!hinweis] Spatel gibt es als Einweg- und Mehrwegvariante; Mehrwegspatel und Griffe sind nach Herstellerangabe aufzubereiten ([[aufbereitung]], [[desinfektion]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "karl-storz",
+      "models": [
+        "C-MAC"
+      ]
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "McGRATH MAC"
+      ]
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Funktionskontrolle vor jedem Einsatz (Bild, Licht, Akkuladung); Prüfung von Kabeln, Steckverbindern und Monitor nach Herstellerangabe; elektrische Sicherheitsprüfung von Netzteilen/Ladestationen nach [[iec-62353|IEC 62353]] bzw. [[dguv-vorschrift-3|DGUV Vorschrift 3]]."
+  },
+  "related": [
+    "anaesthesiegeraet",
+    "kapnometer",
+    "beatmungsgeraet",
+    "endoskop",
+    "lunge"
+  ],
+  "sources": [
+    "larsen-2018",
+    "kramme-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

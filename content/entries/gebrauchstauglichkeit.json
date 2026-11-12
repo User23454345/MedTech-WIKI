@@ -1,0 +1,162 @@
+{
+  "id": "gebrauchstauglichkeit",
+  "type": "term",
+  "title": "Gebrauchstauglichkeit (Usability)",
+  "aliases": [
+    "Usability",
+    "Usability Engineering",
+    "Human Factors",
+    "Human Factors Engineering",
+    "HFE",
+    "Benutzungsschnittstelle",
+    "Ergonomie"
+  ],
+  "category": "einfuehrung",
+  "summary": "Gebrauchstauglichkeit beschreibt, wie sicher, wirksam und effizient vorgesehene Benutzer ein Medizinprodukt in ihrer Umgebung bedienen können. Der Usability-Engineering-Prozess nach IEC 62366-1 soll vorhersehbare Anwendungsfehler durch Gestaltung vermeiden.",
+  "body": "## Begriff\n\n**Gebrauchstauglichkeit** (englisch *Usability*) beschreibt, wie gut die Benutzungsschnittstelle eines Produkts die vorgesehenen Benutzer in der vorgesehenen Umgebung dabei unterstützt, ihre Aufgaben wirksam, effizient und zufriedenstellend zu erledigen. In der Medizintechnik steht dabei nicht Komfort im Vordergrund, sondern **Sicherheit**: Eine schlechte Benutzungsschnittstelle begünstigt [[anwendungsfehler|Anwendungsfehler]], die Patienten schädigen können [@iec-62366-1] [@fda-human-factors-2016].\n\nZur **Benutzungsschnittstelle** gehört alles, worüber Mensch und Produkt interagieren: [[display-bedienoberflaeche|Display und Bedienelemente]], Tasten, Drehknöpfe, akustische und optische [[alarmsystem|Alarme]], Stecker und Anschlüsse, Beschriftungen, Verpackung, Gebrauchsanweisung und Schulungsmaterial.\n\n> [!belegt] Der Prozess des Usability-Engineerings für Medizinprodukte ist in [[iec-62366-1|IEC 62366-1]] beschrieben. Für medizinische elektrische Geräte verweist die Ergänzungsnorm [[iec-60601-1-6|IEC 60601-1-6]] auf diesen Prozess [@iec-62366-1] [@iec-60601-1-6].\n\n## Anwendungsfehler und unsachgemäße Anwendung\n\nDie Normen unterscheiden zwei grundsätzlich verschiedene Kategorien:\n\n| Begriff | Bedeutung | Beispiel | Verantwortung |\n|---|---|---|---|\n| **Anwendungsfehler** (*use error*) | Handlung oder Unterlassung, deren Ergebnis vom Hersteller nicht beabsichtigt oder vom Benutzer nicht erwartet war | Eingabe von 100 statt 10,0 ml/h an der [[infusionspumpe]] | Hersteller muss vorhersehbare Anwendungsfehler im Design berücksichtigen |\n| **Unsachgemäße Anwendung** (*abnormal use*) | bewusste Handlung entgegen der Gebrauchsanweisung, z. B. Überbrücken einer Schutzfunktion | Abkleben eines Alarmlautsprechers | liegt außerhalb dessen, was das Design verhindern muss; Betreiber- und Organisationsverantwortung |\n\nAnwendungsfehler lassen sich nach dem Wahrnehmungs-, Kognitions- und Handlungsmodell einordnen:\n\n* **Wahrnehmung:** Information wird nicht gesehen oder gehört (zu leiser Alarm, Anzeige im Gegenlicht).\n* **Kognition:** Information wird falsch verstanden oder vergessen (verwechselbare Einheiten mg/µg, unklare Moduswechsel).\n* **Handlung:** Bedienelement wird falsch betätigt (zu kleine Touch-Flächen, benachbarte Tasten, Doppeltipp).\n\n> [!vereinfacht] Psychologische Fehlermodelle unterscheiden feiner, etwa zwischen Ausrutschern, Aussetzern und Irrtümern (nach Reason). Für die Gestaltung von Medizinprodukten genügt meist die Frage, an welcher Stelle der Kette Wahrnehmen – Verstehen – Handeln der Fehler entsteht [@reason-2000-human-error].\n\n## Der Usability-Engineering-Prozess\n\nIEC 62366-1 beschreibt einen Prozess, der eng mit dem Risikomanagement nach [[iso-14971]] verzahnt ist [@iec-62366-1] [@iso-14971]. Die folgende Liste fasst die Prozessschritte der Norm in eigenen Worten zusammen:\n\n1. **Anwendungsspezifikation** – Wer bedient das Produkt (Intensivpflege, Laien, Rettungsdienst)? In welcher Umgebung (OP, Rettungswagen, Wohnung)? Für welche Patienten?\n2. **Sicherheitsrelevante Merkmale der Benutzungsschnittstelle** und mögliche Anwendungsfehler identifizieren.\n3. **Gefährdungen und Gefährdungssituationen** ermitteln, die durch Bedienung entstehen können.\n4. **Gefährdungsbezogene Nutzungsszenarien** beschreiben und für die Bewertung auswählen.\n5. **Spezifikation der Benutzungsschnittstelle** festlegen.\n6. **Formative Evaluierung** – iterative Tests während der Entwicklung (Expertenreviews, Prototypentests).\n7. **Summative Evaluierung** – abschließender Nachweis mit repräsentativen Benutzern, dass die Benutzungsschnittstelle sicher verwendet werden kann.\n\n> [!vereinfacht] Die Norm gliedert den Prozess feiner (u. a. eigener Schritt für den Evaluierungsplan und die Auswahl der Szenarien für die summative Evaluierung). Die Reihenfolge ist zudem nicht streng linear: Ergebnisse formativer Tests führen regelmäßig zurück zur Spezifikation.\n\nAlle Ergebnisse werden in der Usability-Akte (*usability engineering file*) dokumentiert und fließen in die technische Dokumentation und damit in die [[konformitaetsbewertung|Konformitätsbewertung]] ein (siehe [[lebenszyklus-medizinprodukt]]).\n\n## Gestaltungsprinzipien\n\n| Prinzip | Umsetzung im Gerät | Beispiel |\n|---|---|---|\n| Fehlervermeidung durch Konstruktion | mechanische Kodierung, nicht verwechselbare Anschlüsse | Gasanschlüsse am [[anaesthesiegeraet]] |\n| Plausibilitätsprüfung | weiche und harte Grenzwerte, Dosisbibliotheken | [[infusionspumpe]], [[pca-pumpe]] |\n| Eindeutige Rückmeldung | Bestätigungsdialog mit Einheit, Anzeige des aktiven Modus | [[beatmungsgeraet]] |\n| Konsistenz | gleiche Farben, Symbole, Alarmtöne über Gerätefamilien | [[patientenmonitor]], [[iec-60601-1-8]] |\n| Priorisierte Alarmierung | hohe, mittlere, niedrige Priorität klar unterscheidbar | [[alarmsystem]], [[alarmmuedigkeit]] |\n| Bedienung unter Stress | wenige, große Bedienelemente; Sprachführung | [[defibrillator]] (AED) |\n\nFür die Größe von Bedienelementen liefert das **Fitts’sche Gesetz** eine Abschätzung der Zeit T, die für eine Zielbewegung über die Distanz D zu einem Ziel der Breite W benötigt wird:\n\nT = a + b · log₂(D / W + 1)\n\nmit den empirischen Konstanten a und b. Kleine, weit entfernte Schaltflächen kosten Zeit und erhöhen die Fehlerrate – relevant bei Touchscreens, die mit Handschuhen bedient werden.\n\n> [!beispiel] Eine Pflegekraft soll an einer [[spritzenpumpe]] 2,5 ml/h einstellen. Ist das Komma auf dem Display klein und die Ziffernfolge ohne führende Null dargestellt, kann „25“ statt „2,5“ eingegeben werden – ein Zehnerstellenfehler. Gegenmaßnahmen: deutliche Kommadarstellung, Grenzwerte aus der Dosisbibliothek, Bestätigung der Rate mit Einheit. (Fiktives Szenario zur Veranschaulichung.)\n\n## Rechtlicher Rahmen\n\nDie [[mdr|MDR]] verlangt, Risiken durch Anwendungsfehler so weit wie möglich zu verringern; dabei sind ergonomische Merkmale des Produkts, die Anwendungsumgebung sowie Kenntnisse, Ausbildung und Erfahrung der vorgesehenen Anwender zu berücksichtigen (Anhang I, Abschnitt 5) [@mdr-2017]. Die US-amerikanische FDA erwartet in ihrer Leitlinie für Produkte mit kritischen Aufgaben (*critical tasks*) einen Human-Factors-Nachweis einschließlich einer Validierungsprüfung mit repräsentativen Benutzern [@fda-human-factors-2016]. Betreiberseitig ergänzt die [[mpbetreibv|MPBetreibV]] die Konstruktion durch die Pflicht zur [[einweisung|Einweisung]] [@mpbetreibv].\n\n> [!warnung] Gebrauchstauglichkeit ist kein Ersatz für Einweisung – und Einweisung ist kein Ersatz für Gebrauchstauglichkeit. Ein Gerät, dessen sichere Bedienung nur durch ständiges Nachschulen erreichbar ist, hat ein Konstruktionsproblem.\n\n## Bedeutung in der Medizintechnik\n\nUntersuchungen von Vorkommnissen zeigen immer wieder, dass ein relevanter Teil der Ereignisse nicht auf technische Defekte, sondern auf die Interaktion zwischen Mensch und Gerät zurückgeht (siehe [[anwendungsfehler]], [[patientensicherheit]]). Für die Klinik folgt daraus:\n\n* **Beschaffung:** Usability gehört in die Bewertung von Angeboten – etwa Probeläufe mit Pflegepersonal für [[infusionspumpe|Infusionspumpen]] oder [[patientenmonitor|Monitore]].\n* **Standardisierung:** Wenige Gerätetypen pro Funktion verringern Verwechslungen.\n* **Alarmmanagement:** Sinnvolle Grenzwerte und Verzögerungen reduzieren Fehlalarme ([[alarmmuedigkeit]]).\n* **Störungsbearbeitung:** Bei Meldungen wie „Gerät hat falsch dosiert“ immer auch die Bedienhistorie prüfen; viele Geräte führen ein Ereignisprotokoll ([[fehlersuche]]).\n\nGeräte mit besonders hoher Usability-Relevanz sind [[beatmungsgeraet]], [[anaesthesiegeraet]], [[infusionspumpe]], [[spritzenpumpe]], [[insulinpumpe]], [[defibrillator]], [[heimbeatmungsgeraet]] und [[blutzuckermessgeraet]] (Bedienung durch Laien, vgl. [[iec-60601-1-11]]).",
+  "related": [
+    "anwendungsfehler",
+    "iec-62366-1",
+    "iec-60601-1-6",
+    "alarmsystem",
+    "alarmmuedigkeit",
+    "display-bedienoberflaeche",
+    "patientensicherheit",
+    "einweisung",
+    "iso-14971",
+    "iec-60601-1-8"
+  ],
+  "paths": [
+    [
+      "gebrauchstauglichkeit",
+      "display-bedienoberflaeche",
+      "infusionspumpe",
+      "anwendungsfehler"
+    ],
+    [
+      "gebrauchstauglichkeit",
+      "alarmsystem",
+      "alarmmuedigkeit",
+      "patientenmonitor"
+    ]
+  ],
+  "sources": [
+    "iec-62366-1",
+    "iec-60601-1-6",
+    "iso-14971",
+    "fda-human-factors-2016",
+    "reason-2000-human-error",
+    "mdr-2017",
+    "mpbetreibv",
+    "iec-60601-1-8",
+    "iec-60601-1-11"
+  ],
+  "diagram": {
+    "title": "Usability-Engineering-Prozess (vereinfacht)",
+    "caption": "Vereinfachte Prozesskette nach IEC 62366-1. Formative Evaluierungen werden iterativ wiederholt; Ergebnisse fließen in das Risikomanagement.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "spez",
+        "label": "Anwendungs-\nspezifikation",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "gef",
+        "label": "Gefährdungen /\nAnwendungsfehler",
+        "ref": "anwendungsfehler",
+        "kind": "process",
+        "x": 320,
+        "y": 90
+      },
+      {
+        "id": "risk",
+        "label": "Risikomanagement",
+        "ref": "iso-14971",
+        "kind": "control",
+        "x": 320,
+        "y": 270
+      },
+      {
+        "id": "szen",
+        "label": "Nutzungs-\nszenarien",
+        "kind": "process",
+        "x": 540,
+        "y": 90
+      },
+      {
+        "id": "ui",
+        "label": "Benutzungs-\nschnittstelle",
+        "ref": "display-bedienoberflaeche",
+        "kind": "actuator",
+        "x": 760,
+        "y": 90
+      },
+      {
+        "id": "form",
+        "label": "Formative\nEvaluierung",
+        "kind": "sensor",
+        "x": 760,
+        "y": 270
+      },
+      {
+        "id": "summ",
+        "label": "Summative\nEvaluierung",
+        "ref": "iec-62366-1",
+        "kind": "output",
+        "x": 540,
+        "y": 270
+      }
+    ],
+    "edges": [
+      {
+        "from": "spez",
+        "to": "gef",
+        "kind": "data"
+      },
+      {
+        "from": "gef",
+        "to": "risk",
+        "kind": "data"
+      },
+      {
+        "from": "gef",
+        "to": "szen",
+        "kind": "data"
+      },
+      {
+        "from": "szen",
+        "to": "ui",
+        "kind": "data"
+      },
+      {
+        "from": "ui",
+        "to": "form",
+        "kind": "data",
+        "label": "Prototyp"
+      },
+      {
+        "from": "form",
+        "to": "ui",
+        "kind": "signal",
+        "label": "Iteration"
+      },
+      {
+        "from": "form",
+        "to": "summ",
+        "kind": "data"
+      },
+      {
+        "from": "summ",
+        "to": "risk",
+        "kind": "signal",
+        "label": "Restrisiko"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

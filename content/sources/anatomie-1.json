@@ -1,0 +1,48 @@
+[
+  {
+    "id": "hodgkin-huxley-1952",
+    "kind": "artikel",
+    "authors": "Hodgkin, A. L.; Huxley, A. F.",
+    "title": "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+    "publisher": "Journal of Physiology 117(4), S. 500–544",
+    "year": "1952",
+    "note": "Grundlegendes Ionenkanalmodell des Aktionspotentials (Hodgkin-Huxley-Modell)"
+  },
+  {
+    "id": "severinghaus-1979",
+    "kind": "artikel",
+    "authors": "Severinghaus, J. W.",
+    "title": "Simple, accurate equations for human blood O2 dissociation computations",
+    "publisher": "Journal of Applied Physiology: Respiratory, Environmental and Exercise Physiology 46(3), S. 599–602",
+    "year": "1979",
+    "note": "Empirische Näherungsgleichung der Sauerstoffbindungskurve"
+  },
+  {
+    "id": "west-luks-2021",
+    "kind": "buch",
+    "authors": "West, J. B.; Luks, A. M.",
+    "title": "West's Respiratory Physiology: The Essentials",
+    "edition": "11th edition",
+    "publisher": "Wolters Kluwer, Philadelphia",
+    "year": "2021",
+    "note": "Erschienen Oktober 2020, Copyright-Jahr 2021"
+  },
+  {
+    "id": "esc-hypertension-2024",
+    "kind": "leitlinie",
+    "authors": "McEvoy, J. W.; McCarthy, C. P. et al. (ESC Scientific Document Group)",
+    "title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "publisher": "European Heart Journal 45(38), S. 3912–4018",
+    "year": "2024",
+    "note": "doi:10.1093/eurheartj/ehae178; führt die Kategorie „erhöhter Blutdruck“ (120–139/70–89 mmHg) ein"
+  },
+  {
+    "id": "ards-berlin-2012",
+    "kind": "artikel",
+    "authors": "ARDS Definition Task Force; Ranieri, V. M. et al.",
+    "title": "Acute respiratory distress syndrome: the Berlin Definition",
+    "publisher": "JAMA 307(23), S. 2526–2533",
+    "year": "2012",
+    "note": "Schweregradeinteilung des ARDS über den Oxygenierungsindex paO₂/FiO₂"
+  }
+]

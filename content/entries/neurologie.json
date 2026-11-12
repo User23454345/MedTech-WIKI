@@ -1,0 +1,42 @@
+{
+  "id": "neurologie",
+  "type": "domain",
+  "title": "Neurologie",
+  "aliases": [
+    "Nervenheilkunde",
+    "Neurology",
+    "Stroke Unit",
+    "Klinische Neurophysiologie",
+    "Neurophysiologie"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Neurologie behandelt Erkrankungen des zentralen und peripheren Nervensystems und der Muskulatur. Ihre Medizintechnik misst bioelektrische Signale im Mikro- bis Millivoltbereich (EEG, EMG, evozierte Potentiale) und stützt sich für die Akutversorgung des Schlaganfalls stark auf CT, MRT und Monitoring.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Neurologie** befasst sich mit Erkrankungen von Gehirn, Rückenmark, peripheren Nerven und Muskeln ([[nervensystem]]). Häufige Krankheitsbilder sind Schlaganfall (Hirninfarkt und Hirnblutung), Epilepsie, Multiple Sklerose, Parkinson-Syndrome, Demenzen, Polyneuropathien, Muskelerkrankungen, Kopfschmerzerkrankungen und Schlafstörungen [@kandel-2021].\n\nDiagnostisch nutzt die Neurologie die klinische Untersuchung, bildgebende Verfahren sowie die **klinische Neurophysiologie**: die Ableitung elektrischer Signale des Nervensystems, die auf [[aktionspotential|Aktionspotentialen]] und synaptischen Potentialen beruhen [@hodgkin-huxley-1952]. Beim akuten Schlaganfall gilt „Zeit ist Hirn“ – die Versorgung auf einer spezialisierten Stroke Unit mit Monitoring, Bildgebung und ggf. Thrombolyse oder Thrombektomie ist zeitkritisch.\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[eeg-geraet]] | Elektroenzephalographie: Epilepsiediagnostik, Bewusstseinsstörungen, Hirnfunktionsmonitoring |\n| [[emg-geraet]] | Elektromyographie und Nervenleitgeschwindigkeit, evozierte Potentiale |\n| [[polysomnograph]] | Schlafdiagnostik (EEG, EOG, EMG, Atmung, SpO₂) |\n| [[computertomograph]] | Akutdiagnostik Schlaganfall, Blutungsausschluss, CT-Angiographie und -Perfusion |\n| [[mrt]] | Ischämienachweis, Multiple Sklerose, Tumoren, Entzündungen |\n| [[angiographieanlage]] | mechanische Thrombektomie, Aneurysmabehandlung (Neuroradiologie) |\n| [[ultraschallgeraet]] | Doppler- und Duplexsonographie der hirnversorgenden Gefäße |\n| [[patientenmonitor]] | Überwachung auf der Stroke Unit (EKG, Blutdruck, SpO₂) |\n| [[langzeit-ekg]] | Suche nach Vorhofflimmern als Schlaganfallursache |\n| [[reizstromgeraet]] | Elektrotherapie in der Rehabilitation |\n\n## Besondere technische Anforderungen\n\n### Kleinste Signale, große Störungen\n\nNeurophysiologische Signale sind sehr klein: Das Oberflächen-EEG liegt typischerweise im Bereich einiger zehn Mikrovolt, Muskelaktionspotentiale im Mikro- bis Millivoltbereich, evozierte Potentiale teils darunter [@webster-2010]. Sie werden von Netzbrummen, Bewegungs- und Muskelartefakten überlagert ([[netzstoerung]], [[bewegungsartefakt]], [[emv-stoerung]]). Entscheidend sind daher:\n\n- [[instrumentenverstaerker|Instrumentenverstärker]] mit hoher Gleichtaktunterdrückung und hoher Eingangsimpedanz [@kitchin-counts-2006],\n- niedrige und stabile Elektroden-Haut-Übergangsimpedanzen,\n- geeignete [[filter]] (Hochpass, Tiefpass, ggf. Netzfilter) und ausreichende Abtastrate des [[analog-digital-wandler|A/D-Wandlers]] [@shannon-1949],\n- Mittelungsverfahren, um evozierte Potentiale aus dem Grundrauschen herauszuheben.\n\n> [!vereinfacht] Ein evoziertes Potential ist oft kleiner als das spontane EEG. Erst durch Mittelung vieler Reizantworten heben sich die reizgekoppelten Anteile hervor, während zufällige Anteile sich herausmitteln.\n\n### Elektrodenposition und Standardisierung\n\nEEG-Elektroden werden nach dem internationalen 10-20-System platziert, das die Elektrodenpositionen relativ zu anatomischen Landmarken des Schädels festlegt [@jasper-1958]. Eine standardisierte Montage macht Ableitungen zwischen Labors vergleichbar. Für EEG-Geräte gilt die besondere Festlegung IEC 60601-2-26, für Elektromyographen und Geräte für evozierte Potentiale IEC 60601-2-40 (jeweils gültige Fassung) [@iec-60601-2-26][@iec-60601-2-40].\n\n### Elektrische Sicherheit bei Stimulation\n\nBei Nervenleitmessungen und evozierten Potentialen wird elektrisch stimuliert. Stimulationsausgänge müssen begrenzt und von der Netzseite sicher getrennt sein ([[galvanische-trennung]], [[anwendungsteile]]) [@iec-60601-1]. Bei Patienten mit aktiven Implantaten (Schrittmacher, Neurostimulatoren) sind Herstellerhinweise zu beachten.\n\n### MRT und Implantate\n\nViele neurologische Patienten tragen Implantate wie Tiefenhirnstimulatoren, Vagusnervstimulatoren oder Shunt-Ventile mit einstellbarem Magnetmechanismus. Vor jeder [[mrt|MRT-Untersuchung]] ist der MR-Status zu klären; programmierbare Ventile können durch das Magnetfeld verstellt werden [@kanal-2013].\n\n### Langzeitableitungen und Daten\n\nVideo-EEG-Monitoring in der Epilepsiediagnostik erzeugt große Datenmengen über Tage; Synchronisation von Video und Signal, Speicher und Datenschutz sind technische Aufgaben. Die automatisierte Auswertung, etwa der Schlafstadien in der Polysomnographie, folgt standardisierten Regeln [@aasm-scoring-manual].\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[radiologie]]**: Neuroradiologie mit CT, MRT und Angiographie.\n- **[[notfallmedizin]]**: präklinische Schlaganfallerkennung und Transport zur Stroke Unit.\n- **[[intensivmedizin]]**: neurologische Intensivmedizin, Hirndruck- und EEG-Monitoring.\n- **[[kardiologie]]**: kardiale Emboliequellen, Rhythmusmonitoring.\n- **[[pneumologie]]**: Schlafmedizin (Schlafapnoe) und neuromuskuläre Atemschwäche mit [[heimbeatmungsgeraet|Heimbeatmung]].\n- **[[physikalische-medizin]]**: Rehabilitation nach Schlaganfall.\n- **[[hno-heilkunde]]**: Hörbahndiagnostik, [[cochlea-implantat|Cochlea-Implantate]].\n",
+  "related": [
+    "nervensystem",
+    "aktionspotential",
+    "eeg-geraet",
+    "emg-geraet",
+    "polysomnograph",
+    "biosignale",
+    "instrumentenverstaerker",
+    "radiologie",
+    "mrt",
+    "computertomograph"
+  ],
+  "sources": [
+    "kandel-2021",
+    "hodgkin-huxley-1952",
+    "webster-2010",
+    "kitchin-counts-2006",
+    "shannon-1949",
+    "jasper-1958",
+    "iec-60601-1",
+    "kanal-2013",
+    "aasm-scoring-manual",
+    "iec-60601-2-26",
+    "iec-60601-2-40"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,147 @@
+{
+  "id": "dicom",
+  "type": "term",
+  "title": "DICOM",
+  "aliases": [
+    "Digital Imaging and Communications in Medicine",
+    "DICOM 3.0",
+    "ISO 12052",
+    "NEMA PS3",
+    "DICOMweb",
+    "PACS-Kommunikation",
+    "Modality Worklist",
+    "MWL",
+    "MPPS",
+    "RDSR",
+    "DICOM Conformance Statement"
+  ],
+  "category": "elektrotechnik",
+  "summary": "DICOM (Digital Imaging and Communications in Medicine) ist der internationale Standard für Speicherung, Übertragung, Abfrage und Darstellung medizinischer Bilddaten. Er definiert ein Datenmodell mit Patienten, Studien, Serien und Bildern, ein Dateiformat sowie Netzwerkdienste, über die Modalitäten, PACS, RIS und Befundstationen herstellerübergreifend zusammenarbeiten.",
+  "body": "## Begriff und Geschichte\n\n**DICOM** (*Digital Imaging and Communications in Medicine*) ist der internationale Standard für das Speichern, Übertragen, Abfragen und Darstellen medizinischer Bilddaten und zugehöriger Informationen [@nema-dicom]. Er legt sowohl ein **Dateiformat** als auch ein **Netzwerkprotokoll** fest und sorgt dafür, dass Geräte verschiedener Hersteller – etwa ein [[computertomograph]] von Hersteller A und ein Bildarchiv von Hersteller B – miteinander arbeiten können.\n\nDer Standard geht auf eine gemeinsame Arbeitsgruppe des American College of Radiology (ACR) und der National Electrical Manufacturers Association (NEMA) zurück. Nach den Vorläuferversionen ACR-NEMA 1.0 (1985) und 2.0 (1988) erschien 1993 **DICOM 3.0**, das erstmals ein Netzwerkprotokoll auf Basis von TCP/IP enthielt [@pianykh-2012]. Seither wird der Standard laufend erweitert; international ist er zudem als ISO 12052 veröffentlicht [@nema-dicom].\n\n## Aufbau des Standards\n\nDer Standard ist in Teile gegliedert (PS3.1, PS3.2, …). Wichtige Teile sind [@nema-dicom]:\n\n| Teil | Inhalt |\n|---|---|\n| PS3.2 | Konformität (Aufbau des Conformance Statements) |\n| PS3.3 | Informationsobjektdefinitionen (IOD): Welche Daten gehören zu einem CT-, MR- oder Ultraschallbild? |\n| PS3.4 | Dienstklassen (Service Classes): Speichern, Abfragen, Arbeitslisten usw. |\n| PS3.5 | Datenstrukturen und Kodierung (Datenelemente, Transfersyntaxen) |\n| PS3.6 | Data Dictionary: Verzeichnis aller Datenelemente (Tags) |\n| PS3.7 / PS3.8 | Nachrichtenaustausch und Netzwerkkommunikation |\n| PS3.10 | Dateiformat für Datenträger |\n| PS3.14 | Graustufen-Standard-Darstellungsfunktion (GSDF) für Befundmonitore |\n| PS3.18 | Webdienste (DICOMweb) |\n\n## Das Informationsmodell\n\nDICOM ordnet Bilddaten hierarchisch:\n\n**Patient → Studie → Serie → Instanz (Bild)**\n\nJede Studie, Serie und Instanz trägt einen weltweit eindeutigen **UID** (*Unique Identifier*). Ein einzelnes DICOM-Objekt besteht aus einer Folge von **Datenelementen**, die jeweils über einen Tag `(Gruppe, Element)` adressiert werden:\n\n| Tag | Bedeutung |\n|---|---|\n| (0010,0010) | Patientenname |\n| (0010,0020) | Patienten-ID |\n| (0008,0060) | Modalität (z. B. CT, MR, US, CR, DX) |\n| (0020,000D) | Study Instance UID |\n| (0028,0010) / (0028,0011) | Zeilen / Spalten der Bildmatrix |\n| (7FE0,0010) | Pixeldaten |\n\nJedes Datenelement hat eine **Value Representation** (VR), also einen Datentyp (z. B. PN für Personennamen, DA für Datum, US für vorzeichenlose 16-Bit-Ganzzahl). Die **Transfersyntax** legt fest, wie die Daten kodiert werden: Byte-Reihenfolge, explizite oder implizite VR und gegebenenfalls Kompression (z. B. JPEG, JPEG 2000, verlustfrei oder verlustbehaftet) [@pianykh-2012].\n\n> [!beispiel] Ein CT-Schichtbild mit 512 × 512 Pixeln und 16 Bit pro Pixel benötigt unkomprimiert 512 · 512 · 2 Byte ≈ 0,5 MB. Eine Thorax-Untersuchung mit 600 dünnen Schichten ergibt damit rund 300 MB – ein Grund, warum Netzwerkbandbreite und Speicherkapazität im PACS sorgfältig geplant werden müssen.\n\n## Netzwerkdienste\n\nDICOM-Kommunikation läuft zwischen **Application Entities** (AE), die über einen AE-Titel, eine IP-Adresse und einen Port identifiziert werden. Eine Verbindung beginnt mit einer **Association**, in der die Partner aushandeln, welche Dienste (SOP-Klassen) und Transfersyntaxen sie unterstützen. Ein Gerät kann dabei als Dienstnutzer (SCU) oder Dienstanbieter (SCP) auftreten [@nema-dicom].\n\n| Dienst | Funktion | Typische Anwendung |\n|---|---|---|\n| C-ECHO | Verbindungstest („DICOM-Ping“) | Inbetriebnahme, Fehlersuche |\n| C-STORE | Objekt senden und speichern | Modalität sendet Bilder ins PACS |\n| C-FIND | Abfrage nach Patient/Studie/Serie | Befundstation sucht Voraufnahmen |\n| C-MOVE / C-GET | Objekte abrufen | Laden von Voraufnahmen |\n| Modality Worklist (MWL) | Arbeitsliste geplanter Untersuchungen | Patientendaten werden aus dem RIS übernommen statt abgetippt |\n| MPPS | Rückmeldung über durchgeführte Untersuchung | Status an RIS, Abrechnung |\n| Storage Commitment | Bestätigung der sicheren Archivierung | Modalität darf lokale Bilder löschen |\n\nErgänzend definiert **DICOMweb** REST-basierte Dienste (z. B. QIDO-RS zum Suchen, WADO-RS zum Abrufen, STOW-RS zum Speichern), die in Webanwendungen und Cloud-Umgebungen eingesetzt werden [@nema-dicom].\n\n## Darstellung und Bildqualität\n\nDICOM regelt nicht nur Daten, sondern auch deren Darstellung. Die **GSDF** (Teil 14) definiert, wie digitale Grauwerte in Leuchtdichten umgesetzt werden, sodass Kontrastunterschiede auf verschiedenen Monitoren gleich wahrnehmbar sind. Befundmonitore werden auf diese Kennlinie kalibriert und im Rahmen der Qualitätssicherung regelmäßig geprüft (siehe [[konstanzpruefung]] und [[display-bedienoberflaeche]]).\n\n> [!vereinfacht] CT-Bilder enthalten Rohwerte, die über *Rescale Slope* und *Rescale Intercept* in Hounsfield-Einheiten umgerechnet werden; Fensterlage und -breite bestimmen anschließend, welcher Wertebereich auf die Grauwerte des Monitors abgebildet wird. Die Darstellungspipeline ist in der Praxis mehrstufig.\n\n## Weitere Objekttypen\n\nNeben Bildern kennt DICOM unter anderem:\n\n* **Structured Reports (SR):** strukturierte Befunde und Messwerte, darunter der **Radiation Dose Structured Report (RDSR)**, der Dosisdaten von [[roentgengeraet|Röntgen-]] und [[computertomograph|CT-Geräten]] maschinenlesbar überträgt – wichtig für Dosismanagement und [[strahlenschutz]],\n* **Presentation States:** gespeicherte Darstellungseinstellungen und Annotationen,\n* **RT-Objekte:** Bestrahlungspläne, Strukturen und Dosisverteilungen für [[linearbeschleuniger|Linearbeschleuniger]] und [[strahlentherapie]],\n* **Encapsulated PDF** und Videoformate, z. B. aus der [[endoskop|Endoskopie]].\n\n## Anwendung in Geräten\n\nDICOM ist bei nahezu allen bildgebenden Modalitäten Standard: [[computertomograph]], [[mrt]], [[roentgengeraet]], [[c-bogen]], [[angiographieanlage]], [[mammographiegeraet]], [[ultraschallgeraet]], [[pet-ct]], [[gammakamera]], [[dvt]] und [[oct]]. Für nicht bildgebende klinische Daten (Labor, Vitalwerte, Aufnahme/Entlassung) wird dagegen überwiegend [[hl7-fhir|HL7]] genutzt; im Radiologie-Workflow arbeiten beide Standards zusammen (RIS ↔ HL7, Modalität ↔ DICOM).\n\n> [!belegt] Wer für ein Produkt DICOM-Konformität beansprucht, muss ein **DICOM Conformance Statement** nach Teil PS3.2 bereitstellen, das angibt, welche SOP-Klassen, Rollen und Transfersyntaxen unterstützt werden [@nema-dicom]. Sie ist die wichtigste Unterlage bei Beschaffung und Integration.\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechnik und IT ergeben sich typische Aufgaben:\n\n* **Integration neuer Modalitäten:** AE-Titel, Ports, Worklist- und Archivziele einrichten; Conformance Statements von Modalität und PACS abgleichen.\n* **Fehlersuche:** Kommen Bilder nicht an, hilft die Prüfung der Kette Netzwerk → C-ECHO → Association-Protokoll → abgelehnte SOP-Klasse oder Transfersyntax (siehe [[fehlersuche]]).\n* **Datenschutz und IT-Sicherheit:** DICOM-Objekte enthalten personenbezogene Gesundheitsdaten. Der Standard unterstützt TLS-gesicherte Verbindungen und definiert Profile zur De-Identifikation; Geräte gehören in segmentierte Netze.\n* **Regulatorik:** Software, die Bilddaten für Diagnosezwecke verarbeitet, kann selbst ein Medizinprodukt sein (siehe [[software-medizinprodukt]]).\n\n> [!praxis] Viele „PACS-Probleme“ entstehen bereits an der Modalität: falsch übernommene Patientendaten durch manuelle Eingabe statt Worklist, doppelte Patienten-IDs oder abweichende Zeichensätze bei Umlauten. Eine konsequent genutzte Modality Worklist verhindert einen großen Teil dieser Fehler.\n\nSiehe auch: [[mikrocontroller]], [[elektrotechnik]].\n",
+  "related": [
+    "hl7-fhir",
+    "computertomograph",
+    "mrt",
+    "roentgengeraet",
+    "ultraschallgeraet",
+    "software-medizinprodukt",
+    "display-bedienoberflaeche",
+    "strahlenschutz",
+    "konstanzpruefung",
+    "fehlersuche"
+  ],
+  "paths": [
+    [
+      "computertomograph",
+      "dicom",
+      "hl7-fhir"
+    ],
+    [
+      "roentgengeraet",
+      "dicom",
+      "strahlenschutz"
+    ]
+  ],
+  "diagram": {
+    "title": "DICOM im radiologischen Arbeitsablauf",
+    "caption": "Vereinfachter Datenfluss zwischen Informationssystemen und Modalität. Kein konkretes Produkt.",
+    "width": 900,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "kis",
+        "label": "KIS\n(Aufnahme, Anforderung)",
+        "ref": "hl7-fhir",
+        "kind": "source",
+        "x": 100,
+        "y": 90,
+        "w": 160
+      },
+      {
+        "id": "ris",
+        "label": "RIS\n(Terminplanung)",
+        "kind": "process",
+        "x": 320,
+        "y": 90
+      },
+      {
+        "id": "mod",
+        "label": "Modalität\n(z. B. CT)",
+        "ref": "computertomograph",
+        "kind": "process",
+        "x": 540,
+        "y": 90
+      },
+      {
+        "id": "pacs",
+        "label": "PACS\n(Archiv)",
+        "kind": "process",
+        "x": 760,
+        "y": 90
+      },
+      {
+        "id": "bef",
+        "label": "Befundstation\n(kalibrierter Monitor)",
+        "ref": "display-bedienoberflaeche",
+        "kind": "output",
+        "x": 760,
+        "y": 250,
+        "w": 170
+      },
+      {
+        "id": "dose",
+        "label": "Dosismanagement\n(RDSR)",
+        "ref": "strahlenschutz",
+        "kind": "output",
+        "x": 540,
+        "y": 250
+      }
+    ],
+    "edges": [
+      {
+        "from": "kis",
+        "to": "ris",
+        "kind": "data",
+        "label": "HL7"
+      },
+      {
+        "from": "ris",
+        "to": "mod",
+        "kind": "data",
+        "label": "Worklist"
+      },
+      {
+        "from": "mod",
+        "to": "ris",
+        "kind": "data",
+        "label": "MPPS"
+      },
+      {
+        "from": "mod",
+        "to": "pacs",
+        "kind": "data",
+        "label": "C-STORE"
+      },
+      {
+        "from": "pacs",
+        "to": "bef",
+        "kind": "data",
+        "label": "C-MOVE / WADO"
+      },
+      {
+        "from": "mod",
+        "to": "dose",
+        "kind": "data",
+        "label": "Dosisbericht"
+      }
+    ]
+  },
+  "sources": [
+    "nema-dicom",
+    "pianykh-2012",
+    "kramme-2017",
+    "bushberg-2020"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

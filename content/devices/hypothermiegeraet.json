@@ -1,0 +1,75 @@
+{
+  "id": "hypothermiegeraet",
+  "type": "device",
+  "title": "Temperaturmanagementsystem (Hypothermie)",
+  "aliases": [
+    "Hypothermiegerät",
+    "Kühlgerät",
+    "Targeted Temperature Management",
+    "TTM",
+    "Temperaturmanagement",
+    "Therapeutische Hypothermie",
+    "Intravasale Kühlung"
+  ],
+  "category": "geraete",
+  "deviceGroup": "therapie",
+  "rank": 82,
+  "domains": [
+    "intensivmedizin",
+    "notfallmedizin",
+    "neonatologie",
+    "neurologie",
+    "kardiologie"
+  ],
+  "summary": "Temperaturmanagementsysteme kühlen oder wärmen Patienten kontrolliert auf eine eingestellte Zieltemperatur und halten diese über Stunden bis Tage stabil. Sie arbeiten über Oberflächenpads mit zirkulierendem Wasser oder über einen Katheter im Blutgefäß und regeln anhand der gemessenen Körperkerntemperatur.",
+  "sections": {
+    "purpose": "Ein kontrolliertes Temperaturmanagement wird u. a. nach Herz-Kreislauf-Stillstand eingesetzt, um Fieber zu vermeiden und das Gehirn zu schützen; die Leitlinien des ERC empfehlen nach erfolgreicher Reanimation eine aktive Temperaturkontrolle [@erc-2021]. In der [[neonatologie|Neonatologie]] wird die Hypothermiebehandlung bei hypoxisch-ischämischer Enzephalopathie von Neugeborenen angewendet. Ziel ist, den Stoffwechsel und sekundäre Schädigungen des [[nervensystem|Nervensystems]] zu verringern.",
+    "principle": "## Regelkreis\n\nDas Gerät misst die **Kerntemperatur** über einen [[temperatursensor|Temperaturfühler]] in Ösophagus, Blase oder Blutbahn und vergleicht sie mit der Zieltemperatur. Der Regler steuert die Temperatur eines Wärmeträgermediums (meist Wasser) über Kühl- und Heizaggregate ([[regelkreis]]). Typische Phasen sind Induktion (Abkühlen), Erhaltung und kontrolliertes Wiedererwärmen mit begrenzter Rate.\n\n## Verfahren\n\n| Verfahren | Aufbau | Wärmeaustausch |\n|---|---|---|\n| Oberflächenkühlung | Pads oder Westen mit Wasserkanälen, teils mit Hydrogel-Kontaktschicht | Konduktion über die [[haut|Haut]] |\n| intravasale Kühlung | Katheter mit Ballons in einer großen Vene; im geschlossenen Kreislauf zirkuliert temperierte Kochsalzlösung | Konduktion zum vorbeiströmenden [[blut|Blut]] |\n\nKältemaschinen arbeiten mit Kompressor oder thermoelektrischen (Peltier-)Elementen; die übertragene Wärmeleistung ergibt sich aus Massenstrom, spezifischer Wärmekapazität und Temperaturdifferenz des Mediums zwischen Vor- und Rücklauf: Q̇ = ṁ · c · ΔT ([[waermeuebertragung]]).\n\n> [!beispiel] Strömt Wasser (c ≈ 4,18 kJ/(kg·K)) mit 2 kg/min durch die Pads und kehrt um 1 K wärmer zurück, entzieht das System dem Körper rund 2 · 4,18 kJ pro Minute ≈ 140 W. Zum Vergleich: Der Grundumsatz eines Erwachsenen liegt in der Größenordnung von 70–100 W. Eine Pumpe fördert das Wasser, [[drucksensor|Druck]]- und Durchflussüberwachung erkennen Abknicken oder Leckagen.\n\n> [!hinweis] Der Körper reagiert auf Kühlung mit Kältezittern und Gefäßengstellung ([[thermoregulation]]); dies erschwert die Kühlung und wird medikamentös behandelt. Fehlerhafte Fühlerlage führt zu falscher Regelung – Plausibilitätsprüfung mit einer zweiten Messstelle ist üblich.\n\n> [!warnung] Unter Oberflächenpads können Hautschäden durch Kälte oder Druck entstehen; Hautkontrollen gehören zur Pflege."
+  },
+  "manufacturers": [
+    {
+      "ref": "bd",
+      "models": [
+        "Arctic Sun"
+      ],
+      "note": "Oberflächen-Temperaturmanagement mit Hydrogel-Pads"
+    },
+    {
+      "ref": "zoll",
+      "models": [
+        "Thermogard XP"
+      ],
+      "note": "intravasales Temperaturmanagement"
+    },
+    {
+      "ref": "stryker",
+      "models": [],
+      "note": "Systeme zum Patiententemperaturmanagement"
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Oberflächen- oder intravasales Verfahren, Einmalpads bzw. -katheter als laufende Kosten, Schnittstelle zur Kerntemperaturmessung, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "STK: MPBetreibV (Fassung 2025) Anlage 1 – nichtimplantierbare aktive Produkte zur Therapie mittels Hypothermie (Wortlaut der amtlichen Fassung maßgeblich; in der Fassung von 2002/2017 Anlage 1 Nr. 1.8); Kontrollen nach § 12. Reine Wärmegeräte ohne Hypothermiefunktion fallen nicht darunter. MTK: nicht in Anlage 2 aufgeführt; eine eigenständige Körpertemperatur-Messfunktion ist im Einzelfall auf Anlage 2 zu prüfen.",
+    "intervals": "STK spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025); Wasserwechsel, Desinfektion des Wasserkreislaufs und Prüfung der Temperaturfühler nach Herstellerangabe."
+  },
+  "related": [
+    "thermoregulation",
+    "temperatursensor",
+    "regelkreis",
+    "patientenwaermesystem",
+    "stk",
+    "intensivmedizin"
+  ],
+  "sources": [
+    "erc-2021",
+    "mpbetreibv",
+    "kramme-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

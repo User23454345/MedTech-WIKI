@@ -1,0 +1,40 @@
+[
+  {
+    "id": "iso-8637-1",
+    "kind": "norm",
+    "title": "ISO 8637-1 – Extracorporeal systems for blood purification – Part 1: Haemodialysers, haemodiafilters, haemofilters and haemoconcentrators",
+    "publisher": "International Organization for Standardization (ISO); europäisch als EN ISO 8637-1",
+    "note": "Anforderungen und Prüfverfahren für Dialysatoren und Hämofilter; die Blutschlauchsysteme regelt ISO 8637-2. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-9360-1",
+    "kind": "norm",
+    "title": "ISO 9360-1 – Anaesthetic and respiratory equipment – Heat and moisture exchangers (HMEs) for humidifying respired gases in humans – Part 1: HMEs for use with minimum tidal volumes of 250 ml",
+    "publisher": "International Organization for Standardization (ISO)",
+    "note": "Anforderungen und Prüfverfahren für HME und HME-Filter; Teil 2 betrifft tracheotomierte Patienten. Die Norm befindet sich in Überarbeitung; jeweils gültige Fassung beachten."
+  },
+  {
+    "id": "iso-80601-2-74",
+    "kind": "norm",
+    "title": "ISO 80601-2-74 – Medical electrical equipment – Part 2-74: Particular requirements for basic safety and essential performance of respiratory humidifying equipment",
+    "publisher": "International Organization for Standardization (ISO) / International Electrotechnical Commission (IEC)",
+    "note": "Partikularnorm für aktive Atemgasbefeuchter; Medikamentenvernebler sind ausgenommen. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "aarc-humidification-2012",
+    "kind": "leitlinie",
+    "authors": "Restrepo RD, Walsh BK",
+    "title": "Humidification during invasive and noninvasive mechanical ventilation: 2012 (AARC Clinical Practice Guideline)",
+    "publisher": "Respiratory Care 57(5): 782–788",
+    "year": "2012"
+  },
+  {
+    "id": "f-gas-vo-2024-573",
+    "kind": "gesetz",
+    "title": "Verordnung (EU) 2024/573 des Europäischen Parlaments und des Rates über fluorierte Treibhausgase (F-Gas-Verordnung)",
+    "publisher": "Amtsblatt der Europäischen Union",
+    "year": "2024",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/573/oj",
+    "note": "Artikel 13 enthält eine Beschränkung der routinemäßigen Verwendung von Desfluran als Inhalationsanästhetikum mit Ausnahmen aus medizinischen Gründen."
+  }
+]

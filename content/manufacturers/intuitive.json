@@ -1,0 +1,51 @@
+{
+  "id": "intuitive",
+  "type": "manufacturer",
+  "title": "Intuitive Surgical",
+  "aliases": [
+    "Intuitive",
+    "Intuitive Surgical, Inc.",
+    "da Vinci"
+  ],
+  "category": "hersteller",
+  "summary": "US-amerikanischer Hersteller robotischer Assistenzsysteme für die minimalinvasive Chirurgie mit Sitz in Sunnyvale (Kalifornien), gegründet 1995. Bekanntestes Produkt ist das da-Vinci-System; mit Ion bietet Intuitive zudem ein robotisches System für die Bronchoskopie an.",
+  "headquarters": "Sunnyvale, USA",
+  "founded": "1995",
+  "website": "https://www.intuitive.com/",
+  "productLines": [
+    {
+      "device": "op-roboter",
+      "models": [
+        "da Vinci Xi",
+        "da Vinci X",
+        "da Vinci SP",
+        "da Vinci 5"
+      ],
+      "note": "Telemanipulator-Systeme für die minimalinvasive Weichteilchirurgie; da Vinci SP als Single-Port-System."
+    },
+    {
+      "device": "endoskop",
+      "models": [
+        "Ion"
+      ],
+      "note": "Robotisch geführter, dünner Katheter für die Biopsie peripherer Lungenherde (endoluminales System)."
+    }
+  ],
+  "body": "## Überblick\n\nIntuitive Surgical ist ein börsennotiertes US-Unternehmen mit Sitz in Sunnyvale, Kalifornien. Es hat mit dem **da-Vinci-System** die robotisch assistierte minimalinvasive Chirurgie maßgeblich etabliert [@hst-intuitive].\n\n## Geschichte in Stichpunkten\n\n* **1995** – Gründung des Unternehmens; Grundlagen der Telemanipulation stammen u. a. aus Forschungsarbeiten am SRI International [@hst-intuitive-history].\n* **1999/2000** – Markteinführung des ersten da-Vinci-Systems in Europa (1999) und FDA-Zulassung in den USA (2000).\n* **2000er/2010er** – Weiterentwicklungen da Vinci S, Si, Xi und X; zunehmende Verbreitung in Urologie, Gynäkologie und Allgemeinchirurgie.\n* **2018** – US-Markteinführung des Single-Port-Systems da Vinci SP.\n* **2019** – FDA-Freigabe des Ion-Systems für die Biopsie peripherer Lungenherde.\n* **2024** – FDA-Freigabe des da Vinci 5.\n\n## Aufbau eines da-Vinci-Systems\n\n| Komponente | Funktion |\n|---|---|\n| Chirurgenkonsole | Steuerung der Instrumente über Handgriffe; stereoskopische 3D-Sicht |\n| Patientenwagen | Roboterarme, die Endoskop und Instrumente durch Trokare führen |\n| Vision-System | Kamerasteuerung, Bildverarbeitung, Lichtquelle, Energieschnittstellen |\n\nDas System ist ein **Telemanipulator**: Es führt ausschließlich die Bewegungen der Chirurgin oder des Chirurgen aus, skaliert sie (Bewegungsskalierung) und filtert physiologischen Tremor. Die Instrumente besitzen abwinkelbare Spitzen mit zusätzlichen Freiheitsgraden. Für die Energieanwendung werden HF-Generatoren ([[hf-chirurgiegeraet]]) angebunden; die Visualisierung beruht auf Stereoendoskopen ([[endoskop]], [[optik]]).\n\n> [!vereinfacht] Der Roboter „operiert“ nicht selbstständig. Er überträgt Bewegungen der Hände auf die Instrumente, ähnlich einem sehr präzisen, ferngesteuerten Werkzeug.\n\n## Bedeutung für die Medizintechnik\n\nRobotische Systeme gehören zu den komplexesten Medizinprodukten im OP ([[op-roboter]]). Für die Medizintechnik relevant:\n\n* Instrumente sind wiederverwendbar mit begrenzter Anzahl an Einsätzen; ihre [[aufbereitung]] und [[sterilisation]] erfordert spezielle Spül- und Reinigungsschritte.\n* Service und Instandsetzung erfolgen in der Regel durch den Hersteller; der Betreiber ist für [[einweisung|Einweisungen]], Dokumentation und Bereitstellung im Rahmen der [[betreiberpflichten]] zuständig.\n* [[emv|Elektromagnetische Verträglichkeit]] und Ausfallsicherheit (Notfallprozeduren zum Abkoppeln des Systems) sind zentrale Sicherheitsthemen.\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "op-roboter",
+    "endoskop",
+    "hf-chirurgiegeraet",
+    "chirurgie",
+    "aufbereitung",
+    "medtronic",
+    "stryker",
+    "karl-storz"
+  ],
+  "sources": [
+    "hst-intuitive",
+    "hst-intuitive-history"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

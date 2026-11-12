@@ -1,0 +1,158 @@
+{
+  "id": "pwm",
+  "type": "term",
+  "title": "Pulsweitenmodulation (PWM)",
+  "aliases": [
+    "PWM",
+    "Pulsbreitenmodulation",
+    "Pulse-width modulation",
+    "Tastgrad",
+    "Duty Cycle",
+    "Taktung",
+    "H-Brücke",
+    "Vollbrücke",
+    "B6-Brücke",
+    "Wechselrichter"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Bei der Pulsweitenmodulation wird eine Last mit fester Frequenz schnell ein- und ausgeschaltet; über das Verhältnis von Ein- zu Periodendauer (Tastgrad) lässt sich die mittlere Spannung oder Leistung nahezu verlustfrei einstellen. PWM steuert Motoren von Turbinen und Pumpen, Heizelemente, Ventile und LEDs und ist Grundlage jedes Schaltnetzteils.",
+  "body": "## Prinzip\n\nBei der **Pulsweitenmodulation** (PWM) wird eine Gleichspannung U_B durch einen elektronischen Schalter (meist MOSFET oder IGBT) periodisch ein- und ausgeschaltet. Die Periodendauer T = 1/f bleibt konstant, verändert wird nur die Einschaltdauer t_ein. Das Verhältnis heißt **Tastgrad** (engl. *duty cycle*) [@mohan-2003] [@horowitz-hill-2015]:\n\n`D = t_ein / T` (0 … 100 %)\n\nDer arithmetische Mittelwert der Ausgangsspannung ist\n\n`Ū = D · U_B`\n\nEine träge Last – die Induktivität einer Motorwicklung, die Wärmekapazität eines [[heizelement|Heizelements]] oder das menschliche Auge bei einer LED – „sieht“ im Wesentlichen nur diesen Mittelwert.\n\n> [!beispiel] Ein Motor an 24 V wird mit D = 25 % angesteuert. Die mittlere Spannung beträgt `0,25 · 24 V = 6 V`. Bei D = 75 % sind es 18 V. Die Schaltfrequenz könnte z. B. 25 kHz betragen. Zahlen beispielhaft.\n\n## Warum PWM statt Vorwiderstand?\n\nEin linearer Steller (Vorwiderstand, Längstransistor) vernichtet die Differenzspannung als Wärme: `P_V = (U_B − U_Last) · I`. Ein Schalter dagegen ist entweder ganz eingeschaltet (kleiner Spannungsabfall, Leitverluste `P = I² · R_DS(on)`) oder ganz ausgeschaltet (kein Strom). Verluste entstehen hauptsächlich während der kurzen Umschaltvorgänge. Wirkungsgrade über 90 % sind deshalb üblich – entscheidend für akkubetriebene Geräte mit [[lithium-ionen-akku|Lithium-Ionen-Akku]] und für geringe Erwärmung im geschlossenen Gerätegehäuse [@mohan-2003].\n\n| Größe | Einfluss der Schaltfrequenz f |\n|---|---|\n| Schaltverluste | steigen proportional zu f |\n| Stromwelligkeit in einer Induktivität | sinkt mit f |\n| Hörbarkeit | oberhalb von etwa 20 kHz nicht mehr hörbar |\n| Elektromagnetische Störaussendung | steile Flanken erzeugen breitbandige Störungen, siehe [[emv]] |\n\nFür einen Tiefsetzsteller mit Induktivität L gilt für die Spitze-Spitze-Welligkeit des Stroms näherungsweise `ΔI = U_B · D · (1 − D) / (L · f)` – sie ist bei D = 50 % am größten [@mohan-2003].\n\n## Leistungsstufen\n\n| Topologie | Aufbau | Anwendung |\n|---|---|---|\n| Einzelschalter (Low-Side) | ein Transistor, Freilaufdiode | Heizelement, [[magnetventil|Magnetventil]], LED |\n| Halbbrücke | zwei Schalter übereinander | Tiefsetzsteller, eine Motorphase |\n| H-Brücke (Vollbrücke) | zwei Halbbrücken | Gleichstrommotor mit zwei Drehrichtungen, z. B. [[spindelantrieb|Spindelantrieb]] |\n| B6-Brücke (Drehstrombrücke) | drei Halbbrücken | [[bldc-motor|BLDC-Motor]] einer [[turbine|Turbine]] oder Pumpe |\n\nZwischen dem Ausschalten des einen und dem Einschalten des anderen Schalters einer Halbbrücke wird eine kurze **Totzeit** eingefügt, damit kein Querstrom durch beide Transistoren fließt. Ein Gate-Treiber setzt die Logiksignale des [[mikrocontroller|Mikrocontrollers]] in die nötigen Gatespannungen um; die PWM-Signale selbst erzeugen Timer-Einheiten des Mikrocontrollers.\n\n> [!vereinfacht] Bei einem BLDC-Motor ist PWM nur ein Teil der Ansteuerung: Die B6-Brücke schaltet die Phasen zusätzlich in der richtigen Reihenfolge um (Kommutierung), abhängig von der Rotorlage. Bei feldorientierter Regelung wird über PWM sogar ein nahezu sinusförmiger Phasenstrom erzeugt (Sinus- bzw. Raumzeiger-Modulation) [@schroeder-antriebe-2015].\n\n## PWM als Stellglied im Regelkreis\n\nPWM ist das typische **Stellglied** eines digitalen [[regelkreis|Regelkreises]]: Der Regler berechnet eine Stellgröße, der Timer setzt sie als Tastgrad um. In der Kette **[[beatmungsgeraet|Beatmungsgerät]] → [[turbine|Turbine]] → [[elektromotor|Elektromotor]] → [[drehzahlregelung|Drehzahlregelung]]** ist PWM die Stelle, an der die Information „mehr Druck“ in elektrische Energie übersetzt wird: Der Druckregler fordert mehr Drehzahl, der Drehzahlregler mehr Strom, der Stromregler einen größeren Tastgrad.\n\n## Anwendung in Geräten\n\n| Gerät / Komponente | Aufgabe der PWM |\n|---|---|\n| [[beatmungsgeraet]], [[cpap-geraet]], [[high-flow-geraet]] | Ansteuerung des Turbinenmotors |\n| [[infusionspumpe]], [[spritzenpumpe]] | Motor bzw. [[schrittmotor|Schrittmotor]]-Stromregelung |\n| [[proportionalventil]] | Stromregelung der Spule, häufig mit überlagertem Dither gegen Haftreibung |\n| [[magnetventil]] | Absenken auf einen kleineren Haltestrom nach dem Anzug |\n| [[inkubator]], [[infusionswaermer]], [[atemgasbefeuchter]] | Leistungsstellung von Heizelementen (oft langsame PWM bzw. Schwingungspaketsteuerung) |\n| [[op-leuchte]], [[phototherapiegeraet]] | Dimmen von LED-Leuchtmitteln |\n| [[medizinisches-netzteil]] | Schaltregler: PWM des Leistungsschalters regelt die Ausgangsspannung |\n\n> [!belegt] Schaltwandler, Brückenschaltungen und die Abhängigkeit von Verlusten und Welligkeit von Tastgrad und Schaltfrequenz sind Standardinhalte der Leistungselektronik [@mohan-2003].\n\n> [!praxis] Eine PWM-Ausgangsspannung lässt sich mit einem einfachen Multimeter nicht sinnvoll messen; je nach Messverfahren zeigt es den Mittelwert, einen (oft nicht korrekten) Effektivwert oder einen nicht aussagekräftigen Wert an. Für die Diagnose sind ein Oszilloskop mit geeignetem Tastkopf und die Herstellerdokumentation nötig. Bei Pfeifgeräuschen aus Motoren oder Spulen liegt oft eine hörbare PWM-Frequenz oder ein mechanischer Defekt vor.",
+  "related": [
+    "drehzahlregelung",
+    "bldc-motor",
+    "elektromotor",
+    "regelkreis",
+    "mikrocontroller",
+    "medizinisches-netzteil",
+    "emv",
+    "proportionalventil"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "drehzahlregelung",
+      "pwm",
+      "bldc-motor"
+    ],
+    [
+      "medizinisches-netzteil",
+      "pwm",
+      "transformator",
+      "galvanische-trennung"
+    ]
+  ],
+  "diagram": {
+    "title": "PWM-Motoransteuerung",
+    "caption": "Funktionsschema einer PWM-Leistungsstufe für einen BLDC-Motor; kein konkretes Gerät.",
+    "width": 900,
+    "height": 320,
+    "nodes": [
+      {
+        "id": "mcu",
+        "label": "Mikrocontroller\n(Timer/PWM)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "gd",
+        "label": "Gate-Treiber",
+        "kind": "process",
+        "x": 300,
+        "y": 90
+      },
+      {
+        "id": "br",
+        "label": "B6-Brücke\n(MOSFETs)",
+        "ref": "pwm",
+        "kind": "actuator",
+        "x": 500,
+        "y": 90
+      },
+      {
+        "id": "mot",
+        "label": "BLDC-Motor",
+        "ref": "bldc-motor",
+        "kind": "actuator",
+        "x": 700,
+        "y": 90
+      },
+      {
+        "id": "dc",
+        "label": "Versorgung\n(Netzteil/Akku)",
+        "ref": "medizinisches-netzteil",
+        "kind": "source",
+        "x": 500,
+        "y": 250
+      },
+      {
+        "id": "shunt",
+        "label": "Strommessung\n(Shunt + OPV)",
+        "ref": "operationsverstaerker",
+        "kind": "sensor",
+        "x": 300,
+        "y": 250
+      },
+      {
+        "id": "turb",
+        "label": "Turbine",
+        "ref": "turbine",
+        "kind": "output",
+        "x": 700,
+        "y": 250
+      }
+    ],
+    "edges": [
+      {
+        "from": "mcu",
+        "to": "gd",
+        "kind": "signal",
+        "label": "PWM"
+      },
+      {
+        "from": "gd",
+        "to": "br",
+        "kind": "signal"
+      },
+      {
+        "from": "dc",
+        "to": "br",
+        "kind": "power",
+        "label": "U_B"
+      },
+      {
+        "from": "br",
+        "to": "mot",
+        "kind": "power",
+        "label": "Ū = D·U_B"
+      },
+      {
+        "from": "mot",
+        "to": "turb",
+        "kind": "energy",
+        "label": "Drehmoment"
+      },
+      {
+        "from": "br",
+        "to": "shunt",
+        "kind": "signal"
+      },
+      {
+        "from": "shunt",
+        "to": "mcu",
+        "kind": "signal",
+        "label": "I_ist"
+      }
+    ]
+  },
+  "sources": [
+    "mohan-2003",
+    "horowitz-hill-2015",
+    "schroeder-antriebe-2015"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "iso-80601-2-55",
+  "type": "standard",
+  "title": "ISO 80601-2-55",
+  "code": "ISO 80601-2-55",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-55: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Atemgasmonitoren",
+  "scope": "Legt besondere Anforderungen an Basissicherheit und wesentliche Leistungsmerkmale von Geräten fest, die Kohlendioxid, Sauerstoff und Anästhesiegase im Atemgas von Patienten kontinuierlich messen.",
+  "aliases": [
+    "DIN EN ISO 80601-2-55",
+    "EN ISO 80601-2-55",
+    "Atemgasmonitor-Norm",
+    "80601-2-55"
+  ],
+  "category": "normen",
+  "summary": "Die ISO 80601-2-55 ist die besondere Festlegung für Atemgasmonitore, also Kapnometer sowie Monitore für Sauerstoff und Anästhesiegase. Sie regelt Messgenauigkeit, Ansprechzeiten, Alarme und den sicheren Umgang mit abgesaugtem Probengas bei Haupt- und Nebenstromverfahren.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **ISO 80601-2-55** gilt für **Atemgasmonitore** (englisch *respiratory gas monitors*): Geräte oder Module, die die Konzentration von Gasen im Atemgas eines Patienten fortlaufend messen und anzeigen [@iso-80601-2-55]. Erfasst werden insbesondere:\n\n| Messgröße | typisches Messprinzip | Anwendung |\n|---|---|---|\n| Kohlendioxid (CO₂) | Infrarotabsorption ([[co2-sensor|NDIR]]) | [[kapnometer|Kapnometrie/Kapnographie]] |\n| Sauerstoff (O₂) | paramagnetisch oder elektrochemisch ([[sauerstoffsensor]]) | in- und exspiratorische O₂-Konzentration |\n| Lachgas, volatile Anästhetika | Infrarotabsorption bei mehreren Wellenlängen | Narkoseüberwachung |\n\nDie Vorsilbe 80601 kennzeichnet die gemeinsame Erarbeitung durch ISO und IEC; federführend ist hier die ISO, deshalb lautet die Bezeichnung „ISO 80601“.\n\n## Zentrale Konzepte und Anforderungen\n\n### Haupt- und Nebenstromverfahren\n\n* **Hauptstrom (mainstream):** Die Messküvette sitzt direkt im Atemsystem zwischen Tubus und Y-Stück. Vorteil: sehr schnelle Messung, keine Gasabsaugung; Nachteil: zusätzlicher Totraum und Gewicht am Atemweg.\n* **Nebenstrom (sidestream):** Eine Pumpe saugt kontinuierlich eine kleine Probengasmenge über einen dünnen Schlauch zum Analysator ab. Vorteil: auch bei nicht intubierten Patienten einsetzbar; Nachteile: Zeitverzögerung, Gefahr der Verstopfung durch Kondenswasser, Probengas muss sicher abgeführt werden.\n\n> [!vereinfacht] Die Messung beruht für CO₂ und Anästhesiegase auf dem [[lambert-beer|Lambert-Beer-Gesetz]]: Je mehr Gasmoleküle im Strahlengang, desto stärker wird Infrarotlicht einer charakteristischen Wellenlänge absorbiert.\n\n### Leistungsmerkmale\n\nDie Norm verlangt, dass der Hersteller die Leistungsmerkmale angibt und nachweist, u. a.:\n\n* **Messgenauigkeit** über den angegebenen Messbereich und unter Einfluss von Störgasen (z. B. Wasserdampf, Lachgas, andere Anästhetika),\n* **Drift** über die Zeit und Angaben zur [[kalibrierung|Kalibrierung]] bzw. Nullpunktabgleich (siehe [[sensordrift]]),\n* **Ansprechzeit** (Anstiegszeit und Verzögerungszeit des Gesamtsystems) – entscheidend für eine formgetreue Kapnographie-Kurve,\n* bei Nebenstromgeräten die **Probengasflussrate** und deren Einfluss auf den Patienten, vor allem bei Neugeborenen mit kleinen Atemzugvolumina.\n\n> [!beispiel] Typische Nebenstrom-Absaugraten liegen bei etwa 50 bis 200 ml/min. Bei einem Neugeborenen mit einem Atemzugvolumen von wenigen Millilitern pro Kilogramm kann eine hohe Absaugrate einen merklichen Anteil des Atemgases entziehen und die Kurve verfälschen (Verdünnung mit Frischgas). Die tatsächlichen Werte sind den Herstellerangaben zu entnehmen.\n\n> [!vereinfacht] Die Gesamtverzögerung eines Nebenstromgeräts setzt sich aus der **Transportzeit** durch den Probenschlauch (abhängig von Schlauchlänge, -querschnitt und Absaugrate) und der **Anstiegszeit** des Sensors zusammen. Eine lange Verzögerung verschiebt die Kurve zeitlich, eine lange Anstiegszeit rundet das Plateau ab und lässt das endtidale CO₂ bei hoher Atemfrequenz zu niedrig erscheinen.\n\n### Sicherheit und Alarme\n\n* Alarme für Grenzwerte (z. B. endtidales CO₂, inspiratorisches O₂, Anästhetikakonzentration) nach [[iec-60601-1-8]], siehe [[alarmsystem]],\n* technische Alarme bei Okklusion der Probenleitung oder Sensorstörung,\n* Vorgaben zur **Rückführung oder Ableitung des Probengases**, damit Anästhesiegase den Arbeitsplatz nicht belasten,\n* Kennzeichnung, welche Anästhetika das Gerät erkennt und ob eine automatische Agens-Identifikation vorhanden ist.\n\n> [!hinweis] Konkrete Genauigkeitsgrenzen und Prüfgaszusammensetzungen sind der jeweils gültigen Fassung zu entnehmen.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Rolle |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Basissicherheit |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-8]] | [[emv|EMV]], Alarmsysteme |\n| Besondere Festlegung | ISO 80601-2-55 | Atemgasmonitor |\n| Verwandte besondere Festlegungen | [[iso-80601-2-13]] | Anästhesiearbeitsplatz, der Atemgasüberwachung voraussetzt |\n| | [[iso-80601-2-12]] | Intensivbeatmungsgeräte |\n| Gesamtgerät | [[iec-80601-2-49]] | wenn der Atemgasmonitor Teil eines Multiparametermonitors ist |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen Querempfindlichkeiten, Ansprechzeiten und Kalibrierintervalle nachweisen und dokumentieren. Bei Nebenstromgeräten gehören Wasserfallen, Filter und Probenleitungen zum Systemdesign.\n\n**Betreiber** müssen die Herstellerangaben zu Kalibrierung, Wasserfallen, Verbrauchsmaterial und Prüfungen umsetzen. Bei [[anaesthesiegeraet|Anästhesiearbeitsplätzen]] ist die Gasüberwachung sicherheitsrelevant; die Prüfung im Rahmen der [[stk]] bzw. [[wartung]] erfolgt mit Prüfgasen definierter Zusammensetzung.\n\n> [!praxis] Häufige Ursachen für Fehlanzeigen sind volle Wasserfallen, geknickte oder verstopfte Probenleitungen, Leckagen am Anschluss (Verdünnung mit Raumluft → zu niedriges etCO₂) und überfällige Nullpunktabgleiche. Bei abgeflachter Kapnographie-Kurve lohnt sich zuerst ein Blick auf die Probenleitung (siehe [[fehlersuche]]).\n\n## Betroffene Geräte\n\n* [[kapnometer]], Gasmodule von [[patientenmonitor|Patientenmonitoren]] und [[anaesthesiegeraet|Anästhesiearbeitsplätzen]]\n* Gasmessung in [[beatmungsgeraet|Intensivbeatmungsgeräten]] und [[transportbeatmungsgeraet|Transportbeatmungsgeräten]], soweit vorhanden\n* Grundlagen: [[co2-sensor]], [[sauerstoffsensor]], [[gasaustausch]], [[lambert-beer]]\n* Fachbereiche: [[anaesthesiologie]], [[intensivmedizin]], [[notfallmedizin]]\n",
+  "related": [
+    "kapnometer",
+    "anaesthesiegeraet",
+    "patientenmonitor",
+    "beatmungsgeraet",
+    "co2-sensor",
+    "sauerstoffsensor",
+    "lambert-beer",
+    "gasaustausch",
+    "iso-80601-2-13",
+    "iso-80601-2-12",
+    "iec-80601-2-49",
+    "sensordrift"
+  ],
+  "sources": [
+    "iso-80601-2-55",
+    "iec-60601-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

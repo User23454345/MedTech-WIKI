@@ -1,0 +1,77 @@
+{
+  "id": "roche-diagnostics",
+  "type": "manufacturer",
+  "title": "Roche Diagnostics",
+  "aliases": [
+    "Roche",
+    "F. Hoffmann-La Roche AG",
+    "Roche Diagnostics International AG",
+    "Boehringer Mannheim",
+    "cobas",
+    "Accu-Chek"
+  ],
+  "category": "hersteller",
+  "summary": "Roche Diagnostics ist die Diagnostiksparte des Schweizer Pharma- und Diagnostikkonzerns Roche mit Sitz in Basel. Sie stellt Laborsysteme für klinische Chemie, Immunologie, Gerinnung, Molekulardiagnostik und Pathologie sowie patientennahe Messsysteme her.",
+  "headquarters": "Basel, Schweiz",
+  "founded": "1896",
+  "website": "https://www.roche.com/",
+  "productLines": [
+    {
+      "device": "klinisch-chemischer-analysator",
+      "models": [
+        "cobas pro",
+        "cobas c 311"
+      ],
+      "note": "Modulare Systeme für klinische Chemie und Immunologie; cobas c 311 als älteres Kompaktsystem, cobas pro als aktuelle modulare Plattform."
+    },
+    {
+      "device": "blutgasanalysator",
+      "models": [
+        "cobas b 123"
+      ]
+    },
+    {
+      "device": "gerinnungsanalysator",
+      "models": [
+        "cobas t 511",
+        "cobas t 711",
+        "CoaguChek"
+      ],
+      "note": "CoaguChek: patientennahe INR-Messung."
+    },
+    {
+      "device": "blutzuckermessgeraet",
+      "models": [
+        "Accu-Chek Inform II"
+      ],
+      "note": "Klinik-POCT-System; für die Selbstkontrolle weitere Accu-Chek-Geräte."
+    },
+    {
+      "device": "insulinpumpe",
+      "models": [
+        "Accu-Chek Solo"
+      ],
+      "note": "Schlauchlose Mikropumpe (Patch-Pumpe) der Marke Accu-Chek über Roche Diabetes Care."
+    }
+  ],
+  "body": "## Überblick\n\n**Roche** ist ein Schweizer Gesundheitskonzern mit den Divisionen Pharma und Diagnostics; Konzernsitz ist Basel [@roche-web]. Die Division **Roche Diagnostics** ist einer der weltweit größten Anbieter von In-vitro-Diagnostika. Wichtige Standorte in Deutschland sind Mannheim und Penzberg; in der Schweiz u. a. Rotkreuz.\n\n## Geschichte in Stichpunkten\n\n* **1896:** Gründung von F. Hoffmann-La Roche in Basel durch Fritz Hoffmann-La Roche.\n* **1998:** Übernahme der Corange-Gruppe mit **Boehringer Mannheim** – dadurch starker Ausbau der Diagnostik (Laborsysteme, Blutzuckermessung) und Erwerb der Standorte Mannheim und Penzberg.\n* **2000er Jahre:** Erweiterung u. a. um Insulinpumpen (Disetronic) und Gewebediagnostik (Ventana).\n* **heute:** Gerätefamilien unter der Dachmarke **cobas** (Labor und patientennah) sowie **Accu-Chek** (Diabetes Care).\n\n## Geschäftsbereiche der Diagnostik\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Core Lab | [[klinisch-chemischer-analysator|Klinische Chemie]], Immunoassays, [[gerinnungsanalysator|Gerinnung]], Laborautomation |\n| Molekulardiagnostik | PCR-Systeme, Virologie, Blutspender-Screening |\n| Near Patient Care | [[blutgasanalysator|Blutgasanalyse]], Klinik-[[blutzuckermessgeraet|Blutzuckermessung]], INR-Selbstmessung |\n| Pathologie | Gewebefärbung und digitale Pathologie |\n| Diabetes Care | Blutzuckermessung, [[insulinpumpe|Insulinpumpen]] |\n\n## Bedeutung für die Medizintechnik\n\nRoche-Systeme sind in vielen Krankenhauslaboren und Großlaboren Teil der Grundausstattung. Laboranalysatoren sind In-vitro-Diagnostika und unterliegen der [[ivdr|IVDR]], nicht der [[mdr|MDR]]. Für die [[labormedizin]] ist neben der Gerätetechnik die Qualitätssicherung entscheidend (interne und externe Qualitätskontrolle, [[kalibrierung]]).\n\n> [!hinweis] Laboranalysatoren ohne Patientenkontakt werden in der Regel nach der Gerätesicherheitsnorm für Mess- und Laborgeräte [[iec-61010-1|IEC 61010-1]] ausgelegt, nicht nach [[iec-60601-1|IEC 60601-1]] für medizinische elektrische Geräte. Welche Normen zugrunde liegen, ergibt sich aus der Konformitätserklärung des Herstellers.\n\n> [!praxis] Bei POCT-Geräten wie Blutzucker- oder Blutgasmessgeräten liegt die Verantwortung für Qualitätskontrolle oft in der Station, die technische Betreuung aber bei Labor oder Medizintechnik – Zuständigkeiten sollten schriftlich geregelt sein.\n\n## Betrieb und Service\n\nGroßanalysatoren werden meist im Rahmen von Reagenzienmiet- oder Serviceverträgen betrieben, bei denen Gerät, Reagenzien, Wartung und Software-Updates gebündelt sind. Fernwartung und Fernüberwachung des Gerätestatus sind üblich; sie erfordern eine abgestimmte IT-Anbindung (Netzwerksegmentierung, Schnittstellen zum Laborinformationssystem, z. B. über [[hl7-fhir|HL7]]).\n\n## Einordnung im Markt\n\nWichtige Wettbewerber in der Labordiagnostik sind [[abbott]], [[siemens-healthineers]], [[sysmex]] (Hämatologie) und [[bd]] (Präanalytik).",
+  "related": [
+    "klinisch-chemischer-analysator",
+    "gerinnungsanalysator",
+    "blutgasanalysator",
+    "blutzuckermessgeraet",
+    "insulinpumpe",
+    "labormedizin",
+    "ivdr",
+    "kalibrierung",
+    "abbott",
+    "sysmex",
+    "siemens-healthineers",
+    "diabetologie"
+  ],
+  "sources": [
+    "roche-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

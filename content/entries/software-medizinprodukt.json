@@ -1,0 +1,59 @@
+{
+  "id": "software-medizinprodukt",
+  "type": "term",
+  "title": "Software als Medizinprodukt",
+  "aliases": [
+    "Medical Device Software",
+    "MDSW",
+    "Software as a Medical Device",
+    "SaMD",
+    "Medizinproduktesoftware",
+    "Regel 11",
+    "Stand-alone-Software",
+    "DiGA"
+  ],
+  "category": "recht",
+  "summary": "Software ist ein Medizinprodukt, wenn sie nach der Zweckbestimmung des Herstellers medizinischen Zwecken für einzelne Patienten dient. Eigenständige Software wird nach Regel 11 der MDR klassifiziert und muss nach IEC 62304, ISO 14971 und den Cybersicherheitsanforderungen der MDR entwickelt werden.",
+  "body": "## Begriff und Abgrenzung\n\nSoftware kann selbst ein [[medizinprodukt|Medizinprodukt]] sein, wenn der Hersteller ihr eine **medizinische [[zweckbestimmung|Zweckbestimmung]]** gibt – etwa Diagnose, Überwachung, Vorhersage, Prognose oder Behandlung einer Krankheit. Man unterscheidet:\n\n| Kategorie | Beschreibung | Beispiele |\n|---|---|---|\n| **Eigenständige Software** (im Sprachgebrauch der MDCG *Medical Device Software*, MDSW; international nach IMDRF *Software as a Medical Device*, SaMD) | läuft auf allgemeiner Hardware (PC, Server, Smartphone, Cloud) und ist selbst das Medizinprodukt | Befundungssoftware mit Messfunktionen, Dosisberechnung, KI-gestützte Bilderkennung, Apps zur Insulindosierung |\n| **Software in einem Medizinprodukt** (*embedded*) | steuert oder beeinflusst ein Gerät; Teil des Produkts und mit ihm bewertet | Firmware eines [[beatmungsgeraet|Beatmungsgeräts]], einer [[infusionspumpe|Infusionspumpe]] oder eines [[defibrillator|Defibrillators]] auf dem [[mikrocontroller]] |\n| **Keine Medizinproduktesoftware** | ohne medizinische Zweckbestimmung | reine Verwaltungs- und Abrechnungssoftware, allgemeine Kommunikation, einfache Archivierung ohne Datenveränderung |\n\n> [!belegt] Die MDCG-Leitlinie 2019-11 beschreibt mit Entscheidungsbäumen, wann Software als Medizinprodukt (oder als In-vitro-Diagnostikum) zu qualifizieren ist und wie sie zu klassifizieren ist. Entscheidend ist, ob die Software Daten zum Nutzen einzelner Patient:innen **verarbeitet, analysiert, erzeugt oder verändert** – reines Speichern, Archivieren, verlustfreies Komprimieren oder Übertragen genügt nicht [@mdcg-2019-11].\n\nBei Software zur Auswertung von Laborproben greift statt der [[mdr|MDR]] die [[ivdr|IVDR]] [@ivdr-2017].\n\n## Klassifizierung nach Regel 11 MDR\n\nMedizinproduktesoftware – insbesondere eigenständige Software – wird nach **Regel 11** in Anhang VIII der MDR klassifiziert [@mdr-2017]. Sinngemäß gilt:\n\n| Funktion der Software | Klasse |\n|---|---|\n| liefert Informationen für diagnostische oder therapeutische Entscheidungen | **IIa** |\n| … wenn diese Entscheidungen eine schwerwiegende Verschlechterung des Gesundheitszustands oder einen chirurgischen Eingriff verursachen können | **IIb** |\n| … wenn diese Entscheidungen den Tod oder eine irreversible Verschlechterung verursachen können | **III** |\n| überwacht physiologische Prozesse | **IIa** |\n| … überwacht Vitalparameter, deren Veränderung zu einer unmittelbaren Gefahr führen kann | **IIb** |\n| alle sonstige Software | **I** |\n\nNach den Durchführungsvorschriften in Anhang VIII gilt außerdem: Software, die ein Gerät steuert oder dessen Anwendung beeinflusst, fällt in **dieselbe Klasse wie das Gerät** [@mdr-2017].\n\n> [!vereinfacht] Regel 11 führt dazu, dass viele Apps und Programme, die unter der alten Richtlinie Klasse I waren, unter der MDR mindestens Klasse IIa sind und damit eine [[benannte-stelle|Benannte Stelle]] benötigen. Beispiele und Grenzfälle erläutern die MDCG-Leitlinien [@mdcg-2019-11] [@mdcg-2021-24].\n\n## Anforderungen an Software\n\n### Software-Lebenszyklus nach IEC 62304\n\nAnhang I der MDR verlangt, dass Software nach dem Stand der Technik unter Berücksichtigung von Entwicklungslebenszyklus, Risikomanagement, Verifizierung und Validierung entwickelt wird. Die zentrale Norm dafür ist [[iec-62304]] (europäisch EN 62304) [@iec-62304]. Sie teilt Software in **Sicherheitsklassen** ein:\n\n| Sicherheitsklasse | mögliche Folge eines Softwarefehlers | Dokumentationstiefe |\n|---|---|---|\n| A | keine Verletzung möglich | gering |\n| B | nicht schwerwiegende Verletzung möglich | mittel |\n| C | Tod oder schwere Verletzung möglich | hoch (u. a. detailliertes Design, Unit-Verifizierung) |\n\nDie Sicherheitsklasse nach IEC 62304 ist **nicht dasselbe** wie die Risikoklasse nach MDR – sie steuert den Entwicklungsaufwand, nicht das Konformitätsbewertungsverfahren.\n\n### Weitere Normen und Leitlinien\n\n* **Risikomanagement** nach [[iso-14971]] – inklusive Gefährdungen durch Softwarefehler, falsche Algorithmen und Fehlbedienung,\n* **Gebrauchstauglichkeit** nach [[iec-62366-1]] (vgl. [[gebrauchstauglichkeit]]),\n* **Qualitätsmanagement** nach [[iso-13485]],\n* **Produktsicherheit eigenständiger Gesundheitssoftware** nach IEC 82304-1 [@iec-82304-1],\n* **Cybersicherheit**: Anhang I MDR fordert Schutz vor unbefugtem Zugriff; die MDCG-Leitlinie 2019-16 konkretisiert dies [@mdcg-2019-16],\n* **Interoperabilität** mit Standards wie [[dicom|DICOM]] und [[hl7-fhir|HL7 FHIR]].\n\n## Software-Updates und Änderungen\n\nJede Änderung muss vom Hersteller bewertet werden: Fehlerbehebungen (*Patches*) sind oft geringfügig, neue Funktionen oder geänderte Algorithmen können dagegen eine erneute Konformitätsbewertung erfordern. Für Betreiber gilt: Updates nur nach Herstellerfreigabe einspielen, die Version dokumentieren und – wenn sich die Bedienung relevant ändert – erneut [[einweisung|einweisen]].\n\n> [!hinweis] Lernende KI-Systeme stellen das klassische Modell „zertifizierter, eingefrorener Stand“ vor Herausforderungen. Neben der MDR ist für KI-basierte Medizinprodukte inzwischen auch die EU-KI-Verordnung zu beachten; das Zusammenspiel beider Regelwerke ist Gegenstand laufender Leitlinienarbeit.\n\n## Digitale Gesundheitsanwendungen (DiGA)\n\nIn Deutschland können bestimmte Software-Medizinprodukte niedriger Risikoklassen (ursprünglich Klasse I und IIa) nach Prüfung durch das BfArM als **digitale Gesundheitsanwendung (DiGA)** in das DiGA-Verzeichnis (§ 139e SGB V) aufgenommen und dann zulasten der gesetzlichen Krankenversicherung verordnet werden [@bfarm]. Voraussetzung ist neben der CE-Kennzeichnung u. a. der Nachweis positiver Versorgungseffekte (alternativ zunächst eine vorläufige Aufnahme zur Erprobung) sowie die Erfüllung von Anforderungen an Datenschutz und Informationssicherheit.\n\n## Anwendung in Geräten und Betrieb\n\nSoftware ist in nahezu allen modernen Geräten sicherheitsrelevant:\n\n* **Regelalgorithmen** in [[beatmungsgeraet|Beatmungsgeräten]] (Druck- und Flowregelung, vgl. [[regelkreis]] und [[drehzahlregelung]] der [[turbine]]) und in [[infusionspumpe|Infusionspumpen]] (Dosisfehlerreduktion durch Medikamentenbibliotheken),\n* **Signalverarbeitung** im [[patientenmonitor|Patientenmonitor]], im [[ekg-geraet|EKG-Gerät]] und im [[pulsoxymeter|Pulsoxymeter]] (Filterung, Arrhythmieerkennung, [[alarmsystem|Alarmlogik]]),\n* **Bildrekonstruktion** in [[computertomograph|CT]] und [[mrt|MRT]],\n* **Therapieplanung** in der [[strahlentherapie|Strahlentherapie]] (Bestrahlungsplanung für den [[linearbeschleuniger|Linearbeschleuniger]]).\n\nFür die Medizintechnik bedeutet das: Software-Stände gehören in das [[bestandsverzeichnis|Bestandsverzeichnis]] bzw. die Gerätedatenbank, sicherheitsrelevante Updates werden wie Sicherheitsinformationen der Hersteller behandelt, und vernetzte Geräte müssen in das IT-Sicherheitskonzept des Hauses (Netzsegmentierung, Patch-Management) eingebunden werden.\n\n> [!praxis] Ein häufiger Stolperstein ist die Eigenentwicklung kleiner Hilfsprogramme in Kliniken, z. B. Tabellen zur Dosisberechnung. Sobald solche Werkzeuge Patientendaten für Therapieentscheidungen verarbeiten, sollte geprüft werden, ob sie als Medizinprodukt einzustufen sind und welche Pflichten daraus folgen.\n",
+  "related": [
+    "mdr",
+    "ivdr",
+    "iec-62304",
+    "iso-14971",
+    "iec-62366-1",
+    "risikoklassen",
+    "zweckbestimmung",
+    "mikrocontroller",
+    "dicom",
+    "hl7-fhir",
+    "alarmsystem",
+    "patientenmonitor"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "mikrocontroller",
+      "software-medizinprodukt",
+      "iec-62304",
+      "iso-14971"
+    ],
+    [
+      "software-medizinprodukt",
+      "zweckbestimmung",
+      "risikoklassen",
+      "konformitaetsbewertung"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "ivdr-2017",
+    "mdcg-2019-11",
+    "mdcg-2021-24",
+    "iec-62304",
+    "iec-82304-1",
+    "mdcg-2019-16",
+    "bfarm"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

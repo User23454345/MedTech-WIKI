@@ -1,0 +1,152 @@
+{
+  "id": "kraftsensor",
+  "type": "term",
+  "title": "Kraftsensor (Dehnungsmessstreifen)",
+  "aliases": [
+    "Dehnungsmessstreifen",
+    "DMS",
+    "Kraftaufnehmer",
+    "Wägezelle",
+    "strain gauge",
+    "load cell",
+    "force sensor",
+    "Kraftmessdose"
+  ],
+  "category": "sensorik",
+  "summary": "Sensor, der Kraft über die elastische Verformung eines Messkörpers und die dadurch verursachte Widerstandsänderung aufgeklebter Dehnungsmessstreifen in einer Wheatstone-Brücke misst. Eingesetzt in Spritzenpumpen, Bilanzierwaagen, Bett- und Lifterwaagen.",
+  "body": "## Begriff\n\nEin **Kraftsensor** wandelt eine mechanische Kraft in ein elektrisches Signal. Die in Medizingeräten am weitesten verbreitete Bauform ist der **Kraftaufnehmer mit Dehnungsmessstreifen** (DMS, englisch *strain gauge*), oft als **Wägezelle** (*load cell*) ausgeführt. Ein elastischer Verformungskörper dehnt sich unter Last geringfügig; auf ihm aufgeklebte DMS ändern dabei ihren elektrischen Widerstand [@hering-2018] [@fraden-2016]. Dasselbe Prinzip – in Silizium integriert – steckt im [[drucksensor|piezoresistiven Drucksensor]].\n\n## Physikalische Grundlagen\n\n### Vom Kraft- zum Dehnungssignal\n\nIm elastischen Bereich gilt das Hookesche Gesetz: Die mechanische Spannung σ im Verformungskörper ist der Dehnung ε proportional,\n\n`σ = E · ε`  mit  `σ = F / A`\n\n(E: Elastizitätsmodul, A: belasteter Querschnitt). Verformungskörper werden so ausgelegt, dass die Dehnung bei Nennlast typischerweise im Bereich von etwa 1 000 µm/m (1 ‰) liegt – groß genug für ein gutes Signal, klein genug für Linearität und Dauerfestigkeit.\n\n### Widerstandsänderung des DMS\n\nEin Metallfolien-DMS besteht aus einem mäanderförmigen Leiter (z. B. Konstantan) auf einer Trägerfolie. Für seinen Widerstand gilt `R = ρ · l / A`. Bei Dehnung wird der Leiter länger und dünner; die relative Widerstandsänderung ist der Dehnung proportional:\n\n`ΔR / R = k · ε`\n\nDer **k-Faktor** liegt bei Metall-DMS bei etwa 2 und ist überwiegend geometrisch bedingt. Halbleiter-DMS erreichen deutlich höhere k-Faktoren, sind aber stärker temperaturabhängig [@hering-2018].\n\n> [!beispiel] Bei ε = 1 000 µm/m und k = 2 ergibt sich ΔR / R = 0,2 %. Ein 350-Ω-DMS ändert seinen Widerstand also nur um 0,7 Ω – deshalb ist eine Brückenschaltung unverzichtbar.\n\n### Wheatstone-Brücke\n\nDie kleinen Widerstandsänderungen werden in einer **Wheatstone-Brücke** ausgewertet, die mit der Spannung U₀ gespeist wird ([[spannung-strom-widerstand]]). Je nach Anzahl aktiver DMS gilt näherungsweise:\n\n| Schaltung | aktive DMS | Ausgangsspannung | Bemerkung |\n|---|---|---|---|\n| Viertelbrücke | 1 | `U_a ≈ U₀ · k · ε / 4` | einfach, temperaturempfindlich |\n| Halbbrücke | 2 (gegensinnig) | `U_a ≈ U₀ · k · ε / 2` | Temperaturkompensation durch gleichartige DMS |\n| Vollbrücke | 4 (paarweise gegensinnig) | `U_a ≈ U₀ · k · ε` | Standard bei Wägezellen; höchstes Signal, beste Kompensation |\n\nKraftaufnehmer werden mit ihrem **Kennwert** in mV/V spezifiziert, also Ausgangsspannung bei Nennlast pro Volt Speisespannung.\n\n> [!beispiel] Eine Wägezelle mit einem Kennwert von 2 mV/V liefert bei U₀ = 5 V und Nennlast 10 mV. Bei einer Auflösung von 1/3 000 des Messbereichs muss die Elektronik also Signaländerungen von wenigen Mikrovolt sicher erkennen – Aufgabe des [[instrumentenverstaerker|Instrumentenverstärkers]] und eines hochauflösenden [[analog-digital-wandler|A/D-Wandlers]].\n\n> [!vereinfacht] Die Brückengleichungen sind Näherungen für kleine ΔR/R. Reale Aufnehmer enthalten zusätzliche Abgleich- und Kompensationswiderstände für Nullpunkt, Temperaturgang und Kennwert, die der Hersteller im Werk einstellt.\n\n## Bauformen und Kenngrößen\n\n| Bauform | Typischer Einsatz |\n|---|---|\n| Biegebalken | kleine bis mittlere Lasten, Plattformwaagen, Pumpenantriebe |\n| Scherstab / Scherbalken | Bettwaagen, Lifterwaagen |\n| S-Zugkraftaufnehmer | Zug- und Druckkräfte, z. B. in Hebezeugen |\n| Membran- oder Knopfaufnehmer | kompakte Druckkraftmessung, z. B. am Spritzenkolben |\n\nWichtige Fehlergrößen sind Nullpunkt- und Kennwertdrift mit der Temperatur, **Kriechen** (langsame Signaländerung unter konstanter Last), Hysterese, Nichtlinearität und Querkrafteinfluss. Überlast kann den Verformungskörper bleibend verformen; viele Aufnehmer haben deshalb mechanische Anschläge. Zur Quantifizierung siehe [[messunsicherheit]].\n\n## Anwendung in Geräten\n\n| Gerät | Aufgabe des Kraftsensors |\n|---|---|\n| [[spritzenpumpe]] | Kraft auf den Spritzenkolben – Erkennung eines Förderdruckanstiegs als [[okklusionsalarm|Okklusion]] |\n| [[infusionspumpe]] | Kraft der Schlauchwand am Pumpensegment als Maß für den Leitungsdruck (je nach Bauart) |\n| [[crrt-geraet]] | gravimetrische Bilanzierung: Waagen für Substitutions-, Dialysat- und Effluentbeutel |\n| [[pflegebett]] | integrierte Bettwaage, Erkennung des Bettverlassens (je nach Ausstattung) |\n| [[patientenlifter]] | Wägefunktion am Hebearm (optional) |\n| [[inkubator]] | integrierte Säuglingswaage (je nach Modell) |\n| [[ergometer]] | Erfassung des Bremsmoments bzw. der Tretkraft (je nach Bauart) |\n\n### Beispiel Spritzenpumpe\n\nIn der [[spritzenpumpe|Spritzenpumpe]] treibt ein [[schrittmotor|Schrittmotor]] über einen [[spindelantrieb|Spindelantrieb]] den Kolbenschieber. Ein Kraftsensor im Schieberkopf misst die Gegenkraft des Kolbens. Steigt der Druck in der Leitung, steigt die Kraft F = p · A_Kolben. Da die Kolbenfläche von der Spritzengröße abhängt, muss das Gerät die Spritze kennen, um aus der Kraft auf den Druck zu schließen – ein Grund, warum die korrekte Spritzenauswahl sicherheitsrelevant ist.\n\n> [!praxis] Bei großen Spritzen führt derselbe Leitungsdruck wegen der größeren Kolbenfläche zu einer höheren Kraft, kleine Spritzen erzeugen dagegen schon bei geringer Kraft hohe Drücke. Okklusionsgrenzen werden deshalb gerätespezifisch je Spritzentyp festgelegt. Hinzu kommt die Nachgiebigkeit (Compliance) von Spritze und Leitung: Bei großen Spritzen und niedrigen Förderraten kann es lange dauern, bis sich nach einer Okklusion genug Kraft für den Alarm aufbaut – und nach Lösen der Okklusion wird ein Bolus abgegeben.\n\n## Prüfung und Instandhaltung\n\nKraftsensoren werden mit **Prüfgewichten** oder kalibrierten Referenzkraftaufnehmern geprüft ([[kalibrierung]], [[pruefgeraete]]). Bei Infusionsgeräten erfolgt die Prüfung meist indirekt über den Okklusionsdruck mit einem Druckmessgerät im Rahmen der [[stk|sicherheitstechnischen Kontrolle]]. Nichtselbsttätige Waagen, die in der Heilkunde zum Wiegen von Patientinnen und Patienten (Überwachung, Diagnose, Therapie) verwendet werden, unterliegen in Deutschland in der Regel zusätzlich dem Mess- und Eichrecht (Mess- und Eichgesetz, Mess- und Eichverordnung) mit eigenen Nacheichfristen – unabhängig von [[stk]] und [[mtk]] nach der [[mpbetreibv|MPBetreibV]]. Ob eine konkrete Wägefunktion (z. B. Bettwaage, Bilanzierwaage) eichpflichtig ist, hängt von ihrer Zweckbestimmung ab und ist mit Hersteller bzw. Eichbehörde zu klären.\n\n> [!warnung] Mechanische Überlast, Stöße oder Flüssigkeitseintritt können DMS-Aufnehmer dauerhaft schädigen. Nach einem Sturz des Geräts ist eine erneute Prüfung des Kraftsensors erforderlich, bevor das Gerät wieder am Patienten eingesetzt wird.\n",
+  "related": [
+    "drucksensor",
+    "spritzenpumpe",
+    "okklusionsalarm",
+    "crrt-geraet",
+    "instrumentenverstaerker",
+    "analog-digital-wandler",
+    "messkette",
+    "messunsicherheit",
+    "kalibrierung",
+    "spindelantrieb",
+    "pflegebett",
+    "patientenlifter"
+  ],
+  "paths": [
+    [
+      "spritzenpumpe",
+      "schrittmotor",
+      "spindelantrieb",
+      "kraftsensor",
+      "okklusionsalarm"
+    ],
+    [
+      "kraftsensor",
+      "instrumentenverstaerker",
+      "analog-digital-wandler",
+      "mikrocontroller"
+    ]
+  ],
+  "sources": [
+    "hering-2018",
+    "fraden-2016",
+    "tietze-schenk-2019",
+    "webster-2010"
+  ],
+  "diagram": {
+    "title": "DMS-Kraftaufnehmer: Wandlungskette",
+    "caption": "Von der Kraft über Dehnung und Widerstandsänderung zum digitalen Messwert.",
+    "width": 960,
+    "height": 280,
+    "nodes": [
+      {
+        "id": "f",
+        "label": "Kraft F",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "vk",
+        "label": "Verformungs-\nkörper (σ = E·ε)",
+        "kind": "process",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "dms",
+        "label": "DMS\nΔR/R = k·ε",
+        "kind": "sensor",
+        "x": 470,
+        "y": 80,
+        "ref": "kraftsensor"
+      },
+      {
+        "id": "br",
+        "label": "Vollbrücke\n(U₀)",
+        "kind": "process",
+        "x": 660,
+        "y": 80,
+        "ref": "spannung-strom-widerstand"
+      },
+      {
+        "id": "ina",
+        "label": "Instrumenten-\nverstärker",
+        "kind": "process",
+        "x": 850,
+        "y": 80,
+        "ref": "instrumentenverstaerker"
+      },
+      {
+        "id": "adc",
+        "label": "A/D-Wandler",
+        "kind": "process",
+        "x": 850,
+        "y": 210,
+        "ref": "analog-digital-wandler"
+      },
+      {
+        "id": "mcu",
+        "label": "Kompensation,\nOkklusionsgrenze",
+        "kind": "control",
+        "x": 640,
+        "y": 210,
+        "ref": "mikrocontroller"
+      }
+    ],
+    "edges": [
+      {
+        "from": "f",
+        "to": "vk",
+        "kind": "energy"
+      },
+      {
+        "from": "vk",
+        "to": "dms",
+        "kind": "energy",
+        "label": "Dehnung ε"
+      },
+      {
+        "from": "dms",
+        "to": "br",
+        "kind": "signal",
+        "label": "ΔR"
+      },
+      {
+        "from": "br",
+        "to": "ina",
+        "kind": "signal",
+        "label": "mV"
+      },
+      {
+        "from": "ina",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "mcu",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

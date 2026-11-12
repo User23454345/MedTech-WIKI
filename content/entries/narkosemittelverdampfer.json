@@ -1,0 +1,151 @@
+{
+  "id": "narkosemittelverdampfer",
+  "type": "term",
+  "title": "Narkosemittelverdampfer",
+  "aliases": [
+    "Vapor",
+    "Verdampfer",
+    "Anästhesiemittelverdampfer",
+    "Vaporizer",
+    "Variable-Bypass-Verdampfer",
+    "Desfluran-Verdampfer"
+  ],
+  "category": "komponenten",
+  "summary": "Komponente des Narkosegeräts, die ein flüssiges volatiles Anästhetikum verdampft und in genau einstellbarer Konzentration dem Frischgas beimischt. Klassisch nach dem Bypass-Prinzip mit Temperaturkompensation, für Desfluran als beheizter, druckgeregelter Verdampfer.",
+  "body": "## Begriff\n\nEin **Narkosemittelverdampfer** (Vapor, englisch *vaporizer*) wandelt ein flüssiges volatiles Anästhetikum – heute vor allem Sevofluran, Desfluran und Isofluran – in Dampf um und mischt diesen in einer genau einstellbaren Konzentration dem Frischgas des [[anaesthesiegeraet|Narkosegeräts]] bei. Die eingestellte Konzentration wird in Volumenprozent (Vol.-%) angegeben. Weil schon kleine Dosierfehler klinisch bedeutsam sind, gehört der Verdampfer zu den sicherheitskritischsten Komponenten des Anästhesiearbeitsplatzes [@dorsch-2008] [@larsen-2018].\n\n## Physikalische Grundlagen\n\n### Sättigungsdampfdruck\n\nÜber einer Flüssigkeit stellt sich bei gegebener Temperatur ein **Sättigungsdampfdruck** (SVP) ein. Der Gasraum über dem Anästhetikum ist daher mit Dampf gesättigt; seine Konzentration beträgt nach dem Gesetz von Dalton (siehe [[gasgesetze]])\n\n`C_sat = SVP / p_amb`\n\nmit dem Umgebungsdruck p_amb. Bei Raumtemperatur liegt dieser Wert für Sevofluran und Isofluran weit über den klinisch benötigten wenigen Prozent; das gesättigte Gas muss also stark verdünnt werden [@dorsch-2008].\n\n| Anästhetikum | Sättigungsdampfdruck bei 20 °C (ca.) | Siedepunkt (ca.) | Konsequenz für den Verdampfer |\n|---|---|---|---|\n| Sevofluran | ca. 21 kPa | ca. 59 °C | Bypass-Verdampfer |\n| Isofluran | ca. 32 kPa | ca. 48 °C | Bypass-Verdampfer |\n| Desfluran | ca. 89 kPa | ca. 23 °C | Beheizter, druckgeregelter Verdampfer |\n\n> [!hinweis] Die Tabellenwerte sind gerundete Literaturangaben zur Orientierung [@dorsch-2008]. Wegen der unterschiedlichen Dampfdrücke ist jeder Verdampfer auf **ein** bestimmtes Anästhetikum kalibriert.\n\n### Verdunstungskälte\n\nBeim Verdampfen wird der Flüssigkeit Verdampfungswärme entzogen; sie kühlt ab, der Dampfdruck sinkt, und ohne Gegenmaßnahme fiele die abgegebene Konzentration. Verdampfer besitzen deshalb eine große Wärmekapazität (Metallblock) und eine **Temperaturkompensation** (siehe [[waermeuebertragung]]) [@dorsch-2008].\n\n## Bauformen\n\n### Bypass-Verdampfer (Variable-Bypass-Prinzip)\n\nDas Frischgas wird im Verdampfer aufgeteilt: Ein kleiner Teilstrom durchströmt die **Verdunsterkammer** und sättigt sich dort mit Dampf, der Hauptstrom fließt am **Bypass** vorbei. Beide Ströme vereinigen sich am Ausgang. Das Stellrad verändert das Teilungsverhältnis über einen Regelkegel. Für den Dampfstrom gilt\n\n`V̇_Dampf = V̇_Kammer · SVP / (p_amb − SVP)`\n\nund die Ausgangskonzentration ergibt sich aus V̇_Dampf bezogen auf den Gesamtfluss [@dorsch-2008].\n\n> [!beispiel] Sevofluran, SVP ≈ 21 kPa, p_amb ≈ 101 kPa: V̇_Dampf ≈ V̇_Kammer · 21/80 ≈ 0,26 · V̇_Kammer. Sollen bei 2 l/min Gesamtfluss 2 Vol.-% (40 ml/min Dampf) abgegeben werden, muss etwa 150 ml/min durch die Kammer strömen; der Rest geht über den Bypass. Die Zahlen sind gerundet und didaktisch gewählt.\n\nDie Temperaturkompensation geschieht meist über ein Bimetall- oder Dehnstoffelement, das bei sinkender Temperatur den Kammerweg weiter öffnet. Dochte bzw. Fließstrukturen vergrößern die Verdunstungsoberfläche, damit das Gas in der Kammer auch bei höherem Fluss gesättigt wird.\n\n### Beheizter Desfluran-Verdampfer\n\nDesfluran siedet nahe Raumtemperatur. Ein Bypass-Verdampfer würde bei Temperaturschwankungen völlig unkontrolliert dosieren. Desfluran-Verdampfer heizen das Anästhetikum deshalb elektrisch in einem Reservoir auf eine konstante Temperatur deutlich über dem Siedepunkt (beim verbreiteten Bautyp etwa 39 °C, entsprechend einem Dampfdruck von rund 2 bar), sodass ein definierter Überdruck entsteht. Reiner Dampf wird dann über ein geregeltes Ventil dem Frischgasstrom zudosiert; Drucksensoren und ein [[mikrocontroller|Mikrocontroller]] gleichen das Dosierventil an den Frischgasfluss an. Solche Verdampfer benötigen Netzstrom und besitzen Alarme für Störungen [@dorsch-2008].\n\n> [!vereinfacht] Ein Bypass-Verdampfer gibt bei gleicher Einstellung näherungsweise einen konstanten **Partialdruck** ab; in großer Höhe (niedriger Umgebungsdruck) steigt daher die angezeigte Vol.-%-Konzentration, die klinische Wirkung bleibt ähnlich. Der druckgeregelte Desfluran-Verdampfer dosiert dagegen eine konstante **Volumenkonzentration**; bei vermindertem Umgebungsdruck sinkt der Partialdruck, und die Einstellung muss nach Herstellerangabe angepasst werden [@dorsch-2008].\n\n### Elektronische Verdampfer und Direkteinspritzung\n\nIn elektronisch gesteuerten Systemen wird die Dosierung über [[proportionalventil|Proportionalventile]] oder Einspritzventile sowie [[flowsensor|Flowsensoren]] geregelt; teilweise wird das flüssige Anästhetikum direkt in den Frischgas- oder Kreisstrom eingespritzt. Damit lassen sich Zielwertsteuerungen (Ziel-Konzentration im Exspirationsgas) realisieren. Die Ausgestaltung ist herstellerspezifisch.\n\n## Sicherheitsmerkmale\n\n| Merkmal | Zweck |\n|---|---|\n| Mittelspezifische Farbcodierung und Befüllsysteme | Verhindern Fehlbefüllung mit dem falschen Anästhetikum |\n| Verriegelung (*Interlock*) | Nur ein Verdampfer kann gleichzeitig geöffnet sein |\n| Füllstandsanzeige | Sichtkontrolle des Vorrats |\n| Kippschutz bzw. Transportstellung | Verhindert, dass Flüssigkeit in den Bypass gelangt (Überdosierungsgefahr) |\n| Messung der Anästhetikakonzentration im Atemgas | Unabhängige Überwachung der tatsächlich abgegebenen Konzentration, siehe [[co2-sensor|Gasmessung]] |\n\n> [!belegt] Die Anforderungen an Anästhesiearbeitsplätze einschließlich der Systeme zur Abgabe von Anästhesiemitteldampf und der Anästhesiegasüberwachung fasst die Partikularnorm [[iso-80601-2-13|ISO 80601-2-13]] zusammen [@iso-80601-2-13-2022].\n\n> [!warnung] Ein gekippter, falsch befüllter oder undichter Verdampfer kann zu gefährlicher Über- oder Unterdosierung führen. Die Konzentration im Atemgas ist während jeder Narkose zu überwachen. Prüfung und Instandsetzung nur durch befugtes Fachpersonal nach Herstellervorgabe.\n\n## Umweltaspekte\n\nVolatile Anästhetika sind starke Treibhausgase; Desfluran hat unter ihnen die größte Klimawirkung. Die EU-F-Gas-Verordnung (EU) 2024/573 schränkt daher die routinemäßige Verwendung von Desfluran ein und lässt sie nur aus medizinischen Gründen zu [@f-gas-vo-2024-573]. Technisch reduziert die **Niedrigflussnarkose** den Verbrauch erheblich, weil das Ausatemgas über den [[co2-absorber|CO₂-Absorber]] wiederverwendet wird [@baum-2001].\n\n## Wartung und Prüfung\n\nVerdampfer werden nach Herstellervorgabe regelmäßig gewartet; dazu gehören Dichtheitsprüfungen, Kontrolle der Abgabegenauigkeit mit einem kalibrierten Gasanalysator und die Prüfung der Verriegelung. Bei der täglichen Gerätecheckliste des Anästhesiegeräts wird die Dichtheit des Systems mit montierten Verdampfern geprüft. Die [[stk|sicherheitstechnische Kontrolle]] des Anästhesiegeräts nach [[mpbetreibv|MPBetreibV]] schließt die Verdampfer ein [@mpbetreibv].\n\n## Anwendung in Geräten\n\n| Gerät | Rolle |\n|---|---|\n| [[anaesthesiegeraet]] | Dosierung des volatilen Anästhetikums ins Frischgas |\n| [[herz-lungen-maschine]] | Verdampfer im Gaszufluss des Oxygenators (bauart- und klinikabhängig) |\n\n## Bedeutung in der Medizintechnik\n\nDer Verdampfer zeigt exemplarisch, wie [[gasgesetze]], [[waermeuebertragung|Wärmeübertragung]] und [[stroemungslehre|Strömungslehre]] in eine Dosierfunktion münden. Er arbeitet im klassischen Fall rein mechanisch und benötigt keine Energieversorgung – eine bewusst robuste Konstruktion. Moderne elektronische Lösungen ergänzen dies um Sensorik und Regelung [@kramme-2017].\n",
+  "related": [
+    "anaesthesiegeraet",
+    "gasgesetze",
+    "waermeuebertragung",
+    "co2-absorber",
+    "co2-sensor",
+    "iso-80601-2-13",
+    "anaesthesiologie",
+    "proportionalventil",
+    "flowsensor"
+  ],
+  "paths": [
+    [
+      "anaesthesiegeraet",
+      "narkosemittelverdampfer",
+      "gasgesetze",
+      "druck"
+    ],
+    [
+      "narkosemittelverdampfer",
+      "co2-absorber",
+      "anaesthesiegeraet"
+    ]
+  ],
+  "sources": [
+    "dorsch-2008",
+    "larsen-2018",
+    "kramme-2017",
+    "iso-80601-2-13-2022",
+    "baum-2001",
+    "f-gas-vo-2024-573",
+    "mpbetreibv"
+  ],
+  "diagram": {
+    "title": "Prinzip des Bypass-Verdampfers",
+    "caption": "Funktionsschema: Das Frischgas wird in Kammer- und Bypassstrom aufgeteilt; der Kammerstrom sättigt sich mit Dampf.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "fg",
+        "label": "Frischgas\n(O₂, Luft)",
+        "kind": "source",
+        "x": 90,
+        "y": 150
+      },
+      {
+        "id": "split",
+        "label": "Stellrad /\nRegelkegel",
+        "kind": "control",
+        "x": 280,
+        "y": 150
+      },
+      {
+        "id": "byp",
+        "label": "Bypass",
+        "kind": "process",
+        "x": 480,
+        "y": 60
+      },
+      {
+        "id": "kam",
+        "label": "Verdunsterkammer\n(gesättigt)",
+        "kind": "process",
+        "x": 480,
+        "y": 240
+      },
+      {
+        "id": "tk",
+        "label": "Temperatur-\nkompensation\n(Bimetall)",
+        "kind": "control",
+        "x": 280,
+        "y": 250,
+        "h": 64
+      },
+      {
+        "id": "mix",
+        "label": "Frischgas +\nAnästhetikum",
+        "ref": "anaesthesiegeraet",
+        "kind": "output",
+        "x": 680,
+        "y": 150
+      },
+      {
+        "id": "pat",
+        "label": "Atemsystem /\nPatient",
+        "kind": "patient",
+        "x": 830,
+        "y": 250
+      }
+    ],
+    "edges": [
+      {
+        "from": "fg",
+        "to": "split",
+        "kind": "gas"
+      },
+      {
+        "from": "split",
+        "to": "byp",
+        "kind": "gas",
+        "label": "Hauptstrom"
+      },
+      {
+        "from": "split",
+        "to": "kam",
+        "kind": "gas",
+        "label": "Teilstrom"
+      },
+      {
+        "from": "tk",
+        "to": "kam",
+        "kind": "signal",
+        "label": "Kammerfluss"
+      },
+      {
+        "from": "byp",
+        "to": "mix",
+        "kind": "gas"
+      },
+      {
+        "from": "kam",
+        "to": "mix",
+        "kind": "gas",
+        "label": "Dampf"
+      },
+      {
+        "from": "mix",
+        "to": "pat",
+        "kind": "gas"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

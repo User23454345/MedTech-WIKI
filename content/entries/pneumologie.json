@@ -1,0 +1,40 @@
+{
+  "id": "pneumologie",
+  "type": "domain",
+  "title": "Pneumologie",
+  "aliases": [
+    "Lungenheilkunde",
+    "Pulmonologie",
+    "Pneumology",
+    "Pulmonology",
+    "Lungenfunktion",
+    "Schlafmedizin"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Pneumologie behandelt Erkrankungen der Lunge und der Atemwege. Medizintechnisch reicht sie von der Lungenfunktionsdiagnostik mit Spirometer und Bodyplethysmograph über Bronchoskopie und Blutgasanalyse bis zu Sauerstofftherapie, CPAP und außerklinischer Beatmung.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Pneumologie** ist ein Teilgebiet der Inneren Medizin und befasst sich mit Erkrankungen von [[lunge]], Atemwegen, Pleura und Atempumpe. Häufige Krankheitsbilder sind Asthma bronchiale, chronisch obstruktive Lungenerkrankung (COPD), Lungenentzündung, interstitielle Lungenerkrankungen, Lungenkrebs, Lungenembolie, schlafbezogene Atmungsstörungen (obstruktive Schlafapnoe) und die chronische ventilatorische Insuffizienz [@west-luks-2021].\n\nGrundlage für das Verständnis der Gerätetechnik sind [[atemmechanik]] (Compliance, Resistance), [[gasaustausch]] und die Transportfunktion des [[haemoglobin|Hämoglobins]] [@west-luks-2021].\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[spirometer]] | Messung von Volumina und Flüssen (z. B. FEV₁, FVC) |\n| [[bodyplethysmograph]] | Atemwegswiderstand, intrathorakales Gasvolumen, Residualvolumen |\n| [[blutgasanalysator]] | pO₂, pCO₂, pH zur Beurteilung von Oxygenierung und Ventilation |\n| [[pulsoxymeter]] | nichtinvasive Sättigungsmessung, Nachtoximetrie |\n| [[polysomnograph]] | Schlaflabor: Diagnose von Schlafapnoe |\n| [[cpap-geraet]] | Therapie der obstruktiven Schlafapnoe |\n| [[heimbeatmungsgeraet]] | außerklinische nichtinvasive oder invasive Beatmung |\n| [[sauerstoffkonzentrator]] | Langzeit-Sauerstofftherapie zu Hause |\n| [[high-flow-geraet]] | erwärmte, befeuchtete High-Flow-Sauerstofftherapie |\n| [[inhalationsgeraet]] | Vernebelung von Medikamenten |\n| [[beatmungsgeraet]] | invasive und nichtinvasive Beatmung im Krankenhaus |\n| [[endoskop]] | Bronchoskopie, endobronchialer Ultraschall |\n| [[ergometer]] | Spiroergometrie |\n| [[computertomograph]] | hochauflösende Lungen-CT, Lungenkrebs-Diagnostik |\n\n## Besondere technische Anforderungen\n\n### Messgenauigkeit und Kalibrierung der Lungenfunktion\n\nLungenfunktionswerte werden mit alters-, größen- und geschlechtsabhängigen Referenzwerten verglichen; schon kleine Messfehler können zu Fehlbefunden führen. Die Empfehlung von ATS und ERS fordert u. a. eine mindestens tägliche Kalibrierprüfung des Volumensignals mit einer 3-Liter-Kalibrierpumpe und definiert Kriterien für akzeptable und reproduzierbare Messungen [@ats-ers-spirometry-2019]. Je nach Gerät beruht die Flussmessung auf Pneumotachographen (Druckdifferenz), Turbinen oder Ultraschall-Laufzeit ([[flowsensor]], [[stroemungslehre]]).\n\n> [!vereinfacht] Gemessene Volumina müssen auf Körperbedingungen (BTPS – Körpertemperatur, Umgebungsdruck, wasserdampfgesättigt) umgerechnet werden, weil sich Ausatemluft beim Abkühlen zusammenzieht ([[gasgesetze]]).\n\n> [!praxis] Die tägliche Kalibrierprüfung und ihre Dokumentation sind keine reine Formalie: Ein unbemerkt verschmutzter Pneumotachograph verschiebt alle Messwerte des Tages.\n\n### Hygiene\n\nSpirometer und Bodyplethysmographen werden von vielen Patienten nacheinander benutzt, oft auch von Personen mit Atemwegsinfektionen. Einweg-Bakterien-/Virenfilter und Mundstücke sowie die Aufbereitung der Sensoren nach Herstellerangabe sind Standard. Bronchoskope zählen zu den aufbereitungsintensiven Medizinprodukten; ihre [[aufbereitung]] erfolgt validiert in [[rdg|Reinigungs-Desinfektionsgeräten]] für Endoskope [@krinko-bfarm-2012].\n\n### Sauerstoff\n\nSauerstoff fördert Verbrennungen. Bei Sauerstoffkonzentratoren, Flüssigsauerstoff und Druckgasflaschen in Klinik und Heimversorgung sind Brandschutz (kein Rauchen, keine offenen Flammen, keine fetthaltigen Pflegeprodukte am Ventil) und die sichere Lagerung von Druckgasbehältern zu beachten [@iso-80601-2-69].\n\n### Heimbeatmung und Patientenumgebung\n\nEin wachsender Teil der Beatmungstherapie findet außerhalb des Krankenhauses statt. Für diese Geräte gelten die Ergänzungsnorm für die häusliche Umgebung [[iec-60601-1-11]] und spezielle Gerätenormen [@iec-60601-1-11][@iso-80601-2-72][@iso-80601-2-70]. Wichtig sind Akkupufferung bei lebenserhaltender Beatmung, Alarmweiterleitung, Einweisung der Angehörigen und ein funktionierender Notdienst des Versorgers.\n\n> [!hinweis] Bei Heimbeatmung ist oft unklar, wer Betreiber im Sinne der [[mpbetreibv]] ist (Klinik, Hilfsmittelversorger, Pflegedienst). Zuständigkeiten für Wartung und [[stk]] sollten vertraglich geregelt sein.\n\n### Atemgasbefeuchtung\n\nNichtinvasive Beatmung und High-Flow-Therapie trocknen ohne Befeuchtung die Schleimhäute aus; [[atemgasbefeuchter|Befeuchter]] müssen Temperatur und Feuchte sicher regeln, ohne Kondensat in die Atemwege zu leiten [@aarc-humidification-2012].\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[intensivmedizin]]**: invasive Beatmung, ARDS, Entwöhnung vom Respirator.\n- **[[neurologie]]**: Schlafmedizin, neuromuskuläre Erkrankungen mit Atemschwäche.\n- **[[kardiologie]]**: Lungenhochdruck, Spiroergometrie.\n- **[[radiologie]]** und **[[nuklearmedizin]]**: Lungen-CT, Perfusionsszintigraphie bei Lungenembolie.\n- **[[hno-heilkunde]]**: obere Atemwege und Schlafapnoe.\n- **[[anaesthesiologie]]**: Atemwegsmanagement, gemeinsame Beatmungsphysiologie.\n",
+  "related": [
+    "lunge",
+    "atemmechanik",
+    "gasaustausch",
+    "spirometer",
+    "bodyplethysmograph",
+    "cpap-geraet",
+    "heimbeatmungsgeraet",
+    "sauerstoffkonzentrator",
+    "blutgasanalysator",
+    "intensivmedizin"
+  ],
+  "sources": [
+    "west-luks-2021",
+    "ats-ers-spirometry-2019",
+    "krinko-bfarm-2012",
+    "iso-80601-2-69",
+    "iec-60601-1-11",
+    "iso-80601-2-72",
+    "iso-80601-2-70",
+    "aarc-humidification-2012"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

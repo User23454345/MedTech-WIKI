@@ -1,0 +1,75 @@
+{
+  "id": "invasive-druckmessung",
+  "type": "device",
+  "title": "Invasive Blutdruckmessung (Druckmesssystem)",
+  "aliases": [
+    "IBP",
+    "invasive blood pressure",
+    "arterielle Druckmessung",
+    "Druckmesssystem",
+    "Druckwandler",
+    "Transducer",
+    "Druckaufnehmer"
+  ],
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 17,
+  "domains": [
+    "intensivmedizin",
+    "anaesthesiologie",
+    "kardiologie",
+    "herzchirurgie"
+  ],
+  "summary": "Die invasive Blutdruckmessung erfasst den Druck in Arterien, Venen oder Herzhöhlen kontinuierlich über einen Katheter, eine flüssigkeitsgefüllte Druckleitung und einen externen Druckwandler. Sie liefert Schlag-zu-Schlag-Kurven und ist Standard bei kritisch kranken Patienten und großen Operationen.",
+  "sections": {
+    "purpose": "Invasive Druckmesssysteme dienen der kontinuierlichen Überwachung des arteriellen [[blutdruck|Blutdrucks]], des zentralen Venendrucks (ZVD) und des Pulmonalarteriendrucks. Sie ermöglichen zusätzlich Blutentnahmen für die [[blutgasanalysator|Blutgasanalyse]] und die Analyse der Druckkurve (z. B. Pulskonturverfahren). Angezeigt werden die Werte am [[patientenmonitor]].",
+    "principle": "## Messkette\n\nDie [[messkette]] besteht aus intravasalem Katheter, nicht dehnbarer Druckleitung, Dreiwegehähnen, Spülsystem und Einweg-Druckwandler. Der Wandler enthält einen [[drucksensor|piezoresistiven Drucksensor]] in [[druckmessung|Wheatstone-Brückenschaltung]]; der Monitor speist die Brücke und verstärkt die Brückenspannung mit einem [[instrumentenverstaerker]]. Ein Spülsystem mit Druckbeutel (typisch etwa 300 mmHg) und Kapillardrossel hält den Katheter mit einem kleinen kontinuierlichen Fluss (*typisch* etwa 3 ml/h) offen [@webster-2010].\n\n## Nullabgleich und Hydrostatik\n\nVor der Messung wird der Wandler zur Atmosphäre geöffnet und genullt. Bezugspunkt ist das Niveau des rechten Vorhofs (phlebostatische Achse, in Rückenlage etwa 4. Interkostalraum in der mittleren Axillarlinie). Zusätzlich wird der Wandler regelmäßig neu genullt, weil Offset und Temperatur driften können. Jede Höhendifferenz verursacht einen hydrostatischen Fehler p = ρ · g · h.\n\n> [!beispiel] Liegt der Wandler 10 cm unter Herzniveau, zeigt das System um etwa 10 cmH₂O ≈ 7,4 mmHg zu hohe Werte an.\n\n## Dynamisches Verhalten\n\nDie flüssigkeitsgefüllte Leitung bildet ein schwingungsfähiges System zweiter Ordnung mit Eigenfrequenz und Dämpfung. Luftblasen, Gerinnsel, weiche oder zu lange Leitungen senken die Eigenfrequenz bzw. verändern die Dämpfung: **Überdämpfung** flacht die Kurve ab (systolisch zu niedrig), **Unterdämpfung** führt zu Überschwingen (systolisch zu hoch). Mit dem Schnellspültest (Rechteckimpuls) lässt sich das Verhalten am Bett beurteilen [@webster-2010].\n\n> [!warnung] Luft im Spülsystem birgt neben Messfehlern das Risiko einer arteriellen Luftembolie. Spülsysteme sorgfältig entlüften."
+  },
+  "manufacturers": [
+    {
+      "ref": "icu-medical",
+      "models": [
+        "Transpac"
+      ],
+      "note": "Einweg-Druckwandler."
+    },
+    {
+      "ref": "b-braun",
+      "models": [
+        "Combitrans"
+      ],
+      "note": "Einweg-Druckmesssysteme."
+    },
+    {
+      "ref": "philips",
+      "models": [],
+      "note": "Druckmodule der Patientenmonitore."
+    },
+    {
+      "ref": "draeger",
+      "models": [],
+      "note": "Druckmodule der Patientenmonitore."
+    }
+  ],
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: MPBetreibV (2025) Anlage 1 Nr. 1.2 erfasst nichtimplantierbare aktive Produkte zur Messung von Größen unter Verwendung elektrisch betriebener Messsonden in Blutgefäßen. Ob ein System mit externem Wandler und flüssigkeitsgefüllter Leitung darunter fällt, ist anhand der Herstellerangaben zu klären; für Systeme mit Messsonde in der Katheterspitze ist die Zuordnung eindeutig. Die Druckmessfunktion des Monitors wird in der Regel im Rahmen der STK des Monitors geprüft. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025), sofern STK-pflichtig; Einweg-Druckwandler werden nicht instandgehalten, sondern nach Herstellerangabe gewechselt; Überprüfung des Druckkanals mit Drucksimulator im Rahmen von Wartung/STK des Monitors."
+  },
+  "related": [
+    "patientenmonitor",
+    "drucksensor",
+    "druckmessung",
+    "nibp-messgeraet",
+    "luft-im-system",
+    "blutdruck"
+  ],
+  "sources": [
+    "webster-2010",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

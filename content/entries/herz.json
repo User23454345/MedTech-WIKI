@@ -1,0 +1,160 @@
+{
+  "id": "herz",
+  "type": "term",
+  "title": "Herz",
+  "aliases": [
+    "Cor",
+    "Kardia",
+    "heart",
+    "Herzmuskel",
+    "Myokard",
+    "Herzzyklus",
+    "Herzzeitvolumen",
+    "HZV",
+    "cardiac output"
+  ],
+  "category": "anatomie",
+  "summary": "Muskuläres Hohlorgan aus zwei in Serie geschalteten Pumpen, das in Ruhe etwa 5 l Blut pro Minute durch Lungen- und Körperkreislauf fördert. Seine elektrische Aktivität, Druckverläufe und Pumpleistung sind Messgrößen und Therapieziele zahlreicher Medizingeräte.",
+  "body": "## Überblick\n\nDas **Herz** (lat. *cor*, griech. *kardia*) ist ein muskuläres Hohlorgan, das als zweistufige Pumpe den [[blutkreislauf|Blutkreislauf]] antreibt. Beim Erwachsenen wiegt es etwa 250–350 g, liegt im Mediastinum hinter dem Brustbein und fördert in Ruhe rund 5 l Blut pro Minute [@schmidt-lang-2019] [@guyton-2021]. Für die Medizintechnik ist das Herz das Organ mit der höchsten Gerätedichte: Seine elektrische Aktivität wird mit dem [[ekg-geraet|EKG]] abgeleitet, seine Pumpleistung mit [[invasive-druckmessung|invasiver Druckmessung]] und [[ultraschallgeraet|Echokardiographie]] beurteilt, seine Rhythmusstörungen werden mit [[defibrillator|Defibrillator]], [[herzschrittmacher|Schrittmacher]] und [[icd|ICD]] behandelt.\n\n## Anatomischer Aufbau\n\n### Vier Kammern, zwei Pumpen\n\nDas Herz besteht funktionell aus zwei in Serie geschalteten Pumpen:\n\n| Herzhälfte | Vorhof (Atrium) | Kammer (Ventrikel) | fördert in |\n|---|---|---|---|\n| rechts | rechter Vorhof (aus oberer und unterer Hohlvene) | rechter Ventrikel | Lungenkreislauf (Truncus pulmonalis) |\n| links | linker Vorhof (aus den Lungenvenen) | linker Ventrikel | Körperkreislauf (Aorta) |\n\nDie Wand des linken Ventrikels ist deutlich dicker als die des rechten, weil er gegen einen etwa fünf- bis sechsmal höheren Druck arbeitet. Die Herzwand gliedert sich in Endokard (innere Auskleidung), Myokard (Arbeitsmuskulatur) und Epikard, umgeben vom Herzbeutel (Perikard).\n\n### Herzklappen\n\nVier Ventile erzwingen die Strömungsrichtung – technisch entsprechen sie passiven Rückschlagventilen, die allein durch Druckdifferenzen öffnen und schließen:\n\n| Klappe | Typ | Lage |\n|---|---|---|\n| Trikuspidalklappe | Segelklappe | rechter Vorhof → rechter Ventrikel |\n| Pulmonalklappe | Taschenklappe | rechter Ventrikel → Truncus pulmonalis |\n| Mitralklappe | Segelklappe | linker Vorhof → linker Ventrikel |\n| Aortenklappe | Taschenklappe | linker Ventrikel → Aorta |\n\nDas Schließen der Klappen erzeugt die Herztöne. Klappenstenosen und -insuffizienzen erzeugen Turbulenzen, die als Geräusch hörbar und mit dem [[doppler-effekt|Doppler-Verfahren]] messbar sind.\n\n### Koronararterien\n\nDas Myokard wird über die rechte und linke Koronararterie versorgt, die direkt oberhalb der Aortenklappe entspringen. Weil der linke Ventrikel in der Systole die eigenen intramuralen Gefäße komprimiert, erfolgt seine Perfusion überwiegend in der Diastole [@guyton-2021]. Dieses Prinzip nutzt die [[iabp|intraaortale Ballonpumpe]]: Sie bläst den Ballon in der Diastole auf und erhöht so den diastolischen Aortendruck und die Koronarperfusion.\n\n## Herzzyklus\n\nEin Herzzyklus besteht aus Systole (Anspannung und Austreibung) und Diastole (Entspannung und Füllung). Ausgelöst wird jede Kontraktion vom [[erregungsleitungssystem|Erregungsbildungs- und -leitungssystem]], die zelluläre Grundlage ist das [[aktionspotential|Aktionspotential]] der Herzmuskelzellen mit seiner charakteristischen Plateauphase.\n\n| Phase | Klappenzustand | Vorgang im linken Ventrikel |\n|---|---|---|\n| Anspannungsphase | alle Klappen geschlossen | isovolumetrischer Druckanstieg |\n| Austreibungsphase | Aortenklappe offen | Auswurf des Schlagvolumens |\n| Entspannungsphase | alle Klappen geschlossen | isovolumetrischer Druckabfall |\n| Füllungsphase | Mitralklappe offen | passive Füllung, am Ende Vorhofkontraktion |\n\nIm Druck-Volumen-Diagramm des Ventrikels bilden diese vier Phasen eine geschlossene Schleife; die eingeschlossene Fläche entspricht der äußeren Arbeit pro Schlag.\n\n### Typische Drücke\n\n| Ort | Druck (systolisch/diastolisch bzw. Mittel) |\n|---|---|\n| rechter Vorhof | ca. 2–8 mmHg (Mittel) |\n| rechter Ventrikel | ca. 15–30 / 2–8 mmHg |\n| Pulmonalarterie | ca. 15–30 / 8–15 mmHg |\n| linker Vorhof | ca. 4–12 mmHg (Mittel) |\n| linker Ventrikel | ca. 100–140 / 3–12 mmHg |\n| Aorta | ca. 100–140 / 60–90 mmHg |\n\n> [!hinweis] Die Werte sind typische Bereiche für ruhende, herzgesunde Erwachsene aus der Lehrbuchliteratur und hängen von Alter, Lage und Messmethode ab [@schmidt-lang-2019] [@guyton-2021]. Klinische Referenzbereiche können je nach Quelle leicht abweichen.\n\n## Pumpleistung\n\n### Herzzeitvolumen\n\nDas **Herzzeitvolumen** (HZV, engl. *cardiac output*) ist das Produkt aus Herzfrequenz und Schlagvolumen:\n\n`HZV = HF · SV`\n\nDie **Ejektionsfraktion** beschreibt den Anteil des enddiastolischen Volumens (EDV), der pro Schlag ausgeworfen wird:\n\n`EF = SV / EDV`\n\n> [!beispiel] Bei HF = 70 /min und SV = 70 ml ergibt sich HZV = 70 /min · 0,07 l ≈ 4,9 l/min. Beträgt das EDV 120 ml, so ist EF = 70 / 120 ≈ 58 %. Die Zahlen sind didaktische Beispielwerte.\n\nBezogen auf die Körperoberfläche ergibt sich der **Herzindex** (HZV / KOF in l/(min·m²)), der Patienten unterschiedlicher Körpergröße vergleichbar macht. Gemessen wird das HZV klinisch z. B. mit Thermodilution, Pulskonturanalyse oder Doppler-Echokardiographie – jeweils indirekte Verfahren mit eigenen Messunsicherheiten (siehe [[messunsicherheit]]).\n\nUnter Belastung kann das HZV beim Untrainierten auf etwa das Vier- bis Fünffache steigen, überwiegend über die Herzfrequenz [@guyton-2021].\n\n### Frank-Starling-Mechanismus\n\nEine stärkere Vordehnung der Herzmuskelfasern (höheres enddiastolisches Volumen, „Vorlast“) führt innerhalb physiologischer Grenzen zu einer kräftigeren Kontraktion. Dadurch passen beide Ventrikel ihr Schlagvolumen automatisch aneinander an, ohne dass eine nervale Steuerung nötig ist [@schmidt-lang-2019]. Zusätzlich wirken das vegetative [[nervensystem|Nervensystem]] (Sympathikus steigert Frequenz und Kontraktionskraft, Parasympathikus senkt die Frequenz) und hormonelle Einflüsse.\n\n> [!vereinfacht] Technisch lässt sich das Herz als volumengesteuerte Verdrängerpumpe mit selbstregelndem Fördervolumen beschreiben: Mehr Zulauf erzeugt mehr Auswurf. Dieses Bild vernachlässigt die Abhängigkeit vom Gegendruck (Nachlast), von der Kontraktilität und von der Frequenz.\n\n### Energetik\n\nDie hydraulische Leistung des linken Ventrikels lässt sich als `P ≈ p_mittel · HZV` abschätzen. Mit einem mittleren Aortendruck von etwa 93 mmHg (≈ 12,4 kPa) und 5 l/min (≈ 8,3 · 10⁻⁵ m³/s) ergibt sich rund 1 W (eigene Überschlagsrechnung; berücksichtigt nur die äußere Druck-Volumen-Arbeit des linken Ventrikels, ohne kinetischen Anteil und ohne rechten Ventrikel); der Wirkungsgrad des Herzmuskels ist dabei gering, der überwiegende Teil der umgesetzten Energie wird zu Wärme.\n\n## Bedeutung in der Medizintechnik\n\nKaum ein Organ wird so umfassend technisch überwacht, unterstützt oder ersetzt wie das Herz:\n\n| Funktion | Gerät | Physiologischer Bezug |\n|---|---|---|\n| elektrische Aktivität messen | [[ekg-geraet]], [[langzeit-ekg]], [[ergometer]], [[patientenmonitor]] | Summenvektor der Erregung, siehe [[biosignale]] |\n| Rhythmus therapieren | [[defibrillator]], [[icd]], [[herzschrittmacher]], [[externer-schrittmacher]] | Depolarisation einer kritischen Myokardmasse bzw. Ersatz des Sinusknotens |\n| Druck und Fluss messen | [[invasive-druckmessung]], [[nibp-messgeraet]], [[ultraschallgeraet]] | Druckverlauf in Ventrikel und Gefäßen, Klappenfunktion |\n| Pumpfunktion unterstützen | [[iabp]], [[vad]], [[ecmo]] | Nachlastsenkung, Koronarperfusion, Ersatz des Auswurfs |\n| Pumpfunktion ersetzen | [[herz-lungen-maschine]] | vollständiger extrakorporaler Kreislauf während Herzoperationen |\n| Reanimation | [[thoraxkompressionsgeraet]] | externe Kompression erzeugt Restfluss |\n\n> [!warnung] Das Herz ist besonders empfindlich gegenüber Strom: Bereits kleine Ströme können bei direktem Herzkontakt (z. B. über Katheter) Kammerflimmern auslösen. Daher gelten für herznahe Anwendungsteile die strengsten Grenzwerte (Typ CF), siehe [[anwendungsteile]], [[ableitstrom]] und [[elektrische-stromwirkung]] [@iec-60601-1] [@iec-60479-1].\n\n> [!praxis] Bei der [[funktionspruefung]] von EKG- und Monitoring-Geräten werden Herzsignale mit Patientensimulatoren nachgebildet (siehe [[pruefgeraete]]). Wer die physiologische Bedeutung von P-Welle, QRS-Komplex und Druckkurve kennt, erkennt Fehlfunktionen deutlich schneller.\n\nKlinisch sind die Fachgebiete [[kardiologie]], [[herzchirurgie]] und [[intensivmedizin]] die Hauptnutzer der genannten Geräte.\n",
+  "related": [
+    "erregungsleitungssystem",
+    "aktionspotential",
+    "blutkreislauf",
+    "blutdruck",
+    "ekg-geraet",
+    "defibrillator",
+    "herzschrittmacher",
+    "icd",
+    "herz-lungen-maschine",
+    "vad",
+    "iabp",
+    "invasive-druckmessung",
+    "kardiologie",
+    "herzchirurgie"
+  ],
+  "paths": [
+    [
+      "herz",
+      "erregungsleitungssystem",
+      "aktionspotential",
+      "biosignale",
+      "ekg-elektrode",
+      "ekg-geraet"
+    ],
+    [
+      "herz",
+      "blutkreislauf",
+      "blutdruck",
+      "druckmessung",
+      "drucksensor"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021",
+    "iec-60601-1",
+    "iec-60479-1"
+  ],
+  "diagram": {
+    "title": "Vom elektrischen Impuls zum messbaren Druck",
+    "caption": "Funktionskette der Herzaktion von der Erregung bis zur Messung (vereinfacht).",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "sk",
+        "label": "Sinusknoten /\nErregungsleitung",
+        "ref": "erregungsleitungssystem",
+        "kind": "control",
+        "x": 110,
+        "y": 90
+      },
+      {
+        "id": "ap",
+        "label": "Aktionspotential\nder Myokardzelle",
+        "ref": "aktionspotential",
+        "kind": "process",
+        "x": 330,
+        "y": 90
+      },
+      {
+        "id": "ca",
+        "label": "Ca²⁺-Einstrom /\nelektromech. Kopplung",
+        "kind": "process",
+        "x": 560,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "lv",
+        "label": "Kontraktion\nlinker Ventrikel",
+        "kind": "actuator",
+        "x": 790,
+        "y": 90
+      },
+      {
+        "id": "ao",
+        "label": "Aortendruck /\nSchlagvolumen",
+        "ref": "blutdruck",
+        "kind": "patient",
+        "x": 790,
+        "y": 260
+      },
+      {
+        "id": "ibp",
+        "label": "Invasive\nDruckmessung",
+        "ref": "invasive-druckmessung",
+        "kind": "sensor",
+        "x": 530,
+        "y": 260
+      },
+      {
+        "id": "ekg",
+        "label": "EKG-Ableitung",
+        "ref": "ekg-geraet",
+        "kind": "output",
+        "x": 250,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "sk",
+        "to": "ap",
+        "kind": "signal",
+        "label": "Erregung"
+      },
+      {
+        "from": "ap",
+        "to": "ca",
+        "kind": "signal"
+      },
+      {
+        "from": "ca",
+        "to": "lv",
+        "kind": "energy",
+        "label": "Kraft"
+      },
+      {
+        "from": "lv",
+        "to": "ao",
+        "kind": "fluid",
+        "label": "Auswurf"
+      },
+      {
+        "from": "ao",
+        "to": "ibp",
+        "kind": "fluid",
+        "label": "Druckwelle"
+      },
+      {
+        "from": "ap",
+        "to": "ekg",
+        "kind": "signal",
+        "label": "Feldpotential"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

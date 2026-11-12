@@ -1,0 +1,133 @@
+{
+  "id": "neutralelektrode",
+  "type": "term",
+  "title": "Neutralelektrode",
+  "aliases": [
+    "NE",
+    "Patientenrückleitungselektrode",
+    "Patientenplatte",
+    "Return electrode",
+    "Dispersive electrode",
+    "Geteilte Neutralelektrode",
+    "Split electrode"
+  ],
+  "category": "komponenten",
+  "summary": "Großflächige Elektrode, über die der HF-Strom bei monopolarer HF-Chirurgie aus dem Patienten zum Generator zurückfließt. Durch geringe Stromdichte bleibt die Erwärmung der Haut gering; geteilte Elektroden erlauben eine Überwachung der Kontaktqualität durch das Gerät.",
+  "body": "## Begriff\n\nDie **Neutralelektrode** (NE, Patientenrückleitungselektrode, englisch *patient return electrode* oder *dispersive electrode*) ist die großflächige Elektrode, über die der hochfrequente Strom bei der **monopolaren** Anwendung eines [[hf-chirurgiegeraet|HF-Chirurgiegeräts]] aus dem Körper des Patienten zum Generator zurückfließt. Ihre Aufgabe ist das Gegenteil der Aktivelektrode: Während diese den Strom auf eine winzige Fläche konzentriert, um Gewebe zu schneiden oder zu koagulieren, soll die Neutralelektrode ihn so großflächig verteilen, dass sich die Haut darunter nicht nennenswert erwärmt [@massarweh-2006] [@kramme-2017].\n\nBei **bipolaren** Instrumenten fließt der Strom nur zwischen den beiden Branchen; eine Neutralelektrode ist dort nicht erforderlich.\n\n## Physikalisches Prinzip\n\n### Stromdichte und Erwärmung\n\nDie thermische Wirkung des Stroms hängt von der **Stromdichte** J ab:\n\n`J = I / A`\n\nmit Strom I und Kontaktfläche A. Die in einem Gewebevolumen umgesetzte Leistungsdichte folgt der [[joulesche-waerme|Jouleschen Wärme]]:\n\n`p = J² · ρ`\n\nmit dem spezifischen Widerstand ρ des Gewebes. Die Erwärmung steigt also mit dem **Quadrat** der Stromdichte und linear mit der Einwirkzeit [@massarweh-2006].\n\n> [!beispiel] Fließen 0,5 A über eine Aktivelektrode mit 1 mm² Kontaktfläche, beträgt J = 0,5 A/mm² = 50 A/cm². Über eine Neutralelektrode mit 100 cm² wirksamer Fläche verteilt, sind es 0,005 A/cm² – also 10 000-mal weniger Stromdichte und, wegen der quadratischen Abhängigkeit, eine um den Faktor 10⁸ geringere Leistungsdichte. Die Zahlen sind rein didaktisch gewählt.\n\n> [!vereinfacht] In der Realität ist die Stromdichte unter der Neutralelektrode nicht gleichmäßig: Am Rand, insbesondere an der Kante, die dem Operationsgebiet zugewandt ist (Leading Edge), ist sie höher als in der Mitte. Darum ist die Ausrichtung der Elektrode wichtig.\n\n### Warum Hochfrequenz?\n\nHF-Chirurgiegeräte arbeiten typischerweise mit Frequenzen von einigen hundert Kilohertz bis in den unteren Megahertzbereich (in der Lehrbuchliteratur meist „oberhalb von etwa 300 kHz“), weil Nerven und Muskeln auf so schnelle Wechselströme nicht mehr mit Erregung reagieren (siehe [[elektrische-stromwirkung]] und [[aktionspotential]]). Es bleibt im Wesentlichen die thermische Wirkung; Restreizungen (faradischer Effekt) können etwa durch Gleichrichtungseffekte an Funkenstrecken auftreten [@massarweh-2006] [@kramme-2017].\n\n## Bauformen\n\n| Bauform | Merkmal | Bemerkung |\n|---|---|---|\n| Einflächige (ungeteilte) Klebeelektrode | Eine leitfähige Fläche mit Gel/Hydrogel | Keine Kontaktqualitätsüberwachung möglich, nur Kabelbruchüberwachung |\n| **Geteilte (zweiflächige) Elektrode** | Zwei elektrisch getrennte Teilflächen | Ermöglicht die Überwachung der Kontaktqualität durch das Gerät |\n| Kapazitive Großflächen-Rückleitung (z. B. Auflage auf dem OP-Tisch) | Kopplung über ein Dielektrikum, sehr große Fläche | Herstellerspezifische Systeme mit eigenen Anwendungsregeln |\n| Kinder- und Neugeborenenelektroden | Kleinere Fläche | Nur bis zu den vom Hersteller angegebenen Leistungen bzw. Patientengewichten |\n\n### Kontaktqualitätsüberwachung\n\nBei der geteilten Elektrode misst das HF-Chirurgiegerät mit einem kleinen Messstrom die **Impedanz zwischen den beiden Teilflächen** über die Haut. Löst sich die Elektrode teilweise ab, steigt die Impedanz bzw. die Symmetrie der Ströme ändert sich, und das Gerät sperrt die Aktivierung mit einem Alarm. Die Systeme tragen herstellerspezifische Namen; das Prinzip ist gleich [@massarweh-2006] [@kramme-2017].\n\n> [!belegt] Die Partikularnorm [[iec-60601-2-2|IEC 60601-2-2]] enthält Anforderungen an Neutralelektroden und deren Überwachung, darunter eine thermische Prüfung, mit der die Erwärmung unter der Elektrode begrenzt wird; die aktuelle Ausgabe (Ed. 6) verlangt für die Anwendung bei Erwachsenen Neutralelektroden mit Kontaktqualitätsüberwachung. Einzelheiten und Grenzwerte sind der jeweils gültigen Ausgabe zu entnehmen [@iec-60601-2-2].\n\n## Anlage am Patienten\n\n| Regel | Begründung |\n|---|---|\n| Auf gut durchblutete Muskulatur (z. B. Oberarm, Oberschenkel) | Muskel leitet gut und führt Wärme über die Durchblutung ab |\n| Möglichst nah am Operationsgebiet | Kurzer Stromweg, weniger Strom durch andere Körperregionen |\n| Lange Kante zum Operationsgebiet | Gleichmäßigere Stromverteilung über beide Teilflächen |\n| Nicht über Knochenvorsprüngen, Narben, Tattoos, Behaarung oder Implantaten | Ungleichmäßiger Kontakt, Hot Spots |\n| Haut trocken und fettfrei, keine Flüssigkeitsansammlungen | Flüssigkeit (Desinfektionsmittel, Spülflüssigkeit) kann Stromwege verändern |\n| Stromweg nicht über Herzschrittmacher oder EKG-Elektroden | Vermeidung von Störungen und Stromkonzentration, siehe [[herzschrittmacher]] |\n| Keine Wiederverwendung, Haltbarkeitsdatum beachten | Ausgetrocknetes Gel erhöht den Übergangswiderstand |\n\n[@massarweh-2006] [@kramme-2017]\n\n> [!warnung] Eine teilweise abgelöste oder falsch platzierte Neutralelektrode ist die klassische Ursache von [[neutralelektroden-verbrennung|Verbrennungen unter der Neutralelektrode]]. Ebenso gefährlich sind **alternative Stromwege**: Hat der Patient Kontakt zu geerdeten Metallteilen (z. B. OP-Tisch), kann der Strom dort mit hoher Stromdichte austreten. Moderne Geräte haben deshalb einen HF-isolierten (floatenden) Patientenkreis.\n\n## Gerätetechnische Überwachung und Prüfung\n\n| Funktion | Prüfgegenstand |\n|---|---|\n| Kontaktqualitätsüberwachung | Alarmschwellen mit Prüfwiderständen bzw. Simulationsadapter nach Herstellerangabe |\n| NE-Kabel und Stecker | Durchgang, Isolation, Unversehrtheit |\n| HF-Ableitstrom | Messung nach Herstellerangabe und Partikularnorm; nur mit geeigneter Messtechnik |\n| [[elektrische-sicherheitspruefung|Elektrische Sicherheit]] | Wiederholungsprüfung nach [[iec-62353|IEC 62353]] |\n\nHF-Chirurgiegeräte unterliegen als Produkte zur Koagulation und Gewebezerstörung der [[stk|sicherheitstechnischen Kontrolle]] nach § 12 i. V. m. Anlage 1 der [[mpbetreibv|MPBetreibV]] (Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind); die Neutralelektrodenüberwachung ist dabei ein zentraler Prüfpunkt [@mpbetreibv] [@iec-62353].\n\n## Anwendung in Geräten\n\n| Gerät | Rolle der Neutralelektrode |\n|---|---|\n| [[hf-chirurgiegeraet]] | Rückleitung des HF-Stroms bei monopolarer Technik |\n| [[endoskop]] | Monopolare Schlingen und Messer in der Endoskopie benötigen ebenfalls eine NE |\n| [[op-roboter]] | Monopolare Instrumente am Roboterarm, gleiche Anforderungen |\n| [[chirurgischer-laser]] | Keine NE nötig – Gewebeeffekt ohne Stromfluss durch den Körper (Vergleich) |\n\n## Bedeutung in der Medizintechnik\n\nDie Neutralelektrode ist ein unscheinbares Einmalprodukt, an dem sich Grundlagen der [[elektrotechnik]] direkt sicherheitsrelevant auswirken: Stromdichte, Übergangswiderstand, Joulesche Wärme und [[ableitstrom|Ableitströme]]. Ihre korrekte Anwendung gehört zur [[einweisung|Einweisung]] des OP-Personals, ihre Überwachung zur Prüfung des Geräts [@kramme-2017].\n",
+  "related": [
+    "hf-chirurgiegeraet",
+    "neutralelektroden-verbrennung",
+    "joulesche-waerme",
+    "elektrische-stromwirkung",
+    "iec-60601-2-2",
+    "ableitstrom",
+    "anwendungsteile",
+    "chirurgie",
+    "elektrodenproblem"
+  ],
+  "paths": [
+    [
+      "hf-chirurgiegeraet",
+      "neutralelektrode",
+      "joulesche-waerme",
+      "neutralelektroden-verbrennung"
+    ]
+  ],
+  "sources": [
+    "massarweh-2006",
+    "kramme-2017",
+    "iec-60601-2-2",
+    "iec-62353",
+    "mpbetreibv"
+  ],
+  "diagram": {
+    "title": "Stromkreis der monopolaren HF-Chirurgie",
+    "caption": "Funktionsschema: Der HF-Strom fließt von der Aktivelektrode durch den Patienten zur Neutralelektrode zurück; das Gerät überwacht deren Kontakt.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "gen",
+        "label": "HF-Generator",
+        "ref": "hf-chirurgiegeraet",
+        "kind": "source",
+        "x": 100,
+        "y": 150
+      },
+      {
+        "id": "akt",
+        "label": "Aktivelektrode\n(hohe Stromdichte)",
+        "kind": "actuator",
+        "x": 330,
+        "y": 60
+      },
+      {
+        "id": "pat",
+        "label": "Patient\n(Gewebe)",
+        "kind": "patient",
+        "x": 560,
+        "y": 150
+      },
+      {
+        "id": "ne",
+        "label": "Neutralelektrode\n(geteilt)",
+        "ref": "neutralelektrode",
+        "kind": "process",
+        "x": 330,
+        "y": 240
+      },
+      {
+        "id": "cq",
+        "label": "Kontaktqualitäts-\nüberwachung",
+        "kind": "sensor",
+        "x": 790,
+        "y": 240
+      },
+      {
+        "id": "sp",
+        "label": "Aktivierungs-\nsperre / Alarm",
+        "ref": "alarmsystem",
+        "kind": "control",
+        "x": 790,
+        "y": 60
+      }
+    ],
+    "edges": [
+      {
+        "from": "gen",
+        "to": "akt",
+        "kind": "power",
+        "label": "HF-Strom"
+      },
+      {
+        "from": "akt",
+        "to": "pat",
+        "kind": "power"
+      },
+      {
+        "from": "pat",
+        "to": "ne",
+        "kind": "power"
+      },
+      {
+        "from": "ne",
+        "to": "gen",
+        "kind": "power",
+        "label": "Rückleitung"
+      },
+      {
+        "from": "ne",
+        "to": "cq",
+        "kind": "signal",
+        "label": "Impedanz"
+      },
+      {
+        "from": "cq",
+        "to": "sp",
+        "kind": "signal"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

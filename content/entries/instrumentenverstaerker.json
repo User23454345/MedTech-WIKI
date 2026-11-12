@@ -1,0 +1,148 @@
+{
+  "id": "instrumentenverstaerker",
+  "type": "term",
+  "title": "Instrumentenverstärker",
+  "aliases": [
+    "INA",
+    "In-Amp",
+    "Instrumentation amplifier",
+    "Messverstärker",
+    "Drei-OPV-Instrumentenverstärker",
+    "Biosignalverstärker"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Ein Instrumentenverstärker ist ein Differenzverstärker mit hohem, symmetrischem Eingangswiderstand, einstellbarer Verstärkung und sehr hoher Gleichtaktunterdrückung. Er trennt kleine Nutzsignale wie das EKG im Millivoltbereich von großen Gleichtaktstörungen wie 50-Hz-Netzbrumm und ist deshalb das Herzstück jedes Biosignalverstärkers.",
+  "body": "## Begriff und Problemstellung\n\nViele Messsignale der Medizintechnik sind **Differenzsignale**: Das Elektrokardiogramm erscheint als Spannung zwischen zwei [[ekg-elektrode|Elektroden]], die Brückenspannung eines [[drucksensor|Drucksensors]] zwischen zwei Brückenzweigen. Beide Eingangspunkte tragen jedoch zusätzlich eine gemeinsame **Gleichtaktspannung** – beim Patienten vor allem kapazitiv eingekoppelte Netzspannung. Diese kann um Größenordnungen größer sein als das Nutzsignal [@webster-2010].\n\n| Signal | Typische Größenordnung |\n|---|---|\n| EKG an der Körperoberfläche | etwa 0,5–4 mV |\n| EEG | etwa 5–300 µV |\n| Elektroden-Polarisationsspannung (DC) | bis einige hundert mV |\n| 50-Hz-Gleichtaktspannung am Patienten | mV bis V, je nach Umgebung |\n\nEin einfacher [[operationsverstaerker|OPV]]-Differenzverstärker reicht dafür nicht: Sein Eingangswiderstand ist durch die Beschaltungswiderstände begrenzt und seine Gleichtaktunterdrückung hängt von der Widerstandspaarung ab. Der **Instrumentenverstärker** (INA) löst beide Probleme [@kitchin-counts-2006].\n\n## Drei-OPV-Schaltung\n\nDie klassische Struktur besteht aus zwei Stufen [@tietze-schenk-2019] [@kitchin-counts-2006]:\n\n1. **Eingangsstufe:** Zwei nichtinvertierende Verstärker, deren Gegenkopplungen über einen gemeinsamen Widerstand R_G verbunden sind. Beide Eingänge sind sehr hochohmig. Das Differenzsignal wird um `1 + 2R₁/R_G` verstärkt, das Gleichtaktsignal nur mit dem Faktor 1 durchgereicht.\n2. **Ausgangsstufe:** Ein Differenzverstärker setzt die Differenz in ein massebezogenes Signal um und unterdrückt den verbleibenden Gleichtaktanteil.\n\nGesamtverstärkung:\n\n`G = (1 + 2R₁ / R_G) · (R₃ / R₂)`\n\nIn integrierten INA sind alle Widerstände außer R_G lasergetrimmt auf dem Chip; die Verstärkung wird mit einem einzigen externen Widerstand eingestellt.\n\n## Gleichtaktunterdrückung (CMRR)\n\nDie Güte eines Instrumentenverstärkers misst man an der **Gleichtaktunterdrückung**:\n\n`CMRR = 20 · log₁₀ (V_D / V_CM)` in dB\n\nmit Differenzverstärkung V_D und Gleichtaktverstärkung V_CM.\n\n> [!beispiel] Am Patienten liegt eine 50-Hz-Gleichtaktspannung von 100 mV, das EKG beträgt 1 mV. Bei einer CMRR von 100 dB (Faktor 10⁵) erscheint die Störung am Ausgang so, als läge am Eingang ein Differenzsignal von nur 1 µV – vernachlässigbar gegenüber dem EKG. Bei 60 dB wären es 100 µV, also ein deutlich sichtbarer [[netzstoerung|Netzbrumm]]. Zahlen beispielhaft.\n\n> [!warnung] Die CMRR des Verstärkers allein genügt nicht. Unterschiedliche Elektroden-Haut-Impedanzen bilden mit der Eingangsimpedanz einen unsymmetrischen Spannungsteiler und wandeln Gleichtakt- in Differenzspannung um. Schlecht klebende oder ausgetrocknete Elektroden verschlechtern daher die effektive Störunterdrückung erheblich – siehe [[elektrodenproblem]] [@webster-2010].\n\n## Typisches Biosignal-Frontend\n\nEin EKG- oder EEG-Eingang besteht aus mehr als dem INA [@webster-2010] [@winter-webster-1983]:\n\n* **Schutzbeschaltung:** Serienwiderstände und Begrenzer schützen vor Defibrillationsimpulsen und HF-Chirurgie-Einkopplung.\n* **Instrumentenverstärker:** moderate Verstärkung, damit die Elektroden-Gleichspannung den Verstärker nicht übersteuert.\n* **Hochpass:** entfernt die Gleichspannung (Polarisation), danach weitere Verstärkung.\n* **Right-Leg-Drive (RLD):** Ein Hilfsverstärker misst die Gleichtaktspannung und speist sie invertiert über die Neutralelektrode (rechtes Bein) zurück in den Körper. Dadurch sinkt die wirksame Gleichtaktspannung; der Strom wird aus Sicherheitsgründen begrenzt [@winter-webster-1983].\n* **Anti-Aliasing-[[filter|Filter]]** und [[analog-digital-wandler|Analog-Digital-Wandler]].\n* **[[galvanische-trennung|Galvanische Trennung]]** des gesamten patientenseitigen Teils (Anwendungsteil Typ BF oder CF).\n\n> [!belegt] Die Driven-Right-Leg-Schaltung zur aktiven Reduktion der Gleichtaktspannung und ihre sicherheitsrelevante Strombegrenzung wurden von Winter und Webster systematisch beschrieben [@winter-webster-1983].\n\nModerne Geräte integrieren INA, RLD, Multiplexer und hochauflösende Sigma-Delta-ADC in einem Analog-Frontend-Baustein; Hochpass und Notch werden dann häufig digital realisiert.\n\n## Wichtige Kenngrößen\n\nBei der Auswahl oder Bewertung eines Instrumentenverstärkers für Biosignale zählen vor allem folgende Größen [@kitchin-counts-2006] [@webster-2010]:\n\n| Kenngröße | Bedeutung für Biosignale |\n|---|---|\n| Eingangsimpedanz (differentiell und Gleichtakt) | muss groß gegenüber der Elektroden-Haut-Impedanz sein, damit Impedanzunterschiede kaum Gleichtakt- in Differenzspannung umwandeln |\n| CMRR über der Frequenz | nimmt mit steigender Frequenz ab; bei 50 Hz und deren Oberwellen muss sie noch hoch genug sein |\n| Eingangsspannungsbereich | muss Elektroden-Gleichspannung plus Gleichtaktspannung ohne Übersteuerung aufnehmen |\n| Rauschen (0,05–150 Hz bzw. EEG-Band) | bestimmt die kleinste noch auswertbare Amplitude |\n| Eingangsruheströme | erzeugen an den Elektrodenimpedanzen Offsetspannungen und werden teils zur Elektrodenablöse-Erkennung genutzt |\n| Erholzeit nach Übersteuerung | wichtig nach Defibrillation oder Elektrodenwechsel |\n\n> [!vereinfacht] Die Drei-OPV-Schaltung ist die Lehrbuchform. Es gibt auch Zwei-OPV-Varianten und Instrumentenverstärker mit Stromrückkopplung oder Chopper-Stabilisierung, die geringere Offsetdrift und weniger 1/f-Rauschen bieten. Das Grundprinzip – hochohmiger, symmetrischer Differenzeingang mit hoher Gleichtaktunterdrückung – bleibt gleich.\n\n## Anwendung in Geräten\n\n| Gerät / Komponente | Einsatz des Instrumentenverstärkers |\n|---|---|\n| [[ekg-geraet]], [[langzeit-ekg]], [[patientenmonitor]] | EKG-Ableitungen |\n| [[eeg-geraet]], [[polysomnograph]] | EEG, EOG – sehr kleine Signale, hohe Anforderungen an Rauschen |\n| [[emg-geraet]] | Muskel- und Nervenpotentiale |\n| [[invasive-druckmessung]], [[nibp-messgeraet]] | Wheatstone-Brücke des [[drucksensor|Drucksensors]] |\n| [[infusionspumpe]], [[waermebett]] (sofern mit integrierter Waage) | [[kraftsensor|DMS-Kraftsensoren]], Wägezellen |\n| [[defibrillator]] | EKG-Analyse über die Klebeelektroden (AED-Rhythmusanalyse) |\n\n> [!praxis] Tritt an allen Kanälen gleichzeitig 50-Hz-Störung auf, liegt die Ursache oft nicht im Gerät: Elektrodenqualität, Kabelführung parallel zu Netzleitungen, fehlende Potentialausgleichsverbindung oder nahe Störquellen prüfen, bevor das Gerät verdächtigt wird.",
+  "related": [
+    "operationsverstaerker",
+    "ekg-elektrode",
+    "biosignale",
+    "netzstoerung",
+    "filter",
+    "analog-digital-wandler",
+    "galvanische-trennung",
+    "anwendungsteile",
+    "messkette"
+  ],
+  "paths": [
+    [
+      "ekg-geraet",
+      "ekg-elektrode",
+      "instrumentenverstaerker",
+      "filter",
+      "analog-digital-wandler",
+      "mikrocontroller"
+    ]
+  ],
+  "diagram": {
+    "title": "Biosignal-Frontend mit Instrumentenverstärker",
+    "caption": "Funktionsschema eines EKG-Eingangskanals; kein konkretes Gerät.",
+    "width": 900,
+    "height": 330,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "id": "el",
+        "label": "Elektroden",
+        "ref": "ekg-elektrode",
+        "kind": "sensor",
+        "x": 290,
+        "y": 90
+      },
+      {
+        "id": "ina",
+        "label": "Instrumenten-\nverstärker",
+        "ref": "instrumentenverstaerker",
+        "kind": "process",
+        "x": 490,
+        "y": 90
+      },
+      {
+        "id": "flt",
+        "label": "Hochpass /\nTiefpass",
+        "ref": "filter",
+        "kind": "process",
+        "x": 690,
+        "y": 90
+      },
+      {
+        "id": "rld",
+        "label": "Right-Leg-Drive",
+        "ref": "operationsverstaerker",
+        "kind": "control",
+        "x": 290,
+        "y": 240
+      },
+      {
+        "id": "adc",
+        "label": "ADC",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 690,
+        "y": 240
+      },
+      {
+        "id": "iso",
+        "label": "Galvanische\nTrennung",
+        "ref": "galvanische-trennung",
+        "kind": "output",
+        "x": 490,
+        "y": 240
+      }
+    ],
+    "edges": [
+      {
+        "from": "pat",
+        "to": "el",
+        "kind": "signal",
+        "label": "mV"
+      },
+      {
+        "from": "el",
+        "to": "ina",
+        "kind": "signal"
+      },
+      {
+        "from": "ina",
+        "to": "flt",
+        "kind": "signal"
+      },
+      {
+        "from": "flt",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "iso",
+        "kind": "data"
+      },
+      {
+        "from": "ina",
+        "to": "rld",
+        "kind": "signal",
+        "label": "Gleichtakt"
+      },
+      {
+        "from": "rld",
+        "to": "pat",
+        "kind": "signal",
+        "label": "invertiert"
+      }
+    ]
+  },
+  "sources": [
+    "webster-2010",
+    "tietze-schenk-2019",
+    "kitchin-counts-2006",
+    "winter-webster-1983"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

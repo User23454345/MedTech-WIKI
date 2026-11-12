@@ -1,0 +1,72 @@
+[
+  {
+    "id": "iec-60601-2-16",
+    "kind": "norm",
+    "title": "IEC 60601-2-16 – Medizinische elektrische Geräte – Teil 2-16: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Hämodialyse-, Hämodiafiltrations- und Hämofiltrationsgeräten",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-16 (VDE 0750-2-16)",
+    "note": "Gerätespezifische Norm für Hämodialyse-, Hämodiafiltrations- und Hämofiltrationsgeräte; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-23500-3",
+    "kind": "norm",
+    "title": "ISO 23500-3 – Preparation and quality management of fluids for haemodialysis and related therapies – Part 3: Water for haemodialysis and related therapies",
+    "publisher": "ISO",
+    "note": "Anforderungen an das Wasser zur Herstellung von Dialysierflüssigkeit (chemische und mikrobiologische Grenzwerte); jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-23500-5",
+    "kind": "norm",
+    "title": "ISO 23500-5 – Preparation and quality management of fluids for haemodialysis and related therapies – Part 5: Quality of dialysis fluid for haemodialysis and related therapies",
+    "publisher": "ISO",
+    "year": "2024",
+    "note": "Mikrobiologische Anforderungen an Standard- und ultrareine Dialysierflüssigkeit sowie an online hergestellte Substitutionsflüssigkeit."
+  },
+  {
+    "id": "kdoqi-hd-adequacy-2015",
+    "kind": "leitlinie",
+    "authors": "National Kidney Foundation",
+    "title": "KDOQI Clinical Practice Guideline for Hemodialysis Adequacy: 2015 Update",
+    "publisher": "American Journal of Kidney Diseases 66(5), S. 884–930",
+    "year": "2015"
+  },
+  {
+    "id": "daugirdas-1993",
+    "kind": "artikel",
+    "authors": "Daugirdas, J. T.",
+    "title": "Second generation logarithmic estimates of single-pool variable volume Kt/V: an analysis of error",
+    "publisher": "Journal of the American Society of Nephrology 4(5), S. 1205–1213",
+    "year": "1993"
+  },
+  {
+    "id": "convince-2023",
+    "kind": "artikel",
+    "authors": "Blankestijn, P. J. et al. (CONVINCE Scientific Committee)",
+    "title": "Effect of Hemodiafiltration or Hemodialysis on Mortality in Kidney Failure",
+    "publisher": "New England Journal of Medicine 389(8), S. 700–709",
+    "year": "2023"
+  },
+  {
+    "id": "kolff-1944",
+    "kind": "artikel",
+    "authors": "Kolff, W. J.; Berk, H. T. J.",
+    "title": "The artificial kidney: a dialyser with a great area",
+    "publisher": "Acta Medica Scandinavica 117, S. 121–134",
+    "year": "1944"
+  },
+  {
+    "id": "fmc-6008",
+    "kind": "hersteller",
+    "authors": "Fresenius Medical Care",
+    "title": "6008 CAREsystem – Hämodialysesystem (Produktseite)",
+    "url": "https://freseniusmedicalcare.com/en/healthcare-professionals/hemodialysis/machines/6008-caresystem",
+    "note": "Herstellerangaben; abgerufen 2026."
+  },
+  {
+    "id": "vantive-ak98",
+    "kind": "hersteller",
+    "authors": "Vantive (vormals Baxter Kidney Care)",
+    "title": "AK 98 Dialysis Machine (Produktseite)",
+    "url": "https://pro.vantive.com/ak-98-dialysis-machine",
+    "note": "Herstellerangaben; abgerufen 2026."
+  }
+]

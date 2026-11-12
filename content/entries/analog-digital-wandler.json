@@ -1,0 +1,146 @@
+{
+  "id": "analog-digital-wandler",
+  "type": "term",
+  "title": "Analog-Digital-Wandler",
+  "aliases": [
+    "ADC",
+    "ADU",
+    "A/D-Wandler",
+    "Analog-to-digital converter",
+    "Digitalisierung",
+    "Abtastung",
+    "Quantisierung",
+    "Sigma-Delta-Wandler",
+    "SAR-ADC",
+    "DAC",
+    "Digital-Analog-Wandler"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Ein Analog-Digital-Wandler (ADC) setzt eine zeit- und wertkontinuierliche Messspannung in eine Folge von Zahlenwerten um, indem er sie in festen Zeitabständen abtastet und quantisiert. Abtastrate und Auflösung bestimmen, welche Signalanteile ein Medizingerät überhaupt erfassen kann; das Abtasttheorem und das Anti-Aliasing-Filter sind dabei zentral.",
+  "body": "## Begriff\n\nEin **Analog-Digital-Wandler** (ADC, engl. *analog-to-digital converter*) ist die Schnittstelle zwischen der analogen Messwelt und der digitalen Verarbeitung in einem [[mikrocontroller|Mikrocontroller]] oder Signalprozessor. In einer [[messkette|Messkette]] steht er hinter Sensor, Verstärker ([[operationsverstaerker|Operationsverstärker]], [[instrumentenverstaerker|Instrumentenverstärker]]) und analogem [[filter|Filter]]. Die Umkehrung – Zahlenwerte in Spannung – leistet der **Digital-Analog-Wandler** (DAC), etwa für Sollwerte von Ventilen oder Audiosignale [@kester-2005] [@tietze-schenk-2019].\n\nDie Wandlung besteht aus zwei grundsätzlich verschiedenen Schritten:\n\n1. **Abtastung** (zeitliche Diskretisierung): Das Signal wird im Abstand `T_s = 1 / f_s` gemessen.\n2. **Quantisierung** (wertmäßige Diskretisierung): Jeder Abtastwert wird auf eine von 2^N Stufen gerundet.\n\n## Abtasttheorem und Aliasing\n\nNach dem **Abtasttheorem** (Nyquist-Shannon) lässt sich ein bandbegrenztes Signal aus seinen Abtastwerten vollständig rekonstruieren, wenn die Abtastfrequenz mehr als doppelt so groß ist wie die höchste enthaltene Frequenz [@shannon-1949] [@oppenheim-schafer-2010]:\n\n`f_s > 2 · f_max`\n\nDie halbe Abtastfrequenz heißt **Nyquist-Frequenz**. Anteile oberhalb davon werden nicht einfach weggelassen, sondern als **Alias** in den Nutzfrequenzbereich gespiegelt und sind danach nicht mehr vom echten Signal unterscheidbar. Deshalb steht vor jedem ADC ein analoges **Anti-Aliasing-Tiefpassfilter**.\n\n> [!beispiel] Ein EKG soll bis 150 Hz erfasst werden. Bei `f_s = 500 Hz` liegt die Nyquist-Frequenz bei 250 Hz; das Anti-Aliasing-Filter muss Störungen oberhalb davon ausreichend dämpfen. Eine Störung bei 450 Hz würde sonst als 50-Hz-Komponente (|450 − 500| Hz) erscheinen und wie [[netzstoerung|Netzbrumm]] aussehen. Zahlen beispielhaft.\n\n> [!vereinfacht] In der Praxis tastet man deutlich schneller ab als `2 · f_max` (Überabtastung), weil reale Filter keine senkrechte Flanke haben. Viele moderne Wandler tasten intern sogar um ein Vielfaches schneller ab und filtern digital.\n\n## Quantisierung und Auflösung\n\nBei einem Eingangsbereich `U_FS` (Full Scale) und N Bit beträgt die kleinste Stufe\n\n`U_LSB = U_FS / 2^N`\n\nDer Rundungsfehler von höchstens ±½ LSB wirkt wie ein Rauschen. Für ein ideales N-Bit-System und ein vollaussteuerndes Sinussignal gilt näherungsweise [@kester-2005]:\n\n`SNR ≈ 6,02 · N + 1,76 dB`\n\n| Auflösung | Stufen | LSB bei 3,3 V Eingangsbereich | ideales SNR |\n|---|---|---|---|\n| 10 Bit | 1 024 | ≈ 3,2 mV | ≈ 62 dB |\n| 12 Bit | 4 096 | ≈ 0,81 mV | ≈ 74 dB |\n| 16 Bit | 65 536 | ≈ 50 µV | ≈ 98 dB |\n| 24 Bit | 16,8 Mio. | ≈ 0,2 µV | ≈ 146 dB (theoretisch) |\n\nReale Wandler erreichen diese Werte nicht. Die **effektive Bitzahl** (ENOB) berücksichtigt Rauschen und Verzerrungen; daneben sind **Offset**, **Verstärkungsfehler** sowie integrale und differentielle Nichtlinearität (INL, DNL) wichtig. Auch die Genauigkeit der **Referenzspannung** geht direkt in das Ergebnis ein – ein Grund für [[sensordrift|Drift]] und für die Notwendigkeit von [[kalibrierung|Kalibrierung]].\n\n> [!beispiel] Ein 24-Bit-Sigma-Delta-Wandler mit ±2,4 V Eingangsbereich hat eine rechnerische Stufe von 4,8 V / 2²⁴ ≈ 0,29 µV. So kann ein EKG-Frontend auch ohne große Vorverstärkung Signale im Mikrovoltbereich auflösen und gleichzeitig eine Elektroden-Gleichspannung von einigen hundert Millivolt verkraften. Zahlen beispielhaft.\n\n## Wandlerverfahren\n\n| Verfahren | Prinzip | Stärken | Typischer Einsatz |\n|---|---|---|---|\n| Sukzessive Approximation (SAR) | binäre Suche mit internem DAC und Komparator | mittlere bis hohe Rate, geringe Latenz | Mikrocontroller-ADC, Motorstrom, Druck, Multiplex-Messungen |\n| Sigma-Delta (ΣΔ) | starke Überabtastung mit 1-Bit- oder Mehrbit-Modulator, digitale Dezimation | sehr hohe Auflösung, geringer Filteraufwand | EKG, EEG, Wägezellen, Temperatur |\n| Pipeline | mehrere Stufen nacheinander | hohe Abtastraten | Ultraschall-Empfangskanäle, Bildgebung |\n| Flash (Parallel) | ein Komparator je Stufe | extrem schnell, wenig Bit | Hochgeschwindigkeitsanwendungen |\n| Integrierend (Dual-Slope) | Zeitmessung einer Integration | Unterdrückung von Netzstörungen, präzise | Multimeter, Prüfgeräte |\n\nFür die Wahl des Verfahrens zählt das Verhältnis von benötigter Bandbreite zu benötigter Dynamik [@kester-2005].\n\n## Anwendung in Geräten\n\n| Gerät | Gewandeltes Signal | Anforderung |\n|---|---|---|\n| [[ekg-geraet]], [[patientenmonitor]], [[eeg-geraet]] | [[biosignale|Biosignale]] | hohe Auflösung, geringes Rauschen, synchrone Kanäle |\n| [[pulsoxymeter]] | Photodiodensignal der [[photoplethysmographie|Photoplethysmographie]] | großer Dynamikbereich (kleiner pulsatiler Anteil auf großem Gleichanteil) |\n| [[beatmungsgeraet]] | [[druckmessung|Druck]] und Flow aus [[drucksensor|Drucksensor]] und [[flowsensor|Flowsensor]] | schnelle Abtastung für die Regelung, siehe [[regelkreis]] |\n| [[ultraschallgeraet]] | Echo-Signale je Wandlerelement | sehr hohe Abtastraten, viele parallele Kanäle |\n| [[computertomograph]], [[roentgengeraet]] | Detektorsignale des [[roentgendetektor|Röntgendetektors]] | große Kanalzahl, hohe Dynamik |\n| [[infusionspumpe]] | [[kraftsensor|Kraftsensor]], Motorstrom | Okklusionserkennung |\n\n> [!belegt] Abtasttheorem, Aliasing und die Quantisierungsrauschformel gehören zu den Grundlagen der zeitdiskreten Signalverarbeitung und der Datenwandlertechnik [@oppenheim-schafer-2010] [@kester-2005].\n\n> [!praxis] Bei der [[mtk|messtechnischen Kontrolle]] (z. B. eines [[nibp-messgeraet|nichtinvasiven Blutdruckmessgeräts]]) oder bei der [[funktionspruefung|Funktionsprüfung]] mit [[pruefgeraete|Prüfgeräten und Patientensimulatoren]] wird letztlich die gesamte Kette bis einschließlich ADC geprüft. Abweichungen, die über alle Messbereiche proportional sind, deuten eher auf Verstärkungs- oder Referenzfehler, konstante Abweichungen eher auf Offset hin.",
+  "related": [
+    "messkette",
+    "filter",
+    "instrumentenverstaerker",
+    "operationsverstaerker",
+    "mikrocontroller",
+    "messunsicherheit",
+    "biosignale",
+    "kalibrierung"
+  ],
+  "paths": [
+    [
+      "drucksensor",
+      "instrumentenverstaerker",
+      "filter",
+      "analog-digital-wandler",
+      "mikrocontroller",
+      "regelkreis"
+    ]
+  ],
+  "diagram": {
+    "title": "Signalweg der Digitalisierung",
+    "caption": "Funktionsschema einer typischen Messkette mit Analog-Digital-Wandler.",
+    "width": 900,
+    "height": 400,
+    "nodes": [
+      {
+        "id": "sen",
+        "label": "Sensor",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "amp",
+        "label": "Verstärker",
+        "ref": "instrumentenverstaerker",
+        "kind": "process",
+        "x": 290,
+        "y": 80
+      },
+      {
+        "id": "aaf",
+        "label": "Anti-Aliasing-\nTiefpass",
+        "ref": "filter",
+        "kind": "process",
+        "x": 490,
+        "y": 80
+      },
+      {
+        "id": "sh",
+        "label": "Abtast-\nHalte-Glied",
+        "kind": "process",
+        "x": 690,
+        "y": 80
+      },
+      {
+        "id": "q",
+        "label": "Quantisierer\n(N Bit)",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 690,
+        "y": 220
+      },
+      {
+        "id": "dsp",
+        "label": "Digitale Filter /\nAuswertung",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 420,
+        "y": 220
+      },
+      {
+        "id": "ref",
+        "label": "Referenz-\nspannung",
+        "kind": "source",
+        "x": 690,
+        "y": 340
+      }
+    ],
+    "edges": [
+      {
+        "from": "sen",
+        "to": "amp",
+        "kind": "signal"
+      },
+      {
+        "from": "amp",
+        "to": "aaf",
+        "kind": "signal"
+      },
+      {
+        "from": "aaf",
+        "to": "sh",
+        "kind": "signal"
+      },
+      {
+        "from": "sh",
+        "to": "q",
+        "kind": "signal",
+        "label": "f_s"
+      },
+      {
+        "from": "q",
+        "to": "dsp",
+        "kind": "data",
+        "label": "Zahlenwerte"
+      },
+      {
+        "from": "ref",
+        "to": "q",
+        "kind": "power",
+        "label": "U_ref"
+      }
+    ]
+  },
+  "sources": [
+    "kester-2005",
+    "oppenheim-schafer-2010",
+    "shannon-1949",
+    "tietze-schenk-2019"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

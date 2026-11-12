@@ -1,0 +1,37 @@
+{
+  "id": "din-31051",
+  "type": "standard",
+  "title": "DIN 31051",
+  "code": "DIN 31051",
+  "kind": "norm",
+  "fullTitle": "Grundlagen der Instandhaltung",
+  "scope": "Gliedert die Instandhaltung in ihre Grundmaßnahmen und legt die zugehörigen Begriffe und Zusammenhänge für technische Einheiten fest.",
+  "aliases": [
+    "DIN 31051 Instandhaltung",
+    "Grundlagen der Instandhaltung",
+    "31051"
+  ],
+  "category": "normen",
+  "summary": "DIN 31051 ist die deutsche Grundnorm der Instandhaltung. Sie gliedert die Instandhaltung in Wartung, Inspektion, Instandsetzung und Verbesserung und erklärt das Modell des Abnutzungsvorrats, das auch der Instandhaltung von Medizinprodukten zugrunde liegt.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **DIN 31051** ist eine nationale deutsche Norm, die die Grundbegriffe der [[instandhaltung-grundlagen|Instandhaltung]] für technische Systeme aller Art festlegt [@din-31051]. Sie ist keine Medizinprodukte-Norm, bildet aber die begriffliche Grundlage, auf der Medizintechnik-Abteilungen, Servicetechniker:innen und Betreiber ihre Arbeit organisieren. Ergänzend definiert die europäische Norm DIN EN 13306 die Begriffe der Instandhaltung im Detail [@din-en-13306].\n\nInstandhaltung umfasst – in eigenen Worten – alle technischen und administrativen Maßnahmen sowie Managementmaßnahmen während des Lebenszyklus einer Einheit, die dazu dienen, ihren funktionsfähigen Zustand zu erhalten oder ihn wiederherzustellen, sodass sie die geforderte Funktion erfüllen kann.\n\n## Zentrale Konzepte\n\n### Die vier Grundmaßnahmen\n\n| Grundmaßnahme | Ziel (eigene Worte) | Beispiele aus der Medizintechnik |\n|---|---|---|\n| [[wartung|Wartung]] | Verzögerung des Abbaus des Abnutzungsvorrats | Filterwechsel am [[beatmungsgeraet|Beatmungsgerät]], Austausch von O-Ringen, Akkupflege |\n| [[inspektion|Inspektion]] | Feststellung und Beurteilung des Istzustands, Ursachenermittlung | [[stk|STK]], [[mtk|MTK]], [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]], [[funktionspruefung|Funktionsprüfung]] |\n| [[instandsetzung|Instandsetzung]] | Rückführung einer Einheit in den funktionsfähigen Zustand | Tausch einer defekten [[peristaltikpumpe|Pumpeneinheit]] einer Dialysemaschine |\n| Verbesserung | Steigerung der Zuverlässigkeit, Instandhaltbarkeit oder Sicherheit ohne Änderung der ursprünglichen Funktion | Software-Update auf Herstellerempfehlung, verbesserte Kabelführung |\n\n> [!hinweis] Im Medizinprodukterecht sind Änderungen an Funktion oder Zweckbestimmung keine „Verbesserung“ im Sinne der Instandhaltung, sondern können den Betreiber zum Hersteller machen. Verbesserungen sind daher nur im Rahmen der Herstellervorgaben zulässig.\n\n### Abnutzungsvorrat\n\nKernmodell der Norm ist der **Abnutzungsvorrat**: der Vorrat an möglichen Funktionserfüllungen, den eine Einheit durch Herstellung oder Instandsetzung erhält. Durch Betrieb, Alterung, Korrosion oder Verschleiß wird dieser Vorrat abgebaut. Die **Abnutzungsgrenze** ist ein festgelegter Mindestwert des Abnutzungsvorrats: Wird sie erreicht, ist eine Instandsetzung fällig; ist der Vorrat aufgebraucht, fällt die Einheit aus.\n\n> [!vereinfacht] Man kann sich den Abnutzungsvorrat wie den Ladezustand eines Akkus vorstellen: Wartung verlangsamt die Entladung, Inspektion misst den Ladezustand, Instandsetzung lädt wieder auf, Verbesserung vergrößert die Kapazität.\n\n### Instandhaltungsstrategien\n\n| Strategie | Prinzip | Eignung |\n|---|---|---|\n| ausfallbedingt (reaktiv) | Instandsetzung erst nach Ausfall | nur für unkritische Einheiten mit Redundanz |\n| präventiv, zeitbasiert | Maßnahmen in festen Intervallen | z. B. Wartung nach Herstellerplan |\n| zustandsorientiert | Maßnahmen nach gemessenem Zustand | z. B. Ableitstromtrend, Akkukapazitätstest |\n| vorausschauend (prädiktiv) | Prognose aus Betriebsdaten | z. B. Röhrenüberwachung in der Bildgebung |\n\n> [!hinweis] Die Einteilung der Instandhaltungsstrategien ist allgemeines Instandhaltungswissen; die entsprechenden Begriffe (z. B. korrektive, vorbeugende, zustandsorientierte und voraussagende Instandhaltung) werden vor allem in der europäischen Begriffsnorm DIN EN 13306 definiert [@din-en-13306].\n\n## Bezug zu anderen Normen\n\n| Norm/Regelwerk | Bezug |\n|---|---|\n| DIN EN 13306 | europäische Begriffsnorm der Instandhaltung [@din-en-13306] |\n| [[iec-62353]] | konkretes Prüfverfahren für die Inspektion von ME-Geräten |\n| [[iec-60601-1]] | Konstruktionsnorm; legt Grundlagen für Instandhaltbarkeit und Begleitpapiere fest |\n| [[iso-13485]] | QM-Anforderungen an Instandhaltungstätigkeiten von Herstellern und Dienstleistern |\n| [[mpbetreibv|MPBetreibV]] | rechtliche Pflichten zu Instandhaltung, STK und MTK |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Betreiber** sind nach der [[mpbetreibv|MPBetreibV]] verpflichtet, Medizinprodukte nach den Vorgaben des Herstellers instand halten zu lassen – durch Personen mit der erforderlichen Sachkenntnis. Daneben gelten STK nach § 12 i. V. m. Anlage 1 und MTK nach § 15 i. V. m. Anlage 2 [@mpbetreibv]. Die Begriffe der DIN 31051 helfen, diese Pflichten in einem Instandhaltungskonzept zu strukturieren, Verträge mit Dienstleistern eindeutig zu formulieren und Maßnahmen im [[medizintechnik-management|Medizintechnik-Management]] zu dokumentieren.\n\n**Hersteller** legen in ihren Unterlagen Wartungsintervalle, Prüfumfänge und Ersatzteile fest und schaffen damit die Grundlage für die Instandhaltung beim Betreiber.\n\n> [!praxis] In Ausschreibungen und Serviceverträgen sollte klar zwischen Wartung, Inspektion und Instandsetzung unterschieden werden – etwa ob ein „Vollwartungsvertrag“ auch Ersatzteile und Instandsetzung umfasst oder nur Inspektion und Verschleißteile.\n\n## Betroffene Geräte\n\nAlle technischen Einheiten, z. B. [[beatmungsgeraet]], [[dialysegeraet]], [[infusionspumpe]], [[defibrillator]], [[computertomograph]], [[roentgengeraet]], [[dampfsterilisator]], [[rdg]], [[op-tisch]], [[op-leuchte]] und [[pflegebett]].\n",
+  "related": [
+    "instandhaltung-grundlagen",
+    "wartung",
+    "inspektion",
+    "instandsetzung",
+    "stk",
+    "mtk",
+    "kalibrierung",
+    "fehlersuche",
+    "medizintechnik-management",
+    "mpbetreibv",
+    "iec-62353"
+  ],
+  "sources": [
+    "din-31051",
+    "din-en-13306",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

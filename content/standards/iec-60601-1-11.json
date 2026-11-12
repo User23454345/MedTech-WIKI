@@ -1,0 +1,37 @@
+{
+  "id": "iec-60601-1-11",
+  "type": "standard",
+  "title": "IEC 60601-1-11",
+  "code": "IEC 60601-1-11",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 1-11: Allgemeine Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale – Ergänzungsnorm: Anforderungen an medizinische elektrische Geräte und medizinische elektrische Systeme für die medizinische Versorgung in häuslicher Umgebung",
+  "scope": "Legt zusätzliche Sicherheitsanforderungen an medizinische elektrische Geräte und Systeme fest, die für den Einsatz in der häuslichen Gesundheitsversorgung bestimmt sind.",
+  "aliases": [
+    "DIN EN 60601-1-11",
+    "EN 60601-1-11",
+    "Home-Healthcare-Norm",
+    "60601-1-11"
+  ],
+  "category": "normen",
+  "summary": "IEC 60601-1-11 ergänzt die Basisnorm um Anforderungen an ME-Geräte für die häusliche Gesundheitsversorgung. Berücksichtigt werden Laienanwender, eine weniger kontrollierte Elektroinstallation, Transport, Umgebungsbedingungen sowie verständliche Gebrauchsanweisungen.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nImmer mehr Therapien werden aus der Klinik nach Hause verlagert: [[heimbeatmungsgeraet|Heimbeatmung]], [[sauerstoffkonzentrator|Sauerstofftherapie]], [[cpap-geraet|CPAP]], [[enterale-ernaehrungspumpe|enterale Ernährung]] oder [[insulinpumpe|Insulintherapie]]. Die **IEC 60601-1-11** stellt sicher, dass [[medizinisches-elektrisches-geraet|ME-Geräte]] für die häusliche Umgebung auch unter diesen Bedingungen sicher sind [@iec-60601-1-11].\n\nAls häusliche Umgebung gilt – vereinfacht – jeder Ort, an dem sich Patient:innen außerhalb professioneller Gesundheitseinrichtungen aufhalten, in denen ständig medizinisch geschultes Personal verfügbar ist: also Wohnung, aber auch Arbeitsplatz, Schule, Außenbereiche oder Fahrzeuge.\n\n## Zentrale Konzepte und Anforderungen\n\n### Unterschiede zur Klinik\n\n| Aspekt | Klinik | häusliche Umgebung |\n|---|---|---|\n| Anwender | geschultes Fachpersonal | Patient:innen, Angehörige, Pflegedienste – oft Laien |\n| Elektroinstallation | nach [[din-vde-0100-710]] errichtet, Schutzleiter geprüft | Zustand unbekannt, Schutzleiter nicht immer vorhanden oder wirksam |\n| Umgebung | klimatisiert, sauber | Feuchtigkeit, Haustiere, Kinder, Staub |\n| Transport | selten | häufig, auch im Auto oder Flugzeug |\n| Instandhaltung | Medizintechnik vor Ort | oft über Fachhändler bzw. Homecare-Provider |\n\n### Anforderungen (Auswahl, eigene Worte)\n\n* **Elektrischer Schutz:** Da ein wirksamer Schutzleiter nicht vorausgesetzt werden kann, werden Geräte bevorzugt in [[schutzklassen|Schutzklasse II]] oder mit interner Stromversorgung ausgeführt.\n* **Schutz gegen Eindringen von Wasser und Fremdkörpern:** Mindestanforderungen an den IP-Code, abhängig davon, ob das Gerät getragen, transportiert oder stationär genutzt wird.\n* **Mechanische Robustheit:** Prüfungen gegen Stoß, Fall und Vibration für tragbare und transportable Geräte.\n* **Umgebungsbedingungen:** Betrieb, Transport und Lagerung über erweiterte Temperatur-, Feuchte- und Luftdruckbereiche; Angabe der Aufwärm- bzw. Abkühlzeit nach Lagerung.\n* **Stromversorgung:** Verhalten bei Netzausfall, Anzeige des Akkuladezustands, Alarm bei Ausfall der Versorgung lebenserhaltender Geräte ([[lithium-ionen-akku]], [[akkufehler]]).\n* **Begleitpapiere für Laien:** verständliche, ggf. bebilderte Gebrauchsanweisung; Hinweise zu Reinigung und Desinfektion durch den Anwender ([[desinfektion]]).\n* **Gebrauchstauglichkeit:** Laien als Nutzergruppe sind ausdrücklich in der Nutzungsspezifikation nach [[iec-60601-1-6]] und [[iec-62366-1]] zu berücksichtigen.\n* **Alarme:** Alarmsignale müssen im häuslichen Umfeld wahrnehmbar sein, ggf. auch über Fernalarmierung ([[iec-60601-1-8]]).\n\n> [!hinweis] Konkrete Grenzwerte (z. B. Mindest-IP-Schutzgrade, Fallhöhen, Umgebungsbereiche) sind der jeweils gültigen Fassung der Norm zu entnehmen.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Sicherheitsanforderungen |\n| Ergänzungsnormen | IEC 60601-1-11, [[iec-60601-1-2]] (EMV mit eigenen Pegeln für die häusliche Umgebung), [[iec-60601-1-8]], [[iec-60601-1-6]] | wirken zusammen |\n| Besondere Festlegungen | z. B. [[iso-80601-2-12]] (Intensivbeatmung, Abgrenzung zur Heimbeatmung), [[iso-80601-2-61]] (Pulsoxymetrie), [[iec-80601-2-30]] (automatische Blutdruckmessgeräte) | können für Heimgeräte zusätzliche Festlegungen treffen |\n\nFür Geräte im Rettungsdienst existiert mit IEC 60601-1-12 eine eigene Ergänzungsnorm.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen die vorgesehene Einsatzumgebung bereits in der [[zweckbestimmung]] festlegen. Ein Gerät, das nur für die Klinik geprüft wurde, darf nicht ohne Weiteres für die Heimanwendung angeboten werden.\n\n**Betreiberpflichten** liegen im häuslichen Bereich in der Regel nicht bei den Patient:innen selbst, sondern bei der Stelle, die das Produkt zur Verfügung stellt (z. B. Krankenkasse oder Leistungserbringer); praktisch übernehmen meist Homecare-Unternehmen oder Sanitätshäuser [[einweisung|Einweisung]], Instandhaltung und die erforderlichen [[stk|sicherheitstechnischen Kontrollen]] nach [[mpbetreibv|MPBetreibV]] (§ 12 i. V. m. Anlage 1) [@mpbetreibv]. Die genaue Zuordnung der Betreiberrolle ist der jeweils geltenden Fassung der Verordnung zu entnehmen.\n\n> [!praxis] Ein Klinikgerät der Schutzklasse I, das zu Hause an einer Steckdose ohne funktionierenden Schutzleiter betrieben wird, verliert eine seiner beiden Schutzmaßnahmen – ein zusätzlicher Isolationsfehler kann dann unmittelbar zu einer gefährlichen Berührungsspannung am Gehäuse führen. Deshalb sollte bei der Überleitung vom Krankenhaus in die häusliche Versorgung geprüft werden, ob das Gerät für die häusliche Umgebung bestimmt ist.\n\n## Betroffene Geräte\n\n[[heimbeatmungsgeraet]], [[cpap-geraet]], [[sauerstoffkonzentrator]], [[inhalationsgeraet]], [[enterale-ernaehrungspumpe]], [[insulinpumpe]], [[pulsoxymeter]], [[nibp-messgeraet]], [[blutzuckermessgeraet]], [[absauggeraet]], [[high-flow-geraet]], [[pflegebett]], [[patientenlifter]] und [[antidekubitussystem]].\n",
+  "related": [
+    "heimbeatmungsgeraet",
+    "cpap-geraet",
+    "sauerstoffkonzentrator",
+    "insulinpumpe",
+    "iec-60601-1",
+    "iec-60601-1-2",
+    "iec-60601-1-6",
+    "iec-60601-1-8",
+    "schutzklassen",
+    "gebrauchstauglichkeit"
+  ],
+  "sources": [
+    "iec-60601-1-11",
+    "iec-60601-1",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

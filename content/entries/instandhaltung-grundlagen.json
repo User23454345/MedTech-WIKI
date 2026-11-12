@@ -1,0 +1,164 @@
+{
+  "id": "instandhaltung-grundlagen",
+  "type": "term",
+  "title": "Instandhaltung",
+  "aliases": [
+    "Instandhaltung von Medizinprodukten",
+    "Maintenance",
+    "Service",
+    "Technischer Service",
+    "Instandhaltungsmanagement",
+    "DIN 31051"
+  ],
+  "category": "instandhaltung",
+  "summary": "Instandhaltung umfasst alle technischen, administrativen und organisatorischen Maßnahmen, die den funktionsfähigen Zustand eines Geräts während seines Lebenszyklus erhalten oder wiederherstellen. Nach DIN 31051 gliedert sie sich in Wartung, Inspektion, Instandsetzung und Verbesserung; für Medizinprodukte ist sie zugleich Betreiberpflicht nach der MPBetreibV.",
+  "body": "## Begriff\n\n**Instandhaltung** bezeichnet nach [[din-31051|DIN 31051]] und der europäischen Begriffsnorm DIN EN 13306 die Kombination aller technischen und administrativen Maßnahmen sowie der Maßnahmen des Managements während des gesamten Lebenszyklus einer Betrachtungseinheit, die dem Erhalt oder der Wiederherstellung ihres funktionsfähigen Zustands dienen [@din-31051] [@din-en-13306]. Betrachtungseinheit kann ein ganzes Gerät (z. B. ein [[beatmungsgeraet|Intensivbeatmungsgerät]]), eine Baugruppe (z. B. die [[turbine]]) oder ein einzelnes Bauteil sein.\n\nIn der Medizintechnik hat Instandhaltung eine doppelte Bedeutung: Sie sichert die **Verfügbarkeit** teurer, oft lebenswichtiger Geräte und ist zugleich eine **Rechtspflicht** des Betreibers aus der [[mpbetreibv|Medizinprodukte-Betreiberverordnung]] (siehe [[betreiberpflichten]]).\n\n## Die vier Grundmaßnahmen nach DIN 31051\n\n| Grundmaßnahme | Ziel | Typische Tätigkeiten in der Medizintechnik |\n|---|---|---|\n| [[wartung|Wartung]] | Abbau des Abnutzungsvorrats verzögern | Filter wechseln, Dichtungen und Akkus tauschen, reinigen, schmieren |\n| [[inspektion|Inspektion]] | Ist-Zustand feststellen und beurteilen, Abnutzungsursachen ermitteln | Sichtprüfung, Messungen, [[stk|STK]], [[mtk|MTK]], Auswertung von Fehlerspeichern |\n| [[instandsetzung|Instandsetzung]] | Funktion einer fehlerhaften Einheit wiederherstellen | Defekte Baugruppe tauschen, Platine reparieren, anschließend prüfen |\n| Verbesserung | Zuverlässigkeit, Instandhaltbarkeit oder Sicherheit steigern, ohne die geforderte Funktion zu ändern | Schwachstellen beseitigen, sicherheitsrelevante Software-Updates, konstruktive Nachrüstungen des Herstellers |\n\n> [!belegt] Die Gliederung in Wartung, Inspektion, Instandsetzung und Verbesserung sowie das Modell des Abnutzungsvorrats stammen aus DIN 31051; die Normen sind kostenpflichtig, die Definitionen werden hier sinngemäß wiedergegeben [@din-31051].\n\n## Abnutzungsvorrat und Ausfallverhalten\n\nZentral für DIN 31051 ist der **Abnutzungsvorrat**: der Vorrat an möglichen Funktionserfüllungen, den eine Einheit nach Herstellung oder Instandsetzung besitzt. Durch Betrieb, Alterung, Korrosion oder Verschmutzung wird er abgebaut. Unterschreitet er die **Abnutzungsgrenze**, ist die geforderte Funktion nicht mehr sicher gewährleistet; spätestens dann muss instand gesetzt werden. Wartung verlangsamt den Abbau, Instandsetzung füllt den Vorrat wieder auf, Inspektion macht den aktuellen Stand sichtbar.\n\nDas Ausfallverhalten vieler technischer Systeme wird mit der **Badewannenkurve** beschrieben: erhöhte Ausfallrate in der Frühphase (Fertigungs- und Montagefehler), weitgehend konstante Rate in der Nutzungsphase (Zufallsausfälle, z. B. Elektronik) und steigende Rate in der Verschleißphase (z. B. Lager eines [[elektromotor|Elektromotors]], Kapazitätsverlust eines [[lithium-ionen-akku|Lithium-Ionen-Akkus]]).\n\n> [!vereinfacht] Die Badewannenkurve ist ein Denkmodell. Elektronikbaugruppen zeigen oft kaum Verschleiß, mechanische Komponenten wie Lager, Pumpenschläuche einer [[peristaltikpumpe|Peristaltikpumpe]] oder Membranen dagegen ausgeprägten. Für reale Geräte muss das Ausfallverhalten aus Herstellerangaben und eigenen Instandhaltungsdaten ermittelt werden.\n\n## Instandhaltungsstrategien\n\n| Strategie | Auslöser | Vorteile | Nachteile |\n|---|---|---|---|\n| Ausfallbedingt (korrektiv) | Störung tritt auf | keine vorzeitigen Kosten | ungeplante Ausfälle, Patientengefährdung möglich |\n| Vorbeugend, zeitbasiert | festes Intervall (Monate, Betriebsstunden, Zyklen) | planbar, gut dokumentierbar | Teile werden teils vor Ende ihrer Lebensdauer getauscht |\n| Zustandsorientiert | Messwerte, Selbsttests, Inspektionsergebnisse | Tausch nach Bedarf | erfordert Diagnosemöglichkeiten und Erfahrung |\n| Vorausschauend (prädiktiv) | Trendanalyse, Ferndiagnose | Ausfälle vor Eintritt erkennen | Datenbasis und Vernetzung nötig |\n\nFür lebenserhaltende Geräte – etwa [[beatmungsgeraet|Beatmungsgeräte]], [[defibrillator|Defibrillatoren]] oder [[herz-lungen-maschine|Herz-Lungen-Maschinen]] – ist eine rein ausfallbedingte Strategie nicht vertretbar. Hier gibt der Hersteller in der Regel vorbeugende Wartungsintervalle vor; zustandsorientierte Elemente kommen durch Selbsttests und Fehlerspeicher hinzu (siehe [[fehlercodes]]).\n\n## Kennzahlen\n\nZur Bewertung der Instandhaltung werden Zuverlässigkeitskennzahlen verwendet:\n\n* **MTBF** (Mean Time Between Failures): mittlere Betriebszeit zwischen zwei Ausfällen.\n* **MTTR** (Mean Time To Repair): mittlere Dauer bis zur Wiederherstellung.\n* **Stationäre Verfügbarkeit:** A = MTBF / (MTBF + MTTR)\n\n> [!beispiel] Ein [[ultraschallgeraet|Ultraschallgerät]] fällt im Mittel nach 4 000 Betriebsstunden aus, die Wiederherstellung dauert inklusive Ersatzteilbeschaffung 40 Stunden. Dann gilt A = 4 000 / (4 000 + 40) ≈ 0,990, also rund 99 %. Halbiert ein Servicevertrag mit Ersatzteilbevorratung die MTTR auf 20 h, steigt A auf etwa 99,5 %. Die Zahlen sind frei gewählt.\n\n## Rechtlicher Rahmen in Deutschland\n\nDie [[mpbetreibv|MPBetreibV]] in der Neufassung vom 14. Februar 2025 regelt die Instandhaltung von Medizinprodukten in § 7. Danach darf der Betreiber nur Personen, Betriebe oder Einrichtungen mit der erforderlichen Sachkenntnis, den notwendigen Voraussetzungen und Mitteln beauftragen; die Instandhaltung erfolgt nach den Herstellerangaben und umfasst ausdrücklich auch die Installation sicherheitsrelevanter Softwareaktualisierungen. Schon die Vorgängerfassung verlangte, nach Wartung oder Instandsetzung die für Sicherheit und Funktionstüchtigkeit wesentlichen konstruktiven und funktionellen Merkmale zu prüfen, soweit sie durch die Maßnahme beeinträchtigt sein können; fachlich ist diese Prüfung in jedem Fall geboten – der genaue Wortlaut ist dem aktuellen amtlichen Text zu entnehmen [@mpbetreibv].\n\nDavon zu unterscheiden sind die **gesetzlich geforderten Prüfungen**:\n\n* [[stk|Sicherheitstechnische Kontrolle]] nach § 12 i. V. m. Anlage 1 – Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind,\n* [[mtk|Messtechnische Kontrolle]] nach § 15 i. V. m. Anlage 2 für Produkte mit Messfunktion [@mpbetreibv].\n\nSystematisch gehören STK und MTK zur Inspektion. Die [[aufbereitung]] von Medizinprodukten ist in der MPBetreibV gesondert geregelt (§ 8), gehört aber organisatorisch eng zur Instandhaltung, weil gereinigte und geprüfte Instrumente häufig zugleich auf Funktion und Verschleiß kontrolliert werden.\n\n> [!hinweis] Paragraphenangaben beziehen sich auf die Neufassung der MPBetreibV vom 14. Februar 2025 (einschließlich späterer Berichtigungen). Ältere Fundstellen (z. B. § 11/§ 14 der Fassung von 2002/2017) sind überholt. Maßgeblich ist stets der aktuelle amtliche Text [@mpbetreibv].\n\n## Prüfung nach Instandsetzung und Dokumentation\n\nNach jedem Eingriff in ein [[medizinisches-elektrisches-geraet|ME-Gerät]] wird in Deutschland üblicherweise eine [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] nach [[iec-62353|IEC 62353]] mit Messung von [[schutzleiterwiderstand|Schutzleiterwiderstand]], [[isolationswiderstand|Isolationswiderstand]] und [[ableitstrommessung|Ableitströmen]] sowie eine [[funktionspruefung|Funktionsprüfung]] durchgeführt [@iec-62353]. Wurde eine messende Baugruppe getauscht, ist zusätzlich eine [[kalibrierung|Kalibrierung bzw. Justierung]] erforderlich. Alle Maßnahmen werden – bei Geräten nach Anlage 1 und 2 im [[medizinproduktebuch|Medizinproduktebuch]], sonst in der Instandhaltungsdokumentation – mit Datum, Art der Maßnahme, Ergebnis und durchführender Person festgehalten. Grundlage dafür ist das [[bestandsverzeichnis|Bestandsverzeichnis]].\n\n## Bedeutung in der Medizintechnik\n\n| Gerät | Instandhaltungsschwerpunkte (Auswahl) |\n|---|---|\n| [[beatmungsgeraet|Intensivbeatmungsgerät]] | Filterwechsel, [[sauerstoffsensor|O₂-Sensor]], [[exspirationsventil|Exspirationsventil]], [[flowsensor|Flowsensor]], Laufzeit der [[turbine]] |\n| [[infusionspumpe|Infusionspumpe]] / [[spritzenpumpe|Spritzenpumpe]] | Akkuzustand, Förderratengenauigkeit, Okklusionsdruckerkennung |\n| [[defibrillator]] | Energieabgabe, Akku, Selbsttestprotokolle |\n| [[dialysegeraet|Dialysegerät]] | Hydraulik, [[leitfaehigkeitssensor|Leitfähigkeitsmessung]], Desinfektionsprogramme |\n| [[computertomograph|CT]] / [[mrt|MRT]] | Herstellerservice, Konstanzprüfungen, Kühlung |\n| [[dampfsterilisator|Dampfsterilisator]] | Dichtungen, Vakuumpumpe, Temperatur- und Druckfühler |\n\nDie Organisation dieser Aufgaben – Termine, Dienstleister, Kosten, Kennzahlen – ist Gegenstand des [[medizintechnik-management|Medizintechnik-Managements]]. Bei Störungen hilft die [[fehlersuche|systematische Fehlersuche]].",
+  "related": [
+    "wartung",
+    "inspektion",
+    "instandsetzung",
+    "kalibrierung",
+    "aufbereitung",
+    "medizintechnik-management",
+    "fehlersuche",
+    "din-31051",
+    "mpbetreibv",
+    "stk",
+    "mtk",
+    "iec-62353",
+    "betreiberpflichten",
+    "lebenszyklus-medizinprodukt"
+  ],
+  "paths": [
+    [
+      "instandhaltung-grundlagen",
+      "inspektion",
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "ableitstrommessung"
+    ],
+    [
+      "instandhaltung-grundlagen",
+      "instandsetzung",
+      "fehlersuche",
+      "beatmungsgeraet",
+      "turbine"
+    ]
+  ],
+  "sources": [
+    "din-31051",
+    "din-en-13306",
+    "mpbetreibv",
+    "iec-62353",
+    "kramme-2017",
+    "bronzino-2015"
+  ],
+  "diagram": {
+    "title": "Instandhaltung nach DIN 31051 – Grundmaßnahmen",
+    "caption": "Vereinfachtes Schema: Die Inspektion liefert den Ist-Zustand und steuert Wartung, Instandsetzung und Verbesserung; danach folgt eine Prüfung vor der erneuten Freigabe.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "geraet",
+        "label": "Medizinprodukt\nim Betrieb",
+        "kind": "source",
+        "x": 110,
+        "y": 180
+      },
+      {
+        "id": "insp",
+        "label": "Inspektion\n(Ist-Zustand)",
+        "kind": "sensor",
+        "ref": "inspektion",
+        "x": 330,
+        "y": 180
+      },
+      {
+        "id": "wart",
+        "label": "Wartung",
+        "kind": "process",
+        "ref": "wartung",
+        "x": 560,
+        "y": 70
+      },
+      {
+        "id": "inst",
+        "label": "Instandsetzung",
+        "kind": "actuator",
+        "ref": "instandsetzung",
+        "x": 560,
+        "y": 180
+      },
+      {
+        "id": "verb",
+        "label": "Verbesserung",
+        "kind": "process",
+        "x": 560,
+        "y": 290
+      },
+      {
+        "id": "pruef",
+        "label": "Prüfung nach\nIEC 62353",
+        "kind": "control",
+        "ref": "elektrische-sicherheitspruefung",
+        "x": 790,
+        "y": 180
+      },
+      {
+        "id": "doku",
+        "label": "Dokumentation /\nFreigabe",
+        "kind": "output",
+        "ref": "medizinproduktebuch",
+        "x": 790,
+        "y": 300
+      }
+    ],
+    "edges": [
+      {
+        "from": "geraet",
+        "to": "insp",
+        "kind": "data",
+        "label": "Zustand"
+      },
+      {
+        "from": "insp",
+        "to": "wart",
+        "kind": "data"
+      },
+      {
+        "from": "insp",
+        "to": "inst",
+        "kind": "data",
+        "label": "Mangel"
+      },
+      {
+        "from": "insp",
+        "to": "verb",
+        "kind": "data"
+      },
+      {
+        "from": "wart",
+        "to": "pruef",
+        "kind": "signal"
+      },
+      {
+        "from": "inst",
+        "to": "pruef",
+        "kind": "signal"
+      },
+      {
+        "from": "verb",
+        "to": "pruef",
+        "kind": "signal"
+      },
+      {
+        "from": "pruef",
+        "to": "doku",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

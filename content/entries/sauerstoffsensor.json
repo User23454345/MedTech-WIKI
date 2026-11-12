@@ -1,0 +1,152 @@
+{
+  "id": "sauerstoffsensor",
+  "type": "term",
+  "title": "Sauerstoffsensor",
+  "aliases": [
+    "O₂-Sensor",
+    "O2-Sensor",
+    "Sauerstoffzelle",
+    "oxygen sensor",
+    "galvanische Sauerstoffzelle",
+    "Brennstoffzelle (O₂)",
+    "paramagnetischer Sauerstoffsensor",
+    "Clark-Elektrode",
+    "FiO2-Sensor"
+  ],
+  "category": "sensorik",
+  "summary": "Sensor zur Bestimmung des Sauerstoffanteils oder -partialdrucks in Atemgas oder Blut. Wichtige Prinzipien sind die galvanische Zelle, der paramagnetische Sensor, die polarographische Clark-Elektrode und optische Lumineszenzsensoren.",
+  "body": "## Begriff und Abgrenzung\n\nEin **Sauerstoffsensor** misst den Sauerstoffanteil eines Gases oder den Sauerstoffpartialdruck in einer Flüssigkeit. Drei Messaufgaben sind sauber zu unterscheiden:\n\n| Messgröße | Bedeutung | Typisches Gerät |\n|---|---|---|\n| F_iO₂ (inspiratorische O₂-Fraktion) | Volumenanteil O₂ im Atemgas, 0,21 bis 1,0 | [[beatmungsgeraet]], [[anaesthesiegeraet]] |\n| pO₂ (Sauerstoffpartialdruck) | Partialdruck im Blut oder Gas | [[blutgasanalysator]] |\n| SpO₂ (pulsoximetrische Sättigung) | Anteil oxygenierten [[haemoglobin|Hämoglobins]] | [[pulsoxymeter]] – kein Sauerstoffsensor im engeren Sinn, sondern [[photoplethysmographie|Photoplethysmographie]] |\n\nNach dem Daltonschen Gesetz ([[gasgesetze]]) hängen Fraktion und Partialdruck über den Gesamtdruck zusammen: `p_O₂ = F_O₂ · p_ges`. Viele Sensoren reagieren physikalisch auf den **Partialdruck**, zeigen aber eine **Fraktion** an – Luftdruckschwankungen oder Überdruck im Beatmungssystem wirken sich deshalb auf die Anzeige aus, wenn sie nicht kompensiert werden [@oczenski-2017] [@dorsch-2008].\n\n## Galvanische Sauerstoffzelle (Brennstoffzelle)\n\nDie in Beatmungs- und Anästhesiegeräten verbreitete **galvanische Zelle** arbeitet ohne äußere Spannungsquelle. Sauerstoff diffundiert durch eine Membran zur Kathode (Gold oder Silber) und wird dort reduziert; die Bleianode wird oxidiert [@dorsch-2008]:\n\n* Kathode: `O₂ + 2 H₂O + 4 e⁻ → 4 OH⁻`\n* Anode: `2 Pb + 4 OH⁻ → 2 PbO + 2 H₂O + 4 e⁻`\n\nDer Strom ist proportional zum O₂-Partialdruck und wird über einen Lastwiderstand als Spannung abgegriffen. Ein [[temperatursensor|NTC]] kompensiert die Temperaturabhängigkeit der Diffusion.\n\n> [!vereinfacht] Da die Bleianode verbraucht wird, hat die Zelle eine begrenzte Lebensdauer, die mit der Sauerstoffexposition sinkt; ein dauerhaft unter hoher F_iO₂ betriebener Sensor altert schneller. Typische Lebensdauerangaben liegen im Bereich von etwa einem bis zwei Jahren – maßgeblich ist die Herstellerangabe.\n\n> [!praxis] Gealterte Zellen äußern sich durch abnehmendes Signal, Kalibrierfehler beim Selbsttest oder schwankende F_iO₂-Werte. Die Kalibrierung erfolgt bei 21 % (Raumluft) und/oder 100 % O₂. Verbrauchte Zellen sind wegen des Bleigehalts sachgerecht zu entsorgen.\n\n## Paramagnetischer Sensor\n\nSauerstoff ist wegen zweier ungepaarter Elektronen **paramagnetisch** – er wird in ein Magnetfeld hineingezogen, während N₂, CO₂ und Narkosegase schwach diamagnetisch sind. Im klassischen Hantelsensor hängt eine mit Stickstoff gefüllte Glashantel drehbar in einem inhomogenen Magnetfeld; O₂ verdrängt die Hantel aus dem Feld. Das Drehmoment wird elektrisch kompensiert, der Kompensationsstrom ist das Messsignal. Varianten nutzen ein magnetisches Wechselfeld und messen den dabei entstehenden Druckunterschied [@dorsch-2008].\n\nParamagnetische Sensoren sind schnell genug für die **atemzugweise** Messung (inspiratorisch/exspiratorisch) und verbrauchen sich nicht; sie werden in Atemgasmonitoren von Anästhesiearbeitsplätzen eingesetzt (Normbezug: [[iso-80601-2-55]] [@iso-80601-2-55]).\n\n## Polarographische Clark-Elektrode\n\nFür den pO₂ im Blut nutzt der [[blutgasanalysator|Blutgasanalysator]] klassisch die **Clark-Elektrode** [@clark-1956]: Eine Platinkathode wird gegenüber einer Ag/AgCl-Anode mit einer Polarisationsspannung von etwa −0,6 bis −0,7 V betrieben; eine gasdurchlässige Membran trennt die Elektroden von der Probe. Der Reduktionsstrom ist proportional zum pO₂. Im Unterschied zur galvanischen Zelle braucht sie eine externe Spannung und verbraucht in der Messung selbst Sauerstoff – deshalb sind Membran und Elektrolyt kritische Verschleißteile [@webster-2010].\n\n## Optische Sensoren (Lumineszenzlöschung)\n\nBestimmte Farbstoffe (z. B. Ruthenium- oder Platin-Porphyrin-Komplexe) fluoreszieren bzw. phosphoreszieren nach Anregung; Sauerstoff löscht diese Lumineszenz. Die **Stern-Volmer-Gleichung** beschreibt den Zusammenhang:\n\n`I₀ / I = τ₀ / τ = 1 + K_SV · p_O₂`\n\nmit Intensität I bzw. Abklingzeit τ ohne (Index 0) und mit Sauerstoff. Die Messung der Abklingzeit ist unempfindlich gegen Lichtintensitätsschwankungen. Optische Sensoren verbrauchen keinen Sauerstoff und werden in Einweg-Messkassetten und faseroptischen Sonden genutzt [@fraden-2016].\n\n## Ultraschallverfahren\n\nIn [[sauerstoffkonzentrator|Sauerstoffkonzentratoren]] wird der O₂-Gehalt des Produktgases bei vielen Bauarten über die Schallgeschwindigkeit bestimmt: Für ideale Gase gilt `c = √(κ · R · T / M)`, und die molare Masse M eines O₂/N₂-Gemischs (32 bzw. 28 g/mol) verschiebt c messbar [@fraden-2016].\n\n> [!vereinfacht] Die Auswertung setzt ein binäres Gemisch voraus. Das Druckwechsel-Adsorptionsverfahren trennt Argon (M ≈ 40 g/mol) nicht vom Sauerstoff ab, sodass es im Produktgas angereichert wird (einige Prozent); Gerätealgorithmen müssen dies berücksichtigen. Die Temperatur geht unter der Wurzel ein und wird deshalb mitgemessen.\n\n## Vergleich\n\n| Prinzip | Ansprechzeit | Verbrauch/Alterung | Typischer Einsatz |\n|---|---|---|---|\n| Galvanisch | einige Sekunden | ja (Anode) | F_iO₂-Überwachung in Beatmungs-, Anästhesie-, Inkubatorgeräten |\n| Paramagnetisch | atemzugweise | nein | Atemgasmonitoring, Anästhesie |\n| Clark (polarographisch) | Sekunden | Membran, Elektrolyt | Blutgasanalyse, transkutane pO₂-Messung |\n| Optisch (Lumineszenz) | Sekunden | Farbstoff-Ausbleichen | Blutgas-Kassetten, Sonden |\n| Ultraschall | schnell | nein | Sauerstoffkonzentrator |\n\n## Anwendung in Geräten\n\n* [[beatmungsgeraet]], [[transportbeatmungsgeraet]], [[high-flow-geraet]]: Überwachung der eingestellten O₂-Konzentration, Alarm bei Abweichung; bei Turbinengeräten wird O₂ über ein [[proportionalventil|Proportionalventil]] zugemischt und die Mischung kontrolliert.\n* [[anaesthesiegeraet]]: inspiratorische und exspiratorische O₂-Konzentration, Schutz vor hypoxischer Gasmischung.\n* [[inkubator]]: Regelung bzw. Überwachung der O₂-Konzentration in der Haube ([[neonatologie]]).\n* [[blutgasanalysator]]: pO₂ im arteriellen Blut.\n* [[sauerstoffkonzentrator]]: Kontrolle der Produktgasreinheit.\n\n> [!belegt] Atemgasmonitore für Sauerstoff, CO₂ und Narkosegase unterliegen der Gerätenorm ISO 80601-2-55, die u. a. Anforderungen an Messgenauigkeit, Ansprechverhalten und Alarme festlegt; maßgeblich ist die jeweils gültige Fassung [@iso-80601-2-55].\n\n> [!warnung] Ein O₂-Sensor, der zu hohe Werte anzeigt, verdeckt eine hypoxische Gasmischung. Kalibrierfehler und Alarme des O₂-Monitorings dürfen nie ignoriert oder durch Deaktivieren der Überwachung „gelöst“ werden ([[sensordrift]], [[alarmsystem]]).\n",
+  "related": [
+    "co2-sensor",
+    "gasgesetze",
+    "gasaustausch",
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "blutgasanalysator",
+    "sauerstoffkonzentrator",
+    "photoplethysmographie",
+    "sensordrift",
+    "kalibrierung",
+    "iso-80601-2-55"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "sauerstoffsensor",
+      "gasgesetze"
+    ],
+    [
+      "blutgasanalysator",
+      "sauerstoffsensor",
+      "gasaustausch"
+    ]
+  ],
+  "sources": [
+    "dorsch-2008",
+    "oczenski-2017",
+    "clark-1956",
+    "webster-2010",
+    "fraden-2016",
+    "iso-80601-2-55"
+  ],
+  "diagram": {
+    "title": "Galvanische Sauerstoffzelle im Beatmungsgerät",
+    "caption": "Funktionsschema von der O₂-Diffusion bis zur F_iO₂-Anzeige.",
+    "width": 980,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "gas",
+        "label": "Atemgas\n(p_O₂)",
+        "kind": "source",
+        "x": 90,
+        "y": 80,
+        "ref": "gasgesetze"
+      },
+      {
+        "id": "mem",
+        "label": "Diffusions-\nmembran",
+        "kind": "process",
+        "x": 280,
+        "y": 80,
+        "ref": "diffusion-osmose"
+      },
+      {
+        "id": "zel",
+        "label": "Kathode / Elektrolyt /\nPb-Anode",
+        "kind": "sensor",
+        "x": 490,
+        "y": 80,
+        "ref": "sauerstoffsensor"
+      },
+      {
+        "id": "r",
+        "label": "Lastwiderstand\n(I → U)",
+        "kind": "process",
+        "x": 700,
+        "y": 80,
+        "ref": "spannung-strom-widerstand"
+      },
+      {
+        "id": "ntc",
+        "label": "NTC-Temperatur-\nkompensation",
+        "kind": "sensor",
+        "x": 490,
+        "y": 220,
+        "ref": "temperatursensor"
+      },
+      {
+        "id": "mcu",
+        "label": "Kalibrierung\n21 % / 100 %",
+        "kind": "control",
+        "x": 700,
+        "y": 220,
+        "ref": "kalibrierung"
+      },
+      {
+        "id": "al",
+        "label": "F_iO₂-Anzeige\n+ Alarm",
+        "kind": "output",
+        "x": 880,
+        "y": 150,
+        "ref": "alarmsystem"
+      }
+    ],
+    "edges": [
+      {
+        "from": "gas",
+        "to": "mem",
+        "kind": "gas"
+      },
+      {
+        "from": "mem",
+        "to": "zel",
+        "kind": "gas",
+        "label": "O₂"
+      },
+      {
+        "from": "zel",
+        "to": "r",
+        "kind": "signal",
+        "label": "Strom ∝ p_O₂"
+      },
+      {
+        "from": "ntc",
+        "to": "mcu",
+        "kind": "signal"
+      },
+      {
+        "from": "r",
+        "to": "mcu",
+        "kind": "signal"
+      },
+      {
+        "from": "mcu",
+        "to": "al",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

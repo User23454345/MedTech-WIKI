@@ -1,0 +1,70 @@
+{
+  "id": "ergometer",
+  "type": "device",
+  "title": "Belastungs-EKG mit Ergometer",
+  "aliases": [
+    "Belastungs-EKG",
+    "Ergometrie",
+    "Fahrradergometer",
+    "Laufband-Ergometrie",
+    "Stress-EKG",
+    "Spiroergometrie",
+    "Tretkurbelergometer"
+  ],
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 29,
+  "domains": [
+    "kardiologie",
+    "pneumologie",
+    "physikalische-medizin"
+  ],
+  "summary": "Ein Belastungs-EKG-Messplatz kombiniert ein Ergometer – meist ein Fahrradergometer, seltener ein Laufband – mit einem 12-Kanal-EKG und einer Blutdruckmessung. Die Belastung wird stufenweise gesteigert, um belastungsabhängige Durchblutungsstörungen, Rhythmusstörungen und die Leistungsfähigkeit zu beurteilen.",
+  "sections": {
+    "purpose": "Die Ergometrie dient der Diagnostik der koronaren Herzkrankheit, der Beurteilung von Belastbarkeit, Blutdruck- und Herzfrequenzverhalten sowie belastungsinduzierter Arrhythmien. Kombiniert mit Atemgasanalyse (Spiroergometrie) liefert sie zusätzlich die Sauerstoffaufnahme als Maß der kardiopulmonalen Leistungsfähigkeit – auch in Sport- und Rehabilitationsmedizin.",
+    "principle": "## Belastungserzeugung\n\nModerne Fahrradergometer bremsen das Schwungrad mit einer elektronisch geregelten **Wirbelstrombremse**: Ein Elektromagnet induziert in einer rotierenden Metallscheibe Wirbelströme, deren Magnetfeld der Bewegung entgegenwirkt ([[elektromagnetische-induktion]]). Die mechanische Leistung ergibt sich aus Drehmoment und Winkelgeschwindigkeit, P = M · ω. Ein [[regelkreis]] passt das Bremsmoment so an, dass die eingestellte Leistung in Watt in einem weiten Drehzahlbereich unabhängig von der Trittfrequenz gilt; erfasst wird das Moment über [[kraftsensor|Kraftsensoren]] oder eine kalibrierte Bremskennlinie [@kramme-2017].\n\n> [!beispiel] Ein häufiges Stufenprotokoll beginnt bei 25 oder 50 W und steigert alle zwei bis drei Minuten um 25 W; Rampenprotokolle erhöhen die Last kontinuierlich.\n\nBeim **Laufband** wird die Belastung über Geschwindigkeit und Steigung vorgegeben; die Leistung in Watt ist dort nicht direkt messbar.\n\n## EKG und Überwachung\n\nDas EKG-Modul entspricht einem 12-Kanal-[[ekg-geraet]], benötigt aber stärkere Artefaktunterdrückung: Bewegungen, Schweiß und Muskelpotentiale stören das Signal ([[bewegungsartefakt]], [[filter]]). Die Software mittelt Schläge und vermisst die ST-Strecke über die Belastungsstufen. Der Blutdruck wird automatisch oder auskultatorisch gemessen ([[nibp-messgeraet]]).\n\n> [!warnung] Während der Ergometrie muss eine Notfallausrüstung einschließlich [[defibrillator|Defibrillator]] sofort verfügbar sein; Abbruchkriterien sind vorab festzulegen."
+  },
+  "manufacturers": [
+    {
+      "ref": "schiller",
+      "models": [
+        "CARDIOVIT CS-200"
+      ],
+      "note": "Belastungs-EKG-System."
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "CASE"
+      ],
+      "note": "Belastungs-EKG-System."
+    },
+    {
+      "ref": "philips",
+      "models": [
+        "ST80i"
+      ],
+      "note": "Belastungs-EKG-System."
+    }
+  ],
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "ja",
+    "basis": "MTK: MPBetreibV (2025) § 15 i. V. m. Anlage 2 Nr. 1.7 – Tretkurbelergometer zur definierten physikalischen und reproduzierbaren Belastung von Patienten; Laufbänder sind dort nicht genannt. Integrierte Blutdruckmessgeräte unterliegen der MTK nach Anlage 2 Nr. 1.3. STK: Belastungs-EKG-Systeme sind in Anlage 1 nicht aufgeführt; Kontrollen nach § 12, wenn der Hersteller sie vorschreibt.",
+    "intervals": "MTK für Tretkurbelergometer (und ggf. integrierte NIBP-Messung) alle 2 Jahre nach Anlage 2; vom Hersteller vorgeschriebene Kontrollen nach Herstellerangabe; elektrische Wiederholungsprüfung nach IEC 62353 gemäß Herstellervorgabe."
+  },
+  "related": [
+    "ekg-geraet",
+    "langzeit-ekg",
+    "nibp-messgeraet",
+    "mtk",
+    "elektromagnetische-induktion",
+    "defibrillator"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

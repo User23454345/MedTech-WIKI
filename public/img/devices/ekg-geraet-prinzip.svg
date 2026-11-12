@@ -15,7 +15,7 @@
   <polygon points="50,70 230,70 140,226" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
   <path d="M128,128 q12,-12 22,0 q8,18 -14,34 q-20,-16 -8,-34 z" fill="#e6f7f5" stroke="#0d9488" stroke-width="1.5"/>
   <line x1="122" y1="160" x2="160" y2="128" stroke="#0d9488" stroke-width="2" marker-end="url(#pf2)"/>
-  <text x="172" y="150" font-size="13" fill="#0d9488">Herzvektor</text>
+  <text x="140" y="104" font-size="13" fill="#0d9488" text-anchor="middle">Herzvektor</text>
   <g fill="#14b8a6" stroke="#0b2545" stroke-width="1.5">
     <circle cx="50" cy="70" r="6"/><circle cx="230" cy="70" r="6"/><circle cx="140" cy="226" r="6"/>
   </g>
@@ -26,11 +26,11 @@
     <text x="202" y="160" font-weight="600">III</text>
   </g>
   <g font-size="13" fill="#0b2545">
-    <text x="20" y="282">I = Φ_L − Φ_R</text>
-    <text x="20" y="302">II = Φ_F − Φ_R</text>
-    <text x="20" y="322">III = Φ_F − Φ_L   →   II = I + III</text>
-    <text x="20" y="348">WCT = (Φ_R + Φ_L + Φ_F) / 3</text>
-    <text x="20" y="368">Vi = Φ_Vi − WCT  (i = 1 … 6)</text>
+    <text x="20" y="282">I = Φ<tspan baseline-shift="sub" font-size="10">L</tspan> − Φ<tspan baseline-shift="sub" font-size="10">R</tspan></text>
+    <text x="20" y="302">II = Φ<tspan baseline-shift="sub" font-size="10">F</tspan> − Φ<tspan baseline-shift="sub" font-size="10">R</tspan></text>
+    <text x="20" y="322">III = Φ<tspan baseline-shift="sub" font-size="10">F</tspan> − Φ<tspan baseline-shift="sub" font-size="10">L</tspan>   →   II = I + III</text>
+    <text x="20" y="348">Φ<tspan baseline-shift="sub" font-size="10">WCT</tspan> = (Φ<tspan baseline-shift="sub" font-size="10">R</tspan> + Φ<tspan baseline-shift="sub" font-size="10">L</tspan> + Φ<tspan baseline-shift="sub" font-size="10">F</tspan>) / 3</text>
+    <text x="20" y="368">V<tspan baseline-shift="sub" font-size="10">i</tspan> = Φ<tspan baseline-shift="sub" font-size="10">Vi</tspan> − Φ<tspan baseline-shift="sub" font-size="10">WCT</tspan>  (i = 1 … 6)</text>
   </g>
 
   <line x1="300" y1="44" x2="300" y2="380" stroke="#f1f5f9" stroke-width="2"/>

@@ -1,0 +1,59 @@
+{
+  "id": "stroemungslehre",
+  "type": "term",
+  "title": "Strömungslehre",
+  "aliases": [
+    "Fluiddynamik",
+    "Fluidmechanik",
+    "Hydrodynamik",
+    "fluid dynamics",
+    "Hagen-Poiseuille",
+    "Bernoulli-Gleichung",
+    "Kontinuitätsgleichung",
+    "Reynolds-Zahl",
+    "laminare Strömung",
+    "turbulente Strömung",
+    "Strömungswiderstand",
+    "Resistance"
+  ],
+  "category": "physik",
+  "summary": "Die Strömungslehre beschreibt die Bewegung von Gasen und Flüssigkeiten: Kontinuität, Energieerhaltung (Bernoulli), Reibung (Hagen-Poiseuille) und den Übergang von laminarer zu turbulenter Strömung. Sie erklärt Atemwegswiderstände, Blutfluss, Infusionsraten und das Messprinzip vieler Flowsensoren.",
+  "body": "## Grundbegriffe\n\nEin **Fluid** ist ein Stoff, der einer Scherung keinen bleibenden Widerstand entgegensetzt – also Gase und Flüssigkeiten. Die Strömungslehre beschreibt, wie sich ein Fluid unter dem Einfluss von Druckunterschieden bewegt. Zentrale Größen sind:\n\n| Größe | Formelzeichen | Einheit | Klinische Einheit |\n|---|---|---|---|\n| Volumenstrom (Flow) | V̇ = dV/dt | m³/s | L/min, mL/h |\n| Strömungsgeschwindigkeit | v | m/s | cm/s |\n| Druckdifferenz | Δp | Pa | cmH₂O, mmHg |\n| Strömungswiderstand | R = Δp / V̇ | Pa·s/m³ | cmH₂O/(L/s), mmHg·min/L |\n| dynamische Viskosität | η | Pa·s | mPa·s |\n\nOhne Druckdifferenz keine Strömung: Der [[druck|Druck]] ist der Antrieb, der Widerstand die Bremse. Die Gleichung `Δp = R · V̇` ist das strömungstechnische Gegenstück zum Ohm'schen Gesetz `U = R · I` ([[spannung-strom-widerstand]]) [@tipler-2019].\n\n## Kontinuitätsgleichung\n\nFür ein inkompressibles Fluid in einem Rohr ohne Verzweigung ist der Volumenstrom überall gleich:\n\n`V̇ = A₁ · v₁ = A₂ · v₂`\n\nHalbiert sich der Querschnitt, verdoppelt sich die Geschwindigkeit. Deshalb strömt Blut in einer Stenose schneller – ein Effekt, den die Doppler-Sonographie direkt sichtbar macht ([[doppler-effekt]]). Im Kapillarbett ist die Gesamtquerschnittsfläche sehr groß und die Geschwindigkeit entsprechend klein, was den [[gasaustausch|Gas-]] und Stoffaustausch begünstigt [@schmidt-lang-2019].\n\n## Bernoulli-Gleichung\n\nFür reibungsfreie, stationäre Strömung gilt entlang einer Stromlinie die Energieerhaltung:\n\n`p + ½ · ρ · v² + ρ · g · h = const`\n\nStatischer Druck, dynamischer Druck (Staudruck) und hydrostatischer Druck tauschen sich aus. Wo die Geschwindigkeit steigt, sinkt der statische Druck. Technisch genutzt wird das im **Venturi-Prinzip**: In einer Düse beschleunigter Sauerstoff erzeugt einen Unterdruck, der Raumluft ansaugt (Venturi-Maske, Injektor-Absaugung, manche Vernebler). Auch Differenzdruck-[[flowsensor|Flowsensoren]] mit Blende oder Venturi-Rohr werten diesen Zusammenhang aus: `V̇ ∝ √Δp` [@webster-2010].\n\n## Reibung: das Gesetz von Hagen-Poiseuille\n\nReale Fluide haben eine Viskosität. Für **laminare** Strömung in einem starren, geraden Rohr mit Radius r und Länge l gilt:\n\n`V̇ = (π · r⁴ · Δp) / (8 · η · l)`   bzw.   `R = 8 · η · l / (π · r⁴)`\n\nDie vierte Potenz des Radius ist die klinisch wichtigste Aussage der Strömungslehre [@tipler-2019] [@schmidt-lang-2019].\n\n> [!beispiel] Ein Tubus mit 7 mm Innendurchmesser wird gegen einen mit 6 mm getauscht. Bei laminarer Strömung steigt der Widerstand um den Faktor (7/6)⁴ ≈ 1,85, also um rund 85 %. Bei einer peripheren Venenverweilkanüle führt ein größerer Durchmesser umgekehrt zu einem überproportional höheren maximalen Durchfluss. Die Rechnung vernachlässigt Turbulenz und Einlaufeffekte und zeigt nur die Größenordnung.\n\n> [!vereinfacht] Hagen-Poiseuille setzt ein Newton'sches Fluid, starre Wände, laminare und voll ausgebildete Strömung voraus. Blut ist nicht-Newton'sch (Viskosität abhängig von Scherrate und Hämatokrit), Gefäße sind elastisch, und der Atemfluss ist pulsatil und teilweise turbulent. Das Gesetz liefert deshalb Proportionen, keine exakten Werte.\n\n## Laminar und turbulent: die Reynolds-Zahl\n\nOb eine Strömung geordnet in Schichten (laminar) oder mit Wirbeln (turbulent) verläuft, entscheidet die dimensionslose **Reynolds-Zahl**:\n\n`Re = ρ · v · d / η`\n\nFür Rohrströmungen gilt als Richtwert ein Umschlag bei Re ≈ 2300 [@tipler-2019]. Turbulenz hat drei praktische Folgen:\n\n| Eigenschaft | laminar | turbulent |\n|---|---|---|\n| Druckabfall | proportional zu V̇ | ungefähr proportional zu V̇² |\n| Geräusch | leise | Strömungsgeräusche (z. B. Stenosegeräusch, Stridor) |\n| Messtechnik | lineare Differenzdruck-Kennlinie | Nichtlinearität, Rauschen |\n\nIn großen Atemwegen und an Verzweigungen ist die Strömung bei höheren Flüssen turbulent. Gasgemische mit geringer Dichte (Helium-Sauerstoff) senken die Reynolds-Zahl und damit den Widerstand bei turbulenter Strömung [@oczenski-2017].\n\n## Widerstand und Compliance im Atemsystem\n\nDie [[atemmechanik|Atemmechanik]] lässt sich als einfaches Modell aus Widerstand R (Resistance der Atemwege und des Tubus) und Dehnbarkeit C (Compliance von Lunge und Thorax) beschreiben. Der Druck am Atemwegseingang ist dann:\n\n`p_aw = V̇ · R + V / C + PEEP`\n\nDie Zeitkonstante `τ = R · C` bestimmt, wie schnell sich die Lunge füllt und entleert; nach etwa drei Zeitkonstanten sind rund 95 % des Volumens ausgeatmet. Diese „Bewegungsgleichung“ ist die Grundlage der Druck- und Flowkurven am [[beatmungsgeraet|Beatmungsgerät]] [@oczenski-2017] [@tobin-2013].\n\n> [!praxis] Steigt der Spitzendruck bei volumenkontrollierter Beatmung, während der Plateaudruck gleich bleibt, deutet das auf einen erhöhten Widerstand (Sekret, abgeknickter Schlauch, verlegtes Filter) hin; steigen beide, eher auf eine verminderte Compliance. Siehe [[atemwegsdruck-hoch]].\n\n## Strömung von Flüssigkeiten in Geräten\n\n- **Infusionstechnik:** Der Förderdruck einer [[infusionspumpe|Infusionspumpe]] muss den Widerstand von Leitung, Filter und Kanüle überwinden. Ein Verschluss erhöht den Widerstand drastisch – der Leitungsdruck steigt bis zum [[okklusionsalarm|Okklusionsalarm]]. Die Nachgiebigkeit (Compliance) der Leitung verzögert dabei sowohl den Alarm als auch den Förderbeginn.\n- **Extrakorporale Kreisläufe:** In [[dialysegeraet|Dialyse]], [[herz-lungen-maschine|Herz-Lungen-Maschine]] und [[ecmo|ECMO]] bestimmen Schlauchdurchmesser, Kanülen und Membranen Druckverlust und Scherbelastung des Blutes (Hämolyserisiko).\n- **Pumpen:** [[peristaltikpumpe|Peristaltikpumpen]] verdrängen ein Volumen; [[turbine|Turbinen]] und Radialgebläse erzeugen eine Druckdifferenz, deren Höhe mit der Drehzahl steigt ([[drehzahlregelung]]).\n\n## Bedeutung in der Medizintechnik\n\n| Gerät / Komponente | Strömungsphysik |\n|---|---|\n| [[flowsensor]] | Differenzdruck (Bernoulli, Hagen-Poiseuille), Hitzdraht (konvektive [[waermeuebertragung]]) |\n| [[beatmungsgeraet]], [[high-flow-geraet]], [[cpap-geraet]] | Widerstand, Compliance, Leckageflüsse ([[leckage]]) |\n| [[spirometer]], [[bodyplethysmograph]] | Fluss- und Volumenmessung, Atemwegswiderstand |\n| [[ultraschallgeraet]] | Blutflussgeschwindigkeit über [[doppler-effekt|Doppler]] |\n| [[infusionspumpe]], [[spritzenpumpe]] | Leitungswiderstand, Okklusion |\n| [[absauggeraet]], [[insufflator]] | Unterdruck/Überdruck und Gasflüsse |\n\nWeiterführend: [[druck]], [[gasgesetze]], [[blutkreislauf]], [[blutdruck]].\n",
+  "related": [
+    "druck",
+    "gasgesetze",
+    "atemmechanik",
+    "flowsensor",
+    "blutkreislauf",
+    "doppler-effekt",
+    "turbine",
+    "peristaltikpumpe",
+    "beatmungsgeraet",
+    "infusionspumpe",
+    "okklusionsalarm",
+    "spannung-strom-widerstand"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "stroemungslehre",
+      "flowsensor"
+    ],
+    [
+      "ultraschallgeraet",
+      "doppler-effekt",
+      "stroemungslehre",
+      "blutkreislauf"
+    ]
+  ],
+  "sources": [
+    "tipler-2019",
+    "schmidt-lang-2019",
+    "oczenski-2017",
+    "tobin-2013",
+    "webster-2010"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

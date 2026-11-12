@@ -1,0 +1,157 @@
+{
+  "id": "ohr",
+  "type": "term",
+  "title": "Ohr und Hören",
+  "aliases": [
+    "Ohr",
+    "Auris",
+    "ear",
+    "Hören",
+    "Gehör",
+    "Hörorgan",
+    "Cochlea",
+    "Hörschnecke",
+    "Innenohr",
+    "Mittelohr",
+    "Schalldruckpegel",
+    "dB HL",
+    "Tonotopie"
+  ],
+  "category": "anatomie",
+  "summary": "Sinnesorgan, das Schall über Außenohr, Mittelohr als Impedanzwandler und die frequenzanalysierende Cochlea in Nervensignale umwandelt. Diese Kette ist Grundlage von Audiometrie, Hörgeräten und Cochlea-Implantaten sowie von Anforderungen an akustische Alarme und Lärmschutz.",
+  "body": "## Überblick\n\nDas **Ohr** wandelt Schallwellen – periodische Druckschwankungen der Luft – in Nervensignale um und enthält zusätzlich das Gleichgewichtsorgan [@schmidt-lang-2019]. Physikalisch ist es eine Kette aus akustischem Trichter, mechanischem Impedanzwandler und frequenzanalysierendem Wandler mit nachgeschalteter neuronaler Codierung. Diese Kette ist Vorbild und Angriffspunkt von [[audiometer|Audiometer]], [[hoergeraet|Hörgerät]] und [[cochlea-implantat|Cochlea-Implantat]] und Grundlage für Anforderungen an akustische Alarme und Lärmschutz in der Klinik.\n\n## Aufbau\n\n| Abschnitt | Strukturen | Funktion |\n|---|---|---|\n| Außenohr | Ohrmuschel, Gehörgang (ca. 2,5 cm) | Schallaufnahme, Richtungsinformation, Resonanz um ca. 2–4 kHz (siehe unten) |\n| Mittelohr | Trommelfell, Hammer, Amboss, Steigbügel; Paukenhöhle; Ohrtrompete | Impedanzanpassung Luft → Flüssigkeit |\n| Innenohr | Cochlea (Hörschnecke), Vestibularapparat | Frequenzanalyse, Mechano-elektrische Wandlung; Gleichgewicht |\n| Hörbahn | Hörnerv, Hirnstammkerne, Hörrinde | Weiterverarbeitung im [[nervensystem|Nervensystem]] |\n\n## Physikalische Grundlagen\n\nSchall ist eine Druckwelle (siehe [[schallwellen|Schallwellen]]). Der **Schalldruckpegel** wird logarithmisch angegeben:\n\n`L_p = 20 · log₁₀ (p / p₀)` dB, mit `p₀ = 20 µPa`\n\nDer Hörbereich junger Erwachsener reicht etwa von 20 Hz bis 20 kHz; die Hörschwelle ist zwischen etwa 2 und 5 kHz am niedrigsten. Die Kurven gleicher Lautstärkepegel sind in ISO 226 genormt [@iso-226].\n\nDer Gehörgang wirkt näherungsweise wie ein einseitig geschlossenes Rohr (λ/4-Resonator): `f₀ = c / (4·L)`. Mit `c` ≈ 343 m/s und `L` ≈ 2,5 cm ergibt sich `f₀` ≈ 3,4 kHz – passend zur Empfindlichkeitsspitze des Gehörs und zur Lage des typischen lärmbedingten Hörverlusts um 4 kHz.\n\n> [!vereinfacht] Das Rohrmodell vernachlässigt Krümmung, Querschnittsänderungen und die nachgiebige Abschlussimpedanz des Trommelfells; real ist die Resonanz breit und individuell verschieden.\n\n> [!beispiel] Eine Verdopplung des Schalldrucks erhöht den Pegel um 20 · log₁₀ 2 ≈ 6 dB, eine Verzehnfachung um 20 dB. Ein Pegel von 100 dB entspricht einem Schalldruck von 20 µPa · 10⁵ = 2 Pa – noch immer nur ein winziger Bruchteil des Atmosphärendrucks von rund 100 000 Pa.\n\n## Mittelohr als Impedanzwandler\n\nSchall, der direkt aus Luft auf Flüssigkeit träfe, würde wegen des großen Unterschieds der akustischen Impedanzen überwiegend reflektiert. Das Mittelohr gleicht dies aus [@schmidt-lang-2019] [@guyton-2021]:\n\n* **Flächenverhältnis:** Die wirksame Fläche des Trommelfells ist etwa 17- bis 20-mal größer als die Steigbügelfußplatte – die Kraft wird auf eine kleine Fläche gebündelt, der Druck steigt (`p = F / A`, siehe [[druck|Druck]]).\n* **Hebelwirkung** der Gehörknöchelchen: zusätzlicher Faktor von etwa 1,3.\n\nInsgesamt ergibt sich eine Druckverstärkung um rund das 20- bis 25-Fache, entsprechend etwa 25–30 dB.\n\n> [!vereinfacht] Die Rechnung mit Flächen- und Hebelverhältnis ist ein idealisiertes Modell. Die reale Übertragung ist frequenzabhängig und wird zusätzlich durch Masse und Steifigkeit von Trommelfell und Knöchelchenkette bestimmt.\n\nDie Ohrtrompete (Tuba auditiva) gleicht den Druck zwischen Paukenhöhle und Umgebung aus – relevant bei schnellen Druckänderungen, etwa in der [[druckkammer|Druckkammer]].\n\n## Innenohr: Frequenzanalyse\n\nIn der Cochlea läuft eine **Wanderwelle** entlang der Basilarmembran. Diese ist an der Basis schmal und steif, an der Spitze (Apex) breit und weich. Hohe Frequenzen erzeugen ihr Amplitudenmaximum nahe der Basis, tiefe nahe der Spitze – die **Tonotopie**. Die Cochlea wirkt damit wie eine mechanische Filterbank.\n\n| Haarzelltyp | Anzahl (Größenordnung) | Funktion |\n|---|---|---|\n| innere Haarzellen | ca. 3 500 | eigentliche Sinneszellen, Signal an den Hörnerv |\n| äußere Haarzellen | ca. 12 000 | aktive Verstärkung (Elektromotilität), erhöhen Empfindlichkeit und Trennschärfe |\n\n> [!hinweis] Zahlenangaben als Größenordnung nach Lehrbuch [@schmidt-lang-2019] [@kandel-2021]. Die aktive Verstärkung der äußeren Haarzellen erzeugt **otoakustische Emissionen**, die mit einem Ohrsondenmikrofon messbar sind – neben der automatisierten Hirnstammaudiometrie (AABR) eine Grundlage des Neugeborenen-Hörscreenings.\n\nDie Auslenkung der Stereozilien öffnet mechanisch gesteuerte Ionenkanäle; das Rezeptorpotential löst über Synapsen [[aktionspotential|Aktionspotentiale]] im Hörnerv aus.\n\n## Hörstörungen\n\n| Art | Ort | typische Ursachen | technische Versorgung |\n|---|---|---|---|\n| Schallleitungsschwerhörigkeit | Außen-/Mittelohr | Cerumen, Paukenerguss, Otosklerose | Operation, Knochenleitungshörsysteme |\n| Schallempfindungsschwerhörigkeit | Innenohr, Hörnerv | Alter, Lärm, Ototoxizität, Hörsturz | [[hoergeraet|Hörgerät]]; bei hochgradigem Verlust [[cochlea-implantat|Cochlea-Implantat]] |\n\nDie **Tonaudiometrie** mit dem [[audiometer|Audiometer]] ermittelt die Hörschwelle für Luftleitung (Kopfhörer) und Knochenleitung (Knochenleitungshörer) in dB HL (Hearing Level, bezogen auf normalhörende junge Erwachsene); die Differenz („Air-Bone-Gap“) unterscheidet Leitungs- von Empfindungsstörungen. Anforderungen an Audiometer beschreibt IEC 60645-1 [@iec-60645-1].\n\n> [!praxis] Audiometer müssen regelmäßig kalibriert werden, weil Wandler (Kopfhörer, Knochenleitungshörer) altern und ihre Übertragungsfunktion sich ändert. Die Prüfung erfolgt mit künstlichem Ohr bzw. künstlichem Mastoid – siehe [[kalibrierung|Kalibrierung]] und [[mtk|Messtechnische Kontrolle]].\n\n## Anwendung in Geräten\n\n| Gerät | Ansatzpunkt in der Hörkette |\n|---|---|\n| [[audiometer|Audiometer]] | Messung der Hörschwelle (Luft- und Knochenleitung) |\n| [[hoergeraet|Hörgerät]] | Mikrofon, frequenzabhängige Verstärkung und Kompression, Lautsprecher in den Gehörgang |\n| [[cochlea-implantat|Cochlea-Implantat]] | umgeht defekte Haarzellen; Elektrodenträger in der Cochlea reizt den Hörnerv tonotop elektrisch |\n| [[alarmsystem|Alarmsysteme]] | akustische Alarme müssen hörbar, unterscheidbar und nicht übermäßig belastend sein [@iec-60601-1-8] |\n| [[mrt|MRT]] | Gradientenschaltung erzeugt laute Geräusche – Gehörschutz für Patientinnen und Patienten ist erforderlich [@iec-60601-2-33] |\n\nDas Cochlea-Implantat ist ein Musterbeispiel für Neuroprothetik: Ein Sprachprozessor zerlegt das Mikrofonsignal in Frequenzbänder ([[filter|Filter]]), codiert deren Hüllkurven in Pulsfolgen und überträgt sie induktiv ([[elektromagnetische-induktion|elektromagnetische Induktion]]) zum Implantat. Die Elektroden nutzen die Tonotopie: basale Kontakte für hohe, apikale für tiefe Frequenzen.\n\n## Bedeutung in der Medizintechnik\n\nDas Ohr verbindet Akustik, Mechanik und Neurophysiologie. Für Medizintechniker:innen sind vor allem Pegelrechnung, Kalibrierung audiometrischer Wandler, die Funktionsweise von Hörsystemen und Implantaten sowie Lärm- und Alarmgestaltung im klinischen Umfeld relevant ([[alarmmuedigkeit|Alarmmüdigkeit]]). Fachlich zugeordnet ist die [[hno-heilkunde|HNO-Heilkunde]].\n",
+  "related": [
+    "schallwellen",
+    "audiometer",
+    "hoergeraet",
+    "cochlea-implantat",
+    "hno-heilkunde",
+    "nervensystem",
+    "alarmsystem",
+    "alarmmuedigkeit",
+    "druck",
+    "kalibrierung"
+  ],
+  "paths": [
+    [
+      "ohr",
+      "schallwellen",
+      "audiometer",
+      "kalibrierung"
+    ],
+    [
+      "ohr",
+      "nervensystem",
+      "cochlea-implantat",
+      "elektromagnetische-induktion"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021",
+    "kandel-2021",
+    "iso-226",
+    "iec-60645-1",
+    "iec-60601-1-8",
+    "iec-60601-2-33"
+  ],
+  "diagram": {
+    "title": "Signalkette des Hörens",
+    "caption": "Vom Schalldruck zum Nervensignal mit den Ansatzpunkten technischer Hörhilfen (vereinfacht).",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "schall",
+        "label": "Schall\n(Druckwelle)",
+        "ref": "schallwellen",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "aussen",
+        "label": "Außenohr /\nGehörgang",
+        "kind": "process",
+        "x": 300,
+        "y": 90
+      },
+      {
+        "id": "mittel",
+        "label": "Mittelohr\n(Impedanzwandler)",
+        "kind": "process",
+        "x": 510,
+        "y": 90
+      },
+      {
+        "id": "coch",
+        "label": "Cochlea\n(Haarzellen)",
+        "kind": "sensor",
+        "x": 730,
+        "y": 90
+      },
+      {
+        "id": "nerv",
+        "label": "Hörnerv /\nHörbahn",
+        "ref": "nervensystem",
+        "kind": "output",
+        "x": 730,
+        "y": 260
+      },
+      {
+        "id": "ci",
+        "label": "Cochlea-\nImplantat",
+        "ref": "cochlea-implantat",
+        "kind": "actuator",
+        "x": 510,
+        "y": 260
+      },
+      {
+        "id": "hg",
+        "label": "Hörgerät",
+        "ref": "hoergeraet",
+        "kind": "actuator",
+        "x": 300,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "schall",
+        "to": "aussen",
+        "kind": "energy"
+      },
+      {
+        "from": "aussen",
+        "to": "mittel",
+        "kind": "energy",
+        "label": "Trommelfell"
+      },
+      {
+        "from": "mittel",
+        "to": "coch",
+        "kind": "fluid",
+        "label": "Steigbügel"
+      },
+      {
+        "from": "coch",
+        "to": "nerv",
+        "kind": "signal"
+      },
+      {
+        "from": "hg",
+        "to": "aussen",
+        "kind": "energy",
+        "label": "verstärkter Schall"
+      },
+      {
+        "from": "ci",
+        "to": "nerv",
+        "kind": "signal",
+        "label": "elektr. Reizung"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

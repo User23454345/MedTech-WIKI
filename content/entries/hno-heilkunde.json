@@ -1,0 +1,37 @@
+{
+  "id": "hno-heilkunde",
+  "type": "domain",
+  "title": "Hals-Nasen-Ohren-Heilkunde",
+  "aliases": [
+    "HNO",
+    "HNO-Heilkunde",
+    "Otorhinolaryngologie",
+    "Otolaryngology",
+    "ENT",
+    "Kopf- und Halschirurgie"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Hals-Nasen-Ohren-Heilkunde behandelt Erkrankungen von Ohr, Nase, Nasennebenhöhlen, Mundhöhle, Rachen, Kehlkopf und Hals. Ihre Medizintechnik reicht von Audiometern und Hörimplantaten bis zu Endoskopie, Navigation, Lasern und Nervenmonitoring.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Hals-Nasen-Ohren-Heilkunde** (HNO, Otorhinolaryngologie) umfasst Erkrankungen des [[ohr|Ohres]] einschließlich Hör- und Gleichgewichtsorgan, der Nase und Nasennebenhöhlen, der Mundhöhle, des Rachens, des Kehlkopfs, der Speicheldrüsen und der Halsweichteile. Sie verbindet konservative Diagnostik (z. B. Hörprüfung) mit einer anspruchsvollen Mikro- und endoskopischen Chirurgie auf engem Raum, in unmittelbarer Nähe zu Hirnnerven, großen Gefäßen und den Atemwegen [@kramme-2017].\n\n## Typische Krankheitsbilder und Eingriffe\n\n| Krankheitsbild | Typische Diagnostik/Therapie |\n|---|---|\n| Schwerhörigkeit | Ton- und Sprachaudiometrie, Hörgeräteversorgung, Cochlea-Implantat |\n| Chronische Mittelohrentzündung | Mikroskopie, Tympanoplastik |\n| Chronische Sinusitis | Nasenendoskopie, DVT/CT, endoskopische Nasennebenhöhlenchirurgie |\n| Kopf-Hals-Tumoren | Panendoskopie, Laserchirurgie, Resektion, Strahlentherapie |\n| Schlafbezogene Atmungsstörungen | Polysomnographie, CPAP-Therapie, Operationen |\n| Neugeborenen-Hörscreening | otoakustische Emissionen, Hirnstammaudiometrie |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[audiometer]] | Ton- und Sprachaudiometrie zur Bestimmung der Hörschwelle und des Sprachverstehens |\n| [[hoergeraet]] | Verstärkung und Signalverarbeitung bei Schwerhörigkeit |\n| [[cochlea-implantat]] | direkte elektrische Stimulation des Hörnervs bei hochgradiger Innenohrschwerhörigkeit |\n| [[endoskop]] | starre Optiken für Nase, Nasennebenhöhlen und Kehlkopf; flexible Laryngoskope |\n| [[op-mikroskop]] | Ohr- und Kehlkopfchirurgie |\n| [[chirurgischer-laser]] | CO₂-Laser für die transorale Kehlkopfchirurgie |\n| [[hf-chirurgiegeraet]] | Blutstillung, Tonsillektomie |\n| [[chirurgisches-motorsystem]] | Bohrer in der Ohrchirurgie, Shaver in der Nasennebenhöhlenchirurgie |\n| [[dvt]] | dreidimensionale Darstellung von Felsenbein und Nasennebenhöhlen |\n| [[emg-geraet]] (intraoperatives Neuromonitoring) | Überwachung des N. facialis und des N. laryngeus recurrens |\n| [[polysomnograph]], [[cpap-geraet]] | Diagnostik und Therapie der obstruktiven Schlafapnoe |\n\nBei Eingriffen an den Nasennebenhöhlen und der Schädelbasis werden zusätzlich **Navigationssysteme** eingesetzt, die die Instrumentenposition optisch oder elektromagnetisch verfolgen und in präoperativen CT- oder DVT-Daten anzeigen.\n\n## Besondere technische Anforderungen\n\n### Audiometrie und Messtechnik\n\nAudiometer erzeugen definierte Schalldruckpegel über Kopfhörer, Knochenleitungshörer oder Lautsprecher. Ihre Anforderungen regelt IEC 60645-1 [@iec-60645-1]; Grundlage ist die Physik der [[schallwellen]]. Ton- und Sprachaudiometer sind in Anlage 2 der [[mpbetreibv|MPBetreibV]] aufgeführt und unterliegen der [[mtk|messtechnischen Kontrolle]] nach § 15 i. V. m. Anlage 2 [@mpbetreibv]. Die Hörschwellenbestimmung braucht zudem eine ruhige Umgebung, meist eine schallgedämmte Kabine.\n\n> [!praxis] Ein vertauschter oder defekter Kopfhörerwandler verfälscht die Seitenzuordnung und den Pegel. Eine kurze subjektive Funktionsprüfung vor dem Tagesbetrieb sowie die regelmäßige akustische [[kalibrierung]] sind daher üblich.\n\n### Laser und Atemwegsbrand\n\n> [!warnung] Bei Laser- oder HF-Chirurgie in den Atemwegen treffen drei Elemente des Brandes zusammen: Zündquelle (Laser/HF), Brennstoff (Tubus, Tupfer, Gewebe) und eine sauerstoffangereicherte Atmosphäre. Laserresistente Tuben, eine möglichst niedrige inspiratorische Sauerstofffraktion und feuchte Abdeckungen sind wesentliche Schutzmaßnahmen; Laserschutz nach IEC 60825-1 gilt zusätzlich [@iec-60825-1].\n\n### Neuromonitoring\n\nBeim intraoperativen Neuromonitoring werden Muskelantworten über Nadel- oder Oberflächenelektroden abgeleitet. Störungen durch HF-Chirurgie, Erdungsfehler oder [[emv|elektromagnetische Einflüsse]] sind häufig; eine saubere Elektrodentechnik ([[elektrodenproblem]]) ist Voraussetzung für verlässliche Signale.\n\n### Implantate und MRT\n\nCochlea-Implantate enthalten in der Regel einen Magneten zur Fixierung der Sendespule. Ob und unter welchen Bedingungen eine [[mrt|MRT-Untersuchung]] möglich ist, ergibt sich aus den Herstellerangaben (MR-bedingt sicher) [@iso-14708-7].\n\n### Aufbereitung\n\nStarre Optiken, Shaver-Handstücke und mikrochirurgische Instrumente haben enge Lumina und empfindliche Optiken; sie erfordern validierte [[aufbereitung]] und sorgfältige Handhabung, flexible Laryngoskope eine Aufbereitung wie andere thermolabile Endoskope [@krinko-bfarm-2012].\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[anaesthesiologie]]: gemeinsamer Atemweg; schwierige Intubation, Tracheotomie, Jet-Ventilation.\n* [[pneumologie]] und [[neurologie]]: Schlafmedizin, Schwindel- und Hirnnervendiagnostik.\n* [[strahlentherapie]]: Kopf-Hals-Tumoren.\n* [[zahnmedizin]] und Mund-Kiefer-Gesichtschirurgie: DVT-Diagnostik, Nasennebenhöhlen.\n* [[neonatologie]]: Neugeborenen-Hörscreening.\n",
+  "related": [
+    "ohr",
+    "audiometer",
+    "hoergeraet",
+    "cochlea-implantat",
+    "endoskop",
+    "chirurgischer-laser",
+    "dvt",
+    "polysomnograph",
+    "cochlear"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iec-60645-1",
+    "mpbetreibv",
+    "iec-60825-1",
+    "iso-14708-7",
+    "krinko-bfarm-2012"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,150 @@
+{
+  "id": "photoplethysmographie",
+  "type": "term",
+  "title": "Photoplethysmographie",
+  "aliases": [
+    "PPG",
+    "photoplethysmography",
+    "Plethysmogramm",
+    "Pleth-Kurve",
+    "optische Pulsmessung",
+    "Pulsoxymetrie-Prinzip",
+    "SpO₂-Sensor"
+  ],
+  "category": "sensorik",
+  "summary": "Optisches Messverfahren, das die pulsatile Blutvolumenänderung im Gewebe über die Lichtabsorption erfasst. Mit zwei Wellenlängen (Rot und Infrarot) bildet es die Grundlage der Pulsoxymetrie zur nichtinvasiven Bestimmung der Sauerstoffsättigung.",
+  "body": "## Begriff\n\nDie **Photoplethysmographie** (PPG) ist ein optisches Verfahren, das die pulsatile Volumenänderung des Blutes im Gewebe über die Änderung der Lichtabsorption erfasst. Eine Leuchtdiode durchstrahlt Gewebe (Finger, Ohrläppchen, Stirn), eine Photodiode misst das durchgelassene oder rückgestreute Licht. Mit jedem Herzschlag nimmt das arterielle Blutvolumen kurz zu, die Absorption steigt, das Detektorsignal sinkt. PPG ist das Messprinzip des [[pulsoxymeter|Pulsoxymeters]] und wird darüber hinaus für Herzfrequenz, Perfusionsbeurteilung und in Wearables genutzt [@allen-2007] [@webster-2010].\n\n## Messanordnung\n\n| Anordnung | Prinzip | Typischer Messort |\n|---|---|---|\n| Transmission | LED und Photodiode gegenüber, Licht durchquert das Gewebe | Finger, Zehe, Ohrläppchen, Fuß bei Neugeborenen |\n| Reflexion | LED und Photodiode nebeneinander, Messung des rückgestreuten Lichts | Stirn, Handgelenk, Brust |\n\nDer Sensor ist ein [[anwendungsteile|Anwendungsteil]]; die Photodiode liefert einen Photostrom im Nano- bis Mikroamperebereich, der mit einem Transimpedanzverstärker ([[operationsverstaerker]]) in eine Spannung gewandelt wird. LEDs werden im Zeitmultiplex angesteuert, dazwischen wird eine Dunkelphase zur Messung des Umgebungslichts eingefügt.\n\n## Physikalische Grundlage\n\n### Lambert-Beer und das AC/DC-Signal\n\nNach dem [[lambert-beer|Lambert-Beer-Gesetz]] ist die Lichtschwächung von Konzentration und Weglänge der Absorber abhängig. Das Gesamtsignal lässt sich in zwei Anteile zerlegen [@allen-2007]:\n\n* **DC-Anteil:** konstante Absorption durch Haut, Gewebe, Knochen, venöses und nicht-pulsatiles arterielles Blut.\n* **AC-Anteil:** pulsatile Zunahme des arteriellen Blutvolumens; meist nur wenige Prozent des Gesamtsignals.\n\nDas Verhältnis wird oft als **Perfusionsindex** angegeben: `PI = AC / DC · 100 %`. Ein niedriger PI weist auf schwache periphere Durchblutung hin (Kälte, Vasokonstriktion, Schock) und kündigt unsichere Messwerte an.\n\n### Zwei Wellenlängen: Pulsoxymetrie\n\nOxygeniertes (HbO₂) und desoxygeniertes [[haemoglobin|Hämoglobin]] (Hb) absorbieren Licht unterschiedlich: Im Rotbereich (typisch um 660 nm) absorbiert Hb deutlich stärker, im nahen Infrarot (typisch um 900–940 nm) absorbiert HbO₂ etwas stärker. Am isosbestischen Punkt um 800 nm sind beide gleich. Aus beiden Wellenlängen bildet das Gerät das **Verhältnis der Verhältnisse** [@jubran-2015]:\n\n`R = (AC_rot / DC_rot) / (AC_IR / DC_IR)`\n\nDie Normierung auf DC eliminiert Gewebedicke, Hautfarbe-Grundabsorption und LED-Intensität weitgehend. R wird über eine empirisch an Probanden ermittelte Kalibrierkurve in die funktionelle Sättigung SpO₂ umgerechnet.\n\n> [!vereinfacht] Häufig wird zur Veranschaulichung die Näherung `SpO₂ ≈ 110 % − 25 % · R` genannt: R ≈ 0,5 entspricht etwa 98 %, R ≈ 1 etwa 85 %. Reale Geräte verwenden herstellerspezifische, an Probandenstudien kalibrierte Kurven; die Formel ist nur ein didaktisches Hilfsmittel.\n\n## Signalverarbeitung\n\nDie Messkette umfasst Transimpedanzverstärkung, Umgebungslichtsubtraktion, Bandpassfilterung ([[filter]]), [[analog-digital-wandler|A/D-Wandlung]] und Pulsdetektion. Moderne Geräte nutzen adaptive Filter und Plausibilitätsprüfungen, um [[bewegungsartefakt|Bewegungsartefakte]] von echten Pulswellen zu unterscheiden. Mittelungszeiten beeinflussen, wie schnell eine Entsättigung angezeigt wird und wie häufig Fehlalarme auftreten ([[alarmmuedigkeit]]).\n\n## Fehlerquellen und Grenzen\n\n| Einflussgröße | Wirkung |\n|---|---|\n| Bewegung, Zittern | Artefakte im AC-Signal, Fehlmessungen und Fehlalarme |\n| Geringe Perfusion | kleines AC-Signal, schlechter Signal-Rausch-Abstand |\n| Umgebungslicht (OP-Leuchte, Phototherapie) | Störung trotz Dunkelphasenkorrektur, Sensor abdecken |\n| Carboxyhämoglobin (CO-Vergiftung) | wird im Rotbereich ähnlich HbO₂ bewertet – SpO₂ falsch hoch |\n| Methämoglobin | SpO₂-Anzeige tendiert gegen etwa 85 % |\n| Nagellack, Kunstnägel, Farbstoffe (z. B. Methylenblau) | zusätzliche Absorption, Fehlmessung |\n| Hautpigmentierung | systematische Überschätzung der Sättigung bei dunkler Haut beschrieben |\n| Venöse Pulsation | z. B. bei Trikuspidalinsuffizienz oder zu fest sitzendem Sensor |\n\n> [!belegt] In einer retrospektiven Analyse gepaarter SpO₂- und arterieller Sättigungswerte trat eine okkulte Hypoxämie (SaO₂ < 88 % bei SpO₂ 92–96 %) bei Schwarzen Patientinnen und Patienten etwa dreimal so häufig auf wie bei weißen [@sjoding-2020].\n\n> [!warnung] Zu fest angelegte oder lange nicht umgesetzte Clip-Sensoren können Drucknekrosen und – bei Inkompatibilität von Sensor und Monitor – Verbrennungen verursachen. Nur vom Hersteller freigegebene Sensor-Monitor-Kombinationen verwenden.\n\n## Weitere Anwendungen der PPG\n\n* **Herzfrequenz** und Pulsrhythmus (auch in Smartwatches)\n* **Atemabhängige Schwankungen** der Pulskurve als Hinweis auf Volumenreagibilität\n* **Pulswellenanalyse** zur Gefäßbeurteilung und **Pulslaufzeit** als Basis experimenteller Blutdruckschätzung [@allen-2007]\n* Mehrwellenlängen-Verfahren (Puls-CO-Oxymetrie) zur Abschätzung von COHb, MetHb und Gesamthämoglobin\n\n## Anwendung in Geräten\n\n| Gerät | Nutzung der PPG |\n|---|---|\n| [[pulsoxymeter]] | SpO₂, Pulsfrequenz, Perfusionsindex |\n| [[patientenmonitor]] | SpO₂-Modul, Plethysmogramm als Kurve |\n| [[defibrillator]] (Monitor-Defibrillatoren) | SpO₂-Option in der [[notfallmedizin]] |\n| [[polysomnograph]] | Entsättigungen bei Schlafapnoe |\n| [[anaesthesiegeraet]]-Arbeitsplatz | Basismonitoring jeder Narkose |\n| [[inkubator]] (je nach Ausstattung) | Neugeborenenüberwachung |\n\nDie Gerätenorm [[iso-80601-2-61]] legt u. a. Anforderungen an die Genauigkeit der SpO₂-Messung und deren Nachweis in kontrollierten Entsättigungsstudien fest [@iso-80601-2-61].\n\n> [!praxis] Bei einem unplausiblen SpO₂-Wert zuerst die Kurve beurteilen: Eine saubere, regelmäßige Plethysmographiekurve mit zur EKG-Herzfrequenz passender Pulsfrequenz spricht für einen verlässlichen Messwert. Ein Sensortest mit SpO₂-Simulator prüft die Gerätefunktion, nicht aber die Kalibrierkurve des Sensors ([[funktionspruefung]], [[pruefgeraete]]).\n",
+  "related": [
+    "pulsoxymeter",
+    "lambert-beer",
+    "haemoglobin",
+    "optik",
+    "patientenmonitor",
+    "bewegungsartefakt",
+    "biosignale",
+    "sauerstoffsensor",
+    "iso-80601-2-61",
+    "alarmmuedigkeit"
+  ],
+  "paths": [
+    [
+      "pulsoxymeter",
+      "photoplethysmographie",
+      "lambert-beer",
+      "haemoglobin"
+    ],
+    [
+      "patientenmonitor",
+      "photoplethysmographie",
+      "filter",
+      "analog-digital-wandler"
+    ]
+  ],
+  "sources": [
+    "allen-2007",
+    "jubran-2015",
+    "webster-2010",
+    "sjoding-2020",
+    "iso-80601-2-61"
+  ],
+  "diagram": {
+    "title": "Messkette der Pulsoxymetrie",
+    "caption": "Funktionsschema eines Transmissions-Pulsoxymeters.",
+    "width": 960,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "led",
+        "label": "LEDs rot / IR\n(Zeitmultiplex)",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "gew",
+        "label": "Gewebe mit\npulsierendem Blut",
+        "kind": "patient",
+        "x": 290,
+        "y": 80,
+        "ref": "haemoglobin"
+      },
+      {
+        "id": "pd",
+        "label": "Photodiode",
+        "kind": "sensor",
+        "x": 490,
+        "y": 80,
+        "ref": "photoplethysmographie"
+      },
+      {
+        "id": "tia",
+        "label": "Transimpedanz-\nverstärker",
+        "kind": "process",
+        "x": 690,
+        "y": 80,
+        "ref": "operationsverstaerker"
+      },
+      {
+        "id": "flt",
+        "label": "Filter +\nA/D-Wandler",
+        "kind": "process",
+        "x": 690,
+        "y": 220,
+        "ref": "filter"
+      },
+      {
+        "id": "alg",
+        "label": "R-Berechnung +\nKalibrierkurve",
+        "kind": "control",
+        "x": 470,
+        "y": 220,
+        "ref": "mikrocontroller"
+      },
+      {
+        "id": "out",
+        "label": "SpO₂, Puls,\nPleth-Kurve",
+        "kind": "output",
+        "x": 250,
+        "y": 220,
+        "ref": "alarmsystem"
+      }
+    ],
+    "edges": [
+      {
+        "from": "led",
+        "to": "gew",
+        "kind": "energy",
+        "label": "Licht"
+      },
+      {
+        "from": "gew",
+        "to": "pd",
+        "kind": "energy",
+        "label": "AC + DC"
+      },
+      {
+        "from": "pd",
+        "to": "tia",
+        "kind": "signal",
+        "label": "I_Photo"
+      },
+      {
+        "from": "tia",
+        "to": "flt",
+        "kind": "signal"
+      },
+      {
+        "from": "flt",
+        "to": "alg",
+        "kind": "data"
+      },
+      {
+        "from": "alg",
+        "to": "out",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

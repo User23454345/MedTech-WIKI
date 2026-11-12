@@ -1,0 +1,63 @@
+{
+  "id": "high-flow-geraet",
+  "type": "device",
+  "title": "High-Flow-Sauerstofftherapiegerät",
+  "aliases": [
+    "High-Flow-Nasenkanüle",
+    "HFNC",
+    "HFOT",
+    "nasale High-Flow-Therapie",
+    "Respiratory high-flow therapy"
+  ],
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 37,
+  "domains": [
+    "intensivmedizin",
+    "pneumologie",
+    "neonatologie",
+    "notfallmedizin"
+  ],
+  "summary": "High-Flow-Geräte liefern ein erwärmtes, vollständig befeuchtetes Luft-Sauerstoff-Gemisch mit hohem Fluss und einstellbarer Sauerstoffkonzentration über eine großlumige Nasenkanüle. Die Therapie liegt zwischen konventioneller Sauerstoffgabe und nicht-invasiver Beatmung.",
+  "sections": {
+    "purpose": "High-Flow-Therapie wird bei akuter hypoxämischer Ateminsuffizienz, nach Extubation, zur Präoxygenierung und in der Neonatologie eingesetzt. Da der Gasfluss den inspiratorischen Spitzenfluss des Patienten erreicht oder übersteigt, wird kaum Raumluft beigemischt, sodass die eingestellte Sauerstoffkonzentration (FiO₂) zuverlässig ankommt. Die Nasenkanüle wird meist besser toleriert als eine NIV-Maske.",
+    "principle": "## Gasaufbereitung\n\nDas Gasgemisch entsteht entweder in einem Luft-Sauerstoff-Mischer (Blender) mit Flussmesser an der zentralen Gasversorgung oder in einem eigenständigen Gerät, bei dem eine [[turbine]] Raumluft fördert und Sauerstoff über ein [[proportionalventil]] zugemischt wird. Ein [[sauerstoffsensor]] misst die Konzentration, ein [[flowsensor]] den Fluss. Sicherheits- und Leistungsanforderungen an Geräte für die High-Flow-Atemtherapie legt ISO 80601-2-90 fest [@iso-80601-2-90].\n\nEin [[atemgasbefeuchter|aktiver Befeuchter]] mit beheizter Kammer ([[heizelement]], [[temperatursensor]]) erwärmt und sättigt das Gas; ein beheizter Inspirationsschlauch verhindert Kondensation auf dem Weg zur Nasenkanüle ([[waermeuebertragung]]).\n\n## Physiologische Wirkmechanismen\n\n| Effekt | Erklärung |\n|---|---|\n| Totraumauswaschung | Der hohe Fluss spült CO₂ aus dem Nasen-Rachen-Raum ([[gasaustausch]]) |\n| Stabile FiO₂ | geringe Beimischung von Raumluft |\n| Geringer positiver Druck | flussabhängiger, mundschlussabhängiger Druckaufbau im Rachen |\n| Konditioniertes Gas | warm und feucht, schont Schleimhaut und mukoziliäre Clearance |\n\n> [!vereinfacht] Der entstehende Atemwegsdruck ist nicht eingestellt oder überwacht wie bei CPAP und schwankt stark mit geöffnetem oder geschlossenem Mund; High-Flow ist daher **kein** Ersatz für eine definierte PEEP-Therapie.\n\n> [!hinweis] Viele [[beatmungsgeraet|Intensivbeatmungsgeräte]] bieten eine High-Flow-Funktion als zusätzliche Therapieoption."
+  },
+  "manufacturers": [
+    {
+      "ref": "hamilton-medical",
+      "models": [],
+      "note": "High-Flow-Sauerstofftherapie als Option in Intensivbeatmungsgeräten (modellabhängig)."
+    },
+    {
+      "ref": "draeger",
+      "models": [],
+      "note": "Sauerstofftherapie mit hohem Fluss als Option in Intensivbeatmungsgeräten (modellabhängig)."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Eigenständige High-Flow-Geräte sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht ausdrücklich genannt; ob sie unter Nr. 1.5 (maschinelle Beatmung) fallen, ist nicht eindeutig – im Zweifel Herstellerangabe und Einstufung durch den Betreiber maßgeblich. Ist die Funktion in ein Beatmungsgerät integriert, gilt die STK-Pflicht des Beatmungsgeräts. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Kontrollen und Wartung nach Herstellerangabe (u. a. Sauerstoffsensor-Kalibrierung, Heizung/Temperaturregelung, Filter); Befeuchterkammer und Schlauchsystem als Einweg- oder aufzubereitende Teile nach Herstellerangabe."
+  },
+  "related": [
+    "beatmungsgeraet",
+    "atemgasbefeuchter",
+    "sauerstoffsensor",
+    "heimbeatmungsgeraet",
+    "cpap-geraet",
+    "gasaustausch"
+  ],
+  "sources": [
+    "iso-80601-2-90",
+    "oczenski-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

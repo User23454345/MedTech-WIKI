@@ -1,0 +1,67 @@
+{
+  "id": "externer-schrittmacher",
+  "type": "device",
+  "title": "Externer temporärer Herzschrittmacher",
+  "aliases": [
+    "temporärer Schrittmacher",
+    "passagerer Schrittmacher",
+    "externer Schrittmacher",
+    "temporary pacemaker",
+    "transkutane Stimulation"
+  ],
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 27,
+  "domains": [
+    "kardiologie",
+    "herzchirurgie",
+    "intensivmedizin",
+    "notfallmedizin"
+  ],
+  "summary": "Externe temporäre Herzschrittmacher sind batteriebetriebene Stimulationsgeräte außerhalb des Körpers, die über passager eingebrachte transvenöse Sonden oder epikardiale Drähte nach Herzoperationen stimulieren. Die transkutane Stimulation über Klebeelektroden erfolgt dagegen meist mit dem Defibrillator.",
+  "sections": {
+    "purpose": "Die temporäre Stimulation überbrückt bradykarde Rhythmusstörungen, bis sich der Rhythmus erholt oder ein [[herzschrittmacher|permanenter Schrittmacher]] implantiert ist – etwa bei AV-Block im Rahmen eines Infarkts, bei Intoxikationen oder nach herzchirurgischen Eingriffen. Im Notfall wird die transkutane Stimulation mit dem [[defibrillator]] als schnellste Maßnahme eingesetzt.",
+    "principle": "## Funktionsprinzip\n\nWie beim Implantat wird das intrakardiale Signal wahrgenommen und bei Ausbleiben einer Eigenaktion ein Rechteckimpuls abgegeben ([[erregungsleitungssystem]], [[aktionspotential]]). Am Gerät werden Frequenz, Ausgangsstrom (Milliampere-Bereich), Wahrnehmungsempfindlichkeit (Millivolt-Bereich) und – bei Zweikammergeräten – AV-Zeit eingestellt. Stromgeregelte Ausgänge halten die Stimulationsstärke trotz wechselnder Elektrodenimpedanz konstant [@kramme-2017].\n\n## Transkutane Stimulation\n\nBei der transkutanen Stimulation fließt der Strom über großflächige [[defibrillationselektroden|Klebeelektroden]] durch den Thorax. Da nur ein Bruchteil das Herz erreicht, sind deutlich höhere Ströme und längere Impulse nötig als bei der Sondenstimulation; Skelettmuskelkontraktionen und Schmerzen erfordern meist eine Analgosedierung.\n\n## Mikroschockgefahr\n\nTransvenöse Sonden und epikardiale Drähte bilden einen leitfähigen Pfad direkt zum Herzen. Schon Ströme im Mikroampere-Bereich können dann Kammerflimmern auslösen ([[elektrische-stromwirkung]]). Daher gelten die strengen Grenzwerte für [[anwendungsteile|Anwendungsteile vom Typ CF]] und für den [[ableitstrom]].\n\n> [!warnung] Freie Drahtenden und Anschlussklemmen nie ohne Handschuhe berühren und isoliert abdecken; keine netzbetriebenen Geräte ohne geeignete Schutzmaßnahmen leitend mit dem Stimulationskreis verbinden.\n\n> [!praxis] Vor jedem Einsatz Batteriestatus prüfen und Ersatzbatterie bereithalten; die Wirksamkeit der Stimulation (Capture) wird am EKG und am Puls kontrolliert."
+  },
+  "manufacturers": [
+    {
+      "ref": "medtronic",
+      "models": [
+        "5392"
+      ],
+      "note": "Externer Zweikammer-Schrittmacher."
+    },
+    {
+      "ref": "biotronik",
+      "models": [
+        "Reocor"
+      ],
+      "note": "Externe temporäre Schrittmacher."
+    },
+    {
+      "ref": "zoll",
+      "models": [],
+      "note": "Transkutane Stimulation als Funktion der Defibrillatoren."
+    }
+  ],
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.1 – nichtimplantierbare aktive Produkte zur Erzeugung und Anwendung elektrischer Energie zur unmittelbaren Beeinflussung der Herztätigkeit; nicht in Anlage 2 aufgeführt.",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); Funktionsprüfung, Batteriewechsel und Kontrolle der Anschlusskabel vor jedem Einsatz nach Herstellerangabe."
+  },
+  "related": [
+    "herzschrittmacher",
+    "defibrillator",
+    "anwendungsteile",
+    "ableitstrom",
+    "elektrische-stromwirkung",
+    "erregungsleitungssystem"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

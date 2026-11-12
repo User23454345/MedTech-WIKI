@@ -1,0 +1,99 @@
+{
+  "id": "abbott",
+  "type": "manufacturer",
+  "title": "Abbott",
+  "aliases": [
+    "Abbott Laboratories",
+    "Abbott Diagnostics",
+    "St. Jude Medical",
+    "Alere"
+  ],
+  "category": "hersteller",
+  "summary": "Abbott Laboratories mit Sitz in Abbott Park (Illinois, USA) ist ein breit aufgestellter Gesundheitskonzern mit Geschäftsbereichen in Medizintechnik, Diagnostik, Ernährung und Markenarzneimitteln. In der Medizintechnik ist Abbott vor allem mit kardiologischen Implantaten, Herzunterstützungssystemen, Labor- und patientennaher Diagnostik sowie Diabetes-Produkten vertreten.",
+  "headquarters": "Abbott Park, Illinois, USA",
+  "founded": "1888",
+  "website": "https://www.abbott.com/",
+  "productLines": [
+    {
+      "device": "herzschrittmacher",
+      "models": [
+        "Assurity",
+        "AVEIR"
+      ],
+      "note": "AVEIR: sondenloses (leadless) Schrittmachersystem; Rhythmusmanagement überwiegend aus der Übernahme von St. Jude Medical."
+    },
+    {
+      "device": "icd",
+      "models": [
+        "Gallant"
+      ]
+    },
+    {
+      "device": "vad",
+      "models": [
+        "HeartMate 3"
+      ],
+      "note": "Linksventrikuläres Unterstützungssystem; ursprünglich Thoratec (über St. Jude Medical)."
+    },
+    {
+      "device": "ecmo",
+      "models": [
+        "CentriMag"
+      ],
+      "note": "Extrakorporale Zentrifugalpumpe für die kurzzeitige Kreislaufunterstützung."
+    },
+    {
+      "device": "blutgasanalysator",
+      "models": [
+        "i-STAT"
+      ],
+      "note": "Handgerät mit Einmalkartuschen für die patientennahe Diagnostik."
+    },
+    {
+      "device": "klinisch-chemischer-analysator",
+      "models": [
+        "Alinity c",
+        "ARCHITECT c-Serie"
+      ]
+    },
+    {
+      "device": "haematologie-analysator",
+      "models": [
+        "Alinity hq"
+      ]
+    },
+    {
+      "device": "blutzuckermessgeraet",
+      "models": [
+        "FreeStyle Precision Pro",
+        "FreeStyle Libre"
+      ],
+      "note": "FreeStyle Libre ist ein System zur kontinuierlichen Glukosemessung (CGM) im Gewebe, kein klassisches Blutzuckermessgerät."
+    }
+  ],
+  "body": "## Überblick\n\n**Abbott Laboratories** ist ein US-amerikanischer Gesundheitskonzern mit Sitz in Abbott Park bei Chicago [@abbott-web]. Anders als reine Medizintechnikhersteller vereint Abbott vier Geschäftsfelder: Medizinprodukte, Diagnostik, Ernährungsprodukte und Markenarzneimittel (außerhalb der USA). Für die Klinik-Medizintechnik relevant sind vor allem die kardiologischen Implantate, die Herzunterstützung und die Labordiagnostik.\n\n## Geschichte in Stichpunkten\n\n* **1888:** Gründung durch den Arzt Wallace C. Abbott in Chicago, zunächst zur Herstellung standardisierter Arzneimitteldosen.\n* **2013:** Abspaltung des forschenden Pharmageschäfts als eigenständiges Unternehmen AbbVie; Abbott konzentriert sich auf Medizinprodukte, Diagnostik, Ernährung und etablierte Arzneimittel.\n* **2017:** Übernahme von **St. Jude Medical** (Herzschrittmacher, ICDs, Elektrophysiologie, Strukturelle Herzerkrankungen; über St. Jude auch das Herzunterstützungsgeschäft von Thoratec) sowie des Diagnostikherstellers **Alere** (patientennahe Tests).\n* **2026:** Abschluss der Übernahme von **Exact Sciences** (Krebsfrüherkennung und Onkologie-Diagnostik) [@abbott-exact-sciences-2026].\n\n## Geschäftsbereiche (Medizintechnik und Diagnostik)\n\n| Bereich | Relevante Produkte (Auswahl) |\n|---|---|\n| Rhythmusmanagement | [[herzschrittmacher|Herzschrittmacher]] einschließlich sondenloser Systeme, [[icd|ICDs]] |\n| Herzinsuffizienz | [[vad|Linksherzunterstützungssysteme]], extrakorporale Pumpen für [[ecmo|ECLS/ECMO]] |\n| Kerndiagnostik | [[klinisch-chemischer-analysator|Klinisch-chemische]] und Immunoassay-Analysatoren, [[haematologie-analysator|Hämatologie]] |\n| Patientennahe Diagnostik | Kartuschenbasierte [[blutgasanalysator|Blutgasanalyse]], Schnelltests |\n| Diabetes Care | Kontinuierliche Glukosemessung, [[blutzuckermessgeraet|Blutzuckermessung]] |\n\n## Bedeutung für die Medizintechnik\n\nAbbott gehört zu den wenigen Anbietern, die sowohl aktive Implantate als auch Labor- und POCT-Systeme in großem Umfang herstellen. Damit berührt das Unternehmen zwei unterschiedliche Regulierungswelten: Implantate unterliegen der [[mdr|MDR]] und gehören in der Regel den höchsten [[risikoklassen]] an, während Analysatoren und Tests als In-vitro-Diagnostika unter die [[ivdr|IVDR]] fallen.\n\n> [!hinweis] Aktive Implantate wie Schrittmacher werden nicht vom Klinikbetreiber, sondern im Rahmen der ärztlichen Nachsorge mit herstellerspezifischen Programmiergeräten abgefragt. Für die Medizintechnik relevant sind hier vor allem Programmiergeräte, Fernnachsorge-Systeme und die Beachtung von Sicherheitsmitteilungen.\n\n> [!praxis] Viele Implantate und Geräte tragen noch die Namen übernommener Marken (St. Jude Medical, Thoratec, Alere). Für Rückfragen, Ersatzteile und Sicherheitsinformationen ist heute Abbott zuständig.\n\n## Einordnung im Markt\n\nIm kardialen Rhythmusmanagement konkurriert Abbott vor allem mit [[medtronic]], [[boston-scientific]] und [[biotronik]]. In der Labordiagnostik sind [[roche-diagnostics]], [[siemens-healthineers]] und – in der Hämatologie – [[sysmex]] die wichtigsten Wettbewerber.",
+  "related": [
+    "herzschrittmacher",
+    "icd",
+    "vad",
+    "ecmo",
+    "blutgasanalysator",
+    "klinisch-chemischer-analysator",
+    "haematologie-analysator",
+    "blutzuckermessgeraet",
+    "medtronic",
+    "boston-scientific",
+    "biotronik",
+    "roche-diagnostics",
+    "sysmex",
+    "kardiologie",
+    "labormedizin",
+    "ivdr"
+  ],
+  "sources": [
+    "abbott-web",
+    "abbott-exact-sciences-2026"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

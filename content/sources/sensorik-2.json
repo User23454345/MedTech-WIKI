@@ -1,0 +1,67 @@
+[
+  {
+    "id": "iec-80601-2-30-2018",
+    "kind": "norm",
+    "title": "IEC 80601-2-30 – Medizinische elektrische Geräte – Teil 2-30: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von automatisierten nichtinvasiven Blutdruckmessgeräten",
+    "edition": "2. Ausgabe",
+    "publisher": "IEC / ISO; in Deutschland als DIN EN IEC 80601-2-30",
+    "year": "2018",
+    "note": "Gilt für automatische, elektrisch betriebene Geräte zur intermittierenden, indirekten Blutdruckbestimmung mit Manschette, einschließlich Heimanwendung; ersetzt die Ausgabe 2009 mit Änderung 1:2013. Maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "jcgm-100-2008",
+    "kind": "norm",
+    "authors": "Joint Committee for Guides in Metrology (JCGM)",
+    "title": "JCGM 100:2008 – Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+    "edition": "1. Ausgabe 2008 (GUM 1995 mit kleinen Korrekturen)",
+    "publisher": "BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, OIML",
+    "year": "2008",
+    "url": "https://www.bipm.org/doi/10.59161/JCGM100-2008E",
+    "note": "Internationaler Leitfaden zur Ermittlung und Angabe der Messunsicherheit; frei verfügbar über das BIPM."
+  },
+  {
+    "id": "jcgm-200-2012",
+    "kind": "norm",
+    "authors": "Joint Committee for Guides in Metrology (JCGM)",
+    "title": "JCGM 200:2012 – International vocabulary of metrology – Basic and general concepts and associated terms (VIM)",
+    "edition": "3. Ausgabe",
+    "publisher": "BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, OIML",
+    "year": "2012",
+    "note": "Internationales Wörterbuch der Metrologie mit den Definitionen von Messabweichung, Messunsicherheit, Kalibrierung, Messkette u. a."
+  },
+  {
+    "id": "din-1319-1",
+    "kind": "norm",
+    "title": "DIN 1319-1 – Grundlagen der Meßtechnik – Teil 1: Grundbegriffe",
+    "publisher": "DIN / Beuth (DIN Media)",
+    "year": "1995",
+    "note": "Deutsche Grundnorm der Messtechnik (Messgröße, Messwert, Messabweichung, Messeinrichtung, Messkette). Weitere Teile: DIN 1319-2 bis -4."
+  },
+  {
+    "id": "geddes-1982",
+    "kind": "artikel",
+    "authors": "Geddes LA, Voelz M, Combs C, Reiner D, Babbs CF",
+    "title": "Characterization of the oscillometric method for measuring indirect blood pressure",
+    "publisher": "Annals of Biomedical Engineering 10(6): 271–280",
+    "year": "1982",
+    "note": "Klassische Untersuchung des Zusammenhangs zwischen Oszillationsamplituden in der Manschette und systolischem, mittlerem und diastolischem Druck."
+  },
+  {
+    "id": "hall-1879",
+    "kind": "artikel",
+    "authors": "Hall EH",
+    "title": "On a New Action of the Magnet on Electric Currents",
+    "publisher": "American Journal of Mathematics 2(3): 287–292",
+    "year": "1879",
+    "note": "Erstbeschreibung des Hall-Effekts an einem stromdurchflossenen Goldleiter im Magnetfeld."
+  },
+  {
+    "id": "bland-altman-1986",
+    "kind": "artikel",
+    "authors": "Bland JM, Altman DG",
+    "title": "Statistical methods for assessing agreement between two methods of clinical measurement",
+    "publisher": "The Lancet 327(8476): 307–310",
+    "year": "1986",
+    "note": "Grundlagenarbeit zum Methodenvergleich (Bland-Altman-Diagramm, Übereinstimmungsgrenzen). Bandangabe 327 nach heutiger Zählung; im Original zitiert als Lancet 1(8476): 307–310."
+  }
+]

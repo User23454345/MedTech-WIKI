@@ -1,0 +1,65 @@
+{
+  "id": "niedertemperatursterilisator",
+  "type": "device",
+  "title": "Niedertemperatur-Plasmasterilisator",
+  "aliases": [
+    "Plasmasterilisator",
+    "H₂O₂-Sterilisator",
+    "Wasserstoffperoxid-Plasmasterilisation",
+    "NT-Sterilisator",
+    "Niedertemperatursterilisator",
+    "Low-temperature sterilizer"
+  ],
+  "category": "geraete",
+  "deviceGroup": "aufbereitung",
+  "rank": 96,
+  "domains": [
+    "chirurgie"
+  ],
+  "summary": "Niedertemperatur-Plasmasterilisatoren sterilisieren hitzeempfindliche Medizinprodukte mit verdampftem Wasserstoffperoxid im Vakuum bei Temperaturen deutlich unter 60 °C. Ein Niederdruckplasma bzw. die Vakuumphasen dienen dazu, Peroxidrückstände abzubauen, sodass keine lange Auslüftung nötig ist.",
+  "riskClass": {
+    "value": "IIa",
+    "evidence": "belegt",
+    "note": "Produkte, die speziell zur Sterilisation von Medizinprodukten bestimmt sind, gehören nach Regel 16 der [[mdr|MDR]] Anhang VIII zur Klasse IIa.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Viele moderne Instrumente – starre Optiken, Kamerasysteme, Teile robotischer Instrumente, elektronische Komponenten und manche Kunststoffe – vertragen die Temperaturen der [[dampfsterilisator|Dampfsterilisation]] nicht. Für sie stehen Niedertemperaturverfahren zur Verfügung: Wasserstoffperoxid (mit oder ohne Plasma), Ethylenoxid und Niedertemperatur-Dampf-Formaldehyd. H₂O₂-Verfahren haben kurze Zykluszeiten und hinterlassen als Zerfallsprodukte Wasser und Sauerstoff.",
+    "principle": "## Ablauf eines H₂O₂-Plasmazyklus\n\n1. **Vakuum:** Die Kammer wird auf einen niedrigen [[druck|Druck]] evakuiert; dabei verdampft Restfeuchte. Feuchte Beladungen führen deshalb zum Zyklusabbruch.\n2. **Injektion und Diffusion:** Konzentrierte Wasserstoffperoxidlösung wird verdampft und in die Kammer geleitet. Im Unterdruck diffundiert der Dampf in Verpackungen und Lumina ([[diffusion-osmose|Diffusion]]); H₂O₂ wirkt als starkes Oxidationsmittel auf Proteine, Lipide und Nukleinsäuren der Mikroorganismen.\n3. **Plasmaphase:** Ein hochfrequentes elektromagnetisches Feld regt das Restgas zu einem Niederdruckplasma an; reaktive Spezies entstehen, Peroxidreste werden zu Wasser und Sauerstoff abgebaut.\n4. **Belüftung** über einen Filter auf Atmosphärendruck.\n\nDie Zyklen werden je nach System mehrfach durchlaufen. Die Prozesstemperatur liegt typischerweise im Bereich von etwa 40–55 °C.\n\n> [!vereinfacht] Die eigentliche Sterilisationswirkung geht überwiegend vom H₂O₂-Dampf aus; das Plasma trägt vor allem zur Entfernung von Rückständen bei. Die Bezeichnung „Plasmasterilisation“ ist daher eine Verkürzung.\n\n## Grenzen des Verfahrens\n\nCellulosehaltige Materialien (Papier, Baumwolle, Textilien) und Flüssigkeiten absorbieren bzw. zersetzen H₂O₂ und sind nicht geeignet; verwendet werden Verpackungen aus Polyolefin-Vlies (z. B. Tyvek) oder Polypropylen-Vlies. Für Lumina gibt der Hersteller je Zyklus maximale Längen und minimale Innendurchmesser an. Ob ein Medizinprodukt geeignet ist, ergibt sich ausschließlich aus den Aufbereitungsangaben seines Herstellers. Zur Chargenkontrolle dienen chemische Indikatoren und biologische Indikatoren mit Sporen von *Geobacillus stearothermophilus*. Validierung und Routinekontrolle richten sich nach der verfahrensspezifischen Norm ISO 22441 bzw. der allgemeinen Norm ISO 14937 [@iso-22441] [@iso-14937]."
+  },
+  "manufacturers": [
+    {
+      "ref": "getinge",
+      "models": [],
+      "note": "Niedertemperatursterilisatoren auf Wasserstoffperoxid-Basis im Aufbereitungsportfolio."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software- und Zusatzmodulen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Für die Aufbereitung sind geeignete validierte Verfahren anzuwenden (KRINKO/BfArM-Empfehlung); Arbeitsschutzvorgaben für den Umgang mit Wasserstoffperoxid sind zu beachten.",
+    "intervals": "Validierung und periodische Leistungsbeurteilung nach Herstellerangaben und Normen (ISO 22441 bzw. ISO 14937); Wartung nach Herstellerangabe (Vakuumpumpe, Dichtungen, Injektionssystem, Sensorik); Chargenkontrolle mit chemischen und biologischen Indikatoren."
+  },
+  "related": [
+    "sterilisation",
+    "dampfsterilisator",
+    "rdg",
+    "aufbereitung",
+    "endoskop",
+    "diffusion-osmose"
+  ],
+  "sources": [
+    "iso-14937",
+    "iso-22441",
+    "krinko-bfarm-2012",
+    "mdr-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

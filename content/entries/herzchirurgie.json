@@ -1,0 +1,37 @@
+{
+  "id": "herzchirurgie",
+  "type": "domain",
+  "title": "Herzchirurgie",
+  "aliases": [
+    "Herz-Thorax-Chirurgie",
+    "Kardiochirurgie",
+    "Cardiac Surgery",
+    "Herz-, Thorax- und Gefäßchirurgie",
+    "Kardiotechnik"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Herzchirurgie operiert am Herzen, an den Herzklappen und an den großen Gefäßen. Sie ist auf extrakorporale Verfahren wie die Herz-Lungen-Maschine sowie auf mechanische Kreislaufunterstützung angewiesen und gehört zu den technisch anspruchsvollsten Bereichen eines Krankenhauses.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Herzchirurgie** behandelt Erkrankungen des [[herz|Herzens]] und der herznahen großen Gefäße operativ. Viele Eingriffe erfordern einen ruhigen, blutleeren Situs – das Herz wird dafür mit einer kardioplegischen Lösung stillgelegt, während eine [[herz-lungen-maschine]] die Funktion von Herz und Lunge übernimmt (**extrakorporale Zirkulation**). Die Maschine wird von **Kardiotechniker:innen** (Perfusionist:innen) bedient, einer eigenen Berufsgruppe an der Schnittstelle von Medizin und Technik [@kramme-2017] [@wintermantel-2009].\n\n## Typische Eingriffe\n\n| Eingriff | Kurzbeschreibung |\n|---|---|\n| Koronare Bypassoperation | Überbrückung verengter Herzkranzgefäße mit Arterien oder Venen, mit oder ohne Herz-Lungen-Maschine |\n| Klappenchirurgie | Ersatz oder Rekonstruktion von Aorten-, Mitral- und Trikuspidalklappe, auch minimalinvasiv |\n| Kathetergestützter Klappenersatz | z. B. TAVI im Hybrid-OP gemeinsam mit der Kardiologie |\n| Aortenchirurgie | Aneurysmen und Dissektionen, teils im tiefen hypothermen Kreislaufstillstand |\n| Herzinsuffizienzchirurgie | Implantation von Herzunterstützungssystemen, Herztransplantation |\n| Rhythmuschirurgie | chirurgische Ablation, Implantation epikardialer Elektroden |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[herz-lungen-maschine]] | Blutpumpen, Oxygenator, Wärmetauscher, Reservoir und Kardioplegiesystem für die extrakorporale Zirkulation |\n| [[ecmo]] | längerfristige extrakorporale Lungen- und/oder Kreislaufunterstützung |\n| [[vad]] | implantierbare oder extrakorporale Herzunterstützung bei schwerer Herzinsuffizienz |\n| [[iabp]] | intraaortale Ballonpumpe zur diastolischen Augmentation |\n| [[externer-schrittmacher]] | temporäre Stimulation über epikardiale Schrittmacherdrähte nach der Operation |\n| [[defibrillator]] | interne Defibrillation mit Löffelelektroden bei offenem Thorax, externe Defibrillation |\n| [[hypothermiegeraet]] (Heater-Cooler) | Temperierung des Wärmetauschers der Herz-Lungen-Maschine und von Wärmematten |\n| [[invasive-druckmessung]], [[patientenmonitor]] | arterieller, zentralvenöser und pulmonalarterieller Druck |\n| [[ultraschallgeraet]] | transösophageale Echokardiographie (TEE) zur Klappen- und Funktionsbeurteilung |\n| [[blutgasanalysator]], [[gerinnungsanalysator]] | Blutgase und Heparinwirkung (aktivierte Gerinnungszeit) während der Perfusion |\n| [[angiographieanlage]] | Bildgebung im Hybrid-OP |\n| [[anaesthesiegeraet]], [[hf-chirurgiegeraet]], [[op-tisch]] | OP-Grundausstattung |\n\n### Aufbau der Herz-Lungen-Maschine\n\n> [!vereinfacht] Venöses Blut läuft über Schwerkraft oder unterstützt durch Sog in ein Reservoir. Eine Rollen- oder Zentrifugalpumpe ([[peristaltikpumpe]], [[elektromotor]]) fördert es durch den Membranoxygenator, in dem Sauerstoff aufgenommen und CO₂ abgegeben wird ([[gasaustausch]], [[diffusion-osmose]]); ein integrierter Wärmetauscher regelt die Bluttemperatur. Über einen arteriellen Filter gelangt das Blut zurück in die Aorta. Sensoren überwachen Drücke, Füllstand, Luftblasen und Temperaturen.\n\n## Besondere technische Anforderungen\n\n### Luftembolie und Überwachung\n\nLuft im arteriellen Schenkel ist eine der gefährlichsten Komplikationen. [[luftblasendetektor|Luftblasendetektoren]] und Füllstandssensoren am Reservoir sind mit der Pumpensteuerung gekoppelt und stoppen bei Alarm die arterielle Pumpe ([[luft-im-system]]). Ein klares Alarm- und Bedienkonzept ist entscheidend, da Kardiotechnik, Anästhesie und Chirurgie gleichzeitig auf Meldungen reagieren müssen ([[alarmsystem]]) [@iec-60601-1-8].\n\n### Hygiene der Heater-Cooler-Geräte\n\n> [!warnung] Ab etwa 2015 wurden weltweit Infektionen mit *Mycobacterium chimaera* nach Herzoperationen bekannt, die auf kontaminierte Wassertanks von Heater-Cooler-Geräten zurückgeführt wurden: Keimhaltige Aerosole gelangten über den Luftstrom des Geräts in das OP-Feld. Seitdem gelten strenge Herstellervorgaben zur Desinfektion des Wasserkreislaufs, zur Aufstellung und zur Abluftführung ([[desinfektion]]) [@sax-2015].\n\n### Elektrische Sicherheit\n\nBei offenem Thorax und über Katheter oder Schrittmacherdrähte besteht ein direkter elektrischer Zugang zum Herzen. Geräte und [[anwendungsteile]] müssen dafür die strengen Ableitstromgrenzen für Typ CF einhalten ([[ableitstrom]], [[elektrische-stromwirkung]]) [@iec-60601-1]. Herzchirurgische OP-Säle zählen zu den medizinisch genutzten Räumen der Gruppe 2 mit IT-System und Isolationsüberwachung sowie Sicherheitsstromversorgung ([[medizinisch-genutzte-bereiche]]) [@din-vde-0100-710].\n\n> [!praxis] Die Herz-Lungen-Maschine muss bei Netzausfall weiterlaufen: Integrierte Batterien überbrücken kurze Ausfälle, und für Pumpen sind Handkurbeln für den Notbetrieb vorgesehen. Die regelmäßige Prüfung von Akkus ([[akkufehler]]) und Notfallhandkurbeln gehört zur Routine.\n\n### Verbrauchsmaterial und Instandhaltung\n\nSchlauchsets, Oxygenatoren und Kanülen sind Einmalprodukte. Die Konsolen werden nach Herstellerangabe gewartet und unterliegen der [[stk|sicherheitstechnischen Kontrolle]] nach § 12 i. V. m. Anlage 1 der [[mpbetreibv|MPBetreibV]], sofern sie dort erfasst sind oder der Hersteller sie vorschreibt [@mpbetreibv].\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[kardiologie]]: Herzteam für Klappenentscheidungen, Hybrid-OP, Rhythmusimplantate.\n* [[anaesthesiologie]] und [[intensivmedizin]]: Narkose, TEE, postoperative Intensivtherapie, ECMO.\n* [[labormedizin]]: Gerinnung, Blutgase, Transfusion.\n* [[radiologie]]: CT-Angiographie der Aorta und der Koronarien.\n* [[nephrologie]]: Nierenersatzverfahren nach Herzoperationen ([[crrt-geraet]]).\n",
+  "related": [
+    "herz-lungen-maschine",
+    "ecmo",
+    "vad",
+    "iabp",
+    "luftblasendetektor",
+    "kardiologie",
+    "getinge",
+    "medtronic",
+    "abbott"
+  ],
+  "sources": [
+    "kramme-2017",
+    "wintermantel-2009",
+    "iec-60601-1",
+    "iec-60601-1-8",
+    "din-vde-0100-710",
+    "mpbetreibv",
+    "sax-2015"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

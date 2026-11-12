@@ -74,9 +74,16 @@
   <circle cx="42" cy="110" r="5" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
   <circle cx="42" cy="130" r="5" fill="#0b2545"/>
   <circle cx="42" cy="150" r="5" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
-  <line x1="47" y1="110" x2="150" y2="80" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="47" y1="130" x2="150" y2="84" stroke="#0d9488" stroke-width="2"/>
-  <line x1="47" y1="150" x2="150" y2="88" stroke="#0d9488" stroke-width="2"/>
+  <line x1="47" y1="110" x2="163" y2="74" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="47" y1="130" x2="163" y2="80" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="47" y1="150" x2="163" y2="86" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Gasweg Mischer → Verdampfer → Kreissystem, Ventilator → Kreissystem -->
+  <line x1="240" y1="108" x2="240" y2="160" stroke="#0d9488" stroke-width="2"/>
+  <line x1="240" y1="160" x2="226" y2="160" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M221,184 L285,184 L285,196 L298,196" fill="none" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="253" y="178" text-anchor="middle" font-size="11">Frischgas</text>
+  <line x1="275" y1="262" x2="298" y2="262" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
 
   <!-- Narkosegasfortleitung -->
   <path d="M414,204 L414,196" stroke="#0b2545" stroke-width="2"/>

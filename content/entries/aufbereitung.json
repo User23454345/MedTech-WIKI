@@ -1,0 +1,168 @@
+{
+  "id": "aufbereitung",
+  "type": "term",
+  "title": "Aufbereitung von Medizinprodukten",
+  "aliases": [
+    "Reprocessing",
+    "Medizinprodukte-Aufbereitung",
+    "AEMP",
+    "ZSVA",
+    "Instrumentenaufbereitung",
+    "Sterilgutversorgung",
+    "KRINKO-BfArM-Empfehlung"
+  ],
+  "category": "instandhaltung",
+  "summary": "Aufbereitung umfasst alle Schritte, die ein gebrauchtes Medizinprodukt sicher wiederverwendbar machen: Reinigung, Desinfektion, gegebenenfalls Sterilisation sowie Prüfung und Wiederherstellung der technisch-funktionellen Sicherheit. In Deutschland ist sie in der MPBetreibV geregelt; Maßstab ist die gemeinsame Empfehlung von KRINKO und BfArM.",
+  "body": "## Begriff und Rechtsgrundlagen\n\n**Aufbereitung** ist nach der [[mdr|MDR]] ein Verfahren, dem ein gebrauchtes Produkt unterzogen wird, damit es sicher wiederverwendet werden kann; dazu gehören Reinigung, [[desinfektion|Desinfektion]], [[sterilisation|Sterilisation]] und ähnliche Verfahren sowie die Prüfung und Wiederherstellung der technischen und funktionellen Sicherheit des gebrauchten Produkts (Art. 2 Nr. 39 MDR) [@mdr-2017]. Aufbereitung ist damit mehr als Hygiene: Sie schließt Pflege, Funktionsprüfung und gegebenenfalls [[instandsetzung|Instandsetzung]] ein.\n\nIn Deutschland regelt die [[mpbetreibv|MPBetreibV]] 2025 die Aufbereitung von Medizinprodukten in **§ 8**, die Aufbereitung von Einmalprodukten gesondert in **§ 9** [@mpbetreibv]. Kernforderungen:\n\n* Aufbereitung (sinngemäß) unter Berücksichtigung der Herstellerangaben mit **geeigneten validierten Verfahren**, sodass der Erfolg nachvollziehbar gewährleistet ist und Patienten, Anwender und Dritte nicht gefährdet werden,\n* eine ordnungsgemäße Aufbereitung wird **vermutet**, wenn die gemeinsame Empfehlung der Kommission für Krankenhaushygiene und Infektionsprävention (KRINKO) beim Robert Koch-Institut und des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM) beachtet wird – die sogenannte **KRINKO-BfArM-Empfehlung** [@krinko-bfarm-2012],\n* für Produkte mit besonders hohen Anforderungen (**„kritisch C“**) ist zusätzlich eine Zertifizierung des Qualitätsmanagementsystems der aufbereitenden Stelle erforderlich [@mpbetreibv].\n\n> [!belegt] Die KRINKO-BfArM-Empfehlung „Anforderungen an die Hygiene bei der Aufbereitung von Medizinprodukten“ (2012) ist in Deutschland der zentrale Standard; ihre Beachtung begründet nach der MPBetreibV eine Vermutungswirkung für eine ordnungsgemäße Aufbereitung. Einzelne Anlagen, etwa zur Aufbereitung flexibler Endoskope, wurden seither aktualisiert [@krinko-bfarm-2012] [@mpbetreibv].\n\n## Risikobewertung und Einstufung\n\nGrundlage jeder Aufbereitung ist die Einstufung des Medizinprodukts nach dem Infektionsrisiko bei der Anwendung. Sie geht auf die Klassifikation von **Spaulding** zurück [@spaulding-1968] und wurde von der KRINKO-BfArM-Empfehlung verfeinert [@krinko-bfarm-2012]:\n\n| Einstufung | Kontakt bei der Anwendung | Beispiele | Mindestanforderung |\n|---|---|---|---|\n| unkritisch | nur intakte Haut | EKG-Elektrodenkabel, Blutdruckmanschette, Stethoskop | Reinigung und Desinfektion |\n| semikritisch A | Schleimhaut oder krankhaft veränderte Haut, ohne besondere Anforderungen an die Aufbereitung | Spekulum, Laryngoskopspatel | Reinigung und Desinfektion (bevorzugt maschinell), ggf. Sterilisation |\n| semikritisch B | wie A, mit erhöhten Anforderungen (z. B. Hohlräume) | flexibles [[endoskop|Endoskop]], transösophageale [[ultraschallgeraet|Ultraschallsonde]] | Vorreinigung, maschinelle Reinigung und Desinfektion |\n| kritisch A | Durchdringung von Haut/Schleimhaut, Kontakt mit Blut, ohne besondere Anforderungen | Wundhaken, Scheren | Reinigung, Desinfektion, Dampfsterilisation |\n| kritisch B | wie A, mit erhöhten Anforderungen (Lumen, schwer zugängliche Teile) | MIC-Instrumente, Handstücke des [[chirurgisches-motorsystem|chirurgischen Motorsystems]], [[phakoemulsifikation|Phako-Handstücke]] | maschinelle Reinigung/Desinfektion, Dampfsterilisation |\n| kritisch C | wie B, aber nicht dampfsterilisierbar (thermolabil) | thermolabile Instrumente | Niedertemperaturverfahren, QM-Zertifizierung |\n\n> [!vereinfacht] Die Tabelle fasst die Systematik zusammen. Die konkrete Einstufung erfolgt durch den Betreiber anhand der Herstellerangaben und der tatsächlichen Anwendung und ist zu dokumentieren; Zweifelsfälle werden der höheren Stufe zugeordnet.\n\n## Der Aufbereitungskreislauf\n\n1. **Vorbereitung:** Vorreinigung am Anwendungsort, Entsorgung von Einwegteilen, sicheres Sammeln und Transport (möglichst trocken, zeitnah), Zerlegen.\n2. **Reinigung:** Entfernen organischer und anorganischer Rückstände – Voraussetzung für jede weitere Stufe, da Rückstände Mikroorganismen vor Desinfektion und Sterilisation schützen.\n3. **Desinfektion:** bevorzugt maschinell-thermisch im [[rdg|Reinigungs- und Desinfektionsgerät (RDG)]] nach [[iso-15883|ISO 15883]] [@iso-15883-1].\n4. **Spülung und Trocknung.**\n5. **Prüfung und Pflege:** Sauberkeit (Sichtkontrolle, ggf. Lupe), Unversehrtheit, Pflege von Gelenken, technisch-funktionelle Prüfung.\n6. **Verpackung und Kennzeichnung:** Sterilbarrieresystem, Chargenkennzeichnung, ggf. Zählung von Aufbereitungszyklen.\n7. **Sterilisation:** bei kritischen Produkten, bevorzugt im [[dampfsterilisator|Dampfsterilisator]], bei thermolabilen Produkten im [[niedertemperatursterilisator|Niedertemperatursterilisator]].\n8. **Dokumentierte Freigabe:** Prüfung von Prozessparametern und Indikatoren durch qualifiziertes Personal, dann Lagerung und Bereitstellung.\n\n> [!praxis] Aufbereitet wird in Kliniken in einer **Aufbereitungseinheit für Medizinprodukte (AEMP)**. Das Personal benötigt eine spezifische Sachkenntnis, die in Deutschland typischerweise durch Fachkunde-Lehrgänge erworben wird. Die Medizintechnik verantwortet in der Regel die Instandhaltung von RDG und Sterilisatoren und organisiert deren Validierung, die häufig durch externe, spezialisierte Validierer erfolgt.\n\n## Validierung\n\n„Validiert“ heißt: Es ist dokumentiert nachgewiesen, dass ein Verfahren unter den festgelegten Bedingungen reproduzierbar das gewünschte Ergebnis liefert. Für maschinelle Verfahren besteht die Validierung aus Installationsqualifikation (IQ), Betriebsqualifikation (OQ) und Leistungsqualifikation (PQ) mit realen Beladungsmustern; sie wird periodisch und nach Änderungen wiederholt (siehe [[sterilisation]], [[desinfektion]]) [@iso-15883-1] [@iso-17665-2024].\n\n## Einmalprodukte\n\nEinmalprodukte sind vom Hersteller nur für eine einzige Anwendung bestimmt. Ihre Aufbereitung ist in der Neufassung der MPBetreibV in § 9 eigenständig geregelt und an strenge Voraussetzungen gebunden; maßgeblich sind die Vorgaben der MDR zu aufbereiteten Einmalprodukten und die aktuelle Fassung der Verordnung [@mpbetreibv] [@mdr-2017].\n\n## Anwendung in Geräten\n\n| Gerät | Aufbereitungsrelevante Teile |\n|---|---|\n| [[endoskop|Flexibles Videoendoskop]] | Kanäle, Ventile; maschinelle Aufbereitung in Endoskop-RDG; Dichtheitstest vor der Reinigung |\n| [[ultraschallgeraet|Ultraschallgerät]] | Schallköpfe; endokavitäre und TEE-Sonden semikritisch |\n| [[beatmungsgeraet|Beatmungsgerät]] / [[anaesthesiegeraet|Anästhesiegerät]] | wiederverwendbare Schläuche, [[exspirationsventil|Exspirationsventil]], Atemsystem, [[flowsensor|Flowsensoren]] je nach Herstellerangabe |\n| [[chirurgisches-motorsystem|Chirurgisches Motorsystem]] | Hand- und Winkelstücke (Pflege mit Öl nach Herstellerangabe) |\n| [[dentaleinheit|Zahnärztliche Behandlungseinheit]] | Übertragungsinstrumente, wasserführende Systeme |\n| [[hf-chirurgiegeraet|HF-Chirurgiegerät]] | wiederverwendbare Instrumente und Kabel; Isolationsprüfung |\n\nDie Sicherheit der Aufbereitung hängt damit unmittelbar an der Medizintechnik: an der [[instandhaltung-grundlagen|Instandhaltung]] der Aufbereitungsgeräte, an der Prüfung der aufbereiteten Instrumente und an der Erkennung von Schäden, die nur technisch feststellbar sind, etwa defekte Isolierungen an HF-Instrumenten.",
+  "related": [
+    "desinfektion",
+    "sterilisation",
+    "rdg",
+    "dampfsterilisator",
+    "niedertemperatursterilisator",
+    "endoskop",
+    "iso-15883",
+    "iso-17665",
+    "mpbetreibv",
+    "mdr",
+    "instandhaltung-grundlagen",
+    "betreiberpflichten"
+  ],
+  "paths": [
+    [
+      "aufbereitung",
+      "desinfektion",
+      "rdg",
+      "iso-15883"
+    ],
+    [
+      "aufbereitung",
+      "sterilisation",
+      "dampfsterilisator",
+      "iso-17665"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "mpbetreibv",
+    "krinko-bfarm-2012",
+    "spaulding-1968",
+    "iso-15883-1",
+    "iso-17665-2024",
+    "kramme-2017"
+  ],
+  "diagram": {
+    "title": "Kreislauf der Aufbereitung",
+    "caption": "Schema nach der Systematik der KRINKO-BfArM-Empfehlung; die Sterilisation entfällt bei unkritischen und vielen semikritischen Produkten.",
+    "width": 960,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "anw",
+        "label": "Anwendung\nam Patienten",
+        "kind": "patient",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "vor",
+        "label": "Vorbereitung\n(Vorreinigung, Transport)",
+        "kind": "process",
+        "x": 330,
+        "y": 90,
+        "w": 180
+      },
+      {
+        "id": "rd",
+        "label": "Reinigung und\nDesinfektion (RDG)",
+        "kind": "process",
+        "ref": "rdg",
+        "x": 580,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "pp",
+        "label": "Prüfung\nund Pflege",
+        "kind": "sensor",
+        "ref": "funktionspruefung",
+        "x": 830,
+        "y": 90
+      },
+      {
+        "id": "verp",
+        "label": "Verpackung,\nKennzeichnung",
+        "kind": "process",
+        "x": 830,
+        "y": 250
+      },
+      {
+        "id": "ster",
+        "label": "Sterilisation",
+        "kind": "process",
+        "ref": "sterilisation",
+        "x": 580,
+        "y": 250
+      },
+      {
+        "id": "frei",
+        "label": "Dokumentierte\nFreigabe",
+        "kind": "control",
+        "x": 330,
+        "y": 250
+      },
+      {
+        "id": "lager",
+        "label": "Lagerung,\nBereitstellung",
+        "kind": "output",
+        "x": 100,
+        "y": 250
+      }
+    ],
+    "edges": [
+      {
+        "from": "anw",
+        "to": "vor",
+        "kind": "fluid"
+      },
+      {
+        "from": "vor",
+        "to": "rd",
+        "kind": "fluid"
+      },
+      {
+        "from": "rd",
+        "to": "pp",
+        "kind": "fluid"
+      },
+      {
+        "from": "pp",
+        "to": "verp",
+        "kind": "fluid"
+      },
+      {
+        "from": "verp",
+        "to": "ster",
+        "kind": "fluid"
+      },
+      {
+        "from": "ster",
+        "to": "frei",
+        "kind": "data",
+        "label": "Chargendaten"
+      },
+      {
+        "from": "frei",
+        "to": "lager",
+        "kind": "fluid"
+      },
+      {
+        "from": "lager",
+        "to": "anw",
+        "kind": "fluid"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -29,7 +29,9 @@
   <line x1="130" y1="68" x2="163" y2="68" stroke="#0d9488" stroke-width="2" marker-end="url(#sp-arr)"/>
   <line x1="275" y1="68" x2="308" y2="68" stroke="#0d9488" stroke-width="2" marker-end="url(#sp-arr)"/>
   <line x1="420" y1="68" x2="453" y2="68" stroke="#0d9488" stroke-width="2" marker-end="url(#sp-arr)"/>
-  <text x="300" y="120" text-anchor="middle">Δs = P / (z · i)      v = f · Δs      Q = A · v = A · f · Δs</text>
+  <text x="140" y="120" text-anchor="middle">Δs = P / (z · i)</text>
+  <text x="290" y="120" text-anchor="middle">v = f · Δs</text>
+  <text x="460" y="120" text-anchor="middle">Q = A · v = A · f · Δs</text>
 
   <!-- Spritzenquerschnitt -->
   <rect x="40" y="150" width="200" height="56" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="2"/>
@@ -54,21 +56,20 @@
   <line x1="60" y1="290" x2="290" y2="290" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="6 4"/>
   <text x="200" y="284" font-size="12" fill="#0d9488">Sollrate</text>
   <path d="M60,370 L95,368 Q120,362 140,320 Q155,292 175,294 L195,288 L215,293 L235,289 L255,291 L285,290" stroke="#0b2545" stroke-width="2" fill="none"/>
-  <text x="70" y="350" font-size="12">Spiel,</text>
-  <text x="70" y="364" font-size="12">Haftreibung</text>
-  <text x="150" y="340" font-size="12">Anlaufphase</text>
+  <text x="150" y="362" font-size="12">← Spiel, Haftreibung</text>
+  <text x="170" y="330" font-size="12">Anlaufphase</text>
 
   <!-- Formelbox -->
-  <rect x="340" y="150" width="240" height="225" rx="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="340" y="150" width="240" height="232" rx="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
   <text x="352" y="174" font-weight="600">Beispiel (fiktive Werte)</text>
   <text x="352" y="198" font-size="12">d = 26 mm → A ≈ 531 mm²</text>
   <text x="352" y="218" font-size="12">P = 1 mm, z = 3 200, i = 10</text>
   <text x="352" y="238" font-size="12">Δs ≈ 31 nm, ΔV ≈ 16,6 nl</text>
   <text x="352" y="258" font-size="12">Q = 1 ml/h → f ≈ 16,7 Hz</text>
   <line x1="352" y1="272" x2="568" y2="272" stroke="#0b2545" stroke-width="1"/>
-  <text x="352" y="294" font-weight="600">Okklusion</text>
-  <text x="352" y="316" font-size="12">t_Alarm ≈ C_S · Δp / Q</text>
-  <text x="352" y="336" font-size="12">C_S = 1 µl/mmHg, Δp = 300 mmHg</text>
-  <text x="352" y="356" font-size="12">1 ml/h → ca. 18 min</text>
-  <text x="352" y="370" font-size="12">0,1 ml/h → ca. 3 h</text>
+  <text x="352" y="292" font-weight="600">Okklusion</text>
+  <text x="352" y="312" font-size="12">t_Alarm ≈ C_S · Δp / Q</text>
+  <text x="352" y="330" font-size="12">C_S = 1 µl/mmHg, Δp = 300 mmHg</text>
+  <text x="352" y="348" font-size="12">1 ml/h → ca. 18 min</text>
+  <text x="352" y="366" font-size="12">0,1 ml/h → ca. 3 h</text>
 </svg>

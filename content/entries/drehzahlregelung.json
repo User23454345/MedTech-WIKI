@@ -1,0 +1,192 @@
+{
+  "id": "drehzahlregelung",
+  "type": "term",
+  "title": "Drehzahlregelung",
+  "aliases": [
+    "Drehzahlregler",
+    "Speed control",
+    "Motor speed control",
+    "Kaskadenregelung",
+    "Antriebsregelung",
+    "Feldorientierte Regelung",
+    "FOC",
+    "Sensorlose Regelung",
+    "Back-EMF-Regelung"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Die Drehzahlregelung hält die Drehzahl eines Elektromotors trotz Last- und Spannungsschwankungen auf dem Sollwert, indem sie die Ist-Drehzahl misst und Motorspannung bzw. -strom nachführt. In Turbinenbeatmungsgeräten, Blutpumpen und Zentrifugen verbindet sie den Motor mit der eigentlichen Zielgröße wie Druck oder Fluss.",
+  "body": "## Begriff und Aufgabe\n\nDie **Drehzahlregelung** sorgt dafür, dass ein [[elektromotor|Elektromotor]] die geforderte Drehzahl n (bzw. Winkelgeschwindigkeit `ω = 2π · n`) einhält – auch wenn sich Last, Versorgungsspannung oder Temperatur ändern. Sie ist ein Anwendungsfall des allgemeinen [[regelkreis|Regelkreises]]: Die Ist-Drehzahl wird gemessen, mit dem Sollwert verglichen, und ein Regler verstellt über eine Leistungsstufe mit [[pwm|Pulsweitenmodulation]] die Motorspannung [@schroeder-antriebe-2015] [@hughes-drury-2019].\n\nIn der Medizintechnik ist die Drehzahl selten Selbstzweck. Sie ist eine **Hilfsgröße** für das, was am Patienten ankommen soll:\n\n| Gerät | Eigentliche Zielgröße | Zusammenhang mit der Drehzahl |\n|---|---|---|\n| [[beatmungsgeraet|Turbinenbeatmungsgerät]] | Atemwegsdruck, Flow | Druckerhöhung der [[turbine|Turbine]] steigt etwa mit n² |\n| [[cpap-geraet|CPAP-Gerät]], [[heimbeatmungsgeraet]], [[high-flow-geraet]] | Maskendruck bzw. Flow | wie oben |\n| [[ecmo]], [[herz-lungen-maschine]], [[vad]] (Zentrifugalpumpe) | Blutfluss | Fluss hängt von Drehzahl und Druckdifferenz (Vor-/Nachlast) ab |\n| [[laborzentrifuge]] | relative Zentrifugalbeschleunigung (RZB) | `RZB = r · ω² / g` bzw. als Zahlenwertgleichung `RZB ≈ 1,118 · 10⁻⁵ · r · n²` (r in cm, n in min⁻¹) |\n| [[chirurgisches-motorsystem]], [[dentaleinheit]] | Schnitt-/Bohrleistung, Drehmoment | Drehzahl und Drehmomentbegrenzung |\n| [[roentgenroehre|Röntgenröhre]] mit Drehanode | Wärmeverteilung auf der Anode | Anode muss vor der Aufnahme Nenndrehzahl erreichen |\n\nDamit schließt die Drehzahlregelung die Kette aus der Projektübersicht: **[[beatmungsgeraet|Beatmungsgerät]] → [[turbine|Turbine]] → [[elektromotor|Elektromotor]] → [[elektrotechnik|Elektrotechnik]] → Drehzahlregelung → [[sensorik|Sensorik]] → [[druckmessung|Druckmessung]]**. Der Motor liefert das Drehmoment, die Elektronik stellt Spannung und Strom, die Drehzahlregelung hält die Turbine auf Kurs, und die Sensorik meldet zurück, ob am Patienten tatsächlich der gewünschte Druck anliegt.\n\n## Physikalische Grundlage\n\n### Mechanische Bewegungsgleichung\n\nDie Drehzahl ändert sich nur, wenn Motormoment M_M und Lastmoment M_L nicht im Gleichgewicht sind [@schroeder-antriebe-2015]:\n\n`J · dω/dt = M_M − M_L`\n\nJ ist das Massenträgheitsmoment von Rotor und Laufrad. Ein kleines J erlaubt schnelle Drehzahlwechsel – bei Beatmungsturbinen ein zentrales Konstruktionsziel, weil zwischen Inspiration und Exspiration innerhalb von Sekundenbruchteilen umgesteuert werden muss.\n\n### Motorgleichungen\n\nFür permanenterregte Gleichstrom- und [[bldc-motor|BLDC-Motoren]] gilt näherungsweise [@hughes-drury-2019]:\n\n* Drehmoment proportional zum Strom: `M_M = k · I`\n* Gegenspannung proportional zur Drehzahl: `U_i = k · ω`\n* stationär: `ω = (U − R · I) / k`\n\nDie **Spannung bestimmt also die Drehzahl, der Strom das Drehmoment**. Daraus folgt der klassische Aufbau als Kaskade.\n\n### Lastkennlinie eines Gebläses\n\nFür Ventilatoren und Kreiselpumpen gelten die Affinitätsgesetze: Volumenstrom ∝ n, Druckerhöhung ∝ n², Leistung ∝ n³ [@carolus-ventilatoren-2020]. Das Lastmoment einer Turbine steigt daher etwa quadratisch mit der Drehzahl. Doppelte Drehzahl bedeutet grob vierfachen Druck, aber achtfache Leistung – ein Grund, warum der Akkubetrieb bei hohen Drücken und Flows schnell an Grenzen stößt.\n\n> [!vereinfacht] Die Affinitätsgesetze gelten exakt nur für geometrisch ähnliche Betriebspunkte. In einem Beatmungsgerät verändern Schlauchsystem, Ventilstellungen und Patientenlunge den Betriebspunkt ständig; der Zusammenhang „Druck ∝ n²“ ist eine Orientierung, kein Rechenmodell.\n\n## Kaskadenregelung\n\nAntriebe werden fast immer als **Kaskade** verschachtelter Regelkreise aufgebaut [@schroeder-antriebe-2015]:\n\n| Ebene | Regelgröße | Stellgröße | Dynamik (relativ) |\n|---|---|---|---|\n| äußerer Kreis (anwendungsspezifisch) | Druck, Flow, Blutfluss | Drehzahl-Sollwert | am langsamsten |\n| mittlerer Kreis | Drehzahl | Strom- bzw. Drehmoment-Sollwert | mittel |\n| innerer Kreis | Motorstrom | Tastgrad der PWM | am schnellsten |\n\nVorteile der Kaskade:\n\n* Der **Stromregler** begrenzt den Strom direkt – das schützt Motor, Leistungsstufe und Akku und begrenzt das Drehmoment.\n* Störungen (z. B. Spannungseinbruch beim Umschalten auf Akku) werden im inneren Kreis ausgeregelt, bevor sie die Drehzahl merklich verändern.\n* Jeder Kreis kann einzeln in Betrieb genommen und eingestellt werden.\n\nAls Regler dient meist ein **PI-Regler** mit Begrenzung und Anti-Windup (siehe [[regelkreis|Regelkreis und PID-Regler]]). Für die Turbine eines Beatmungsgeräts liefert der übergeordnete Druck- oder Flowregler zusätzlich eine **Vorsteuerung**: Aus dem bekannten Sollkurvenverlauf wird der benötigte Drehzahlverlauf vorausberechnet, der Regler korrigiert nur noch die Abweichungen.\n\n> [!vereinfacht] Die Darstellung als dreistufige Kaskade ist didaktisch. Reale Geräte kombinieren Drehzahl, Ventilstellungen ([[exspirationsventil]], [[proportionalventil]]) und Sensorwerte in herstellerspezifischen Regelstrukturen, die nicht öffentlich dokumentiert sind.\n\n## Erfassung der Ist-Drehzahl\n\n| Verfahren | Prinzip | Eigenschaften |\n|---|---|---|\n| [[hall-sensor|Hall-Sensoren]] | drei Sensoren erfassen das Rotorfeld; 6 Zustände je elektrischer Umdrehung | robust, auch im Stillstand Lageinformation; Auflösung begrenzt |\n| Gegen-EMK (sensorlos) | Auswertung der induzierten Spannung in der unbestromten Phase oder per Beobachter | keine zusätzlichen Sensoren; bei sehr kleinen Drehzahlen unzuverlässig |\n| Inkrementalgeber (optisch/magnetisch) | Impulsscheibe, viele Impulse je Umdrehung | hohe Auflösung, für Positionierantriebe |\n| Tachogenerator | Spannung proportional zur Drehzahl | klassisch, heute selten |\n\nBei einem BLDC-Motor mit p Polpaaren gilt für die elektrische Frequenz `f_el = p · n`. Aus der Hall-Signalfrequenz ergibt sich die Drehzahl in min⁻¹ zu `n = 60 · f_el / p`.\n\n> [!beispiel] Ein vierpoliger BLDC-Motor (p = 2) liefert Hall-Signale mit 1 000 Hz elektrischer Frequenz. Daraus folgt `n = 60 · 1000 / 2 = 30 000 min⁻¹`. Zahlen beispielhaft, keine Angabe eines konkreten Turbinenmodells.\n\nModerne Antriebe arbeiten oft mit **feldorientierter Regelung** (FOC): Die Phasenströme werden in eine drehmomentbildende und eine flussbildende Komponente zerlegt und getrennt geregelt. Das ergibt ein gleichmäßiges Drehmoment, geringe Geräusche und hohe Effizienz [@schroeder-antriebe-2015].\n\n## Störgrößen und Grenzen\n\n* **Lastsprünge:** Patient atmet gegen, Schlauch wird abgeknickt, Blutpumpe gegen erhöhten Widerstand.\n* **Versorgungsschwankungen:** Netz-/Akkuumschaltung, entladender [[lithium-ionen-akku|Akku]].\n* **Verschleiß:** Lagerverschleiß erhöht Reibmoment und Geräusch; der Regler gleicht das zunächst durch mehr Strom aus.\n* **Temperatur:** Wicklungswiderstand und Magnetfluss ändern sich; Strombedarf steigt.\n* **Sättigung:** Ist die maximale Spannung oder der Maximalstrom erreicht, kann der Regler die Drehzahl nicht mehr halten.\n\n> [!praxis] Ein langsam steigender Motorstrom bei gleicher Drehzahl ist ein frühes Verschleißmerkmal. Viele Geräte protokollieren Betriebsstunden und Motordaten im Fehlerspeicher (siehe [[fehlercodes]]); Turbinen und Gebläse werden nach Herstellervorgaben bei der [[wartung|Wartung]] geprüft oder getauscht.\n\n## Bedeutung in der Medizintechnik\n\nTurbinengetriebene Beatmungsgeräte erzeugen den Inspirationsdruck mit einem elektrisch angetriebenen Gebläse aus Umgebungsluft und kommen daher ohne zentrale Druckluftversorgung aus; das macht sie für Transport, Heimbeatmung und Notfallmedizin attraktiv (Grundlagen der Beatmungstechnik siehe [@kramme-2017]).\n\nDamit das Gebläse dem schnell wechselnden Sollverlauf eines Atemzyklus folgen kann, muss seine Drehzahl fortlaufend nachgeführt werden – das ist die Aufgabe der hier beschriebenen Regelung.\n\nFür die Sicherheit entscheidend ist, dass die Drehzahlregelung **nicht allein** über den Patienten wacht. Der eigentliche Therapieparameter wird unabhängig gemessen: Im Beatmungsgerät überwachen [[drucksensor|Drucksensoren]] im Rahmen der [[druckmessung|Druckmessung]] und der [[flowsensor]] die Atemgasabgabe und lösen bei Abweichungen Alarme aus, etwa [[atemwegsdruck-hoch]], [[leckage]] oder [[diskonnektion]]. Anforderungen an Alarmsysteme und die wesentlichen Leistungsmerkmale von Intensivbeatmungsgeräten sind in [[iec-60601-1-8|IEC 60601-1-8]] und [[iso-80601-2-12|ISO 80601-2-12]] festgelegt [@iec-60601-1-8] [@iso-80601-2-12]. Die Regelungssoftware unterliegt den Lebenszyklusanforderungen der [[iec-62304|IEC 62304]] [@iec-62304].\n\nBei Blutpumpen ([[ecmo]], [[vad]]) wird typischerweise die Drehzahl eingestellt, der resultierende Fluss aber separat gemessen und angezeigt, weil derselbe Drehzahlwert je nach Füllung und Gefäßwiderstand unterschiedliche Flüsse ergibt. Bei der [[laborzentrifuge]] muss die Drehzahlregelung zusätzlich mit Unwuchterkennung und Deckelverriegelung zusammenarbeiten.",
+  "related": [
+    "regelkreis",
+    "pwm",
+    "elektromotor",
+    "bldc-motor",
+    "turbine",
+    "hall-sensor",
+    "druckmessung",
+    "drucksensor",
+    "mikrocontroller",
+    "beatmungsgeraet",
+    "laborzentrifuge"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "elektrotechnik",
+      "drehzahlregelung",
+      "sensorik",
+      "druckmessung"
+    ],
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "drehzahlregelung",
+      "druckmessung"
+    ],
+    [
+      "drehzahlregelung",
+      "regelkreis",
+      "pwm",
+      "bldc-motor",
+      "hall-sensor"
+    ]
+  ],
+  "diagram": {
+    "title": "Kaskadenregelung einer Beatmungsturbine",
+    "caption": "Didaktisches Funktionsschema: Druckregler, Drehzahlregler und Stromregler in Kaskade; kein konkretes Gerät.",
+    "width": 900,
+    "height": 400,
+    "nodes": [
+      {
+        "id": "preg",
+        "label": "Druckregler\n(Sollwert aus Modus)",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 300,
+        "y": 80
+      },
+      {
+        "id": "nreg",
+        "label": "Drehzahlregler",
+        "ref": "drehzahlregelung",
+        "kind": "control",
+        "x": 500,
+        "y": 80
+      },
+      {
+        "id": "ireg",
+        "label": "Stromregler +\nPWM-Endstufe",
+        "ref": "pwm",
+        "kind": "control",
+        "x": 720,
+        "y": 80
+      },
+      {
+        "id": "mot",
+        "label": "BLDC-Motor",
+        "ref": "bldc-motor",
+        "kind": "actuator",
+        "x": 720,
+        "y": 210
+      },
+      {
+        "id": "turb",
+        "label": "Turbine",
+        "ref": "turbine",
+        "kind": "actuator",
+        "x": 500,
+        "y": 210
+      },
+      {
+        "id": "pat",
+        "label": "Schlauchsystem /\nPatient",
+        "kind": "patient",
+        "x": 300,
+        "y": 330
+      },
+      {
+        "id": "hall",
+        "label": "Hall-Sensoren",
+        "ref": "hall-sensor",
+        "kind": "sensor",
+        "x": 720,
+        "y": 330
+      },
+      {
+        "id": "ps",
+        "label": "Drucksensor",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 100,
+        "y": 210
+      }
+    ],
+    "edges": [
+      {
+        "from": "preg",
+        "to": "nreg",
+        "kind": "signal",
+        "label": "n_soll"
+      },
+      {
+        "from": "nreg",
+        "to": "ireg",
+        "kind": "signal",
+        "label": "I_soll"
+      },
+      {
+        "from": "ireg",
+        "to": "mot",
+        "kind": "power"
+      },
+      {
+        "from": "mot",
+        "to": "turb",
+        "kind": "energy",
+        "label": "Drehmoment"
+      },
+      {
+        "from": "turb",
+        "to": "pat",
+        "kind": "gas",
+        "label": "Atemgas"
+      },
+      {
+        "from": "mot",
+        "to": "hall",
+        "kind": "signal"
+      },
+      {
+        "from": "hall",
+        "to": "nreg",
+        "kind": "signal",
+        "label": "n_ist"
+      },
+      {
+        "from": "pat",
+        "to": "ps",
+        "kind": "gas"
+      },
+      {
+        "from": "ps",
+        "to": "preg",
+        "kind": "signal",
+        "label": "p_ist"
+      }
+    ]
+  },
+  "sources": [
+    "schroeder-antriebe-2015",
+    "hughes-drury-2019",
+    "carolus-ventilatoren-2020",
+    "kramme-2017",
+    "iec-60601-1-8",
+    "iso-80601-2-12",
+    "iec-62304"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "zoll",
+  "type": "manufacturer",
+  "title": "ZOLL Medical",
+  "aliases": [
+    "ZOLL",
+    "ZOLL Medical Corporation",
+    "Zoll"
+  ],
+  "category": "hersteller",
+  "summary": "Die ZOLL Medical Corporation mit Sitz in Chelmsford (Massachusetts, USA) ist ein Hersteller von Defibrillatoren, Reanimationshilfen und Temperaturmanagementsystemen. Das Unternehmen gehört seit 2012 zum japanischen Asahi-Kasei-Konzern.",
+  "headquarters": "Chelmsford, Massachusetts, USA",
+  "founded": "1980",
+  "website": "https://www.zoll.com/",
+  "productLines": [
+    {
+      "device": "defibrillator",
+      "models": [
+        "X Series",
+        "R Series",
+        "AED 3",
+        "AED Plus",
+        "LifeVest"
+      ],
+      "note": "X/R Series als Monitor-Defibrillatoren, AED 3 und AED Plus als AED, LifeVest als tragbarer Kardioverter-Defibrillator."
+    },
+    {
+      "device": "externer-schrittmacher",
+      "models": [],
+      "note": "Transkutane Stimulation als Funktion der Monitor-Defibrillatoren."
+    },
+    {
+      "device": "thoraxkompressionsgeraet",
+      "models": [
+        "AutoPulse"
+      ],
+      "note": "Lastverteilendes Band."
+    },
+    {
+      "device": "hypothermiegeraet",
+      "models": [
+        "Thermogard XP"
+      ],
+      "note": "Intravasales Temperaturmanagement."
+    },
+    {
+      "device": "transportbeatmungsgeraet",
+      "models": [
+        "EMV+"
+      ],
+      "note": "Aktuelles Produktprogramm beim Hersteller prüfen."
+    }
+  ],
+  "body": "## Überblick\n\nDie **ZOLL Medical Corporation** ist ein US-amerikanischer Hersteller mit Sitz in Chelmsford (Massachusetts). Schwerpunkte sind die Akut- und Notfallversorgung, insbesondere [[defibrillator|Defibrillation]], Reanimation und Temperaturmanagement [@zoll-web]. Seit 2012 gehört ZOLL zum japanischen Chemie- und Technologiekonzern Asahi Kasei.\n\n## Geschichte in Stichpunkten\n\n* **Namensgeber:** Der US-Kardiologe Paul M. Zoll gilt als Pionier der externen Herzstimulation (1952) und der externen Defibrillation am geschlossenen Thorax (1956).\n* **1980:** Gründung des Unternehmens; erste Produkte sind Systeme zur nichtinvasiven transkutanen Stimulation ([[externer-schrittmacher]]).\n* **1990er-/2000er-Jahre:** Entwicklung von Monitor-Defibrillatoren und AED mit einer rectilinear-biphasischen Impulsform.\n* **2000er-Jahre:** Erweiterung des Portfolios durch Übernahmen, u. a. um das Thoraxkompressionssystem AutoPulse, den tragbaren Kardioverter-Defibrillator LifeVest und das intravasale Temperaturmanagement (Thermogard).\n* **2012:** Übernahme durch Asahi Kasei.\n* **2021:** Übernahme von Itamar Medical (Schlafapnoe-Diagnostik) und Respicardia (Therapie der zentralen Schlafapnoe).\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Rettungsdienst und Klinik | Monitor-Defibrillatoren, [[thoraxkompressionsgeraet|mechanische Thoraxkompression]], [[transportbeatmungsgeraet|Transportbeatmung]] |\n| Öffentliche Defibrillation | AED für Laien und Ersthelfer |\n| Kardiologische Versorgung | Tragbarer Kardioverter-Defibrillator (LifeVest) |\n| Temperaturmanagement | [[hypothermiegeraet|Intravasale Kühlung und Wärmung]] |\n| Schlafmedizin und Software | Heimdiagnostik der Schlafapnoe, Einsatzdokumentation |\n\n## Bedeutung für die Medizintechnik\n\nZOLL ist neben [[stryker]] (LIFEPAK) und [[philips]] einer der bekanntesten Defibrillatorhersteller. Typisch für die Geräte sind Feedbackfunktionen zur Qualität der Herzdruckmassage, die über Beschleunigungssensoren in den [[defibrillationselektroden|Elektroden]] Kompressionstiefe und -frequenz erfassen. Diese Rückmeldung unterstützt die Umsetzung der Reanimationsleitlinien [@erc-2021].\n\n> [!vereinfacht] Bei biphasischen Impulsformen kehrt der Strom während des Schocks seine Richtung um. Die „rectilineare“ Variante versucht, den Strom in der ersten Phase möglichst konstant zu halten, um den Einfluss der [[spannung-strom-widerstand|Transthorakalimpedanz]] zu verringern.\n\n> [!praxis] Defibrillatoren unterliegen der [[stk]] nach [[mpbetreibv]] (Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind); dazu kommen regelmäßige Akku- und Elektrodenkontrollen ([[lithium-ionen-akku]]). Ablaufdaten der Elektroden und Akkus sind in der Praxis eine häufige Fehlerquelle bei AED.\n\n## Einordnung im Markt\n\nIn Deutschland konkurriert ZOLL im Rettungsdienst und in der Klinik vor allem mit [[stryker]] (LIFEPAK), [[corpuls]] und [[philips]]. Monitor-Defibrillatoren vereinen heute Funktionen mehrerer Geräte: 12-Kanal-[[ekg-geraet|EKG]], [[pulsoxymeter|Pulsoxymetrie]], [[kapnometer|Kapnographie]], [[nibp-messgeraet|nichtinvasive Blutdruckmessung]] und [[externer-schrittmacher|transkutane Stimulation]]. Entsprechend umfangreich fallen Funktionsprüfung und Messtechnik bei der Instandhaltung aus.",
+  "related": [
+    "defibrillator",
+    "externer-schrittmacher",
+    "thoraxkompressionsgeraet",
+    "hypothermiegeraet",
+    "defibrillationselektroden",
+    "stryker",
+    "corpuls",
+    "notfallmedizin"
+  ],
+  "sources": [
+    "zoll-web",
+    "erc-2021"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

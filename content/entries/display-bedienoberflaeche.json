@@ -1,0 +1,150 @@
+{
+  "id": "display-bedienoberflaeche",
+  "type": "term",
+  "title": "Display und Bedienoberfläche",
+  "aliases": [
+    "Benutzerschnittstelle",
+    "Benutzeroberfläche",
+    "User Interface",
+    "UI",
+    "GUI",
+    "Touchscreen",
+    "Bildschirm",
+    "Mensch-Maschine-Schnittstelle",
+    "HMI"
+  ],
+  "category": "komponenten",
+  "summary": "Gesamtheit aus Display, Touchscreen, Tasten, Drehknöpfen, Alarmsignalen und Software-Logik, über die Anwender ein Medizingerät bedienen und überwachen. Gestaltung und Prüfung richten sich nach den Normen zu Gebrauchstauglichkeit und Alarmsystemen, weil Bedienfehler eine häufige Ursache von Zwischenfällen sind.",
+  "body": "## Begriff\n\nDie **Bedienoberfläche** (Benutzerschnittstelle, englisch *user interface*, UI) ist die Gesamtheit aller Elemente, über die Anwender mit einem Medizingerät interagieren: Display, Touchscreen, Tasten, Drehknöpfe, akustische und optische Signale sowie die Software-Logik dahinter. Das **Display** ist ihr sichtbarer Kern. Bei vielen modernen Geräten – vom [[patientenmonitor|Patientenmonitor]] über das [[beatmungsgeraet|Beatmungsgerät]] bis zur [[infusionspumpe|Infusionspumpe]] – ist es zugleich Anzeige- und Eingabeelement [@kramme-2017].\n\nDie Bedienoberfläche ist sicherheitsrelevant: Viele Zwischenfälle mit Medizinprodukten gehen auf **Anwendungsfehler** zurück, die durch eine missverständliche Oberfläche begünstigt werden ([[anwendungsfehler]], [[gebrauchstauglichkeit]]) [@iom-to-err-is-human-2000] [@fda-human-factors-2016].\n\n## Displaytechnologien\n\n| Technologie | Prinzip | Eigenschaften |\n|---|---|---|\n| TFT-LCD | Flüssigkristalle steuern das Licht einer Hintergrundbeleuchtung pixelweise; jedes Pixel hat einen Dünnschichttransistor | Weit verbreitet; Blickwinkel je nach Paneltyp (IPS besser als TN) |\n| LED-Hintergrundbeleuchtung | Leuchtdioden hinter dem LCD | Lange Lebensdauer, dimmbar über [[pwm|PWM]] |\n| OLED | Selbstleuchtende organische Leuchtdioden | Hoher Kontrast, kein Backlight; Alterung bei statischen Inhalten möglich |\n| Segment- und Punktmatrixanzeigen | Einfache LCD oder LED-Ziffern | Kleine Geräte, Statusanzeigen |\n| Befundmonitore | Hochauflösende, kalibrierte Graustufen- oder Farbdisplays | Radiologische Befundung, siehe unten |\n\n### Helligkeit und Kontrast\n\nDie Leuchtdichte wird in cd/m² angegeben. Für die Ablesbarkeit sind Kontrast, Blickwinkel und Reflexionen wichtiger als die maximale Helligkeit. Medizingeräte bieten meist einen Tag-/Nachtmodus, um Patienten im abgedunkelten Raum nicht zu stören, ohne die Erkennbarkeit von Alarmen zu beeinträchtigen.\n\n## Eingabeelemente\n\n| Element | Vorteile | Grenzen |\n|---|---|---|\n| **Projiziert-kapazitiver Touchscreen** | Glatte, gut desinfizierbare Glasfront, Mehrfingergesten | Eingeschränkt mit dicken Handschuhen oder bei Flüssigkeit auf der Oberfläche (bauartabhängig) |\n| **Resistiver Touchscreen** | Bedienbar mit Handschuh und Stift | Weichere Oberfläche, empfindlicher, geringere Lichtdurchlässigkeit |\n| Drehknopf mit Drückfunktion (Inkrementalgeber) | Präzise Werteingabe, Bestätigungsprinzip „Wählen – Drehen – Bestätigen“ | Mechanischer Verschleiß |\n| Folientastatur, Hardkeys | Robust, dicht, fühlbar | Wenig flexibel |\n| Fernbedienung, Fußschalter | Bedienung im Sterilbereich, z. B. am [[hf-chirurgiegeraet|HF-Chirurgiegerät]] | Zusätzliche Kabel und Fehlerquellen |\n\nDer kapazitive Touchscreen arbeitet mit einem Raster transparenter Elektroden (meist Indiumzinnoxid). Ein Finger verändert die Kapazität zwischen den Elektroden; ein Controller wertet die Änderung aus ([[kondensator]], [[mikrocontroller]]).\n\n> [!praxis] Eine Bildschirmsperre für die Reinigung, fest belegte Tasten für kritische Funktionen (z. B. Stopp, Alarmstummschaltung) und eine Bestätigung bei sicherheitsrelevanten Eingaben sind bewährte Gestaltungsmerkmale. Ob und wie sie umgesetzt sind, hängt vom Gerät ab.\n\n## Alarmdarstellung\n\n> [!belegt] Die Ergänzungsnorm [[iec-60601-1-8|IEC 60601-1-8]] legt für Alarmsysteme Prioritäten (hoch, mittel, niedrig) und zugehörige optische Signale fest: Hohe Priorität wird rot blinkend, mittlere Priorität gelb blinkend und niedrige Priorität gelb oder cyan mit Dauerlicht angezeigt. Akustische Alarmsignale sind nach Priorität unterscheidbar [@iec-60601-1-8].\n\nZur Bedienoberfläche gehören auch Alarmlisten, Trendanzeigen und die klare Unterscheidung zwischen *Alarm stummschalten* (zeitlich begrenzt) und *Alarm aus*. Unklare oder zu häufige Alarme fördern die [[alarmmuedigkeit|Alarmmüdigkeit]] ([[alarmsystem]]).\n\n## Gebrauchstauglichkeit und Software\n\n| Norm | Inhalt |\n|---|---|\n| [[iec-62366-1|IEC 62366-1]] | Prozess der gebrauchstauglichkeitsorientierten Entwicklung: Nutzungsanalyse, Gestaltung der Benutzerschnittstelle, formative und summative Evaluierung |\n| [[iec-60601-1-6|IEC 60601-1-6]] | Bindet IEC 62366-1 für medizinische elektrische Geräte ein |\n| [[iec-62304|IEC 62304]] | Lebenszyklus der Software, die die Oberfläche realisiert |\n| [[iso-14971|ISO 14971]] | Risikomanagement – Anwendungsfehler als Gefährdungsursache |\n\n[@iec-62366-1] [@iec-60601-1-6] [@iec-62304] [@iso-14971]\n\nTypische Gestaltungsprinzipien sind: einheitliche Einheiten und Dezimaltrennzeichen, keine nachgestellten Nullen bei Dosierungen, klare Kennzeichnung des aktiven Modus, Plausibilitätsprüfungen (z. B. Dosisgrenzen in Medikamentenbibliotheken von [[infusionspumpe|Infusionspumpen]]) und konsistente Farbcodes [@fda-human-factors-2016].\n\n> [!vereinfacht] Gebrauchstauglichkeit lässt sich nicht allein durch „schöne“ Oberflächen erreichen. Entscheidend ist, dass Anwender unter realen Bedingungen – Stress, Zeitdruck, Handschuhe, Nachtschicht – die richtige Aktion zuverlässig ausführen.\n\n## Befundmonitore in der Radiologie\n\nDisplays zur Befundung radiologischer Bilder sind Teil der Bildkette. Ihre Graustufenwiedergabe wird nach der **DICOM-Graustufen-Standardanzeigefunktion** (GSDF) kalibriert, damit gleiche Grauwertstufen als gleich große Helligkeitsunterschiede wahrgenommen werden ([[dicom]]). In Deutschland sind für Bildwiedergabesysteme regelmäßige Konstanzprüfungen vorgeschrieben ([[konstanzpruefung]]); maßgeblich sind die Anforderungen nach [[strlschg|Strahlenschutzrecht]] und die einschlägigen DIN-Normen der Reihe DIN 6868 [@qs-rl-roentgendiagnostik-2024].\n\n## Fehler und Prüfung\n\n| Befund | Mögliche Ursache |\n|---|---|\n| Dunkles Bild, Inhalte schwach erkennbar | Hintergrundbeleuchtung oder Inverter/LED-Treiber defekt |\n| Pixelfehler, Streifen | Panel- oder Flexkabeldefekt |\n| Touch reagiert falsch oder gar nicht | Kalibrierung, Controller, Feuchtigkeit, beschädigte Oberfläche |\n| Drehknopf springt oder reagiert verzögert | Verschleiß des Inkrementalgebers, Kontaktprellen |\n| Bildschirm friert ein | Software- oder Hardwarefehler – Gerät muss in sicheren Zustand gehen |\n\nBei der [[funktionspruefung|Funktionsprüfung]] im Rahmen der [[stk|STK]] oder der Wartung werden Anzeige, Bedienelemente, optische und akustische Alarmsignale geprüft. Sichtbare Beschädigungen der Frontscheibe sind auch hygienisch relevant, weil sich Risse schlecht [[desinfektion|desinfizieren]] lassen.\n\n> [!warnung] Ein ausgefallenes Display bei laufender Therapie ist ein schwerwiegender Fehler. Geräte müssen in einem solchen Fall nach ihrem Sicherheitskonzept weiterarbeiten oder in einen sicheren Zustand übergehen und einen Alarm auslösen; der Anwender muss sofort auf ein Ersatzgerät ausweichen können.\n\n## Anwendung in Geräten\n\n| Gerät | Besonderheit der Bedienoberfläche |\n|---|---|\n| [[patientenmonitor]] | Konfigurierbare Kurven- und Zahlenfelder, Alarmanzeige, Trends |\n| [[beatmungsgeraet]] | Touchscreen plus Drehknopf, Echtzeitkurven von Druck, Flow und Volumen |\n| [[anaesthesiegeraet]] | Kombination aus Beatmungs-, Gas- und Monitoringdaten |\n| [[infusionspumpe]] und [[spritzenpumpe]] | Kleine Displays, Medikamentenbibliothek, Dosisgrenzen |\n| [[defibrillator]] | AED mit Sprachführung und minimaler Bedienung; manueller Modus mit Energiewahl |\n| [[ultraschallgeraet]] | Spezialtastatur, Trackball, Touchpanel |\n| [[computertomograph]] und [[mrt]] | Bedienkonsole mit Befund- und Planungsmonitoren |\n| [[dialysegeraet]] | Geführte Abläufe für Aufrüsten, Behandlung und Desinfektion |\n\n## Bedeutung in der Medizintechnik\n\nDisplay und Bedienoberfläche sind die Stelle, an der Technik und Mensch zusammentreffen. Für die [[patientensicherheit|Patientensicherheit]] ist eine gut gestaltete Oberfläche ebenso wichtig wie die korrekte Funktion von [[drucksensor|Sensoren]] und Aktoren. Medizintechniker prüfen die Oberfläche technisch, unterstützen die [[einweisung|Einweisung]] der Anwender und melden systematische Bedienprobleme an Hersteller oder Behörden ([[vigilanz]]) [@kramme-2017] [@iec-62366-1].\n",
+  "related": [
+    "gebrauchstauglichkeit",
+    "anwendungsfehler",
+    "alarmsystem",
+    "alarmmuedigkeit",
+    "iec-62366-1",
+    "iec-60601-1-6",
+    "iec-60601-1-8",
+    "iec-62304",
+    "patientensicherheit",
+    "dicom",
+    "mikrocontroller"
+  ],
+  "paths": [
+    [
+      "patientenmonitor",
+      "display-bedienoberflaeche",
+      "alarmsystem",
+      "alarmmuedigkeit"
+    ],
+    [
+      "display-bedienoberflaeche",
+      "gebrauchstauglichkeit",
+      "iec-62366-1"
+    ]
+  ],
+  "sources": [
+    "kramme-2017",
+    "iec-60601-1-8",
+    "iec-62366-1",
+    "iec-60601-1-6",
+    "iec-62304",
+    "iso-14971",
+    "fda-human-factors-2016",
+    "iom-to-err-is-human-2000",
+    "qs-rl-roentgendiagnostik-2024"
+  ],
+  "diagram": {
+    "title": "Signalweg von der Eingabe bis zur Anzeige",
+    "caption": "Funktionsschema: Eingaben werden von der Gerätesoftware geprüft, bevor sie wirksam werden; Zustände und Alarme werden optisch und akustisch zurückgemeldet.",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "user",
+        "label": "Anwender",
+        "kind": "patient",
+        "x": 90,
+        "y": 150
+      },
+      {
+        "id": "touch",
+        "label": "Touchscreen /\nDrehknopf",
+        "ref": "display-bedienoberflaeche",
+        "kind": "sensor",
+        "x": 290,
+        "y": 70
+      },
+      {
+        "id": "mc",
+        "label": "Gerätesoftware\n(Plausibilität)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 500,
+        "y": 150
+      },
+      {
+        "id": "akt",
+        "label": "Therapiefunktion\n(Aktoren)",
+        "kind": "actuator",
+        "x": 730,
+        "y": 70
+      },
+      {
+        "id": "alarm",
+        "label": "Alarmsystem",
+        "ref": "alarmsystem",
+        "kind": "control",
+        "x": 730,
+        "y": 230
+      },
+      {
+        "id": "disp",
+        "label": "Display /\nLautsprecher",
+        "kind": "output",
+        "x": 290,
+        "y": 230
+      }
+    ],
+    "edges": [
+      {
+        "from": "user",
+        "to": "touch",
+        "kind": "signal",
+        "label": "Eingabe"
+      },
+      {
+        "from": "touch",
+        "to": "mc",
+        "kind": "data"
+      },
+      {
+        "from": "mc",
+        "to": "akt",
+        "kind": "signal"
+      },
+      {
+        "from": "mc",
+        "to": "alarm",
+        "kind": "data"
+      },
+      {
+        "from": "alarm",
+        "to": "disp",
+        "kind": "signal"
+      },
+      {
+        "from": "mc",
+        "to": "disp",
+        "kind": "data",
+        "label": "Anzeige"
+      },
+      {
+        "from": "disp",
+        "to": "user",
+        "kind": "signal"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

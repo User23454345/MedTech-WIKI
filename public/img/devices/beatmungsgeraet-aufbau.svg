@@ -63,24 +63,29 @@
   <ellipse cx="528" cy="318" rx="40" ry="20" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
   <text x="528" y="323" text-anchor="middle">Patient</text>
 
+  <!-- O2-Zuleitung vom Einlass zum Proportionalventil -->
+  <path d="M85,222 L85,264 L138,264" fill="none" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+
   <!-- Beschriftungen mit Führungslinien -->
   <g font-size="13">
-    <line x1="85" y1="222" x2="85" y2="366" stroke="#0b2545" stroke-width="1"/>
-    <text x="40" y="382">Gaseinlass (O₂ / Luft)</text>
-    <line x1="175" y1="282" x2="175" y2="366" stroke="#0b2545" stroke-width="1"/>
-    <text x="180" y="382">Turbine · O₂-Ventil</text>
-    <line x1="275" y1="316" x2="300" y2="366" stroke="#0b2545" stroke-width="1"/>
-    <text x="300" y="382">Exspirationsventil</text>
-    <line x1="342" y1="106" x2="420" y2="80" stroke="#0b2545" stroke-width="1"/>
-    <text x="424" y="84">Elektronik</text>
-    <line x1="310" y1="186" x2="420" y2="104" stroke="#0b2545" stroke-width="1"/>
-    <text x="424" y="108">Sensoren insp.</text>
-    <line x1="516" y1="138" x2="540" y2="118" stroke="#0b2545" stroke-width="1"/>
-    <text x="500" y="112">Befeuchter</text>
+    <line x1="60" y1="222" x2="60" y2="356" stroke="#0b2545" stroke-width="1"/>
+    <text x="85" y="370" text-anchor="middle">Gaseinlass</text>
+    <text x="85" y="386" text-anchor="middle">(O₂, Luft)</text>
+    <line x1="175" y1="282" x2="175" y2="356" stroke="#0b2545" stroke-width="1"/>
+    <text x="180" y="370" text-anchor="middle">Turbine (Luft),</text>
+    <text x="180" y="386" text-anchor="middle">O₂-Ventil</text>
+    <line x1="275" y1="316" x2="305" y2="356" stroke="#0b2545" stroke-width="1"/>
+    <text x="312" y="370" text-anchor="middle">Exspirations-</text>
+    <text x="312" y="386" text-anchor="middle">ventil (PEEP)</text>
+    <line x1="342" y1="106" x2="420" y2="70" stroke="#0b2545" stroke-width="1"/>
+    <text x="424" y="74">Elektronik</text>
+    <line x1="310" y1="186" x2="420" y2="94" stroke="#0b2545" stroke-width="1"/>
+    <text x="424" y="98">Sensoren insp.</text>
+    <text x="493" y="121" text-anchor="middle">Befeuchter</text>
     <line x1="544" y1="240" x2="566" y2="226" stroke="#0b2545" stroke-width="1"/>
     <text x="548" y="218">Y-Stück</text>
-    <line x1="430" y1="268" x2="450" y2="290" stroke="#0b2545" stroke-width="1"/>
-    <text x="410" y="306">Exsp.-Schlauch</text>
+    <line x1="430" y1="268" x2="430" y2="318" stroke="#0b2545" stroke-width="1"/>
+    <text x="378" y="334">Exsp.-Schlauch</text>
     <text x="388" y="168" font-size="13">Insp.</text>
   </g>
   <text x="125" y="160" text-anchor="middle" font-size="13">Display</text>

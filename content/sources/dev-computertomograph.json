@@ -11,22 +11,22 @@
     "kind": "norm",
     "title": "IEC 61223-2-6 – Bewertung und routinemäßige Prüfung in Abteilungen für medizinische Bildgebung – Teil 2-6: Konstanzprüfungen an Röntgeneinrichtungen für die Computertomographie",
     "publisher": "IEC / in Deutschland als DIN EN 61223-2-6",
-    "note": "Deutsche Fassung DIN EN 61223-2-6:2008-12 (EN 61223-2-6:2007); Nachfolgerin der früheren DIN 6868-6. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+    "note": "In Deutschland als DIN EN 61223-2-6 übernommen. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
   },
   {
     "id": "iec-61223-3-5",
     "kind": "norm",
     "title": "IEC 61223-3-5 – Bewertung und routinemäßige Prüfung in Abteilungen für medizinische Bildgebung – Teil 3-5: Abnahmeprüfungen und Konstanzprüfungen – Leistungsmerkmale zur Bildgebung von Röntgeneinrichtungen für die Computertomographie",
     "publisher": "IEC / in Deutschland als DIN EN IEC 61223-3-5",
-    "note": "Norm für die Abnahmeprüfung (in neueren Ausgaben auch Konstanzprüfung) von CT-Systemen. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+    "note": "Norm für die Abnahmeprüfung von CT-Systemen; die Ausgabe 2.0 (2019) umfasst nach ihrem Titel auch Konstanzprüfungen. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
   },
   {
     "id": "qs-rl-roentgendiagnostik-2024",
     "kind": "behoerde",
     "authors": "Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV)",
-    "title": "Qualitätssicherungs-Richtlinie für Abnahme- und Konstanzprüfungen nach §§ 115, 116 und 117 StrlSchV bei Röntgeneinrichtungen zur Untersuchung am Menschen (QS-RL Röntgendiagnostik)",
+    "title": "Richtlinie zur Durchführung der Qualitätssicherung bei Röntgeneinrichtungen zur Untersuchung oder Behandlung von Menschen nach den §§ 115 und 116 der Strahlenschutzverordnung (Qualitätssicherungs-Richtlinie – QS-RL)",
     "year": "2024",
-    "note": "Richtlinie vom 28.08.2024, geändert durch Rundschreiben vom 27.05.2025; konkretisiert Abnahme- und Konstanzprüfungen, u. a. für CT-Einrichtungen (alternativ zu DIN EN 61223-2-6). Titel sinngemäß; maßgeblich ist die jeweils aktuelle Fassung."
+    "note": "Fassung 2024; konkretisiert Abnahme- und Konstanzprüfungen einschließlich der Prüfintervalle, u. a. für CT-Einrichtungen. Titel sinngemäß wiedergegeben; Datum und spätere Änderungen sind der amtlichen Bekanntmachung zu entnehmen, maßgeblich ist die jeweils aktuelle Fassung."
   },
   {
     "id": "hsieh-2015",

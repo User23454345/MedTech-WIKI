@@ -1,0 +1,74 @@
+{
+  "id": "blutzuckermessgeraet",
+  "type": "device",
+  "title": "Blutzuckermessgerät",
+  "aliases": [
+    "Glukometer",
+    "Blutglukosemessgerät",
+    "BZ-Messgerät",
+    "POCT-Glukosemessung",
+    "Glucometer"
+  ],
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 59,
+  "domains": [
+    "diabetologie",
+    "labormedizin",
+    "intensivmedizin"
+  ],
+  "summary": "Blutzuckermessgeräte bestimmen die Glukosekonzentration in einem Blutstropfen mithilfe enzymatischer Teststreifen, meist elektrochemisch. Sie werden zur Selbstkontrolle bei Diabetes und als patientennahe Sofortdiagnostik im Krankenhaus eingesetzt. Als In-vitro-Diagnostika fallen sie unter die IVDR.",
+  "riskClass": {
+    "value": "C",
+    "evidence": "typisch",
+    "note": "In-vitro-Diagnostikum nach [[ivdr|IVDR]]: Produkte zur **Eigenanwendung** werden nach Anhang VIII **Regel 4** der Klasse C zugeordnet; Blutzuckermessung ist nicht unter den dort genannten Ausnahmen der Klasse B. Für Geräte zur patientennahen Testung durch Fachpersonal ist die Klasse nach Zweckbestimmung des Herstellers zu prüfen.",
+    "sources": [
+      "ivdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die Blutzuckermessung dient der Therapiesteuerung bei Diabetes mellitus (z. B. Insulindosierung, siehe [[insulinpumpe]]) und der Erkennung von Hypo- und Hyperglykämien. Im Krankenhaus werden POCT-Systeme (Point-of-Care-Testing) mit Benutzerverwaltung und Datenanbindung genutzt; sie unterliegen der Qualitätssicherung nach Rili-BÄK [@rili-baek].",
+    "principle": "## Enzymatische Reaktion\n\nDer Teststreifen enthält ein Enzym, das Glukose spezifisch oxidiert – **Glukoseoxidase** (GOD) oder **Glukosedehydrogenase** (GDH, mit unterschiedlichen Coenzymen). Ein **Mediator** überträgt die dabei frei werdenden Elektronen auf eine Arbeitselektrode.\n\n## Amperometrische Messung\n\nDas Messgerät legt eine definierte Spannung an die Elektroden und misst den entstehenden Strom; er ist in einem bestimmten Bereich proportional zur Glukosekonzentration. Ältere Systeme werteten photometrisch eine Farbreaktion aus ([[lambert-beer]]). Gerät und Streifen bilden ein kalibriertes System; Chargeninformationen werden heute meist automatisch übernommen ([[kalibrierung]]).\n\n## Störeinflüsse\n\n| Einflussgröße | Wirkung |\n|---|---|\n| Hämatokrit | verändert Diffusion und Plasmaanteil im Probenvolumen ([[blut]]) |\n| Sauerstoffpartialdruck | beeinflusst GOD-basierte Systeme |\n| Fremdzucker (z. B. Maltose) | Störung bei GDH-Varianten mit geringer Spezifität |\n| Temperatur, Probenmenge | Abweichungen außerhalb des zulässigen Bereichs |\n\n> [!belegt] ISO 15197 verlangt für Systeme zur Eigenanwendung, dass mindestens 95 % der Messwerte unterhalb von 100 mg/dl innerhalb von ±15 mg/dl und ab 100 mg/dl innerhalb von ±15 % des Referenzwerts liegen [@iso-15197].\n\n> [!warnung] Bei kritisch kranken Patienten (z. B. Schock, schwere Ödeme) kann Kapillarblut nicht repräsentativ sein; Herstellerangaben zu zugelassenen Probenarten und Patientengruppen beachten."
+  },
+  "manufacturers": [
+    {
+      "ref": "roche-diagnostics",
+      "models": [
+        "Accu-Chek Inform II"
+      ],
+      "note": "Klinik-POCT-System; für die Selbstkontrolle weitere Accu-Chek-Geräte."
+    },
+    {
+      "ref": "abbott",
+      "models": [
+        "FreeStyle Precision Pro"
+      ],
+      "note": "Klinik-POCT-System."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Selbsttest- oder Klinik-POCT-Gerät, Teststreifen als dominierender Kostenfaktor, Kontrolllösungen, Datenmanagement und Schnittstellen, Benutzerverwaltung."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025): weder in Anlage 1 (STK, § 12) noch in Anlage 2 (MTK, § 15) aufgeführt. Beim Einsatz in Einrichtungen gilt für quantitative laboratoriumsmedizinische Untersuchungen die Qualitätssicherung nach der Richtlinie der Bundesärztekammer (Rili-BÄK) mit interner Qualitätskontrolle; für Unit-use-Systeme der patientennahen Sofortdiagnostik sieht die Rili-BÄK Sonderregelungen vor.",
+    "intervals": "Interne Qualitätskontrolle mit Kontrolllösungen nach Rili-BÄK und Herstellerangabe; Reinigung und Desinfektion nach jedem Patienten; Teststreifen-Verfalldaten und Lagerbedingungen beachten."
+  },
+  "related": [
+    "insulinpumpe",
+    "blutgasanalysator",
+    "blut",
+    "kalibrierung",
+    "diabetologie",
+    "labormedizin"
+  ],
+  "sources": [
+    "iso-15197",
+    "rili-baek",
+    "ivdr-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "intensivmedizin",
+  "type": "domain",
+  "title": "Intensivmedizin",
+  "aliases": [
+    "Intensivstation",
+    "ICU",
+    "Intensive Care Unit",
+    "Intensivtherapie",
+    "Critical Care"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Intensivmedizin behandelt Patientinnen und Patienten mit akut lebensbedrohlichen Störungen der Vitalfunktionen. Sie ist der Fachbereich mit der höchsten Dichte an Medizintechnik: Überwachung, Beatmung, Infusionstherapie und extrakorporale Organersatzverfahren laufen am selben Bettplatz rund um die Uhr.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Intensivmedizin** ist ein interdisziplinäres Fachgebiet, das sich mit der Überwachung und Behandlung von Patientinnen und Patienten befasst, deren Vitalfunktionen – Atmung, Herz-Kreislauf, Nierenfunktion, Bewusstsein, Stoffwechsel – akut gestört oder bedroht sind. Intensivstationen werden von der [[anaesthesiologie]], der Inneren Medizin, der [[chirurgie]], der [[neurologie]] oder der [[neonatologie]] geführt; die technischen Anforderungen ähneln sich aber stark [@larsen-2018].\n\nTypische Krankheitsbilder sind das akute Lungenversagen (ARDS) [@ards-berlin-2012], Sepsis und septischer Schock, kardiogener Schock, akutes Nierenversagen, schweres Polytrauma, Zustände nach großen Operationen sowie Schlaganfall und Hirnblutung. Charakteristisch ist, dass mehrere Organsysteme gleichzeitig unterstützt werden müssen – der Intensivbettplatz ist deshalb ein **ME-System** aus vielen miteinander verbundenen Geräten.\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck auf der Intensivstation |\n|---|---|\n| [[patientenmonitor]] | kontinuierliche Überwachung von [[ekg-geraet|EKG]], SpO₂, Blutdruck, Temperatur, Atemfrequenz, Alarmierung |\n| [[invasive-druckmessung]] | arterieller Blutdruck und zentralvenöser Druck Schlag für Schlag über Katheter und [[drucksensor]] |\n| [[beatmungsgeraet]] | invasive und nichtinvasive Beatmung bei respiratorischer Insuffizienz |\n| [[high-flow-geraet]] | erwärmte, befeuchtete Sauerstofftherapie mit hohem Flow |\n| [[kapnometer]] | endexspiratorisches CO₂ zur Tubuslagekontrolle und Beatmungssteuerung |\n| [[infusionspumpe]] / [[spritzenpumpe]] | präzise Dosierung von Katecholaminen, Sedativa, Insulin, Ernährung |\n| [[enterale-ernaehrungspumpe]] | Sondenernährung |\n| [[crrt-geraet]] | kontinuierliche Nierenersatztherapie bei akutem Nierenversagen |\n| [[ecmo]] | extrakorporale Lungen- bzw. Herz-Lungen-Unterstützung |\n| [[iabp]] / [[vad]] | mechanische Kreislaufunterstützung |\n| [[defibrillator]] / [[externer-schrittmacher]] | Therapie lebensbedrohlicher Rhythmusstörungen |\n| [[blutgasanalysator]] | Blutgase, [[saeure-basen-haushalt|Säure-Basen-Status]], Elektrolyte patientennah |\n| [[absauggeraet]] | Bronchialtoilette, Drainagen |\n| [[antidekubitussystem]] / [[pflegebett]] | Lagerung und Dekubitusprophylaxe |\n| [[hypothermiegeraet]] | zielgerichtetes Temperaturmanagement, z. B. nach Reanimation |\n\nZur Beatmung in Deutschland gibt die S3-Leitlinie „Invasive Beatmung und Einsatz extrakorporaler Verfahren“ den klinischen Rahmen vor [@awmf-s3-invasive-beatmung]; lungenprotektive Beatmung mit kleinen Tidalvolumina gilt seit der ARDSNet-Studie als Standard [@ardsnet-2000].\n\n## Besondere technische Anforderungen\n\n### Alarmmanagement\n\nAuf einer Intensivstation entstehen pro Bett und Tag sehr viele Alarme, von denen ein großer Teil klinisch nicht relevant ist. Die Folge ist [[alarmmuedigkeit]]: Alarme werden überhört oder vorschnell quittiert [@sendelbach-funk-2013]. Technisch relevant sind daher die Priorisierung nach [[iec-60601-1-8]], sinnvolle Grenzwert-Voreinstellungen, Alarmverzögerungen und die Weiterleitung über ein verteiltes [[alarmsystem]] [@iec-60601-1-8].\n\n> [!praxis] Medizintechnik und Pflege sollten Alarm-Voreinstellungen (Profile) gemeinsam festlegen und dokumentieren. Ein Software-Update kann Standardgrenzen verändern – nach Updates die Alarmprofile prüfen.\n\n### Elektrische Sicherheit und Raumgruppen\n\nIntensivbettplätze sind [[medizinisch-genutzte-bereiche|medizinisch genutzte Bereiche]] der Gruppe 2 nach [[din-vde-0100-710]], weil hier lebenserhaltende Geräte betrieben und Katheter bis ans Herz geführt werden. Gefordert sind u. a. ein IT-System mit Isolationsüberwachung und eine Sicherheitsstromversorgung [@din-vde-0100-710]. Da viele Geräte gleichzeitig mit dem Patienten verbunden sind, ist der summierte [[ableitstrom]] des ME-Systems zu beachten [@iec-60601-1].\n\n> [!vereinfacht] Gruppe 2 bedeutet sinngemäß: Ein Ausfall der Stromversorgung oder ein erster Isolationsfehler darf die Behandlung nicht unterbrechen. Die genauen Anforderungen ergeben sich aus der Norm.\n\n### Interoperabilität und Daten\n\nMonitore, Beatmungsgeräte und Pumpen liefern Daten an Zentralen, Patientendatenmanagementsysteme (PDMS) und Krankenhausinformationssysteme, meist über [[hl7-fhir|HL7]] oder herstellerspezifische Protokolle. Mit dem herstellerübergreifenden Standard SDC (IEEE 11073) wird eine sichere Gerätevernetzung am Bettplatz angestrebt [@ieee-11073-10207]. Die Vernetzung erfordert ein Risikomanagement für das IT-Netz [@iec-80001-1].\n\n### Hygiene und Verfügbarkeit\n\nGeräte werden zwischen Patienten wischdesinfiziert, Zubehör wie Beatmungsschläuche oder Drucksysteme sind meist Einwegprodukte. Für die [[aufbereitung]] wiederverwendbarer Teile gelten die KRINKO/BfArM-Empfehlungen [@krinko-bfarm-2012]. Weil Ausfälle lebensbedrohlich sein können, sind Ersatzgeräte, geladene [[lithium-ionen-akku|Akkus]] und fristgerechte [[stk]] und [[mtk]] nach [[mpbetreibv]] Pflicht [@mpbetreibv].\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[anaesthesiologie]]:** Übergabe aus dem OP, gemeinsame Geräteplattformen (Beatmung, Monitoring).\n- **[[notfallmedizin]]:** Übernahme aus Schockraum und Rettungsdienst, Transport mit [[transportbeatmungsgeraet]].\n- **[[nephrologie]]:** Nierenersatzverfahren (CRRT, intermittierende [[dialysegeraet|Dialyse]]).\n- **[[kardiologie]]** und **[[herzchirurgie]]:** Kreislaufunterstützung, Schrittmachertherapie, Postoperativversorgung.\n- **[[radiologie]]:** Bettseitiges Röntgen, Transporte ins [[computertomograph|CT]] oder [[mrt|MRT]] mit MR-tauglicher Ausrüstung.\n- **[[labormedizin]]:** Point-of-Care-Diagnostik unter Laboraufsicht.\n",
+  "related": [
+    "anaesthesiologie",
+    "notfallmedizin",
+    "neonatologie",
+    "patientenmonitor",
+    "beatmungsgeraet",
+    "alarmsystem",
+    "alarmmuedigkeit",
+    "medizinisch-genutzte-bereiche",
+    "ecmo",
+    "crrt-geraet",
+    "pneumologie",
+    "nephrologie"
+  ],
+  "sources": [
+    "larsen-2018",
+    "ards-berlin-2012",
+    "awmf-s3-invasive-beatmung",
+    "ardsnet-2000",
+    "iec-60601-1-8",
+    "sendelbach-funk-2013",
+    "din-vde-0100-710",
+    "iec-60601-1",
+    "ieee-11073-10207",
+    "iec-80001-1",
+    "krinko-bfarm-2012",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

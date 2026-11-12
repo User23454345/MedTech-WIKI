@@ -1,0 +1,64 @@
+{
+  "id": "okklusionsalarm",
+  "type": "fault",
+  "title": "Okklusionsalarm",
+  "aliases": [
+    "Okklusion",
+    "Verschlussalarm",
+    "Occlusion Alarm",
+    "Okklusion downstream",
+    "Okklusion upstream",
+    "Druckalarm Infusion"
+  ],
+  "category": "fehler",
+  "summary": "Technischer Alarm von Infusions-, Spritzen- und Ernährungspumpen, der einen Verschluss oder eine starke Behinderung des Förderwegs anzeigt. Erkannt wird er meist über einen Druck- oder Kraftanstieg im Schlauch bzw. am Spritzenkolben; die Fördermenge erreicht den Patienten während der Okklusion nicht.",
+  "devices": [
+    "infusionspumpe",
+    "spritzenpumpe",
+    "pca-pumpe",
+    "insulinpumpe",
+    "enterale-ernaehrungspumpe",
+    "dialysegeraet",
+    "crrt-geraet"
+  ],
+  "causes": [
+    "Geschlossene Rollenklemme, geschlossener Dreiwegehahn oder abgeknickter Schlauch zwischen Pumpe und Patient (**Okklusion downstream**).",
+    "Verlegter oder thrombosierter Venenkatheter, paravasal liegende Kanüle, verstopfter Inline-Filter.",
+    "Behinderung auf der Behälterseite (**Okklusion upstream**): leerer oder nicht belüfteter Behälter, geschlossene Klemme oberhalb der Pumpe, kollabierte Leitung.",
+    "Hohe Viskosität der Lösung (z. B. Ernährungslösungen) oder sehr dünnlumige Zugänge in Kombination mit hoher Förderrate.",
+    "Zu niedrig eingestellte Okklusions-Alarmschwelle im Verhältnis zum tatsächlichen Gegendruck des Systems.",
+    "Falsch eingelegtes oder nicht freigegebenes Infusionsset bzw. falscher Spritzentyp, wodurch die [[kraftsensor|Kraft-]] bzw. [[drucksensor|Druckmessung]] nicht korrekt anliegt.",
+    "Technischer Defekt: driftender oder verschmutzter Drucksensor, mechanischer Fehler am [[spindelantrieb|Spindelantrieb]] oder an der [[peristaltikpumpe|Peristaltikmechanik]] (siehe [[sensordrift]])."
+  ],
+  "actions": [
+    "**Patienten zuerst:** Prüfen, ob die Unterbrechung der Medikamentenzufuhr klinisch kritisch ist (z. B. Katecholamine), ggf. Ersatzzugang oder Ersatzpumpe nach Klinikstandard veranlassen.",
+    "**Unkontrollierten Bolus vermeiden:** Vor dem Öffnen einer Klemme oder dem Beheben eines Knicks den aufgestauten Druck kontrolliert abbauen; viele Pumpen reduzieren den Druck nach dem Alarm automatisch (Anti-Bolus-Funktion).",
+    "Leitung systematisch vom Behälter über die Pumpe bis zum Patienten verfolgen: Klemmen, Hähne, Knicke, Filter, Lage des Zugangs.",
+    "Set bzw. Spritze gemäß Gebrauchsanweisung korrekt einlegen; nur vom Hersteller freigegebenes Zubehör verwenden.",
+    "Eingestellte Alarmschwelle auf Plausibilität prüfen (Viskosität, Katheterlumen, Förderrate) – Änderungen nur durch eingewiesenes Personal ([[einweisung]]).",
+    "Bei wiederholtem Alarm ohne erkennbare Ursache: Gerät außer Betrieb nehmen, kennzeichnen und der Medizintechnik übergeben; Druck- bzw. Kraftmessung mit [[pruefgeraete|Prüfmitteln]] kontrollieren lassen.",
+    "Kam es zu einer relevanten Unterdosierung oder einem Bolus mit Patientenschaden, Vorkommnis prüfen und ggf. melden ([[vigilanz]])."
+  ],
+  "body": "## Technischer Hintergrund\n\nEine Okklusion ist ein Verschluss im Förderweg. Da eine [[infusionspumpe|volumetrische Infusionspumpe]] oder [[spritzenpumpe]] volumengesteuert arbeitet, fördert der Antrieb auch gegen einen Verschluss weiter – der Druck in der Leitung steigt, bis die Alarmschwelle erreicht ist [@iec-60601-2-24].\n\n### Erkennung\n\n| Seite | Messprinzip (typisch) | Erkanntes Signal |\n|---|---|---|\n| downstream (patientenseitig) | [[drucksensor|Druck-]] oder [[kraftsensor|Kraftsensor]], der die Aufweitung des Schlauchs bzw. die Kraft am Spritzenkolben misst | Druckanstieg über Schwelle |\n| upstream (behälterseitig) | Sensor vor der Pumpmechanik | Unterdruck / kollabierender Schlauch |\n| Spritzenpumpe | Kraftmessung am Kolbenschieber, ggf. zusätzlich Motorstrom | Kraftanstieg |\n| Insulin- und PCA-Pumpen | Kraft- oder Motorstromüberwachung | Anstieg über Schwelle |\n\nModerne Pumpen werten zusätzlich die **Druckanstiegsrate** aus, um eine Okklusion früher zu erkennen. Die Alarmschwelle ist meist in Stufen einstellbar.\n\n### Physik der Verzögerung\n\nZwischen Verschluss und Alarm vergeht Zeit, weil das System nachgiebig (compliant) ist: Schlauch, Spritze und Kolbendichtung nehmen Volumen auf, bevor der Druck die Schwelle erreicht. Die Zeit bis zum Alarm ist daher umso länger, je **niedriger die Förderrate**, je **höher die Alarmschwelle** und je **größer und nachgiebiger** Spritze bzw. Set sind. Das aufgestaute Volumen wird beim Lösen des Verschlusses als **Bolus** abgegeben. Die besondere Festlegung [[iec-60601-2-24]] sieht deshalb vor, dass Hersteller das Okklusionsverhalten (u. a. Zeit bis zum Okklusionsalarm und dabei entstehendes Bolusvolumen bei verschiedenen Raten und Alarmschwellen) in den Begleitpapieren angeben [@iec-60601-2-24]. Diese Angaben helfen bei der Auswahl von Alarmschwelle und Spritzengröße.\n\n> [!vereinfacht] Das Verhalten lässt sich als Kapazität (Nachgiebigkeit C) und Volumenstrom Q beschreiben: Bis der Druck um Δp steigt, muss etwa das Volumen ΔV = C · Δp gefördert werden; die Zeit bis zum Alarm ist näherungsweise t ≈ C · Δp / Q. Halbiert man die Rate, verdoppelt sich die Alarmzeit.\n\n> [!warnung] Bei niedrigen Raten (Neonatologie, hochkonzentrierte Katecholamine, Basalraten von [[insulinpumpe|Insulinpumpen]]) kann eine Okklusion lange unbemerkt bleiben. Eine **Diskonnektion** erkennt die Druckmessung dagegen in der Regel gar nicht (siehe [[diskonnektion]]).\n\n### Alarmpriorität\n\nWeil die Therapie unterbrochen ist, stufen Hersteller den Okklusionsalarm im Rahmen ihres [[iso-14971|Risikomanagements]] häufig als Alarm hoher oder mittlerer Priorität nach [[iec-60601-1-8]] ein; die Pumpe stoppt die Förderung [@iec-60601-1-8].\n\nBeim [[dialysegeraet|Dialysegerät]] entspricht dem Okklusionsalarm die Überwachung des arteriellen und venösen Drucks im extrakorporalen Kreislauf, etwa bei abgeknickter Blutleitung oder Gerinnung im [[dialysator]].\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Alarm downstream unmittelbar nach Start | Klemmen, Dreiwegehahn, Filter, Knick am Patienten | Verschluss beheben, Druck kontrolliert entlasten |\n| Alarm downstream nach längerer Laufzeit | Zugang (Lage, Thrombose, Paravasat), Viskosität | Zugang ärztlich beurteilen lassen, ggf. neu legen |\n| Alarm upstream | Behälter leer, Belüftung, Rollenklemme oberhalb | Behälter tauschen, belüften, Klemme öffnen |\n| Alarm bei viskösen Lösungen | eingestellte Schwelle, Katheterlumen | Schwelle nach Standard anpassen, geeigneten Zugang wählen |\n| Alarm ohne erkennbare Ursache, wiederholt | Set korrekt eingelegt? Freigegebenes Set? | Neu einlegen; sonst Gerät zur Medizintechnik |\n| Alarm bei leerer Leitung / ohne Gegendruck | Sensor-Nullpunkt, Kalibrierung | [[kalibrierung|Kalibrierung]] und [[funktionspruefung|Funktionsprüfung]] durch die Medizintechnik |\n\nIn der Werkstatt wird die Okklusionserkennung mit einem Infusionspumpen-Analysator geprüft, der Gegendruck, Alarmdruck und Zeit bis zum Alarm misst ([[pruefgeraete]]).\n\n## Prävention\n\n- Leitungen übersichtlich führen, Klemmen und Hähne vor dem Start kontrollieren.\n- Nur freigegebene Sets und Spritzen verwenden; Spritzentyp korrekt auswählen.\n- Bei kritischen Medikamenten die niedrigste klinisch vertretbare Alarmschwelle wählen und kleine Spritzen bevorzugen, um die Alarmzeit kurz zu halten.\n- Regelmäßige [[wartung]] und [[stk]] nach Herstellerangabe ([[mpbetreibv]]) [@mpbetreibv].\n\n> [!hinweis] Herstellerspezifische Fehlercodes, Schwellwerte und Prüfabläufe stehen in den Service-Unterlagen des jeweiligen Geräts (siehe [[fehlercodes]]).",
+  "related": [
+    "infusionspumpe",
+    "spritzenpumpe",
+    "luft-im-system",
+    "diskonnektion",
+    "alarmsystem",
+    "drucksensor",
+    "kraftsensor",
+    "peristaltikpumpe",
+    "iec-60601-2-24",
+    "fehlersuche"
+  ],
+  "sources": [
+    "iec-60601-2-24",
+    "iec-60601-1-8",
+    "kramme-2017",
+    "webster-2010",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

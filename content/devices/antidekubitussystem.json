@@ -1,0 +1,63 @@
+{
+  "id": "antidekubitussystem",
+  "type": "device",
+  "title": "Antidekubitus-Wechseldrucksystem",
+  "aliases": [
+    "Wechseldruckmatratze",
+    "Antidekubitusmatratze",
+    "Dekubitusprophylaxe-System",
+    "Alternating pressure mattress",
+    "Luftkammermatratze",
+    "Weichlagerungssystem"
+  ],
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 100,
+  "domains": [
+    "intensivmedizin",
+    "physikalische-medizin"
+  ],
+  "summary": "Antidekubitus-Wechseldrucksysteme bestehen aus einer Matratze mit luftgefüllten Zellen und einem Aggregat, das die Zellen zyklisch be- und entlüftet. Dadurch wechseln die Auflageflächen des Körpers regelmäßig und Gewebe wird zeitweise vollständig entlastet.",
+  "sections": {
+    "purpose": "Ein Dekubitus (Druckgeschwür) entsteht, wenn [[haut|Haut]] und darunterliegendes Gewebe über längere Zeit durch Druck – oft kombiniert mit Scherkräften – komprimiert und dadurch minderdurchblutet werden, typischerweise über Knochenvorsprüngen wie Kreuzbein und Fersen. Wechseldrucksysteme werden zur Prophylaxe und Therapie bei immobilen, intensivpflichtigen oder schwer kranken Patienten eingesetzt; sie ergänzen, ersetzen aber nicht Positionswechsel, Hautinspektion und weitere pflegerische Maßnahmen.",
+    "principle": "## Wechseldruckprinzip\n\nDas Aggregat enthält einen Kompressor bzw. eine Membranpumpe, die Luft fördert. Ein Drehschieber- oder [[magnetventil|Magnetventilsystem]] verteilt die Luft auf zwei oder mehr Zellgruppen (z. B. jede zweite oder jede dritte Zelle), die zeitversetzt aufgeblasen und entleert werden. Ein Zyklus dauert typischerweise etwa 10–20 Minuten; je nach System und Einstellung sind auch andere Zykluszeiten möglich. Während eine Zellgruppe entlüftet ist, wird das Gewebe darüber entlastet und kann reperfundieren ([[blutkreislauf|Mikrozirkulation]]).\n\n> [!vereinfacht] Die Wirkung wird oft mit dem Auflagedruck ([[druck|p = F / A]]) im Vergleich zum Kapillardruck erklärt. Tatsächlich hängt die Gewebeschädigung von Druckhöhe, Einwirkdauer, Scherkräften, Mikroklima (Feuchte, Wärme) und dem Zustand des Patienten ab.\n\n## Regelung und Sicherheit\n\n[[drucksensor|Drucksensoren]] im Aggregat erfassen den Zelldruck; der Solldruck wird manuell nach Körpergewicht eingestellt oder automatisch angepasst ([[regelkreis]]). Ein statischer Modus mit konstant niedrigem Druck erleichtert Pflegemaßnahmen und die Mobilisation. Alarme melden Druckverlust (Leck, abgeknickter Schlauch), Netzausfall und Fehlfunktionen. Ein CPR-Ventil entlüftet die Matratze schnell auf eine harte Unterlage für Thoraxkompressionen. Low-Air-Loss-Varianten führen zusätzlich Luft durch eine luftdurchlässige Oberfläche zur Feuchtigkeitsregulierung ab.\n\n> [!praxis] Die Seitengitterhöhe des [[pflegebett|Bettes]] ist auf die meist dickere Luftmatratze abzustimmen; bei Transporten Transportmodus bzw. Ventile nach Herstellerangabe nutzen."
+  },
+  "manufacturers": [
+    {
+      "ref": "arjo",
+      "models": [
+        "Nimbus"
+      ],
+      "note": "Wechseldruckmatratzensysteme."
+    },
+    {
+      "ref": "hillrom",
+      "models": [],
+      "note": "Therapie- und Matratzensysteme für Klinikbetten."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software- und Zusatzmodulen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Wechseldrucksysteme sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Wartung nach Herstellerangabe (Kompressor, Filter, Ventile, Alarmfunktionen, Dichtheit der Zellen und Schläuche); elektrische Wiederholungsprüfung des Aggregats nach IEC 62353 bzw. DGUV Vorschrift 3; Aufbereitung des Matratzenbezugs und der Zellen zwischen Patienten."
+  },
+  "related": [
+    "pflegebett",
+    "haut",
+    "drucksensor",
+    "magnetventil",
+    "druck",
+    "alarmsystem"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

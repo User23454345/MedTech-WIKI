@@ -67,7 +67,7 @@ Hub-Kategorien (`category`): `einfuehrung`, `fachbereiche`, `geraete`, `herstell
   ],
   "manufacturers": [{ "ref": "draeger", "models": ["Evita V800"], "note": "optional" }],
   "price": { "status": "nicht-verifiziert", "note": "Einflussfaktoren auf den Preis …" },
-  "maintenance": { "stk": "ja", "mtk": "nein", "basis": "MPBetreibV Anlage 1 Nr. 1.5", "intervals": "nach Herstellerangabe, spätestens alle 2 Jahre (§ 12 MPBetreibV 2025)" },
+  "maintenance": { "stk": "ja", "mtk": "nein", "basis": "MPBetreibV Anlage 1 Nr. 1.5", "intervals": "spätestens alle 2 Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025)" },
   "faults": [{ "title": "Leckagealarm", "ref": "leckage", "cause": "…", "action": "…" }],
   "tests":  [{ "name": "Sicherheitstechnische Kontrolle", "ref": "stk", "description": "…" }],
   "diagram": { … siehe Abschnitt 5 … },
@@ -134,7 +134,7 @@ Ablage unter `public/img/devices/<geraete-id>-<motiv>.svg`. Stilvorgaben: `viewB
 2. **Kennwerte** (`specs`) nur als gerätetyp-übergreifende Bereiche aus Normen/Fachliteratur (`typisch`) oder wörtlich belegte Werte (`belegt` + `sources`). Unsicheres weglassen.
 3. **Preise:** Ohne überprüfbare Quelle `status: "nicht-verifiziert"`, keine Zahl, stattdessen Einflussfaktoren (Ausstattung, Software-Optionen, Servicevertrag, Verbrauchsmaterial, Ausschreibung, Gesamtbetriebskosten).
 4. **Modelle:** nur real existierende, öffentlich bekannte Produktlinien. Im Zweifel weglassen.
-5. **Recht:** Die MPBetreibV wurde **2025 neu gefasst** (vom 14.02.2025, BGBl. 2025 I Nr. 38): STK § 12 + Anlage 1, MTK § 15 + Anlage 2 – ältere Paragraphenangaben (§ 11/§ 14 der Fassung 2002/2017) nicht mehr verwenden. Paragraphen/Anlagen der MPBetreibV, MDR-Regeln usw. nur zitieren, wenn sicher. Hinweis auf die jeweils geltende Fassung.
+5. **Recht:** Die MPBetreibV wurde **2025 neu gefasst** (vom 14.02.2025, BGBl. 2025 I Nr. 38): STK § 12 + Anlage 1 (Pflicht knüpft an Anlage 1 an; Höchstfrist 2 Jahre, früher wenn Mängel zu erwarten), MTK § 15 + Anlage 2 – ältere Paragraphenangaben (§ 11/§ 14 der Fassung 2002/2017) nicht mehr verwenden. Paragraphen/Anlagen der MPBetreibV, MDR-Regeln usw. nur zitieren, wenn sicher. Hinweis auf die jeweils geltende Fassung.
 6. **Kennzeichnung:** Vereinfachungen und Beispiele als Callout markieren. Jede belegbare Kernaussage mit `[@…]`.
 7. **Sicherheit:** Keine Anleitungen zur Umgehung von Schutzfunktionen; Instandsetzung nur durch befugtes Fachpersonal.
 8. **Sprache:** Deutsch, sachlich, präzise, verständlich für Medizintechniker in Ausbildung und Studium; Fachbegriffe beim ersten Auftreten erklären oder verlinken.

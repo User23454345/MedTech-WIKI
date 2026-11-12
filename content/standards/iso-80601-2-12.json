@@ -1,0 +1,43 @@
+{
+  "id": "iso-80601-2-12",
+  "type": "standard",
+  "title": "ISO 80601-2-12",
+  "code": "ISO 80601-2-12",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-12: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Beatmungsgeräten für die Intensivpflege",
+  "scope": "Legt besondere Sicherheits- und Leistungsanforderungen an Beatmungsgeräte für die Intensivpflege fest, die in professionellen Gesundheitseinrichtungen bei Patienten mit unterschiedlichem Unterstützungsbedarf bis hin zu beatmungsabhängigen Patienten eingesetzt werden.",
+  "aliases": [
+    "DIN EN ISO 80601-2-12",
+    "EN ISO 80601-2-12",
+    "VDE 0750-2-12",
+    "80601-2-12",
+    "Intensivbeatmungsnorm"
+  ],
+  "category": "normen",
+  "summary": "ISO 80601-2-12 ist die besondere Festlegung der Normenfamilie IEC 60601 für Intensivbeatmungsgeräte. Sie ergänzt und ändert die Basisnorm um beatmungsspezifische Anforderungen, etwa an die Genauigkeit von Volumen und Druck, an Überwachungs- und Alarmfunktionen, an das Verhalten bei Stromausfall und an die Sicherheit des Atemgaswegs.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **ISO 80601-2-12** gilt für [[beatmungsgeraet|Beatmungsgeräte]] der Intensivmedizin, die in professionellen Gesundheitseinrichtungen eingesetzt werden und **lebenserhaltend** arbeiten [@iso-80601-2-12]. Die Nummer „80601“ zeigt, dass ISO und IEC die Norm gemeinsam erarbeiten: ISO bringt die Expertise für Atemgas und Beatmung, IEC die für elektrische Sicherheit ein.\n\nAbgegrenzt wird sie von verwandten besonderen Festlegungen für andere Beatmungsanwendungen:\n\n| Anwendung | maßgebliche Norm |\n|---|---|\n| Intensivbeatmung (Klinik) | ISO 80601-2-12 |\n| Anästhesie-Arbeitsplatz | [[iso-80601-2-13]] |\n| Heimbeatmung, Notfall- und Transportbeatmung, Schlafapnoe-Therapie, High-Flow-Therapie | eigene Teile der Reihe ISO 80601-2-x |\n\nDamit fallen [[transportbeatmungsgeraet|Transportbeatmungsgeräte]], [[heimbeatmungsgeraet|Heimbeatmungsgeräte]], [[cpap-geraet|CPAP-Geräte]] und [[high-flow-geraet|High-Flow-Geräte]] grundsätzlich nicht unter diesen Teil, auch wenn die technischen Prinzipien ähnlich sind.\n\n## Zentrale Konzepte und Anforderungen\n\n### Wesentliche Leistungsmerkmale\n\nDie Basisnorm [[iec-60601-1]] verlangt, dass der Hersteller die **wesentlichen Leistungsmerkmale** benennt – also die Funktionen, deren Ausfall zu einem unvertretbaren Risiko führt. Für Intensivbeatmungsgeräte legt die besondere Festlegung diese weitgehend fest: Das Gerät muss die Beatmung innerhalb der eingestellten Alarmgrenzen sicherstellen **oder** einen Alarm erzeugen. Dahinter steht der Gedanke, dass ein unbemerktes Versagen der Beatmung das zentrale Risiko ist.\n\n### Genauigkeit von Einstellung und Messung\n\nDie Norm beschreibt, wie Hersteller die Genauigkeit von abgegebenem Volumen, Druck, [[flowsensor|Flow]] und Sauerstoffkonzentration unter definierten Testbedingungen ermitteln und offenlegen. Dazu gehören standardisierte Lungenmodelle mit festgelegter Compliance und Resistance ([[atemmechanik]]), damit Angaben verschiedener Hersteller vergleichbar werden.\n\n> [!vereinfacht] Die Norm schreibt nicht vor, welche Beatmungsmodi ein Gerät haben muss. Sie verlangt aber, dass die angegebenen Genauigkeiten unter reproduzierbaren Bedingungen geprüft und in den Begleitpapieren offengelegt werden.\n\n### Überwachung und Alarme\n\nEin Intensivbeatmungsgerät muss kritische Zustände selbst erkennen. Typische geforderte Überwachungen und [[alarmsystem|Alarme]] betreffen:\n\n| Zustand | Bezug |\n|---|---|\n| hoher Atemwegsdruck | [[atemwegsdruck-hoch]] |\n| Diskonnektion bzw. Leckage | [[diskonnektion]], [[leckage]] |\n| exspiratorisches Volumen außerhalb der Grenzen | [[flowsensor]] |\n| Sauerstoffkonzentration außerhalb der Grenzen | [[sauerstoffsensor]], Monitoring nach [[iso-80601-2-55]] |\n| Ausfall der Gasversorgung | zentrale Gasversorgung |\n| Ausfall der Netzversorgung, niedriger Akkuladestand | [[netzstoerung]], [[akkufehler]] |\n| Obstruktion im Atemsystem | [[exspirationsventil]] |\n\nGestaltung und Priorisierung der Alarmsignale richten sich nach der Ergänzungsnorm [[iec-60601-1-8]].\n\n### Stromausfall und interne Stromquelle\n\nDa der Patient vom Gerät abhängt, stellt die Norm Anforderungen an das Verhalten bei Netzausfall: Umschaltung auf eine interne Stromquelle ([[lithium-ionen-akku]]), Anzeige des Ladezustands und Alarmierung, bevor die Beatmung endet.\n\n### Atemgasweg\n\nTeile, durch die Atemgas zum Patienten strömt, dürfen keine schädlichen Stoffe (Partikel, flüchtige organische Verbindungen) abgeben. Hierfür verweist die Norm auf die biologische Beurteilung des Atemgaswegs, die über [[iso-10993-1]] hinaus spezifische Prüfungen umfasst. Außerdem werden Konnektoren, [[atemgasbefeuchter|Befeuchtung]] und Filter im Atemsystem betrachtet.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Rolle |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Sicherheit, wird durch -2-12 ergänzt und teils ersetzt |\n| Ergänzungsnormen | [[iec-60601-1-2]] (EMV), [[iec-60601-1-6]] (Gebrauchstauglichkeit), [[iec-60601-1-8]] (Alarme) | gelten, soweit -2-12 nichts anderes sagt |\n| Besondere Festlegungen | [[iso-80601-2-13]], [[iso-80601-2-55]] | Anästhesie bzw. Atemgasmonitoring |\n| Prozessnormen | [[iso-14971]], [[iec-62304]], [[iec-62366-1]] | Risikomanagement, Software, Usability |\n\n> [!hinweis] Grundprinzip der Familie IEC 60601: Die besondere Festlegung (-2-x) hat Vorrang vor Ergänzungsnormen (-1-x) und der Basisnorm. Sie gibt jeweils an, welche Abschnitte der Basisnorm gelten, ergänzt oder ersetzt werden.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** nutzen die harmonisierte Fassung der Norm, um die Konformität mit den grundlegenden Sicherheits- und Leistungsanforderungen der [[mdr]] nachzuweisen ([[konformitaetsbewertung]]). Intensivbeatmungsgeräte werden als aktive Produkte zur Abgabe bzw. zum Austausch von Stoffen mit potenziell gefährlicher Wirkung in der Regel der Klasse IIb zugeordnet ([[risikoklassen]], Regel 12 Anhang VIII MDR).\n\n**Betreiber** profitieren indirekt: Die in den Begleitpapieren offengelegten Genauigkeiten und Alarmfunktionen sind Grundlage für [[funktionspruefung|Funktionsprüfungen]] und die [[stk]]. Geräte zur maschinellen Beatmung sind in Anlage 1 der [[mpbetreibv]] genannt; die STK ist nach § 12 spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind durchzuführen [@mpbetreibv].\n\n> [!praxis] Prüfgeräte für Beatmung (Gasflussanalysatoren mit Testlunge, siehe [[pruefgeraete]]) messen Volumen, Druck und O₂-Konzentration. Abweichungen werden mit den vom Hersteller angegebenen Toleranzen verglichen – nicht mit Erfahrungswerten.\n\n## Betroffene Geräte\n\n[[beatmungsgeraet]] (Intensivbeatmung) und mittelbar [[ecmo]]-Arbeitsplätze mit Beatmung; abzugrenzen sind [[anaesthesiegeraet]], [[transportbeatmungsgeraet]], [[heimbeatmungsgeraet]], [[cpap-geraet]] und [[high-flow-geraet]]. Hersteller in diesem Segment sind u. a. [[draeger]], [[hamilton-medical]], [[getinge]] und [[medtronic]].\n",
+  "related": [
+    "beatmungsgeraet",
+    "iec-60601-1",
+    "iec-60601-1-8",
+    "iso-80601-2-13",
+    "iso-80601-2-55",
+    "atemmechanik",
+    "flowsensor",
+    "sauerstoffsensor",
+    "atemwegsdruck-hoch",
+    "diskonnektion",
+    "leckage",
+    "transportbeatmungsgeraet",
+    "heimbeatmungsgeraet"
+  ],
+  "sources": [
+    "iso-80601-2-12",
+    "iec-60601-1",
+    "iec-60601-1-8",
+    "oczenski-2017",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

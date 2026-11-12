@@ -1,0 +1,55 @@
+{
+  "id": "iabp",
+  "type": "device",
+  "title": "Intraaortale Ballonpumpe (IABP)",
+  "aliases": [
+    "IABP",
+    "intraaortale Ballongegenpulsation",
+    "IABP-Konsole",
+    "intra-aortic balloon pump",
+    "Gegenpulsation"
+  ],
+  "category": "geraete",
+  "deviceGroup": "kardiologie",
+  "rank": 23,
+  "domains": [
+    "kardiologie",
+    "intensivmedizin",
+    "herzchirurgie"
+  ],
+  "summary": "Die intraaortale Ballonpumpe ist ein temporäres mechanisches Kreislaufunterstützungssystem. Ein Ballonkatheter in der Aorta descendens wird EKG- oder drucksynchron in der Diastole mit Helium gefüllt und vor der Systole entleert. Das verbessert die Koronarperfusion und senkt die Nachlast des linken Ventrikels.",
+  "sections": {
+    "purpose": "Die IABP wird zur kurzzeitigen Unterstützung des [[herz|Herzens]] eingesetzt, etwa bei mechanischen Infarktkomplikationen, im Umfeld herzchirurgischer Eingriffe oder bei Hochrisiko-Interventionen. Beim infarktbedingten kardiogenen Schock zeigte die randomisierte Studie IABP-SHOCK II keinen Überlebensvorteil [@thiele-2012]; der routinemäßige Einsatz ist dort daher zurückgegangen.",
+    "principle": "## Prinzip der Gegenpulsation\n\nDer Ballon (Volumen beim Erwachsenen meist im Bereich von 30–50 ml, *typisch*) liegt in der Aorta descendens: Die Spitze etwa 1–2 cm unterhalb des Abgangs der linken A. subclavia, das untere Ende möglichst oberhalb der Nierenarterien. Die Konsole füllt ihn zu Beginn der Diastole (Schluss der Aortenklappe, dikrote Inzisur) und entleert ihn unmittelbar vor der nächsten Systole [@kramme-2017]:\n\n* **Inflation in der Diastole** verdrängt Blut und erhöht den diastolischen Aortendruck („diastolische Augmentation“) – die Koronarien werden vorwiegend in der Diastole durchblutet.\n* **Deflation vor der Systole** senkt den enddiastolischen Aortendruck; der linke Ventrikel wirft gegen einen geringeren Widerstand aus (Nachlastsenkung, geringerer O₂-Verbrauch).\n\n## Technik der Konsole\n\nAls Treibgas dient **Helium**: Seine geringe Dichte erlaubt schnelle Füll- und Entleerungszeiten durch den dünnen Katheter ([[stroemungslehre]], [[gasgesetze]]). Ein Kompressor bzw. Vakuumsystem treibt das Gas über [[magnetventil|Ventile]] in den Katheter. Die Triggerung erfolgt über die R-Zacke des EKG ([[biosignale]]) oder über die arterielle Druckkurve, die über das Katheterlumen mit einem externen [[drucksensor]] oder einen faseroptischen Sensor in der Katheterspitze gemessen wird ([[invasive-druckmessung]]). Algorithmen passen das Timing bei Arrhythmien an.\n\n> [!warnung] Fehlerhaftes Timing (zu frühe Inflation, zu späte Deflation) erhöht die Nachlast und kann der Herzfunktion schaden. Ein Gasverlust im System (z. B. Ballonleck, Blut im Gasschlauch) muss sofort zum Stopp führen."
+  },
+  "manufacturers": [
+    {
+      "ref": "getinge",
+      "models": [
+        "Cardiosave"
+      ],
+      "note": "Marke Maquet (ehemals Datascope)."
+    }
+  ],
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Eine ausdrückliche Nennung der IABP in Anlage 1 der MPBetreibV (2025) ist nicht gegeben; je nach Ausführung kann Nr. 1.2 (Messung anderer Größen unter Verwendung elektrisch betriebener Messsonden in Blutgefäßen) einschlägig sein. Ob eine faseroptische Druckmessung in der Katheterspitze als „elektrisch betriebene Messsonde“ gilt, ist eine Auslegungsfrage; die Zuordnung ist daher anhand der Herstellerangaben zu klären. Im Übrigen STK nach § 12, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Sicherheitstechnische Kontrollen und Wartung nach Herstellerangabe; STK (falls Anlage 1 zutrifft) spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); regelmäßiger Wechsel der Heliumflasche und Akkupflege; Funktionsprüfung vor Einsatz."
+  },
+  "related": [
+    "vad",
+    "ecmo",
+    "herz",
+    "invasive-druckmessung",
+    "ekg-geraet",
+    "blutkreislauf"
+  ],
+  "sources": [
+    "kramme-2017",
+    "thiele-2012",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

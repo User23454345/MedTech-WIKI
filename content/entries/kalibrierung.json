@@ -1,0 +1,162 @@
+{
+  "id": "kalibrierung",
+  "type": "term",
+  "title": "Kalibrierung und Justierung",
+  "aliases": [
+    "Kalibrieren",
+    "Justieren",
+    "Calibration",
+    "Adjustment",
+    "Abgleich",
+    "Nullabgleich",
+    "Rückführbarkeit",
+    "Eichung (Abgrenzung)"
+  ],
+  "category": "instandhaltung",
+  "summary": "Kalibrieren heißt, die Abweichung der Anzeige eines Messgeräts gegenüber einem rückgeführten Normal zu ermitteln und zu dokumentieren; Justieren heißt, das Messgerät so einzustellen, dass diese Abweichung möglichst klein wird. Beide Tätigkeiten sichern die Messrichtigkeit medizinischer Geräte und sind von der hoheitlichen Eichung zu unterscheiden.",
+  "body": "## Begriffe: Kalibrieren, Justieren, Eichen\n\nDie drei Begriffe werden im Alltag oft verwechselt, bezeichnen aber verschiedene Tätigkeiten. Maßgeblich ist das Internationale Wörterbuch der Metrologie (VIM) [@jcgm-200-2012]:\n\n| Begriff | Bedeutung (sinngemäß nach VIM) | Verändert das Messgerät? |\n|---|---|---|\n| **Kalibrierung** | Ermitteln des Zusammenhangs zwischen den von Normalen bereitgestellten Größenwerten (mit ihren Messunsicherheiten) und den Anzeigen des Messgeräts; diese Information dient dazu, aus einer Anzeige ein Messergebnis zu gewinnen | nein |\n| **Justierung** | Tätigkeiten am Messsystem, damit es vorgeschriebene Anzeigen zu gegebenen Werten der Messgröße liefert (z. B. Nullpunkt- und Steilheitsabgleich) | ja |\n| **Eichung** | hoheitliche Prüfung im gesetzlichen Messwesen nach Mess- und Eichgesetz | nein (Prüfung mit Kennzeichnung) |\n\n> [!belegt] Das VIM (JCGM 200:2012) definiert Kalibrierung (Begriff 2.39) ausdrücklich als Vergleich mit Normalen und grenzt sie von der Justierung (Begriff 3.11) ab, die das Messsystem verändert [@jcgm-200-2012]. Für Medizinprodukte mit Messfunktion tritt in Deutschland an die Stelle der Eichung die [[mtk|messtechnische Kontrolle]] nach der MPBetreibV [@messeg] [@mpbetreibv].\n\nIm Klinikalltag bedeutet „das Gerät kalibrieren“ häufig *Kalibrieren und anschließend Justieren* – etwa beim Abgleich eines [[sauerstoffsensor|Sauerstoffsensors]]. Für Dokumentation und Qualitätssicherung sollte man beides trennen: Ein Kalibrierschein dokumentiert die Abweichungen **vor** einer Justierung („wie vorgefunden“) und **danach** („wie verlassen“).\n\n## Messabweichung und Kennlinie\n\nDie **Messabweichung** ist die Differenz zwischen Anzeige und Referenzwert des Normals:\n\nE = x_Anzeige − x_Referenz, relativ: e = E / x_Referenz · 100 %\n\nViele Sensoren werden durch eine lineare Kennlinie beschrieben, y = m · x + b, mit der **Steilheit (Empfindlichkeit)** m und dem **Nullpunkt (Offset)** b. Eine **Zweipunktkalibrierung** misst bei zwei Referenzwerten x₁ und x₂ die Anzeigen y₁ und y₂ und bestimmt daraus\n\nm = (y₂ − y₁) / (x₂ − x₁), b = y₁ − m · x₁.\n\nDie Justierung korrigiert anschließend Nullpunkt und Steilheit, sodass die Anzeige mit dem Referenzwert übereinstimmt. Nichtlineare Sensoren erfordern Mehrpunktkalibrierungen oder Kennlinientabellen im [[mikrocontroller|Mikrocontroller]] (siehe [[messkette]]).\n\n> [!beispiel] Ein Druckmesskanal zeigt bei 0 mmHg Referenzdruck 1,5 mmHg und bei 200 mmHg Referenzdruck 203,5 mmHg an. Dann gilt m = (203,5 − 1,5) / 200 = 1,01 und b = 1,5 mmHg. Bei 100 mmHg ist eine Anzeige von 1,01 · 100 + 1,5 = 102,5 mmHg zu erwarten, also E = +2,5 mmHg. Ob das zulässig ist, entscheidet die für das Gerät geltende Fehlergrenze. Alle Zahlen sind beispielhaft.\n\n## Rückführbarkeit und Messunsicherheit\n\nEine Kalibrierung ist nur so gut wie ihr Normal. **Metrologische Rückführbarkeit** bedeutet, dass das Ergebnis über eine dokumentierte, ununterbrochene Kette von Kalibrierungen auf nationale Normale – in Deutschland bei der Physikalisch-Technischen Bundesanstalt (PTB) – und damit auf das SI zurückgeführt ist; jedes Glied trägt zur [[messunsicherheit|Messunsicherheit]] bei [@jcgm-200-2012] [@jcgm-100-2008]. Kalibrierlaboratorien weisen ihre Kompetenz durch Akkreditierung nach ISO/IEC 17025 nach, in Deutschland durch die DAkkS [@iso-iec-17025].\n\n| Ebene | Beispiel |\n|---|---|\n| Nationales Normal | PTB |\n| Bezugsnormal | akkreditiertes Kalibrierlabor |\n| Gebrauchsnormal / [[pruefgeraete|Prüfgerät]] | Druckkalibrator, Thermometer-Referenz, Gasflussanalysator der Medizintechnik |\n| Prüfling | [[nibp-messgeraet|NIBP-Messgerät]], [[thermometer]], [[beatmungsgeraet|Beatmungsgerät]] |\n\n> [!vereinfacht] Als Faustregel sollte die Messunsicherheit des Prüfmittels deutlich kleiner sein als die Fehlergrenze des Prüflings; häufig wird ein Verhältnis von mindestens etwa 1 : 3 bis 1 : 4 angestrebt. Liegt ein Messwert nahe an der Fehlergrenze, ist eine Entscheidungsregel unter Berücksichtigung der Messunsicherheit nötig.\n\n## Kalibrierintervalle\n\nDas Kalibrierintervall hängt ab von Herstellerangaben, Driftverhalten ([[sensordrift]]), Beanspruchung und der Bedeutung des Messwerts für die Therapie. Für die in Anlage 2 der MPBetreibV genannten Medizinprodukte ergeben sich die Fristen der [[mtk|MTK]] aus der Anlage, für weitere Produkte mit Messfunktion, für die der Hersteller MTK vorsieht, aus dessen Angaben; der PTB-Leitfaden LMKM beschreibt Prüfumfang, Prüfmittel und Fehlergrenzen [@mpbetreibv] [@lmkm-ptb]. Die MTK ersetzt nicht die geräteinternen Abgleiche, die der Hersteller z. B. nach Sensorwechsel vorschreibt. Prüfmittel der Medizintechnik selbst werden regelmäßig extern kalibriert.\n\n## Anwendung in Geräten\n\n| Gerät / Sensor | Kalibrierung bzw. Justierung (typisch) |\n|---|---|\n| [[beatmungsgeraet|Beatmungsgerät]] – [[sauerstoffsensor|O₂-Sensor]] | Abgleich bei 21 % (Raumluft) und ggf. 100 % O₂, oft geräteseitig automatisiert |\n| Beatmungsgerät – [[flowsensor|Flowsensor]] | Nullpunkt- und Flowabgleich im Selbsttest nach Sensorwechsel |\n| [[invasive-druckmessung|Invasive Druckmessung]] – [[drucksensor|Drucksensor]] | Nullabgleich gegen Atmosphärendruck auf Referenzhöhe vor der Messung |\n| [[nibp-messgeraet|NIBP-Messgerät]] | MTK der Druckmesseinrichtung mit Referenzmanometer |\n| [[kapnometer|Kapnometer]] – [[co2-sensor|CO₂-Sensor]] | Nullabgleich, Prüfung mit Prüfgas definierter Konzentration |\n| [[dialysegeraet|Dialysegerät]] – [[leitfaehigkeitssensor|Leitfähigkeitssensor]] | Abgleich mit Referenzmessung, Temperaturkompensation |\n| [[thermometer|Medizinisches Thermometer]] | Vergleich im temperierten Bad bzw. mit Referenzstrahler |\n\n> [!praxis] Der Nullabgleich eines invasiven Druckaufnehmers ist eine Justierung durch die Anwender. Wird er auf falscher Höhe oder bei geschlossenem Hahn durchgeführt, entsteht ein systematischer Offset aller Druckwerte – ein typischer Anwendungsfehler (siehe [[anwendungsfehler]]).\n\n## Bedeutung in der Medizintechnik\n\nMesswerte steuern Therapieentscheidungen und Regelkreise: Der gemessene Atemwegsdruck wird über einen [[regelkreis|Regelkreis]] und die [[drehzahlregelung|Drehzahlregelung]] der [[turbine]] ausgeregelt; ein verschobener Nullpunkt der [[druckmessung|Druckmessung]] würde damit unmittelbar die Beatmung verändern. Kalibrierung und Justierung sind deshalb Teil der [[instandhaltung-grundlagen|Instandhaltung]] und nach jeder [[instandsetzung|Instandsetzung]] an messenden Baugruppen erforderlich.",
+  "related": [
+    "messunsicherheit",
+    "messkette",
+    "mtk",
+    "sensordrift",
+    "pruefgeraete",
+    "drucksensor",
+    "sauerstoffsensor",
+    "flowsensor",
+    "instandhaltung-grundlagen",
+    "inspektion"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "drehzahlregelung",
+      "drucksensor",
+      "druckmessung",
+      "kalibrierung"
+    ],
+    [
+      "messkette",
+      "messunsicherheit",
+      "kalibrierung",
+      "mtk"
+    ]
+  ],
+  "sources": [
+    "jcgm-200-2012",
+    "jcgm-100-2008",
+    "iso-iec-17025",
+    "mpbetreibv",
+    "lmkm-ptb",
+    "messeg",
+    "hering-2018",
+    "webster-2010"
+  ],
+  "diagram": {
+    "title": "Ablauf von Kalibrierung und Justierung",
+    "caption": "Schema: Das rückgeführte Normal liefert den Referenzwert; die Abweichung wird mit Unsicherheit bewertet und nur bei Bedarf justiert, danach erneut kalibriert.",
+    "width": 900,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "norm",
+        "label": "Rückgeführtes\nNormal",
+        "kind": "source",
+        "ref": "pruefgeraete",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "pruef",
+        "label": "Prüfling\n(z. B. Drucksensor)",
+        "kind": "sensor",
+        "ref": "drucksensor",
+        "x": 100,
+        "y": 250
+      },
+      {
+        "id": "vgl",
+        "label": "Vergleich\nE = Anzeige − Referenz",
+        "kind": "process",
+        "x": 340,
+        "y": 170,
+        "w": 180
+      },
+      {
+        "id": "mu",
+        "label": "Messunsicherheit\nbewerten",
+        "kind": "process",
+        "ref": "messunsicherheit",
+        "x": 580,
+        "y": 90
+      },
+      {
+        "id": "ent",
+        "label": "Fehlergrenze\neingehalten?",
+        "kind": "control",
+        "x": 580,
+        "y": 250
+      },
+      {
+        "id": "jus",
+        "label": "Justierung\n(Nullpunkt, Steilheit)",
+        "kind": "actuator",
+        "x": 810,
+        "y": 250
+      },
+      {
+        "id": "doku",
+        "label": "Kalibrierschein /\nMTK-Protokoll",
+        "kind": "output",
+        "ref": "mtk",
+        "x": 810,
+        "y": 90
+      }
+    ],
+    "edges": [
+      {
+        "from": "norm",
+        "to": "vgl",
+        "kind": "signal",
+        "label": "Referenz"
+      },
+      {
+        "from": "pruef",
+        "to": "vgl",
+        "kind": "signal",
+        "label": "Anzeige"
+      },
+      {
+        "from": "vgl",
+        "to": "mu",
+        "kind": "data"
+      },
+      {
+        "from": "mu",
+        "to": "ent",
+        "kind": "data"
+      },
+      {
+        "from": "ent",
+        "to": "jus",
+        "kind": "data",
+        "label": "nein"
+      },
+      {
+        "from": "ent",
+        "to": "doku",
+        "kind": "data",
+        "label": "ja"
+      },
+      {
+        "from": "jus",
+        "to": "pruef",
+        "kind": "signal",
+        "label": "erneut prüfen"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

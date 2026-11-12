@@ -1,0 +1,71 @@
+{
+  "id": "rdg",
+  "type": "device",
+  "title": "Reinigungs- und Desinfektionsgerät (RDG)",
+  "aliases": [
+    "RDG",
+    "Reinigungs-Desinfektionsgerät",
+    "Washer-Disinfector",
+    "Thermodesinfektor",
+    "RDG-E",
+    "Endoskop-Waschmaschine",
+    "Steckbeckenspüler"
+  ],
+  "category": "geraete",
+  "deviceGroup": "aufbereitung",
+  "rank": 97,
+  "domains": [
+    "chirurgie",
+    "gastroenterologie"
+  ],
+  "summary": "Reinigungs- und Desinfektionsgeräte reinigen und desinfizieren Medizinprodukte maschinell in einem validierbaren Programm aus Vorspülen, Reinigen, Neutralisieren, Spülen, Desinfektion und Trocknung. Sie sind Kernstück der Aufbereitung von Instrumenten, flexiblen Endoskopen und Pflegeutensilien.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Nach Regel 16 der [[mdr|MDR]] Anhang VIII sind Produkte, die speziell zur Desinfektion von Medizinprodukten bestimmt sind, Klasse IIa; Reinigungs-Desinfektionsgeräte, die speziell zur Desinfektion invasiver Produkte als letzter Schritt der Aufbereitung bestimmt sind (z. B. RDG-E für flexible Endoskope), gehören zur Klasse IIb. Die konkrete Klasse hängt damit von der Zweckbestimmung ab; maßgeblich ist die Einstufung des Herstellers.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Maschinelle Reinigung und Desinfektion sind gegenüber manuellen Verfahren besser standardisierbar und validierbar und werden deshalb für die [[aufbereitung|Aufbereitung]] bevorzugt [@krinko-bfarm-2012]. Instrumenten-RDG bereiten chirurgische Instrumente vor der [[sterilisation|Sterilisation]] auf; RDG-E bereiten thermolabile flexible [[endoskop|Endoskope]] chemothermisch auf; Steckbeckenspüler reinigen und desinfizieren Pflegegeschirr auf Stationen.",
+    "principle": "## Programmablauf (Instrumenten-RDG)\n\n| Phase | Zweck |\n|---|---|\n| Vorspülen kalt | Lösen grober Verschmutzung; niedrige Temperatur verhindert die Proteinfixierung |\n| Reinigen | alkalischer oder enzymatischer Reiniger bei erhöhter Temperatur |\n| Neutralisieren | Entfernen alkalischer Reste |\n| Zwischen- und Schlussspülen | vollentsalztes Wasser, ggf. mit Pflegemittel |\n| Thermische [[desinfektion|Desinfektion]] | Halten einer definierten Temperatur über eine definierte Zeit |\n| Trocknung | Heißluft |\n\nRotierende Sprüharme und Injektorschienen für Hohlkörper bringen die Flotte mechanisch auf; eine Umwälzpumpe erzeugt den Spüldruck, der bei Bedarf überwacht wird ([[drucksensor]]). [[temperatursensor|Temperatursensoren]], Dosierpumpen mit Füllstands- bzw. Durchflusskontrolle und eine [[leitfaehigkeitssensor|Leitfähigkeitsmessung]] des Schlussspülwassers sichern den Prozess.\n\n## A₀-Konzept\n\nDie Wirksamkeit der thermischen Desinfektion wird nach ISO 15883 mit dem **A₀-Wert** bewertet [@iso-15883-1]: A₀ = Σ 10^((T − 80 °C) / z) · Δt mit z = 10 K und Δt in Sekunden. Jede Temperaturerhöhung um 10 K verzehnfacht also die Wirkung pro Zeiteinheit.\n\n> [!beispiel] 90 °C über 5 min ergeben A₀ = 10^((90 − 80)/10) · 300 s = 3 000. Ein A₀-Wert von 3 000 gilt für Medizinprodukte, die mit hitzeresistenten Viren (z. B. Hepatitis-B-Virus) kontaminiert sein können, als übliche Zielgröße und wird in der deutschen Aufbereitungspraxis für kritische Medizinprodukte zugrunde gelegt; 80 °C über 10 min ergeben dagegen nur A₀ = 600.\n\nThermolabile Endoskope werden dagegen chemothermisch bei niedrigerer Temperatur mit einem Desinfektionsmittel aufbereitet; dort überwacht das RDG-E zusätzlich die Durchgängigkeit und Dichtheit der Kanäle."
+  },
+  "manufacturers": [
+    {
+      "ref": "belimed",
+      "models": [],
+      "note": "Reinigungs- und Desinfektionsgeräte für Instrumente und Zubehör."
+    },
+    {
+      "ref": "getinge",
+      "models": [],
+      "note": "Reinigungs- und Desinfektionsgeräte für die Zentralsterilgutversorgung."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software- und Zusatzmodulen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: RDG sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Die Aufbereitung hat mit geeigneten validierten Verfahren zu erfolgen (KRINKO/BfArM-Empfehlung); Validierung und Routinekontrollen richten sich nach ISO 15883 und einschlägigen Leitlinien.",
+    "intervals": "Validierung bei Inbetriebnahme, periodische Leistungsbeurteilung (häufig jährlich) und nach Änderungen; Wartung nach Herstellerangabe (Sprüharme, Filter, Dosiersysteme, Kalibrierung der Temperatur- und Leitfähigkeitsmessung); arbeitstägliche Sicht- und Funktionsprüfungen, Prüfung der Reinigungsleistung mit Prüfkörpern."
+  },
+  "related": [
+    "desinfektion",
+    "aufbereitung",
+    "dampfsterilisator",
+    "niedertemperatursterilisator",
+    "iso-15883",
+    "endoskop"
+  ],
+  "sources": [
+    "iso-15883-1",
+    "krinko-bfarm-2012",
+    "mdr-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

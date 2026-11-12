@@ -53,7 +53,7 @@
   <!-- Trennlinie -->
   <line x1="318" y1="44" x2="318" y2="380" stroke="#e2e8f0" stroke-width="2"/>
 
-  <g transform="translate(30,0)">
+  <g transform="translate(36,0)">
   <!-- Panel B: Grundgerät -->
   <text x="470" y="52" font-size="14" font-weight="600" fill="#0b2545" text-anchor="middle">B  Konsolensystem</text>
   <!-- Monitor -->
@@ -84,9 +84,9 @@
     <line x1="404" y1="179" x2="380" y2="179"/>
     <line x1="430" y1="230" x2="380" y2="230"/>
     <line x1="430" y1="290" x2="380" y2="290"/>
-    <line x1="538" y1="260" x2="548" y2="370"/>
+    <line x1="538" y1="260" x2="556" y2="372"/>
   </g>
-  <g font-size="13" fill="#0b2545" text-anchor="end">
+  <g font-size="12" fill="#0b2545" text-anchor="end">
     <text x="376" y="96">Monitor</text>
     <text x="376" y="175">Bedienpult</text>
     <text x="376" y="191">(TGC, Trackball)</text>

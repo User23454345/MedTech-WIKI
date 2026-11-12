@@ -1,0 +1,44 @@
+[
+  {
+    "id": "iec-60601-2-27",
+    "kind": "norm",
+    "title": "IEC 60601-2-27 – Medizinische elektrische Geräte – Teil 2-27: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Elektrokardiographie-Überwachungsgeräten",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-27",
+    "note": "Gerätespezifische Norm für EKG-Überwachungsgeräte (Monitoring). Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-80601-2-49",
+    "kind": "norm",
+    "title": "IEC 80601-2-49 – Medizinische elektrische Geräte – Teil 2-49: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von multifunktionalen Patientenüberwachungsgeräten",
+    "publisher": "IEC / ISO; in Deutschland als DIN EN IEC 80601-2-49",
+    "note": "Gemeinsame Norm von IEC und ISO für Multiparameter-Patientenmonitore; Nachfolgerin der früheren IEC 60601-2-49. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-61010-1",
+    "kind": "norm",
+    "title": "IEC 61010-1 – Sicherheitsbestimmungen für elektrische Mess-, Steuer-, Regel- und Laborgeräte – Teil 1: Allgemeine Anforderungen",
+    "publisher": "IEC / in Deutschland als DIN EN 61010-1",
+    "note": "Grundnorm der Reihe IEC 61010 für Mess-, Steuer-, Regel- und Laborgeräte; gerätespezifische Teile 2-xxx. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-61010-2-040",
+    "kind": "norm",
+    "title": "IEC 61010-2-040 – Sicherheitsbestimmungen für elektrische Mess-, Steuer-, Regel- und Laborgeräte – Teil 2-040: Besondere Anforderungen an Sterilisatoren und Reinigungs-Desinfektionsgeräte für die Behandlung medizinischer Materialien",
+    "publisher": "IEC / in Deutschland als DIN EN 61010-2-040",
+    "note": "Elektrische Sicherheit von Sterilisatoren und Reinigungs-Desinfektionsgeräten. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-61010-2-101",
+    "kind": "norm",
+    "title": "IEC 61010-2-101 – Sicherheitsbestimmungen für elektrische Mess-, Steuer-, Regel- und Laborgeräte – Teil 2-101: Besondere Anforderungen an In-vitro-Diagnostik-(IVD-)Medizingeräte",
+    "publisher": "IEC / in Deutschland als DIN EN 61010-2-101",
+    "note": "Ergänzende Sicherheitsanforderungen für IVD-Geräte. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-15883",
+    "kind": "norm",
+    "title": "ISO 15883 (Normenreihe) – Reinigungs-Desinfektionsgeräte",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 15883-x",
+    "note": "Mehrteilige Normenreihe: Teil 1 allgemeine Anforderungen, Begriffe und Prüfverfahren; weitere Teile u. a. für chirurgische Instrumente und Anästhesiezubehör (Teil 2), Behälter für menschliche Ausscheidungen (Teil 3), thermolabile Endoskope (Teil 4). Maßgeblich ist die jeweils gültige Ausgabe des jeweiligen Teils."
+  }
+]

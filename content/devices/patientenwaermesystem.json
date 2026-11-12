@@ -1,0 +1,66 @@
+{
+  "id": "patientenwaermesystem",
+  "type": "device",
+  "title": "Patientenwärmesystem",
+  "aliases": [
+    "Wärmesystem",
+    "Warmluftgebläse",
+    "Forced-Air-Wärmung",
+    "Konvektionswärmung",
+    "Wärmedecke",
+    "Wärmematte",
+    "Patient Warming System"
+  ],
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 78,
+  "domains": [
+    "anaesthesiologie",
+    "chirurgie",
+    "intensivmedizin"
+  ],
+  "summary": "Patientenwärmesysteme führen dem Körper von außen Wärme zu, um eine perioperative oder therapiebedingte Unterkühlung zu verhindern. Verbreitet sind Warmluftgebläse mit perforierten Decken sowie leitungsbasierte Systeme mit Wasser- oder Widerstandsheizmatten.",
+  "sections": {
+    "purpose": "Während einer Narkose verliert der Patient Wärme: Narkosemittel weiten die Gefäße, sodass Wärme aus dem Körperkern in die Peripherie umverteilt wird; hinzu kommen Verluste über Haut, Wundfläche, kalte Infusionen und Atemgase. Schon eine milde Hypothermie ist mit erhöhtem Blutverlust, Wundinfektionen und Kältezittern verbunden. Leitlinien empfehlen deshalb Temperaturmessung und aktive Wärmung [@awmf-s3-perioperative-hypothermie][@larsen-2018]. Siehe [[thermoregulation]].",
+    "principle": "## Wärmeübertragung\n\nAlle Systeme nutzen die Grundformen der [[waermeuebertragung|Wärmeübertragung]]:\n\n| Prinzip | Gerät | Wirkweise |\n|---|---|---|\n| Konvektion | Warmluftgebläse (Forced Air) | erwärmte Luft strömt durch eine Schlauchverbindung in eine Einmaldecke und tritt durch Perforationen auf die [[haut|Haut]] aus |\n| Konduktion | Wassermatte, Widerstandsheizdecke | direkter Kontakt mit einer temperierten Fläche |\n| Strahlung | Wärmestrahler | Infrarotstrahlung, v. a. in der Neonatologie ([[waermebett]]) |\n\n## Aufbau eines Warmluftgebläses\n\nEin Gebläse saugt Raumluft über einen Filter an, ein [[heizelement|Heizelement]] erwärmt sie, ein [[temperatursensor|Temperatursensor]] am Schlauchauslass liefert den Istwert für die Regelung ([[regelkreis]]). Ein zweiter, unabhängiger Übertemperaturschutz schaltet die Heizung bei Grenzwertüberschreitung ab. Leitungsbasierte Systeme regeln die Wassertemperatur einer Matte über Heizer und Pumpe oder heizen eine Kohlefaser- bzw. Widerstandsfolie elektrisch ([[joulesche-waerme]]).\n\n> [!warnung] Wärmesysteme dürfen nur mit dem vorgesehenen Zubehör verwendet werden. Wird der Warmluftschlauch ohne Decke direkt auf den Patienten gerichtet, drohen Verbrennungen. Besonders gefährdet sind schlecht durchblutete Hautareale und Patienten, die Wärme nicht melden können.\n\nAnforderungen an Wärmegeräte mit Decken, Auflagen oder Matratzen beschreibt [@iec-80601-2-35]. Zur Ergänzung werden Infusionen über [[infusionswaermer|Infusionswärmer]] erwärmt."
+  },
+  "manufacturers": [
+    {
+      "ref": "medtronic",
+      "models": [
+        "WarmTouch"
+      ],
+      "note": "Warmluft-Wärmesysteme"
+    },
+    {
+      "ref": "stryker",
+      "models": [],
+      "note": "Systeme zum Temperaturmanagement"
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Wärmeprinzip (Warmluft, Wasser, Widerstandsheizung), Einmal- oder Mehrwegdecken bzw. -matten als laufende Kosten, Gerätezahl je OP-Saal, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) aufgeführt. Elektrische Wiederholungsprüfung nach [[iec-62353|IEC 62353]] und Prüfung des Übertemperaturschutzes gemäß Herstellervorgabe.",
+    "intervals": "Wartung, Filterwechsel und Temperaturprüfung nach Herstellerangabe."
+  },
+  "related": [
+    "thermoregulation",
+    "waermeuebertragung",
+    "infusionswaermer",
+    "hypothermiegeraet",
+    "waermebett",
+    "temperatursensor"
+  ],
+  "sources": [
+    "awmf-s3-perioperative-hypothermie",
+    "iec-80601-2-35",
+    "larsen-2018"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

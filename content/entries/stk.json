@@ -1,0 +1,167 @@
+{
+  "id": "stk",
+  "type": "term",
+  "title": "Sicherheitstechnische Kontrolle (STK)",
+  "aliases": [
+    "STK",
+    "Sicherheitstechnische Kontrollen",
+    "sicherheitstechnische Prüfung",
+    "Safety inspection",
+    "Periodic safety inspection",
+    "Wiederkehrende sicherheitstechnische Kontrolle",
+    "§ 12 MPBetreibV"
+  ],
+  "category": "stk-mtk",
+  "summary": "Die sicherheitstechnische Kontrolle (STK) ist eine gesetzlich vorgeschriebene, wiederkehrende Prüfung bestimmter aktiver Medizinprodukte, mit der Mängel rechtzeitig erkannt werden sollen, die Patienten, Anwender oder Dritte gefährden könnten. Rechtsgrundlage in Deutschland ist § 12 der 2025 neu gefassten Medizinprodukte-Betreiberverordnung in Verbindung mit deren Anlage 1.",
+  "body": "## Begriff und Zweck\n\nDie **sicherheitstechnische Kontrolle (STK)** ist eine wiederkehrende, vom Gesetzgeber vorgeschriebene Prüfung bestimmter aktiver [[medizinprodukt|Medizinprodukte]]. Sie soll Mängel erkennen, bevor daraus eine Gefährdung für Patienten, Anwender oder Dritte entsteht – etwa ein unterbrochener Schutzleiter, ein erhöhter [[ableitstrom|Ableitstrom]], ein nicht mehr auslösender Alarm oder eine falsch abgegebene Energie. Die Pflicht trifft den **Betreiber** (siehe [[betreiberpflichten]]), nicht den Hersteller [@mpbetreibv].\n\nIm Sinne der Instandhaltungsnorm [[din-31051]] ist die STK eine besondere Form der [[inspektion|Inspektion]]: Sie stellt den Ist-Zustand fest und bewertet ihn, behebt aber selbst keine Fehler. Werden Mängel gefunden, folgt eine [[instandsetzung|Instandsetzung]] und anschließend eine erneute Prüfung [@din-31051].\n\n## Rechtsgrundlage\n\n> [!belegt] Rechtsgrundlage ist **§ 12 der Medizinprodukte-Betreiberverordnung** ([[mpbetreibv|MPBetreibV]]) in der Neufassung vom 14. Februar 2025 (BGBl. 2025 I Nr. 38) in Verbindung mit **Anlage 1**. Danach hat der Betreiber für die in Anlage 1 genannten Produkte sicherheitstechnische Kontrollen nach den allgemein anerkannten Regeln der Technik durchzuführen oder durchführen zu lassen – **spätestens alle zwei Jahre** (mit Ablauf des Monats). Sind nach den Einsatzbedingungen früher Mängel zu erwarten, muss rechtzeitig vorher kontrolliert werden. Die Kontrollen schließen die Messfunktionen ein [@mpbetreibv].\n\n> [!hinweis] Die Fassung 2002/2017 knüpfte die STK-Pflicht zusätzlich an Herstellervorgaben („für die der Hersteller STK vorgeschrieben hat“) und nannte zuerst die Herstellerfrist. Im Wortlaut von § 12 der Fassung 2025 ist der Anknüpfungspunkt **Anlage 1**; vom Hersteller vorgeschriebene Prüfungen bleiben über die Instandhaltungspflichten des Betreibers relevant. Maßgeblich ist stets der aktuelle Verordnungstext.\n\n| Regelungsgegenstand | Inhalt (mit eigenen Worten) |\n|---|---|\n| Anwendungsbereich | aktive Medizinprodukte nach Anlage 1 und Produkte mit herstellerseitig vorgesehener STK |\n| Umfang | nach Herstellerangaben und anerkannten Regeln der Technik |\n| Frist | spätestens alle zwei Jahre; früher, wenn Mängel früher zu erwarten sind (z. B. laut Herstellerangabe) |\n| Durchführende | Personen mit geeigneter Ausbildung, Kenntnissen, Erfahrung und Prüfmitteln, bei der Prüftätigkeit weisungsfrei |\n| Nachweis | Protokoll mit Datum und Ergebnis (Messwerte, Messverfahren, Beurteilung); Eintrag im [[medizinproduktebuch|Medizinproduktebuch]] |\n\n> [!warnung] Ältere Unterlagen nennen die STK noch als „§ 11 MPBetreibV“. Diese Nummerierung gehört zur Fassung von 2002/2017 und ist **überholt**. In Prüfprotokollen, Verfahrensanweisungen und Software-Vorlagen sollte auf § 12 der Fassung 2025 umgestellt werden [@mpbetreibv].\n\nÜbergeordnet sind das [[mpdg|Medizinprodukterecht-Durchführungsgesetz]] und die europäische [[mdr|MDR]]; letztere regelt die STK aber nicht – Betreiberpflichten sind in der EU weitgehend nationales Recht [@mpdg].\n\n## Welche Geräte sind betroffen?\n\nAnlage 1 listet aktive nichtimplantierbare Medizinprodukte, bei denen ein Fehler unmittelbar zu einer schweren Gefährdung führen kann. Nach der Systematik der Anlage gehören dazu sinngemäß Produkte\n\n* zur Erzeugung und Anwendung elektrischer Energie zur unmittelbaren Beeinflussung von Nerven, Muskeln oder der Herztätigkeit, einschließlich Defibrillatoren,\n* zur intrakardialen Messung elektrischer Größen oder zur Messung mit elektrisch betriebenen Sonden in Blutgefäßen,\n* zur Erzeugung und Anwendung von Energie zur unmittelbaren Koagulation, Gewebezerstörung oder Zertrümmerung von Ablagerungen in Organen,\n* zur unmittelbaren Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potenziellem Druckaufbau,\n* zur maschinellen Beatmung mit oder ohne Anästhesie,\n* zur Bildgebung nach dem Prinzip der [[kernspinresonanz|Kernspinresonanz]],\n* zur Therapie mit Druckkammern und zur Therapie mittels Hypothermie,\n* sowie Säuglingsinkubatoren und externe aktive Komponenten aktiver Implantate [@mpbetreibv].\n\n> [!hinweis] Die Aufzählung ist eine sinngemäße Zusammenfassung ohne Nummerierung. Auch die Zuordnung der Beispielgeräte in der folgenden Tabelle ist eine fachliche Einordnung nach dem Sinn der Gruppen, kein Zitat. Für die Zuordnung eines konkreten Geräts ist ausschließlich der Wortlaut der Anlage 1 in der aktuellen Fassung maßgeblich – zusätzlich zu den Herstellerangaben, die eine STK auch für Geräte außerhalb der Anlage 1 vorsehen können.\n\n| Gruppe (sinngemäß) | Beispiele im Wiki |\n|---|---|\n| Reizstrom, Stimulation, Defibrillation | [[defibrillator]], [[externer-schrittmacher]], [[reizstromgeraet]] |\n| Energie zur Gewebewirkung | [[hf-chirurgiegeraet]], [[chirurgischer-laser]], [[lithotripter]] |\n| Flüssigkeiten in den Blutkreislauf | [[infusionspumpe]], [[spritzenpumpe]], [[pca-pumpe]], [[dialysegeraet]], [[herz-lungen-maschine]] |\n| Messung in Blutgefäßen | [[invasive-druckmessung]] |\n| Beatmung | [[beatmungsgeraet]], [[anaesthesiegeraet]], [[transportbeatmungsgeraet]], [[heimbeatmungsgeraet]] |\n| Bildgebung mit Kernspinresonanz | [[mrt]] |\n| Druckkammer, Hypothermie | [[druckkammer]], [[hypothermiegeraet]] |\n| Inkubatoren | [[inkubator]] |\n\n## Fristen\n\nDie Höchstfrist beträgt **zwei Jahre**. Kürzere Fristen sind nötig, wenn nach den Einsatzbedingungen früher Mängel zu erwarten sind; Anhaltspunkte liefern die Gebrauchsanweisung des Herstellers und die Risikobewertung des Betreibers, etwa bei hoher Nutzungsintensität, mobilem Einsatz oder bekannten Schwachstellen [@mpbetreibv].\n\n> [!praxis] Viele Medizintechnik-Abteilungen legen STK, [[mtk|MTK]], [[wartung|Wartung]] und die Wiederholungsprüfung nach [[dguv-vorschrift-3|DGUV Vorschrift 3]] auf einen gemeinsamen Termin. Das reduziert Geräteausfallzeiten auf Station, setzt aber voraus, dass das kürzeste der geforderten Intervalle eingehalten wird.\n\n## Inhalt einer STK\n\nDer Prüfumfang folgt den Angaben des Herstellers. Wo diese fehlen oder allgemein bleiben, greifen anerkannte Regeln der Technik – für die elektrische Sicherheit vor allem die [[iec-62353|IEC 62353]] [@iec-62353]. Typische Prüfschritte sind:\n\n| Prüfschritt | Ziel | Beispiele |\n|---|---|---|\n| Sichtprüfung | mechanische Schäden, Vollständigkeit, Kennzeichnung | Gehäuserisse, geknickte Netzleitung, fehlende Typenschilder, Flüssigkeitsspuren |\n| [[schutzleiterwiderstand|Schutzleiterwiderstand]] | wirksame Verbindung berührbarer leitfähiger Teile mit dem Schutzleiter | Messung vom Netzstecker zum Gehäuse |\n| [[isolationswiderstand|Isolationswiderstand]] | Zustand der Isolierung zwischen Netzteil, Gehäuse und Anwendungsteilen | Messung mit Gleichspannung, soweit zulässig |\n| [[ableitstrommessung|Ableitströme]] | Begrenzung nicht funktionsbedingter Ströme | Geräteableitstrom, Ableitstrom vom Anwendungsteil |\n| [[funktionspruefung|Funktionsprüfung]] | sicherheitsrelevante Funktionen und wesentliche Leistungsmerkmale | Alarme, abgegebene Energie, Förderrate, Beatmungsdruck |\n| Bewertung und Dokumentation | Entscheidung über Weiterbetrieb | Protokoll, Prüfmarke, Medizinproduktebuch |\n\nDie Werte der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] basieren auf einfachen physikalischen Zusammenhängen. Der Schutzleiterwiderstand ergibt sich aus R = U / I bei definiertem Prüfstrom; ein kapazitiver Ableitstrom aus I = U · 2π · f · C. Ein langsam steigender Ableitstrom über mehrere STK hinweg deutet auf alternde Isolierungen oder Entstörkondensatoren hin, auch wenn der Grenzwert noch eingehalten ist (siehe [[ableitstrom]]).\n\n> [!vereinfacht] Die STK beantwortet im Kern zwei Fragen: Ist das Gerät **elektrisch sicher**? Und erfüllt es seine **sicherheitsrelevanten Funktionen**? Die Messgenauigkeit von Messfunktionen ist dagegen Gegenstand der [[mtk|messtechnischen Kontrolle]]; die vorbeugende Erneuerung von Verschleißteilen ist Aufgabe der [[wartung|Wartung]].\n\n## Wer darf prüfen?\n\nDie STK darf nur durchführen, wer aufgrund seiner Ausbildung, Kenntnisse und praktischen Erfahrung die Kontrolle ordnungsgemäß durchführen kann, bei der Prüftätigkeit keiner fachlichen Weisung unterliegt und über geeignete Mess- und Prüfeinrichtungen verfügt [@mpbetreibv]. In der Praxis sind das Medizintechniker:innen der Klinik, Servicetechniker des Herstellers oder spezialisierte Dienstleister. Die [[pruefgeraete|Prüfgeräte]] selbst müssen regelmäßig kalibriert sein und den Anforderungen etwa der IEC 61557-16 entsprechen [@iec-61557-16].\n\n## Dokumentation\n\nÜber jede STK ist ein **Protokoll** anzufertigen, das mindestens Datum und Ergebnis mit den ermittelten Messwerten enthält. Die Durchführung wird im [[medizinproduktebuch|Medizinproduktebuch]] vermerkt [@mpbetreibv]. Eine Prüfplakette mit dem nächsten Termin ist gängige Praxis und erleichtert Anwendern die Kontrolle vor der Anwendung; eine ausdrückliche Kennzeichnungspflicht mit dem nächsten Termin kennt die Verordnung dagegen für die [[mtk|MTK]]. Moderne [[medizintechnik-management|Medizintechnik-Managementsysteme]] verknüpfen das Protokoll mit dem [[bestandsverzeichnis|Bestandsverzeichnis]] und planen Folgetermine automatisch.\n\n> [!beispiel] STK einer [[infusionspumpe|Infusionspumpe]] (Werte beispielhaft): Sichtprüfung von Gehäuse, Halterung und Netzteil; Geräteableitstrom; Förderrate mit einem Infusionsanalysator bei 100 ml/h, gemessen 98,2 ml/h (−1,8 %); Auslösen des Okklusionsalarms bei definiertem Gegendruck; Test des Luftblasendetektors; Prüfung des Akkubetriebs. Ergebnis: bestanden, nächste STK nach Herstellerfrist.\n\n## Abgrenzung zu anderen Prüfungen\n\n| Prüfung | Rechtsgrundlage | Ziel |\n|---|---|---|\n| STK | § 12 i. V. m. Anlage 1 MPBetreibV | Sicherheit von Patient und Anwender |\n| [[mtk|MTK]] | § 15 i. V. m. Anlage 2 MPBetreibV | Einhaltung der Fehlergrenzen von Messfunktionen |\n| Funktionsprüfung bei Erstinbetriebnahme | MPBetreibV (Anlage-1-Produkte) | ordnungsgemäße Funktion am Betriebsort |\n| [[dguv-vorschrift-3|DGUV Vorschrift 3]] | Unfallverhütungsvorschrift | Schutz der Beschäftigten vor elektrischer Gefährdung |\n| [[konstanzpruefung|Konstanz-/Abnahmeprüfung]] | Strahlenschutzrecht | Bildqualität und Dosis bei Röntgeneinrichtungen |\n\nEine nach [[iec-62353]] durchgeführte STK kann in der Regel zugleich die elektrische Wiederholungsprüfung im Sinne der DGUV Vorschrift 3 abdecken, sofern Fristen und Prüfperson beide Anforderungen erfüllen [@dguv-v3] [@iec-62353].\n\n## Bedeutung in der Medizintechnik\n\nDie STK ist eines der wichtigsten Werkzeuge des Betreibers, um Patientensicherheit nachweisbar zu machen. Besonders relevant ist sie bei Geräten, die Energie an den Patienten abgeben ([[defibrillator]], [[hf-chirurgiegeraet]]), Vitalfunktionen ersetzen ([[beatmungsgeraet]], [[herz-lungen-maschine]]) oder Medikamente dosieren ([[infusionspumpe]], [[spritzenpumpe]]). Bei einem [[beatmungsgeraet|Beatmungsgerät]] umfasst die STK neben der elektrischen Sicherheit etwa die Prüfung von Druck- und Volumenabgabe an einer Testlunge sowie aller Atemwegsalarme – also auch der Kette aus [[turbine]], [[drucksensor|Drucksensorik]] und [[alarmsystem|Alarmsystem]].\n\n> [!praxis] Häufige STK-Befunde sind beschädigte Netz- und Patientenleitungen, fehlende oder unleserliche Kennzeichnungen, gealterte [[lithium-ionen-akku|Akkus]] und nicht dokumentierte Fremdzubehörteile. Viele Mängel lassen sich durch Schulung der Anwender und eine konsequente Prüfung vor der Anwendung vermeiden.",
+  "related": [
+    "mtk",
+    "elektrische-sicherheitspruefung",
+    "funktionspruefung",
+    "pruefgeraete",
+    "betreiberpflichten",
+    "mpbetreibv",
+    "medizinproduktebuch",
+    "dguv-vorschrift-3",
+    "instandhaltung-grundlagen",
+    "iec-62353",
+    "inspektion",
+    "medizintechnik-management"
+  ],
+  "paths": [
+    [
+      "betreiberpflichten",
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "schutzleiterwiderstand"
+    ],
+    [
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "ableitstrommessung",
+      "ableitstrom",
+      "elektrische-stromwirkung"
+    ],
+    [
+      "beatmungsgeraet",
+      "stk",
+      "funktionspruefung",
+      "pruefgeraete"
+    ]
+  ],
+  "diagram": {
+    "title": "Typischer Ablauf einer STK",
+    "caption": "Didaktisches Ablaufschema; Umfang und Reihenfolge im Einzelfall nach Herstellerangaben und den allgemein anerkannten Regeln der Technik.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "vor",
+        "label": "Vorbereitung\n(Herstellerangaben,\nVorprotokoll)",
+        "kind": "source",
+        "x": 110,
+        "y": 90,
+        "h": 64
+      },
+      {
+        "id": "sicht",
+        "label": "Sichtprüfung",
+        "ref": "inspektion",
+        "kind": "process",
+        "x": 320,
+        "y": 90
+      },
+      {
+        "id": "esp",
+        "label": "Elektrische\nSicherheitsprüfung",
+        "ref": "elektrische-sicherheitspruefung",
+        "kind": "process",
+        "x": 540,
+        "y": 90
+      },
+      {
+        "id": "pg",
+        "label": "Prüfgeräte /\nSimulatoren",
+        "ref": "pruefgeraete",
+        "kind": "sensor",
+        "x": 760,
+        "y": 90
+      },
+      {
+        "id": "fkt",
+        "label": "Funktionsprüfung\n(inkl. Alarme)",
+        "ref": "funktionspruefung",
+        "kind": "process",
+        "x": 540,
+        "y": 230
+      },
+      {
+        "id": "bew",
+        "label": "Bewertung\n(bestanden / Mangel)",
+        "kind": "control",
+        "x": 320,
+        "y": 230
+      },
+      {
+        "id": "doku",
+        "label": "Protokoll, Prüfmarke,\nMedizinproduktebuch",
+        "ref": "medizinproduktebuch",
+        "kind": "output",
+        "x": 110,
+        "y": 230,
+        "w": 170
+      }
+    ],
+    "edges": [
+      {
+        "from": "vor",
+        "to": "sicht",
+        "kind": "data"
+      },
+      {
+        "from": "sicht",
+        "to": "esp",
+        "kind": "data"
+      },
+      {
+        "from": "pg",
+        "to": "esp",
+        "kind": "signal",
+        "label": "Messwerte"
+      },
+      {
+        "from": "esp",
+        "to": "fkt",
+        "kind": "data"
+      },
+      {
+        "from": "pg",
+        "to": "fkt",
+        "kind": "signal",
+        "label": "Simulation"
+      },
+      {
+        "from": "fkt",
+        "to": "bew",
+        "kind": "data"
+      },
+      {
+        "from": "bew",
+        "to": "doku",
+        "kind": "data"
+      }
+    ]
+  },
+  "sources": [
+    "mpbetreibv",
+    "iec-62353",
+    "iec-60601-1",
+    "din-31051",
+    "dguv-v3",
+    "kramme-2017",
+    "mpdg",
+    "iec-61557-16"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-12"
+}

@@ -6,7 +6,30 @@
   "order": 15,
   "icon": "ruler",
   "summary": "Wichtige Normen für Medizinprodukte: Sicherheit, EMV, Alarme, Risikomanagement, Software, Qualitätsmanagement und gerätespezifische Besonderheiten.",
-  "body": "",
+  "body": "**Normen** konkretisieren, wie die allgemein formulierten Anforderungen des Medizinprodukterechts technisch erfüllt werden können. Während die [[mdr|MDR]] etwa verlangt, dass Produkte sicher sind und Risiken so weit wie möglich minimiert werden, beschreiben Normen Prüfaufbauten, Grenzwerte und Prozesse. Normen sind grundsätzlich freiwillig; die Anwendung **harmonisierter Normen** begründet nach Art. 8 MDR jedoch die Vermutung, dass die entsprechenden Anforderungen erfüllt sind [@mdr-2017].\n\nFür die Medizintechnik im Betrieb sind Normen in doppelter Weise relevant: Sie bestimmen, wie Geräte gebaut und geprüft sind (Entwicklungs- und Produktnormen), und sie geben vor, wie Geräte im Betrieb geprüft werden (z. B. [[iec-62353]]). Wer die Normstruktur kennt, versteht Typenschilder, Gebrauchsanweisungen und Prüfprotokolle besser.\n\n## Struktur der Normenreihe IEC 60601\n\nDie [[iec-60601-1]] ist die **Grundnorm** für die Sicherheit medizinischer elektrischer Geräte einschließlich ihrer wesentlichen Leistungsmerkmale [@iec-60601-1]. Sie wird ergänzt durch:\n\n* **Ergänzungsnormen (IEC 60601-1-x)** für übergreifende Themen wie EMV, Gebrauchstauglichkeit oder Alarme,\n* **Besondere Festlegungen (IEC 60601-2-x, gemeinsam mit ISO als 80601-2-x)** für einzelne Gerätearten; sie haben Vorrang vor der Grundnorm, soweit sie Abweichungen festlegen.\n\n> [!vereinfacht] Grundnorm = „gilt für alle“, Ergänzungsnorm = „gilt für ein Querschnittsthema“, Besondere Festlegung = „gilt für einen Gerätetyp und darf die anderen abwandeln“.\n\n## Überblick\n\n| Bereich | Normen |\n|---|---|\n| Grundnorm | [[iec-60601-1]] |\n| Ergänzungsnormen | [[iec-60601-1-2]] (EMV), [[iec-60601-1-6]] (Gebrauchstauglichkeit), [[iec-60601-1-8]] (Alarmsysteme), [[iec-60601-1-11]] (häusliche Umgebung) |\n| Prozessnormen | [[iso-13485]] (Qualitätsmanagement), [[iso-14971]] (Risikomanagement), [[iec-62304]] (Software-Lebenszyklus), [[iec-62366-1]] (Gebrauchstauglichkeit), [[iso-10993-1]] (biologische Beurteilung) |\n| Betrieb, Prüfung, Installation | [[iec-62353]], [[din-31051]], [[din-vde-0100-710]], [[iec-60479-1]] |\n| Beatmung und Anästhesie | [[iso-80601-2-12]] ([[beatmungsgeraet]]), [[iso-80601-2-13]] ([[anaesthesiegeraet]]), [[iso-80601-2-55]] (Atemgasmonitore) |\n| Monitoring | [[iec-60601-2-27]] (EKG-Überwachung), [[iec-80601-2-30]] ([[nibp-messgeraet]]), [[iec-80601-2-49]] (Multifunktionsmonitore), [[iso-80601-2-61]] ([[pulsoxymeter]]) |\n| Kardiologie | [[iec-60601-2-4]] ([[defibrillator]]), [[iec-60601-2-25]] ([[ekg-geraet]]) |\n| Infusion, Dialyse, Neonatologie | [[iec-60601-2-24]] ([[infusionspumpe]]), [[iec-60601-2-16]] ([[dialysegeraet]]), [[iec-60601-2-19]] ([[inkubator]]) |\n| Chirurgie | [[iec-60601-2-2]] ([[hf-chirurgiegeraet]]) |\n| Bildgebung | [[iec-60601-2-54]] ([[roentgengeraet]]), [[iec-60601-2-44]] ([[computertomograph]]), [[iec-60601-2-33]] ([[mrt]]), [[iec-60601-2-37]] ([[ultraschallgeraet]]) |\n| Labor und Aufbereitung | [[iec-61010-1]], [[iso-17665]] (Dampfsterilisation), [[iso-15883]] (Reinigungs-Desinfektionsgeräte) |\n\n> [!hinweis] Normen werden regelmäßig überarbeitet und in Deutschland meist als DIN EN bzw. DIN EN (VDE) übernommen. Dieses Wiki fasst Inhalte mit eigenen Worten zusammen und zitiert keine Normtexte; maßgeblich ist die jeweils gültige Fassung.\n\n## Lernpfad-Empfehlung\n\n1. **Fundament:** [[iec-60601-1]] mit Blick auf [[schutzklassen]], [[anwendungsteile]] und [[ableitstrom]].\n2. **Querschnittsthemen:** [[iec-60601-1-2]] → [[iec-60601-1-8]] → [[iec-60601-1-6]] → [[iec-60601-1-11]].\n3. **Prozesse beim Hersteller:** [[iso-13485]] → [[iso-14971]] → [[iec-62366-1]] → [[iec-62304]] → [[iso-10993-1]].\n4. **Betrieb:** [[iec-62353]] → [[din-31051]] → [[din-vde-0100-710]].\n5. **Gerätespezifisch:** die Besonderen Festlegungen der Geräte, mit denen man arbeitet – jeweils zusammen mit dem Geräteartikel.",
+  "paths": [
+    [
+      "iec-60601-1",
+      "iec-60601-1-2",
+      "iec-60601-1-8",
+      "iso-80601-2-12",
+      "beatmungsgeraet"
+    ],
+    [
+      "iso-13485",
+      "iso-14971",
+      "iec-62366-1",
+      "iec-62304",
+      "software-medizinprodukt"
+    ]
+  ],
+  "sources": [
+    "iec-60601-1",
+    "iso-14971",
+    "iso-13485",
+    "iec-62304",
+    "mdr-2017"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

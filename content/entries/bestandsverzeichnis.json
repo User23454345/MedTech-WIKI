@@ -1,0 +1,42 @@
+{
+  "id": "bestandsverzeichnis",
+  "type": "term",
+  "title": "Bestandsverzeichnis",
+  "aliases": [
+    "Gerätebestandsverzeichnis",
+    "Inventarverzeichnis Medizinprodukte",
+    "Asset Register",
+    "Medical Device Inventory",
+    "§ 14 MPBetreibV"
+  ],
+  "category": "recht",
+  "summary": "Das Bestandsverzeichnis nach § 14 MPBetreibV ist die vom Betreiber zu führende Liste aller aktiven nichtimplantierbaren Medizinprodukte einer Betriebsstätte mit Angaben wie Bezeichnung, Typ, Seriennummer, Anschaffungsjahr und Standort. Es ist Grundlage für Prüfplanung, Vigilanz und Medizintechnik-Management.",
+  "body": "## Begriff\n\nDas **Bestandsverzeichnis** ist die vom Betreiber geführte Liste aller **aktiven nichtimplantierbaren Medizinprodukte** einer Betriebsstätte. Es bildet die Grundlage, um den Gerätebestand zu überblicken, Prüffristen zu planen und bei Sicherheitsinformationen betroffene Geräte schnell zu finden. Rechtsgrundlage ist in der Neufassung der [[mpbetreibv|Medizinprodukte-Betreiberverordnung]] von 2025 der **§ 14 MPBetreibV** (früher § 13) [@mpbetreibv].\n\n> [!belegt] Nach § 14 MPBetreibV hat der Betreiber für alle aktiven nichtimplantierbaren Medizinprodukte der jeweiligen Betriebsstätte ein Bestandsverzeichnis zu führen. Einzutragen sind je Produkt insbesondere Bezeichnung, Art und Typ, Los- oder Seriennummer und Anschaffungsjahr sowie – soweit vorhanden – die betriebliche Identifikationsnummer und Standort bzw. betriebliche Zuordnung [@mpbetreibv].\n\n## Was ist ein „aktives nichtimplantierbares“ Produkt?\n\nEin **aktives Produkt** ist nach der [[mdr|MDR]] ein Produkt, dessen Betrieb von einer Energiequelle abhängt, die nicht für diesen Zweck durch den menschlichen Körper oder durch die Schwerkraft erzeugt wird, und das durch Änderung der Dichte oder Umwandlung dieser Energie wirkt (Art. 2 Nr. 4 MDR) [@mdr-2017]. **Nichtimplantierbar** heißt, dass es nicht dauerhaft in den Körper eingebracht wird. Damit fallen fast alle elektrisch betriebenen Geräte unter die Pflicht – vom [[patientenmonitor|Patientenmonitor]] über das [[pflegebett|elektrische Pflegebett]] bis zum [[computertomograph|Computertomographen]] –, nicht aber passive Produkte wie Verbandmittel oder implantierte Herzschrittmacher (wohl aber ein [[externer-schrittmacher|externer Schrittmacher]]).\n\n| Produkt | aktiv? | implantierbar? | Bestandsverzeichnis |\n|---|---|---|---|\n| [[infusionspumpe|Infusionspumpe]] | ja | nein | ja |\n| [[ekg-geraet|EKG-Gerät]] | ja | nein | ja |\n| [[op-tisch|OP-Tisch]] (elektrisch verstellbar) | ja | nein | ja |\n| Skalpell, Pinzette | nein | nein | nein |\n| [[herzschrittmacher|Herzschrittmacher]] (Implantat) | ja | ja | nein |\n\n> [!vereinfacht] Die Tabelle zeigt die Grundlogik. Für Grenzfälle (z. B. Zubehör, Software, Systeme) ist die Zweckbestimmung des Herstellers und die Definition der MDR maßgeblich.\n\n## Pflichtangaben im Überblick\n\n| Angabe | Zweck in der Praxis |\n|---|---|\n| Bezeichnung, Art und Typ | Zuordnung zu Gerätegruppen und Prüfanweisungen |\n| Los- oder Seriennummer | Abgleich mit Rückrufen und Sicherheitsinformationen |\n| Anschaffungsjahr | Altersstruktur, Ersatzplanung |\n| betriebliche Identifikationsnummer (Inventarnummer) | eindeutige interne Kennzeichnung, Barcode/RFID |\n| Standort und betriebliche Zuordnung | Auffinden des Geräts, Verantwortlichkeit |\n\n> [!hinweis] Gegenüber der Fassung von 2017 wurden die Pflichtangaben nach Übersichten zur Neufassung reduziert. Viele Einrichtungen erfassen darüber hinaus freiwillig Hersteller, [[udi|UDI]], Softwarestand, Prüffristen für [[stk|STK]] und [[mtk|MTK]], Wartungsverträge und Anschaffungswert – das ist zulässig und für das Management sinnvoll [@mpbetreibv].\n\n## Form und Führung\n\nDas Bestandsverzeichnis darf **elektronisch** geführt werden; in Kliniken ist dies über eine Gerätedatenbank bzw. ein Instandhaltungsmanagementsystem Standard. Wesentliche Anforderungen in der Praxis:\n\n* **Vollständigkeit:** Jedes Gerät wird beim Wareneingang erfasst – auch Leih-, Test- und Mietgeräte sowie Geräte, die Anwender privat oder über Drittmittel beschafft haben.\n* **Aktualität:** Standortwechsel, Außerbetriebnahmen und Verschrottung werden zeitnah eingetragen.\n* **Eindeutigkeit:** Inventaretikett am Gerät, idealerweise maschinenlesbar.\n* **Verknüpfung** mit [[medizinproduktebuch|Medizinproduktebuch]], Prüfprotokollen und Herstellerunterlagen.\n\nNach der Fassung von 2017 durften Bestandsverzeichnisse nach der früheren Medizingeräteverordnung [@medgv-1985] weitergeführt werden; ob diese Übergangsregel in der Neufassung 2025 unverändert fortbesteht, ist im aktuellen Verordnungstext zu prüfen [@mpbetreibv].\n\n## Rechenbeispiel: Prüfplanung aus dem Bestand\n\n> [!beispiel] Eine Klinik hat im Bestandsverzeichnis 1 200 aktive Medizinprodukte, davon 400 mit STK-Pflicht nach Anlage 1. Bei einer Prüffrist von zwei Jahren sind im Mittel 400 / 2 = 200 STK pro Jahr fällig, also rund 17 pro Monat. Rechnet man mit 1,5 Stunden je STK inklusive Dokumentation, ergibt das etwa 300 Prüfstunden pro Jahr. Alle Zahlen sind frei gewählt.\n\nDas Beispiel zeigt, warum ein sauberes Bestandsverzeichnis Voraussetzung für die Personal- und Kapazitätsplanung der Medizintechnik ist.\n\n## Abgrenzung zum Medizinproduktebuch\n\n| Merkmal | Bestandsverzeichnis (§ 14) | [[medizinproduktebuch|Medizinproduktebuch]] (§ 13) |\n|---|---|---|\n| Umfang | alle aktiven nichtimplantierbaren Produkte | nur Produkte nach Anlage 1 und 2 |\n| Charakter | Übersicht über den Bestand | Lebenslauf des einzelnen Geräts |\n| Typische Fragen | Wie viele Geräte von Typ X stehen wo? | Wann war die letzte STK, wer wurde eingewiesen? |\n\n## Bedeutung in der Medizintechnik\n\nDas Bestandsverzeichnis ist das **Rückgrat des [[medizintechnik-management|Medizintechnik-Managements]]**:\n\n* **Prüfplanung:** Aus dem Bestand werden STK-, MTK-, [[wartung|Wartungs]]- und [[dguv-vorschrift-3|DGUV-V3]]-Fälligkeiten generiert.\n* **Vigilanz:** Bei einer Sicherheitsinformation des Herstellers – etwa zu einem [[defibrillator|Defibrillator]] oder einem [[beatmungsgeraet|Beatmungsgerät]] – kann der [[beauftragter-medizinproduktesicherheit|Beauftragte für Medizinproduktesicherheit]] über Typ und Seriennummer sofort die betroffenen Geräte ermitteln.\n* **Beschaffung und Ersatzplanung:** Altersstruktur und Ausfallhistorie zeigen, wann Geräte ersetzt werden sollten.\n* **Behördliche Überwachung:** Bei Begehungen ist das Bestandsverzeichnis meist das erste angeforderte Dokument.\n* **IT-Sicherheit:** Vernetzte Geräte (z. B. Monitore mit [[hl7-fhir|HL7]]- oder [[dicom|DICOM]]-Anbindung) lassen sich über ein erweitertes Bestandsverzeichnis mit Netzwerkdaten in das Patch-Management einbinden.\n\n> [!praxis] „Graue“ Geräte, die ohne Wissen der Medizintechnik ins Haus gelangen (z. B. Leihgeräte von Firmenvertretern), sind ein häufiger Befund bei Begehungen. Eine verbindliche Regel, dass jedes Gerät vor dem ersten Einsatz die Medizintechnik durchläuft, verhindert Lücken im Bestandsverzeichnis.\n",
+  "related": [
+    "mpbetreibv",
+    "medizinproduktebuch",
+    "betreiberpflichten",
+    "medizintechnik-management",
+    "stk",
+    "mtk",
+    "udi",
+    "beauftragter-medizinproduktesicherheit",
+    "instandhaltung-grundlagen"
+  ],
+  "paths": [
+    [
+      "betreiberpflichten",
+      "mpbetreibv",
+      "bestandsverzeichnis",
+      "stk",
+      "elektrische-sicherheitspruefung"
+    ]
+  ],
+  "sources": [
+    "mpbetreibv",
+    "mdr-2017",
+    "medgv-1985"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

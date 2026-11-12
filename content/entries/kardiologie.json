@@ -1,0 +1,47 @@
+{
+  "id": "kardiologie",
+  "type": "domain",
+  "title": "Kardiologie",
+  "aliases": [
+    "Herzmedizin",
+    "Cardiology",
+    "Kardiologe",
+    "Herzkatheterlabor",
+    "Rhythmologie",
+    "Elektrophysiologie"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Kardiologie befasst sich mit Erkrankungen des Herzens und der herznahen Gefäße. Sie nutzt ein breites Spektrum an Medizintechnik von EKG und Echokardiographie über das Herzkatheterlabor bis zu aktiven Implantaten wie Herzschrittmachern und Defibrillatoren.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Kardiologie** ist ein Teilgebiet der Inneren Medizin und behandelt Erkrankungen des [[herz|Herzens]] und des [[blutkreislauf|Kreislaufs]]. Wichtige Krankheitsbilder sind die koronare Herzkrankheit mit Herzinfarkt, Herzinsuffizienz, Herzrhythmusstörungen (z. B. Vorhofflimmern, AV-Blockierungen, ventrikuläre Tachykardien), Herzklappenerkrankungen und die arterielle Hypertonie [@schmidt-lang-2019].\n\nDie Kardiologie ist stark technikgetrieben: Diagnostik beruht auf der Ableitung elektrischer Herzsignale ([[erregungsleitungssystem]], [[aktionspotential]]), auf bildgebenden Verfahren und auf Druckmessungen. Therapeutisch kommen Katheterinterventionen (Ballondilatation, Stent), Ablationen und aktive Implantate hinzu.\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[ekg-geraet]] | 12-Kanal-Ruhe-EKG, Basisdiagnostik |\n| [[langzeit-ekg]] | Rhythmusanalyse über 24 h und länger |\n| [[ergometer]] | Belastungs-EKG, Leistungsdiagnostik |\n| [[langzeit-blutdruck]] | 24-h-Blutdruckprofil zur Hypertoniediagnostik |\n| [[ultraschallgeraet]] | Echokardiographie mit [[doppler-effekt|Doppler]] |\n| [[angiographieanlage]] | Herzkatheterlabor: Koronarangiographie, PCI |\n| [[invasive-druckmessung]] | intrakardiale und intravasale Druckkurven |\n| [[herzschrittmacher]] | Therapie bradykarder Rhythmusstörungen |\n| [[icd]] | implantierbarer Defibrillator gegen plötzlichen Herztod |\n| [[externer-schrittmacher]] | temporäre Stimulation |\n| [[defibrillator]] | Defibrillation, Kardioversion |\n| [[iabp]] / [[vad]] / [[ecmo]] | mechanische Kreislaufunterstützung |\n| [[patientenmonitor]] | Überwachung auf Chest-Pain-Unit und Intensivstation |\n\nDie Ableitung und Interpretation des EKG ist international standardisiert [@kligfield-2007]; die Gerätenorm für Elektrokardiographen ist [[iec-60601-2-25]] [@iec-60601-2-25].\n\n## Besondere technische Anforderungen\n\n### Elektrische Sicherheit bei herznahen Anwendungen\n\nKatheter und Schrittmacherelektroden bilden einen niederohmigen Strompfad direkt zum Myokard. Schon sehr kleine Ströme können dann Kammerflimmern auslösen ([[elektrische-stromwirkung]]) [@iec-60479-1]. Geräte mit direktem Herzkontakt müssen deshalb [[anwendungsteile|Anwendungsteile]] vom Typ CF besitzen, für die die strengsten Grenzwerte des Patientenableitstroms gelten [@iec-60601-1]. Herzkatheterlabore sind Räume der Gruppe 2 nach [[din-vde-0100-710]] [@din-vde-0100-710].\n\n> [!belegt] Für Anwendungsteile vom Typ CF begrenzt die IEC 60601-1 den Patientenableitstrom im Normalzustand auf 10 µA (Gleich- wie Wechselstrom) [@iec-60601-1].\n\n### Strahlenschutz im Herzkatheterlabor\n\nKoronarangiographie und Ablationen erfolgen unter Röntgendurchleuchtung. Lange Durchleuchtungszeiten führen zu relevanten Patienten- und Personaldosen. Pflichten aus [[strlschg]] und StrlSchV, diagnostische Referenzwerte des BfS und regelmäßige [[konstanzpruefung|Konstanzprüfungen]] gelten auch hier [@strlschg][@bfs-drw]. Die Anforderungen an interventionelle Röntgenanlagen beschreibt die Norm IEC 60601-2-43 [@iec-60601-2-43].\n\n### Aktive Implantate und MRT\n\n[[herzschrittmacher|Herzschrittmacher]] und [[icd|ICDs]] sind aktive implantierbare Medizinprodukte der höchsten Risikoklasse nach [[mdr]] [@mdr-2017]. Sie werden über Programmiergeräte telemetrisch abgefragt; zunehmend kommt Fernnachsorge (Remote Monitoring) hinzu. Vor einer [[mrt|MRT-Untersuchung]] muss geprüft werden, ob das Gesamtsystem aus Aggregat und Elektroden als „MR conditional“ freigegeben ist und welche Bedingungen gelten [@kanal-2013].\n\n> [!warnung] Auch [[hf-chirurgiegeraet|HF-Chirurgie]] und starke elektromagnetische Felder ([[emv]]) können Implantate stören. Vor Operationen ist das Vorgehen mit Kardiologie und Anästhesie abzustimmen.\n\n### Signalqualität\n\nEKG-Signale liegen im Millivoltbereich und werden von Netzstörungen, Muskelpotentialen und Bewegung überlagert ([[bewegungsartefakt]], [[netzstoerung]]). [[instrumentenverstaerker|Instrumentenverstärker]] mit hoher Gleichtaktunterdrückung, Driven-Right-Leg-Schaltungen und [[filter]] sind daher zentrale Bausteine [@webster-2010][@winter-webster-1983]. Für das diagnostische Ruhe-EKG empfiehlt die AHA-Empfehlung eine untere Grenzfrequenz von 0,05 Hz, damit die ST-Strecke nicht verfälscht wird, und eine obere Grenzfrequenz von mindestens 150 Hz bei Erwachsenen [@kligfield-2007]. Monitor-EKGs arbeiten oft mit stärkerer Filterung; sie sind deshalb für die ST-Diagnostik nur eingeschränkt geeignet.\n\n> [!praxis] Wird am Monitor oder EKG-Gerät ein „Monitor-“ oder „Filter-Modus“ gewählt, kann eine ST-Hebung abgeschwächt oder vorgetäuscht werden. Für die Infarktdiagnostik zählt das 12-Kanal-EKG im Diagnosemodus.\n\n### Defibrillation, Kardioversion und Stimulation\n\nEin [[defibrillator]] gibt einen kurzen Hochspannungsimpuls aus einem Kondensator über Klebe- oder Paddelelektroden ab; heutige Geräte verwenden biphasische Impulsformen [@erc-2025-als]. Viele Geräte messen vor bzw. während der Abgabe die transthorakale Impedanz und passen Impulsdauer oder Spannung herstellerspezifisch daran an. Die Gerätenorm ist [[iec-60601-2-4]] [@iec-60601-2-4]. Bei der **Kardioversion** (z. B. Vorhofflimmern) wird der Impuls mit der R-Zacke des EKG synchronisiert, damit er nicht in die vulnerable Phase der T-Welle fällt und Kammerflimmern auslöst. Implantierte [[herzschrittmacher|Schrittmacher]] und [[icd|ICDs]] erkennen Eigenaktionen über ihre Elektroden und stimulieren nur bei Bedarf (Demand-Prinzip).\n\n> [!vereinfacht] Synchronisiert = „Schock nur auf der R-Zacke“, unsynchronisiert = „Schock sofort“ (Defibrillation bei Kammerflimmern, wo keine verwertbare R-Zacke existiert).\n\n## Schnittstellen zu anderen Fachbereichen\n\n- **[[herzchirurgie]]**: Bypass- und Klappenchirurgie, Heart-Team-Entscheidungen, [[herz-lungen-maschine]].\n- **[[intensivmedizin]]** und **[[notfallmedizin]]**: Reanimation, kardiogener Schock, Kreislaufunterstützung.\n- **[[radiologie]]**: Kardio-CT und Kardio-MRT.\n- **[[nuklearmedizin]]**: Myokardszintigraphie mit der [[gammakamera]].\n- **[[neurologie]]**: Vorhofflimmern als Schlaganfallursache.\n- **[[nephrologie]]**: kardiorenale Wechselwirkungen.\n",
+  "related": [
+    "herz",
+    "erregungsleitungssystem",
+    "ekg-geraet",
+    "herzschrittmacher",
+    "icd",
+    "defibrillator",
+    "angiographieanlage",
+    "herzchirurgie",
+    "anwendungsteile",
+    "ableitstrom"
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "kligfield-2007",
+    "iec-60601-2-25",
+    "iec-60479-1",
+    "iec-60601-1",
+    "din-vde-0100-710",
+    "strlschg",
+    "bfs-drw",
+    "iec-60601-2-43",
+    "mdr-2017",
+    "kanal-2013",
+    "webster-2010",
+    "winter-webster-1983",
+    "erc-2025-als",
+    "iec-60601-2-4"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

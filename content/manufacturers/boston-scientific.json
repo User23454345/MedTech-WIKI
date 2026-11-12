@@ -1,0 +1,64 @@
+{
+  "id": "boston-scientific",
+  "type": "manufacturer",
+  "title": "Boston Scientific",
+  "aliases": [
+    "Boston Scientific Corporation",
+    "BSC",
+    "Guidant"
+  ],
+  "category": "hersteller",
+  "summary": "Boston Scientific Corporation mit Sitz in Marlborough (Massachusetts, USA) ist ein Hersteller minimalinvasiver Medizinprodukte. Schwerpunkte sind interventionelle Kardiologie, kardiales Rhythmusmanagement und Elektrophysiologie, Endoskopie, Urologie und Neuromodulation.",
+  "headquarters": "Marlborough, Massachusetts, USA",
+  "founded": "1979",
+  "website": "https://www.bostonscientific.com/",
+  "productLines": [
+    {
+      "device": "icd",
+      "models": [
+        "EMBLEM S-ICD"
+      ],
+      "note": "Subkutanes ICD-System ohne transvenöse Elektrode; daneben transvenöse ICDs und CRT-D-Systeme."
+    },
+    {
+      "device": "herzschrittmacher",
+      "models": [
+        "ACCOLADE"
+      ],
+      "note": "Konventionelle Schrittmacher und CRT-Systeme; Rhythmusmanagement überwiegend aus der Übernahme von Guidant."
+    },
+    {
+      "device": "chirurgischer-laser",
+      "models": [],
+      "note": "Holmiumlaser für Urologie (u. a. mit MOSES-Pulstechnologie) aus dem 2021 übernommenen chirurgischen Geschäft von Lumenis."
+    },
+    {
+      "device": "endoskop",
+      "models": [
+        "LithoVue",
+        "SpyGlass DS"
+      ],
+      "note": "Einweg-Ureteroskop (LithoVue) und Cholangioskopiesystem (SpyGlass DS); kein Hersteller klassischer wiederverwendbarer Videogastroskope."
+    }
+  ],
+  "body": "## Überblick\n\n**Boston Scientific** ist ein US-amerikanischer Medizintechnikkonzern mit Sitz in Marlborough (Massachusetts) [@boston-scientific-web]. Das Unternehmen ist auf weniger invasive Therapieverfahren spezialisiert: Katheter, Stents, Implantate und Einwegsysteme, die über Gefäße, Körperöffnungen oder kleine Zugänge eingesetzt werden. Großgeräte für Bildgebung oder Intensivtherapie stellt Boston Scientific nicht her.\n\n## Geschichte in Stichpunkten\n\n* **1979:** Gründung durch John Abele und Pete Nicholas; Ausgangspunkt waren lenkbare Katheter.\n* **1990er Jahre:** Börsengang und zahlreiche Zukäufe im Bereich Kardiologie, Gastroenterologie und Urologie.\n* **2006:** Übernahme von **Guidant** – damit Einstieg in das kardiale Rhythmusmanagement ([[herzschrittmacher|Schrittmacher]], [[icd|ICDs]]).\n* **2021:** Übernahme des chirurgischen Geschäfts von Lumenis (Laser für Urologie und HNO) sowie von Farapulse (Pulsfeldablation in der Elektrophysiologie).\n* **seit 2022:** weitere Zukäufe, u. a. in Elektrophysiologie, Gefäßintervention und Neuromodulation.\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Kardiovaskulär | Koronarstents, Ballonkatheter, Strukturelle Herzerkrankungen (z. B. Vorhofohrverschluss), Elektrophysiologie und Ablation |\n| Rhythmusmanagement | Schrittmacher, transvenöse und subkutane ICDs, CRT-Systeme, Fernnachsorge |\n| MedSurg | Endoskopie (Gastroenterologie, Pneumologie), Urologie inklusive [[chirurgischer-laser|Holmiumlaser]] und Einweg-Ureteroskopen, Neuromodulation |\n\n## Bedeutung für die Medizintechnik\n\nBoston Scientific hat mit dem **subkutanen ICD** ein Konzept etabliert, bei dem die Defibrillationselektrode nicht durch die Venen ins Herz, sondern unter der Haut entlang des Brustbeins verläuft. Das vermeidet typische Komplikationen transvenöser Sonden, erlaubt aber keine dauerhafte antibradykarde Stimulation.\n\n> [!vereinfacht] S-ICD und transvenöser ICD unterscheiden sich vor allem im Elektrodenweg; die Indikationsstellung ist eine ärztliche Entscheidung und hängt u. a. davon ab, ob zusätzlich eine Schrittmacherfunktion benötigt wird.\n\nFür die Klinik-Medizintechnik relevant sind die **Lasersysteme** der Urologie: Sie gehören zu den [[laser|Lasereinrichtungen]] mit besonderen Anforderungen an Laserschutz, Einweisung und regelmäßige Prüfung. Einweg-Endoskope verändern zudem die [[aufbereitung]]: Sie entfallen aus dem Aufbereitungskreislauf, erzeugen aber Abfall und Verbrauchskosten.\n\n> [!praxis] Bei Konzernumbauten (Verkauf, Abspaltung, Joint Venture) ändert sich oft der Rechtsträger, der als Hersteller auftritt. Betreiber sollten im [[bestandsverzeichnis]] und in Serviceverträgen den aktuellen Ansprechpartner pflegen, damit Sicherheitsinformationen im Rahmen der [[vigilanz]] zuverlässig ankommen.\n\n## Einordnung im Markt\n\nIm Rhythmusmanagement konkurriert Boston Scientific mit [[medtronic]], [[abbott]] und [[biotronik]]; in der Endoskopie ergänzen sich die Einweg- und Spezialsysteme mit den Videoendoskopie-Plattformen von [[olympus]], [[fujifilm]] und [[karl-storz]].",
+  "related": [
+    "icd",
+    "herzschrittmacher",
+    "chirurgischer-laser",
+    "endoskop",
+    "laser",
+    "aufbereitung",
+    "medtronic",
+    "abbott",
+    "biotronik",
+    "olympus",
+    "kardiologie",
+    "gastroenterologie"
+  ],
+  "sources": [
+    "boston-scientific-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

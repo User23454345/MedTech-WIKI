@@ -1,0 +1,62 @@
+{
+  "id": "herz-lungen-maschine",
+  "type": "device",
+  "title": "Herz-Lungen-Maschine",
+  "aliases": [
+    "HLM",
+    "kardiopulmonaler Bypass",
+    "extrakorporale Zirkulation",
+    "EKZ",
+    "cardiopulmonary bypass",
+    "CPB"
+  ],
+  "category": "geraete",
+  "deviceGroup": "extrakorporal",
+  "rank": 20,
+  "domains": [
+    "herzchirurgie",
+    "anaesthesiologie"
+  ],
+  "summary": "Die Herz-Lungen-Maschine übernimmt während herzchirurgischer Eingriffe vorübergehend die Pumpfunktion des Herzens und den Gasaustausch der Lunge. Venöses Blut wird abgeleitet, im Oxygenator mit Sauerstoff angereichert, von CO₂ befreit, temperiert und arteriell zurückgegeben. Bedient wird sie von Kardiotechnikerinnen und Kardiotechnikern (Perfusionisten).",
+  "sections": {
+    "purpose": "Die HLM ermöglicht Operationen am stillgelegten, blutleeren Herzen, etwa Bypass- und Klappenoperationen oder Eingriffe an der Aorta. Sie stellt den [[blutkreislauf|Körperkreislauf]] und den [[gasaustausch]] sicher, steuert die Körpertemperatur und liefert die Kardioplegielösung zum Schutz des Herzmuskels.",
+    "principle": "## Kreislauf der extrakorporalen Zirkulation\n\nDas venöse Blut fließt über Kanülen im rechten Vorhof bzw. in den Hohlvenen per Schwerkraft (oder vakuumunterstützt) in ein **venöses Reservoir**. Die **arterielle Pumpe** – eine Rollerpumpe nach dem Prinzip der [[peristaltikpumpe]] oder eine Zentrifugalpumpe mit magnetisch gekoppeltem Laufrad – fördert es durch den **Membranoxygenator** und einen arteriellen Filter zurück in die Aorta. Weitere Rollerpumpen dienen als Kardiotomiesauger, Vent und Kardioplegiepumpe [@kramme-2017].\n\n## Oxygenator und Wärmetauscher\n\nIm Oxygenator strömen Blut und Gas getrennt durch eine mikroporöse bzw. diffusionsdichte Hohlfasermembran; O₂ und CO₂ wandern entlang ihrer Partialdruckgradienten ([[diffusion-osmose|Diffusion]]). Die O₂-Aufnahme wird über die O₂-Konzentration des Frischgases (Gasblender), die CO₂-Abgabe über den Gasfluss (Sweep) gesteuert. Ein integrierter Wärmetauscher, versorgt von einem Heiz-Kühl-Gerät, ermöglicht Kühlung und Wiedererwärmung ([[waermeuebertragung]], [[thermoregulation]]).\n\n## Sicherheitstechnik\n\n| Überwachung | Zweck |\n|---|---|\n| Füllstandssensor im Reservoir | verhindert Leerlaufen und Lufteintrag |\n| [[luftblasendetektor]] arteriell | stoppt die Pumpe bei Luft |\n| [[drucksensor|Drucksensoren]] | Leitungs- und Oxygenatordruck, Kardioplegiedruck |\n| [[temperatursensor|Temperatursensoren]] | Blut-, Patienten- und Wassertemperatur |\n\nDie Gerinnung wird mit Heparin gehemmt und über die aktivierte Gerinnungszeit (ACT) kontrolliert.\n\n> [!warnung] Heiz-Kühl-Geräte können über ihre Wasserkreisläufe Keime (u. a. *Mycobacterium chimaera*) in die Raumluft abgeben. Herstellervorgaben zu Desinfektion und Aufstellung sind strikt einzuhalten."
+  },
+  "manufacturers": [
+    {
+      "ref": "getinge",
+      "models": [
+        "HL 20",
+        "HL 40"
+      ],
+      "note": "Marke Maquet."
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "Affinity"
+      ],
+      "note": "Oxygenatoren und Einmalkomponenten für die extrakorporale Zirkulation."
+    }
+  ],
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.4 – nichtimplantierbare aktive Produkte zur unmittelbaren Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potenziellem Druckaufbau; erfasst sind auch aufbereitete körpereigene Flüssigkeiten (hier: Blut), deren Einbringen mit einer Entnahmefunktion direkt gekoppelt ist; nicht in Anlage 2 aufgeführt. Ob das separate Heiz-Kühl-Gerät zusätzlich unter Anlage 1 Nr. 1.8 (Therapie mittels Hypothermie) fällt, ist eine Auslegungsfrage und anhand der Zweckbestimmung des Herstellers zu klären.",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); Wartung nach Herstellerangabe; Funktionsprüfung und Checkliste vor jedem Einsatz durch die Kardiotechnik; Hygienemaßnahmen am Heiz-Kühl-Gerät nach Herstellerangabe."
+  },
+  "related": [
+    "ecmo",
+    "peristaltikpumpe",
+    "luftblasendetektor",
+    "gasaustausch",
+    "herzchirurgie",
+    "vad"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

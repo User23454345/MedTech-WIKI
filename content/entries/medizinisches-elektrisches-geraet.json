@@ -1,0 +1,174 @@
+{
+  "id": "medizinisches-elektrisches-geraet",
+  "type": "term",
+  "title": "Medizinisches elektrisches Gerät (ME-Gerät)",
+  "aliases": [
+    "ME-Gerät",
+    "ME-System",
+    "Medical Electrical Equipment",
+    "ME Equipment",
+    "medizinisch-elektrisches Gerät",
+    "MOPP",
+    "MOOP"
+  ],
+  "category": "einfuehrung",
+  "summary": "Ein ME-Gerät ist ein elektrisches Medizingerät mit Anwendungsteil oder Energieübertragung zum bzw. vom Patienten. IEC 60601-1 fordert Basissicherheit und wesentliche Leistungsmerkmale auch beim ersten Fehler, umgesetzt durch Schutzklassen, Anwendungsteile, doppelte Schutzmaßnahmen und Ableitstromgrenzen.",
+  "body": "## Definition\n\nEin **medizinisches elektrisches Gerät** (kurz **ME-Gerät**, englisch *medical electrical equipment*) ist nach der Normenreihe [[iec-60601-1|IEC 60601]] ein elektrisches Gerät, das\n\n* ein [[anwendungsteile|Anwendungsteil]] besitzt **oder** Energie zum bzw. vom Patienten überträgt **oder** eine solche Energieübertragung erfasst,\n* mit höchstens **einem** Anschluss an ein bestimmtes Versorgungsnetz versehen ist und\n* vom Hersteller zur Diagnose, Behandlung oder Überwachung eines Patienten bzw. zur Kompensation oder Linderung von Krankheit, Verletzung oder Behinderung bestimmt ist [@iec-60601-1].\n\nBeispiele sind [[ekg-geraet|EKG-Gerät]], [[patientenmonitor|Patientenmonitor]], [[beatmungsgeraet|Beatmungsgerät]], [[infusionspumpe|Infusionspumpe]], [[defibrillator|Defibrillator]] oder [[hf-chirurgiegeraet|HF-Chirurgiegerät]]. Kein ME-Gerät im Sinne der Norm ist dagegen z. B. eine [[laborzentrifuge]] ohne Patientenbezug; Laborgeräte fallen typischerweise unter [[iec-61010-1]].\n\nWerden mehrere Geräte – von denen mindestens eines ein ME-Gerät ist – durch Funktionsverbindungen oder eine Mehrfachsteckdose zusammengeschaltet, entsteht ein **ME-System** (z. B. Ultraschallgerät mit angeschlossenem PC und Drucker). Für ME-Systeme gelten eigene Anforderungen, insbesondere an die Begrenzung von Ableitströmen in der Patientenumgebung [@iec-60601-1].\n\n> [!belegt] Die Allgemeinnorm IEC 60601-1 legt Anforderungen an die **Basissicherheit** und die **wesentlichen Leistungsmerkmale** von ME-Geräten fest. In Europa ist sie als DIN EN 60601-1 (VDE 0750-1) übernommen; maßgeblich ist die jeweils gültige Fassung [@iec-60601-1].\n\n## Basissicherheit und wesentliche Leistungsmerkmale\n\n| Begriff | Bedeutung | Beispiel |\n|---|---|---|\n| **Basissicherheit** | Freiheit von unvertretbaren Risiken, die direkt durch physikalische Gefährdungen entstehen, wenn das Gerät unter Normal- und Einzelfehlerbedingungen benutzt wird | kein gefährlicher [[ableitstrom|Ableitstrom]], keine Überhitzung, kein Umkippen |\n| **Wesentliche Leistungsmerkmale** (*essential performance*) | Leistung, deren Ausfall oder Beeinträchtigung zu einem unvertretbaren Risiko führen würde | Abgabe des eingestellten Tidalvolumens beim [[beatmungsgeraet]]; korrekte Förderrate bei der [[infusionspumpe]] |\n\nWelche Merkmale „wesentlich“ sind, legt der Hersteller im Rahmen des Risikomanagements nach [[iso-14971]] fest; die besonderen Festlegungen (Teil 2-x) geben für viele Gerätearten Mindestinhalte vor [@iso-14971].\n\n## Das Prinzip des ersten Fehlers\n\nEin ME-Gerät muss nicht nur im **Normalzustand** (NC, *normal condition*) sicher sein, sondern auch beim Auftreten eines beliebigen **ersten Fehlers** (SFC, *single fault condition*). Typische erste Fehler sind:\n\n* Unterbrechung des Schutzleiters,\n* Unterbrechung eines Versorgungsleiters,\n* Versagen eines Bauteils, z. B. Kurzschluss einer Isolierung oder Ausfall eines Lüfters.\n\nZusätzlich prüft die Norm als **besondere Prüfbedingung** den Fall, dass von außen Netzspannung an ein Anwendungsteil vom Typ F gelangt; dafür gelten eigene Grenzwerte für den Patientenableitstrom.\n\nZwei gleichzeitig auftretende, voneinander unabhängige Fehler gelten als hinreichend unwahrscheinlich. Daraus folgt das Konzept **doppelter Schutzmaßnahmen**: Zwischen gefährlicher Netzspannung und Patient müssen stets zwei unabhängige Schutzmaßnahmen liegen [@iec-60601-1].\n\n## Schutzmaßnahmen: MOOP und MOPP\n\nIEC 60601-1 unterscheidet Schutzmaßnahmen zum Schutz des **Bedieners** (*Means of Operator Protection*, MOOP) und zum Schutz des **Patienten** (*Means of Patient Protection*, MOPP). Eine Schutzmaßnahme kann eine Isolierung, ein Luft- und Kriechstreckenabstand, eine Schutzimpedanz oder eine Schutzleiterverbindung sein.\n\n| Schutzmaßnahme | Prüfspannung (AC) | Kriechstrecke | Anmerkung |\n|---|---|---|---|\n| 1 × MOOP | 1 500 V | 2,5 mm | Bedienerschutz, angelehnt an IT-Gerätenormen |\n| 2 × MOOP | 3 000 V | 5 mm | |\n| 1 × MOPP | 1 500 V | 4 mm | |\n| 2 × MOPP | 4 000 V | 8 mm | übliche Forderung für Netzteile mit Patientenbezug |\n\n> [!vereinfacht] Die Tabelle nennt die häufig zitierten Werte für eine Arbeitsspannung bis etwa 250 V AC. Die tatsächlichen Anforderungen hängen von Arbeitsspannung, Verschmutzungsgrad, Höhenlage und Isolationsart ab und sind der jeweils gültigen Normfassung zu entnehmen [@iec-60601-1].\n\nTechnisch umgesetzt wird die Trennung im [[medizinisches-netzteil|medizinischen Netzteil]] (Sicherheitstransformator, [[transformator]]) und an Signalschnittstellen durch [[galvanische-trennung|galvanische Trennung]] mit Optokopplern, Übertragern oder isolierenden DC/DC-Wandlern.\n\n## Schutzklassen und Anwendungsteile\n\n**[[schutzklassen|Schutzklassen]]** beschreiben, wie der Schutz gegen elektrischen Schlag bei einem Isolationsfehler erreicht wird:\n\n| Schutzklasse | Prinzip | Typisches Prüfmerkmal |\n|---|---|---|\n| I | Basisisolierung + Schutzleiteranschluss berührbarer leitfähiger Teile | [[schutzleiterwiderstand|Schutzleiterwiderstand]] |\n| II | doppelte oder verstärkte Isolierung, kein Schutzleiter | [[isolationswiderstand|Isolationswiderstand]], Berührungsstrom |\n| intern versorgt | Betrieb aus internem Akku/Batterie ([[lithium-ionen-akku]]) | Prüfung im Ladebetrieb nach Schutzklasse des Ladegeräts |\n\n**[[anwendungsteile|Anwendungsteile]]** sind Teile, die bestimmungsgemäß mit dem Patienten in Berührung kommen. Sie werden nach dem Grad des Schutzes eingeteilt:\n\n| Typ | Kennzeichen | Eigenschaften | Beispiele |\n|---|---|---|---|\n| B (*body*) | Symbol Mensch | nicht vom Erdpotenzial getrennt; nicht für direkte Herzanwendung | Patientenlagerung, z. B. Liegefläche eines [[op-tisch|OP-Tischs]] |\n| BF (*body floating*) | Mensch im Quadrat | vom Erdpotenzial getrennt (F-Typ); nicht für direkte Herzanwendung | [[nibp-messgeraet|NIBP-Manschette]], [[pulsoxymeter|SpO₂-Sensor]], Oberflächen-EKG |\n| CF (*cardiac floating*) | Herz im Quadrat | F-Typ mit den strengsten Grenzwerten; für direkte Anwendung am Herzen | [[invasive-druckmessung]], intrakardiale Elektroden |\n\nZusätzlich können Anwendungsteile **defibrillationsgeschützt** sein (eigenes, erweitertes Symbol). Dann übersteht das Gerät die Entladung eines [[defibrillator|Defibrillators]] am Patienten ohne Schaden und ohne gefährliche Energieabzweigung.\n\n## Ableitströme\n\nJedes netzbetriebene Gerät erzeugt über Isolationskapazitäten und Entstörfilter ([[filter]], [[emv]]) kleine Ströme gegen Erde. Weil ein Patient über Elektroden oder Katheter leitfähig mit dem Gerät verbunden sein kann, begrenzt die Norm diese [[ableitstrom|Ableitströme]] streng. Grundlage ist die [[elektrische-stromwirkung|Wirkung des elektrischen Stroms]] auf das Herz: Bei Körperdurchströmung über die Haut (**Makroschock**) liegen die Schwellen für Kammerflimmern im Bereich von etwa zehn bis einigen hundert Milliampere, abhängig von Stromweg und Einwirkdauer [@iec-60479-1]. Wird der Strom dagegen über einen Katheter oder eine Elektrode direkt am Herzen eingeleitet (**Mikroschock**), genügen um Größenordnungen kleinere Ströme – in der Fachliteratur werden Werte im Bereich von einigen zehn bis etwa hundert Mikroampere genannt. Daraus erklärt sich der um den Faktor zehn strengere Grenzwert für CF-Anwendungsteile.\n\n| Strom (Wechselstrom) | NC | SFC |\n|---|---|---|\n| Erdableitstrom | 5 mA | 10 mA |\n| Berührungsstrom | 100 µA | 500 µA |\n| Patientenableitstrom, Typ B und BF | 100 µA | 500 µA |\n| Patientenableitstrom, Typ CF | 10 µA | 50 µA |\n\n> [!belegt] Die Werte (Wechselstrom, Normalzustand NC und erster Fehler SFC) entsprechen den in der 3. Ausgabe der IEC 60601-1 genannten zulässigen Grenzwerten für Typprüfungen (Auswahl; für Gleichstrom, Gesamt-Patientenableitstrom und besondere Prüfbedingungen gelten weitere Werte). Für Wiederholungsprüfungen im Betrieb gelten die Messverfahren und Grenzwerte der [[iec-62353|IEC 62353]], die teilweise abweichen [@iec-60601-1] [@iec-62353].\n\nFür einen Überschlag: Fließt ein Ableitstrom I über eine Isolations- bzw. Koppelkapazität C bei Netzfrequenz f und Spannung U, gilt mit dem kapazitiven Blindwiderstand X_C = 1 / (2π · f · C) näherungsweise\n\nI = U · 2π · f · C\n\n> [!beispiel] Eigene Überschlagsrechnung mit beispielhaften Werten: Bei U = 230 V, f = 50 Hz und einer Koppelkapazität von C = 100 pF ergibt sich I ≈ 230 V · 314 s⁻¹ · 100 · 10⁻¹² F ≈ 7 µA – schon in der Größenordnung des CF-Grenzwerts von 10 µA. Deshalb werden CF-Anwendungsteile mit besonders kapazitätsarmen Isolationsbarrieren aufgebaut. Ein Y-Kondensator von einigen Nanofarad im Netzfilter würde dagegen bereits Ableitströme im Bereich mehrerer hundert Mikroampere verursachen.\n\n## Normenfamilie IEC 60601\n\nDie Normenreihe ist dreistufig aufgebaut:\n\n| Ebene | Bezeichnung | Beispiele |\n|---|---|---|\n| Allgemeinnorm | IEC 60601-1 | [[iec-60601-1]] |\n| Ergänzungsnormen (Teil 1-x) | Querschnittsthemen | [[iec-60601-1-2]] ([[emv]]), [[iec-60601-1-6]] ([[gebrauchstauglichkeit]]), [[iec-60601-1-8]] ([[alarmsystem|Alarmsysteme]]), [[iec-60601-1-11]] (häusliche Umgebung) |\n| Besondere Festlegungen (Teil 2-x) | gerätespezifisch, haben Vorrang | [[iec-60601-2-4]] ([[defibrillator]]), [[iec-60601-2-24]] ([[infusionspumpe]]), [[iso-80601-2-12]] ([[beatmungsgeraet]]), [[iec-60601-2-2]] ([[hf-chirurgiegeraet]]), [[iec-60601-2-16]] ([[dialysegeraet]]), [[iec-60601-2-27]] (EKG-Überwachung) |\n\n> [!hinweis] Besondere Festlegungen ändern, ergänzen oder ersetzen Abschnitte der Allgemeinnorm. Für ein konkretes Gerät ist daher immer die Kombination aus Allgemeinnorm, zutreffenden Ergänzungsnormen und der passenden Teil-2-Norm zu betrachten.\n\n## Prüfung im Betrieb\n\nDer Hersteller weist die Normkonformität durch **Typprüfung** nach. Im Betrieb prüft der Betreiber die Sicherheit wiederkehrend:\n\n* [[stk|Sicherheitstechnische Kontrolle]] nach § 12 i. V. m. Anlage 1 [[mpbetreibv|MPBetreibV]] für die dort aufgeführten Produktarten (z. B. Defibrillatoren, Infusionspumpen, HF-Chirurgiegeräte) – spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind [@mpbetreibv]; für alle übrigen ME-Geräte ergibt sich die wiederkehrende Prüfung aus den Instandhaltungsvorgaben des Herstellers,\n* [[elektrische-sicherheitspruefung|Elektrische Sicherheitsprüfung]] nach [[iec-62353]] mit [[schutzleiterwiderstand|Schutzleiterwiderstand]], [[isolationswiderstand|Isolationswiderstand]] (sofern anwendbar) und [[ableitstrommessung|Ableitstrommessung]] (Ersatz-, Direkt- oder Differenzstrommessverfahren) [@iec-62353],\n* [[funktionspruefung|Funktionsprüfung]] der wesentlichen Leistungsmerkmale mit geeigneten [[pruefgeraete|Prüfgeräten]],\n* bei Installation: Beachtung der Anforderungen an [[medizinisch-genutzte-bereiche|medizinisch genutzte Bereiche]] nach [[din-vde-0100-710|DIN VDE 0100-710]] [@din-vde-0100-710].\n\n> [!praxis] Ein häufiger Befund bei der STK ist ein erhöhter Schutzleiterwiderstand durch beschädigte Netzkabel oder lockere Gerätestecker. Bei Geräten der Schutzklasse I lohnt deshalb immer ein Biegetest des Netzkabels während der Messung.\n\n## Anwendung in Geräten\n\nDer Aufbau fast aller ME-Geräte folgt demselben Grundmuster: Netzteil mit Schutztrennung → Steuer- und Signalverarbeitung ([[mikrocontroller]], [[analog-digital-wandler]], [[operationsverstaerker]]) → isolierte Patientenschnittstelle → Anwendungsteil. Beim [[ekg-geraet|EKG-Gerät]] sitzt der [[instrumentenverstaerker]] hinter einer CF- oder BF-Barriere; beim [[beatmungsgeraet]] versorgt das Netzteil [[turbine]] und [[elektromotor]], während [[drucksensor|Druck-]] und [[flowsensor|Flowsensoren]] die wesentlichen Leistungsmerkmale überwachen; beim [[defibrillator]] erzeugt eine [[hochspannungserzeugung|Hochspannungsstufe]] die Ladespannung des [[kondensator|Kondensators]]. Weitere Beispiele: [[patientenmonitor]], [[infusionspumpe]], [[hf-chirurgiegeraet]], [[dialysegeraet]], [[ultraschallgeraet]].",
+  "related": [
+    "iec-60601-1",
+    "anwendungsteile",
+    "schutzklassen",
+    "ableitstrom",
+    "galvanische-trennung",
+    "medizinisches-netzteil",
+    "elektrische-sicherheitspruefung",
+    "iec-62353",
+    "stk",
+    "medizinisch-genutzte-bereiche"
+  ],
+  "paths": [
+    [
+      "medizinisches-elektrisches-geraet",
+      "anwendungsteile",
+      "ableitstrom",
+      "ableitstrommessung",
+      "iec-62353"
+    ],
+    [
+      "medizinisches-elektrisches-geraet",
+      "medizinisches-netzteil",
+      "transformator",
+      "galvanische-trennung"
+    ],
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "elektrotechnik",
+      "drehzahlregelung",
+      "sensorik",
+      "druckmessung"
+    ]
+  ],
+  "sources": [
+    "iec-60601-1",
+    "iec-62353",
+    "iec-60479-1",
+    "iso-14971",
+    "mpbetreibv",
+    "din-vde-0100-710",
+    "iec-60601-1-2",
+    "iec-60601-1-8"
+  ],
+  "diagram": {
+    "title": "Grundstruktur eines ME-Geräts",
+    "caption": "Funktionsschema: Zwischen Netzspannung und Patient liegen zwei unabhängige Schutzmaßnahmen (2 × MOPP). Kein konkretes Modell.",
+    "width": 900,
+    "height": 380,
+    "nodes": [
+      {
+        "id": "netz",
+        "label": "Versorgungsnetz\n230 V / 50 Hz",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "nt",
+        "label": "Medizinisches\nNetzteil",
+        "ref": "medizinisches-netzteil",
+        "kind": "process",
+        "x": 300,
+        "y": 90
+      },
+      {
+        "id": "akku",
+        "label": "Akku\n(intern versorgt)",
+        "ref": "lithium-ionen-akku",
+        "kind": "source",
+        "x": 300,
+        "y": 300
+      },
+      {
+        "id": "mcu",
+        "label": "Steuerung /\nSignalverarbeitung",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 510,
+        "y": 90
+      },
+      {
+        "id": "iso",
+        "label": "Isolations-\nbarriere (MOPP)",
+        "ref": "galvanische-trennung",
+        "kind": "process",
+        "x": 510,
+        "y": 300
+      },
+      {
+        "id": "ap",
+        "label": "Anwendungsteil\nB / BF / CF",
+        "ref": "anwendungsteile",
+        "kind": "sensor",
+        "x": 720,
+        "y": 300
+      },
+      {
+        "id": "alarm",
+        "label": "Anzeige /\nAlarmsystem",
+        "ref": "alarmsystem",
+        "kind": "output",
+        "x": 720,
+        "y": 90
+      },
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 840,
+        "y": 195,
+        "w": 110
+      }
+    ],
+    "edges": [
+      {
+        "from": "netz",
+        "to": "nt",
+        "kind": "power"
+      },
+      {
+        "from": "nt",
+        "to": "mcu",
+        "kind": "power",
+        "label": "Kleinspannung"
+      },
+      {
+        "from": "akku",
+        "to": "nt",
+        "kind": "power"
+      },
+      {
+        "from": "mcu",
+        "to": "iso",
+        "kind": "signal"
+      },
+      {
+        "from": "iso",
+        "to": "ap",
+        "kind": "signal"
+      },
+      {
+        "from": "ap",
+        "to": "pat",
+        "kind": "energy"
+      },
+      {
+        "from": "mcu",
+        "to": "alarm",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "eeg-geraet",
+  "type": "device",
+  "title": "Elektroenzephalograph (EEG)",
+  "aliases": [
+    "EEG",
+    "Elektroenzephalograph",
+    "Elektroenzephalographie",
+    "Hirnstrommessung",
+    "Video-EEG",
+    "aEEG"
+  ],
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 51,
+  "domains": [
+    "neurologie",
+    "intensivmedizin",
+    "neonatologie"
+  ],
+  "summary": "Der Elektroenzephalograph registriert die elektrische Aktivität der Großhirnrinde über Elektroden auf der Kopfhaut. Die Signale liegen im Mikrovoltbereich und erfordern rauscharme Differenzverstärker mit hoher Gleichtaktunterdrückung. Haupteinsatz ist die Epilepsiediagnostik.",
+  "sections": {
+    "purpose": "Das EEG dient der Diagnostik von Epilepsien, Bewusstseinsstörungen, Enzephalopathien und Schlafstörungen sowie der Überwachung auf Intensivstationen (kontinuierliches EEG, amplitudenintegriertes aEEG bei Neugeborenen). Es ist außerdem Bestandteil der Hirnfunktionsdiagnostik in der [[neurologie]] [@webster-2010].",
+    "principle": "## Signalentstehung\n\nDas Oberflächen-EEG entsteht vor allem aus der Summe synchroner **postsynaptischer Potentiale** vieler kortikaler Pyramidenzellen, weniger aus einzelnen [[aktionspotential|Aktionspotentialen]] ([[nervensystem]]). Schädel und Kopfhaut dämpfen und verschmieren die Signale stark; die Amplituden liegen typischerweise bei etwa 10–100 µV [@webster-2010].\n\n| Frequenzband | Bereich (typisch) |\n|---|---|\n| Delta | < 4 Hz |\n| Theta | 4–8 Hz |\n| Alpha | 8–13 Hz |\n| Beta | 13–30 Hz |\n| Gamma | > 30 Hz |\n\n## Ableitung\n\nDie Elektroden werden nach dem internationalen **10-20-System** platziert. Aus den Elektrodenpotentialen bildet das Gerät **Montagen**: bipolar (Differenz benachbarter Elektroden) oder referenziell (gegen eine gemeinsame Referenz). Eine niedrige und ausgeglichene Übergangsimpedanz der Elektroden (in der Routine häufig unter etwa 5–10 kΩ angestrebt; Richtwert, je nach Verstärker und Laborstandard) ist wichtig, weil Impedanzunterschiede die Gleichtaktunterdrückung verschlechtern.\n\n## Signalkette\n\nDie [[messkette]] besteht aus [[instrumentenverstaerker|Instrumentenverstärkern]] mit sehr hoher Eingangsimpedanz und hoher Gleichtaktunterdrückung, analogen [[filter|Filtern]] (Hochpass, Tiefpass, ggf. Netzfilter), [[analog-digital-wandler|Analog-Digital-Wandlung]] und digitaler Weiterverarbeitung. Die Patientenseite ist [[galvanische-trennung|galvanisch getrennt]]; die [[anwendungsteile]] sind in der Regel vom Typ BF oder CF. Video-EEG-Systeme synchronisieren das EEG mit einer Videoaufzeichnung.\n\n> [!praxis] Häufige Artefakte stammen von Augenbewegungen, Muskelaktivität, Schwitzen, schlecht sitzenden Elektroden und 50-Hz-Netzeinstreuung ([[emv]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "nihon-kohden",
+      "models": [],
+      "note": "EEG- und Neurophysiologiesysteme im Portfolio."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Kanalzahl, Video-EEG, ambulante Langzeitableitung, Auswerte- und Spike-Erkennungssoftware, Vernetzung, Elektrodensysteme (Verbrauchsmaterial), Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: EEG-Geräte sind in Anlage 1 der MPBetreibV (2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) genannt.",
+    "intervals": "Vom Hersteller vorgeschriebene Kontrollen nach Herstellerangabe; elektrische Wiederholungsprüfung nach IEC 62353 gemäß Herstellervorgabe bzw. Gefährdungsbeurteilung des Betreibers; Kalibriersignal- und Impedanzprüfung vor jeder Ableitung."
+  },
+  "related": [
+    "emg-geraet",
+    "polysomnograph",
+    "biosignale",
+    "instrumentenverstaerker",
+    "ekg-geraet",
+    "neurologie"
+  ],
+  "sources": [
+    "webster-2010",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

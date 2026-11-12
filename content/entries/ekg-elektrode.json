@@ -1,0 +1,151 @@
+{
+  "id": "ekg-elektrode",
+  "type": "term",
+  "title": "EKG-Elektrode (Ag/AgCl)",
+  "aliases": [
+    "EKG-Elektrode",
+    "ECG electrode",
+    "Ag/AgCl-Elektrode",
+    "Silber-Silberchlorid-Elektrode",
+    "Klebeelektrode",
+    "Einmalelektrode",
+    "Monitoring-Elektrode",
+    "Ableitelektrode"
+  ],
+  "category": "sensorik",
+  "summary": "Hautelektrode, die den ionischen Strom im Körper in einen elektronischen Strom im Messkabel umsetzt. Die nahezu nicht polarisierbare Silber/Silberchlorid-Elektrode mit Elektrolytgel liefert ein stabiles, rauscharmes Signal und erholt sich schnell nach einer Defibrillation.",
+  "body": "## Begriff\n\nDie **EKG-Elektrode** ist der Wandler zwischen dem ionischen Stromfluss im Körper und dem elektronischen Stromfluss im Messkabel. Die elektrische Erregung des [[herz|Herzens]] ([[erregungsleitungssystem]], [[aktionspotential]]) erzeugt an der Hautoberfläche Potentialdifferenzen in der Größenordnung von einem Millivolt. Damit diese kleinen [[biosignale|Biosignale]] verzerrungsarm erfasst werden, muss die Elektrode ein stabiles, rauscharmes und niederohmiges Übergangsverhalten haben. Standard ist heute die Einmal-Elektrode mit **Silber/Silberchlorid-Sensor (Ag/AgCl)** und Elektrolytgel [@webster-2010] [@aami-ec12].\n\n## Elektrochemische Grundlagen\n\n### Halbzellenpotential\n\nTaucht ein Metall in einen Elektrolyten, bildet sich an der Grenzfläche eine elektrochemische Doppelschicht mit einem **Halbzellenpotential** aus. Bei der Ag/AgCl-Elektrode läuft die Reaktion\n\n`AgCl + e⁻ ⇌ Ag + Cl⁻`\n\nab. Das Standardpotential gegenüber der Normalwasserstoffelektrode beträgt rund +0,22 V; in einem chloridhaltigen Gel stellt sich ein Potential ein, das nach der Nernst-Gleichung von der Chloridaktivität abhängt:\n\n`E = E⁰ − (R · T / F) · ln a(Cl⁻)`\n\nEntscheidend ist nicht der Absolutwert, sondern dass zwei gleichartige Elektroden **nahezu gleiche** Potentiale haben. Die Differenz – das **Offsetpotential** – erscheint als Gleichspannung am Verstärkereingang [@webster-2010].\n\n### Polarisierbare und nicht polarisierbare Elektroden\n\n| Eigenschaft | Ideal polarisierbar (z. B. Edelmetall, Edelstahl) | Ideal nicht polarisierbar (Ag/AgCl) |\n|---|---|---|\n| Ladungsdurchtritt | kein Faradayscher Strom, Elektrode wirkt kapazitiv | Strom fließt frei durch Redoxreaktion |\n| Verhalten bei Bewegung | stark schwankendes Potential, Artefakte | stabiles Potential |\n| Erholung nach Defibrillation | langsam, Elektrode bleibt polarisiert | schnell |\n| Rauschen | höher | gering |\n\nAg/AgCl kommt der nicht polarisierbaren Elektrode nahe. Deshalb ist sie für das Monitoring besonders geeignet: Nach einer Defibrillation muss das EKG rasch wieder ablesbar sein, um den Rhythmus zu beurteilen [@webster-2010].\n\n## Ersatzschaltbild Elektrode–Haut\n\nDer Übergang von Elektrode über Gel und Haut zum Gewebe lässt sich durch ein elektrisches Ersatzschaltbild beschreiben:\n\n| Element | Bedeutung |\n|---|---|\n| E_hc | Halbzellenpotential der Elektrode |\n| R_d ∥ C_d | Doppelschicht an der Grenzfläche Metall/Gel |\n| R_s | Widerstand des Elektrolytgels |\n| E_se | Potential an der Grenzfläche Gel/Epidermis |\n| R_e ∥ C_e | Hornschicht der [[haut|Haut]] (Stratum corneum) – meist dominierender Anteil |\n| R_u | Widerstand des tieferen, gut leitenden Gewebes |\n\nDie Haut ist also kein einfacher Widerstand, sondern eine frequenzabhängige Impedanz. Bei niedrigen Frequenzen ist sie hoch, weil die Kapazitäten sperren. Hautvorbereitung (Haare entfernen, Fett lösen, leichtes Anrauen der Hornschicht) senkt R_e deutlich [@webster-2010].\n\n> [!vereinfacht] Das Ersatzschaltbild fasst verteilte, nichtlineare und zeitlich veränderliche Vorgänge zu konzentrierten Bauelementen zusammen. Es erklärt die wesentlichen Effekte – Gleichspannungsoffset, frequenzabhängige Impedanz, Bewegungsartefakte –, liefert aber keine exakten Werte für einen konkreten Patienten.\n\n## Störungen und Artefakte\n\n* **Bewegungsartefakte:** Dehnung der Haut verändert E_se und R_e; es entstehen niederfrequente Schwankungen ([[bewegungsartefakt]]). Schaumstoff-Elektroden mit gelgetränktem Schwamm entkoppeln die Bewegung teilweise.\n* **Netzbrummen (50 Hz):** Gleichtaktstörungen werden bei **unterschiedlichen Elektrodenimpedanzen** in eine Gegentaktstörung umgewandelt, die auch ein idealer [[instrumentenverstaerker|Instrumentenverstärker]] nicht mehr unterdrücken kann. Gleichmäßig gute Hautvorbereitung verbessert daher die Gleichtaktunterdrückung des Gesamtsystems ([[emv]], [[emv-stoerung]]).\n* **Offsetspannung:** Unterschiedlich gealterte oder verschiedene Elektrodentypen erzeugen Gleichspannungen, die den Eingangsbereich des Verstärkers belasten; EKG-Verstärker müssen deshalb Offsets von mehreren hundert Millivolt tolerieren.\n* **Ausgetrocknetes Gel:** abgelaufene oder offen gelagerte Elektroden haben stark erhöhte Impedanz – typisches [[elektrodenproblem]].\n\n> [!praxis] Bei verrauschtem EKG zuerst die Elektroden prüfen: Haltbarkeitsdatum, Gelzustand, Hautvorbereitung, Kabelzug. Elektroden verschiedener Hersteller oder Typen am selben Patienten zu mischen kann Offsetdifferenzen und Driften verstärken.\n\n## Anforderungen\n\nDie US-Norm ANSI/AAMI EC12 legt für Einmal-EKG-Elektroden Mindestanforderungen und Prüfverfahren fest, u. a. für Wechselstromimpedanz, Gleichspannungsoffset, Offsetstabilität und Rauschen, Erholung nach Defibrillationsüberlastung sowie biologische Verträglichkeit [@aami-ec12]. Die Biokompatibilität des Hautkontakts ist nach [[iso-10993-1]] zu bewerten [@iso-10993-1].\n\n> [!belegt] Einmal-EKG-Elektroden werden nach ANSI/AAMI EC12 u. a. auf ihr Verhalten nach einer simulierten Defibrillationsüberlastung geprüft – eine Eigenschaft, bei der polarisierbare Elektroden typischerweise deutlich schlechter abschneiden [@aami-ec12] [@webster-2010].\n\n## Bauformen\n\n| Bauform | Merkmal | Einsatz |\n|---|---|---|\n| Monitoring-Elektrode mit Druckknopf | Schaumstoff- oder Vliesträger, Nassgel oder festes Hydrogel | Dauerüberwachung am [[patientenmonitor]] |\n| Tab-Elektrode | flache Lasche für Klemmen | Ruhe-EKG am [[ekg-geraet]] |\n| Langzeit-Elektrode | atmungsaktiver Träger, starke Haftung | [[langzeit-ekg]] |\n| Belastungs-Elektrode | besonders bewegungsstabil | [[ergometer]] |\n| Röntgentransparente Elektrode | Kohlenstoff-Sensor statt Metallknopf | Katheterlabor, Bildgebung |\n| Neonatale Elektrode | kleine Fläche, hautschonender Kleber | [[neonatologie]] |\n\nFür Defibrillation und Stimulation werden großflächige [[defibrillationselektroden|Defibrillationselektroden]] verwendet, die zusätzlich ein Überwachungs-EKG ableiten können.\n\n## Anwendung in Geräten\n\n* [[ekg-geraet]] – 12-Kanal-Ruhe-EKG\n* [[patientenmonitor]] – kontinuierliche Rhythmusüberwachung, Atmungsmessung über Impedanzpneumographie an denselben Elektroden\n* [[langzeit-ekg]], [[ergometer]]\n* [[defibrillator]] und [[externer-schrittmacher]] – Rhythmusanalyse\n* [[polysomnograph]] – EKG-Kanal; verwandte Elektroden auch am [[eeg-geraet]] und [[emg-geraet]]\n\n## Sicherheitstechnischer Kontext\n\nElektroden und Patientenkabel sind Teil des [[anwendungsteile|Anwendungsteils]]. Schutz vor gefährlichen [[ableitstrom|Ableitströmen]] und vor Defibrillationsenergie liegt bei Kabel und Gerät (Schutzwiderstände, [[galvanische-trennung|galvanische Trennung]], meist defibrillationsgeschützte Anwendungsteile vom Typ CF), nicht bei der Elektrode [@iec-60601-1].\n",
+  "related": [
+    "biosignale",
+    "ekg-geraet",
+    "patientenmonitor",
+    "instrumentenverstaerker",
+    "elektrodenproblem",
+    "bewegungsartefakt",
+    "haut",
+    "aktionspotential",
+    "anwendungsteile",
+    "defibrillationselektroden"
+  ],
+  "paths": [
+    [
+      "ekg-geraet",
+      "ekg-elektrode",
+      "instrumentenverstaerker",
+      "analog-digital-wandler"
+    ],
+    [
+      "herz",
+      "erregungsleitungssystem",
+      "biosignale",
+      "ekg-elektrode"
+    ]
+  ],
+  "sources": [
+    "webster-2010",
+    "aami-ec12",
+    "iso-10993-1",
+    "iec-60601-1"
+  ],
+  "diagram": {
+    "title": "Signalweg vom Herzen zum EKG-Verstärker",
+    "caption": "Funktionsschema des Übergangs Gewebe – Haut – Gel – Elektrode – Messkabel.",
+    "width": 960,
+    "height": 280,
+    "nodes": [
+      {
+        "id": "herz",
+        "label": "Herz\n(Erregung)",
+        "kind": "patient",
+        "x": 90,
+        "y": 80,
+        "ref": "herz"
+      },
+      {
+        "id": "gew",
+        "label": "Gewebe /\nIonenstrom",
+        "kind": "process",
+        "x": 270,
+        "y": 80,
+        "ref": "biosignale"
+      },
+      {
+        "id": "haut",
+        "label": "Haut\n(Stratum corneum)",
+        "kind": "process",
+        "x": 450,
+        "y": 80,
+        "ref": "haut"
+      },
+      {
+        "id": "el",
+        "label": "Gel + Ag/AgCl",
+        "kind": "sensor",
+        "x": 630,
+        "y": 80,
+        "ref": "ekg-elektrode"
+      },
+      {
+        "id": "kab",
+        "label": "Patientenkabel\n(Schutzwiderstand)",
+        "kind": "process",
+        "x": 820,
+        "y": 80,
+        "ref": "anwendungsteile"
+      },
+      {
+        "id": "ina",
+        "label": "Instrumenten-\nverstärker",
+        "kind": "process",
+        "x": 820,
+        "y": 210,
+        "ref": "instrumentenverstaerker"
+      },
+      {
+        "id": "adc",
+        "label": "Filter +\nA/D-Wandler",
+        "kind": "output",
+        "x": 600,
+        "y": 210,
+        "ref": "analog-digital-wandler"
+      }
+    ],
+    "edges": [
+      {
+        "from": "herz",
+        "to": "gew",
+        "kind": "signal"
+      },
+      {
+        "from": "gew",
+        "to": "haut",
+        "kind": "signal",
+        "label": "Ionen"
+      },
+      {
+        "from": "haut",
+        "to": "el",
+        "kind": "signal"
+      },
+      {
+        "from": "el",
+        "to": "kab",
+        "kind": "signal",
+        "label": "Elektronen"
+      },
+      {
+        "from": "kab",
+        "to": "ina",
+        "kind": "signal",
+        "label": "mV"
+      },
+      {
+        "from": "ina",
+        "to": "adc",
+        "kind": "signal"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

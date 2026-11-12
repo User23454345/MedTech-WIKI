@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Schematischer Aufbau eines Hämodialysegeräts</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+    <marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="22" text-anchor="middle" font-size="15" font-weight="600">Hämodialysegerät – schematischer Aufbau</text>
+
+  <!-- Gehäuse -->
+  <rect x="190" y="40" width="190" height="320" rx="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <!-- Bildschirm -->
+  <rect x="205" y="52" width="160" height="70" rx="4" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <polyline points="215,100 240,100 250,80 262,108 272,92 300,92 310,84 355,84" fill="none" stroke="#0d9488" stroke-width="1.5"/>
+  <!-- Blutmodul -->
+  <rect x="205" y="135" width="160" height="90" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Blutpumpe -->
+  <circle cx="240" cy="168" r="20" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="240" cy="168" r="4" fill="#0b2545"/>
+  <line x1="240" y1="168" x2="254" y2="154" stroke="#0b2545" stroke-width="2"/>
+  <line x1="240" y1="168" x2="226" y2="182" stroke="#0b2545" stroke-width="2"/>
+  <!-- Druckaufnehmer -->
+  <circle cx="290" cy="150" r="7" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <circle cx="315" cy="150" r="7" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <circle cx="340" cy="150" r="7" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <!-- Heparinpumpe -->
+  <rect x="280" y="172" width="70" height="14" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <line x1="350" y1="179" x2="360" y2="179" stroke="#0b2545" stroke-width="2"/>
+  <!-- Luftfalle + Luftdetektor -->
+  <rect x="330" y="195" width="14" height="24" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="300" y="200" width="22" height="16" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <!-- Hydraulikbereich -->
+  <rect x="205" y="238" width="160" height="72" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <rect x="215" y="250" width="40" height="22" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="265" y="250" width="40" height="22" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="315" y="250" width="40" height="22" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="215" y="280" width="140" height="20" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <!-- Konzentratkanister -->
+  <rect x="210" y="318" width="40" height="38" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="260" y="318" width="40" height="38" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Rollen -->
+  <circle cx="210" cy="368" r="7" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="360" cy="368" r="7" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Dialysator an der Seite -->
+  <rect x="400" y="140" width="22" height="110" rx="8" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="405" y1="150" x2="405" y2="240" stroke="#0d9488" stroke-width="1"/>
+  <line x1="411" y1="150" x2="411" y2="240" stroke="#0d9488" stroke-width="1"/>
+  <line x1="417" y1="150" x2="417" y2="240" stroke="#0d9488" stroke-width="1"/>
+  <line x1="380" y1="195" x2="400" y2="195" stroke="#0b2545" stroke-width="2"/>
+  <!-- Dialysatschläuche -->
+  <path d="M422,160 C445,160 445,265 365,268" fill="none" stroke="#0d9488" stroke-width="2"/>
+  <path d="M422,232 C438,232 438,290 365,290" fill="none" stroke="#0d9488" stroke-width="2"/>
+  <!-- Blutschläuche -->
+  <path d="M260,168 C300,125 380,120 411,140" fill="none" stroke="#b91c1c" stroke-width="2"/>
+  <path d="M411,250 C411,270 360,240 344,219" fill="none" stroke="#b91c1c" stroke-width="2"/>
+  <path d="M120,210 C150,190 170,168 218,168" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#arrb)"/>
+  <path d="M311,216 C300,240 170,240 120,232" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#arrb)"/>
+  <text x="30" y="214">vom / zum</text>
+  <text x="30" y="230">Gefäßzugang</text>
+
+  <!-- Beschriftungen links -->
+  <line x1="205" y1="80" x2="150" y2="74" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="66">Bildschirm /</text>
+  <text x="20" y="82">Bedienoberfläche</text>
+  <line x1="222" y1="155" x2="120" y2="128" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="124">Blutpumpe</text>
+  <text x="20" y="140">(Rollenpumpe)</text>
+  <line x1="228" y1="270" x2="180" y2="290" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="278">Hydraulik: Heizung,</text>
+  <text x="20" y="294">Bilanzierung, Sensoren</text>
+  <line x1="230" y1="336" x2="165" y2="340" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="332">Konzentrate</text>
+  <text x="20" y="348">(Säure / Bicarbonat)</text>
+
+  <!-- Beschriftungen rechts -->
+  <line x1="347" y1="150" x2="460" y2="70" stroke="#0b2545" stroke-width="1"/>
+  <text x="464" y="66">Druckaufnehmer</text>
+  <line x1="352" y1="181" x2="460" y2="112" stroke="#0b2545" stroke-width="1"/>
+  <text x="464" y="116">Heparinpumpe</text>
+  <line x1="422" y1="195" x2="460" y2="195" stroke="#0b2545" stroke-width="1"/>
+  <text x="464" y="192">Dialysator</text>
+  <text x="464" y="208">(Kapillarfilter)</text>
+  <line x1="344" y1="210" x2="460" y2="250" stroke="#0b2545" stroke-width="1"/>
+  <text x="464" y="244">Luftfalle,</text>
+  <text x="464" y="260">Luftdetektor,</text>
+  <text x="464" y="276">Venenklemme</text>
+  <line x1="434" y1="280" x2="460" y2="306" stroke="#0b2545" stroke-width="1"/>
+  <text x="464" y="312">Dialysat-</text>
+  <text x="464" y="328">kupplungen</text>
+
+  <!-- Legende -->
+  <line x1="420" y1="360" x2="445" y2="360" stroke="#b91c1c" stroke-width="2"/>
+  <text x="452" y="364">Blutkreislauf</text>
+  <line x1="420" y1="380" x2="445" y2="380" stroke="#0d9488" stroke-width="2"/>
+  <text x="452" y="384">Dialysatkreislauf</text>
+  <text x="20" y="392" font-size="11">Eigene Darstellung, kein reales Modell</text>
+</svg>

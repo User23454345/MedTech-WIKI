@@ -1,0 +1,156 @@
+{
+  "id": "biosignale",
+  "type": "term",
+  "title": "Biosignale",
+  "aliases": [
+    "Biosignal",
+    "physiologische Signale",
+    "biomedizinische Signale",
+    "biosignals",
+    "physiological signals",
+    "Vitalparameter",
+    "bioelektrische Signale"
+  ],
+  "category": "sensorik",
+  "summary": "Messbare physikalische oder chemische Größen, die von Organen ausgehen – etwa EKG, EEG, EMG, Blutdruck, Pulswelle oder Atemgaskonzentrationen. Sie sind klein, stark gestört und erfordern eine sorgfältig ausgelegte Messkette aus Sensor, Differenzverstärker, Filter und Digitalisierung.",
+  "body": "## Begriff\n\n**Biosignale** sind messbare physikalische oder chemische Größen, die von lebenden Organismen ausgehen und Informationen über den Zustand und die Funktion von Organen tragen. Ihre Erfassung, Verstärkung und Auswertung ist die Kernaufgabe der diagnostischen und überwachenden Medizintechnik – vom [[ekg-geraet|EKG]] über die Pulsoxymetrie bis zur Kapnographie [@webster-2010] [@kramme-2017].\n\n## Einteilung\n\n| Klasse | Physikalische Natur | Beispiele | Typische Erfassung |\n|---|---|---|---|\n| bioelektrisch | Potenzialdifferenzen durch Ionenströme erregbarer Zellen | EKG, EEG, EMG, EOG | [[ekg-elektrode|Elektroden]] + [[instrumentenverstaerker]] |\n| biomechanisch | Druck, Kraft, Bewegung, Volumen | [[blutdruck|Blutdruck]], Atemfluss, Atembewegung | [[drucksensor]], [[flowsensor]], [[kraftsensor]] |\n| biooptisch | Lichtabsorption und -streuung im Gewebe | Pulswelle, Sauerstoffsättigung | [[photoplethysmographie]] |\n| bioakustisch | Schall und Schwingungen | Herztöne, Atemgeräusche, Blutfluss | Mikrofon, [[ultraschallwandler|Ultraschall-Doppler]] |\n| biochemisch | Konzentrationen von Gasen und Stoffen | CO₂ und O₂ im Atemgas, Blutgase, Glukose | [[co2-sensor]], [[sauerstoffsensor]], Elektroden |\n| biothermisch | Temperatur und Wärmestrom | Körperkern- und Hauttemperatur | [[temperatursensor]] |\n| biomagnetisch | sehr schwache Magnetfelder bioelektrischer Ströme | Magnetokardiographie, Magnetoenzephalographie | hochempfindliche Magnetometer (Spezialanwendung) |\n\n## Entstehung bioelektrischer Signale\n\nGrundlage ist das [[aktionspotential|Aktionspotential]] erregbarer Zellen: Ionenströme durch die Zellmembran erzeugen im umgebenden, elektrisch leitfähigen Gewebe (**Volumenleiter**) Ströme und Potenzialverteilungen. An der Körperoberfläche lassen sich davon nur noch kleine, räumlich gemittelte Spannungen ableiten. Beim Herzen bestimmt das [[erregungsleitungssystem|Erregungsbildungs- und -leitungssystem]] die zeitliche Abfolge, beim Gehirn die synchrone Aktivität vieler Neuronen des [[nervensystem|Nervensystems]] [@schmidt-lang-2019].\n\n## Typische Kennwerte\n\n| Signal | Amplitude (typisch) | Frequenzbereich (typisch) |\n|---|---|---|\n| EKG (Oberfläche) | ca. 0,5–4 mV | ca. 0,05–150 Hz (diagnostisch) |\n| EEG (Oberfläche) | ca. 5–300 µV | ca. 0,5–100 Hz |\n| EMG (Oberfläche) | ca. 0,1–5 mV | ca. 10 Hz bis einige kHz |\n| EOG | ca. 50 µV–3,5 mV | ca. 0–50 Hz |\n| arterieller Blutdruck | ca. 10–400 mmHg (Messbereich) | Grundfrequenz = Herzfrequenz; relevante Oberwellen je nach Quelle bis ca. 20–50 Hz |\n| Atmung | – | ca. 0,1–1 Hz (Atemfrequenz) |\n\n> [!hinweis] Die Tabellenwerte sind Größenordnungen aus der Lehrbuchliteratur und je nach Quelle, Ableitung und Patient unterschiedlich [@webster-2010]. Verbindliche Anforderungen an Bandbreite und Genauigkeit stehen in den gerätespezifischen Normen, z. B. [[iec-60601-2-25|IEC 60601-2-25]] für Elektrokardiographen [@iec-60601-2-25].\n\n## Messtechnische Herausforderungen\n\nBiosignale sind klein, niederfrequent und von Störungen überlagert, die oft um Größenordnungen größer sind als das Nutzsignal:\n\n| Störung | Größenordnung | Gegenmaßnahme |\n|---|---|---|\n| Elektrodenpolarisation, Halbzellenpotenzial | Gleichspannung bis zu einigen hundert mV | Ag/AgCl-Elektroden, AC-Kopplung bzw. Hochpass ([[filter]]) |\n| Netzbrumm (50 Hz) als Gleichtaktsignal | kann das Nutzsignal weit übersteigen | hohe Gleichtaktunterdrückung (CMRR), Rechtes-Bein-Treiber, Schirmung – siehe [[netzstoerung]] |\n| Bewegung, Muskelaktivität | Amplitude im Bereich des Nutzsignals | Fixierung, Filter, Plausibilitätsprüfung – siehe [[bewegungsartefakt]] |\n| Hochfrequenzeinkopplung | z. B. HF-Chirurgie | Eingangsfilter, Schutzbeschaltung ([[emv]]) |\n\nDie zentrale Rolle spielt der **Differenzverstärker**: Er verstärkt die Spannungsdifferenz zweier Elektroden (Nutzsignal) und unterdrückt die auf beiden Elektroden gleich auftretende Gleichtaktspannung. Die Güte beschreibt das Gleichtaktunterdrückungsverhältnis\n\n`CMRR = 20 · log₁₀ (V_d / V_cm)  in dB`\n\nmit Differenzverstärkung V_d und Gleichtaktverstärkung V_cm [@tietze-schenk-2019].\n\n> [!beispiel] Eine Gleichtaktstörung von 10 mV bei 50 Hz soll – auf den Eingang zurückgerechnet – höchstens 10 µV betragen, also etwa 1 % eines EKG-Signals von 1 mV. Das erfordert ein CMRR von mindestens 10 mV / 10 µV = 1 000, also 60 dB – real werden deutlich höhere Werte angestrebt, weil zusätzlich Elektrodenimpedanz-Unterschiede die Gleichtaktstörung teilweise in ein Differenzsignal umwandeln.\n\n> [!vereinfacht] Die Elektrode wird hier als idealer Spannungsabgriff behandelt. Tatsächlich bildet die Grenzfläche Haut–Gel–Elektrode ein frequenzabhängiges Netzwerk aus Widerständen, Kapazitäten und einer Halbzellenspannung. Deshalb benötigt der Verstärker einen sehr hohen Eingangswiderstand, und unterschiedliche Elektrodenimpedanzen verschlechtern die effektive Gleichtaktunterdrückung [@webster-2010].\n\n## Von der Erfassung zur Information\n\nDie typische [[messkette|Messkette]] für Biosignale lautet: Sensor bzw. Elektrode → Vorverstärker ([[instrumentenverstaerker]]) → [[galvanische-trennung|galvanische Trennung]] → Filterung → [[analog-digital-wandler|A/D-Wandlung]] → digitale Auswertung im [[mikrocontroller|Mikrocontroller]] oder PC. Die Auswertung reicht von der Merkmalsextraktion (R-Zacken-Erkennung, Herzfrequenz, ST-Strecke) über Spektralanalysen (EEG-Frequenzbänder) bis zu Klassifikatoren, etwa der Rhythmusanalyse im [[defibrillator|AED]]. Die Qualität dieser Auswertung hängt unmittelbar von der [[messunsicherheit|Messunsicherheit]] und den Artefakten der Erfassung ab.\n\n## Anwendung in Geräten\n\n| Gerät | Erfasste Biosignale |\n|---|---|\n| [[patientenmonitor]] | EKG, Blutdruck invasiv/nichtinvasiv, SpO₂, Atmung, Temperatur, CO₂ |\n| [[ekg-geraet]], [[langzeit-ekg]], [[ergometer]] | EKG |\n| [[eeg-geraet]], [[polysomnograph]] | EEG, EOG, EMG, Atmung, SpO₂ |\n| [[emg-geraet]] | EMG, Nervenleitgeschwindigkeit |\n| [[pulsoxymeter]] | photoplethysmographisches Signal, SpO₂ |\n| [[kapnometer]] | CO₂-Partialdruck im Atemgas |\n| [[ctg]] | fetale Herzfrequenz (Ultraschall-Doppler), Wehentätigkeit (Tokodynamometer mit Kraft- bzw. Drucksensor) |\n| [[herzschrittmacher]], [[icd]] | intrakardiales Elektrogramm (IEGM) zur Wahrnehmung (Sensing) und Therapiesteuerung |\n| [[defibrillator]] | EKG über Pads zur Rhythmusanalyse |\n\n## Sicherheit\n\nElektroden und Sensoren mit Patientenkontakt sind [[anwendungsteile|Anwendungsteile]]. Weil Biosignalverstärker galvanisch mit dem Patienten verbunden sind, begrenzt die [[iec-60601-1|IEC 60601-1]] die zulässigen Patientenableitströme; Anwendungsteile mit direkter Herzverbindung (Typ CF) unterliegen den strengsten Grenzwerten [@iec-60601-1]. Siehe auch [[ableitstrom]] und [[elektrische-stromwirkung]].\n\n> [!praxis] Viele „schlechte Signale“ sind kein Gerätefehler: ausgetrocknete Elektroden, unzureichende Hautvorbereitung, falsch platzierte Ableitungen oder Kabel parallel zu Netzleitungen sind die häufigsten Ursachen – siehe [[elektrodenproblem]] und [[fehlersuche]].\n",
+  "related": [
+    "messkette",
+    "ekg-elektrode",
+    "instrumentenverstaerker",
+    "filter",
+    "aktionspotential",
+    "ekg-geraet",
+    "eeg-geraet",
+    "emg-geraet",
+    "patientenmonitor",
+    "photoplethysmographie",
+    "netzstoerung",
+    "anwendungsteile",
+    "messunsicherheit"
+  ],
+  "paths": [
+    [
+      "herz",
+      "erregungsleitungssystem",
+      "aktionspotential",
+      "biosignale",
+      "ekg-elektrode",
+      "instrumentenverstaerker",
+      "ekg-geraet"
+    ],
+    [
+      "biosignale",
+      "messkette",
+      "analog-digital-wandler",
+      "mikrocontroller"
+    ]
+  ],
+  "sources": [
+    "webster-2010",
+    "kramme-2017",
+    "schmidt-lang-2019",
+    "tietze-schenk-2019",
+    "iec-60601-1",
+    "iec-60601-2-25"
+  ],
+  "diagram": {
+    "title": "Erfassung bioelektrischer Signale",
+    "caption": "Vom Aktionspotential bis zum digitalen Signal (vereinfacht).",
+    "width": 960,
+    "height": 280,
+    "nodes": [
+      {
+        "id": "ap",
+        "label": "Aktions-\npotentiale",
+        "kind": "patient",
+        "x": 90,
+        "y": 80,
+        "ref": "aktionspotential"
+      },
+      {
+        "id": "vol",
+        "label": "Volumenleiter\n(Gewebe, Haut)",
+        "kind": "patient",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "el",
+        "label": "Elektroden\n(Ag/AgCl)",
+        "kind": "sensor",
+        "x": 470,
+        "y": 80,
+        "ref": "ekg-elektrode"
+      },
+      {
+        "id": "ina",
+        "label": "Differenz-\nverstärker (CMRR)",
+        "kind": "process",
+        "x": 660,
+        "y": 80,
+        "ref": "instrumentenverstaerker"
+      },
+      {
+        "id": "iso",
+        "label": "Galvanische\nTrennung",
+        "kind": "process",
+        "x": 850,
+        "y": 80,
+        "ref": "galvanische-trennung"
+      },
+      {
+        "id": "filt",
+        "label": "Filter +\nA/D-Wandlung",
+        "kind": "process",
+        "x": 850,
+        "y": 210,
+        "ref": "analog-digital-wandler"
+      },
+      {
+        "id": "ausw",
+        "label": "Auswertung,\nAnzeige, Alarm",
+        "kind": "output",
+        "x": 640,
+        "y": 210,
+        "ref": "patientenmonitor"
+      }
+    ],
+    "edges": [
+      {
+        "from": "ap",
+        "to": "vol",
+        "kind": "energy",
+        "label": "Ionenströme"
+      },
+      {
+        "from": "vol",
+        "to": "el",
+        "kind": "signal",
+        "label": "µV–mV"
+      },
+      {
+        "from": "el",
+        "to": "ina",
+        "kind": "signal"
+      },
+      {
+        "from": "ina",
+        "to": "iso",
+        "kind": "signal"
+      },
+      {
+        "from": "iso",
+        "to": "filt",
+        "kind": "signal"
+      },
+      {
+        "from": "filt",
+        "to": "ausw",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

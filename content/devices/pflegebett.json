@@ -1,0 +1,79 @@
+{
+  "id": "pflegebett",
+  "type": "device",
+  "title": "Elektrisches Klinik- und Pflegebett",
+  "aliases": [
+    "Krankenhausbett",
+    "Klinikbett",
+    "Pflegebett",
+    "Intensivbett",
+    "Medical bed",
+    "Hospital bed",
+    "Niederflurbett"
+  ],
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 98,
+  "domains": [
+    "intensivmedizin",
+    "physikalische-medizin"
+  ],
+  "summary": "Elektrisch verstellbare Klinik- und Pflegebetten ermöglichen das Einstellen von Liegeflächenhöhe, Rückenlehne, Beinteil und Kopf-Tief- bzw. Fußtieflage über motorische Linearantriebe. Sie gehören zu den zahlenmäßig häufigsten aktiven Medizinprodukten in Krankenhaus und Pflege.",
+  "riskClass": {
+    "value": "I",
+    "evidence": "typisch",
+    "note": "Aktives Produkt, das keiner spezielleren Regel unterliegt – Regel 13 der [[mdr|MDR]] Anhang VIII. Maßgeblich ist die Einstufung des Herstellers.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Das Bett dient der Lagerung, Mobilisation und Therapie des Patienten und schützt Pflegende durch eine ergonomische Arbeitshöhe. Lagerungsfunktionen unterstützen u. a. die Oberkörperhochlagerung bei Beatmungspatienten, die Schocklagerung (Kopftieflage) und die Mobilisation in eine Sitzposition. Intensivbetten bieten zusätzlich integrierte Waagen, Röntgenkassettenfächer, Lagerungswinkelanzeigen und Schnittstellen zu [[antidekubitussystem|Antidekubitussystemen]].",
+    "principle": "## Antriebe und Steuerung\n\nJede Verstellfunktion wird von einem elektrischen Linearantrieb erzeugt: Ein Gleichstrommotor ([[elektromotor]]) treibt über ein Schneckengetriebe einen [[spindelantrieb|Spindelantrieb]], der die Drehbewegung in einen Hub umsetzt. Eine Steuerbox mit [[medizinisches-netzteil|Netzteil]] versorgt die Antriebe mit Schutzkleinspannung; Endschalter bzw. Positionssensoren begrenzen die Verfahrwege. Ein [[lithium-ionen-akku|Akku]] bzw. Notakku erlaubt Verstellungen bei Netzausfall, z. B. für die Absenkung in eine flache Lage zur Reanimation. Viele Betten haben zusätzlich eine mechanische CPR-Schnellabsenkung der Rückenlehne.\n\n## Sicherheitsaspekte\n\nWesentliche Gefährdungen sind Einklemmen (zwischen Seitengitter, Liegefläche und Matratze sowie unter beweglichen Teilen), Herausfallen, Kippen und elektrische Risiken. Die Norm IEC 60601-2-52 legt dafür Spaltmaße, Seitengitterhöhen, Stabilitätsprüfungen und Anforderungen an Bedienelemente fest [@iec-60601-2-52]. Sperrfunktionen am Pflegebedienteil verhindern unbeabsichtigte Verstellungen durch den Patienten. Integrierte Waagen nutzen [[kraftsensor|Wägezellen mit Dehnungsmessstreifen]].\n\n> [!warnung] Seitengitter müssen zur verwendeten Matratze passen: Eine zu dicke oder zu weiche Auflage verringert die wirksame Seitengitterhöhe und vergrößert Spalten – Einklemmungs- und Sturzgefahr.\n\n> [!praxis] Beschädigte Kabel und Handschalter, eingedrungene Reinigungsflüssigkeit und Quetschungen der Netzleitung beim Verfahren sind häufige Ursachen für Ausfälle und Brandrisiken; Sichtprüfung bei jeder Aufbereitung."
+  },
+  "manufacturers": [
+    {
+      "ref": "hillrom",
+      "models": [
+        "Centrella",
+        "Progressa"
+      ],
+      "note": "Klinik- und Intensivbetten (Hillrom gehört seit 2021 zu Baxter)."
+    },
+    {
+      "ref": "stryker",
+      "models": [],
+      "note": "Klinik- und Intensivbetten."
+    },
+    {
+      "ref": "arjo",
+      "models": [],
+      "note": "Klinik- und Pflegebetten."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software- und Zusatzmodulen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Elektrische Betten sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt – viele Hersteller schreiben regelmäßige sicherheitstechnische Prüfungen vor. MTK: nicht in Anlage 2 aufgeführt; integrierte Waagen können eichrechtlichen Vorgaben unterliegen.",
+    "intervals": "Prüfungen nach Herstellerangabe (Mechanik, Seitengitter, Bremsen, Antriebe, Notabsenkung, Akku); elektrische Wiederholungsprüfung nach IEC 62353 bzw. DGUV Vorschrift 3; Sichtprüfung im Rahmen jeder Bettenaufbereitung."
+  },
+  "related": [
+    "spindelantrieb",
+    "elektromotor",
+    "antidekubitussystem",
+    "patientenlifter",
+    "patientensicherheit",
+    "iec-60601-1"
+  ],
+  "sources": [
+    "iec-60601-2-52",
+    "mdr-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

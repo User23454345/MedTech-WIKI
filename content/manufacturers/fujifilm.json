@@ -1,0 +1,87 @@
+{
+  "id": "fujifilm",
+  "type": "manufacturer",
+  "title": "Fujifilm Healthcare",
+  "aliases": [
+    "FUJIFILM",
+    "Fujifilm Holdings",
+    "FUJIFILM Healthcare Corporation",
+    "Fujinon",
+    "SonoSite",
+    "Hitachi Healthcare"
+  ],
+  "category": "hersteller",
+  "summary": "Fujifilm Healthcare ist der Medizintechnikbereich des japanischen Fujifilm-Konzerns mit Sitz in Tokio. Das Portfolio umfasst digitale Radiographie, Mammographie, CT, MRT, Ultraschall, Endoskopie und Bild-IT; es wurde 2021 um das Bildgebungsgeschäft von Hitachi erweitert.",
+  "headquarters": "Tokio, Japan",
+  "founded": "1934",
+  "website": "https://www.fujifilm.com/",
+  "productLines": [
+    {
+      "device": "roentgengeraet",
+      "models": [
+        "FDR Smart X",
+        "FDR D-EVO"
+      ],
+      "note": "FDR D-EVO: Flachdetektorfamilie für die digitale Radiographie, auch zur Nachrüstung bestehender Röntgenarbeitsplätze."
+    },
+    {
+      "device": "mammographiegeraet",
+      "models": [
+        "AMULET"
+      ]
+    },
+    {
+      "device": "computertomograph",
+      "models": [
+        "SCENARIA View",
+        "Supria"
+      ],
+      "note": "CT-Systeme aus dem ehemaligen Hitachi-Healthcare-Geschäft."
+    },
+    {
+      "device": "mrt",
+      "models": [
+        "ECHELON Synergy",
+        "APERTO Lucent"
+      ],
+      "note": "Ehemals Hitachi; APERTO Lucent als offenes Permanentmagnetsystem."
+    },
+    {
+      "device": "ultraschallgeraet",
+      "models": [
+        "ARIETTA",
+        "Sonosite PX",
+        "Sonosite LX"
+      ],
+      "note": "ARIETTA ehemals Hitachi; Sonosite für Point-of-Care-Ultraschall."
+    },
+    {
+      "device": "endoskop",
+      "models": [
+        "ELUXEO"
+      ],
+      "note": "Videoendoskopie-Plattform (Marke Fujinon)."
+    }
+  ],
+  "body": "## Überblick\n\n**Fujifilm** ist ein japanischer Technologiekonzern mit Sitz in Tokio, der aus der Herstellung fotografischer Filme hervorgegangen ist [@fujifilm-web]. Der Bereich Healthcare umfasst Medizinprodukte, Pharma und Bio-CDMO; für die Medizintechnik relevant sind vor allem Bildgebung und Endoskopie.\n\n## Geschichte in Stichpunkten\n\n* **1934:** Gründung als Fuji Photo Film in Japan; frühe Produkte waren Kino-, Foto- und Röntgenfilme.\n* **1983:** Einführung der **Speicherfolienradiographie** (Computed Radiography, CR) – ein wichtiger Schritt von Film zu digitalen [[roentgendetektor|Röntgendetektoren]].\n* **2012:** Übernahme von **SonoSite** (tragbarer Point-of-Care-[[ultraschallgeraet|Ultraschall]]).\n* **2021:** Übernahme des Bildgebungsgeschäfts von **Hitachi** ([[computertomograph|CT]], [[mrt|MRT]], Ultraschall); Integration als FUJIFILM Healthcare.\n* **heute:** Endoskopie unter der Marke Fujinon, digitale Radiographie (Marke FDR), Bild-IT (PACS).\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Röntgen | [[roentgengeraet|Digitale Radiographie]], mobile Röntgensysteme, [[mammographiegeraet|Mammographie]] |\n| Schnittbildgebung | CT, MRT einschließlich offener Niederfeldsysteme |\n| Ultraschall | Stationäre Systeme und Point-of-Care-Geräte |\n| Endoskopie | [[endoskop|Videoendoskope]], Lichtquellen, Prozessoren |\n| Healthcare IT | PACS, Befundung, Bildverteilung ([[dicom|DICOM]]) |\n\n## Bedeutung für die Medizintechnik\n\nFujifilm hat den Übergang von der analogen zur digitalen Radiographie maßgeblich mitgeprägt. Durch die Hitachi-Übernahme ist das Unternehmen heute in fast allen Modalitäten der [[radiologie]] vertreten. In der Endoskopie arbeitet Fujifilm mit Lichtquellen aus mehreren Laserdioden bzw. LEDs, um neben Weißlicht auch spektral eingeschränkte Beleuchtungen zur Kontrastverstärkung bereitzustellen.\n\n> [!vereinfacht] Bei der Speicherfolienradiographie (photostimulierbare Lumineszenz) hebt die Röntgenstrahlung Elektronen in der Leuchtstoffschicht (typisch Bariumfluorohalogenid, dotiert mit Europium) in metastabile Haftstellen – es entsteht ein latentes Bild. Ein roter Laser tastet die Folie punktweise ab und setzt die gespeicherte Energie als blaues Licht frei; dieses wird von einem Photomultiplier gemessen und digitalisiert. Anschließend wird die Folie mit hellem Licht gelöscht und ist wiederverwendbar.\n\n> [!hinweis] Röntgeneinrichtungen unterliegen in Deutschland zusätzlich dem [[strlschg|Strahlenschutzgesetz]]; Abnahme- und [[konstanzpruefung|Konstanzprüfungen]] sind gesondert geregelt ([[strahlenschutz]]).\n\n> [!praxis] Bei Konzernumbauten (Verkauf, Abspaltung, Joint Venture) ändert sich oft der Rechtsträger, der als Hersteller auftritt. Betreiber sollten im [[bestandsverzeichnis]] und in Serviceverträgen den aktuellen Ansprechpartner pflegen, damit Sicherheitsinformationen im Rahmen der [[vigilanz]] zuverlässig ankommen.\n\n## Einordnung im Markt\n\nIn der Bildgebung konkurriert Fujifilm mit [[siemens-healthineers]], [[ge-healthcare]], [[philips]] und [[canon-medical]]; in der Endoskopie mit [[olympus]] und [[karl-storz]].",
+  "related": [
+    "roentgengeraet",
+    "mammographiegeraet",
+    "computertomograph",
+    "mrt",
+    "ultraschallgeraet",
+    "endoskop",
+    "roentgendetektor",
+    "radiologie",
+    "dicom",
+    "siemens-healthineers",
+    "ge-healthcare",
+    "canon-medical",
+    "olympus"
+  ],
+  "sources": [
+    "fujifilm-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

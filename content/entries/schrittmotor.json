@@ -1,0 +1,160 @@
+{
+  "id": "schrittmotor",
+  "type": "term",
+  "title": "Schrittmotor",
+  "aliases": [
+    "Stepper",
+    "Stepper motor",
+    "Stepping motor",
+    "Schrittantrieb",
+    "Hybrid-Schrittmotor",
+    "Mikroschritt"
+  ],
+  "category": "komponenten",
+  "summary": "Elektromotor, der sich pro Steuerimpuls um einen festen Winkel weiterdreht; Position und Drehzahl folgen aus Zahl und Frequenz der Impulse. Klassischer Antrieb in Infusions- und Spritzenpumpen, der wegen möglichen Schrittverlusts unabhängig überwacht werden muss.",
+  "body": "## Begriff\n\nEin **Schrittmotor** (englisch *stepper motor*, *stepping motor*) ist ein [[elektromotor|Elektromotor]], dessen Läufer sich bei jedem Umschaltimpuls der Ansteuerung um einen festen Winkel – den **Schrittwinkel** – weiterdreht. Die Position ergibt sich damit aus der Zahl der ausgegebenen Impulse, die Drehzahl aus deren Frequenz. Diese digitale „Zählbarkeit“ der Bewegung macht ihn zum klassischen Antrieb für Dosiersysteme wie [[infusionspumpe|Infusionspumpen]] und [[spritzenpumpe|Spritzenpumpen]] [@kenjo-sugawara-1994] [@kramme-2017].\n\n## Bauarten\n\n| Bauart | Läufer | Typischer Schrittwinkel | Eigenschaften |\n|---|---|---|---|\n| Permanentmagnet-Schrittmotor (PM) | Magnetisierter Zylinder, wenige Pole | relativ groß (z. B. 7,5° oder 15°) | preiswert, Selbsthaltemoment ohne Strom |\n| Reluktanz-Schrittmotor (VR) | Gezahnter Weicheisenläufer ohne Magnet | mittel | kein Rastmoment, heute selten |\n| Hybrid-Schrittmotor | Axial magnetisierter Magnet zwischen zwei gezahnten Eisenkränzen | klein, häufig 1,8° | hohe Auflösung und gutes Drehmoment; Standard in der Gerätetechnik |\n\n> [!belegt] Beim zweiphasigen Hybrid-Schrittmotor mit 50 Läuferzähnen ergibt sich ein Vollschrittwinkel von 1,8°, also 200 Schritte pro Umdrehung [@kenjo-sugawara-1994] [@hughes-drury-2019].\n\nAllgemein gilt für den Hybridmotor mit m Phasen und N_r Läuferzähnen:\n\n`θ_Schritt = 360° / (2 · m · N_r)`\n\n## Funktionsprinzip\n\nDer Läufer stellt sich stets so ein, dass der magnetische Widerstand (die *Reluktanz*) des Kreises minimal wird, bzw. dass Läufer- und Statorpole einander gegenüberstehen. Schaltet die Ansteuerung den Strom auf die nächste Phase um, wandert das Statorfeld und zieht den Läufer um einen Schritt mit.\n\n### Betriebsarten\n\n| Betriebsart | Prinzip | Auflösung | Bemerkung |\n|---|---|---|---|\n| Vollschritt | Abwechselnd eine bzw. zwei Phasen voll bestromt | 1 Schritt | größtes Drehmoment, aber ruckelnd |\n| Halbschritt | Wechsel zwischen ein und zwei bestromten Phasen | ½ Schritt | doppelte Auflösung |\n| Mikroschritt | Phasenströme sinus-/kosinusförmig abgestuft | 1/n Schritt (z. B. 1/16) | sehr gleichmäßige Bewegung, weniger Resonanz |\n\nIm **Mikroschrittbetrieb** regelt der Treiber den Strom in jeder Phase über eine Chopper-Schaltung ([[pwm|Pulsweitenmodulation]]) auf Zwischenwerte. Die erreichbare Positioniergenauigkeit ist dabei geringer als die nominelle Auflösung, weil Rastmoment und Last den Läufer zwischen den Vollschrittlagen verschieben [@kenjo-sugawara-1994].\n\n### Kennlinien und Grenzen\n\n* **Haltemoment:** maximales Drehmoment bei bestromtem Stillstand.\n* **Rastmoment:** Haltemoment ohne Strom (bei PM- und Hybridmotoren).\n* **Start-Stopp-Grenzfrequenz:** höchste Schrittfrequenz, mit der der Motor aus dem Stand ohne Rampe anlaufen kann.\n* **Betriebsgrenzfrequenz:** Mit steigender Schrittfrequenz sinkt das verfügbare Drehmoment, weil der Strom in der Wicklungsinduktivität (Zeitkonstante τ = L/R) nicht schnell genug aufgebaut werden kann.\n* **Resonanz:** Bei bestimmten Schrittfrequenzen schwingt der Läufer um seine Sollposition; Mikroschritt und Dämpfung mildern das.\n\n> [!warnung] Ein Schrittmotor wird meist **gesteuert**, nicht geregelt betrieben. Übersteigt die Last das verfügbare Moment, verliert er Schritte – die Steuerung „glaubt“ dann, gefördert zu haben, obwohl der Läufer stehen geblieben ist. In Dosiergeräten muss die tatsächliche Bewegung deshalb unabhängig überwacht werden.\n\n## Ansteuerung und Überwachung in Dosiergeräten\n\nIn Infusions- und Spritzenpumpen ist die Förderrate direkt an die Schrittfrequenz gekoppelt. Ein [[mikrocontroller|Mikrocontroller]] berechnet aus der eingestellten Rate die Frequenz; ein unabhängiger Überwachungskanal zählt die Pulse eines Drehgebers (optisch oder mit [[hall-sensor|Hall-Sensor]]) und vergleicht sie mit dem Sollwert. Weicht die Bewegung ab, stoppt die Pumpe und alarmiert. Die Partikularnorm [[iec-60601-2-24|IEC 60601-2-24]] legt unter anderem Prüfungen zur Fördergenauigkeit und zum Verhalten bei Okklusion fest [@iec-60601-2-24].\n\n> [!beispiel] Eine Spritzenpumpe mit 200 Vollschritten pro Umdrehung treibe eine [[spindelantrieb|Spindel]] mit 1 mm Steigung direkt an. Ein Vollschritt schiebt den Kolben dann um 5 µm vor. Bei einer 50-ml-Spritze mit rund 6,6 cm² Kolbenfläche entspricht das etwa 3,3 µl. Für 1 ml/h wären rund 300 Vollschritte pro Stunde nötig – ein Schritt alle 12 s. Um die Förderung zu glätten, kombinieren reale Geräte Untersetzungsgetriebe und Mikroschritt. Alle Zahlen sind beispielhaft gewählt.\n\nDas Beispiel zeigt, warum **Förderkontinuität** bei niedrigen Raten ein eigenes Gütekriterium ist: Ein pulsierender Vorschub kann bei hochwirksamen, kurz wirkenden Medikamenten klinisch relevant werden.\n\n## Vor- und Nachteile\n\n| Vorteile | Nachteile |\n|---|---|\n| Position ohne Rückführung zählbar | Schrittverlust bei Überlast möglich |\n| Hohes Haltemoment im Stillstand | Wirkungsgrad gering, Strom fließt auch im Stand |\n| Einfache digitale Ansteuerung | Resonanzen, Geräusche, begrenzte Drehzahl |\n| Bürstenlos, robust | Eigenerwärmung bei Dauerbestromung |\n\nIm Vergleich dazu bietet ein [[bldc-motor|BLDC-Motor]] höhere Drehzahlen und Wirkungsgrade, benötigt aber immer eine Lagerückführung für die Positionierung.\n\n## Fehlerbilder\n\n* **Förderabweichung** durch Schrittverlust bei erhöhter Last (z. B. Okklusion, schwergängige Spritze) – erkannt über Drehgeber bzw. Kraftsensor ([[okklusionsalarm]]).\n* **Treiberdefekt** oder Phasenunterbrechung: Motor brummt, dreht nicht oder ungleichmäßig.\n* **Mechanischer Verschleiß** in Getriebe und Spindelmutter; Prüfung im Rahmen der [[funktionspruefung|Funktionsprüfung]] mit Fördermengenmessung ([[pruefgeraete|Prüfgeräte]]).\n\n## Anwendung in Geräten\n\n| Gerät | Aufgabe |\n|---|---|\n| [[infusionspumpe]] | Antrieb der Nockenwelle der [[peristaltikpumpe|Linearperistaltik]] |\n| [[spritzenpumpe]] | Antrieb der [[spindelantrieb|Spindel]] über Getriebe |\n| [[enterale-ernaehrungspumpe]], [[pca-pumpe]] | Dosierantrieb (bauartabhängig) |\n| [[klinisch-chemischer-analysator]], [[haematologie-analysator]] | Pipettier- und Probenhandling-Achsen |\n| Bildgebung, z. B. [[kollimator]] | Positionierung von Blenden und Filtern (bauartabhängig) |\n\n## Bedeutung in der Medizintechnik\n\nDer Schrittmotor steht exemplarisch für das Prinzip „digital gesteuerte Mechanik“: Eine Zahl im Speicher wird ohne Analogregelung in einen Weg und damit in ein Volumen übersetzt. Gerade weil das so einfach erscheint, verlangt die Sicherheit der Patienten eine unabhängige Kontrolle – ein Grundmuster, das sich in der gesamten Medizintechnik wiederfindet ([[regelkreis]], [[alarmsystem]]) [@kramme-2017].",
+  "related": [
+    "elektromotor",
+    "bldc-motor",
+    "spindelantrieb",
+    "peristaltikpumpe",
+    "infusionspumpe",
+    "spritzenpumpe",
+    "pwm",
+    "mikrocontroller",
+    "hall-sensor",
+    "okklusionsalarm",
+    "iec-60601-2-24"
+  ],
+  "paths": [
+    [
+      "spritzenpumpe",
+      "spindelantrieb",
+      "schrittmotor",
+      "pwm",
+      "mikrocontroller"
+    ],
+    [
+      "infusionspumpe",
+      "peristaltikpumpe",
+      "schrittmotor",
+      "elektromotor"
+    ]
+  ],
+  "sources": [
+    "kenjo-sugawara-1994",
+    "hughes-drury-2019",
+    "kramme-2017",
+    "iec-60601-2-24"
+  ],
+  "diagram": {
+    "title": "Schrittmotorantrieb einer Spritzenpumpe",
+    "caption": "Gesteuerter Antrieb mit unabhängiger Bewegungsüberwachung (Funktionsschema).",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "mc",
+        "label": "Mikrocontroller\n(Rate → Schrittfrequenz)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 90,
+        "y": 80,
+        "w": 170
+      },
+      {
+        "id": "tr",
+        "label": "Schrittmotortreiber\n(Chopper, Mikroschritt)",
+        "ref": "pwm",
+        "kind": "control",
+        "x": 290,
+        "y": 80,
+        "w": 170
+      },
+      {
+        "id": "sm",
+        "label": "Schrittmotor",
+        "ref": "schrittmotor",
+        "kind": "actuator",
+        "x": 480,
+        "y": 80
+      },
+      {
+        "id": "sp",
+        "label": "Getriebe +\nSpindel",
+        "ref": "spindelantrieb",
+        "kind": "process",
+        "x": 670,
+        "y": 80
+      },
+      {
+        "id": "pat",
+        "label": "Spritze →\nPatient",
+        "kind": "patient",
+        "x": 860,
+        "y": 80
+      },
+      {
+        "id": "dg",
+        "label": "Drehgeber",
+        "ref": "hall-sensor",
+        "kind": "sensor",
+        "x": 480,
+        "y": 220
+      },
+      {
+        "id": "uw",
+        "label": "Überwachungs-\nprozessor",
+        "ref": "alarmsystem",
+        "kind": "control",
+        "x": 290,
+        "y": 220,
+        "w": 170
+      }
+    ],
+    "edges": [
+      {
+        "from": "mc",
+        "to": "tr",
+        "kind": "signal",
+        "label": "Takt/Richtung"
+      },
+      {
+        "from": "tr",
+        "to": "sm",
+        "kind": "power",
+        "label": "Phasenströme"
+      },
+      {
+        "from": "sm",
+        "to": "sp",
+        "kind": "energy"
+      },
+      {
+        "from": "sp",
+        "to": "pat",
+        "kind": "fluid",
+        "label": "Vorschub"
+      },
+      {
+        "from": "sm",
+        "to": "dg",
+        "kind": "signal"
+      },
+      {
+        "from": "dg",
+        "to": "uw",
+        "kind": "signal",
+        "label": "Ist-Bewegung"
+      },
+      {
+        "from": "uw",
+        "to": "mc",
+        "kind": "signal",
+        "label": "Stopp/Alarm"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,81 @@
+{
+  "id": "mammographiegeraet",
+  "type": "device",
+  "title": "Mammographiesystem",
+  "aliases": [
+    "Mammographie",
+    "Mammograph",
+    "digitale Mammographie",
+    "Tomosynthese",
+    "DBT",
+    "Mammography system"
+  ],
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 42,
+  "domains": [
+    "radiologie",
+    "geburtshilfe"
+  ],
+  "summary": "Mammographiesysteme sind auf die Röntgenuntersuchung der weiblichen Brust spezialisierte Röntgenanlagen. Weichstrahlung, Kompression und hochauflösende Detektoren machen kleine Kontrastunterschiede und Mikroverkalkungen sichtbar; die Tomosynthese ergänzt Schichtbilder.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives Produkt, das ionisierende Strahlung für die diagnostische bzw. interventionelle Radiologie aussendet, nach [[mdr|MDR]] Anhang VIII **Regel 10** (Klasse IIb). Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die Mammographie dient der Früherkennung von Brustkrebs im Screening, der Abklärung von Tastbefunden und der Steuerung von Biopsien (Stereotaxie). Weil Drüsengewebe und Tumoren sehr ähnlich schwächen, stellt sie höchste Anforderungen an Kontrast und Ortsauflösung bei möglichst geringer Dosis – das Screening gesunder Frauen erfordert eine besonders sorgfältige [[strahlenschutz|Strahlenschutz]]-Abwägung.",
+    "principle": "## Strahlerzeugung und Spektrum\n\nUm den geringen Weichteilkontrast auszunutzen, arbeitet die Mammographie mit niedrigen Röhrenspannungen (etwa 25–35 kV, *typisch*), bei denen der Photoeffekt gegenüber der Compton-Streuung stärker ins Gewicht fällt ([[ionisierende-strahlung]]). Die [[roentgenroehre]] besitzt spezielle Anoden (z. B. Molybdän, Rhodium oder Wolfram) und Filter (z. B. Molybdän, Rhodium, Silber, Aluminium), die das Spektrum auf einen günstigen Energiebereich formen [@bushberg-2020]. Kleine Brennflecke (typisch etwa 0,3 mm, für Vergrößerungsaufnahmen etwa 0,1 mm, *typisch*) ermöglichen hohe Ortsauflösung und Vergrößerungsaufnahmen.\n\n## Kompression, Detektor, Belichtung\n\n| Baugruppe | Funktion |\n|---|---|\n| Kompressionsplatte | verringert und vergleichmäßigt die Gewebedicke → weniger Streustrahlung, weniger Dosis, geringere Bewegungsunschärfe |\n| Streustrahlenraster | unterdrückt Streustrahlung (bei Vergrößerung meist entfernt) |\n| [[roentgendetektor|Flachdetektor]] | häufig direkt konvertierendes amorphes Selen mit kleinen Pixeln |\n| Belichtungsautomatik | wählt Spannung, Anoden-/Filterkombination und mAs nach Dicke und Dichte der Brust |\n\n## Tomosynthese\n\nBei der digitalen Brust-Tomosynthese schwenkt die Röhre über einen begrenzten Winkelbereich; aus wenigen Projektionen werden Schichten rekonstruiert, die Gewebeüberlagerungen verringern. Sicherheits- und Leistungsanforderungen legt IEC 60601-2-45 fest [@iec-60601-2-45].\n\n> [!praxis] In Mammographie-Screening-Programmen gelten zusätzliche, über das allgemeine Strahlenschutzrecht hinausgehende Qualitätssicherungsanforderungen mit häufigen Konstanzprüfungen."
+  },
+  "manufacturers": [
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "MAMMOMAT"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "Senographe"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "fujifilm",
+      "models": [
+        "AMULET"
+      ],
+      "note": ""
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Die sicherheitsrelevanten Prüfungen ergeben sich vor allem aus dem Strahlenschutzrecht ([[strlschg|StrlSchG]], StrlSchV): Abnahmeprüfung, regelmäßige [[konstanzpruefung|Konstanzprüfungen]] und wiederkehrende Prüfung durch behördlich bestimmte Sachverständige.",
+    "intervals": "Konstanzprüfungen nach Strahlenschutzrecht und Qualitätssicherungsrichtlinie (in der Mammographie in kurzen Abständen, teils arbeitstäglich); Sachverständigenprüfung nach behördlicher Vorgabe; Wartung nach Herstellerangabe."
+  },
+  "related": [
+    "roentgengeraet",
+    "roentgenroehre",
+    "roentgendetektor",
+    "konstanzpruefung",
+    "strahlenschutz",
+    "ultraschallgeraet"
+  ],
+  "sources": [
+    "bushberg-2020",
+    "iec-60601-2-45",
+    "strlschv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

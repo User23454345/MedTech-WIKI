@@ -1,0 +1,90 @@
+{
+  "id": "pet-ct",
+  "type": "device",
+  "title": "PET/CT",
+  "aliases": [
+    "PET-CT",
+    "Positronen-Emissions-Tomographie",
+    "PET",
+    "Hybridbildgebung",
+    "Positron emission tomography"
+  ],
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 45,
+  "domains": [
+    "nuklearmedizin",
+    "radiologie",
+    "strahlentherapie",
+    "kardiologie"
+  ],
+  "summary": "Ein PET/CT kombiniert einen Positronen-Emissions-Tomographen mit einem Computertomographen in einer Gantry. Die PET zeigt Stoffwechselvorgänge anhand radioaktiv markierter Substanzen, die CT liefert anatomische Information und die Daten zur Schwächungskorrektur.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Der CT-Teil ist ein aktives Produkt, das ionisierende Strahlung für die diagnostische Radiologie aussendet ([[mdr|MDR]] Anhang VIII **Regel 10**, Klasse IIb); die Bildgebung der In-vivo-Verteilung von Radiopharmaka allein wäre nach derselben Regel Klasse IIa. Für das Kombinationsgerät ergibt sich damit typischerweise Klasse IIb. Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Hauptanwendung ist die Onkologie: Staging, Rezidivsuche, Therapiekontrolle und Bestrahlungsplanung, meist mit dem Glukoseanalogon F-18-FDG, das sich in stoffwechselaktiven Tumoren anreichert. Weitere Tracer stellen z. B. das prostataspezifische Membranantigen (PSMA) oder Rezeptoren dar. Daneben wird die PET in der Neurologie (Demenzdiagnostik) und Kardiologie (Vitalitäts- und Perfusionsdiagnostik) eingesetzt.",
+    "principle": "## Positronenvernichtung und Koinzidenz\n\nDer Tracer enthält ein Positronenstrahler-Nuklid ([[radioaktivitaet]]). Das emittierte Positron vernichtet sich nach kurzer Wegstrecke mit einem Elektron; dabei entstehen zwei Gammaquanten von je 511 keV, die nahezu entgegengesetzt auseinanderfliegen [@bushberg-2020]. Ein Ring aus Szintillationskristallen (z. B. LSO/LYSO oder BGO) mit Photodetektoren (Photomultiplier oder Silizium-Photomultiplier) registriert beide Quanten. Treffen zwei Ereignisse innerhalb eines sehr kurzen Koinzidenzzeitfensters ein, liegt der Zerfallsort auf der Verbindungslinie der Detektoren (Line of Response).\n\n| Begriff | Bedeutung |\n|---|---|\n| Time-of-Flight (TOF) | Aus der Laufzeitdifferenz wird der Ort auf der Linie eingegrenzt → besseres Signal-Rausch-Verhältnis |\n| Zufällige und Streukoinzidenzen | Störereignisse, die rechnerisch korrigiert werden |\n| SUV | Standardized Uptake Value, semiquantitatives Maß der Anreicherung |\n\n## Rolle der CT\n\nGammaquanten werden im Körper je nach Weglänge unterschiedlich geschwächt ([[ionisierende-strahlung]]). Die CT-Daten werden auf 511 keV umgerechnet und zur Schwächungskorrektur verwendet; zugleich ermöglichen sie die exakte anatomische Zuordnung durch Bildfusion. Der CT-Teil entspricht technisch einem [[computertomograph|Computertomographen]] mit [[gantry]], [[roentgenroehre]] und Detektorsystem.\n\n> [!vereinfacht] Die Ortsauflösung der PET ist physikalisch begrenzt, u. a. durch die Reichweite des Positrons und die nicht exakt antiparallele Emission; sie ist deutlich gröber als die der CT (typisch einige Millimeter gegenüber Bruchteilen eines Millimeters, *typisch*).\n\n> [!hinweis] Der Umgang mit offenen radioaktiven Stoffen erfordert eine strahlenschutzrechtliche Genehmigung, bauliche Abschirmung und Kontaminationskontrolle ([[strahlenschutz]], [[strlschg|StrlSchG]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "Biograph"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "Discovery MI",
+        "Omni Legend"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "philips",
+      "models": [
+        "Vereos"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "canon-medical",
+      "models": [
+        "Cartesion Prime"
+      ],
+      "note": ""
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Für den CT-Teil gelten die strahlenschutzrechtlichen Abnahme-, Konstanz- und Sachverständigenprüfungen ([[konstanzpruefung]]); für den PET-Teil Qualitätskontrollen nach Herstellerangabe und nuklearmedizinischen Vorgaben.",
+    "intervals": "Tägliche PET-Qualitätskontrolle (z. B. Detektor-Normalisierung mit Prüfquelle) nach Herstellerangabe; CT-Konstanzprüfungen nach Strahlenschutzrecht; regelmäßige Prüfung des Aktivimeters und der Kreuzkalibrierung; Wartung nach Herstellerangabe."
+  },
+  "related": [
+    "computertomograph",
+    "gammakamera",
+    "radioaktivitaet",
+    "strahlenschutz",
+    "linearbeschleuniger",
+    "dicom"
+  ],
+  "sources": [
+    "bushberg-2020",
+    "strlschg",
+    "strlschv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "iec-60601-2-34",
+    "kind": "norm",
+    "title": "IEC 60601-2-34 – Medizinische elektrische Geräte – Teil 2-34: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von invasiven Blutdrucküberwachungsgeräten",
+    "publisher": "IEC; in Deutschland als DIN EN IEC 60601-2-34",
+    "note": "Gerätespezifische Norm für die invasive Blutdrucküberwachung (Katheter, Schläuche und Hähne sind ausgenommen). Aktuelle Ausgabe IEC 60601-2-34:2024; maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "iso-80601-2-55",
+    "kind": "norm",
+    "title": "ISO 80601-2-55 – Medizinische elektrische Geräte – Teil 2-55: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Atemgasmonitoren",
+    "publisher": "ISO / IEC; in Deutschland als DIN EN ISO 80601-2-55",
+    "note": "Gilt für Monitore für Anästhesiegase, Kohlendioxid und Sauerstoff im Atemgas. Ausgabe 2018 mit Änderung 1:2023; maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "iec-60751",
+    "kind": "norm",
+    "title": "IEC 60751 – Industrielle Platin-Widerstandsthermometer und Platin-Temperatursensoren",
+    "publisher": "IEC; in Deutschland als DIN EN IEC 60751",
+    "note": "Legt die Kennlinie (Callendar-Van-Dusen-Gleichung) und Toleranzklassen von Platin-Messwiderständen wie Pt100/Pt1000 fest. Maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "aami-ec12",
+    "kind": "norm",
+    "title": "ANSI/AAMI EC12 – Disposable ECG electrodes",
+    "publisher": "Association for the Advancement of Medical Instrumentation (AAMI)",
+    "year": "2000",
+    "note": "US-Norm mit Mindestanforderungen an Kennzeichnung, Sicherheit und Leistung von Einmal-EKG-Elektroden samt Prüfverfahren (u. a. Wechselstromimpedanz, Gleichspannungsoffset, Erholung nach Defibrillationsüberlastung); seither mehrfach bestätigt, maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "allen-2007",
+    "kind": "artikel",
+    "authors": "Allen J",
+    "title": "Photoplethysmography and its application in clinical physiological measurement",
+    "publisher": "Physiological Measurement 28(3): R1–R39",
+    "year": "2007",
+    "note": "Übersichtsarbeit zu Messprinzip, Licht-Gewebe-Wechselwirkung, Instrumentierung und klinischen Anwendungen der Photoplethysmographie. DOI 10.1088/0967-3334/28/3/R01."
+  },
+  {
+    "id": "jaffe-2008",
+    "kind": "artikel",
+    "authors": "Jaffe MB",
+    "title": "Infrared measurement of carbon dioxide in the human breath: „breathe-through“ devices from Tyndall to the present day",
+    "publisher": "Anesthesia & Analgesia 107(3): 890–904",
+    "year": "2008",
+    "note": "Historische und technische Übersicht zur Infrarot-Kapnometrie, insbesondere zum Hauptstromverfahren."
+  },
+  {
+    "id": "clark-1956",
+    "kind": "artikel",
+    "authors": "Clark LC Jr",
+    "title": "Monitor and control of blood and tissue oxygen tensions",
+    "publisher": "Transactions – American Society for Artificial Internal Organs 2: 41–48",
+    "year": "1956",
+    "note": "Erstbeschreibung der membranbedeckten polarographischen Sauerstoffelektrode (Clark-Elektrode)."
+  },
+  {
+    "id": "fraden-2016",
+    "kind": "buch",
+    "authors": "Fraden J",
+    "title": "Handbook of Modern Sensors: Physics, Designs, and Applications",
+    "edition": "5. Auflage",
+    "publisher": "Springer, Cham",
+    "year": "2016",
+    "note": "Standardwerk zu physikalischen Sensorprinzipien (Druck, Durchfluss, Temperatur, Gas, Optik)."
+  }
+]

@@ -1,0 +1,159 @@
+{
+  "id": "ionisierende-strahlung",
+  "type": "term",
+  "title": "Wechselwirkung ionisierender Strahlung mit Materie",
+  "aliases": [
+    "ionisierende Strahlung",
+    "ionizing radiation",
+    "Photoeffekt",
+    "Compton-Effekt",
+    "Compton-Streuung",
+    "Paarbildung",
+    "Schwächungsgesetz",
+    "Schwächungskoeffizient",
+    "Energiedosis",
+    "Äquivalentdosis",
+    "effektive Dosis",
+    "LET",
+    "Bragg-Peak"
+  ],
+  "category": "physik",
+  "summary": "Ionisierende Strahlung gibt ihre Energie über Photoeffekt, Compton-Streuung, Paarbildung oder Stoßprozesse an Materie ab und ionisiert dabei Atome. Diese Wechselwirkungen erklären Bildkontrast und Streustrahlung in der Röntgendiagnostik, die Dosisverteilung in der Strahlentherapie und die Grundlagen des Strahlenschutzes.",
+  "body": "## Was heißt „ionisierend“?\n\nAls **ionisierend** gilt Strahlung, deren Teilchen oder Quanten genug Energie tragen, um Elektronen aus Atomen oder Molekülen herauszulösen – in der Größenordnung von einigen eV bis über 10 eV je Ionisation. Man unterscheidet [@krieger-strahlenschutz-2019]:\n\n| Art | Beispiele | Wechselwirkung |\n|---|---|---|\n| **indirekt ionisierend** (ungeladen) | Photonen ([[roentgenstrahlung|Röntgen-]] und Gammastrahlung), Neutronen | einzelne, zufällige Ereignisse; erzeugen Sekundärelektronen, die dann ionisieren |\n| **direkt ionisierend** (geladen) | Elektronen, Positronen, Protonen, Alphateilchen, Ionen | viele kleine Coulomb-Stöße entlang der Bahn; definierte Reichweite |\n\n## Photonen: Schwächungsgesetz\n\nEin schmales Photonenbündel wird in Materie exponentiell geschwächt:\n\n`I(x) = I₀ · e^(−μ · x)`\n\nμ ist der **lineare Schwächungskoeffizient** (cm⁻¹). Dividiert durch die Dichte ergibt sich der materialtypische **Massenschwächungskoeffizient** μ/ρ (cm²/g). Die **Halbwertsschichtdicke** ist\n\n`HWS = ln 2 / μ ≈ 0,693 / μ`\n\nμ setzt sich additiv aus den Beiträgen der einzelnen Prozesse zusammen:\n\n`μ = μ_Photo + μ_Compton + μ_Rayleigh + μ_Paar`\n\n### Photoeffekt\n\nDas Photon wird vollständig absorbiert und schlägt ein inneres Hüllenelektron heraus. Die Wahrscheinlichkeit steigt sehr stark mit der Ordnungszahl und fällt stark mit der Energie, näherungsweise\n\n`τ/ρ ∝ Z³ / E³`\n\nDieser Effekt erzeugt den **Kontrast** in der Röntgendiagnostik: Knochen (Calcium), Jod- und Barium-Kontrastmittel absorbieren deutlich stärker als Weichteile. An den Bindungsenergien der Schalen springt die Absorption sprunghaft an (**Absorptionskanten**, z. B. K-Kante von Jod bei rund 33 keV) [@bushberg-2020].\n\n### Compton-Streuung\n\nDas Photon stößt mit einem äußeren, nahezu freien Elektron, gibt einen Teil seiner Energie ab und fliegt mit geänderter Richtung weiter. Die Wahrscheinlichkeit hängt kaum von Z ab, sondern von der Elektronendichte. Im Weichgewebe überwiegt der Compton-Effekt oberhalb von etwa 30 keV und ist im gesamten Bereich der Megavolt-Strahlentherapie dominant [@krieger-strahlenschutz-2019].\n\n> [!praxis] Compton-gestreute Photonen sind die **Streustrahlung**, die Bildkontrast verschlechtert und das Personal am [[c-bogen]] oder an der [[angiographieanlage]] belastet. Der Patient selbst ist die wichtigste Streustrahlenquelle – deshalb wirken Abstand, Bleischürze und Deckenschild.\n\n### Rayleigh-Streuung\n\nKohärente Streuung ohne Energieverlust; im diagnostischen Bereich nur ein kleiner Anteil.\n\n### Paarbildung\n\nOberhalb von **1,022 MeV** (zweifache Ruheenergie des Elektrons) kann ein Photon im Kernfeld in ein Elektron-Positron-Paar übergehen (im Feld eines Hüllenelektrons erst oberhalb von 2,044 MeV, sogenannte Triplettbildung). Der Wirkungsquerschnitt wächst etwa mit Z² und steigt mit der Photonenenergie an. Das Positron zerstrahlt später mit einem Elektron in zwei 511-keV-Photonen – dieselbe Vernichtungsstrahlung, die in der [[pet-ct|PET]] nachgewiesen wird ([[radioaktivitaet]]).\n\n| Energiebereich (Weichgewebe) | dominierender Prozess | Bedeutung |\n|---|---|---|\n| unter ca. 30 keV | Photoeffekt | Mammographie, hoher Weichteilkontrast |\n| ca. 30 keV bis ca. 20–25 MeV | Compton-Streuung | Radiographie, CT, Strahlentherapie |\n| ab einigen MeV zunehmend, über ca. 25 MeV dominierend | Paarbildung | Hochenergie-Strahlentherapie (Anteil wächst mit der Energie) |\n\n> [!vereinfacht] Die Bereichsgrenzen sind Richtwerte für Wasser bzw. Weichgewebe. In Materialien hoher Ordnungszahl (Blei, Wolfram) reicht der Photoeffekt bis zu deutlich höheren Energien – deshalb schirmt Blei Röntgenstrahlung so wirksam ab.\n\n## Geladene Teilchen: Bremsvermögen und Bragg-Peak\n\nGeladene Teilchen verlieren ihre Energie kontinuierlich. Das **Bremsvermögen** S = dE/dx steigt, je langsamer das Teilchen wird (Bethe-Formel, näherungsweise S ∝ z²/v²). Für schwere Teilchen wie Protonen führt das zum **Bragg-Peak**: Kurz vor dem Ende ihrer Reichweite deponieren sie den größten Teil ihrer Energie, dahinter fällt die Dosis steil ab. Elektronen werden dagegen stark gestreut und erzeugen in Materie hoher Ordnungszahl zusätzlich Bremsstrahlung – das Prinzip der Röntgenröhre [@krieger-strahlenschutz-2019].\n\nDer **lineare Energietransfer** (LET, keV/µm) beschreibt die Ionisationsdichte entlang der Spur. Hoch-LET-Strahlung (Alphateilchen sowie die von Neutronen freigesetzten Rückstoßprotonen) schädigt die DNA dichter und ist biologisch wirksamer.\n\n## Dosisgrößen\n\n| Größe | Definition | Einheit |\n|---|---|---|\n| Energiedosis D | absorbierte Energie je Masse, D = dE/dm | Gray (Gy = J/kg) |\n| Kerma K | Summe der Anfangs-Bewegungsenergien aller von ungeladenen Teilchen (Photonen, Neutronen) freigesetzten geladenen Teilchen je Masse | Gy |\n| Organ-Äquivalentdosis H_T | H_T = w_R · D_T | Sievert (Sv) |\n| Effektive Dosis E | E = Σ w_T · H_T | Sv |\n\nDie Strahlungs-Wichtungsfaktoren w_R betragen nach ICRP 103 für Photonen und Elektronen 1, für Protonen 2 und für Alphateilchen 20; für Neutronen ist w_R eine energieabhängige Funktion [@icrp-103]. Die Gewebe-Wichtungsfaktoren w_T berücksichtigen die unterschiedliche Strahlenempfindlichkeit der Organe.\n\n> [!belegt] Die effektive Dosis ist eine **Schutzgröße** für die Risikobewertung von Bevölkerungsgruppen, keine Messgröße für das individuelle Risiko eines Patienten [@icrp-103].\n\n## Biologische Wirkung in Kürze\n\nDie Ionisationen schädigen direkt oder über Radikale (Radiolyse des Wassers) die DNA. Man unterscheidet **deterministische Wirkungen** (Gewebereaktionen, oberhalb einer Schwellendosis, z. B. Hautrötung bei langen Durchleuchtungen) und **stochastische Wirkungen** (Krebs, genetische Effekte; Wahrscheinlichkeit steigt mit der Dosis, für den Strahlenschutz wird keine Schwelle angenommen). Daraus folgen Rechtfertigung, Optimierung und Dosisbegrenzung im [[strahlenschutz|Strahlenschutz]] nach [[strlschg|StrlSchG]] [@strlschg].\n\n## Anwendung in Geräten\n\n* **Bildgebung:** Der Unterschied der Schwächungskoeffizienten erzeugt das Bild im [[roentgengeraet]], [[computertomograph]] (CT-Werte aus μ) und bei der [[knochendichtemessung]] (zwei Energien, Materialtrennung).\n* **Detektion:** Ein [[roentgendetektor|Flachdetektor]] wandelt absorbierte Photonen über Szintillator (Photoeffekt im Cäsiumiodid) oder direkt (Selen) in Ladung um; die [[gammakamera]] und die [[pet-ct|PET]] nutzen Szintillationskristalle.\n* **Therapie:** Der [[linearbeschleuniger]] nutzt Megavolt-Photonen (Compton-dominiert, hautschonender Dosisaufbau) oder Elektronen; der [[afterloader]] setzt Gammastrahler direkt im Tumor ein.\n* **Abschirmung und Begrenzung:** [[kollimator|Kollimatoren]] und Bleiabschirmungen nutzen den hohen Photoeffekt-Anteil schwerer Elemente.\n\n## Bedeutung in der Medizintechnik\n\nWer Röntgen- und Strahlentherapieanlagen betreut, braucht das Wechselwirkungsmodell, um Prüfergebnisse zu verstehen: Warum steigt der Kontrast bei niedrigerer kV? Warum erhöht ein fehlendes Zusatzfilter die Hautdosis? Warum ist eine Bleischürze bei Megavolt-Strahlung wirkungslos? Diese Fragen tauchen bei der [[konstanzpruefung|Konstanzprüfung]], der Dosimetrie und in der Strahlenschutzunterweisung immer wieder auf.\n\n> [!warnung] Dosis- und Abschirmberechnungen für reale Räume sind Aufgabe von Medizinphysik-Expert:innen bzw. Sachverständigen; die Formeln in diesem Artikel dienen dem Verständnis.",
+  "related": [
+    "roentgenstrahlung",
+    "radioaktivitaet",
+    "strahlenschutz",
+    "roentgendetektor",
+    "kollimator",
+    "linearbeschleuniger",
+    "computertomograph",
+    "pet-ct",
+    "gammakamera",
+    "strlschg"
+  ],
+  "paths": [
+    [
+      "roentgengeraet",
+      "roentgenstrahlung",
+      "ionisierende-strahlung",
+      "strahlenschutz",
+      "strlschg"
+    ],
+    [
+      "linearbeschleuniger",
+      "ionisierende-strahlung",
+      "strahlentherapie"
+    ]
+  ],
+  "sources": [
+    "krieger-strahlenschutz-2019",
+    "bushberg-2020",
+    "icrp-103",
+    "strlschg"
+  ],
+  "diagram": {
+    "title": "Wege der Energieabgabe eines Photons",
+    "caption": "Indirekt ionisierende Photonen übertragen Energie auf Sekundärelektronen, die das Gewebe ionisieren.",
+    "width": 900,
+    "height": 320,
+    "nodes": [
+      {
+        "id": "ph",
+        "label": "Photon\n(Röntgen/Gamma)",
+        "ref": "roentgenstrahlung",
+        "kind": "source",
+        "x": 100,
+        "y": 160
+      },
+      {
+        "id": "pe",
+        "label": "Photoeffekt\n(Z³/E³)",
+        "kind": "process",
+        "x": 330,
+        "y": 60
+      },
+      {
+        "id": "co",
+        "label": "Compton-\nStreuung",
+        "kind": "process",
+        "x": 330,
+        "y": 160
+      },
+      {
+        "id": "pa",
+        "label": "Paarbildung\n(> 1,022 MeV)",
+        "kind": "process",
+        "x": 330,
+        "y": 260
+      },
+      {
+        "id": "se",
+        "label": "Sekundär-\nelektronen",
+        "kind": "process",
+        "x": 570,
+        "y": 160
+      },
+      {
+        "id": "st",
+        "label": "Streustrahlung",
+        "ref": "strahlenschutz",
+        "kind": "output",
+        "x": 570,
+        "y": 60
+      },
+      {
+        "id": "dos",
+        "label": "Ionisation /\nEnergiedosis",
+        "kind": "patient",
+        "x": 790,
+        "y": 160
+      }
+    ],
+    "edges": [
+      {
+        "from": "ph",
+        "to": "pe",
+        "kind": "energy"
+      },
+      {
+        "from": "ph",
+        "to": "co",
+        "kind": "energy"
+      },
+      {
+        "from": "ph",
+        "to": "pa",
+        "kind": "energy"
+      },
+      {
+        "from": "co",
+        "to": "st",
+        "kind": "energy",
+        "label": "gestreutes Photon"
+      },
+      {
+        "from": "pe",
+        "to": "se",
+        "kind": "energy"
+      },
+      {
+        "from": "co",
+        "to": "se",
+        "kind": "energy"
+      },
+      {
+        "from": "pa",
+        "to": "se",
+        "kind": "energy"
+      },
+      {
+        "from": "se",
+        "to": "dos",
+        "kind": "energy"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

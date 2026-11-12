@@ -1,0 +1,51 @@
+{
+  "id": "tonometer",
+  "type": "device",
+  "title": "Augentonometer",
+  "aliases": [
+    "Tonometer",
+    "Applanationstonometer",
+    "Goldmann-Tonometer",
+    "Non-Contact-Tonometer",
+    "Luftimpuls-Tonometer",
+    "Rebound-Tonometer",
+    "IOP-Messgerät"
+  ],
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 91,
+  "domains": [
+    "augenheilkunde"
+  ],
+  "summary": "Augentonometer messen den Augeninnendruck (intraokularer Druck, IOD), die wichtigste messbare Größe in Diagnostik und Verlaufskontrolle des Glaukoms. Verbreitet sind Applanationstonometer nach Goldmann, berührungslose Luftimpuls-Tonometer und Rebound-Tonometer.",
+  "sections": {
+    "purpose": "Ein erhöhter Augeninnendruck ist der wichtigste beeinflussbare Risikofaktor für das Glaukom (Grüner Star), bei dem der Sehnerv fortschreitend geschädigt wird. Tonometer dienen der Früherkennung (Screening), der Diagnosestellung zusammen mit Gesichtsfeld- und [[oct|OCT]]-Befunden sowie der Therapiekontrolle nach medikamentöser, Laser- oder operativer Drucksenkung. Der Messwert wird in mmHg angegeben; als statistischer Normalbereich gelten etwa 10–21 mmHg (Orientierungswert).",
+    "principle": "## Applanation (Imbert-Fick-Prinzip)\n\nBei der Applanationstonometrie wird die Hornhaut des [[auge|Auges]] mit einem Messkörper auf eine definierte Fläche abgeplattet. Vereinfacht gilt für eine dünnwandige, ideal elastische Kugel das Imbert-Fick-Gesetz p = F / A ([[druck]]). Beim Goldmann-Tonometer wird eine Kreisfläche von 3,06 mm Durchmesser abgeplattet; bei diesem Durchmesser heben sich die Biegesteifigkeit der Hornhaut und die Kapillaranziehung des Tränenfilms näherungsweise auf, und die Abplattungsfläche ist so gewählt, dass eine Kraft von 1 g (≈ 9,81 mN) einem Druck von 10 mmHg entspricht – der an der Messtrommel abgelesene Wert in Gramm wird daher mit 10 multipliziert. Die nötige Kraft wird an einer Feder- oder Hebelmechanik eingestellt; ein Biprisma teilt das Bild des fluoreszeingefärbten Tränenmeniskus in zwei Halbringe, deren Innenkanten sich bei korrekter Abplattung berühren ([[optik]]).\n\n> [!vereinfacht] Das Auge ist keine ideale dünnwandige Kugel. Hornhautdicke, -krümmung und Biomechanik beeinflussen den Messwert systematisch – eine dicke Hornhaut führt tendenziell zu überhöhten, eine dünne zu zu niedrigen Werten.\n\n## Berührungslose und Rebound-Verfahren\n\nDas **Luftimpuls-Tonometer** (Non-Contact) bläst einen zeitlich ansteigenden Luftstoß auf die Hornhaut. Ein optoelektronisches System registriert über das reflektierte Licht den Moment der Abplattung (Reflexionsmaximum); aus Zeitpunkt bzw. Luftdruck zu diesem Moment berechnet das Gerät den IOD. Das **Rebound-Tonometer** schießt eine kleine, magnetisierte Sonde gegen die Hornhaut; über [[elektromagnetische-induktion|Induktion]] in einer Spule wird ihre Abbremsung gemessen – je höher der Druck, desto schneller prallt sie zurück. Beide Verfahren benötigen keine Lokalanästhesie.\n\n> [!praxis] Messwerte verschiedener Verfahren sind nicht beliebig austauschbar; Verlaufskontrollen sollten möglichst mit demselben Verfahren erfolgen. Messköpfe mit Hornhautkontakt sind nach Herstellerangabe [[aufbereitung|aufzubereiten]] oder als Einmalprodukt zu verwenden [@krinko-bfarm-2012]."
+  },
+  "manufacturers": [],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software- und Zusatzmodulen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "ja",
+    "basis": "MTK: MPBetreibV (Fassung 2025) § 15 i. V. m. Anlage 2 – Produkte zur Bestimmung des Augeninnendrucks (Augentonometer), nach der bisherigen Gliederung Nr. 1.4; Nachprüffrist für Augentonometer allgemein 2 Jahre. STK: nicht in Anlage 1 aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. Anlage 2 wurde 2025 geändert – Nummerierung und Fristen sind am jeweils geltenden amtlichen Text zu prüfen.",
+    "intervals": "MTK spätestens alle 2 Jahre (Anlage 2 MPBetreibV); zusätzlich Kalibrierkontrollen nach Herstellerangabe (z. B. Prüfgewicht bzw. Kontrollkörper beim Goldmann-Tonometer), elektrische Wiederholungsprüfung aktiver Geräte nach IEC 62353 bzw. DGUV Vorschrift 3."
+  },
+  "related": [
+    "auge",
+    "mtk",
+    "druck",
+    "oct",
+    "spaltlampe",
+    "kalibrierung"
+  ],
+  "sources": [
+    "iso-8612",
+    "mpbetreibv",
+    "krinko-bfarm-2012"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

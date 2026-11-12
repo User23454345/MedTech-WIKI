@@ -1,0 +1,52 @@
+{
+  "id": "biotronik",
+  "type": "manufacturer",
+  "title": "Biotronik",
+  "aliases": [
+    "BIOTRONIK SE & Co. KG",
+    "BIOTRONIK"
+  ],
+  "category": "hersteller",
+  "summary": "BIOTRONIK ist ein familiengeführter Medizintechnikhersteller mit Sitz in Berlin. Schwerpunkte sind aktive kardiale Implantate wie Herzschrittmacher, ICDs und CRT-Systeme, Ereignisrekorder sowie die telemedizinische Fernnachsorge.",
+  "headquarters": "Berlin, Deutschland",
+  "founded": "1963",
+  "website": "https://www.biotronik.com/",
+  "productLines": [
+    {
+      "device": "herzschrittmacher",
+      "models": [],
+      "note": "Konventionelle Ein- und Zweikammerschrittmacher, CRT-P-Systeme; Fernnachsorge über BIOTRONIK Home Monitoring."
+    },
+    {
+      "device": "icd",
+      "models": [],
+      "note": "Transvenöse ICDs und CRT-D-Systeme."
+    },
+    {
+      "device": "externer-schrittmacher",
+      "models": [
+        "Reocor"
+      ],
+      "note": "Externe temporäre Schrittmacher."
+    }
+  ],
+  "body": "## Überblick\n\n**BIOTRONIK** ist eines der wenigen europäischen Unternehmen, die aktive kardiale Implantate entwickeln und fertigen [@biotronik-web]. Hauptsitz und wesentliche Fertigung befinden sich in Berlin; das Unternehmen ist in Familienbesitz.\n\n## Geschichte in Stichpunkten\n\n* **1963:** Gründung in Berlin durch den Physiker Max Schaldach; das Unternehmen entwickelte den ersten in Deutschland hergestellten [[herzschrittmacher|Herzschrittmacher]].\n* **ab den 1970er/1980er Jahren:** Ausbau zu einem international tätigen Hersteller von Schrittmachern, später auch von [[icd|ICDs]] und Elektroden.\n* **2000er Jahre:** Einführung der drahtlosen, automatischen **Fernnachsorge** (Home Monitoring), bei der Implantate täglich Daten über ein Patientengerät an eine Serviceplattform übertragen.\n* **2025:** Verkauf des Geschäfts mit Gefäßinterventionen (Stents, Ballonkatheter) an Teleflex [@teleflex-biotronik-vi-2025]; BIOTRONIK konzentriert sich seitdem auf Rhythmusmanagement und Neuromodulation.\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Kardiales Rhythmusmanagement | Schrittmacher, ICDs, CRT-P/CRT-D, Elektroden, implantierbare Ereignisrekorder |\n| Telemedizin | Fernnachsorge der Implantate (Home Monitoring) |\n| Akutversorgung | [[externer-schrittmacher|Externe temporäre Schrittmacher]] |\n| Neuromodulation | Systeme zur Rückenmarkstimulation (eigenständiger Unternehmensbereich) |\n\n## Bedeutung für die Medizintechnik\n\nBIOTRONIK steht für die Entwicklung der Schrittmachertechnik in Deutschland und für die frühe Verbreitung der Fernnachsorge. Bei der Fernnachsorge werden Messwerte wie Elektrodenimpedanz, Batteriezustand und Arrhythmie-Episoden übertragen, sodass technische Probleme häufig vor dem nächsten Kontrolltermin erkannt werden.\n\n> [!vereinfacht] Ein Schrittmacher besteht aus einem hermetisch gekapselten Aggregat (Batterie, Elektronik) und einer oder mehreren Elektroden. Die Elektronik misst die [[biosignale|intrakardialen Signale]] und gibt nur dann Stimulationsimpulse ab, wenn die Eigenaktivität des [[erregungsleitungssystem|Erregungsleitungssystems]] ausbleibt.\n\nExterne temporäre Schrittmacher sind dagegen klassische Klinikgeräte: Sie werden auf Intensivstationen und in der Herzchirurgie betrieben, unterliegen den Betreiberpflichten der [[mpbetreibv|MPBetreibV]] und sind regelmäßig sicherheitstechnisch zu kontrollieren ([[stk]]).\n\n> [!praxis] Bei Patientinnen und Patienten mit Implantat sind Wechselwirkungen mit [[hf-chirurgiegeraet|HF-Chirurgie]], [[mrt|MRT]] und [[defibrillator|externer Defibrillation]] zu beachten; maßgeblich sind die Herstellerangaben zum jeweiligen Implantat.\n\n## Einordnung im Markt\n\nIm Rhythmusmanagement konkurriert BIOTRONIK mit den US-Konzernen [[medtronic]], [[abbott]] und [[boston-scientific]].",
+  "related": [
+    "herzschrittmacher",
+    "icd",
+    "externer-schrittmacher",
+    "erregungsleitungssystem",
+    "mrt",
+    "medtronic",
+    "abbott",
+    "boston-scientific",
+    "kardiologie",
+    "mpbetreibv"
+  ],
+  "sources": [
+    "biotronik-web",
+    "teleflex-biotronik-vi-2025"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

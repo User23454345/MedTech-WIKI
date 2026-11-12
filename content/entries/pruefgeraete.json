@@ -1,0 +1,59 @@
+{
+  "id": "pruefgeraete",
+  "type": "term",
+  "title": "Prüfgeräte und Simulatoren",
+  "aliases": [
+    "Prüfmittel",
+    "Medizintechnische Prüfgeräte",
+    "Sicherheitstester",
+    "Patientensimulator",
+    "Analysator",
+    "Test equipment",
+    "Biomedical test equipment",
+    "Electrical safety analyzer",
+    "Patient simulator"
+  ],
+  "category": "stk-mtk",
+  "summary": "Prüfgeräte und Simulatoren sind die Mess- und Testmittel der Medizintechnik: Sicherheitstester für elektrische Messungen, Analysatoren zur Messung abgegebener Größen wie Energie, Flow oder Förderrate und Simulatoren, die physiologische Signale nachbilden. Sie müssen selbst regelmäßig kalibriert werden.",
+  "body": "## Überblick\n\nOhne geeignete Prüfmittel ist weder eine [[stk|STK]] noch eine [[mtk|MTK]] möglich: Die [[mpbetreibv|MPBetreibV]] verlangt ausdrücklich, dass Prüfende über geeignete Mess- und Prüfeinrichtungen verfügen [@mpbetreibv]. In der Medizintechnik lassen sich drei Gruppen unterscheiden:\n\n| Gruppe | Prinzip | Beispiel |\n|---|---|---|\n| **Sicherheitstester** | messen elektrische Sicherheitsgrößen | Schutzleiterwiderstand, Isolationswiderstand, Ableitströme |\n| **Analysatoren** | messen, was ein Gerät abgibt | Defibrillationsenergie, Flow, Förderrate, HF-Leistung, Dosis |\n| **Simulatoren** | erzeugen, was ein Gerät misst | EKG-Signale, Blutdruckkurven, SpO₂-Signale, Temperaturen |\n\n## Sicherheitstester\n\nSicherheitstester für ME-Geräte führen die Messungen der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] nach [[iec-62353|IEC 62353]] durch: [[schutzleiterwiderstand|Schutzleiterwiderstand]], [[isolationswiderstand|Isolationswiderstand]] und [[ableitstrommessung|Ableitströme]] nach direktem, Differenzstrom- und Ersatzableitstromverfahren. Anforderungen an diese Geräte enthält die IEC 61557-16 [@iec-61557-16] [@iec-62353].\n\nWichtige Merkmale:\n\n* Prüfsteckdose mit Umschaltung der Netzpolarität und Unterbrechung des Schutzleiters,\n* genormte Messeinrichtung (MD) zur frequenzbewerteten Ableitstrommessung,\n* Anschlussbuchsen für Anwendungsteile (BF/CF), gruppierbar,\n* Prüfabläufe als Sequenz mit Protokollierung und Datenexport ins [[medizintechnik-management|Medizintechnik-Managementsystem]].\n\n## Analysatoren\n\n| Analysator | Messgrößen | Prüfling |\n|---|---|---|\n| Defibrillator-Analysator | Energie an 50-Ω-Last, Spitzenspannung/-strom, Kurvenform, Ladezeit, Synchronisationsverzögerung | [[defibrillator]] |\n| HF-Chirurgie-Analysator | Ausgangsleistung an wählbaren Lastwiderständen, HF-Ableitstrom, Crestfaktor | [[hf-chirurgiegeraet]] |\n| Infusionspumpen-Analysator | Förderrate, Volumen, Okklusionsdruck | [[infusionspumpe]], [[spritzenpumpe]], [[pca-pumpe]] |\n| Gasflow-Analysator mit Testlunge | Flow, Volumen, Druck, O₂-Konzentration | [[beatmungsgeraet]], [[anaesthesiegeraet]], [[cpap-geraet]] |\n| Röntgen-Multimeter, Dosimeter | Röhrenspannung (kV), Dosis, Dosisleistung, Belichtungszeit | [[roentgengeraet]], [[c-bogen]], [[computertomograph]] |\n| Ultraschall-Leistungswaage | akustische Ausgangsleistung | [[ultraschalltherapiegeraet]] |\n\nBeim Defibrillator-Analysator wird die Energie aus der Kurvenform berechnet:\n\nE = ∫ u(t)² / R dt mit R = 50 Ω\n\n> [!beispiel] Liegt an der 50-Ω-Last ein biphasischer Impuls mit der effektiven Spannung 1 000 V über eine Gesamtdauer von 10 ms, ergibt sich näherungsweise E = (1 000 V)² / 50 Ω · 0,01 s = 200 J. Reale Impulse haben einen abklingenden Verlauf; der Analysator integriert deshalb das abgetastete Signal. Zahlen beispielhaft [@iec-60601-2-4].\n\n## Simulatoren\n\nSimulatoren erzeugen definierte Ersatzsignale, damit Mess- und Alarmfunktionen ohne Patienten geprüft werden können:\n\n* **EKG-/Patientensimulatoren** liefern normale und pathologische EKG-Kurven, Amplituden- und Frequenzstufen, oft zusätzlich Atmungsimpedanz, invasive Druckkurven und Temperaturwerte ([[biosignale]]).\n* **NIBP-Simulatoren** erzeugen in einem starren Volumen druckpulsähnliche Oszillationen und prüfen so den Messablauf [[oszillometrie|oszillometrischer]] Geräte; für die MTK wird der statische Druck zusätzlich gegen ein Referenzmanometer verglichen.\n* **SpO₂-Simulatoren** bilden das Verhältnis der Absorptionen bei Rot und Infrarot elektrooptisch oder mit einem optischen Finger nach ([[photoplethysmographie]]).\n* **Temperatursimulatoren** ersetzen Thermistoren durch definierte Widerstände ([[temperatursensor]]).\n\n> [!vereinfacht] Ein Simulator prüft die **Messkette des Geräts** (Eingangsstufe, Verarbeitung, Anzeige, Alarm), aber nicht die Genauigkeit am Patienten. Ein SpO₂-Simulator kann z. B. nur zeigen, dass das Gerät bei einem bestimmten Signalverhältnis den nach seiner hinterlegten Kalibrierkurve erwarteten Wert anzeigt – die Kalibrierkurve selbst beruht auf klinischen Studien des Herstellers.\n\n## Prüfmittelüberwachung\n\nPrüfgeräte sind selbst Messgeräte und unterliegen einer **Prüfmittelüberwachung**: Sie werden in festen Intervallen [[kalibrierung|kalibriert]], die Ergebnisse dokumentiert und auf nationale Normale zurückgeführt (Rückführung, z. B. über akkreditierte Kalibrierlaboratorien) [@jcgm-200-2012].\n\nDamit ein Prüfergebnis belastbar ist, muss die [[messunsicherheit|Messunsicherheit]] des Prüfmittels deutlich kleiner sein als die zu prüfende Toleranz [@jcgm-100-2008].\n\n> [!vereinfacht] Eine verbreitete Faustregel verlangt, dass die Unsicherheit des Prüfmittels höchstens etwa ein Viertel der zu prüfenden Toleranz beträgt (Verhältnis 4 : 1). Je kleiner das Verhältnis, desto häufiger sind Fehlentscheidungen nahe der Toleranzgrenze.\n\nFür die MTK nennt der Leitfaden der PTB je Gerätegruppe geeignete Prüfmittel, etwa Referenzmanometer für Blutdruckmessgeräte, Flüssigkeitsbäder und Hohlraumstrahler für Thermometer sowie akustische Kuppler für Audiometer [@lmkm-ptb].\n\n## Bedeutung in der Medizintechnik\n\nPrüfgeräte sind das Handwerkszeug der Medizintechnik-Abteilung. Ihre Auswahl hängt vom Gerätepark ab: Eine Klinik mit vielen [[beatmungsgeraet|Beatmungsgeräten]] und [[infusionspumpe|Infusionspumpen]] braucht andere Analysatoren als eine radiologische Praxis. Neben Kalibrierung und Wartung der Prüfgeräte zählt die **Prüfsoftware**: Sie definiert Prüfsequenzen, vergleicht automatisch mit Grenzwerten und überträgt Ergebnisse ins [[bestandsverzeichnis|Bestandsverzeichnis]] bzw. [[medizinproduktebuch|Medizinproduktebuch]].\n\n> [!praxis] Prüfsequenzen sollten bei jeder Aktualisierung von Herstellerprüfanweisungen oder Normen kontrolliert werden. Eine veraltete Grenzwerttabelle im Sicherheitstester führt sonst über Jahre zu systematisch falschen Bewertungen.",
+  "related": [
+    "stk",
+    "mtk",
+    "elektrische-sicherheitspruefung",
+    "funktionspruefung",
+    "kalibrierung",
+    "messunsicherheit",
+    "ableitstrommessung",
+    "schutzleiterwiderstand",
+    "isolationswiderstand",
+    "konstanzpruefung",
+    "biosignale",
+    "medizintechnik-management"
+  ],
+  "paths": [
+    [
+      "stk",
+      "pruefgeraete",
+      "kalibrierung",
+      "messunsicherheit"
+    ],
+    [
+      "pulsoxymeter",
+      "pruefgeraete",
+      "photoplethysmographie"
+    ]
+  ],
+  "sources": [
+    "iec-61557-16",
+    "iec-62353",
+    "jcgm-200-2012",
+    "jcgm-100-2008",
+    "mpbetreibv",
+    "lmkm-ptb",
+    "iec-60601-2-4",
+    "kramme-2017",
+    "webster-2010"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

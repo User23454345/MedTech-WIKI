@@ -1,0 +1,59 @@
+{
+  "id": "kapselendoskop",
+  "type": "device",
+  "title": "Kapselendoskop",
+  "aliases": [
+    "Videokapselendoskopie",
+    "Kapselendoskopie",
+    "Capsule endoscope",
+    "Endoskopiekapsel"
+  ],
+  "category": "geraete",
+  "deviceGroup": "endoskopie",
+  "rank": 68,
+  "domains": [
+    "gastroenterologie"
+  ],
+  "summary": "Ein Kapselendoskop ist eine schluckbare Kamera in Tablettenform, die auf dem Weg durch den Verdauungstrakt Bilder aufnimmt und drahtlos an einen am Körper getragenen Rekorder überträgt. Es ermöglicht vor allem die Untersuchung des Dünndarms, der mit konventionellen Endoskopen schwer erreichbar ist.",
+  "sections": {
+    "purpose": "Hauptindikation ist die Suche nach Blutungsquellen im Dünndarm bei unklarer gastrointestinaler Blutung; weitere Einsatzgebiete sind Morbus Crohn, Dünndarmtumoren und – mit speziellen Kapseln – Untersuchungen von Speiseröhre und Dickdarm. Die Untersuchung ist rein diagnostisch: Biopsien oder Therapie sind nicht möglich, auffällige Befunde werden mit [[endoskop|flexiblen Endoskopen]] weiter abgeklärt [@kramme-2017].",
+    "principle": "## Aufbau der Kapsel\n\nDie Einwegkapsel hat etwa die Größe einer großen Tablette und enthält hinter einer transparenten Kuppel eine Optik mit **CMOS-Bildsensor**, mehrere weiße LEDs zur Beleuchtung, Batterien als Energiequelle, eine Steuerelektronik und einen Funksender mit Antenne. Die Fortbewegung erfolgt passiv durch die Darmperistaltik.\n\n## Datenübertragung und Auswertung\n\nDie Bilder werden per Funk durch das Gewebe zu Antennen übertragen, die auf der Bauchhaut oder in einem Gürtel angebracht sind, und in einem tragbaren Rekorder gespeichert. Aus den Signalstärken an den verschiedenen Antennen lässt sich die Position der Kapsel grob abschätzen. Einige Systeme passen die Bildrate an die Bewegungsgeschwindigkeit an. Die Auswertung der viele Stunden umfassenden Bildserie erfolgt am Arbeitsplatzrechner mit Software, die z. B. rot gefärbte Areale markiert ([[software-medizinprodukt]]).\n\n> [!vereinfacht] Die Bildqualität hängt stark von der Darmvorbereitung ab; Luft wird – anders als bei der konventionellen Endoskopie – nicht insuffliert, sodass die Schleimhaut nicht entfaltet wird.\n\n> [!warnung] Bei Engstellen (Stenosen) droht eine Kapselretention, die eine endoskopische oder operative Bergung erfordern kann; bei Verdacht wird vorab eine sich auflösende Testkapsel eingesetzt. Bis zur gesicherten Ausscheidung darf keine [[mrt|MRT-Untersuchung]] erfolgen, da die Kapsel metallische und magnetische Bauteile enthält."
+  },
+  "manufacturers": [
+    {
+      "ref": "medtronic",
+      "models": [
+        "PillCam"
+      ],
+      "note": "Ursprünglich von Given Imaging entwickelt."
+    },
+    {
+      "ref": "olympus",
+      "models": [
+        "EndoCapsule"
+      ]
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "Die Kapsel ist ein Einmalprodukt; Rekorder und Auswertesystem sind in Anlage 1 und Anlage 2 der MPBetreibV (Fassung 2025) nicht aufgeführt. Sicherheitstechnische Kontrollen nur, falls der Hersteller sie vorschreibt.",
+    "intervals": "Prüfung von Rekorder, Antennen und Akkus nach Herstellerangabe; Aufbereitung von Antennengürtel und Rekorder nach Herstellerangabe; Softwarepflege der Auswertestation."
+  },
+  "related": [
+    "endoskop",
+    "insufflator",
+    "software-medizinprodukt",
+    "lithium-ionen-akku",
+    "mrt"
+  ],
+  "sources": [
+    "kramme-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

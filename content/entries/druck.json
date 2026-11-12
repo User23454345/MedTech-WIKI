@@ -1,0 +1,62 @@
+{
+  "id": "druck",
+  "type": "term",
+  "title": "Druck",
+  "aliases": [
+    "pressure",
+    "Druckgröße",
+    "hydrostatischer Druck",
+    "Absolutdruck",
+    "Überdruck",
+    "Partialdruck",
+    "Pascal",
+    "Pa",
+    "mmHg",
+    "cmH₂O",
+    "mbar"
+  ],
+  "category": "physik",
+  "summary": "Druck ist die senkrecht auf eine Fläche wirkende Kraft pro Flächeneinheit (p = F/A, SI-Einheit Pascal). Er ist die zentrale Zustandsgröße der Beatmungs-, Infusions-, Dialyse- und Kreislaufmesstechnik; in der Klinik werden parallel mmHg, cmH₂O, mbar und kPa verwendet.",
+  "body": "## Definition\n\n**Druck** ist der Quotient aus der Kraft F, die senkrecht auf eine Fläche wirkt, und dem Flächeninhalt A:\n\n`p = F / A`   Einheit: 1 Pascal (Pa) = 1 N/m²\n\nDruck ist eine skalare Zustandsgröße: In einem ruhenden Fluid (Gas oder Flüssigkeit) wirkt er in alle Richtungen gleich und breitet sich nach dem **Pascal'schen Prinzip** ungeschwächt im gesamten Volumen aus [@tipler-2019]. Darauf beruhen hydraulische Systeme ebenso wie die Tatsache, dass ein Druckaufnehmer außerhalb des Körpers über eine flüssigkeitsgefüllte Leitung den Druck in einem Blutgefäß erfassen kann ([[invasive-druckmessung]]).\n\n## Einheiten in der Klinik\n\nIn der Medizin haben sich historisch mehrere Einheiten gehalten. Für die Umrechnung genügt die folgende Tabelle:\n\n| Einheit | Wert in Pa | Typischer Einsatz |\n|---|---|---|\n| 1 Pa | 1 | SI-Einheit, wissenschaftliche Angaben |\n| 1 kPa | 1 000 | Blutgase (Partialdrücke, international), Gasversorgung |\n| 1 mmHg (≈ 1 Torr) | 133,322 | Blutdruck, Partialdrücke (Deutschland), Hirndruck |\n| 1 cmH₂O | 98,0665 | Atemwegsdruck, PEEP, Cuffdruck, ZVD teilweise |\n| 1 mbar = 1 hPa | 100 | Beatmung (≈ 1 cmH₂O), Luftdruck |\n| 1 bar | 100 000 | Druckgasflaschen, Sterilisatoren, Druckluft |\n| 1 atm | 101 325 | physikalische Normatmosphäre |\n\n> [!belegt] 1 mmHg = 133,322 Pa und 1 cmH₂O = 98,0665 Pa ergeben sich aus der Definition über die Quecksilber- bzw. Wassersäule bei Normfallbeschleunigung. Daraus folgt: 1 kPa ≈ 7,5 mmHg ≈ 10,2 cmH₂O und 1 mmHg ≈ 1,36 cmH₂O [@tipler-2019] [@webster-2010].\n\n> [!praxis] Weil 1 mbar und 1 cmH₂O nur um rund 2 % voneinander abweichen, werden sie in der Beatmungstechnik oft gleichgesetzt. Bei Prüfgeräten und Kalibrierungen muss die Einheit dagegen exakt stimmen.\n\n## Bezugssysteme: Absolut-, Relativ- und Differenzdruck\n\n| Druckart | Bezug | Beispiel |\n|---|---|---|\n| Absolutdruck | Vakuum | Luftdruck (≈ 1013 hPa auf Meereshöhe), Kammerdruck im [[dampfsterilisator|Dampfsterilisator]], Druck in der [[druckkammer|Druckkammer]] |\n| Relativdruck (Über-/Unterdruck) | Umgebungsdruck | Blutdruck, Atemwegsdruck, Sog im [[absauggeraet|Absauggerät]] |\n| Differenzdruck | zweiter Messpunkt | Druckabfall am Strömungswiderstand im [[flowsensor|Flowsensor]], Transmembrandruck am [[dialysator|Dialysator]] |\n| Partialdruck | Anteil eines Gases am Gesamtdruck | pO₂, pCO₂ im [[blutgasanalysator|Blutgasanalysator]], siehe [[gasgesetze]] |\n\nPhysiologische Drücke werden fast immer als **Relativdruck** angegeben: Ein arterieller Druck von 120 mmHg liegt 120 mmHg über dem Umgebungsdruck. Deshalb wird ein invasiver Messaufnehmer vor Messbeginn gegen Atmosphäre „genullt“ [@webster-2010].\n\n## Hydrostatischer Druck\n\nIn einer ruhenden Flüssigkeit der Dichte ρ wächst der Druck mit der Tiefe h:\n\n`p = ρ · g · h`\n\nFür Wasser (ρ ≈ 1000 kg/m³) bedeutet das rund 98 Pa pro Zentimeter Höhe – genau die Definition von 1 cmH₂O. Blut hat mit etwa 1050 kg/m³ eine ähnliche Dichte [@schmidt-lang-2019].\n\n> [!beispiel] Liegt ein Druckaufnehmer der invasiven Blutdruckmessung 10 cm unterhalb der Herzhöhe (phlebostatische Achse), misst er zusätzlich den Druck einer 10 cm hohen Flüssigkeitssäule: rund 10 cmH₂O ≈ 7,4 mmHg. Bei einem ZVD von 8 mmHg ist dieser Fehler größer als die Hälfte des Messwerts. Die Zahlen dienen der Veranschaulichung.\n\nDer hydrostatische Druck erklärt auch, warum die Höhe eines Infusionsbeutels den Förderdruck einer Schwerkraftinfusion bestimmt und warum eine [[spritzenpumpe|Spritzenpumpe]] bei einer Höhenänderung gegenüber dem Patienten kurzzeitig einen ungewollten Bolus oder eine Förderpause verursachen kann (Siphon-Effekt, Nachgiebigkeit von Spritze und Leitung) – besonders kritisch bei hochkonzentrierten Medikamenten mit niedriger Förderrate.\n\n## Druck an gekrümmten Wänden: Gesetz von Laplace\n\nFür eine gekrümmte, gespannte Wand gilt das Gesetz von Laplace, für eine Kugel:\n\n`Δp = 2 · T / r`\n\nmit der Wandspannung T und dem Radius r. Es beschreibt, warum kleine Alveolen ohne Surfactant zum Kollaps neigen ([[atemmechanik]], [[lunge]]) und warum die Wandspannung eines dilatierten Herzens bei gleichem Druck steigt ([[herz]]). In der Technik ist es relevant für Ballonkatheter, die Manschette der [[oszillometrie|oszillometrischen]] Blutdruckmessung und den Ballon der [[iabp|IABP]] [@schmidt-lang-2019].\n\n> [!vereinfacht] Die Laplace-Gleichung gilt streng nur für dünnwandige, homogene Hohlkörper; für einen Zylinder (z. B. Blutgefäß, Schlauch) lautet sie Δp = T / r. Biologische Gewebe sind dickwandig und anisotrop; die Formel liefert daher Tendenzen, keine exakten Werte.\n\n## Typische Drücke in Physiologie und Technik\n\n| Größe | Typischer Bereich | Evidenz |\n|---|---|---|\n| Arterieller Blutdruck (Erwachsene, Ruhe) | ca. 120/80 mmHg | typisch [@schmidt-lang-2019] |\n| Zentraler Venendruck | wenige mmHg | typisch |\n| Atemwegsspitzendruck bei Beatmung | ca. 15–35 cmH₂O | typisch [@oczenski-2017] |\n| PEEP | ca. 5–15 cmH₂O | typisch [@oczenski-2017] |\n| Sauerstoff-Druckgasflasche (gefüllt) | ca. 200 bar | typisch |\n| Dampfsterilisation bei 134 °C | ca. 3 bar absolut, also rund 2 bar Überdruck (Sattdampf; Wert folgt aus der Dampfdruckkurve von Wasser) | typisch |\n\n## Druck als Regelgröße und Messgröße\n\nDruck ist selten nur Anzeige, sondern meist **Regelgröße**. Im [[beatmungsgeraet|Beatmungsgerät]] erzeugt eine [[turbine|Turbine]] oder ein [[proportionalventil|Proportionalventil]] den Druck; ein [[elektromotor|Elektromotor]] treibt die Turbine an, deren Drehzahl die [[drehzahlregelung|Drehzahlregelung]] so nachführt, dass der von der [[druckmessung|Druckmessung]] gemeldete Istwert dem Sollwert folgt ([[regelkreis]]). Die Messung selbst erfolgt mit einem [[drucksensor|Drucksensor]], dessen Signal über eine [[messkette|Messkette]] digitalisiert wird.\n\n## Bedeutung in der Medizintechnik\n\n| Gerät | Rolle des Drucks |\n|---|---|\n| [[beatmungsgeraet]], [[anaesthesiegeraet]], [[cpap-geraet]] | Atemwegsdruck, PEEP, Druckbegrenzung, [[atemwegsdruck-hoch|Druckalarme]] |\n| [[patientenmonitor]], [[invasive-druckmessung]], [[nibp-messgeraet]] | arterieller, venöser und intrakranieller Druck |\n| [[infusionspumpe]], [[spritzenpumpe]] | Leitungsdrucküberwachung, [[okklusionsalarm|Okklusionserkennung]] |\n| [[dialysegeraet]], [[herz-lungen-maschine]], [[ecmo]] | arterieller/venöser Leitungsdruck, Transmembrandruck |\n| [[dampfsterilisator]], [[druckkammer]] | Absolutdruck als Prozessparameter |\n| [[npwt-geraet]], [[absauggeraet]] | geregelter Unterdruck |\n\nWeiterführend: [[stroemungslehre]] (Druck als Antrieb jeder Strömung), [[gasgesetze]] (Druck, Volumen und Temperatur von Gasen) und [[blutdruck]] (physiologische Grundlagen).\n",
+  "related": [
+    "druckmessung",
+    "drucksensor",
+    "gasgesetze",
+    "stroemungslehre",
+    "blutdruck",
+    "atemmechanik",
+    "invasive-druckmessung",
+    "beatmungsgeraet",
+    "turbine",
+    "drehzahlregelung",
+    "piezoelektrischer-effekt",
+    "kalibrierung"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "elektrotechnik",
+      "drehzahlregelung",
+      "sensorik",
+      "druckmessung",
+      "druck"
+    ],
+    [
+      "patientenmonitor",
+      "invasive-druckmessung",
+      "drucksensor",
+      "druck"
+    ]
+  ],
+  "sources": [
+    "tipler-2019",
+    "webster-2010",
+    "schmidt-lang-2019",
+    "oczenski-2017",
+    "hering-2018"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

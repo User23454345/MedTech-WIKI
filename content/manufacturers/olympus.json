@@ -1,0 +1,85 @@
+{
+  "id": "olympus",
+  "type": "manufacturer",
+  "title": "Olympus",
+  "aliases": [
+    "Olympus Corporation",
+    "Olympus Medical Systems",
+    "Olympus Europa"
+  ],
+  "category": "hersteller",
+  "summary": "Japanischer Medizintechnikkonzern mit Sitz in Tokio, gegründet 1919. Olympus ist weltweit führend bei flexiblen Endoskopen und bietet zudem Systeme für die Laparoskopie, chirurgische Energie und Urologie an.",
+  "headquarters": "Tokio, Japan",
+  "founded": "1919",
+  "website": "https://www.olympus-global.com/",
+  "productLines": [
+    {
+      "device": "endoskop",
+      "models": [
+        "EVIS X1",
+        "EVIS EXERA III"
+      ],
+      "note": "Videoendoskopie-Plattformen für die Gastroenterologie und Bronchoskopie."
+    },
+    {
+      "device": "kapselendoskop",
+      "models": [
+        "EndoCapsule"
+      ]
+    },
+    {
+      "device": "hf-chirurgiegeraet",
+      "models": [
+        "ESG-400",
+        "ESG-410"
+      ],
+      "note": "HF-Generatoren für offene, laparoskopische und endoskopische Eingriffe."
+    },
+    {
+      "device": "ultraschalldissektor",
+      "models": [
+        "THUNDERBEAT",
+        "SONICBEAT"
+      ],
+      "note": "THUNDERBEAT kombiniert Ultraschall- und bipolare HF-Energie."
+    },
+    {
+      "device": "chirurgischer-laser",
+      "models": [
+        "SOLTIVE"
+      ],
+      "note": "Thulium-Faserlaser für die Urologie (Lithotripsie)."
+    },
+    {
+      "device": "op-mikroskop",
+      "models": [
+        "ORBEYE"
+      ],
+      "note": "Digitales 4K-3D-Exoskop."
+    },
+    {
+      "device": "insufflator",
+      "models": [],
+      "note": "Insufflatoren als Teil laparoskopischer Videosysteme."
+    }
+  ],
+  "body": "## Überblick\n\nDie Olympus Corporation ist ein japanischer Konzern, der sich nach mehreren Verkäufen von Geschäftsbereichen inzwischen ausschließlich auf **Medizintechnik** konzentriert. Kernkompetenz ist die [[optik|Optik]] und Bildgebung in der [[endoskop|flexiblen Endoskopie]], in der Olympus seit Jahrzehnten eine führende Marktstellung innehat [@hst-olympus].\n\n## Geschichte in Stichpunkten\n\n* **1919** – Gründung in Tokio als Takachiho Seisakusho; anfangs Mikroskope und Thermometer.\n* **1949** – Umbenennung in Olympus Optical; **2003** in Olympus Corporation.\n* **1950** – Entwicklung einer der ersten Gastrokameras, Ausgangspunkt der späteren Endoskopsparte.\n* **2019** – Neuausrichtung als globales Medizintechnikunternehmen.\n* **2021** – Abgabe des Kamerageschäfts an OM Digital Solutions.\n* **2023** – Verkauf des Geschäfts mit wissenschaftlichen Instrumenten (Mikroskope, Prüftechnik) als Evident an Bain Capital.\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte | Wiki-Geräte |\n|---|---|---|\n| Endoskopie | Video-Gastroskope, -Koloskope, -Bronchoskope, Videoprozessoren, Lichtquellen, [[aufbereitung|Aufbereitungssysteme]] | [[endoskop]], [[kapselendoskop]] |\n| Chirurgie | Laparoskopie-Videosysteme, Energieinstrumente, Insufflation | [[hf-chirurgiegeraet]], [[ultraschalldissektor]], [[insufflator]], [[op-mikroskop]] |\n| Urologie | Resektoskope, Lasersysteme zur Steinbehandlung | [[chirurgischer-laser]] |\n\nModerne Videoendoskope tragen den Bildsensor an der Spitze und nutzen zusätzlich schmalbandige Beleuchtung (Narrow Band Imaging) zur Kontrastverstärkung von Schleimhaut- und Gefäßstrukturen.\n\n## Bedeutung für die Medizintechnik\n\nOlympus prägt die Gastroenterologie und Pneumologie maßgeblich. Für die Medizintechnik zentral ist die **Aufbereitung** flexibler Endoskope: Sie sind thermolabil, werden in [[rdg|Reinigungs- und Desinfektionsgeräten für Endoskope]] chemothermisch aufbereitet und gehören nach der KRINKO/BfArM-Empfehlung zu den Medizinprodukten mit erhöhten Anforderungen an die Aufbereitung [@krinko-bfarm-2012].\n\n> [!warnung] Duodenoskope mit komplexem Albarran-Hebel standen weltweit wegen schwer aufbereitbarer Strukturen im Fokus von Behördenwarnungen. Die Herstelleranweisungen zur Aufbereitung und die aktuellen Sicherheitsinformationen sind strikt einzuhalten.\n\n* Endoskope werden als [[anwendungsteile|Anwendungsteile]] in Kombination mit Videoprozessoren betrieben; die [[elektrische-sicherheitspruefung|elektrische Sicherheit]] wird für das System geprüft [@iec-62353].\n* Dichtheitstests (Leak-Tests) vor jeder Aufbereitung sind Teil der Routine.\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "endoskop",
+    "kapselendoskop",
+    "ultraschalldissektor",
+    "aufbereitung",
+    "gastroenterologie",
+    "pneumologie",
+    "karl-storz",
+    "fujifilm",
+    "erbe"
+  ],
+  "sources": [
+    "hst-olympus",
+    "krinko-bfarm-2012",
+    "iec-62353"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

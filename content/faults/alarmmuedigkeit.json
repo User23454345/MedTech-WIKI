@@ -1,0 +1,61 @@
+{
+  "id": "alarmmuedigkeit",
+  "type": "fault",
+  "title": "Alarmmüdigkeit",
+  "aliases": [
+    "Alarm fatigue",
+    "Alarmermüdung",
+    "Alarmdesensibilisierung",
+    "Alarmflut"
+  ],
+  "category": "fehler",
+  "summary": "Desensibilisierung des Personals gegenüber Gerätealarmen infolge sehr vieler, überwiegend nicht handlungsrelevanter Alarme. Alarme werden verzögert beantwortet, ignoriert oder unsachgemäß deaktiviert, wodurch echte Notfälle übersehen werden können.",
+  "devices": [
+    "patientenmonitor",
+    "pulsoxymeter",
+    "beatmungsgeraet",
+    "infusionspumpe",
+    "spritzenpumpe",
+    "kapnometer",
+    "ekg-geraet",
+    "ctg",
+    "dialysegeraet",
+    "nibp-messgeraet"
+  ],
+  "causes": [
+    "Hohe Zahl falsch positiver Alarme durch [[bewegungsartefakt|Bewegungsartefakte]], [[elektrodenproblem|schlechten Elektrodenkontakt]] oder Sensorablösung",
+    "Standardalarmgrenzen, die nicht an Patientengruppe und Station angepasst sind",
+    "Klinisch nicht handlungsrelevante Alarme (richtig positiv, aber ohne Konsequenz), z. B. kurze Grenzwertüberschreitungen",
+    "Fehlende Alarmverzögerung oder -validierung bei Parametern mit kurzfristigen Schwankungen (z. B. SpO₂)",
+    "Viele Geräte mit ähnlichen Alarmtönen im selben Raum, schlechte Zuordenbarkeit des Alarms",
+    "Unzureichende Einweisung in Alarmkonzept, Prioritäten und Stummschaltfunktionen ([[anwendungsfehler]])",
+    "Wartungsmängel an Verbrauchsmaterial: verbrauchte EKG-Elektroden, defekte Sensorkabel"
+  ],
+  "actions": [
+    "Jeden Alarm zunächst am Patienten bewerten; Alarme hoher Priorität sofort beantworten",
+    "Ursachen falscher Alarme direkt beheben (Elektroden erneuern, Sensor richtig platzieren) statt Alarm wiederholt zu quittieren",
+    "Alarmgrenzen patientenindividuell und nach Stationsstandard einstellen; deaktivierte Alarme nur nach klinischer Entscheidung und mit Dokumentation",
+    "Alarmdaten (Häufigkeit, Dauer, Parameter) aus Monitoringsystem und Event-Logs auswerten, um Hauptverursacher zu identifizieren",
+    "Interdisziplinäres Alarmmanagement einrichten (Pflege, Ärzteschaft, Medizintechnik, IT) und Standardkonfigurationen gemeinsam festlegen",
+    "Alarmverteilung und -weiterleitung (Zentrale, Mobilgeräte) technisch prüfen und regelmäßig testen"
+  ],
+  "body": "## Technischer Hintergrund\n\nAlarmmüdigkeit ist kein Gerätedefekt, sondern ein **Mensch-Technik-Problem**: Wenn die meisten Alarme keine Handlung erfordern, lernt das Personal, Alarme zu ignorieren. In einer Literaturübersicht wurde ein Anteil falscher Alarme zwischen 72 % und 99 % berichtet [@sendelbach-funk-2013]. Die US-amerikanische Joint Commission hat Alarmsicherheit 2013 in einem Sentinel Event Alert als Patientensicherheitsrisiko herausgestellt und Krankenhäuser zu systematischem Alarmmanagement aufgefordert [@joint-commission-sea-50].\n\n### Alarmsystem nach IEC 60601-1-8\n\nDie Ergänzungsnorm [[iec-60601-1-8]] beschreibt den Aufbau von [[alarmsystem|Alarmsystemen]] in ME-Geräten [@iec-60601-1-8]:\n\n| Begriff | Bedeutung |\n|---|---|\n| physiologische Alarmbedingung | Messwert des Patienten außerhalb der Grenzen (z. B. SpO₂ zu niedrig) |\n| technische Alarmbedingung | Geräte- oder Zubehörproblem (z. B. Sensor ab, Akku schwach) |\n| Priorität hoch / mittel / niedrig | richtet sich nach möglicher Schadensfolge bei ausbleibender Reaktion und nach der Zeit bis zum Schadenseintritt; unterschiedliche optische und akustische Signale |\n| Alarmverzögerung | Zeit zwischen Eintritt der Bedingung und Alarmsignal |\n| Signalunterdrückung | z. B. Audiopause, Alarm aus, Quittierung – jeweils mit eindeutiger Anzeige |\n\nDie Norm verlangt eindeutige, unterscheidbare Signale je Priorität und eine sichtbare Kennzeichnung unterdrückter Alarme. Sie macht jedoch keine Vorgabe, **wie viele** Alarme klinisch sinnvoll sind; das hängt von Konfiguration und Anwendung ab.\n\n### Technische Ursachen falscher Alarme\n\n* **Signalqualität:** Beim [[pulsoxymeter|Pulsoxymeter]] erzeugen Bewegung und schlechte Perfusion Fehlmessungen der [[photoplethysmographie|Photoplethysmographie]]; beim EKG führen ausgetrocknete [[ekg-elektrode|Elektroden]] zu Rauschen und Fehlerkennung von Arrhythmien.\n* **Schwellwertlogik:** Ein einfacher Grenzwertvergleich ohne Verzögerung alarmiert bei jeder kurzen Unterschreitung. Verzögerungen, Mittelung oder integrale Verfahren (Dauer und Ausmaß der Abweichung) reduzieren Alarme, verlängern aber die Reaktionszeit.\n* **Konfiguration:** Werkseinstellungen sind Kompromisse für eine breite Anwendergruppe. Sie passen nicht automatisch zu jeder Station und Patientengruppe (z. B. Neonatologie, Intensivstation, Normalstation mit Telemetrie) und müssen bewusst angepasst werden.\n\n> [!beispiel] Ein Pulsoxymeter mit Untergrenze 90 % ohne Verzögerung alarmiert bei jeder kurzen Entsättigung durch Bewegung. Eine moderate Alarmverzögerung von wenigen Sekunden unterdrückt viele dieser Ereignisse – die Wahl der Verzögerung ist jedoch eine klinische Risikoabwägung, keine rein technische Einstellung.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| sehr viele technische Alarme „Elektrode ab“ | Elektrodenqualität, Hautvorbereitung, Kabelzustand | regelmäßiger Elektrodenwechsel nach Stationsstandard, Hautvorbereitung, Kabeltausch, siehe [[elektrodenproblem]] |\n| viele kurze SpO₂-Alarme | Sensortyp, Sitz, Perfusion, Verzögerung | geeigneten Sensor wählen, Verzögerung nach Standard |\n| Alarme werden nicht gehört | Lautstärke, Raumakustik, Weiterleitung an Zentrale | Mindestlautstärke, Weiterleitung prüfen |\n| Alarme dauerhaft stumm | Konfiguration, Benutzerrechte | Rechte einschränken, Standardprofile sperren |\n| unklare Herkunft des Alarms | Gerätevielfalt, Signalgestaltung | Geräte standardisieren, Alarmzuordnung verbessern |\n\n## Prävention\n\n* Alarmmanagement als dauerhafte Aufgabe mit klarer Verantwortung etablieren; Alarmdaten regelmäßig auswerten.\n* Stations- und patientengruppenspezifische Standardkonfigurationen festlegen und über die Medizintechnik in die Geräte einspielen.\n* Verbrauchsmaterial in guter Qualität bereitstellen; Sensoren und Kabel im Rahmen der [[wartung|Wartung]] prüfen.\n* [[einweisung|Einweisung]] in Alarmprioritäten, Unterdrückungsfunktionen und Weiterleitung.\n* Alarmweiterleitung über Netzwerke im Rahmen des IT-Risikomanagements betrachten; ein verteiltes Alarmsystem braucht eine Überwachung der Verbindung.\n\n> [!hinweis] Welche Alarmgrenzen, Verzögerungen und Prioritäten an einem Gerät konfigurierbar sind und welche Fehlercodes es für technische Alarme verwendet, steht in Gebrauchsanweisung und Service-Unterlagen des Herstellers. Siehe auch [[fehlercodes]].",
+  "related": [
+    "alarmsystem",
+    "iec-60601-1-8",
+    "patientenmonitor",
+    "pulsoxymeter",
+    "patientensicherheit",
+    "anwendungsfehler",
+    "bewegungsartefakt",
+    "elektrodenproblem",
+    "gebrauchstauglichkeit"
+  ],
+  "sources": [
+    "sendelbach-funk-2013",
+    "joint-commission-sea-50",
+    "iec-60601-1-8"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

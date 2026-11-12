@@ -1,0 +1,47 @@
+{
+  "id": "wartung",
+  "type": "term",
+  "title": "Wartung",
+  "aliases": [
+    "Preventive Maintenance",
+    "PM",
+    "vorbeugende Wartung",
+    "Servicewartung",
+    "Wartungsintervall",
+    "Verschleißteiltausch"
+  ],
+  "category": "instandhaltung",
+  "summary": "Wartung ist die Grundmaßnahme der Instandhaltung, die den Abbau des Abnutzungsvorrats verzögert – etwa durch Reinigen, Schmieren und den vorbeugenden Tausch von Verschleißteilen wie Filtern, Dichtungen oder Akkus. Bei Medizinprodukten erfolgt sie nach Herstellervorgaben durch sachkundiges Personal.",
+  "body": "## Begriff\n\n**Wartung** ist nach [[din-31051|DIN 31051]] diejenige Grundmaßnahme der [[instandhaltung-grundlagen|Instandhaltung]], die den **Abbau des vorhandenen Abnutzungsvorrats verzögert** [@din-31051]. Sie greift also, *bevor* eine Funktion verloren geht – im Gegensatz zur [[instandsetzung|Instandsetzung]], die einen bereits eingetretenen Fehler beseitigt, und zur [[inspektion|Inspektion]], die den Zustand nur feststellt und bewertet.\n\nIm Sprachgebrauch der Kliniken wird „Wartung“ oft unscharf für den gesamten Servicetermin verwendet, bei dem Wartung, [[stk|sicherheitstechnische Kontrolle]] und ggf. [[mtk|messtechnische Kontrolle]] gemeinsam erledigt werden. Fachlich und für die Dokumentation sollten diese Maßnahmen jedoch getrennt benannt werden, weil sie unterschiedliche Rechtsgrundlagen und Zwecke haben.\n\n> [!belegt] DIN 31051 definiert Wartung über das Konzept des Abnutzungsvorrats; die DIN EN 13306 enthält die zugehörige europäische Begriffswelt der vorbeugenden Instandhaltung [@din-31051] [@din-en-13306].\n\n## Typische Wartungstätigkeiten\n\n| Tätigkeit | Wirkprinzip | Beispiele aus der Medizintechnik |\n|---|---|---|\n| Reinigen | Verschmutzung als Abnutzungsursache entfernen | Lüftungsgitter und Kühlkörper, Lüfterfilter von Netzteilen |\n| Austausch von Verschleißteilen | Teile mit begrenzter Lebensdauer vor dem Ausfall ersetzen | Ansaug- und Kühlluftfilter, Dichtungen, O-Ringe, Membranen, Pumpenschläuche, Akkus |\n| Schmieren, Konservieren | Reibung und Korrosion vermindern | Gelenke von [[op-tisch|OP-Tischen]], Spindeln eines [[spindelantrieb|Spindelantriebs]] (sofern vom Hersteller vorgesehen) |\n| Nachstellen, Nachspannen | Spiel und Lockerung ausgleichen | Bremsen, Riemen, Federn |\n| Ergänzen von Betriebsstoffen | Funktion erhaltende Medien auffüllen | Kühlmittel, Wasser für Dampferzeuger eines [[dampfsterilisator|Dampfsterilisators]] |\n| Software pflegen | bekannte Fehler und Sicherheitslücken schließen | sicherheitsrelevante Updates nach Herstellerfreigabe |\n\nWartungsarbeiten an Medizinprodukten erfolgen **nach den Vorgaben des Herstellers**, die in der Gebrauchsanweisung (Anwenderwartung) bzw. in der Serviceanleitung (technische Wartung) festgelegt sind. Die [[mpbetreibv|MPBetreibV]] 2025 verpflichtet den Betreiber in § 7, die Instandhaltung – und damit auch die Wartung – nur von Personen, Betrieben oder Einrichtungen mit der erforderlichen Sachkenntnis und Ausstattung durchführen zu lassen; sicherheitsrelevante Softwareaktualisierungen sind ausdrücklich eingeschlossen [@mpbetreibv].\n\n## Wartungsintervalle\n\nWartungsintervalle werden vom Hersteller festgelegt und können sich beziehen auf\n\n* **Kalenderzeit** – z. B. jährliche Wartung,\n* **Betriebsstunden** – z. B. bei einer [[turbine]] oder einem Kompressor,\n* **Zyklen bzw. Anwendungen** – z. B. Sterilisationszyklen, Schaltspiele, Lastwechsel,\n* **Zustand** – z. B. Akkukapazität unter einem Schwellenwert, Sensoranzeige außerhalb der Toleranz.\n\n> [!vereinfacht] Zeitbasierte Intervalle sind ein Kompromiss: Zu kurze Intervalle verschwenden Material und Gerätezeit, zu lange erhöhen das Ausfallrisiko. Moderne Geräte überwachen deshalb Betriebsstunden und Sensorwerte selbst und melden fällige Wartungen; die Intervallvorgaben des Herstellers bleiben dennoch verbindlich.\n\n### Rechenbeispiel Akkualterung\n\nDie nutzbare Kapazität eines [[lithium-ionen-akku|Lithium-Ionen-Akkus]] sinkt mit Ladezyklen, Alter und Temperatur. Viele Hersteller definieren ein Lebensdauerende, wenn die Kapazität auf einen festgelegten Anteil der Nennkapazität gefallen ist.\n\n> [!beispiel] Ein Transportmonitor benötigt im Akkubetrieb mittlere 12 W. Ein neuer Akku mit 14,4 V und 5,2 Ah speichert E = U · Q = 14,4 V · 5,2 Ah ≈ 75 Wh; die Laufzeit beträgt rund 75 Wh / 12 W ≈ 6,2 h. Bei 70 % Restkapazität bleiben ≈ 52 Wh bzw. ≈ 4,4 h. Ob das für die längste zu erwartende Transportzeit genügt, entscheidet über den Tausch – nicht allein das Kalenderalter. Alle Zahlen sind beispielhaft.\n\n## Wartung an ausgewählten Geräten\n\n| Gerät | Typische Wartungsinhalte (gerätetypübergreifend) |\n|---|---|\n| [[beatmungsgeraet|Intensivbeatmungsgerät]] | Luftansaug- und Kühlluftfilter, Membran des [[exspirationsventil|Exspirationsventils]], galvanischer [[sauerstoffsensor|O₂-Sensor]], sofern verbaut (begrenzte Lebensdauer; paramagnetische Sensoren altern kaum), Wartung der [[turbine]] bzw. Gasmischeinheit nach Betriebsstunden |\n| [[anaesthesiegeraet|Anästhesiearbeitsplatz]] | Dichtungen im Atemsystem, Wechsel des [[co2-absorber|CO₂-Absorbers]], Dichtheitsprüfung, Pflege des [[narkosemittelverdampfer|Verdampfers]] nach Herstellerangabe |\n| [[infusionspumpe|Infusionspumpe]] / [[spritzenpumpe|Spritzenpumpe]] | Akkutausch, Reinigung der Mechanik, Kontrolle von Türdichtungen und Sensorflächen |\n| [[defibrillator]] / AED | Akkus und Elektroden (Verfallsdatum), Auswertung der Selbsttests |\n| [[dialysegeraet|Dialysegerät]] | Filter, Dichtungen und Ventile im Hydrauliksystem, Pumpensegmente, Entkalkung |\n| [[dampfsterilisator|Dampfsterilisator]] | Türdichtung, Vakuumpumpe, Dampferzeuger, Filter |\n| [[pflegebett|Elektrisches Pflegebett]] | Antriebe, Handschalter, Kabelführung, Bremsen |\n\n> [!praxis] Viele Wartungsfehler entstehen nicht durch fehlenden Teiletausch, sondern durch falsche Teile: Nachbau-Filter mit anderem Strömungswiderstand, ungeeignete Dichtungsmaterialien oder Akkus ohne Herstellerfreigabe. Ersatz- und Verschleißteile sollten nur verwendet werden, wenn der Hersteller sie freigegeben hat oder ihre Gleichwertigkeit nachgewiesen ist.\n\n## Abgrenzung zu STK, MTK und Anwenderprüfung\n\n| Maßnahme | Rechtsgrundlage | Zweck |\n|---|---|---|\n| Wartung | Herstellerangaben; Instandhaltungspflicht nach § 7 MPBetreibV | Abnutzung verzögern |\n| [[stk|STK]] | § 12 i. V. m. Anlage 1 MPBetreibV | Sicherheit feststellen (Inspektion) |\n| [[mtk|MTK]] | § 15 i. V. m. Anlage 2 MPBetreibV | Einhaltung der Fehlergrenzen feststellen |\n| Prüfung vor Anwendung | Anwenderpflicht nach MPBetreibV | ordnungsgemäßen Zustand vor jeder Anwendung sicherstellen |\n\nNach einer Wartung, bei der in das Gerät eingegriffen wurde, folgen in der Regel eine [[funktionspruefung|Funktionsprüfung]] und – bei geöffneten ME-Geräten – eine [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] nach [[iec-62353|IEC 62353]] [@iec-62353]. Die Wartung wird mit Datum, Umfang, getauschten Teilen und Ergebnis dokumentiert; bei Geräten nach Anlage 1 und 2 im [[medizinproduktebuch|Medizinproduktebuch]].\n\n## Bedeutung in der Medizintechnik\n\nWartung ist der planbarste Teil der Instandhaltung und deshalb Kern jedes Instandhaltungsplans im [[medizintechnik-management|Medizintechnik-Management]]. Sie reduziert ungeplante Ausfälle, verlängert die Nutzungsdauer und verhindert typische Fehlerbilder wie [[akkufehler|Akkufehler]] oder [[sensordrift|Sensordrift]]. Gleichzeitig verursacht sie Kosten und Gerätestillstand – die Wahl zwischen Herstellerservice, eigener Medizintechnik und Drittanbietern ist daher eine wichtige wirtschaftliche Entscheidung [@kramme-2017].",
+  "related": [
+    "instandhaltung-grundlagen",
+    "inspektion",
+    "instandsetzung",
+    "stk",
+    "mtk",
+    "din-31051",
+    "mpbetreibv",
+    "lithium-ionen-akku",
+    "akkufehler",
+    "medizintechnik-management",
+    "funktionspruefung"
+  ],
+  "paths": [
+    [
+      "instandhaltung-grundlagen",
+      "wartung",
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor"
+    ]
+  ],
+  "sources": [
+    "din-31051",
+    "din-en-13306",
+    "mpbetreibv",
+    "iec-62353",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

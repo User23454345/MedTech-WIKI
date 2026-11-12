@@ -6,7 +6,29 @@
   "order": 12,
   "icon": "wrench",
   "summary": "Instandhaltung nach DIN 31051, Kalibrierung, Aufbereitung und Medizintechnik-Management im Krankenhaus.",
-  "body": "",
+  "body": "**Instandhaltung** umfasst alle Maßnahmen, die einen funktionsfähigen Zustand eines Geräts erhalten oder wiederherstellen. In der Medizintechnik ist sie mehr als Reparatur: Sie schließt vorbeugende Wartung, Inspektion, Kalibrierung, die hygienische Aufbereitung von Medizinprodukten sowie das strategische Management des gesamten Gerätebestands ein [@kramme-2017].\n\nDie Bedeutung ist hoch: Ausfälle lebenserhaltender Geräte gefährden Patienten unmittelbar, und schlecht aufbereitete Instrumente können Infektionen übertragen. Zugleich ist Instandhaltung ein erheblicher Kostenfaktor; eine gute Strategie verbindet Sicherheit mit Wirtschaftlichkeit. Rechtlich verlangt die [[mpbetreibv|MPBetreibV]], dass Instandhaltungsmaßnahmen fachgerecht – in der Regel nach den Vorgaben des Herstellers – und nur von Personen durchgeführt werden, die über die erforderliche Sachkenntnis und die nötigen Mittel verfügen [@mpbetreibv].\n\n## Grundbegriffe nach DIN 31051\n\n> [!belegt] Die [[din-31051|DIN 31051]] gliedert die Instandhaltung in vier Grundmaßnahmen: Wartung, Inspektion, Instandsetzung und Verbesserung [@din-31051].\n\n| Maßnahme | Ziel | Artikel |\n|---|---|---|\n| Wartung | Abbau der Abnutzung verzögern (z. B. Reinigen, Schmieren, Verschleißteile tauschen) | [[wartung]] |\n| Inspektion | Ist-Zustand feststellen und beurteilen | [[inspektion]] |\n| Instandsetzung | funktionsfähigen Zustand wiederherstellen | [[instandsetzung]] |\n| Verbesserung | Zuverlässigkeit oder Sicherheit erhöhen, ohne die Funktion zu ändern | [[instandhaltung-grundlagen]] |\n\n## Überblick\n\n| Themenfeld | Artikel | Bezug |\n|---|---|---|\n| Grundlagen | [[instandhaltung-grundlagen]], [[wartung]], [[inspektion]], [[instandsetzung]] | [[din-31051]] |\n| Messrichtigkeit | [[kalibrierung]] | [[mtk]], [[messunsicherheit]] |\n| Hygiene und Aufbereitung | [[aufbereitung]], [[desinfektion]], [[sterilisation]] | [[dampfsterilisator]], [[rdg]], [[niedertemperatursterilisator]] |\n| Organisation | [[medizintechnik-management]] | [[bestandsverzeichnis]], [[medizinproduktebuch]], [[lebenszyklus-medizinprodukt]] |\n| Fehlerbehebung | [[fehlersuche]] | Kategorie [[fehler]] |\n\n> [!belegt] Maßstab für die Aufbereitung von Medizinprodukten ist in Deutschland die gemeinsame Empfehlung der KRINKO beim Robert Koch-Institut und des BfArM „Anforderungen an die Hygiene bei der Aufbereitung von Medizinprodukten“ [@krinko-bfarm-2012].\n\n> [!hinweis] Die MPBetreibV knüpft – so jedenfalls in den Fassungen 2002/2017 – an die Beachtung dieser Empfehlung die Vermutung einer ordnungsgemäßen Aufbereitung. Für die Neufassung 2025 sollten Wortlaut und Fundstelle im Verordnungstext nachgeprüft werden [@mpbetreibv].\n\n> [!warnung] Nach einer Instandsetzung, die die elektrische Sicherheit beeinflussen kann, sieht die [[iec-62353]] eine Prüfung (Schutzleiter, ggf. Isolation, Ableitströme, Funktion) vor, bevor das Gerät wieder am Patienten eingesetzt wird; Herstellervorgaben zu Umfang und Grenzwerten gehen vor [@iec-62353].\n\n## Strategien\n\nMan unterscheidet **ausfallorientierte** (Reparatur nach Ausfall), **zeitbasiert vorbeugende** (feste Intervalle, z. B. nach Herstellerangabe) und **zustandsorientierte** Instandhaltung (anhand von Messwerten, Betriebsstunden oder Fehlerspeichern). Im Krankenhaus werden diese Strategien je nach Risiko und Verfügbarkeitsanforderung kombiniert; das [[medizintechnik-management]] priorisiert dafür den Gerätebestand.\n\n> [!praxis] Gute Instandhaltung beginnt mit sauberer Dokumentation: Jede Maßnahme, jedes Ersatzteil und jede Prüfung wird gerätebezogen festgehalten. So lassen sich wiederkehrende Fehler, Lebensdauer und Ersatzbedarf erkennen.\n\n## Lernpfad-Empfehlung\n\n1. [[instandhaltung-grundlagen]] → [[wartung]] → [[inspektion]] → [[instandsetzung]].\n2. [[kalibrierung]] zusammen mit [[mtk]] und [[messunsicherheit]].\n3. [[aufbereitung]] → [[desinfektion]] → [[sterilisation]], danach [[dampfsterilisator]] und [[rdg]].\n4. [[fehlersuche]] als Brücke zur Kategorie [[fehler]].\n5. [[medizintechnik-management]] als übergreifende Organisationsperspektive.",
+  "paths": [
+    [
+      "instandhaltung-grundlagen",
+      "wartung",
+      "inspektion",
+      "instandsetzung",
+      "elektrische-sicherheitspruefung"
+    ],
+    [
+      "aufbereitung",
+      "desinfektion",
+      "sterilisation",
+      "dampfsterilisator"
+    ]
+  ],
+  "sources": [
+    "din-31051",
+    "iec-62353",
+    "krinko-bfarm-2012",
+    "mpbetreibv",
+    "kramme-2017"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

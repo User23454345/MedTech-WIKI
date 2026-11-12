@@ -1,0 +1,162 @@
+{
+  "id": "auge",
+  "type": "term",
+  "title": "Auge",
+  "aliases": [
+    "Oculus",
+    "Ophthalmos",
+    "eye",
+    "Sehorgan",
+    "Netzhaut",
+    "Retina",
+    "Hornhaut",
+    "Cornea",
+    "Augeninnendruck",
+    "IOD",
+    "Brechkraft",
+    "Dioptrie"
+  ],
+  "category": "anatomie",
+  "summary": "Optisches Sinnesorgan, das über Hornhaut und Linse ein Bild auf die Netzhaut projiziert, wo Photorezeptoren Licht in Nervensignale umwandeln. Optik, Augeninnendruck und Lichtempfindlichkeit bestimmen die Messprinzipien ophthalmologischer Geräte und die Anforderungen der Lasersicherheit.",
+  "body": "## Überblick\n\nDas **Auge** (lat. *oculus*, griech. *ophthalmos*) ist ein optisches System, das ein reelles, verkleinertes und umgekehrtes Bild der Umwelt auf die Netzhaut projiziert, wo Photorezeptoren Licht in elektrische Signale des [[nervensystem|Nervensystems]] umwandeln [@schmidt-lang-2019]. Für die Medizintechnik ist es in doppelter Hinsicht wichtig: Es ist Untersuchungsobjekt zahlreicher optischer Geräte der [[augenheilkunde|Augenheilkunde]], und es ist das gegenüber [[laser|Laserstrahlung]] und intensivem Licht empfindlichste Organ – mit Konsequenzen für Lasersicherheit in OP und Klinik.\n\n## Aufbau\n\n| Struktur | Funktion | technisches Analogon |\n|---|---|---|\n| Hornhaut (Cornea) | größter Anteil der Brechkraft, transparent, avaskulär | feste Frontlinse |\n| Vorderkammer mit Kammerwasser | Ernährung, Aufrechterhaltung des Augeninnendrucks | Hydrauliksystem |\n| Iris mit Pupille | Regulierung des Lichteinfalls (ca. 2–8 mm Pupillendurchmesser) | Blende |\n| Linse | variable Brechkraft (Akkommodation) | Zoom-/Fokussierlinse |\n| Glaskörper | gelartige Füllung, formstabilisierend | Füllmedium |\n| Netzhaut (Retina) | Photorezeptoren und erste neuronale Verarbeitung | Bildsensor mit Vorverarbeitung |\n| Aderhaut, Pigmentepithel | Versorgung, Lichtabsorption | Absorber gegen Streulicht |\n| Sehnerv | Signalübertragung zum Gehirn | Datenleitung |\n\n## Optik des Auges\n\nDie Gesamtbrechkraft des entspannten Auges beträgt beim Erwachsenen rund 60 dpt, davon entfallen etwa zwei Drittel auf die Hornhaut und rund 20 dpt auf die Linse; die Achslänge liegt typischerweise um 24 mm [@schmidt-lang-2019]. Grundlagen siehe [[optik|Optik und Lichtausbreitung]].\n\n`D = 1 / f` (Brechkraft in Dioptrien, Brennweite in Metern)\n\nDie Brechkraft einer einzelnen Grenzfläche ergibt sich aus `D = (n₂ − n₁) / r`. Weil der Brechzahlsprung zwischen Luft (n = 1) und Hornhaut (n ≈ 1,376) groß ist, dominiert die Hornhautvorderfläche – deshalb wirkt refraktive Chirurgie an der Hornhaut so stark.\n\n> [!beispiel] Hornhautvorderfläche mit r = 7,8 mm: D = (1,376 − 1) / 0,0078 m ≈ 48 dpt. Die Rückfläche wirkt mit negativer Brechkraft (Übergang zum Kammerwasser), sodass die Gesamthornhaut auf rund 43 dpt kommt.\n\n**Akkommodation:** Der Ziliarmuskel verändert die Linsenkrümmung. Mit dem Alter verliert die Linse ihre Elastizität (Presbyopie). Fehlsichtigkeiten (Myopie, Hyperopie, Astigmatismus) entstehen durch ein Missverhältnis von Achslänge und Brechkraft.\n\n## Netzhaut und Lichtwandlung\n\n| Photorezeptor | Anzahl (Größenordnung) | Funktion |\n|---|---|---|\n| Stäbchen | ca. 120 Millionen | Dämmerungssehen, hohe Empfindlichkeit |\n| Zapfen (S, M, L) | ca. 6 Millionen | Farb- und Tagessehen, hohe Auflösung in der Fovea |\n\n> [!hinweis] Lehrbuchwerte als Größenordnung [@schmidt-lang-2019] [@kandel-2021]. In der Fovea centralis liegen nahezu ausschließlich Zapfen – dort ist die Sehschärfe am höchsten.\n\nDer sichtbare Bereich reicht etwa von 380 bis 780 nm; das helladaptierte Auge ist um 555 nm am empfindlichsten. Licht wird durch Photopigmente absorbiert, was eine Signalkaskade auslöst und das Membranpotential der Rezeptorzelle verändert ([[aktionspotential|Aktionspotential]]-Bildung erst in den Ganglienzellen).\n\n## Augeninnendruck\n\nKammerwasser wird vom Ziliarkörper gebildet und fließt über den Kammerwinkel (Trabekelwerk, Schlemm-Kanal) ab. Das Gleichgewicht aus Produktion und Abflusswiderstand bestimmt den **Augeninnendruck** (IOD), typisch etwa 10–21 mmHg. Ein erhöhter Druck ist ein Hauptrisikofaktor des Glaukoms.\n\nGemessen wird der IOD mit dem [[tonometer|Tonometer]]. Die Goldmann-Applanationstonometrie beruht auf dem **Imbert-Fick-Prinzip**: Für eine ideal dünne, elastische Kugel gilt\n\n`p = F / A`\n\nBei einem Applanationsdurchmesser von 3,06 mm heben sich Hornhautsteifigkeit und Kapillarkraft des Tränenfilms näherungsweise auf, sodass die Kraft direkt in mmHg umgerechnet werden kann: Die Applanationsfläche beträgt π·(1,53 mm)² ≈ 7,35 mm², und eine Kraft von 1 g·9,81 m/s² ≈ 9,81 mN erzeugt darauf 9,81 mN / 7,35 mm² ≈ 1 334 Pa ≈ 10 mmHg. 1 g Messkraft entspricht also 10 mmHg ([[druck|Druck]], [[druckmessung|Druckmessung]]). Anforderungen an Tonometer beschreibt ISO 8612 [@iso-8612].\n\n> [!vereinfacht] Das Imbert-Fick-Prinzip gilt streng nur für eine unendlich dünne Membran. Abweichende Hornhautdicke führt zu systematischen Messfehlern – ein Beispiel dafür, wie biologische Variabilität die [[messunsicherheit|Messunsicherheit]] dominiert.\n\n## Lichtschädigung und Lasersicherheit\n\nDas Auge fokussiert parallele Strahlung im Bereich etwa 400–1400 nm auf einen sehr kleinen Netzhautfleck. Dadurch steigt die Bestrahlungsstärke auf der Netzhaut gegenüber der Hornhaut um viele Größenordnungen – schon geringe Laserleistungen können irreversible Schäden verursachen. UV-B und UV-C werden dagegen überwiegend in der Hornhaut, UV-A in der Linse absorbiert; Infrarot oberhalb von etwa 1400 nm erreicht die Netzhaut kaum und schädigt vor allem Hornhaut und vordere Augenabschnitte [@iec-60825-1].\n\n> [!warnung] Beim Betrieb von [[chirurgischer-laser|chirurgischen Lasern]] sind Laserklasse, Laserschutzbrillen passend zu Wellenlänge und Schutzstufe sowie Laserbereichskennzeichnung zu beachten [@iec-60825-1] [@ostrv]. Auch Patientinnen und Patienten benötigen Augenschutz.\n\n## Anwendung in Geräten\n\n| Gerät | Messgröße / Funktion | physikalisches Prinzip |\n|---|---|---|\n| [[spaltlampe|Spaltlampe]] | Biomikroskopie des vorderen Augenabschnitts | Spaltbeleuchtung, Stereomikroskop [@iso-10939] |\n| [[tonometer|Tonometer]] | Augeninnendruck | Applanation, Luftstoß, Rebound [@iso-8612] |\n| [[oct|OCT]] | Schnittbilder der Netzhaut im Mikrometerbereich | Interferometrie mit kurzkohärentem Licht [@huang-1991] |\n| [[phakoemulsifikation|Phakoemulsifikation]] | Entfernung der getrübten Linse (Katarakt) | Ultraschall-Zertrümmerung, Spülung und Aspiration [@kelman-1967] |\n| [[op-mikroskop|Operationsmikroskop]] | vergrößerte Sicht bei Eingriffen | Stereomikroskopie, koaxiale Beleuchtung |\n| [[chirurgischer-laser|Laser]] | Photokoagulation, refraktive Chirurgie | Absorption, Photodisruption, Ablation |\n\nBei der Phakoemulsifikation muss das Gerät den Druck in der Vorderkammer durch Gleichgewicht von Infusion und Aspiration stabil halten – ein Regelproblem, das über [[druckmessung|Druckmessung]] und [[peristaltikpumpe|Pumpen]] gelöst wird. Beim [[oct|OCT]] bestimmt die Bandbreite der Lichtquelle die axiale Auflösung: je breitbandiger, desto kürzer die Kohärenzlänge. Für eine Quelle mit gaußförmigem Spektrum gilt\n\n`Δz = (2·ln 2 / π) · λ₀² / Δλ`\n\n> [!beispiel] Zentralwellenlänge λ₀ = 840 nm, Bandbreite Δλ = 50 nm: Δz ≈ 0,44 · (840 nm)² / 50 nm ≈ 6 µm (in Luft; im Gewebe um den Brechungsindex von rund 1,35–1,4 kleiner). Die laterale Auflösung wird dagegen von der Fokussierung des Strahls bestimmt [@huang-1991].\n\n## Bedeutung in der Medizintechnik\n\nDas Auge vereint präzise [[optik|Optik]], Druckregelung und neuronale Signalwandlung. Für Medizintechniker:innen stehen drei Aspekte im Vordergrund: die optischen und mechanischen Messprinzipien ophthalmologischer Geräte, die Sicherheit beim Umgang mit Laser und intensiven Lichtquellen und die Aufbereitung von Instrumenten mit Kontakt zur Hornhaut (z. B. Tonometer-Messkörper), bei denen Infektionsschutz und Materialverträglichkeit gleichermaßen zählen.\n",
+  "related": [
+    "optik",
+    "laser",
+    "augenheilkunde",
+    "spaltlampe",
+    "tonometer",
+    "oct",
+    "phakoemulsifikation",
+    "op-mikroskop",
+    "chirurgischer-laser",
+    "nervensystem",
+    "druckmessung"
+  ],
+  "paths": [
+    [
+      "auge",
+      "optik",
+      "oct"
+    ],
+    [
+      "auge",
+      "tonometer",
+      "druck",
+      "druckmessung"
+    ],
+    [
+      "auge",
+      "laser",
+      "chirurgischer-laser"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "kandel-2021",
+    "iso-8612",
+    "iso-10939",
+    "huang-1991",
+    "kelman-1967",
+    "iec-60825-1",
+    "ostrv"
+  ],
+  "diagram": {
+    "title": "Vom Licht zum Nervensignal",
+    "caption": "Optische und neuronale Kette des Sehens mit zugehörigen Untersuchungsgeräten (vereinfacht).",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "licht",
+        "label": "Licht\n(380–780 nm)",
+        "ref": "optik",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "horn",
+        "label": "Hornhaut /\nVorderkammer",
+        "kind": "process",
+        "x": 300,
+        "y": 90
+      },
+      {
+        "id": "linse",
+        "label": "Linse\n(Akkommodation)",
+        "kind": "process",
+        "x": 500,
+        "y": 90
+      },
+      {
+        "id": "ret",
+        "label": "Netzhaut\n(Photorezeptoren)",
+        "kind": "sensor",
+        "x": 720,
+        "y": 90
+      },
+      {
+        "id": "nerv",
+        "label": "Sehnerv /\nGehirn",
+        "ref": "nervensystem",
+        "kind": "output",
+        "x": 720,
+        "y": 260
+      },
+      {
+        "id": "oct",
+        "label": "OCT",
+        "ref": "oct",
+        "kind": "output",
+        "x": 500,
+        "y": 260
+      },
+      {
+        "id": "ton",
+        "label": "Tonometer",
+        "ref": "tonometer",
+        "kind": "output",
+        "x": 300,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "licht",
+        "to": "horn",
+        "kind": "energy"
+      },
+      {
+        "from": "horn",
+        "to": "linse",
+        "kind": "energy",
+        "label": "Brechung"
+      },
+      {
+        "from": "linse",
+        "to": "ret",
+        "kind": "energy",
+        "label": "Bild"
+      },
+      {
+        "from": "ret",
+        "to": "nerv",
+        "kind": "signal"
+      },
+      {
+        "from": "oct",
+        "to": "ret",
+        "kind": "energy",
+        "label": "Schnittbild"
+      },
+      {
+        "from": "ton",
+        "to": "horn",
+        "kind": "signal",
+        "label": "IOD"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

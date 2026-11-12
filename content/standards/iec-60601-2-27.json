@@ -1,0 +1,39 @@
+{
+  "id": "iec-60601-2-27",
+  "type": "standard",
+  "title": "IEC 60601-2-27",
+  "code": "IEC 60601-2-27",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-27: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Elektrokardiographie-Überwachungsgeräten",
+  "scope": "Legt besondere Anforderungen an Basissicherheit und wesentliche Leistungsmerkmale von Geräten zur kontinuierlichen EKG-Überwachung fest, einschließlich Herzfrequenzbestimmung und EKG-bezogener Alarme.",
+  "aliases": [
+    "DIN EN 60601-2-27",
+    "EN 60601-2-27",
+    "EKG-Monitoring-Norm",
+    "60601-2-27"
+  ],
+  "category": "normen",
+  "summary": "Die IEC 60601-2-27 ist die besondere Festlegung für EKG-Überwachungsgeräte, etwa das EKG-Modul eines Patientenmonitors. Im Mittelpunkt stehen eine zuverlässige Herzfrequenzbestimmung, EKG-Alarme, die Unterdrückung von Schrittmacherimpulsen sowie der Schutz bei Defibrillation und HF-Chirurgie.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-2-27** gilt für Geräte zur **kontinuierlichen Überwachung des EKG** am Patienten – in der Regel das EKG-Modul eines [[patientenmonitor|Patientenmonitors]] auf Intensiv-, Überwachungs- oder Normalstation, im OP oder im Rettungsdienst [@iec-60601-2-27]. Anders als beim diagnostischen [[ekg-geraet|12-Kanal-EKG]] (Norm [[iec-60601-2-25]]) steht nicht die Detailbefundung im Vordergrund, sondern die **sichere Erkennung bedrohlicher Zustände** in Echtzeit.\n\nIst das EKG Teil eines Multiparametermonitors, gilt zusätzlich [[iec-80601-2-49]] für das Gesamtgerät.\n\n## Zentrale Konzepte und Anforderungen\n\n### Herzfrequenz und QRS-Erkennung\n\nDas Gerät muss QRS-Komplexe zuverlässig erkennen und daraus die Herzfrequenz berechnen. Die Norm verlangt Prüfungen mit definierten Testsignalen, u. a. für:\n\n* den Messbereich und die Genauigkeit der Herzfrequenzanzeige,\n* die Reaktionszeit auf Frequenzänderungen,\n* die **Unterdrückung hoher T-Wellen** (keine Doppelzählung),\n* unregelmäßige Rhythmen und sehr kleine bzw. große QRS-Amplituden.\n\n### Schrittmacherimpulse\n\nBei Patientinnen und Patienten mit [[herzschrittmacher|Herzschrittmacher]] darf der Monitor Stimulationsimpulse nicht als QRS-Komplexe zählen. Sonst würde bei einer Asystolie mit weiterlaufendem Schrittmacher eine normale Herzfrequenz angezeigt – ein lebensgefährlicher Fehler.\n\n> [!warnung] Die Schrittmacher-Erkennung muss am Monitor aktiviert sein, wenn der Patient einen Schrittmacher trägt. Die Norm verlangt entsprechende Leistungsmerkmale, die korrekte Einstellung liegt aber beim Anwender.\n\n### Alarme\n\nEKG-bezogene Alarme – Asystolie, Herzfrequenzgrenzen, ggf. Arrhythmien – müssen innerhalb definierter Zeiten ausgelöst werden. Ein **technischer Alarm** bei abgefallenen Elektroden („Ableitung ab“) ist ebenfalls gefordert (siehe [[elektrodenproblem]]). Gestaltung und Priorisierung folgen der Ergänzungsnorm [[iec-60601-1-8]] (siehe [[alarmsystem]]). Zu viele Fehlalarme fördern [[alarmmuedigkeit|Alarmmüdigkeit]] – ein bekanntes Patientensicherheitsthema.\n\n### Signalaufbereitung und Sicherheit\n\n* **Bandbreite:** Für das Monitoring sind schmalere [[filter|Filter]] üblich als in der Diagnostik, um [[bewegungsartefakt|Bewegungsartefakte]] und [[netzstoerung|Netzbrumm]] zu dämpfen; die Norm verlangt, dass der gewählte Filtermodus erkennbar ist.\n* **Defibrillationsschutz** der [[anwendungsteile|Anwendungsteile]] mit Erholungszeit, damit nach einem Schock rasch wieder ein EKG angezeigt wird.\n* **Schutz bei [[hf-chirurgiegeraet|HF-Chirurgie]]**: Das Gerät soll während der Anwendung von HF-Chirurgie nicht zu Verbrennungen an den [[ekg-elektrode|Elektroden]] führen und sich nach der Störung wieder erholen.\n* Begrenzung der [[ableitstrom|Ableitströme]] (meist Typ CF oder BF, defibrillationsgeschützt).\n\n> [!vereinfacht] Diagnose-EKG = möglichst unverfälschte Kurvenform; Monitoring-EKG = möglichst stabile, störungsarme Kurve und zuverlässige Alarme. Daraus erklären sich die unterschiedlichen Filter- und Prüfanforderungen der beiden Normen.\n\n> [!hinweis] Konkrete Zeitgrenzen, Testsignale und Toleranzen sind der jeweils gültigen Ausgabe zu entnehmen.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Rolle |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Basissicherheit |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-8]] | [[emv|EMV]], Alarmsysteme |\n| Besondere Festlegungen | IEC 60601-2-27 | EKG-Überwachung |\n| | [[iec-60601-2-25]] | diagnostisches EKG |\n| | [[iec-80601-2-49]] | Multiparametermonitor als Ganzes |\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen die Alarm- und Erkennungsleistung mit standardisierten Signalen nachweisen und Leistungsdaten in den Begleitpapieren offenlegen (z. B. Verhalten bei Schrittmacherimpulsen, Filtermodi).\n\n**Betreiber** sollten diese Angaben kennen: Sie bestimmen, wie Alarmgrenzen, Filter und Schrittmachererkennung im Klinikalltag konfiguriert werden. Die wiederkehrende Prüfung erfolgt nach Herstellerangabe; typisch sind [[elektrische-sicherheitspruefung]] nach [[iec-62353]] und [[funktionspruefung]] mit einem Patientensimulator (siehe [[pruefgeraete]]).\n\n> [!praxis] Bei zentralen Überwachungsanlagen muss auch die Alarmweiterleitung über das Netzwerk in die Prüfung einbezogen werden – Risiken der Vernetzung adressiert IEC 80001-1 [@iec-80001-1].\n\n## Betroffene Geräte\n\n* [[patientenmonitor]] (EKG-Modul)\n* verwandt: [[defibrillator]] mit EKG-Monitorfunktion und [[externer-schrittmacher]] – für diese Geräte gelten primär eigene besondere Festlegungen (z. B. [[iec-60601-2-4]] für Defibrillatoren); inwieweit diese für die EKG-Überwachung auf IEC 60601-2-27 verweisen, ist der jeweiligen Norm zu entnehmen\n* abgegrenzt: [[ekg-geraet]], [[langzeit-ekg]]\n* Fachbereiche: [[intensivmedizin]], [[anaesthesiologie]], [[notfallmedizin]], [[kardiologie]]\n",
+  "related": [
+    "patientenmonitor",
+    "defibrillator",
+    "ekg-geraet",
+    "iec-60601-2-25",
+    "iec-80601-2-49",
+    "iec-60601-1-8",
+    "alarmsystem",
+    "alarmmuedigkeit",
+    "herzschrittmacher",
+    "ekg-elektrode",
+    "elektrodenproblem",
+    "intensivmedizin"
+  ],
+  "sources": [
+    "iec-60601-2-27",
+    "iec-60601-1",
+    "iec-80001-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

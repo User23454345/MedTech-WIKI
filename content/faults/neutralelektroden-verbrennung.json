@@ -1,0 +1,58 @@
+{
+  "id": "neutralelektroden-verbrennung",
+  "type": "fault",
+  "title": "Verbrennung unter der Neutralelektrode",
+  "aliases": [
+    "NE-Verbrennung",
+    "Verbrennung an der Neutralelektrode",
+    "Patient return electrode burn",
+    "Dispersive electrode burn",
+    "Hautverbrennung HF-Chirurgie"
+  ],
+  "category": "fehler",
+  "summary": "Thermische Hautschädigung im Bereich der Neutralelektrode bei monopolarer HF-Chirurgie. Ursache ist eine zu hohe lokale Stromdichte, meist durch verringerte oder ungleichmäßige Kontaktfläche, ungünstige Platzierung oder lange Aktivierung mit hoher Leistung.",
+  "devices": [
+    "hf-chirurgiegeraet",
+    "op-tisch"
+  ],
+  "causes": [
+    "Teilweise abgelöste oder schlecht haftende [[neutralelektrode|Neutralelektrode]] (Lagerungswechsel, Zug am Kabel, Feuchtigkeit, Behaarung) mit verkleinerter Kontaktfläche",
+    "Ungünstige Platzierung über Knochenvorsprüngen, Narbengewebe, Fettgewebe, Metallimplantaten oder weit entfernt vom OP-Gebiet",
+    "Flüssigkeit unter oder an der Elektrode (Desinfektionsmittel, Spülflüssigkeit, Blut), die Kontaktfläche und Stromverteilung verändert",
+    "Lange Aktivierungszeit mit hoher Leistung, z. B. bei großflächiger Koagulation; Überlagerung durch Wärmequellen ([[patientenwaermesystem|Wärmesysteme]])",
+    "Verwendung ungeteilter Elektroden ohne Kontaktqualitätsüberwachung, abgelaufene oder wiederverwendete Einmal-Elektroden mit ausgetrocknetem Gel",
+    "Zu kleine Elektrode für den Patienten oder die Leistung (z. B. Erwachsenengröße vs. Kinder-/Neonatenelektrode nicht passend gewählt)",
+    "Defekt des Generators oder der Überwachungsschaltung (selten), beschädigtes NE-Kabel"
+  ],
+  "actions": [
+    "Verbrennung ärztlich versorgen und dokumentieren (Lage, Ausdehnung, Fotodokumentation nach Hausregel)",
+    "Neutralelektrode, Kabel, Verpackung (Charge, Verfallsdatum) und Gerät sichern; Einstellungen und Event-Log nicht verändern",
+    "Differenzialdiagnosen beachten: Druckschädigung, chemische Hautschädigung durch Desinfektionsmittel, Verbrennung durch Wärmesysteme oder an EKG-Elektroden",
+    "Gerät außer Betrieb nehmen und durch die Medizintechnik prüfen lassen: Ausgangsleistung, NE-Überwachung, Isolation, [[ableitstrom|Ableitströme]]",
+    "Meldepflicht als mutmaßlich schwerwiegendes Vorkommnis prüfen ([[vigilanz]], MPAMIV) und Hersteller einbinden",
+    "Ursachenanalyse mit OP-Team: Platzierung, Lagerung, Einstellung, Aktivierungsdauer; Standards und Einweisung anpassen"
+  ],
+  "body": "## Technischer Hintergrund\n\nBei der monopolaren [[hf-chirurgiegeraet|HF-Chirurgie]] fließt der hochfrequente Strom von der kleinen Aktivelektrode durch den Körper zur großflächigen [[neutralelektrode|Neutralelektrode]] (NE) und zurück zum Generator. Die Wärmeleistung pro Volumen wächst mit dem Quadrat der Stromdichte J = I / A ([[joulesche-waerme|Joulesche Wärme]]). An der Aktivelektrode ist A sehr klein – dort entsteht der gewünschte Schneid- oder Koagulationseffekt. An der NE soll A so groß sein, dass die Erwärmung durch die Hautdurchblutung abgeführt wird [@massarweh-2006][@iec-60601-2-2].\n\n> [!vereinfacht] Halbiert sich die wirksame Kontaktfläche bei gleichem Strom, verdoppelt sich die Stromdichte und die lokale Wärmeleistung vervierfacht sich näherungsweise. Die tatsächliche Temperatur hängt zusätzlich von Aktivierungsdauer, Gewebedurchblutung und Wärmeableitung ab ([[waermeuebertragung]]).\n\nDie Stromdichte ist auch an einer vollständig haftenden Elektrode nicht gleichmäßig: Sie ist an der dem OP-Gebiet zugewandten Kante erhöht (**Randeffekt**, „leading edge“).\n\n> [!praxis] Gängige Anwendungsempfehlungen der Hersteller lauten, die NE möglichst nah am OP-Gebiet auf gut durchblutetem Muskelgewebe zu platzieren und die lange Kante dem OP-Gebiet zuzuwenden. So verteilt sich der Strom über eine längere Randlinie, und bei geteilten Elektroden werden beide Hälften gleichmäßig belastet. Maßgeblich ist die Gebrauchsanweisung der verwendeten Elektrode.\n\n### Wie das Gerät den Zustand erkennt\n\nModerne Generatoren überwachen die NE; Anforderungen an solche Überwachungseinrichtungen enthält die gerätespezifische Norm [[iec-60601-2-2]] [@iec-60601-2-2]:\n\n| Elektrodentyp | Überwachung | Grenze |\n|---|---|---|\n| ungeteilte NE | nur Kabelunterbrechung (Durchgang) | erkennt **keine** teilweise Ablösung |\n| geteilte NE (zweiflächig) | Messung der Impedanz zwischen den beiden Hälften mit einem kleinen Messstrom; Alarm bei zu hoher, zu niedriger oder stark veränderter Impedanz | erkennt Ablösung und unzureichenden Kontakt, aber nicht jede ungünstige Platzierung |\n\nBei einer unzulässigen Kontaktqualität sperrt der Generator die Aktivierung und meldet einen Alarm. Da hier unmittelbar ein Verbrennungsrisiko besteht, ist die Meldung sicherheitsrelevant; Priorität und Signalisierung folgen dem Alarmkonzept nach [[iec-60601-1-8]] und der Herstellerauslegung [@iec-60601-1-8]. Zusätzlich verhindern **erdfreie (isolierte) Ausgänge** heutiger Generatoren weitgehend, dass HF-Strom über geerdete Kontaktstellen (Metallteile des [[op-tisch|OP-Tisches]], EKG-Elektroden) abfließt – ein Mechanismus, der bei älteren erdbezogenen Generatoren zu Verbrennungen fernab der NE führte [@massarweh-2006].\n\n> [!warnung] Eine NE-Überwachung darf niemals überbrückt oder durch „Nachdrücken“ der Elektrode und Weiterarbeiten umgangen werden. Bei Alarm wird die Elektrode neu angelegt oder ersetzt.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Verbrennung am Rand der NE | Ausrichtung, Abstand zum OP-Gebiet, Leistung und Dauer | Platzierungsstandard schulen, lange Kante zum OP-Gebiet |\n| fleckige Verbrennung in der Fläche | Haftung, Haare, Feuchtigkeit, Gelzustand, Verfallsdatum | Haut vorbereiten, Elektrodencharge prüfen |\n| Verbrennung trotz fehlendem Alarm | Elektrodentyp (ungeteilt?), Funktion der Überwachung | geteilte NE verwenden; Generator prüfen lassen |\n| häufige NE-Alarme | Kabel, Stecker, Elektrodenqualität, Patientenhaut | Kabel tauschen, Elektrodentyp prüfen |\n| Läsion außerhalb der NE | Kontakt mit Metall, EKG-Elektroden, Instrumentenisolation | Lagerung prüfen, Instrumente auf Isolationsdefekte testen |\n\nDie technische Prüfung umfasst die Messung der Ausgangsleistung an definierten Lastwiderständen mit einem HF-Analysator, die Prüfung der NE-Überwachung mit Prüfwiderständen, die HF-Ableitstrommessung sowie die [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] nach [[iec-62353]] [@iec-62353].\n\n## Prävention\n\n* Geteilte NE mit Kontaktqualitätsüberwachung verwenden; Größe passend zum Patienten wählen.\n* Platzierung auf trockener, ggf. von Haaren befreiter Haut über gut durchblutetem Muskel; keine Platzierung über Knochen, Narben oder Implantaten.\n* Nach jeder Umlagerung Sitz der NE kontrollieren; Desinfektionsmittel nicht unter die Elektrode laufen lassen.\n* Möglichst niedrige wirksame Leistung, kurze Aktivierungszeiten; bipolare Technik nutzen, wo möglich.\n* Regelmäßige [[stk|STK]] nach § 12 [[mpbetreibv|MPBetreibV]] (HF-Chirurgiegeräte sind in Anlage 1 aufgeführt) und [[einweisung|Einweisung]] des OP-Personals [@mpbetreibv].\n\n> [!hinweis] Gerätespezifische Fehlercodes der NE-Überwachung und Prüfwerte für die Kontaktqualitätsmessung stehen in den Service-Unterlagen des Herstellers.",
+  "related": [
+    "neutralelektrode",
+    "hf-chirurgiegeraet",
+    "iec-60601-2-2",
+    "joulesche-waerme",
+    "elektrische-stromwirkung",
+    "haut",
+    "elektrodenproblem",
+    "vigilanz",
+    "stk",
+    "anwendungsfehler"
+  ],
+  "sources": [
+    "iec-60601-2-2",
+    "massarweh-2006",
+    "iec-60601-1-8",
+    "iec-62353",
+    "mpbetreibv",
+    "mpamiv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

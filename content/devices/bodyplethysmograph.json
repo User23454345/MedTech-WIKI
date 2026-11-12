@@ -1,0 +1,55 @@
+{
+  "id": "bodyplethysmograph",
+  "type": "device",
+  "title": "Bodyplethysmograph",
+  "aliases": [
+    "Ganzkörperplethysmograph",
+    "Bodybox",
+    "Body-Box",
+    "Ganzkörperplethysmographie",
+    "große Lungenfunktion"
+  ],
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 54,
+  "domains": [
+    "pneumologie"
+  ],
+  "summary": "Der Bodyplethysmograph ist eine luftdicht verschließbare Kabine, in der der Patient atmet, während Kabinen- und Munddruck gemessen werden. Über das Gesetz von Boyle-Mariotte lassen sich daraus der Atemwegswiderstand und das intrathorakale Gasvolumen bestimmen – Größen, die mit der Spirometrie allein nicht erfassbar sind.",
+  "sections": {
+    "purpose": "Die Bodyplethysmographie ergänzt die [[spirometer|Spirometrie]] und erlaubt mitarbeitsarm die Messung des **Atemwegswiderstands** (Raw) sowie des **intrathorakalen Gasvolumens** (ITGV), aus dem Residualvolumen und Totalkapazität folgen. Damit lassen sich Obstruktion, Überblähung und Restriktion sicherer unterscheiden [@schmidt-lang-2019].",
+    "principle": "## Physikalische Grundlage\n\nBei konstanter Temperatur gilt für eine abgeschlossene Gasmenge das Gesetz von Boyle-Mariotte: p · V = konstant ([[gasgesetze]]). Atmet der Patient, ändert sich das Volumen seines Thorax; da die Kabine geschlossen ist, ändert sich der **Kabinendruck** spiegelbildlich. Das Verschiebevolumen wird daher über einen empfindlichen [[drucksensor]] an der Kabine gemessen, der zuvor mit einem definierten Volumen (motorgetriebener Kolben) kalibriert wurde.\n\n## Atemwegswiderstand\n\nWährend ruhiger Atmung misst ein [[flowsensor|Pneumotachograph]] am Mundstück den Atemfluss. Der Atemwegswiderstand ist das Verhältnis aus alveolärem Antriebsdruck und Fluss (R = Δp / V̇, analog zu [[spannung-strom-widerstand|R = U / I]]). Der alveoläre Druck wird indirekt aus der Kabinendruckänderung bestimmt; dargestellt wird die Beziehung als Widerstandsschleife ([[atemmechanik]], [[stroemungslehre]]).\n\n## Intrathorakales Gasvolumen\n\nFür das ITGV verschließt ein **Shutter** (Verschlussventil) kurz das Mundstück. Der Patient atmet gegen den Verschluss weiter; ohne Fluss entspricht der Munddruck dem Alveolardruck. Aus Munddruck- und Kabinendruckänderung ergibt sich über Boyle-Mariotte das Gasvolumen im Thorax zum Verschlusszeitpunkt [@schmidt-lang-2019].\n\n> [!vereinfacht] Reale Systeme müssen Erwärmung und Befeuchtung der Atemluft sowie die Wärmeabgabe des Patienten an die Kabinenluft korrigieren; diese thermischen Effekte überlagern die kleinen Druckänderungen ([[waermeuebertragung]]).\n\n> [!praxis] Nach dem Schließen der Tür braucht die Kabine eine kurze Stabilisierungszeit, bevor gemessen werden kann."
+  },
+  "manufacturers": [
+    {
+      "ref": "schiller",
+      "models": [],
+      "note": "Bodyplethysmographen über die Tochtergesellschaft Ganshorn."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Kabinenausführung (u. a. barrierefreie Varianten), Zusatzmodule (Diffusionskapazität, Provokationstests), Auswertesoftware, Verbrauchsmaterial (Filter, Mundstücke), Servicevertrag und Kalibrierausstattung."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Bodyplethysmographen sind in Anlage 1 der MPBetreibV (2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) genannt.",
+    "intervals": "Volumen- und Kabinenkalibrierung nach Herstellerangabe (üblicherweise arbeitstäglich); Prüfung der Türdichtung und des Shutters; elektrische Wiederholungsprüfung nach IEC 62353 gemäß Herstellervorgabe."
+  },
+  "related": [
+    "spirometer",
+    "gasgesetze",
+    "atemmechanik",
+    "drucksensor",
+    "flowsensor",
+    "pneumologie"
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

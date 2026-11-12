@@ -1,0 +1,152 @@
+{
+  "id": "flowsensor",
+  "type": "term",
+  "title": "Flowsensor",
+  "aliases": [
+    "Durchflusssensor",
+    "Flusssensor",
+    "flow sensor",
+    "Volumenstromsensor",
+    "Pneumotachograph",
+    "Pneumotachometer",
+    "Hitzdrahtanemometer",
+    "Flow-Sensor"
+  ],
+  "category": "sensorik",
+  "summary": "Sensor zur Messung des Volumenstroms von Gasen oder Flüssigkeiten. In Beatmungs- und Anästhesiegeräten liefert er durch Integration Tidal- und Minutenvolumen und dient als Trigger- und Regelsignal; gängige Prinzipien sind Differenzdruck, Hitzdraht und Ultraschall.",
+  "body": "## Begriff\n\nEin **Flowsensor** (Durchflusssensor) misst den **Volumenstrom** V̇ eines Gases oder einer Flüssigkeit, also das pro Zeiteinheit transportierte Volumen (`V̇ = dV/dt`, Einheiten L/min oder mL/s). In der Beatmungs- und Anästhesietechnik ist er neben dem [[drucksensor|Drucksensor]] der wichtigste Sensor: Aus dem Flow werden durch Integration das Tidalvolumen und das Atemminutenvolumen berechnet, Leckagen erkannt und Triggerereignisse ausgelöst [@oczenski-2017] [@tobin-2013].\n\n`V_T = ∫ V̇(t) dt` (über die In- bzw. Exspiration)\n\n## Messprinzipien für Gase\n\n| Prinzip | Messgröße | Kennlinie | Typische Eigenschaften |\n|---|---|---|---|\n| Pneumotachograph (laminares Element) | Differenzdruck über Sieb oder Kapillarbündel | linear: Δp ∝ V̇ | genau im Auslegungsbereich, empfindlich gegen Feuchte/Sekret |\n| Blende / variable Blende (*variable orifice*) | Differenzdruck über Klappe oder Engstelle | quadratisch: Δp ∝ V̇² | robust, preiswert, oft proximal als Einwegteil |\n| Hitzdraht-/Heißfilm-Anemometer | Wärmeabfuhr von einem beheizten Draht | nichtlinear (King-Gesetz) | sehr schnell, geringer Strömungswiderstand, gasartabhängig |\n| Ultraschall-Laufzeit | Laufzeitdifferenz mit/gegen die Strömung | linear | ohne bewegte Teile, praktisch gasartunabhängig in der Flowbestimmung |\n| Turbine/Flügelrad | Drehzahl eines Rotors | linear über Frequenz | mechanisch einfach, Trägheit bei kleinen Flows |\n\n### Differenzdruckverfahren\n\nFür ein laminar durchströmtes Rohr gilt das Gesetz von Hagen-Poiseuille ([[stroemungslehre]]):\n\n`Δp = R · V̇` mit `R = 8 · η · l / (π · r⁴)`\n\nDer Strömungswiderstand R hängt von der dynamischen Viskosität η des Gases ab – und damit von Gaszusammensetzung und Temperatur. Bei einer Blende überwiegt dagegen der Bernoulli-Anteil, sodass `V̇ = k · √Δp` gilt. Das Differenzdrucksignal wird von einem Differenzdrucksensor erfasst; die [[druckmessung|Druckmessung]] ist damit Grundlage der Flowmessung [@hering-2018].\n\n### Thermische Verfahren (Anemometrie)\n\nEin elektrisch beheizter Platindraht wird vom Gas gekühlt. Im Konstanttemperaturbetrieb regelt eine Brückenschaltung den Heizstrom so nach, dass die Drahttemperatur konstant bleibt; die nötige Heizleistung ist das Messsignal. Das **King-Gesetz** beschreibt den Zusammenhang näherungsweise:\n\n`P = I² · R_w = (A + B · √v) · (T_w − T_g)`\n\nmit Strömungsgeschwindigkeit v, Drahttemperatur T_w, Gastemperatur T_g und gasabhängigen Konstanten A und B [@fraden-2016]. Weil Wärmeleitfähigkeit und Wärmekapazität von O₂, Luft, Heliox oder Narkosegasen verschieden sind, muss das Gerät die Gaszusammensetzung kennen und kompensieren. Häufig wird ein zweiter, unbeheizter Draht als Temperaturreferenz verwendet ([[temperatursensor]]).\n\n### Ultraschall-Laufzeitverfahren\n\nZwei Wandler senden schräg zur Strömung abwechselnd Ultraschallimpulse. Mit der Strömung ist die Laufzeit t₁ kürzer als gegen die Strömung t₂. Für die mittlere Geschwindigkeit gilt\n\n`v = L / (2 · cos α) · (1/t₁ − 1/t₂)`\n\nmit Länge L des Schallpfads und Winkel α zwischen Schallpfad und Strömungsrichtung – die Schallgeschwindigkeit fällt heraus. Aus der Summe der Kehrwerte, `c = L / 2 · (1/t₁ + 1/t₂)`, lässt sich zusätzlich die Schallgeschwindigkeit und damit die molare Masse des Gases abschätzen [@fraden-2016]. Das Verfahren wird u. a. in [[spirometer|Spirometern]] eingesetzt.\n\n> [!vereinfacht] Die Formeln setzen eine voll ausgebildete, symmetrische Strömung voraus. Reale Atemströmungen sind instationär und an Krümmern oder Tuben gestört; Hersteller kalibrieren deshalb die gesamte Messstrecke einschließlich Geometrie.\n\n## Proximal oder distal?\n\n| Messort | Vorteil | Nachteil |\n|---|---|---|\n| Proximal (am Y-Stück, patientennah) | erfasst tatsächlich am Patienten ankommende Volumina; empfindlicher Trigger | Feuchte, Sekret, Totraum, Gewicht am Tubus; meist Einweg- oder Wechselteil |\n| Distal (im Gerät, in- und exspiratorisch) | geschützt, beheizbar, wartungsärmer | Schlauchcompliance und Leckagen verfälschen das Patientenvolumen und müssen herausgerechnet werden |\n\n> [!praxis] Wassertropfen oder Sekret auf einem Hitzdraht- oder Differenzdruckelement führen typischerweise zu unplausiblen Volumina oder Flow-Alarmen. Bei der [[fehlersuche|Fehlersuche]] steht deshalb vor jedem Gerätetausch die Sichtprüfung, Reinigung bzw. Ersatz des Sensors und die anschließende Kalibrierung nach Herstellerangabe.\n\n## Gasbedingungen: BTPS, ATPS, STPD\n\nGasvolumina hängen nach den [[gasgesetze|Gasgesetzen]] von Temperatur, Druck und Wasserdampfgehalt ab. Beatmungs- und Lungenfunktionsgeräte geben Volumina daher meist auf **BTPS** bezogen an (Körpertemperatur 37 °C, aktueller Umgebungsdruck, wasserdampfgesättigt). Die Umrechnung aus Umgebungsbedingungen (ATPS) lautet\n\n`V_BTPS = V_ATPS · (310 K / T) · (p_B − p_H₂O,T) / (p_B − 47 mmHg)`\n\nmit Barometerdruck p_B und Wasserdampfpartialdruck p_H₂O bei der Gastemperatur T; 47 mmHg ist der Sättigungsdampfdruck bei 37 °C [@oczenski-2017].\n\n> [!beispiel] Bei 22 °C (295 K), p_B = 760 mmHg und gesättigtem Gas (p_H₂O ≈ 20 mmHg) ergibt sich ein Faktor 310/295 · 740/713 ≈ 1,09. Ein bei Raumbedingungen gemessenes Volumen von 500 mL entspricht also rund 545 mL BTPS.\n\n## Flowmessung in Flüssigkeiten\n\nFür Blut und Infusionslösungen kommen andere Prinzipien zum Einsatz: An [[herz-lungen-maschine|Herz-Lungen-Maschine]] und [[ecmo|ECMO]] werden außen auf den Schlauch geklemmte Ultraschall-Durchflusssensoren (Laufzeit- oder Dopplerprinzip, [[doppler-effekt]]) genutzt; elektromagnetische Verfahren nutzen die [[elektromagnetische-induktion]] in der leitfähigen Flüssigkeit [@webster-2010]. Volumetrische [[infusionspumpe|Infusionspumpen]] bestimmen den Fluss dagegen meist nicht durch Messung, sondern aus dem geförderten Volumen pro Pumpenhub.\n\n## Anwendung in Geräten\n\n| Gerät | Aufgabe des Flowsensors |\n|---|---|\n| [[beatmungsgeraet]], [[transportbeatmungsgeraet]] | Volumenmessung, Flowtrigger, Leckageberechnung ([[leckage]]), Volumenregelung |\n| [[anaesthesiegeraet]] | Tidal- und Minutenvolumen im Kreissystem, Frischgasdosierung |\n| [[cpap-geraet]], [[heimbeatmungsgeraet]] | Leckagekompensation, Erkennung von Atemereignissen |\n| [[high-flow-geraet]] | Regelung des eingestellten Gasflusses |\n| [[spirometer]], [[bodyplethysmograph]] | Lungenfunktionsdiagnostik |\n| [[herz-lungen-maschine]], [[ecmo]] | Blutflussmessung |\n| [[insufflator]] | Gasfluss bei der Insufflation |\n\nIm Turbinenbeatmungsgerät dient der Flowsensor zusätzlich als Istwertgeber für die volumenkontrollierte Beatmung: Die [[turbine|Turbine]] wird über die [[drehzahlregelung|Drehzahlregelung]] so geführt, dass der gemessene Flow dem Sollflow folgt ([[regelkreis]]).\n\n> [!belegt] Die Gerätenorm für Intensivbeatmungsgeräte stellt Anforderungen an die Genauigkeit der Volumenüberwachung und an die zugehörigen Alarme; Einzelheiten sind der jeweils gültigen Fassung der [[iso-80601-2-12]] zu entnehmen [@iso-80601-2-12].\n\n## Instandhaltung\n\nFlowsensoren gehören zu den Verschleiß- bzw. Verbrauchsteilen. Die Kalibrierung erfolgt im Selbsttest oder nach Herstellerverfahren; bei der [[stk]] wird die Volumen- bzw. Flowgenauigkeit mit einem Prüfgerät (Gasflussanalysator, siehe [[pruefgeraete]]) gegen eine Prüflunge kontrolliert. Wiederaufbereitbare Sensoren müssen gemäß Herstellerangaben [[aufbereitung|aufbereitet]] werden; Hitzdrähte sind mechanisch empfindlich.\n",
+  "related": [
+    "drucksensor",
+    "druckmessung",
+    "stroemungslehre",
+    "gasgesetze",
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "spirometer",
+    "leckage",
+    "turbine",
+    "regelkreis",
+    "temperatursensor",
+    "kalibrierung"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "flowsensor",
+      "druckmessung",
+      "stroemungslehre"
+    ],
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "drehzahlregelung",
+      "flowsensor"
+    ]
+  ],
+  "sources": [
+    "oczenski-2017",
+    "tobin-2013",
+    "hering-2018",
+    "fraden-2016",
+    "webster-2010",
+    "iso-80601-2-12"
+  ],
+  "diagram": {
+    "title": "Flowmessung nach dem Differenzdruckprinzip",
+    "caption": "Funktionsschema eines Pneumotachographen in der Messkette eines Beatmungsgeräts.",
+    "width": 960,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "gas",
+        "label": "Atemgasstrom V̇",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "el",
+        "label": "Strömungs-\nwiderstand\n(Sieb/Blende)",
+        "kind": "process",
+        "x": 280,
+        "y": 80,
+        "ref": "stroemungslehre"
+      },
+      {
+        "id": "dp",
+        "label": "Differenzdruck-\nsensor",
+        "kind": "sensor",
+        "x": 470,
+        "y": 80,
+        "ref": "drucksensor"
+      },
+      {
+        "id": "t",
+        "label": "Temperatur /\nGasart",
+        "kind": "sensor",
+        "x": 470,
+        "y": 220,
+        "ref": "temperatursensor"
+      },
+      {
+        "id": "mcu",
+        "label": "Kennlinie +\nKompensation",
+        "kind": "control",
+        "x": 680,
+        "y": 80,
+        "ref": "mikrocontroller"
+      },
+      {
+        "id": "int",
+        "label": "Integration\n→ V_T, MV",
+        "kind": "process",
+        "x": 880,
+        "y": 80
+      },
+      {
+        "id": "reg",
+        "label": "Regler /\nAlarm",
+        "kind": "output",
+        "x": 880,
+        "y": 220,
+        "ref": "alarmsystem"
+      }
+    ],
+    "edges": [
+      {
+        "from": "gas",
+        "to": "el",
+        "kind": "gas"
+      },
+      {
+        "from": "el",
+        "to": "dp",
+        "kind": "gas",
+        "label": "Δp"
+      },
+      {
+        "from": "dp",
+        "to": "mcu",
+        "kind": "signal"
+      },
+      {
+        "from": "t",
+        "to": "mcu",
+        "kind": "signal"
+      },
+      {
+        "from": "mcu",
+        "to": "int",
+        "kind": "data",
+        "label": "V̇"
+      },
+      {
+        "from": "int",
+        "to": "reg",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

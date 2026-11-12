@@ -1,0 +1,105 @@
+{
+  "id": "draeger",
+  "type": "manufacturer",
+  "title": "Drägerwerk",
+  "aliases": [
+    "Dräger",
+    "Draeger",
+    "Drägerwerk AG & Co. KGaA"
+  ],
+  "category": "hersteller",
+  "summary": "Die Drägerwerk AG & Co. KGaA mit Sitz in Lübeck ist ein familiengeprägtes Unternehmen der Medizin- und Sicherheitstechnik. In Kliniken ist Dräger vor allem durch Anästhesiearbeitsplätze, Beatmungsgeräte, Neonatologie- und Monitoringsysteme bekannt.",
+  "headquarters": "Lübeck, Deutschland",
+  "founded": "1889",
+  "website": "https://www.draeger.com/",
+  "productLines": [
+    {
+      "device": "anaesthesiegeraet",
+      "models": [
+        "Perseus A500",
+        "Atlan A350",
+        "Atlan A300",
+        "Zeus IE",
+        "Fabius plus"
+      ],
+      "note": "Perseus mit Turbinenantrieb, Atlan mit Kolbenantrieb; Verfügbarkeit einzelner Modelle regional unterschiedlich."
+    },
+    {
+      "device": "beatmungsgeraet",
+      "models": [
+        "Evita V800",
+        "Evita V600",
+        "Evita Infinity V500",
+        "Savina 300",
+        "Babylog VN800"
+      ]
+    },
+    {
+      "device": "transportbeatmungsgeraet",
+      "models": [
+        "Oxylog 3000 plus"
+      ]
+    },
+    {
+      "device": "patientenmonitor",
+      "models": [
+        "Infinity Delta",
+        "Infinity M540"
+      ],
+      "note": "Infinity-Monitoringfamilie."
+    },
+    {
+      "device": "inkubator",
+      "models": [
+        "Babyleo TN500",
+        "Isolette 8000 plus",
+        "Isolette TI500"
+      ],
+      "note": "Die Isolette-Linie geht auf den früheren Hersteller Air-Shields zurück."
+    },
+    {
+      "device": "waermebett",
+      "models": [
+        "Babytherm",
+        "Resuscitaire"
+      ]
+    },
+    {
+      "device": "phototherapiegeraet",
+      "models": [
+        "BiliLux"
+      ]
+    },
+    {
+      "device": "op-leuchte",
+      "models": [
+        "Polaris"
+      ]
+    },
+    {
+      "device": "absauggeraet",
+      "models": [],
+      "note": "Vakuumregler und Absaugzubehör für die zentrale Gasversorgung."
+    }
+  ],
+  "body": "## Überblick\n\nDie **Drägerwerk AG & Co. KGaA** ist ein börsennotiertes Unternehmen mit Sitz in Lübeck, das in zwei Bereichen tätig ist: **Medizintechnik** und **Sicherheitstechnik** [@draeger-web]. Durch die Rechtsform der Kommanditgesellschaft auf Aktien behält die Gründerfamilie über die persönlich haftende Gesellschafterin maßgeblichen Einfluss auf die Unternehmensführung. Für die klinische Medizintechnik ist Dräger vor allem in der [[anaesthesiologie|Anästhesie]], der [[intensivmedizin|Intensivmedizin]] und der [[neonatologie|Neonatologie]] relevant.\n\n## Geschichte in Stichpunkten\n\n* **1889:** Johann Heinrich Dräger gründet zusammen mit Carl Adolf Gerling in Lübeck die Firma „Dräger & Gerling“, zunächst als Handelsunternehmen [@draeger-web].\n* **1889:** Mit dem „Lubeca-Ventil“, einem Druckminderer für komprimierte Gase, entsteht das erste eigene Produkt – die präzise Gasdosierung bleibt bis heute die technologische Klammer des Unternehmens ([[druck]], [[gasgesetze]]).\n* **1907:** Patent auf den „Pulmotor“, ein frühes Wiederbelebungsgerät mit Überdruckbeatmung; der Pulmotor gilt als Vorläufer der maschinellen [[beatmungsgeraet|Beatmung]] [@draeger-web].\n* **20. Jahrhundert:** Ausbau zu einem Anbieter von Narkose-, Beatmungs- und Neonatologietechnik; die Inkubatorlinie Isolette stammt ursprünglich vom US-Hersteller Air-Shields.\n* **2003:** Siemens bringt sein elektromedizinisches Geschäft, insbesondere das Patientenmonitoring, als Minderheitsgesellschafter in das Gemeinschaftsunternehmen Dräger Medical ein; Ende der 2000er-Jahre übernimmt Dräger die Siemens-Anteile vollständig. Auf die Siemens-Monitore geht die Infinity-Monitoringfamilie zurück. (Das Siemens-Beatmungsgeschäft mit den Servo-Geräten ging dagegen an Maquet/Getinge.)\n\n## Geschäftsbereiche\n\n| Bereich | Typische Produkte |\n|---|---|\n| Medizintechnik | [[anaesthesiegeraet|Anästhesiearbeitsplätze]], [[beatmungsgeraet|Intensiv-]] und [[transportbeatmungsgeraet|Transportbeatmung]], [[patientenmonitor|Patientenmonitoring]], [[inkubator|Inkubatoren]], [[waermebett|Wärmetherapie]], [[phototherapiegeraet|Phototherapie]], [[op-leuchte|OP-Leuchten]], Deckenversorgungseinheiten, Komponenten der medizinischen Gasversorgung |\n| Sicherheitstechnik | Gasmesstechnik, Atemschutz, Alkohol- und Drogenmesstechnik (nicht Gegenstand dieses Wikis) |\n\n## Bedeutung für die Medizintechnik\n\nDräger gehört zu den traditionsreichsten Anbietern von Atem- und Narkosetechnik. Typische technische Besonderheiten der Produktlinien sind der turbinengetriebene Anästhesiearbeitsplatz (Perseus, [[turbine]]) neben kolbengetriebenen Systemen, die Kombination aus Inkubator und offenem Wärmebett in einem Hybridgerät (Babyleo) sowie die modulare Monitoringplattform Infinity. In vielen deutschen Kliniken prägen Dräger-Geräte daher den Alltag in OP, Intensivstation und Kreißsaal.\n\n> [!praxis] Für Medizintechniker:innen bedeutet die große Verbreitung: Herstellerschulungen sind häufig Voraussetzung, um [[wartung]], [[stk]] und Instandsetzung nach Herstellervorgaben durchführen zu dürfen. Prüf- und Wartungsintervalle, Verschleißteile (z. B. [[co2-absorber]], [[flowsensor|Flowsensoren]], [[sauerstoffsensor|O₂-Sensoren]]) und Softwarestände sind geräteindividuell der Herstellerdokumentation zu entnehmen.\n\n> [!hinweis] Produktnamen und Verfügbarkeit ändern sich; maßgeblich ist das aktuelle Produktprogramm des Herstellers [@draeger-web].\n\n## Einordnung im Markt\n\nIm Bereich Anästhesie und Intensivbeatmung konkurriert Dräger international vor allem mit [[ge-healthcare]], [[mindray]] und – in der Beatmung – mit [[hamilton-medical]]. Für Betreiber ist relevant, dass Dräger viele Gerätegenerationen parallel betreut: Ältere Plattformen bleiben oft lange im Einsatz, während Ersatzteil- und Softwareunterstützung schrittweise auslaufen. Eine vorausschauende Ersatzbeschaffung im Rahmen des [[medizintechnik-management|Medizintechnik-Managements]] berücksichtigt deshalb die vom Hersteller angekündigten Supportzeiträume.",
+  "related": [
+    "anaesthesiegeraet",
+    "beatmungsgeraet",
+    "transportbeatmungsgeraet",
+    "inkubator",
+    "patientenmonitor",
+    "narkosemittelverdampfer",
+    "hamilton-medical",
+    "ge-healthcare",
+    "mindray",
+    "anaesthesiologie",
+    "intensivmedizin",
+    "neonatologie"
+  ],
+  "sources": [
+    "draeger-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

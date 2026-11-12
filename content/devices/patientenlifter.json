@@ -1,0 +1,73 @@
+{
+  "id": "patientenlifter",
+  "type": "device",
+  "title": "Patientenlifter",
+  "aliases": [
+    "Personenlifter",
+    "Patientenheber",
+    "Mobillifter",
+    "Deckenlifter",
+    "Aufstehhilfe",
+    "Patient hoist",
+    "Patient lift"
+  ],
+  "category": "geraete",
+  "deviceGroup": "pflege",
+  "rank": 99,
+  "domains": [
+    "physikalische-medizin",
+    "intensivmedizin"
+  ],
+  "summary": "Patientenlifter heben und transferieren Menschen, die nicht oder nur eingeschränkt selbst stehen können, z. B. vom Bett in den Rollstuhl. Sie bestehen aus einem motorischen Hubsystem, einem Tragarm mit Gurtaufnahme und einem Hebegurt.",
+  "riskClass": {
+    "value": "I",
+    "evidence": "typisch",
+    "note": "Aktives Produkt, das keiner spezielleren Regel unterliegt – Regel 13 der [[mdr|MDR]] Anhang VIII. Maßgeblich ist die Einstufung des Herstellers.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Lifter ermöglichen sichere Transfers immobiler oder schwergewichtiger Patienten und entlasten zugleich das Personal: Das manuelle Heben ist eine wesentliche Ursache für Rückenbelastungen in der Pflege. Eingesetzt werden sie in Klinik, Rehabilitation, Pflegeheim und häuslicher Pflege, u. a. für Transfers zwischen Bett, Stuhl, Toilette und Badewanne sowie zum Wiegen und zur Gehübung.",
+    "principle": "## Bauformen\n\n| Bauform | Merkmal |\n|---|---|\n| Mobiler Bodenlifter | fahrbares Chassis mit spreizbaren Beinen, Hubarm über Linearantrieb |\n| Deckenlifter | Hubmotor mit Gurtband in einer Laufschiene an der Decke |\n| Aufstehlifter | unterstützt das Aufrichten aus dem Sitzen, Patient trägt teilweise selbst |\n\n## Antrieb und Sicherheitseinrichtungen\n\nBeim Bodenlifter hebt ein elektrischer Linearantrieb ([[elektromotor]] mit [[spindelantrieb|Spindelantrieb]]) den Hubarm; beim Deckenlifter wickelt ein Motor mit Getriebe ein Hubband auf. Energiequelle ist ein Akku mit Ladestation (je nach Modell Blei-Gel-, NiMH- oder [[lithium-ionen-akku|Lithium-Ionen-Akku]]). Die Kräfte am Tragarm folgen dem Hebelgesetz; die Standsicherheit hängt von Spreizweite, Schwerpunktlage und Bremsen ab.\n\nTypische, u. a. in ISO 10535 adressierte Sicherheitsanforderungen sind eine Notabsenkung (elektrisch und/oder mechanisch) für den Fall eines Antriebs- oder Akkuausfalls, eine Not-Aus- bzw. Stoppfunktion, Prüfungen der Standsicherheit und der statischen Festigkeit sowie die Kennzeichnung der maximalen Last für Lifter und Gurt [@iso-10535]. Integrierte Waagen nutzen [[kraftsensor|Wägezellen]].\n\n> [!warnung] Der Hebegurt ist Teil des Systems: Nur vom Hersteller als kompatibel angegebene Gurte in passender Größe verwenden und vor jedem Einsatz auf Beschädigungen, ausgefranste Nähte und Verschleiß der Aufhängeschlaufen prüfen.\n\n> [!praxis] Häufige Störungen sind tiefentladene oder gealterte Akkus ([[akkufehler]]) und verschlissene Handschalter; eine regelmäßige Ladepraxis und Sichtprüfungen beugen Ausfällen beim Transfer vor."
+  },
+  "manufacturers": [
+    {
+      "ref": "arjo",
+      "models": [
+        "Maxi Move"
+      ],
+      "note": "Mobile Bodenlifter, Deckenlifter und Aufstehhilfen."
+    },
+    {
+      "ref": "hillrom",
+      "models": [],
+      "note": "Decken- und Mobillifter unter der Marke Liko; Hillrom gehört seit 2021 zu Baxter."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software- und Zusatzmodulen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Patientenlifter sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt – Hersteller sehen in der Regel regelmäßige Inspektionen von Lifter und Gurten vor. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Inspektion nach Herstellerangabe (häufig jährlich; Tragmechanik, Notabsenkung, Not-Halt, Bremsen, Gurte, Akku); elektrische Prüfung von Lifter und Ladegerät nach IEC 62353 bzw. DGUV Vorschrift 3; Sichtprüfung vor jedem Einsatz."
+  },
+  "related": [
+    "pflegebett",
+    "spindelantrieb",
+    "lithium-ionen-akku",
+    "kraftsensor",
+    "akkufehler",
+    "inspektion"
+  ],
+  "sources": [
+    "iso-10535",
+    "mdr-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

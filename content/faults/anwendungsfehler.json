@@ -1,0 +1,69 @@
+{
+  "id": "anwendungsfehler",
+  "type": "fault",
+  "title": "Anwendungsfehler",
+  "aliases": [
+    "Bedienfehler",
+    "Benutzungsfehler",
+    "Use error",
+    "Anwenderfehler",
+    "Fehlbedienung"
+  ],
+  "category": "fehler",
+  "summary": "Handlung oder Unterlassung bei der Benutzung eines Medizinprodukts, die zu einem anderen als dem vom Hersteller beabsichtigten oder vom Anwender erwarteten Ergebnis führt. Anwendungsfehler sind häufig durch Gestaltung, Arbeitsumgebung und Organisation mitverursacht und werden daher systemisch analysiert.",
+  "devices": [
+    "infusionspumpe",
+    "spritzenpumpe",
+    "pca-pumpe",
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "hf-chirurgiegeraet",
+    "defibrillator",
+    "patientenmonitor",
+    "dialysegeraet",
+    "insulinpumpe"
+  ],
+  "causes": [
+    "Eingabefehler bei Zahlen und Einheiten, z. B. Kommafehler, Verwechslung von ml/h und mg/h oder falsche Medikamentenkonzentration an einer [[infusionspumpe|Infusionspumpe]]",
+    "Fehlerhaftes Einlegen oder Anschließen von Zubehör (Infusionsleitung, Schlauchsystem, [[neutralelektrode|Neutralelektrode]], Sensoren)",
+    "Falsch eingestellte oder deaktivierte Alarmgrenzen, auch als Folge von [[alarmmuedigkeit|Alarmmüdigkeit]]",
+    "Unzureichende oder fehlende [[einweisung|Einweisung]], seltene Anwendung (z. B. [[defibrillator|Defibrillator]] im Notfall) und Gerätevielfalt mit uneinheitlicher Bedienlogik",
+    "Gestaltungsmängel der [[display-bedienoberflaeche|Bedienoberfläche]]: missverständliche Menüs, ähnliche Tasten, fehlende Rückmeldung (mangelnde [[gebrauchstauglichkeit|Gebrauchstauglichkeit]])",
+    "Arbeitsbedingungen wie Zeitdruck, Unterbrechungen, Müdigkeit, schlechte Beleuchtung oder Lärm",
+    "Bewusstes Abweichen von Vorgaben (Umgehen von Sicherheitsfunktionen, Verwendung nicht freigegebenen Zubehörs)"
+  ],
+  "actions": [
+    "Patienten sofort sichern: Therapie stoppen bzw. korrigieren, ärztliche Beurteilung veranlassen, Vitalparameter überwachen",
+    "Gerät mit allen Einstellungen, Zubehör und Verbrauchsmaterial unverändert sichern, Event- und Alarmprotokoll nicht löschen (siehe [[fehlercodes]])",
+    "Gerätedefekt ausschließen: Medizintechnik prüft Gerät und Zubehör auf Funktion ([[funktionspruefung|Funktionsprüfung]]) und Fehlermeldungen",
+    "Bei mutmaßlich schwerwiegendem Vorkommnis Meldepflichten nach MPAMIV prüfen ([[vigilanz]]); zusätzlich interne Meldung, z. B. im CIRS",
+    "Ursachenanalyse systemisch durchführen: Gestaltung, Organisation, Ausbildung und Umgebung betrachten, nicht nur die handelnde Person",
+    "Maßnahmen ableiten: Einweisung wiederholen, Standardkonfigurationen und Medikamentenbibliotheken anpassen, Gerätevielfalt reduzieren, ggf. Hersteller informieren"
+  ],
+  "body": "## Technischer Hintergrund\n\nDie Gebrauchstauglichkeitsnorm [[iec-62366-1]] unterscheidet den **Benutzungsfehler** (use error) – eine Handlung oder Unterlassung, die zu einem anderen Ergebnis als beabsichtigt oder erwartet führt – von der **abnormalen Benutzung**, also einer bewussten, vom Hersteller nicht vorgesehenen Verwendung [@iec-62366-1]. Hersteller müssen vorhersehbare Benutzungsfehler im [[iso-14971|Risikomanagement]] analysieren und durch Gestaltung so weit wie möglich verhindern; für [[medizinisches-elektrisches-geraet|ME-Geräte]] verweist [[iec-60601-1-6]] auf diesen Prozess [@iec-60601-1-6][@iso-14971].\n\nDie Fehlerforschung zeigt, dass Fehler meist nicht das Versagen einzelner Personen, sondern das Zusammentreffen mehrerer Schwachstellen im System sind („Schweizer-Käse-Modell“) [@reason-2000-human-error]. Der Bericht „To Err Is Human“ hat diesen Systemansatz in der Patientensicherheit etabliert [@iom-to-err-is-human-2000].\n\n| Fehlerart (nach Reason) | Beschreibung | Beispiel |\n|---|---|---|\n| Ausrutscher (slip) | richtige Absicht, falsche Ausführung | Tippfehler 50 statt 5,0 |\n| Aussetzer (lapse) | Schritt vergessen | Klemme nach Leitungswechsel nicht geöffnet |\n| Irrtum (mistake) | falscher Plan, falsches Wissen | falscher Modus gewählt |\n| Regelverstoß (violation) | bewusste Abweichung | Alarm dauerhaft stummgeschaltet |\n\n### Wie das Gerät Anwendungsfehler erkennt\n\nGeräte können nur einen Teil der Fehler technisch abfangen:\n\n* **Plausibilitätsgrenzen** und Medikamentenbibliotheken mit weichen und harten Grenzen in [[infusionspumpe|Infusionspumpen]] warnen bei unüblichen Dosierungen.\n* **Bestätigungsdialoge** und Zusammenfassungen vor dem Therapiestart.\n* **Zustandsüberwachung**, z. B. Erkennung einer nicht korrekt eingelegten Leitung, einer offenen Klappe oder einer schlecht anliegenden Neutralelektrode.\n* **Erinnerungsalarme**, wenn ein Gerät im Pausenzustand verbleibt.\n\nDosiswarnungen und Bestätigungsdialoge sind keine Alarme, sondern Bedienrückmeldungen. Erkannte Fehlzustände wie eine offene Klappe oder eine abgelöste Neutralelektrode werden dagegen als technische Alarmbedingungen nach [[iec-60601-1-8]] signalisiert; ihre Priorität legt der Hersteller nach möglicher Schadensfolge fest [@iec-60601-1-8]. Viele Fehler – etwa eine richtige Eingabe für den falschen Patienten – sind für das Gerät grundsätzlich nicht erkennbar.\n\n> [!hinweis] Bei der Untersuchung gemeldeter Geräteprobleme wird häufig kein technischer Defekt gefunden („kein Fehler feststellbar“). Das ist kein Beweis für „Bedienfehler“: Sporadische Defekte, EMV-Einflüsse oder Gestaltungsmängel müssen sorgfältig ausgeschlossen werden.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| Falsche Dosis/Fördermenge | Eingaben, Einheiten, Konzentration und Bibliotheksprofil im Event-Log nachvollziehen; Fördergenauigkeit messen | Medikamentenbibliothek überarbeiten, Doppelkontrolle einführen |\n| Therapie lief nicht, obwohl gestartet | Klemmen, Leitungseinlage, Startbestätigung, Pausenzustand | Ablauf standardisieren, Erinnerungsalarm aktivieren |\n| Alarm wurde nicht bemerkt | Alarmgrenzen, Lautstärke, Weiterleitung, Stummschaltung | Standardalarmkonfiguration, siehe [[alarmmuedigkeit]] |\n| Wiederkehrende Fehlbedienung desselben Geräts | Bedienlogik, Beschriftung, Einweisungsstand | Rückmeldung an Hersteller, Schulung, ggf. Gerätewechsel |\n| Zubehör falsch angeschlossen | Steckerkompatibilität, Kennzeichnung | verwechslungssichere Konnektoren, Kennzeichnung |\n\n## Prävention\n\n* Betreiber dürfen Medizinprodukte nur von Personen anwenden lassen, die dafür ausgebildet und eingewiesen sind; die [[mpbetreibv|MPBetreibV]] regelt dazu Einweisungspflichten und deren Dokumentation [@mpbetreibv]. Siehe [[einweisung]] und [[betreiberpflichten]].\n* Bei der Beschaffung die [[gebrauchstauglichkeit|Gebrauchstauglichkeit]] bewerten und die Zahl unterschiedlicher Modelle gleicher Funktion gering halten.\n* Standardkonfigurationen (Alarmgrenzen, Medikamentenbibliotheken) zentral pflegen.\n* Unterbrechungsarme Arbeitsplätze bei kritischen Tätigkeiten (z. B. Programmierung von Hochrisiko-Medikamenten).\n* Fehlermeldesysteme fördern, die ohne Schuldzuweisung arbeiten; Erkenntnisse an Hersteller zurückmelden [@fda-human-factors-2016].\n\n> [!praxis] Viele Kliniken definieren für Hochrisiko-Perfusoren eine verpflichtende Zweitkontrolle der Programmierung und nutzen Smart Pumps mit Medikamentenbibliothek. Wirksam ist das nur, wenn die Bibliothek gepflegt und tatsächlich genutzt wird.\n\n> [!hinweis] Gerätespezifische Meldungen und Fehlercodes zu Bedienzuständen sind in Gebrauchsanweisung und Service-Unterlagen beschrieben. Das Event-Log des Geräts ist für die Rekonstruktion eines Vorfalls oft die wichtigste Informationsquelle.",
+  "related": [
+    "gebrauchstauglichkeit",
+    "iec-62366-1",
+    "iec-60601-1-6",
+    "einweisung",
+    "patientensicherheit",
+    "alarmmuedigkeit",
+    "vigilanz",
+    "betreiberpflichten",
+    "display-bedienoberflaeche",
+    "fehlersuche"
+  ],
+  "sources": [
+    "iec-62366-1",
+    "iec-60601-1-6",
+    "iso-14971",
+    "reason-2000-human-error",
+    "iom-to-err-is-human-2000",
+    "iec-60601-1-8",
+    "mpbetreibv",
+    "mpamiv",
+    "fda-human-factors-2016"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

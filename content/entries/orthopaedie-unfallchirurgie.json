@@ -1,0 +1,37 @@
+{
+  "id": "orthopaedie-unfallchirurgie",
+  "type": "domain",
+  "title": "Orthopädie und Unfallchirurgie",
+  "aliases": [
+    "Orthopädie",
+    "Unfallchirurgie",
+    "Traumatologie",
+    "O und U",
+    "Orthopaedic Surgery",
+    "Endoprothetik"
+  ],
+  "category": "fachbereiche",
+  "summary": "Orthopädie und Unfallchirurgie behandeln angeborene, degenerative und verletzungsbedingte Erkrankungen des Bewegungsapparats. Technisch prägen sie intraoperative Röntgenbildgebung, chirurgische Motorsysteme, Arthroskopie, Navigation und Robotik sowie die Logistik zahlreicher Implantate und Instrumente.",
+  "body": "## Gegenstand des Fachgebiets\n\nDas Fach **Orthopädie und Unfallchirurgie** befasst sich mit Knochen, Gelenken, Muskeln, Sehnen, Bändern und der Wirbelsäule. Die Orthopädie behandelt vor allem angeborene und degenerative Erkrankungen (z. B. Arthrose), die Unfallchirurgie Verletzungen bis hin zur Versorgung Schwerverletzter (Polytrauma). Beide Bereiche sind in Deutschland zu einem gemeinsamen Facharzt zusammengefasst. Viele Eingriffe ersetzen oder stabilisieren Strukturen mit **Implantaten** aus Metall, Kunststoff oder Keramik, deren biologische Verträglichkeit nach ISO 10993 bewertet wird ([[iso-10993-1]]) [@iso-10993-1].\n\n## Typische Krankheitsbilder und Eingriffe\n\n| Bereich | Beispiele |\n|---|---|\n| Frakturversorgung | Plattenosteosynthese, Marknagelung, Fixateur externe |\n| Endoprothetik | Hüft- und Kniegelenkersatz, Revisionsoperationen |\n| Arthroskopie | Meniskus- und Kreuzbandchirurgie, Schulterchirurgie |\n| Wirbelsäulenchirurgie | Stabilisierung, Dekompression, Bandscheibenoperationen |\n| Konservative Orthopädie | Osteoporose, Sehnenerkrankungen, Orthesenversorgung |\n| Polytrauma | Schockraumversorgung, Notfallstabilisierung |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[c-bogen]] | intraoperative Durchleuchtung zur Reposition und Implantatkontrolle; mit 3D-Funktion auch Volumenbilder |\n| [[roentgengeraet]], [[computertomograph]], [[mrt]] | prä- und postoperative Diagnostik, Schockraum-CT |\n| [[op-tisch]] | Lagerung mit Extensionsvorrichtungen für Becken und Beine |\n| [[chirurgisches-motorsystem]] | Bohren, Sägen, Fräsen und Aufbereiten des Markraums |\n| [[endoskop]] (Arthroskop) | Gelenkspiegelung mit Kamera, Lichtquelle und Spülpumpe |\n| [[hf-chirurgiegeraet]] | Blutstillung; bipolare Ablationssonden in der Arthroskopie |\n| [[op-roboter]] | robotisch unterstützte Gelenkersatzoperationen und Wirbelsäulenchirurgie |\n| [[knochendichtemessung]] | Osteoporosediagnostik mittels Dual-Röntgen-Absorptiometrie (DXA) |\n| [[lithotripter]] (Stoßwellenprinzip) | extrakorporale Stoßwellentherapie bei Sehnenerkrankungen |\n| [[ipk-geraet]] | apparative Thromboseprophylaxe nach Operationen und bei Immobilisation |\n| [[patientenwaermesystem]] | Vermeidung perioperativer Hypothermie |\n\nZur Osteoporosediagnostik wird die mittels DXA gemessene Knochendichte als T-Wert ausgedrückt; ein T-Wert von −2,5 oder darunter gilt nach WHO-Definition als Osteoporose [@who-trs-843-1994].\n\n**Navigationssysteme** verfolgen Instrumente und Knochen über Infrarotkameras und reflektierende Marker oder elektromagnetisch und setzen deren Lage in Beziehung zu Bilddaten. Robotische Systeme gehen weiter, indem sie die Bewegung des Sägeblatts oder Bohrers auf ein geplantes Volumen begrenzen.\n\n## Besondere technische Anforderungen\n\n### Strahlenschutz im OP\n\n> [!warnung] Beim C-Bogen-Einsatz ist das OP-Team der Streustrahlung am Patienten ausgesetzt. Schutzkleidung, Schilddrüsenschutz, Personendosimeter, möglichst großer Abstand, kurze Durchleuchtungszeiten und die Lage der Röhre unter dem Tisch reduzieren die Dosis deutlich. Die Anwendung erfordert Fachkunde bzw. Kenntnisse im [[strahlenschutz]] [@strlschg] [@strlschv].\n\nGepulste Durchleuchtung, Last-Image-Hold und Einblendung ([[kollimator]]) sind die wichtigsten technischen Mittel zur Dosisreduktion [@iec-60601-2-54-2022].\n\n### Motorsysteme und Akkus\n\nChirurgische Antriebe arbeiten akku-, netz- oder druckluftbetrieben. Akkus sind meist nicht sterilisierbar und werden über einen sterilen Einsatz bzw. eine aseptische Übergabe in das sterile Handstück eingesetzt ([[lithium-ionen-akku]]). Überhitzung von Handstücken, verschlissene Kupplungen und Lagerschäden sind typische Ursachen für Ausfälle.\n\n### Instrumenten- und Implantatlogistik\n\nEndoprothetik und Osteosynthese benötigen umfangreiche Instrumentensiebe, teils als Leihinstrumente von Herstellern. Deren [[aufbereitung]] in der Aufbereitungseinheit für Medizinprodukte muss rechtzeitig vor dem Eingriff erfolgen und folgt den Herstellerangaben [@krinko-bfarm-2012]. Implantate werden über die [[udi]] rückverfolgbar dokumentiert.\n\n### Arthroskopie und Blutsperre\n\nSpülpumpen für die Arthroskopie regeln den Gelenkinnendruck; zu hoher Druck kann zur Flüssigkeitseinschwemmung in das Gewebe führen. Pneumatische Blutsperren benötigen eine zuverlässige Druckregelung, Zeitüberwachung und Alarmierung.\n\n### Bildgebung mit Implantaten\n\nMetallimplantate erzeugen in CT und MRT [[bildartefakte]]. Vor einer [[mrt|MRT-Untersuchung]] ist zu klären, ob Implantate als MR-sicher oder MR-bedingt eingestuft sind.\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[chirurgie]] und [[anaesthesiologie]]: gemeinsame OP-Infrastruktur, Narkose und Regionalanästhesie.\n* [[radiologie]]: Diagnostik, Schockraum-CT, interventionelle Verfahren.\n* [[notfallmedizin]] und [[intensivmedizin]]: Polytraumaversorgung.\n* [[physikalische-medizin]]: Rehabilitation nach Operationen und Verletzungen.\n* [[neurologie]]: Wirbelsäulenerkrankungen mit neurologischen Ausfällen, Neuromonitoring.\n",
+  "related": [
+    "c-bogen",
+    "chirurgisches-motorsystem",
+    "op-roboter",
+    "op-tisch",
+    "knochendichtemessung",
+    "strahlenschutz",
+    "stryker",
+    "chirurgie"
+  ],
+  "sources": [
+    "kramme-2017",
+    "iso-10993-1",
+    "who-trs-843-1994",
+    "strlschg",
+    "strlschv",
+    "iec-60601-2-54-2022",
+    "krinko-bfarm-2012"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

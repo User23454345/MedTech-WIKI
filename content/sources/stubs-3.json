@@ -1,0 +1,57 @@
+[
+  {
+    "id": "rili-baek",
+    "kind": "leitlinie",
+    "authors": "Bundesärztekammer",
+    "title": "Richtlinie der Bundesärztekammer zur Qualitätssicherung laboratoriumsmedizinischer Untersuchungen (Rili-BÄK)",
+    "publisher": "Deutsches Ärzteblatt",
+    "note": "Regelt interne und externe Qualitätssicherung quantitativer Laboruntersuchungen, einschließlich patientennaher Sofortdiagnostik; maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "iso-15197",
+    "kind": "norm",
+    "title": "ISO 15197 – In-vitro-Diagnostik-Testsysteme – Anforderungen an Blutzuckermesssysteme zur Eigenanwendung beim Diabetesmanagement",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 15197",
+    "year": "2013",
+    "note": "Legt u. a. Mindestanforderungen an die Systemgenauigkeit von Blutzuckermesssystemen zur Eigenanwendung fest; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iso-80601-2-56",
+    "kind": "norm",
+    "title": "ISO 80601-2-56 – Medizinische elektrische Geräte – Teil 2-56: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von medizinischen Thermometern zum Messen der Körpertemperatur",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 80601-2-56",
+    "note": "Gerätespezifische Norm für klinische Thermometer; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-60645-1",
+    "kind": "norm",
+    "title": "IEC 60645-1 – Elektroakustik – Audiometrische Geräte – Teil 1: Geräte für die Ton- und Sprachaudiometrie",
+    "publisher": "IEC / in Deutschland als DIN EN 60645-1",
+    "note": "Legt Anforderungen an Ton- und Sprachaudiometer fest; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "ats-ers-spirometry-2019",
+    "kind": "artikel",
+    "authors": "Graham BL, Steenbruggen I, Miller MR et al.",
+    "title": "Standardization of Spirometry 2019 Update. An Official American Thoracic Society and European Respiratory Society Technical Statement",
+    "publisher": "American Journal of Respiratory and Critical Care Medicine 200(8): e70–e88",
+    "year": "2019"
+  },
+  {
+    "id": "aasm-scoring-manual",
+    "kind": "leitlinie",
+    "authors": "American Academy of Sleep Medicine",
+    "title": "The AASM Manual for the Scoring of Sleep and Associated Events: Rules, Terminology and Technical Specifications",
+    "publisher": "American Academy of Sleep Medicine",
+    "note": "Fortlaufend aktualisiertes Regelwerk für Ableitung und Auswertung der Polysomnographie; maßgeblich ist die jeweils aktuelle Version."
+  },
+  {
+    "id": "who-trs-843-1994",
+    "kind": "behoerde",
+    "authors": "WHO Study Group",
+    "title": "Assessment of fracture risk and its application to screening for postmenopausal osteoporosis (WHO Technical Report Series 843)",
+    "publisher": "World Health Organization, Genf",
+    "year": "1994",
+    "note": "Enthält die densitometrische Osteoporose-Definition über den T-Score."
+  }
+]

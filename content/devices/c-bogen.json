@@ -1,0 +1,84 @@
+{
+  "id": "c-bogen",
+  "type": "device",
+  "title": "C-Bogen (mobile Durchleuchtung)",
+  "aliases": [
+    "C-Arm",
+    "mobiler C-Bogen",
+    "Bildverstärker",
+    "BV",
+    "Durchleuchtungsgerät",
+    "mobile Fluoroskopie"
+  ],
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 43,
+  "domains": [
+    "chirurgie",
+    "orthopaedie-unfallchirurgie",
+    "radiologie",
+    "kardiologie"
+  ],
+  "summary": "Ein C-Bogen ist eine fahrbare Röntgeneinrichtung, bei der Röhre und Detektor an den Enden eines C-förmigen Bogens gegenüberliegen. Er liefert intraoperativ Durchleuchtungs- und Einzelbilder, etwa zur Kontrolle von Frakturreposition, Implantatlage oder Kathetern.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives Produkt, das ionisierende Strahlung für die diagnostische bzw. interventionelle Radiologie aussendet, nach [[mdr|MDR]] Anhang VIII **Regel 10** (Klasse IIb). Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Der C-Bogen bringt die Röntgenbildgebung an den Operationstisch: In der Unfallchirurgie und Orthopädie werden Schrauben, Platten und Nägel positioniert, in Gefäßchirurgie, Urologie und Schmerztherapie Katheter und Nadeln geführt. 3D-fähige Geräte rekonstruieren aus einer Rotation Volumendaten zur intraoperativen Lagekontrolle oder Navigation.",
+    "principle": "## Aufbau\n\nAm einen Ende des Bogens sitzt der Monoblock-Strahler aus [[roentgenroehre]] und [[hochspannungserzeugung|Hochspannungsgenerator]] mit [[kollimator|Tiefenblende]], am anderen Ende der Bildempfänger. Ältere Geräte nutzen einen Bildverstärker mit Kamera, neuere einen [[roentgendetektor|Flachdetektor]] mit verzerrungsfreiem Bild und größerem Dynamikumfang [@bushberg-2020]. Der Bogen lässt sich orbital und angular schwenken, sodass verschiedene Projektionen ohne Umlagern des Patienten möglich sind. Bilder werden am Monitorwagen angezeigt und per [[dicom]] archiviert.\n\n## Durchleuchtung und Dosis\n\n| Funktion | Zweck |\n|---|---|\n| gepulste Durchleuchtung | kurze Röntgenpulse mit niedriger Pulsrate reduzieren die Dosis gegenüber kontinuierlicher Strahlung |\n| automatische Dosisleistungsregelung | passt Spannung und Strom an die Patientendicke an ([[regelkreis]]) |\n| Last-Image-Hold | letztes Bild bleibt ohne weitere Strahlung sichtbar |\n| Dosisflächenprodukt-Messung | dokumentiert die Patientenexposition |\n\n> [!warnung] Die Hauptquelle der Personaldosis ist die Streustrahlung aus dem Patienten. Sie ist auf der Röhrenseite am höchsten – die Röhre gehört deshalb möglichst unter den Tisch, der Detektor nah an den Patienten. Strahlenschutzkleidung und Abstand sind Pflicht ([[strahlenschutz]]).\n\n> [!vereinfacht] Eine Verdopplung des Abstands zur Streustrahlenquelle verringert die Dosisleistung etwa auf ein Viertel (Abstandsquadratgesetz).\n\nAnforderungen an Röntgeneinrichtungen für Radiographie und Durchleuchtung legt IEC 60601-2-54 fest [@iec-60601-2-54-2022]; für C-Bögen, die für interventionelle Verfahren bestimmt sind, gilt zusätzlich IEC 60601-2-43 [@iec-60601-2-43]."
+  },
+  "manufacturers": [
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "Cios"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "OEC"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "philips",
+      "models": [
+        "Zenition"
+      ],
+      "note": ""
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Die sicherheitsrelevanten Prüfungen ergeben sich vor allem aus dem Strahlenschutzrecht ([[strlschg|StrlSchG]], StrlSchV): Abnahmeprüfung, regelmäßige [[konstanzpruefung|Konstanzprüfungen]] und wiederkehrende Prüfung durch behördlich bestimmte Sachverständige.",
+    "intervals": "Konstanzprüfungen nach Strahlenschutzrecht in den vorgegebenen Abständen; Sachverständigenprüfung nach behördlicher Vorgabe; Wartung nach Herstellerangabe; elektrische Sicherheitsprüfung nach IEC 62353."
+  },
+  "related": [
+    "roentgengeraet",
+    "angiographieanlage",
+    "roentgendetektor",
+    "strahlenschutz",
+    "konstanzpruefung",
+    "iec-60601-2-54"
+  ],
+  "sources": [
+    "bushberg-2020",
+    "iec-60601-2-54-2022",
+    "iec-60601-2-43",
+    "strlschv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "laborzentrifuge",
+  "type": "device",
+  "title": "Laborzentrifuge",
+  "aliases": [
+    "Zentrifuge",
+    "Tischzentrifuge",
+    "Kühlzentrifuge",
+    "Blutzentrifuge",
+    "Laboratory centrifuge"
+  ],
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 64,
+  "domains": [
+    "labormedizin"
+  ],
+  "summary": "Laborzentrifugen trennen Probenbestandteile unterschiedlicher Dichte durch Rotation, im klinischen Labor vor allem Blut in Serum bzw. Plasma und Zellen. Entscheidend sind die relative Zentrifugalbeschleunigung, Laufzeit und Temperatur.",
+  "sections": {
+    "purpose": "Nahezu jede klinisch-chemische und Gerinnungsanalytik setzt zellfreies Serum oder Plasma voraus. Zentrifugen werden außerdem für Urinsedimente, Blutbankanwendungen und Zellpräparationen eingesetzt. Ob eine Zentrifuge ein In-vitro-Diagnostikum ist, hängt von der Zweckbestimmung des Herstellers ab: Allgemeine Laborgeräte gelten nach der [[ivdr|IVDR]] nur dann als IVD, wenn sie ausdrücklich für In-vitro-diagnostische Untersuchungen bestimmt sind [@ivdr-2017]. Die Gerätesicherheit regelt die Normenreihe [[iec-61010-1|IEC 61010]] mit dem besonderen Teil für Laborzentrifugen [@iec-61010-2-020].",
+    "principle": "## Zentrifugalbeschleunigung\n\nIm rotierenden System wirkt auf ein Teilchen die Zentrifugalbeschleunigung `a = ω² · r`. Angegeben wird sie als **relative Zentrifugalbeschleunigung** (RZB, engl. RCF) als Vielfaches der Erdbeschleunigung g:\n\n`RZB = 1,118 · 10⁻⁵ · r · n²` (r in cm, n in min⁻¹)\n\nDie Sedimentationsgeschwindigkeit eines Partikels steigt mit seinem Dichteunterschied zum umgebenden Medium, seiner Größe und der RZB ([[stroemungslehre]]). Laborvorschriften sollten deshalb RZB und Zeit nennen – eine Drehzahlangabe allein ist ohne Rotorradius nicht übertragbar.\n\n> [!beispiel] Bei r = 10 cm und n = 3 000 min⁻¹ ergibt sich RZB = 1,118 · 10⁻⁵ · 10 · 9 · 10⁶ ≈ 1 006 · g.\n\n## Aufbau\n\nAngetrieben wird der Rotor meist von einem bürstenlosen [[elektromotor]] (z. B. [[bldc-motor]] oder Induktionsmotor) mit elektronischer [[drehzahlregelung]]. **Ausschwingrotoren** bringen die Röhrchen in die Horizontale und erzeugen eine ebene Trennschicht; **Winkelrotoren** erlauben höhere Drehzahlen. Kühlzentrifugen besitzen eine Kompressionskältemaschine, um Erwärmung durch Luftreibung zu kompensieren ([[waermeuebertragung]]).\n\nSicherheitsfunktionen sind Deckelverriegelung (Öffnen erst im Stillstand), Unwuchterkennung mit Abschaltung, Rotorerkennung zur Begrenzung der maximalen Drehzahl und ein Panzerkessel, der Bruchstücke eines versagenden Rotors zurückhält.\n\n> [!warnung] Rotoren und Becher sind mechanisch hoch belastet: Korrosion, Risse oder überschrittene Zyklenzahlen können zum Rotorbruch führen. Beladung immer symmetrisch, Herstellerangaben zu Lebensdauer und Pflege beachten."
+  },
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Unabhängig davon ist die Zentrifuge als elektrisches Arbeitsmittel zu prüfen; für Zentrifugen bestehen zudem arbeitsschutzrechtliche Prüfpflichten nach Gefährdungsbeurteilung.",
+    "intervals": "Inspektion von Rotoren, Bechern, Dichtungen und Deckelverriegelung sowie Drehzahl- und Temperaturkontrolle nach Herstellerangabe; elektrische Wiederholungsprüfung nach [[dguv-vorschrift-3|DGUV Vorschrift 3]]; Dokumentation der Rotorzyklen, sofern vom Hersteller gefordert."
+  },
+  "related": [
+    "klinisch-chemischer-analysator",
+    "gerinnungsanalysator",
+    "haematologie-analysator",
+    "zellseparator",
+    "iec-61010-1",
+    "elektromotor"
+  ],
+  "sources": [
+    "iec-61010-2-020",
+    "ivdr-2017",
+    "kramme-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

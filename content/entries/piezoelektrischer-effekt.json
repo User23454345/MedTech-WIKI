@@ -1,0 +1,154 @@
+{
+  "id": "piezoelektrischer-effekt",
+  "type": "term",
+  "title": "Piezoelektrischer Effekt",
+  "aliases": [
+    "Piezoeffekt",
+    "Piezoelektrizität",
+    "piezoelectric effect",
+    "inverser piezoelektrischer Effekt",
+    "reziproker Piezoeffekt",
+    "PZT",
+    "Bleizirkonattitanat",
+    "PVDF",
+    "Piezokeramik"
+  ],
+  "category": "physik",
+  "summary": "Beim piezoelektrischen Effekt erzeugt eine mechanische Verformung bestimmter Kristalle und Keramiken eine elektrische Ladung; umgekehrt verformt eine angelegte Spannung das Material. Der Effekt ist Grundlage von Ultraschallwandlern, Luftblasendetektoren, Ultraschallverneblern, piezoelektrischen Stoßwellenquellen und Signalgebern.",
+  "body": "## Entdeckung und Prinzip\n\nDer **direkte piezoelektrische Effekt** wurde 1880 von Jacques und Pierre Curie an Kristallen wie Quarz und Turmalin beschrieben: Wird ein solcher Kristall in bestimmten Richtungen gedrückt oder gezogen, erscheinen auf gegenüberliegenden Oberflächen elektrische Ladungen entgegengesetzten Vorzeichens [@curie-1880]. Kurz darauf wurde der **inverse (reziproke) Effekt** – 1881 von Gabriel Lippmann aus thermodynamischen Überlegungen vorhergesagt und von den Brüdern Curie experimentell bestätigt – nachgewiesen: Eine angelegte elektrische Spannung verformt den Kristall.\n\nUrsache ist der Kristallaufbau. In piezoelektrischen Materialien fehlt ein Symmetriezentrum. Im unbelasteten Zustand fallen die Schwerpunkte der positiven und negativen Ladungen in jeder Elementarzelle zusammen; eine Verformung verschiebt sie gegeneinander, und es entsteht ein elektrisches Dipolmoment – die Oberfläche lädt sich auf [@hering-2018] [@fraden-2016].\n\n> [!vereinfacht] Das Bild der „verschobenen Ladungsschwerpunkte“ ist eine anschauliche Vereinfachung. Die exakte Beschreibung erfolgt über Tensoren, die mechanische Spannung, Dehnung, elektrisches Feld und Polarisation in allen Raumrichtungen verknüpfen.\n\n## Mathematische Beschreibung\n\nFür eine einachsige Betrachtung (Kraft und Ladung in Polarisationsrichtung) gilt beim direkten Effekt:\n\n`Q = d₃₃ · F`\n\nmit dem **piezoelektrischen Ladungskoeffizienten** d₃₃ in pC/N. Die Ladung erzeugt an der Eigenkapazität C des Elements die Spannung `U = Q / C`. Beim inversen Effekt dehnt sich das Element um\n\n`Δl = d₃₃ · U`\n\nDie Indizes geben Richtungen an: „33“ bedeutet Kraft und Ladung in derselben Achse (Dickenschwinger), „31“ bedeutet quer dazu. Wie gut ein Material mechanische in elektrische Energie umsetzt, beschreibt der **Kopplungsfaktor** k (0 bis 1) [@fraden-2016].\n\n## Werkstoffe\n\n| Werkstoff | Eigenschaften | Typischer Einsatz |\n|---|---|---|\n| Quarz (SiO₂) | sehr stabil, geringe Kopplung; bei geeignetem Kristallschnitt kaum temperaturabhängig | Schwingquarze (Taktgeber im [[mikrocontroller]]), Kraftmessung |\n| Piezokeramik, v. a. Bleizirkonattitanat (PZT) | hohe Kopplung und Ladungskoeffizienten; muss durch Polung im starken Feld aktiviert werden | Ultraschallwandler, Aktoren, Signalgeber |\n| Piezo-Komposite (Keramikstäbchen in Polymer) | geringere akustische Impedanz, breitbandig | moderne Ultraschallsonden |\n| Polyvinylidenfluorid (PVDF) | flexible Folie, niedrige akustische Impedanz | Hydrophone, Folien-Sensoren |\n| Relaxor-Einkristalle (z. B. PMN-PT) | sehr hohe Kopplung, große Bandbreite | hochwertige Ultraschallsonden |\n\n> [!hinweis] Piezokeramiken verlieren ihre Polarisation, wenn sie über die **Curie-Temperatur** erwärmt werden. Deshalb dürfen Ultraschallsonden nicht mit Verfahren aufbereitet werden, die der Hersteller nicht freigibt – Hitze kann den Wandler dauerhaft schädigen ([[aufbereitung]]).\n\n## Statisch oder dynamisch?\n\nDie durch eine konstante Kraft erzeugte Ladung fließt über Isolations- und Eingangswiderstände langsam ab. Piezoelektrische Sensoren messen deshalb **nur dynamische Größen** (Schwingungen, Stöße, Schall) – im Gegensatz zum piezoresistiven [[drucksensor|Drucksensor]], der auf einer Widerstandsänderung beruht und auch statische Drücke erfasst. Ausgewertet wird die Ladung mit einem **Ladungsverstärker**, einem [[operationsverstaerker|Operationsverstärker]] mit Kondensator in der Rückführung, dessen Ausgangsspannung `U_a = −Q / C_f` von der Kabelkapazität weitgehend unabhängig ist [@hering-2018].\n\n## Resonanz und Ultraschallerzeugung\n\nEin piezoelektrisches Plättchen der Dicke D schwingt bevorzugt bei der Frequenz, bei der seine Dicke einer halben Wellenlänge im Material entspricht:\n\n`f₀ = c_Material / (2 · D)`\n\nJe dünner das Plättchen, desto höher die Frequenz. Für die Bildgebung wird der Wandler mit einem kurzen Spannungsimpuls angeregt, durch eine Dämpfungsschicht (Backing) schnell beruhigt und über eine Anpassschicht von λ/4 an die akustische Impedanz des Gewebes angekoppelt. Derselbe Kristall empfängt anschließend die Echos über den direkten Effekt ([[schallwellen]]) [@szabo-2014].\n\n> [!beispiel] Die Schallgeschwindigkeit in PZT liegt in der Größenordnung von 4000 m/s. Für eine Mittenfrequenz von 5 MHz ergibt sich eine Dicke von D = 4000 m/s / (2 · 5 · 10⁶ Hz) = 0,4 mm. Der Materialwert ist ein gerundeter Richtwert und je nach Keramik verschieden.\n\n## Funktionskette im Ultraschallsystem\n\nDas Diagramm zeigt, wie direkter und inverser Effekt in einem Puls-Echo-System zusammenwirken: Der Sender erzeugt einen Spannungsimpuls, der Wandler setzt ihn in eine Schallwelle um, das Gewebe reflektiert sie, und der Wandler wandelt das Echo zurück in eine Spannung.\n\n## Anwendung in Geräten\n\n| Gerät / Komponente | Genutzter Effekt | Funktion |\n|---|---|---|\n| [[ultraschallwandler]] im [[ultraschallgeraet]] | invers + direkt | Senden und Empfangen von Ultraschallimpulsen im MHz-Bereich |\n| [[ctg]] | invers + direkt | Doppler-Ultraschall zur fetalen Herzfrequenz ([[doppler-effekt]]) |\n| [[luftblasendetektor]] in [[infusionspumpe]], [[dialysegeraet]] | invers + direkt | Ultraschalldurchschallung der Leitung; Luft unterbricht die Übertragung ([[luft-im-system]]) |\n| [[inhalationsgeraet]] (Ultraschall- und Membranvernebler) | invers | Schwingender Piezo erzeugt Aerosol |\n| [[lithotripter]] | invers | piezoelektrische Stoßwellenquellen (neben elektrohydraulischen und elektromagnetischen) |\n| [[ultraschalldissektor]], [[phakoemulsifikation]] | invers | Piezo-Stapel versetzen eine Hohlspitze (meist Titan) in Schwingung – vorwiegend longitudinal, bei Phako-Systemen teils auch torsional – im Bereich einiger 10 kHz (niederfrequenter Ultraschall) |\n| [[ultraschalltherapiegeraet]] | invers | Therapeutischer Ultraschall zur Gewebeerwärmung |\n| Signalgeber im [[alarmsystem]] | invers | Piezo-Summer für akustische Alarme |\n| Hydrophone, Körperschall- und Kontaktmikrofone | direkt | Vermessung von Ultraschallfeldern (Hydrophon), Schallaufnahme |\n\n> [!belegt] Diagnostische Ultraschallwandler nutzen piezoelektrische Keramiken oder Komposite sowohl als Sender (inverser Effekt) als auch als Empfänger (direkter Effekt) [@szabo-2014] [@hering-2018].\n\n## Prüfung und Fehlerbilder\n\nGebrochene Kristallelemente in Ultraschallsonden zeigen sich als dunkle Längsstreifen im Bild („Drop-out“). Beschädigte Linsen, Kabelbrüche und Delaminationen lassen sich mit Sondentestern und Phantomen erkennen ([[bildartefakte]]). Defekte Piezo-Summer führen zu fehlenden oder leisen akustischen Alarmen – ein Prüfpunkt der [[funktionspruefung|Funktionsprüfung]].\n\nWeiterführend: [[schallwellen]], [[doppler-effekt]], [[ultraschallwandler]], [[kraftsensor]].\n",
+  "related": [
+    "schallwellen",
+    "ultraschallwandler",
+    "doppler-effekt",
+    "ultraschallgeraet",
+    "drucksensor",
+    "kraftsensor",
+    "luftblasendetektor",
+    "lithotripter",
+    "inhalationsgeraet",
+    "operationsverstaerker",
+    "ultraschalldissektor",
+    "iec-60601-2-37"
+  ],
+  "paths": [
+    [
+      "ultraschallgeraet",
+      "ultraschallwandler",
+      "piezoelektrischer-effekt",
+      "schallwellen"
+    ],
+    [
+      "infusionspumpe",
+      "luftblasendetektor",
+      "piezoelektrischer-effekt"
+    ]
+  ],
+  "sources": [
+    "curie-1880",
+    "hering-2018",
+    "fraden-2016",
+    "szabo-2014",
+    "webster-2010"
+  ],
+  "diagram": {
+    "title": "Piezoelektrische Puls-Echo-Kette",
+    "caption": "Funktionsschema: Ein Wandler nutzt den inversen Effekt zum Senden und den direkten Effekt zum Empfangen.",
+    "width": 820,
+    "height": 280,
+    "nodes": [
+      {
+        "id": "tx",
+        "label": "Sendepuls-\ngenerator",
+        "kind": "source",
+        "x": 90,
+        "y": 70
+      },
+      {
+        "id": "inv",
+        "label": "Piezo-Element\n(inverser Effekt)",
+        "kind": "actuator",
+        "x": 290,
+        "y": 70,
+        "ref": "ultraschallwandler"
+      },
+      {
+        "id": "gew",
+        "label": "Gewebe /\nGrenzflächen",
+        "kind": "patient",
+        "x": 500,
+        "y": 70,
+        "ref": "schallwellen"
+      },
+      {
+        "id": "dir",
+        "label": "Piezo-Element\n(direkter Effekt)",
+        "kind": "sensor",
+        "x": 710,
+        "y": 70,
+        "ref": "ultraschallwandler"
+      },
+      {
+        "id": "amp",
+        "label": "Ladungs-/\nVorverstärker",
+        "kind": "process",
+        "x": 710,
+        "y": 210,
+        "ref": "operationsverstaerker"
+      },
+      {
+        "id": "adc",
+        "label": "A/D-Wandler +\nSignalverarbeitung",
+        "kind": "process",
+        "x": 500,
+        "y": 210,
+        "ref": "analog-digital-wandler"
+      },
+      {
+        "id": "bild",
+        "label": "Bild / Doppler-\nSpektrum",
+        "kind": "output",
+        "x": 290,
+        "y": 210,
+        "ref": "ultraschallgeraet"
+      }
+    ],
+    "edges": [
+      {
+        "from": "tx",
+        "to": "inv",
+        "kind": "signal",
+        "label": "Spannung"
+      },
+      {
+        "from": "inv",
+        "to": "gew",
+        "kind": "energy",
+        "label": "Schallwelle"
+      },
+      {
+        "from": "gew",
+        "to": "dir",
+        "kind": "energy",
+        "label": "Echo"
+      },
+      {
+        "from": "dir",
+        "to": "amp",
+        "kind": "signal",
+        "label": "Ladung Q"
+      },
+      {
+        "from": "amp",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "bild",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

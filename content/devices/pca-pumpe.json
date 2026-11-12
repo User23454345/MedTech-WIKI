@@ -1,0 +1,81 @@
+{
+  "id": "pca-pumpe",
+  "type": "device",
+  "title": "PCA-Pumpe (patientenkontrollierte Analgesie)",
+  "aliases": [
+    "PCA",
+    "Schmerzpumpe",
+    "PCEA-Pumpe",
+    "Patient-controlled analgesia pump",
+    "patientenkontrollierte Analgesie"
+  ],
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 39,
+  "domains": [
+    "anaesthesiologie",
+    "intensivmedizin",
+    "chirurgie"
+  ],
+  "summary": "PCA-Pumpen sind Infusionspumpen, bei denen der Patient selbst per Handtaster einen vorprogrammierten Analgetikabolus anfordert. Sperrzeiten und Dosislimits verhindern eine Überdosierung; die Programmierung ist gegen unbefugten Zugriff geschützt.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives Produkt zur Abgabe von Arzneimitteln an den Körper in potenziell gefährlicher Weise nach [[mdr|MDR]] Anhang VIII **Regel 12** (Klasse IIb). Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die patientenkontrollierte Analgesie wird vor allem in der postoperativen Schmerztherapie und in der Palliativmedizin eingesetzt, intravenös (z. B. mit Opioiden) oder epidural bzw. über Nervenkatheter (PCEA, PCRA). Der Patient passt die Analgetikazufuhr seinem Bedarf an, ohne auf Pflegepersonal warten zu müssen; Akutschmerzdienste überwachen Verbrauch und Wirkung anhand des Ereignisprotokolls.",
+    "principle": "## Fördertechnik\n\nPCA-Funktionen sind in [[spritzenpumpe|Spritzenpumpen]] (Antrieb über [[spindelantrieb]] und [[schrittmotor]]), in volumetrische [[infusionspumpe|Infusionspumpen]] oder in ambulante Kassettenpumpen mit [[peristaltikpumpe|Linearperistaltik]] integriert. Ein [[kraftsensor]] bzw. [[drucksensor]] erkennt Verschlüsse ([[okklusionsalarm]]); bei Kassettenpumpen überwacht ein [[luftblasendetektor]] die Leitung ([[luft-im-system]]).\n\n## Dosierlogik\n\n| Parameter | Bedeutung |\n|---|---|\n| Bolusdosis | Menge pro Anforderung über den Handtaster |\n| Sperrzeit (Lockout) | Mindestabstand zwischen zwei wirksamen Boli; Anforderungen in dieser Zeit werden protokolliert, aber nicht abgegeben |\n| Basalrate | optionale kontinuierliche Hintergrundinfusion |\n| Dosislimit | Höchstmenge in einem Zeitfenster (z. B. 1 h oder 4 h) |\n\nDie Verhältnisse von angeforderten zu abgegebenen Boli geben einen Hinweis auf eine unzureichende Schmerzkontrolle. Moderne Geräte verwenden Medikamentenbibliotheken mit Grenzwerten („Dose Error Reduction Software“), um Programmierfehler abzufangen ([[anwendungsfehler]]).\n\n> [!warnung] Nur der Patient selbst darf den Bolus auslösen („PCA by proxy“ durch Angehörige kann zu Atemdepression führen). Bei Opioid-PCA ist eine Überwachung von Sedierung und Atmung erforderlich.\n\n> [!vereinfacht] Das Sicherheitsprinzip beruht darauf, dass ein zunehmend sedierter Patient keinen weiteren Bolus mehr anfordert – eine Basalrate hebt diese Selbstbegrenzung teilweise auf.\n\nGehäuse und Spritzenfach sind abschließbar, die Programmierung per Code geschützt. Anforderungen an Infusionspumpen beschreibt IEC 60601-2-24 [@iec-60601-2-24]."
+  },
+  "manufacturers": [
+    {
+      "ref": "icu-medical",
+      "models": [
+        "CADD-Solis"
+      ],
+      "note": "Ambulante Kassettenpumpe, ursprünglich Smiths Medical."
+    },
+    {
+      "ref": "b-braun",
+      "models": [
+        "Perfusor Space PCA"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "bd",
+      "models": [
+        "Alaris PCA-Modul"
+      ],
+      "note": ""
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "STK: MPBetreibV (Fassung 2025) Anlage 1 Nr. 1.4 – nichtimplantierbare aktive Produkte zur unmittelbaren Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potenziellem Druckaufbau; Kontrollen nach § 12. Für ausschließlich epidural bzw. perineural genutzte Pumpen ist die Zuordnung nicht eindeutig; in der Praxis werden PCA-Pumpen meist wie Infusionspumpen geprüft. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "STK spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind (§ 12 MPBetreibV 2025); Prüfung von Förderrate, Bolusgenauigkeit, Okklusionsdruck und Alarmen mit einem Infusionspumpen-Analysator ([[pruefgeraete]]); Funktionsprüfung vor der Anwendung."
+  },
+  "related": [
+    "spritzenpumpe",
+    "infusionspumpe",
+    "okklusionsalarm",
+    "anwendungsfehler",
+    "iec-60601-2-24",
+    "alarmsystem"
+  ],
+  "sources": [
+    "iec-60601-2-24",
+    "larsen-2018",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

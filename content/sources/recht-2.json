@@ -1,0 +1,50 @@
+[
+  {
+    "id": "vo-2020-561",
+    "kind": "gesetz",
+    "title": "Verordnung (EU) 2020/561 zur Änderung der Verordnung (EU) 2017/745 über Medizinprodukte hinsichtlich des Geltungsbeginns einiger ihrer Bestimmungen",
+    "publisher": "Amtsblatt der EU",
+    "year": "2020",
+    "note": "Verschiebt den Geltungsbeginn der MDR wegen der COVID-19-Pandemie um ein Jahr auf den 26. Mai 2021."
+  },
+  {
+    "id": "vo-2022-112",
+    "kind": "gesetz",
+    "title": "Verordnung (EU) 2022/112 zur Änderung der Verordnung (EU) 2017/746 hinsichtlich der Übergangsbestimmungen für bestimmte In-vitro-Diagnostika und des späteren Geltungsbeginns der Bedingungen für hausinterne Produkte",
+    "publisher": "Amtsblatt der EU",
+    "year": "2022",
+    "note": "Gestaffelte Übergangsfristen nach Risikoklasse für IVD-Altprodukte."
+  },
+  {
+    "id": "vo-2024-1860",
+    "kind": "gesetz",
+    "title": "Verordnung (EU) 2024/1860 zur Änderung der Verordnungen (EU) 2017/745 und (EU) 2017/746 hinsichtlich der schrittweisen Einführung von Eudamed, der Informationspflicht im Falle einer Unterbrechung oder Einstellung der Lieferung und der Übergangsbestimmungen für bestimmte In-vitro-Diagnostika",
+    "publisher": "Amtsblatt der EU",
+    "year": "2024",
+    "note": "Verlängert u. a. die IVDR-Übergangsfristen (Klasse D bis 31.12.2027, Klasse C bis 31.12.2028, Klasse B und sterile Klasse A bis 31.12.2029, jeweils unter Bedingungen). Titel sinngemäß wiedergegeben."
+  },
+  {
+    "id": "mdcg-2019-16",
+    "kind": "leitlinie",
+    "authors": "Medical Device Coordination Group",
+    "title": "MDCG 2019-16 – Guidance on Cybersecurity for medical devices",
+    "year": "2019",
+    "note": "Leitfaden zur Umsetzung der Cybersicherheitsanforderungen aus Anhang I MDR/IVDR; inzwischen revidiert, maßgeblich ist die jeweils aktuelle Revision."
+  },
+  {
+    "id": "iec-82304-1",
+    "kind": "norm",
+    "title": "IEC 82304-1 – Gesundheitssoftware – Teil 1: Allgemeine Anforderungen für die Produktsicherheit",
+    "publisher": "IEC",
+    "year": "2016",
+    "note": "Gilt für eigenständige Gesundheitssoftware (Software, die auf allgemeiner Hardware läuft); verweist für den Software-Lebenszyklus auf IEC 62304. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "rl-2013-59-euratom",
+    "kind": "gesetz",
+    "title": "Richtlinie 2013/59/Euratom zur Festlegung grundlegender Sicherheitsnormen für den Schutz vor den Gefahren einer Exposition gegenüber ionisierender Strahlung",
+    "publisher": "Amtsblatt der EU L 13",
+    "year": "2014",
+    "note": "Richtlinie vom 5. Dezember 2013 (veröffentlicht 2014); in Deutschland mit Strahlenschutzgesetz und Strahlenschutzverordnung umgesetzt."
+  }
+]

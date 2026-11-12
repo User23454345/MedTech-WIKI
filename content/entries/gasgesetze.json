@@ -1,0 +1,59 @@
+{
+  "id": "gasgesetze",
+  "type": "term",
+  "title": "Gasgesetze",
+  "aliases": [
+    "ideales Gasgesetz",
+    "allgemeine Gasgleichung",
+    "Boyle-Mariotte",
+    "Gay-Lussac",
+    "Amontons",
+    "Gesetz von Dalton",
+    "Gesetz von Henry",
+    "gas laws",
+    "BTPS",
+    "ATPS",
+    "STPD",
+    "Partialdruck"
+  ],
+  "category": "physik",
+  "summary": "Die Gasgesetze beschreiben den Zusammenhang von Druck, Volumen, Temperatur und Stoffmenge von Gasen sowie das Verhalten von Gasgemischen und gelösten Gasen. Sie sind Grundlage für Beatmung, Gasversorgung, Narkosemitteldosierung, Blutgasanalyse und Hyperbarmedizin.",
+  "body": "## Überblick\n\nGase bestehen aus frei beweglichen Teilchen, deren Abstände groß gegenüber ihrer Größe sind. Bei den in der Medizintechnik üblichen Drücken und Temperaturen verhalten sich Luft, Sauerstoff, Stickstoff und Kohlendioxid in guter Näherung wie ein **ideales Gas**. Die Gasgesetze verknüpfen die Zustandsgrößen [[druck|Druck]] p, Volumen V, absolute Temperatur T und Stoffmenge n [@tipler-2019].\n\n## Die Einzelgesetze und die allgemeine Gasgleichung\n\n| Gesetz | Konstant gehalten | Aussage | Beispiel aus der Medizintechnik |\n|---|---|---|---|\n| Boyle-Mariotte | T, n | `p · V = const` | Volumenänderung der Lunge bei Druckänderung ([[bodyplethysmograph|Bodyplethysmographie]]), Gasvolumen in der [[druckkammer|Druckkammer]] |\n| Gay-Lussac | p, n | `V / T = const` | Ausdehnung des Atemgases bei Erwärmung auf Körpertemperatur |\n| Amontons | V, n | `p / T = const` | Druckanstieg einer Druckgasflasche bei Erwärmung |\n| Avogadro | p, T | `V / n = const` | gleiche Volumina enthalten gleich viele Teilchen |\n\nZusammengefasst ergibt sich die **allgemeine (ideale) Gasgleichung**:\n\n`p · V = n · R · T`   mit R = 8,314 J/(mol·K)\n\nUnter Normbedingungen (0 °C, 101,325 kPa) nimmt ein Mol eines idealen Gases rund 22,4 Liter ein [@tipler-2019]. Wichtig: T ist stets in **Kelvin** einzusetzen, p als **Absolutdruck**.\n\n> [!beispiel] Eine 10-Liter-Sauerstoffflasche mit 200 bar Fülldruck enthält nach Boyle-Mariotte bei Entspannung auf Umgebungsdruck (≈ 1 bar) rund 10 L · 200 = 2000 Liter Gas. Bei einem Verbrauch von 10 L/min reicht das rechnerisch etwa 200 Minuten. Reale Gase weichen bei hohem Druck vom idealen Verhalten ab, und eine Restdruckreserve muss eingeplant werden – die Rechnung ist eine Abschätzung, keine Herstellerangabe.\n\n## Gasgemische: Gesetz von Dalton\n\nIn einem Gemisch verhält sich jedes Gas so, als wäre es allein im Volumen. Der Gesamtdruck ist die Summe der **Partialdrücke**:\n\n`p_gesamt = p₁ + p₂ + … + pₙ`   und   `pᵢ = Fᵢ · p_gesamt`\n\nmit dem Volumenanteil (der Fraktion) Fᵢ. Atmosphärische Luft enthält rund 21 % O₂; auf Meereshöhe (≈ 760 mmHg) beträgt der Sauerstoffpartialdruck der trockenen Luft also etwa 160 mmHg [@schmidt-lang-2019].\n\nIn den Atemwegen wird das Gas auf 37 °C erwärmt und mit Wasserdampf gesättigt. Der Wasserdampfpartialdruck beträgt dann 47 mmHg (6,3 kPa) und „verdrängt“ einen Teil der anderen Gase:\n\n`p_I,O₂ = F_I,O₂ · (p_B − p_H₂O) = 0,21 · (760 − 47) mmHg ≈ 150 mmHg`\n\n> [!belegt] Der Sättigungsdampfdruck von Wasser bei 37 °C beträgt 47 mmHg. Er ist unabhängig vom Umgebungsdruck und deshalb in großer Höhe und in der Hyperbarmedizin besonders bedeutsam [@schmidt-lang-2019] [@oczenski-2017].\n\n## Bezugsbedingungen: BTPS, ATPS, STPD\n\nWeil ein Gasvolumen von Druck, Temperatur und Feuchte abhängt, muss jede Volumenangabe ihre Bezugsbedingungen nennen:\n\n| Kürzel | Bedeutung | Verwendung |\n|---|---|---|\n| BTPS | Body Temperature and Pressure, Saturated (37 °C, Umgebungsdruck, wasserdampfgesättigt) | Lungenvolumina, Tidalvolumen am Patienten |\n| ATPS | Ambient Temperature and Pressure, Saturated | Gas im Messgerät (Spirometer) |\n| ATPD | Ambient Temperature and Pressure, Dry | trockenes Frischgas, Gasversorgung |\n| STPD | Standard Temperature and Pressure, Dry (0 °C, 101,325 kPa, trocken) | Gasaufnahme/-abgabe (V̇O₂, V̇CO₂), Gasmengen |\n\nEin [[spirometer]] misst typischerweise bei Raumtemperatur und rechnet auf BTPS um; der Korrekturfaktor liegt in der Größenordnung von etwa 1,1. Auch [[flowsensor|Flowsensoren]] im [[beatmungsgeraet|Beatmungsgerät]] arbeiten mit solchen Korrekturen, weil warmes, feuchtes Exspirationsgas ein anderes Volumen einnimmt als trockenes Inspirationsgas [@oczenski-2017].\n\n## Gelöste Gase: Gesetz von Henry\n\nDie in einer Flüssigkeit physikalisch gelöste Gasmenge ist proportional zum Partialdruck des Gases über der Flüssigkeit:\n\n`c = α · p`\n\nmit dem temperaturabhängigen Löslichkeitskoeffizienten α. Daraus folgt: Der [[blutgasanalysator|Blutgasanalysator]] misst Partialdrücke, nicht Mengen; die Hauptmenge des Sauerstoffs ist zudem chemisch an [[haemoglobin|Hämoglobin]] gebunden und folgt nicht dem Henry-Gesetz ([[gasaustausch]]). In der [[druckkammer|Druckkammer]] steigt bei 2–3 bar Absolutdruck und reiner O₂-Atmung der physikalisch gelöste Sauerstoff deutlich an – das therapeutische Prinzip der hyperbaren Oxygenation. Umgekehrt erklärt das Henry-Gesetz die Dekompressionskrankheit: Bei zu schneller Druckentlastung perlt gelöster Stickstoff aus [@schmidt-lang-2019].\n\n## Dampfdruck und Narkosemittelverdampfer\n\nVolatile Anästhetika sind bei Raumtemperatur Flüssigkeiten. Über der Flüssigkeit stellt sich ein **Sättigungsdampfdruck** ein, der nur von der Temperatur abhängt. Ein [[narkosemittelverdampfer|Narkosemittelverdampfer]] leitet einen Teil des Frischgases über die gesättigte Dampfphase und mischt ihn wieder zu; die abgegebene Konzentration folgt aus dem Verhältnis von Dampfdruck zu Gesamtdruck [@dorsch-2008].\n\n| Anästhetikum | Sättigungsdampfdruck bei 20 °C (ca.) | Evidenz |\n|---|---|---|\n| Sevofluran | ≈ 160 mmHg | typisch [@dorsch-2008] |\n| Isofluran | ≈ 240 mmHg | typisch [@dorsch-2008] |\n| Desfluran | ≈ 670 mmHg (nahe Atmosphärendruck) | typisch [@dorsch-2008] |\n\n> [!hinweis] Wegen seines hohen Dampfdrucks (Siedepunkt nahe Raumtemperatur) wird Desfluran in beheizten, druckgeregelten Verdampfern dosiert; ein Bypass-Verdampfer für andere Mittel darf nicht mit Desfluran befüllt werden. Die genannten Werte sind gerundete Literaturwerte.\n\nVerdampfung entzieht der Flüssigkeit Wärme (Verdampfungsenthalpie). Ohne Temperaturkompensation würde die abgegebene Konzentration mit sinkender Temperatur fallen – Verdampfer besitzen deshalb Wärmespeicher und temperaturabhängige Stellglieder ([[waermeuebertragung]]).\n\n## Zustandsänderungen bei schneller Expansion\n\nStrömt Gas aus einer Hochdruckflasche über einen Druckminderer, kühlt es sich ab (Joule-Thomson-Effekt bzw. nahezu adiabatische Expansion). Umgekehrt erwärmt schnelle Kompression ein Gas stark – bei Sauerstoff in Verbindung mit Fett oder Öl eine ernste Brandgefahr.\n\n> [!warnung] Sauerstoffarmaturen, Druckminderer und Flaschenventile dürfen nicht gefettet oder geölt werden und sind langsam zu öffnen. Durch adiabatische Kompression in Totvolumina können Zündtemperaturen erreicht werden.\n\n## Bedeutung in der Medizintechnik\n\n- **[[beatmungsgeraet]], [[anaesthesiegeraet]], [[transportbeatmungsgeraet]]:** Gasmischung nach Partialdrücken, Volumenkorrektur (BTPS), Flaschenreichweite.\n- **[[sauerstoffkonzentrator]]:** Druckwechseladsorption nutzt druckabhängige Adsorption von Stickstoff.\n- **[[narkosemittelverdampfer]]:** Dosierung über Sättigungsdampfdruck.\n- **[[blutgasanalysator]], [[kapnometer]]:** Messung von Partialdrücken; Umrechnung von Fraktionen in Drücke mit dem aktuellen Luftdruck.\n- **[[druckkammer]]:** Boyle-Mariotte (Gasräume im Körper) und Henry (gelöster Sauerstoff).\n- **[[dampfsterilisator]]:** Zusammenhang von Druck und Temperatur des Sattdampfs.\n- **[[insufflator]]:** CO₂-Druck und -Volumen im Abdomen.\n\nWeiterführend: [[druck]], [[stroemungslehre]], [[gasaustausch]], [[atemmechanik]].\n",
+  "related": [
+    "druck",
+    "stroemungslehre",
+    "gasaustausch",
+    "atemmechanik",
+    "narkosemittelverdampfer",
+    "druckkammer",
+    "blutgasanalysator",
+    "sauerstoffkonzentrator",
+    "spirometer",
+    "flowsensor",
+    "waermeuebertragung",
+    "diffusion-osmose"
+  ],
+  "paths": [
+    [
+      "anaesthesiegeraet",
+      "narkosemittelverdampfer",
+      "gasgesetze",
+      "druck"
+    ],
+    [
+      "druckkammer",
+      "gasgesetze",
+      "gasaustausch",
+      "haemoglobin"
+    ]
+  ],
+  "sources": [
+    "tipler-2019",
+    "schmidt-lang-2019",
+    "oczenski-2017",
+    "dorsch-2008",
+    "larsen-2018"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

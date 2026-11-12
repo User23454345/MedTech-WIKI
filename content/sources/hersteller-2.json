@@ -1,0 +1,231 @@
+[
+  {
+    "id": "hst-schiller",
+    "kind": "hersteller",
+    "authors": "SCHILLER AG",
+    "title": "SCHILLER AG – Unternehmenswebsite",
+    "publisher": "SCHILLER AG, Baar",
+    "url": "https://www.schiller.ch/"
+  },
+  {
+    "id": "hst-schiller-50",
+    "kind": "hersteller",
+    "authors": "SCHILLER AG",
+    "title": "50 Years SCHILLER – Firmengeschichte",
+    "publisher": "SCHILLER AG, Baar",
+    "url": "https://50years.schiller.ch/en/history",
+    "note": "Jubiläumsseite zur Firmengeschichte (Gründung 1974, MINISCOPE MS-1)."
+  },
+  {
+    "id": "hst-erbe",
+    "kind": "hersteller",
+    "authors": "Erbe Elektromedizin GmbH",
+    "title": "Erbe Elektromedizin – Unternehmenswebsite",
+    "publisher": "Erbe Elektromedizin GmbH, Tübingen",
+    "url": "https://www.erbe-med.com/"
+  },
+  {
+    "id": "hst-erbe-history",
+    "kind": "hersteller",
+    "authors": "Erbe Elektromedizin GmbH",
+    "title": "Erbe – Company History",
+    "publisher": "Erbe Elektromedizin GmbH, Tübingen",
+    "url": "https://en.erbe-med.com/en-en/company/history",
+    "note": "Firmengeschichte seit 1851; erster HF-Chirurgiegenerator 1923."
+  },
+  {
+    "id": "hst-olympus",
+    "kind": "hersteller",
+    "authors": "Olympus Corporation",
+    "title": "Olympus Corporation – Unternehmenswebsite",
+    "publisher": "Olympus Corporation, Tokio",
+    "url": "https://www.olympus-global.com/"
+  },
+  {
+    "id": "hst-karl-storz",
+    "kind": "hersteller",
+    "authors": "KARL STORZ SE & Co. KG",
+    "title": "KARL STORZ – Unternehmenswebsite",
+    "publisher": "KARL STORZ SE & Co. KG, Tuttlingen",
+    "url": "https://www.karlstorz.com/"
+  },
+  {
+    "id": "hst-karl-storz-history",
+    "kind": "hersteller",
+    "authors": "KARL STORZ SE & Co. KG",
+    "title": "KARL STORZ – Our Journey: History from 1945",
+    "publisher": "KARL STORZ SE & Co. KG, Tuttlingen",
+    "url": "https://www.karlstorz.com/cz/en/history.htm",
+    "note": "Firmenchronik inkl. Einführung des HOPKINS-Stablinsensystems (1965)."
+  },
+  {
+    "id": "hst-getinge",
+    "kind": "hersteller",
+    "authors": "Getinge AB",
+    "title": "Getinge – Unternehmenswebsite",
+    "publisher": "Getinge AB, Göteborg",
+    "url": "https://www.getinge.com/"
+  },
+  {
+    "id": "hst-getinge-datascope-2009",
+    "kind": "hersteller",
+    "authors": "Getinge AB",
+    "title": "Getinge AB and Datascope Corp. Merger Approved (Pressemitteilung)",
+    "publisher": "Getinge AB",
+    "year": "2009",
+    "url": "https://www.getinge.com/us/company/news/press-releases/2009/218108-Getinge-AB-and-Datascope-Corp.-Merger--Approved"
+  },
+  {
+    "id": "hst-arjo-listing-2017",
+    "kind": "artikel",
+    "authors": "Nasdaq",
+    "title": "Nasdaq Stockholm Welcomes Arjo to the Main Market",
+    "publisher": "GlobeNewswire",
+    "year": "2017",
+    "url": "https://globenewswire.com/news-release/2017/12/12/1252866/0/en/Nasdaq-Stockholm-Welcomes-Arjo-to-the-Main-Market.html",
+    "note": "Börsennotierung der Arjo AB nach Abspaltung von Getinge am 12.12.2017."
+  },
+  {
+    "id": "hst-canon-medical",
+    "kind": "hersteller",
+    "authors": "Canon Medical Systems Corporation",
+    "title": "Canon Medical Systems – Unternehmenswebsite",
+    "publisher": "Canon Medical Systems Corporation, Otawara",
+    "url": "https://global.medical.canon/"
+  },
+  {
+    "id": "hst-canon-medical-history",
+    "kind": "hersteller",
+    "authors": "Canon Medical Systems Corporation",
+    "title": "Canon Medical Systems – Corporate History",
+    "publisher": "Canon Medical Systems Corporation",
+    "url": "https://sg.medical.canon/about-us/corporate/history/",
+    "note": "Chronik ab 1914 (Röntgenröhrenforschung bei Tokyo Electric), Gründung Nihon Iryo Denki 1930, Umbenennung 2018."
+  },
+  {
+    "id": "hst-loewenstein",
+    "kind": "hersteller",
+    "authors": "Löwenstein Medical SE & Co. KG",
+    "title": "Löwenstein Medical – Unternehmenswebsite",
+    "publisher": "Löwenstein Medical SE & Co. KG, Bad Ems",
+    "url": "https://loewensteinmedical.com/"
+  },
+  {
+    "id": "hst-loewenstein-about",
+    "kind": "hersteller",
+    "authors": "Löwenstein Medical SE & Co. KG",
+    "title": "Löwenstein Medical – About us (Unternehmenschronik)",
+    "publisher": "Löwenstein Medical SE & Co. KG, Bad Ems",
+    "url": "https://loewensteinmedical.com/en/company/about-us/"
+  },
+  {
+    "id": "hst-masimo",
+    "kind": "hersteller",
+    "authors": "Masimo Corporation",
+    "title": "Masimo – Unternehmenswebsite",
+    "publisher": "Masimo Corporation, Irvine",
+    "url": "https://www.masimo.com/"
+  },
+  {
+    "id": "hst-masimo-harman-2025",
+    "kind": "artikel",
+    "title": "Masimo completes sale of consumer audio business to Harman",
+    "publisher": "MedTech Dive",
+    "year": "2025",
+    "url": "https://www.medtechdive.com/news/Masimo-consumer-audio-sale-Harman-Q1/747448",
+    "note": "Verkauf von Sound United an Harman International (Samsung)."
+  },
+  {
+    "id": "hst-icu-medical",
+    "kind": "hersteller",
+    "authors": "ICU Medical, Inc.",
+    "title": "ICU Medical – Unternehmenswebsite",
+    "publisher": "ICU Medical, Inc., San Clemente",
+    "url": "https://www.icumed.com/"
+  },
+  {
+    "id": "hst-icu-medical-10k-2024",
+    "kind": "hersteller",
+    "authors": "ICU Medical, Inc.",
+    "title": "ICU Medical, Inc. – Form 10-K, Geschäftsjahr 2024",
+    "publisher": "U.S. Securities and Exchange Commission (EDGAR)",
+    "year": "2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/883984/000088398425000007/icui-20241231.htm",
+    "note": "Jahresbericht; beschreibt u. a. die Übernahmen von Hospira Infusion Systems (2017) und Smiths Medical (2022) sowie das IV-Lösungs-Joint-Venture mit Otsuka."
+  },
+  {
+    "id": "hst-bd",
+    "kind": "hersteller",
+    "authors": "Becton, Dickinson and Company",
+    "title": "BD – Unternehmenswebsite",
+    "publisher": "Becton, Dickinson and Company, Franklin Lakes",
+    "url": "https://www.bd.com/"
+  },
+  {
+    "id": "hst-waters-bd-2026",
+    "kind": "artikel",
+    "authors": "Waters Corporation",
+    "title": "Waters Completes Combination with BD’s Biosciences & Diagnostic Solutions Businesses",
+    "publisher": "BioSpace (Pressemitteilung)",
+    "year": "2026",
+    "url": "https://www.biospace.com/press-releases/waters-completes-combination-with-bds-biosciences-diagnostic-solutions-businesses"
+  },
+  {
+    "id": "hst-resmed",
+    "kind": "hersteller",
+    "authors": "ResMed Inc.",
+    "title": "ResMed – Unternehmenswebsite",
+    "publisher": "ResMed Inc., San Diego",
+    "url": "https://www.resmed.com/"
+  },
+  {
+    "id": "hst-resmed-story",
+    "kind": "hersteller",
+    "authors": "ResMed",
+    "title": "The ResMed story",
+    "publisher": "ResMed",
+    "url": "https://resmed.com.au/about-us/the-resmed-story",
+    "note": "Firmengeschichte: nasale CPAP-Therapie (Sullivan, 1981), Gründung 1989."
+  },
+  {
+    "id": "hst-zeiss",
+    "kind": "hersteller",
+    "authors": "Carl Zeiss AG",
+    "title": "ZEISS – Unternehmenswebsite",
+    "publisher": "Carl Zeiss AG, Oberkochen",
+    "url": "https://www.zeiss.com/"
+  },
+  {
+    "id": "hst-zeiss-meditec-history",
+    "kind": "hersteller",
+    "authors": "Carl Zeiss Meditec AG",
+    "title": "Carl Zeiss Meditec – Unternehmensgeschichte",
+    "publisher": "Carl Zeiss Meditec AG, Jena",
+    "url": "https://www.zeiss.com/meditec-ag/de/ueber-uns/unternehmensgeschichte.html",
+    "note": "Entstehung 2002 durch Zusammenschluss der Zeiss-Ophthalmologie mit der Asclepion-Meditec AG."
+  },
+  {
+    "id": "hst-elekta",
+    "kind": "hersteller",
+    "authors": "Elekta AB",
+    "title": "Elekta – Unternehmenswebsite",
+    "publisher": "Elekta AB, Stockholm",
+    "url": "https://www.elekta.com/"
+  },
+  {
+    "id": "hst-intuitive",
+    "kind": "hersteller",
+    "authors": "Intuitive Surgical, Inc.",
+    "title": "Intuitive – Unternehmenswebsite",
+    "publisher": "Intuitive Surgical, Inc., Sunnyvale",
+    "url": "https://www.intuitive.com/"
+  },
+  {
+    "id": "hst-intuitive-history",
+    "kind": "hersteller",
+    "authors": "Intuitive Surgical, Inc.",
+    "title": "Intuitive – Company History",
+    "publisher": "Intuitive Surgical, Inc.",
+    "url": "https://www.intuitive.com/en-us/about-us/company/history"
+  }
+]

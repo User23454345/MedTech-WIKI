@@ -65,7 +65,9 @@
 
   <!-- Formeln -->
   <rect x="16" y="292" width="568" height="92" rx="10" fill="#e6f7f5" stroke="#0d9488" stroke-width="1.5"/>
-  <text x="32" y="316" font-size="14">E = ½ · C · U₀²        i(t) = (U₀ / R) · e^(−t/τ)        τ = R · C</text>
-  <text x="32" y="342" font-size="13">Beispielwerte: C = 150 µF, U₀ = 1,8 kV, R = 75 Ω → E ≈ 243 J gespeichert,</text>
+  <text x="32" y="316" font-size="14">E = ½ · C · U₀²</text>
+  <text x="190" y="316" font-size="14">i(t) = (U₀ / R) · e^(−t/τ)</text>
+  <text x="430" y="316" font-size="14">τ = R · C</text>
+  <text x="32" y="342" font-size="13">Beispielwerte: C = 150 µF, U₀ = 1,8 kV, R = R_Pat = 75 Ω → E ≈ 243 J gespeichert,</text>
   <text x="32" y="362" font-size="13">τ ≈ 11,3 ms, abgegeben bis zum Ende von Phase 2 ≈ 200 J (ohne Innenwiderstand)</text>
 </svg>

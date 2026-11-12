@@ -1,0 +1,155 @@
+{
+  "id": "exspirationsventil",
+  "type": "term",
+  "title": "Exspirationsventil",
+  "aliases": [
+    "Ausatemventil",
+    "Expiratory valve",
+    "Exhalation valve",
+    "PEEP-Ventil",
+    "Exspirationsmembran"
+  ],
+  "category": "komponenten",
+  "summary": "Ventil im Ausatemweg von Beatmungs- und Anästhesiegeräten, das während der Inspiration schließt, die Exspiration freigibt und den positiven endexspiratorischen Druck (PEEP) hält. Moderne Geräte regeln es elektronisch über eine Membran mit Tauchspulenaktor.",
+  "body": "## Begriff\n\nDas **Exspirationsventil** (englisch *expiratory valve*, *exhalation valve*) ist das Ventil im Ausatemweg eines [[beatmungsgeraet|Beatmungsgeräts]] oder [[anaesthesiegeraet|Anästhesiegeräts]]. Es erfüllt drei Aufgaben: Es **schließt** während der Inspiration, damit das Atemgas in die [[lunge|Lunge]] strömt, es **öffnet** zur Exspiration, und es **hält** am Ende der Ausatmung einen positiven endexspiratorischen Druck, den **PEEP** (*positive end-expiratory pressure*). Damit ist es neben der Gasquelle – [[turbine|Turbine]] oder [[proportionalventil|Proportionalventil]] – das zweite zentrale Stellglied der Beatmung [@oczenski-2017] [@tobin-2013].\n\n## Physiologischer Hintergrund\n\nDie Ausatmung erfolgt bei der kontrollierten Beatmung **passiv**: Die elastischen Rückstellkräfte von Lunge und Thorax treiben das Gas aus ([[atemmechanik]]). Der Exspirationsflow hängt von der Druckdifferenz zwischen Alveolen und Ventil und vom Atemwegswiderstand ab. Mit der Zeitkonstante\n\n`τ = R · C`\n\n(Resistance R, Compliance C) fällt das Lungenvolumen näherungsweise exponentiell ab. Das Exspirationsventil setzt dem Ausatemweg einen definierten Gegendruck entgegen: Der PEEP verhindert, dass Alveolen am Ende der Exspiration kollabieren, und verbessert so den [[gasaustausch|Gasaustausch]] [@oczenski-2017].\n\n> [!vereinfacht] Das Einkompartimentmodell mit einem einzigen τ beschreibt eine gesunde, homogene Lunge. Bei obstruktiven Erkrankungen gibt es Bereiche mit sehr unterschiedlichen Zeitkonstanten; ein zu kurzes Exspirationsintervall führt dann zu einem intrinsischen PEEP, den das Ventil nicht kontrollieren kann.\n\n## Funktionsprinzip\n\n### Membranventil mit Aktor\n\nModerne Intensivbeatmungsgeräte verwenden überwiegend ein **Membranventil**: Eine elastische Membran liegt auf einem ringförmigen Sitz auf. Von der Patientenseite drückt der Atemwegsdruck p auf die wirksame Fläche A, von der Gegenseite ein Aktor mit der Kraft F_Aktor. Das Ventil öffnet, sobald\n\n`p · A > F_Aktor`\n\nDer Aktor ist häufig eine elektromagnetische **Tauchspule** (*voice coil*), deren Kraft proportional zum Strom ist (`F = B · I · l`, siehe [[elektromotor]]). Über den Strom stellt das Gerät also unmittelbar den Druck ein, bei dem das Ventil öffnet – den PEEP oder, in der Inspiration, den Druck, bei dem überschüssiges Gas abströmt. Alternativ wird die Membran pneumatisch über einen geregelten Steuerdruck belastet [@tobin-2013].\n\n> [!beispiel] Wirkt der Atemwegsdruck auf eine Membranfläche von 5 cm² und soll ein PEEP von 10 cmH₂O (≈ 1 kPa) gehalten werden, muss der Aktor eine Kraft von F = p · A = 1 000 Pa · 5 · 10⁻⁴ m² = 0,5 N aufbringen. Zahlen beispielhaft gewählt.\n\n### Aktives Exspirationsventil\n\nEin **aktives** Exspirationsventil regelt den Druck nicht nur während der Exspiration, sondern auch in der Inspiration: Atmet der Patient bei einer druckkontrollierten Beatmung aktiv aus oder hustet, öffnet das Ventil so weit, dass der eingestellte Druck nicht überschritten wird. Das ermöglicht Spontanatmung auf beiden Druckniveaus (z. B. bei BIPAP-artigen Beatmungsformen) und ist eine wesentliche Voraussetzung für patientenfreundliche, synchronisierte Beatmung [@oczenski-2017].\n\n### Weitere Bauformen\n\n| Bauform | Prinzip | Einsatz |\n|---|---|---|\n| Elektronisch gesteuertes Membranventil | Tauchspule oder Steuerdruck auf Membran | Intensiv-, Transport-, Anästhesieventilatoren |\n| Patientennahes Ausatemventil | Membran am Schlauchsystem, über Steuerleitung vom Gerät angesteuert | Einschlauchsysteme in Heim- und Transportbeatmung |\n| Leckageport (definierte Leckage) | kalibrierte Öffnung, kein Ventil im engeren Sinn | CPAP- und NIV-Systeme mit Einschlauchsystem |\n| Federbelastetes PEEP-Ventil | Federkraft gegen Membran oder Kugel | Beatmungsbeutel, einfache Notfallgeräte |\n\nIm Anästhesie-Kreissystem übernimmt das Exspirationsventil des Ventilators eine ähnliche Funktion; das manuell einstellbare **APL-Ventil** (*adjustable pressure limiting*) begrenzt dagegen den Druck bei Handbeatmung und Spontanatmung [@dorsch-2008].\n\n## Messung im Exspirationsschenkel\n\nAm Exspirationsventil sitzen meist der exspiratorische [[flowsensor|Flowsensor]] und ein [[drucksensor|Drucksensor]]. Das exspiratorische Volumen ist der wichtigste Messwert für die Überwachung des tatsächlich abgegebenen Tidalvolumens und für die Erkennung von [[leckage|Leckagen]] und [[diskonnektion|Diskonnektionen]]. Weil sich in diesem Bereich Kondensat sammelt, sind Ventilgehäuse und Flowsensor bei manchen Geräten beheizt.\n\n## Sicherheitsfunktionen\n\n> [!belegt] Die Beatmungsgerätenorm [[iso-80601-2-12|ISO 80601-2-12]] enthält Anforderungen an die Druckbegrenzung, an Alarme für hohen Atemwegsdruck und an das Verhalten des Geräts im Fehlerfall [@iso-80601-2-12].\n\nKonstruktiv ist das Exspirationsventil in der Regel so ausgelegt, dass es bei Energieausfall oder erkanntem Fehler **öffnet** und den Patienten zur Umgebung entlastet. Bleibt es dagegen geschlossen – etwa durch eine verklebte Membran –, steigt der Druck: Das Gerät meldet [[atemwegsdruck-hoch|„Atemwegsdruck hoch“]] und entlastet – je nach Bauart – über ein separates, unabhängig wirkendes Sicherheits- bzw. Überdruckventil.\n\n> [!warnung] Ein falsch montiertes, beschädigtes oder nicht kompatibles Exspirationsventil kann zu Leckage, fehlendem PEEP oder Druckanstieg führen. Nach jeder Aufbereitung ist der vom Hersteller vorgeschriebene Geräteselbsttest (Dichtheit, Ventilfunktion, Sensorkalibrierung) durchzuführen.\n\n## Aufbereitung und Instandhaltung\n\nDas Exspirationsventil ist mit potenziell infektiösem Ausatemgas in Kontakt. Je nach Gerät ist es ein Einmalteil oder ein wiederaufbereitbares Teil, das nach Herstellerangabe gereinigt, desinfiziert oder sterilisiert wird ([[aufbereitung]], [[sterilisation]]) [@krinko-bfarm-2012]. Membranen altern durch Aufbereitungszyklen und werden nach Herstellervorgabe getauscht. Bei der [[stk|STK]] und der [[funktionspruefung|Funktionsprüfung]] werden PEEP-Genauigkeit, Dichtheit und Alarmfunktion geprüft.\n\n| Fehlerbild | Mögliche Ursache |\n|---|---|\n| PEEP wird nicht gehalten | Membran undicht oder falsch eingelegt, Leckage im System |\n| Hoher Atemwegsdruck, Ventil öffnet nicht | verklebte Membran, Kondensat, Aktordefekt |\n| Abweichendes exspiratorisches Volumen | verschmutzter oder nicht kalibrierter Flowsensor |\n| Selbsttest scheitert | Ventil nicht korrekt eingerastet, Dichtung fehlt |\n\n## Anwendung in Geräten\n\n| Gerät | Ausführung |\n|---|---|\n| [[beatmungsgeraet]] | Gerätenahes, elektronisch geregeltes Membranventil mit exspiratorischer Flowmessung |\n| [[anaesthesiegeraet]] | Ventilator-Ausatemventil im Kreissystem, ergänzt durch das APL-Ventil |\n| [[transportbeatmungsgeraet]] | Gerätenahes oder patientennahes Ventil (bauartabhängig) |\n| [[heimbeatmungsgeraet]] | Patientennahes Ausatemventil oder Leckagesystem |\n| [[cpap-geraet]] | Definierter Leckageport an der Maske |\n\n## Bedeutung in der Medizintechnik\n\nDas Exspirationsventil macht aus der Gasquelle erst ein Beatmungssystem: Erst das Zusammenspiel von Inspirationsseite ([[turbine]], [[proportionalventil]]) und Exspirationsseite erzeugt den gewünschten Druckverlauf. Seine Regelung schließt sich über die [[druckmessung|Druckmessung]] – ein Beispiel für die Kette aus Aktorik, Sensorik und [[regelkreis|Regelung]], die das Beatmungsgerät prägt.",
+  "related": [
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "proportionalventil",
+    "turbine",
+    "flowsensor",
+    "drucksensor",
+    "druckmessung",
+    "atemmechanik",
+    "leckage",
+    "atemwegsdruck-hoch",
+    "aufbereitung",
+    "iso-80601-2-12"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "exspirationsventil",
+      "druckmessung",
+      "regelkreis"
+    ],
+    [
+      "atemmechanik",
+      "exspirationsventil",
+      "flowsensor"
+    ]
+  ],
+  "sources": [
+    "oczenski-2017",
+    "tobin-2013",
+    "dorsch-2008",
+    "iso-80601-2-12",
+    "krinko-bfarm-2012"
+  ],
+  "diagram": {
+    "title": "PEEP-Regelung über das Exspirationsventil",
+    "caption": "Funktionsschema des Exspirationsschenkels eines Intensivbeatmungsgeräts.",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Patient\n(Lunge)",
+        "ref": "lunge",
+        "kind": "patient",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "ps",
+        "label": "Drucksensor\n(exspiratorisch)",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "fs",
+        "label": "Flowsensor\n(exspiratorisch)",
+        "ref": "flowsensor",
+        "kind": "sensor",
+        "x": 470,
+        "y": 80
+      },
+      {
+        "id": "ev",
+        "label": "Exspirations-\nventil (Membran)",
+        "ref": "exspirationsventil",
+        "kind": "actuator",
+        "x": 660,
+        "y": 80
+      },
+      {
+        "id": "out",
+        "label": "Umgebung /\nAbsaugung",
+        "kind": "output",
+        "x": 850,
+        "y": 80
+      },
+      {
+        "id": "reg",
+        "label": "PEEP-Regler",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 470,
+        "y": 220
+      },
+      {
+        "id": "tsp",
+        "label": "Tauchspule\n(Aktor)",
+        "ref": "elektromotor",
+        "kind": "actuator",
+        "x": 660,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "pat",
+        "to": "ps",
+        "kind": "gas",
+        "label": "Ausatemgas"
+      },
+      {
+        "from": "ps",
+        "to": "fs",
+        "kind": "gas"
+      },
+      {
+        "from": "fs",
+        "to": "ev",
+        "kind": "gas"
+      },
+      {
+        "from": "ev",
+        "to": "out",
+        "kind": "gas"
+      },
+      {
+        "from": "ps",
+        "to": "reg",
+        "kind": "signal",
+        "label": "p_ist"
+      },
+      {
+        "from": "reg",
+        "to": "tsp",
+        "kind": "power",
+        "label": "Spulenstrom"
+      },
+      {
+        "from": "tsp",
+        "to": "ev",
+        "kind": "energy",
+        "label": "Schließkraft"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

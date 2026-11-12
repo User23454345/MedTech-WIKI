@@ -1,0 +1,148 @@
+{
+  "id": "dialysator",
+  "type": "term",
+  "title": "Dialysator",
+  "aliases": [
+    "Kapillardialysator",
+    "Hohlfaserdialysator",
+    "Künstliche Niere",
+    "Dialyzer",
+    "Hämofilter",
+    "Hämodiafilter",
+    "Filter (Dialyse)"
+  ],
+  "category": "komponenten",
+  "summary": "Einmal-Austauschmodul der Hämodialyse, in dem Blut und Dialysierflüssigkeit im Gegenstrom durch eine semipermeable Hohlfasermembran getrennt sind. Harnpflichtige Stoffe und Wasser werden durch Diffusion und Konvektion entfernt; Kenngrößen sind Clearance, KoA und Ultrafiltrationskoeffizient.",
+  "body": "## Begriff\n\nDer **Dialysator** (künstliche Niere, englisch *dialyzer*) ist das Austauschmodul der Hämodialyse. In ihm stehen Blut und Dialysierflüssigkeit über eine semipermeable Membran in Kontakt, ohne sich zu vermischen. Harnpflichtige Substanzen, Elektrolyte und Wasser werden über die Membran aus dem Blut entfernt, Puffersubstanzen (meist Bicarbonat) gelangen umgekehrt ins Blut. Der Dialysator ist ein steril gelieferter Einmalartikel, der in den extrakorporalen Kreislauf des [[dialysegeraet|Dialysegeräts]] eingesetzt wird [@daugirdas-2015] [@kramme-2017].\n\nHistorisch markiert die Trommelniere von Willem Kolff aus den 1940er-Jahren den Beginn der klinischen Dialyse [@kolff-1944]. Heute sind nahezu ausschließlich **Kapillardialysatoren** (Hohlfaserdialysatoren) im Einsatz.\n\n## Aufbau des Kapillardialysators\n\n| Bauteil | Funktion |\n|---|---|\n| Zylindrisches Gehäuse (Kunststoff) | Trägt das Faserbündel, bildet den Dialysatraum |\n| Hohlfaserbündel | Tausende feiner Kapillaren; das Blut fließt **innen**, das Dialysat **außen** |\n| Vergussmasse (meist Polyurethan) | Bettet die Faserenden an beiden Stirnseiten ein und trennt Blut- von Dialysatraum |\n| Endkappen mit Blutanschlüssen | Verteilen das Blut gleichmäßig auf die Fasern |\n| Seitliche Dialysatanschlüsse | Zu- und Ablauf der Dialysierflüssigkeit |\n\nBlut und Dialysat fließen im **Gegenstrom**. Dadurch bleibt das Konzentrationsgefälle über die gesamte Faserlänge erhalten, und der Stoffaustausch ist effektiver als im Gleichstrom [@daugirdas-2015].\n\n> [!hinweis] Typische Kenngrößen von Kapillardialysatoren sind eine effektive Membranfläche in der Größenordnung von etwa 1 bis gut 2 m² und Faserinnendurchmesser von rund 200 µm. Die genauen Werte stehen im Datenblatt des jeweiligen Produkts.\n\n### Membranmaterialien\n\nMan unterscheidet zellulosebasierte Membranen (z. B. Cellulosetriacetat) und synthetische Membranen (z. B. Polysulfon, Polyethersulfon, Polyacrylnitril, PMMA). Synthetische Membranen dominieren heute; sie gelten als gut [[iso-10993-1|biokompatibel]] und lassen sich mit definierter Porengröße herstellen. Die Biokompatibilität betrifft unter anderem Komplementaktivierung und Gerinnungsneigung [@daugirdas-2015].\n\n## Transportmechanismen\n\nIm Dialysator wirken zwei physikalische Grundprinzipien, die im Artikel [[diffusion-osmose]] ausführlich behandelt werden:\n\n| Mechanismus | Antrieb | Bevorzugt entfernt | Verfahren |\n|---|---|---|---|\n| **Diffusion** | Konzentrationsgefälle über die Membran | Kleine Moleküle (Harnstoff, Kreatinin, Kalium) | Hämodialyse (HD) |\n| **Konvektion** | Transmembrandruck (TMP), Wasser reißt gelöste Stoffe mit (*solvent drag*) | Auch Mittelmoleküle (z. B. β₂-Mikroglobulin) | Hämofiltration (HF), Hämodiafiltration (HDF) |\n\nBei der Hämodiafiltration wird ein großes Filtratvolumen entzogen und durch online hergestellte Substitutionslösung ersetzt; eine große randomisierte Studie berichtete für die Hochvolumen-HDF eine geringere Gesamtsterblichkeit als für die High-Flux-HD [@convince-2023].\n\n### Ultrafiltrationskoeffizient\n\nDer Wasserentzug folgt näherungsweise\n\n`Q_UF = K_UF · TMP`\n\nmit dem Ultrafiltrationskoeffizienten K_UF (in ml/(h · mmHg)) und dem Transmembrandruck TMP. Nach K_UF und Siebkoeffizienten unterscheidet man **Low-Flux**- und **High-Flux**-Dialysatoren. Weil High-Flux-Membranen sehr durchlässig sind, muss das Dialysegerät die Ultrafiltration volumetrisch exakt bilanzieren; das übernimmt die Bilanzkammer bzw. das Flussmesssystem des Geräts [@daugirdas-2015].\n\n## Leistungskennzahlen\n\n### Clearance\n\nDie **Clearance** K ist der Blutvolumenstrom, der pro Zeiteinheit vollständig von einem Stoff befreit wird. Ohne Ultrafiltration gilt\n\n`K = Q_B · (C_Bi − C_Bo) / C_Bi`\n\nmit dem Blutfluss Q_B sowie den Konzentrationen am Blutein- (C_Bi) und -ausgang (C_Bo).\n\n> [!beispiel] Bei Q_B = 300 ml/min, C_Bi = 30 mmol/l und C_Bo = 9 mmol/l Harnstoff ergibt sich K = 300 · (30 − 9) / 30 = 210 ml/min. Die Zahlen sind beispielhaft gewählt.\n\nDie Clearance steigt mit Blut- und Dialysatfluss, sättigt aber, weil die Membran selbst begrenzt. Die membranspezifische Größe dafür ist das **Massentransfer-Flächen-Produkt** KoA: Es fasst Membrandurchlässigkeit (Ko) und Fläche (A) zusammen und erlaubt, die Clearance für verschiedene Flüsse abzuschätzen [@daugirdas-2015].\n\n### Dialysedosis\n\nAus Clearance K, Behandlungszeit t und Harnstoffverteilungsvolumen V ergibt sich die dimensionslose Dosis **Kt/V**. In der Praxis wird sie meist aus Harnstoffwerten vor und nach der Dialyse geschätzt, z. B. mit der Formel nach Daugirdas [@daugirdas-1993]. Zielwerte geben Leitlinien vor [@kdoqi-hd-adequacy-2015].\n\n> [!vereinfacht] Die Clearance-Formel und das einfache Kt/V-Modell setzen ein Ein-Kompartiment-Verhalten voraus. Tatsächlich strömt Harnstoff nach Ende der Dialyse aus dem Gewebe nach (Rebound); genauere Modelle berücksichtigen das.\n\n## Normen, Sterilisation, Aufbereitung\n\nAnforderungen und Prüfverfahren für Dialysatoren, Hämodiafilter und Hämofilter legt [@iso-8637-1] fest, etwa zur Dichtheit, zum Blutverlust und zur Angabe von Clearance und Ultrafiltrationskoeffizient. Dialysatoren werden steril geliefert; übliche Verfahren sind Dampf- und Strahlensterilisation. In Deutschland werden sie als Einmalprodukte verwendet und nach der Behandlung entsorgt; die Wiederverwendung (*reuse*), die in anderen Ländern praktiziert wurde, ist hier nicht üblich.\n\nDie Qualität der Dialysierflüssigkeit regelt die Normenreihe ISO 23500; bei durchlässigen High-Flux-Membranen ist sie besonders wichtig, weil Endotoxinfragmente aus dem Dialysat ins Blut gelangen können (Rückfiltration) [@iso-23500-5].\n\n## Betriebsrelevante Fehler\n\n| Ereignis | Erkennung im Gerät | Folge / Maßnahme |\n|---|---|---|\n| Membranriss | [[blutleckdetektor|Blutleckdetektor]] im Dialysatablauf | [[blutleck-alarm|Blutleckalarm]], Blutpumpe stoppt; Dialysator tauschen |\n| Gerinnung im Faserbündel | Steigender TMP, steigender venöser Druck | Antikoagulation prüfen, ggf. Systemwechsel |\n| Luft im Blutteil | [[luftblasendetektor|Luftdetektor]] am venösen Schlauch | [[luft-im-system|Luftalarm]], venöse Klemme schließt |\n| Falsches Dialysat | [[leitfaehigkeitssensor|Leitfähigkeitsmessung]] | [[leitfaehigkeitsalarm|Leitfähigkeitsalarm]], Bypass des Dialysators |\n\n> [!praxis] Vor Behandlungsbeginn wird der Dialysator nach Herstellerangabe gespült und gefüllt (Priming), um Luft und Rückstände aus der Herstellung zu entfernen. Luft im Faserbündel verringert die wirksame Austauschfläche.\n\n## Anwendung in Geräten\n\n| Gerät | Rolle |\n|---|---|\n| [[dialysegeraet]] | Intermittierende Hämodialyse und Hämodiafiltration |\n| [[crrt-geraet]] | Kontinuierliche Nierenersatzverfahren auf der Intensivstation (Hämofilter) |\n| [[ecmo]] | Vergleichbares Hohlfaserprinzip im Oxygenator; ein Hämofilter kann zusätzlich in den Kreislauf eingebunden werden |\n| [[zellseparator]] | Membran- oder zentrifugale Trennverfahren, verwandte Grundlagen |\n\n## Bedeutung in der Medizintechnik\n\nAm Dialysator lässt sich die Kette von der [[niere|Nierenphysiologie]] über [[diffusion-osmose|Stofftransport]] und [[druck|Druckverhältnisse]] bis zur Sensorik des Geräts verfolgen. Er selbst enthält keine Elektronik, ist aber die Baugruppe, für die Blutpumpe, Bilanzierung, [[druckmessung|Druckmessung]] und Leitfähigkeitsüberwachung des Dialysegeräts überhaupt existieren [@kramme-2017].\n",
+  "related": [
+    "dialysegeraet",
+    "crrt-geraet",
+    "diffusion-osmose",
+    "niere",
+    "blutleckdetektor",
+    "leitfaehigkeitssensor",
+    "luftblasendetektor",
+    "blutleck-alarm",
+    "peristaltikpumpe",
+    "nephrologie",
+    "iso-10993-1"
+  ],
+  "paths": [
+    [
+      "dialysegeraet",
+      "dialysator",
+      "diffusion-osmose",
+      "niere"
+    ],
+    [
+      "dialysator",
+      "blutleckdetektor",
+      "blutleck-alarm"
+    ]
+  ],
+  "sources": [
+    "daugirdas-2015",
+    "kramme-2017",
+    "kolff-1944",
+    "iso-8637-1",
+    "daugirdas-1993",
+    "kdoqi-hd-adequacy-2015",
+    "convince-2023",
+    "iso-23500-5"
+  ],
+  "diagram": {
+    "title": "Stoffaustausch im Dialysator (Gegenstrom)",
+    "caption": "Funktionsschema: Blut fließt in den Kapillaren, Dialysat im Gegenstrom außen; Diffusion und Konvektion über die Membran.",
+    "width": 900,
+    "height": 320,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Patient\n(Gefäßzugang)",
+        "kind": "patient",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "bp",
+        "label": "Blutpumpe",
+        "ref": "peristaltikpumpe",
+        "kind": "actuator",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "dia",
+        "label": "Dialysator\n(Hohlfasermembran)",
+        "ref": "dialysator",
+        "kind": "process",
+        "x": 480,
+        "y": 160,
+        "w": 170,
+        "h": 70
+      },
+      {
+        "id": "vd",
+        "label": "Luftdetektor /\nvenöse Klemme",
+        "ref": "luftblasendetektor",
+        "kind": "sensor",
+        "x": 280,
+        "y": 250
+      },
+      {
+        "id": "dz",
+        "label": "Dialysat-\naufbereitung",
+        "ref": "leitfaehigkeitssensor",
+        "kind": "source",
+        "x": 760,
+        "y": 80
+      },
+      {
+        "id": "bld",
+        "label": "Blutleck-\ndetektor",
+        "ref": "blutleckdetektor",
+        "kind": "sensor",
+        "x": 760,
+        "y": 250
+      }
+    ],
+    "edges": [
+      {
+        "from": "pat",
+        "to": "bp",
+        "kind": "fluid",
+        "label": "arteriell"
+      },
+      {
+        "from": "bp",
+        "to": "dia",
+        "kind": "fluid"
+      },
+      {
+        "from": "dia",
+        "to": "vd",
+        "kind": "fluid",
+        "label": "venös"
+      },
+      {
+        "from": "vd",
+        "to": "pat",
+        "kind": "fluid"
+      },
+      {
+        "from": "dz",
+        "to": "dia",
+        "kind": "fluid",
+        "label": "Dialysat ein"
+      },
+      {
+        "from": "dia",
+        "to": "bld",
+        "kind": "fluid",
+        "label": "Dialysat aus"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "zweckbestimmung",
+  "type": "term",
+  "title": "Zweckbestimmung",
+  "aliases": [
+    "Intended Purpose",
+    "Intended Use",
+    "Bestimmungsgemäßer Gebrauch",
+    "Zweckbestimmung des Herstellers",
+    "Off-Label-Use"
+  ],
+  "category": "recht",
+  "summary": "Die Zweckbestimmung ist die vom Hersteller festgelegte Verwendung eines Medizinprodukts, wie sie aus Kennzeichnung, Gebrauchsanweisung, Werbematerial und klinischer Bewertung hervorgeht. Sie entscheidet darüber, ob ein Produkt ein Medizinprodukt ist, welcher Risikoklasse es angehört und wie Betreiber und Anwender es einsetzen dürfen.",
+  "body": "## Begriff\n\nDie **Zweckbestimmung** (englisch *intended purpose*) beschreibt, wofür ein Produkt nach dem Willen des Herstellers verwendet werden soll. Die [[mdr|MDR]] definiert sie in Art. 2 Nr. 12 sinngemäß als die Verwendung, für die ein Produkt entsprechend den Angaben des Herstellers auf der Kennzeichnung, in der Gebrauchsanweisung, im Werbe- oder Verkaufsmaterial und in seinen Angaben bei der [[klinische-bewertung|klinischen Bewertung]] bestimmt ist [@mdr-2017].\n\nDie Zweckbestimmung ist damit **der zentrale Ausgangspunkt** des gesamten Medizinprodukterechts:\n\n| Frage | Abhängigkeit von der Zweckbestimmung |\n|---|---|\n| Ist das Produkt ein [[medizinprodukt|Medizinprodukt]]? | nur bei medizinischem Zweck |\n| Welche [[risikoklassen|Risikoklasse]]? | Die Klassifizierungsregeln knüpfen an Anwendungsdauer, Körperregion und Wirkungsweise an |\n| Welche [[konformitaetsbewertung|Konformitätsbewertung]]? | folgt aus der Klasse |\n| Welche klinischen Daten sind nötig? | Die [[klinische-bewertung|klinische Bewertung]] muss genau die beanspruchten Indikationen belegen |\n| Welche Risiken muss das Risikomanagement betrachten? | [[iso-14971]] verlangt die Analyse der Zweckbestimmung und vernünftigerweise vorhersehbarer Fehlanwendung |\n| Wie darf der Betreiber das Produkt einsetzen? | Die [[mpbetreibv|MPBetreibV]] verlangt den Betrieb entsprechend der Zweckbestimmung |\n\n## Bestandteile einer Zweckbestimmung\n\nEine vollständige Zweckbestimmung beantwortet typischerweise folgende Fragen:\n\n* **Medizinische Indikation:** Welche Krankheit oder welcher Zustand wird diagnostiziert, überwacht oder behandelt?\n* **Patientenpopulation:** Erwachsene, Kinder, Neugeborene; Gewichts- oder Altersgrenzen; Kontraindikationen.\n* **Anwender:** Fachpersonal, geschulte Laien, Patient:innen selbst (vgl. [[gebrauchstauglichkeit]] und [[iec-62366-1]]).\n* **Anwendungsumgebung:** Intensivstation, OP, Rettungsdienst, häusliche Umgebung (vgl. [[iec-60601-1-11]]).\n* **Funktionsprinzip und Anwendungsdauer:** vorübergehend, kurzzeitig, langzeitig; invasiv oder nicht invasiv.\n\n> [!beispiel] Ein vereinfachtes Beispiel für ein [[beatmungsgeraet|Intensivbeatmungsgerät]]: „Invasive und nichtinvasive Beatmung von erwachsenen und pädiatrischen Patient:innen ab einem bestimmten Körpergewicht mit respiratorischer Insuffizienz auf Intensivstationen und während des innerklinischen Transports durch geschultes Fachpersonal.“ Ein [[heimbeatmungsgeraet]] hat dagegen eine Zweckbestimmung für die häusliche Umgebung mit anderen Anwendern – und damit andere Normanforderungen.\n\n## Zweckbestimmung und Klassifizierung\n\nDie Klassifizierungsregeln in Anhang VIII der MDR fragen nach Invasivität, Anwendungsdauer, Körperregion und Energieabgabe [@mdr-2017] [@mdcg-2021-24]. Dasselbe technische Prinzip kann deshalb je nach Zweckbestimmung in verschiedene Klassen fallen:\n\n| Produkt | Zweckbestimmung | Folge (vereinfacht) |\n|---|---|---|\n| Pulsoxymeter | Stichprobenmessung beim Hausarzt | niedrigere Klasse möglich |\n| Pulsoxymeter / [[patientenmonitor]] | Überwachung vitaler Parameter, bei denen Veränderungen zu unmittelbarer Gefahr führen können | höhere Klasse (Regel 10 MDR) |\n| Software | reine Datenspeicherung | ggf. kein Medizinprodukt |\n| Software | Therapieentscheidung bei kritischen Zuständen | höhere Klasse (Regel 11 MDR) |\n\n> [!vereinfacht] Die Tabelle illustriert das Prinzip. Die tatsächliche Klasse ergibt sich erst aus der vollständigen Anwendung aller Regeln auf die konkrete Zweckbestimmung [@mdcg-2021-24].\n\n## Zweckbestimmung im Betrieb\n\n### Betrieb nur im Rahmen der Zweckbestimmung\n\nBetreiber und Anwender dürfen Medizinprodukte nur ihrer Zweckbestimmung entsprechend und nach den allgemein anerkannten Regeln der Technik betreiben und anwenden [@mpbetreibv]. Grundlage dafür ist die Gebrauchsanweisung, in der Hersteller Zweckbestimmung, Kontraindikationen, Zubehör und zulässige Kombinationen angeben.\n\n### Zweckfremde Anwendung („Off-Label-Use“)\n\nWird ein Produkt außerhalb seiner Zweckbestimmung eingesetzt, verlässt der Anwender den vom Hersteller abgesicherten Bereich: Risikoanalyse, klinische Daten und Prüfungen decken diese Anwendung nicht ab. Die Verantwortung verschiebt sich auf Betreiber und Anwender.\n\n> [!warnung] Ändert eine Einrichtung die Zweckbestimmung eines bereits in Verkehr gebrachten Produkts oder verändert sie es so, dass die Konformität berührt sein kann, kann sie nach Art. 16 MDR selbst Herstellerpflichten übernehmen [@mdr-2017]. Typische Risikofälle sind selbst gebaute Adapter, nicht freigegebene Zubehörkombinationen oder die Nutzung eines Erwachsenengeräts bei Neugeborenen ohne entsprechende Freigabe.\n\n### Systeme und Kombinationen\n\nWerden Produkte zu einem System verbunden – etwa ein [[patientenmonitor]] mit Zentrale und Datennetz (vgl. [[hl7-fhir]]) –, muss die Kombination von den Zweckbestimmungen der Einzelprodukte gedeckt sein. Andernfalls entsteht faktisch ein neues System, das eine eigene Bewertung erfordert.\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechniker:innen ist die Zweckbestimmung bei vielen Alltagsfragen der Prüfstein:\n\n* **Beschaffung:** Passt die Zweckbestimmung zum geplanten Einsatz (z. B. Neonatologie, MRT-Umgebung, Transport)?\n* **Zubehör und Ersatzteile:** Ist das Zubehör vom Hersteller für das Gerät freigegeben? Beispiel: Sensoren am [[pulsoxymeter]], Schlauchsysteme an der [[infusionspumpe]].\n* **Instandhaltung:** [[instandsetzung|Instandsetzungen]] dürfen die zweckbestimmungsrelevanten Eigenschaften nicht verändern; Prüfungen wie [[stk]] und [[funktionspruefung]] orientieren sich an den Herstellervorgaben.\n* **Einweisung:** In der [[einweisung]] werden Zweckbestimmung und Kontraindikationen vermittelt.\n* **Vorkommnisse:** Bei der [[vigilanz|Bewertung von Vorkommnissen]] ist zu klären, ob das Produkt bestimmungsgemäß verwendet wurde (vgl. [[anwendungsfehler]]).\n\n> [!praxis] Bei Anfragen wie „Können wir das Gerät auch für … verwenden?“ lohnt der Blick in die Gebrauchsanweisung und im Zweifel eine schriftliche Herstellerauskunft – nicht die Einschätzung, dass es „technisch ja auch funktioniert“.\n\n## Hinweis\n\nMaßgeblich sind die jeweils gültigen Fassungen von MDR und MPBetreibV; diese Zusammenfassung gibt den Regelungsinhalt mit eigenen Worten wieder.",
+  "related": [
+    "medizinprodukt",
+    "risikoklassen",
+    "klinische-bewertung",
+    "betreiberpflichten",
+    "iso-14971",
+    "gebrauchstauglichkeit",
+    "software-medizinprodukt",
+    "einweisung"
+  ],
+  "paths": [
+    [
+      "medizinprodukt",
+      "zweckbestimmung",
+      "risikoklassen",
+      "konformitaetsbewertung"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "mdcg-2021-24",
+    "mpbetreibv",
+    "iso-14971",
+    "iec-62366-1"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

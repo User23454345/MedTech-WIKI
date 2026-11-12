@@ -1,0 +1,74 @@
+{
+  "id": "icu-medical",
+  "type": "manufacturer",
+  "title": "ICU Medical",
+  "aliases": [
+    "ICU Medical, Inc.",
+    "Smiths Medical",
+    "Hospira Infusion Systems"
+  ],
+  "category": "hersteller",
+  "summary": "US-amerikanischer Hersteller von Infusionstechnik mit Sitz in San Clemente (Kalifornien), gegründet 1984. Durch die Übernahmen von Hospira Infusion Systems (2017) und Smiths Medical (2022) gehört ICU Medical zu den großen Anbietern von Infusionspumpen, Infusionszubehör und Gefäßzugängen.",
+  "headquarters": "San Clemente, USA",
+  "founded": "1984",
+  "website": "https://www.icumed.com/",
+  "productLines": [
+    {
+      "device": "infusionspumpe",
+      "models": [
+        "Plum 360"
+      ],
+      "note": "Kassettenbasiertes volumetrisches Pumpprinzip, ursprünglich Hospira."
+    },
+    {
+      "device": "spritzenpumpe",
+      "models": [
+        "Medfusion 3500",
+        "Medfusion 4000"
+      ],
+      "note": "Ursprünglich Smiths Medical."
+    },
+    {
+      "device": "pca-pumpe",
+      "models": [
+        "CADD-Solis"
+      ],
+      "note": "Ambulante Kassettenpumpe, ursprünglich Smiths Medical."
+    },
+    {
+      "device": "infusionswaermer",
+      "models": [
+        "Level 1"
+      ],
+      "note": "Schnellinfusions- und Wärmesysteme, ursprünglich Smiths Medical."
+    },
+    {
+      "device": "invasive-druckmessung",
+      "models": [
+        "Transpac"
+      ],
+      "note": "Einweg-Druckwandler."
+    }
+  ],
+  "body": "## Überblick\n\nICU Medical ist ein börsennotiertes US-Unternehmen mit Sitz in San Clemente, Kalifornien. Das Portfolio umfasst **Infusionssysteme** (Pumpen, Software, Infusionsbestecke), **Gefäßzugänge** und **Vital-Care-Produkte**. Bekannt geworden ist das Unternehmen ursprünglich mit nadelfreien Konnektoren für Infusionsleitungen [@hst-icu-medical].\n\n## Geschichte in Stichpunkten\n\n* **1984** – Gründung in Kalifornien; frühe Produkte sind Konnektoren und Zubehör für die Infusionstherapie.\n* **2017** – Übernahme von Hospira Infusion Systems von Pfizer: Infusionslösungen, Infusionspumpen und Infusionsbestecke [@hst-icu-medical-10k-2024].\n* **2022** – Übernahme von Smiths Medical von der Smiths Group: Spritzen- und ambulante Pumpen, Gefäßzugänge, Vital-Care-Produkte (u. a. Level 1, Transpac) [@hst-icu-medical-10k-2024].\n* **2025** – Das Geschäft mit IV-Lösungen wird in ein Joint Venture mit Otsuka Pharmaceutical Factory eingebracht, an dem Otsuka die Mehrheit hält [@hst-icu-medical-10k-2024].\n\n## Geschäftsbereiche\n\n| Bereich | Wiki-Geräte |\n|---|---|\n| Volumetrische Infusion | [[infusionspumpe]] |\n| Spritzenpumpen | [[spritzenpumpe]] |\n| Schmerztherapie, ambulante Pumpen | [[pca-pumpe]] |\n| Wärme und Schnellinfusion | [[infusionswaermer]] |\n| Hämodynamik | [[invasive-druckmessung]] |\n\nVolumetrische Pumpen arbeiten mit Kassetten- oder [[peristaltikpumpe|Peristaltik-]]Mechanismen, Spritzenpumpen mit einem [[spindelantrieb]] und [[schrittmotor|Schrittmotor]]. Überwachungsfunktionen wie [[luftblasendetektor|Luftblasendetektion]] und [[okklusionsalarm|Okklusionserkennung]] über [[drucksensor|Drucksensoren]] sind sicherheitskritisch. Beim kassettenbasierten Prinzip (z. B. Plum) verdrängt ein Stößel ein definiertes Volumen aus einer Pumpkammer in der Einwegkassette, Ventile steuern Füll- und Förderphase; die Fördergenauigkeit hängt damit wesentlich von der Kassette und nicht von der Elastizität eines Schlauchsegments ab.\n\n## Bedeutung für die Medizintechnik\n\nDurch die Zusammenführung von Hospira- und Smiths-Medical-Produkten betreuen viele Kliniken Geräte von ICU Medical, die ursprünglich unter anderen Herstellernamen beschafft wurden. Das ist für das [[bestandsverzeichnis]], die Ersatzteilversorgung und die Zuordnung von Sicherheitsinformationen ([[vigilanz]]) relevant.\n\n* Infusions- und Spritzenpumpen sind nach [[mpbetreibv|MPBetreibV]] Anlage 1 STK-pflichtig (§ 12) [@mpbetreibv].\n* Die Basissicherheit und wesentlichen Leistungsmerkmale regelt [[iec-60601-2-24|IEC 60601-2-24]] (u. a. Fördergenauigkeit, Okklusionsalarm, Bolus nach Okklusion).\n\n> [!praxis] Nach Firmenübernahmen ändern sich häufig Ansprechpartner, Serviceportale und die Bezeichnungen von Ersatzteilen. Es lohnt sich, im Bestandsverzeichnis den ursprünglichen und den aktuellen Hersteller zu dokumentieren.\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "infusionspumpe",
+    "spritzenpumpe",
+    "pca-pumpe",
+    "infusionswaermer",
+    "invasive-druckmessung",
+    "iec-60601-2-24",
+    "okklusionsalarm",
+    "bd",
+    "b-braun",
+    "fresenius-kabi",
+    "baxter"
+  ],
+  "sources": [
+    "hst-icu-medical",
+    "hst-icu-medical-10k-2024",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

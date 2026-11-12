@@ -1,0 +1,71 @@
+{
+  "id": "medizintechnik",
+  "type": "term",
+  "title": "Medizintechnik",
+  "aliases": [
+    "Medical Engineering",
+    "Biomedical Engineering",
+    "Biomedizinische Technik",
+    "Clinical Engineering",
+    "Medizinische Technik",
+    "BME"
+  ],
+  "category": "einfuehrung",
+  "summary": "Medizintechnik ist die Anwendung von Natur- und Ingenieurwissenschaften auf die Medizin: Entwicklung, Herstellung, Prüfung und sicherer Betrieb von Geräten, Implantaten und Software für Diagnose, Überwachung und Therapie.",
+  "body": "## Begriff und Abgrenzung\n\n**Medizintechnik** (englisch *Medical Engineering*, *Biomedical Engineering*, im Krankenhausbetrieb oft *Clinical Engineering*) ist die Anwendung natur- und ingenieurwissenschaftlicher Methoden auf die Medizin. Sie umfasst Entwicklung, Herstellung, Prüfung, Betrieb und Instandhaltung von Geräten, Systemen, Implantaten und Software, die der Diagnose, Überwachung, Therapie oder Rehabilitation von Menschen dienen [@kramme-2017] [@wintermantel-2009].\n\nRechtlich wird der Gegenstand der Medizintechnik über den Begriff [[medizinprodukt|Medizinprodukt]] gefasst: Ein Produkt ist ein Medizinprodukt, wenn der Hersteller es für einen medizinischen Zweck bestimmt (die [[zweckbestimmung|Zweckbestimmung]]) und seine bestimmungsgemäße Hauptwirkung nicht pharmakologisch, immunologisch oder metabolisch erreicht wird [@mdr-2017]. Damit unterscheidet sich ein Medizinprodukt grundsätzlich vom Arzneimittel – eine [[infusionspumpe|Infusionspumpe]] fördert ein Medikament, wirkt selbst aber physikalisch.\n\n> [!belegt] Die Definition des Medizinprodukts steht in Art. 2 Nr. 1 der europäischen Medizinprodukteverordnung [[mdr|MDR]] (Verordnung (EU) 2017/745). Sie umfasst ausdrücklich auch Software, Implantate und Zubehör [@mdr-2017].\n\nMedizintechnik ist kein einzelnes Fach, sondern eine **Querschnittsdisziplin**. Ein [[beatmungsgeraet|Beatmungsgerät]] verbindet Atemphysiologie ([[atemmechanik]], [[gasaustausch]]), Strömungsmechanik ([[stroemungslehre]], [[gasgesetze]]), Antriebstechnik ([[turbine]], [[elektromotor]]), Regelungstechnik ([[regelkreis]], [[drehzahlregelung]]), Sensorik ([[druckmessung]], [[flowsensor]]), Informatik und Recht.\n\n## Teilgebiete\n\n| Teilgebiet | Typische Fragestellung | Beispiele im Wiki |\n|---|---|---|\n| Diagnostik / Bildgebung | Wie wird Körperinneres sichtbar, wie wird Strahlendosis minimiert? | [[roentgengeraet]], [[computertomograph]], [[mrt]], [[ultraschallgeraet]] |\n| Patientenüberwachung (Monitoring) | Wie werden [[biosignale]] störarm erfasst und bewertet? | [[patientenmonitor]], [[ekg-geraet]], [[pulsoxymeter]], [[kapnometer]] |\n| Therapie und Lebenserhaltung | Wie wird eine Organfunktion sicher unterstützt oder ersetzt? | [[beatmungsgeraet]], [[dialysegeraet]], [[herz-lungen-maschine]], [[defibrillator]] |\n| Medikamentenapplikation | Wie wird ein Volumenstrom genau und überwacht gefördert? | [[infusionspumpe]], [[spritzenpumpe]], [[insulinpumpe]] |\n| Chirurgie und OP-Technik | Wie wird Gewebe präzise getrennt oder koaguliert? | [[hf-chirurgiegeraet]], [[endoskop]], [[op-roboter]], [[chirurgischer-laser]] |\n| Labor- und In-vitro-Diagnostik | Wie wird eine Probe reproduzierbar analysiert? | [[blutgasanalysator]], [[haematologie-analysator]] |\n| Strahlentherapie / Nuklearmedizin | Wie wird Dosis gezielt im Tumor deponiert? | [[linearbeschleuniger]], [[afterloader]], [[pet-ct]] |\n| Implantate und Prothetik | Wie arbeitet ein Gerät jahrelang im Körper? | [[herzschrittmacher]], [[icd]], [[cochlea-implantat]] |\n| Aufbereitung und Hygiene | Wie wird ein Produkt wieder sicher verwendbar? | [[dampfsterilisator]], [[rdg]], [[aufbereitung]] |\n\n## Physikalisch-technische Grundlagen\n\nFast jedes medizintechnische Gerät lässt sich als **Messkette** oder als **Regelkreis** beschreiben. In der Diagnostik wird eine physiologische Größe (Druck, Potenzial, Lichtabsorption) über einen Sensor in ein elektrisches Signal gewandelt, verstärkt, gefiltert, digitalisiert und ausgewertet ([[messkette]]). In der Therapie wird zusätzlich ein Stellglied angesteuert, dessen Wirkung erneut gemessen und mit dem Sollwert verglichen wird.\n\nFür einen Regelkreis gilt allgemein:\n\ne(t) = w(t) − y(t)\n\nmit Sollwert w, Istwert y und Regelabweichung e. Ein Regler (z. B. PI-Regler) berechnet daraus die Stellgröße u(t) = K_P · e(t) + K_I · ∫ e(t) dt.\n\n> [!vereinfacht] Reale Geräte enthalten verschachtelte Regelkreise: Im turbinengetriebenen Beatmungsgerät regelt ein innerer Kreis die Motordrehzahl, ein äußerer Kreis den Atemwegsdruck. Die hier gezeigte Formel beschreibt nur das Grundprinzip.\n\n### Beispielkette: vom Gerät zur Physik\n\nDie Stärke eines Wissensnetzes zeigt sich, wenn man einem Gerät bis in die Grundlagen folgt:\n\n1. [[beatmungsgeraet|Beatmungsgerät]] – erzeugt den Atemgasfluss für den Patienten.\n2. [[turbine|Turbine (Radialgebläse)]] – stellt Druck und Fluss aus Raumluft bereit.\n3. [[elektromotor|Elektromotor]] – meist ein [[bldc-motor|bürstenloser Gleichstrommotor]], treibt das Laufrad an.\n4. [[elektrotechnik|Elektrotechnik]] – Leistungselektronik, [[pwm|Pulsweitenmodulation]], [[mikrocontroller]].\n5. [[drehzahlregelung|Drehzahlregelung]] – passt die Drehzahl in Millisekunden an den Druck-Sollwert an.\n6. [[sensorik|Sensorik]] – liefert die Istwerte (Druck, Fluss, O₂).\n7. [[druckmessung|Druckmessung]] – z. B. über einen [[drucksensor|piezoresistiven Drucksensor]] und damit zur Physik des [[druck|Drucks]] p = F / A.\n\n## Sicherheit als Leitprinzip\n\nMedizintechnik unterscheidet sich von anderer Technik durch die besondere **Verletzlichkeit der Anwender und Patienten**: Patienten sind oft bewusstlos, narkotisiert oder über Katheter direkt elektrisch mit dem Gerät verbunden. Deshalb gelten eigene Sicherheitsnormen, allen voran die Normenreihe [[iec-60601-1|IEC 60601]] für [[medizinisches-elektrisches-geraet|medizinische elektrische Geräte]] [@iec-60601-1]. Wichtige Schutzkonzepte sind:\n\n* [[schutzklassen|Schutzklassen]] und [[anwendungsteile|Anwendungsteile]] (Typ B, BF, CF) zur Begrenzung von [[ableitstrom|Ableitströmen]] – begründet durch die [[elektrische-stromwirkung|Wirkung des elektrischen Stroms]] auf den Menschen [@iec-60479-1],\n* [[risikoklassen|Risikoklassen]] und das Risikomanagement nach [[iso-14971]] [@iso-14971],\n* [[gebrauchstauglichkeit|Gebrauchstauglichkeit]] zur Vermeidung von Anwendungsfehlern [@iec-62366-1],\n* [[alarmsystem|Alarmsysteme]] nach [[iec-60601-1-8]],\n* regelmäßige Prüfungen im Betrieb: [[stk|sicherheitstechnische Kontrollen]] und [[mtk|messtechnische Kontrollen]] nach der [[mpbetreibv|MPBetreibV]] [@mpbetreibv].\n\n> [!belegt] Nach der neu gefassten Medizinprodukte-Betreiberverordnung (2025) sind sicherheitstechnische Kontrollen in § 12 i. V. m. Anlage 1 geregelt; sie sind spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind durchzuführen. Messtechnische Kontrollen regelt § 15 i. V. m. Anlage 2 [@mpbetreibv].\n\nMehr dazu im Artikel [[patientensicherheit|Patientensicherheit und Medizintechnik]].\n\n## Rechtlicher Rahmen (Überblick)\n\n| Ebene | Regelwerk | Inhalt |\n|---|---|---|\n| EU | [[mdr|MDR]], [[ivdr|IVDR]] | Anforderungen an Hersteller, [[konformitaetsbewertung]], [[ce-kennzeichnung]], [[vigilanz]] |\n| Deutschland | [[mpdg|MPDG]] | Durchführung der EU-Verordnungen, Zuständigkeiten, Sanktionen [@mpdg] |\n| Deutschland | [[mpbetreibv|MPBetreibV]] | [[betreiberpflichten]]: Einweisung, STK, MTK, Dokumentation [@mpbetreibv] |\n| Deutschland | [[strlschg|StrlSchG]] / StrlSchV | Strahlenschutz bei Röntgen, Nuklearmedizin, Strahlentherapie [@strlschg] |\n| Normen | [[iec-60601-1]], [[iso-13485]], [[iso-14971]], [[iec-62304]], [[iec-62366-1]] | Stand der Technik, Konkretisierung der grundlegenden Anforderungen |\n\nDen Weg eines Produkts von der Idee bis zur Entsorgung beschreibt der Artikel [[lebenszyklus-medizinprodukt|Lebenszyklus eines Medizinprodukts]].\n\n## Medizintechnik im Krankenhaus\n\nIm Krankenhaus ist die Abteilung Medizintechnik (auch *Medizintechnik-Management*, [[medizintechnik-management]]) für den sicheren, wirtschaftlichen Betrieb des Gerätebestands zuständig. Typische Aufgaben:\n\n* Führen des [[bestandsverzeichnis|Bestandsverzeichnisses]] und der [[medizinproduktebuch|Medizinproduktebücher]],\n* Organisation von [[einweisung|Einweisungen]], [[stk|STK]], [[mtk|MTK]], [[wartung]], [[inspektion]] und [[instandsetzung]] gemäß [[instandhaltung-grundlagen|Grundlagen der Instandhaltung]] [@din-31051],\n* [[fehlersuche]] und Störungsbearbeitung, Meldung von Vorkommnissen ([[vigilanz]]),\n* Beratung bei Beschaffung, Integration in IT-Netze ([[dicom]], [[hl7-fhir]]) und Planung [[medizinisch-genutzte-bereiche|medizinisch genutzter Bereiche]].\n\nWelche Ausbildungswege in diese Tätigkeiten führen, beschreibt [[berufe-medizintechnik|Berufe in der Medizintechnik]].\n\n> [!praxis] Ein großer Teil der Störungsmeldungen in der Klinik betrifft nicht defekte Elektronik, sondern Zubehör (Kabel, Sensoren, Schläuche), Akkus und Bedienung. Strukturierte Fehlersuche beginnt deshalb beim Patienten und beim Zubehör, nicht beim Geräteinneren – siehe [[anwendungsfehler]] und [[akkufehler]].\n\n## Entwicklungslinien der Gegenwart\n\nMehrere Trends prägen das Fach derzeit und verändern auch die Arbeit von Medizintechniker:innen:\n\n| Trend | Technische Konsequenz | Bezug im Wiki |\n|---|---|---|\n| Vernetzung | Geräte tauschen Daten mit Krankenhausinformationssystemen aus; Schnittstellen, Netzwerksicherheit und Datenintegrität werden prüfrelevant | [[dicom]], [[hl7-fhir]] |\n| Software als Medizinprodukt | Funktionen wandern von Hardware in Software; Software-Lebenszyklus und Klassifizierung gewinnen an Gewicht [@mdcg-2019-11] | [[software-medizinprodukt]], [[iec-62304]] |\n| Versorgung zu Hause | Geräte werden von Laien bedient, oft akkubetrieben und unter wechselnden Umgebungsbedingungen [@iec-60601-1-11] | [[heimbeatmungsgeraet]], [[sauerstoffkonzentrator]], [[iec-60601-1-11]] |\n| Miniaturisierung | Implantierbare und tragbare Systeme mit sehr geringem Energiebedarf | [[insulinpumpe]], [[kapselendoskop]], [[lithium-ionen-akku]] |\n\n> [!hinweis] Mit jeder dieser Entwicklungen verschiebt sich ein Teil der Risiken von der Hardware zur Software, zur Bedienung und zur IT-Infrastruktur. Klassische elektrische Sicherheitsprüfungen bleiben notwendig, reichen aber allein nicht mehr aus.\n\n## Bedeutung in der Medizintechnik\n\nDieser Artikel ist der Einstiegspunkt in das Wiki. Wer ein Gerät verstehen will, sollte drei Ebenen verbinden:\n\n1. **Medizinischer Zweck** – Welche Körperfunktion wird gemessen oder unterstützt? (Kategorie [[anatomie]], [[fachbereiche]])\n2. **Technisches Prinzip** – Welche Physik, welche Komponenten, welche Sensoren? (Kategorien [[physik]], [[komponenten]], [[sensorik]], [[elektrotechnik]])\n3. **Sicherer Betrieb** – Welche Normen, Prüfungen und typischen Fehler gibt es? (Kategorien [[recht]], [[normen]], [[stk-mtk]], [[instandhaltung]], [[fehler]])\n\nGute Startpunkte sind die zentralen Geräte [[beatmungsgeraet]], [[patientenmonitor]], [[defibrillator]], [[infusionspumpe]] und [[dialysegeraet]]. Die historische Entwicklung des Fachs schildert [[geschichte-medizintechnik|Geschichte der Medizintechnik]].",
+  "related": [
+    "medizinprodukt",
+    "medizinisches-elektrisches-geraet",
+    "lebenszyklus-medizinprodukt",
+    "patientensicherheit",
+    "geschichte-medizintechnik",
+    "berufe-medizintechnik",
+    "gebrauchstauglichkeit",
+    "medizintechnik-management",
+    "mdr",
+    "mpbetreibv"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "elektrotechnik",
+      "drehzahlregelung",
+      "sensorik",
+      "druckmessung"
+    ],
+    [
+      "medizintechnik",
+      "medizinprodukt",
+      "risikoklassen",
+      "konformitaetsbewertung",
+      "ce-kennzeichnung"
+    ],
+    [
+      "medizintechnik",
+      "patientenmonitor",
+      "ekg-elektrode",
+      "instrumentenverstaerker",
+      "analog-digital-wandler"
+    ]
+  ],
+  "sources": [
+    "mdcg-2019-11",
+    "iec-60601-1-11",
+    "kramme-2017",
+    "wintermantel-2009",
+    "bronzino-2015",
+    "mdr-2017",
+    "mpdg",
+    "mpbetreibv",
+    "iec-60601-1",
+    "iso-14971",
+    "iec-62366-1",
+    "din-31051",
+    "iec-60479-1",
+    "strlschg"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

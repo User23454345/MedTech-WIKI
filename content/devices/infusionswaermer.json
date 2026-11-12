@@ -1,0 +1,59 @@
+{
+  "id": "infusionswaermer",
+  "type": "device",
+  "title": "Blut- und Infusionswärmer",
+  "aliases": [
+    "Blutwärmer",
+    "Infusionswärmegerät",
+    "Fluid warmer",
+    "Blood warmer",
+    "Druckinfusionssystem mit Wärmer"
+  ],
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 41,
+  "domains": [
+    "anaesthesiologie",
+    "intensivmedizin",
+    "notfallmedizin",
+    "chirurgie"
+  ],
+  "summary": "Blut- und Infusionswärmer erwärmen Infusionslösungen und Blutprodukte während der Gabe auf etwa Körpertemperatur. Sie beugen einer Auskühlung des Patienten bei großen Volumen- und Transfusionsmengen vor.",
+  "sections": {
+    "purpose": "Kühlschrankkalte Blutkonserven und raumtemperierte Infusionen entziehen dem Körper bei schneller Gabe großer Mengen erheblich Wärme. Eine perioperative Hypothermie verschlechtert Blutgerinnung, Wundheilung und Herz-Kreislauf-Funktion ([[thermoregulation]]). Wärmer werden daher bei Massivtransfusionen, in der Traumaversorgung und bei längeren Operationen eingesetzt, oft zusammen mit einem [[patientenwaermesystem]].",
+    "principle": "## Wärmeübertragung\n\nDie Wärme wird über eine Kontaktfläche auf die strömende Flüssigkeit übertragen ([[waermeuebertragung]]). Entscheidend ist, dass die Flüssigkeit bei der jeweiligen Durchflussrate genügend Verweilzeit und Kontaktfläche hat.\n\n| Bauart | Prinzip |\n|---|---|\n| Trockenwärmer (Platten/Kassette) | Ein Einweg-Wärmetauscher (Flachkanal oder Kassette) liegt zwischen elektrisch beheizten Platten ([[heizelement]]) |\n| Schlauchwärmer (Inline) | beheizte Hülle oder Leitung bis kurz vor den Zugang, verringert Abkühlung auf der Strecke |\n| Wasserbad-Gegenstromwärmer | temperiertes Wasser umströmt einen Doppelwandschlauch; hohe Leistung für Schnellinfusion |\n\n## Regelung und Sicherheit\n\n[[temperatursensor|Temperatursensoren]] (meist NTC) messen Heizfläche bzw. Austrittstemperatur; ein [[regelkreis]] steuert die Heizleistung, häufig per [[pwm]]. Eine unabhängige Übertemperaturabschaltung schützt vor Überhitzung, da zu heißes Blut zur Hämolyse führen kann ([[blut]]). Schnellinfusionssysteme kombinieren den Wärmer mit Druckinfusion und Luftabscheidung bzw. [[luftblasendetektor|Luftdetektion]].\n\n> [!warnung] Blutkonserven dürfen nur mit dafür zugelassenen Geräten erwärmt werden – nicht im Wasserbad, in der Mikrowelle oder auf Heizkörpern.\n\n> [!vereinfacht] Bei niedrigen Flussraten kühlt die Flüssigkeit im Schlauch nach dem Wärmer wieder ab; bei sehr hohen Flussraten reicht die Leistung kleiner Trockenwärmer unter Umständen nicht aus. Die Leistungsgrenzen sind der Gebrauchsanweisung zu entnehmen."
+  },
+  "manufacturers": [
+    {
+      "ref": "icu-medical",
+      "models": [
+        "Level 1"
+      ],
+      "note": "Schnellinfusions- und Wärmesysteme, ursprünglich Smiths Medical."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Reine Wärmegeräte sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Schnellinfusionssysteme mit Druckförderung können unter Anlage 1 Nr. 1.4 (Einbringung in den Blutkreislauf unter potenziellem Druckaufbau) fallen. Ansonsten Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Prüfungen nach Herstellerangabe, insbesondere Temperaturgenauigkeit und Auslösen der Übertemperaturabschaltung mit kalibriertem Thermometer; elektrische Wiederholungsprüfung nach IEC 62353 bzw. DGUV Vorschrift 3 gemäß Gefährdungsbeurteilung."
+  },
+  "related": [
+    "patientenwaermesystem",
+    "waermeuebertragung",
+    "infusionspumpe",
+    "thermoregulation",
+    "temperatursensor",
+    "heizelement"
+  ],
+  "sources": [
+    "larsen-2018",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

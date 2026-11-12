@@ -1,0 +1,44 @@
+{
+  "id": "ce-kennzeichnung",
+  "type": "term",
+  "title": "CE-Kennzeichnung",
+  "aliases": [
+    "CE-Zeichen",
+    "CE-Kennzeichen",
+    "CE marking",
+    "Conformité Européenne",
+    "EU-Konformitätserklärung",
+    "Declaration of Conformity",
+    "DoC"
+  ],
+  "category": "recht",
+  "summary": "Mit der CE-Kennzeichnung erklärt der Hersteller, dass ein Medizinprodukt die Anforderungen der MDR erfüllt und das vorgeschriebene Konformitätsbewertungsverfahren durchlaufen hat. Ist eine Benannte Stelle beteiligt, steht deren vierstellige Kennnummer neben dem CE-Zeichen.",
+  "body": "## Begriff\n\nDie **CE-Kennzeichnung** ist eine Kennzeichnung, mit der der Hersteller angibt, dass ein Produkt den geltenden Anforderungen der Harmonisierungsrechtsvorschriften der EU entspricht. Für Medizinprodukte definiert die [[mdr|MDR]] die CE-Konformitätskennzeichnung in Art. 2 Nr. 43 und regelt ihre Anbringung in Art. 20 und Anhang V [@mdr-2017]. Die allgemeinen Grundsätze der CE-Kennzeichnung für alle Produktbereiche stehen in Art. 30 der Verordnung (EG) Nr. 765/2008 [@vo-765-2008].\n\n> [!belegt] Die CE-Kennzeichnung ist **kein Qualitätssiegel** und kein Prüfzeichen einer unabhängigen Stelle. Sie ist eine Erklärung des Herstellers, dass er die einschlägigen Anforderungen erfüllt und das vorgeschriebene [[konformitaetsbewertung|Konformitätsbewertungsverfahren]] durchgeführt hat [@vo-765-2008] [@mdr-2017].\n\n## Voraussetzungen\n\nBevor der Hersteller das CE-Zeichen anbringen darf, muss er unter anderem [@mdr-2017]:\n\n1. das Produkt als [[medizinprodukt|Medizinprodukt]] einordnen und seine [[zweckbestimmung|Zweckbestimmung]] festlegen,\n2. die [[risikoklassen|Risikoklasse]] bestimmen,\n3. die **grundlegenden Sicherheits- und Leistungsanforderungen** nach Anhang I erfüllen – häufig unterstützt durch harmonisierte Normen wie [[iec-60601-1]], [[iso-14971]] oder [[iec-62304]],\n4. eine **technische Dokumentation** nach Anhang II und III erstellen,\n5. eine [[klinische-bewertung|klinische Bewertung]] durchführen,\n6. ein Qualitätsmanagementsystem betreiben (in der Praxis meist nach [[iso-13485]]),\n7. das klassenabhängige Konformitätsbewertungsverfahren abschließen – ab Klasse IIa (sowie bei Is/Im/Ir) unter Beteiligung einer [[benannte-stelle|Benannten Stelle]],\n8. eine **EU-Konformitätserklärung** nach Art. 19 und Anhang IV ausstellen und das Produkt mit einer [[udi|UDI]] versehen.\n\n```\nKlassifizierung → Anforderungen erfüllen → Technische Dokumentation\n→ Konformitätsbewertung → EU-Konformitätserklärung → CE-Kennzeichnung → Inverkehrbringen\n```\n\n## Gestaltung und Anbringung\n\n| Aspekt | Regelung (mit eigenen Worten) |\n|---|---|\n| Form | festgelegtes Schriftbild „CE“; bei Vergrößerung/Verkleinerung Proportionen beibehalten [@vo-765-2008] |\n| Mindesthöhe | 5 mm, soweit für sehr kleine Produkte keine Ausnahme gilt [@mdr-2017] |\n| Ort | gut sichtbar, leserlich und dauerhaft auf dem Produkt bzw. seiner sterilen Verpackung, außerdem auf der Gebrauchsanweisung und der Handelsverpackung [@mdr-2017] |\n| Kennnummer | Ist eine Benannte Stelle am Konformitätsbewertungsverfahren beteiligt, folgt ihre vierstellige Kennnummer dem CE-Zeichen |\n| Zeitpunkt | vor dem Inverkehrbringen |\n\n> [!beispiel] Auf dem Typenschild eines [[beatmungsgeraet|Beatmungsgeräts]] (typisch Klasse IIb) steht das CE-Zeichen zusammen mit einer vierstelligen Nummer – das ist die Kennnummer der Benannten Stelle, nicht etwa eine Seriennummer. Auf einem [[pflegebett|Pflegebett]] der Klasse I fehlt diese Nummer in der Regel, weil der Hersteller die Konformität ohne Benannte Stelle erklärt.\n\n## Produkte ohne CE-Kennzeichnung\n\nNicht jedes Medizinprodukt im Krankenhaus trägt ein CE-Zeichen [@mdr-2017]:\n\n| Produktart | Situation |\n|---|---|\n| **Sonderanfertigungen** | individuell nach schriftlicher Verordnung gefertigt; kein CE-Zeichen, aber eine Erklärung nach Anhang XIII |\n| **Prüfprodukte** | für klinische Prüfungen; kein CE-Zeichen |\n| **Eigenherstellungen in Gesundheitseinrichtungen** | unter den Bedingungen von Art. 5 Abs. 5 MDR ohne CE-Kennzeichnung zulässig |\n| **Altprodukte** | Produkte mit Bescheinigungen nach den früheren Richtlinien dürfen innerhalb der Übergangsfristen weiter in Verkehr gebracht werden; sie tragen das CE-Zeichen nach altem Recht [@vo-2023-607] |\n\n> [!hinweis] Die Übergangsfristen für Altprodukte wurden durch die Verordnung (EU) 2023/607 verlängert und sind an Bedingungen geknüpft [@vo-2023-607]. Für die Beurteilung eines konkreten Produkts sind die jeweils gültigen Fristen und die Herstellerangaben maßgeblich.\n\n## EU-Konformitätserklärung\n\nDie **EU-Konformitätserklärung** (Declaration of Conformity) ist das Dokument hinter dem CE-Zeichen. Sie enthält unter anderem Hersteller, Produktbezeichnung, Basis-UDI-DI, Risikoklasse, angewandte Rechtsvorschriften, ggf. Benannte Stelle und Bescheinigungsnummer sowie Verweise auf angewandte Normen oder gemeinsame Spezifikationen [@mdr-2017]. Mit ihr übernimmt der Hersteller die Verantwortung für die Konformität.\n\n## Missbrauch und Marktüberwachung\n\nEin CE-Zeichen ohne durchlaufenes Verfahren oder auf einem Produkt, das die Anforderungen nicht erfüllt, ist rechtswidrig. Die Marktüberwachung obliegt den zuständigen Behörden der Mitgliedstaaten; in Deutschland sind die Landesbehörden zuständig, das [@bfarm] bewertet Risiken von Medizinprodukten [@mpdg].\n\n> [!warnung] Wird ein CE-gekennzeichnetes Gerät durch nicht freigegebene Umbauten, Ersatzteile oder Software verändert, kann die Konformitätsaussage des Herstellers ihre Gültigkeit für dieses Gerät verlieren. Wer ein Produkt wesentlich verändert, kann selbst Herstellerpflichten übernehmen (Art. 16 MDR) [@mdr-2017].\n\n## Bedeutung in der Medizintechnik\n\nFür Medizintechniker:innen ist die CE-Kennzeichnung bei mehreren Gelegenheiten zu prüfen:\n\n* **Wareneingang und Inbetriebnahme:** Trägt das Gerät CE-Zeichen, ggf. Kennnummer und [[udi|UDI]]? Liegen Gebrauchsanweisung und Konformitätserklärung vor? Erst danach folgen Eintrag in das [[bestandsverzeichnis]], [[funktionspruefung]] und [[einweisung]].\n* **Systemkombinationen:** Bei der Kopplung mehrerer Geräte – etwa [[patientenmonitor]], [[infusionspumpe]] und Datennetz – muss geklärt sein, ob die Kombination durch die Zweckbestimmungen gedeckt ist.\n* **Ersatzteile und Zubehör:** Zubehör ist selbst CE-pflichtig; Nachbau-Zubehör ist nur dann unproblematisch, wenn dessen Hersteller die Kompatibilität mit dem Gerät belegt.\n* **Elektrische Sicherheit:** Die normgerechte Auslegung nach [[iec-60601-1]] ist Teil der Konformität; im Betrieb wird sie durch [[stk]] und [[elektrische-sicherheitspruefung|Prüfungen nach IEC 62353]] überwacht.\n\n## Hinweis\n\nMaßgeblich sind die jeweils gültigen Fassungen der MDR, der Verordnung (EG) Nr. 765/2008 und der nationalen Vorschriften.",
+  "related": [
+    "konformitaetsbewertung",
+    "benannte-stelle",
+    "risikoklassen",
+    "udi",
+    "mdr",
+    "iso-13485",
+    "medizinprodukt",
+    "klinische-bewertung"
+  ],
+  "paths": [
+    [
+      "risikoklassen",
+      "konformitaetsbewertung",
+      "benannte-stelle",
+      "ce-kennzeichnung"
+    ]
+  ],
+  "sources": [
+    "mdr-2017",
+    "vo-765-2008",
+    "vo-2023-607",
+    "mpdg",
+    "bfarm"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

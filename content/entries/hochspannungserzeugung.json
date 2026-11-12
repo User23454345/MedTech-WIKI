@@ -1,0 +1,177 @@
+{
+  "id": "hochspannungserzeugung",
+  "type": "term",
+  "title": "Hochspannungserzeugung",
+  "aliases": [
+    "Hochspannungsgenerator",
+    "Röntgengenerator",
+    "Hochfrequenzgenerator",
+    "Konvertergenerator",
+    "High-voltage generator",
+    "HV-Generator",
+    "Spannungsvervielfacher",
+    "Greinacher-Kaskade",
+    "Cockcroft-Walton-Schaltung",
+    "Hochspannungstransformator",
+    "Pulsmodulator"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Hochspannungserzeugung bezeichnet die Schaltungstechnik, mit der aus Netz- oder Akkuspannung Spannungen im Kilovoltbereich gewonnen und geregelt werden. In der Medizintechnik ist sie Kernbestandteil von Röntgen- und CT-Generatoren, Defibrillatoren und Linearbeschleunigern; moderne Generatoren arbeiten mit Wechselrichtern im Kilohertzbereich, kompakten Transformatoren und Spannungsvervielfachern.",
+  "body": "## Überblick\n\nMehrere zentrale Gerätegruppen der Medizintechnik benötigen Spannungen weit oberhalb der Netzspannung. **Hochspannungserzeugung** umfasst die Schaltungstechnik, mit der aus Netz- oder Akkuspannung Spannungen im Kilovolt-Bereich gewonnen, geregelt und sicher beherrscht werden.\n\n| Anwendung | Größenordnung | Zweck |\n|---|---|---|\n| [[roentgengeraet|Projektionsradiographie]], [[c-bogen]] | etwa 40–150 kV | Beschleunigung der Elektronen in der [[roentgenroehre|Röntgenröhre]] |\n| [[computertomograph|Computertomographie]] | typisch etwa 70–140 kV | wie oben, mit sehr hoher Leistung und Dauerbelastung |\n| [[mammographiegeraet|Mammographie]] | typisch etwa 25–35 kV | weiche Strahlung für hohen Weichteilkontrast |\n| [[defibrillator]] | einige hundert Volt bis wenige kV | Ladung des Energiespeicher-[[kondensator|Kondensators]] |\n| [[linearbeschleuniger|Medizinischer Linearbeschleuniger]] | gepulst, Kilovolt-Bereich | Pulsmodulator für die HF-Quelle (Magnetron oder Klystron) |\n| [[hf-chirurgiegeraet|HF-Chirurgie]] | Spitzenspannungen bis in den kV-Bereich | Koagulation und Funkenbildung |\n\n> [!hinweis] Die Spannungsbereiche sind typische Größenordnungen aus der Fachliteratur; konkrete Geräte können abweichen [@bushberg-2020] [@krieger-strahlungsquellen-2018].\n\n## Physikalische Grundlagen\n\n### Transformator\n\nGrundbaustein fast jeder Hochspannungserzeugung ist der [[transformator|Transformator]]. Im idealen Fall gilt für das Übersetzungsverhältnis:\n\n`U₂ / U₁ = N₂ / N₁`\n\nDie induzierte Spannung hängt nach dem Induktionsgesetz ([[elektromagnetische-induktion]]) von Frequenz, Windungszahl und Kernquerschnitt ab. Für sinusförmige Spannung gilt die Transformatorhauptgleichung:\n\n`U_eff = 4,44 · f · N · A · B̂`\n\nmit Frequenz f, Windungszahl N, Kernquerschnitt A und Scheitelwert der magnetischen Flussdichte B̂. Daraus folgt eine wichtige Konsequenz: **Bei höherer Frequenz genügt ein kleinerer Kern** für dieselbe Spannung. Das ist der Grund, warum moderne Generatoren mit Frequenzen im Kilohertz-Bereich statt mit 50 Hz arbeiten.\n\n### Gleichrichtung und Spannungsvervielfachung\n\nRöntgenröhren benötigen eine möglichst konstante Gleichspannung. Nach dem Hochspannungstransformator folgt daher eine Gleichrichtung. Eine Alternative oder Ergänzung zu sehr hohen Windungszahlen ist die **Spannungsvervielfacher-Kaskade** (Greinacher- bzw. Cockcroft-Walton-Schaltung) aus Dioden und Kondensatoren. Im Leerlauf liefert eine Kaskade mit n Stufen idealerweise:\n\n`U_aus ≈ 2 · n · Û`\n\nwobei Û der Scheitelwert der Wechselspannung am Eingang ist. Unter Last sinkt die Spannung und die Welligkeit steigt, umso stärker, je mehr Stufen und je kleiner Kapazitäten und Frequenz sind [@tietze-schenk-2019].\n\n> [!vereinfacht] Die Formel gilt nur für eine ideale, unbelastete Kaskade. Reale Schaltungen müssen Spannungsabfall und Welligkeit berücksichtigen; deshalb werden Vervielfacher meist mit hohen Frequenzen betrieben.\n\n## Der Röntgengenerator\n\n### Entwicklung der Generatorbauarten\n\n| Bauart | Prinzip | Spannungswelligkeit |\n|---|---|---|\n| Ein-/Zweipulsgenerator | Netztransformator mit Gleichrichter, einphasig | sehr hoch, nahezu 100 % (Spannung pulsiert mit einfacher bzw. doppelter Netzfrequenz) |\n| Sechs-/Zwölfpulsgenerator | Drehstromtransformator mit Gleichrichterbrücken | deutlich geringer |\n| Hochfrequenz- bzw. Konvertergenerator | Gleichrichter – Zwischenkreis – Wechselrichter – HV-Transformator – HV-Gleichrichter | gering, gut regelbar |\n\nHeute dominieren **Hochfrequenzgeneratoren** [@bushberg-2020] [@kramme-2017]. Ihr Aufbau:\n\n1. **Netzgleichrichter und Zwischenkreis:** Die Netzspannung wird gleichgerichtet und in einem Kondensator-Zwischenkreis geglättet.\n2. **Wechselrichter:** Leistungshalbleiter (z. B. IGBT) erzeugen daraus eine Wechselspannung im Kilohertz-Bereich; häufig wird ein Resonanzwandler verwendet.\n3. **Hochspannungstransformator:** transformiert auf Hochspannung; wegen der hohen Frequenz kompakt, meist in Öl oder Vergussmasse isoliert.\n4. **Hochspannungsgleichrichter:** Diodenkaskaden, oft mit Vervielfacherstufen.\n5. **Regelung:** Ein Hochspannungsteiler misst die Röhrenspannung; ein [[regelkreis|Regler]] passt Frequenz oder Pulsbreite ([[pwm]]) des Wechselrichters an.\n\nHäufig wird die Hochspannung **symmetrisch** erzeugt (z. B. ±75 kV gegen Erde für 150 kV an der Röhre). Jede Hälfte der Isolation muss dann nur die halbe Spannung gegen Erde beherrschen.\n\n### Zusammenhang mit der Strahlung\n\nDie Röhrenspannung bestimmt die maximale Energie der Bremsstrahlungsphotonen ([[roentgenstrahlung]]):\n\n`E_max = e · U`\n\nBei 100 kV beträgt die maximale Photonenenergie also 100 keV. Der Röhrenstrom (mA) wird dagegen über die Heizung der Kathode eingestellt – Hochspannungskreis und Heizkreis sind getrennte, aber gekoppelt geregelte Systeme.\n\n> [!belegt] Eine geringe Spannungswelligkeit führt zu einem härteren, gleichmäßigeren Spektrum und damit zu einer höheren Strahlungsausbeute pro mAs als bei pulsierender Spannung; deshalb ersetzen Hochfrequenzgeneratoren die älteren Bauarten [@bushberg-2020].\n\nBeim [[computertomograph|CT]] sitzt der Hochspannungsgenerator meist auf dem rotierenden Teil der [[gantry]]; die Leistung wird über Schleifringe übertragen.\n\n## Hochspannung im Defibrillator\n\nDer [[defibrillator]] speichert die Therapieenergie in einem Kondensator. Ein Gleichspannungswandler (häufig ein Sperrwandler) lädt ihn aus dem [[lithium-ionen-akku|Akku]] oder dem Netzteil auf. Die gespeicherte Energie beträgt:\n\n`W = ½ · C · U²`\n\n> [!beispiel] Ein Kondensator mit C = 150 µF soll 200 J speichern. Dann gilt U = √(2W / C) = √(2 · 200 J / 150 µF) ≈ 1,6 kV. Die Werte sind beispielhaft und entsprechen keinem bestimmten Gerät.\n\nBei biphasischen Defibrillatoren wird die Entladung über eine Halbleiter-Brückenschaltung geführt, die nach einer festgelegten Zeit die Stromrichtung umkehrt; die [[defibrillationselektroden]] übertragen den Impuls auf den Patienten. Nicht abgegebene Energie wird über einen internen Lastwiderstand sicher entladen.\n\n## Hochspannung im Linearbeschleuniger\n\nIm [[linearbeschleuniger]] erzeugt ein **Pulsmodulator** kurze Hochspannungsimpulse im Mikrosekundenbereich, mit denen Magnetron oder Klystron die Mikrowellenleistung für die Beschleunigungsstrecke liefern [@krieger-strahlungsquellen-2018].\n\n## Anwendung in Geräten und Instandhaltung\n\n* **Abnahme- und Konstanzprüfung:** Die Röhrenspannung wird bei Abnahmeprüfung und Wartung von Röntgeneinrichtungen nichtinvasiv mit kV-Messgeräten überprüft (siehe [[pruefgeraete]]); die regelmäßige [[konstanzpruefung]] erfasst Abweichungen der Generatorleistung indirekt über Dosis- und Bildqualitätskenngrößen an Prüfkörpern.\n* **Typische Fehlerbilder:** Hochspannungsüberschläge (Röhre, Kabel, Stecker), Ölalterung, defekte Gleichrichter oder Wechselrichter-Halbleiter, Ausfälle der Regelung.\n* **Defibrillator:** Ladezeit und abgegebene Energie werden bei der [[stk|STK]] mit einem Defibrillator-Analysator geprüft.\n\n> [!warnung] Hochspannungsbaugruppen können auch nach dem Ausschalten gefährliche Restladungen in Kondensatoren und Kabeln halten. Arbeiten an Hochspannungskreisen dürfen nur durch dafür ausgebildetes und befugtes Fachpersonal mit geeigneten Messmitteln und nach Herstellervorgaben erfolgen. Schutzeinrichtungen und Entladeschaltungen dürfen nicht umgangen werden.\n\nSiehe auch: [[schutzklassen]], [[emv]], [[elektrotechnik]].\n",
+  "related": [
+    "transformator",
+    "kondensator",
+    "roentgenroehre",
+    "roentgenstrahlung",
+    "elektromagnetische-induktion",
+    "regelkreis",
+    "pwm",
+    "defibrillator",
+    "roentgengeraet",
+    "computertomograph",
+    "linearbeschleuniger",
+    "konstanzpruefung"
+  ],
+  "paths": [
+    [
+      "roentgengeraet",
+      "hochspannungserzeugung",
+      "transformator",
+      "roentgenroehre",
+      "roentgenstrahlung"
+    ],
+    [
+      "defibrillator",
+      "hochspannungserzeugung",
+      "kondensator",
+      "defibrillationselektroden"
+    ]
+  ],
+  "diagram": {
+    "title": "Hochfrequenz-Röntgengenerator",
+    "caption": "Funktionsschema eines Konverter-Generators mit Spannungsregelung. Kein konkretes Gerät.",
+    "width": 900,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "netz",
+        "label": "Netz\n(Drehstrom)",
+        "kind": "source",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "id": "gl",
+        "label": "Gleichrichter +\nZwischenkreis",
+        "ref": "kondensator",
+        "kind": "process",
+        "x": 280,
+        "y": 90
+      },
+      {
+        "id": "wr",
+        "label": "Wechselrichter\n(kHz-Bereich)",
+        "ref": "pwm",
+        "kind": "actuator",
+        "x": 470,
+        "y": 90
+      },
+      {
+        "id": "tr",
+        "label": "HV-Transformator",
+        "ref": "transformator",
+        "kind": "process",
+        "x": 660,
+        "y": 90
+      },
+      {
+        "id": "hvg",
+        "label": "HV-Gleichrichter /\nKaskade",
+        "kind": "process",
+        "x": 660,
+        "y": 240
+      },
+      {
+        "id": "roe",
+        "label": "Röntgenröhre",
+        "ref": "roentgenroehre",
+        "kind": "output",
+        "x": 840,
+        "y": 240,
+        "w": 110
+      },
+      {
+        "id": "mess",
+        "label": "kV-Messung\n(Spannungsteiler)",
+        "kind": "sensor",
+        "x": 470,
+        "y": 240
+      },
+      {
+        "id": "reg",
+        "label": "kV-Regler",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 280,
+        "y": 240
+      }
+    ],
+    "edges": [
+      {
+        "from": "netz",
+        "to": "gl",
+        "kind": "power"
+      },
+      {
+        "from": "gl",
+        "to": "wr",
+        "kind": "power",
+        "label": "DC"
+      },
+      {
+        "from": "wr",
+        "to": "tr",
+        "kind": "power",
+        "label": "AC, kHz"
+      },
+      {
+        "from": "tr",
+        "to": "hvg",
+        "kind": "power"
+      },
+      {
+        "from": "hvg",
+        "to": "roe",
+        "kind": "power",
+        "label": "kV"
+      },
+      {
+        "from": "hvg",
+        "to": "mess",
+        "kind": "signal"
+      },
+      {
+        "from": "mess",
+        "to": "reg",
+        "kind": "signal",
+        "label": "Istwert"
+      },
+      {
+        "from": "reg",
+        "to": "wr",
+        "kind": "signal",
+        "label": "Stellgröße"
+      }
+    ]
+  },
+  "sources": [
+    "bushberg-2020",
+    "krieger-strahlungsquellen-2018",
+    "kramme-2017",
+    "tietze-schenk-2019",
+    "mohan-2003",
+    "doessel-2016"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,62 @@
+{
+  "id": "leckage",
+  "type": "fault",
+  "title": "Leckagealarm (Beatmung)",
+  "aliases": [
+    "Leckage",
+    "Leck",
+    "Leak-Alarm",
+    "Undichtigkeit Schlauchsystem",
+    "Leckagealarm"
+  ],
+  "category": "fehler",
+  "summary": "Alarm von Beatmungs- und Narkosegeräten, wenn ein relevanter Teil des abgegebenen Gasvolumens nicht über den Exspirationszweig zurückkehrt. Ursache ist eine Undichtigkeit zwischen Gerät und Lunge, etwa am Schlauchsystem, am Tubus-Cuff oder an der Maske.",
+  "devices": [
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "transportbeatmungsgeraet",
+    "heimbeatmungsgeraet",
+    "cpap-geraet"
+  ],
+  "causes": [
+    "Undichte oder nicht korrekt aufgesteckte Verbindungen im Schlauchsystem (Y-Stück, Filter, [[atemgasbefeuchter|Befeuchterkammer]], Wasserfalle, Temperaturfühler-Port).",
+    "Nicht ausreichend geblockter oder defekter Tubus- bzw. Trachealkanülen-Cuff, Tubusfehllage.",
+    "Schlecht sitzende oder falsch dimensionierte Maske bei nichtinvasiver Beatmung (NIV), Mundleckage.",
+    "Patientenseitige Leckagen, z. B. bronchopleurale Fistel oder liegende Thoraxdrainage.",
+    "Am [[anaesthesiegeraet|Narkosegerät]]: lockerer [[co2-absorber|CO₂-Absorberbehälter]], undichter [[narkosemittelverdampfer|Verdampfer]]-Sitz, beschädigter Handbeatmungsbeutel, offenes APL-Ventil.",
+    "Defektes oder falsch eingesetztes [[exspirationsventil]] (Membran, Dichtungen).",
+    "Messfehler: verschmutzter oder nicht kalibrierter [[flowsensor]], der ein zu kleines Exspirationsvolumen misst (siehe [[sensordrift]])."
+  ],
+  "actions": [
+    "**Ventilation sicherstellen:** Patienten beurteilen (Thoraxexkursion, SpO₂, etCO₂); bei unzureichender Beatmung manuell mit Beatmungsbeutel weiterbeatmen.",
+    "Schlauchsystem systematisch vom Patienten zum Gerät abtasten bzw. abhören; alle Konnektoren fest aufstecken.",
+    "Cuffdruck mit Cuffdruckmesser kontrollieren; bei Verdacht auf Tubusfehllage ärztliches Personal hinzuziehen.",
+    "Bei NIV Maskensitz und -größe prüfen, Leckagekompensation des Geräts beachten.",
+    "Defekte Teile (Schlauch, Filter, Befeuchterkammer) austauschen; nach Systemwechsel den Geräteselbsttest (Leckage-/Compliance-Test) bei nächster Gelegenheit durchführen.",
+    "Bestehen Leckage oder unplausible Volumina weiter, [[flowsensor]] kalibrieren oder tauschen; anschließend Gerät durch die Medizintechnik prüfen lassen."
+  ],
+  "body": "## Technischer Hintergrund\n\nEin [[beatmungsgeraet|Beatmungsgerät]] misst mit [[flowsensor|Flowsensoren]] das inspiratorische Tidalvolumen (VTi) und das exspiratorische Tidalvolumen (VTe). In einem dichten System sind beide nahezu gleich. Die Differenz ist die **Leckage** [@oczenski-2017]:\n\n> [!vereinfacht] Leckageanteil ≈ (VTi − VTe) / VTi. Bei 500 ml Inspiration und 400 ml Exspiration gehen rund 20 % des Volumens verloren. Kompressionsvolumen des Schlauchsystems und Gasbedingungen (Temperatur, Feuchte, siehe [[gasgesetze]]) werden je nach Gerät rechnerisch kompensiert; die angezeigte Leckage ist daher ein geräteabhängig berechneter Wert.\n\nÜberschreitet die Leckage eine einstellbare oder vom Hersteller festgelegte Schwelle, entsteht eine technische Alarmbedingung. Häufig wird sie mit **niedrigem Minutenvolumen** oder **niedrigem Tidalvolumen** kombiniert, weil dem Patienten Volumen fehlt [@iso-80601-2-12].\n\n### Invasive und nichtinvasive Beatmung\n\n| Beatmungsform | Rolle der Leckage |\n|---|---|\n| Invasiv (Tubus, Kanüle) | Leckage ist unerwünscht und deutet auf ein Problem hin |\n| NIV mit Zweischlauchsystem | Leckage an der Maske ist unvermeidbar; das Gerät kompensiert sie bis zu einer Grenze |\n| NIV/CPAP mit Einschlauchsystem | Gewollte Leckage über ein Ausatemsystem dient dem CO₂-Auswaschen; nur ungewollte Leckage wird bewertet |\n\nEine Leckage beeinflusst nicht nur das Volumen, sondern auch die **Triggerung**: Geht ständig Gas verloren, kann das Gerät den Flowabfall als Einatembemühung missdeuten (Autotriggerung). Moderne Geräte schätzen die Leckage deshalb laufend und passen Trigger und Zyklus an [@tobin-2013].\n\nAm [[anaesthesiegeraet|Anästhesiearbeitsplatz]] führt eine Leckage im Kreissystem außerdem zu Narkosegasbelastung der Raumluft und erhöhtem Frischgasbedarf. Der Selbsttest vor Inbetriebnahme prüft daher Dichtheit und Compliance des Atemsystems [@dorsch-2008] [@iso-80601-2-13-2022].\n\n### Alarmpriorität\n\nEine geringe Leckage ist meist ein Alarm niedriger oder mittlerer Priorität; geht so viel Volumen verloren, dass die Ventilation nicht mehr gesichert ist, greifen Volumen-, Druck- oder Apnoealarme hoher Priorität nach [[iec-60601-1-8]]. Der Übergang zur [[diskonnektion]] ist fließend.\n\n## Systematische Fehlersuche\n\n| Symptom | Prüfung | Abhilfe |\n|---|---|---|\n| VTe deutlich kleiner als VTi, Zischgeräusch | Konnektoren, Filter, Befeuchter, Wasserfalle | Fest aufstecken, defekte Teile ersetzen |\n| Leckage atemsynchron, Gurgeln im Rachen | Cuffdruck, Tubuslage | Cuff nachblocken, ärztliche Lagekontrolle |\n| Hohe Leckage bei NIV | Maskengröße, Sitz, Mundöffnung | Maske anpassen oder wechseln |\n| Leckage nach Systemwechsel | Komponenten vollständig montiert? | Selbsttest wiederholen |\n| Narkosegerät: Selbsttest Dichtheit nicht bestanden | Absorberbehälter, Verdampfer, Beutel, APL-Ventil | Sitz prüfen, Teile tauschen; bei Fortbestehen Gerät sperren |\n| Leckage ohne Undichtigkeit | Flowsensor-Kalibrierung, Feuchtigkeit im Sensor | Kalibrieren, tauschen; Medizintechnik informieren |\n\n## Prävention\n\n- Schlauchsysteme nach Gebrauchsanweisung montieren und vor Patientenanschluss Selbsttest durchführen.\n- Cuffdruck regelmäßig kontrollieren; Kondensat aus Wasserfallen ablassen, ohne das System offen zu lassen.\n- Nur kompatible Einwegartikel verwenden.\n- Dichtungen und [[exspirationsventil|Exspirationsventile]] im Rahmen von [[wartung]] und [[stk]] nach Herstellerangabe prüfen bzw. tauschen [@mpbetreibv].\n\n> [!hinweis] Herstellerspezifische Fehlercodes und Grenzwerte für den Dichtheitstest stehen in den Service-Unterlagen (siehe [[fehlercodes]]). Leckagealarme gibt es auch an anderen Gerätetypen, etwa am [[npwt-geraet|Unterdruck-Wundtherapiegerät]] oder an [[ipk-geraet|Kompressionsgeräten]]; das Prinzip – Soll-Ist-Vergleich von Druck oder Volumen – ist vergleichbar.",
+  "related": [
+    "diskonnektion",
+    "atemwegsdruck-hoch",
+    "flowsensor",
+    "exspirationsventil",
+    "beatmungsgeraet",
+    "anaesthesiegeraet",
+    "atemmechanik",
+    "iso-80601-2-12",
+    "iso-80601-2-13",
+    "npwt-geraet"
+  ],
+  "sources": [
+    "oczenski-2017",
+    "tobin-2013",
+    "dorsch-2008",
+    "iso-80601-2-12",
+    "iso-80601-2-13-2022",
+    "iec-60601-1-8",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

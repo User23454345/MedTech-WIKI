@@ -1,0 +1,103 @@
+{
+  "id": "hillrom",
+  "type": "manufacturer",
+  "title": "Hillrom",
+  "aliases": [
+    "Hill-Rom",
+    "Hill-Rom Holdings",
+    "Welch Allyn",
+    "Liko",
+    "Mortara",
+    "TRUMPF Medical"
+  ],
+  "category": "hersteller",
+  "summary": "Hillrom (Hill-Rom) ist ein US-amerikanischer Hersteller von Klinikbetten, Patientenhandling, OP-Ausstattung, Vitaldatenmessung und Diagnostikgeräten. Seit 2021 gehört Hillrom mit den Marken Welch Allyn, Liko und Mortara zu Baxter.",
+  "headquarters": "Chicago, Illinois, USA",
+  "founded": "1929",
+  "website": "https://www.hillrom.com/",
+  "productLines": [
+    {
+      "device": "pflegebett",
+      "models": [
+        "Centrella",
+        "Progressa"
+      ],
+      "note": "Klinik- und Intensivbetten."
+    },
+    {
+      "device": "antidekubitussystem",
+      "models": [],
+      "note": "Therapie- und Matratzensysteme für Klinikbetten."
+    },
+    {
+      "device": "patientenlifter",
+      "models": [
+        "Liko"
+      ],
+      "note": "Decken- und Mobillifter der Marke Liko."
+    },
+    {
+      "device": "op-tisch",
+      "models": [
+        "TruSystem"
+      ],
+      "note": "Ursprünglich TRUMPF Medical."
+    },
+    {
+      "device": "op-leuchte",
+      "models": [
+        "TruLight"
+      ],
+      "note": "Ursprünglich TRUMPF Medical."
+    },
+    {
+      "device": "nibp-messgeraet",
+      "models": [
+        "Welch Allyn Connex Spot Monitor"
+      ],
+      "note": "Marke Welch Allyn."
+    },
+    {
+      "device": "thermometer",
+      "models": [
+        "SureTemp Plus"
+      ],
+      "note": "Marke Welch Allyn."
+    },
+    {
+      "device": "ekg-geraet",
+      "models": [
+        "ELI 280"
+      ],
+      "note": "Produktlinie ursprünglich von Mortara Instrument."
+    },
+    {
+      "device": "langzeit-blutdruck",
+      "models": [
+        "Welch Allyn ABPM 7100"
+      ],
+      "note": "Marke Welch Allyn."
+    }
+  ],
+  "body": "## Überblick\n\n**Hillrom** (früher Hill-Rom Holdings) war bis 2021 ein eigenständiger, börsennotierter US-Medizintechnikkonzern mit Sitz in Chicago und traditionellem Produktionsstandort in Batesville (Indiana) [@hillrom-web]. Seit der Übernahme durch [[baxter]] im Jahr 2021 ist Hillrom Teil des Baxter-Konzerns; die Marken werden weitergeführt.\n\n## Geschichte in Stichpunkten\n\n* **1929:** Gründung in Batesville (Indiana) im Umfeld der Familie Hillenbrand; frühe Produkte waren Krankenhausmöbel und -betten.\n* **20. Jahrhundert:** Entwicklung zu einem führenden Anbieter elektrisch verstellbarer Klinik- und Intensivbetten.\n* **2008:** Übernahme des schwedischen Lifterherstellers **Liko**.\n* **2014:** Übernahme von **TRUMPF Medical** (OP-Tische, OP-Leuchten, Deckenversorgungseinheiten).\n* **2015:** Übernahme von **Welch Allyn** (Diagnostikgeräte, Vitaldatenmessung).\n* **2017:** Übernahme von **Mortara Instrument** (EKG und kardiologische Diagnostik).\n* **2021:** Übernahme durch **Baxter International**.\n\n## Geschäftsbereiche (Marken und Produkte)\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Betten und Oberflächen | [[pflegebett|Klinik- und Intensivbetten]], [[antidekubitussystem|Therapiematratzen]] |\n| Patientenhandling | [[patientenlifter|Lifter]] (Liko) |\n| OP-Ausstattung | [[op-tisch|OP-Tische]], [[op-leuchte|OP-Leuchten]], Deckenversorgungseinheiten |\n| Diagnostik und Vitaldaten | [[nibp-messgeraet|Blutdruckmessung]], [[thermometer|Thermometrie]], [[ekg-geraet|Ruhe-EKG]], [[langzeit-blutdruck|Langzeit-Blutdruckmessung]] (Welch Allyn, Mortara) |\n| Kommunikation | Schwesternruf- und Kommunikationssysteme |\n\n## Bedeutung für die Medizintechnik\n\nHillrom-Produkte finden sich in vielen Krankenhäusern – vom Intensivbett über die OP-Ausstattung bis zum Vitaldatengerät auf Normalstation. Elektrisch verstellbare Betten sind Medizinprodukte mit eigenen Gefährdungen (Einklemmen, Überlast, Netzkabelschäden); die besonderen Anforderungen an medizinische Betten sind in einem eigenen besonderen Teil der Normenreihe [[iec-60601-1|IEC 60601]] festgelegt (IEC 60601-2-52), u. a. zu Lückenmaßen an Seitensicherungen gegen Einklemmen, sicherer Arbeitslast und Standsicherheit.\n\n> [!praxis] Durch die vielen Übernahmen tragen Geräte unterschiedliche Markennamen (Hill-Rom, Welch Allyn, Liko, Mortara, TRUMPF Medical). Bei Ersatzteilen, Software-Updates und Sicherheitsmitteilungen ist zu prüfen, welcher Rechtsträger aktuell als Hersteller auftritt; Betreiber sollten diesen im [[bestandsverzeichnis]] und in Serviceverträgen pflegen, damit Sicherheitsinformationen im Rahmen der [[vigilanz]] zuverlässig ankommen.\n\n> [!hinweis] Die Zuordnung einzelner Produktlinien (z. B. der ehemaligen TRUMPF-Medical-OP-Ausstattung) zum Baxter-Konzern kann sich durch spätere Umstrukturierungen ändern; maßgeblich sind die aktuellen Herstellerangaben auf Typenschild und Konformitätserklärung.\n\n## Einordnung im Markt\n\nWettbewerber sind u. a. [[arjo]] und [[stryker]] (Betten, Patientenhandling), [[getinge]] und [[draeger]] (OP-Ausstattung) sowie [[philips]] und [[mindray]] (Vitaldatenmessung).",
+  "related": [
+    "baxter",
+    "pflegebett",
+    "patientenlifter",
+    "op-tisch",
+    "op-leuchte",
+    "nibp-messgeraet",
+    "thermometer",
+    "ekg-geraet",
+    "langzeit-blutdruck",
+    "antidekubitussystem",
+    "arjo",
+    "stryker",
+    "getinge"
+  ],
+  "sources": [
+    "hillrom-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

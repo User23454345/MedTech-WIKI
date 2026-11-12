@@ -46,7 +46,7 @@
 
   <!-- Kabel -->
   <path d="M260,250 C330,250 330,190 380,190" fill="none" stroke="#0b2545" stroke-width="3"/>
-  <text x="300" y="275" font-size="13" fill="#0b2545">Sensorkabel</text>
+  <text x="300" y="178" font-size="13" fill="#0b2545">Sensorkabel</text>
 
   <!-- Grundgerät -->
   <rect x="380" y="60" width="200" height="280" rx="14" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>

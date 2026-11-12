@@ -1,0 +1,48 @@
+{
+  "id": "audiometer",
+  "type": "device",
+  "title": "Audiometer",
+  "aliases": [
+    "Tonaudiometer",
+    "Sprachaudiometer",
+    "Audiometrie",
+    "Hörtestgerät",
+    "Tonschwellenaudiometrie"
+  ],
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 57,
+  "domains": [
+    "hno-heilkunde"
+  ],
+  "summary": "Audiometer erzeugen kalibrierte Prüftöne und Sprachsignale, um die Hörschwelle eines Menschen frequenzabhängig zu bestimmen. Getrennte Messung über Luft- und Knochenleitung unterscheidet Schallleitungs- von Schallempfindungsschwerhörigkeit. Ton- und Sprachaudiometer unterliegen in Deutschland der jährlichen messtechnischen Kontrolle.",
+  "sections": {
+    "purpose": "Die Audiometrie quantifiziert Hörminderungen in der [[hno-heilkunde]], der Arbeitsmedizin (Lärmschwerhörigkeit) und bei der Anpassung von [[hoergeraet|Hörgeräten]] oder der Indikation zum [[cochlea-implantat]]. Das Ergebnis der Tonaudiometrie ist das **Audiogramm** [@kramme-2017].",
+    "principle": "## Tonaudiometrie\n\nEin Tongenerator erzeugt Sinustöne, typischerweise im Bereich von 125 Hz bis 8 kHz (Hochtonaudiometrie darüber). Ein Abschwächer stellt den Pegel in **dB HL** (Hearing Level) ein, meist in 5-dB-Schritten. 0 dB HL entspricht bei jeder Frequenz der normalen Hörschwelle junger Normalhörender; die dafür nötigen Schalldruckpegel am Wandler (Bezugs-Hörschwellenpegel) sind wandlerspezifisch in der Normenreihe ISO 389 festgelegt ([[schallwellen]], [[ohr]]).\n\n| Ankopplung | Wandler | Prüft |\n|---|---|---|\n| Luftleitung | Kopfhörer oder Einsteckhörer | gesamten Hörweg (Außen-, Mittel-, Innenohr) |\n| Knochenleitung | Knochenleitungshörer auf dem Mastoid | Innenohr unter Umgehung des Mittelohrs |\n\nEine Differenz zwischen Luft- und Knochenleitungsschwelle („Air-Bone-Gap“) spricht für eine Schallleitungsschwerhörigkeit. Ist das Gehör seitendifferent, kann ein lauter Prüfton das bessere Gegenohr erreichen (Überhören; die interaurale Dämpfung beträgt bei Luftleitung über Kopfhörer typisch etwa 40–50 dB, bei Knochenleitung nahezu 0 dB). Dann wird das Gegenohr mit Schmalbandrauschen **vertäubt**.\n\n## Sprachaudiometrie\n\nHier werden standardisierte Wort- und Zahlenlisten (im deutschen Sprachraum verbreitet der Freiburger Sprachtest) bei definierten Pegeln dargeboten und das Sprachverstehen in Prozent bestimmt.\n\n## Kalibrierung\n\nDa das Messergebnis unmittelbar von der korrekten Ausgabepegel- und Frequenzgenauigkeit abhängt, werden Audiometer mit Messmikrofon und künstlichem Ohr bzw. künstlichem Mastoid geprüft. Anforderungen an die Geräte legt die Normenreihe IEC 60645 fest [@iec-60645-1]. Wandler sind an das Gerät kalibriert und dürfen nicht beliebig getauscht werden ([[kalibrierung]], [[mtk]]).\n\n> [!praxis] Für korrekte Schwellen braucht es eine ausreichend ruhige Umgebung, in der Regel eine schallgedämmte Hörkabine."
+  },
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Screening- oder klinisches Audiometer, Sprach- und Hochtonaudiometrie, Software und Datenbankanbindung, Wandler, Hörkabine, Kosten der jährlichen MTK."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "ja",
+    "basis": "MTK: MPBetreibV (2025) § 15 i. V. m. Anlage 2 Nr. 1.1 – Medizinprodukte zur Bestimmung der Hörfähigkeit (Ton- und Sprachaudiometer). STK: nicht in Anlage 1 aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt.",
+    "intervals": "MTK jährlich (Nachprüffrist 1 Jahr nach Anlage 2); subjektive Funktionsprüfung (Abhören) vor Gebrauch; elektrische Wiederholungsprüfung nach IEC 62353 gemäß Herstellervorgabe."
+  },
+  "related": [
+    "ohr",
+    "schallwellen",
+    "hoergeraet",
+    "cochlea-implantat",
+    "mtk",
+    "hno-heilkunde"
+  ],
+  "sources": [
+    "iec-60645-1",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

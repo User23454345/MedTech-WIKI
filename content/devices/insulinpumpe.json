@@ -1,0 +1,73 @@
+{
+  "id": "insulinpumpe",
+  "type": "device",
+  "title": "Insulinpumpe",
+  "aliases": [
+    "CSII",
+    "kontinuierliche subkutane Insulininfusion",
+    "Insulin pump",
+    "Patch-Pumpe",
+    "AID-System",
+    "Closed-Loop-System"
+  ],
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 40,
+  "domains": [
+    "diabetologie"
+  ],
+  "summary": "Insulinpumpen sind kleine, am Körper getragene Pumpen – meist nach dem Prinzip einer Spritzenpumpe –, die Insulin kontinuierlich subkutan abgeben. In Kombination mit einem kontinuierlichen Glukosesensor können sie die Basalrate automatisch anpassen (automatisierte Insulindosierung, AID).",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives Produkt zur Abgabe von Arzneimitteln an den Körper in potenziell gefährlicher Weise nach [[mdr|MDR]] Anhang VIII **Regel 12** (Klasse IIb). Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Bei Diabetes mellitus Typ 1 und manchen Formen des Typ-2-Diabetes ersetzt die Pumpe die mehrmals tägliche Injektion. Eine programmierbare Basalrate bildet den wechselnden Grundbedarf über den Tag nach, Mahlzeiten- und Korrekturboli werden per Knopfdruck oder App abgegeben. AID-Systeme verbessern die Glukoseeinstellung und verringern Hypoglykämien, ersetzen aber nicht die Mitwirkung des Patienten.",
+    "principle": "## Aufbau und Förderung\n\nDas Insulin befindet sich in einem Reservoir (Ampulle) oder bei Patch-Pumpen in einer direkt auf die Haut geklebten Einheit. Ein [[schrittmotor]] oder [[elektromotor]] treibt über einen [[spindelantrieb]] einen Kolben in sehr kleinen Schritten vor – die Abgabe erfolgt pulsierend in Kleinstmengen, die sich zur eingestellten Rate summieren. Über einen Katheter mit Kanüle (Infusionsset) gelangt das Insulin ins Unterhautfettgewebe.\n\n| Funktion | Umsetzung |\n|---|---|\n| Basalrate | zeitabhängiges Profil, temporäre Anpassung möglich |\n| Bolus | Standard-, verzögerter oder dualer Bolus; Bolusrechner mit Kohlenhydrat- und Korrekturfaktoren |\n| Okklusionserkennung | Kraft- bzw. Motorstromüberwachung ([[kraftsensor]], [[okklusionsalarm]]) |\n| Energie | Batterie oder [[lithium-ionen-akku|Akku]] |\n\n## Automatisierte Insulindosierung\n\nBei AID-Systemen („Hybrid-Closed-Loop“) misst ein subkutaner Glukosesensor im Gewebe; ein Algorithmus berechnet daraus im [[regelkreis]] laufend Basalrate und ggf. Korrekturboli. Die Mahlzeitenboli muss der Anwender meist weiterhin selbst anfordern.\n\n> [!vereinfacht] Der Gewebeglukosewert folgt dem Blutzucker mit zeitlicher Verzögerung, und subkutanes Insulin wirkt verzögert – deshalb kann der Regler schnelle Glukoseanstiege nach Mahlzeiten nicht allein ausgleichen.\n\n> [!warnung] Da nur kurzwirksames Insulin verwendet wird, führt eine unbemerkte Unterbrechung (Katheterabknickung, Luft, Pumpenausfall) innerhalb weniger Stunden zu einer Stoffwechselentgleisung bis zur Ketoazidose. Messung mit dem [[blutzuckermessgeraet]] und Ersatz-Pen sind unverzichtbar."
+  },
+  "manufacturers": [
+    {
+      "ref": "medtronic",
+      "models": [
+        "MiniMed 780G"
+      ],
+      "note": "AID-System."
+    },
+    {
+      "ref": "roche-diagnostics",
+      "models": [
+        "Accu-Chek"
+      ],
+      "note": "Insulinpumpen der Marke Accu-Chek über Roche Diabetes Care."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Insulinpumpen geben subkutan ab und fallen damit nicht unter Anlage 1 Nr. 1.4 (Einbringung in den Blutkreislauf) der MPBetreibV (Fassung 2025); Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Die Geräte werden meist vom Patienten selbst betrieben; Wartung und Austausch regelt in der Regel der Hersteller bzw. Versorger.",
+    "intervals": "Nach Herstellerangabe; begrenzte Nutzungsdauer bzw. Garantiezeit, danach Austausch; Infusionssets und Reservoirs nach Herstellerangabe wechseln."
+  },
+  "related": [
+    "blutzuckermessgeraet",
+    "spritzenpumpe",
+    "spindelantrieb",
+    "regelkreis",
+    "okklusionsalarm",
+    "software-medizinprodukt"
+  ],
+  "sources": [
+    "iec-60601-2-24",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

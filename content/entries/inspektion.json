@@ -1,0 +1,54 @@
+{
+  "id": "inspektion",
+  "type": "term",
+  "title": "Inspektion",
+  "aliases": [
+    "Inspection",
+    "Zustandsfeststellung",
+    "Soll-Ist-Vergleich",
+    "Zustandsprüfung",
+    "Condition Monitoring"
+  ],
+  "category": "instandhaltung",
+  "summary": "Inspektion ist die Grundmaßnahme der Instandhaltung, mit der der Ist-Zustand eines Geräts festgestellt, mit dem Soll-Zustand verglichen und beurteilt wird. In der Medizintechnik gehören dazu Sicht-, Funktions- und Messprüfungen, insbesondere die gesetzlich vorgeschriebenen sicherheits- und messtechnischen Kontrollen.",
+  "body": "## Begriff\n\n**Inspektion** ist nach [[din-31051|DIN 31051]] die Grundmaßnahme der [[instandhaltung-grundlagen|Instandhaltung]], die den **Ist-Zustand** einer Einheit feststellt und beurteilt, einschließlich der Ermittlung der Ursachen von Abnutzung und der Ableitung notwendiger Konsequenzen für die künftige Nutzung [@din-31051]. Inspektion verändert das Gerät nicht – sie liefert Information. Auf ihrer Grundlage wird entschieden, ob [[wartung|Wartung]], [[instandsetzung|Instandsetzung]] oder eine Verbesserung nötig ist oder ob das Gerät unverändert weiterbetrieben werden darf.\n\n> [!belegt] Inspektion umfasst nach DIN 31051 drei Elemente: Feststellen des Ist-Zustands, Beurteilen durch Vergleich mit dem Soll-Zustand und Ableiten von Maßnahmen. Die Begriffsnormen sind kostenpflichtig; die Darstellung ist sinngemäß [@din-31051] [@din-en-13306].\n\n## Ablauf einer Inspektion\n\n1. **Planung:** Prüfumfang, Prüfmittel und Grenzwerte festlegen (Herstellerangaben, Normen, Prüfanweisungen).\n2. **Feststellen des Ist-Zustands:** Sichtprüfung, Messungen, Funktionstests, Auswertung von Betriebsdaten.\n3. **Soll-Ist-Vergleich:** Messwerte gegen Grenzwerte, Befunde gegen Kriterien.\n4. **Beurteilung:** in Ordnung / Mangel ohne Gefährdung / Mangel mit Gefährdung.\n5. **Maßnahmen ableiten:** Weiterbetrieb, Wartung, Instandsetzung, Außerbetriebnahme.\n6. **Dokumentation:** Protokoll, Prüfplakette, Eintrag im [[medizinproduktebuch|Medizinproduktebuch]].\n\n## Methoden\n\n| Methode | Was wird erfasst? | Beispiele |\n|---|---|---|\n| Sichtprüfung | mechanische Schäden, Verschmutzung, fehlende Kennzeichnung | Gehäuserisse, beschädigte Netzleitungen, geknickte Schläuche, lesbares Typschild |\n| Elektrische Messung | Wirksamkeit der Schutzmaßnahmen | [[schutzleiterwiderstand|Schutzleiterwiderstand]], [[isolationswiderstand|Isolationswiderstand]], [[ableitstrommessung|Ableitströme]] |\n| Funktionsprüfung | Erfüllung der Gerätefunktion | Alarme auslösen, Abgabeenergie messen, Förderrate prüfen ([[funktionspruefung]]) |\n| Messtechnische Prüfung | Einhaltung von Fehlergrenzen | Druckanzeige, Temperatur, SpO₂-Simulation ([[mtk]], [[kalibrierung]]) |\n| Zustandsüberwachung | Trends, Betriebsdaten | Betriebsstunden, Selbsttestergebnisse, Fehlerspeicher ([[fehlercodes]]) |\n\nFür Messungen und Funktionsprüfungen werden kalibrierte [[pruefgeraete|Prüfgeräte und Simulatoren]] eingesetzt, etwa Sicherheitstester nach IEC 61557-16, Defibrillator-Analysatoren, Infusionspumpen-Analysatoren, Patientensimulatoren oder Gasflussanalysatoren [@iec-61557-16].\n\n### Soll-Ist-Vergleich mit Messunsicherheit\n\nEin Messwert x wird gegen einen Grenzwert G beurteilt. Weil jede Messung mit einer [[messunsicherheit|Messunsicherheit]] U behaftet ist, ist eine eindeutige Aussage nur möglich, wenn der Abstand zum Grenzwert größer als die Unsicherheit ist:\n\n* x + U ≤ G → sicher eingehalten,\n* x − U > G → sicher überschritten,\n* dazwischen → Grauzone; Entscheidungsregel der Prüfanweisung anwenden.\n\n> [!beispiel] Ein gemessener Patientenableitstrom beträgt 42 µA, das Prüfgerät hat in diesem Bereich eine erweiterte Messunsicherheit von 3 µA. Angenommen, der für diesen Anwendungsteil und diese Messmethode maßgebliche Grenzwert läge bei 100 µA, dann wäre er eindeutig eingehalten (42 µA + 3 µA ≤ 100 µA). Die Grenzwerte selbst hängen vom Typ des [[anwendungsteile|Anwendungsteils]] und der Messmethode ab und sind der [[iec-62353|IEC 62353]] zu entnehmen; die Zahlen hier sind beispielhaft.\n\n## Gesetzlich geforderte Inspektionen\n\nMehrere Prüfungen der Medizintechnik sind systematisch **Inspektionen**, auch wenn sie im Klinikalltag eigene Namen tragen:\n\n| Prüfung | Grundlage | Inhalt |\n|---|---|---|\n| [[stk|Sicherheitstechnische Kontrolle (STK)]] | § 12 i. V. m. Anlage 1 [[mpbetreibv|MPBetreibV]] | sicherheitsrelevante Eigenschaften; Frist spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind |\n| [[mtk|Messtechnische Kontrolle (MTK)]] | § 15 i. V. m. Anlage 2 MPBetreibV | Einhaltung der Fehlergrenzen von Produkten mit Messfunktion |\n| [[elektrische-sicherheitspruefung|Wiederholungsprüfung]] | [[iec-62353|IEC 62353]] | elektrische Sicherheit von ME-Geräten |\n| [[dguv-vorschrift-3|Prüfung nach DGUV Vorschrift 3]] | Unfallverhütungsvorschrift | elektrische Betriebsmittel (Arbeitsschutz) |\n| [[konstanzpruefung|Konstanzprüfung]] | Strahlenschutzrecht | Bildqualität und Dosis an Röntgeneinrichtungen |\n\n> [!belegt] Für die STK gilt nach der MPBetreibV 2025: Frist nach den Angaben des Herstellers, fehlen diese, spätestens alle zwei Jahre (§ 12 i. V. m. Anlage 1); die MTK ist in § 15 i. V. m. Anlage 2 geregelt [@mpbetreibv]. Für die Durchführung der MTK gilt bei Beachtung des PTB-Leitfadens LMKM eine Vermutungswirkung [@lmkm-ptb].\n\n## Prüfung vor der Anwendung\n\nEine Inspektion im kleinen Maßstab ist die Prüfung durch den Anwender vor jeder Anwendung: Sichtkontrolle, Selbsttest, Alarmtest. Beispiele sind der Geräte-Selbsttest eines [[beatmungsgeraet|Beatmungsgeräts]] mit Leckage- und Compliance-Messung des Schlauchsystems, der tägliche Check eines [[anaesthesiegeraet|Anästhesiearbeitsplatzes]] oder der Selbsttest eines [[defibrillator|Defibrillators]]. Diese Prüfungen ersetzen die STK nicht, decken aber zwischen den Intervallen viele Mängel auf.\n\n## Zustandsorientierte Inspektion\n\nModerne Geräte liefern Inspektionsdaten selbst: Ein Beatmungsgerät protokolliert etwa Betriebsstunden der [[turbine]], ein [[dialysegeraet|Dialysegerät]] Abweichungen der [[leitfaehigkeitssensor|Leitfähigkeitsmessung]], ein [[computertomograph|CT]] Röhrenparameter. Die Auswertung solcher Trends ermöglicht zustandsorientierte Instandhaltung: Bauteile werden getauscht, wenn Messwerte driften (siehe [[sensordrift]]), nicht erst nach Ausfall.\n\n> [!vereinfacht] Ein steigender Motorstrom bei gleicher Drehzahl kann auf erhöhte Reibung im Lager eines [[elektromotor|Elektromotors]] hinweisen. Ob ein Trend tatsächlich auf Verschleiß zurückgeht, hängt aber von vielen Einflussgrößen (Last, Temperatur, Filterzustand) ab und muss gerätespezifisch bewertet werden.\n\n## Bedeutung in der Medizintechnik\n\nInspektionen sind die Datenquelle des [[medizintechnik-management|Medizintechnik-Managements]]: Ihre Ergebnisse bestimmen Instandhaltungsaufwand, Ersatzbeschaffungen und Risikobewertungen. Gerätebeispiele mit hohem Inspektionsbedarf sind [[infusionspumpe|Infusionspumpen]], [[hf-chirurgiegeraet|HF-Chirurgiegeräte]], [[defibrillator|Defibrillatoren]], [[nibp-messgeraet|NIBP-Messgeräte]] (MTK) und [[thermometer|medizinische Thermometer]]. Werden bei einer Inspektion Mängel festgestellt, die bereits zu einer Gefährdung geführt haben könnten, ist zu prüfen, ob ein meldepflichtiges Vorkommnis vorliegt (siehe [[vigilanz]]).",
+  "related": [
+    "instandhaltung-grundlagen",
+    "wartung",
+    "instandsetzung",
+    "stk",
+    "mtk",
+    "elektrische-sicherheitspruefung",
+    "funktionspruefung",
+    "pruefgeraete",
+    "messunsicherheit",
+    "iec-62353",
+    "konstanzpruefung",
+    "sensordrift"
+  ],
+  "paths": [
+    [
+      "inspektion",
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "schutzleiterwiderstand"
+    ],
+    [
+      "inspektion",
+      "mtk",
+      "kalibrierung",
+      "messunsicherheit"
+    ]
+  ],
+  "sources": [
+    "din-31051",
+    "din-en-13306",
+    "mpbetreibv",
+    "iec-62353",
+    "iec-61557-16",
+    "lmkm-ptb",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,141 @@
+{
+  "id": "siemens-healthineers",
+  "type": "manufacturer",
+  "title": "Siemens Healthineers",
+  "aliases": [
+    "Siemens Healthineers AG",
+    "Siemens Healthcare",
+    "Siemens Medizintechnik"
+  ],
+  "category": "hersteller",
+  "summary": "Die Siemens Healthineers AG mit Sitz in Erlangen ist ein börsennotierter Medizintechnikkonzern mit Schwerpunkten in Bildgebung, Labordiagnostik, Strahlentherapie (Varian) und bildgestützter Therapie. Die Medizintechnik von Siemens reicht bis in die Anfänge der Röntgentechnik zurück.",
+  "headquarters": "Erlangen, Deutschland",
+  "founded": "1847",
+  "website": "https://www.siemens-healthineers.com/",
+  "productLines": [
+    {
+      "device": "computertomograph",
+      "models": [
+        "SOMATOM Force",
+        "SOMATOM X.cite",
+        "SOMATOM go.",
+        "NAEOTOM Alpha"
+      ],
+      "note": "NAEOTOM Alpha als photonenzählendes CT."
+    },
+    {
+      "device": "mrt",
+      "models": [
+        "MAGNETOM Sola",
+        "MAGNETOM Vida",
+        "MAGNETOM Free.Max",
+        "MAGNETOM Terra.X"
+      ]
+    },
+    {
+      "device": "roentgengeraet",
+      "models": [
+        "YSIO X.pree",
+        "MULTIX Impact",
+        "MOBILETT Elara Max"
+      ]
+    },
+    {
+      "device": "mammographiegeraet",
+      "models": [
+        "MAMMOMAT"
+      ]
+    },
+    {
+      "device": "angiographieanlage",
+      "models": [
+        "ARTIS"
+      ]
+    },
+    {
+      "device": "c-bogen",
+      "models": [
+        "Cios"
+      ]
+    },
+    {
+      "device": "pet-ct",
+      "models": [
+        "Biograph"
+      ]
+    },
+    {
+      "device": "gammakamera",
+      "models": [
+        "Symbia Intevo"
+      ]
+    },
+    {
+      "device": "ultraschallgeraet",
+      "models": [
+        "ACUSON Sequoia",
+        "ACUSON Juniper",
+        "ACUSON Redwood"
+      ]
+    },
+    {
+      "device": "linearbeschleuniger",
+      "models": [
+        "TrueBeam",
+        "Halcyon"
+      ],
+      "note": "Über die Tochter Varian."
+    },
+    {
+      "device": "afterloader",
+      "models": [
+        "GammaMedplus",
+        "Bravos"
+      ],
+      "note": "Über die Tochter Varian."
+    },
+    {
+      "device": "blutgasanalysator",
+      "models": [
+        "RAPIDPoint 500"
+      ]
+    },
+    {
+      "device": "haematologie-analysator",
+      "models": [
+        "ADVIA 2120i"
+      ]
+    },
+    {
+      "device": "klinisch-chemischer-analysator",
+      "models": [
+        "Atellica CH"
+      ]
+    },
+    {
+      "device": "gerinnungsanalysator",
+      "models": [],
+      "note": "Gerinnungssysteme und Reagenzien."
+    }
+  ],
+  "body": "## Überblick\n\nDie **Siemens Healthineers AG** mit Hauptsitz in Erlangen ist ein börsennotierter Medizintechnikkonzern, an dem die Siemens AG seit dem Börsengang maßgeblich beteiligt ist [@siemens-healthineers-web]. Als Gründungsjahr wird hier 1847 angegeben, das Gründungsjahr von Siemens & Halske; als eigenständige Aktiengesellschaft existiert Siemens Healthineers erst seit 2017/2018.\n\n## Geschichte in Stichpunkten\n\n* **1847:** Werner von Siemens und Johann Georg Halske gründen in Berlin die Telegraphen-Bauanstalt Siemens & Halske.\n* **Kurz nach 1895:** Siemens & Halske stellt Röntgenröhren her ([[roentgenroehre]]).\n* **Erlangen:** Aus der Werkstatt des Erlanger Universitätsmechanikers Erwin Moritz Reiniger entsteht die Firma Reiniger, Gebbert & Schall, ein früher Hersteller elektromedizinischer Geräte.\n* **1932:** Zusammenführung der Medizintechnik zu den Siemens-Reiniger-Werken mit Sitz in Erlangen.\n* **2006–2007:** Aufbau der Labordiagnostik durch Übernahmen (u. a. Diagnostic Products Corporation, Bayer Diagnostics, Dade Behring).\n* **2016–2018:** Neue Marke „Siemens Healthineers“; 2018 Börsengang in Frankfurt.\n* **2019:** Übernahme von Corindus (robotergestützte Gefäßinterventionen).\n* **2021:** Abschluss der Übernahme von Varian Medical Systems (Strahlentherapie) [@siemens-healthineers-web].\n* **Seit 2025:** Die Siemens AG hat angekündigt, ihre Beteiligung schrittweise zu reduzieren; zudem plant Siemens Healthineers, die Labordiagnostik zu verselbstständigen. Zeitplan, Ausgestaltung und aktuelle Beteiligungsverhältnisse sind beim Unternehmen zu prüfen.\n\n## Geschäftsbereiche\n\n| Segment | Inhalte (Auswahl) |\n|---|---|\n| Imaging | [[computertomograph|CT]], [[mrt|MRT]], [[roentgengeraet|Röntgen]], [[mammographiegeraet|Mammographie]], [[pet-ct|Molekulare Bildgebung]], [[ultraschallgeraet|Ultraschall]] |\n| Diagnostics | [[klinisch-chemischer-analysator|Klinische Chemie]], Immunologie, [[haematologie-analysator|Hämatologie]], [[gerinnungsanalysator|Gerinnung]], [[blutgasanalysator|Point-of-Care]] |\n| Varian | [[linearbeschleuniger|Linearbeschleuniger]], [[afterloader|Brachytherapie]], Bestrahlungsplanungssoftware |\n| Advanced Therapies | [[angiographieanlage|Angiographie]], [[c-bogen|mobile C-Bögen]], Robotik |\n\n## Bedeutung für die Medizintechnik\n\nSiemens Healthineers deckt mit Bildgebung, Labor und Strahlentherapie einen großen Teil der apparativen Diagnostik und Krebstherapie ab. Technische Meilensteine der jüngeren Zeit sind das photonenzählende CT (NAEOTOM Alpha), bei dem ein direkt konvertierender [[roentgendetektor]] einzelne Röntgenquanten energieaufgelöst zählt, sowie MRT-Systeme mit sehr geringer Heliummenge im [[supraleitender-magnet|supraleitenden Magneten]] [@siemens-free-max].\n\n> [!praxis] Großgeräte wie CT, MRT und Linearbeschleuniger werden meist über Herstellerserviceverträge betreut. Medizintechniker:innen koordinieren dabei häufig Wartungsfenster, [[konstanzpruefung|Konstanzprüfungen]] und die Anforderungen des [[strahlenschutz|Strahlenschutzes]] nach [[strlschg]].\n\n## Einordnung im Markt\n\nSiemens Healthineers konkurriert in der Bildgebung vor allem mit [[philips]], [[ge-healthcare]], [[canon-medical]] und [[fujifilm]], in der Strahlentherapie mit [[elekta]] und in der Labordiagnostik u. a. mit [[roche-diagnostics]] und [[abbott]]. Für Betreiber großer Anlagen ist bedeutsam, dass Systeme dieser Größenordnung über viele Jahre betrieben werden und Software-Upgrades, Ersatzteilverfügbarkeit und Cybersicherheit über den gesamten [[lebenszyklus-medizinprodukt|Lebenszyklus]] geplant werden müssen.",
+  "related": [
+    "computertomograph",
+    "mrt",
+    "linearbeschleuniger",
+    "roentgengeraet",
+    "klinisch-chemischer-analysator",
+    "philips",
+    "ge-healthcare",
+    "elekta",
+    "radiologie",
+    "strahlentherapie",
+    "labormedizin"
+  ],
+  "sources": [
+    "siemens-healthineers-web",
+    "siemens-free-max"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

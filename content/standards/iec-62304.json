@@ -1,0 +1,39 @@
+{
+  "id": "iec-62304",
+  "type": "standard",
+  "title": "IEC 62304",
+  "code": "IEC 62304",
+  "kind": "norm",
+  "fullTitle": "Medizingeräte-Software – Software-Lebenszyklus-Prozesse",
+  "scope": "Legt Anforderungen an die Lebenszyklus-Prozesse für Entwicklung und Wartung von Software in Medizinprodukten und von Software als Medizinprodukt fest.",
+  "aliases": [
+    "DIN EN 62304",
+    "EN 62304",
+    "Medical device software – Software life cycle processes",
+    "62304"
+  ],
+  "category": "normen",
+  "summary": "IEC 62304 regelt die Prozesse für Entwicklung, Wartung, Konfigurationsmanagement und Problemlösung von Medizinprodukte-Software. Der Umfang der geforderten Tätigkeiten richtet sich nach der Software-Sicherheitsklasse A, B oder C.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nModerne Medizinprodukte sind ohne Software kaum denkbar: Die Regelung eines [[beatmungsgeraet|Beatmungsgeräts]], die Bildrekonstruktion im [[computertomograph|CT]] oder die Dosisberechnung einer [[insulinpumpe|Insulinpumpe]] sind Softwarefunktionen. Die **IEC 62304** legt fest, **wie** solche Software entwickelt und gewartet werden muss [@iec-62304]. Sie gilt sowohl für Software, die in ein Gerät eingebettet ist ([[mikrocontroller|Embedded-Systeme]]), als auch für eigenständige [[software-medizinprodukt|Software als Medizinprodukt]].\n\nDie Norm ist eine **Prozessnorm**: Sie schreibt keine Programmiersprache, Methode oder Architektur vor, sondern definiert Tätigkeiten und Ergebnisse, die nachweisbar sein müssen. Voraussetzung sind ein [[iso-13485|QM-System]] und ein [[iso-14971|Risikomanagement nach ISO 14971]].\n\n## Zentrale Konzepte und Anforderungen\n\n### Software-Sicherheitsklassen\n\n| Klasse | Möglicher Schaden bei Softwarefehler (vereinfacht) | Dokumentations- und Prüfumfang |\n|---|---|---|\n| A | keine Verletzung oder Gesundheitsschädigung möglich | gering |\n| B | nicht schwerwiegende Verletzung möglich | mittel, u. a. Architektur, Verifikation der Software-Einheiten, Integrationstests |\n| C | Tod oder schwere Verletzung möglich | vollständig, zusätzlich detailliertes Design der Software-Einheiten und erweiterte Akzeptanzkriterien für deren Verifikation |\n\nDie Einstufung erfolgt im Risikomanagement. Externe, softwareunabhängige Schutzmaßnahmen (z. B. eine hardwareseitige Druckbegrenzung) können die Klasse senken. Die Sicherheitsklasse ist **nicht** identisch mit der [[risikoklassen|Risikoklasse]] des Medizinprodukts nach [[mdr|MDR]].\n\n### Prozesse\n\n| Prozess | Kerninhalte |\n|---|---|\n| Software-Entwicklung | Planung, Anforderungsanalyse, Architektur, detailliertes Design, Implementierung, Unit-Verifikation, Integration, Systemtest, Freigabe |\n| Software-Wartung | Analyse von Rückmeldungen und Änderungen nach der Freigabe |\n| Software-Risikomanagement | Software als Ursache von Gefährdungssituationen, Risikobeherrschung durch Softwaremaßnahmen |\n| Konfigurationsmanagement | eindeutige Identifikation aller Softwarebestandteile und Versionen, Änderungskontrolle |\n| Problemlösung | strukturierte Erfassung, Untersuchung und Behebung von Fehlern |\n\n### SOUP\n\n**SOUP** (*Software of Unknown Provenance*) bezeichnet – vereinfacht – bereits existierende Software, die nicht eigens für das Medizinprodukt entwickelt wurde oder für deren Entwicklung keine ausreichenden Prozessnachweise vorliegen – etwa Betriebssysteme, Bibliotheken oder Open-Source-Komponenten. Sie darf verwendet werden, muss aber identifiziert, in ihren funktionalen und Leistungsanforderungen beschrieben und hinsichtlich bekannter Fehler bewertet werden.\n\n> [!beispiel] Ein [[patientenmonitor|Patientenmonitor]] nutzt ein kommerzielles Echtzeitbetriebssystem und eine Grafikbibliothek. Beide sind SOUP. Der Hersteller muss die verwendeten Versionen festhalten, ihre bekannten Fehlerlisten auswerten und nachweisen, dass die Architektur sicherheitskritische Funktionen (z. B. [[alarmsystem|Alarmerzeugung]]) gegen Fehler dieser Komponenten absichert.\n\n## Bezug zu anderen Normen\n\n| Norm | Bezug |\n|---|---|\n| [[iec-60601-1]] | Der Abschnitt zu programmierbaren elektrischen medizinischen Systemen (PEMS) verweist für die Software-Prozesse auf IEC 62304 |\n| [[iso-14971]] | Grundlage der Sicherheitsklassifizierung und des Software-Risikomanagements |\n| [[iso-13485]] | Rahmen des QM-Systems |\n| [[iec-62366-1]] | Gebrauchstauglichkeit der Benutzeroberfläche |\n| IEC 82304-1 | Anforderungen an eigenständige Gesundheitssoftware als Produkt (Validierung, Begleitdokumentation) [@iec-82304-1] |\n| IEC 80001-1 | Risikomanagement beim Betrieb vernetzter Medizinprodukte [@iec-80001-1] |\n\n> [!hinweis] Zur Qualifizierung und Klassifizierung von Software nach MDR (z. B. Regel 11) gibt die MDCG-Leitlinie 2019-11 Hinweise [@mdcg-2019-11]. Diese regulatorische Frage ist von der Prozessfrage der IEC 62304 zu trennen.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen die Software-Lebenszyklus-Dokumentation in der technischen Dokumentation vorhalten. Die [[mdr|MDR]] fordert in Anhang I, dass Software nach dem Stand der Technik unter Berücksichtigung von Lebenszyklus, Risikomanagement, Verifizierung und Validierung entwickelt wird [@mdr-2017]. Für Cybersecurity sind zusätzliche Leitlinien und Normen zu beachten.\n\n**Betreiber** begegnen der Norm vor allem bei **Software-Updates**: Ein Update ist eine Änderung, die der Hersteller nach seinem Wartungsprozess freigibt. Betreiber sollten Updates nur in freigegebenen Versionen einspielen, den Softwarestand dokumentieren (z. B. im [[bestandsverzeichnis|Bestandsverzeichnis]] oder [[medizinproduktebuch|Medizinproduktebuch]]) und Sicherheitsmitteilungen zeitnah umsetzen.\n\n> [!praxis] Bei Fehlerbildern, die nur sporadisch auftreten, ist der Softwarestand eine wichtige Information für den Hersteller-Service. Gespeicherte Ereignisprotokolle (siehe [[fehlercodes]]) sollten vor einem Neustart gesichert werden, wenn der Hersteller das vorsieht.\n\n## Betroffene Geräte\n\nAlle softwaregesteuerten Medizinprodukte, z. B. [[patientenmonitor]], [[beatmungsgeraet]], [[infusionspumpe]], [[insulinpumpe]], [[defibrillator]], [[herzschrittmacher]], [[icd]], [[dialysegeraet]], [[computertomograph]], [[mrt]], [[linearbeschleuniger]] und [[op-roboter]].\n",
+  "related": [
+    "software-medizinprodukt",
+    "mikrocontroller",
+    "iso-14971",
+    "iso-13485",
+    "iec-60601-1",
+    "iec-62366-1",
+    "fehlercodes",
+    "patientenmonitor",
+    "insulinpumpe",
+    "linearbeschleuniger"
+  ],
+  "sources": [
+    "iec-62304",
+    "mdr-2017",
+    "iec-82304-1",
+    "iec-80001-1",
+    "mdcg-2019-11"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

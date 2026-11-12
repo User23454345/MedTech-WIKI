@@ -1,0 +1,149 @@
+{
+  "id": "isolationswiderstand",
+  "type": "term",
+  "title": "Isolationswiderstand",
+  "aliases": [
+    "RISO",
+    "R_ISO",
+    "Isolationsmessung",
+    "Isolationsprüfung",
+    "Insulation resistance",
+    "Insulation resistance test",
+    "Megger-Test"
+  ],
+  "category": "stk-mtk",
+  "summary": "Der Isolationswiderstand ist der ohmsche Widerstand einer Isolierung zwischen spannungsführenden Teilen und Schutzleiter, Gehäuse oder Anwendungsteilen. Er wird mit einer Gleichspannung von typisch 500 V gemessen und zeigt Alterung, Feuchtigkeit, Verschmutzung und Beschädigungen der Isolierung an.",
+  "body": "## Begriff\n\nEine Isolierung ist kein idealer Nichtleiter. Zwischen zwei Leitern, die durch eine Isolierung getrennt sind, fließt bei angelegter Spannung ein kleiner Strom – teils über das Volumen des Isolierstoffs, teils über dessen Oberfläche. Der **Isolationswiderstand** R_iso beschreibt den ohmschen Anteil dieses Strompfads:\n\nR_iso = U / I\n\nTypische Werte intakter Isolierungen liegen im Bereich vieler Megaohm bis Gigaohm. Sinkt R_iso, ist das ein Hinweis auf Feuchtigkeit, Verschmutzung (z. B. leitfähige Ablagerungen nach Flüssigkeitseintritt), thermische Alterung oder mechanische Beschädigung [@iec-62353].\n\n## Isolierung und Schutzkonzept\n\nDie [[iec-60601-1|IEC 60601-1]] unterscheidet Basisisolierung, zusätzliche Isolierung, doppelte und verstärkte Isolierung. In Geräten der [[schutzklassen|Schutzklasse I]] schützt die Basisisolierung zusammen mit dem Schutzleiter; in Schutzklasse II übernimmt eine doppelte oder verstärkte Isolierung die gesamte Schutzfunktion [@iec-60601-1] [@iec-61140]. Für [[anwendungsteile|Anwendungsteile]] vom Typ BF und CF ist zusätzlich eine isolierte („floating“) Trennung vom Netz und von Erde erforderlich, die meist durch [[galvanische-trennung|galvanische Trennung]] mit Übertragern und Optokopplern realisiert wird.\n\n> [!vereinfacht] Eine Isolierung kann man sich elektrisch als Parallelschaltung aus einem sehr großen Widerstand R_iso und einer Kapazität C_iso vorstellen. Bei Gleichspannung wirkt nach dem Aufladen nur R_iso – deshalb misst man den Isolationswiderstand mit Gleichspannung. Bei Netzwechselspannung dominiert dagegen der kapazitive Anteil; er bestimmt den [[ableitstrom|Ableitstrom]].\n\n## Messung\n\n### Messanordnung\n\nGemessen wird mit einem Isolationsmessgerät bzw. einem [[pruefgeraete|Sicherheitstester]], der eine Gleichspannung von typisch **500 V** erzeugt [@iec-62353] [@iec-61557-16]. Der Prüfling ist dabei vom Netz getrennt, sein Netzschalter eingeschaltet, damit alle netzseitigen Teile erfasst werden. Außen- und Neutralleiter werden im Prüfgerät miteinander verbunden.\n\n| Messstrecke | Schutzklasse | Zweck |\n|---|---|---|\n| Netzteil gegen Schutzleiter | I | Zustand der Basisisolierung |\n| Netzteil gegen berührbare leitfähige Teile | II | Zustand der doppelten/verstärkten Isolierung |\n| Netzteil gegen Anwendungsteile | I und II | Trennung des Patienten vom Netz |\n| Anwendungsteile gegen Schutzleiter | I (BF/CF) | Erdfreiheit der Anwendungsteile |\n\n### Zeitverhalten\n\nUnmittelbar nach dem Anlegen der Spannung fließt ein Ladestrom in die Isolationskapazität, der exponentiell mit der Zeitkonstante τ = R_Quelle · C abklingt. Hinzu kommt ein langsamer Polarisationsstrom im Isolierstoff. Der Messwert wird deshalb erst nach Stabilisierung abgelesen. Bei Geräten mit großen Entstörkapazitäten kann das einige Sekunden dauern.\n\n> [!beispiel] Eine Prüfspannung von 500 V erzeugt bei einem Isolationswiderstand von 10 MΩ einen Strom von I = 500 V / 10 MΩ = 50 µA. Bei 230 V Netzspannung entspräche das einem ohmschen Ableitstromanteil von 23 µA – zusätzlich zum kapazitiven Anteil. Ein Isolationswiderstand von 1 MΩ würde bereits 230 µA ohmschen Ableitstrom verursachen. Die Zahlen sind beispielhaft.\n\n### Grenzwerte\n\n> [!hinweis] Für ME-Geräte sind die Herstellerangaben und die jeweils gültige Ausgabe der IEC 62353 maßgeblich [@iec-62353]. Für elektrische Geräte außerhalb der Medizintechnik nennt die Wiederholungsprüfnorm DIN EN 50699 (VDE 0702) Mindestwerte im Bereich von etwa 1 MΩ (Schutzklasse I) bzw. 2 MΩ (Schutzklasse II) [@din-en-50699]. Diese Werte sind als Orientierung zu verstehen; aussagekräftiger ist häufig der **Vergleich mit den Vorwerten** desselben Geräts.\n\n### Wann nicht gemessen wird\n\nDie Isolationsmessung ist nicht bei jedem Gerät sinnvoll oder zulässig. Hinderungsgründe können sein [@iec-62353]:\n\n* Überspannungsschutzelemente (Varistoren, Ableiter) zwischen Netz und Erde, die bei 500 V ansprechen und den Messwert verfälschen,\n* elektronische Netzschalter, die das Netzteil im ausgeschalteten Zustand nicht vollständig erfassen lassen,\n* ausdrückliche Herstellervorgabe, z. B. zum Schutz empfindlicher Eingangsstufen an Anwendungsteilen.\n\n> [!warnung] An Anwendungsteilen mit empfindlicher Elektronik (z. B. EKG-Eingänge) darf die Isolationsprüfung nur erfolgen, wenn der Hersteller dies zulässt. Nach der Messung können Kapazitäten noch geladen sein – das Prüfgerät entlädt den Prüfling in der Regel automatisch, dies ist vor dem Berühren abzuwarten.\n\n## Einflussgrößen\n\n| Einfluss | Wirkung auf R_iso | Praxisbezug |\n|---|---|---|\n| Feuchtigkeit, Kondensation | stark sinkend | Geräte nach Transport aus kalter Umgebung akklimatisieren |\n| Verschmutzung, Flüssigkeitseintritt | sinkend, oft unstetig | Infusionslösungen, Desinfektionsmittel, Blut |\n| Temperatur | sinkend mit steigender Temperatur | Messung bei Raumtemperatur vergleichbar halten |\n| Alterung (thermisch, UV, mechanisch) | langsam sinkend | Trend über mehrere Prüfungen |\n\n## Bedeutung in der Medizintechnik\n\nDie Isolationsmessung ergänzt die [[ableitstrommessung|Ableitstrommessung]]: Ein sinkender R_iso zeigt Schäden oft früher an, weil der ohmsche Anteil des Ableitstroms neben dem großen kapazitiven Anteil kaum auffällt. Besonders aussagekräftig ist sie bei Geräten mit Flüssigkeitskontakt, etwa [[dialysegeraet|Dialysegeräten]], [[infusionswaermer|Infusionswärmern]], [[patientenwaermesystem|Patientenwärmesystemen]], [[dampfsterilisator|Dampfsterilisatoren]] und [[rdg|Reinigungs-Desinfektionsgeräten]], sowie bei Geräten mit [[heizelement|Heizelementen]] wie [[inkubator|Inkubatoren]] oder [[atemgasbefeuchter|Atemgasbefeuchtern]]. Bei Patientenleitungen von [[ekg-geraet|EKG-Geräten]] und [[defibrillator|Defibrillatoren]] deckt sie beschädigte Isolierungen auf, die für den Patienten gefährlich sein können.\n\n> [!praxis] Nach einem Flüssigkeitseintritt sollte ein Gerät vor der Isolationsmessung gemäß Herstellerangabe getrocknet und gereinigt werden. Ein grenzwertiger Wert, der sich nach Trocknung deutlich verbessert, weist auf Feuchtigkeit als Ursache hin; bleibt er niedrig, ist meist eine Instandsetzung nötig.",
+  "related": [
+    "elektrische-sicherheitspruefung",
+    "schutzleiterwiderstand",
+    "ableitstrom",
+    "ableitstrommessung",
+    "schutzklassen",
+    "anwendungsteile",
+    "galvanische-trennung",
+    "spannung-strom-widerstand",
+    "kondensator",
+    "stk",
+    "pruefgeraete"
+  ],
+  "paths": [
+    [
+      "stk",
+      "elektrische-sicherheitspruefung",
+      "isolationswiderstand",
+      "ableitstrom"
+    ],
+    [
+      "schutzklassen",
+      "isolationswiderstand",
+      "spannung-strom-widerstand"
+    ]
+  ],
+  "diagram": {
+    "title": "Messung des Isolationswiderstands",
+    "caption": "Netzleiter L und N werden gebrückt; zwischen Netzteil und Schutzleiter/Gehäuse wird eine Gleichspannung angelegt und der Reststrom gemessen. Didaktisches Schema.",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "quelle",
+        "label": "Prüfspannung\n500 V DC",
+        "ref": "pruefgeraete",
+        "kind": "source",
+        "x": 110,
+        "y": 90
+      },
+      {
+        "id": "ln",
+        "label": "Netzteil\n(L und N gebrückt)",
+        "ref": "medizinisches-netzteil",
+        "kind": "process",
+        "x": 330,
+        "y": 90
+      },
+      {
+        "id": "iso",
+        "label": "Isolierung\n(R_iso ∥ C_iso)",
+        "kind": "process",
+        "x": 550,
+        "y": 90
+      },
+      {
+        "id": "pe",
+        "label": "Schutzleiter /\nGehäuse / AP",
+        "ref": "anwendungsteile",
+        "kind": "output",
+        "x": 770,
+        "y": 90
+      },
+      {
+        "id": "imess",
+        "label": "Strommessung\n(µA–nA)",
+        "kind": "sensor",
+        "x": 770,
+        "y": 240
+      },
+      {
+        "id": "rech",
+        "label": "R_iso = U / I",
+        "ref": "spannung-strom-widerstand",
+        "kind": "control",
+        "x": 550,
+        "y": 240
+      },
+      {
+        "id": "trend",
+        "label": "Bewertung und\nTrendvergleich",
+        "kind": "output",
+        "x": 330,
+        "y": 240
+      }
+    ],
+    "edges": [
+      {
+        "from": "quelle",
+        "to": "ln",
+        "kind": "power",
+        "label": "U"
+      },
+      {
+        "from": "ln",
+        "to": "iso",
+        "kind": "power"
+      },
+      {
+        "from": "iso",
+        "to": "pe",
+        "kind": "power",
+        "label": "Reststrom"
+      },
+      {
+        "from": "pe",
+        "to": "imess",
+        "kind": "signal"
+      },
+      {
+        "from": "imess",
+        "to": "rech",
+        "kind": "data",
+        "label": "I"
+      },
+      {
+        "from": "rech",
+        "to": "trend",
+        "kind": "data"
+      }
+    ]
+  },
+  "sources": [
+    "iec-62353",
+    "iec-60601-1",
+    "iec-61140",
+    "din-en-50699",
+    "tipler-2019",
+    "iec-61557-16"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

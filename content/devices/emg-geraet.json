@@ -1,0 +1,60 @@
+{
+  "id": "emg-geraet",
+  "type": "device",
+  "title": "Elektromyograph / Neurographie (EMG/NLG)",
+  "aliases": [
+    "EMG",
+    "NLG",
+    "ENG",
+    "Elektromyographie",
+    "Elektroneurographie",
+    "Nervenleitgeschwindigkeitsmessung",
+    "EP-Gerät"
+  ],
+  "category": "geraete",
+  "deviceGroup": "funktionsdiagnostik",
+  "rank": 52,
+  "domains": [
+    "neurologie",
+    "orthopaedie-unfallchirurgie"
+  ],
+  "summary": "Elektromyographen leiten die elektrische Aktivität von Muskeln über Nadel- oder Oberflächenelektroden ab; mit integriertem Stimulator messen sie zusätzlich die Nervenleitgeschwindigkeit. Viele Systeme erfassen außerdem evozierte Potentiale. Sie dienen der Unterscheidung von Nerven- und Muskelerkrankungen.",
+  "sections": {
+    "purpose": "EMG und Neurographie klären, ob eine Muskelschwäche oder Sensibilitätsstörung durch eine Schädigung des Nervs (z. B. Karpaltunnelsyndrom, Polyneuropathie, Nervenwurzelläsion) oder des Muskels selbst verursacht ist. Evozierte Potentiale prüfen sensorische und motorische Bahnen des zentralen [[nervensystem|Nervensystems]] [@webster-2010].",
+    "principle": "## Elektromyographie\n\nBei der Nadel-EMG registriert eine konzentrische Nadelelektrode die **Potentiale motorischer Einheiten** – die summierten [[aktionspotential|Aktionspotentiale]] aller Muskelfasern, die von einem Motoneuron versorgt werden. Form, Amplitude, Dauer und Rekrutierungsmuster geben Hinweise auf neurogene oder myogene Schädigungen. Die Signale liegen im Bereich von Mikro- bis Millivolt und enthalten deutlich höhere Frequenzanteile als EEG oder EKG ([[biosignale]]).\n\n## Neurographie\n\nEin **Konstantstromstimulator** reizt den Nerv über Oberflächenelektroden mit kurzen Rechteckimpulsen. Abgeleitet wird das Summenaktionspotential des Muskels (motorisch) oder des Nervs (sensibel). Aus der Latenzdifferenz zweier Reizorte und deren Abstand ergibt sich die **Nervenleitgeschwindigkeit**:\n\nv = Δs / Δt\n\n> [!beispiel] Liegen zwei Reizorte 200 mm auseinander und unterscheiden sich die Latenzen um 4 ms, beträgt die Leitgeschwindigkeit 200 mm / 4 ms = 50 m/s.\n\n## Signalkette und evozierte Potentiale\n\nDie Verstärkung erfolgt mit [[instrumentenverstaerker|Instrumentenverstärkern]] hoher Gleichtaktunterdrückung, umschaltbaren [[filter|Filtern]] und schneller [[analog-digital-wandler|A/D-Wandlung]]. Für evozierte Potentiale (SEP, VEP, AEP), deren Amplitude weit unter dem Grundrauschen liegt, wird über viele reizsynchrone Durchläufe **gemittelt** (Averaging): Das Signal addiert sich, unkorreliertes Rauschen mittelt sich heraus.\n\n> [!warnung] Elektrische Reize an Patienten mit implantierten [[herzschrittmacher|Schrittmachern]] oder [[icd|ICD]] erfordern besondere Vorsicht; Herstellerangaben und klinische Vorgaben sind zu beachten. Der Stimulator ist ein [[anwendungsteile|Anwendungsteil]] mit eigenen Ausgangsbegrenzungen; besondere Sicherheitsanforderungen an Elektromyographen und Geräte für evozierte Potentiale enthält die Gerätenorm IEC 60601-2-40."
+  },
+  "manufacturers": [
+    {
+      "ref": "nihon-kohden",
+      "models": [
+        "Neuropack"
+      ],
+      "note": ""
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Kanalzahl, Stimulatoren (elektrisch, akustisch, visuell), Module für evozierte Potentiale und intraoperatives Monitoring, Software, Nadelelektroden als Verbrauchsmaterial, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Geräte mit Stimulationseinrichtung können unter MPBetreibV (2025) Anlage 1 Nr. 1.1 fallen (Erzeugung und Anwendung elektrischer Energie zur unmittelbaren Beeinflussung der Funktion von Nerven und/oder Muskeln); entscheidend sind Zweckbestimmung und Einstufung durch den Hersteller (die Zuordnung diagnostischer Stimulatoren ist in der Praxis nicht einheitlich; im Zweifel Herstellerangabe und zuständige Behörde heranziehen). Reine Ableitgeräte ohne Stimulator: STK nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Bei Zuordnung zu Anlage 1 STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); elektrische Wiederholungsprüfung nach IEC 62353; Prüfung des Stimulatorausgangs nach Herstellervorgabe."
+  },
+  "related": [
+    "eeg-geraet",
+    "reizstromgeraet",
+    "aktionspotential",
+    "biosignale",
+    "instrumentenverstaerker",
+    "neurologie"
+  ],
+  "sources": [
+    "webster-2010",
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

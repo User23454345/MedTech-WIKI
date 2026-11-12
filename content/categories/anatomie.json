@@ -6,7 +6,26 @@
   "order": 9,
   "icon": "heart",
   "summary": "Bau und Funktion des menschlichen Körpers, soweit sie für das Verständnis von Messung und Therapie mit Medizingeräten nötig sind.",
-  "body": "",
+  "body": "Medizingeräte messen Körperfunktionen oder greifen in sie ein. Wer verstehen will, was ein EKG ableitet, warum ein Beatmungsgerät einen positiven endexspiratorischen Druck aufbaut oder wie eine Dialyse die Niere ersetzt, braucht Grundkenntnisse in **Anatomie und Physiologie**. Diese Kategorie vermittelt sie gezielt aus technischer Perspektive – kein Ersatz für ein Lehrbuch der Medizin, sondern eine Brücke zwischen Körper und Gerät [@schmidt-lang-2019] [@guyton-2021].\n\nPhysiologisches Wissen hilft auch bei der Fehlersuche und Plausibilitätsprüfung: Ein Messwert, der physiologisch unmöglich ist, deutet auf ein Mess- oder Geräteproblem hin. Und viele Gefahren – etwa die Empfindlichkeit des Herzens gegenüber Strömen oder die eingeschränkte [[thermoregulation]] von Frühgeborenen – erklären sich aus der Physiologie.\n\n## Überblick\n\n| Organsystem | Artikel | Zugehörige Medizintechnik |\n|---|---|---|\n| Herz und Kreislauf | [[herz]], [[blutkreislauf]], [[blutdruck]] | [[ekg-geraet]], [[nibp-messgeraet]], [[invasive-druckmessung]], [[herz-lungen-maschine]], [[vad]] |\n| Elektrische Erregung | [[erregungsleitungssystem]], [[aktionspotential]] | [[defibrillator]], [[herzschrittmacher]], [[icd]] |\n| Nervensystem und Muskulatur | [[nervensystem]] | [[eeg-geraet]], [[emg-geraet]], [[reizstromgeraet]] |\n| Atmung | [[lunge]], [[atemmechanik]], [[gasaustausch]] | [[beatmungsgeraet]], [[spirometer]], [[kapnometer]] |\n| Blut und Sauerstofftransport | [[blut]], [[haemoglobin]], [[saeure-basen-haushalt]] | [[pulsoxymeter]], [[blutgasanalysator]], [[haematologie-analysator]] |\n| Niere | [[niere]] | [[dialysegeraet]], [[crrt-geraet]] |\n| Haut und Temperatur | [[haut]], [[thermoregulation]] | [[ekg-elektrode]], [[neutralelektrode]], [[inkubator]], [[hypothermiegeraet]] |\n| Sinnesorgane | [[auge]], [[ohr]] | [[oct]], [[spaltlampe]], [[audiometer]], [[cochlea-implantat]] |\n\n> [!vereinfacht] Physiologische Normwerte hängen von Alter, Körpergröße und Zustand ab. Angaben in diesem Wiki sind Orientierungswerte zum Verständnis der Technik, keine klinischen Entscheidungsgrenzen.\n\n## Vom Organ zum Gerät\n\nDie Artikel folgen einem einheitlichen Muster: Bau des Organs, Funktion, die für Geräte relevanten Messgrößen und Kennwerte sowie typische Störungen, die technische Hilfe erfordern. Am Ende stehen Links zu den Geräten, die diese Funktion messen oder ersetzen, und zu den physikalischen Grundlagen in [[physik]] – etwa von [[gasaustausch]] zu [[diffusion-osmose]] oder von [[haemoglobin]] zu [[lambert-beer]].\n\n> [!beispiel] Das [[pulsoxymeter]] verknüpft drei Kategorien: Die Physiologie liefert die unterschiedliche Lichtabsorption von oxygeniertem und desoxygeniertem [[haemoglobin]], die Physik das [[lambert-beer|Lambert-Beer-Gesetz]], die Sensorik die [[photoplethysmographie]].\n\n## Lernpfad-Empfehlung\n\n1. **Elektrophysiologie:** [[aktionspotential]] → [[erregungsleitungssystem]] → [[herz]] → [[nervensystem]].\n2. **Kreislauf:** [[blutkreislauf]] → [[blutdruck]] → [[blut]].\n3. **Atmung:** [[lunge]] → [[atemmechanik]] → [[gasaustausch]] → [[haemoglobin]] → [[saeure-basen-haushalt]].\n4. **Ausscheidung und Wärme:** [[niere]] → [[haut]] → [[thermoregulation]].\n5. **Sinnesorgane:** [[auge]] und [[ohr]].\n\nParallel dazu sollten die passenden Geräteartikel gelesen werden – so wird jede physiologische Größe sofort mit ihrer Messung verbunden.",
+  "paths": [
+    [
+      "erregungsleitungssystem",
+      "aktionspotential",
+      "herz",
+      "ekg-geraet",
+      "defibrillator"
+    ],
+    [
+      "lunge",
+      "gasaustausch",
+      "haemoglobin",
+      "pulsoxymeter"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

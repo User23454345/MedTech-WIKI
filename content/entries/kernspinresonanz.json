@@ -1,0 +1,159 @@
+{
+  "id": "kernspinresonanz",
+  "type": "term",
+  "title": "Kernspinresonanz",
+  "aliases": [
+    "Magnetresonanz",
+    "Kernmagnetische Resonanz",
+    "NMR",
+    "nuclear magnetic resonance",
+    "MR-Physik",
+    "Larmor-Frequenz",
+    "Larmorpräzession",
+    "T1-Relaxation",
+    "T2-Relaxation",
+    "Spinecho",
+    "Gyromagnetisches Verhältnis"
+  ],
+  "category": "physik",
+  "summary": "Kernspinresonanz beschreibt, wie Wasserstoffkerne in einem starken Magnetfeld präzedieren, durch ein Hochfrequenzfeld passender Frequenz angeregt werden und beim Zurückkehren ins Gleichgewicht ein messbares Signal aussenden. Larmor-Gleichung, Relaxationszeiten T1 und T2 und Gradienten-Ortskodierung sind die Grundlage der MRT.",
+  "body": "## Kernspin und magnetisches Moment\n\nProtonen und Neutronen besitzen einen Eigendrehimpuls, den **Spin**. Kerne mit ungerader Protonen- oder Neutronenzahl haben deshalb ein magnetisches Moment – sie verhalten sich wie winzige Stabmagnete. Für die Medizin ist der **Wasserstoffkern** (¹H, ein einzelnes Proton) entscheidend: Er ist in Wasser und Fett in sehr großer Zahl vorhanden und liefert das stärkste Signal [@mcrobbie-2017].\n\nFelix Bloch sowie Edward Purcell und Mitarbeiter wiesen die Kernspinresonanz in kondensierter Materie 1946 unabhängig voneinander nach [@bloch-1946] [@purcell-1946]; Paul Lauterbur zeigte 1973, wie man mit Magnetfeldgradienten daraus Bilder gewinnt [@lauterbur-1973].\n\n## Larmor-Präzession\n\nIn einem äußeren Magnetfeld B₀ richten sich die Spins nicht einfach aus, sondern **präzedieren** wie ein schräg stehender Kreisel um die Feldrichtung. Die Frequenz dieser Bewegung ist die **Larmor-Frequenz**:\n\n`f₀ = (γ / 2π) · B₀`\n\nFür ¹H beträgt γ/2π ≈ 42,58 MHz/T [@haacke-2014].\n\n| Feldstärke B₀ | Larmor-Frequenz ¹H (gerundet) |\n|---|---|\n| 0,55 T | 23,4 MHz |\n| 1,5 T | 63,9 MHz |\n| 3 T | 127,7 MHz |\n\nDie Frequenzen liegen im UKW-/VHF-Bereich – deshalb braucht ein MRT eine HF-dichte Kabine (Faraday-Käfig), damit Rundfunk- und Störsignale nicht ins Bild gelangen ([[emv]]).\n\n## Makroskopische Magnetisierung\n\nQuantenmechanisch kann der Spin eines Protons zwei Energiezustände einnehmen (parallel oder antiparallel zu B₀). Im thermischen Gleichgewicht ist der energieärmere Zustand nur minimal häufiger besetzt (Boltzmann-Verteilung). Der relative Überschuss beträgt näherungsweise\n\n`ΔN / N ≈ h · f₀ / (2 · k_B · T)`\n\nund liegt bei 1,5 T und Körpertemperatur (310 K) bei rund 5 · 10⁻⁶ – also bei wenigen Protonen pro Million. Er wächst proportional zu B₀.\n\n> [!vereinfacht] Dieser winzige Überschuss addiert sich wegen der riesigen Zahl von Protonen (rund 10²³ in wenigen Millilitern Wasser) zu einer messbaren **Netto-Magnetisierung M₀** in Feldrichtung. Die folgenden Abschnitte beschreiben deren klassisches Verhalten (Bloch-Gleichungen), nicht einzelne Spins.\n\nDa M₀ etwa proportional zu B₀ wächst, steigt auch das Signal-Rausch-Verhältnis mit der Feldstärke – ein Hauptgrund für [[supraleitender-magnet|supraleitende Magnete]] mit 1,5 T oder 3 T.\n\n## Anregung und Signal\n\nEine [[hf-spule|HF-Spule]] strahlt ein kurzes magnetisches Wechselfeld B₁ mit genau der Larmor-Frequenz ein (**Resonanzbedingung**). Die Magnetisierung kippt dabei aus der Feldrichtung; der Kippwinkel ist\n\n`α = γ · B₁ · τ`   (τ = Pulsdauer)\n\nNach einem 90°-Puls rotiert die Magnetisierung in der Querebene mit der Larmor-Frequenz. Dieses rotierende Magnetfeld **induziert** in einer Empfangsspule eine Wechselspannung – das MR-Signal, auch **FID** (free induction decay) genannt. Physikalisch ist das reine [[elektromagnetische-induktion|elektromagnetische Induktion]].\n\n## Relaxation\n\nNach der Anregung kehrt das System in das Gleichgewicht zurück. Zwei unabhängige Prozesse bestimmen den Bildkontrast [@haacke-2014]:\n\n| Prozess | Was geschieht? | Zeitkonstante | Gleichung |\n|---|---|---|---|\n| Längsrelaxation | Magnetisierung baut sich in B₀-Richtung wieder auf; Energieabgabe an die Umgebung („Gitter“) | **T1** | `M_z(t) = M₀ · (1 − e^(−t/T1))` (nach 90°-Puls) |\n| Querrelaxation | Spins verlieren ihre Phasengleichheit durch Wechselwirkungen untereinander | **T2** | `M_xy(t) = M_xy(0) · e^(−t/T2)` |\n\nZusätzlich lassen statische Feldinhomogenitäten das Signal noch schneller zerfallen (**T2***). Diesen Anteil kann ein 180°-Refokussierungspuls rückgängig machen – das **Spinecho**, von Erwin Hahn 1950 entdeckt [@hahn-1950].\n\n> [!beispiel] Typische Größenordnungen bei 1,5 T: Fettgewebe hat ein kurzes T1 (einige hundert ms), Liquor ein sehr langes T1 (mehrere Sekunden) und ein langes T2. Deshalb erscheint Liquor im T1-gewichteten Bild dunkel, im T2-gewichteten Bild hell. Konkrete Werte variieren je nach Literatur, Feldstärke und Messmethode.\n\nDie Gewichtung wird über die Sequenzparameter gesteuert: Repetitionszeit **TR** (Zeit zwischen Anregungen) und Echozeit **TE** (Zeit bis zur Signalaufnahme). Kurzes TR und kurzes TE ergeben T1-Gewichtung, langes TR und langes TE T2-Gewichtung.\n\n## Ortskodierung\n\nOhne zusätzliche Maßnahmen würden alle Protonen mit derselben Frequenz antworten. [[gradientenspule|Gradientenspulen]] überlagern B₀ ein ortsabhängiges Zusatzfeld, sodass gilt:\n\n`f(x) = (γ / 2π) · (B₀ + G_x · x)`\n\n* **Schichtselektion:** Gradient während des HF-Pulses – nur eine Schicht erfüllt die Resonanzbedingung.\n* **Frequenzkodierung:** Gradient während der Auslese – die Frequenz verrät die Position.\n* **Phasenkodierung:** kurzer Gradient zwischen Anregung und Auslese – die Phase verrät die zweite Koordinate.\n\nDie gemessenen Rohdaten bilden den **k-Raum**; das Bild entsteht durch eine zweidimensionale Fourier-Transformation [@mcrobbie-2017].\n\n## Anwendung in Geräten\n\n| Baugruppe im [[mrt]] | physikalische Aufgabe |\n|---|---|\n| [[supraleitender-magnet]] | homogenes, stabiles B₀ → Larmor-Frequenz und Magnetisierung |\n| [[gradientenspule]] | ortsabhängige Frequenz/Phase → Ortskodierung |\n| [[hf-spule]] (Sende-/Empfangsspulen) | Anregung mit B₁, Empfang des induzierten Signals |\n| HF-Kabine | Abschirmung äußerer Störfelder bei der Larmor-Frequenz |\n\nNeben ¹H sind auch andere Kerne mit Kernspin messbar (z. B. ²³Na, ³¹P, ¹³C), wegen geringerer Konzentration und kleinerem γ aber mit deutlich schwächerem Signal; sie erfordern spezielle mehrfrequente HF-Spulen und sind Forschungs- bzw. Spezialanwendungen. Verwandt ist die NMR-Spektroskopie im Labor; Prinzipien der Spinresonanz von Elektronen (ESR) spielen in der klinischen Gerätetechnik kaum eine Rolle.\n\n## Bedeutung in der Medizintechnik\n\nAus der Physik folgen direkt die Sicherheitsthemen des MRT, die nach [[iec-60601-2-33]] geregelt sind [@iec-60601-2-33]:\n\n* **Statisches Feld:** Anziehungskraft auf ferromagnetische Gegenstände (Projektil-Effekt) – auch bei abgeschaltetem Scanner, solange der Magnet geladen ist.\n* **HF-Feld:** Energieeintrag ins Gewebe, begrenzt über die **spezifische Absorptionsrate (SAR)**; bei gleicher Sequenz wächst die deponierte HF-Leistung näherungsweise mit B₀² – ein Grund, warum SAR bei 3 T häufiger die Sequenzparameter begrenzt als bei 1,5 T; Erwärmung leitfähiger Implantate und Kabelschleifen ([[waermeuebertragung]]).\n* **Gradientenfelder:** schnelle Feldänderungen induzieren Ströme im Körper (periphere Nervenstimulation) und erzeugen laute Geräusche durch Lorentzkräfte auf die Spulen.\n\n> [!warnung] Ein supraleitender Magnet ist praktisch immer „an“. Der Zutritt zum Untersuchungsraum mit ferromagnetischem Werkzeug oder Prüfgerät ist lebensgefährlich. Prüfmittel müssen als MR-sicher bzw. MR-bedingt gekennzeichnet sein [@astm-f2503].\n\n> [!belegt] Das MR-Signal entsteht durch Induktion der präzedierenden Magnetisierung in einer Empfangsspule; Frequenz und Feldstärke sind über die Larmor-Gleichung verknüpft [@haacke-2014].",
+  "related": [
+    "mrt",
+    "supraleitender-magnet",
+    "gradientenspule",
+    "hf-spule",
+    "elektromagnetische-induktion",
+    "iec-60601-2-33",
+    "emv",
+    "waermeuebertragung",
+    "radiologie"
+  ],
+  "paths": [
+    [
+      "mrt",
+      "supraleitender-magnet",
+      "kernspinresonanz",
+      "hf-spule",
+      "elektromagnetische-induktion"
+    ],
+    [
+      "mrt",
+      "gradientenspule",
+      "kernspinresonanz"
+    ]
+  ],
+  "sources": [
+    "bloch-1946",
+    "purcell-1946",
+    "lauterbur-1973",
+    "hahn-1950",
+    "haacke-2014",
+    "mcrobbie-2017",
+    "iec-60601-2-33",
+    "astm-f2503"
+  ],
+  "diagram": {
+    "title": "Vom Proton zum MR-Bild",
+    "caption": "Physikalische Kette der Kernspinresonanz in der MRT (vereinfacht).",
+    "width": 900,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "b0",
+        "label": "Statisches Feld B₀",
+        "ref": "supraleitender-magnet",
+        "kind": "source",
+        "x": 100,
+        "y": 80
+      },
+      {
+        "id": "m0",
+        "label": "Netto-\nMagnetisierung M₀",
+        "ref": "kernspinresonanz",
+        "kind": "patient",
+        "x": 320,
+        "y": 80
+      },
+      {
+        "id": "hf",
+        "label": "HF-Puls B₁\n(Larmor-Frequenz)",
+        "ref": "hf-spule",
+        "kind": "actuator",
+        "x": 320,
+        "y": 220
+      },
+      {
+        "id": "gr",
+        "label": "Gradienten\n(Ortskodierung)",
+        "ref": "gradientenspule",
+        "kind": "actuator",
+        "x": 540,
+        "y": 220
+      },
+      {
+        "id": "sig",
+        "label": "Induziertes\nMR-Signal",
+        "ref": "elektromagnetische-induktion",
+        "kind": "sensor",
+        "x": 540,
+        "y": 80
+      },
+      {
+        "id": "adc",
+        "label": "Empfang /\nDigitalisierung",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 760,
+        "y": 80
+      },
+      {
+        "id": "img",
+        "label": "Fourier-\nRekonstruktion",
+        "ref": "mrt",
+        "kind": "output",
+        "x": 760,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "b0",
+        "to": "m0",
+        "kind": "energy",
+        "label": "Ausrichtung"
+      },
+      {
+        "from": "hf",
+        "to": "m0",
+        "kind": "energy",
+        "label": "Anregung"
+      },
+      {
+        "from": "gr",
+        "to": "sig",
+        "kind": "signal",
+        "label": "f(x)"
+      },
+      {
+        "from": "m0",
+        "to": "sig",
+        "kind": "energy",
+        "label": "Präzession"
+      },
+      {
+        "from": "sig",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "img",
+        "kind": "data",
+        "label": "k-Raum"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

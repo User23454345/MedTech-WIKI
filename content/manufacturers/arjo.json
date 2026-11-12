@@ -1,0 +1,66 @@
+{
+  "id": "arjo",
+  "type": "manufacturer",
+  "title": "Arjo",
+  "aliases": [
+    "Arjo AB",
+    "ArjoHuntleigh",
+    "Huntleigh"
+  ],
+  "category": "hersteller",
+  "summary": "Arjo AB mit Sitz in Malmö (Schweden) ist ein Hersteller von Produkten für Patientenhandling, Hygiene, Dekubitusprophylaxe, Thromboseprophylaxe und Klinikbetten. Das Unternehmen gehörte lange zum Getinge-Konzern und ist seit 2017 eigenständig börsennotiert.",
+  "headquarters": "Malmö, Schweden",
+  "founded": "1957",
+  "website": "https://www.arjo.com/",
+  "productLines": [
+    {
+      "device": "patientenlifter",
+      "models": [
+        "Maxi Move",
+        "Maxi Sky",
+        "Sara Stedy"
+      ],
+      "note": "Mobile Bodenlifter, Deckenlifter und Aufstehhilfen."
+    },
+    {
+      "device": "antidekubitussystem",
+      "models": [
+        "Nimbus",
+        "AutoLogic"
+      ],
+      "note": "Wechseldruckmatratzensysteme."
+    },
+    {
+      "device": "ipk-geraet",
+      "models": [
+        "Flowtron"
+      ],
+      "note": "Kompressionssysteme zur Thromboseprophylaxe."
+    },
+    {
+      "device": "pflegebett",
+      "models": [
+        "Enterprise",
+        "Citadel"
+      ],
+      "note": "Klinik- und Intensivbetten."
+    }
+  ],
+  "body": "## Überblick\n\n**Arjo** ist ein schwedischer Medizintechnikhersteller mit Hauptsitz in Malmö, der sich auf die Versorgung von Menschen mit eingeschränkter Mobilität spezialisiert hat [@arjo-web]. Kunden sind Krankenhäuser, Pflegeeinrichtungen und die häusliche Pflege.\n\n## Geschichte in Stichpunkten\n\n* **1957:** Gründung in Eslöv (Schweden) durch Arne Johansson; frühe Produkte waren Badewannen und Hilfsmittel für die Pflege.\n* **1995:** Übernahme durch **Getinge**; Arjo wird Kern des Geschäftsbereichs Extended Care.\n* **2007:** Getinge übernimmt den britischen Hersteller **Huntleigh Technology** (u. a. Matratzensysteme, Kompressionstherapie) und führt ihn mit Arjo zu **ArjoHuntleigh** zusammen.\n* **2017:** Abspaltung von Getinge und Börsennotierung als eigenständige **Arjo AB** an der Nasdaq Stockholm.\n\n## Produktbereiche\n\n| Bereich | Inhalte (Auswahl) |\n|---|---|\n| Patientenhandling | [[patientenlifter|Patientenlifter]] (Boden- und Deckenlifter), Aufstehhilfen, Gleitmatten |\n| Hygiene | Bade- und Duschsysteme, Hygienestühle |\n| Medizinische Betten | [[pflegebett|Klinik- und Pflegebetten]] |\n| Therapeutische Oberflächen | [[antidekubitussystem|Antidekubitus-Wechseldrucksysteme]] |\n| Thromboseprophylaxe | [[ipk-geraet|Intermittierende pneumatische Kompression]] |\n\n## Bedeutung für die Medizintechnik\n\nArjo-Produkte sind typische Geräte der „Grundausstattung“ von Stationen, die in großen Stückzahlen betrieben werden. Gerade deshalb sind sie für das [[medizintechnik-management]] relevant: Lifter, Betten und Wechseldrucksysteme erfordern regelmäßige Prüfungen, und Fehler können unmittelbar zu Stürzen oder Druckgeschwüren führen.\n\n> [!hinweis] Patientenlifter tragen die volle Last eines Menschen; neben der elektrischen Sicherheit sind Gurte, Aufhängungen und Tragmechanik regelmäßig zu prüfen. Prüfintervalle und -umfang richten sich nach den Herstellerangaben und der Gefährdungsbeurteilung.\n\n> [!vereinfacht] Ein Wechseldrucksystem besteht aus einer Matratze mit vielen Luftkammern und einer Steuereinheit mit Kompressor und Ventilen, die die Kammern zyklisch be- und entlüftet. So wird die Auflagefläche periodisch entlastet.\n\n> [!praxis] Häufige Störungen bei Wechseldrucksystemen sind undichte Schläuche, defekte Kammern und falsch gesteckte Verbindungen – siehe [[leckage]].\n\n## Einordnung im Markt\n\nWettbewerber sind u. a. [[hillrom]] (Baxter), [[stryker]] und verschiedene Spezialanbieter von Pflegebetten und Hilfsmitteln. Die ehemalige Muttergesellschaft [[getinge]] konzentriert sich heute auf Akutversorgung und Sterilgutversorgung.",
+  "related": [
+    "patientenlifter",
+    "antidekubitussystem",
+    "ipk-geraet",
+    "pflegebett",
+    "medizintechnik-management",
+    "leckage",
+    "getinge",
+    "hillrom",
+    "stryker"
+  ],
+  "sources": [
+    "arjo-web"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

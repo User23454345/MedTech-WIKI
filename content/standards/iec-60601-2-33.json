@@ -1,0 +1,40 @@
+{
+  "id": "iec-60601-2-33",
+  "type": "standard",
+  "title": "IEC 60601-2-33",
+  "code": "IEC 60601-2-33",
+  "kind": "norm",
+  "fullTitle": "Medizinische elektrische Geräte – Teil 2-33: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Magnetresonanzgeräten für die medizinische Diagnostik",
+  "scope": "Legt besondere Sicherheitsanforderungen an Magnetresonanzgeräte und MR-Systeme für die medizinische Diagnostik fest, um Patienten und Personal vor den Gefährdungen durch statisches Magnetfeld, Gradientenfelder und Hochfrequenzfelder zu schützen.",
+  "aliases": [
+    "DIN EN 60601-2-33",
+    "EN 60601-2-33",
+    "VDE 0750-2-33",
+    "60601-2-33",
+    "MR-Sicherheitsnorm"
+  ],
+  "category": "normen",
+  "summary": "IEC 60601-2-33 ist die besondere Festlegung der Normenfamilie IEC 60601 für MRT-Geräte. Sie definiert Betriebsarten mit gestaffelten Grenzwerten für die spezifische Absorptionsrate (SAR) und für schnell geschaltete Gradientenfelder, fordert Schutz vor Lärm, eine Notabschaltung des Magnetfelds sowie Kennzeichnung und Informationen für den sicheren Betrieb.",
+  "body": "## Gegenstand und Anwendungsbereich\n\nDie **IEC 60601-2-33** gilt für Magnetresonanzgeräte ([[mrt]]) und MR-Systeme für die medizinische Diagnostik [@iec-60601-2-33]. Sie behandelt die besonderen Gefährdungen, die von den drei Feldern eines MRT ausgehen ([[kernspinresonanz]]):\n\n| Feld | erzeugt durch | Gefährdung |\n|---|---|---|\n| statisches Magnetfeld B₀ | [[supraleitender-magnet]] | Anziehung ferromagnetischer Gegenstände (Projektileffekt), Wirkung auf Implantate, Schwindel bei Bewegung im Feld |\n| Gradientenfelder (dB/dt) | [[gradientenspule]] | periphere Nervenstimulation durch induzierte Ströme ([[elektromagnetische-induktion]]), Lärm |\n| Hochfrequenzfeld B₁ | [[hf-spule]] | Gewebeerwärmung (SAR), Verbrennungen an Leiterschleifen und Elektroden |\n\nNicht geregelt werden die Sicherheit konkreter Implantate (das ist Sache der Implantathersteller) und die bauliche Gestaltung der MR-Abteilung im Detail; die Norm verlangt aber Informationen, die der Betreiber für ein Sicherheitskonzept benötigt.\n\n## Zentrale Konzepte und Anforderungen\n\n### Betriebsarten\n\nKernkonzept sind **gestaffelte Betriebsarten**:\n\n| Betriebsart | Charakter |\n|---|---|\n| Normalbetrieb | Werte, bei denen keine physiologisch belastenden Wirkungen zu erwarten sind |\n| Kontrollierter Betrieb erster Stufe | höhere Werte; möglich sind leichte Belastungen, daher ärztliche Überwachung und bewusste Bestätigung durch den Anwender |\n| Kontrollierter Betrieb zweiter Stufe | nur für Forschung unter besonderen, genehmigten Bedingungen |\n\nDas Gerät muss die Grenzwerte selbst überwachen und verhindern, dass sie ohne Bestätigung überschritten werden.\n\n### Spezifische Absorptionsrate (SAR)\n\nDie SAR (in W/kg) beschreibt die im Gewebe absorbierte HF-Leistung ([[joulesche-waerme]], [[thermoregulation]]). Das Gerät berechnet sie vorab aus Patientengewicht und Sequenzparametern und begrenzt sie für Ganzkörper, Kopf und Körperteile.\n\n> [!beispiel] In Lehrbüchern und Herstellerunterlagen wird für die Ganzkörper-SAR häufig ein Grenzwert von 2 W/kg im Normalbetrieb und 4 W/kg im kontrollierten Betrieb erster Stufe genannt [@mcrobbie-2017]. Die verbindlichen Werte, Mittelungszeiten und Teilkörpergrenzen sind der jeweils gültigen Ausgabe zu entnehmen.\n\n### Gradientenfelder und Nervenstimulation\n\nSchnell geschaltete Gradienten induzieren im Körper elektrische Felder, die periphere Nerven reizen können (Kribbeln, Muskelzucken). Die Norm begrenzt die Schaltgeschwindigkeit relativ zu Stimulationsschwellen; die Grenzwerte unterscheiden sich je nach Betriebsart ([[aktionspotential]], [[nervensystem]]).\n\n### Statisches Feld, Lärm, Notabschaltung\n\n- Die Feldstärke von B₀ ist je Betriebsart begrenzt; Streufeldlinien (z. B. die 0,5-mT-Linie für Implantatträger) müssen dokumentiert werden.\n- Gradientenlärm kann sehr laut sein; ab festgelegten Pegeln ist Gehörschutz vorzusehen ([[ohr]]).\n- Supraleitende Magnete benötigen eine **Notabschaltung des Magnetfelds** (kontrollierter Quench), etwa wenn eine Person durch einen angezogenen Gegenstand eingeklemmt ist.\n- Patientenkommunikation und Notruf (Klingelball) sind vorzusehen.\n\n### MR-bedingte Implantate\n\nNeuere Ausgaben enthalten Festlegungen, die es erleichtern, Patienten mit MR-bedingt sicheren Implantaten ([[herzschrittmacher]], [[icd]], [[cochlea-implantat]]) unter definierten Feldbedingungen zu untersuchen. Maßgeblich bleiben stets die Bedingungen des Implantatherstellers.\n\n> [!warnung] Ferromagnetische Gegenstände (Gasflaschen, Werkzeug, Scheren, ungeeignete [[infusionspumpe|Infusionspumpen]] oder Beatmungsgeräte) dürfen nicht in den Magnetraum gelangen. Nur Geräte mit Kennzeichnung „MR-sicher“ oder „MR-bedingt“ unter den angegebenen Bedingungen verwenden.\n\n## Bezug zu anderen Normen\n\n| Ebene | Norm | Bezug |\n|---|---|---|\n| Basisnorm | [[iec-60601-1]] | allgemeine Sicherheit |\n| Ergänzungsnormen | [[iec-60601-1-2]], [[iec-60601-1-6]], [[iec-60601-1-8]] | EMV (Hochfrequenzabschirmung), Gebrauchstauglichkeit, Alarme |\n| Prozessnormen | [[iso-14971]], [[iec-62304]] | Risikomanagement, SAR-Überwachungssoftware |\n| Datenaustausch | [[dicom]] | Bildaustausch (keine Sicherheitsnorm) |\n\n> [!hinweis] Grundprinzip der Familie IEC 60601: Die besondere Festlegung (-2-x) hat Vorrang vor Ergänzungsnormen (-1-x) und der Basisnorm. Sie gibt jeweils an, welche Abschnitte der Basisnorm gelten, ergänzt oder ersetzt werden.\n\n## Bedeutung für Hersteller und Betreiber\n\n**Hersteller** müssen SAR- und dB/dt-Überwachung zuverlässig implementieren und Informationen zu Streufeld, Lärm und Betriebsgrenzen bereitstellen.\n\n**Betreiber** benötigen ein MR-Sicherheitskonzept mit Zonen, Zugangskontrolle, Patientenscreening und Schulung des Personals ([[einweisung]], [[patientensicherheit]]). Produkte zur Diagnose mit bildgebenden Verfahren nach dem Prinzip der Kernspinresonanz sind in Anlage 1 der [[mpbetreibv]] genannt; die [[stk]] ist daher nach § 12 spätestens alle zwei Jahre, früher wenn Mängel früher zu erwarten sind durchzuführen [@mpbetreibv]. Wartung richtet sich nach den Herstellerangaben; hinzu kommen Überwachung der Kühlung (Helium) und Bildqualitätsprüfungen mit Phantomen.\n\n> [!praxis] Verbrennungen im MRT entstehen häufig durch Leiterschleifen: gekreuzte Beine, Hautkontakt der Hände mit dem Oberschenkel oder ungeeignete EKG-Kabel. Polsterung und korrekte Kabelführung sind einfache, wirksame Schutzmaßnahmen.\n\n## Betroffene Geräte\n\n[[mrt]] einschließlich Spulen und Zubehör; im Umfeld MR-taugliche [[patientenmonitor|Patientenmonitore]], [[infusionspumpe|Infusionspumpen]], [[beatmungsgeraet|Beatmungsgeräte]] und [[anaesthesiegeraet|Anästhesiegeräte]]. Hersteller sind u. a. [[siemens-healthineers]], [[ge-healthcare]], [[philips]], [[canon-medical]] und [[fujifilm]].\n",
+  "related": [
+    "mrt",
+    "kernspinresonanz",
+    "supraleitender-magnet",
+    "gradientenspule",
+    "hf-spule",
+    "elektromagnetische-induktion",
+    "radiologie",
+    "herzschrittmacher",
+    "iec-60601-1",
+    "patientensicherheit"
+  ],
+  "sources": [
+    "iec-60601-2-33",
+    "iec-60601-1",
+    "mcrobbie-2017",
+    "doessel-2016",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "strlschg",
+  "type": "standard",
+  "title": "Strahlenschutzgesetz (StrlSchG)",
+  "code": "StrlSchG",
+  "kind": "gesetz",
+  "fullTitle": "Gesetz zum Schutz vor der schädlichen Wirkung ionisierender Strahlung (Strahlenschutzgesetz – StrlSchG)",
+  "scope": "Regelt in Deutschland den Schutz von Mensch und Umwelt vor ionisierender Strahlung in geplanten, bestehenden und notfallbedingten Expositionssituationen, einschließlich der Anwendung ionisierender Strahlung am Menschen.",
+  "aliases": [
+    "StrlSchG",
+    "Strahlenschutzgesetz",
+    "Radiation Protection Act",
+    "Strahlenschutzrecht"
+  ],
+  "category": "recht",
+  "summary": "Das Strahlenschutzgesetz regelt seit dem 31. Dezember 2018 zusammen mit der Strahlenschutzverordnung den Schutz vor ionisierender Strahlung in Deutschland. Für die Medizin bedeutsam sind rechtfertigende Indikation, Fachkunde, Strahlenschutzorganisation, Dosisgrenzwerte für Beschäftigte sowie Abnahme- und Konstanzprüfungen an Röntgeneinrichtungen.",
+  "body": "## Überblick\n\nDas **Strahlenschutzgesetz (StrlSchG)** ist das zentrale deutsche Gesetz zum Schutz von Mensch und Umwelt vor den schädlichen Wirkungen [[ionisierende-strahlung|ionisierender Strahlung]]. Es wurde als Artikel 1 des Gesetzes zur Neuordnung des Rechts zum Schutz vor der schädlichen Wirkung ionisierender Strahlung vom 27. Juni 2017 erlassen und gilt in seinen wesentlichen Teilen seit dem **31. Dezember 2018** [@strlschg]. Zum gleichen Zeitpunkt trat die neue **Strahlenschutzverordnung (StrlSchV)** in Kraft, die das Gesetz technisch konkretisiert [@strlschv]. Beide setzen die europäische Richtlinie 2013/59/Euratom um [@rl-2013-59-euratom].\n\n> [!belegt] Mit dem neuen Strahlenschutzrecht wurden die frühere **Röntgenverordnung (RöV)** und die alte Strahlenschutzverordnung von 2001 in einem einheitlichen Regelwerk zusammengeführt. Röntgeneinrichtungen und radioaktive Stoffe werden seither nach gemeinsamen Grundsätzen behandelt [@strlschg] [@strlschv].\n\n## Grundsätze des Strahlenschutzes\n\nDas Gesetz baut auf den drei international anerkannten Grundprinzipien der ICRP auf [@icrp-103]:\n\n| Grundsatz | Bedeutung | Beispiel in der Medizin |\n|---|---|---|\n| **Rechtfertigung** | Eine Tätigkeit mit Strahlenexposition muss mehr nutzen als schaden. | Ein [[computertomograph|CT]] wird nur durchgeführt, wenn der diagnostische Nutzen das Strahlenrisiko überwiegt. |\n| **Optimierung** | Expositionen so gering wie vernünftigerweise erreichbar halten (ALARA-Prinzip). | Dosisoptimierte Protokolle, enge [[kollimator|Kollimation]], gepulste Durchleuchtung am [[c-bogen|C-Bogen]]. |\n| **Dosisbegrenzung** | Grenzwerte für beruflich exponierte Personen und die Bevölkerung. | Begrenzung der Dosis für Personal in der [[angiographieanlage|Angiographie]]. |\n\n> [!hinweis] Für **Patient:innen** gibt es bei medizinischen Anwendungen bewusst **keine Dosisgrenzwerte** – an ihre Stelle treten die rechtfertigende Indikation und die Optimierung, unterstützt durch die vom Bundesamt für Strahlenschutz bekannt gemachten **diagnostischen Referenzwerte** [@bfs-drw].\n\n## Expositionssituationen und Aufbau\n\nDas StrlSchG unterscheidet **geplante**, **bestehende** und **notfallbedingte** Expositionssituationen. Für die Medizintechnik ist fast ausschließlich die geplante Exposition relevant: der Betrieb von [[roentgengeraet|Röntgeneinrichtungen]], Anlagen zur Erzeugung ionisierender Strahlung (z. B. [[linearbeschleuniger|Linearbeschleuniger]]) und der Umgang mit radioaktiven Stoffen (z. B. in der [[nuklearmedizin|Nuklearmedizin]] oder beim [[afterloader|Afterloading]]).\n\nWichtige Regelungsbereiche für die Medizin:\n\n* **Genehmigung und Anzeige:** Der Betrieb von Röntgeneinrichtungen und Bestrahlungsanlagen ist genehmigungs- oder anzeigebedürftig; zuständig sind die Landesbehörden.\n* **Strahlenschutzorganisation:** Der **Strahlenschutzverantwortliche** (§ 69, in der Regel der Betreiber bzw. Träger) bestellt **Strahlenschutzbeauftragte** (§ 70) mit der erforderlichen Fachkunde [@strlschg].\n* **Anwendung am Menschen:** Ionisierende Strahlung darf am Menschen nur angewendet werden, wenn eine Person mit der erforderlichen Fachkunde die **rechtfertigende Indikation** gestellt hat (§ 83) [@strlschg].\n* **Grenzwerte für beruflich exponierte Personen** (§ 78): effektive Dosis höchstens **20 mSv pro Kalenderjahr**, daneben Organ-Äquivalentdosisgrenzwerte, u. a. für die Augenlinse (seit 2018 ebenfalls 20 mSv pro Kalenderjahr, entsprechend der Absenkung in der Richtlinie 2013/59/Euratom) [@strlschg] [@rl-2013-59-euratom].\n* **Bevölkerung** (§ 80): Die Summe der effektiven Dosen aus genehmigten bzw. angezeigten Tätigkeiten darf für Einzelpersonen der Bevölkerung 1 mSv pro Kalenderjahr nicht überschreiten [@strlschg].\n\n> [!vereinfacht] Die effektive Dosis E (Einheit Sievert, Sv) gewichtet die Organdosen nach Strahlenart und Organempfindlichkeit: E = Σ w_T · H_T mit H_T = Σ w_R · D_T,R. Sie ist eine Schutzgröße für das stochastische Risiko einer Population, kein Messwert für das individuelle Risiko eines Patienten. Details: [[strahlenschutz]].\n\n## Konkretisierung durch die Strahlenschutzverordnung\n\nDie StrlSchV regelt technische und organisatorische Einzelheiten [@strlschv], u. a.:\n\n* Einrichtung von **Strahlenschutzbereichen** (Überwachungs-, Kontroll- und Sperrbereich) und deren Kennzeichnung,\n* **Personendosimetrie** und Kategorisierung beruflich exponierter Personen,\n* **Abnahme- und Konstanzprüfungen** an Röntgeneinrichtungen (§§ 115–117 StrlSchV), konkretisiert durch die Qualitätssicherungs-Richtlinie [@qs-rl-roentgendiagnostik-2024]; siehe [[konstanzpruefung]],\n* **Sachverständigenprüfungen** in regelmäßigen Abständen,\n* Hinzuziehung von **Medizinphysik-Experten**, insbesondere in Strahlentherapie, Nuklearmedizin und bei dosisintensiven Röntgenanwendungen wie CT und Interventionen,\n* Meldung **bedeutsamer Vorkommnisse** (z. B. erhebliche unbeabsichtigte Expositionen) an die Behörde.\n\n> [!hinweis] Paragraphenangaben beziehen sich auf die bei Redaktionsschluss bekannte Fassung. StrlSchG und StrlSchV wurden seit 2018 mehrfach geändert; maßgeblich ist die jeweils geltende Fassung.\n\n## Abgrenzung\n\n* **Nichtionisierende Strahlung** (z. B. Magnetfelder und HF-Felder im [[mrt|MRT]], Ultraschall, Laser) fällt **nicht** unter das StrlSchG; hier gelten andere Regelungen, etwa die NiSV für kosmetische Anwendungen [@nisv] und das Arbeitsschutzrecht.\n* Die **Produktsicherheit** von Röntgengeräten (Konstruktion, Leckstrahlung, Filterung) regeln die [[mdr|MDR]] und Normen wie [[iec-60601-2-54]] und die Ergänzungsnorm zum Strahlenschutz IEC 60601-1-3 [@iec-60601-1-3-strahlenschutz]. Das StrlSchG regelt dagegen den **Betrieb** und die **Anwendung**.\n* Neben dem StrlSchG gilt für alle Medizinprodukte die [[mpbetreibv|MPBetreibV]] – ein Röntgengerät unterliegt also sowohl Strahlenschutzprüfungen als auch den Betreiberpflichten.\n\n## Bedeutung in der Medizintechnik\n\nMedizintechniker:innen begegnen dem StrlSchG vor allem bei:\n\n* **Inbetriebnahme und Abnahmeprüfung** neuer Geräte wie [[computertomograph|Computertomographen]], [[mammographiegeraet|Mammographiegeräten]], [[dvt|DVT]] oder [[angiographieanlage|Angiographieanlagen]],\n* **Instandsetzung** an strahlungsrelevanten Baugruppen ([[roentgenroehre|Röntgenröhre]], [[hochspannungserzeugung|Hochspannungsgenerator]], [[roentgendetektor|Detektor]], Kollimator) – danach sind in der Regel Teilabnahme- oder Konstanzprüfungen erforderlich,\n* **Konstanzprüfungen** im laufenden Betrieb und bei der Auswertung von Dosiswerten (z. B. CTDIvol, DLP, Dosisflächenprodukt),\n* **Arbeiten im Kontrollbereich** mit Dosimeterpflicht und Unterweisung,\n* Geräten der Nuklearmedizin und Strahlentherapie wie [[pet-ct|PET/CT]], [[gammakamera|Gammakamera]] und Linearbeschleuniger.\n\n> [!praxis] Vor Servicearbeiten an einer Röntgenanlage sollte geklärt sein, welche Prüfung nach dem Eingriff nötig ist und wer sie durchführt (Hersteller, Medizinphysik, Sachverständige). Ohne diese Freigabe darf die Anlage nicht wieder am Patienten eingesetzt werden.\n",
+  "related": [
+    "strahlenschutz",
+    "ionisierende-strahlung",
+    "roentgenstrahlung",
+    "radioaktivitaet",
+    "konstanzpruefung",
+    "roentgengeraet",
+    "computertomograph",
+    "linearbeschleuniger",
+    "radiologie",
+    "strahlentherapie",
+    "nuklearmedizin",
+    "mpbetreibv"
+  ],
+  "paths": [
+    [
+      "roentgengeraet",
+      "roentgenroehre",
+      "roentgenstrahlung",
+      "ionisierende-strahlung",
+      "strahlenschutz",
+      "strlschg"
+    ]
+  ],
+  "sources": [
+    "strlschg",
+    "strlschv",
+    "rl-2013-59-euratom",
+    "icrp-103",
+    "bfs-drw",
+    "qs-rl-roentgendiagnostik-2024",
+    "nisv",
+    "iec-60601-1-3-strahlenschutz"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

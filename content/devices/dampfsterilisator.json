@@ -1,0 +1,71 @@
+{
+  "id": "dampfsterilisator",
+  "type": "device",
+  "title": "Dampfsterilisator",
+  "aliases": [
+    "Autoklav",
+    "Dampfautoklav",
+    "Großsterilisator",
+    "Kleinsterilisator",
+    "Steam sterilizer",
+    "Dampf-Sterilisator"
+  ],
+  "category": "geraete",
+  "deviceGroup": "aufbereitung",
+  "rank": 95,
+  "domains": [
+    "chirurgie",
+    "zahnmedizin"
+  ],
+  "summary": "Dampfsterilisatoren töten Mikroorganismen einschließlich Bakteriensporen mit gesättigtem, gespanntem Wasserdampf ab, typischerweise bei 121 °C oder 134 °C. Die Dampfsterilisation ist das Standardverfahren für thermostabile Medizinprodukte in der Zentralsterilgutversorgung, in OP-Abteilungen und Praxen.",
+  "riskClass": {
+    "value": "IIa",
+    "evidence": "belegt",
+    "note": "Produkte, die speziell zur Sterilisation von Medizinprodukten bestimmt sind, gehören nach Regel 16 der [[mdr|MDR]] Anhang VIII zur Klasse IIa.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Der Dampfsterilisator ist der letzte Schritt der [[aufbereitung|Aufbereitung]] kritischer Medizinprodukte (z. B. chirurgische Instrumente, OP-Textilien, Implantatsiebe). Nach Reinigung und [[desinfektion|Desinfektion]], Pflege, Prüfung und Verpackung wird das Sterilgut in validierten Programmen sterilisiert. Unterschieden werden Groß-Sterilisatoren für die zentrale Aufbereitung [@en-285] und Klein-Sterilisatoren für Praxen (EN 13060, Zyklustypen B, N und S; für verpackte Hohlkörper ist ein Typ-B-Zyklus mit fraktioniertem Vorvakuum erforderlich).",
+    "principle": "## Physik der Dampfsterilisation\n\nWirksam ist **gesättigter Dampf**, dessen Temperatur über die Dampfdruckkurve fest mit dem [[druck|Druck]] verknüpft ist ([[gasgesetze]]). Beim Kondensieren auf dem kälteren Sterilgut gibt der Dampf seine große Kondensationswärme ab ([[waermeuebertragung]]) und befeuchtet die Oberflächen – feuchte Hitze denaturiert Proteine weit effektiver als trockene Hitze. Gebräuchliche Kombinationen sind 121 °C mit längerer und 134 °C mit kürzerer Einwirkzeit; die konkreten Parameter legt die Validierung fest.\n\n| Sterilisiertemperatur | Sattdampfdruck (absolut, ca.) | übliche Mindest-Haltezeit (Orientierung) |\n|---|---|---|\n| 121 °C | 2,0 bar | 15 min |\n| 134 °C | 3,0 bar | 3 min |\n\nDer Druck folgt aus der Dampftafel; weicht die gemessene Temperatur von der aus dem Druck berechneten Sattdampftemperatur ab, deutet dies auf Luft oder nicht kondensierbare Gase bzw. überhitzten Dampf hin.\n\n> [!vereinfacht] Luft ist der Hauptfeind der Dampfsterilisation: Luftreste (z. B. in Hohlkörpern oder Verpackungen) bilden Isolierpolster, an denen kein Dampf kondensiert und die nötige Temperatur nicht erreicht wird.\n\n## Programmablauf\n\n| Phase | Funktion |\n|---|---|\n| Entlüftung | fraktioniertes Vorvakuum: mehrfacher Wechsel von Evakuieren (Vakuumpumpe) und Dampfeinlass |\n| Steigzeit | Aufheizen von Kammer und Beladung auf Sterilisiertemperatur |\n| Plateauzeit | Ausgleichs- und Abtötungszeit bei Solltemperatur |\n| Trocknung | Vakuum zur Verdampfung des Kondensats, Belüftung über Sterilfilter |\n\nDie Steuerung überwacht Druck und Temperatur mit redundanten [[drucksensor|Druck-]] und [[temperatursensor|Temperatursensoren]]; der Dampf stammt aus einem integrierten Dampferzeuger oder einer Hausdampfversorgung mit Anforderungen an die Speisewasserqualität. Die Kammer ist ein Druckbehälter mit verriegelter Tür.\n\n> [!praxis] Routinekontrollen sind u. a. der arbeitstägliche Dampfdurchdringungstest (Bowie-Dick-Test) bei Groß-Sterilisatoren, Chargenkontrollen mit Indikatoren und die Freigabe anhand der aufgezeichneten Prozessparameter."
+  },
+  "manufacturers": [
+    {
+      "ref": "belimed",
+      "models": [],
+      "note": "Groß-Dampfsterilisatoren für die Zentralsterilgutversorgung."
+    },
+    {
+      "ref": "getinge",
+      "models": [],
+      "note": "Dampfsterilisatoren und Systeme für die Sterilgutversorgung."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software- und Zusatzmodulen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Dampfsterilisatoren sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Die MPBetreibV verlangt für die Aufbereitung geeignete validierte Verfahren; die gemeinsame KRINKO/BfArM-Empfehlung konkretisiert dies. Als Druckgerät kann der Sterilisator zusätzlich wiederkehrenden Prüfungen nach Betriebssicherheitsverordnung unterliegen.",
+    "intervals": "Validierung (Installations-, Betriebs- und Leistungsqualifikation) bei Inbetriebnahme und erneute Leistungsbeurteilung in festgelegten Abständen bzw. nach Änderungen; Wartung nach Herstellerangabe (Dichtungen, Ventile, Vakuumpumpe, Dampferzeuger, Kalibrierung der Messkette); arbeitstägliche Routineprüfungen."
+  },
+  "related": [
+    "sterilisation",
+    "aufbereitung",
+    "rdg",
+    "niedertemperatursterilisator",
+    "iso-17665",
+    "waermeuebertragung"
+  ],
+  "sources": [
+    "en-285",
+    "krinko-bfarm-2012",
+    "mdr-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

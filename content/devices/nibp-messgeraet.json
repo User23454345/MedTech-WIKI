@@ -1,0 +1,82 @@
+{
+  "id": "nibp-messgeraet",
+  "type": "device",
+  "title": "Automatisches nichtinvasives Blutdruckmessgerät",
+  "aliases": [
+    "NIBP-Messgerät",
+    "NIBP",
+    "automatisches Blutdruckmessgerät",
+    "oszillometrisches Blutdruckmessgerät",
+    "Vitaldatenmonitor (Spot-Check)",
+    "non-invasive blood pressure"
+  ],
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 16,
+  "domains": [
+    "intensivmedizin",
+    "anaesthesiologie",
+    "notfallmedizin",
+    "kardiologie"
+  ],
+  "summary": "Automatische nichtinvasive Blutdruckmessgeräte bestimmen den arteriellen Blutdruck mit einer Oberarm- oder Handgelenkmanschette, die eine Pumpe selbsttätig aufbläst und kontrolliert entlüftet. Fast alle Geräte arbeiten nach dem oszillometrischen Verfahren. Sie sind als Einzelgerät (Spot-Check), als Modul im Patientenmonitor und als Langzeitgerät verbreitet.",
+  "riskClass": {
+    "value": "IIa",
+    "evidence": "typisch",
+    "note": "Aktives Diagnoseprodukt zur direkten Überwachung einer vitalen Körperfunktion nach [[mdr|MDR]] Anhang VIII **Regel 10** (Klasse IIa); als Bestandteil von Überwachungssystemen für vitale Parameter, deren Veränderung zu unmittelbarer Gefahr führen kann, auch IIb. Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Das Gerät misst intermittierend systolischen, diastolischen und mittleren arteriellen [[blutdruck|Blutdruck]] (MAD) sowie meist die Pulsfrequenz – auf Normalstation, in Notaufnahme, Aufwachraum und Anästhesie, als Funktion des [[patientenmonitor|Patientenmonitors]] oder als eigenständiges Spot-Check-Gerät. Im Gegensatz zur [[invasive-druckmessung|invasiven Druckmessung]] liefert es keine Schlag-zu-Schlag-Werte, ist aber ohne Gefäßpunktion anwendbar.",
+    "principle": "## Oszillometrisches Messprinzip\n\nEine Membranpumpe bläst die Manschette über den erwarteten systolischen Druck auf; anschließend wird der Manschettendruck über ein [[magnetventil|Magnet-]] oder [[proportionalventil]] stufenweise oder linear abgesenkt. Ein [[drucksensor|piezoresistiver Drucksensor]] erfasst dabei den Manschettendruck, dem kleine pulssynchrone Druckschwankungen (Oszillationen) überlagert sind. Diese werden durch [[filter|Hochpassfilterung]] vom Gleichanteil getrennt, digitalisiert ([[analog-digital-wandler]]) und als Hüllkurve über dem Manschettendruck ausgewertet [@webster-2010].\n\nDas Maximum der Oszillationsamplitude liegt beim **mittleren arteriellen Druck** – das ist der physikalisch am besten begründete Messwert. Systolischer und diastolischer Druck werden dagegen über herstellerspezifische, empirisch gewonnene Algorithmen (z. B. feste Amplitudenverhältnisse auf der ansteigenden bzw. abfallenden Flanke) abgeleitet. Details siehe [[oszillometrie]].\n\n> [!vereinfacht] Die Manschette wirkt wie ein „Stethoskop für Druckwellen“: Solange die Arterie teilweise komprimiert ist, übertragen sich die Pulswellen am stärksten auf die Manschette – am stärksten dort, wo transmuraler Druck nahe null herrscht, also etwa beim Mitteldruck.\n\n## Sicherheit und Genauigkeit\n\nEin unabhängiger Überdruckschutz (zweiter Druckkanal bzw. Zeitbegrenzung) verhindert gefährlich hohe oder lange Manschettendrücke; die Anforderungen dazu regelt [[iec-80601-2-30]]. Die klinische Genauigkeit wird gegen ein Referenzverfahren nach ISO 81060-2 validiert [@iso-81060-2]. Typische Fehlerquellen sind falsche Manschettengröße (zu kleine Manschette ergibt zu hohe Werte), [[bewegungsartefakt|Bewegungsartefakte]], Herzrhythmusstörungen und eine Manschette, die nicht auf Herzhöhe liegt (hydrostatischer Fehler)."
+  },
+  "manufacturers": [
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "DINAMAP"
+      ],
+      "note": "Produktlinie oszillometrischer Vitaldatenmonitore."
+    },
+    {
+      "ref": "hillrom",
+      "models": [
+        "Welch Allyn Connex Spot Monitor"
+      ],
+      "note": "Marke Welch Allyn."
+    },
+    {
+      "ref": "philips",
+      "models": [],
+      "note": "NIBP als Funktion der Patientenmonitore."
+    },
+    {
+      "ref": "mindray",
+      "models": [],
+      "note": "Vitaldatenmonitore und Monitor-Module."
+    }
+  ],
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "ja",
+    "basis": "MTK: MPBetreibV (2025) § 15 i. V. m. Anlage 2 Nr. 1.3 – Messgeräte zur nichtinvasiven Blutdruckmessung. STK: nicht in Anlage 1 aufgeführt; vom Hersteller vorgeschriebene sicherheitstechnische Kontrollen sind dennoch durchzuführen. Für Laiengeräte gelten in § 15 Sonderregelungen.",
+    "intervals": "MTK alle 2 Jahre (Frist nach Anlage 2; Fristberechnung nach § 15 MPBetreibV 2025); Prüfung der Manschetten und Schläuche auf Dichtheit vor der Anwendung; elektrische Wiederholungsprüfung nach IEC 62353 gemäß Herstellervorgabe."
+  },
+  "related": [
+    "oszillometrie",
+    "patientenmonitor",
+    "langzeit-blutdruck",
+    "invasive-druckmessung",
+    "mtk",
+    "iec-80601-2-30"
+  ],
+  "sources": [
+    "webster-2010",
+    "mpbetreibv",
+    "iso-81060-2"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

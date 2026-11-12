@@ -1,0 +1,59 @@
+{
+  "id": "messunsicherheit",
+  "type": "term",
+  "title": "Messabweichung und Messunsicherheit",
+  "aliases": [
+    "Messabweichung",
+    "Messfehler",
+    "Messunsicherheit",
+    "measurement uncertainty",
+    "measurement error",
+    "GUM",
+    "Fehlergrenze",
+    "Richtigkeit und Präzision",
+    "Genauigkeit"
+  ],
+  "category": "sensorik",
+  "summary": "Die Messabweichung ist die Differenz zwischen Messwert und Referenzwert, die Messunsicherheit beschreibt den Bereich, in dem der Wert der Messgröße vernünftigerweise vermutet wird. Grundlage für Kalibrierung, messtechnische Kontrollen und die Beurteilung medizinischer Messwerte.",
+  "body": "## Begriffe\n\nKein Messwert ist exakt. Die Metrologie unterscheidet zwei verwandte, aber verschiedene Konzepte [@jcgm-200-2012] [@din-1319-1]:\n\n* Die **Messabweichung** (früher „Messfehler“) ist die Differenz zwischen dem Messwert und einem Referenzwert der Messgröße: `e = x_gemessen − x_ref`. Sie lässt sich nur bestimmen, wenn ein Referenzwert bekannt ist – etwa bei der [[kalibrierung|Kalibrierung]] gegen ein Normal.\n* Die **Messunsicherheit** ist ein Kennwert, der den Bereich beschreibt, in dem der Wert der Messgröße mit vernünftiger Begründung vermutet werden kann. Sie ist eine Aussage über die Qualität eines Ergebnisses, auch wenn der wahre Wert unbekannt ist.\n\n### Systematische und zufällige Abweichungen\n\n| Art | Eigenschaft | Beispiele in Medizingeräten | Umgang |\n|---|---|---|---|\n| systematisch | bei Wiederholung gleich in Betrag und Vorzeichen (oder vorhersehbar veränderlich) | Nullpunktfehler eines [[drucksensor|Drucksensors]], falsche Manschettengröße, Temperaturgang, [[sensordrift]] | korrigieren (Nullabgleich, Kalibrierung, Kompensation) |\n| zufällig | streut unvorhersehbar um einen Mittelwert | Rauschen, Bewegungsartefakte, Ablesestreuung | mitteln, filtern, statistisch erfassen |\n\nDaraus leiten sich die Güteeigenschaften eines Messverfahrens ab: **Richtigkeit** (geringe systematische Abweichung), **Präzision** (geringe Streuung bei Wiederholung) und **Genauigkeit** als Kombination aus beidem.\n\n> [!vereinfacht] Das bekannte Zielscheibenbild – eng beieinander, aber neben dem Zentrum = präzise, aber nicht richtig – veranschaulicht die Begriffe gut. Es unterschlägt jedoch, dass in der Praxis kein Zentrum sichtbar ist: Den wahren Wert kennt man nie, nur Referenzwerte mit eigener Unsicherheit.\n\n## Ermittlung der Messunsicherheit nach GUM\n\nDer internationale *Guide to the Expression of Uncertainty in Measurement* (GUM) beschreibt ein einheitliches Vorgehen [@jcgm-100-2008]:\n\n1. **Modell aufstellen:** Die Messgröße Y wird als Funktion der Eingangsgrößen dargestellt, `Y = f(X₁, X₂, …, X_n)`.\n2. **Standardunsicherheiten der Eingangsgrößen bestimmen:**\n   * **Typ A** – statistisch aus Messreihen. Bei n Wiederholungen mit der Standardabweichung s gilt für den Mittelwert `u = s / √n`.\n   * **Typ B** – aus anderen Informationen: Kalibrierschein, Datenblatt, Auflösung, Erfahrung. Ist nur eine Grenze ±a bekannt (Rechteckverteilung), gilt `u = a / √3`. Aus einem Kalibrierschein mit erweiterter Unsicherheit U und Faktor k folgt `u = U / k`.\n3. **Kombinieren:** Für unkorrelierte Eingangsgrößen gilt\n\n   `u_c(y) = √( Σ (c_i · u(x_i))² )`  mit den Sensitivitätskoeffizienten  `c_i = ∂f / ∂x_i`\n\n4. **Erweitern:** `U = k · u_c`. Mit dem Erweiterungsfaktor k = 2 überdeckt das Intervall y ± U bei annähernd normalverteilten Größen etwa 95 % der vernünftigerweise zuschreibbaren Werte.\n5. **Angeben:** z. B. „T = 37,20 °C ± 0,12 °C (k = 2)“.\n\n> [!beispiel] Unsicherheitsbudget für die Prüfung eines elektronischen [[thermometer|Fieberthermometers]] im Wasserbad (Zahlen frei gewählt):\n>\n> | Einflussgröße | Angabe | Verteilung | Standardunsicherheit |\n> |---|---|---|---|\n> | Referenzthermometer (Kalibrierschein) | U = 0,04 K, k = 2 | normal | 0,020 K |\n> | Inhomogenität des Bades | ±0,03 K | rechteckig | 0,017 K |\n> | Auflösung des Prüflings | 0,1 K (±0,05 K) | rechteckig | 0,029 K |\n> | Wiederholungen (n = 5, s = 0,03 K) | Typ A | normal | 0,013 K |\n>\n> u_c = √(0,020² + 0,017² + 0,029² + 0,013²) K ≈ 0,041 K, U = 2 · u_c ≈ 0,08 K. Die Auflösung des Prüflings dominiert das Budget.\n\n## Fehlergrenzen und Konformitätsaussagen\n\nFür Messgeräte im Medizinbereich sind meist **Fehlergrenzen** (maximal zulässige Messabweichungen) festgelegt – in gerätespezifischen Normen, in Herstellerspezifikationen oder für die [[mtk|messtechnische Kontrolle]]. Bei der Prüfung wird entschieden, ob die festgestellte Abweichung innerhalb dieser Grenzen liegt. Diese **Konformitätsaussage** ist nur sinnvoll, wenn die Messunsicherheit der Prüfung deutlich kleiner ist als die Fehlergrenze.\n\n> [!praxis] Verbreitete Faustregeln verlangen, dass die Unsicherheit des Prüfmittels höchstens etwa ein Viertel der Fehlergrenze des Prüflings beträgt (Verhältnis ≥ 4 : 1); in der Fertigungsmesstechnik wird teils sogar ein Zehntel angestrebt. Verbindlich sind diese Verhältnisse nicht – sie ersetzen keine Festlegung im Prüfverfahren. Liegt ein Messwert sehr nah an der Fehlergrenze, ist die Aussage „bestanden“ oder „nicht bestanden“ unsicher – das Vorgehen dafür sollte im Prüfverfahren festgelegt sein ([[pruefgeraete]]).\n\n### Kalibrieren, Justieren, Eichen\n\n| Begriff | Bedeutung |\n|---|---|\n| Kalibrieren | Ermitteln und Dokumentieren der Abweichung gegenüber einem Normal – ohne Eingriff |\n| Justieren | Eingriff in das Messgerät, um die Abweichung zu verringern |\n| Eichen | hoheitliche Prüfung nach dem Mess- und Eichrecht (z. B. bestimmte Waagen) |\n\nDie **metrologische Rückführbarkeit** stellt sicher, dass Referenzmessgeräte über eine ununterbrochene Kette von Kalibrierungen auf nationale Normale zurückgeführt sind – in Deutschland auf die Physikalisch-Technische Bundesanstalt.\n\n## Genauigkeitsangaben in der Medizintechnik\n\nMedizinische Normen verwenden unterschiedliche, nicht direkt vergleichbare Genauigkeitsmaße:\n\n| Messgröße | Typische Genauigkeitsangabe |\n|---|---|\n| nichtinvasiver Blutdruck ([[oszillometrie]]) | mittlere Abweichung und Standardabweichung gegenüber Referenzmethode in der klinischen Validierung [@iso-81060-2] |\n| Sauerstoffsättigung ([[pulsoxymeter]]) | quadratischer Mittelwert der Abweichungen A_rms gegenüber der arteriellen Sättigung SaO₂ aus CO-Oxymetrie von Blutproben [@iso-80601-2-61] |\n| Temperatur ([[temperatursensor]]) | maximal zulässige Abweichung im Messbereich |\n| Förderrate ([[infusionspumpe]], [[spritzenpumpe]]) | prozentuale Abweichung der Förderrate, Trompetenkurven [@iec-60601-2-24] |\n\nFür den **Methodenvergleich** zweier Messverfahren am Patienten hat sich die Darstellung nach Bland und Altman etabliert: Aufgetragen wird die Differenz beider Verfahren über ihrem Mittelwert; angegeben werden mittlere Abweichung (Bias) und Übereinstimmungsgrenzen `Bias ± 1,96 · s` [@bland-altman-1986]. Ein hoher Korrelationskoeffizient allein belegt dagegen keine Übereinstimmung.\n\n> [!belegt] Ergebnisse einer Messung sind nach GUM erst vollständig, wenn sie mit einer Angabe der Messunsicherheit versehen sind [@jcgm-100-2008].\n\n## Bedeutung in der Medizintechnik\n\nMessunsicherheit ist keine akademische Größe: Alarmgrenzen am [[patientenmonitor|Patientenmonitor]], Therapieentscheidungen auf Basis des Blutdrucks oder der Sauerstoffsättigung und die Dosierung von Medikamenten über Infusionsgeräte setzen voraus, dass die Messwerte innerhalb bekannter Grenzen liegen. Für Medizintechnikerinnen und -techniker ist das Konzept vor allem bei drei Aufgaben zentral:\n\n* bei der [[kalibrierung|Kalibrierung]] und der [[mtk|messtechnischen Kontrolle]] (Konformitätsaussage gegenüber Fehlergrenzen),\n* bei der Auswahl von [[pruefgeraete|Prüfgeräten]] und Simulatoren (ausreichend kleine Unsicherheit),\n* bei der [[fehlersuche|Fehlersuche]] in der [[messkette|Messkette]] (Welches Glied verursacht die Abweichung?).\n\n> [!hinweis] Gerätespezifische Fehlergrenzen, Prüfpunkte und Prüfmittel sind den jeweils gültigen Normen, der Herstellerdokumentation und für messtechnische Kontrollen der [[mpbetreibv|MPBetreibV]] sowie den zugehörigen Leitfäden zu entnehmen [@mpbetreibv].\n",
+  "related": [
+    "messkette",
+    "kalibrierung",
+    "mtk",
+    "pruefgeraete",
+    "sensordrift",
+    "oszillometrie",
+    "pulsoxymeter",
+    "thermometer",
+    "temperatursensor",
+    "drucksensor",
+    "funktionspruefung",
+    "biosignale"
+  ],
+  "paths": [
+    [
+      "messkette",
+      "messunsicherheit",
+      "kalibrierung",
+      "mtk"
+    ],
+    [
+      "drucksensor",
+      "sensordrift",
+      "messunsicherheit",
+      "pruefgeraete"
+    ]
+  ],
+  "sources": [
+    "jcgm-100-2008",
+    "jcgm-200-2012",
+    "din-1319-1",
+    "bland-altman-1986",
+    "iso-81060-2",
+    "iso-80601-2-61",
+    "iec-60601-2-24",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

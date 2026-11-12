@@ -1,0 +1,161 @@
+{
+  "id": "medtronic",
+  "type": "manufacturer",
+  "title": "Medtronic",
+  "aliases": [
+    "Medtronic plc",
+    "Covidien",
+    "Nellcor",
+    "Puritan Bennett",
+    "Valleylab"
+  ],
+  "category": "hersteller",
+  "summary": "Medtronic plc ist einer der weltweit größten Medizintechnikkonzerne mit rechtlichem Sitz in Dublin und operativer Zentrale im Raum Minneapolis. Schwerpunkte sind Herz-Kreislauf-Implantate, Neurotechnik, chirurgische Systeme und Patientenmonitoring.",
+  "headquarters": "Dublin, Irland (operative Zentrale: Minneapolis, USA)",
+  "founded": "1949",
+  "website": "https://www.medtronic.com/",
+  "productLines": [
+    {
+      "device": "herzschrittmacher",
+      "models": [
+        "Micra"
+      ],
+      "note": "Sondenloser Schrittmacher; daneben konventionelle Systeme."
+    },
+    {
+      "device": "icd",
+      "models": [
+        "Aurora EV-ICD"
+      ],
+      "note": "Extravaskuläres ICD-System; daneben transvenöse ICDs."
+    },
+    {
+      "device": "externer-schrittmacher",
+      "models": [
+        "5392"
+      ]
+    },
+    {
+      "device": "langzeit-ekg",
+      "models": [
+        "LINQ"
+      ],
+      "note": "Implantierbarer Ereignisrekorder."
+    },
+    {
+      "device": "vad",
+      "models": [
+        "HVAD"
+      ],
+      "note": "Vertrieb 2021 eingestellt; implantierte Systeme werden weiter betreut."
+    },
+    {
+      "device": "herz-lungen-maschine",
+      "models": [
+        "Affinity"
+      ],
+      "note": "Oxygenatoren und Einmalkomponenten."
+    },
+    {
+      "device": "pulsoxymeter",
+      "models": [
+        "Nellcor PM10N"
+      ],
+      "note": "Marke Nellcor."
+    },
+    {
+      "device": "kapnometer",
+      "models": [
+        "Microstream",
+        "Capnostream"
+      ]
+    },
+    {
+      "device": "beatmungsgeraet",
+      "models": [
+        "Puritan Bennett 980",
+        "Puritan Bennett 840"
+      ],
+      "note": "Ausstieg aus dem Beatmungsgeschäft 2024 angekündigt; Service für die installierte Basis."
+    },
+    {
+      "device": "hf-chirurgiegeraet",
+      "models": [
+        "Valleylab FT10",
+        "ForceTriad",
+        "LigaSure"
+      ]
+    },
+    {
+      "device": "ultraschalldissektor",
+      "models": [
+        "Sonicision"
+      ]
+    },
+    {
+      "device": "op-roboter",
+      "models": [
+        "Hugo"
+      ]
+    },
+    {
+      "device": "chirurgisches-motorsystem",
+      "models": [
+        "Midas Rex"
+      ]
+    },
+    {
+      "device": "patientenwaermesystem",
+      "models": [
+        "WarmTouch"
+      ]
+    },
+    {
+      "device": "videolaryngoskop",
+      "models": [
+        "McGRATH MAC"
+      ]
+    },
+    {
+      "device": "kapselendoskop",
+      "models": [
+        "PillCam"
+      ]
+    },
+    {
+      "device": "insulinpumpe",
+      "models": [
+        "MiniMed 780G"
+      ],
+      "note": "Diabetesgeschäft seit 2026 als börsennotierte MiniMed, mehrheitlich im Besitz von Medtronic."
+    },
+    {
+      "device": "dialysegeraet",
+      "models": [
+        "Flexya"
+      ],
+      "note": "Ursprünglich Bellco; aktuelle Vertriebsstruktur (Mozarc Medical) regional prüfen."
+    }
+  ],
+  "body": "## Überblick\n\n**Medtronic plc** ist einer der größten Medizintechnikkonzerne der Welt. Seit der Übernahme von Covidien 2015 hat das Unternehmen seinen rechtlichen Sitz in Dublin (Irland); die operative Zentrale liegt weiterhin im Raum Minneapolis (USA) [@medtronic-web]. Das Portfolio reicht von aktiven Implantaten über chirurgische Systeme bis zum Patientenmonitoring.\n\n## Geschichte in Stichpunkten\n\n* **1949:** Earl Bakken und Palmer Hermundslie gründen in Minneapolis eine Werkstatt zur Reparatur medizinischer Geräte.\n* **1957:** Bakken entwickelt für den Herzchirurgen C. Walton Lillehei einen batteriebetriebenen, tragbaren externen [[externer-schrittmacher|Herzschrittmacher]].\n* **1960:** Medtronic beginnt mit der Fertigung implantierbarer [[herzschrittmacher|Schrittmacher]] auf Basis der Entwicklung von Chardack und Greatbatch.\n* **2001:** Übernahme von MiniMed ([[insulinpumpe|Insulinpumpen]]).\n* **2015:** Übernahme von Covidien mit den Marken Nellcor (Pulsoxymetrie), Puritan Bennett (Beatmung) und Valleylab (HF-Chirurgie); Sitzverlegung nach Irland.\n* **2016:** Übernahme von HeartWare ([[vad|HVAD]]); 2021 Vertriebsstopp des HVAD.\n* **2024:** Ankündigung des Ausstiegs aus dem Beatmungsgeschäft (Puritan Bennett); bestehende Geräte werden über ihre Lebensdauer weiter betreut.\n* **2026:** Börsengang der Diabetessparte als MiniMed; Medtronic bleibt zunächst Mehrheitsaktionär.\n\n## Geschäftsbereiche\n\n| Portfolio | Inhalte (Auswahl) |\n|---|---|\n| Cardiovascular | [[herzschrittmacher|Schrittmacher]], [[icd|ICD]], Ereignisrekorder, Herzklappen, Katheterablation, [[herz-lungen-maschine|Extrakorporale Zirkulation]] |\n| Neuroscience | Neurostimulation, Wirbelsäulen- und Neurochirurgie, [[chirurgisches-motorsystem|Motorsysteme]] |\n| Medical Surgical | [[hf-chirurgiegeraet|HF-Chirurgie]], [[op-roboter|Robotik]], [[pulsoxymeter|Pulsoxymetrie]], [[kapnometer|Kapnographie]], [[videolaryngoskop|Atemwegsmanagement]] |\n| Diabetes | [[insulinpumpe|Insulinpumpen]] und kontinuierliche Glukosemessung (MiniMed) |\n\n## Bedeutung für die Medizintechnik\n\nMedtronic steht historisch für die Entwicklung tragbarer und implantierbarer Schrittmacher und damit für die Geburtsstunde der aktiven Implantate. Durch die Covidien-Übernahme gehören zudem Marken mit großer Verbreitung im Klinikalltag zum Konzern – etwa Nellcor-Sensoren ([[photoplethysmographie]]) und Valleylab-Generatoren [@medtronic-pm10n].\n\n> [!hinweis] Der Ausstieg aus der Beatmung (2024) und der Vertriebsstopp des HVAD (2021) zeigen, dass Betreiber bei Beschaffungsentscheidungen die langfristige Ersatzteil- und Serviceverfügbarkeit berücksichtigen müssen.\n\n> [!praxis] Implantierbare Systeme werden in der Klinik nicht von der Medizintechnik instand gehalten; relevant sind hier vor allem Programmiergeräte und die Abstimmung mit den kardiologischen Funktionsbereichen.\n\n## Einordnung im Markt\n\nIn der Rhythmologie konkurriert Medtronic vor allem mit [[abbott]], [[boston-scientific]] und [[biotronik]]; in der Pulsoxymetrie u. a. mit [[masimo]]. Die Vielzahl übernommener Marken führt dazu, dass Geräte im Bestand häufig noch unter alten Herstellernamen (Covidien, Tyco, Nellcor Puritan Bennett) geführt werden. Für Vigilanzmeldungen und Ersatzteilbestellungen ist der aktuelle Rechtsträger maßgeblich.",
+  "related": [
+    "herzschrittmacher",
+    "icd",
+    "vad",
+    "pulsoxymeter",
+    "hf-chirurgiegeraet",
+    "insulinpumpe",
+    "beatmungsgeraet",
+    "abbott",
+    "boston-scientific",
+    "biotronik",
+    "kardiologie",
+    "herzchirurgie"
+  ],
+  "sources": [
+    "medtronic-web",
+    "medtronic-pm10n"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

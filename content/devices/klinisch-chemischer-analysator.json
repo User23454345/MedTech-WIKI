@@ -1,0 +1,85 @@
+{
+  "id": "klinisch-chemischer-analysator",
+  "type": "device",
+  "title": "Klinisch-chemischer Analysator",
+  "aliases": [
+    "Klinische-Chemie-Analysator",
+    "Chemieanalysator",
+    "Laborautomat",
+    "Clinical chemistry analyzer"
+  ],
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 62,
+  "domains": [
+    "labormedizin",
+    "intensivmedizin",
+    "nephrologie",
+    "diabetologie"
+  ],
+  "summary": "Klinisch-chemische Analysatoren messen vollautomatisch Substrate, Enzyme, Elektrolyte und Proteine in Serum, Plasma und Urin. Kern ist die Photometrie in thermostatisierten Reaktionsküvetten, ergänzt durch ionenselektive Elektroden.",
+  "riskClass": {
+    "value": "A (IVDR)",
+    "evidence": "typisch",
+    "note": "Analysegeräte, die vom Hersteller speziell für In-vitro-diagnostische Verfahren bestimmt sind, fallen als Instrumente nach Regel 5 der [[ivdr|IVDR]] Anhang VIII in der Regel in **Klasse A**. Reagenzien, Kalibratoren und Kontrollmaterialien werden eigenständig klassifiziert und können höheren Klassen angehören [@ivdr-2017].",
+    "sources": [
+      "ivdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Mit klinisch-chemischen Parametern werden Organfunktionen beurteilt (Niere: Kreatinin, Harnstoff; Leber: Transaminasen, Bilirubin), Stoffwechselstörungen erkannt (Glucose, Lipide), Elektrolyte überwacht und Gewebeschäden nachgewiesen. Großgeräte im Zentrallabor bearbeiten mehrere Tausend Tests pro Stunde und sind oft mit Immunassay-Modulen und Probentransportsystemen zu Laborstraßen verkettet [@kramme-2017].",
+    "principle": "## Probenhandling und Reaktion\n\nEine Pipettiernadel saugt Probe und Reagenzien an und dosiert sie in Reaktionsküvetten. Eine **kapazitive Füllstandserkennung** sorgt dafür, dass die Nadel nur knapp eintaucht; Druckmessung im Pipettiersystem ([[drucksensor]]) erkennt Gerinnsel und Luftansaugung. Die Küvetten werden auf 37 °C temperiert ([[temperatursensor]], [[regelkreis]]), weil die Reaktionsgeschwindigkeit enzymatischer Reaktionen stark temperaturabhängig ist.\n\n## Photometrie\n\nDie Konzentration wird über die Lichtabsorption nach dem [[lambert-beer|Lambert-Beer-Gesetz]] bestimmt: `A = ε · c · d`. Man unterscheidet:\n\n| Verfahren | Prinzip | Beispiel |\n|---|---|---|\n| Endpunktmessung | Absorption nach vollständig abgelaufener Reaktion | viele Substratbestimmungen |\n| Kinetische Messung | Änderung der Absorption pro Zeit | Enzymaktivitäten, häufig über NADH/NAD⁺ bei 340 nm |\n| Turbidimetrie | Trübung durch Antigen-Antikörper-Komplexe | spezifische Proteine |\n\nEin Gitter- oder Filterphotometer misst bei mehreren Wellenlängen gleichzeitig; eine Nebenwellenlänge korrigiert Störungen durch Trübung oder Küvetteneffekte ([[optik]]).\n\n## Ionenselektive Elektroden\n\nNatrium, Kalium und Chlorid werden potentiometrisch gemessen: Die Spannung zwischen ionenselektiver Elektrode und Referenzelektrode folgt der Nernst-Gleichung und ist proportional zum Logarithmus der Ionenaktivität. Das Signal wird mit hochohmigen Verstärkern erfasst ([[instrumentenverstaerker]]).\n\n> [!hinweis] Hämolyse, Ikterus und Lipämie (HIL-Indizes) stören viele photometrische Tests; moderne Geräte messen diese Indizes automatisch und kennzeichnen betroffene Ergebnisse ([[messunsicherheit]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "roche-diagnostics",
+      "models": [
+        "cobas pro",
+        "cobas c 311"
+      ]
+    },
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "Atellica CH"
+      ]
+    },
+    {
+      "ref": "abbott",
+      "models": [
+        "Alinity c",
+        "ARCHITECT c-Serie"
+      ]
+    },
+    {
+      "ref": "mindray",
+      "models": [],
+      "note": "Chemieanalysatoren der BS-Serie."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Als In-vitro-Diagnostikum unterliegt das Gerät zusätzlich der laborinternen Qualitätssicherung nach [[betreiberpflichten|Betreiberpflichten]] und Rili-BÄK (interne und externe Qualitätskontrolle).",
+    "intervals": "Tägliche/wöchentliche Wartung (Nadelreinigung, Küvettenprüfung, Lampenwechsel, Elektrodenpflege) nach Herstellerangabe; Kalibrierung je Test nach Herstellerangabe, interne Qualitätskontrolle und Ringversuche nach Rili-BÄK; elektrische Wiederholungsprüfung nach [[dguv-vorschrift-3|DGUV Vorschrift 3]] gemäß Gefährdungsbeurteilung."
+  },
+  "related": [
+    "haematologie-analysator",
+    "gerinnungsanalysator",
+    "blutgasanalysator",
+    "lambert-beer",
+    "kalibrierung",
+    "laborzentrifuge"
+  ],
+  "sources": [
+    "kramme-2017",
+    "ivdr-2017",
+    "rili-baek"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

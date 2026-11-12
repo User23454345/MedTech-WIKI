@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Funktionsprinzip der HF-Chirurgie: Stromdichte und Spannungsformen</title>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="26" text-anchor="middle" font-size="15" font-weight="600">Prinzip: Stromdichte bestimmt die Gewebewirkung</text>
+
+  <!-- Gewebeblock -->
+  <rect x="30" y="80" width="300" height="140" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="180" y="212" text-anchor="middle" font-size="13">Gewebe (Leitfähigkeit σ)</text>
+
+  <!-- Aktivelektrode -->
+  <line x1="180" y1="44" x2="180" y2="78" stroke="#0b2545" stroke-width="3"/>
+  <circle cx="180" cy="80" r="4" fill="#0d9488"/>
+  <text x="192" y="54" font-size="13">Aktivelektrode: kleine Fläche</text>
+  <text x="192" y="70" font-size="13" fill="#0d9488">hohe Stromdichte</text>
+
+  <!-- Stromlinien -->
+  <path d="M180,82 C120,120 70,170 60,226" fill="none" stroke="#0d9488" stroke-width="1.5"/>
+  <path d="M180,82 C150,130 120,180 115,226" fill="none" stroke="#0d9488" stroke-width="1.5"/>
+  <path d="M180,82 L180,226" fill="none" stroke="#0d9488" stroke-width="1.5"/>
+  <path d="M180,82 C210,130 240,180 245,226" fill="none" stroke="#0d9488" stroke-width="1.5"/>
+  <path d="M180,82 C240,120 290,170 300,226" fill="none" stroke="#0d9488" stroke-width="1.5"/>
+
+  <!-- Neutralelektrode -->
+  <rect x="40" y="226" width="280" height="12" rx="3" fill="#14b8a6" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="180" y="258" text-anchor="middle" font-size="13">Neutralelektrode: große Fläche, kleine J</text>
+
+  <!-- Formel -->
+  <rect x="30" y="274" width="300" height="56" rx="6" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="180" y="297" text-anchor="middle" font-size="14">J = I / A      p = J² / σ</text>
+  <text x="180" y="318" text-anchor="middle" font-size="13">Wärmeleistungsdichte steigt mit J²</text>
+
+  <!-- Temperaturskala -->
+  <text x="30" y="352" font-size="13" font-weight="600">Gewebetemperatur (typisch):</text>
+  <rect x="30" y="360" width="60" height="18" fill="#f1f5f9" stroke="#0b2545" stroke-width="1"/>
+  <rect x="90" y="360" width="80" height="18" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="170" y="360" width="80" height="18" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <rect x="250" y="360" width="80" height="18" fill="#0d9488" stroke="#0b2545" stroke-width="1"/>
+  <text x="60" y="374" text-anchor="middle" font-size="13">&lt; 50 °C</text>
+  <text x="130" y="374" text-anchor="middle" font-size="13">60–100 °C</text>
+  <text x="210" y="374" text-anchor="middle" font-size="13">≈ 100 °C</text>
+  <text x="290" y="374" text-anchor="middle" font-size="13" fill="#ffffff">&gt; 100 °C</text>
+  <text x="60" y="394" text-anchor="middle" font-size="13">reversibel</text>
+  <text x="130" y="394" text-anchor="middle" font-size="13">Koagulation</text>
+  <text x="210" y="394" text-anchor="middle" font-size="13">Desikkation</text>
+  <text x="290" y="394" text-anchor="middle" font-size="13">Vaporisation</text>
+
+  <!-- Spannungsformen -->
+  <rect x="360" y="44" width="220" height="160" rx="6" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="470" y="64" text-anchor="middle" font-size="13" font-weight="600">Schneiden</text>
+  <line x1="372" y1="120" x2="568" y2="120" stroke="#0b2545" stroke-width="1"/>
+  <path d="M372,120 Q378,84 384,120 T396,120 T408,120 T420,120 T432,120 T444,120 T456,120 T468,120 T480,120 T492,120 T504,120 T516,120 T528,120 T540,120 T552,120 T564,120" fill="none" stroke="#0d9488" stroke-width="1.6"/>
+  <text x="470" y="176" text-anchor="middle" font-size="13">ungemodulierte Sinusspannung</text>
+  <text x="470" y="194" text-anchor="middle" font-size="13">Crestfaktor ≈ 1,4</text>
+
+  <rect x="360" y="216" width="220" height="162" rx="6" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="470" y="236" text-anchor="middle" font-size="13" font-weight="600">Koagulation (moduliert)</text>
+  <line x1="372" y1="296" x2="568" y2="296" stroke="#0b2545" stroke-width="1"/>
+  <path d="M376,296 Q380,250 384,296 T392,296 T400,296" fill="none" stroke="#0d9488" stroke-width="1.6"/>
+  <path d="M440,296 Q444,250 448,296 T456,296 T464,296" fill="none" stroke="#0d9488" stroke-width="1.6"/>
+  <path d="M504,296 Q508,250 512,296 T520,296 T528,296" fill="none" stroke="#0d9488" stroke-width="1.6"/>
+  <text x="470" y="350" text-anchor="middle" font-size="13">Bursts mit Pausen, hohe</text>
+  <text x="470" y="368" text-anchor="middle" font-size="13">Spitzenspannung, Crestfaktor groß</text>
+</svg>

@@ -1,0 +1,172 @@
+{
+  "id": "elektromotor",
+  "type": "term",
+  "title": "Elektromotor",
+  "aliases": [
+    "E-Motor",
+    "Elektrische Maschine",
+    "Electric motor",
+    "Antriebsmotor",
+    "Gleichstrommotor",
+    "DC-Motor",
+    "Asynchronmotor",
+    "Drehstrommotor"
+  ],
+  "category": "komponenten",
+  "summary": "Elektromechanischer Energiewandler, der über Magnetfelder elektrische in mechanische Energie umsetzt. In Medizingeräten treibt er Turbinen, Pumpen, Spindeln, Drehanoden und Verstellantriebe an; Drehmoment und Drehzahl werden über Strom und Spannung geregelt.",
+  "body": "## Begriff\n\nEin **Elektromotor** ist ein elektromechanischer Energiewandler, der elektrische Energie über magnetische Felder in mechanische Bewegung umsetzt – meist eine Drehbewegung, bei Linearmotoren und Tauchspulen eine geradlinige. Kaum ein aktives Medizinprodukt kommt ohne ihn aus: Er dreht die [[turbine|Turbine]] im [[beatmungsgeraet|Beatmungsgerät]], schiebt den Kolben der [[spritzenpumpe|Spritzenpumpe]], bewegt die Drehanode der [[roentgenroehre|Röntgenröhre]] und verfährt [[op-tisch|OP-Tische]] und [[pflegebett|Pflegebetten]] [@fischer-nolle-elektrische-maschinen-2022] [@kramme-2017].\n\n## Physikalische Grundlagen\n\n### Kraft auf stromdurchflossene Leiter\n\nGrundlage ist die **Lorentzkraft**: Ein Leiter der Länge l, der vom Strom I durchflossen wird und senkrecht in einem Magnetfeld der Flussdichte B liegt, erfährt die Kraft\n\n`F = I · l · B`\n\nOrdnet man viele Leiter auf einem drehbar gelagerten Läufer an, entsteht ein Drehmoment M. Umgekehrt wird in jedem bewegten Leiter nach dem Gesetz der [[elektromagnetische-induktion|elektromagnetischen Induktion]] eine Spannung induziert – der Motor arbeitet immer auch als Generator [@tipler-2019].\n\n### Grundgleichungen der Gleichstrommaschine\n\nFür permanenterregte Gleichstrommotoren – und in guter Näherung auch für [[bldc-motor|bürstenlose Motoren]] – gelten drei Gleichungen [@hughes-drury-2019]:\n\n| Beziehung | Formel | Bedeutung |\n|---|---|---|\n| Drehmoment | `M = k_M · I` | Drehmoment proportional zum Strom |\n| Gegenspannung | `U_i = k_E · ω` | induzierte Spannung proportional zur Winkelgeschwindigkeit |\n| Spannungsgleichung | `U = R · I + L · dI/dt + U_i` | Klemmenspannung = ohmscher + induktiver Spannungsabfall + Gegen-EMK |\n\nIn SI-Einheiten sind Drehmoment- und Spannungskonstante gleich (`k_M = k_E = k`). Im stationären Betrieb (dI/dt = 0) folgt die **Drehzahl-Drehmoment-Kennlinie**:\n\n`ω = U / k − R · M / k²`\n\nDie Drehzahl wird also im Wesentlichen durch die Spannung bestimmt und fällt mit zunehmender Last linear ab. Daraus ergibt sich die Grundidee jeder [[drehzahlregelung|Drehzahlregelung]]: Die mittlere Spannung wird über [[pwm|Pulsweitenmodulation]] verstellt, der Strom begrenzt das Drehmoment.\n\n### Leistung und Wirkungsgrad\n\nDie mechanische Leistung beträgt `P_mech = M · ω = 2π · n · M` (n in s⁻¹). Verluste entstehen als Kupferverluste `P_Cu = I² · R` ([[joulesche-waerme|Joulesche Wärme]]), Eisenverluste (Ummagnetisierung, Wirbelströme) und Reibung. Der Wirkungsgrad ist `η = P_mech / P_el`.\n\n> [!beispiel] Ein Gleichstrommotor mit U = 24 V, R = 1 Ω und k = 0,05 V·s/rad läuft im Leerlauf mit ω₀ = U/k = 480 rad/s (≈ 4 580 min⁻¹). Bei I = 4 A liefert er M = 0,2 N·m bei ω = (24 − 4)/0,05 = 400 rad/s. Dann ist P_mech = 80 W, P_el = 96 W und η ≈ 83 % (Reibung und Eisenverluste vernachlässigt). Die Werte sind frei gewählt.\n\n> [!vereinfacht] Die lineare Kennlinie gilt für permanenterregte Maschinen bei konstanter Temperatur. Der Wicklungswiderstand steigt mit der Erwärmung (bei Kupfer um etwa 0,4 % pro Kelvin), Magnete verlieren bei Wärme an Flussdichte – Drehzahl und Drehmoment verschieben sich dadurch im Betrieb.\n\n## Bauarten im Überblick\n\n| Bauart | Kommutierung / Prinzip | Stärken | Grenzen | Typische Medizintechnik |\n|---|---|---|---|---|\n| Bürstenbehafteter Gleichstrommotor | mechanisch (Kommutator, Bürsten) | einfach, preiswert, einfache Ansteuerung | Bürstenverschleiß, Bürstenfeuer, EMV-Störungen | Linearantriebe in Betten und Liftern, kleine Pumpen |\n| [[bldc-motor|Bürstenloser Gleichstrommotor (BLDC/EC)]] | elektronisch, Rotorlage über Sensoren oder Gegen-EMK | verschleißarm, hohe Drehzahl, hohe Dynamik | Ansteuerelektronik nötig | Turbinen, chirurgische Handstücke, Zentrifugen, Blutpumpen |\n| [[schrittmotor|Schrittmotor]] | schrittweise Bestromung der Phasen | Positionierung ohne Rückführung | Schrittverlust, Resonanzen, geringer Wirkungsgrad | Infusions- und Spritzenpumpen, Laborautomaten |\n| Asynchronmotor (Induktionsmotor) | Drehfeld induziert Läuferströme | robust, keine Magnete, kein Schleifkontakt | Schlupf, Drehzahl nur über Frequenz | Drehanode der Röntgenröhre, Pumpen, Lüfter |\n| Synchron-Servomotor (PMSM) | Drehfeld, Läufer mit Permanentmagneten | präzise, hohe Leistungsdichte | aufwendige Regelung | Positionierantriebe in Bildgebung und Robotik |\n| Tauchspule (Voice Coil) | Lorentzkraft auf bewegte Spule | spielfrei, sehr schnell, linear | kleiner Hub | Aktoren in [[exspirationsventil|Exspirations-]] und [[proportionalventil|Proportionalventilen]] |\n\n### Drehfeldmaschinen\n\nSpeist man eine mehrsträngige Wicklung mit phasenverschobenen Wechselströmen, entsteht ein umlaufendes Magnetfeld mit der synchronen Drehzahl `n_s = f / p` (f = Speisefrequenz, p = Polpaarzahl). Ein Synchronmotor dreht genau mit n_s; ein Asynchronmotor bleibt um den **Schlupf** `s = (n_s − n) / n_s` zurück, denn nur dann werden im Läufer Ströme induziert [@fischer-nolle-elektrische-maschinen-2022].\n\n> [!belegt] Bei Drehanoden-Röntgenröhren wird die Anode über einen Asynchronmotor angetrieben: Der Stator liegt außerhalb des Vakuumkolbens, der Läufer innerhalb – das Drehfeld wirkt durch die Kolbenwand hindurch [@krieger-strahlungsquellen-2018].\n\n## Motor im System: Antriebsstrang\n\nEin Motor arbeitet nie allein. Der vollständige Antriebsstrang eines Medizingeräts umfasst Energieversorgung ([[medizinisches-netzteil|Netzteil]] oder [[lithium-ionen-akku|Akku]]), Leistungselektronik, Motor, mechanische Übertragung ([[spindelantrieb|Spindel]], Getriebe, Laufrad) und Rückführsensoren ([[hall-sensor|Hall-Sensor]], Drehgeber). Ein [[mikrocontroller|Mikrocontroller]] schließt den [[regelkreis|Regelkreis]].\n\n> [!praxis] Bei sicherheitsrelevanten Antrieben – etwa in [[infusionspumpe|Infusionspumpen]] – überwacht ein zweiter, unabhängiger Kanal die tatsächlich ausgeführte Bewegung. Weicht die Drehgeberzählung vom Sollwert ab, wird der Antrieb gestoppt und ein Alarm ausgelöst.\n\n## Sicherheit und EMV\n\nMotoren sind sowohl Störquelle als auch Gefährdungsquelle:\n\n* **EMV:** Bürstenfeuer und schnell schaltende PWM-Endstufen erzeugen hochfrequente Störungen, die z. B. Biosignalverstärker beeinflussen können ([[emv]], [[emv-stoerung]]). Die Anforderungen ergeben sich aus [[iec-60601-1-2|IEC 60601-1-2]] [@iec-60601-1-2].\n* **Mechanische Gefährdung:** Quetsch- und Scherstellen, unkontrollierte Bewegungen und Überlast sind im Risikomanagement nach [[iso-14971|ISO 14971]] zu betrachten; die Grundnorm [[iec-60601-1|IEC 60601-1]] enthält Anforderungen an mechanische Gefährdungen und zulässige Oberflächentemperaturen [@iec-60601-1].\n* **Sauerstoffangereicherte Umgebung:** Funkenbildung an Bürsten ist in sauerstoffangereicherter Atmosphäre eine Zündquelle; bürstenlose Antriebe vermeiden dieses Risiko konstruktiv.\n\n## Prüfung und Instandhaltung\n\nBei der [[funktionspruefung|Funktionsprüfung]] werden Drehzahl, Förderleistung oder Verfahrwege gegen die Herstellerangaben geprüft. Auffällige Laufgeräusche, erhöhte Stromaufnahme oder Erwärmung deuten auf Lager- oder Getriebeverschleiß hin. Die elektrische Sicherheit wird im Rahmen der [[elektrische-sicherheitspruefung|Prüfung nach IEC 62353]] am Gesamtgerät beurteilt, nicht am einzelnen Motor.\n\nViele Geräte protokollieren Betriebsstunden, Motorströme oder Schrittfehler im Fehlerspeicher ([[fehlercodes]]). Diese Daten sind für die vorbeugende [[wartung|Wartung]] wertvoll: Ein langsam steigender Strombedarf bei gleicher Förderleistung weist früh auf mechanische Reibung hin, lange bevor ein Ausfall auftritt.\n\n## Anwendung in Geräten\n\n| Gerät | Motorbauart (typisch) | Aufgabe |\n|---|---|---|\n| [[beatmungsgeraet]], [[cpap-geraet]] | BLDC | Antrieb der Turbine |\n| [[infusionspumpe]], [[spritzenpumpe]] | Schrittmotor | Förderantrieb mit Getriebe bzw. Spindel |\n| [[dialysegeraet]], [[herz-lungen-maschine]] | Gleichstrom- oder BLDC-Motor | Antrieb der [[peristaltikpumpe|Rollenpumpen]] |\n| [[computertomograph]] | Servo- bzw. Direktantrieb | Rotation der [[gantry|Gantry]], Tischvorschub |\n| [[roentgengeraet]] | Asynchronmotor | Drehanode der Röntgenröhre |\n| [[chirurgisches-motorsystem]], [[dentaleinheit]] | BLDC | Bohrer, Sägen, Mikromotoren |\n| [[laborzentrifuge]] | BLDC oder Asynchronmotor | Rotorantrieb |\n| [[pflegebett]], [[patientenlifter]], [[op-tisch]] | Gleichstrommotor mit Spindel | Höhen- und Lageverstellung |\n\n## Bedeutung in der Medizintechnik\n\nDer Elektromotor ist das Bindeglied zwischen Elektrotechnik und Mechanik. In der Kette [[beatmungsgeraet|Beatmungsgerät]] → [[turbine|Turbine]] → Elektromotor → [[spannung-strom-widerstand|Elektrotechnik]] → [[drehzahlregelung|Drehzahlregelung]] → [[messkette|Sensorik]] → [[druckmessung|Druckmessung]] steht er an der Stelle, an der ein elektrisches Stellsignal zu einer physikalischen Wirkung am Patienten wird. Wer die Motorkennlinie kennt, versteht, warum Akkuspannung, Temperatur und Verschleiß die Leistung eines Geräts beeinflussen [@hughes-drury-2019].",
+  "related": [
+    "bldc-motor",
+    "schrittmotor",
+    "turbine",
+    "spindelantrieb",
+    "peristaltikpumpe",
+    "drehzahlregelung",
+    "pwm",
+    "regelkreis",
+    "hall-sensor",
+    "elektromagnetische-induktion",
+    "spannung-strom-widerstand",
+    "mikrocontroller",
+    "emv",
+    "beatmungsgeraet"
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "spannung-strom-widerstand",
+      "drehzahlregelung",
+      "messkette",
+      "druckmessung"
+    ],
+    [
+      "elektromotor",
+      "elektromagnetische-induktion",
+      "spannung-strom-widerstand"
+    ],
+    [
+      "spritzenpumpe",
+      "schrittmotor",
+      "elektromotor",
+      "pwm"
+    ]
+  ],
+  "sources": [
+    "fischer-nolle-elektrische-maschinen-2022",
+    "hughes-drury-2019",
+    "tipler-2019",
+    "kramme-2017",
+    "krieger-strahlungsquellen-2018",
+    "iec-60601-1",
+    "iec-60601-1-2"
+  ],
+  "diagram": {
+    "title": "Elektrischer Antriebsstrang eines Medizingeräts",
+    "caption": "Vom Energiespeicher bis zur mechanischen Wirkung; die Rückführung schließt den Regelkreis.",
+    "width": 940,
+    "height": 300,
+    "nodes": [
+      {
+        "id": "ver",
+        "label": "Netzteil /\nAkku",
+        "ref": "medizinisches-netzteil",
+        "kind": "source",
+        "x": 90,
+        "y": 80
+      },
+      {
+        "id": "le",
+        "label": "Leistungselektronik\n(PWM-Endstufe)",
+        "ref": "pwm",
+        "kind": "control",
+        "x": 280,
+        "y": 80
+      },
+      {
+        "id": "mot",
+        "label": "Elektromotor",
+        "ref": "elektromotor",
+        "kind": "actuator",
+        "x": 470,
+        "y": 80
+      },
+      {
+        "id": "mech",
+        "label": "Getriebe / Spindel /\nLaufrad",
+        "ref": "spindelantrieb",
+        "kind": "process",
+        "x": 660,
+        "y": 80
+      },
+      {
+        "id": "last",
+        "label": "Wirkung am\nPatienten",
+        "kind": "patient",
+        "x": 850,
+        "y": 80
+      },
+      {
+        "id": "sens",
+        "label": "Hall-Sensor /\nDrehgeber",
+        "ref": "hall-sensor",
+        "kind": "sensor",
+        "x": 660,
+        "y": 220
+      },
+      {
+        "id": "mc",
+        "label": "Mikrocontroller\n(Regler)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 280,
+        "y": 220
+      }
+    ],
+    "edges": [
+      {
+        "from": "ver",
+        "to": "le",
+        "kind": "power",
+        "label": "DC"
+      },
+      {
+        "from": "le",
+        "to": "mot",
+        "kind": "power",
+        "label": "Phasenstrom"
+      },
+      {
+        "from": "mot",
+        "to": "mech",
+        "kind": "energy",
+        "label": "Drehmoment"
+      },
+      {
+        "from": "mech",
+        "to": "last",
+        "kind": "energy"
+      },
+      {
+        "from": "mot",
+        "to": "sens",
+        "kind": "signal"
+      },
+      {
+        "from": "sens",
+        "to": "mc",
+        "kind": "signal",
+        "label": "Ist-Drehzahl"
+      },
+      {
+        "from": "mc",
+        "to": "le",
+        "kind": "signal",
+        "label": "Tastgrad"
+      }
+    ]
+  },
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

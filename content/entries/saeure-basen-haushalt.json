@@ -1,0 +1,167 @@
+{
+  "id": "saeure-basen-haushalt",
+  "type": "term",
+  "title": "Säure-Basen-Haushalt",
+  "aliases": [
+    "Säure-Basen-Status",
+    "acid-base balance",
+    "pH-Wert",
+    "Azidose",
+    "Alkalose",
+    "Henderson-Hasselbalch-Gleichung",
+    "Bicarbonatpuffer",
+    "Basenabweichung",
+    "Base Excess",
+    "BE",
+    "Anionenlücke",
+    "Blutgase"
+  ],
+  "category": "anatomie",
+  "summary": "Zusammenspiel von Puffern, Lunge und Niere, das den arteriellen pH-Wert bei 7,35–7,45 hält. Pulmonale CO₂-Abgabe und renale Bicarbonatregulation werden technisch durch Beatmung, Dialyse und ECMO beeinflusst und mit dem Blutgasanalysator gemessen.",
+  "body": "## Überblick\n\nDer **Säure-Basen-Haushalt** hält die Wasserstoffionenkonzentration der Körperflüssigkeiten in engen Grenzen. Im arteriellen [[blut|Blut]] liegt der pH-Wert normalerweise bei 7,35–7,45, das entspricht einer H⁺-Konzentration von nur etwa 35–45 nmol/l [@schmidt-lang-2019] [@guyton-2021]. Schon kleine Abweichungen verändern Enzymaktivität, Ionenkanäle, Herzrhythmus, Gefäßtonus und die Sauerstoffbindung des [[haemoglobin|Hämoglobins]].\n\nDrei Systeme wirken zusammen: chemische **Puffer** (Sekunden), die **Lunge** über die CO₂-Abatmung (Minuten) und die **Niere** über Bicarbonat-Rückgewinnung und H⁺-Ausscheidung (Stunden bis Tage). Gemessen wird der Säure-Basen-Status mit dem [[blutgasanalysator|Blutgasanalysator]]; beeinflusst wird er u. a. durch [[beatmungsgeraet|Beatmung]] und [[dialysegeraet|Dialyse]].\n\n## Grundbegriffe\n\n`pH = −log₁₀ a(H⁺)`\n\nWeil die Skala logarithmisch ist, entspricht ein Abfall um 0,3 pH-Einheiten etwa einer Verdopplung der H⁺-Konzentration.\n\n| Parameter | Referenzbereich arteriell (typisch) | Bedeutung |\n|---|---|---|\n| pH | 7,35–7,45 | Gesamtergebnis |\n| paCO₂ | ca. 35–45 mmHg (4,7–6,0 kPa) | respiratorische Komponente |\n| Standardbicarbonat | ca. 22–26 mmol/l | metabolische Komponente |\n| Basenabweichung (BE) | ca. −2 bis +2 mmol/l | metabolische Komponente, weitgehend unabhängig vom pCO₂ (Standard-BE bezogen auf die Extrazellulärflüssigkeit) |\n\n> [!hinweis] Referenzbereiche variieren geringfügig zwischen Lehrbüchern und Laboren [@schmidt-lang-2019].\n\n## Der Bicarbonatpuffer\n\nDas wichtigste extrazelluläre Puffersystem ist ein **offenes System**, weil CO₂ über die [[lunge|Lunge]] abgeatmet werden kann:\n\n`CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻`\n\nDie Hydratation von CO₂ wird in Erythrozyten und Nierentubuli durch das Enzym Carboanhydrase beschleunigt. Die **Henderson-Hasselbalch-Gleichung** verknüpft pH, Bicarbonat und pCO₂:\n\n`pH = 6,1 + log₁₀ ( [HCO₃⁻] / (0,03 · pCO₂) )`\n\nmit `[HCO₃⁻]` in mmol/l, `pCO₂` in mmHg und dem CO₂-Löslichkeitskoeffizienten 0,03 mmol/(l·mmHg) [@guyton-2021].\n\n> [!beispiel] [HCO₃⁻] = 24 mmol/l, pCO₂ = 40 mmHg: Quotient = 24 / 1,2 = 20; log₁₀ 20 ≈ 1,30; pH ≈ 7,40. Halbiert eine Hyperventilation den pCO₂ auf 20 mmHg, steigt der Quotient auf 40 und der pH rechnerisch auf etwa 7,70 – eine respiratorische Alkalose (die akute Pufferung senkt das Bicarbonat etwas, sodass der reale Anstieg etwas geringer ausfällt).\n\nWeitere Puffer sind Hämoglobin (wichtigster Nicht-Bicarbonat-Puffer im Blut), Plasmaproteine und Phosphat.\n\n## Regulation\n\n| Organ | Mechanismus | Zeitkonstante |\n|---|---|---|\n| Puffer | Bindung/Freisetzung von H⁺ | Sekunden |\n| Lunge | Atemantrieb über zentrale und periphere Chemorezeptoren; Abatmung von CO₂ | Minuten |\n| [[niere|Niere]] | Rückresorption und Neubildung von HCO₃⁻, Ausscheidung von H⁺ als titrierbare Säure und NH₄⁺ | Stunden bis Tage |\n\nDie alveoläre Ventilation bestimmt direkt den paCO₂: Bei konstanter CO₂-Produktion gilt näherungsweise `paCO₂ ∝ V̇CO₂ / V̇A`. Doppelte alveoläre Ventilation halbiert den paCO₂ (siehe [[gasaustausch|Gasaustausch]] und [[atemmechanik|Atemmechanik]]).\n\n## Störungen\n\n| Störung | Primärveränderung | Kompensation | Beispiele |\n|---|---|---|---|\n| respiratorische Azidose | paCO₂ ↑ | renal HCO₃⁻ ↑ | Hypoventilation, zu niedrig eingestellte Beatmung, COPD |\n| respiratorische Alkalose | paCO₂ ↓ | renal HCO₃⁻ ↓ | Hyperventilation, Überbeatmung |\n| metabolische Azidose | HCO₃⁻ ↓ | respiratorisch paCO₂ ↓ | Laktatazidose, Ketoazidose, Niereninsuffizienz, Durchfall |\n| metabolische Alkalose | HCO₃⁻ ↑ | respiratorisch paCO₂ ↑ | Erbrechen, Diuretika, Bicarbonatüberschuss |\n\nBei metabolischen Azidosen hilft die **Anionenlücke** `AG = [Na⁺] − ([Cl⁻] + [HCO₃⁻])` zur Ursachensuche: Eine erhöhte Lücke spricht für zusätzliche, nicht gemessene Säureanionen (z. B. Laktat, Ketonkörper).\n\n> [!vereinfacht] Die klassische Bicarbonat-/BE-Betrachtung ist ein Modell. Der physikochemische Ansatz nach Stewart beschreibt den pH als abhängig von drei unabhängigen Größen – starker Ionendifferenz (SID), Gesamtkonzentration schwacher Säuren (vor allem Albumin, Phosphat) und pCO₂ [@stewart-1983]. Er erklärt z. B., warum große Mengen Kochsalzlösung eine hyperchlorämische Azidose verursachen können.\n\n## Messtechnik\n\nDer [[blutgasanalysator|Blutgasanalysator]] misst pH, pCO₂ und pO₂ direkt mit Elektroden und berechnet daraus Bicarbonat und BE:\n\n| Messgröße | Sensorprinzip | Kernidee |\n|---|---|---|\n| pH | Glaselektrode (potentiometrisch) | Spannung nach Nernst, ca. 61,5 mV pro pH-Einheit bei 37 °C |\n| pCO₂ | Severinghaus-Elektrode | CO₂ diffundiert durch Membran in Bicarbonatlösung, deren pH-Änderung gemessen wird [@severinghaus-bradley-1958] |\n| pO₂ | Clark-Elektrode (amperometrisch) | O₂-Reduktion an Platinkathode, Strom ∝ pO₂ [@clark-1956] |\n\nDie Nernst-Steigung `U = (R·T·ln 10 / F) · ΔpH` ist temperaturabhängig; deshalb wird bei 37 °C gemessen und für abweichende Patiententemperatur ggf. umgerechnet – relevant in der Hypothermie und an der [[herz-lungen-maschine|Herz-Lungen-Maschine]] („alpha-stat“ vs. „pH-stat“-Strategie).\n\n> [!praxis] Fehlerquellen der Präanalytik: Luftblasen in der Probe (pCO₂ ↓, pO₂ verfälscht), zu langes Liegenlassen ohne Kühlung (Stoffwechsel der Zellen), falsche Heparinisierung und venöse statt arterielle Probe. Sie wirken sich stärker aus als die Messunsicherheit des Geräts (siehe [[messunsicherheit|Messunsicherheit]]).\n\nNichtinvasiv liefert die [[kapnometer|Kapnometrie]] mit dem [[co2-sensor|CO₂-Sensor]] den endtidalen CO₂-Partialdruck. Bei gesunder Lunge liegt er nur wenige mmHg unter dem paCO₂; bei Ventilations-Perfusions-Störungen kann die Differenz deutlich größer sein [@jaffe-2008].\n\n## Anwendung in Geräten\n\n| Gerät | Eingriff in den Säure-Basen-Haushalt |\n|---|---|\n| [[beatmungsgeraet|Beatmungsgerät]] | Minutenvolumen steuert paCO₂ (respiratorische Komponente) |\n| [[anaesthesiegeraet|Anästhesiegerät]] | CO₂-Elimination über [[co2-absorber|CO₂-Absorber]]; erschöpfter Kalk → Rückatmung von CO₂ |\n| [[dialysegeraet|Dialysegerät]] / [[crrt-geraet|CRRT]] | Bicarbonat im Dialysat korrigiert metabolische Azidose [@daugirdas-2015] |\n| [[ecmo|ECMO]] | CO₂-Elimination über den Oxygenator, gesteuert über den Gasfluss (Sweep) |\n| [[blutgasanalysator|Blutgasanalysator]] | Messung, Grundlage für Therapieentscheidungen |\n\n## Bedeutung in der Medizintechnik\n\nDer Säure-Basen-Haushalt verbindet [[lunge|Lunge]], [[niere|Niere]] und [[blut|Blut]] mit Beatmungs-, Dialyse- und Analysetechnik. Wer Henderson-Hasselbalch und die Elektrodenprinzipien versteht, kann Blutgaswerte plausibilisieren, Beatmungseinstellungen nachvollziehen und Messfehler von echten Patientenveränderungen unterscheiden.\n",
+  "related": [
+    "blutgasanalysator",
+    "blut",
+    "niere",
+    "lunge",
+    "gasaustausch",
+    "haemoglobin",
+    "kapnometer",
+    "co2-sensor",
+    "beatmungsgeraet",
+    "dialysegeraet",
+    "co2-absorber",
+    "ecmo"
+  ],
+  "paths": [
+    [
+      "saeure-basen-haushalt",
+      "blutgasanalysator",
+      "messunsicherheit"
+    ],
+    [
+      "saeure-basen-haushalt",
+      "lunge",
+      "beatmungsgeraet",
+      "kapnometer",
+      "co2-sensor"
+    ],
+    [
+      "saeure-basen-haushalt",
+      "niere",
+      "dialysegeraet"
+    ]
+  ],
+  "sources": [
+    "schmidt-lang-2019",
+    "guyton-2021",
+    "stewart-1983",
+    "severinghaus-bradley-1958",
+    "clark-1956",
+    "jaffe-2008",
+    "daugirdas-2015"
+  ],
+  "diagram": {
+    "title": "Regulation des pH-Werts",
+    "caption": "Puffer, Lunge und Niere als parallele Regelpfade; Geräte greifen an Lunge und Niere ein (vereinfacht).",
+    "width": 900,
+    "height": 380,
+    "nodes": [
+      {
+        "id": "saeure",
+        "label": "Säureanfall\n(Stoffwechsel)",
+        "kind": "source",
+        "x": 110,
+        "y": 190
+      },
+      {
+        "id": "puffer",
+        "label": "Bicarbonat-\npuffer im Blut",
+        "ref": "blut",
+        "kind": "process",
+        "x": 330,
+        "y": 190
+      },
+      {
+        "id": "lunge",
+        "label": "Lunge:\nCO₂-Abatmung",
+        "ref": "lunge",
+        "kind": "actuator",
+        "x": 560,
+        "y": 80
+      },
+      {
+        "id": "niere",
+        "label": "Niere:\nHCO₃⁻ / H⁺",
+        "ref": "niere",
+        "kind": "actuator",
+        "x": 560,
+        "y": 300
+      },
+      {
+        "id": "beat",
+        "label": "Beatmungsgerät",
+        "ref": "beatmungsgeraet",
+        "kind": "control",
+        "x": 790,
+        "y": 80
+      },
+      {
+        "id": "dial",
+        "label": "Dialysegerät",
+        "ref": "dialysegeraet",
+        "kind": "control",
+        "x": 790,
+        "y": 300
+      },
+      {
+        "id": "bga",
+        "label": "Blutgas-\nanalysator",
+        "ref": "blutgasanalysator",
+        "kind": "sensor",
+        "x": 790,
+        "y": 190
+      }
+    ],
+    "edges": [
+      {
+        "from": "saeure",
+        "to": "puffer",
+        "kind": "fluid",
+        "label": "H⁺"
+      },
+      {
+        "from": "puffer",
+        "to": "lunge",
+        "kind": "gas",
+        "label": "CO₂"
+      },
+      {
+        "from": "puffer",
+        "to": "niere",
+        "kind": "fluid",
+        "label": "H⁺"
+      },
+      {
+        "from": "beat",
+        "to": "lunge",
+        "kind": "gas",
+        "label": "Ventilation"
+      },
+      {
+        "from": "dial",
+        "to": "niere",
+        "kind": "fluid",
+        "label": "Ersatz"
+      },
+      {
+        "from": "puffer",
+        "to": "bga",
+        "kind": "data",
+        "label": "pH, pCO₂"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

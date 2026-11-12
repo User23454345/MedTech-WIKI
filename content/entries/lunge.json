@@ -1,0 +1,158 @@
+{
+  "id": "lunge",
+  "type": "term",
+  "title": "Lunge und Atemwege",
+  "aliases": [
+    "Lunge",
+    "Pulmo",
+    "Atemwege",
+    "Bronchialbaum",
+    "Alveolen",
+    "Lungenbläschen",
+    "lung",
+    "airways",
+    "Respirationstrakt",
+    "Lungenvolumina",
+    "Totraum",
+    "Surfactant"
+  ],
+  "category": "anatomie",
+  "summary": "Organ des äußeren Gasaustauschs mit einem rund 23-fach verzweigten Atemwegsbaum und mehreren hundert Millionen Alveolen. Anatomie, Lungenvolumina, Surfactant und Atemgaskonditionierung bestimmen die Anforderungen an Beatmungs-, Lungenfunktions- und Atemgasmessgeräte.",
+  "body": "## Überblick\n\nDie **Lunge** (lat. *pulmo*) mit den zuführenden **Atemwegen** ist das Organ des äußeren [[gasaustausch|Gasaustauschs]]: Sie nimmt Sauerstoff aus der Luft in das [[blut|Blut]] auf und gibt Kohlendioxid ab. Dazu wird Luft durch ein sich vielfach verzweigendes Röhrensystem bis zu mehreren hundert Millionen Lungenbläschen (Alveolen) geleitet, deren Gesamtoberfläche beim Erwachsenen in der Größenordnung von 50–100 m² liegt [@west-luks-2021] [@schmidt-lang-2019]. Wie Luft bewegt wird, beschreibt die [[atemmechanik|Atemmechanik]].\n\n## Gliederung der Atemwege\n\n### Obere Atemwege\n\nNase, Nasennebenhöhlen, Rachen (Pharynx) und Kehlkopf (Larynx). Sie **konditionieren** die Atemluft: Sie wird erwärmt, befeuchtet und von groben Partikeln gereinigt. Der Kehlkopf schützt mit dem Kehldeckel (Epiglottis) die unteren Atemwege beim Schlucken und enthält die Stimmlippen.\n\n### Untere Atemwege und Bronchialbaum\n\nDie Luftröhre (Trachea) teilt sich an der Bifurkation (Carina) in den rechten und linken Hauptbronchus. Danach verzweigen sich die Atemwege nach dem Modell von Weibel in rund 23 Generationen dichotomer Teilungen:\n\n| Generation (Weibel, ca.) | Abschnitt | Funktion |\n|---|---|---|\n| 0 | Trachea | Luftleitung |\n| 1–4 | Haupt-, Lappen-, Segmentbronchien | Luftleitung, Knorpelspangen |\n| 5–16 | kleine Bronchien, Bronchiolen, terminale Bronchiolen | Luftleitung (anatomischer Totraum) |\n| 17–19 | respiratorische Bronchiolen | beginnender Gasaustausch |\n| 20–23 | Alveolargänge, Alveolarsäckchen | Gasaustausch |\n\n> [!vereinfacht] Das Weibel-Modell nimmt eine symmetrische Verzweigung an. Der reale Bronchialbaum ist asymmetrisch, die Zahl der Generationen bis zu den Alveolen schwankt je nach Lungenregion [@west-luks-2021].\n\nDa sich der **Gesamtquerschnitt** mit jeder Generation stark vergrößert, sinkt die Strömungsgeschwindigkeit zur Peripherie hin drastisch; in den Alveolarbereichen erfolgt der Gastransport überwiegend durch Diffusion. Der größte Teil des Atemwegswiderstands liegt daher in den mittelgroßen Bronchien, nicht in den kleinsten Atemwegen.\n\n### Anatomie der Lungenflügel\n\nDie rechte Lunge besteht aus drei, die linke – wegen des Platzbedarfs des [[herz|Herzens]] – aus zwei Lappen. Jede Lunge ist vom Lungenfell (Pleura visceralis) überzogen, die Brusthöhle vom Rippenfell (Pleura parietalis) ausgekleidet. Im flüssigkeitsgefüllten Pleuraspalt herrscht ein gegenüber der Atmosphäre negativer Druck, der die Lunge an der Thoraxwand hält. Dringt Luft ein (Pneumothorax), fällt die Lunge zusammen.\n\n> [!praxis] Der rechte Hauptbronchus verläuft steiler als der linke. Ein zu tief vorgeschobener Endotrachealtubus gelangt deshalb häufig in den rechten Hauptbronchus (einseitige Intubation). Die Tubuslage wird klinisch u. a. per Auskultation, [[kapnometer|Kapnographie]] und Bildgebung kontrolliert.\n\n## Alveolen und Blut-Luft-Schranke\n\nDie Alveolen sind von einem dichten Kapillarnetz umgeben. Die Blut-Luft-Schranke aus Alveolarepithel, gemeinsamer Basalmembran und Kapillarendothel ist an den dünnsten Stellen deutlich unter 1 µm dick. Nach dem Fickschen Diffusionsgesetz begünstigen große Fläche und geringe Dicke den Gasaustausch (siehe [[diffusion-osmose]]) [@west-luks-2021].\n\n### Surfactant\n\nDie Alveolarinnenfläche ist mit einem Flüssigkeitsfilm bedeckt, dessen Oberflächenspannung die Alveolen zusammenziehen würde. Für eine Kugel gilt das Gesetz von Laplace:\n\n`p = 2 · γ / r`\n\nmit Druck p, Oberflächenspannung γ und Radius r. Kleine Alveolen müssten danach kollabieren. Das von Typ-II-Pneumozyten gebildete **Surfactant** senkt die Oberflächenspannung – umso stärker, je kleiner die Alveole wird – und stabilisiert so die Alveolen. Frühgeborene mit Surfactantmangel entwickeln ein Atemnotsyndrom und benötigen häufig Atemunterstützung, z. B. CPAP (siehe [[neonatologie]]).\n\n## Lungenvolumina\n\n| Größe | Definition | Typischer Wert (junger Erwachsener) |\n|---|---|---|\n| Atemzugvolumen (VT) | pro Atemzug in Ruhe bewegtes Volumen | ca. 0,5 l |\n| inspiratorisches Reservevolumen | zusätzlich maximal einatembar | ca. 3 l |\n| exspiratorisches Reservevolumen | zusätzlich maximal ausatembar | ca. 1–1,2 l |\n| Residualvolumen (RV) | nach maximaler Ausatmung verbleibend | ca. 1,2 l |\n| Vitalkapazität (VC) | VT + IRV + ERV | ca. 4,5–5 l |\n| funktionelle Residualkapazität (FRC) | ERV + RV, Ruhevolumen nach normaler Ausatmung | ca. 2,3–2,5 l |\n| totale Lungenkapazität (TLC) | VC + RV | ca. 6 l |\n| anatomischer Totraum | Volumen der luftleitenden Atemwege | ca. 150 ml (≈ 2 ml/kg) |\n\n> [!hinweis] Die Werte sind Größenordnungen; Sollwerte hängen von Geschlecht, Alter, Körpergröße und Herkunft ab und werden mit Referenzgleichungen berechnet [@ats-ers-spirometry-2019] [@schmidt-lang-2019]. Residualvolumen und FRC sind mit der Spirometrie nicht messbar, sondern nur z. B. mit dem [[bodyplethysmograph|Bodyplethysmographen]] oder Gasverdünnungsverfahren.\n\n> [!beispiel] Bei einer Atemfrequenz von 15 /min und VT = 0,5 l beträgt das Atemminutenvolumen 7,5 l/min. Davon erreichen pro Atemzug nur 0,5 − 0,15 = 0,35 l die Alveolen; die alveoläre Ventilation beträgt also rund 5,25 l/min.\n\n## Schutzmechanismen\n\n* **Mukoziliäre Clearance:** Flimmerepithel transportiert Schleim mit eingefangenen Partikeln Richtung Rachen.\n* **Husten- und Schluckreflex** schützen vor Aspiration.\n* **Atemgaskonditionierung:** Bei Nasenatmung ist die Atemluft typischerweise wenige Zentimeter unterhalb der Bifurkation auf Körpertemperatur erwärmt und mit Wasserdampf gesättigt (isotherme Sättigungsgrenze, Lehrbuchwert; ihre Lage verschiebt sich z. B. bei Mundatmung oder hohem Atemminutenvolumen nach peripher).\n\n> [!belegt] Ein Endotrachealtubus oder eine Trachealkanüle umgeht die oberen Atemwege. Trockene, kalte Gase schädigen dann Schleimhaut und Clearance; bei invasiver Beatmung ist deshalb eine aktive oder passive Befeuchtung (Atemgasbefeuchter bzw. HME-Filter) erforderlich [@aarc-humidification-2012] [@oczenski-2017].\n\n## Bedeutung in der Medizintechnik\n\n| Aufgabe | Geräte |\n|---|---|\n| Beatmung und Atemunterstützung | [[beatmungsgeraet]], [[anaesthesiegeraet]], [[transportbeatmungsgeraet]], [[heimbeatmungsgeraet]], [[cpap-geraet]], [[high-flow-geraet]] |\n| Atemgaskonditionierung | [[atemgasbefeuchter]] |\n| Lungenfunktionsdiagnostik | [[spirometer]], [[bodyplethysmograph]] |\n| Monitoring | [[kapnometer]], [[pulsoxymeter]], [[polysomnograph]] |\n| Atemwegsmanagement und Bronchoskopie | [[videolaryngoskop]], [[endoskop]], [[absauggeraet]] |\n| Medikamenten- und Sauerstoffgabe | [[inhalationsgeraet]], [[sauerstoffkonzentrator]] |\n\nDas Beatmungsgerät ist dabei der Ausgangspunkt einer typischen technischen Wissenskette: [[beatmungsgeraet|Beatmungsgerät]] → [[turbine|Turbine]] → [[elektromotor|Elektromotor]] → [[drehzahlregelung|Drehzahlregelung]] → [[druckmessung|Druckmessung]]. Welche Drücke und Volumina dabei auf die Lunge wirken, erläutert die [[atemmechanik]]. Klinische Hauptanwender sind [[pneumologie]], [[intensivmedizin]] und [[anaesthesiologie]].\n",
+  "related": [
+    "atemmechanik",
+    "gasaustausch",
+    "haemoglobin",
+    "beatmungsgeraet",
+    "spirometer",
+    "bodyplethysmograph",
+    "atemgasbefeuchter",
+    "kapnometer",
+    "cpap-geraet",
+    "high-flow-geraet",
+    "pneumologie",
+    "intensivmedizin"
+  ],
+  "paths": [
+    [
+      "lunge",
+      "atemmechanik",
+      "beatmungsgeraet",
+      "turbine",
+      "elektromotor",
+      "drehzahlregelung",
+      "druckmessung"
+    ],
+    [
+      "lunge",
+      "gasaustausch",
+      "haemoglobin",
+      "pulsoxymeter"
+    ]
+  ],
+  "sources": [
+    "west-luks-2021",
+    "schmidt-lang-2019",
+    "ats-ers-spirometry-2019",
+    "aarc-humidification-2012",
+    "oczenski-2017"
+  ],
+  "diagram": {
+    "title": "Weg der Atemluft",
+    "caption": "Luftleitende und gasaustauschende Abschnitte der Atemwege (Funktionsschema).",
+    "width": 900,
+    "height": 360,
+    "nodes": [
+      {
+        "id": "luft",
+        "label": "Umgebungsluft /\nBeatmungsgerät",
+        "ref": "beatmungsgeraet",
+        "kind": "source",
+        "x": 100,
+        "y": 90
+      },
+      {
+        "id": "obere",
+        "label": "Nase, Rachen,\nKehlkopf",
+        "kind": "process",
+        "x": 320,
+        "y": 90
+      },
+      {
+        "id": "tra",
+        "label": "Trachea /\nBifurkation",
+        "kind": "process",
+        "x": 540,
+        "y": 90
+      },
+      {
+        "id": "bro",
+        "label": "Bronchien,\nBronchiolen",
+        "kind": "process",
+        "x": 770,
+        "y": 90
+      },
+      {
+        "id": "alv",
+        "label": "Alveolen\n(Surfactant)",
+        "kind": "patient",
+        "x": 770,
+        "y": 260
+      },
+      {
+        "id": "bls",
+        "label": "Blut-Luft-Schranke\n(Diffusion)",
+        "ref": "diffusion-osmose",
+        "kind": "process",
+        "x": 540,
+        "y": 260
+      },
+      {
+        "id": "kap",
+        "label": "Lungenkapillaren\n(Hämoglobin)",
+        "ref": "haemoglobin",
+        "kind": "output",
+        "x": 320,
+        "y": 260
+      }
+    ],
+    "edges": [
+      {
+        "from": "luft",
+        "to": "obere",
+        "kind": "gas",
+        "label": "Inspiration"
+      },
+      {
+        "from": "obere",
+        "to": "tra",
+        "kind": "gas",
+        "label": "Erwärmung, Befeuchtung"
+      },
+      {
+        "from": "tra",
+        "to": "bro",
+        "kind": "gas"
+      },
+      {
+        "from": "bro",
+        "to": "alv",
+        "kind": "gas",
+        "label": "Konvektion → Diffusion"
+      },
+      {
+        "from": "alv",
+        "to": "bls",
+        "kind": "gas",
+        "label": "O₂ / CO₂"
+      },
+      {
+        "from": "bls",
+        "to": "kap",
+        "kind": "gas"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

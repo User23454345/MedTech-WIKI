@@ -1,0 +1,68 @@
+{
+  "id": "oct",
+  "type": "device",
+  "title": "Optische Kohärenztomographie (OCT)",
+  "aliases": [
+    "OCT",
+    "Optical Coherence Tomography",
+    "SD-OCT",
+    "Spectral-Domain-OCT",
+    "Swept-Source-OCT",
+    "OCT-Angiographie",
+    "Netzhaut-OCT"
+  ],
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 92,
+  "domains": [
+    "augenheilkunde",
+    "kardiologie"
+  ],
+  "summary": "Die optische Kohärenztomographie erzeugt berührungslos Schnittbilder biologischen Gewebes mit Auflösungen im Mikrometerbereich, indem sie die Laufzeit rückgestreuten Lichts interferometrisch misst. Hauptanwendung ist die Netzhaut- und Sehnervdiagnostik in der Augenheilkunde.",
+  "riskClass": {
+    "value": "IIa",
+    "evidence": "typisch",
+    "note": "Aktives diagnostisches Produkt, das Energie (Nahinfrarotlicht) in den Körper einstrahlt – Regel 10 der [[mdr|MDR]] Anhang VIII; die Ausnahme für Produkte, die den Patienten im sichtbaren Spektrum beleuchten, greift bei NIR-Lichtquellen nicht. Maßgeblich ist die Einstufung des Herstellers.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die OCT ist in der [[augenheilkunde|Augenheilkunde]] Standardverfahren zur Diagnose und Verlaufskontrolle von Makulaerkrankungen (z. B. altersabhängige Makuladegeneration, diabetisches Makulaödem), zur Messung der retinalen Nervenfaserschicht beim Glaukom und zur Steuerung intravitrealer Injektionstherapien. Vorderabschnitts-OCT und OCT-basierte Biometrie unterstützen die Kataraktchirurgie. Außerhalb der Ophthalmologie wird OCT u. a. intravaskulär in der [[kardiologie|Kardiologie]] und in der Dermatologie eingesetzt.",
+    "principle": "## Kurzkohärenz-Interferometrie\n\nKern ist ein Michelson-[[optik|Interferometer]]: Licht einer breitbandigen Quelle (z. B. Superlumineszenzdiode im nahen Infrarot) wird in einen Referenz- und einen Probenarm geteilt. Licht, das von Grenzflächen im Gewebe zurückgestreut wird, interferiert mit dem Referenzlicht nur dann, wenn die optischen Weglängen innerhalb der **Kohärenzlänge** übereinstimmen. Daraus ergibt sich ein Tiefenprofil der Reflektivität (A-Scan); durch seitliches Ablenken des Strahls mit Galvanometerspiegeln entstehen Schnittbilder (B-Scans) und Volumendatensätze [@huang-1991].\n\nDie **axiale Auflösung** wird durch die Kohärenzlänge bestimmt und ist proportional zu λ₀² / Δλ – eine breitere spektrale Bandbreite Δλ ergibt also eine feinere Tiefenauflösung. Die **laterale Auflösung** hängt dagegen von der Fokussierung durch Hornhaut und Linse ab.\n\n## Time-, Spectral- und Swept-Source-Domain\n\n| Verfahren | Prinzip |\n|---|---|\n| Time-Domain-OCT | Referenzspiegel wird mechanisch verschoben, Tiefen werden nacheinander abgetastet |\n| Spectral-Domain-OCT | feststehender Referenzarm; ein Spektrometer mit Zeilenkamera zerlegt das Interferenzsignal, eine Fourier-Transformation liefert den ganzen A-Scan auf einmal |\n| Swept-Source-OCT | schnell durchstimmbarer [[laser|Laser]] und Photodetektor statt Spektrometer; in der Ophthalmologie meist um 1 050 nm statt um 840 nm, daher größere Eindringtiefe (z. B. Aderhaut) und hohe Scanraten |\n\nDie Fourier-Domain-Verfahren sind deutlich schneller als die Time-Domain-Technik und ermöglichen die **OCT-Angiographie**, bei der aus der zeitlichen Signaländerung (Dekorrelation) wiederholter B-Scans an derselben Stelle bewegtes Blut sichtbar gemacht wird – ohne Farbstoffinjektion.\n\n> [!praxis] Bewegungs- und Blinzelartefakte sowie Trübungen der brechenden Medien (z. B. Katarakt) mindern die Bildqualität; moderne Geräte nutzen Eye-Tracking zur Bewegungskorrektur ([[bildartefakte]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "zeiss",
+      "models": [
+        "CIRRUS"
+      ],
+      "note": "Spectral-Domain-OCT für die Netzhaut- und Glaukomdiagnostik; zusätzlich OCT-basierte Biometrie (IOLMaster)."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software- und Zusatzmodulen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: OCT-Geräte sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15) genannt.",
+    "intervals": "Wartung und Kalibrierkontrollen nach Herstellerangabe (z. B. mit Testaugen bzw. Referenzobjekten); elektrische Wiederholungsprüfung nach IEC 62353 bzw. DGUV Vorschrift 3 gemäß Gefährdungsbeurteilung; Software-Updates und DICOM-Anbindung im Rahmen des IT-Betriebs."
+  },
+  "related": [
+    "optik",
+    "laser",
+    "auge",
+    "spaltlampe",
+    "tonometer",
+    "dicom"
+  ],
+  "sources": [
+    "huang-1991",
+    "mdr-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

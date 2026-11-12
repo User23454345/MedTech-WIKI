@@ -6,7 +6,28 @@
   "order": 6,
   "icon": "gauge",
   "summary": "Wie Medizingeräte Druck, Fluss, Temperatur, Gase, Licht und bioelektrische Signale erfassen – und wie zuverlässig das ist.",
-  "body": "",
+  "body": "**Sensoren** wandeln physikalische, chemische oder physiologische Größen – Druck, Fluss, Temperatur, Gaskonzentration, Lichtabsorption, Biopotentiale – in elektrische Signale. Fast jedes Medizingerät misst: Ein Monitor überwacht Vitalparameter, ein [[beatmungsgeraet]] regelt anhand von Druck und Flow, eine [[infusionspumpe]] erkennt Luftblasen und Verschlüsse, ein [[dialysegeraet]] überwacht Leitfähigkeit und Blutlecks [@webster-2010] [@hering-2018].\n\nFür die Medizintechnik ist Messtechnik doppelt wichtig: Diagnose- und Therapieentscheidungen hängen von korrekten Messwerten ab, und viele Schutzfunktionen beruhen auf Sensoren. Fehlmessungen – etwa durch [[sensordrift]], [[bewegungsartefakt|Bewegungsartefakte]] oder fehlerhafte Kalibrierung – können zu Fehlalarmen oder, gefährlicher, zu ausbleibenden Alarmen führen.\n\n## Grundbegriffe\n\nJede Messung folgt einer [[messkette]]: Sensor → Signalaufbereitung ([[instrumentenverstaerker|Verstärkung]], [[filter|Filterung]]) → [[analog-digital-wandler|Digitalisierung]] → Auswertung und Anzeige. Kein Messergebnis ist exakt; die [[messunsicherheit]] kennzeichnet die Streuung der Werte, die der Messgröße auf Grundlage der verfügbaren Information begründet zugeordnet werden können; als erweiterte Messunsicherheit wird sie als Intervall mit einer angegebenen Überdeckungswahrscheinlichkeit (oft etwa 95 %) angegeben [@jcgm-200-2012]. [[kalibrierung|Kalibrierung und Justierung]] sowie die [[mtk|messtechnische Kontrolle]] sichern die Messrichtigkeit im Betrieb.\n\n> [!vereinfacht] Ein Sensor „misst“ fast nie direkt die gewünschte Größe: Ein [[drucksensor]] misst die Verformung einer Membran, ein [[pulsoxymeter]] Lichtintensitäten, aus denen ein Algorithmus die Sauerstoffsättigung berechnet.\n\n## Überblick\n\n| Messgröße | Sensor / Verfahren | Typische Geräte |\n|---|---|---|\n| Druck | [[druckmessung]], [[drucksensor]] | [[invasive-druckmessung]], [[beatmungsgeraet]], [[infusionspumpe]] |\n| Nichtinvasiver Blutdruck | [[oszillometrie]] | [[nibp-messgeraet]], [[patientenmonitor]] |\n| Gasfluss | [[flowsensor]] | [[beatmungsgeraet]], [[spirometer]] |\n| Temperatur | [[temperatursensor]] | [[thermometer]], [[inkubator]], [[infusionswaermer]] |\n| Sauerstoff | [[sauerstoffsensor]] | [[beatmungsgeraet]], [[anaesthesiegeraet]] |\n| Kohlendioxid | [[co2-sensor]] | [[kapnometer]] |\n| Sauerstoffsättigung | [[photoplethysmographie]] | [[pulsoxymeter]] |\n| Biopotentiale | [[ekg-elektrode]], [[biosignale]] | [[ekg-geraet]], [[eeg-geraet]], [[emg-geraet]] |\n| Luft in Leitungen | [[luftblasendetektor]] | [[infusionspumpe]], [[dialysegeraet]] |\n| Leitfähigkeit | [[leitfaehigkeitssensor]] | [[dialysegeraet]] |\n| Blut im Dialysat | [[blutleckdetektor]] | [[dialysegeraet]] |\n| Kraft | [[kraftsensor]] | [[spritzenpumpe]] |\n| Position, Magnetfeld | [[hall-sensor]] | Motoren, Klappen- und Türüberwachung |\n\n## Bezug zu anderen Kategorien\n\nDie physikalischen Effekte hinter den Sensoren – [[piezoelektrischer-effekt]], [[lambert-beer|Lambert-Beer-Gesetz]], Widerstandsänderung unter Dehnung – stehen in [[physik]]. Die Signalverarbeitung (Verstärker, Filter, AD-Wandler) behandelt [[elektrotechnik]]; typische Messfehler und Alarme sind in [[fehler]] beschrieben, z. B. [[sensordrift]] und [[elektrodenproblem]].\n\n> [!praxis] Viele Sensoren – etwa galvanische Sauerstoffsensoren oder Flowsensoren in Beatmungsgeräten – sind Verschleißteile mit begrenzter Lebensdauer; viele müssen zudem regelmäßig vom Gerät kalibriert werden (z. B. Sauerstoffzellen an Raumluft bzw. 100 % O₂). Wechselintervalle stehen in den Herstellerunterlagen.\n\n## Lernpfad-Empfehlung\n\n1. **Grundlagen:** [[messkette]] → [[messunsicherheit]] → [[biosignale]].\n2. **Druck und Fluss:** [[druckmessung]] → [[drucksensor]] → [[flowsensor]] → [[oszillometrie]].\n3. **Optische und Gassensorik:** [[photoplethysmographie]] → [[co2-sensor]] → [[sauerstoffsensor]].\n4. **Elektrophysiologie:** [[ekg-elektrode]] zusammen mit [[aktionspotential]] und [[instrumentenverstaerker]].\n5. **Sicherheitssensorik:** [[luftblasendetektor]], [[blutleckdetektor]], [[leitfaehigkeitssensor]], [[kraftsensor]], [[temperatursensor]], [[hall-sensor]].\n6. **Praxis:** [[kalibrierung]] und [[mtk]].",
+  "paths": [
+    [
+      "messkette",
+      "drucksensor",
+      "instrumentenverstaerker",
+      "analog-digital-wandler",
+      "invasive-druckmessung"
+    ],
+    [
+      "lambert-beer",
+      "photoplethysmographie",
+      "pulsoxymeter",
+      "bewegungsartefakt"
+    ]
+  ],
+  "sources": [
+    "hering-2018",
+    "webster-2010",
+    "fraden-2016",
+    "jcgm-200-2012"
+  ],
   "status": "basis",
   "updated": "2026-11-11"
 }

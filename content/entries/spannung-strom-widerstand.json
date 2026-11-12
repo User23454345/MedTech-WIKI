@@ -1,0 +1,53 @@
+{
+  "id": "spannung-strom-widerstand",
+  "type": "term",
+  "title": "Spannung, Strom und Widerstand",
+  "aliases": [
+    "Ohmsches Gesetz",
+    "Elektrische Grundgrößen",
+    "Voltage, current and resistance",
+    "Ohm's law",
+    "U = R · I",
+    "Kirchhoffsche Regeln",
+    "Elektrische Leistung"
+  ],
+  "category": "elektrotechnik",
+  "summary": "Die drei elektrischen Grundgrößen Spannung (Volt), Strom (Ampere) und Widerstand (Ohm) sind über das ohmsche Gesetz U = R · I verknüpft. Sie bilden die Grundlage für das Verständnis jeder Geräteschaltung, aber auch für Stromwirkungen am Körper, Heizleistungen und elektrische Sicherheitsprüfungen.",
+  "body": "## Begriff\n\n**Spannung**, **Strom** und **Widerstand** sind die Grundgrößen der Elektrotechnik. Wer ein [[medizinisches-elektrisches-geraet|medizinisches elektrisches Gerät]] verstehen, prüfen oder instand setzen will, braucht sie ständig: bei der Fehlersuche auf einer Platine ebenso wie bei der Bewertung eines [[ableitstrom|Ableitstroms]] oder bei der Frage, warum eine schlecht klebende [[neutralelektrode|Neutralelektrode]] Verbrennungen verursachen kann [@tipler-2019] [@kramme-2017].\n\n| Größe | Formelzeichen | SI-Einheit | Definition |\n|---|---|---|---|\n| Elektrische Ladung | Q | Coulomb (C = A · s) | Grundeigenschaft von Elektronen/Ionen |\n| Stromstärke | I | Ampere (A) | `I = dQ / dt` – transportierte Ladung pro Zeit |\n| Spannung | U | Volt (V = W/A) | `U = W / Q` – Arbeit pro Ladung zwischen zwei Punkten |\n| Widerstand | R | Ohm (Ω = V/A) | `R = U / I` |\n| Leitwert | G | Siemens (S = 1/Ω) | `G = 1 / R` |\n| Leistung | P | Watt (W = V · A) | `P = U · I` |\n\n## Strom und Spannung\n\nElektrischer **Strom** ist gerichtete Bewegung von Ladungsträgern: in Metallen Elektronen, in Elektrolyten – also auch im menschlichen Gewebe und in der Dialysierflüssigkeit – Ionen. Die **Spannung** ist die Potentialdifferenz zwischen zwei Punkten; sie gibt an, wie viel Energie eine Ladung beim Durchlaufen dieser Strecke abgibt oder aufnimmt. Spannung wird deshalb immer *zwischen* zwei Punkten gemessen (parallel), Strom immer *durch* einen Leiter (in Reihe) [@tipler-2019].\n\n> [!vereinfacht] Die Wasseranalogie hilft beim Einstieg: Spannung entspricht dem Druckunterschied, Strom dem Volumenstrom, Widerstand dem Strömungswiderstand eines Rohres. Formal entspricht `U = R · I` dem Hagen-Poiseuille-Zusammenhang `Δp = R_str · Q` aus der [[stroemungslehre|Strömungslehre]]. Die Analogie versagt bei Induktivitäten, Kapazitäten und Feldern.\n\n## Widerstand und ohmsches Gesetz\n\nFür viele Leiter ist der Strom bei konstanter Temperatur proportional zur Spannung – das **ohmsche Gesetz**:\n\n`U = R · I`\n\nDer Widerstand eines homogenen Leiters hängt von Material und Geometrie ab:\n\n`R = ρ · l / A`\n\nmit spezifischem Widerstand ρ, Länge l und Querschnitt A. Er ist außerdem temperaturabhängig, näherungsweise `R(T) = R₀ · (1 + α · ΔT)`. Genau diesen Effekt nutzen Platin-Messwiderstände wie der Pt100 im [[temperatursensor|Temperatursensor]] (α ≈ 3,85 · 10⁻³ K⁻¹) [@iec-60751]. Auch [[kraftsensor|Dehnungsmessstreifen]] und der [[drucksensor|piezoresistive Drucksensor]] wandeln eine physikalische Größe in eine Widerstandsänderung um [@hering-2018].\n\n### Leistung und Wärme\n\nDie in einem Widerstand umgesetzte Leistung beträgt\n\n`P = U · I = I² · R = U² / R`\n\nDiese [[joulesche-waerme|Joulesche Wärme]] ist im [[heizelement|Heizelement]] eines [[inkubator|Inkubators]] erwünscht, in Leiterbahnen, Steckverbindern und Motorwicklungen dagegen Verlust – und bei zu hoher Stromdichte im Gewebe die Ursache von Verbrennungen, etwa unter einer teilweise abgelösten [[neutralelektrode|Neutralelektrode]] des [[hf-chirurgiegeraet|HF-Chirurgiegeräts]].\n\n> [!beispiel] Ein Heizelement mit 48 W an 24 V nimmt `I = P / U = 2 A` auf; sein Widerstand beträgt `R = U / I = 12 Ω`. Halbiert eine [[pwm|PWM]]-Ansteuerung die Einschaltdauer, sinkt die mittlere Leistung auf 24 W.\n\n## Netzwerke: Kirchhoffsche Regeln\n\nReale Schaltungen bestehen aus vielen Zweigen. Zwei Regeln genügen, um sie zu berechnen [@tipler-2019]:\n\n* **Knotenregel:** Die Summe aller zu- und abfließenden Ströme in einem Knoten ist null (`Σ I = 0`).\n* **Maschenregel:** Die Summe aller Spannungen in einer geschlossenen Masche ist null (`Σ U = 0`).\n\nDaraus folgen Reihenschaltung (`R_ges = R₁ + R₂`) und Parallelschaltung (`1/R_ges = 1/R₁ + 1/R₂`) sowie der **Spannungsteiler** `U₂ = U · R₂ / (R₁ + R₂)`. Der Spannungsteiler steckt in fast jeder Messschaltung, etwa in der Wheatstone-Brücke eines Drucksensors oder im Eingang eines [[analog-digital-wandler|Analog-Digital-Wandlers]].\n\n## Gleich- und Wechselgrößen\n\nDas Versorgungsnetz liefert Wechselspannung mit 50 Hz. Für sinusförmige Größen gilt der **Effektivwert** `U_eff = Û / √2`; 230 V Netzspannung entsprechen einem Scheitelwert von etwa 325 V. Bei Wechselstrom tritt an die Stelle des Widerstands die frequenzabhängige **Impedanz** Z, weil Spulen und [[kondensator|Kondensatoren]] Blindwiderstände bilden (`X_C = 1 / (2π · f · C)`, `X_L = 2π · f · L`). Das erklärt, warum über die Isolationskapazitäten eines Geräts ein Ableitstrom fließt, obwohl kein leitender Kontakt besteht – siehe [[galvanische-trennung|Galvanische Trennung]].\n\n## Bedeutung in der Medizintechnik\n\n### Strom durch den Körper\n\nFür die Gefährdung des Menschen ist nicht die Spannung, sondern der **Strom** durch den Körper (Stärke, Frequenz, Weg, Dauer) entscheidend. Die Körperimpedanz ist nicht konstant: Sie hängt von Berührungsspannung, Hautzustand, Kontaktfläche und Stromweg ab [@iec-60479-1]. Details beschreibt der Artikel [[elektrische-stromwirkung|Wirkung des elektrischen Stroms auf den Körper]].\n\n> [!belegt] Die Wirkungen von Wechselstrom (15–100 Hz) auf den Menschen werden in der technischen Spezifikation IEC/TS 60479-1 in Abhängigkeit von Stromstärke und Einwirkdauer in Zonen eingeteilt; die Körperimpedanz wird dort als spannungs- und wegabhängige Größe beschrieben [@iec-60479-1].\n\n> [!vereinfacht] Rechnet man mit einem pauschalen Körperwiderstand von 1 000 Ω, ergäbe eine Berührung von 230 V einen Strom von 230 mA – weit oberhalb der Schwelle für Herzkammerflimmern. Der reale Wert hängt stark von den Bedingungen ab; die Rechnung zeigt nur die Größenordnung.\n\nBeim direkten Zugang zum Herzen (z. B. über einen Katheter der [[invasive-druckmessung|invasiven Druckmessung]]) können bereits Ströme im Mikroampere-Bereich gefährlich werden. Deshalb sind für [[anwendungsteile|Anwendungsteile]] vom Typ CF besonders niedrige Ableitstromgrenzwerte festgelegt [@iec-60601-1].\n\n### Anwendungen im Gerät\n\n| Anwendung | Relevante Größe | Gerätebeispiel |\n|---|---|---|\n| Schutzleiterprüfung | sehr kleiner Widerstand (Milliohm) | jedes Gerät der [[schutzklassen|Schutzklasse I]], siehe [[schutzleiterwiderstand]] |\n| Isolationsprüfung | sehr großer Widerstand (Megaohm) | [[isolationswiderstand]] |\n| Energieabgabe in Gewebe | Impedanz, Strom, Energie | [[defibrillator]], [[hf-chirurgiegeraet]] |\n| Heizen | `P = I² · R` | [[inkubator]], [[infusionswaermer]], [[atemgasbefeuchter]] |\n| Widerstandssensoren | ΔR / R | [[temperatursensor]], [[drucksensor]], [[kraftsensor]] |\n| Akkubetrieb | Innenwiderstand, Kapazität | [[lithium-ionen-akku]], [[akkufehler]] |\n\n> [!praxis] Bei der [[elektrische-sicherheitspruefung|elektrischen Sicherheitsprüfung]] nach [[iec-62353|IEC 62353]] werden genau diese Grundgrößen gemessen: Widerstand (Schutzleiter, Isolation) und Strom (Ableitströme). Die konkreten Grenzwerte sind der jeweils gültigen Normfassung zu entnehmen [@iec-62353].",
+  "related": [
+    "elektrische-stromwirkung",
+    "joulesche-waerme",
+    "kondensator",
+    "operationsverstaerker",
+    "schutzleiterwiderstand",
+    "isolationswiderstand",
+    "ableitstrom",
+    "galvanische-trennung",
+    "elektromagnetische-induktion"
+  ],
+  "paths": [
+    [
+      "spannung-strom-widerstand",
+      "joulesche-waerme",
+      "heizelement",
+      "inkubator"
+    ],
+    [
+      "spannung-strom-widerstand",
+      "elektrische-stromwirkung",
+      "ableitstrom",
+      "anwendungsteile"
+    ]
+  ],
+  "sources": [
+    "tipler-2019",
+    "kramme-2017",
+    "iec-60479-1",
+    "iec-60601-1",
+    "iec-62353",
+    "iec-60751",
+    "hering-2018"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

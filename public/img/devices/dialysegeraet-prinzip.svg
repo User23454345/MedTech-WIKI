@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Prinzip des Stoffaustauschs im Dialysator und der volumetrischen Bilanzierung</title>
+  <defs>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/>
+    </marker>
+    <marker id="at" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+    <marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b2545"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="22" text-anchor="middle" font-size="15" font-weight="600">Stoffaustausch im Gegenstrom und Bilanzierung</text>
+
+  <!-- Teil A: Membranausschnitt -->
+  <text x="20" y="48" font-weight="600">A  Ausschnitt einer Kapillare</text>
+  <!-- Dialysat oben -->
+  <rect x="40" y="60" width="400" height="44" fill="#e6f7f5" stroke="none"/>
+  <!-- Membran -->
+  <line x1="40" y1="104" x2="440" y2="104" stroke="#0b2545" stroke-width="2" stroke-dasharray="8 4"/>
+  <!-- Blut unten -->
+  <rect x="40" y="106" width="400" height="50" fill="#fde8e8" stroke="none"/>
+  <line x1="40" y1="156" x2="440" y2="156" stroke="#0b2545" stroke-width="2" stroke-dasharray="8 4"/>
+  <rect x="40" y="158" width="400" height="30" fill="#e6f7f5" stroke="none"/>
+  <!-- Flussrichtungen -->
+  <line x1="60" y1="132" x2="200" y2="132" stroke="#b91c1c" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="210" y="136" fill="#b91c1c">Blut (Q_B)</text>
+  <line x1="420" y1="78" x2="300" y2="78" stroke="#0d9488" stroke-width="2" marker-end="url(#at)"/>
+  <text x="60" y="82" fill="#0d9488">Dialysat (Q_D), Gegenstrom</text>
+  <!-- Diffusion: kleine Moleküle -->
+  <circle cx="330" cy="140" r="4" fill="#0b2545"/>
+  <circle cx="350" cy="124" r="4" fill="#0b2545"/>
+  <circle cx="372" cy="142" r="4" fill="#0b2545"/>
+  <circle cx="390" cy="136" r="4" fill="#0b2545"/>
+  <line x1="350" y1="118" x2="350" y2="94" stroke="#0b2545" stroke-width="1.5" marker-end="url(#an)"/>
+  <line x1="390" y1="128" x2="390" y2="94" stroke="#0b2545" stroke-width="1.5" marker-end="url(#an)"/>
+  <!-- großes Molekül (Albumin) bleibt -->
+  <circle cx="290" cy="128" r="9" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Konvektion: Wasser -->
+  <line x1="420" y1="146" x2="420" y2="94" stroke="#0d9488" stroke-width="2.5" marker-end="url(#at)"/>
+
+  <!-- Beschriftungen Teil A -->
+  <line x1="450" y1="104" x2="470" y2="104" stroke="#0b2545" stroke-width="1"/>
+  <text x="474" y="100">semipermeable</text>
+  <text x="474" y="116">Membran</text>
+  <line x1="396" y1="110" x2="470" y2="140" stroke="#0b2545" stroke-width="1"/>
+  <text x="474" y="144">Diffusion</text>
+  <text x="474" y="160">(Harnstoff, K⁺)</text>
+  <line x1="424" y1="126" x2="470" y2="178" stroke="#0b2545" stroke-width="1"/>
+  <text x="474" y="182">Konvektion /</text>
+  <text x="474" y="198">Ultrafiltration</text>
+  <line x1="290" y1="137" x2="270" y2="176" stroke="#0b2545" stroke-width="1"/>
+  <text x="150" y="182" font-size="12">Protein bleibt im Blut</text>
+
+  <!-- Teil B: Bilanzkammer -->
+  <text x="20" y="226" font-weight="600">B  Volumetrische Bilanzierung (vereinfacht)</text>
+  <rect x="190" y="240" width="160" height="110" rx="6" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <path d="M190,295 C230,270 310,320 350,295" fill="none" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="270" y="262" text-anchor="middle" font-size="12">Frischdialysat</text>
+  <text x="270" y="338" text-anchor="middle" font-size="12">verbrauchtes Dialysat</text>
+  <!-- Zu-/Abläufe -->
+  <line x1="60" y1="262" x2="186" y2="262" stroke="#0d9488" stroke-width="2" marker-end="url(#at)"/>
+  <text x="40" y="254" font-size="12">aus Aufbereitung</text>
+  <line x1="350" y1="262" x2="476" y2="262" stroke="#0d9488" stroke-width="2" marker-end="url(#at)"/>
+  <text x="400" y="254" font-size="12">zum Dialysator</text>
+  <line x1="560" y1="330" x2="354" y2="330" stroke="#0b2545" stroke-width="2" marker-end="url(#an)"/>
+  <text x="400" y="322" font-size="12">vom Dialysator</text>
+  <line x1="186" y1="330" x2="60" y2="330" stroke="#0b2545" stroke-width="2" marker-end="url(#an)"/>
+  <text x="70" y="322" font-size="12">zum Abfluss</text>
+  <!-- UF-Pumpe -->
+  <circle cx="500" cy="372" r="14" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="500" y="377" text-anchor="middle" font-size="12">UF</text>
+  <line x1="500" y1="330" x2="500" y2="358" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="486" y1="372" x2="436" y2="372" stroke="#0b2545" stroke-width="1.5" marker-end="url(#an)"/>
+  <text x="40" y="376" font-size="12">UF-Pumpe: Netto-Entzug = Hubzahl · Hubvolumen</text>
+  <text x="384" y="376" font-size="12">Abfluss</text>
+  <line x1="215" y1="287" x2="165" y2="292" stroke="#0b2545" stroke-width="1"/>
+  <text x="40" y="292" font-size="12">bewegliche Membran</text>
+  <text x="40" y="307" font-size="12">V(zu) = V(ab)</text>
+  <text x="20" y="394" font-size="11">Eigene Darstellung, Größenverhältnisse nicht maßstäblich</text>
+</svg>

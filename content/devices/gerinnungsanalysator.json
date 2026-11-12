@@ -1,0 +1,79 @@
+{
+  "id": "gerinnungsanalysator",
+  "type": "device",
+  "title": "Gerinnungsanalysator",
+  "aliases": [
+    "Koagulometer",
+    "Hämostaseologie-Analysator",
+    "Coagulation analyzer",
+    "Gerinnungsautomat"
+  ],
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 63,
+  "domains": [
+    "labormedizin",
+    "intensivmedizin",
+    "kardiologie",
+    "chirurgie"
+  ],
+  "summary": "Gerinnungsanalysatoren bestimmen die plasmatische Blutgerinnung, z. B. Thromboplastinzeit (Quick/INR), aPTT, Fibrinogen und D-Dimere. Sie erkennen die Gerinnselbildung mechanisch oder optisch und messen Einzelfaktoren mit chromogenen und immunologischen Verfahren.",
+  "riskClass": {
+    "value": "A (IVDR)",
+    "evidence": "typisch",
+    "note": "Analysegeräte, die vom Hersteller speziell für In-vitro-diagnostische Verfahren bestimmt sind, fallen als Instrumente nach Regel 5 der [[ivdr|IVDR]] Anhang VIII in der Regel in **Klasse A**. Reagenzien, Kalibratoren und Kontrollmaterialien werden eigenständig klassifiziert und können höheren Klassen angehören [@ivdr-2017].",
+    "sources": [
+      "ivdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Gerinnungstests dienen der Abklärung von Blutungsneigung und Thromboserisiko, der präoperativen Diagnostik und der Überwachung gerinnungshemmender Therapie (Vitamin-K-Antagonisten über INR, unfraktioniertes Heparin über aPTT bzw. Anti-Xa). Untersucht wird Citratplasma, das nach [[laborzentrifuge|Zentrifugation]] plättchenarm vorliegen muss. Neben Laborgeräten gibt es patientennahe Systeme (Point of Care) für INR-Selbstmessung und Notfalldiagnostik [@kramme-2017].",
+    "principle": "## Gerinnungszeit-Tests\n\nDem auf 37 °C temperierten Plasma wird ein Aktivator zugesetzt (z. B. Thromboplastin und Calcium); gemessen wird die Zeit bis zur Fibrinbildung. Zwei Detektionsprinzipien sind verbreitet:\n\n| Prinzip | Messgröße |\n|---|---|\n| Mechanisch | Eine Stahlkugel in der Küvette wird magnetisch in Bewegung gehalten; die zunehmende Viskosität des entstehenden Gerinnsels bremst ihre Bewegung, was induktiv bzw. über einen Sensor erfasst wird ([[elektromagnetische-induktion]]). |\n| Optisch (turbidimetrisch) | Die Fibrinbildung erhöht die Trübung; die Änderung der Lichttransmission bzw. Streuung wird photometrisch registriert ([[optik]]). |\n\nMechanische Verfahren sind weniger empfindlich gegenüber trüben, lipämischen oder ikterischen Proben; optische erlauben die Auswertung der gesamten Gerinnungskurve.\n\n## Chromogene und immunologische Tests\n\nBei **chromogenen Tests** spaltet ein Gerinnungsenzym ein synthetisches Substrat und setzt einen Farbstoff frei (häufig p-Nitroanilin, gemessen um 405 nm), dessen Zunahme nach dem [[lambert-beer|Lambert-Beer-Gesetz]] ausgewertet wird. D-Dimere und andere Proteine werden meist immunturbidimetrisch bestimmt.\n\n> [!warnung] Präanalytik ist entscheidend: Ein korrektes Mischungsverhältnis Blut zu Citrat (Röhrchen vollständig füllen), zügige Verarbeitung und vollständige Zentrifugation sind Voraussetzung für valide Werte.\n\n> [!vereinfacht] Die Gerinnungskaskade ist hier stark verkürzt dargestellt; die Referenzbereiche und Kalibrierung (z. B. ISI-Wert für die INR) sind reagenz- und geräteabhängig."
+  },
+  "manufacturers": [
+    {
+      "ref": "sysmex",
+      "models": [
+        "CS-Serie"
+      ]
+    },
+    {
+      "ref": "roche-diagnostics",
+      "models": [
+        "cobas t 511",
+        "cobas t 711",
+        "CoaguChek"
+      ],
+      "note": "CoaguChek: patientennahe INR-Messung."
+    },
+    {
+      "ref": "siemens-healthineers",
+      "models": [],
+      "note": "Gerinnungssysteme und Reagenzien."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Als In-vitro-Diagnostikum unterliegt das Gerät zusätzlich der laborinternen Qualitätssicherung nach [[betreiberpflichten|Betreiberpflichten]] und Rili-BÄK (interne und externe Qualitätskontrolle).",
+    "intervals": "Wartung, Reinigung und Lampen-/Optikprüfung nach Herstellerangabe; tägliche interne Qualitätskontrolle in mehreren Konzentrationsbereichen, Ringversuche nach Rili-BÄK; Temperaturkontrolle der Reagenzkühlung; elektrische Wiederholungsprüfung nach [[dguv-vorschrift-3|DGUV Vorschrift 3]] gemäß Gefährdungsbeurteilung."
+  },
+  "related": [
+    "haematologie-analysator",
+    "klinisch-chemischer-analysator",
+    "laborzentrifuge",
+    "blut",
+    "kalibrierung"
+  ],
+  "sources": [
+    "kramme-2017",
+    "ivdr-2017",
+    "rili-baek"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

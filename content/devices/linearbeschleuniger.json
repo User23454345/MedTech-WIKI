@@ -1,0 +1,74 @@
+{
+  "id": "linearbeschleuniger",
+  "type": "device",
+  "title": "Medizinischer Linearbeschleuniger",
+  "aliases": [
+    "Linac",
+    "LINAC",
+    "Elektronenlinearbeschleuniger",
+    "Bestrahlungsgerät",
+    "Teletherapiegerät"
+  ],
+  "category": "geraete",
+  "deviceGroup": "strahlentherapie",
+  "rank": 47,
+  "domains": [
+    "strahlentherapie"
+  ],
+  "summary": "Der medizinische Linearbeschleuniger beschleunigt Elektronen mit Hochfrequenzfeldern auf Energien im Megaelektronenvolt-Bereich und erzeugt daraus hochenergetische Photonen- oder Elektronenstrahlung für die perkutane Strahlentherapie. Ein Multileaf-Kollimator formt das Strahlenfeld an den Tumor an, während die Gantry um den Patienten rotiert.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives therapeutisches Produkt, das ionisierende Strahlung abgibt – [[mdr|MDR]] Anhang VIII **Regel 9** (aktive therapeutische Produkte, die ionisierende Strahlung für therapeutische Zwecke abgeben): Klasse IIb. Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Der Linearbeschleuniger ist das Standardgerät der externen (perkutanen) [[strahlentherapie]]. Ziel ist, im Tumor eine hohe Energiedosis (gemessen in Gray, Gy) zu applizieren und umgebendes gesundes Gewebe zu schonen. Die Bestrahlung erfolgt meist fraktioniert über mehrere Wochen [@krieger-strahlungsquellen-2018].",
+    "principle": "## Erzeugung des Strahls\n\nEine **Elektronenkanone** emittiert Elektronen, die in Pakete gebündelt in ein **Beschleunigungsrohr** (Hohlleiter mit Resonatorzellen) eingeschossen werden. Ein Magnetron oder Klystron speist dort Mikrowellen im GHz-Bereich (typisch S-Band, rund 3 GHz) ein; das elektrische Feld der Welle beschleunigt die Elektronen auf Energien von typischerweise etwa 4–20 MeV (Photonenbetrieb klinisch meist 6–18 MV). Ein **Umlenkmagnet** (häufig 270°-Ablenkung) lenkt den Strahl in Richtung Patient und lässt dabei über Blenden nur ein schmales Energieband passieren [@krieger-strahlungsquellen-2018].\n\n## Photonen- und Elektronenbetrieb\n\n| Betriebsart | Prinzip |\n|---|---|\n| Photonen | Elektronen treffen auf ein Target aus Schwermetall und erzeugen Bremsstrahlung ([[roentgenstrahlung]]); ein Ausgleichsfilter homogenisiert das Feld (bei FFF-Betrieb entfällt er) |\n| Elektronen | Target ist ausgefahren; Streufolien weiten den Elektronenstrahl auf, Tubusse begrenzen das Feld |\n\nZwei unabhängige **Monitorkammern** (Durchstrahl-Ionisationskammern) messen fortlaufend die abgegebene Dosis und schalten den Strahl bei Erreichen der Soll-Monitoreinheiten ab.\n\n## Feldformung und Bildführung\n\nBlenden und ein **Multileaf-Kollimator** ([[kollimator]]) mit vielen motorisch bewegten Wolframlamellen formen das Feld. Bei IMRT und VMAT werden Lamellen, Dosisleistung und [[gantry]]-Winkel während der Bestrahlung moduliert. Für die bildgeführte Strahlentherapie (IGRT) tragen viele Geräte eine kV-Röntgeneinheit mit Flachdetektor (Cone-Beam-CT) und einen Megavolt-Bildempfänger.\n\n> [!warnung] Fehlbestrahlungen gehören zu den schwerwiegendsten Ereignissen der Medizintechnik. Verriegelungen, Dosisüberwachung und die physikalische Qualitätssicherung durch Medizinphysik-Expert:innen sind daher zentral ([[strahlenschutz]])."
+  },
+  "manufacturers": [
+    {
+      "ref": "elekta",
+      "models": [
+        "Versa HD",
+        "Unity"
+      ],
+      "note": "Unity: MR-Linac."
+    },
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "TrueBeam",
+        "Halcyon"
+      ],
+      "note": "Über die Tochter Varian (seit 2021 Teil von Siemens Healthineers)."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Energievarianten, Multileaf-Kollimator, Bildführung (Cone-Beam-CT, Oberflächenerfassung), Software für IMRT/VMAT und Stereotaxie, Bunkerbau/Abschirmung, Planungssystem, Servicevertrag und Personal für die Qualitätssicherung."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025): Linearbeschleuniger sind weder in Anlage 1 (STK, § 12) noch als Messgerät in Anlage 2 aufgeführt. Die zur Dosimetrie eingesetzten Therapiedosimeter sind eigenständige Medizinprodukte mit Messfunktion und unterliegen der MTK nach § 15 i. V. m. Anlage 2. Der Beschleuniger selbst ist kein Messgerät im Sinne der Anlage 2 und unterliegt daher keiner MTK; die eingebaute Dosisüberwachung (Monitorkammern) wird im Rahmen der strahlenschutzrechtlichen Qualitätssicherung mit den Therapiedosimetern abgeglichen. Für den Beschleuniger selbst gelten die strahlenschutzrechtlichen Prüfpflichten (Abnahme-, Konstanz- und Sachverständigenprüfung nach StrlSchG/StrlSchV).",
+    "intervals": "Konstanzprüfungen täglich, wöchentlich, monatlich und jährlich nach den einschlägigen Normen und dem Qualitätssicherungsprogramm der Medizinphysik; Sachverständigenprüfungen in behördlich festgelegten Abständen; Wartung nach Herstellerangabe; MTK der Therapiedosimeter mit der in Anlage 2 der geltenden Fassung genannten Nachprüffrist (die Verordnung sieht abweichende Fristen vor, wenn der Betreiber regelmäßige Kontrollmessungen mit einer geeigneten Kontrollvorrichtung durchführt und dokumentiert)."
+  },
+  "related": [
+    "afterloader",
+    "roentgenstrahlung",
+    "ionisierende-strahlung",
+    "kollimator",
+    "strahlenschutz",
+    "strlschg"
+  ],
+  "sources": [
+    "krieger-strahlungsquellen-2018",
+    "strlschv",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

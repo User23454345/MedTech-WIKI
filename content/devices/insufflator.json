@@ -1,0 +1,68 @@
+{
+  "id": "insufflator",
+  "type": "device",
+  "title": "CO₂-Insufflator (Laparoskopie)",
+  "aliases": [
+    "Insufflator",
+    "Laparoskopie-Insufflator",
+    "CO₂-Insufflationsgerät",
+    "Pneumoperitoneum-Insufflator",
+    "Laparoflator"
+  ],
+  "category": "geraete",
+  "deviceGroup": "endoskopie",
+  "rank": 69,
+  "domains": [
+    "chirurgie",
+    "gastroenterologie",
+    "geburtshilfe"
+  ],
+  "summary": "Ein CO₂-Insufflator füllt bei laparoskopischen Eingriffen die Bauchhöhle mit Kohlendioxid und hält den eingestellten Druck konstant. Das so erzeugte Pneumoperitoneum schafft Sicht und Arbeitsraum für Optik und Instrumente.",
+  "sections": {
+    "purpose": "Bei der minimalinvasiven Chirurgie in Bauchraum, kleinem Becken oder Retroperitoneum ersetzt das Gaspolster die große Schnittöffnung. Der Insufflator gleicht Gasverluste durch Instrumentenwechsel, Absaugung und Leckagen an den Trokaren aus. Varianten gibt es auch für die CO₂-Insufflation im Darm während der [[endoskop|Endoskopie]] sowie für arthroskopische oder thorakoskopische Anwendungen [@kramme-2017].",
+    "principle": "## Druck- und Flussregelung\n\nCO₂ aus einer Druckgasflasche oder der zentralen Gasversorgung wird über einen Druckminderer auf einen niedrigen Arbeitsdruck reduziert. Ein elektronisch angesteuertes [[proportionalventil]] bzw. [[magnetventil|Magnetventile]] dosieren den Gasfluss; ein [[drucksensor]] misst den intraabdominellen [[druck]]. Ein [[regelkreis]] vergleicht Ist- mit Solldruck und passt den Fluss an: Bei Druckabfall wird mit hohem Fluss nachgefüllt, bei Erreichen des Solldrucks gestoppt. Da der Druck oft über dieselbe Leitung gemessen wird, durch die das Gas strömt, unterbrechen manche Geräte den Fluss kurz für eine Messung oder rechnen den Strömungsdruckabfall heraus ([[stroemungslehre]]).\n\n## Warum Kohlendioxid?\n\nCO₂ ist nicht brennbar (wichtig beim Einsatz des [[hf-chirurgiegeraet|HF-Chirurgiegeräts]]) und löst sich sehr gut im Blut. Gelangt Gas in ein Gefäß, wird es deutlich schneller resorbiert als Luft, wodurch das Risiko einer Gasembolie sinkt. Das resorbierte CO₂ wird abgeatmet und kann den arteriellen CO₂-Partialdruck erhöhen – die Anästhesie passt die Beatmung an ([[kapnometer]], [[gasaustausch]]).\n\n> [!warnung] Überdruck beeinträchtigt venösen Rückstrom, Atemmechanik und Organdurchblutung. Geräte besitzen deshalb Überdruckalarme und Druckentlastung; Solldruck und Grenzwerte legt das OP-Team fest. Ein hydrophober Filter verhindert den Rückfluss von Körperflüssigkeit in das Gerät.\n\n> [!hinweis] Zusatzfunktionen wie Gaserwärmung und -befeuchtung oder integrierte Rauchgasabsaugung sind modellabhängig."
+  },
+  "manufacturers": [
+    {
+      "ref": "karl-storz",
+      "models": [
+        "ENDOFLATOR"
+      ]
+    },
+    {
+      "ref": "stryker",
+      "models": [
+        "PneumoClear"
+      ]
+    },
+    {
+      "ref": "olympus",
+      "models": [],
+      "note": "Insufflatoren als Teil laparoskopischer Videosysteme."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt.",
+    "intervals": "Prüfung von Druck- und Flussgenauigkeit, Überdruckabschaltung und Alarmen nach Herstellerangabe ([[funktionspruefung]]); elektrische Sicherheitsprüfung nach [[iec-62353|IEC 62353]]; Kontrolle der Gasanschlüsse und Druckminderer auf Dichtheit."
+  },
+  "related": [
+    "endoskop",
+    "hf-chirurgiegeraet",
+    "drucksensor",
+    "gasgesetze",
+    "kapnometer",
+    "regelkreis"
+  ],
+  "sources": [
+    "kramme-2017",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

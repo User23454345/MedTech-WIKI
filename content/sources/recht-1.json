@@ -1,0 +1,70 @@
+[
+  {
+    "id": "vo-765-2008",
+    "kind": "gesetz",
+    "title": "Verordnung (EG) Nr. 765/2008 über die Vorschriften für die Akkreditierung und Marktüberwachung im Zusammenhang mit der Vermarktung von Produkten",
+    "publisher": "Amtsblatt der EU L 218",
+    "year": "2008",
+    "note": "Art. 30 enthält die allgemeinen Grundsätze der CE-Kennzeichnung. Maßgeblich ist die jeweils gültige Fassung."
+  },
+  {
+    "id": "vo-2023-607",
+    "kind": "gesetz",
+    "title": "Verordnung (EU) 2023/607 zur Änderung der Verordnungen (EU) 2017/745 und (EU) 2017/746 hinsichtlich der Übergangsbestimmungen für bestimmte Medizinprodukte und In-vitro-Diagnostika",
+    "publisher": "Amtsblatt der EU",
+    "year": "2023",
+    "note": "Verlängert die Übergangsfristen für Altprodukte mit Bescheinigungen nach den früheren Richtlinien."
+  },
+  {
+    "id": "iso-14155",
+    "kind": "norm",
+    "title": "ISO 14155 – Klinische Prüfung von Medizinprodukten an Menschen – Gute klinische Praxis",
+    "publisher": "ISO",
+    "note": "Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "mdcg-2020-5",
+    "kind": "leitlinie",
+    "title": "MDCG 2020-5 – Clinical Evaluation – Equivalence: A guide for manufacturers and notified bodies",
+    "authors": "Medical Device Coordination Group",
+    "year": "2020"
+  },
+  {
+    "id": "meddev-2-7-1-rev4",
+    "kind": "leitlinie",
+    "title": "MEDDEV 2.7/1 Revision 4 – Clinical Evaluation: A Guide for Manufacturers and Notified Bodies under Directives 93/42/EEC and 90/385/EEC",
+    "authors": "Europäische Kommission",
+    "year": "2016",
+    "note": "Unter den früheren Richtlinien entstanden; wird für die Methodik der klinischen Bewertung weiterhin häufig herangezogen."
+  },
+  {
+    "id": "mdcg-2023-3",
+    "kind": "leitlinie",
+    "title": "MDCG 2023-3 – Questions and Answers on vigilance terms and concepts as outlined in the Regulation (EU) 2017/745 on medical devices",
+    "authors": "Medical Device Coordination Group",
+    "year": "2023"
+  },
+  {
+    "id": "durchfuehrungsbeschluss-2019-939",
+    "kind": "gesetz",
+    "title": "Durchführungsbeschluss (EU) 2019/939 der Kommission zur Benennung der Zuteilungsstellen für die Zuteilung einmaliger Produktkennungen (UDI) im Bereich der Medizinprodukte",
+    "publisher": "Amtsblatt der EU",
+    "year": "2019",
+    "note": "Benennt GS1, HIBCC, ICCBBA und IFA als Zuteilungsstellen."
+  },
+  {
+    "id": "zlg",
+    "kind": "behoerde",
+    "title": "Zentralstelle der Länder für Gesundheitsschutz bei Arzneimitteln und Medizinprodukten (ZLG)",
+    "publisher": "ZLG",
+    "url": "https://www.zlg.de/",
+    "note": "In Deutschland für die Benennung und Überwachung Benannter Stellen für Medizinprodukte zuständig."
+  },
+  {
+    "id": "nando",
+    "kind": "behoerde",
+    "title": "NANDO – New Approach Notified and Designated Organisations Information System",
+    "publisher": "Europäische Kommission",
+    "note": "Öffentliches Verzeichnis der Benannten Stellen mit Kennnummer und Benennungsumfang."
+  }
+]

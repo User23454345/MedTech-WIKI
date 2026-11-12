@@ -1,0 +1,72 @@
+{
+  "id": "zeiss",
+  "type": "manufacturer",
+  "title": "Carl Zeiss Meditec",
+  "aliases": [
+    "ZEISS Medical Technology",
+    "Carl Zeiss Meditec AG",
+    "ZEISS"
+  ],
+  "category": "hersteller",
+  "summary": "Börsennotierte Medizintechniktochter des ZEISS-Konzerns mit Sitz in Jena, entstanden 2002. Schwerpunkte sind Ophthalmologie (Diagnostik, refraktive Laserchirurgie, Katarakt) und Mikrochirurgie mit Operationsmikroskopen.",
+  "headquarters": "Jena, Deutschland",
+  "founded": "2002",
+  "website": "https://www.zeiss.com/",
+  "productLines": [
+    {
+      "device": "op-mikroskop",
+      "models": [
+        "KINEVO 900",
+        "OPMI PENTERO 900",
+        "OPMI Lumera 700"
+      ],
+      "note": "KINEVO/PENTERO: Neurochirurgie und Wirbelsäule; OPMI Lumera: Ophthalmologie."
+    },
+    {
+      "device": "oct",
+      "models": [
+        "CIRRUS"
+      ],
+      "note": "Spectral-Domain-OCT für Netzhaut- und Glaukomdiagnostik."
+    },
+    {
+      "device": "chirurgischer-laser",
+      "models": [
+        "VisuMax",
+        "MEL 90"
+      ],
+      "note": "Femtosekunden- bzw. Excimerlaser für die refraktive Chirurgie."
+    },
+    {
+      "device": "phakoemulsifikation",
+      "models": [
+        "QUATERA 700"
+      ]
+    },
+    {
+      "device": "spaltlampe",
+      "models": [],
+      "note": "Spaltlampen für die augenärztliche Diagnostik."
+    }
+  ],
+  "body": "## Überblick\n\nDie Carl Zeiss Meditec AG mit Sitz in Jena bündelt die Medizintechnik des ZEISS-Konzerns. Mehrheitsaktionär ist die Carl Zeiss AG (Oberkochen), die ihrerseits der Carl-Zeiss-Stiftung gehört. Das Unternehmen ist auf **Ophthalmologie** und **Mikrochirurgie** spezialisiert [@hst-zeiss].\n\n## Geschichte in Stichpunkten\n\n* **1846** – Carl Zeiss eröffnet in Jena eine feinmechanisch-optische Werkstatt; die Zusammenarbeit mit Ernst Abbe begründet die wissenschaftliche Optikfertigung.\n* **20. Jahrhundert** – Zeiss entwickelt u. a. Spaltlampen und Operationsmikroskope (Markenname OPMI) und wird zu einem prägenden Anbieter der ophthalmologischen und mikrochirurgischen Optik.\n* **2002** – Die Ophthalmologie-Sparte von Carl Zeiss schließt sich mit der Jenaer Asclepion-Meditec AG (medizinische Laser) zur **Carl Zeiss Meditec AG** zusammen; über die bereits börsennotierte Asclepion-Meditec ist das neue Unternehmen von Beginn an an der Börse gelistet [@hst-zeiss-meditec-history].\n* **Folgejahre** – Ausbau um optische Biometrie (IOLMaster), OCT-Diagnostik, Femtosekundenlaser und digitale Visualisierung.\n\n## Geschäftsbereiche\n\n| Bereich | Inhalte | Wiki-Geräte |\n|---|---|---|\n| Ophthalmologie | Diagnostik, refraktive Laser, Kataraktchirurgie, Intraokularlinsen | [[oct]], [[spaltlampe]], [[chirurgischer-laser]], [[phakoemulsifikation]] |\n| Mikrochirurgie | Operationsmikroskope und digitale Visualisierung für Neurochirurgie, HNO, Zahnmedizin | [[op-mikroskop]] |\n\nDie Geräte beruhen auf [[optik|Optik]] und [[laser|Lasertechnik]]: Die [[oct|optische Kohärenztomographie]] nutzt die Interferometrie kurzkohärenten Lichts zur Schichtdarstellung der Netzhaut, Femtosekundenlaser erzeugen durch Photodisruption Schnitte im Gewebe des [[auge|Auges]], Excimerlaser tragen Hornhautgewebe photoablativ ab.\n\n## Bedeutung für die Medizintechnik\n\nZeiss-Geräte sind in der [[augenheilkunde|Augenheilkunde]] und in der Mikrochirurgie weit verbreitet. Für die Medizintechnik relevant:\n\n* Bei der Phakoemulsifikation wird die Linse mit einer ultraschallgetriebenen Hohlnadel ([[piezoelektrischer-effekt]]) zerkleinert und abgesaugt; Fluidik (Spülung/Aspiration) und Vakuumregelung bestimmen die Kammerstabilität.\n* Medizinische Lasersysteme erfordern einen Laserschutzbeauftragten und entsprechende Schutzmaßnahmen (Laserschutzbrillen, Kennzeichnung des Laserbereichs).\n* Operationsmikroskope sind komplexe optomechanische Systeme mit Stativ, Bremsen und Gewichtsausgleich; Funktionsprüfungen und [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfungen]] erfolgen nach Herstellerangaben und [[iec-62353|IEC 62353]] [@iec-62353].\n\n> [!hinweis] Produktnamen, Portfolio und Konzernstruktur ändern sich laufend. Maßgeblich sind die aktuellen Herstellerangaben; die Liste der Produktlinien ist eine Auswahl und keine Kaufempfehlung.",
+  "related": [
+    "op-mikroskop",
+    "oct",
+    "chirurgischer-laser",
+    "phakoemulsifikation",
+    "spaltlampe",
+    "tonometer",
+    "laser",
+    "optik",
+    "augenheilkunde",
+    "olympus"
+  ],
+  "sources": [
+    "hst-zeiss",
+    "hst-zeiss-meditec-history",
+    "iec-62353"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

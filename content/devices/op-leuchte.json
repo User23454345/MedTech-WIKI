@@ -1,0 +1,70 @@
+{
+  "id": "op-leuchte",
+  "type": "device",
+  "title": "Operationsleuchte",
+  "aliases": [
+    "OP-Leuchte",
+    "OP-Lampe",
+    "Operationslampe",
+    "Surgical light",
+    "Surgical luminaire"
+  ],
+  "category": "geraete",
+  "deviceGroup": "chirurgie",
+  "rank": 72,
+  "domains": [
+    "chirurgie",
+    "anaesthesiologie",
+    "zahnmedizin"
+  ],
+  "summary": "Operationsleuchten beleuchten das Operationsfeld hell, schattenarm und farbtreu, ohne das Gewebe nennenswert zu erwärmen. Heute dominieren LED-Leuchten an Deckenstativen, häufig mit integrierter Kamera.",
+  "sections": {
+    "purpose": "Das Operationsteam muss feine Strukturen und Farbunterschiede von Gewebe sicher erkennen – auch in tiefen Wundhöhlen und wenn Köpfe und Hände den Lichtweg teilweise verdecken. Operationsleuchten sind Medizinprodukte und keine Allgemeinbeleuchtung; ihre Leistungsmerkmale regelt eine eigene Norm [@iec-60601-2-41]. Untersuchungsleuchten für Ambulanzen und Stationen erfüllen geringere Anforderungen.",
+    "principle": "## Lichttechnische Anforderungen\n\n| Merkmal | Bedeutung |\n|---|---|\n| Zentralbeleuchtungsstärke Eᴄ | Beleuchtungsstärke in der Feldmitte; für Operationsleuchten typischerweise im Bereich von 40 000 bis 160 000 lx |\n| Leuchtfelddurchmesser und Tiefenausleuchtung | Ausdehnung des hellen Feldes und Erhalt der Beleuchtungsstärke in der Tiefe |\n| Schattenverdünnung | Restbeleuchtungsstärke, wenn Blenden oder ein Tubus Teile der Leuchte abdecken |\n| Farbwiedergabe (Ra) und Farbtemperatur | Natürliche Darstellung von Gewebefarben |\n| Bestrahlungsstärke | Begrenzung der Strahlungsleistung zum Schutz vor Gewebeerwärmung |\n\nDie Schattenarmut entsteht durch viele Einzellichtquellen, deren Licht aus unterschiedlichen Richtungen auf das Feld trifft: Verdeckt ein Kopf einen Teil, beleuchten die übrigen das Feld weiter ([[optik]]). Linsen oder Reflektoren bündeln das Licht der LEDs; die Fokussierung erfolgt über einen sterilisierbaren Handgriff oder elektronisch durch Ansteuerung einzelner LED-Gruppen. LEDs strahlen kaum Infrarot ab, doch bei Überlagerung mehrerer Leuchten kann die Bestrahlungsstärke im Feld steigen ([[waermeuebertragung]]).\n\n> [!vereinfacht] Die Zahlenangaben dienen der Orientierung; maßgeblich sind die jeweils gültige Ausgabe der IEC 60601-2-41 und die Herstellerangaben.\n\n## Stromversorgung\n\nOperationsleuchten müssen bei Netzausfall sehr schnell weiterleuchten. [[din-vde-0100-710|DIN VDE 0100-710]] fordert für sie eine besondere Sicherheitsstromversorgung mit einer Umschaltzeit von höchstens 0,5 s ([[medizinisch-genutzte-bereiche]]).\n\n> [!praxis] Prüfpunkte sind Bremsen und Gelenke der Federarme (Drift), Leuchtfeldhomogenheit, ausgefallene LED-Segmente und die Funktion der Ersatzstromversorgung."
+  },
+  "manufacturers": [
+    {
+      "ref": "getinge",
+      "models": [
+        "Maquet PowerLED",
+        "Maquet Volista"
+      ]
+    },
+    {
+      "ref": "hillrom",
+      "models": [
+        "TruLight"
+      ]
+    },
+    {
+      "ref": "draeger",
+      "models": [
+        "Polaris"
+      ]
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Die Prüfung der Sicherheitsstromversorgung ist Teil der wiederkehrenden Prüfungen der elektrischen Anlage nach DIN VDE 0100-710.",
+    "intervals": "Wartung von Federarmen, Bremsen und Gelenken sowie Messung der Beleuchtungsstärke nach Herstellerangabe; elektrische Sicherheitsprüfung nach [[iec-62353|IEC 62353]] bzw. [[dguv-vorschrift-3|DGUV Vorschrift 3]]."
+  },
+  "related": [
+    "op-tisch",
+    "op-mikroskop",
+    "optik",
+    "din-vde-0100-710",
+    "medizinisch-genutzte-bereiche"
+  ],
+  "sources": [
+    "iec-60601-2-41",
+    "din-vde-0100-710",
+    "kramme-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "dvt",
+  "type": "device",
+  "title": "Digitale Volumentomographie (DVT)",
+  "aliases": [
+    "DVT",
+    "Cone-Beam-CT",
+    "CBCT",
+    "Kegelstrahl-CT",
+    "Digitale Volumentomographie"
+  ],
+  "category": "geraete",
+  "deviceGroup": "augen-hno-dental",
+  "rank": 49,
+  "domains": [
+    "zahnmedizin",
+    "hno-heilkunde",
+    "radiologie"
+  ],
+  "summary": "Die digitale Volumentomographie erzeugt mit einem kegelförmigen Röntgenstrahl und einem Flachdetektor in einem einzigen Umlauf einen dreidimensionalen Datensatz. Sie wird vor allem in Zahnmedizin, Mund-Kiefer-Gesichtschirurgie und HNO für hochaufgelöste Darstellungen von Knochen und Zähnen genutzt.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives Diagnoseprodukt, das ionisierende Strahlung für die diagnostische Radiologie abgibt – [[mdr|MDR]] Anhang VIII **Regel 10** (letzter Absatz): Klasse IIb. Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Die DVT liefert dreidimensionale Bilder knöcherner Strukturen im Kopf-Hals-Bereich, z. B. zur Implantatplanung, bei verlagerten Weisheitszähnen, in der Endodontie oder für Nasennebenhöhlen und Felsenbein in der [[hno-heilkunde]]. Gegenüber der konventionellen [[computertomograph|CT]] ist der Weichteilkontrast deutlich geringer [@doessel-2016].",
+    "principle": "## Aufnahme\n\nEine [[roentgenroehre]] und ein gegenüberliegender **Flachdetektor** ([[roentgendetektor]]) rotieren einmal (je nach Gerät etwa 180–360°) um den Kopf des meist sitzenden oder stehenden Patienten. Anders als der fächerförmige Strahl der Mehrzeilen-CT ist das Strahlenbündel **kegelförmig** und erfasst das gesamte Untersuchungsvolumen auf einmal. Der [[kollimator]] begrenzt das Sichtfeld (Field of View) auf die interessierende Region – ein wesentlicher Hebel für die Dosis ([[strahlenschutz]]).\n\n## Rekonstruktion\n\nAus den einige hundert Projektionen wird mit Kegelstrahl-Rekonstruktionsverfahren (klassisch der Feldkamp-Algorithmus, zunehmend iterativ) ein Volumen aus würfelförmigen, isotropen Voxeln berechnet. Typische Voxelgrößen liegen im Zehntelmillimeterbereich und erlauben eine feine Darstellung von Zahnwurzeln und Knochenstrukturen [@doessel-2016].\n\n## Grenzen\n\n| Aspekt | DVT im Vergleich zur Mehrzeilen-CT |\n|---|---|\n| Ortsauflösung | hoch, isotrop |\n| Weichteilkontrast | gering (hoher Streustrahlenanteil, [[roentgenstrahlung]]) |\n| Grauwerte | nicht verlässlich als Hounsfield-Einheiten kalibriert |\n| Artefakte | ausgeprägt bei Metall (Implantate, Füllungen) und Bewegung |\n\n> [!praxis] Die Daten werden üblicherweise im [[dicom|DICOM]]-Format exportiert und in Planungssoftware für Implantate oder Bohrschablonen weiterverarbeitet."
+  },
+  "manufacturers": [
+    {
+      "ref": "dentsply-sirona",
+      "models": [
+        "Orthophos"
+      ],
+      "note": "Kombinierte Panorama-/DVT-Geräte."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Einflussfaktoren: Größe des Sichtfelds, Kombination mit Panorama- und Fernröntgen-Funktion, Detektor, Planungssoftware, Strahlenschutzmaßnahmen im Raum, Servicevertrag."
+  },
+  "maintenance": {
+    "stk": "nein",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025): weder in Anlage 1 (STK, § 12) noch in Anlage 2 (MTK, § 15) aufgeführt. Als Röntgeneinrichtung unterliegt die DVT den Prüfpflichten nach Strahlenschutzrecht: Abnahmeprüfung, regelmäßige Konstanzprüfung und Sachverständigenprüfung (StrlSchG/StrlSchV, konkretisiert durch die Qualitätssicherungs-Richtlinie).",
+    "intervals": "Konstanzprüfung mit Prüfkörper in den festgelegten Intervallen; Sachverständigenprüfung in behördlich festgelegten Abständen; Wartung nach Herstellerangabe; elektrische Sicherheitsprüfung nach IEC 62353 im Rahmen der Wartung und nach Instandsetzung."
+  },
+  "related": [
+    "computertomograph",
+    "roentgengeraet",
+    "c-bogen",
+    "roentgendetektor",
+    "strahlenschutz",
+    "konstanzpruefung"
+  ],
+  "sources": [
+    "doessel-2016",
+    "strlschv",
+    "mpbetreibv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

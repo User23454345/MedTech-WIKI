@@ -1,0 +1,55 @@
+{
+  "id": "hl7-fhir",
+  "type": "term",
+  "title": "HL7 und FHIR",
+  "aliases": [
+    "HL7",
+    "Health Level Seven",
+    "HL7 v2",
+    "HL7 Version 2",
+    "HL7 v3",
+    "CDA",
+    "Clinical Document Architecture",
+    "FHIR",
+    "Fast Healthcare Interoperability Resources",
+    "FHIR R4",
+    "FHIR R5",
+    "Interoperabilität",
+    "IEEE 11073 SDC",
+    "SDC"
+  ],
+  "category": "elektrotechnik",
+  "summary": "HL7 ist eine Familie internationaler Standards für den Austausch klinischer und administrativer Daten im Gesundheitswesen. Die weit verbreitete Version 2 nutzt textbasierte Nachrichten, der neuere Standard FHIR modulare Ressourcen und Web-Schnittstellen; beide verbinden Medizingeräte über Gateways mit Krankenhausinformationssystemen und Patientenakten.",
+  "body": "## Begriff\n\n**HL7** (*Health Level Seven*) bezeichnet sowohl eine internationale Standardisierungsorganisation (HL7 International) als auch eine Familie von Standards für den Austausch klinischer und administrativer Daten zwischen Informationssystemen im Gesundheitswesen [@benson-grieve-2021]. Die „Sieben“ im Namen verweist auf die oberste Schicht (Anwendungsschicht) des OSI-Referenzmodells: HL7 beschreibt *Inhalt und Struktur* von Nachrichten, nicht deren physikalische Übertragung.\n\n**FHIR** (*Fast Healthcare Interoperability Resources*, ausgesprochen wie englisch „fire“) ist der jüngste HL7-Standard. Er kombiniert ein modulares Datenmodell aus „Ressourcen“ mit gängigen Web-Technologien [@hl7-fhir].\n\nWährend [[dicom]] den Bilddatenaustausch regelt, transportiert HL7 typischerweise Patientenstammdaten, Aufträge, Befunde, Laborwerte und Vitaldaten.\n\n## Die Standardfamilie im Überblick\n\n| Standard | Prinzip | Typischer Einsatz |\n|---|---|---|\n| HL7 Version 2.x | textbasierte Nachrichten mit Segmenten und Trennzeichen | krankenhausinterne Kommunikation (KIS, RIS, LIS, Monitoring) – sehr weit verbreitet |\n| HL7 Version 3 / CDA | XML-basiertes, modellgetriebenes Nachrichten- bzw. Dokumentenformat | klinische Dokumente (Arztbriefe, Befunde) |\n| HL7 FHIR | Ressourcen, REST-Schnittstellen, JSON/XML | moderne Apps, einrichtungsübergreifender Austausch, nationale Infrastrukturen |\n\n## HL7 Version 2\n\nHL7 v2 ist seit Jahrzehnten das „Rückgrat“ der Krankenhauskommunikation [@hl7-v2]. Eine Nachricht besteht aus **Segmenten** (je eine Zeile), die durch Feldtrennzeichen (`|`) und Komponententrenner (`^`) gegliedert sind. Jede Nachricht hat einen **Nachrichtentyp** und ein **auslösendes Ereignis** (*Trigger Event*).\n\n| Segment / Nachricht | Bedeutung |\n|---|---|\n| MSH | Nachrichtenkopf (Absender, Empfänger, Zeitstempel, Typ, Version) |\n| PID | Patientenidentifikation |\n| PV1 | Fallinformationen (Station, Bett, Fachabteilung) |\n| OBR / OBX | Untersuchungsauftrag bzw. einzelne Beobachtung (Messwert) |\n| ADT^A01 | Aufnahme eines Patienten |\n| ORU^R01 | Übermittlung von Ergebnissen (z. B. Labor- oder Vitalwerte) |\n\n> [!beispiel] Vereinfacht sieht ein Messwert-Segment so aus: `OBX|1|NM|8867-4^Heart rate^LN||72|/min|...` – Feldtyp numerisch, LOINC-Code für Herzfrequenz, Wert 72, Einheit pro Minute. Das Beispiel ist didaktisch gekürzt.\n\nVorteil von v2 ist die enorme Verbreitung; Nachteil sind viele optionale Felder und lokale Erweiterungen (Z-Segmente). Zwei Systeme, die „HL7 v2 können“, verstehen sich deshalb nicht automatisch – Schnittstellen müssen im Detail abgestimmt werden, häufig über einen **Kommunikationsserver** [@benson-grieve-2021].\n\n## FHIR\n\n### Ressourcen\n\nFHIR zerlegt die Gesundheitsversorgung in **Ressourcen** – kleine, wiederverwendbare Informationsbausteine mit eindeutiger Adresse (URL) [@hl7-fhir]:\n\n| Ressource | Inhalt |\n|---|---|\n| Patient | Stammdaten einer Person |\n| Encounter | Behandlungskontakt / Fall |\n| Observation | Messwert oder Beobachtung, z. B. SpO₂, Blutdruck, Laborwert |\n| Device / DeviceMetric | Medizingerät bzw. dessen Messkanal |\n| DiagnosticReport | Befundbericht |\n| ImagingStudy | Verweis auf eine DICOM-Studie |\n| MedicationAdministration | Medikamentengabe, z. B. über eine [[infusionspumpe]] |\n\n### Technik\n\n* **REST-Schnittstelle:** Lesen, Anlegen, Ändern und Suchen über HTTP-Methoden (`GET`, `POST`, `PUT`) auf Ressourcen-URLs, z. B. `GET [base]/Observation?patient=123&code=...`.\n* **Formate:** JSON und XML (zusätzlich RDF).\n* **Terminologien:** Codes aus Systemen wie LOINC, SNOMED CT oder UCUM (Einheiten) machen Daten maschinell interpretierbar.\n* **Profile:** Basisressourcen werden für konkrete Anwendungsfälle eingeschränkt und erweitert (*Profiling*); nationale Festlegungen entstehen in sogenannten Implementation Guides.\n\n> [!belegt] FHIR Release 4 (2019) war die erste FHIR-Version mit normativen, also stabilen Anteilen; Release 5 erschien 2023 [@hl7-fhir]. In der Praxis ist R4 derzeit die am weitesten verbreitete Basis.\n\n### Versionen und Stabilität\n\nFHIR wird in Releases weiterentwickelt. Ressourcen tragen einen **Reifegrad**; normative Teile sollen rückwärtskompatibel bleiben. Für Medizingeräte bedeutet das: Schnittstellenbeschreibungen müssen stets die FHIR-Version und die verwendeten Profile angeben.\n\n## Geräteanbindung: Vom Monitor ins Informationssystem\n\nMedizingeräte liefern ihre Daten meist nicht direkt in HL7, sondern über eine Zwischenschicht:\n\n1. **Gerät:** [[patientenmonitor]], [[beatmungsgeraet]], [[infusionspumpe]] oder [[dialysegeraet]] messen bzw. protokollieren Werte.\n2. **Gateway/Zentrale:** Ein Herstellersystem oder ein Gerätedaten-Gateway sammelt die Daten, oft über proprietäre Protokolle.\n3. **Übersetzung:** Werte werden in HL7-v2-ORU-Nachrichten oder FHIR-Observations umgesetzt, idealerweise mit standardisierter Nomenklatur (z. B. ISO/IEEE 11073).\n4. **Zielsystem:** Patientendatenmanagementsystem (PDMS), elektronische Patientenakte, Anästhesieprotokoll.\n\nFür die direkte, herstellerübergreifende Vernetzung am Point of Care wurde die Normenfamilie **IEEE 11073 SDC** (*Service-oriented Device Connectivity*) entwickelt [@ieee-11073-10207]. Sie beschreibt, wie Geräte im OP oder auf der Intensivstation Messwerte, Alarme und – unter Sicherheitsauflagen – auch Fernsteuerbefehle austauschen. HL7/FHIR übernimmt dann die Weitergabe an die Informationssysteme.\n\n> [!vereinfacht] Die Darstellung „Gerät → Gateway → HL7 → KIS“ ist vereinfacht. In realen Installationen gibt es zusätzlich Zeitstempelsynchronisation, Patientenzuordnung (Bett-Gerät-Patient), Pufferung bei Netzausfall und Plausibilitätsprüfungen.\n\n## Bedeutung in der Medizintechnik\n\n* **Patientenzuordnung:** Die korrekte Zuordnung eines Geräts zum Patienten (über ADT-Nachrichten und Bettplatz) ist sicherheitskritisch – falsch zugeordnete Vitalwerte können zu Fehlbehandlungen führen.\n* **Alarmweiterleitung:** Alarme von Geräten werden zunehmend über Kommunikationsserver an Mobilgeräte verteilt; dabei gelten die Anforderungen an verteilte [[alarmsystem|Alarmsysteme]] (siehe [[iec-60601-1-8]]).\n* **Regulatorik:** Software, die Gerätedaten für Diagnose oder Therapie aufbereitet oder Alarme weiterleitet, kann selbst ein [[software-medizinprodukt|Medizinprodukt]] sein; Entwicklung nach [[iec-62304]], Risikomanagement nach [[iso-14971]].\n* **IT-Sicherheit:** Vernetzte Medizingeräte erweitern die Angriffsfläche; Netzsegmentierung, Zugriffskontrolle und Updatemanagement gehören zum [[medizintechnik-management|Medizintechnik-Management]].\n\n> [!praxis] Bei Schnittstellenproblemen lohnt ein Blick in die Nachrichtenprotokolle des Kommunikationsservers: fehlende Pflichtfelder, abweichende Codes oder falsche Zeichensätze sind häufige Ursachen dafür, dass Werte im Zielsystem nicht erscheinen.\n\nSiehe auch: [[dicom]], [[mikrocontroller]], [[elektrotechnik]].\n",
+  "related": [
+    "dicom",
+    "alarmsystem",
+    "software-medizinprodukt",
+    "patientenmonitor",
+    "iec-62304",
+    "iso-14971",
+    "medizintechnik-management",
+    "iec-60601-1-8"
+  ],
+  "paths": [
+    [
+      "patientenmonitor",
+      "hl7-fhir",
+      "dicom"
+    ],
+    [
+      "infusionspumpe",
+      "hl7-fhir",
+      "software-medizinprodukt"
+    ]
+  ],
+  "sources": [
+    "hl7-fhir",
+    "hl7-v2",
+    "benson-grieve-2021",
+    "ieee-11073-10207",
+    "kramme-2017"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

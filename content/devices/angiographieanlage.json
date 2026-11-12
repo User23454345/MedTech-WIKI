@@ -1,0 +1,90 @@
+{
+  "id": "angiographieanlage",
+  "type": "device",
+  "title": "Angiographieanlage",
+  "aliases": [
+    "Angiographie",
+    "Angiographiesystem",
+    "DSA-Anlage",
+    "Herzkatheteranlage",
+    "Interventionsanlage",
+    "Biplananlage"
+  ],
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 44,
+  "domains": [
+    "radiologie",
+    "kardiologie",
+    "neurologie",
+    "herzchirurgie"
+  ],
+  "summary": "Angiographieanlagen sind fest installierte Röntgensysteme mit motorisiertem C-Bogen für die Darstellung von Gefäßen mit Kontrastmittel und für kathetergestützte Eingriffe. Typische Einsatzorte sind Herzkatheterlabor, interventionelle Radiologie und Neuroradiologie sowie Hybrid-OPs.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Aktives Produkt, das ionisierende Strahlung für die diagnostische bzw. interventionelle Radiologie aussendet, nach [[mdr|MDR]] Anhang VIII **Regel 10** (Klasse IIb). Maßgeblich ist die Herstellerangabe.",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "Mit der Angiographie werden Engstellen, Verschlüsse, Aneurysmen und Gefäßmissbildungen sichtbar gemacht und unmittelbar behandelt: Ballondilatation und Stentimplantation an Koronar- und Beingefäßen, Thrombektomie beim Schlaganfall, Embolisation von Blutungen oder Tumoren sowie kathetergestützte Herzklappeneingriffe. Häufig arbeiten Diagnostik und Therapie in einer Sitzung zusammen; dabei kommen auch die [[invasive-druckmessung]] und [[patientenmonitor|Patientenüberwachung]] zum Einsatz.",
+    "principle": "## Systemaufbau\n\nEin boden- oder deckenmontiertes Stativ trägt den [[c-bogen|C-Bogen]] mit [[roentgenroehre]] und [[roentgendetektor|Flachdetektor]]; Biplananlagen besitzen eine zweite Ebene für gleichzeitige Aufnahmen aus zwei Richtungen. Wegen langer Durchleuchtungszeiten und Serienaufnahmen benötigen die Röhren eine hohe Wärmespeicherkapazität (Drehanode, Flüssigmetalllager, aktive Kühlung). Ein leistungsstarker [[hochspannungserzeugung|Hochfrequenzgenerator]], Patiententisch mit Kipp- und Schwimmfunktionen sowie eine Kollisionsüberwachung gehören zur Anlage.\n\n## Bildgebungsverfahren\n\n| Verfahren | Prinzip |\n|---|---|\n| Digitale Subtraktionsangiographie (DSA) | Ein Leerbild (Maske) wird vom Kontrastbild logarithmisch subtrahiert; übrig bleiben die kontrastierten Gefäße |\n| Roadmap | gespeichertes Gefäßbild als Überlagerung der Live-Durchleuchtung für die Katheterführung |\n| Rotationsangiographie / Kegelstrahl-CT | Rotation des C-Bogens, Rekonstruktion von 3D-Volumen ähnlich der [[computertomograph|CT]] |\n\n> [!vereinfacht] Die DSA funktioniert nur, wenn sich der Patient zwischen Masken- und Füllungsbild nicht bewegt; schon Atembewegungen erzeugen Subtraktionsartefakte ([[bildartefakte]], [[bewegungsartefakt]]).\n\n## Dosismanagement\n\nDa interventionelle Eingriffe lange dauern können, sind deterministische Hautschäden möglich. Gepulste Durchleuchtung, Spektralfilter, Dosisanzeige (Dosisflächenprodukt, Referenzpunkt-Luftkerma) und Strahlenschutzeinrichtungen am Tisch begrenzen Patienten- und Personaldosis ([[strahlenschutz]]). Besondere Anforderungen an interventionelle Röntgeneinrichtungen enthält IEC 60601-2-43 [@iec-60601-2-43] [@bushberg-2020]."
+  },
+  "manufacturers": [
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "ARTIS"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "philips",
+      "models": [
+        "Azurion"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "Allia"
+      ],
+      "note": ""
+    },
+    {
+      "ref": "canon-medical",
+      "models": [
+        "Alphenix"
+      ],
+      "note": ""
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; Kontrollen nach § 12 nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Die sicherheitsrelevanten Prüfungen ergeben sich vor allem aus dem Strahlenschutzrecht ([[strlschg|StrlSchG]], StrlSchV): Abnahmeprüfung, regelmäßige [[konstanzpruefung|Konstanzprüfungen]] und wiederkehrende Prüfung durch behördlich bestimmte Sachverständige. Mitgenutzte Geräte (z. B. Kontrastmittelinjektor, Defibrillator, invasive Druckmessung) haben eigene Prüfpflichten.",
+    "intervals": "Konstanzprüfungen nach Strahlenschutzrecht in den vorgegebenen Abständen; Sachverständigenprüfung nach behördlicher Vorgabe; Wartung nach Herstellerangabe (u. a. Röhre, Stativmechanik, Kollisionsschutz); elektrische Sicherheitsprüfung nach IEC 62353."
+  },
+  "related": [
+    "c-bogen",
+    "roentgengeraet",
+    "invasive-druckmessung",
+    "computertomograph",
+    "strahlenschutz",
+    "iabp"
+  ],
+  "sources": [
+    "bushberg-2020",
+    "iec-60601-2-43",
+    "strlschv"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

@@ -1,0 +1,165 @@
+{
+  "id": "supraleitender-magnet",
+  "type": "term",
+  "title": "Supraleitender Magnet",
+  "aliases": [
+    "Hauptfeldmagnet",
+    "Grundfeldmagnet",
+    "B₀-Magnet",
+    "Superconducting Magnet",
+    "MRT-Magnet",
+    "Kryomagnet",
+    "Quench",
+    "Kaltkopf"
+  ],
+  "category": "komponenten",
+  "summary": "Spule aus supraleitendem Niob-Titan-Draht, die im Kryostaten auf etwa 4 K gekühlt wird und im Dauerstrombetrieb das starke, hochhomogene Grundfeld des MRT erzeugt. Das Feld ist ständig vorhanden; Projektileffekt und Quench sind die zentralen Gefährdungen.",
+  "body": "## Begriff und Aufgabe\n\nDer **supraleitende Magnet** erzeugt im [[mrt|Magnetresonanztomographen]] das statische Grundfeld B₀ – in klinischen Ganzkörpersystemen meist 1,5 T oder 3 T, also rund das 30 000- bis 60 000-Fache des Erdmagnetfelds (etwa 50 µT). Er besteht aus einer großen Spule aus supraleitendem Draht, die in einem Kryostaten auf wenige Kelvin gekühlt wird. Weil der Draht im supraleitenden Zustand keinen elektrischen Widerstand hat, fließt der Strom nach dem Aufladen ohne äußere Stromversorgung dauerhaft weiter: Das Feld ist **immer eingeschaltet**, auch nachts und bei ausgeschaltetem Gerät [@mcrobbie-2017] [@weishaupt-2014].\n\nDas Grundfeld bestimmt über die Larmor-Gleichung die Resonanzfrequenz der Protonen (siehe [[kernspinresonanz]]) und maßgeblich das erreichbare Signal-Rausch-Verhältnis. Gleichzeitig ist der Magnet die Quelle der wichtigsten Gefährdungen im MRT-Bereich.\n\n## Supraleitung\n\nBestimmte Werkstoffe verlieren unterhalb einer **Sprungtemperatur** T_c ihren elektrischen Widerstand vollständig. Supraleitung bleibt aber nur erhalten, solange drei Grenzen gleichzeitig unterschritten werden: kritische Temperatur, kritische magnetische Flussdichte und kritische Stromdichte [@tipler-2019].\n\n| Größe | Typischer Wert / Ausführung in MRT-Magneten |\n|---|---|\n| Leitermaterial | Niob-Titan (NbTi), feine Filamente in einer Kupfermatrix |\n| Sprungtemperatur NbTi | etwa 9 K |\n| Betriebstemperatur | etwa 4,2 K (Siedepunkt von flüssigem Helium bei Normaldruck) |\n| Kühlmittel | flüssiges Helium, rückverflüssigt durch einen Kaltkopf |\n\nDie **Kupfermatrix** ist kein Nebendetail: Geht ein Leiterabschnitt in den normalleitenden Zustand über, übernimmt das gut leitende Kupfer kurzzeitig den Strom und schützt den Supraleiter vor Zerstörung.\n\n## Feldberechnung und Energie\n\nFür eine lange Zylinderspule (Solenoid) gilt näherungsweise\n\n`B = μ₀ · n · I`\n\nmit der magnetischen Feldkonstante μ₀ = 4π · 10⁻⁷ Vs/(Am), der Windungsdichte n (Windungen pro Meter) und dem Strom I.\n\n> [!beispiel] Für B = 1,5 T und einen Strom von I = 500 A wäre eine Windungsdichte von n = 1,5 / (4π · 10⁻⁷ · 500) ≈ 2 400 Windungen pro Meter nötig. Reale MRT-Magnete bestehen aus mehreren, unterschiedlich bewickelten Spulenpaketen, deren Anordnung auf maximale Homogenität optimiert ist. Die Zahlen sind didaktisch gewählt.\n\nDie im Feld gespeicherte Energie beträgt `E = ½ · L · I²`; bei klinischen Ganzkörpermagneten liegt sie typischerweise im Megajoule-Bereich. Diese Energie wird bei einem Quench schlagartig in Wärme umgesetzt.\n\n## Aufbau\n\n### Spulensystem und Dauerstrombetrieb\n\nBeim Hochfahren („Rampen“) speist ein externes Netzgerät den Strom in die Spule ein. Parallel dazu liegt ein **supraleitender Schalter** – ein Leiterstück, das während des Rampens beheizt und damit normalleitend gehalten wird. Ist der Sollstrom erreicht, wird die Heizung abgeschaltet: Der Schalter wird supraleitend, schließt den Stromkreis, und das Netzgerät kann entfernt werden. Der Magnet arbeitet nun im **Dauerstrombetrieb** (persistent mode); das Feld nimmt nur über sehr lange Zeiträume messbar ab [@mcrobbie-2017].\n\n### Kryostat und Kühlung\n\nDer Kryostat ist ein mehrschaliges Vakuumgefäß: Heliumbehälter mit Spule, Strahlungsschilde und äußerer Vakuumbehälter minimieren den Wärmeeinfall. Ein **Kaltkopf** – angetrieben von einem wassergekühlten Heliumkompressor – kühlt den Strahlungsschild und rückverflüssigt verdampfendes Helium. Moderne Systeme arbeiten damit im Normalbetrieb praktisch ohne Heliumverlust („zero boil-off“).\n\n> [!belegt] Konventionelle supraleitende MRT-Magnete enthalten rund 1 500 Liter flüssiges Helium. Neuere Konzepte kommen nach Herstellerangaben mit etwa 7 Litern in einem versiegelten System bzw. mit unter einem Liter aus; teilweise entfällt dadurch die Quenchleitung [@philips-blueseal] [@siemens-free-max].\n\n### Shimming\n\nFür die Bildgebung muss das Feld im Messvolumen (typisch eine Kugel von 40–50 cm Durchmesser) auf wenige Millionstel (ppm) homogen sein. Fertigungstoleranzen und Eisen im Gebäude stören diese Homogenität. Man korrigiert sie durch\n\n* **passives Shimming**: kleine Eisenplättchen an berechneten Positionen im Magnetinneren (bei der Installation),\n* **aktives Shimming**: zusätzliche Shimspulen, deren Ströme vor jeder Untersuchung patientenspezifisch angepasst werden [@weishaupt-2014].\n\n### Aktive Abschirmung und Streufeld\n\nAußerhalb des Magneten fällt das Feld nicht abrupt ab. Bei **aktiv abgeschirmten** Magneten erzeugen gegensinnig gewickelte äußere Spulen ein Gegenfeld, das das Streufeld stark verkleinert. Die **0,5-mT-Linie** (5-Gauß-Linie) markiert die Grenze, ab der z. B. Träger aktiver Implantate wie [[herzschrittmacher|Herzschrittmacher]] gefährdet sein können; sie liegt bei aktiv abgeschirmten Systemen wenige Meter um das Magnetzentrum und bestimmt die Zonierung des MRT-Bereichs [@kanal-2013].\n\n## Gefährdungen\n\n### Projektileffekt\n\nAuf ferromagnetische Gegenstände wirkt im inhomogenen Streufeld eine Translationskraft, die näherungsweise proportional zum Produkt aus Feldstärke und räumlichem Feldgradienten (B · dB/dz) ist. Sie ist nahe der Öffnung des Magneten am größten. Sauerstoffflaschen, Scheren, Reinigungsgeräte oder ungeeignete [[infusionspumpe|Infusionspumpen]] können zu Geschossen werden. Medizinprodukte werden deshalb als „MR sicher“, „bedingt MR-sicher“ oder „MR-unsicher“ gekennzeichnet [@astm-f2503].\n\n### Quench\n\nEin **Quench** ist der plötzliche Übergang der Spule in den normalleitenden Zustand. Die gespeicherte Feldenergie wird in Wärme umgesetzt, und das flüssige Helium verdampft schlagartig – aus einem Liter Flüssigkeit entstehen bei Raumtemperatur und Normaldruck rund 750 Liter Gas (abgeschätzt aus den Dichten von flüssigem Helium, etwa 0,125 kg/L, und Heliumgas bei 20 °C, etwa 0,17 g/L). Die **Quenchleitung** führt das Gas ins Freie. Versagt sie, drohen Sauerstoffverdrängung, Kälteverletzungen und Überdruck im Untersuchungsraum.\n\n> [!warnung] Ein Quench kann über den **Magnet-Notabschaltknopf** bewusst ausgelöst werden – ausschließlich, wenn eine Person durch einen ferromagnetischen Gegenstand eingeklemmt ist oder eine vergleichbare lebensbedrohliche Lage besteht. Bei Brand oder Herz-Kreislauf-Stillstand wird der Patient aus dem Raum gebracht; der Not-Aus der Elektrik schaltet das Magnetfeld **nicht** ab. Ein ausgelöster Quench verursacht hohe Kosten und lange Ausfallzeiten.\n\n> [!vereinfacht] Die Proportionalität der Anziehungskraft zu B · dB/dz gilt für weichmagnetische Gegenstände unterhalb der Sättigung. Gesättigte Gegenstände folgen eher dem Feldgradienten allein; zusätzlich wirken Drehmomente, die Gegenstände entlang der Feldlinien ausrichten.\n\n## Anwendung in Geräten\n\n* [[mrt]]: Ganzkörper- und Extremitätensysteme, 0,55 T bis 3 T klinisch, 7 T als Ultrahochfeld.\n* Ultrahochfeld- und Forschungssysteme sowie NMR-Spektrometer.\n* Partikeltherapie: supraleitende Magnete in kompakten Beschleunigern und Strahlführungen (siehe [[gantry]]).\n\nGemeinsam mit [[gradientenspule|Gradientenspulen]] und [[hf-spule|HF-Spulen]] bildet der Magnet das „Magnet-Spulen-System“ des MRT.\n\n## Instandhaltung und Überwachung\n\n> [!praxis] Wichtige Überwachungsgrößen sind Heliumfüllstand, Druck im Heliumbehälter, Kaltkopf- und Kompressorstatus sowie die Kühlwasserversorgung des Kompressors. Fällt die Kühlwasserversorgung aus, steigt der Heliumverbrauch; bleibt der Fehler unbemerkt, kann es zum Quench kommen. Viele Hersteller überwachen diese Werte per Fernwartung. Arbeiten am Kryostaten, Nachfüllen von Helium und das Rampen des Magneten erfolgen ausschließlich durch den Hersteller.\n\nFür den Betrieb maßgeblich sind die Gerätenorm [[iec-60601-2-33]] [@iec-60601-2-33] und die Arbeitsschutzvorgaben zu elektromagnetischen Feldern [@emfv]. Die Bildqualität (Homogenität, Verzeichnung) wird mit Phantomen geprüft [@iec-62464-1].\n",
+  "related": [
+    "mrt",
+    "kernspinresonanz",
+    "gradientenspule",
+    "hf-spule",
+    "elektromagnetische-induktion",
+    "iec-60601-2-33",
+    "herzschrittmacher",
+    "gantry"
+  ],
+  "paths": [
+    [
+      "mrt",
+      "supraleitender-magnet",
+      "kernspinresonanz",
+      "hf-spule"
+    ],
+    [
+      "mrt",
+      "supraleitender-magnet",
+      "gradientenspule",
+      "hf-spule"
+    ]
+  ],
+  "sources": [
+    "mcrobbie-2017",
+    "weishaupt-2014",
+    "tipler-2019",
+    "philips-blueseal",
+    "siemens-free-max",
+    "kanal-2013",
+    "astm-f2503",
+    "iec-60601-2-33",
+    "emfv",
+    "iec-62464-1"
+  ],
+  "diagram": {
+    "title": "Supraleitender MRT-Magnet: Energie- und Kältekreislauf",
+    "caption": "Funktionsschema; das Netzgerät ist nur beim Hochfahren angeschlossen.",
+    "width": 960,
+    "height": 340,
+    "nodes": [
+      {
+        "id": "psu",
+        "label": "Rampen-Netzgerät\n(nur beim Laden)",
+        "kind": "source",
+        "x": 100,
+        "y": 90,
+        "w": 170
+      },
+      {
+        "id": "schalter",
+        "label": "Supraleitender\nSchalter",
+        "kind": "control",
+        "x": 310,
+        "y": 90
+      },
+      {
+        "id": "spule",
+        "label": "NbTi-Spule\n(Dauerstrom)",
+        "ref": "supraleitender-magnet",
+        "kind": "actuator",
+        "x": 510,
+        "y": 90
+      },
+      {
+        "id": "feld",
+        "label": "Grundfeld B₀\n(Messvolumen)",
+        "ref": "kernspinresonanz",
+        "kind": "output",
+        "x": 720,
+        "y": 90
+      },
+      {
+        "id": "shim",
+        "label": "Shimspulen\n(Homogenität)",
+        "kind": "process",
+        "x": 870,
+        "y": 210
+      },
+      {
+        "id": "helium",
+        "label": "Flüssiges Helium\n(≈ 4,2 K)",
+        "kind": "process",
+        "x": 510,
+        "y": 250
+      },
+      {
+        "id": "kaltkopf",
+        "label": "Kaltkopf +\nKompressor",
+        "kind": "actuator",
+        "x": 310,
+        "y": 250
+      },
+      {
+        "id": "wasser",
+        "label": "Kühlwasser",
+        "ref": "waermeuebertragung",
+        "kind": "source",
+        "x": 100,
+        "y": 250
+      }
+    ],
+    "edges": [
+      {
+        "from": "psu",
+        "to": "schalter",
+        "kind": "power",
+        "label": "Rampen"
+      },
+      {
+        "from": "schalter",
+        "to": "spule",
+        "kind": "power"
+      },
+      {
+        "from": "spule",
+        "to": "feld",
+        "kind": "energy"
+      },
+      {
+        "from": "shim",
+        "to": "feld",
+        "kind": "energy",
+        "label": "Korrektur"
+      },
+      {
+        "from": "helium",
+        "to": "spule",
+        "kind": "fluid",
+        "label": "kühlt"
+      },
+      {
+        "from": "kaltkopf",
+        "to": "helium",
+        "kind": "fluid",
+        "label": "rückverflüssigt"
+      },
+      {
+        "from": "wasser",
+        "to": "kaltkopf",
+        "kind": "fluid"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}

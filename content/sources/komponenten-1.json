@@ -1,0 +1,70 @@
+[
+  {
+    "id": "fischer-nolle-elektrische-maschinen-2022",
+    "kind": "buch",
+    "authors": "Rolf Fischer, Eugen Nolle",
+    "title": "Elektrische Maschinen – Aufbau, Wirkungsweise und Betriebsverhalten",
+    "edition": "18., überarbeitete Auflage",
+    "publisher": "Carl Hanser Verlag, München",
+    "year": "2022"
+  },
+  {
+    "id": "hughes-drury-2019",
+    "kind": "buch",
+    "authors": "Austin Hughes, Bill Drury",
+    "title": "Electric Motors and Drives: Fundamentals, Types and Applications",
+    "edition": "5th edition",
+    "publisher": "Newnes (Elsevier), Oxford",
+    "year": "2019"
+  },
+  {
+    "id": "kenjo-sugawara-1994",
+    "kind": "buch",
+    "authors": "Takashi Kenjo, Akira Sugawara",
+    "title": "Stepping Motors and Their Microprocessor Controls",
+    "edition": "2nd edition",
+    "publisher": "Clarendon Press, Oxford",
+    "year": "1994"
+  },
+  {
+    "id": "carolus-ventilatoren-2020",
+    "kind": "buch",
+    "authors": "Thomas Carolus",
+    "title": "Ventilatoren – Aerodynamischer Entwurf, Konstruktive Lärmminderung, Optimierung",
+    "edition": "4. Auflage",
+    "publisher": "Springer Vieweg, Wiesbaden",
+    "year": "2020"
+  },
+  {
+    "id": "reddy-linden-2011",
+    "kind": "buch",
+    "authors": "Thomas B. Reddy (Hrsg.), David Linden (Hrsg. emeritus)",
+    "title": "Linden's Handbook of Batteries",
+    "edition": "4th edition",
+    "publisher": "McGraw-Hill, New York",
+    "year": "2011"
+  },
+  {
+    "id": "roloff-matek-2021",
+    "kind": "buch",
+    "authors": "Herbert Wittel, Christian Spura, Dieter Jannasch, Joachim Voßiek",
+    "title": "Roloff/Matek Maschinenelemente – Normung, Berechnung, Gestaltung",
+    "publisher": "Springer Vieweg, Wiesbaden",
+    "year": "2021",
+    "note": "Lehrbuch mit Tabellenbuch; Kapitel Schraubenverbindungen/Bewegungsschrauben."
+  },
+  {
+    "id": "iec-62133-2",
+    "kind": "norm",
+    "title": "IEC 62133-2 – Secondary cells and batteries containing alkaline or other non-acid electrolytes – Safety requirements for portable sealed secondary lithium cells, and for batteries made from them, for use in portable applications – Part 2: Lithium systems",
+    "publisher": "International Electrotechnical Commission (IEC)",
+    "note": "Europäisch übernommen als EN 62133-2; jeweils gültige Fassung beachten."
+  },
+  {
+    "id": "un-38-3",
+    "kind": "leitlinie",
+    "title": "UN Recommendations on the Transport of Dangerous Goods – Manual of Tests and Criteria, Part III, Sub-section 38.3 (Lithium metal and lithium ion batteries)",
+    "publisher": "United Nations Economic Commission for Europe (UNECE)",
+    "note": "Prüfungen T.1 bis T.8 als Voraussetzung für den Transport von Lithiumzellen und -batterien; jeweils gültige revidierte Ausgabe beachten."
+  }
+]

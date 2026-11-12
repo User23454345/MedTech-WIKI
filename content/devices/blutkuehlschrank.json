@@ -1,0 +1,48 @@
+{
+  "id": "blutkuehlschrank",
+  "type": "device",
+  "title": "Blutkonservenkühlschrank",
+  "aliases": [
+    "Blutbankkühlschrank",
+    "Blutkühlschrank",
+    "Blood bank refrigerator",
+    "Blutdepot-Kühlschrank"
+  ],
+  "category": "geraete",
+  "deviceGroup": "labor",
+  "rank": 65,
+  "domains": [
+    "labormedizin",
+    "chirurgie",
+    "intensivmedizin"
+  ],
+  "summary": "Blutkonservenkühlschränke lagern Erythrozytenkonzentrate in einem eng begrenzten Temperaturbereich mit lückenloser Temperaturüberwachung und Alarmierung. Sie unterscheiden sich von Haushaltskühlgeräten durch Umluftkühlung, unabhängige Messtechnik und Dokumentation.",
+  "sections": {
+    "purpose": "Blutprodukte dürfen nur unter den in der Richtlinie Hämotherapie der Bundesärztekammer festgelegten Bedingungen gelagert und transportiert werden; für Erythrozytenkonzentrate ist dort ein Bereich von +2 bis +6 °C vorgesehen [@richtlinie-haemotherapie]. Zu warme Lagerung begünstigt Bakterienwachstum und Qualitätsverlust, Gefrieren führt zur Hämolyse. Kühlschränke stehen im Blutdepot, aber auch dezentral im OP oder auf Intensivstationen. Gefrorenes Frischplasma wird in separaten Tiefkühlgeräten gelagert, Thrombozytenkonzentrate dagegen bei Raumtemperatur unter Agitation.",
+    "principle": "## Kältetechnik\n\nDie Geräte arbeiten meist nach dem **Kaltdampf-Kompressionsprinzip**: Ein Verdichter komprimiert das Kältemittel, das im Verflüssiger Wärme an den Raum abgibt, über ein Drosselorgan entspannt wird und im Verdampfer dem Innenraum Wärme entzieht ([[waermeuebertragung]], [[gasgesetze]]). Ein Ventilator verteilt die gekühlte Luft (Umluftkühlung), damit an allen Lagerpositionen möglichst gleiche Temperaturen herrschen; Glastüren und häufiges Öffnen sind die größten Störgrößen. Die Temperatur wird über einen [[regelkreis]] mit [[temperatursensor|Temperaturfühler]] konstant gehalten.\n\n## Überwachung und Alarmierung\n\nNeben dem Regelfühler besitzen Blutkühlschränke in der Regel eine **unabhängige Temperaturüberwachung** mit eigenem Fühler, häufig in einem Simulationsmedium, das die thermische Trägheit eines Blutbeutels nachbildet. Über- und Unterschreitungen lösen optische und akustische Alarme aus ([[alarmsystem]]); die Alarmierung sollte bei Netzausfall akkugestützt weiterarbeiten und an eine ständig besetzte Stelle weitergeleitet werden. Die Temperaturverläufe werden aufgezeichnet, um die Einhaltung der Lagerbedingungen nachzuweisen.\n\n> [!praxis] Bei Alarm zählt nicht nur der Momentanwert, sondern Dauer und Ausmaß der Abweichung. Über die weitere Verwendbarkeit betroffener Konserven entscheidet die transfusionsverantwortliche Stelle nach dem Qualitätssicherungssystem der Einrichtung.\n\n> [!vereinfacht] Die Temperaturangaben beziehen sich auf Erythrozytenkonzentrate; maßgeblich sind die jeweils gültige Richtlinie Hämotherapie und die Angaben des Herstellers der Blutprodukte."
+  },
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Der Preis hängt u. a. von Ausstattung, Software-Optionen, Zubehör, Verbrauchsmaterial, Servicevertrag und Ausschreibungsbedingungen ab; entscheidend sind die Gesamtbetriebskosten über die Nutzungsdauer."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: In Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; sicherheitstechnische Kontrollen nach § 12 sind nur durchzuführen, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 aufgeführt. Maßgeblich für die Temperaturführung sind die Vorgaben der Richtlinie Hämotherapie und das Qualitätssicherungssystem der Einrichtung.",
+    "intervals": "Regelmäßige Überprüfung der Temperaturmesskette (Vergleich mit kalibriertem Referenzthermometer, [[kalibrierung]]), Alarmtest, Kontrolle von Türdichtungen und Verflüssiger nach Herstellerangabe bzw. Qualitätssicherungssystem; elektrische Wiederholungsprüfung nach [[dguv-vorschrift-3|DGUV Vorschrift 3]]."
+  },
+  "related": [
+    "temperatursensor",
+    "alarmsystem",
+    "waermeuebertragung",
+    "zellseparator",
+    "blut",
+    "infusionswaermer"
+  ],
+  "sources": [
+    "richtlinie-haemotherapie",
+    "kramme-2017"
+  ],
+  "status": "stub",
+  "updated": "2026-11-11"
+}

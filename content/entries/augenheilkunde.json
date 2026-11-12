@@ -1,0 +1,38 @@
+{
+  "id": "augenheilkunde",
+  "type": "domain",
+  "title": "Augenheilkunde",
+  "aliases": [
+    "Ophthalmologie",
+    "Ophthalmology",
+    "Augenklinik",
+    "Augenmedizin"
+  ],
+  "category": "fachbereiche",
+  "summary": "Die Augenheilkunde (Ophthalmologie) diagnostiziert und behandelt Erkrankungen des Auges und seiner Anhangsorgane. Sie ist stark optik- und lasergeprägt: Spaltlampe, optische Kohärenztomographie, Tonometrie, Phakoemulsifikation und ophthalmologische Laser bestimmen den Gerätepark.",
+  "body": "## Gegenstand des Fachgebiets\n\nDie **Augenheilkunde** befasst sich mit Aufbau, Funktion und Erkrankungen des [[auge|Auges]], der Sehbahn und der Augenanhangsgebilde (Lider, Tränenwege, Augenhöhle). Weil die optischen Medien des Auges durchsichtig sind, lassen sich Hornhaut, Linse und Netzhaut direkt mit Licht untersuchen und behandeln. Das macht die Ophthalmologie zu einem besonders **optik- und lasergeprägten** Fach ([[optik]], [[laser]]) [@kramme-2017].\n\n## Typische Krankheitsbilder und Eingriffe\n\n| Krankheitsbild | Diagnostik | Therapie |\n|---|---|---|\n| Katarakt (Grauer Star) | Spaltlampe, optische Biometrie | Phakoemulsifikation und Implantation einer Kunstlinse (IOL) |\n| Glaukom (Grüner Star) | Augeninnendruck, Gesichtsfeld, OCT der Nervenfaserschicht | Tropfen, Lasertrabekuloplastik, Glaukomchirurgie |\n| Altersabhängige Makuladegeneration | OCT, Angiographie | intravitreale Injektionen |\n| Diabetische Retinopathie | Funduskopie, OCT | Laserkoagulation, Injektionen, Vitrektomie |\n| Netzhautablösung | Funduskopie, Ultraschall | Vitrektomie, eindellende Chirurgie |\n| Fehlsichtigkeit | Refraktion, Hornhauttopographie | refraktive Laserchirurgie |\n\n## Medizintechnik im Fachbereich\n\n| Gerät | Einsatzzweck |\n|---|---|\n| [[spaltlampe]] | Stereomikroskop mit schlitzförmiger Beleuchtung zur Untersuchung des vorderen Augenabschnitts und – mit Zusatzlinsen – des Fundus |\n| [[tonometer]] | Messung des Augeninnendrucks, z. B. als Applanations- oder Luftimpulstonometer |\n| [[oct]] | optische Kohärenztomographie: interferometrische Schnittbilder von Netzhaut und Vorderabschnitt mit axialer Auflösung im Mikrometerbereich |\n| [[phakoemulsifikation]] | Zerkleinern der getrübten Linse mit Ultraschall und Absaugung über ein Fluidiksystem |\n| [[op-mikroskop]] | stereoskopische Vergrößerung bei Katarakt-, Glaukom- und Netzhautchirurgie |\n| [[chirurgischer-laser]] | Photokoagulation der Netzhaut, YAG-Kapsulotomie, refraktive Chirurgie |\n| [[ultraschallgeraet]] | Echographie bei trüben Medien, akustische Biometrie |\n\nDie OCT beruht auf dem Prinzip der Weißlicht- bzw. Kurzkohärenz-Interferometrie: Nur Licht, dessen Laufweg mit dem Referenzarm innerhalb der Kohärenzlänge übereinstimmt, erzeugt ein Interferenzsignal. So entstehen Tiefenprofile (A-Scans), die zu Schnittbildern zusammengesetzt werden [@huang-1991].\n\n### Laser in der Augenheilkunde\n\n| Laserart | Wellenlänge | Anwendung |\n|---|---|---|\n| Excimerlaser (ArF) | 193 nm | Abtragung von Hornhautgewebe in der refraktiven Chirurgie |\n| Femtosekundenlaser | nahes Infrarot | Schnitte in Hornhaut und Linsenkapsel |\n| Nd:YAG (gütegeschaltet) | 1064 nm | Kapsulotomie bei Nachstar, Iridotomie |\n| frequenzverdoppelter Nd:YAG bzw. vergleichbare grüne Laser | 532 nm | Photokoagulation der Netzhaut |\n\n> [!vereinfacht] Die Laserwirkung hängt von der Wellenlänge (Absorption im Gewebe), der Pulsdauer und der Leistungsdichte ab: Lange Einwirkzeiten erzeugen thermische Koagulation, ultrakurze Pulse hoher Spitzenleistung führen zur Photodisruption, UV-Laser zur Photoablation [@eichler-2015].\n\n## Besondere technische Anforderungen\n\n### Laserschutz\n\nAugenlaser gehören meist zur Laserklasse 3B oder 4. Laserschutzbeauftragte, gekennzeichnete Laserbereiche, wellenlängenspezifische Schutzbrillen und Verriegelungen sind Pflicht [@iec-60825-1] [@ostrv]. Gerade am Auge ist auch die **Gefährdung der Netzhaut durch Beleuchtungslicht** von Spaltlampe und OP-Mikroskop zu bedenken – lange Untersuchungen mit hoher Bestrahlungsstärke können phototoxisch wirken.\n\n### Messgenauigkeit\n\n[[tonometer|Augentonometer]] sind in Anlage 2 der [[mpbetreibv|MPBetreibV]] aufgeführt und unterliegen der [[mtk|messtechnischen Kontrolle]] nach § 15 i. V. m. Anlage 2. Für Luftimpulstonometer erfolgt die Rückführung nicht auf ein nationales Normal, sondern auf ein klinisch geprüftes Referenzgerät gleicher Bauart [@mpbetreibv] [@iso-8612].\n\n> [!praxis] Fehlerquellen bei der Biometrie (Achslänge, Hornhautradien) wirken sich direkt auf die Brechkraftberechnung der Kunstlinse aus. Regelmäßige Funktionsprüfungen mit Prüfkörpern und die Pflege der Optiken sind daher Teil der [[instandhaltung-grundlagen|Instandhaltung]].\n\n### Mikrochirurgie und Fluidik\n\nPhakoemulsifikationsgeräte regeln Spülflüssigkeit und Sog so, dass der Druck in der Vorderkammer stabil bleibt. Das Verfahren wurde 1967 von Charles Kelman eingeführt [@kelman-1967]. Fluidiksysteme arbeiten entweder mit [[peristaltikpumpe|Peristaltikpumpen]] (flussgeregelt) oder mit Venturi-Systemen (vakuumgeregelt). Ein plötzlicher Druckabfall nach dem Durchbrechen eines Linsenfragments („Surge“) kann die hintere Kapsel gefährden.\n\n### Hygiene\n\nInstrumente für intraokulare Eingriffe sind kritische Medizinprodukte; Kontaktflächen von Tonometern und Kontaktgläsern müssen nach jedem Patienten wirksam desinfiziert werden ([[aufbereitung]], [[desinfektion]]).\n\n## Schnittstellen zu anderen Fachbereichen\n\n* [[diabetologie]]: Screening auf diabetische Retinopathie.\n* [[neurologie]]: Sehbahnerkrankungen, Gesichtsfelddefekte, Stauungspapille.\n* [[hno-heilkunde]]: Erkrankungen der Augenhöhle und Tränenwege.\n* [[neonatologie]]: Frühgeborenenretinopathie, bei der Sauerstofftherapie und Netzhautentwicklung zusammenhängen.\n* [[anaesthesiologie]]: Lokal- und Allgemeinanästhesie bei Augenoperationen.\n",
+  "related": [
+    "auge",
+    "spaltlampe",
+    "tonometer",
+    "oct",
+    "phakoemulsifikation",
+    "chirurgischer-laser",
+    "laser",
+    "optik",
+    "zeiss"
+  ],
+  "sources": [
+    "kramme-2017",
+    "huang-1991",
+    "kelman-1967",
+    "eichler-2015",
+    "iec-60825-1",
+    "ostrv",
+    "iso-8612",
+    "iso-10939",
+    "mpbetreibv"
+  ],
+  "status": "basis",
+  "updated": "2026-11-11"
+}

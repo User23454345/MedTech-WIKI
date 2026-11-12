@@ -1,0 +1,151 @@
+{
+  "id": "doppler-effekt",
+  "type": "term",
+  "title": "Doppler-Effekt",
+  "aliases": [
+    "Dopplereffekt",
+    "Doppler effect",
+    "Doppler-Verschiebung",
+    "Dopplerfrequenz",
+    "Doppler-Shift",
+    "Dopplersonographie",
+    "Duplexsonographie",
+    "Farbdoppler",
+    "PW-Doppler",
+    "CW-Doppler",
+    "Aliasing"
+  ],
+  "category": "physik",
+  "summary": "Der Doppler-Effekt ist die Frequenzänderung einer Welle, wenn sich Sender, Empfänger oder Reflektor relativ zueinander bewegen. In der Medizintechnik dient er vor allem der Messung von Blutflussgeschwindigkeiten mit Ultraschall (Spektral-, Farb- und Power-Doppler) und der Erfassung der fetalen Herzfrequenz im CTG.",
+  "body": "## Prinzip\n\nBewegen sich eine Wellenquelle und ein Beobachter aufeinander zu, treffen die Wellenfronten in kürzeren Abständen ein – die wahrgenommene Frequenz steigt. Entfernen sie sich, sinkt sie. Bekanntes Alltagsbeispiel ist das Martinshorn eines vorbeifahrenden Rettungswagens. Christian Doppler beschrieb den Effekt 1842 in einer Arbeit über das Licht von Doppelsternen [@doppler-1842].\n\nFür Schall in einem ruhenden Medium mit der Schallgeschwindigkeit c gilt allgemein [@tipler-2019]:\n\n`f' = f · (c + v_E) / (c − v_S)`\n\nmit der Geschwindigkeit des Empfängers v_E (positiv auf die Quelle zu) und der Geschwindigkeit der Quelle v_S (positiv auf den Empfänger zu).\n\n## Doppler-Gleichung der Ultraschalldiagnostik\n\nIm Ultraschall ist der bewegte Reflektor das Blut – genauer die Erythrozyten als Streuer. Das Blut empfängt die Welle als bewegter Empfänger und strahlt sie als bewegte Quelle zurück; der Effekt wirkt also **zweimal**. Weil die Blutgeschwindigkeit v sehr klein gegenüber c ist, vereinfacht sich die Frequenzverschiebung zu:\n\n`f_D = f' − f₀ ≈ 2 · f₀ · v · cos θ / c`\n\n| Symbol | Bedeutung |\n|---|---|\n| f_D | Dopplerfrequenz (Frequenzverschiebung) |\n| f₀ | Sendefrequenz des Schallkopfs |\n| v | Betrag der Blutgeschwindigkeit |\n| θ | Winkel zwischen Schallstrahl und Strömungsrichtung (Insonationswinkel) |\n| c | Schallgeschwindigkeit im Gewebe, Annahme 1540 m/s |\n\n> [!belegt] Die Dopplergleichung `f_D = 2 f₀ v cos θ / c` ist die Grundlage aller Ultraschall-Doppler-Verfahren; das Vorzeichen von f_D zeigt die Flussrichtung relativ zum Schallkopf [@szabo-2014] [@bushberg-2020].\n\n> [!beispiel] Mit f₀ = 4 MHz, v = 0,5 m/s und θ = 60° (cos θ = 0,5) ergibt sich f_D = 2 · 4 · 10⁶ Hz · 0,5 m/s · 0,5 / 1540 m/s ≈ 1,3 kHz. Dopplerfrequenzen liegen damit im **hörbaren Bereich** – deshalb können Dopplergeräte den Fluss als Ton ausgeben.\n\n## Der Winkel als Hauptfehlerquelle\n\nDie Messung erfasst nur die Geschwindigkeitskomponente in Schallrichtung. Das Gerät rechnet mit dem vom Untersucher eingestellten Winkel zurück auf v. Weil cos θ bei großen Winkeln steil abfällt, wirken sich Winkelfehler dort stark aus:\n\n| Insonationswinkel θ | cos θ | Folge |\n|---|---|---|\n| 0° | 1,00 | maximale Dopplerverschiebung, in der Praxis selten erreichbar |\n| 30° | 0,87 | gering fehleranfällig |\n| 60° | 0,50 | übliche obere Grenze für Geschwindigkeitsmessungen |\n| 90° | 0 | keine Dopplerverschiebung – kein Signal |\n\n> [!praxis] Für quantitative Geschwindigkeitsmessungen wird ein Insonationswinkel von höchstens etwa 60° empfohlen; bei 90° erscheint ein Gefäß im Farbdoppler „leer“, obwohl Blut fließt [@szabo-2014].\n\n## Verfahren\n\n| Verfahren | Prinzip | Stärken / Grenzen |\n|---|---|---|\n| CW-Doppler (continuous wave) | getrennte Elemente senden und empfangen ununterbrochen | misst auch sehr hohe Geschwindigkeiten; keine Tiefenzuordnung |\n| PW-Doppler (pulsed wave) | gepulste Sendung, Auswertung nur aus einem Messfenster (Sample Volume) in definierter Tiefe | tiefenselektiv; Geschwindigkeitsgrenze durch Aliasing |\n| Farbdoppler (Color Flow) | mittlere Geschwindigkeit in vielen Messfenstern, farbkodiert über dem B-Bild | Übersicht über Flussrichtung und Turbulenz |\n| Power-Doppler | Darstellung der Signalleistung statt der Geschwindigkeit | empfindlich für langsamen Fluss, weitgehend winkelunabhängig, keine Richtung |\n| Duplex/Triplex | Kombination B-Bild + PW-Spektrum (+ Farbe) | Standard der Gefäßdiagnostik |\n| Gewebedoppler | Doppler auf langsame, starke Echos des Myokards | Wandbewegung des Herzens |\n\n## Aliasing und Nyquist-Grenze\n\nBeim PW-Doppler wird die Dopplerverschiebung nur zu den Zeitpunkten der Sendeimpulse abgetastet, also mit der **Pulsrepetitionsfrequenz (PRF)**. Nach dem Abtasttheorem ([[analog-digital-wandler]]) ist die höchste eindeutig messbare Dopplerfrequenz\n\n`f_D,max = PRF / 2`   (Nyquist-Grenze)\n\nHöhere Frequenzen erscheinen „umgeklappt“ in der Gegenrichtung (Aliasing). Gleichzeitig begrenzt die Messtiefe d die PRF, weil das Echo vor dem nächsten Puls zurück sein muss: `PRF ≤ c / (2 · d)`. Tiefe Gefäße und hohe Geschwindigkeiten – etwa in einer Stenose ([[stroemungslehre|Kontinuitätsgleichung]]) – führen deshalb zu Aliasing. Gegenmaßnahmen sind niedrigere Sendefrequenz, Grundlinienverschiebung, höhere PRF oder der Wechsel zum CW-Doppler [@szabo-2014].\n\n## Signalverarbeitung\n\nDas Echo wird mit der Sendefrequenz gemischt (Quadraturdemodulation), sodass die Dopplerverschiebung samt Vorzeichen übrig bleibt. Ein Hochpassfilter („Wandfilter“) unterdrückt starke, langsame Echos der Gefäßwand. Die Spektralanalyse mittels schneller Fourier-Transformation liefert das **Dopplerspektrum** (Geschwindigkeit über Zeit), aus dem Spitzengeschwindigkeiten und Indizes wie der Widerstandsindex bestimmt werden ([[filter]], [[mikrocontroller]]).\n\n> [!vereinfacht] Moderne Farbdopplerverfahren schätzen die mittlere Geschwindigkeit meist über die Phasenverschiebung aufeinanderfolgender Echos (Autokorrelation) statt über eine vollständige Spektralanalyse. Das Ergebnis entspricht physikalisch dem Doppler-Effekt, die Berechnung ist aber eine Zeitbereichsmethode.\n\n## Anwendung in Geräten\n\n| Gerät | Nutzung des Doppler-Effekts |\n|---|---|\n| [[ultraschallgeraet]] | Gefäß-, Herz- und Organdurchblutung; Spektral-, Farb-, Power-Doppler |\n| [[ctg]] | Ultraschall-Doppler-Aufnehmer erfasst die Herzbewegung des Fetus und daraus die Herzfrequenz |\n| [[ultraschallwandler]] | Sende-/Empfangselement aller Dopplerverfahren ([[piezoelektrischer-effekt]]) |\n\nDer Doppler-Effekt tritt bei allen Wellen auf. Laser-Doppler-Verfahren nutzen ihn mit Licht ([[optik]], [[laser]]) zur Messung der Mikrozirkulation.\n\nWeiterführend: [[schallwellen]], [[stroemungslehre]], [[blutkreislauf]], [[ultraschallwandler]].\n",
+  "related": [
+    "schallwellen",
+    "piezoelektrischer-effekt",
+    "ultraschallgeraet",
+    "ultraschallwandler",
+    "ctg",
+    "stroemungslehre",
+    "blutkreislauf",
+    "analog-digital-wandler",
+    "filter",
+    "bildartefakte",
+    "iec-60601-2-37",
+    "optik"
+  ],
+  "paths": [
+    [
+      "ultraschallgeraet",
+      "ultraschallwandler",
+      "piezoelektrischer-effekt",
+      "schallwellen",
+      "doppler-effekt",
+      "stroemungslehre"
+    ]
+  ],
+  "sources": [
+    "doppler-1842",
+    "szabo-2014",
+    "bushberg-2020",
+    "tipler-2019"
+  ],
+  "diagram": {
+    "title": "Signalkette des PW-Dopplers",
+    "caption": "Funktionsschema einer gepulsten Dopplermessung vom Sendepuls bis zum Spektrum. Das Echo wird vom selben Wandler empfangen; der Rückweg ist zur Übersicht direkt zur Demodulation gezeichnet.",
+    "width": 900,
+    "height": 280,
+    "nodes": [
+      {
+        "id": "tx",
+        "label": "Sender\n(PRF)",
+        "kind": "source",
+        "x": 90,
+        "y": 70
+      },
+      {
+        "id": "wd",
+        "label": "Ultraschall-\nwandler",
+        "kind": "actuator",
+        "x": 290,
+        "y": 70,
+        "ref": "ultraschallwandler"
+      },
+      {
+        "id": "blut",
+        "label": "bewegtes Blut\n(Erythrozyten)",
+        "kind": "patient",
+        "x": 500,
+        "y": 70,
+        "ref": "blutkreislauf"
+      },
+      {
+        "id": "demod",
+        "label": "Quadratur-\ndemodulation",
+        "kind": "process",
+        "x": 710,
+        "y": 70
+      },
+      {
+        "id": "wf",
+        "label": "Wandfilter\n(Hochpass)",
+        "kind": "process",
+        "x": 710,
+        "y": 210,
+        "ref": "filter"
+      },
+      {
+        "id": "fft",
+        "label": "FFT /\nAutokorrelation",
+        "kind": "control",
+        "x": 500,
+        "y": 210,
+        "ref": "mikrocontroller"
+      },
+      {
+        "id": "out",
+        "label": "Spektrum, Ton,\nFarbkodierung",
+        "kind": "output",
+        "x": 290,
+        "y": 210,
+        "ref": "ultraschallgeraet"
+      }
+    ],
+    "edges": [
+      {
+        "from": "tx",
+        "to": "wd",
+        "kind": "signal",
+        "label": "Puls f₀"
+      },
+      {
+        "from": "wd",
+        "to": "blut",
+        "kind": "energy",
+        "label": "Schall"
+      },
+      {
+        "from": "blut",
+        "to": "demod",
+        "kind": "signal",
+        "label": "Echo f₀ ± f_D"
+      },
+      {
+        "from": "demod",
+        "to": "wf",
+        "kind": "signal",
+        "label": "f_D"
+      },
+      {
+        "from": "wf",
+        "to": "fft",
+        "kind": "data"
+      },
+      {
+        "from": "fft",
+        "to": "out",
+        "kind": "data"
+      }
+    ]
+  },
+  "status": "basis",
+  "updated": "2026-11-11"
+}
