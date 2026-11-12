@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Schematischer Aufbau eines Intensivbeatmungsgeräts</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="26" text-anchor="middle" font-size="15" font-weight="600">Aufbau eines Intensivbeatmungsgeräts (Schema)</text>
+
+  <!-- Gerätegehäuse -->
+  <rect x="30" y="48" width="330" height="300" rx="12" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+
+  <!-- Display -->
+  <rect x="50" y="62" width="150" height="88" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <polyline points="58,120 70,120 74,84 100,84 104,120 132,120 136,84 162,84 166,120 192,120" fill="none" stroke="#0d9488" stroke-width="1.8"/>
+  <line x1="58" y1="138" x2="192" y2="138" stroke="#0b2545" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- Elektronik -->
+  <rect x="220" y="62" width="122" height="88" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="281" y="96" text-anchor="middle">Steuer- und</text>
+  <text x="281" y="113" text-anchor="middle">Überwachungs-</text>
+  <text x="281" y="130" text-anchor="middle">rechner</text>
+
+  <!-- Gaseinlass -->
+  <rect x="50" y="176" width="70" height="46" rx="5" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="85" y="203" text-anchor="middle">Einlass</text>
+  <!-- Turbine -->
+  <circle cx="175" cy="199" r="26" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M175,199 L175,177 M175,199 L194,210 M175,199 L156,210" stroke="#0d9488" stroke-width="2"/>
+  <!-- Proportionalventil -->
+  <rect x="140" y="246" width="70" height="36" rx="5" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M152,264 L168,254 L168,274 Z M198,264 L182,254 L182,274 Z" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <!-- Sensorblock inspiratorisch -->
+  <rect x="240" y="180" width="70" height="38" rx="5" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="275" y="204" text-anchor="middle">p · V̇ · O₂</text>
+  <!-- Exspirationsventil -->
+  <rect x="240" y="276" width="70" height="40" rx="5" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M252,296 Q275,280 298,296" fill="none" stroke="#0d9488" stroke-width="2"/>
+  <line x1="275" y1="296" x2="275" y2="310" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Gaswege intern -->
+  <line x1="120" y1="199" x2="147" y2="199" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="201" y1="199" x2="238" y2="199" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M210,264 L225,264 L225,212 L238,212" fill="none" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Ports -->
+  <rect x="352" y="191" width="16" height="16" fill="#0b2545"/>
+  <rect x="352" y="288" width="16" height="16" fill="#0b2545"/>
+  <line x1="310" y1="199" x2="352" y2="199" stroke="#0d9488" stroke-width="2"/>
+  <line x1="352" y1="296" x2="312" y2="296" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Schlauchsystem -->
+  <path d="M368,199 C420,199 420,150 450,150 L470,150" fill="none" stroke="#0b2545" stroke-width="5" stroke-linecap="round"/>
+  <path d="M368,296 C430,296 440,250 500,250 L512,250" fill="none" stroke="#0b2545" stroke-width="5" stroke-linecap="round"/>
+  <!-- Befeuchter -->
+  <rect x="470" y="128" width="46" height="46" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M478,160 Q493,150 508,160" fill="none" stroke="#14b8a6" stroke-width="2"/>
+  <path d="M516,150 C540,150 540,200 528,215" fill="none" stroke="#0b2545" stroke-width="5" stroke-linecap="round"/>
+  <!-- Y-Stück -->
+  <path d="M528,215 L528,232 M512,250 L528,232 L544,250" fill="none" stroke="#0b2545" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="528" y1="232" x2="528" y2="300" stroke="#0b2545" stroke-width="4"/>
+  <ellipse cx="528" cy="318" rx="40" ry="20" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="528" y="323" text-anchor="middle">Patient</text>
+
+  <!-- Beschriftungen mit Führungslinien -->
+  <g font-size="13">
+    <line x1="85" y1="222" x2="85" y2="366" stroke="#0b2545" stroke-width="1"/>
+    <text x="40" y="382">Gaseinlass (O₂ / Luft)</text>
+    <line x1="175" y1="282" x2="175" y2="366" stroke="#0b2545" stroke-width="1"/>
+    <text x="180" y="382">Turbine · O₂-Ventil</text>
+    <line x1="275" y1="316" x2="300" y2="366" stroke="#0b2545" stroke-width="1"/>
+    <text x="300" y="382">Exspirationsventil</text>
+    <line x1="342" y1="106" x2="420" y2="80" stroke="#0b2545" stroke-width="1"/>
+    <text x="424" y="84">Elektronik</text>
+    <line x1="310" y1="186" x2="420" y2="104" stroke="#0b2545" stroke-width="1"/>
+    <text x="424" y="108">Sensoren insp.</text>
+    <line x1="516" y1="138" x2="540" y2="118" stroke="#0b2545" stroke-width="1"/>
+    <text x="500" y="112">Befeuchter</text>
+    <line x1="544" y1="240" x2="566" y2="226" stroke="#0b2545" stroke-width="1"/>
+    <text x="548" y="218">Y-Stück</text>
+    <line x1="430" y1="268" x2="450" y2="290" stroke="#0b2545" stroke-width="1"/>
+    <text x="410" y="306">Exsp.-Schlauch</text>
+    <text x="388" y="168" font-size="13">Insp.</text>
+  </g>
+  <text x="125" y="160" text-anchor="middle" font-size="13">Display</text>
+</svg>

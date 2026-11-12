@@ -1,0 +1,9 @@
+[
+  {
+    "id": "iec-60601-2-24",
+    "kind": "norm",
+    "title": "IEC 60601-2-24 – Medizinische elektrische Geräte – Teil 2-24: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Infusionspumpen und Infusionsreglern",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-24 (VDE 0750-2-24)",
+    "note": "Gerätespezifische Norm für Infusionspumpen und -regler (u. a. Fördergenauigkeit, Trompetenkurve, Okklusions- und Luftalarm); maßgeblich ist die jeweils gültige Ausgabe."
+  }
+]

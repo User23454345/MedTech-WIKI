@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" font-family="Inter, Arial, sans-serif">
+  <title>Elektrokardiograph – schematischer Aufbau</title>
+  <defs>
+    <marker id="pf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b2545"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="26" font-size="15" font-weight="600" fill="#0b2545" text-anchor="middle">Aufbau eines 12-Kanal-Elektrokardiographen (schematisch)</text>
+
+  <!-- Patient -->
+  <path d="M70,70 Q125,52 180,70 L196,96 L200,300 Q125,322 50,300 L54,96 Z" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <ellipse cx="125" cy="58" rx="22" ry="16" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M138,150 q14,-14 24,0 q10,22 -16,40 q-24,-18 -8,-40 z" fill="#e6f7f5" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="125" y="345" font-size="13" fill="#0b2545" text-anchor="middle">Patient (Ansicht von vorn)</text>
+
+  <!-- Extremitätenelektroden -->
+  <g fill="#14b8a6" stroke="#0b2545" stroke-width="1.5">
+    <circle cx="66" cy="92" r="6"/><circle cx="184" cy="92" r="6"/>
+    <circle cx="66" cy="288" r="6"/><circle cx="184" cy="288" r="6"/>
+  </g>
+  <g font-size="13" fill="#0b2545">
+    <text x="40" y="88" text-anchor="end">R</text>
+    <text x="210" y="88">L</text>
+    <text x="40" y="292" text-anchor="end">N</text>
+    <text x="210" y="292">F</text>
+  </g>
+  <!-- Brustwandelektroden -->
+  <g fill="#ffffff" stroke="#0d9488" stroke-width="2">
+    <circle cx="112" cy="178" r="5"/><circle cx="136" cy="178" r="5"/><circle cx="148" cy="198"  r="5"/>
+    <circle cx="160" cy="214" r="5"/><circle cx="176" cy="214" r="5"/><circle cx="192" cy="214" r="5"/>
+  </g>
+  <g font-size="13" fill="#0b2545" text-anchor="middle">
+    <text x="104" y="166">V1</text><text x="138" y="166">V2</text>
+    <text x="128" y="204">V3</text><text x="152" y="234">V4</text>
+    <text x="176" y="234">V5</text><text x="200" y="234">V6</text>
+  </g>
+
+  <!-- Kabelbündel -->
+  <g stroke="#0b2545" stroke-width="1.5" fill="none">
+    <path d="M184,92 Q230,120 250,190"/>
+    <path d="M184,288 Q230,260 250,210"/>
+    <path d="M192,214 L250,202"/>
+    <path d="M250,200 L292,200" stroke-width="2" marker-end="url(#pf)"/>
+  </g>
+  <line x1="250" y1="306" x2="246" y2="218" stroke="#0b2545" stroke-width="1"/>
+  <text x="255" y="322" font-size="13" fill="#0b2545" text-anchor="middle">Patienten-</text>
+  <text x="255" y="338" font-size="13" fill="#0b2545" text-anchor="middle">kabel</text>
+
+  <!-- Gerät -->
+  <rect x="296" y="46" width="294" height="320" rx="10" fill="#ffffff" stroke="#0b2545" stroke-width="2"/>
+  <rect x="300" y="50" width="140" height="312" rx="8" fill="#e6f7f5" stroke="none"/>
+  <line x1="446" y1="52" x2="446" y2="360" stroke="#0d9488" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="370" y="66" font-size="13" fill="#0d9488" text-anchor="middle">Anwendungsteil (CF)</text>
+  <text x="518" y="66" font-size="13" fill="#0d9488" text-anchor="middle">Netzseite</text>
+
+  <g fill="#ffffff" stroke="#0b2545" stroke-width="1.5">
+    <rect x="308" y="78" width="124" height="44" rx="6"/>
+    <rect x="308" y="138" width="124" height="44" rx="6"/>
+    <rect x="308" y="198" width="124" height="44" rx="6"/>
+    <rect x="308" y="258" width="124" height="44" rx="6"/>
+  </g>
+  <g font-size="13" fill="#0b2545" text-anchor="middle">
+    <text x="370" y="96">Eingangsschutz</text><text x="370" y="112">(Defi-Schutz)</text>
+    <text x="370" y="156">Verstärker +</text><text x="370" y="172">RL-Treiber</text>
+    <text x="370" y="216">Filter +</text><text x="370" y="232">A/D-Wandler</text>
+    <text x="370" y="276">Lead-off- und</text><text x="370" y="292">Pacer-Erkennung</text>
+  </g>
+  <g stroke="#0b2545" stroke-width="1.5" marker-end="url(#pf)">
+    <line x1="370" y1="122" x2="370" y2="136"/>
+    <line x1="370" y1="182" x2="370" y2="196"/>
+  </g>
+
+  <g fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5">
+    <rect x="458" y="78" width="124" height="44" rx="6"/>
+    <rect x="458" y="138" width="124" height="44" rx="6"/>
+    <rect x="458" y="198" width="124" height="44" rx="6"/>
+    <rect x="458" y="258" width="124" height="44" rx="6"/>
+    <rect x="458" y="314" width="124" height="38" rx="6"/>
+  </g>
+  <g font-size="13" fill="#0b2545" text-anchor="middle">
+    <text x="520" y="96">Prozessor</text><text x="520" y="112">(Analyse)</text>
+    <text x="520" y="164">Touchscreen</text>
+    <text x="520" y="224">Thermodrucker</text>
+    <text x="520" y="276">Netzteil /</text><text x="520" y="292">Akku</text>
+    <text x="520" y="338">LAN / WLAN</text>
+  </g>
+  <g stroke="#0b2545" stroke-width="1.5" marker-end="url(#pf)">
+    <path d="M432,220 L446,220 L446,100 L456,100" fill="none"/>
+    <line x1="520" y1="122" x2="520" y2="136"/>
+    <line x1="520" y1="182" x2="520" y2="196"/>
+  </g>
+  <text x="446" y="384" font-size="13" fill="#0d9488" text-anchor="middle">Isolationsbarriere (galvanische Trennung)</text>
+  <line x1="446" y1="360" x2="446" y2="372" stroke="#0d9488" stroke-width="1.5"/>
+</svg>

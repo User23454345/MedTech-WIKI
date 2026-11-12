@@ -1,0 +1,26 @@
+[
+  {
+    "id": "iso-80601-2-12",
+    "kind": "norm",
+    "title": "ISO 80601-2-12 – Medizinische elektrische Geräte – Teil 2-12: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Beatmungsgeräten für die Intensivpflege",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 80601-2-12 (VDE 0750-2-12)",
+    "note": "Gerätespezifische Norm für Intensivbeatmungsgeräte; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "ardsnet-2000",
+    "kind": "artikel",
+    "authors": "The Acute Respiratory Distress Syndrome Network",
+    "title": "Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and the acute respiratory distress syndrome",
+    "publisher": "New England Journal of Medicine 342(18): 1301–1308",
+    "year": "2000"
+  },
+  {
+    "id": "awmf-s3-invasive-beatmung",
+    "kind": "leitlinie",
+    "authors": "Deutsche Gesellschaft für Anästhesiologie und Intensivmedizin (DGAI) u. a.",
+    "title": "S3-Leitlinie Invasive Beatmung und Einsatz extrakorporaler Verfahren bei akuter respiratorischer Insuffizienz (AWMF-Register-Nr. 001-021)",
+    "publisher": "AWMF",
+    "year": "2017",
+    "note": "Maßgeblich ist die jeweils aktuelle Fassung im AWMF-Leitlinienregister."
+  }
+]

@@ -1,0 +1,615 @@
+{
+  "id": "anaesthesiegeraet",
+  "type": "device",
+  "title": "Anästhesiearbeitsplatz (Narkosegerät)",
+  "aliases": [
+    "Narkosegerät",
+    "Narkoseapparat",
+    "Anästhesiegerät",
+    "Anästhesie-Arbeitsplatz",
+    "Anaesthetic Workstation",
+    "Anesthesia Machine",
+    "Anesthesia Delivery System"
+  ],
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 8,
+  "domains": [
+    "anaesthesiologie",
+    "chirurgie",
+    "herzchirurgie",
+    "intensivmedizin"
+  ],
+  "summary": "Ein Anästhesiearbeitsplatz dosiert Sauerstoff, Luft, Lachgas und volatile Anästhetika, beatmet den Patienten über ein Kreissystem mit CO₂-Absorber und überwacht Atemwegsdruck, Volumina sowie die Konzentrationen von O₂, CO₂ und Narkosegasen. Er ist das zentrale lebenserhaltende System bei Allgemeinanästhesien.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "typisch",
+    "note": "Anästhesiearbeitsplätze sind aktive Produkte, die Stoffe (Atemgase, Inhalationsanästhetika) an den Körper abgeben und aus ihm entfernen (CO₂-Elimination). Nach [[mdr|MDR]] Anhang VIII **Regel 12** sind solche Produkte der Klasse IIa zugeordnet, der Klasse **IIb**, wenn dies unter Berücksichtigung der Art der Stoffe, des betroffenen Körperteils und der Art der Anwendung in potenziell gefährlicher Weise geschieht – was für Beatmung und Narkosegasabgabe in der Regel angenommen wird [@mdr-2017]. Die verbindliche Einstufung (auch einzelner Komponenten wie Verdampfer oder Atemsysteme) nimmt der Hersteller für sein konkretes Produkt vor (siehe [[risikoklassen|Risikoklassen]]).",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "## Medizinischer Zweck\n\nDer **Anästhesiearbeitsplatz** – umgangssprachlich *Narkosegerät* – ist das zentrale technische System der [[anaesthesiologie|Anästhesiologie]]. Er dient dazu, Patientinnen und Patienten während einer Allgemeinanästhesie mit einem exakt dosierten Gasgemisch aus Sauerstoff, Trägergas (Luft oder Lachgas) und einem **volatilen Anästhetikum** zu versorgen, sie bei Bedarf maschinell zu beatmen und alle dafür relevanten Größen lückenlos zu überwachen [@dorsch-2008][@larsen-2018].\n\nIm Unterschied zu einem [[beatmungsgeraet|Intensivbeatmungsgerät]] arbeitet der Anästhesiearbeitsplatz in der Regel mit einem **Rückatemsystem (Kreissystem)**: Das ausgeatmete Gas wird nicht verworfen, sondern nach Entfernung des Kohlendioxids im [[co2-absorber|CO₂-Absorber]] erneut eingeatmet. Dadurch lassen sich teure und klimawirksame Narkosegase sparen, Atemgas wird angewärmt und angefeuchtet, und die Frischgaszufuhr kann weit unter das Atemminutenvolumen gesenkt werden.\n\nEin moderner Anästhesiearbeitsplatz vereint mehrere Teilsysteme, die früher getrennte Geräte waren:\n\n| Teilsystem | Aufgabe | Siehe auch |\n|---|---|---|\n| Gasversorgung und Gasmischer | Anschluss an die zentrale Gasversorgung, Dosierung von O₂, Luft und N₂O | [[proportionalventil|Proportionalventil]] |\n| Narkosemittelverdampfer | Überführung des flüssigen Anästhetikums in eine definierte Dampfkonzentration | [[narkosemittelverdampfer|Narkosemittelverdampfer]] |\n| Atemsystem (Kreissystem) | Rückatmung, CO₂-Elimination, Handbeatmung über Beutel und APL-Ventil | [[co2-absorber|CO₂-Absorber]] |\n| Beatmungseinheit (Ventilator) | maschinelle volumen- oder druckkontrollierte Beatmung | [[atemmechanik|Atemmechanik]] |\n| Überwachung | Atemwegsdruck, Volumina, O₂, CO₂, Narkosegase, Gasversorgung | [[kapnometer|Kapnometrie]], [[sauerstoffsensor|O₂-Sensor]] |\n| Narkosegasfortleitung | Abführung überschüssiger Gase aus dem OP | – |\n\n> [!belegt] Die gerätespezifische Norm [[iso-80601-2-13|ISO 80601-2-13]] definiert den Anästhesiearbeitsplatz als System für die Applikation einer Inhalationsanästhesie unter ständiger Aufsicht eines fachlich ausgebildeten Anwenders und legt besondere Anforderungen an Basissicherheit und wesentliche Leistungsmerkmale fest [@iso-80601-2-13-2022].\n\nDer Anästhesiearbeitsplatz ist ein aktives [[medizinprodukt|Medizinprodukt]] und ein [[medizinisches-elektrisches-geraet|ME-Gerät]] im Sinne der [[iec-60601-1|IEC 60601-1]]. Weil er während der Narkose die Atmung vollständig übernimmt und gleichzeitig hochwirksame Arzneimittel (Inhalationsanästhetika) abgibt, ist er ein lebenserhaltendes System: Ein unbemerkter Ausfall der Sauerstoffzufuhr, eine Diskonnektion oder eine Überdosierung des Anästhetikums kann innerhalb weniger Minuten zu schweren Schäden führen. Viele Konstruktionsmerkmale – von der Lachgassperre bis zum mechanischen Notbetrieb – dienen deshalb ausschließlich der [[patientensicherheit|Patientensicherheit]].\n",
+    "applications": "## Einsatzgebiete\n\nAnästhesiearbeitsplätze stehen überall dort, wo Allgemeinanästhesien durchgeführt werden:\n\n* **Operationssäle** aller operativen Fächer, z. B. [[chirurgie|Chirurgie]], [[orthopaedie-unfallchirurgie|Orthopädie und Unfallchirurgie]], [[herzchirurgie|Herzchirurgie]], [[geburtshilfe|Geburtshilfe]] (Sectio in Allgemeinanästhesie) und [[hno-heilkunde|HNO-Heilkunde]].\n* **Narkoseeinleitungsräume** und Aufwachbereiche, in denen ein Gerät zur Einleitung oder Ausleitung bereitsteht.\n* **Außerhalb des OP** (sogenannte Remote-Anästhesie), etwa im Herzkatheterlabor, in der Endoskopie, in der Strahlentherapie oder bei bildgebenden Verfahren. Für den Einsatz im [[mrt|MRT]] werden spezielle MR-bedingt verwendbare Geräte benötigt.\n* **Kinderanästhesie und [[neonatologie|Neonatologie]]**: Geräte mit kleinen Tidalvolumina, hoher Messauflösung und Kompensation der Schlauchcompliance.\n\n### Typischer Ablauf einer Inhalationsanästhesie\n\n1. **Präoxygenierung** über eine dicht sitzende Maske mit hohem Frischgasflow und 100 % O₂.\n2. **Einleitung** meist intravenös, danach Atemwegssicherung (Larynxmaske oder Tubus, ggf. mit [[videolaryngoskop|Videolaryngoskop]]).\n3. **Aufrechterhaltung** mit volatilem Anästhetikum (z. B. Sevofluran, Desfluran) oder als totale intravenöse Anästhesie (TIVA) mit [[spritzenpumpe|Spritzenpumpen]] – in beiden Fällen beatmet und überwacht der Anästhesiearbeitsplatz.\n4. **Low-Flow-Phase**: Reduktion des Frischgasflows auf etwa 0,5–1 l/min, sobald sich die Konzentrationen im Kreissystem stabilisiert haben [@baum-2001].\n5. **Ausleitung**: Abstellen des Verdampfers, hoher Frischgasflow zum Auswaschen, Übergang zur Spontanatmung, Extubation.\n\n### Abgrenzung zu verwandten Geräten\n\n| Gerät | Unterschied zum Anästhesiearbeitsplatz |\n|---|---|\n| [[beatmungsgeraet|Intensivbeatmungsgerät]] | offenes System ohne Rückatmung, keine Narkosegasdosierung, ausgelegt für Langzeitbeatmung und umfangreiche Spontanatmungsmodi |\n| [[transportbeatmungsgeraet|Transportbeatmungsgerät]] | kompakt, ohne Verdampfer und Kreissystem |\n| [[kapnometer|Kapnometer]] / Gasmonitor | Messfunktion, die im Anästhesiearbeitsplatz integriert ist oder als separates Modul des [[patientenmonitor|Patientenmonitors]] ausgeführt wird |\n\n> [!praxis] Viele Anästhesiearbeitsplätze sind ausdrücklich nicht für die Langzeitbeatmung auf der Intensivstation vorgesehen. Während der COVID-19-Pandemie wurden sie teilweise als Notbehelf eingesetzt; mehrere Hersteller wiesen dabei auf Einschränkungen hin (z. B. Feuchtigkeitsansammlung, Atemkalkverbrauch, fehlende Intensivmodi). Maßgeblich ist stets die [[zweckbestimmung|Zweckbestimmung]] in der Gebrauchsanweisung.\n",
+    "principle": "## Funktionsprinzip\n\nDas Funktionsprinzip lässt sich entlang des Gasweges verstehen: Gas strömt aus der Versorgung über den Mischer und den Verdampfer in das Kreissystem, wird dort vom Ventilator in die Lunge gefördert, kehrt über den Absorber zurück und verlässt das System nur als Überschussgas in die Narkosegasfortleitung.\n\n### 1. Gasversorgung und Gasdosierung\n\nSauerstoff, Druckluft und gegebenenfalls Lachgas (N₂O) kommen aus der zentralen Gasversorgung mit einem Überdruck von typischerweise etwa 5 bar; Reserveflaschen am Gerät dienen der Notversorgung [@dorsch-2008]. Druckminderer senken den Druck auf ein konstantes internes Niveau.\n\n* **Konventionelle Geräte** dosieren mit mechanischen Feinnadelventilen und **Messröhren (Rotametern)**: Ein Schwebekörper stellt sich in einem konischen Glasrohr so ein, dass Gewichtskraft und Strömungskraft im Gleichgewicht sind – die Anzeige hängt daher von Dichte und Viskosität des Gases ab und ist gasartspezifisch kalibriert (siehe [[stroemungslehre|Strömungslehre]]).\n* **Elektronische Gasmischer** messen den Flow jedes Gases mit thermischen oder Differenzdruck-[[flowsensor|Flowsensoren]] und regeln ihn über [[proportionalventil|Proportionalventile]] in einem geschlossenen [[regelkreis|Regelkreis]]. Der Anwender stellt meist direkt die gewünschte O₂-Konzentration und den Gesamt-Frischgasflow ein.\n\nWichtige Sicherheitsfunktionen der Gasdosierung:\n\n| Funktion | Wirkung |\n|---|---|\n| **Sauerstoffmangelsignal** | akustischer und optischer Alarm bei Abfall des O₂-Versorgungsdrucks |\n| **Lachgassperre** | unterbricht die N₂O-Zufuhr, wenn der O₂-Druck ausfällt |\n| **Hypoxieschutz (O₂-Verhältnisregelung)** | verhindert, dass ein O₂/N₂O-Gemisch unter einen Mindest-O₂-Anteil eingestellt wird |\n| **O₂-Flush** | Bypass mit hohem O₂-Flow direkt ins Atemsystem, umgeht Mischer und Verdampfer |\n| **Notfall-O₂ / mechanische Rückfallebene** | erlaubt bei Elektronikausfall die Versorgung mit O₂, je nach Bauart auch mit Narkosemittel |\n\n> [!vereinfacht] Der Hypoxieschutz verhindert nur ein hypoxisches **Frischgas**. Im Kreissystem kann die inspiratorische O₂-Konzentration trotzdem gefährlich sinken, wenn der Patient mehr O₂ verbraucht, als zugeführt wird – das zeigt das Rechenbeispiel zum Low-Flow unten. Deshalb ist die kontinuierliche inspiratorische O₂-Messung unverzichtbar.\n\n### 2. Narkosemittelverdampfer\n\nVolatile Anästhetika wie Sevofluran, Isofluran und Desfluran sind bei Raumtemperatur Flüssigkeiten mit hohem Dampfdruck. Der [[narkosemittelverdampfer|Narkosemittelverdampfer]] erzeugt daraus eine genau definierte Dampfkonzentration im Frischgas. Grundlage ist das **Gesetz von Dalton** über Partialdrücke (siehe [[gasgesetze|Gasgesetze]]): In einer mit Dampf gesättigten Kammer stellt sich der temperaturabhängige Sättigungsdampfdruck p_D ein. Der Volumenanteil des Dampfes im gesättigten Gas ist\n\n`c_sat = p_D / p_amb`\n\nBei 20 °C beträgt der Sättigungsdampfdruck von Sevofluran etwa 157 mmHg (≈ 21 kPa), von Isofluran etwa 238 mmHg (≈ 32 kPa) und von Desfluran etwa 669 mmHg (≈ 89 kPa) [@dorsch-2008]. Gesättigter Sevoflurandampf enthält somit rund 21 Vol.-% Anästhetikum – das Zehnfache einer klinisch üblichen Konzentration.\n\n**Bypass-Verdampfer (Plenumverdampfer):** Der Frischgasstrom wird geteilt. Ein kleiner Teilstrom F_K durchströmt die Verdampferkammer und sättigt sich dort über Dochte mit Dampf; der Hauptstrom F_B fließt im Bypass vorbei. Das Konzentrationsrad verstellt das **Teilungsverhältnis** F_B : F_K. Die in der Kammer aufgenommene Dampfmenge beträgt\n\n`V̇_D = F_K · p_D / (p_amb − p_D)`\n\nund die Abgabekonzentration\n\n`c_out = V̇_D / (F_B + F_K + V̇_D)`\n\n> [!beispiel] **Teilungsverhältnis eines Sevofluran-Verdampfers.** Frischgasflow 2 l/min, gewünschte Abgabekonzentration 2 Vol.-%, p_D = 157 mmHg, p_amb = 760 mmHg.\n> * Benötigter Dampfstrom: V̇_D = 0,02 · (2 + V̇_D) → V̇_D ≈ 0,041 l/min\n> * Kammerstrom: F_K = V̇_D · (760 − 157) / 157 ≈ 0,041 · 3,84 ≈ **0,157 l/min**\n> * Bypassstrom: F_B = 2 − 0,157 ≈ **1,84 l/min**\n> * Teilungsverhältnis F_B : F_K ≈ **11,7 : 1**\n>\n> Nur etwa 8 % des Frischgases durchströmen also die Kammer. Kleine Fehler im Teilungsverhältnis wirken sich deshalb direkt auf die Konzentration aus – ein Grund für die regelmäßige Konzentrationsprüfung.\n\nBeim Verdampfen wird **Verdampfungswärme** entzogen; die Flüssigkeit kühlt ab, der Dampfdruck sinkt und damit die Abgabekonzentration. Verdampfer gleichen dies durch eine große Metallmasse als Wärmespeicher und durch ein **temperaturabhängiges Stellglied** (z. B. Bimetall- oder Dehnstoffelement) im Bypass aus, das bei Abkühlung mehr Gas durch die Kammer lenkt (siehe [[waermeuebertragung|Wärmeübertragung]]).\n\n**Desfluran** siedet bereits bei etwa 23 °C. Ein Bypass-Verdampfer wäre bei Raumtemperatur nicht stabil zu betreiben. Desfluranverdampfer heizen das Anästhetikum deshalb mit einem [[heizelement|Heizelement]] auf eine konstante Temperatur oberhalb des Siedepunkts und dosieren den unter Überdruck stehenden Dampf über ein elektronisch geregeltes Ventil in den Frischgasstrom [@dorsch-2008].\n\n**Elektronische Dosiersysteme** neuerer Geräte spritzen das flüssige Anästhetikum direkt und mengengeregelt in das Frischgas oder in das Atemsystem ein. Sie ermöglichen eine Regelung auf eine **endtidale Zielkonzentration**: Ein übergeordneter Regler vergleicht die gemessene exspiratorische Konzentration mit dem Sollwert und stellt Frischgas und Anästhetikum automatisch nach.\n\n> [!warnung] Verdampfer sind jeweils für **ein bestimmtes** Anästhetikum kalibriert. Eine Fehlbefüllung führt wegen der unterschiedlichen Dampfdrücke zu erheblicher Über- oder Unterdosierung. Anästhetikumspezifische, farbcodierte Füllsysteme sollen Verwechslungen verhindern. Verdampfer dürfen nicht gekippt transportiert werden, wenn der Hersteller dies untersagt, da Flüssigkeit in den Bypass gelangen kann.\n\n### 3. Das Kreissystem (Rückatemsystem)\n\nDas Kreissystem besteht aus Inspirations- und Exspirationsschenkel mit je einem **Richtungsventil**, dem CO₂-Absorber, einem Handbeatmungsbeutel, dem **APL-Ventil** (Adjustable Pressure Limiting, Überdruckventil für die Handbeatmung), der Frischgaseinleitung und dem Y-Stück zum Patienten. Die Richtungsventile erzwingen eine Kreisströmung; Rückatmung von CO₂ verhindert allein der Absorber.\n\nDer [[co2-absorber|Atemkalk]] besteht überwiegend aus Calciumhydroxid mit Wasser, teils mit geringen Anteilen stärkerer Basen. Vereinfacht laufen folgende Reaktionen ab:\n\n`CO₂ + H₂O → H₂CO₃`\n`H₂CO₃ + Ca(OH)₂ → CaCO₃ + 2 H₂O + Wärme`\n\nDie Reaktion ist exotherm und setzt Wasser frei – deshalb ist der Absorber im Betrieb warm, und im Exspirationsschenkel sammelt sich Kondensat. Ein **Farbindikator** (z. B. Ethylviolett) zeigt die Erschöpfung durch einen pH-Wechsel an. Die Farbanzeige ist jedoch nur ein grober Hinweis: Verlässlich ist die Messung des **inspiratorischen CO₂** (FiCO₂ > 0 bedeutet Rückatmung).\n\n> [!warnung] Stark **ausgetrockneter Atemkalk** kann mit volatilen Anästhetika reagieren: Mit Desfluran und Isofluran kann Kohlenmonoxid entstehen, mit Sevofluran unter anderem das nephrotoxische „Compound A“ sowie starke Wärmeentwicklung [@dorsch-2008]. Längere Standzeiten mit hohem Frischgasflow (z. B. über ein Wochenende vergessener O₂-Flow) trocknen den Kalk aus. Moderne Absorber ohne starke Basen verringern dieses Risiko.\n\n### 4. Frischgasflow und Rückatmung – Low-Flow und Minimal-Flow\n\nIm Kreissystem bestimmt der **Frischgasflow (FGF)**, wie viel Gas erneut eingeatmet wird. Bei hohem FGF (z. B. 4–6 l/min) verhält sich das System nahezu wie ein offenes System; bei niedrigem FGF wird der größte Teil des Atemgases rückgeatmet. Nach Baum unterscheidet man **Low-Flow-Anästhesie** (FGF etwa 1 l/min) und **Minimal-Flow-Anästhesie** (FGF etwa 0,5 l/min); das theoretische Minimum ist das **geschlossene System**, in dem genau die vom Patienten aufgenommene Gasmenge ersetzt wird [@baum-2001].\n\nDer Sauerstoffverbrauch eines Erwachsenen lässt sich mit der **Brody-Formel** abschätzen:\n\n`V̇O₂ ≈ 10 · KG^0,75` (V̇O₂ in ml/min, KG in kg)\n\n> [!beispiel] **Warum Low-Flow eine O₂-Überwachung erfordert.** Patient 70 kg: V̇O₂ ≈ 10 · 70^0,75 ≈ 10 · 24,2 ≈ **242 ml/min**. Frischgas: O₂/Luft-Gemisch mit 50 % O₂ (der N₂-Anteil wird nicht aufgenommen; Narkosemittelaufnahme vernachlässigt).\n> * **FGF 1 l/min:** zugeführt 500 ml/min O₂, aufgenommen ≈ 242 ml/min. Überschussgas ≈ 1000 − 242 = 758 ml/min mit 258 ml/min O₂ → O₂-Anteil im System im Gleichgewicht ≈ 258 / 758 ≈ **34 %** (statt 50 % im Frischgas).\n> * **FGF 0,5 l/min:** zugeführt 250 ml/min O₂, aufgenommen ≈ 242 ml/min. Überschussgas ≈ 258 ml/min mit nur 8 ml/min O₂ → O₂-Anteil strebt gegen **≈ 3 %** – lebensgefährlich hypoxisch.\n>\n> Bei Minimal-Flow muss die O₂-Konzentration im Frischgas daher deutlich erhöht werden (z. B. 60 % und mehr); die inspiratorische O₂-Messung mit eng gesetzter unterer Alarmgrenze ist Pflicht. Das Beispiel ist eine stationäre Bilanz unter idealer Durchmischung.\n\nElektronische Geräte unterstützen den Anwender mit Rechenhilfen, die den zu erwartenden O₂-Anteil oder den Narkosemittelverbrauch anzeigen, oder regeln Frischgas und Anästhetikum automatisch auf Zielwerte.\n\n### 5. Beatmungseinheit (Ventilator)\n\nDie Beatmungseinheit fördert das Gas des Kreissystems in die Lunge. Es haben sich vier Antriebsprinzipien etabliert [@dorsch-2008]:\n\n| Prinzip | Funktionsweise | Merkmale |\n|---|---|---|\n| **Balg in Kammer** („bag in bottle“) | Antriebsgas (O₂ oder Luft) komprimiert einen Faltenbalg, in dem sich das Patientengas befindet | Antriebsgas und Patientengas getrennt; Antriebsgasverbrauch; Balgbewegung sichtbar |\n| **Kolbenantrieb** | ein vom [[elektromotor|Elektromotor]] bewegter Kolben verdrängt das Patientengas | kein Antriebsgas, präzise Volumenabgabe |\n| **Turbine** | eine [[turbine|Turbine]] mit [[bldc-motor|BLDC-Antrieb]] erzeugt Druck und Flow im Kreissystem | hohe Flowreserve, gute Unterstützung der Spontanatmung |\n| **Volumenreflektor / Gasreservoir** | ein Speicher, in dem das rückgeatmete Gas von O₂-Antriebsgas verdrängt wird, mit Ventilsteuerung wie im Intensivbeatmungsgerät | Ventilsteuerung ähnlich Intensivbeatmung, geringes Systemvolumen |\n\nDie Beatmung folgt derselben Physik wie beim [[beatmungsgeraet|Intensivbeatmungsgerät]]: Der Atemwegsdruck setzt sich aus elastischem und resistivem Anteil zusammen (`P_aw = V / C + R · V̇ + PEEP`, siehe [[atemmechanik|Atemmechanik]]). Typische Modi sind volumenkontrollierte (VCV), druckkontrollierte (PCV) und druckunterstützte Beatmung (PSV) sowie synchronisierte Mischformen.\n\n**Frischgasentkopplung:** Bei älteren Kreissystemen addierte sich der während der Inspiration zufließende Frischgasflow zum eingestellten Tidalvolumen. Moderne Geräte entkoppeln das Frischgas während der Inspiration (z. B. über ein Ventil in den Beutel oder einen Speicher), sodass das abgegebene Volumen unabhängig vom FGF ist.\n\n**Compliance-Kompensation:** Schläuche und Absorber dehnen sich unter Druck und nehmen Gas auf, das den Patienten nicht erreicht. Beim Selbsttest misst das Gerät diese **Systemcompliance** C_sys und gibt das „verlorene“ Volumen zusätzlich ab: `V_Verlust = C_sys · (P_peak − PEEP)`.\n\n> [!beispiel] Systemcompliance 4 ml/mbar, Spitzendruck 25 mbar, PEEP 5 mbar → ohne Kompensation würden 4 · 20 = **80 ml** im Schlauchsystem verbleiben. Bei einem Tidalvolumen von 500 ml sind das 16 % – bei einem Säugling mit 30 ml Tidalvolumen wäre die Beatmung ohne Kompensation praktisch unwirksam. Werte beispielhaft.\n\n### 6. Atemgas- und Narkosegasmonitoring\n\nDie Gasanalyse arbeitet meist im **Seitenstromverfahren**: Eine Pumpe saugt am Y-Stück kontinuierlich Probengas ab (typisch etwa 150–200 ml/min), das über eine Wasserfalle zur Messkammer gelangt und danach in das Kreissystem zurückgeführt oder der Narkosegasfortleitung zugeführt wird.\n\n* **CO₂, N₂O und volatile Anästhetika** werden mit nichtdispersiver Infrarotspektroskopie ([[co2-sensor|NDIR]]) gemessen. Jedes Gas absorbiert Infrarotstrahlung bei charakteristischen Wellenlängen (CO₂ bei etwa 4,3 µm). Nach dem [[lambert-beer|Lambert-Beer-Gesetz]] gilt `I = I₀ · e^(−ε · c · d)` – aus der Schwächung der Strahlung folgt die Konzentration c. Mehrkanalige Messbänke erkennen das verwendete Anästhetikum automatisch und melden Gemische [@hering-2018].\n* **Sauerstoff** wird schnell und driftarm **paramagnetisch** gemessen (O₂ wird im Magnetfeld angezogen) oder mit einer galvanischen Brennstoffzelle (siehe [[sauerstoffsensor|Sauerstoffsensor]]).\n* Aus dem Kapnogramm werden endtidales CO₂ (etCO₂), inspiratorisches CO₂ und die Atemfrequenz bestimmt (siehe [[kapnometer|Kapnometrie]], [[gasaustausch|Gasaustausch]]).\n\nZur Abschätzung der Narkosetiefe wird die **minimale alveoläre Konzentration (MAC)** herangezogen – die alveoläre Konzentration, bei der 50 % der Patienten auf einen Hautschnitt nicht mehr mit Abwehrbewegungen reagieren. Die Anteile mehrerer Anästhetika addieren sich näherungsweise:\n\n`MAC-Vielfaches = Σ (c_et,i / MAC_i)`\n\n> [!beispiel] Endtidal 1,4 Vol.-% Sevofluran (MAC ≈ 2,0 Vol.-% beim Erwachsenen mittleren Alters) und 50 % N₂O (MAC ≈ 104 Vol.-%): 1,4 / 2,0 + 50 / 104 ≈ 0,70 + 0,48 ≈ **1,2 MAC**. MAC-Werte sind alters- und temperaturabhängig; Monitore korrigieren teils automatisch [@larsen-2018].\n\n### 7. Steuerung, Überwachung und Alarme\n\nEin [[mikrocontroller|Steuerrechner]] regelt Mischer, Ventilator und elektronische Verdampfer; ein davon unabhängiger Überwachungskanal plausibilisiert Messwerte und löst Alarme aus. Die Signalverarbeitung umfasst Tiefpass[[filter|filterung]] der Druck- und Flowsignale, Integration des Flows zum Volumen (`V = ∫ V̇ dt`), Atemphasenerkennung sowie Umrechnung von Gasvolumina auf Bezugsbedingungen. Die Alarme sind nach [[iec-60601-1-8|IEC 60601-1-8]] priorisiert (siehe [[alarmsystem|Alarmsysteme]]). Fällt die Elektronik aus, ermöglichen viele Geräte eine **mechanische Rückfallebene**: O₂-Zufuhr über einen pneumatischen Notdosierer und Handbeatmung über Beutel und APL-Ventil.\n",
+    "construction": "## Technischer Aufbau\n\nEin Anästhesiearbeitsplatz ist ein fahrbares oder an einer Deckenversorgungseinheit montiertes System. Die Baugruppen lassen sich in einen **Hochdruck-/Niederdruckteil**, das **Atemsystem**, die **Beatmungseinheit**, die **Überwachung** und die **Elektronik/Energieversorgung** gliedern.\n\n### Gaseinlass\n\n* **Schlauchanschlüsse** für O₂, Luft und N₂O mit gasartspezifischen, nicht verwechselbaren Steckkupplungen und Farbkennzeichnung (in Europa O₂ weiß, N₂O blau, Luft schwarz-weiß).\n* **Reserveflaschen** (meist O₂, teils N₂O) mit Druckminderer und Rückschlagventil.\n* **Manometer bzw. Drucksensoren** für Versorgungs- und Flaschendruck ([[drucksensor|piezoresistive Drucksensoren]]).\n* **Druckminderer** und **Lachgassperre**.\n\n### Gasmischer und Frischgasausgang\n\nEntweder mechanische Messröhrenblöcke mit Feinnadelventilen oder elektronische Mischer mit [[proportionalventil|Proportionalventilen]] und [[flowsensor|Flowsensoren]]. Zusätzlich ein **O₂-Flush-Taster** und häufig ein **externer Frischgasauslass** für halboffene Systeme. Bei einigen Geräten kann der Frischgasstrom auch an andere Atemsysteme (z. B. für Kinder) abgegeben werden.\n\n### Verdampferhalterung\n\nEine Steckhalterung nimmt meist ein bis zwei, teils mehr [[narkosemittelverdampfer|Verdampfer]] auf. Eine **Verriegelung** stellt sicher, dass immer nur ein Verdampfer gleichzeitig geöffnet werden kann.\n\n### Kompaktatemsystem\n\nDas Kreissystem ist heute meist als beheizter, autoklavierbarer Block mit kurzen internen Gaswegen ausgeführt:\n\n| Baugruppe | Funktion |\n|---|---|\n| Inspirations- und Exspirationsventil | Richtungsventile (Glimmer- oder Kunststoffscheiben) |\n| [[co2-absorber|CO₂-Absorber]] | Mehrweg- oder Einwegbehälter mit Atemkalk, oft während des Betriebs wechselbar |\n| Handbeatmungsbeutel und APL-Ventil | Handbeatmung und Spontanatmung, Druckbegrenzung |\n| Umschalter manuell/maschinell | wählt zwischen Beutel und Ventilator |\n| Überdruck-/Überschussgasventil | führt Überschussgas der Narkosegasfortleitung zu |\n| Heizung | verringert Kondensation (siehe [[heizelement|Heizelement]]) |\n| Flow- und Drucksensoren | inspiratorisch und exspiratorisch, teils am Y-Stück |\n\nPatientenseitig folgen Schlauchsystem, Filter bzw. [[atemgasbefeuchter|HME-Filter]] und Y-Stück.\n\n### Beatmungseinheit\n\nJe nach Gerätekonzept ein Balg in einer transparenten Kammer, ein Kolben mit Elektromotor, eine [[turbine|Turbine]] oder ein Gasreservoir mit Ventilsteuerung. Ein **PEEP-Ventil** bzw. eine elektronisch geregelte Exspirationssteuerung hält den endexspiratorischen Druck.\n\n### Gasmonitoring\n\nIntegriertes Multigasmodul mit Probengaspumpe, Wasserfalle, NDIR-Messbank ([[co2-sensor|CO₂-Sensor]]) und paramagnetischem oder galvanischem [[sauerstoffsensor|O₂-Sensor]]. Bei Geräten ohne integrierte Gasmessung übernimmt ein Modul des [[patientenmonitor|Patientenmonitors]] diese Aufgabe.\n\n### Narkosegasfortleitung\n\nÜberschussgas aus APL- und Überschussventil sowie Probengas wird über eine **Narkosegasfortleitung** (aktive Absaugung mit Unterdruck, Durchfluss über eine Anzeige kontrollierbar) abgeführt. Ein Reservoir mit Druckausgleich verhindert, dass der Sog auf das Atemsystem des Patienten wirkt. Ziel ist der Schutz des Personals vor Narkosegasexposition.\n\n### Elektronik und Energieversorgung\n\n* [[medizinisches-netzteil|Medizinisches Netzteil]] mit Verbindung zum Schutzleiter (Schutzklasse I, siehe [[schutzklassen|Schutzklassen]]).\n* Pufferakku ([[lithium-ionen-akku|Lithium-Ionen]] oder Blei-Gel) zur Überbrückung von Netzausfällen.\n* Steuer- und Überwachungsrechner, [[display-bedienoberflaeche|Bildschirm und Bedienelemente]], Schnittstellen zu Patientenmonitor und Anästhesie-Dokumentationssystem (z. B. über [[hl7-fhir|HL7]]).\n* Häufig Zusatzsteckdosen für Monitore, Arbeitsfläche, Schubladen, Absaugung ([[absauggeraet|Absauggerät]]) und Halterungen für [[spritzenpumpe|Spritzenpumpen]].\n\n> [!hinweis] Zusatzsteckdosen am Gerät bilden mit den angeschlossenen Geräten ein **ME-System**. Die Summe der Ableitströme aller angeschlossenen Geräte fließt über den gemeinsamen Schutzleiter – das muss bei der elektrischen Sicherheitsprüfung berücksichtigt werden (siehe [[ableitstrom|Ableitstrom]]).\n\n> [!vereinfacht] Die Abbildungen zeigen ein generisches Schema. Reale Geräte unterscheiden sich in der Anordnung und Integration der Baugruppen erheblich.\n",
+    "maintenance": "## Wartung und Instandhaltung\n\nDie [[instandhaltung-grundlagen|Instandhaltung]] nach [[din-31051|DIN 31051]] umfasst [[wartung|Wartung]], [[inspektion|Inspektion]], [[instandsetzung|Instandsetzung]] und Verbesserung. Beim Anästhesiearbeitsplatz greifen gesetzliche Prüfpflichten, Herstellervorgaben und tägliche Anwenderprüfungen ineinander.\n\n### Rechtlicher Rahmen\n\n> [!belegt] Produkte zur maschinellen Beatmung mit oder ohne Anästhesie sind in **Anlage 1 Nr. 1.5 der [[mpbetreibv|MPBetreibV]]** (Fassung 2025) aufgeführt. Für sie sind **sicherheitstechnische Kontrollen ([[stk|STK]])** nach § 12 durchzuführen – in den vom Hersteller angegebenen Fristen, fehlen solche Angaben, spätestens alle zwei Jahre [@mpbetreibv]. Eine **messtechnische Kontrolle ([[mtk|MTK]])** nach § 15 i. V. m. Anlage 2 ist für Anästhesiearbeitsplätze nicht vorgeschrieben.\n\nFür Medizinprodukte der Anlage 1 gelten zusätzlich besondere Betreiberpflichten, u. a. eine Funktionsprüfung am Betriebsort und eine dokumentierte [[einweisung|Einweisung]] der Anwender, das Führen eines [[medizinproduktebuch|Medizinproduktebuchs]] sowie die Aufnahme in das [[bestandsverzeichnis|Bestandsverzeichnis]] (siehe [[betreiberpflichten|Betreiberpflichten]]). Maßgeblich ist die jeweils geltende Fassung der Verordnung.\n\n### Präventive Wartung\n\nHersteller schreiben eine präventive Wartung vor, je nach Gerät jährlich oder nach Betriebsstunden. Typische Arbeiten:\n\n* Tausch von **Verschleißteilen und Dichtungen** (O-Ringe im Atemsystem, Ventilscheiben, Balg, Kolbendichtungen), Filter der Kühlung und der Gasmessung.\n* **O₂-Sensor-Tausch** bei galvanischen Zellen (begrenzte Lebensdauer), Kalibrierung paramagnetischer Sensoren.\n* **Kalibrierung der Gasmessung** mit Prüfgas definierter Zusammensetzung ([[kalibrierung|Kalibrierung und Justierung]]).\n* **Verdampferservice** nach Herstellerangabe (Prüfung der Abgabekonzentration, ggf. Überholung).\n* **Akkuprüfung** und -tausch (siehe [[akkufehler|Akkufehler]]).\n* Software-Updates und Sicherheitsmitteilungen des Herstellers (siehe [[vigilanz|Vigilanz]]).\n\n### Aufbereitung\n\nTeile des Atemsystems kommen mit Atemgas in Kontakt und müssen nach Herstellerangabe aufbereitet werden ([[aufbereitung|Aufbereitung]], [[desinfektion|Desinfektion]], ggf. [[sterilisation|Sterilisation]]). Beim Einsatz geeigneter Atemsystemfilter zwischen Patient und Gerät erlauben viele Hersteller längere Wechselintervalle für Schlauchsysteme und Atemsystem – Festlegungen trifft die Krankenhaushygiene auf Basis der Herstellerangaben [@krinko-bfarm-2012].\n\n### Tägliche Prüfungen durch Anwender\n\nVor Inbetriebnahme (zu Beginn des Tages) und vor jedem Patienten führen die Anwender den **Geräte-Check** durch – bei modernen Geräten weitgehend als automatischer Selbsttest. Er umfasst Gasversorgung, Dichtigkeit, Systemcompliance, Sensorkalibrierung, Ventilfunktion, Absorberzustand, Verdampferfüllstand, Narkosegasfortleitung und Verfügbarkeit eines separaten Beatmungsbeutels als Rückfallebene.\n\n> [!praxis] Häufige Ursachen für einen nicht bestandenen Dichtigkeitstest sind ein nicht korrekt eingesetzter Absorberbehälter, ein fehlender oder schlecht sitzender Verdampfer, ein offener Probengasanschluss und beschädigte O-Ringe. Ein systematisches Vorgehen vom Gerät zum Patienten spart Zeit (siehe [[fehlersuche|Systematische Fehlersuche]]).\n\n> [!warnung] Instandsetzungen an gasführenden Teilen, Verdampfern und Sicherheitseinrichtungen dürfen nur befugte, vom Hersteller geschulte Personen mit geeigneten Prüfmitteln durchführen. Nach jedem Eingriff ist eine Prüfung nach Herstellervorgabe einschließlich elektrischer Sicherheitsprüfung erforderlich.\n",
+    "testing": "## Prüfverfahren\n\n### Sicherheitstechnische Kontrolle (STK)\n\nDie [[stk|STK]] erfolgt nach der Prüfanweisung des Herstellers und umfasst typischerweise:\n\n1. **Sichtprüfung**: Gehäuse, Schläuche, Kupplungen, Kennzeichnung, Flaschenhalterungen, Rollen und Bremsen, Verdampferhalterung.\n2. **Elektrische Sicherheit** nach [[iec-62353|IEC 62353]].\n3. **Gasversorgung**: Dichtigkeit des Hochdruck- und Niederdrucksystems, Funktion von Sauerstoffmangelsignal und Lachgassperre, Hypoxieschutz.\n4. **Atemsystem**: Dichtigkeit, Richtungsventile, APL-Ventil, Überdruckbegrenzung.\n5. **Beatmungsleistung**: Tidalvolumen, Frequenz, Drücke und PEEP mit Testlunge und Analysator.\n6. **Dosiergenauigkeit**: Frischgasflows, O₂-Konzentration, Abgabekonzentration der Verdampfer.\n7. **Gasmonitoring**: Prüfung mit Prüfgas.\n8. **Alarme**: Auslösen aller sicherheitsrelevanten Alarme.\n9. **Dokumentation** im [[medizinproduktebuch|Medizinproduktebuch]].\n\n### Elektrische Sicherheitsprüfung\n\nGemessen werden [[schutzleiterwiderstand|Schutzleiterwiderstand]], ggf. [[isolationswiderstand|Isolationswiderstand]], Geräteableitstrom und Patientenableitstrom der [[anwendungsteile|Anwendungsteile]] ([[ableitstrommessung|Ableitstrommessung]]). Zusatzsteckdosen und angeschlossene Geräte werden als ME-System geprüft [@iec-62353].\n\n### Prüfung von Gasdosierung und Verdampfer\n\nMit einem kalibrierten Gasflow-Analysator werden Frischgasflows und O₂-Konzentration nachgemessen. Die Abgabekonzentration des Verdampfers wird mit einem Narkosegasanalysator (Infrarot oder piezoelektrisch-resonant) bei mehreren Einstellungen und Flows geprüft. Die zulässigen Abweichungen legt der Hersteller fest.\n\n> [!beispiel] Ein Sevofluran-Verdampfer steht auf 2 Vol.-%, FGF 2 l/min. Der Analysator misst 1,86 Vol.-%. Relative Abweichung: (1,86 − 2,0) / 2,0 = **−7 %**. Ob der Wert zulässig ist, entscheidet die Toleranz in der Prüfanweisung des Herstellers. Werte beispielhaft.\n\n### Leistungsprüfung der Beatmung\n\nMit Testlunge (definierte Compliance und Resistance) und Analysator werden Tidalvolumen, Frequenz, Spitzen-, Plateau- und PEEP-Druck gemessen und mit Einstellung und Geräteanzeige verglichen. Volumina müssen auf gleiche Bezugsbedingungen umgerechnet werden (z. B. BTPS oder ATPD, siehe [[gasgesetze|Gasgesetze]]); andernfalls entstehen scheinbare Abweichungen von mehreren Prozent (siehe [[messunsicherheit|Messunsicherheit]], [[pruefgeraete|Prüfgeräte und Simulatoren]]).\n\n### Prüfung der Gasmessung\n\nDas Multigasmodul wird mit zertifiziertem Prüfgas (z. B. definierte CO₂-, O₂- und Anästhetikumkonzentration) beaufschlagt. Geprüft werden Anzeigegenauigkeit, Anstiegszeit, Probengasflow und Okklusionserkennung der Probenleitung.\n\n### Funktionsprüfung vor Anwendung\n\nDie [[funktionspruefung|Funktionsprüfung]] durch die Anwender (Geräte-Check) ist keine STK, aber die wichtigste tägliche Sicherheitsmaßnahme. Sie umfasst Dichtigkeits- und Compliancetest, Kalibrierung der Sensoren, Prüfung der Gasversorgung und der Rückfallebene.\n\n> [!hinweis] Eine [[mtk|MTK]] ist für Anästhesiearbeitsplätze nicht vorgeschrieben. Trotzdem sind Messfunktionen wie Gasanalyse, Volumen- und Druckmessung Teil der STK-Leistungsprüfung und der Herstellerwartung.\n"
+  },
+  "body": "## Geschichte und Entwicklung\n\nDie ersten Narkosen im 19. Jahrhundert wurden mit Äther oder Chloroform über einfache Tropfmasken durchgeführt. Anfang des 20. Jahrhunderts entstanden Apparate, die Sauerstoff und Narkosegase aus Druckflaschen dosierten; das Lübecker Unternehmen [[draeger|Dräger]] stellte 1902 den „Roth-Dräger“-Narkoseapparat vor. Mit der Einführung des CO₂-Absorbers und des Kreissystems wurde Rückatmung möglich. Später folgten kalibrierte, temperaturkompensierte Verdampfer, mechanische Beatmungseinheiten und schließlich elektronische Gasmischer und integrierte Gasüberwachung (siehe [[geschichte-medizintechnik|Geschichte der Medizintechnik]]).\n\n## Aktuelle Entwicklungen\n\n* **Zielwertgesteuerte Inhalationsanästhesie**: automatische Regelung auf endtidale Anästhetikum- und inspiratorische O₂-Konzentration.\n* **Klimaschutz**: Volatile Anästhetika sind starke Treibhausgase; Desfluran und Lachgas haben eine besonders hohe Klimawirkung. Low-Flow-Techniken, Verzicht auf Lachgas und auf Desfluran sowie Narkosegas-Rückgewinnungssysteme gewinnen an Bedeutung. Die EU hat die Verwendung von Desfluran im Rahmen der überarbeiteten F-Gase-Verordnung stark eingeschränkt.\n* **Sauerstoff 93**: Die aktuelle Ausgabe der [[iso-80601-2-13|ISO 80601-2-13]] berücksichtigt Anästhesiearbeitsplätze, die mit Sauerstoff aus Konzentratoren (O₂-Anteil etwa 93 %) betrieben werden [@iso-80601-2-13-2022].\n* **Vernetzung**: Integration in Anästhesie-Informationssysteme, Fernwartung und herstellerübergreifende Kommunikationsstandards.\n* **Gebrauchstauglichkeit**: einheitliche Bedienkonzepte zwischen Narkosegerät und Monitor zur Vermeidung von [[anwendungsfehler|Anwendungsfehlern]] (siehe [[gebrauchstauglichkeit|Gebrauchstauglichkeit]], [[iec-62366-1|IEC 62366-1]]).\n",
+  "components": [
+    {
+      "ref": "narkosemittelverdampfer",
+      "role": "Erzeugt eine definierte Dampfkonzentration des volatilen Anästhetikums im Frischgas (Bypass-, beheizter Desfluran- oder elektronischer Injektionsverdampfer)."
+    },
+    {
+      "ref": "co2-absorber",
+      "role": "Bindet das ausgeatmete CO₂ chemisch und ermöglicht so die Rückatmung im Kreissystem."
+    },
+    {
+      "ref": "proportionalventil",
+      "role": "Dosiert im elektronischen Gasmischer O₂, Luft und N₂O; in manchen Ventilatoren auch den Inspirationsflow."
+    },
+    {
+      "ref": "elektromotor",
+      "role": "Antrieb von Kolbenventilatoren; Lageregelung des Kolbens bestimmt das abgegebene Volumen."
+    },
+    {
+      "ref": "turbine",
+      "role": "Bei turbinengetriebenen Anästhesieventilatoren Erzeugung von Druck und Flow im Kreissystem."
+    },
+    {
+      "ref": "exspirationsventil",
+      "role": "Steuert in der Exspiration den PEEP und gibt das Gas in Richtung Absorber frei."
+    },
+    {
+      "ref": "heizelement",
+      "role": "Beheizung des Atemsystems gegen Kondensat; im Desfluranverdampfer Temperierung des Anästhetikums."
+    },
+    {
+      "ref": "atemgasbefeuchter",
+      "role": "HME-Filter am Y-Stück als Wärme- und Feuchtetauscher und bakterieller/viraler Schutz des Atemsystems."
+    },
+    {
+      "ref": "mikrocontroller",
+      "role": "Steuer- und unabhängiger Überwachungsrechner für Mischer, Ventilator, Gasmessung, Alarme und Selbsttests."
+    },
+    {
+      "ref": "medizinisches-netzteil",
+      "role": "Energieversorgung aus dem Netz, Laden des Pufferakkus, Versorgung der Zusatzsteckdosen."
+    },
+    {
+      "ref": "lithium-ionen-akku",
+      "role": "Überbrückung von Netzausfällen (je nach Gerät auch Blei-Gel-Akku)."
+    },
+    {
+      "ref": "display-bedienoberflaeche",
+      "role": "Anzeige von Druck-, Flow- und Gaskurven, Messwerten, Trends und Alarmen; Bedienung über Touchscreen und Drehknopf."
+    },
+    {
+      "ref": "alarmsystem",
+      "role": "Priorisierte Alarme für Gasversorgung, Diskonnektion, Drücke, Volumina und Gaskonzentrationen nach IEC 60601-1-8."
+    }
+  ],
+  "sensors": [
+    {
+      "ref": "flowsensor",
+      "role": "Inspiratorische und exspiratorische Flowmessung (Hitzdraht oder Differenzdruck) für Tidal- und Minutenvolumen sowie Leckageerkennung; thermische Flowsensoren im elektronischen Gasmischer."
+    },
+    {
+      "ref": "drucksensor",
+      "role": "Atemwegsdruck, Versorgungsdrücke von O₂/Luft/N₂O und Flaschendrücke."
+    },
+    {
+      "ref": "sauerstoffsensor",
+      "role": "Inspiratorische O₂-Konzentration – paramagnetisch im Multigasmodul oder als galvanische Zelle im Atemsystem."
+    },
+    {
+      "ref": "co2-sensor",
+      "role": "NDIR-Messbank im Seitenstrom für CO₂, N₂O und volatile Anästhetika inklusive automatischer Anästhetikumerkennung."
+    },
+    {
+      "ref": "temperatursensor",
+      "role": "Temperatur im Verdampfer (Kompensation, Desfluranheizung), im Atemsystem und in der Elektronik."
+    }
+  ],
+  "specs": [
+    {
+      "param": "Frischgasflow (Gesamt)",
+      "value": "etwa 0,2 bis 15–18 l/min",
+      "note": "untere Grenze gerätespezifisch; Low-Flow ≈ 1 l/min, Minimal-Flow ≈ 0,5 l/min [@baum-2001].",
+      "evidence": "typisch",
+      "sources": [
+        "baum-2001"
+      ]
+    },
+    {
+      "param": "O₂-Konzentration im Frischgas",
+      "value": "21–100 %",
+      "note": "Hypoxieschutz verhindert bei O₂/N₂O-Gemischen einen zu niedrigen O₂-Anteil (Mindestwert gerätespezifisch, typischerweise um 25 %).",
+      "evidence": "typisch"
+    },
+    {
+      "param": "O₂-Flush",
+      "value": "etwa 35–75 l/min",
+      "note": "direkte O₂-Zufuhr ins Atemsystem unter Umgehung von Mischer und Verdampfer.",
+      "evidence": "typisch",
+      "sources": [
+        "dorsch-2008"
+      ]
+    },
+    {
+      "param": "Verdampfer-Einstellbereich",
+      "value": "Sevofluran etwa 0–8 Vol.-%, Isofluran etwa 0–5 Vol.-%, Desfluran etwa 0–18 Vol.-%",
+      "note": "anästhetikumspezifische Verdampfer; Bereiche je nach Bauart.",
+      "evidence": "typisch",
+      "sources": [
+        "dorsch-2008"
+      ]
+    },
+    {
+      "param": "Sättigungsdampfdruck bei 20 °C",
+      "value": "Sevofluran ≈ 157 mmHg, Isofluran ≈ 238 mmHg, Desfluran ≈ 669 mmHg",
+      "note": "physikalische Stoffeigenschaft; Grundlage der Verdampferauslegung.",
+      "evidence": "belegt",
+      "sources": [
+        "dorsch-2008"
+      ]
+    },
+    {
+      "param": "Tidalvolumen (Einstellbereich)",
+      "value": "etwa 20 bis 1500 ml; mit Pädiatrie-/Neonatal-Option teils ab wenigen Millilitern",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Atemfrequenz",
+      "value": "etwa 4 bis 60–100 /min",
+      "evidence": "typisch"
+    },
+    {
+      "param": "PEEP",
+      "value": "0 bzw. aus bis etwa 20–30 mbar",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Maximaler Inspirationsdruck",
+      "value": "etwa 60–80 mbar",
+      "note": "zusätzlich unabhängige Überdruckbegrenzung im Atemsystem.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Probengasflow Seitenstrom-Gasmessung",
+      "value": "etwa 150–200 ml/min",
+      "note": "Kinder-/Neonatalmodus teils geringer; muss bei Minimal-Flow in die Bilanz einbezogen werden, wenn das Probengas nicht zurückgeführt wird.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Gasversorgung",
+      "value": "O₂, Luft, ggf. N₂O aus zentraler Versorgung, Nenndruck etwa 5 bar; Reserveflaschen",
+      "evidence": "typisch",
+      "sources": [
+        "dorsch-2008"
+      ]
+    },
+    {
+      "param": "Akku-Überbrückungszeit",
+      "value": "etwa 30 bis 90 min",
+      "note": "abhängig von Gerät, Akkuzustand, Ventilatorantrieb und Zusatzverbrauchern.",
+      "evidence": "typisch"
+    }
+  ],
+  "manufacturers": [
+    {
+      "ref": "draeger",
+      "models": [
+        "Perseus A500",
+        "Atlan A350",
+        "Atlan A300",
+        "Zeus IE",
+        "Fabius plus"
+      ],
+      "note": "Perseus mit Turbinenantrieb, Atlan mit Kolbenantrieb; Verfügbarkeit einzelner Modelle regional unterschiedlich."
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "Aisys CS²",
+        "Carestation 750",
+        "Carestation 650"
+      ],
+      "note": "Verdampfer der Tec-Reihe."
+    },
+    {
+      "ref": "getinge",
+      "models": [
+        "Flow-i",
+        "Flow-e",
+        "Flow-c"
+      ],
+      "note": "Ventilator nach dem Volume-Reflector-Prinzip."
+    },
+    {
+      "ref": "mindray",
+      "models": [
+        "A9",
+        "A8",
+        "A7"
+      ],
+      "note": "A9 mit elektronischem Verdampfer und automatischer Zielwertregelung (Herstellerangabe)."
+    },
+    {
+      "ref": "loewenstein-medical",
+      "models": [
+        "Leon",
+        "Leon plus",
+        "Leon mri"
+      ],
+      "note": "Leon mri für den Einsatz im MRT-Umfeld."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Für Anästhesiearbeitsplätze existieren keine öffentlich überprüfbaren Listenpreise. Der Preis hängt ab von: Geräteplattform (Ventilatorprinzip, elektronischer oder mechanischer Mischer), Anzahl und Art der Verdampfer (Desfluranverdampfer mit Heizung, elektronische Dosierung), integriertem Gasmonitoring, Software-Optionen (Beatmungsmodi, Zielwertregelung, Low-Flow-Assistenz), Montageart (fahrbar oder an Deckenversorgungseinheit), Schnittstellen zu Monitor und Dokumentationssystem, Servicevertrag und Ausschreibungsbedingungen. Für die Beschaffung sind die **Gesamtbetriebskosten** entscheidend: Atemkalk, Schlauchsysteme, Filter, Probenleitungen und Wasserfallen, O₂-Sensoren, Wartungskits, Verdampferservice, Akkutausch, STK, Einweisungen – und nicht zuletzt der Narkosemittelverbrauch, der durch Low-Flow-Fähigkeit des Geräts erheblich beeinflusst wird ([[medizintechnik-management|Medizintechnik-Management]])."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.5 – Produkte zur maschinellen Beatmung mit oder ohne Anästhesie; nicht in Anlage 2 aufgeführt",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); präventive Wartung nach Herstellerangabe (häufig jährlich); Geräte-Check durch Anwender täglich und vor jedem Patienten"
+  },
+  "faults": [
+    {
+      "title": "O₂-Versorgungsdruck niedrig / Gasversorgungsausfall",
+      "cause": "Störung der zentralen Gasversorgung, abgezogene oder geknickte Versorgungsschläuche, leere Reserveflasche, defekte Kupplung.",
+      "action": "Patientenversorgung sichern (Reserveflasche öffnen, ggf. separater Beatmungsbeutel mit O₂-Flasche), Versorgungsanschlüsse prüfen, Haustechnik informieren; Lachgassperre hat N₂O-Zufuhr unterbrochen."
+    },
+    {
+      "title": "Dichtigkeitstest nicht bestanden / Leckage im Atemsystem",
+      "ref": "leckage",
+      "cause": "Absorberbehälter nicht korrekt eingesetzt, Verdampfer nicht verriegelt, offene Probengasleitung, beschädigte O-Ringe, undichtes Schlauchsystem oder Beutel.",
+      "action": "Systematisch vom Gerät zum Patienten prüfen, Bauteile neu einsetzen, Test wiederholen; bei anhaltendem Fehler Gerät sperren und Medizintechnik informieren."
+    },
+    {
+      "title": "Diskonnektion / Minutenvolumen niedrig",
+      "ref": "diskonnektion",
+      "cause": "Gelöstes Y-Stück oder Filter, Extubation, Leckage am Tubus-Cuff, falscher Schalterstellung manuell/maschinell.",
+      "action": "Verbindung wiederherstellen, ggf. manuell beatmen; Kapnographie prüfen (fehlendes CO₂-Signal ist ein frühes Zeichen)."
+    },
+    {
+      "title": "Atemwegsdruck hoch",
+      "ref": "atemwegsdruck-hoch",
+      "cause": "Abgeknickter oder verlegter Tubus, Bronchospasmus, zu flache Narkose (Husten, Pressen), geschlossenes APL-Ventil bei Handbeatmung, Wasser im Schlauch.",
+      "action": "Patient und Atemweg beurteilen, Schlauchsystem prüfen, ggf. absaugen; Spitzen- und Plateaudruck vergleichen."
+    },
+    {
+      "title": "Inspiratorisches CO₂ erhöht",
+      "cause": "Erschöpfter Atemkalk, klemmendes oder fehlendes Inspirations- oder Exspirationsventil, Kanalbildung im Absorber.",
+      "action": "Frischgasflow erhöhen, Absorber wechseln, Ventilscheiben prüfen; bei Ventildefekt Gerät außer Betrieb nehmen und mit Ersatzgerät weiterarbeiten."
+    },
+    {
+      "title": "Gasmessung unplausibel / Probenleitung verlegt",
+      "ref": "sensordrift",
+      "cause": "Volle Wasserfalle, abgeknickte oder feuchte Probenleitung, gealterte O₂-Zelle, fehlende Kalibrierung, Anästhetikumgemisch nach Verdampferwechsel.",
+      "action": "Wasserfalle und Probenleitung tauschen, Kalibrierung bzw. Nullabgleich durchführen; bei wiederholtem Auftreten Kalibrierung mit Prüfgas durch die Medizintechnik."
+    },
+    {
+      "title": "Netzausfall / Akkubetrieb",
+      "ref": "akkufehler",
+      "cause": "Netzstecker gezogen, Ausfall der Stromversorgung im OP, gealterter Akku mit verringerter Kapazität.",
+      "action": "Netzanschluss wiederherstellen, verbleibende Akkulaufzeit beachten, mechanische Rückfallebene und Handbeatmung bereithalten; Akku im Rahmen der Wartung prüfen."
+    },
+    {
+      "title": "Fehldosierung des Anästhetikums",
+      "ref": "anwendungsfehler",
+      "cause": "Falsch befüllter Verdampfer, leerer Verdampfer, nicht beachteter Low-Flow-Effekt (Konzentrationen im Kreissystem weichen vom Frischgas ab).",
+      "action": "Endtidale Konzentration überwachen und Alarmgrenzen setzen, Füllstand kontrollieren; bei Verdacht auf Fehlbefüllung Verdampfer außer Betrieb nehmen und prüfen lassen."
+    }
+  ],
+  "tests": [
+    {
+      "name": "Sicherheitstechnische Kontrolle",
+      "ref": "stk",
+      "description": "Pflichtprüfung nach § 12 MPBetreibV (Anlage 1 Nr. 1.5) nach Herstellerprüfanweisung: Sicht-, Elektro-, Gasversorgungs-, Dichtigkeits-, Dosier-, Leistungs- und Alarmprüfung mit Dokumentation."
+    },
+    {
+      "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+      "ref": "elektrische-sicherheitspruefung",
+      "description": "Schutzleiterwiderstand, ggf. Isolationswiderstand, Geräte- und Patientenableitstrom; Zusatzsteckdosen und angeschlossene Geräte als ME-System berücksichtigen."
+    },
+    {
+      "name": "Geräte-Check / Funktionsprüfung vor Anwendung",
+      "ref": "funktionspruefung",
+      "description": "Täglich und vor jedem Patienten: Gasversorgung, Dichtigkeit, Systemcompliance, Sensorkalibrierung, Ventilfunktion, Absorber, Verdampfer, Narkosegasfortleitung und Rückfallebene."
+    },
+    {
+      "name": "Verdampfer-Konzentrationsprüfung",
+      "ref": "pruefgeraete",
+      "description": "Messung der Abgabekonzentration mit Narkosegasanalysator bei mehreren Einstellungen und Flows; Vergleich mit Herstellertoleranz."
+    },
+    {
+      "name": "Leistungsprüfung der Beatmung",
+      "ref": "pruefgeraete",
+      "description": "Testlunge und Gasflow-Analysator: Tidalvolumen, Frequenz, Spitzen-, Plateau- und PEEP-Druck, O₂-Konzentration; Umrechnung auf gleiche Bezugsbedingungen."
+    },
+    {
+      "name": "Kalibrierung der Gasmessung",
+      "ref": "kalibrierung",
+      "description": "Prüfgas definierter Zusammensetzung (CO₂, O₂, Anästhetikum); Anzeigegenauigkeit, Anstiegszeit und Probengasflow."
+    },
+    {
+      "name": "Alarmprüfung",
+      "ref": "alarmsystem",
+      "description": "Auslösen von Sauerstoffmangel-, Diskonnektions-, Druck-, Volumen-, Gaskonzentrations- und Netzausfallalarm; Priorität und Lautstärke prüfen."
+    }
+  ],
+  "diagram": {
+    "title": "Gasweg und Regelung eines Anästhesiearbeitsplatzes",
+    "caption": "Vereinfachtes Funktionsschema: Gasversorgung, Mischer und Verdampfer speisen das Kreissystem; Ventilator, Patient, Exspirationsschenkel und CO₂-Absorber bilden den Rückatemkreis. Überschussgas gelangt über das APL-/Überschussventil in die Narkosegasfortleitung. Kein Abbild eines konkreten Modells.",
+    "width": 960,
+    "height": 460,
+    "nodes": [
+      {
+        "id": "gas",
+        "label": "Gasversorgung\nO₂ / Luft / N₂O",
+        "kind": "source",
+        "x": 95,
+        "y": 80
+      },
+      {
+        "id": "mix",
+        "label": "Gasmischer\n(Proportionalventile)",
+        "ref": "proportionalventil",
+        "kind": "actuator",
+        "x": 285,
+        "y": 80,
+        "w": 160
+      },
+      {
+        "id": "verd",
+        "label": "Narkosemittel-\nverdampfer",
+        "ref": "narkosemittelverdampfer",
+        "kind": "actuator",
+        "x": 475,
+        "y": 80
+      },
+      {
+        "id": "gasmon",
+        "label": "Multigasmonitor\n(NDIR, O₂)",
+        "ref": "co2-sensor",
+        "kind": "sensor",
+        "x": 665,
+        "y": 80
+      },
+      {
+        "id": "agfs",
+        "label": "Narkosegas-\nfortleitung",
+        "kind": "output",
+        "x": 95,
+        "y": 235
+      },
+      {
+        "id": "apl",
+        "label": "APL- / Überschuss-\nventil",
+        "kind": "process",
+        "x": 285,
+        "y": 235
+      },
+      {
+        "id": "vent",
+        "label": "Ventilator\n(Kolben/Turbine)",
+        "ref": "turbine",
+        "kind": "actuator",
+        "x": 475,
+        "y": 235
+      },
+      {
+        "id": "insp",
+        "label": "Insp. Flow- und\nDrucksensor",
+        "ref": "flowsensor",
+        "kind": "sensor",
+        "x": 665,
+        "y": 235
+      },
+      {
+        "id": "pat",
+        "label": "Patient\n(Lunge)",
+        "ref": "lunge",
+        "kind": "patient",
+        "x": 860,
+        "y": 235
+      },
+      {
+        "id": "ctrl",
+        "label": "Steuer- und Über-\nwachungsrechner",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 95,
+        "y": 390
+      },
+      {
+        "id": "ui",
+        "label": "Display /\nAlarme",
+        "ref": "alarmsystem",
+        "kind": "output",
+        "x": 285,
+        "y": 390
+      },
+      {
+        "id": "abs",
+        "label": "CO₂-Absorber\n(Atemkalk)",
+        "ref": "co2-absorber",
+        "kind": "process",
+        "x": 475,
+        "y": 390
+      },
+      {
+        "id": "exsp",
+        "label": "Exsp. Flowsensor /\nPEEP-Ventil",
+        "ref": "exspirationsventil",
+        "kind": "sensor",
+        "x": 665,
+        "y": 390,
+        "w": 160
+      }
+    ],
+    "edges": [
+      {
+        "from": "gas",
+        "to": "mix",
+        "kind": "gas",
+        "label": "≈ 5 bar"
+      },
+      {
+        "from": "mix",
+        "to": "verd",
+        "kind": "gas",
+        "label": "Frischgas"
+      },
+      {
+        "from": "verd",
+        "to": "insp",
+        "kind": "gas",
+        "label": "+ Anästhetikum"
+      },
+      {
+        "from": "vent",
+        "to": "insp",
+        "kind": "gas"
+      },
+      {
+        "from": "insp",
+        "to": "pat",
+        "kind": "gas",
+        "label": "Inspiration"
+      },
+      {
+        "from": "pat",
+        "to": "exsp",
+        "kind": "gas",
+        "label": "Exspiration"
+      },
+      {
+        "from": "exsp",
+        "to": "abs",
+        "kind": "gas"
+      },
+      {
+        "from": "abs",
+        "to": "vent",
+        "kind": "gas",
+        "label": "CO₂-frei"
+      },
+      {
+        "from": "vent",
+        "to": "apl",
+        "kind": "gas",
+        "label": "Überschuss"
+      },
+      {
+        "from": "apl",
+        "to": "agfs",
+        "kind": "gas"
+      },
+      {
+        "from": "pat",
+        "to": "gasmon",
+        "kind": "gas",
+        "label": "Probengas"
+      },
+      {
+        "from": "gasmon",
+        "to": "ctrl",
+        "kind": "data"
+      },
+      {
+        "from": "insp",
+        "to": "ctrl",
+        "kind": "data",
+        "label": "p, V̇"
+      },
+      {
+        "from": "ctrl",
+        "to": "mix",
+        "kind": "signal"
+      },
+      {
+        "from": "ctrl",
+        "to": "vent",
+        "kind": "signal"
+      },
+      {
+        "from": "ctrl",
+        "to": "ui",
+        "kind": "data"
+      }
+    ]
+  },
+  "images": [
+    {
+      "src": "img/devices/anaesthesiegeraet-aufbau.svg",
+      "kind": "schema",
+      "caption": "Schematischer Aufbau eines Anästhesiearbeitsplatzes mit Gaseinlass, Gasmischer, Verdampfer, Kompaktatemsystem mit CO₂-Absorber, Beutel und APL-Ventil, Ventilator, Gasmonitoring und Narkosegasfortleitung (eigene Darstellung, kein reales Modell)."
+    },
+    {
+      "src": "img/devices/anaesthesiegeraet-prinzip.svg",
+      "kind": "schema",
+      "caption": "Links: Prinzip des Bypass-Verdampfers mit Teilungsverhältnis und temperaturabhängigem Stellglied. Rechts: Kreissystem mit Richtungsventilen, CO₂-Absorber und Frischgaseinleitung (eigene Darstellung, Beispielwerte)."
+    }
+  ],
+  "paths": [
+    [
+      "anaesthesiegeraet",
+      "narkosemittelverdampfer",
+      "gasgesetze",
+      "druck"
+    ],
+    [
+      "anaesthesiegeraet",
+      "co2-sensor",
+      "lambert-beer",
+      "gasaustausch",
+      "lunge"
+    ],
+    [
+      "anaesthesiegeraet",
+      "co2-absorber",
+      "gasaustausch",
+      "saeure-basen-haushalt"
+    ]
+  ],
+  "related": [
+    "beatmungsgeraet",
+    "kapnometer",
+    "patientenmonitor",
+    "transportbeatmungsgeraet",
+    "videolaryngoskop",
+    "spritzenpumpe",
+    "absauggeraet",
+    "patientenwaermesystem",
+    "narkosemittelverdampfer",
+    "co2-absorber",
+    "iso-80601-2-13",
+    "iso-80601-2-55",
+    "iso-80601-2-12",
+    "atemmechanik",
+    "gasgesetze"
+  ],
+  "sources": [
+    "dorsch-2008",
+    "larsen-2018",
+    "baum-2001",
+    "iso-80601-2-13-2022",
+    "kramme-2017",
+    "hering-2018",
+    "iec-60601-1",
+    "iec-60601-1-8",
+    "iec-62353",
+    "mdr-2017",
+    "mpbetreibv",
+    "din-31051",
+    "krinko-bfarm-2012"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

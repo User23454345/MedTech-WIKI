@@ -1,0 +1,626 @@
+{
+ "id": "defibrillator",
+ "type": "device",
+ "title": "Defibrillator (inkl. AED)",
+ "aliases": [
+  "Defi",
+  "AED",
+  "Automatisierter externer Defibrillator",
+  "Monitor-Defibrillator",
+  "Kardioverter",
+  "Externer Defibrillator",
+  "Defibrillator/Monitor",
+  "Public Access Defibrillator"
+ ],
+ "category": "geraete",
+ "deviceGroup": "kardiologie",
+ "rank": 3,
+ "domains": [
+  "notfallmedizin",
+  "kardiologie",
+  "intensivmedizin",
+  "anaesthesiologie",
+  "herzchirurgie"
+ ],
+ "summary": "Ein Defibrillator beendet Kammerflimmern und pulslose ventrikuläre Tachykardie durch einen kurzen, energiereichen Stromimpuls aus einem Kondensator. Automatisierte externe Defibrillatoren (AED) analysieren den Herzrhythmus selbstständig und leiten auch Laien an; professionelle Geräte bieten zusätzlich Kardioversion, Schrittmacherfunktion und Monitoring.",
+ "riskClass": {
+  "value": "IIb (manuell) / III (AED)",
+  "evidence": "belegt",
+  "note": "Die Klassifizierung hängt von der Bauform ab: **AEDs** werden in [[mdr|MDR]] Anhang VIII **Regel 22** ausdrücklich genannt – aktive therapeutische Produkte mit integrierter diagnostischer Funktion, die das Patientenmanagement durch das Produkt maßgeblich bestimmt, wie geschlossene Regelkreise oder automatisierte externe Defibrillatoren, gehören zur **Klasse III** [@mdr-2017]. **Manuelle Defibrillatoren** ohne automatische Schockentscheidung fallen typischerweise unter **Regel 9** (aktive therapeutische Produkte zur Abgabe von Energie); da die Energieabgabe an das Herz potenziell gefährlich ist, ergibt sich **Klasse IIb** [@mdr-2017][@mdcg-2021-24]. Kombigeräte mit AED-Modus werden entsprechend der Regel mit der höchsten Klasse eingestuft. Die verbindliche Einstufung trifft der Hersteller für sein konkretes Produkt (siehe [[risikoklassen|Risikoklassen]], [[konformitaetsbewertung|Konformitätsbewertung]]).",
+  "sources": [
+   "mdr-2017",
+   "mdcg-2021-24"
+  ]
+ },
+ "sections": {
+  "purpose": "## Medizinischer Zweck\n\nEin **Defibrillator** beendet lebensbedrohliche, ungeordnete Herzrhythmusstörungen, indem er einen kurzen, energiereichen Stromimpuls durch den Brustkorb leitet. Hauptindikation ist der **Kreislaufstillstand mit schockbarem Rhythmus**: Kammerflimmern (VF, *ventricular fibrillation*) und pulslose ventrikuläre Tachykardie (pVT). Bei diesen Rhythmen ist die elektrische Aktivität des [[herz|Herzens]] zwar vorhanden, aber so desorganisiert, dass keine wirksame Pumpleistung entsteht – der [[blutkreislauf|Blutkreislauf]] kommt zum Erliegen, und ohne Behandlung sinkt die Überlebenswahrscheinlichkeit mit jeder Minute [@erc-2021].\n\nDer Schock depolarisiert gleichzeitig einen ausreichend großen Teil des Myokards (kritische Masse). Dadurch werden die kreisenden Erregungsfronten unterbrochen; im günstigen Fall übernimmt anschließend der Sinusknoten als physiologischer Schrittmacher des [[erregungsleitungssystem|Erregungsleitungssystems]] wieder die Führung [@webster-2010][@kramme-2017].\n\n> [!hinweis] Ein Defibrillator „startet“ kein stillstehendes Herz. Bei **Asystolie** und **pulsloser elektrischer Aktivität (PEA)** ist ein Schock nicht indiziert – hier stehen Thoraxkompressionen, Beatmung und Medikamente im Vordergrund. Die Rhythmusanalyse ist deshalb integraler Bestandteil jedes Defibrillators.\n\nNeben der Defibrillation bieten professionelle Geräte weitere therapeutische Funktionen:\n\n| Funktion | Zweck | Typische Indikation |\n|---|---|---|\n| Defibrillation (asynchron) | sofortige Schockabgabe | Kammerflimmern, pulslose VT |\n| Synchronisierte Kardioversion | Schock exakt auf die R-Zacke getriggert | Vorhofflimmern/-flattern, VT mit Puls (instabil) |\n| Transkutane Stimulation | externer Schrittmacher über Klebeelektroden | symptomatische Bradykardie, AV-Block |\n| Monitoring | EKG, ggf. SpO₂, NIBP, etCO₂ | Überwachung vor, während und nach der Reanimation |\n\nDer **automatisierte externe Defibrillator (AED)** ist eine Bauform, die den Rhythmus selbstständig analysiert und – bei schockbarem Rhythmus – den Schock freigibt (halbautomatisch: Auslösung durch Anwender:in) oder selbst auslöst (vollautomatisch). AEDs sind für Ersthelfende ohne EKG-Kenntnisse konzipiert und gelten als Schlüsselelement der Laienreanimation („Public Access Defibrillation“) [@erc-2021].\n\n> [!belegt] Die Wirksamkeit der Defibrillation ist stark zeitabhängig. Die Leitlinien des European Resuscitation Council betonen daher die frühe Defibrillation – bei beobachtetem Kreislaufstillstand mit schockbarem Rhythmus so rasch wie möglich – in Kombination mit hochwertigen Thoraxkompressionen und möglichst kurzen Unterbrechungen [@erc-2021][@erc-2025-als].",
+  "applications": "## Einsatzgebiete\n\nDefibrillatoren gehören zu den am weitesten verbreiteten aktiven Medizinprodukten überhaupt. Je nach Umgebung unterscheiden sich Bauform, Bedienkonzept und Funktionsumfang deutlich.\n\n### Präklinik und Rettungsdienst\n\nIm Rettungsdienst ([[notfallmedizin|Notfallmedizin]]) werden **Monitor-Defibrillatoren** eingesetzt: robuste, akkubetriebene Kombigeräte mit manuellem Modus, AED-Modus, transkutaner Stimulation sowie Monitoring (12-Kanal-[[ekg-geraet|EKG]], [[pulsoxymeter|SpO₂]], [[nibp-messgeraet|NIBP]], [[kapnometer|etCO₂]]). Sie müssen Stürze, Vibration, Feuchtigkeit und große Temperaturbereiche aushalten und Daten (z. B. 12-Kanal-EKG zur Infarktdiagnostik) an Kliniken übertragen können. Häufig werden sie zusammen mit [[thoraxkompressionsgeraet|mechanischen Thoraxkompressionsgeräten]] und [[transportbeatmungsgeraet|Transportbeatmungsgeräten]] betrieben.\n\n### Klinik\n\n* **Notfallwagen / Reanimationsteam** auf Normalstationen: oft AED-fähige Geräte mit manueller Übersteuerung.\n* **Intensivstation, Intermediate Care, Chest Pain Unit** ([[intensivmedizin|Intensivmedizin]], [[kardiologie|Kardiologie]]): Kardioversion, Schrittmacherstimulation, Überwachung; Integration mit dem [[patientenmonitor|Patientenmonitor]].\n* **Herzkatheterlabor und Elektrophysiologie**: elektive Kardioversion, Bereitschaft bei Interventionen; Elektroden werden häufig vorsorglich geklebt.\n* **OP und Herzchirurgie** ([[herzchirurgie|Herzchirurgie]], [[anaesthesiologie|Anästhesiologie]]): **interne Defibrillation** mit sterilen Löffelelektroden direkt am Herzen bei eröffnetem Thorax – mit deutlich geringerer Energie (typisch im einstelligen bis niedrigen zweistelligen Joule-Bereich).\n\n### Öffentlicher Raum und Betriebe\n\n**Laien-AEDs** hängen in Bahnhöfen, Flughäfen, Sportstätten, Behörden und Betrieben. Sie führen per Sprachausgabe (und oft Display/Animation) durch die Reanimation, geben CPR-Anweisungen und Metronom-Takte und protokollieren den Einsatz. Moderne Geräte melden ihren Selbsttest-Status per Mobilfunk oder WLAN an ein Flottenmanagement.\n\n### Sonderformen\n\n| Bauform | Kurzbeschreibung |\n|---|---|\n| [[icd|Implantierbarer Kardioverter-Defibrillator (ICD)]] | implantiertes System mit intrakardialen Elektroden, Schockenergie im Bereich einiger zehn Joule |\n| Tragbarer Kardioverter-Defibrillator („Defi-Weste“) | extern am Körper getragen, Elektroden in einer Weste, überbrückend bei vorübergehend hohem Risiko |\n| [[externer-schrittmacher|Externer temporärer Schrittmacher]] | reine Stimulation, keine Defibrillation |\n\n> [!praxis] In Kliniken stehen oft mehrere Gerätegenerationen und Hersteller nebeneinander. Einheitliche Elektrodenstecker oder Adapter, einheitliche Bedienlogik und regelmäßige Simulationstrainings verringern [[anwendungsfehler|Anwendungsfehler]] im Ernstfall erheblich ([[gebrauchstauglichkeit|Gebrauchstauglichkeit]], [[iec-62366-1|IEC 62366-1]]).",
+  "principle": "## Funktionsprinzip\n\nDer Defibrillator ist im Kern ein **Energiespeicher mit gesteuerter Entladung**: Ein [[kondensator|Kondensator]] wird über einen Hochspannungswandler aus Akku oder Netz aufgeladen und anschließend über Elektroden durch den Thorax des Patienten entladen. Die eigentliche „Intelligenz“ liegt in der Formung des Stromimpulses, der Messung der Patientenimpedanz und – beim AED – in der automatischen Rhythmusanalyse.\n\n### Elektrophysiologische Grundlage\n\nHerzmuskelzellen besitzen ein Ruhemembranpotential von etwa −90 mV. Ein überschwelliger Reiz löst ein [[aktionspotential|Aktionspotential]] aus, dem eine **Refraktärzeit** folgt, in der die Zelle nicht erneut erregbar ist. Beim Kammerflimmern kreisen viele Erregungswellen (Reentry) ungeordnet durch das Myokard; zu jedem Zeitpunkt sind einige Bereiche erregt, andere refraktär, andere erregbar [@schmidt-lang-2019].\n\nDer Defibrillationsschock erzeugt im Myokard ein elektrisches Feld, das in ausreichend vielen Zellen eine Depolarisation auslöst oder die Refraktärzeit verlängert. Nach der **Hypothese der kritischen Masse** genügt es, einen hinreichend großen Teil des Ventrikelmyokards zu erfassen, sodass die verbliebene erregbare Masse zu klein ist, um das Flimmern aufrechtzuerhalten [@webster-2010].\n\n> [!vereinfacht] Die Defibrillation wirkt wie ein „Reset“ der elektrischen Aktivität: Alle (bzw. genügend viele) Zellen werden gleichzeitig in denselben Zustand versetzt. Danach kann der Sinusknoten den Takt wieder vorgeben. Die tatsächlichen Mechanismen – u. a. die Theorie der oberen Vulnerabilitätsgrenze und die Bedeutung virtueller Elektroden – sind komplexer und Gegenstand der Forschung.\n\nEntscheidend für den Erfolg ist die **Stromstärke bzw. Stromdichte im Myokard**, nicht die eingestellte Energie an sich. Die Energie ist lediglich die Größe, über die Geräte historisch eingestellt werden. Da der Strom auf seinem Weg durch Haut, Muskulatur, Rippen und Lunge verteilt wird, erreicht nur ein kleiner Bruchteil des Gesamtstroms das Herz – deshalb sind transthorakal Ströme im Bereich einiger zehn Ampere nötig, während bei interner Defibrillation am offenen Herzen deutlich weniger ausreicht (siehe [[elektrische-stromwirkung|Wirkung des elektrischen Stroms auf den Körper]], [[iec-60479-1|IEC/TS 60479-1]]).\n\n### Reizschwelle und Impulsdauer: Weiss-Lapicque-Beziehung\n\nDie Schwellstromstärke einer erregbaren Zelle hängt von der Impulsdauer *d* ab. Die klassische Näherung (Weiss/Lapicque) lautet:\n\n`I_s(d) = I_rh · (1 + c / d)`\n\nmit der **Rheobase** I_rh (Schwellstrom bei unendlich langer Impulsdauer) und der **Chronaxie** c (Impulsdauer, bei der der doppelte Rheobasestrom nötig ist). Die notwendige Ladung ist `Q = I_s · d = I_rh · (d + c)` und steigt linear mit der Impulsdauer, die notwendige Energie wird bei *d ≈ c* minimal [@webster-2010].\n\n> [!vereinfacht] Sehr kurze Impulse brauchen sehr hohe Ströme, sehr lange Impulse verschwenden Energie (und können erneut Arrhythmien auslösen). Für die transthorakale Defibrillation liegen effiziente Phasendauern deshalb im Bereich weniger Millisekunden – das erklärt, warum moderne Impulse nach einigen Millisekunden „abgeschnitten“ werden.\n\n### Energiespeicherung im Kondensator\n\nDie im Kondensator gespeicherte Energie ist\n\n`E = ½ · C · U²`\n\nmit Kapazität C und Ladespannung U. Bei Entladung über die (näherungsweise ohmsche) Patientenimpedanz R folgt Strom und Spannung einer Exponentialfunktion:\n\n`i(t) = (U₀ / R) · e^(−t/τ)` mit der Zeitkonstante `τ = R · C`\n\nReal liegt zusätzlich der Innenwiderstand R_i (Schaltelemente, Leitungen, ggf. Induktivität) im Kreis; die am Patienten umgesetzte Energie ist dann nur der Anteil `R / (R + R_i)` der aus dem Kondensator entnommenen Energie (Spannungsteiler-Prinzip, siehe [[spannung-strom-widerstand|Spannung, Strom und Widerstand]], [[joulesche-waerme|Joulesche Wärme]]) [@tipler-2019].\n\n> [!beispiel] **Rechenbeispiel biphasischer Impuls (Beispielwerte, kein konkretes Gerät):** Ein Kondensator mit C = 150 µF wird auf U₀ = 1,8 kV geladen.\n> Gespeicherte Energie: E = ½ · 150·10⁻⁶ F · (1800 V)² ≈ **243 J**.\n> Patientenimpedanz R = 75 Ω → Zeitkonstante τ = 75 Ω · 150 µF ≈ **11,3 ms**, Spitzenstrom I₀ = 1800 V / 75 Ω = **24 A**.\n> Phase 1 wird nach 6 ms abgeschnitten: U(6 ms) = 1800 V · e^(−6/11,25) ≈ 1056 V (Strom ≈ 14 A).\n> Die H-Brücke polt um, Phase 2 dauert 4 ms: U(10 ms) ≈ 1056 V · e^(−4/11,25) ≈ 740 V.\n> Restenergie im Kondensator: ½ · 150 µF · (740 V)² ≈ 41 J → abgegeben ≈ 243 J − 41 J ≈ **202 J** (Innenwiderstand vernachlässigt). Die Restenergie wird anschließend intern über einen Entladewiderstand abgebaut.\n> Bei R = 150 Ω wäre τ doppelt so lang und der Spitzenstrom halb so groß (12 A) – genau deshalb passen Geräte Impulsdauer, Spannung oder Strom an die gemessene Impedanz an.\n\n### Impulsformen\n\n| Impulsform | Prinzip | Merkmale |\n|---|---|---|\n| Monophasisch, gedämpfte Sinusform | RLC-Entladung über eine Induktivität (Edmark/Lown-Form) | historisch; Energien bis 360 J; heute weitgehend abgelöst |\n| Monophasisch, abgeschnittene Exponentialform | Kondensatorentladung, nach Zeit abgeschnitten | historisch |\n| **Biphasisch, abgeschnittene Exponentialform (BTE)** | Entladung mit Polaritätsumkehr über H-Brücke; Dauer/Tilt impedanzabhängig | heute verbreitet; feste oder eskalierende Energien |\n| **Biphasisch, rechteckförmig (rectilinear)** | in Phase 1 näherungsweise konstanter Strom durch umschaltbare Serienwiderstände | geringere Spitzenströme, Energie typ. bis 200 J |\n| Gepulst biphasisch | Phasen in Teilimpulse zerhackt | herstellerspezifische Variante |\n\n**Biphasische Impulse** defibrillieren bei geringerer Energie mindestens so wirksam wie monophasische und haben die monophasischen Geräte in der Praxis verdrängt [@erc-2021]. Eine verbreitete Erklärung für den Vorteil ist, dass die zweite Phase die durch die erste Phase an den Zellmembranen verbliebene Restladung abbaut und so erneute Erregungen nach dem Schock reduziert.\n\n> [!vereinfacht] Die „Energie“ auf dem Wahlschalter verschiedener Hersteller ist wegen unterschiedlicher Impulsformen **nicht direkt vergleichbar**. Leitlinien verweisen deshalb auf die Herstellerempfehlung für die Erstenergie; ist sie unbekannt, wird für Erwachsene bei biphasischen Geräten mindestens 150 J empfohlen [@erc-2021].\n\n### Impedanzmessung und Impedanzkompensation\n\nDie **transthorakale Impedanz** liegt bei Erwachsenen typischerweise im Bereich von etwa 50 bis 150 Ω, kann aber deutlich darüber oder darunter liegen. Sie hängt ab von Elektrodengröße und -position, Hautzustand, Kontaktmittel (Gel), Thoraxgröße, Atemphase und vorangegangenen Schocks [@webster-2010][@kramme-2017].\n\nDas Gerät misst die Impedanz **vor** dem Schock mit einem kleinen, hochfrequenten Wechselstrom (unterhalb jeder Reizschwelle) über die Defibrillationselektroden – nach `Z = U / I`. Dieselbe Messung dient zur Erkennung von „Elektroden ab“ bzw. Kurzschluss und – über die rhythmischen Impedanzschwankungen – teilweise zur Erkennung von Thoraxkompressionen und Beatmung. Mit dem Messwert passt der Regler den Impuls an:\n\n* **BTE:** Bei hoher Impedanz wird die Phasendauer verlängert und/oder die Ladespannung erhöht, damit die Zielenergie bzw. eine ausreichende Ladung abgegeben wird.\n* **Rectilinear:** Eine Widerstandskaskade wird in Phase 1 so umgeschaltet, dass der Strom annähernd konstant bleibt.\n\nViele Geräte messen außerdem während des Schocks Spannung und Strom und berechnen daraus die tatsächlich abgegebene Energie `E = ∫ u(t) · i(t) dt`, die im Ereignisprotokoll gespeichert wird.\n\n### Synchronisierte Kardioversion\n\nBei Rhythmen mit organisierter Kammeraktion (z. B. Vorhofflimmern, VT mit Puls) darf der Schock **nicht in die vulnerable Phase** der Repolarisation (aufsteigender Teil der T-Welle) fallen, da er sonst Kammerflimmern auslösen kann. Im Synchronmodus erkennt das Gerät im EKG die R-Zacke, markiert sie auf dem Display und gibt den Schock nach dem Auslösen erst mit der nächsten erkannten R-Zacke ab – mit einer Verzögerung von wenigen zehn Millisekunden. Die Signalqualität der R-Zacken-Erkennung (ausreichende Amplitude, keine T-Wellen-Überhöhung, keine Schrittmacher-Spikes als Trigger) ist sicherheitskritisch [@kramme-2017].\n\n### Rhythmusanalyse im AED\n\nDie automatische Rhythmusanalyse ist eine Aufgabe der Signalverarbeitung und Mustererkennung an [[biosignale|Biosignalen]]. Das EKG wird über die Defibrillationselektroden abgeleitet, über einen geschützten [[instrumentenverstaerker|Instrumentenverstärker]] verstärkt, bandbegrenzt ([[filter|Filter]]) und mit einem [[analog-digital-wandler|Analog-Digital-Wandler]] digitalisiert. Typische Analysemerkmale sind:\n\n* **Frequenz** und Regelmäßigkeit erkannter QRS-Komplexe (z. B. Grenzfrequenz für eine schockbare VT),\n* **QRS-Breite und Morphologie** (breit, monomorph vs. schmal),\n* **Amplitude, Steilheit und Spektralinhalt** (Kammerflimmern zeigt eine dominante Frequenz im Bereich weniger Hertz und keine isoelektrischen Strecken),\n* **Signalqualität**: Bewegungs- und Störsignale (Thoraxkompressionen, Transport, [[netzstoerung|50-Hz-Einstreuung]]), erkannt u. a. über die Impedanzschwankung.\n\nFür Laien-AEDs wurden Leistungsziele für die Algorithmen veröffentlicht, die sich an der klinischen Konsequenz orientieren [@kerber-1997]:\n\n| Rhythmusklasse | Leistungsziel | Kenngröße |\n|---|---|---|\n| Grobes Kammerflimmern | > 90 % | Sensitivität |\n| Schnelle VT (schockbar) | > 75 % | Sensitivität |\n| Normaler Sinusrhythmus | > 99 % | Spezifität |\n| Andere nicht schockbare Rhythmen (z. B. Vorhofflimmern, SVT) | > 95 % | Spezifität |\n| Asystolie | > 95 % | Spezifität |\n\n> [!vereinfacht] Ein AED ist auf **hohe Spezifität** optimiert: Ein fälschlich abgegebener Schock bei einem Menschen mit Kreislauf ist gefährlich, ein verpasster Schock wird durch die erneute Analyse nach etwa zwei Minuten CPR teilweise aufgefangen. Deshalb verlangt die Analyse in der Regel eine kurze Kompressionspause; einige neuere Geräte können dank Artefaktfilterung auch während laufender Kompressionen vorbewerten.\n\n### Transkutane Stimulation\n\nIm Schrittmachermodus gibt das Gerät über großflächige Klebeelektroden periodische Rechteck-Stromimpulse ab (Impulsdauer typisch im Bereich von 20–40 ms, Stromamplitude einstellbar bis in den Bereich von etwa 140–200 mA). Im **Demand-Modus** wird nur stimuliert, wenn keine Eigenaktion innerhalb des eingestellten Intervalls erkannt wird. Die vergleichsweise langen Impulse senken nach der Weiss-Lapicque-Beziehung den nötigen Schwellstrom; dennoch wird die Stimulation durch Mitreizung der Skelettmuskulatur oft als schmerzhaft empfunden. Die Wirksamkeit (elektrisches und mechanisches Capture) muss klinisch – z. B. per Pulstastung oder Pulsoxymetrie – kontrolliert werden.\n\n### Regelung und Ablauf eines Schocks\n\n1. Energie wählen (manuell) bzw. Analyse starten (AED).\n2. Impedanzmessung; Prüfung „Elektroden angeschlossen“.\n3. **Laden:** Der Hochspannungswandler lädt den Kondensator geregelt auf die Zielspannung (Regelgröße: Kondensatorspannung, Stellgröße: Taktverhältnis des Wandlers, siehe [[regelkreis|Regelkreis]], [[pwm|PWM]]).\n4. Bereitschaft wird optisch und akustisch angezeigt; wird nicht innerhalb einer festgelegten Zeit ausgelöst, erfolgt eine **automatische interne Entladung**.\n5. **Auslösen:** Patientenrelais schließen, H-Brücke schaltet Phase 1 und Phase 2; Strom und Spannung werden gemessen.\n6. Restenergie wird intern abgebaut, Ereignis und Messwerte werden protokolliert.",
+  "construction": "## Technischer Aufbau\n\nEin externer Defibrillator besteht aus einem Hochspannungsteil (Energiepfad), einem Mess- und Analyseteil (Signalpfad), der Steuerung mit Bedienoberfläche und der Energieversorgung. Die Baugruppen sind galvanisch und räumlich so getrennt, dass die Hochspannung weder die Elektronik noch Anwender:innen gefährdet ([[galvanische-trennung|galvanische Trennung]], [[iec-60601-1|IEC 60601-1]], [[iec-60601-2-4|IEC 60601-2-4]]).\n\n### Baugruppen im Überblick\n\n| Baugruppe | Aufgabe | Technische Umsetzung (typisch) |\n|---|---|---|\n| Energieversorgung | Versorgung, Ladeenergie | [[lithium-ionen-akku|Li-Ionen-Akku]] (professionelle Geräte), Lithium-Primärbatterie (Laien-AED), ggf. [[medizinisches-netzteil|Netzteil]] bzw. Ladehalterung |\n| Hochspannungs-Ladewandler | Akkuspannung → Kondensatorspannung (kV-Bereich) | Sperr- oder Resonanzwandler mit Hochspannungstransformator, geregelt ([[hochspannungserzeugung|Hochspannungserzeugung]], [[transformator|Transformator]]) |\n| Energiespeicherkondensator | speichert die Schockenergie | Folienkondensator, Kapazität typ. im Bereich von etwa 100–200 µF bei biphasischen Geräten |\n| Hochspannungsschalter / H-Brücke | formt die Phasen, polt um, schneidet ab | Hochspannungs-Halbleiterschalter (z. B. IGBT/Thyristoren) in Brückenschaltung |\n| Patientenrelais | trennt Patient und Hochspannungsteil außerhalb des Schocks | Hochspannungsrelais; schützt zugleich den EKG-Eingang |\n| Sicherheitsentladung | baut nicht abgegebene Energie ab | Lastwiderstand mit Schaltelement |\n| EKG-/Impedanz-Frontend | EKG über Pads oder Kabel, Impedanzmessung | defibrillationsgeschützter Eingang, Instrumentenverstärker, A/D-Wandler |\n| Steuer- und Analyserechner | Ablaufsteuerung, Rhythmusanalyse, Selbsttest, Protokoll | [[mikrocontroller|Mikrocontroller/Embedded-System]], Software nach [[iec-62304|IEC 62304]]; häufig getrennter Überwachungsprozessor |\n| Bedienoberfläche | Energiewahl, Laden, Schock, Anzeigen | [[display-bedienoberflaeche|Display]], Folientasten/Drehschalter, Sprachausgabe, Lautsprecher |\n| Elektroden | Stromübertragung, EKG-Ableitung | Einweg-[[defibrillationselektroden|Klebeelektroden]] (Pads) oder wiederverwendbare Paddles |\n| Schnittstellen | Datenexport, Telemetrie, Fernüberwachung | USB, WLAN, Mobilfunk, Bluetooth; Ereignisberichte |\n\n### Hochspannungsteil\n\nDer Ladewandler taktet die Akkuspannung über einen Halbleiterschalter auf die Primärwicklung eines Hochspannungstransformators; die Sekundärseite lädt über Gleichrichterdioden den Kondensator. Der Ladestrom ist durch die Belastbarkeit des Akkus begrenzt – daraus ergibt sich die **Ladezeit** von einigen Sekunden bis zur Maximalenergie. Kälte, gealterte Akkus und hohe Zielenergien verlängern sie.\n\nDie **H-Brücke** aus vier Hochspannungsschaltern erlaubt es, den Kondensator mit beiden Polaritäten an die Elektroden zu legen. Phase 1: Schalter S1/S4 leiten; Phase 2: S2/S3 leiten. Durch Abschalten nach einer berechneten Zeit wird der Impuls „abgeschnitten“ (*truncated*). Fällt ein Schalter aus, müssen Überwachungsfunktionen eine unbeabsichtigte Abgabe sicher verhindern.\n\n### Elektroden\n\n**Klebeelektroden (Pads)** sind heute Standard: Sie bestehen aus einer flexiblen Trägerfolie, einer metallischen Leitschicht und einem leitfähigen Hydrogel. Sie erlauben die freihändige Defibrillation, das EKG-Monitoring über die Pads, die transkutane Stimulation und minimieren Unterbrechungen der Thoraxkompressionen. Ihre Haltbarkeit ist begrenzt, weil das Gel austrocknet (Ablaufdatum beachten). **Paddles** (Hand-Elektroden) werden mit Gel oder Gelpads angepresst; der Anpressdruck senkt die Übergangsimpedanz. Für Kinder gibt es kleinere Elektroden, bei AEDs oft mit **Energiebegrenzung** (Attenuator oder Kinder-Modus) [@erc-2021].\n\nStandardposition ist **anterolateral**: eine Elektrode rechts parasternal unterhalb des Schlüsselbeins, die andere links in der mittleren Axillarlinie in Höhe der Herzspitze (V6-Position). Alternativ **anterior-posterior** – beispielsweise bei implantierten Geräten oder bei der Kardioversion. Der Strompfad soll möglichst viel Myokard erfassen.\n\n### Mess- und Monitoringteil\n\nProfessionelle Monitor-Defibrillatoren enthalten ein vollwertiges Monitoring: 3-/5-/12-Kanal-EKG über [[ekg-elektrode|EKG-Elektroden]], [[photoplethysmographie|Pulsoxymetrie]], [[oszillometrie|oszillometrische Blutdruckmessung]], Kapnographie über [[co2-sensor|NDIR-CO₂-Sensoren]] (Haupt- oder Nebenstrom) und teilweise invasive Drücke und Temperatur. Alle mit dem Patienten verbundenen Eingänge sind als **defibrillationsgeschützte** [[anwendungsteile|Anwendungsteile]] (Typ BF oder CF) ausgeführt: Begrenzungsnetzwerke (Serienwiderstände, Funkenstrecken/Gasableiter, Klemmdioden) schützen die Elektronik vor dem Schock und sorgen für eine schnelle Erholung der EKG-Darstellung.\n\n**CPR-Feedback:** Viele Geräte erfassen Kompressionstiefe und -frequenz über Beschleunigungssensoren (in Pads oder in einem separaten Sensor) oder über die Impedanzänderung und geben Echtzeit-Rückmeldungen.\n\n### Software, Selbsttest und Datenspeicher\n\nDie Gerätesoftware steuert Ablauf und Sprachführung, überwacht Hochspannungsteil und Akku und führt **Selbsttests** durch – täglich, wöchentlich und monatlich in unterschiedlicher Tiefe, teils mit interner Ladung und Entladung über den Sicherheitswiderstand. Ein Ereignisspeicher zeichnet EKG, Analysen, Schocks (Energie, Impedanz), Kompressionsdaten und ggf. Audio auf. Diese Daten unterstützen Einsatznachbesprechungen und die Klärung von [[vigilanz|Vorkommnissen]].\n\n> [!warnung] Im Gerät können auch nach dem Ausschalten gefährliche Spannungen am Kondensator anliegen. Öffnen, Instandsetzung und Prüfungen am Hochspannungsteil sind ausschließlich befugtem, vom Hersteller geschultem Fachpersonal vorbehalten.",
+  "maintenance": "## Wartung und Instandhaltung\n\nDefibrillatoren sind Notfallgeräte: Sie werden selten benutzt, müssen dann aber sofort und zuverlässig funktionieren. Die [[instandhaltung-grundlagen|Instandhaltung]] nach [[din-31051|DIN 31051]] ([[inspektion|Inspektion]], [[wartung|Wartung]], [[instandsetzung|Instandsetzung]]) konzentriert sich daher auf **Einsatzbereitschaft** – Energieversorgung, Elektroden, Selbsttest und Dokumentation.\n\n### Rechtlicher Rahmen\n\n> [!belegt] Defibrillatoren sind in **Anlage 1 Nr. 1.1** der [[mpbetreibv|MPBetreibV]] (Fassung 2025) aufgeführt – nichtimplantierbare aktive Produkte zur Erzeugung und Anwendung elektrischer Energie zur unmittelbaren Beeinflussung der Funktion von Nerven und/oder Muskeln bzw. der Herztätigkeit, einschließlich Defibrillatoren. Damit gilt die Pflicht zur [[stk|sicherheitstechnischen Kontrolle]] nach **§ 12** in den vom Hersteller angegebenen Fristen; fehlen Herstellerangaben, spätestens alle zwei Jahre [@mpbetreibv].\n\n* **Laien-AED:** § 12 Abs. 2 MPBetreibV enthält eine Sonderregelung für AEDs, die für die Anwendung durch Laien bestimmt sind: Bei selbsttestenden Geräten kann die STK unter den dort genannten Voraussetzungen (u. a. regelmäßige Sichtprüfung durch den Betreiber, unverzügliche Wiederherstellung der Funktionsfähigkeit nach fehlgeschlagenem Selbsttest) entfallen. Die genauen Voraussetzungen – einschließlich der Übergangs- und Fernüberwachungsregelungen – sind dem jeweils geltenden Verordnungstext zu entnehmen [@mpbetreibv].\n* **Messtechnische Kontrolle:** Defibrillatoren sind **nicht** in Anlage 2 der MPBetreibV aufgeführt; eine [[mtk|MTK]] ist daher nicht vorgeschrieben. Die Prüfung der abgegebenen Energie erfolgt im Rahmen der STK und der Herstellerprüfanweisung.\n* Für Produkte der Anlage 1 verlangt die MPBetreibV zudem u. a. eine Funktionsprüfung am Betriebsort und eine [[einweisung|Einweisung]] vor der Anwendung sowie die Führung eines [[medizinproduktebuch|Medizinproduktebuchs]]; die Geräte gehören in das [[bestandsverzeichnis|Bestandsverzeichnis]]. Maßgeblich sind die jeweiligen Vorschriften der geltenden Fassung und die [[betreiberpflichten|Betreiberpflichten]] insgesamt.\n\n### Betreiberseitige Routinekontrollen\n\n| Intervall (typisch) | Maßnahme |\n|---|---|\n| täglich bzw. je Schicht/Fahrzeugcheck | Statusanzeige (Selbsttest bestanden), Akku-Ladezustand, Elektroden vorhanden und angeschlossen, Verfallsdatum, Zubehör (Rasierer, Schere, EKG-Elektroden, Papier) |\n| wöchentlich / monatlich | ggf. manueller Funktionstest nach Herstellerangabe (z. B. Testentladung in die Halterung oder einen Testwiderstand), Kabel- und Steckerkontrolle |\n| nach jedem Einsatz | Reinigung/[[desinfektion|Desinfektion]], Pads ersetzen, Akku laden/tauschen, Daten auslesen, Einsatzbereitschaft melden |\n| nach Herstellerangabe | Akkutausch (Kapazitätstest), Austausch der Primärbatterie, Software-Updates, STK |\n\n### Akkus und Batterien\n\nLaien-AEDs verwenden meist **Lithium-Primärbatterien** mit mehrjähriger Standby-Lebensdauer, deren Restkapazität der Selbsttest abschätzt. Professionelle Geräte nutzen wiederaufladbare **Li-Ionen-Akkus** mit Akkumanagement (Zellspannung, Temperatur, Zyklenzahl). Häufigster Ausfallgrund im Feld sind leere oder gealterte Akkus ([[akkufehler|Akkufehler]]). Ein Akku-Rotationssystem und regelmäßige Kapazitätstests mit Ladestationen sind deshalb gute Praxis.\n\n### Elektroden und Zubehör\n\nPads haben ein Verfallsdatum (Gelaustrocknung, Korrosion). Abgelaufene oder bereits geöffnete Pads sind zu ersetzen. Wiederverwendbare Paddles und Kabel sind auf Risse, Knickstellen und Korrosion der Kontakte zu prüfen. Nicht freigegebenes Fremdzubehör kann Impedanzmessung, Schockabgabe und EKG-Qualität beeinträchtigen.\n\n> [!praxis] Viele Ausfälle im Ernstfall sind organisatorisch bedingt: nicht geladene Akkus, fehlende oder abgelaufene Pads, falsche Elektrodenstecker, ignorierte Statusanzeigen. Ein klares Verantwortlichkeitskonzept (wer prüft wann was?) ist so wichtig wie die Technik. Software-Updates und Sicherheitsinformationen der Hersteller ([[vigilanz|Vigilanz]], Rückrufe, Field Safety Notices) müssen nachverfolgt werden.\n\n### Instandsetzung\n\nFehler im Hochspannungsteil, am Kondensator, an Relais oder an der Analyse-Hardware werden durch Baugruppentausch beim Hersteller oder autorisierten Service behoben. Nach jeder Instandsetzung folgen eine Prüfung nach Herstellervorgabe sowie eine [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]] nach [[iec-62353|IEC 62353]].",
+  "testing": "## Prüfverfahren\n\nDie Prüfung eines Defibrillators umfasst Sichtprüfung, elektrische Sicherheit und vor allem die **Leistungsprüfung des Energiepfads** mit einem Defibrillator-Analysator. Grundlage ist die Prüfanweisung des Herstellers; die gerätespezifischen Anforderungen ergeben sich aus [[iec-60601-2-4|IEC 60601-2-4]] [@iec-60601-2-4].\n\n### Sicherheitstechnische Kontrolle (STK)\n\nDie [[stk|STK]] nach § 12 MPBetreibV umfasst typischerweise:\n\n1. **Sichtprüfung:** Gehäuse, Display, Tasten, Kabel, Stecker, Paddles, Halterungen, Typschild, Gebrauchsanweisung, Zubehör.\n2. **Elektrische Sicherheit** nach IEC 62353 (siehe unten).\n3. **Funktions- und Leistungsprüfung:** Energieabgabe, Ladezeit, interne Entladung, Synchronisation, AED-Analyse, Schrittmacher, Monitoring-Parameter, Alarme, Selbsttest.\n4. **Dokumentation** im Medizinproduktebuch, Prüfplakette, Bewertung (bestanden/nicht bestanden).\n\n### Elektrische Sicherheitsprüfung\n\nNach [[iec-62353|IEC 62353]] werden bei netzbetriebenen Geräten bzw. Ladehalterungen der [[schutzleiterwiderstand|Schutzleiterwiderstand]], ggf. der [[isolationswiderstand|Isolationswiderstand]] sowie Geräte- und Patientenableitströme ([[ableitstrommessung|Ableitstrommessung]]) bestimmt. Rein batteriebetriebene Geräte werden je nach Ausführung wie intern versorgte Geräte geprüft; die Anwendungsteile (Defibrillationselektroden, EKG-Eingang, SpO₂, NIBP) werden einzeln oder gruppiert gemessen [@iec-62353].\n\n> [!warnung] Während der Messung des Ableitstroms darf das Gerät nicht geladen oder ausgelöst werden – Isolations- und Ableitstrommessgeräte können durch einen Defibrillationsimpuls zerstört werden, und es besteht Gefahr für das Prüfpersonal. Energieprüfungen ausschließlich mit einem dafür ausgelegten Analysator durchführen.\n\n### Energieprüfung mit dem Defibrillator-Analysator\n\nDer Analysator stellt eine definierte ohmsche **Prüflast** (Referenz 50 Ω; für die Prüfung der Impedanzkompensation oft zuschaltbare Lasten im Bereich von etwa 25–175 Ω) bereit, tastet die Spannung u(t) an der Last mit hoher Abtastrate ab und berechnet:\n\n`E = (1/R) · ∫ u(t)² dt`\n\nsowie Spitzenspannung, Spitzenstrom, Phasendauern und ggf. die Impulsform. Geprüft wird bei mehreren Energiestufen (z. B. niedrig, mittel, maximal); die gemessene Energie muss innerhalb der vom Hersteller bzw. von der Norm angegebenen Toleranz liegen.\n\n> [!beispiel] Ein Analysator misst an 50 Ω bei Wahl „200 J“ eine Spitzenspannung von 1,6 kV und berechnet eine abgegebene Energie von 193 J. Die Abweichung von −3,5 % liegt innerhalb einer (beispielhaften) Toleranz von ±15 % – die Prüfung ist bestanden. Maßgeblich ist stets die Toleranz der Herstellerprüfanweisung.\n\n### Weitere Funktionsprüfungen\n\n| Prüfung | Vorgehen | Bewertung |\n|---|---|---|\n| Ladezeit | Zeit vom Ladebefehl bis zur Bereitschaft bei Maximalenergie, mit Akku (ggf. nach mehreren Entladungen) | Herstellerangabe |\n| Interne Entladung | Laden, nicht auslösen, Wartezeit bzw. Energiewechsel | Energie wird automatisch intern abgebaut |\n| Synchronisation | Analysator gibt EKG mit R-Zacken aus; Schock im Sync-Modus | Verzögerung R-Zacke → Schock innerhalb der Herstellerangabe; keine Abgabe ohne erkannte R-Zacke |\n| AED-Analyse | Analysator/[[pruefgeraete|Simulator]] gibt VF, VT, Sinusrhythmus und Asystolie aus | „Schock empfohlen“ nur bei schockbaren Rhythmen |\n| Transkutane Stimulation | Schrittmacherlast; Messung von Amplitude, Impulsdauer, Frequenz; Demand-Funktion | Herstellerangabe |\n| Monitoring | EKG-Simulator, SpO₂-/NIBP-Simulator | Anzeigegenauigkeit, Alarme ([[alarmsystem|Alarmsystem]]) |\n| Impedanzerkennung | Elektroden offen / Kurzschluss | korrekte Meldung „Elektroden prüfen“ |\n\n### Funktionsprüfung vor Ort und Selbsttest\n\nDie tägliche [[funktionspruefung|Funktionsprüfung]] durch Anwender:innen (Statusanzeige, Zubehör) und der automatische Selbsttest ersetzen die STK nicht – mit Ausnahme der Sonderregelung für Laien-AEDs. Der Selbsttest prüft Elektronik, Akku und teils den Hochspannungsteil intern, aber nicht das externe Zubehör und nicht die Kalibrierung gegen eine rückgeführte Referenz.\n\n> [!praxis] Die verwendeten Analysatoren sind selbst regelmäßig zu kalibrieren ([[kalibrierung|Kalibrierung]]). Messwerte, verwendete Prüfmittel (mit Seriennummer und Kalibrierdatum) und Softwarestand des Prüflings gehören in das Prüfprotokoll."
+ },
+ "body": "## Geschichte\n\nDie Entwicklung des Defibrillators ist eng mit der Geschichte der Elektrophysiologie verbunden (siehe [[geschichte-medizintechnik|Geschichte der Medizintechnik]]):\n\n| Jahr | Meilenstein |\n|---|---|\n| 1947 | Claude Beck defibrilliert erstmals erfolgreich ein menschliches Herz – intern, bei eröffnetem Thorax, mit Wechselstrom |\n| 1956 | Paul Zoll berichtet über die erfolgreiche **externe** Defibrillation mit Wechselstrom |\n| frühe 1960er | Bernard Lown und Mitarbeiter etablieren die **Gleichstrom-Kondensatorentladung** (gedämpfte Sinusform) und die synchronisierte Kardioversion |\n| 1966 | Frank Pantridge und John Geddes setzen in Belfast eine mobile Koronareinheit mit tragbarem Defibrillator ein – Grundstein der präklinischen Defibrillation |\n| ab 1979 | erste automatisierte externe Defibrillatoren |\n| 1990er | biphasische Impulsformen in externen Defibrillatoren; Verbreitung von Laien-AEDs |\n\n## Varianten und aktuelle Entwicklungen\n\n* **Herstellerspezifische Impulsformen:** feste Niedrigenergie-BTE (z. B. 150 J), eskalierende BTE bis 360 J, rectilinear-biphasisch bis 200 J, gepulst-biphasisch. Die Wirksamkeit eines Impulses ist an die Impulsform gebunden – Energien sind daher nicht herstellerübergreifend vergleichbar.\n* **CPR-Analyse während der Kompressionen:** Filteralgorithmen sollen Pausen vor der Rhythmusanalyse verkürzen.\n* **Vernetzte AEDs:** Statusübertragung per Mobilfunk, Standortregister, Kopplung mit Ersthelfer-Apps.\n* **Feedback und Debriefing:** Aufzeichnung von Kompressionstiefe und -frequenz, Beatmung, etCO₂ zur Qualitätssicherung der Reanimation.\n* **Doppelt sequentielle Defibrillation und Vektorwechsel** bei refraktärem Kammerflimmern werden in aktuellen Leitlinien diskutiert; maßgeblich sind die jeweils gültigen Empfehlungen [@erc-2025-als].\n\n> [!hinweis] Der [[icd|ICD]] nutzt dieselben physikalischen Prinzipien, arbeitet jedoch mit intrakardialen Elektroden, viel geringerer Impedanz und Energien in der Größenordnung einiger zehn Joule. Die Stimulation des [[herzschrittmacher|Herzschrittmachers]] beruht auf derselben Reizschwellen-Physik (Weiss-Lapicque).",
+ "components": [
+  {
+   "ref": "kondensator",
+   "role": "Energiespeicher für die Schockenergie (E = ½ · C · U²); Ladespannung im Kilovolt-Bereich."
+  },
+  {
+   "ref": "hochspannungserzeugung",
+   "role": "Hochspannungs-Ladewandler mit Transformator, lädt den Kondensator geregelt aus dem Akku auf."
+  },
+  {
+   "ref": "defibrillationselektroden",
+   "role": "Klebeelektroden oder Paddles: übertragen den Schock, leiten EKG ab, dienen der Impedanzmessung und Stimulation."
+  },
+  {
+   "ref": "lithium-ionen-akku",
+   "role": "Energieversorgung professioneller Geräte; bestimmt Ladezeit und Anzahl möglicher Schocks. Laien-AEDs nutzen meist Lithium-Primärbatterien."
+  },
+  {
+   "ref": "mikrocontroller",
+   "role": "Ablaufsteuerung, Rhythmusanalyse, Impulssteuerung der H-Brücke, Selbsttest und Ereignisspeicher."
+  },
+  {
+   "ref": "galvanische-trennung",
+   "role": "Patientenrelais und Isolationsbarrieren trennen Hochspannungsteil, Patient und Elektronik außerhalb des Schocks."
+  },
+  {
+   "ref": "display-bedienoberflaeche",
+   "role": "Display, Energiewahl, Lade- und Schocktaste, Sprachausgabe; beim AED Ein-Knopf-Bedienung mit Sprachführung."
+  },
+  {
+   "ref": "medizinisches-netzteil",
+   "role": "Netzversorgung bzw. Ladehalterung bei klinischen und rettungsdienstlichen Geräten."
+  }
+ ],
+ "sensors": [
+  {
+   "ref": "ekg-elektrode",
+   "role": "EKG-Ableitung über separates Kabel (3-/5-/12-Kanal); bei AEDs erfolgt die Ableitung über die Defibrillationselektroden."
+  },
+  {
+   "ref": "spannung-strom-widerstand",
+   "role": "Messung der transthorakalen Impedanz (Z = U/I) mit kleinem HF-Messstrom vor und Strom-/Spannungsmessung während des Schocks."
+  },
+  {
+   "ref": "photoplethysmographie",
+   "role": "Pulsoxymetrie (SpO₂) in Monitor-Defibrillatoren, u. a. zur Kontrolle des Capture bei Stimulation."
+  },
+  {
+   "ref": "co2-sensor",
+   "role": "Kapnographie (etCO₂) zur Kontrolle der Tubuslage und der Reanimationsqualität."
+  },
+  {
+   "ref": "oszillometrie",
+   "role": "Nichtinvasive Blutdruckmessung im Monitoring-Modul."
+  }
+ ],
+ "specs": [
+  {
+   "param": "Erste Schockenergie Erwachsene (biphasisch)",
+   "value": "mindestens 150 J bzw. nach Herstellerempfehlung",
+   "note": "Leitlinienempfehlung bei unbekannter Herstellerempfehlung.",
+   "evidence": "belegt",
+   "sources": [
+    "erc-2021"
+   ]
+  },
+  {
+   "param": "Schockenergie Kinder (manuell)",
+   "value": "4 J/kg Körpergewicht",
+   "note": "Leitlinienempfehlung; bei AEDs Kinderelektroden bzw. Energiebegrenzung verwenden, sofern verfügbar.",
+   "evidence": "belegt",
+   "sources": [
+    "erc-2021"
+   ]
+  },
+  {
+   "param": "Wählbare Energie (manuelle Geräte, biphasisch)",
+   "value": "von wenigen Joule bis etwa 200 J bzw. 360 J (je nach Impulsform)",
+   "note": "Niedrige Stufen für interne Defibrillation und Kardioversion.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Bezugslast für Energieangaben",
+   "value": "50 Ω",
+   "note": "Energieanzeige und Prüfung beziehen sich auf eine ohmsche 50-Ω-Last; Prüfung der Impedanzkompensation an weiteren Lasten.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-4"
+   ]
+  },
+  {
+   "param": "Transthorakale Impedanz Erwachsener",
+   "value": "etwa 50–150 Ω (individuell auch darunter oder darüber)",
+   "note": "Abhängig von Elektrodengröße, Position, Haut, Thorax und Atemphase.",
+   "evidence": "typisch",
+   "sources": [
+    "webster-2010"
+   ]
+  },
+  {
+   "param": "Impedanzkompensationsbereich",
+   "value": "etwa 25 bis über 175 Ω",
+   "note": "Herstellerabhängig; außerhalb des Bereichs Meldung „Elektroden prüfen“.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Ladezeit auf Maximalenergie",
+   "value": "wenige Sekunden (typisch unter 10 s mit vollem Akku)",
+   "note": "Verlängert durch Kälte, Akkualterung und viele vorangegangene Schocks.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Energiespeicherkondensator",
+   "value": "Kapazität etwa 100–200 µF, Ladespannung etwa 1–2 kV (biphasisch)",
+   "note": "Monophasische Altgeräte arbeiteten mit kleineren Kapazitäten und höheren Spannungen.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Phasendauer biphasischer Impulse",
+   "value": "wenige Millisekunden je Phase, Gesamtimpuls etwa 10–20 ms",
+   "note": "Impedanzabhängig bei BTE-Impulsen.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Spitzenstrom transthorakal",
+   "value": "etwa 10–40 A",
+   "note": "Abhängig von Energie, Impulsform und Impedanz; siehe Rechenbeispiel im Abschnitt Funktionsprinzip.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Transkutane Stimulation",
+   "value": "Impulsdauer etwa 20–40 ms, Strom einstellbar bis etwa 140–200 mA",
+   "note": "Modi: fix (asynchron) und Demand.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Spezifität der AED-Rhythmusanalyse (Sinusrhythmus)",
+   "value": "Leistungsziel > 99 %",
+   "note": "Für grobes Kammerflimmern Sensitivitätsziel > 90 %.",
+   "evidence": "belegt",
+   "sources": [
+    "kerber-1997"
+   ]
+  }
+ ],
+ "manufacturers": [
+  {
+   "ref": "zoll",
+   "models": [
+    "X Series",
+    "R Series",
+    "AED 3",
+    "AED Plus"
+   ],
+   "note": "Rectilinear-biphasische Impulsform; X/R Series als Monitor-Defibrillatoren, AED 3 und AED Plus als AED."
+  },
+  {
+   "ref": "stryker",
+   "models": [
+    "LIFEPAK 15",
+    "LIFEPAK 1000",
+    "LIFEPAK CR2"
+   ],
+   "note": "LIFEPAK-Produktlinie (ehemals Physio-Control)."
+  },
+  {
+   "ref": "philips",
+   "models": [
+    "HeartStart FRx",
+    "HeartStart HS1",
+    "HeartStart MRx"
+   ],
+   "note": "Verfügbarkeit einzelner Modelle regional unterschiedlich."
+  },
+  {
+   "ref": "corpuls",
+   "models": [
+    "corpuls3",
+    "corpuls1",
+    "corpuls aed"
+   ],
+   "note": "Hersteller GS Elektromedizinische Geräte G. Stemple GmbH, Kaufering."
+  },
+  {
+   "ref": "schiller",
+   "models": [
+    "DEFIGARD Touch 7",
+    "FRED PA-1"
+   ]
+  },
+  {
+   "ref": "mindray",
+   "models": [
+    "BeneHeart D3",
+    "BeneHeart D6",
+    "BeneHeart C-Serie"
+   ]
+  },
+  {
+   "ref": "weinmann",
+   "models": [
+    "MEDUCORE Standard²"
+   ]
+  }
+ ],
+ "price": {
+  "status": "nicht-verifiziert",
+  "note": "Für Defibrillatoren liegen keine öffentlich überprüfbaren, allgemein gültigen Listenpreise vor. Die Spanne zwischen einem Laien-AED und einem voll ausgestatteten Monitor-Defibrillator ist sehr groß. Einflussfaktoren: Bauform (Laien-AED, professioneller AED, Monitor-Defibrillator), Funktionsumfang (manueller Modus, Kardioversion, Schrittmacher, 12-Kanal-EKG, SpO₂, NIBP, etCO₂, CPR-Feedback), Konnektivität (Fernüberwachung, Datenübertragung, Flottenmanagement), Zubehör (Akkus, Ladestationen, Halterungen, Kinderelektroden, Paddles, Wandkasten), Servicevertrag und Garantielaufzeit sowie Ausschreibungs- und Rahmenvertragskonditionen. Für die Investitionsentscheidung sind die **Gesamtbetriebskosten** maßgeblich: Einweg-Elektroden mit begrenzter Haltbarkeit, Batterien/Akkus, STK, Software-Updates, Schulung sowie Standardisierung innerhalb der Flotte (gemeinsames Zubehör)."
+ },
+ "maintenance": {
+  "stk": "ja",
+  "mtk": "nein",
+  "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.1 – Produkte zur Erzeugung und Anwendung elektrischer Energie zur unmittelbaren Beeinflussung der Herztätigkeit einschließlich Defibrillatoren; nicht in Anlage 2 aufgeführt. Sonderregelung für selbsttestende Laien-AED in § 12 Abs. 2.",
+  "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); bei Laien-AED unter den Voraussetzungen des § 12 Abs. 2 entbehrlich; tägliche Sicht- und Statuskontrolle sowie Akku-/Elektrodenwechsel nach Herstellerangabe"
+ },
+ "faults": [
+  {
+   "title": "Elektroden prüfen / schlechter Elektrodenkontakt",
+   "ref": "elektrodenproblem",
+   "cause": "Pads nicht oder schlecht geklebt (Behaarung, Schweiß, Nässe), Gel ausgetrocknet (abgelaufene Pads), Kabel/Stecker defekt, Impedanz außerhalb des Messbereichs.",
+   "action": "Haut trocknen, ggf. rasieren, neue Pads fest andrücken, Steckverbindung prüfen; bei wiederholtem Auftreten Kabel und Gerät durch den Service prüfen lassen."
+  },
+  {
+   "title": "Akku schwach / Selbsttest Akku nicht bestanden",
+   "ref": "akkufehler",
+   "cause": "Entladener oder gealterter Akku, Primärbatterie am Ende der Lebensdauer, Lagerung bei Kälte/Hitze, defekte Ladehalterung.",
+   "action": "Ersatzakku einsetzen, Akku laden bzw. Kapazitätstest durchführen; Batterie nach Herstellerangabe tauschen; Ladeinfrastruktur prüfen."
+  },
+  {
+   "title": "Analyse gestört / Bewegung erkannt",
+   "ref": "bewegungsartefakt",
+   "cause": "Thoraxkompressionen, Beatmung, Transport oder Berührung während der Analyse; Krampfanfälle.",
+   "action": "Gemäß Sprachanweisung Patient nicht berühren, Fahrzeug ggf. anhalten, Analyse wiederholen; Unterbrechungen der CPR so kurz wie möglich halten."
+  },
+  {
+   "title": "Gestörtes EKG / Netzbrumm",
+   "ref": "netzstoerung",
+   "cause": "Kapazitive Einkopplung aus Netzleitungen, schlechte Elektrodenhaftung, fehlende Filtereinstellung.",
+   "action": "Elektrodenkontakt verbessern, Kabel nicht parallel zu Netzleitungen führen, Netzfilter prüfen; Ursachen bei [[netzstoerung|50-Hz-Störungen]] beachten."
+  },
+  {
+   "title": "Selbsttest fehlgeschlagen / Gerät nicht einsatzbereit",
+   "ref": "fehlercodes",
+   "cause": "Interner Hardware- oder Softwarefehler (z. B. Hochspannungsteil, Speicher), abgelaufene Pads, fehlende Pads, Batterie.",
+   "action": "Gerät sofort außer Betrieb nehmen und durch ein Ersatzgerät ersetzen; Fehlerspeicher nach Gebrauchsanweisung auslesen und Hersteller-/Serviceinformation folgen. Bei Laien-AED Funktionsfähigkeit unverzüglich wiederherstellen."
+  },
+  {
+   "title": "Kein Schock bei Synchronisation",
+   "cause": "Sync-Modus aktiv, aber keine R-Zacke erkannt (zu niedrige Amplitude, falsche Ableitung) oder Kammerflimmern im Sync-Modus.",
+   "action": "Ableitung bzw. Verstärkung wechseln, R-Zacken-Markierung prüfen; bei Kammerflimmern Synchronisation ausschalten (Defibrillationsmodus). Nach jeder Kardioversion Modus kontrollieren, da Geräte sich unterschiedlich verhalten."
+  },
+  {
+   "title": "Anwendungsfehler im Einsatz",
+   "ref": "anwendungsfehler",
+   "cause": "Falsche Elektrodenposition, Pads überlappend oder über Pflaster/implantiertem Gerät, Sauerstoffquelle nahe am Thorax, falscher Modus, Energie nicht angepasst.",
+   "action": "Regelmäßige Simulationstrainings und [[einweisung|Einweisungen]]; Elektroden mit ausreichendem Abstand zu Implantaten kleben, Sauerstoffquellen während des Schocks entfernen; einheitliche Gerätetypen."
+  },
+  {
+   "title": "EMV-Störung",
+   "ref": "emv-stoerung",
+   "cause": "Starke Störfelder (Funk, Fahrzeugelektrik, Hochfrequenz) beeinflussen das EKG oder die Analyse.",
+   "action": "Störquelle identifizieren, Abstand vergrößern; Vorfälle dokumentieren und ggf. melden ([[emv|EMV]], [[iec-60601-1-2|IEC 60601-1-2]])."
+  }
+ ],
+ "tests": [
+  {
+   "name": "Sicherheitstechnische Kontrolle",
+   "ref": "stk",
+   "description": "Pflichtprüfung nach § 12 MPBetreibV (Anlage 1 Nr. 1.1) nach Herstellerprüfanweisung: Sichtprüfung, elektrische Sicherheit, Energieabgabe, Ladezeit, Synchronisation, AED-Analyse, Stimulation, Monitoring, Alarme, Dokumentation."
+  },
+  {
+   "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+   "ref": "elektrische-sicherheitspruefung",
+   "description": "Schutzleiterwiderstand (netzbetriebene Geräte/Ladehalterungen), ggf. Isolationswiderstand, Geräte- und Patientenableitströme der defibrillationsgeschützten Anwendungsteile; nach STK und Instandsetzung."
+  },
+  {
+   "name": "Energieprüfung mit Defibrillator-Analysator",
+   "ref": "pruefgeraete",
+   "description": "Schockabgabe in eine 50-Ω-Prüflast bei mehreren Energiestufen; Messung von Energie, Spitzenspannung/-strom und Impulsform; Prüfung der Impedanzkompensation an weiteren Lasten."
+  },
+  {
+   "name": "Synchronisationsprüfung",
+   "ref": "pruefgeraete",
+   "description": "Analysator liefert EKG-Signal; Messung der Verzögerung zwischen R-Zacke und Schockabgabe im Kardioversionsmodus."
+  },
+  {
+   "name": "Prüfung der AED-Rhythmusanalyse",
+   "ref": "pruefgeraete",
+   "description": "Simulierte Rhythmen (Kammerflimmern, VT, Sinusrhythmus, Asystolie): Schockempfehlung nur bei schockbaren Rhythmen."
+  },
+  {
+   "name": "Schrittmacherprüfung",
+   "ref": "pruefgeraete",
+   "description": "Messung von Stromamplitude, Impulsdauer und Frequenz an einer Schrittmacherlast; Prüfung der Demand-Funktion mit simuliertem Eigenrhythmus."
+  },
+  {
+   "name": "Funktionsprüfung und Selbsttest",
+   "ref": "funktionspruefung",
+   "description": "Tägliche Status- und Zubehörkontrolle durch Anwender:innen; ggf. manueller Funktionstest nach Herstellerangabe; Auswertung der Selbsttestprotokolle."
+  }
+ ],
+ "diagram": {
+  "title": "Funktionsschema eines externen Defibrillators",
+  "caption": "Vereinfachtes Funktionsschema eines biphasischen Monitor-Defibrillators mit AED-Funktion: Energiepfad (oben) vom Akku über Ladewandler, Kondensator und H-Brücke zu den Elektroden; Signalpfad (unten) vom Patienten über EKG- und Impedanzmessung zur Rhythmusanalyse. Kein Abbild eines konkreten Modells.",
+  "width": 960,
+  "height": 460,
+  "nodes": [
+   {
+    "id": "akku",
+    "label": "Akku /\nBatterie",
+    "ref": "lithium-ionen-akku",
+    "kind": "source",
+    "x": 90,
+    "y": 80
+   },
+   {
+    "id": "lader",
+    "label": "HV-Ladewandler",
+    "ref": "hochspannungserzeugung",
+    "kind": "process",
+    "x": 290,
+    "y": 80
+   },
+   {
+    "id": "kond",
+    "label": "Energiespeicher-\nkondensator",
+    "ref": "kondensator",
+    "kind": "process",
+    "x": 490,
+    "y": 80
+   },
+   {
+    "id": "bruecke",
+    "label": "H-Brücke +\nPatientenrelais",
+    "ref": "galvanische-trennung",
+    "kind": "actuator",
+    "x": 690,
+    "y": 80
+   },
+   {
+    "id": "elektr",
+    "label": "Defibrillations-\nelektroden",
+    "ref": "defibrillationselektroden",
+    "kind": "output",
+    "x": 870,
+    "y": 80
+   },
+   {
+    "id": "entl",
+    "label": "Sicherheits-\nentladung",
+    "ref": "joulesche-waerme",
+    "kind": "process",
+    "x": 690,
+    "y": 190
+   },
+   {
+    "id": "speicher",
+    "label": "Ereignisspeicher /\nDatenexport",
+    "kind": "output",
+    "x": 90,
+    "y": 190
+   },
+   {
+    "id": "cpu",
+    "label": "Steuerung &\nRhythmusanalyse",
+    "ref": "mikrocontroller",
+    "kind": "control",
+    "x": 490,
+    "y": 190
+   },
+   {
+    "id": "ui",
+    "label": "Display, Tasten,\nSprachausgabe",
+    "ref": "display-bedienoberflaeche",
+    "kind": "output",
+    "x": 290,
+    "y": 300
+   },
+   {
+    "id": "adc",
+    "label": "A/D-Wandler",
+    "ref": "analog-digital-wandler",
+    "kind": "process",
+    "x": 490,
+    "y": 300
+   },
+   {
+    "id": "ekg",
+    "label": "EKG-Eingang\n(defi-geschützt)",
+    "ref": "instrumentenverstaerker",
+    "kind": "sensor",
+    "x": 690,
+    "y": 300
+   },
+   {
+    "id": "pat",
+    "label": "Patient\n(Thorax, Herz)",
+    "ref": "herz",
+    "kind": "patient",
+    "x": 870,
+    "y": 300
+   },
+   {
+    "id": "zmess",
+    "label": "Impedanzmessung",
+    "ref": "spannung-strom-widerstand",
+    "kind": "sensor",
+    "x": 690,
+    "y": 400
+   },
+   {
+    "id": "cpr",
+    "label": "CPR-Feedback-\nSensor",
+    "kind": "sensor",
+    "x": 290,
+    "y": 400
+   }
+  ],
+  "edges": [
+   {
+    "from": "akku",
+    "to": "lader",
+    "kind": "power",
+    "label": "DC"
+   },
+   {
+    "from": "lader",
+    "to": "kond",
+    "kind": "power",
+    "label": "kV"
+   },
+   {
+    "from": "kond",
+    "to": "bruecke",
+    "kind": "energy"
+   },
+   {
+    "from": "bruecke",
+    "to": "elektr",
+    "kind": "energy",
+    "label": "Schock"
+   },
+   {
+    "from": "elektr",
+    "to": "pat",
+    "kind": "energy"
+   },
+   {
+    "from": "bruecke",
+    "to": "entl",
+    "kind": "energy",
+    "label": "Restenergie"
+   },
+   {
+    "from": "pat",
+    "to": "ekg",
+    "kind": "signal",
+    "label": "EKG"
+   },
+   {
+    "from": "pat",
+    "to": "zmess",
+    "kind": "signal",
+    "label": "Z"
+   },
+   {
+    "from": "ekg",
+    "to": "adc",
+    "kind": "signal"
+   },
+   {
+    "from": "zmess",
+    "to": "adc",
+    "kind": "signal"
+   },
+   {
+    "from": "cpr",
+    "to": "adc",
+    "kind": "signal"
+   },
+   {
+    "from": "adc",
+    "to": "cpu",
+    "kind": "data"
+   },
+   {
+    "from": "cpu",
+    "to": "lader",
+    "kind": "signal",
+    "label": "Laden"
+   },
+   {
+    "from": "cpu",
+    "to": "bruecke",
+    "kind": "signal",
+    "label": "Auslösen"
+   },
+   {
+    "from": "cpu",
+    "to": "ui",
+    "kind": "data"
+   },
+   {
+    "from": "cpu",
+    "to": "speicher",
+    "kind": "data"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "img/devices/defibrillator-aufbau.svg",
+   "kind": "schema",
+   "caption": "Schematischer Aufbau eines externen Defibrillators: Energiepfad vom Akku über Hochspannungs-Ladewandler, Kondensator und H-Brücke zu den anterolateral geklebten Elektroden, Sicherheitsentladung sowie EKG- und Impedanzmessung (eigene Darstellung, kein reales Modell)."
+  },
+  {
+   "src": "img/devices/defibrillator-prinzip.svg",
+   "kind": "schema",
+   "caption": "Ersatzschaltbild der Kondensatorentladung und Stromverlauf eines biphasischen, abgeschnittenen Exponentialimpulses mit Beispielwerten (C = 150 µF, U₀ = 1,8 kV, R = 75 Ω; eigene Darstellung)."
+  }
+ ],
+ "paths": [
+  [
+   "defibrillator",
+   "kondensator",
+   "spannung-strom-widerstand",
+   "elektrische-stromwirkung",
+   "herz"
+  ],
+  [
+   "defibrillator",
+   "defibrillationselektroden",
+   "haut",
+   "elektrische-stromwirkung",
+   "aktionspotential"
+  ],
+  [
+   "defibrillator",
+   "ekg-elektrode",
+   "biosignale",
+   "erregungsleitungssystem",
+   "herz"
+  ]
+ ],
+ "related": [
+  "icd",
+  "externer-schrittmacher",
+  "herzschrittmacher",
+  "ekg-geraet",
+  "patientenmonitor",
+  "thoraxkompressionsgeraet",
+  "transportbeatmungsgeraet",
+  "kapnometer",
+  "iec-60601-2-4",
+  "iec-60601-1",
+  "iec-62353",
+  "mpbetreibv",
+  "elektrische-stromwirkung",
+  "kondensator",
+  "defibrillationselektroden",
+  "erregungsleitungssystem"
+ ],
+ "sources": [
+  "erc-2021",
+  "erc-2025-als",
+  "webster-2010",
+  "kramme-2017",
+  "bronzino-2015",
+  "schmidt-lang-2019",
+  "tipler-2019",
+  "kerber-1997",
+  "iec-60601-2-4",
+  "iec-60601-1",
+  "iec-62353",
+  "iec-60479-1",
+  "mdr-2017",
+  "mdcg-2021-24",
+  "mpbetreibv",
+  "din-31051"
+ ],
+ "status": "ausfuehrlich",
+ "updated": "2026-11-11"
+}

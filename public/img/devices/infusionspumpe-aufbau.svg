@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Schematischer Aufbau einer volumetrischen Infusionspumpe</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="24" text-anchor="middle" font-size="15" font-weight="600">Aufbau einer volumetrischen Infusionspumpe (Schema)</text>
+
+  <!-- Infusionsbeutel -->
+  <path d="M40,46 L100,46 L104,118 Q70,132 36,118 Z" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="44" y1="70" x2="96" y2="70" stroke="#14b8a6" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="70" y="98" text-anchor="middle" font-size="12">Lösung</text>
+  <!-- Tropfkammer -->
+  <line x1="70" y1="128" x2="70" y2="142" stroke="#0b2545" stroke-width="2"/>
+  <rect x="58" y="142" width="24" height="44" rx="5" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="59" y="170" width="22" height="15" fill="#e6f7f5"/>
+  <circle cx="70" cy="158" r="3" fill="#14b8a6"/>
+  <!-- Schlauch zum Gerät -->
+  <path d="M70,186 L70,240 L150,240" fill="none" stroke="#0d9488" stroke-width="3"/>
+
+  <!-- Gehäuse -->
+  <rect x="140" y="46" width="300" height="270" rx="14" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <!-- Display -->
+  <rect x="160" y="62" width="170" height="80" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="245" y="98" text-anchor="middle" font-size="15" font-weight="600">100 ml/h</text>
+  <text x="245" y="120" text-anchor="middle" font-size="12">VTBI 500 ml</text>
+  <!-- Tasten -->
+  <rect x="345" y="62" width="80" height="80" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="365" cy="82" r="7" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <circle cx="385" cy="82" r="7" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <circle cx="405" cy="82" r="7" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <circle cx="365" cy="104" r="7" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <circle cx="385" cy="104" r="7" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <circle cx="405" cy="104" r="7" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="357" y="120" width="56" height="14" rx="4" fill="#14b8a6"/>
+
+  <!-- Geöffneter Türbereich -->
+  <rect x="155" y="160" width="270" height="140" rx="8" fill="#ffffff" stroke="#0b2545" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <!-- Schlauch durch die Pumpe -->
+  <line x1="150" y1="240" x2="440" y2="240" stroke="#0d9488" stroke-width="3"/>
+  <!-- Drucksensor upstream -->
+  <rect x="170" y="246" width="26" height="22" rx="3" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Fingermechanismus -->
+  <rect x="212" y="186" width="110" height="10" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.2"/>
+  <rect x="216" y="244" width="10" height="34" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.2"/>
+  <rect x="230" y="246" width="10" height="32" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.2"/>
+  <rect x="244" y="250" width="10" height="28" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.2"/>
+  <rect x="258" y="254" width="10" height="24" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.2"/>
+  <rect x="272" y="250" width="10" height="28" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.2"/>
+  <rect x="286" y="246" width="10" height="32" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.2"/>
+  <rect x="300" y="244" width="10" height="34" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.2"/>
+  <line x1="212" y1="284" x2="322" y2="284" stroke="#0b2545" stroke-width="2"/>
+  <!-- Drucksensor downstream -->
+  <rect x="336" y="246" width="26" height="22" rx="3" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Luftblasendetektor -->
+  <rect x="374" y="226" width="12" height="28" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <rect x="390" y="226" width="12" height="28" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <!-- Freiflusssperre -->
+  <rect x="408" y="232" width="12" height="16" rx="2" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Zum Patienten -->
+  <path d="M440,240 L540,240 L540,300" fill="none" stroke="#0d9488" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="540" y="320" text-anchor="middle">zum Patienten</text>
+  <text x="540" y="336" text-anchor="middle" font-size="12">(venöser Zugang)</text>
+
+  <!-- Beschriftungen links -->
+  <text x="18" y="38" font-size="13">Infusionsbeutel</text>
+  <line x1="58" y1="164" x2="40" y2="200" stroke="#0b2545" stroke-width="1"/>
+  <text x="10" y="214" font-size="13">Tropfkammer</text>
+
+  <!-- Beschriftungen oben rechts -->
+  <line x1="300" y1="62" x2="470" y2="44" stroke="#0b2545" stroke-width="1"/>
+  <text x="474" y="48">Display</text>
+  <line x1="425" y1="100" x2="470" y2="100" stroke="#0b2545" stroke-width="1"/>
+  <text x="474" y="104">Bedientasten</text>
+  <line x1="322" y1="191" x2="470" y2="160" stroke="#0b2545" stroke-width="1"/>
+  <text x="474" y="158">Gegendruckplatte</text>
+  <text x="474" y="174" font-size="12">(Tür)</text>
+  <line x1="414" y1="232" x2="470" y2="206" stroke="#0b2545" stroke-width="1"/>
+  <text x="474" y="210">Freiflusssperre</text>
+
+  <!-- Beschriftungen unten -->
+  <line x1="183" y1="268" x2="160" y2="344" stroke="#0b2545" stroke-width="1"/>
+  <text x="150" y="358" text-anchor="middle">Drucksensor</text>
+  <text x="150" y="374" text-anchor="middle" font-size="12">upstream</text>
+  <line x1="267" y1="284" x2="267" y2="344" stroke="#0b2545" stroke-width="1"/>
+  <text x="267" y="358" text-anchor="middle">Fingermechanismus</text>
+  <text x="267" y="374" text-anchor="middle" font-size="12">(Linearperistaltik)</text>
+  <line x1="349" y1="268" x2="370" y2="344" stroke="#0b2545" stroke-width="1"/>
+  <text x="380" y="358" text-anchor="middle">Drucksensor</text>
+  <text x="380" y="374" text-anchor="middle" font-size="12">downstream</text>
+  <line x1="396" y1="254" x2="470" y2="344" stroke="#0b2545" stroke-width="1"/>
+  <text x="480" y="358" text-anchor="middle">Luftblasen-</text>
+  <text x="480" y="374" text-anchor="middle">detektor (US)</text>
+  <text x="300" y="394" text-anchor="middle" font-size="12" fill="#0d9488">Pfeil = Förderrichtung; eigene Darstellung, kein reales Modell</text>
+</svg>

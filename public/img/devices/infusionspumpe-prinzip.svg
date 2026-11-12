@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Prinzip der Linearperistaltik und Druckanstieg bei Okklusion</title>
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b2545"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="24" text-anchor="middle" font-size="15" font-weight="600">Linearperistaltik und Okklusionserkennung</text>
+
+  <!-- Gegendruckplatte -->
+  <rect x="90" y="48" width="340" height="14" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="440" y="60">Gegendruckplatte</text>
+  <!-- Schlauch: verformt -->
+  <path d="M60,64 L430,64" stroke="#0b2545" stroke-width="2" fill="none"/>
+  <path d="M60,92 L110,92 Q130,92 140,66 Q150,92 175,92 L215,92 Q240,92 250,66 Q260,92 285,92 L325,92 Q350,92 360,66 Q370,92 395,92 L430,92" stroke="#0b2545" stroke-width="2" fill="none"/>
+  <!-- Flüssigkeitspakete -->
+  <path d="M150,66 Q160,90 175,90 L215,90 Q235,90 248,66 Z" fill="#e6f7f5"/>
+  <path d="M260,66 Q270,90 285,90 L325,90 Q345,90 358,66 Z" fill="#e6f7f5"/>
+  <!-- Finger -->
+  <rect x="133" y="70" width="14" height="60" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <rect x="168" y="94" width="14" height="36" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="203" y="96" width="14" height="34" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="243" y="70" width="14" height="60" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <rect x="278" y="94" width="14" height="36" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="313" y="96" width="14" height="34" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="353" y="70" width="14" height="60" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <!-- Nockenwelle -->
+  <line x1="110" y1="142" x2="400" y2="142" stroke="#0b2545" stroke-width="3"/>
+  <circle cx="110" cy="142" r="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="440" y="132">Finger (Lamellen)</text>
+  <line x1="370" y1="118" x2="436" y2="128" stroke="#0b2545" stroke-width="1"/>
+  <text x="440" y="150">Nockenwelle</text>
+  <line x1="400" y1="142" x2="436" y2="146" stroke="#0b2545" stroke-width="1"/>
+  <text x="440" y="96">Schlauchsegment</text>
+  <line x1="430" y1="88" x2="436" y2="92" stroke="#0b2545" stroke-width="1"/>
+  <!-- Flussrichtung -->
+  <line x1="160" y1="166" x2="340" y2="166" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arr2)"/>
+  <text x="250" y="186" text-anchor="middle">Wanderrichtung der Quetschstelle → Förderung Q = V_U · n</text>
+
+  <!-- Diagramm Druck über Zeit -->
+  <line x1="70" y1="370" x2="330" y2="370" stroke="#0b2545" stroke-width="1.5" marker-end="url(#ax)"/>
+  <line x1="70" y1="370" x2="70" y2="215" stroke="#0b2545" stroke-width="1.5" marker-end="url(#ax)"/>
+  <text x="330" y="388" text-anchor="end">Zeit t nach Okklusion</text>
+  <text x="62" y="212" text-anchor="end">p</text>
+  <line x1="70" y1="250" x2="320" y2="250" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="76" y="244" font-size="12" fill="#0d9488">Alarmgrenze Δp</text>
+  <!-- steile Kurve hohe Rate -->
+  <line x1="70" y1="370" x2="110" y2="250" stroke="#0b2545" stroke-width="2"/>
+  <circle cx="110" cy="250" r="4" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <text x="116" y="290" font-size="12">hohe Rate</text>
+  <!-- flache Kurve niedrige Rate -->
+  <line x1="70" y1="370" x2="300" y2="256" stroke="#0b2545" stroke-width="2"/>
+  <text x="220" y="320" font-size="12">niedrige Rate</text>
+  <text x="96" y="388" font-size="12">t₁</text>
+
+  <!-- Formeln -->
+  <rect x="360" y="215" width="220" height="160" rx="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="372" y="240" font-weight="600">Okklusion (Beispiel)</text>
+  <text x="372" y="264">dp/dt = Q / C_S</text>
+  <text x="372" y="286">t_Alarm ≈ C_S · Δp / Q</text>
+  <text x="372" y="308">V_Bolus ≈ C_S · Δp</text>
+  <text x="372" y="332" font-size="12">C_S = 2 µl/mmHg, Δp = 500 mmHg:</text>
+  <text x="372" y="350" font-size="12">100 ml/h → ca. 36 s</text>
+  <text x="372" y="366" font-size="12">1 ml/h → ca. 60 min</text>
+</svg>

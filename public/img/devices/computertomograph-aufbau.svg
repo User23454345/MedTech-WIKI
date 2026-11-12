@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Schematischer Aufbau eines Computertomographen (Gantry-Querschnitt)</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="24" text-anchor="middle" font-size="15" font-weight="600">Aufbau eines CT – Gantry im Querschnitt (Schema)</text>
+
+  <!-- Gantry-Gehäuse (stationär) -->
+  <circle cx="220" cy="215" r="170" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <!-- Rotor / Schleifring -->
+  <circle cx="220" cy="215" r="150" fill="none" stroke="#0b2545" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <!-- Patientenöffnung -->
+  <circle cx="220" cy="215" r="78" fill="#ffffff" stroke="#0b2545" stroke-width="2"/>
+
+  <!-- Fächerstrahl -->
+  <path d="M220,92 L112,322 A250,250 0 0 0 328,322 Z" fill="#e6f7f5" stroke="#14b8a6" stroke-width="1.5" opacity="0.85"/>
+
+  <!-- Patient und Liege -->
+  <ellipse cx="220" cy="210" rx="52" ry="36" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <ellipse cx="200" cy="205" rx="10" ry="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1"/>
+  <ellipse cx="242" cy="214" rx="13" ry="10" fill="#f1f5f9" stroke="#0b2545" stroke-width="1"/>
+  <rect x="160" y="250" width="120" height="10" rx="3" fill="#0b2545"/>
+
+  <!-- Röntgenröhre -->
+  <rect x="188" y="52" width="64" height="30" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="2"/>
+  <circle cx="220" cy="67" r="6" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <!-- Formfilter und Kollimator -->
+  <path d="M200,86 Q220,94 240,86 L240,90 Q220,98 200,90 Z" fill="#0d9488"/>
+  <rect x="198" y="96" width="14" height="5" fill="#0b2545"/>
+  <rect x="228" y="96" width="14" height="5" fill="#0b2545"/>
+
+  <!-- Detektorbogen -->
+  <path d="M104,330 A258,258 0 0 0 336,330" fill="none" stroke="#0b2545" stroke-width="9"/>
+  <path d="M104,330 A258,258 0 0 0 336,330" fill="none" stroke="#14b8a6" stroke-width="3" stroke-dasharray="3 3"/>
+
+  <!-- Rotationspfeil -->
+  <path d="M352,128 A160,160 0 0 1 378,196" fill="none" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Beschriftungen mit Führungslinien -->
+  <g stroke="#0b2545" stroke-width="1">
+    <line x1="252" y1="62" x2="420" y2="56"/>
+    <line x1="241" y1="90" x2="420" y2="88"/>
+    <line x1="242" y1="99" x2="420" y2="120"/>
+    <line x1="252" y1="170" x2="420" y2="152"/>
+    <line x1="372" y1="170" x2="420" y2="184"/>
+    <line x1="268" y1="214" x2="420" y2="216"/>
+    <line x1="280" y1="255" x2="420" y2="248"/>
+    <line x1="320" y1="336" x2="420" y2="300"/>
+    <line x1="368" y1="282" x2="420" y2="268"/>
+    <line x1="330" y1="345" x2="420" y2="340"/>
+  </g>
+  <g font-size="13">
+    <text x="426" y="60">Röntgenröhre (Fokus)</text>
+    <text x="426" y="92">Formfilter (Bowtie)</text>
+    <text x="426" y="124">Kollimator / Blende</text>
+    <text x="426" y="156">Fächerstrahl</text>
+    <text x="426" y="188">Rotation (0,25–1 s)</text>
+    <text x="426" y="220">Patient (Schnittebene)</text>
+    <text x="426" y="252">Patientenliege</text>
+    <text x="426" y="272">Schleifring (Rotor)</text>
+    <text x="426" y="304">Detektorbogen mit</text>
+    <text x="426" y="320">Streustrahlenraster</text>
+    <text x="426" y="344">Gantry-Gehäuse</text>
+  </g>
+
+  <text x="220" y="392" text-anchor="middle" font-size="13">Röhre und Detektor rotieren gemeinsam um den Patienten</text>
+</svg>

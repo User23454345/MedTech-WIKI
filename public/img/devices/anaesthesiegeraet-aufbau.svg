@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Schematischer Aufbau eines Anästhesiearbeitsplatzes</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="24" text-anchor="middle" font-size="15" font-weight="600">Aufbau eines Anästhesiearbeitsplatzes (Schema)</text>
+
+  <!-- Gerätekorpus -->
+  <rect x="150" y="40" width="300" height="300" rx="10" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <!-- Rollen -->
+  <circle cx="180" cy="352" r="10" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="420" cy="352" r="10" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Display -->
+  <rect x="270" y="52" width="165" height="88" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <polyline points="280,90 292,90 296,68 318,68 322,90 344,90 348,68 370,68 374,90 425,90" fill="none" stroke="#0d9488" stroke-width="1.8"/>
+  <polyline points="280,124 300,124 306,106 322,104 330,124 352,124 358,106 374,104 382,124 425,124" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
+
+  <!-- Gasmischer -->
+  <rect x="165" y="52" width="90" height="56" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="177" y="62" width="12" height="36" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="1"/>
+  <rect x="198" y="62" width="12" height="36" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="1"/>
+  <rect x="219" y="62" width="12" height="36" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="1"/>
+  <rect x="179" y="78" width="8" height="8" fill="#14b8a6"/>
+  <rect x="200" y="70" width="8" height="8" fill="#14b8a6"/>
+  <rect x="221" y="88" width="8" height="8" fill="#14b8a6"/>
+
+  <!-- Verdampfer -->
+  <rect x="165" y="124" width="56" height="74" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="193" cy="146" r="12" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="193" y1="146" x2="200" y2="138" stroke="#0d9488" stroke-width="2"/>
+  <rect x="173" y="168" width="40" height="22" rx="3" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="173" y="180" width="40" height="10" fill="#14b8a6" opacity="0.6"/>
+
+  <!-- Ventilator -->
+  <rect x="165" y="214" width="110" height="68" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="180" y="226" width="40" height="44" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <line x1="180" y1="250" x2="220" y2="250" stroke="#0d9488" stroke-width="3"/>
+  <line x1="200" y1="250" x2="200" y2="270" stroke="#0b2545" stroke-width="2"/>
+  <text x="248" y="246" text-anchor="middle" font-size="13">M</text>
+  <circle cx="248" cy="242" r="13" fill="none" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Kompaktatemsystem -->
+  <rect x="300" y="160" width="135" height="122" rx="8" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Richtungsventile -->
+  <circle cx="330" cy="182" r="10" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="322" y1="182" x2="338" y2="182" stroke="#0d9488" stroke-width="2"/>
+  <circle cx="405" cy="182" r="10" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="397" y1="182" x2="413" y2="182" stroke="#0d9488" stroke-width="2"/>
+  <!-- Absorber -->
+  <rect x="345" y="204" width="45" height="66" rx="5" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <g fill="#14b8a6">
+    <circle cx="356" cy="218" r="3"/><circle cx="368" cy="222" r="3"/><circle cx="380" cy="216" r="3"/>
+    <circle cx="358" cy="236" r="3"/><circle cx="372" cy="240" r="3"/><circle cx="382" cy="234" r="3"/>
+    <circle cx="355" cy="254" r="3"/><circle cx="368" cy="258" r="3"/><circle cx="381" cy="252" r="3"/>
+  </g>
+  <!-- APL -->
+  <rect x="402" y="214" width="24" height="24" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="414" y1="214" x2="414" y2="204" stroke="#0b2545" stroke-width="2"/>
+
+  <!-- Beutel -->
+  <line x1="435" y1="258" x2="468" y2="258" stroke="#0b2545" stroke-width="4"/>
+  <ellipse cx="490" cy="272" rx="22" ry="30" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Schlauchsystem zum Patienten -->
+  <path d="M435,182 C480,182 500,150 540,150" fill="none" stroke="#0b2545" stroke-width="5" stroke-linecap="round"/>
+  <path d="M435,198 C490,198 500,168 540,166" fill="none" stroke="#0b2545" stroke-width="5" stroke-linecap="round"/>
+  <rect x="540" y="146" width="22" height="24" rx="4" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Gaseinlass -->
+  <circle cx="42" cy="110" r="5" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="42" cy="130" r="5" fill="#0b2545"/>
+  <circle cx="42" cy="150" r="5" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <line x1="47" y1="110" x2="150" y2="80" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="47" y1="130" x2="150" y2="84" stroke="#0d9488" stroke-width="2"/>
+  <line x1="47" y1="150" x2="150" y2="88" stroke="#0d9488" stroke-width="2"/>
+
+  <!-- Narkosegasfortleitung -->
+  <path d="M414,204 L414,196" stroke="#0b2545" stroke-width="2"/>
+  <path d="M300,300 L120,300 L120,330" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+  <line x1="300" y1="282" x2="300" y2="300" stroke="#0d9488" stroke-width="2" stroke-dasharray="5 3"/>
+
+  <!-- Beschriftungen mit Führungslinien -->
+  <g stroke="#0b2545" stroke-width="1">
+    <line x1="165" y1="70" x2="128" y2="58"/>
+    <line x1="165" y1="160" x2="128" y2="190"/>
+    <line x1="165" y1="250" x2="128" y2="250"/>
+    <line x1="435" y1="80" x2="470" y2="80"/>
+    <line x1="390" y1="236" x2="470" y2="330"/>
+    <line x1="426" y1="226" x2="530" y2="210"/>
+    <line x1="510" y1="282" x2="530" y2="300"/>
+    
+  </g>
+  <text x="124" y="52" text-anchor="end">Gasmischer</text>
+  <text x="30" y="115" text-anchor="end" font-size="13">O₂</text>
+  <text x="30" y="135" text-anchor="end" font-size="13">Luft</text>
+  <text x="30" y="155" text-anchor="end" font-size="13">N₂O</text>
+  <text x="124" y="186" text-anchor="end">Verdampfer</text>
+  <text x="124" y="200" text-anchor="end" font-size="13">(Narkosemittel)</text>
+  <text x="124" y="246" text-anchor="end">Ventilator</text>
+  <text x="124" y="260" text-anchor="end" font-size="13">(Kolben/Motor)</text>
+  <text x="474" y="76">Display,</text>
+  <text x="474" y="92">Monitoring,</text>
+  <text x="474" y="108">Alarme</text>
+  <text x="474" y="336">CO₂-Absorber</text>
+  <text x="534" y="206">APL-Ventil</text>
+  <text x="534" y="312">Beutel</text>
+  <text x="551" y="136" text-anchor="middle">Y-Stück</text>
+  <text x="132" y="318" font-size="13">Narkosegasfortleitung</text>
+  <text x="368" y="152" text-anchor="middle" font-size="13">Kreissystem</text>
+  <text x="286" y="389" font-size="13" fill="#0d9488">Gasweg</text>
+  <line x1="248" y1="384" x2="278" y2="384" stroke="#0d9488" stroke-width="2"/>
+</svg>

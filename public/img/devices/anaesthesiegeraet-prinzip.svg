@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Prinzip von Bypass-Verdampfer und Kreissystem</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="24" text-anchor="middle" font-size="15" font-weight="600">Verdampferprinzip und Kreissystem (Schema)</text>
+  <line x1="290" y1="40" x2="290" y2="380" stroke="#0b2545" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ===== Links: Bypass-Verdampfer ===== -->
+  <text x="145" y="48" text-anchor="middle" font-weight="600">Bypass-Verdampfer</text>
+  <!-- Gehäuse -->
+  <rect x="50" y="80" width="190" height="190" rx="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <!-- Bypasskanal -->
+  <rect x="62" y="96" width="166" height="34" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Stellglied -->
+  <rect x="130" y="102" width="30" height="22" rx="3" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Kammer -->
+  <rect x="62" y="150" width="166" height="108" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="64" y="222" width="162" height="34" fill="#14b8a6" opacity="0.35"/>
+  <g stroke="#0d9488" stroke-width="2">
+    <line x1="95" y1="160" x2="95" y2="250"/>
+    <line x1="145" y1="160" x2="145" y2="250"/>
+    <line x1="195" y1="160" x2="195" y2="250"/>
+  </g>
+  <!-- Ein-/Ausgang -->
+  <line x1="10" y1="140" x2="50" y2="140" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="240" y1="140" x2="282" y2="140" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M70,140 L70,113 L128,113" fill="none" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M162,113 L220,113 L220,140" fill="none" stroke="#0d9488" stroke-width="2"/>
+  <path d="M70,140 L70,172 L84,172" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <path d="M206,172 L220,172 L220,140" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Beschriftung links -->
+  <g stroke="#0b2545" stroke-width="1">
+    <line x1="145" y1="102" x2="145" y2="74"/>
+    <line x1="110" y1="245" x2="80" y2="290"/>
+    <line x1="195" y1="200" x2="215" y2="290"/>
+  </g>
+  <text x="145" y="70" text-anchor="middle" font-size="13">Temperatur-Stellglied</text>
+  <text x="14" y="132" font-size="13">FGF</text>
+  <text x="246" y="132" font-size="13">c_out</text>
+  <text x="70" y="304" text-anchor="middle" font-size="13">Anästhetikum</text>
+  <text x="70" y="319" text-anchor="middle" font-size="13">(flüssig)</text>
+  <text x="225" y="304" text-anchor="middle" font-size="13">Dochte</text>
+  <text x="145" y="343" text-anchor="middle" font-size="13">F_B : F_K ≈ 11,7 : 1</text>
+  <text x="145" y="360" text-anchor="middle" font-size="13">(Sevofluran, 2 Vol.-%, 2 l/min)</text>
+  <text x="145" y="377" text-anchor="middle" font-size="13">c_sat = p_D / p_amb</text>
+
+  <!-- ===== Rechts: Kreissystem ===== -->
+  <text x="445" y="48" text-anchor="middle" font-weight="600">Kreissystem</text>
+  <!-- Kreis -->
+  <rect x="330" y="90" width="200" height="190" rx="24" fill="none" stroke="#0b2545" stroke-width="5"/>
+  <!-- Richtungsventile -->
+  <circle cx="380" cy="90" r="13" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M374,84 L388,90 L374,96 Z" fill="#14b8a6"/>
+  <circle cx="380" cy="280" r="13" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M388,274 L374,280 L388,286 Z" fill="#14b8a6"/>
+  <!-- Absorber -->
+  <rect x="312" y="150" width="36" height="70" rx="5" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <g fill="#14b8a6">
+    <circle cx="322" cy="164" r="3"/><circle cx="336" cy="172" r="3"/><circle cx="324" cy="186" r="3"/>
+    <circle cx="338" cy="196" r="3"/><circle cx="322" cy="206" r="3"/><circle cx="336" cy="212" r="3"/>
+  </g>
+  <!-- Patient -->
+  <rect x="510" y="160" width="40" height="50" rx="8" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Frischgas -->
+  <line x1="440" y1="60" x2="440" y2="84" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arr)"/>
+  <!-- APL / Beutel -->
+  <line x1="460" y1="280" x2="460" y2="310" stroke="#0b2545" stroke-width="3"/>
+  <ellipse cx="460" cy="330" rx="16" ry="20" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="482" y="268" width="22" height="22" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="504" y1="279" x2="570" y2="279" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <!-- Strömungsrichtung -->
+  <path d="M470,106 L500,106" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M500,264 L470,264" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M362,238 L362,212" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Beschriftung rechts -->
+  <g stroke="#0b2545" stroke-width="1">
+    <line x1="380" y1="77" x2="370" y2="66"/>
+    <line x1="380" y1="293" x2="372" y2="318"/>
+    <line x1="348" y1="160" x2="368" y2="150"/>
+  </g>
+  <text x="448" y="72" font-size="13">Frischgas</text>
+  <text x="360" y="64" text-anchor="end" font-size="13">Insp.-Ventil</text>
+  <text x="372" y="334" text-anchor="end" font-size="13">Exsp.-Ventil</text>
+  <text x="372" y="152" font-size="13">CO₂-Absorber</text>
+  <text x="553" y="232" font-size="13">Patient</text>
+  <text x="460" y="370" text-anchor="middle" font-size="13">Beutel</text>
+  <text x="540" y="300" text-anchor="middle" font-size="13">APL →</text>
+  <text x="540" y="315" text-anchor="middle" font-size="13">Fortleitung</text>
+  <text x="430" y="190" text-anchor="middle" font-size="13">Rückatmung</text>
+  <text x="430" y="206" text-anchor="middle" font-size="13">CO₂ + Ca(OH)₂</text>
+  <text x="430" y="222" text-anchor="middle" font-size="13">→ CaCO₃ + H₂O</text>
+</svg>

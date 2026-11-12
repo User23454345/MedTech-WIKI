@@ -1,0 +1,645 @@
+{
+  "id": "patientenmonitor",
+  "type": "device",
+  "title": "Patientenmonitor",
+  "aliases": [
+    "Überwachungsmonitor",
+    "Multiparametermonitor",
+    "Vitaldatenmonitor",
+    "Bettmonitor",
+    "Bedside-Monitor",
+    "Patient Monitor",
+    "Monitoring"
+  ],
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 1,
+  "domains": [
+    "intensivmedizin",
+    "anaesthesiologie",
+    "notfallmedizin",
+    "kardiologie",
+    "neonatologie"
+  ],
+  "summary": "Ein Patientenmonitor misst kontinuierlich Vitalparameter wie EKG, Sauerstoffsättigung, Blutdruck, Atmung und Temperatur, stellt sie als Kurven und Zahlen dar und alarmiert bei kritischen Zuständen. Er ist das zentrale Überwachungsgerät in Intensivmedizin, Anästhesie und Notfallmedizin.",
+  "body": "## Geschichte und Entwicklung\n\nDie Überwachung von Vitalparametern am Krankenbett entwickelte sich mit der Entstehung der Intensivstationen in der zweiten Hälfte des 20. Jahrhunderts. Frühe Monitore waren Einkanal-Oszilloskope für das EKG mit analogen Herzfrequenzmessern. Mit der Mikroprozessortechnik kamen digitale Signalverarbeitung, Trendspeicher und Arrhythmiealgorithmen hinzu; die nichtinvasive Pulsoxymetrie wurde in den 1980er-Jahren zu einem Standardparameter in Anästhesie und Intensivmedizin [@jubran-2015] [@kramme-2017]. Siehe auch [[geschichte-medizintechnik]].\n\n## Aktuelle Entwicklungen\n\n* **Vernetzung:** Monitore sind Teil klinischer IT-Infrastrukturen. Standards wie [[hl7-fhir|HL7 und FHIR]] erleichtern den Datenaustausch mit PDMS und Krankenhausinformationssystem; gleichzeitig steigen die Anforderungen an IT-Sicherheit und Netzwerkverfügbarkeit.\n* **Alarmmanagement:** Wegen der hohen Zahl klinisch nicht relevanter Alarme gewinnen intelligente Alarmfilter, patientenindividuelle Grenzwerte und Alarmweiterleitung auf mobile Endgeräte an Bedeutung ([[alarmmuedigkeit]]).\n* **Drahtlose Sensorik:** kabellose EKG- und SpO₂-Sensoren sowie tragbare Monitore für die kontinuierliche Überwachung auf Normalstation.\n* **Abgeleitete Parameter und Scores:** Frühwarnscores, die mehrere Vitalparameter kombinieren, und Software-Funktionen zur Entscheidungsunterstützung, die selbst als [[software-medizinprodukt|Software-Medizinprodukt]] reguliert sein können.\n\n> [!vereinfacht] Die Grenze zwischen Monitor, Netzwerk und Software verschwimmt: Ein großer Teil der Funktionalität – Arrhythmieerkennung, Alarmweiterleitung, Trendanalyse – liegt heute in Software, die regelmäßig aktualisiert wird. Für die Medizintechnik bedeutet das, neben Hardwareprüfungen auch Konfigurations- und Softwarestände zu verwalten ([[medizintechnik-management]]).",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "belegt",
+    "note": "Nach [[mdr|MDR]] Anhang VIII **Regel 10** gehören aktive Produkte zur Diagnose und Kontrolle, die eine direkte Kontrolle vitaler Körperfunktionen ermöglichen, zur Klasse IIa; sind sie speziell zur Überwachung vitaler physiologischer Parameter bestimmt, deren Änderung zu einer unmittelbaren Gefahr für den Patienten führen kann (z. B. Herzleistung, Atmung), zur **Klasse IIb** [@mdr-2017] [@mdcg-2021-24]. Multiparametermonitore für Intensivstation und OP fallen typischerweise in Klasse IIb. Einfache Spotcheck-Geräte ohne Überwachung lebensbedrohlicher Zustände können je nach [[zweckbestimmung|Zweckbestimmung]] niedriger eingestuft sein; maßgeblich ist die Klassifizierung durch den Hersteller ([[risikoklassen]]).",
+    "sources": [
+      "mdr-2017",
+      "mdcg-2021-24"
+    ]
+  },
+  "sections": {
+    "purpose": "## Medizinischer Zweck\n\nEin Patientenmonitor erfasst fortlaufend die wichtigsten [[biosignale|Biosignale]] und Vitalparameter eines Patienten, stellt sie als Zahlenwerte und Kurven dar und **alarmiert** das Personal, sobald Grenzwerte über- oder unterschritten werden oder ein lebensbedrohlicher Rhythmus erkannt wird. Er ist damit das zentrale Überwachungsgerät überall dort, wo sich der Zustand eines Patienten innerhalb von Sekunden bis Minuten kritisch verändern kann [@kramme-2017].\n\nDie Kernaufgaben lassen sich in drei Funktionen gliedern:\n\n| Funktion | Inhalt | Beispiel |\n|---|---|---|\n| **Messen** | kontinuierliche oder intermittierende Erfassung physiologischer Größen | EKG, SpO₂, Blutdruck, Atmung, Temperatur |\n| **Darstellen und Dokumentieren** | Echtzeitkurven, Zahlenwerte, Trends, Ereignisspeicher | Herzfrequenztrend der letzten 24 h |\n| **Alarmieren** | Erkennung kritischer Zustände und technischer Probleme, Weiterleitung an Zentrale | Asystolie-Alarm, „Elektrode ab“ |\n\nIm Gegensatz zu einem diagnostischen [[ekg-geraet|12-Kanal-EKG]], das eine Momentaufnahme mit hoher Bandbreite liefert, ist der Monitor auf **Langzeitstabilität, Robustheit gegenüber Artefakten und zuverlässige Alarmierung** ausgelegt. Die medizinische [[zweckbestimmung|Zweckbestimmung]] des Herstellers legt fest, für welche Patientengruppen (Erwachsene, Kinder, Neugeborene), Umgebungen (OP, Intensivstation, Transport) und Parameter der Monitor eingesetzt werden darf.\n\n> [!hinweis] Ein Monitor ersetzt nicht die klinische Beobachtung. Messwerte sind immer im Zusammenhang mit dem klinischen Bild zu bewerten – insbesondere bei Artefakten, schlechter Perfusion oder Fehlanlage von Sensoren.\n\n### Rolle in der Patientensicherheit\n\nDa ein Monitor selbst keine Therapie abgibt, entsteht das Risiko vor allem durch **nicht erkannte** oder **zu spät gemeldete** Zustandsänderungen. Deshalb stehen die Zuverlässigkeit des [[alarmsystem|Alarmsystems]], die korrekte Alarmgrenzeinstellung und die Vermeidung von [[alarmmuedigkeit|Alarmmüdigkeit]] im Mittelpunkt der [[patientensicherheit|Patientensicherheit]]. Die Anforderungen an Alarmsysteme medizinischer elektrischer Geräte regelt die Ergänzungsnorm [[iec-60601-1-8]] [@iec-60601-1-8].",
+    "applications": "## Einsatzgebiete\n\nPatientenmonitore gehören zu den am häufigsten eingesetzten aktiven Medizinprodukten im Krankenhaus. Die Ausstattung richtet sich nach der Versorgungsstufe:\n\n| Bereich | Typische Parameter | Besonderheiten |\n|---|---|---|\n| [[intensivmedizin|Intensivstation]] | EKG mit Arrhythmie- und ST-Analyse, SpO₂, NIBP, mehrere invasive Drücke, Temperatur, etCO₂, ggf. Herzzeitvolumen | modulare High-End-Geräte, Anbindung an Zentrale und Patientendatenmanagementsystem (PDMS) |\n| OP und [[anaesthesiologie|Anästhesie]] | EKG, SpO₂, NIBP, IBP, Kapnographie, Anästhesiegase, Temperatur, ggf. Narkosetiefe und neuromuskuläres Monitoring | häufig in den [[anaesthesiegeraet|Anästhesiearbeitsplatz]] integriert |\n| Aufwachraum, Intermediate Care | EKG, SpO₂, NIBP, Atemfrequenz | mittlere Geräteklasse, Zentralüberwachung |\n| [[notfallmedizin|Notaufnahme und Rettungsdienst]] | EKG, SpO₂, NIBP, etCO₂ | robuste Transportmonitore, oft kombiniert mit [[defibrillator|Defibrillator]] |\n| [[neonatologie|Neonatologie]] | EKG, Impedanzatmung, SpO₂, Temperatur, ggf. transkutane Blutgase | Apnoe-Erkennung, angepasste Alarmgrenzen und Manschettengrößen |\n| [[kardiologie|Kardiologie]], Normalstation | EKG, SpO₂ | häufig drahtlose Telemetrie statt Bettmonitor |\n\n### Gerätevarianten\n\n* **Modulare Bettmonitore** – Grundgerät mit Steckplätzen für Parametermodule; flexibel erweiterbar (z. B. zusätzliche invasive Drücke).\n* **Kompaktmonitore** – feste Parameterausstattung, häufig EKG, SpO₂, NIBP, Temperatur.\n* **Transportmonitore** – akkubetrieben, stoßfest; bei manchen Systemen wird ein Messmodul vom Bettmonitor abgezogen und am Transportmonitor weiterverwendet, damit Trenddaten erhalten bleiben.\n* **Vitalzeichen-Spotcheck-Geräte** – intermittierende Messung (NIBP, SpO₂, Temperatur) auf Normalstation, ohne kontinuierliche Arrhythmieüberwachung.\n* **Telemetriesender** – am Patienten getragene Sender für EKG und SpO₂, die Daten per Funk an eine Zentrale übertragen.\n\nFür einzelne Parameter existieren eigenständige Geräte, deren Funktionsprinzip im Monitor als Modul wiederkehrt: [[pulsoxymeter|Pulsoxymeter]], [[nibp-messgeraet|automatische Blutdruckmessgeräte]], [[invasive-druckmessung|invasive Druckmesssysteme]], [[kapnometer|Kapnographen]] und [[thermometer|elektrische Thermometer]].",
+    "principle": "## Funktionsprinzip\n\nEin Patientenmonitor ist im Kern ein **Mehrkanal-Messsystem für Biosignale**. Jeder Parameter durchläuft eine eigene [[messkette|Messkette]]: Sensor → analoge Signalaufbereitung → Digitalisierung → digitale Signalverarbeitung → Anzeige und Alarmbewertung. Die Kanäle unterscheiden sich vor allem im physikalischen Messprinzip des Sensors [@webster-2010].\n\n| Parameter | Messgröße | Physikalisches Prinzip | Sensor |\n|---|---|---|---|\n| EKG | Potentialdifferenzen an der Hautoberfläche (µV bis mV) | elektrisches Feld der Herzerregung | [[ekg-elektrode|Ag/AgCl-Elektroden]] |\n| Respiration | Änderung der Thoraximpedanz | Leitfähigkeit des Thorax ändert sich mit Luftfüllung | dieselben EKG-Elektroden |\n| SpO₂ | Lichtabsorption in pulsierendem Gewebe | [[lambert-beer|Lambert-Beer-Gesetz]], [[photoplethysmographie|Photoplethysmographie]] | LED und Photodiode |\n| NIBP | Druckoszillationen in der Manschette | [[oszillometrie|Oszillometrie]] | [[drucksensor|piezoresistiver Drucksensor]] |\n| IBP | Druck in einer flüssigkeitsgefüllten Kathetersäule | hydraulische Druckübertragung, Wheatstone-Brücke | Einweg-Druckwandler |\n| Temperatur | Widerstandsänderung | temperaturabhängiger Halbleiterwiderstand (NTC) | [[temperatursensor|Temperatursensor]] |\n| etCO₂ | Infrarotabsorption von CO₂ | nichtdispersive Infrarotspektroskopie | [[co2-sensor|NDIR-Sensor]] |\n\n### EKG-Kanal: kleine Signale, große Störungen\n\nDie Erregungsausbreitung im [[herz|Herzen]] – ausgehend vom Sinusknoten über das [[erregungsleitungssystem|Erregungsleitungssystem]] – erzeugt ein elektrisches Feld, dessen Projektion als Spannung zwischen Hautelektroden messbar ist. Die Amplitude des QRS-Komplexes liegt typischerweise in der Größenordnung von 1 mV [@schmidt-lang-2019]. Demgegenüber stehen erhebliche Störgrößen:\n\n* **Elektrodenpolarisationsspannung** (Gleichspannungsoffset der Elektrode-Haut-Grenzfläche) bis in den Bereich einiger hundert Millivolt,\n* **Gleichtaktstörungen** durch kapazitive Kopplung des Patienten an das 50-Hz-Netz ([[netzstoerung|Netzbrumm]]),\n* **Bewegungs- und Muskelartefakte** ([[bewegungsartefakt|Bewegungsartefakte]]).\n\nDeshalb arbeitet der Eingang mit einem [[instrumentenverstaerker|Instrumentenverstärker]], der nur die **Differenz** zweier Elektrodenpotentiale verstärkt und das gemeinsame (Gleichtakt-)Signal unterdrückt:\n\n`U_aus = G · (U₊ − U₋) + G_cm · U_cm`\n\nDas Maß für die Unterdrückung ist die Gleichtaktunterdrückung `CMRR = G / G_cm`, angegeben in Dezibel: `CMRR_dB = 20 · log₁₀(G / G_cm)` [@tietze-schenk-2019]. Eine zusätzliche **Right-Leg-Drive-Schaltung** (aktive Rückführung des invertierten Gleichtaktsignals über die Neutralelektrode, meist rechtes Bein bzw. N/RL) senkt die Gleichtaktspannung am Patienten weiter [@webster-2010].\n\nIn der Praxis begrenzt nicht der Verstärker allein, sondern die **Unsymmetrie der Elektrodenimpedanzen** die Störunterdrückung: Ein Gleichtaktsignal wird an ungleichen Elektroden-Haut-Impedanzen in ein Differenzsignal umgewandelt.\n\n> [!beispiel] **Rechenbeispiel Netzbrumm:** Am Patienten liegt eine 50-Hz-Gleichtaktspannung von `U_cm = 20 mV`. Die Eingangsimpedanz des Verstärkers beträgt `Z_in = 10 MΩ`, die Elektrodenimpedanzen unterscheiden sich um `ΔZ = 20 kΩ`. Das entstehende Differenzsignal ist näherungsweise `U_d ≈ U_cm · ΔZ / Z_in = 20 mV · 20 kΩ / 10 MΩ = 40 µV`. Bei einem QRS-Komplex von 1 mV sind das 4 % – deutlich sichtbar als Brumm auf der Grundlinie. Eine gute Hautvorbereitung (kleinere und gleichmäßigere Impedanzen) und frische Elektroden wirken also direkt auf die Signalqualität.\n\nNach dem Vorverstärker folgen [[filter|Hoch- und Tiefpassfilter]]. Monitore bieten verschiedene Filtermodi: Ein **Monitoring-Filter** mit enger Bandbreite (untere Grenzfrequenz um 0,5 Hz, obere um 40 Hz) unterdrückt Grundlinienschwankungen und Muskelzittern, verzerrt aber die ST-Strecke; ein **Diagnose- bzw. ST-Filter** mit tieferer unterer Grenzfrequenz (bis 0,05 Hz) bildet die ST-Strecke formtreu ab [@webster-2010]. Der Monitor muss außerdem **defibrillationsfest** sein: Schutzschaltungen (Serienwiderstände, Überspannungsableiter) begrenzen die Energie, die bei einer [[defibrillator|Defibrillation]] in das Gerät gelangt, und der Verstärker muss sich innerhalb weniger Sekunden erholen.\n\n#### Herzfrequenz und Arrhythmieerkennung\n\nDie digitalisierten Signale werden mit Abtastraten im Bereich von einigen hundert Hertz verarbeitet. Ein QRS-Detektor (typisch: Bandpass, Differenzierung, Quadrierung, gleitende Integration und adaptive Schwelle) markiert jeden Herzschlag. Aus dem Abstand zweier R-Zacken ergibt sich die Herzfrequenz:\n\n`HF = 60 s / RR-Intervall`\n\n> [!beispiel] Ein RR-Intervall von 0,75 s ergibt `HF = 60 / 0,75 = 80 /min`. Monitore mitteln in der Regel über mehrere Schläge, damit einzelne Extrasystolen die Anzeige nicht springen lassen; bei der Asystolie- und Kammerflimmererkennung wird dagegen ohne lange Mittelung bewertet.\n\nDarauf aufbauend klassifizieren Algorithmen die Schläge (Normalschlag, ventrikuläre Extrasystole, schrittmacherstimulierter Schlag) und erkennen Rhythmen wie Asystolie, Kammerflimmern oder ventrikuläre Tachykardie. **Schrittmacherimpulse** sind sehr kurz (Millisekunden und darunter) und werden daher meist durch eine eigene, schnelle Detektionsschaltung erkannt, damit sie nicht als QRS-Komplex gezählt werden – sonst würde bei einem nicht effektiv stimulierenden Schrittmacher eine Herzfrequenz angezeigt, obwohl das Herz nicht schlägt.\n\n### Impedanzpneumographie: Atmung über die EKG-Elektroden\n\nFür die Atemfrequenz nutzen viele Monitore die EKG-Elektroden doppelt. Über zwei Elektroden wird ein hochfrequenter Wechselstrom sehr kleiner Amplitude (Frequenz im Bereich einiger zehn Kilohertz, deutlich oberhalb des EKG-Bandes und ohne Reizwirkung) eingespeist und die resultierende Spannung gemessen. Nach dem Ohmschen Gesetz gilt `Z = U / I`. Für einen leitenden Körper mit spezifischem Widerstand ρ, Länge l und Querschnitt A gilt vereinfacht `R = ρ · l / A`.\n\n> [!vereinfacht] Beim Einatmen füllt sich die [[lunge|Lunge]] mit schlecht leitender Luft, und der Thorax dehnt sich aus. Beides verändert die Impedanz zwischen den Elektroden. Die atemabhängige Änderung ist klein gegenüber der Grundimpedanz (Bruchteile eines Ohms bis wenige Ohm gegenüber einigen hundert Ohm), weshalb eine empfindliche, synchron demodulierende Messschaltung nötig ist.\n\nStöranfällig ist die Methode für **kardiogene Artefakte** (die Herzaktion verändert ebenfalls die Thoraximpedanz) und für Bewegungen. Eine obstruktive Apnoe, bei der der Thorax sich weiter bewegt, aber keine Luft strömt, wird nicht zuverlässig erkannt – hier ist die [[kapnometer|Kapnographie]] überlegen.\n\n### Pulsoxymetrie (SpO₂)\n\nDie Pulsoxymetrie bestimmt die **funktionelle Sauerstoffsättigung** des arteriellen Blutes:\n\n`SpO₂ ≈ c(HbO₂) / (c(HbO₂) + c(Hb)) · 100 %`\n\nGrundlage ist das unterschiedliche Absorptionsspektrum von oxygeniertem und desoxygeniertem [[haemoglobin|Hämoglobin]]: Im roten Bereich (ca. 660 nm) absorbiert desoxygeniertes Hämoglobin stärker, im Infrarotbereich (ca. 900–940 nm) oxygeniertes [@jubran-2015]. Nach dem [[lambert-beer|Lambert-Beer-Gesetz]] gilt für die Extinktion\n\n`E = log₁₀(I₀ / I) = ε · c · d`\n\nmit dem Extinktionskoeffizienten ε, der Konzentration c und der Schichtdicke d. Da Gewebe, Knochen und venöses Blut ebenfalls absorbieren, nutzt das Verfahren nur den **pulsatilen Anteil** (AC) des Signals, der durch die arterielle Volumenänderung entsteht – das ist die [[photoplethysmographie|Photoplethysmographie]]. Für beide Wellenlängen wird der AC-Anteil auf den Gleichanteil (DC) normiert und das Verhältnis gebildet („Ratio of Ratios“):\n\n`R = (AC_rot / DC_rot) / (AC_IR / DC_IR)`\n\nDer Zusammenhang zwischen R und SpO₂ ist nicht analytisch exakt, sondern wird vom Hersteller **empirisch an Probanden kalibriert** und als Kalibrierkurve im Gerät hinterlegt [@jubran-2015].\n\n> [!beispiel] Eine häufig zitierte lineare Näherung lautet `SpO₂ ≈ 110 % − 25 % · R`. Für `R = 0,5` ergibt sich `SpO₂ ≈ 97,5 %`, für `R = 1,0` ergibt sich `SpO₂ ≈ 85 %`. Reale Geräte verwenden herstellerspezifische, nichtlineare Kalibriertabellen – die Formel dient nur dem Verständnis.\n\nDie LEDs werden im Zeitmultiplex angesteuert (rot – infrarot – dunkel); die Dunkelphase dient der Subtraktion von Umgebungslicht. Moderne Algorithmen trennen Bewegungsartefakte vom Pulssignal durch adaptive Filterung. Grenzen der Methode sind **Dyshämoglobine** (Kohlenmonoxidhämoglobin wird von Zwei-Wellenlängen-Geräten als oxygeniert gewertet), schlechte Perfusion, Bewegung, starkes Umgebungslicht, Nagellack und Fehlanlage. Ausführlich: [[pulsoxymeter]].\n\n### Nichtinvasive Blutdruckmessung (NIBP)\n\nMonitore messen den Blutdruck nichtinvasiv fast ausschließlich **oszillometrisch** [@webster-2010]. Eine Pumpe bläst die Manschette über den erwarteten systolischen Druck auf; anschließend wird der Druck über ein Ablassventil stufenweise oder linear abgesenkt. Die pulsierende Arterie unter der Manschette überträgt kleine Druckschwankungen (Oszillationen) auf die Manschettenluft, die ein [[drucksensor|piezoresistiver Drucksensor]] in einer Wheatstone-Brücke erfasst.\n\n* Die **maximale Oszillationsamplitude** tritt in guter Näherung beim **mittleren arteriellen Druck (MAP)** auf.\n* **Systolischer und diastolischer Druck** werden aus der Hüllkurve abgeleitet – z. B. über charakteristische Amplitudenverhältnisse links und rechts des Maximums. Die genauen Kriterien sind herstellerspezifisch und durch klinische Validierung abgesichert.\n\n> [!vereinfacht] Liegt der Manschettendruck weit über dem systolischen Druck, ist die Arterie komprimiert und pulsiert kaum; liegt er weit unter dem diastolischen Druck, wird die Arterie kaum verformt. Am stärksten „schwingt“ die Arterienwand, wenn der transmurale Druck um null pendelt – also etwa beim Mitteldruck.\n\nFür die Abschätzung des Mitteldrucks aus SYS und DIA gilt die Faustformel `MAP ≈ DIA + (SYS − DIA) / 3`.\n\n> [!beispiel] Bei `SYS = 120 mmHg` und `DIA = 80 mmHg` ergibt sich `MAP ≈ 80 + 40 / 3 ≈ 93 mmHg`. Der oszillometrisch gemessene MAP ist dagegen ein direkter Messwert; die Faustformel gilt nur bei normaler Pulskurvenform und normaler Herzfrequenz.\n\nSicherheitsrelevant sind die **Begrenzung des Manschettendrucks** und der **Messdauer**: Eine unabhängige Überdruckabschaltung (getrennter Drucksensor bzw. Überwachungskanal) öffnet das Ventil, wenn der zulässige Höchstdruck oder die maximale Aufblasdauer überschritten wird. Messfehler entstehen vor allem durch falsche Manschettengröße, Bewegung, Arrhythmien (z. B. Vorhofflimmern) und eine Manschette, die nicht auf Herzhöhe liegt. Ausführlich: [[nibp-messgeraet]] und [[blutdruck|Blutdruck (Physiologie)]].\n\n### Invasive Blutdruckmessung (IBP)\n\nBei der [[invasive-druckmessung|invasiven Druckmessung]] überträgt eine mit Kochsalzlösung gefüllte Schlauchleitung den Druck von einem arteriellen oder zentralvenösen Katheter auf einen Einweg-Druckwandler. Dessen Membran trägt piezoresistive Widerstände in einer Wheatstone-Brücke, deren Ausgangsspannung proportional zum Druck und zur Speisespannung ist. Verbreitet ist eine Empfindlichkeit von **5 µV pro Volt Speisespannung und mmHg**, damit Wandler verschiedener Hersteller an Monitoren verschiedener Hersteller funktionieren [@webster-2010].\n\n> [!beispiel] Bei 5 V Speisespannung liefert ein solcher Wandler `5 µV/(V·mmHg) · 5 V = 25 µV/mmHg`. Ein arterieller Druck von 100 mmHg entspricht also einem Brückensignal von 2,5 mV – ein Signal ähnlicher Größenordnung wie das EKG, das entsprechend sorgfältig verstärkt werden muss.\n\nEntscheidend für die Messrichtigkeit sind der **Nullabgleich** gegen Atmosphärendruck und die **Höhe des Wandlers** relativ zur Referenzebene (meist Höhe des rechten Vorhofs). Der hydrostatische Fehler beträgt `Δp = ρ · g · h`.\n\n> [!beispiel] Hängt der Wandler 10 cm unter der Referenzebene, ergibt sich mit `ρ ≈ 1000 kg/m³` und `g = 9,81 m/s²`: `Δp = 1000 · 9,81 · 0,10 Pa ≈ 981 Pa ≈ 7,4 mmHg` – der angezeigte Druck ist um diesen Betrag zu hoch. Beim zentralen Venendruck mit Werten im einstelligen bis niedrigen zweistelligen mmHg-Bereich ist das ein klinisch erheblicher Fehler.\n\nDas Schlauchsystem ist ein schwingungsfähiges System (Masse der Flüssigkeitssäule, Elastizität von Schlauch und Membran). Seine **Eigenfrequenz** und **Dämpfung** bestimmen, ob die Druckkurve formtreu wiedergegeben wird: Luftblasen und weiche, lange Leitungen senken die Eigenfrequenz und führen zu Überdämpfung (abgeflachte Kurve) oder – bei geringer Dämpfung – zu Überschwingern (überhöhter systolischer Wert). Der „Fast-Flush-Test“ (Spültest) erlaubt am Patienten eine schnelle Abschätzung des dynamischen Verhaltens. Grundlagen: [[druckmessung]], [[stroemungslehre]].\n\n### Temperaturmessung\n\nMonitore verwenden meist [[temperatursensor|NTC-Thermistoren]] in Haut-, Rektal-, Ösophagus- oder Blasensonden. Der Widerstand sinkt nichtlinear mit steigender Temperatur; vereinfacht gilt das B-Parameter-Modell:\n\n`R(T) = R₂₅ · exp(B · (1/T − 1/T₂₅))` mit T in Kelvin, `T₂₅ = 298,15 K`.\n\n> [!beispiel] Ein Thermistor mit `R₂₅ = 2,252 kΩ` und `B = 3900 K` (Beispielwerte) hat bei 37 °C (`T = 310,15 K`) den Widerstand `R ≈ 2,252 kΩ · exp(3900 · (1/310,15 − 1/298,15)) ≈ 2,252 kΩ · exp(−0,506) ≈ 1,36 kΩ`. Der Monitor misst den Widerstand mit kleinem Messstrom (um Eigenerwärmung zu vermeiden) und rechnet über eine hinterlegte Kennlinie in die Temperatur um.\n\nDa Sonden verschiedener Kennlinientypen existieren, dürfen nur die vom Hersteller freigegebenen Sonden verwendet werden – eine Sonde mit falscher Kennlinie liefert plausibel aussehende, aber falsche Werte.\n\n### Kapnographie und weitere Parameter\n\nDie endtidale CO₂-Messung nutzt die Absorption von CO₂ im Infrarotbereich (Absorptionsbande um 4,3 µm) nach dem Lambert-Beer-Gesetz. Man unterscheidet **Hauptstromverfahren** (Messküvette direkt am Tubus) und **Nebenstromverfahren** (kontinuierliche Absaugung einer Gasprobe zum Messmodul). Details: [[co2-sensor]] und [[kapnometer]]. Weitere optionale Module erfassen z. B. Herzzeitvolumen, Anästhesiegase, Narkosetiefe (EEG-basiert) oder neuromuskuläre Blockade.\n\n### Signalverarbeitung, Alarmlogik und Datenfluss\n\nNach der [[analog-digital-wandler|Analog-Digital-Wandlung]] laufen auf einem [[mikrocontroller|Mikrocontroller oder Prozessor]] die Algorithmen: digitale Filter (u. a. 50-Hz-Kerbfilter), QRS-Detektion, Pulserkennung, Mittelwertbildung, Plausibilitätsprüfung und Artefaktunterdrückung. Die **Alarmlogik** vergleicht jeden Parameter mit den eingestellten Grenzen und berücksichtigt Alarmverzögerungen, um kurze Artefakte nicht als Alarm zu melden. Nach [[iec-60601-1-8]] werden physiologische und technische Alarmzustände nach **Priorität** (hoch, mittel, niedrig) unterschieden und durch genormte akustische und optische Signale gekennzeichnet [@iec-60601-1-8].\n\n> [!vereinfacht] Die Alarmverzögerung ist ein Zielkonflikt: Eine längere Verzögerung reduziert Fehlalarme, verzögert aber auch die Meldung echter Ereignisse. Lebensbedrohliche Rhythmusalarme (Asystolie, Kammerflimmern) werden deshalb anders behandelt als z. B. ein kurzzeitiger SpO₂-Abfall.\n\nDie verarbeiteten Daten werden über das Kliniknetzwerk an eine **Überwachungszentrale** und an Dokumentationssysteme übertragen, meist über [[hl7-fhir|HL7]]-Schnittstellen. Damit werden Monitore Teil eines medizinischen IT-Netzwerks, was Fragen der Netzwerksicherheit, Verfügbarkeit und Alarmweiterleitung aufwirft.",
+    "construction": "## Technischer Aufbau\n\nEin moderner Patientenmonitor besteht aus folgenden Baugruppen:\n\n| Baugruppe | Funktion | Typische Technik |\n|---|---|---|\n| Patientenseitige Messelektronik (Front-End) | Signalaufnahme, Verstärkung, Filterung, A/D-Wandlung | [[instrumentenverstaerker|Instrumentenverstärker]], [[operationsverstaerker|Operationsverstärker]], Delta-Sigma-ADC, Pumpe und Ventile für NIBP |\n| [[galvanische-trennung|Galvanische Trennung]] | Isolation der Anwendungsteile vom Netz und voneinander | isolierte DC/DC-Wandler, Optokoppler oder digitale Isolatoren |\n| Hauptprozessor | Algorithmen, Alarmlogik, Bedienoberfläche, Kommunikation | Embedded-Prozessor mit Echtzeitbetriebssystem |\n| [[display-bedienoberflaeche|Display und Bedienung]] | Kurven- und Zahlendarstellung, Eingabe | TFT-Farbdisplay mit Touchscreen, Drehknopf, Tasten |\n| Alarmsignalgeber | akustische und optische Alarmierung | Lautsprecher, Alarmleuchte (Farbe nach Priorität) |\n| Stromversorgung | Netzbetrieb und Überbrückung | [[medizinisches-netzteil|Medizinisches Netzteil]], [[lithium-ionen-akku|Lithium-Ionen-Akku]] |\n| Schnittstellen | Zentrale, PDMS, Drucker, externe Geräte | Ethernet, WLAN, serielle Geräteschnittstellen |\n\n### Modulare und kompakte Bauweise\n\nBei **modularen Systemen** steckt die Messelektronik in Parametermodulen oder einem Multiparametermodul, die über einen Bus mit dem Grundgerät verbunden sind. Jedes Modul besitzt seine eigene isolierte Stromversorgung, sodass die Anwendungsteile **untereinander** und gegenüber dem Netz getrennt sind. Bei **Kompaktmonitoren** sitzt die Messelektronik auf einer gemeinsamen, isolierten Platine.\n\n### Elektrische Sicherheit\n\nDie Anwendungsteile eines Monitors haben direkten, oft langdauernden Kontakt zum Patienten, bei invasiven Drücken über flüssigkeitsgefüllte Katheter bis in die Nähe des Herzens. EKG- und IBP-Eingänge sind daher typischerweise als [[anwendungsteile|Anwendungsteile vom Typ CF]] ausgeführt, häufig mit dem Zusatz „defibrillationsgeschützt“; andere Eingänge mindestens als Typ BF [@iec-60601-1]. Die Isolation begrenzt den [[ableitstrom|Ableitstrom]], der über den Patienten fließen kann – besonders wichtig, weil bei herznahen Zugängen bereits Ströme im Mikroampere-Bereich gefährlich sein können ([[elektrische-stromwirkung|Wirkung des elektrischen Stroms]]). Netzbetriebene Monitore sind meist in [[schutzklassen|Schutzklasse I]] ausgeführt, und die Installation im Patientenbereich muss die Anforderungen an [[medizinisch-genutzte-bereiche|medizinisch genutzte Bereiche]] erfüllen [@din-vde-0100-710].\n\n> [!warnung] Werden mehrere Geräte am Patienten über eine Mehrfachsteckdose oder Datenleitungen verbunden, entsteht ein **ME-System**. Die Summe der Ableitströme kann dann Grenzwerte überschreiten, auch wenn jedes Einzelgerät in Ordnung ist. Solche Kombinationen sind vom Betreiber bzw. der verantwortlichen Organisation zu bewerten und zu prüfen [@iec-60601-1].\n\n### Elektromagnetische Verträglichkeit\n\nDer Monitor muss einerseits empfindliche Biosignale im Mikrovoltbereich verarbeiten, andererseits in einer Umgebung mit HF-Chirurgie, Funknetzen und Mobiltelefonen funktionieren. Die Anforderungen an Störfestigkeit und Störaussendung legt [[iec-60601-1-2]] fest [@iec-60601-1-2]; siehe [[emv]]. Bei Einsatz eines [[hf-chirurgiegeraet|HF-Chirurgiegeräts]] sind EKG-Störungen trotz Filterung häufig – spezielle OP-Filtermodi und korrekt platzierte Elektroden mildern das.\n\n### Software\n\nDie Monitorsoftware (Algorithmen, Alarmlogik, Netzwerkfunktionen) ist sicherheitsrelevant und wird nach [[iec-62304]] entwickelt [@iec-62304]. Updates beeinflussen unter Umständen Algorithmen und Alarmverhalten; sie sollten deshalb dokumentiert, getestet und mit dem Anwenderpersonal kommuniziert werden. Die Gebrauchstauglichkeit der Bedienoberfläche ist nach [[iec-62366-1]] zu bewerten – Fehlbedienungen bei Alarmgrenzen sind eine bekannte Ursache für [[anwendungsfehler|Anwendungsfehler]].\n\n### Zubehör\n\nEin erheblicher Teil der Störungen im Alltag betrifft nicht das Grundgerät, sondern das Zubehör: Patientenkabel, Ableitungskabel, SpO₂-Sensoren, Manschetten mit Schläuchen, Temperatursonden und Druckwandler. Diese Teile unterliegen mechanischer Beanspruchung (Knicken, Ziehen, Desinfektion) und sind Verschleißteile. Nur vom Hersteller freigegebenes Zubehör gewährleistet die angegebenen Messgenauigkeiten und den Schutz bei Defibrillation.",
+    "maintenance": "## Wartung und Instandhaltung\n\nDie [[instandhaltung-grundlagen|Instandhaltung]] eines Patientenmonitors umfasst nach [[din-31051]] [[wartung|Wartung]], [[inspektion|Inspektion]], [[instandsetzung|Instandsetzung]] und Verbesserung [@din-31051]. Grundlage sind die Vorgaben des Herstellers in Gebrauchsanweisung und Servicehandbuch sowie die [[betreiberpflichten|Betreiberpflichten]] nach der [[mpbetreibv|MPBetreibV]] [@mpbetreibv].\n\n### Rechtlicher Rahmen\n\n* **Sicherheitstechnische Kontrolle ([[stk|STK]]):** Nach § 12 MPBetreibV in Verbindung mit Anlage 1 ist eine STK für die dort aufgeführten Produkte durchzuführen – Frist nach Herstellerangabe, sonst spätestens alle zwei Jahre [@mpbetreibv]. Anlage 1 erfasst unter anderem Produkte zur intrakardialen Messung elektrischer Größen bzw. zur Messung anderer Größen mit elektrisch betriebenen Messsonden in Blutgefäßen. Ob ein konkreter Monitor oder ein bestimmtes Modul darunterfällt, ergibt sich aus der Zweckbestimmung und den Herstellerangaben; viele Hersteller schreiben unabhängig davon regelmäßige sicherheitstechnische Prüfungen vor.\n* **Messtechnische Kontrolle ([[mtk|MTK]]):** Nach § 15 MPBetreibV in Verbindung mit Anlage 2 unterliegen Messgeräte zur **nichtinvasiven Blutdruckmessung** sowie Produkte zur **Bestimmung der Körpertemperatur** (medizinische Elektrothermometer) der MTK, jeweils mit einer Nachprüffrist von zwei Jahren [@mpbetreibv]. Ein Monitor mit NIBP-Modul ist deshalb in aller Regel MTK-pflichtig.\n* **Dokumentation:** Ergebnisse von STK und MTK, Funktionsprüfungen, Einweisungen und Störungen sind im [[medizinproduktebuch|Medizinproduktebuch]] zu dokumentieren; der Monitor wird im [[bestandsverzeichnis|Bestandsverzeichnis]] geführt. Anwender müssen in das Gerät [[einweisung|eingewiesen]] sein.\n\n> [!hinweis] Rechtsangaben beziehen sich auf die MPBetreibV in der Neufassung vom 14.02.2025. Maßgeblich ist stets die jeweils geltende Fassung sowie die Herstellerangabe.\n\n### Typische Wartungsmaßnahmen\n\n| Maßnahme | Inhalt | Hinweis |\n|---|---|---|\n| Sichtprüfung | Gehäuse, Display, Anschlussbuchsen, Netzkabel, Halterungen, Zubehör | vor jedem Einsatz durch Anwender, ausführlich bei Inspektion |\n| Zubehörprüfung | Kabelbrüche, Knickstellen, Stecker, Manschettendichtheit, Sensorfenster | Zubehör ist die häufigste Fehlerquelle |\n| Akkuprüfung | Kapazitätstest, Laufzeit im Akkubetrieb, Austausch nach Herstellerangabe | gealterte Akkus führen zu Ausfall beim Transport ([[akkufehler]]) |\n| NIBP-Pneumatik | Dichtheit, Druckanzeige gegen Referenz, Überdruckabschaltung | Teil der MTK, [[kalibrierung|Justierung]] nur nach Herstellervorgabe |\n| Lüfter und Filter | Reinigung oder Wechsel, falls vorhanden | Überhitzung vermeiden |\n| Software | Aktualisierung nach Herstellerfreigabe, Sicherheits-Patches | Änderungen dokumentieren, Konfiguration sichern |\n| Alarmsystem | Lautstärke, Alarmleuchte, Weiterleitung zur Zentrale | Funktionsprüfung nach jedem Update |\n\n### Reinigung und Desinfektion\n\nMonitore stehen im unmittelbaren Patientenumfeld und werden häufig berührt. Oberflächen und Kabel werden mit vom Hersteller freigegebenen Mitteln wischdesinfiziert ([[desinfektion|Desinfektion]], [[aufbereitung|Aufbereitung]]) [@krinko-bfarm-2012]. Ungeeignete Desinfektionsmittel können Kunststoffe verspröden lassen und Kabelmäntel schädigen – eine häufige Ursache für Kabelbrüche und Isolationsfehler. Einwegzubehör (Elektroden, Einweg-SpO₂-Sensoren, Druckwandler) wird nicht aufbereitet.\n\n> [!praxis] Viele „Gerätedefekte“ erweisen sich bei der [[fehlersuche|systematischen Fehlersuche]] als Zubehörproblem. Ein Satz geprüfter Referenzkabel und ein Patientensimulator in der Medizintechnik-Werkstatt beschleunigen die Eingrenzung erheblich: erst Simulator direkt am Gerät, dann mit dem Kabel des Anwenders.",
+    "testing": "## Prüfverfahren\n\nDie Prüfung eines Patientenmonitors kombiniert elektrische Sicherheit, Funktion jedes Messkanals und Alarmsystem. Prüfgrundlage sind die Herstellervorgaben, die MPBetreibV und die [[elektrische-sicherheitspruefung|elektrische Wiederholungsprüfung]] nach [[iec-62353]] [@iec-62353].\n\n### Elektrische Sicherheit nach IEC 62353\n\n| Prüfschritt | Inhalt |\n|---|---|\n| Sichtprüfung | Gehäuse, Netzkabel, Steckverbinder, Kennzeichnung, Zubehör |\n| [[schutzleiterwiderstand|Schutzleiterwiderstand]] | bei Schutzklasse I zwischen Netzstecker-Schutzkontakt und berührbaren leitfähigen Teilen |\n| [[isolationswiderstand|Isolationswiderstand]] | optional, sofern vom Hersteller nicht ausgeschlossen |\n| [[ableitstrommessung|Ableitstrommessung]] | Geräteableitstrom und Patientenableitstrom (Anwendungsteil) – direkt, differenziell oder nach dem Ersatzableitstromverfahren |\n| Funktionsprüfung | Nachweis der sicherheitsrelevanten Funktionen |\n\nBei der Patientenableitstrommessung werden alle Leitungen eines Anwendungsteils (z. B. alle EKG-Ableitungen) zusammengeschaltet und gegen Erde gemessen. Für Typ-CF-Anwendungsteile gelten die strengsten Grenzwerte. Die konkreten Grenzwerte und Messverfahren sind der jeweils gültigen Fassung der IEC 62353 zu entnehmen [@iec-62353].\n\n> [!warnung] Die Ableitstrommessung an Anwendungsteilen erfolgt mit einem geeigneten Sicherheitsprüfgerät und Adaptern. Prüfungen dürfen nur von Personen durchgeführt werden, die die Anforderungen an Ausbildung, Kenntnis und Erfahrung erfüllen.\n\n### Funktionsprüfung mit Patientensimulator\n\nMit einem Multiparameter-[[pruefgeraete|Patientensimulator]] werden die Messkanäle reproduzierbar angesteuert ([[funktionspruefung|Funktionsprüfung]]):\n\n* **EKG:** Sinusrhythmus mit verschiedenen Frequenzen und Amplituden, Prüfung der Herzfrequenzanzeige, aller Ableitungen und der Elektroden-ab-Erkennung; Arrhythmiemuster (z. B. Kammerflimmern, Asystolie) zur Prüfung der Alarmauslösung; Schrittmachersignale.\n* **Respiration:** simulierte Impedanzänderung mit definierter Atemfrequenz, Apnoe-Simulation.\n* **SpO₂:** optischer Fingersimulator oder elektrische Simulation; prüft Signalverarbeitung und Anzeige, nicht jedoch die physiologische Kalibrierkurve des Sensors.\n* **IBP:** Simulation über die Wheatstone-Brücke (Empfindlichkeit 5 µV/V/mmHg) mit statischen und dynamischen Drücken, Nullabgleich.\n* **Temperatur:** Präzisionswiderstände entsprechend der Sensorkennlinie.\n* **NIBP:** NIBP-Simulator zur Prüfung von Wiederholbarkeit, Messablauf und Überdruckabschaltung.\n\n> [!hinweis] NIBP-Simulatoren erzeugen künstliche Oszillationen. Sie prüfen, ob der Monitor reproduzierbar arbeitet, ersetzen aber keine klinische Validierung der Messgenauigkeit, da jeder Hersteller einen anderen Algorithmus verwendet.\n\n### Messtechnische Kontrolle (NIBP und Temperatur)\n\nDie MTK des NIBP-Kanals prüft im Wesentlichen die **statische Druckmessung** des Manometers gegen ein rückgeführtes Referenzmanometer an mehreren Prüfpunkten, die **Dichtheit** des pneumatischen Systems und die **Druckablassgeschwindigkeit** bzw. Funktion des Schnellablasses. Viele Monitore haben dazu einen Servicemodus, in dem das Ventil geschlossen bleibt und der Druck angezeigt wird. Prüfumfang und Fehlergrenzen richten sich nach den anerkannten Regeln der Technik, insbesondere dem Leitfaden der Physikalisch-Technischen Bundesanstalt zu messtechnischen Kontrollen; die MTK darf nur von dafür qualifizierten Personen bzw. Stellen durchgeführt werden [@mpbetreibv]. Der Temperaturkanal wird mit Referenzwiderständen oder einem temperierten Bad geprüft. Das Ergebnis wird im Medizinproduktebuch dokumentiert und das Gerät mit einem Prüfzeichen versehen.\n\n### Alarmsystem und Netzwerk\n\nAbschließend wird geprüft, ob Alarme korrekt priorisiert, akustisch und optisch signalisiert und an die Zentrale weitergeleitet werden. Eine Prüfung der Alarmweiterleitung ist besonders nach Software-Updates, Netzwerkänderungen oder Austausch von Komponenten wichtig, da Fehler hier oft nicht am Bettplatz auffallen."
+  },
+  "components": [
+    {
+      "ref": "instrumentenverstaerker",
+      "role": "Differenzverstärkung der EKG- und Brückensignale mit hoher Gleichtaktunterdrückung."
+    },
+    {
+      "ref": "filter",
+      "role": "Analoge Bandbegrenzung (Anti-Aliasing) und digitale Filter für Grundliniendrift, Muskelartefakte und 50-Hz-Störungen."
+    },
+    {
+      "ref": "analog-digital-wandler",
+      "role": "Digitalisierung der Biosignale für die Weiterverarbeitung."
+    },
+    {
+      "ref": "galvanische-trennung",
+      "role": "Isolation der Anwendungsteile vom Netz und voneinander zur Begrenzung von [[ableitstrom|Ableitströmen]]."
+    },
+    {
+      "ref": "mikrocontroller",
+      "role": "Signalverarbeitung, QRS- und Arrhythmieerkennung, Alarmlogik, Kommunikation."
+    },
+    {
+      "ref": "display-bedienoberflaeche",
+      "role": "Darstellung von Kurven, Zahlenwerten und Trends; Bedienung über Touchscreen und Drehknopf."
+    },
+    {
+      "ref": "alarmsystem",
+      "role": "Akustische und optische Alarmsignale nach Priorität sowie Weiterleitung an die Zentrale."
+    },
+    {
+      "ref": "medizinisches-netzteil",
+      "role": "Netzversorgung mit erhöhten Isolationsanforderungen."
+    },
+    {
+      "ref": "lithium-ionen-akku",
+      "role": "Überbrückung bei Netzausfall und Transportbetrieb."
+    },
+    {
+      "ref": "operationsverstaerker",
+      "role": "Aktive Filter, Right-Leg-Drive und Impedanzmessschaltung."
+    }
+  ],
+  "sensors": [
+    {
+      "ref": "ekg-elektrode",
+      "role": "Ableitung der Herzpotentiale; zugleich Einspeise- und Messpunkte für die Impedanzpneumographie."
+    },
+    {
+      "ref": "photoplethysmographie",
+      "role": "SpO₂-Sensor mit roter und infraroter LED und Photodiode zur Messung von Sättigung und Pulsfrequenz."
+    },
+    {
+      "ref": "oszillometrie",
+      "role": "NIBP: Manschette, Pumpe, Ventile und Drucksensor zur oszillometrischen Blutdruckmessung."
+    },
+    {
+      "ref": "drucksensor",
+      "role": "Piezoresistive Druckwandler für NIBP-Pneumatik und invasive Druckmessung (Wheatstone-Brücke)."
+    },
+    {
+      "ref": "temperatursensor",
+      "role": "NTC-Thermistorsonden für Haut-, Rektal-, Ösophagus- oder Blasentemperatur."
+    },
+    {
+      "ref": "co2-sensor",
+      "role": "NDIR-Messung des endtidalen CO₂ im Haupt- oder Nebenstrom (optionales Modul)."
+    }
+  ],
+  "specs": [
+    {
+      "param": "Basisparameter",
+      "value": "EKG, Herzfrequenz, Respiration (Impedanz), SpO₂, NIBP, Temperatur",
+      "note": "Optional: invasive Drücke, etCO₂, Herzzeitvolumen, Anästhesiegase u. a.",
+      "evidence": "typisch",
+      "sources": [
+        "kramme-2017"
+      ]
+    },
+    {
+      "param": "EKG-Ableitungen",
+      "value": "3, 5 oder 10 Elektroden (bis 12 Ableitungen)",
+      "note": "Anzahl gleichzeitig dargestellter Ableitungen modellabhängig.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "EKG-Bandbreite Monitoring-Modus",
+      "value": "ca. 0,5 bis 40 Hz",
+      "note": "Diagnose-/ST-Modus mit unterer Grenzfrequenz bis 0,05 Hz; Werte modellabhängig.",
+      "evidence": "typisch",
+      "sources": [
+        "webster-2010"
+      ]
+    },
+    {
+      "param": "Herzfrequenz-Messbereich",
+      "value": "ca. 15–300 /min",
+      "note": "Erwachsene; Neugeborenenmodus teils mit höherer Obergrenze.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "SpO₂-Messbereich und Genauigkeit",
+      "value": "0–100 %; Genauigkeit typisch ±2–3 % im Bereich 70–100 %",
+      "note": "Genauigkeit als Effektivwert der Abweichung (A_rms) angegeben; abhängig von Sensor und Patientengruppe.",
+      "evidence": "typisch",
+      "sources": [
+        "jubran-2015"
+      ]
+    },
+    {
+      "param": "NIBP-Messverfahren",
+      "value": "oszillometrisch; Einzelmessung, Intervall- und Serienmodus",
+      "note": "Erwachsene, Kinder, Neugeborene mit angepassten Höchstdrücken.",
+      "evidence": "typisch",
+      "sources": [
+        "webster-2010"
+      ]
+    },
+    {
+      "param": "NIBP-Messbereich systolisch (Erwachsene)",
+      "value": "ca. 30–270 mmHg",
+      "note": "Modellabhängig; Höchstdruck der Manschette durch unabhängige Abschaltung begrenzt.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "IBP-Wandlerempfindlichkeit",
+      "value": "5 µV/V/mmHg",
+      "note": "Verbreiteter Standardwert für Einweg-Druckwandler.",
+      "evidence": "typisch",
+      "sources": [
+        "webster-2010"
+      ]
+    },
+    {
+      "param": "Temperatur-Messbereich",
+      "value": "ca. 0–45 °C, Genauigkeit ca. ±0,1–0,2 °C (ohne Sonde)",
+      "note": "Sondenspezifisch; nur freigegebene Sonden verwenden.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Anwendungsteile",
+      "value": "EKG und IBP meist Typ CF, defibrillationsgeschützt",
+      "note": "Weitere Eingänge mindestens Typ BF; siehe [[anwendungsteile]].",
+      "evidence": "typisch",
+      "sources": [
+        "iec-60601-1"
+      ]
+    },
+    {
+      "param": "Alarmprioritäten",
+      "value": "hoch, mittel, niedrig",
+      "note": "Genormte akustische und optische Kennzeichnung nach [[iec-60601-1-8]].",
+      "evidence": "belegt",
+      "sources": [
+        "iec-60601-1-8"
+      ]
+    },
+    {
+      "param": "Akkubetrieb",
+      "value": "ca. 1 bis mehrere Stunden",
+      "note": "Stark abhängig von Modell, Parameterumfang, NIBP-Intervall und Akkualter.",
+      "evidence": "typisch"
+    }
+  ],
+  "manufacturers": [
+    {
+      "ref": "philips",
+      "models": [
+        "IntelliVue MX450",
+        "IntelliVue MX550",
+        "IntelliVue MX750",
+        "IntelliVue MX850"
+      ],
+      "note": "Modulare und kompakte Bettmonitore der IntelliVue-Familie."
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "CARESCAPE B450",
+        "CARESCAPE B650",
+        "CARESCAPE B850"
+      ]
+    },
+    {
+      "ref": "draeger",
+      "models": [
+        "Infinity Delta",
+        "Infinity M540"
+      ],
+      "note": "Infinity-Monitoringfamilie; M540 auch als Transportmonitor nutzbar."
+    },
+    {
+      "ref": "mindray",
+      "models": [
+        "BeneVision N12",
+        "BeneVision N15",
+        "BeneVision N17",
+        "BeneVision N19",
+        "BeneVision N22"
+      ]
+    },
+    {
+      "ref": "nihon-kohden",
+      "models": [
+        "Life Scope G5",
+        "Life Scope G7",
+        "Life Scope G9"
+      ]
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Für Patientenmonitore liegen keine überprüfbaren, allgemeingültigen Preisangaben vor. Der Preis hängt ab von: Geräteklasse (Kompakt-, Transport- oder modularer High-End-Monitor), Display-Größe, **Parameterumfang** und Zahl der Module (z. B. invasive Drücke, Kapnographie, Herzzeitvolumen), **Software-Lizenzen** (Arrhythmie- und ST-Analyse, klinische Entscheidungsunterstützung), Zentralstation und Netzwerkinfrastruktur, Schnittstellen zu PDMS/KIS, Zubehörausstattung sowie Rahmen- und Ausschreibungsbedingungen. Für die Wirtschaftlichkeit sind die **Gesamtbetriebskosten** entscheidend: Verbrauchsmaterial (Elektroden, Einweg-Sensoren, Druckwandler), Ersatz von Kabeln und Akkus, Servicevertrag, STK/MTK, Software-Updates und IT-Betrieb übersteigen über die Nutzungsdauer häufig den Anschaffungspreis."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "abhaengig",
+    "basis": "STK: § 12 MPBetreibV i. V. m. Anlage 1 (u. a. Messung mit elektrisch betriebenen Messsonden in Blutgefäßen) bzw. nach Herstellervorgabe; MTK: § 15 MPBetreibV i. V. m. Anlage 2 – nichtinvasive Blutdruckmessung (Nr. 1.3) und Körpertemperaturmessung (Nr. 1.2), sofern diese Funktionen vorhanden sind.",
+    "intervals": "STK nach Herstellerangabe, sonst spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); MTK für NIBP und Elektrothermometer alle 2 Jahre (Anlage 2); elektrische Wiederholungsprüfung nach IEC 62353 im Rahmen der Herstellervorgaben."
+  },
+  "faults": [
+    {
+      "title": "Elektrode ab / Störsignal im EKG",
+      "ref": "elektrodenproblem",
+      "cause": "Ausgetrocknete oder abgelöste [[ekg-elektrode|Elektroden]], unzureichende Hautvorbereitung, Kabelbruch im Ableitungskabel.",
+      "action": "Haut vorbereiten, frische Elektroden derselben Sorte verwenden, Kabel mit Simulator prüfen und defektes Kabel austauschen."
+    },
+    {
+      "title": "50-Hz-Störung auf der EKG-Grundlinie",
+      "ref": "netzstoerung",
+      "cause": "Ungleiche Elektrodenimpedanzen, unzureichende Erdung bzw. Potentialausgleich, Netzkabel in der Nähe der Ableitungskabel, falscher Filtermodus.",
+      "action": "Elektroden erneuern, Kabelführung trennen, Netzfilter-Einstellung prüfen; bei Persistenz Installation und Potentialausgleich prüfen lassen."
+    },
+    {
+      "title": "Bewegungsartefakte bei EKG und SpO₂",
+      "ref": "bewegungsartefakt",
+      "cause": "Patientenbewegung, Zittern, Transport, lose sitzender Sensor.",
+      "action": "Sensor korrekt und fest anlegen, ggf. anderen Messort wählen; Plausibilität mit klinischem Bild abgleichen."
+    },
+    {
+      "title": "NIBP-Messung fehlgeschlagen oder unplausibel",
+      "ref": "anwendungsfehler",
+      "cause": "Falsche Manschettengröße, undichte Manschette oder Schlauch, Bewegung, Arrhythmie, Manschette nicht auf Herzhöhe.",
+      "action": "Manschettengröße nach Armumfang wählen, Dichtheit prüfen, Messung in Ruhe wiederholen; bei Verdacht auf Gerätefehler Pneumatikprüfung durchführen."
+    },
+    {
+      "title": "Drift oder Nullpunktfehler der invasiven Druckmessung",
+      "ref": "sensordrift",
+      "cause": "Fehlender Nullabgleich, Wandler nicht auf Referenzhöhe, Luftblasen im System, Temperatureinflüsse.",
+      "action": "Nullabgleich durchführen, Wandlerhöhe korrigieren, System entlüften, Spültest durchführen."
+    },
+    {
+      "title": "Kurze Akkulaufzeit, Abschalten beim Transport",
+      "ref": "akkufehler",
+      "cause": "Alterung des [[lithium-ionen-akku|Li-Ionen-Akkus]], Tiefentladung, defekte Ladeschaltung.",
+      "action": "Akkukapazität testen, Akku nach Herstellervorgabe ersetzen, Akkustatus vor Transport prüfen."
+    },
+    {
+      "title": "Störungen durch HF-Chirurgie oder Funk",
+      "ref": "emv-stoerung",
+      "cause": "Einkopplung hochfrequenter Störungen in Patientenkabel, z. B. bei Betrieb eines [[hf-chirurgiegeraet|HF-Chirurgiegeräts]].",
+      "action": "OP-Filtermodus aktivieren, Kabel getrennt führen, Elektroden fern vom OP-Feld; bei unerklärlichen Störungen EMV-Situation analysieren."
+    },
+    {
+      "title": "Häufige Fehlalarme",
+      "ref": "alarmmuedigkeit",
+      "cause": "Ungeeignete Standardalarmgrenzen, Artefakte, fehlende Anpassung an den Patienten.",
+      "action": "Alarmgrenzen patientenbezogen einstellen, Sensoren korrekt anlegen, Alarmkonzept der Station überprüfen."
+    },
+    {
+      "title": "Gerätemeldung zu internem Fehler",
+      "ref": "fehlercodes",
+      "cause": "Selbsttest erkennt Hardware- oder Softwarefehler (z. B. Modulkommunikation, Lüfter, Speicher).",
+      "action": "Meldung und Umstände dokumentieren, Gerät außer Betrieb nehmen, Fehlerspeicher durch befugtes Fachpersonal nach Servicehandbuch auswerten lassen."
+    }
+  ],
+  "tests": [
+    {
+      "name": "Sicherheitstechnische Kontrolle",
+      "ref": "stk",
+      "description": "Sofern nach § 12 MPBetreibV i. V. m. Anlage 1 oder nach Herstellervorgabe gefordert: Sichtprüfung, elektrische Sicherheit, Funktions- und Alarmprüfung nach Herstellerprotokoll, Dokumentation im [[medizinproduktebuch|Medizinproduktebuch]]."
+    },
+    {
+      "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+      "ref": "elektrische-sicherheitspruefung",
+      "description": "[[schutzleiterwiderstand|Schutzleiterwiderstand]] (Schutzklasse I), ggf. [[isolationswiderstand|Isolationswiderstand]], Geräte- und Patientenableitstrom aller Anwendungsteile (EKG, IBP, SpO₂, Temperatur) mit den Grenzwerten für Typ BF bzw. CF."
+    },
+    {
+      "name": "Funktionsprüfung mit Patientensimulator",
+      "ref": "funktionspruefung",
+      "description": "EKG (Frequenz, Ableitungen, Arrhythmiealarme, Elektrode ab, Schrittmachererkennung), Respiration und Apnoe, SpO₂, IBP (5 µV/V/mmHg), Temperatur und NIBP-Ablauf mit [[pruefgeraete|Simulatoren]]."
+    },
+    {
+      "name": "Messtechnische Kontrolle NIBP und Temperatur",
+      "ref": "mtk",
+      "description": "Nach § 15 MPBetreibV i. V. m. Anlage 2: statische Druckanzeige gegen Referenzmanometer, Dichtheit und Druckablass des NIBP-Systems; Prüfung des Temperaturkanals mit Referenzwiderständen bzw. -bad. Frist zwei Jahre."
+    },
+    {
+      "name": "Prüfung von Alarmsystem und Zentralanbindung",
+      "ref": "alarmsystem",
+      "description": "Auslösung, Priorisierung, akustische und optische Signalisierung, Weiterleitung an Zentrale und mobile Endgeräte, Verhalten bei Netzwerkunterbrechung."
+    },
+    {
+      "name": "Akkutest",
+      "description": "Betrieb ohne Netz unter definierter Last, Vergleich der erreichten Laufzeit mit Herstellerangabe, Prüfung der Akkuwarnung."
+    }
+  ],
+  "diagram": {
+    "title": "Funktionsschema eines Multiparameter-Patientenmonitors",
+    "caption": "Vereinfachte Signal- und Energieflüsse: Sensoren am Patienten, galvanisch getrennte Messelektronik, Prozessor mit Alarmlogik und Ausgabe an Display, Alarmsignalgeber und Netzwerk.",
+    "width": 980,
+    "height": 480,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Patient",
+        "kind": "patient",
+        "x": 90,
+        "y": 240
+      },
+      {
+        "id": "ekg",
+        "label": "EKG-Elektroden\n(EKG + Atmung)",
+        "ref": "ekg-elektrode",
+        "kind": "sensor",
+        "x": 290,
+        "y": 60
+      },
+      {
+        "id": "spo2",
+        "label": "SpO₂-Sensor\n(LED/Photodiode)",
+        "ref": "photoplethysmographie",
+        "kind": "sensor",
+        "x": 290,
+        "y": 150
+      },
+      {
+        "id": "nibp",
+        "label": "NIBP-Manschette\nPumpe/Ventil",
+        "ref": "oszillometrie",
+        "kind": "sensor",
+        "x": 290,
+        "y": 240
+      },
+      {
+        "id": "ibp",
+        "label": "IBP-Druckwandler",
+        "ref": "drucksensor",
+        "kind": "sensor",
+        "x": 290,
+        "y": 330
+      },
+      {
+        "id": "temp",
+        "label": "Temperatursonde\n(NTC)",
+        "ref": "temperatursensor",
+        "kind": "sensor",
+        "x": 290,
+        "y": 420
+      },
+      {
+        "id": "afe",
+        "label": "Analoges Front-End\nVerstärker/Filter",
+        "ref": "instrumentenverstaerker",
+        "kind": "process",
+        "x": 500,
+        "y": 120
+      },
+      {
+        "id": "adc",
+        "label": "A/D-Wandler",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 500,
+        "y": 240
+      },
+      {
+        "id": "iso",
+        "label": "Galvanische\nTrennung",
+        "ref": "galvanische-trennung",
+        "kind": "process",
+        "x": 500,
+        "y": 360
+      },
+      {
+        "id": "cpu",
+        "label": "Prozessor\nAlgorithmen/Alarme",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 700,
+        "y": 240
+      },
+      {
+        "id": "disp",
+        "label": "Display und\nBedienung",
+        "ref": "display-bedienoberflaeche",
+        "kind": "output",
+        "x": 890,
+        "y": 80
+      },
+      {
+        "id": "alarm",
+        "label": "Alarmsignalgeber",
+        "ref": "alarmsystem",
+        "kind": "output",
+        "x": 890,
+        "y": 190
+      },
+      {
+        "id": "netz",
+        "label": "Zentrale / PDMS\n(HL7)",
+        "ref": "hl7-fhir",
+        "kind": "output",
+        "x": 890,
+        "y": 300
+      },
+      {
+        "id": "power",
+        "label": "Netzteil + Akku",
+        "ref": "medizinisches-netzteil",
+        "kind": "source",
+        "x": 890,
+        "y": 420
+      }
+    ],
+    "edges": [
+      {
+        "from": "pat",
+        "to": "ekg",
+        "kind": "signal",
+        "label": "Biopotentiale"
+      },
+      {
+        "from": "pat",
+        "to": "spo2",
+        "kind": "energy",
+        "label": "Licht"
+      },
+      {
+        "from": "nibp",
+        "to": "pat",
+        "kind": "gas",
+        "label": "Manschettendruck"
+      },
+      {
+        "from": "pat",
+        "to": "ibp",
+        "kind": "fluid",
+        "label": "Katheter"
+      },
+      {
+        "from": "pat",
+        "to": "temp",
+        "kind": "energy",
+        "label": "Wärme"
+      },
+      {
+        "from": "ekg",
+        "to": "afe",
+        "kind": "signal"
+      },
+      {
+        "from": "spo2",
+        "to": "afe",
+        "kind": "signal"
+      },
+      {
+        "from": "nibp",
+        "to": "afe",
+        "kind": "signal"
+      },
+      {
+        "from": "ibp",
+        "to": "afe",
+        "kind": "signal"
+      },
+      {
+        "from": "temp",
+        "to": "afe",
+        "kind": "signal"
+      },
+      {
+        "from": "afe",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "iso",
+        "kind": "data"
+      },
+      {
+        "from": "iso",
+        "to": "cpu",
+        "kind": "data"
+      },
+      {
+        "from": "cpu",
+        "to": "disp",
+        "kind": "data"
+      },
+      {
+        "from": "cpu",
+        "to": "alarm",
+        "kind": "data"
+      },
+      {
+        "from": "cpu",
+        "to": "netz",
+        "kind": "data",
+        "label": "LAN/WLAN"
+      },
+      {
+        "from": "power",
+        "to": "cpu",
+        "kind": "power"
+      },
+      {
+        "from": "power",
+        "to": "iso",
+        "kind": "power",
+        "label": "isolierte Versorgung"
+      }
+    ]
+  },
+  "images": [
+    {
+      "src": "img/devices/patientenmonitor-aufbau.svg",
+      "kind": "schema",
+      "caption": "Schematischer Aufbau eines Patientenmonitors mit Display, Parametermodulen, Patientenanschlüssen, Stromversorgung und Netzwerkanbindung (Funktionsschema, kein konkretes Modell)."
+    },
+    {
+      "src": "img/devices/patientenmonitor-prinzip.svg",
+      "kind": "schema",
+      "caption": "Messprinzip: A – Messkette eines Parameterkanals; B – oszillometrische Blutdruckmessung mit maximaler Oszillationsamplitude beim mittleren arteriellen Druck (vereinfacht)."
+    }
+  ],
+  "paths": [
+    [
+      "patientenmonitor",
+      "photoplethysmographie",
+      "lambert-beer",
+      "haemoglobin",
+      "gasaustausch"
+    ],
+    [
+      "patientenmonitor",
+      "instrumentenverstaerker",
+      "biosignale",
+      "aktionspotential",
+      "erregungsleitungssystem",
+      "herz"
+    ],
+    [
+      "patientenmonitor",
+      "oszillometrie",
+      "drucksensor",
+      "druck",
+      "blutdruck"
+    ]
+  ],
+  "related": [
+    "pulsoxymeter",
+    "nibp-messgeraet",
+    "invasive-druckmessung",
+    "kapnometer",
+    "thermometer",
+    "ekg-geraet",
+    "langzeit-ekg",
+    "defibrillator",
+    "anaesthesiegeraet",
+    "beatmungsgeraet",
+    "alarmsystem",
+    "alarmmuedigkeit",
+    "hl7-fhir",
+    "iec-60601-2-27",
+    "iec-80601-2-49",
+    "iec-80601-2-30",
+    "iso-80601-2-61",
+    "iso-80601-2-55",
+    "iec-60601-1-8"
+  ],
+  "sources": [
+    "kramme-2017",
+    "webster-2010",
+    "bronzino-2015",
+    "jubran-2015",
+    "schmidt-lang-2019",
+    "tietze-schenk-2019",
+    "mdr-2017",
+    "mdcg-2021-24",
+    "mpbetreibv",
+    "iec-60601-1",
+    "iec-60601-1-2",
+    "iec-60601-1-8",
+    "iec-62304",
+    "iec-62353",
+    "din-31051",
+    "din-vde-0100-710",
+    "krinko-bfarm-2012"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

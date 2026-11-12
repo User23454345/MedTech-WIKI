@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Prinzip: Kondensatorentladung und biphasischer Defibrillationsimpuls</title>
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b2545"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="26" text-anchor="middle" font-size="15" font-weight="600">Kondensatorentladung und biphasischer Impuls (Schema)</text>
+
+  <!-- Ersatzschaltbild -->
+  <rect x="16" y="44" width="262" height="226" rx="10" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="147" y="64" text-anchor="middle" font-weight="600">Ersatzschaltbild</text>
+  <!-- Kondensator links -->
+  <line x1="60" y1="90" x2="60" y2="146" stroke="#0b2545" stroke-width="2"/>
+  <line x1="44" y1="146" x2="76" y2="146" stroke="#0b2545" stroke-width="2.5"/>
+  <line x1="44" y1="158" x2="76" y2="158" stroke="#0b2545" stroke-width="2.5"/>
+  <line x1="60" y1="158" x2="60" y2="230" stroke="#0b2545" stroke-width="2"/>
+  <text x="84" y="150" font-size="13">C</text>
+  <text x="84" y="166" font-size="13">U₀</text>
+  <!-- obere Leitung mit Schalter -->
+  <line x1="60" y1="90" x2="110" y2="90" stroke="#0b2545" stroke-width="2"/>
+  <circle cx="112" cy="90" r="3" fill="#0b2545"/>
+  <line x1="112" y1="90" x2="140" y2="76" stroke="#0b2545" stroke-width="2"/>
+  <circle cx="144" cy="90" r="3" fill="#0b2545"/>
+  <text x="128" y="112" text-anchor="middle" font-size="13">S (H-Brücke)</text>
+  <line x1="144" y1="90" x2="160" y2="90" stroke="#0b2545" stroke-width="2"/>
+  <!-- Innenwiderstand -->
+  <rect x="160" y="80" width="44" height="20" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="182" y="124" text-anchor="middle" font-size="13">R_i</text>
+  <line x1="204" y1="90" x2="232" y2="90" stroke="#0b2545" stroke-width="2"/>
+  <line x1="232" y1="90" x2="232" y2="134" stroke="#0b2545" stroke-width="2"/>
+  <!-- Patientenwiderstand -->
+  <rect x="220" y="134" width="24" height="56" fill="#e6f7f5" stroke="#0d9488" stroke-width="2"/>
+  <text x="208" y="168" text-anchor="end" font-size="13">R_Pat</text>
+  <line x1="232" y1="190" x2="232" y2="230" stroke="#0b2545" stroke-width="2"/>
+  <line x1="60" y1="230" x2="232" y2="230" stroke="#0b2545" stroke-width="2"/>
+  <text x="147" y="252" text-anchor="middle" font-size="13">Thorax ≈ ohmsche Last</text>
+
+  <!-- Diagramm -->
+  <line x1="320" y1="250" x2="320" y2="60" stroke="#0b2545" stroke-width="1.5" marker-end="url(#ax)"/>
+  <line x1="310" y1="160" x2="584" y2="160" stroke="#0b2545" stroke-width="1.5" marker-end="url(#ax)"/>
+  <text x="578" y="178" text-anchor="end" font-size="13">t</text>
+  <text x="314" y="70" text-anchor="end" font-size="13">i(t)</text>
+  <!-- Phase 1 -->
+  <polyline points="320,160 320,64.0 326.6,66.5 333.2,69.0 339.8,71.4 346.4,73.7 353.0,76.0 359.6,78.2 366.2,80.3 372.8,82.4 379.4,84.5 386.0,86.5 392.6,88.4 399.2,90.3 405.8,92.1 412.4,93.9 419.0,95.6 425.6,97.3 432.2,99.0 438.8,100.6 445.4,102.2 452.0,103.7 452,160" fill="#e6f7f5" stroke="#0d9488" stroke-width="2"/>
+  <!-- Phase 2 -->
+  <polyline points="452,160 452.0,216.3 460.8,214.4 469.6,212.5 478.4,210.6 487.2,208.9 496.0,207.1 504.8,205.5 513.6,203.9 522.4,202.4 531.2,200.9 540.0,199.5 540,160" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <text x="386" y="132" text-anchor="middle" font-size="13">Phase 1</text>
+  <text x="496" y="236" text-anchor="middle" font-size="13">Phase 2</text>
+  <!-- Beschriftung Spitze -->
+  <line x1="324" y1="64" x2="372" y2="56" stroke="#0b2545" stroke-width="1"/>
+  <text x="376" y="60" font-size="13">I₀ = U₀ / R ≈ 24 A</text>
+  <line x1="456" y1="104" x2="490" y2="104" stroke="#0b2545" stroke-width="1"/>
+  <text x="494" y="100" font-size="13">Abschneiden</text>
+  <text x="494" y="116" font-size="13">(truncation)</text>
+  <!-- Zeitachse -->
+  <line x1="320" y1="258" x2="452" y2="258" stroke="#0b2545" stroke-width="1"/>
+  <line x1="452" y1="258" x2="540" y2="258" stroke="#0d9488" stroke-width="1"/>
+  <line x1="320" y1="253" x2="320" y2="263" stroke="#0b2545" stroke-width="1"/>
+  <line x1="452" y1="253" x2="452" y2="263" stroke="#0b2545" stroke-width="1"/>
+  <line x1="540" y1="253" x2="540" y2="263" stroke="#0b2545" stroke-width="1"/>
+  <text x="386" y="276" text-anchor="middle" font-size="13">6 ms</text>
+  <text x="496" y="276" text-anchor="middle" font-size="13">4 ms</text>
+
+  <!-- Formeln -->
+  <rect x="16" y="292" width="568" height="92" rx="10" fill="#e6f7f5" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="32" y="316" font-size="14">E = ½ · C · U₀²        i(t) = (U₀ / R) · e^(−t/τ)        τ = R · C</text>
+  <text x="32" y="342" font-size="13">Beispielwerte: C = 150 µF, U₀ = 1,8 kV, R = 75 Ω → E ≈ 243 J gespeichert,</text>
+  <text x="32" y="362" font-size="13">τ ≈ 11,3 ms, abgegeben bis zum Ende von Phase 2 ≈ 200 J (ohne Innenwiderstand)</text>
+</svg>

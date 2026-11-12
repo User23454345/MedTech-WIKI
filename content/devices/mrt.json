@@ -1,0 +1,654 @@
+{
+  "id": "mrt",
+  "type": "device",
+  "title": "Magnetresonanztomograph (MRT)",
+  "aliases": [
+    "Kernspintomograph",
+    "Kernspin",
+    "MR-Tomograph",
+    "Magnetresonanztomographie",
+    "MRI",
+    "Magnetic Resonance Imaging",
+    "MR-Scanner",
+    "NMR-Tomograph"
+  ],
+  "category": "geraete",
+  "deviceGroup": "bildgebung",
+  "rank": 11,
+  "domains": [
+    "radiologie",
+    "neurologie",
+    "kardiologie",
+    "orthopaedie-unfallchirurgie",
+    "gastroenterologie",
+    "geburtshilfe",
+    "nuklearmedizin",
+    "strahlentherapie"
+  ],
+  "summary": "Der Magnetresonanztomograph erzeugt mithilfe eines starken Magnetfelds, hochfrequenter Pulse und geschalteter Gradientenfelder Schnittbilder mit hervorragendem Weichteilkontrast – ganz ohne ionisierende Strahlung. Das Signal stammt von den Wasserstoffkernen im Gewebe; Kontrast entsteht vor allem durch deren Relaxationszeiten T1 und T2.",
+  "body": "## Geschichte\n\n| Jahr | Meilenstein |\n|---|---|\n| 1946 | Felix Bloch und Edward Purcell weisen unabhängig voneinander die Kernspinresonanz in kondensierter Materie nach (Nobelpreis für Physik 1952) [@bloch-1946]. |\n| 1950er–1960er | NMR-Spektroskopie wird zum Standardverfahren der Chemie; Entdeckung des Spinechos (Erwin Hahn, 1950). |\n| 1971 | Raymond Damadian berichtet über unterschiedliche Relaxationszeiten von Tumor- und Normalgewebe. |\n| 1973 | Paul Lauterbur beschreibt die Bildgebung mit Magnetfeldgradienten („Zeugmatographie“) [@lauterbur-1973]. |\n| 1970er | Peter Mansfield entwickelt die Schichtselektion und die Echo-Planar-Bildgebung (EPI); Richard Ernst die Fourier-Bildgebung. |\n| frühe 1980er | Erste kommerzielle Ganzkörpersysteme, zunächst mit niedrigen Feldstärken. |\n| 1990er | 1,5 T wird Standard; fMRT, Diffusionsbildgebung, Phased-Array-Spulen. |\n| 2000er | 3-T-Systeme in der Klinik, parallele Bildgebung; Nobelpreis für Physiologie oder Medizin 2003 an Lauterbur und Mansfield. |\n| seit den 2010er-Jahren | Weite Patientenöffnungen (70 cm), 7 T für ausgewählte klinische Anwendungen, PET/MR, MR-Linac, Compressed Sensing und Deep-Learning-Rekonstruktion. |\n\nSiehe auch [[geschichte-medizintechnik]].\n\n## Aktuelle Entwicklungen\n\n* **Heliumreduktion:** Helium ist ein knapper, teurer Rohstoff. Versiegelte Magnete mit wenigen Litern Helium und „trockene“ Kühlkonzepte ohne Quenchleitung senken Betriebs- und Infrastrukturkosten [@philips-blueseal] [@siemens-free-max].\n* **Niederfeld-Renaissance:** Moderne Rekonstruktion macht Systeme um 0,5 T wieder klinisch attraktiv – mit weniger Suszeptibilitätsartefakten, geringerer SAR, einfacherer Installation und Vorteilen bei Implantatträgern sowie in der Lungenbildgebung.\n* **KI in Akquisition und Rekonstruktion:** automatische Planung von Schichtlagen, Deep-Learning-Rekonstruktion für kürzere Messzeiten; diese Funktionen sind Teil des Medizinprodukts bzw. eigenständige [[software-medizinprodukt|Software als Medizinprodukt]].\n* **Quantitative MRT:** Mapping-Verfahren (T1, T2, Fett- und Eisengehalt) liefern messbare Gewebekennwerte statt nur Kontrastbilder.\n* **MR-Sicherheit von Implantaten:** Immer mehr aktive Implantate (Herzschrittmacher, Neurostimulatoren, Cochlea-Implantate) sind „MR Conditional“; ihre Untersuchung erfordert die genaue Einhaltung der Bedingungen des Implantatherstellers (Feldstärke, SAR, Gradienten, Programmierung) [@astm-f2503].\n",
+  "riskClass": {
+    "value": "IIa",
+    "evidence": "typisch",
+    "note": "MRT-Systeme sind aktive Produkte zur Diagnose. Nach **Regel 10** der [[mdr|MDR]] Anhang VIII gehören aktive Diagnoseprodukte zur **Klasse IIa**, wenn sie Energie abgeben, die vom menschlichen Körper absorbiert wird – beim MRT die Hochfrequenzenergie des B₁-Feldes, die als Wärme im Gewebe deponiert wird [@mdr-2017] [@mdcg-2021-24]. In europäischen Produktdatenbanken sind Ganzkörper-MRT-Systeme entsprechend überwiegend als Klasse IIa eingetragen. Zubehör (z. B. Spulen), MR-taugliche Patientenüberwachung, Kontrastmittelinjektoren und eigenständige Auswertesoftware können abweichend klassifiziert sein. Maßgeblich ist die Klassifizierung des Herstellers auf Grundlage der [[zweckbestimmung|Zweckbestimmung]] ([[risikoklassen]]).",
+    "sources": [
+      "mdr-2017",
+      "mdcg-2021-24"
+    ]
+  },
+  "sections": {
+    "purpose": "## Medizinischer Zweck\n\nEin Magnetresonanztomograph (MRT, auch Kernspintomograph) erzeugt **Schnittbilder und Volumendatensätze des Körperinneren**, ohne [[ionisierende-strahlung|ionisierende Strahlung]] einzusetzen. Er nutzt die [[kernspinresonanz|Kernspinresonanz]] der Wasserstoffkerne (Protonen) im Gewebe: In einem starken, statischen Magnetfeld werden die Kernspins mit hochfrequenten Magnetfeldpulsen angeregt; das beim Zurückkehren in den Gleichgewichtszustand ausgesandte Signal wird mit Empfangsspulen gemessen und mithilfe von Magnetfeldgradienten räumlich zugeordnet [@mcrobbie-2017] [@doessel-2016] [@weishaupt-2014].\n\nDer besondere diagnostische Wert liegt im **überragenden Weichteilkontrast**. Während die [[computertomograph|Computertomographie]] im Wesentlichen nur einen Gewebeparameter abbildet (die Röntgenschwächung), hängt das MR-Signal von mehreren Gewebeeigenschaften ab – Protonendichte, den Relaxationszeiten T1 und T2, Diffusion, Fluss, Perfusion, chemischer Umgebung und magnetischer Suszeptibilität. Durch die Wahl der Messsequenz lässt sich gezielt festlegen, welche dieser Eigenschaften den Bildkontrast bestimmt [@mcrobbie-2017] [@bushberg-2020].\n\nWesentliche Vorteile:\n\n* **keine ionisierende Strahlung** – geeignet für wiederholte Verlaufskontrollen, Kinder und (mit Einschränkungen) Schwangere; vgl. [[strahlenschutz]] bei den Röntgenverfahren,\n* **frei wählbare Schichtorientierung** und echte 3D-Datensätze,\n* **funktionelle Bildgebung**: Diffusion, Perfusion, Gehirnaktivierung (fMRT), Flussmessung, Spektroskopie,\n* **Gefäßdarstellung** (MR-Angiographie) teils ganz ohne Kontrastmittel.\n\nDem stehen Nachteile gegenüber: lange Untersuchungszeiten (typisch 15–45 Minuten), hohe Bewegungsempfindlichkeit, Lärm, Enge in der Patientenöffnung, hohe Anschaffungs- und Betriebskosten sowie ein **eigenes, gravierendes Gefährdungsspektrum** durch das permanent vorhandene Magnetfeld, die Hochfrequenzenergie und die schnell geschalteten Gradientenfelder [@kanal-2013] [@iec-60601-2-33].\n\n> [!warnung] Das Magnetfeld eines supraleitenden MRT ist **immer eingeschaltet** – auch nachts, am Wochenende und bei ausgeschaltetem Bildgebungssystem. Ferromagnetische Gegenstände (Sauerstoffflaschen, Werkzeug, Scheren, Reinigungsgeräte, Gasflaschenwagen) können zu tödlichen Geschossen werden. Der Zutritt zum Magnetraum ist daher streng zu regeln und jede Person vorher zu befragen bzw. zu überprüfen [@kanal-2013] [@mcrobbie-2017].\n",
+    "applications": "## Einsatzgebiete\n\nDas MRT ist in der [[radiologie|Radiologie]] neben CT und Röntgen das zentrale Schnittbildverfahren; seine Domäne sind Fragestellungen, bei denen Weichteilkontrast und Gewebecharakterisierung entscheiden.\n\n| Fachbereich | Typische Untersuchungen | Bevorzugte Sequenzen / Techniken |\n|---|---|---|\n| [[neurologie|Neurologie]], Neuroradiologie | Schlaganfall (Frühdiagnostik), Multiple Sklerose, Tumoren, Epilepsie, Demenz | T1, T2, FLAIR, Diffusion (DWI), Perfusion, Suszeptibilitätsgewichtung, fMRT |\n| [[orthopaedie-unfallchirurgie|Orthopädie und Unfallchirurgie]] | Knie (Menisken, Bänder), Schulter, Wirbelsäule (Bandscheiben, Myelon), Knochenmarködem | Protonendichte mit Fettsättigung, STIR, T1 |\n| [[kardiologie|Kardiologie]] | Herzfunktion und -volumina, Myokarditis, Narbenquantifizierung (Late Enhancement), Perfusion | EKG-getriggerte Cine-Sequenzen, T1-/T2-Mapping, Kontrastmittel |\n| Onkologie | Leber, Prostata (multiparametrisch), Mamma, Rektum, Weichteiltumoren, Ganzkörper-Staging | T2, DWI, dynamische Kontrastmittelserien |\n| [[gastroenterologie|Gastroenterologie]] | Gallenwege und Pankreas (MRCP), Darm (MR-Enterographie) | stark T2-gewichtete Sequenzen |\n| [[geburtshilfe|Gynäkologie und Geburtshilfe]] | Becken, Mamma-MRT, ggf. fetale MRT bei speziellen Fragestellungen | T2, DWI, Kontrastmittelserien (nicht bei Schwangeren ohne strenge Indikation) |\n| Gefäßmedizin | MR-Angiographie der Hirn-, Hals-, Becken- und Beinarterien | Time-of-Flight, Phasenkontrast, kontrastmittelgestützte MRA |\n| [[nuklearmedizin|Nuklearmedizin]] | Hybridgeräte PET/MR | simultane PET- und MR-Akquisition |\n| [[strahlentherapie|Strahlentherapie]] | Zielvolumendefinition, MR-geführte Bestrahlung (MR-Linac) | geometrisch exakte 3D-Sequenzen |\n\n### Feldstärkeklassen\n\n| Klasse | Feldstärke B₀ | Typischer Einsatz |\n|---|---|---|\n| Niederfeld | < 0,5 T (z. B. 0,2–0,4 T, häufig Permanentmagnete, offene Bauform) | Orthopädie, klaustrophobe oder adipöse Patienten, Interventionen |\n| „Mittelfeld“ / Low-Field-Renaissance | ca. 0,5–1 T (z. B. 0,55 T supraleitend) | Allgemeine Bildgebung mit weniger Suszeptibilitätsartefakten, Implantatträger, geringer Infrastrukturaufwand |\n| Hochfeld | 1,5 T | „Arbeitspferd“ der klinischen Routine |\n| Hochfeld | 3 T | Neuro-, muskuloskelettale, Prostata- und Gefäßbildgebung, Spektroskopie, fMRT |\n| Ultrahochfeld | ≥ 7 T | Forschung; ausgewählte klinische Anwendungen (Gehirn, Gelenke) |\n\n> [!praxis] In einer typischen Klinik laufen 1,5-T- und 3-T-Systeme nebeneinander. 3 T bietet mehr Signal, aber auch höhere HF-Belastung (SAR), stärkere Suszeptibilitäts- und dielektrische Artefakte und andere Implantat-Freigaben. Welche Feldstärke für einen Patienten mit Implantat zulässig ist, entscheidet die **MR-Kennzeichnung des Implantats** („MR Conditional“) – nicht das Gerät [@astm-f2503] [@kanal-2013].\n",
+    "principle": "## Funktionsprinzip\n\nDas MRT verknüpft drei physikalische Bausteine: **Magnetisierung** der Protonen im statischen Feld B₀, **Resonanzanregung** durch ein hochfrequentes Wechselfeld B₁ und **Ortskodierung** durch zeitlich geschaltete Magnetfeldgradienten. Die Bildrekonstruktion erfolgt anschließend über eine zweidimensionale bzw. dreidimensionale Fourier-Transformation der gemessenen Rohdaten (k-Raum) [@mcrobbie-2017] [@haacke-2014] [@doessel-2016].\n\n### 1. Kernspin, Magnetisierung und Larmor-Frequenz\n\nWasserstoffkerne besitzen einen Eigendrehimpuls (Spin ½) und damit ein magnetisches Moment. Im äußeren Magnetfeld B₀ gibt es zwei Energieniveaus (parallel und antiparallel); der Besetzungsunterschied folgt der Boltzmann-Statistik und ist winzig:\n\nΔN / N ≈ γ · ħ · B₀ / (2 · k · T)\n\nDie Summe der überzähligen Momente bildet die makroskopische **Längsmagnetisierung M₀** entlang B₀. Die Spins (bzw. M) **präzedieren** um die Feldrichtung mit der **Larmor-Frequenz**\n\nω₀ = γ · B₀  bzw.  f₀ = (γ / 2π) · B₀\n\nFür ¹H beträgt das gyromagnetische Verhältnis γ/2π ≈ 42,58 MHz/T [@mcrobbie-2017] [@bushberg-2020]. Diese Proportionalität zwischen Feldstärke und Frequenz ist der Schlüssel der gesamten MR-Bildgebung (siehe [[kernspinresonanz]]).\n\n> [!beispiel] **Larmor-Frequenz und Polarisation**\n> * 1,5 T: f₀ = 42,58 MHz/T · 1,5 T ≈ **63,9 MHz**; 3 T: f₀ ≈ **127,7 MHz**. Beide liegen im UKW-/VHF-Bereich – deshalb braucht das MRT eine HF-geschirmte Kabine.\n> * Polarisation bei 1,5 T und Körpertemperatur (T = 310 K): ΔN/N ≈ (2,675·10⁸ s⁻¹T⁻¹ · 1,055·10⁻³⁴ Js · 1,5 T) / (2 · 1,381·10⁻²³ J/K · 310 K) ≈ **5·10⁻⁶**. Nur rund 5 von einer Million Protonen tragen netto zum Signal bei – nutzbar nur, weil Gewebe etwa 10²² Protonen pro cm³ enthält.\n\n### 2. Anregung mit dem HF-Feld B₁\n\nEin kurzer HF-Puls mit der Larmor-Frequenz erzeugt über die [[hf-spule|Sendespule]] ein senkrecht zu B₀ rotierendes Magnetfeld B₁ (Mikrotesla-Bereich). Im mitrotierenden Koordinatensystem kippt die Magnetisierung um den **Flipwinkel**\n\nα = γ · B₁ · τ   (Rechteckpuls der Dauer τ)\n\nEin 90°-Puls klappt M₀ vollständig in die Transversalebene, ein 180°-Puls invertiert sie. Nur Spins, deren Larmor-Frequenz zur Pulsfrequenz passt, werden angeregt – das ist die **Resonanzbedingung**.\n\n> [!beispiel] **Pulsdauer**: Für B₁ = 10 µT und α = 90° = π/2 folgt τ = (π/2) / (2,675·10⁸ s⁻¹T⁻¹ · 10·10⁻⁶ T) ≈ **0,59 ms**. Doppelte B₁-Amplitude halbiert die Pulsdauer, vervierfacht aber die momentane HF-Leistung (P ∝ B₁²).\n\n### 3. Signal: freier Induktionszerfall\n\nDie präzedierende Transversalmagnetisierung M_xy ist ein rotierender Magnet und **induziert** nach dem Faradayschen Gesetz ([[elektromagnetische-induktion]]) in der Empfangsspule eine Wechselspannung mit der Larmor-Frequenz im Mikrovolt-Bereich – den **freien Induktionszerfall (FID)** [@bloch-1946]. Da sowohl die Magnetisierung als auch die Induktionsspannung (über die Frequenz) mit B₀ wachsen, steigt das Signal etwa quadratisch, das Signal-Rausch-Verhältnis (SNR) wegen des mitwachsenden Körperrauschens etwa **linear mit B₀**.\n\n> [!vereinfacht] „SNR ∝ B₀“ ist eine Faustregel. In der Praxis ändern sich mit der Feldstärke auch die Relaxationszeiten, die HF-Homogenität und die nötigen Sequenzparameter, sodass ein 3-T-Bild nicht automatisch doppelt so gut ist wie ein 1,5-T-Bild [@mcrobbie-2017].\n\n### 4. Relaxation – die Quelle des Gewebekontrasts\n\nNach der Anregung kehrt das Spinsystem in den Gleichgewichtszustand zurück:\n\n* **T1-Relaxation (longitudinal, Spin-Gitter):** M_z(t) = M₀ · (1 − e^(−t/T1)) – Energieabgabe an die Umgebung.\n* **T2-Relaxation (transversal, Spin-Spin):** M_xy(t) = M_xy(0) · e^(−t/T2) – Dephasierung durch Wechselwirkung der Spins untereinander.\n* **T2\\*-Zerfall:** zusätzlich beschleunigt durch statische Feldinhomogenitäten (Gerät, Suszeptibilitätssprünge); T2\\* < T2.\n\n| Gewebe (Größenordnung bei 1,5 T) | T1 | T2 |\n|---|---|---|\n| Fett | ca. 250–300 ms | ca. 60–90 ms |\n| Weiße Hirnsubstanz | ca. 600–800 ms | ca. 70–90 ms |\n| Graue Hirnsubstanz | ca. 900–1 200 ms | ca. 90–110 ms |\n| Liquor / freies Wasser | > 3 000 ms | > 1 000 ms |\n\n> [!vereinfacht] Die Werte sind gerundete Literatur-Größenordnungen; T1 nimmt mit der Feldstärke zu, Messwerte variieren je nach Methode und Studie [@mcrobbie-2017] [@weishaupt-2014].\n\nFür eine **Spinecho-Sequenz** gilt näherungsweise\n\nS ∝ ρ · (1 − e^(−TR/T1)) · e^(−TE/T2)\n\nmit der Repetitionszeit TR und der Echozeit TE:\n\n| Wichtung | TR | TE | Hell erscheint |\n|---|---|---|---|\n| T1 | kurz (ca. 400–700 ms) | kurz (ca. 10–20 ms) | Fett, Kontrastmittel (Gadolinium) |\n| T2 | lang (> 2 000 ms) | lang (ca. 80–120 ms) | Wasser, Ödem, Liquor |\n| Protonendichte | lang | kurz | Gewebe mit hoher Protonendichte |\n\n**Spinecho** (90°–180°) refokussiert statische Dephasierung und misst T2; **Gradientenecho** verzichtet auf den 180°-Puls, erlaubt kleine Flipwinkel und sehr kurze TR, ist aber T2\\*-empfindlich. Gadoliniumhaltige Kontrastmittel sind paramagnetisch und verkürzen vor allem T1 des umgebenden Gewebes.\n\n### 5. Ortskodierung mit Gradienten\n\nDie [[gradientenspule|Gradientenspulen]] überlagern B₀ ein linear mit dem Ort ansteigendes Zusatzfeld (Gradientenstärke G in mT/m). Damit wird die Larmor-Frequenz ortsabhängig:\n\nf(z) = (γ/2π) · (B₀ + G_z · z)\n\n1. **Schichtselektion:** Während des HF-Pulses ist G_z eingeschaltet; ein Puls mit der Bandbreite Δf regt nur eine Schicht der Dicke Δz = Δf / ((γ/2π) · G_z) an.\n2. **Frequenzkodierung:** Während des Auslesens liegt G_x an; jede Spalte sendet mit eigener Frequenz.\n3. **Phasenkodierung:** Vor dem Auslesen wird G_y kurz eingeschaltet; jede Zeile erhält eine eigene Phase. Die Messung wird mit schrittweise veränderter Phasenkodierung N_y-mal wiederholt.\n\nDie Messdaten füllen den **k-Raum**, k = (γ/2π) · ∫G(t) dt; Zentrum des k-Raums = Kontrast und Signal, Peripherie = Details und Kanten. Das Bild entsteht durch die inverse 2D-Fourier-Transformation. Der k-Raum-Abstand bestimmt das Messfeld (FOV = 1/Δk), die maximale k-Raum-Ausdehnung die Auflösung [@haacke-2014] [@lauterbur-1973].\n\n> [!beispiel] **Schichtdicke und Messzeit**\n> * Pulsbandbreite Δf = 1 kHz, Schichtgradient G_z = 10 mT/m: (γ/2π) · G_z = 42,58 MHz/T · 0,01 T/m = 425,8 kHz/m = 425,8 Hz/mm → Δz = 1 000 Hz / 425,8 Hz/mm ≈ **2,3 mm**. Doppelte Gradientenstärke halbiert die Schichtdicke.\n> * Konventionelles 2D-Spinecho: T_acq = TR · N_y · NEX = 0,5 s · 256 · 1 = **128 s**. Turbo-Spinecho mit 16 Echos pro Anregung (TR = 4 s): 4 s · 256 / 16 = **64 s** – trotz achtfacher TR doppelt so schnell.\n> * Wellenlänge des HF-Feldes im Gewebe bei 3 T: λ = c / (f · √ε_r) ≈ 3·10⁸ m/s / (127,7·10⁶ Hz · √64) ≈ **0,29 m** – vergleichbar mit Körperabmessungen. Daraus entstehen bei 3 T B₁-Inhomogenitäten (dielektrische Effekte), die Mehrkanal-Sendetechnik (parallel transmit) ausgleichen soll. Die Permittivität ε_r ≈ 64 ist ein beispielhafter Wert für wasserreiches Gewebe.\n\n### 6. Regelung und Systemkalibrierung\n\nEin MRT ist ein hochgradig geregeltes System. Vor jeder Untersuchung laufen automatische Justagen ab [@mcrobbie-2017]:\n\n* **Frequenzjustage:** Bestimmung der exakten Resonanzfrequenz des Patienten im Magnet (wenige ppm Abweichung durch Suszeptibilität).\n* **Shimming:** Messung einer B₀-Feldkarte und Korrektur der Feldhomogenität über Shimströme (aktiver Shim) – Voraussetzung für Fettsättigung, EPI und Spektroskopie.\n* **Sendekalibrierung (B₁):** Ermittlung der Sendespannung, die den gewünschten Flipwinkel erzeugt; geht direkt in die SAR-Berechnung ein.\n* **Empfängerverstärkung:** Aussteuerung der Empfangskette, damit der [[analog-digital-wandler|A/D-Wandler]] nicht übersteuert.\n\nIm Betrieb arbeiten mehrere schnelle [[regelkreis|Regelkreise]]:\n\n* **Gradientenstromregelung:** Die Gradientenverstärker müssen Ströme von einigen hundert Ampere in Mikrosekunden präzise einstellen; Stromsensoren melden den Istwert, ein Regler korrigiert Abweichungen. **Wirbelströme** in leitfähigen Strukturen des Magneten verzerren den Feldverlauf und werden durch Vorverzerrung (pre-emphasis) und aktiv geschirmte Gradientenspulen kompensiert.\n* **SAR- und dB/dt-Überwachung:** Vor- und rücklaufende HF-Leistung werden laufend gemessen; zusammen mit Patientengewicht und Sequenzparametern berechnet das System die **spezifische Absorptionsrate (SAR)** und begrenzt sie normgerecht. Ebenso wird die Änderungsgeschwindigkeit der Gradientenfelder (dB/dt) begrenzt, um periphere Nervenstimulationen zu vermeiden ([[nervensystem]]) [@iec-60601-2-33].\n* **Kryoregelung:** Kaltkopf und Heliumkompressor halten den Heliumbehälter auf etwa 4 K; Druck und Füllstand werden überwacht, eine Heizung stabilisiert den Behälterdruck leicht über Umgebungsdruck.\n\n> [!belegt] Die IEC 60601-2-33 definiert Betriebsarten (Normalbetrieb, kontrollierter Betrieb erster Stufe) mit Grenzwerten u. a. für die Ganzkörper-SAR (Normalbetrieb 2 W/kg, erste Stufe 4 W/kg, gemittelt über 6 Minuten) und die Kopf-SAR (3,2 W/kg) [@iec-60601-2-33]. Die HF-Leistung skaliert grob mit B₀² und dem Quadrat des Flipwinkels – bei 3 T ist die SAR für dieselbe Sequenz etwa viermal so hoch wie bei 1,5 T.\n\n### 7. Signalverarbeitung und Bildrekonstruktion\n\n1. **Empfang:** Mehrkanal-Empfangsspulen (Arrays) mit rauscharmen Vorverstärkern direkt am Spulenelement ([[operationsverstaerker|Verstärker]]); während des Sendens werden die Empfangsspulen über PIN-Dioden verstimmt (Detuning), um Schäden und Verbrennungen zu verhindern.\n2. **Digitalisierung:** Heute meist direkte oder spulennahe Digitalisierung; anschließend digitale Quadraturdemodulation, Dezimation und [[filter|digitale Filterung]].\n3. **Rekonstruktion:** inverse FFT je Kanal, Kombination der Kanalbilder; **parallele Bildgebung** (z. B. SENSE, GRAPPA) nutzt die räumliche Empfindlichkeit der Spulenelemente, um Phasenkodierschritte einzusparen (Beschleunigungsfaktor R); **Compressed Sensing** und **Deep-Learning-Rekonstruktion** erlauben weitere Beschleunigung bzw. Rauschminderung.\n4. **Ausgabe:** Bilddaten werden als [[dicom|DICOM]]-Objekte an PACS und Befundung übertragen.\n\nDas SNR eines Voxels gilt näherungsweise SNR ∝ V_Voxel · √(N_x · N_y · NEX / BW): Kleinere Voxel, kürzere Messzeit oder größere Empfangsbandbreite kosten Signal – das Grundgesetz jedes Protokollkompromisses [@mcrobbie-2017].\n",
+    "construction": "## Technischer Aufbau\n\nEin MRT-System verteilt sich auf drei Räume: den **Untersuchungsraum** mit Magnet in einer HF-Kabine, den **Technikraum** mit Verstärkern, Kühlung und Rechnern und den **Bedienraum** mit Konsole [@mcrobbie-2017] [@kramme-2017].\n\n### Magnet\n\n| Bauform | Prinzip | Feldstärke | Eigenschaften |\n|---|---|---|---|\n| **Supraleitender Magnet** | Spulen aus Niob-Titan-Draht in flüssigem Helium (ca. 4,2 K), Dauerstrom ohne Verluste | ca. 0,5–7 T | Standard; Feld dauerhaft eingeschaltet; Kryotechnik nötig |\n| **Permanentmagnet** | Seltenerd- oder Ferritmagnete mit Eisenjoch | bis ca. 0,5 T | kein Helium, sehr schwer, temperaturempfindlich, oft offene Bauform |\n| **Widerstandsmagnet** | normalleitende Spule | niedrig | hoher Strombedarf; heute selten |\n\nDer [[supraleitender-magnet|supraleitende Magnet]] wird einmal „hochgefahren“ (Strom eingespeist) und dann kurzgeschlossen; der Strom fließt im supraleitenden Kreis ohne Verluste weiter. Der **Kryostat** (Vakuumisolation, Strahlungsschilde) minimiert den Wärmeeintrag; ein **Kaltkopf** mit Heliumkompressor rekondensiert verdampftes Helium. Konventionelle Magnete enthalten in der Größenordnung von 1 000–2 000 Litern flüssigem Helium; neuere Konzepte arbeiten mit stark reduzierter Heliummenge in versiegelten Systemen (Herstellerangaben: ca. 7 Liter bzw. unter 1 Liter) [@philips-blueseal] [@siemens-free-max].\n\n**Aktive Abschirmung:** Zusätzliche, gegensinnig gewickelte Spulen begrenzen das Streufeld, sodass die 0,5-mT-Linie (5 Gauß) nur wenige Meter um den Magneten liegt. Innerhalb dieser Linie dürfen sich z. B. Personen mit aktiven Implantaten nicht unkontrolliert aufhalten [@kanal-2013].\n\n**Quench:** Verliert die Spule ihre Supraleitung (z. B. durch lokale Erwärmung oder bei Betätigung der **Magnet-Notabschaltung**), wird die gespeicherte Feldenergie in Wärme umgesetzt und das flüssige Helium verdampft schlagartig – aus einem Liter Flüssigkeit entstehen bei Raumtemperatur rund 700 Liter Gas ([[gasgesetze]]). Die **Quenchleitung** führt das Gas ins Freie. Versagt sie, drohen Sauerstoffverdrängung, Kälteverbrennungen und Überdruck im Raum – daher Sauerstoffmonitor und Druckentlastung [@mcrobbie-2017].\n\n### Shimsystem\n\nPassive Shims (Eisenplättchen) gleichen die Grundinhomogenität bei der Installation aus; aktive Shimspulen korrigieren patientenabhängige Inhomogenitäten. Ziel ist eine Homogenität im Bereich weniger ppm über das Messvolumen.\n\n### Gradientensystem\n\nDrei [[gradientenspule|Gradientenspulen]] (x, y, z) sitzen zwischen Magnet und Patientenöffnung, gespeist von **Gradientenverstärkern** (Schaltverstärker mit Spannungen im Bereich von Kilovolt und Strömen von mehreren hundert Ampere). Kenngrößen sind die **maximale Gradientenamplitude** (mT/m) und die **Anstiegsrate (Slew Rate, T/m/s)**. Die Spulen sind wassergekühlt, da hohe Ströme [[joulesche-waerme|Joulesche Wärme]] erzeugen. Die Lorentz-Kraft auf die stromdurchflossenen Leiter im Feld B₀ lässt die Spulen mechanisch schwingen – Ursache des typischen **Klopf- und Brummgeräuschs**, das deutlich über 100 dB(A) erreichen kann; Gehörschutz für Patienten ist daher obligatorisch ([[ohr]]) [@iec-60601-2-33] [@mcrobbie-2017].\n\n### Hochfrequenzsystem\n\n* **HF-Sender:** Pulsformung digital, Leistungsverstärker mit Spitzenleistungen im Bereich einiger zehn Kilowatt.\n* **Sendespule:** meist die im Gehäuse integrierte Körperspule (Birdcage-Bauform), bei 3 T zunehmend mit zwei oder mehr Sendekanälen.\n* **Empfangsspulen:** anatomisch geformte Mehrkanal-Arrays (Kopf, Wirbelsäule, Körper, Knie, Schulter, Brust …), mit Abstimm- und Anpasskondensatoren ([[kondensator]]), Vorverstärkern und Verstimmschaltung.\n* **HF-Kabine:** allseitig geschlossener Faraday-Käfig (Kupfer- oder Aluminiumbleche, Wabenkamine für Lüftung, Filterplatte für alle Kabeldurchführungen, HF-dichte Tür und Fenster). Sie verhindert, dass Rundfunk- und Störsignale das schwache MR-Signal überlagern ([[emv]]).\n\n### Weitere Baugruppen\n\n| Baugruppe | Funktion |\n|---|---|\n| Patientenliege | motorisch verfahrbar, bei Notfall manuell herausziehbar; Spulenanschlüsse |\n| Patientenkommunikation | Gegensprechanlage, Notrufball, Video; Gehörschutz mit Musik |\n| Physiologische Triggerung | MR-taugliches EKG, Atemgurt, Pulssensor zur Synchronisation (Herz-, Atem-Gating) |\n| Kühlung | Kaltwassersatz bzw. Rückkühler für Gradienten, Verstärker und Heliumkompressor |\n| Steuer- und Rekonstruktionsrechner | Sequenzsteuerung ([[mikrocontroller|Echtzeitsteuerung]]), Rekonstruktion (Mehrkern-CPU/GPU), Bedienkonsole ([[display-bedienoberflaeche]]) |\n| Sicherheitstechnik | Not-Aus (Abschaltung der Elektronik), Magnet-Notabschaltung (gezielter Quench), Sauerstoffmonitor, ggf. Ferromagnetdetektor am Zugang |\n\n> [!hinweis] **Not-Aus ≠ Magnet-Notabschaltung.** Der elektrische Not-Aus schaltet Gradienten, HF und Liege stromlos, das Magnetfeld bleibt bestehen. Nur die Magnet-Notabschaltung baut das Feld durch einen kontrollierten Quench ab – sie ist Lebensgefahr-Situationen vorbehalten (z. B. eingeklemmte Person durch ferromagnetischen Gegenstand), weil sie das Gerät für längere Zeit außer Betrieb setzt und eine aufwendige Wiederbefüllung und Wiederinbetriebnahme erfordert [@kanal-2013].\n\n### Raum- und Sicherheitskonzept\n\nNach dem Vier-Zonen-Konzept des American College of Radiology wird der Bereich vom frei zugänglichen Eingang (Zone I) über Anmeldung/Screening (Zone II) und kontrollierten Bedienbereich (Zone III) bis zum Magnetraum (Zone IV) gestaffelt [@kanal-2013]. Für die Elektroinstallation gelten zusätzlich die Anforderungen an [[medizinisch-genutzte-bereiche|medizinisch genutzte Bereiche]]; für Beschäftigte ist eine Gefährdungsbeurteilung nach der Arbeitsschutzverordnung zu elektromagnetischen Feldern erforderlich [@emfv] [@rl-2013-35-eu].\n",
+    "maintenance": "## Wartung und Instandhaltung\n\nDie [[instandhaltung-grundlagen|Instandhaltung]] eines MRT ist hochspezialisiert und wird in der Praxis überwiegend vom Hersteller bzw. von dessen autorisiertem Service im Rahmen eines Servicevertrags geleistet; die Medizintechnik des Betreibers koordiniert, dokumentiert und übernimmt einfache Inspektions- und Sichtprüfungen [@kramme-2017].\n\n### Rechtlicher Rahmen\n\n* Das MRT ist ein [[medizinisches-elektrisches-geraet|medizinisches elektrisches Gerät]] und unterliegt den allgemeinen [[betreiberpflichten|Betreiberpflichten]] der [[mpbetreibv|MPBetreibV]] (Fassung 2025): Betrieb nur entsprechend der Zweckbestimmung, durch qualifiziertes und eingewiesenes Personal ([[einweisung]]), Instandhaltung nach Herstellerangaben und Führung im [[bestandsverzeichnis|Bestandsverzeichnis]] [@mpbetreibv].\n* MRT-Geräte sind **nicht in Anlage 1** der MPBetreibV aufgeführt; eine STK-Pflicht nach § 12 i. V. m. Anlage 1 ergibt sich daher nicht unmittelbar. Vom Hersteller vorgesehene sicherheitstechnische Prüfungen sind im Rahmen der Instandhaltung durchzuführen. Messtechnische Kontrollen nach § 15 i. V. m. Anlage 2 sind für MRT nicht vorgesehen [@mpbetreibv].\n* Anders als bei Röntgen und CT gibt es für das MRT **keine strahlenschutzrechtlich vorgeschriebene Konstanzprüfung**; Bildqualitätsprüfungen erfolgen nach Herstellervorgabe und Qualitätsmanagement des Betreibers, methodisch angelehnt an IEC 62464-1 [@iec-62464-1].\n\n### Typische Instandhaltungsaufgaben\n\n| Bereich | Maßnahmen ([[wartung]], [[inspektion]]) |\n|---|---|\n| Kryosystem | Fernüberwachung von Heliumfüllstand, Behälterdruck und Kaltkopftemperatur; Wartung des Kaltkopfs (Austausch nach Herstellerintervall) und des Heliumkompressors (Adsorber, Ölabscheider); ggf. Heliumnachfüllung |\n| Kühlung | Kaltwassersatz: Durchfluss, Temperatur, Wasserqualität, Filter; Temperaturüberwachung der Gradientenspulen |\n| Quench- und Raumsicherheit | Sichtprüfung der Quenchleitung (Abdeckung, Fremdkörper, Vereisung), Sauerstoffmonitor (Funktion, Kalibrierung nach Herstellerangabe), Raumklima |\n| HF-Kabine | Türkontakte und Fingerfedern, Fenster, Filterplatte; periodische Messung der Schirmdämpfung |\n| Spulen | Sichtprüfung von Kabeln, Steckern, Gehäusen; Spulentests per Software; [[aufbereitung|Reinigung und Desinfektion]] nach Herstellerangabe ([[desinfektion]]) |\n| Patientenliege | Antrieb, Notentriegelung, Haltegurte, Polster |\n| Software / IT | Updates und Sicherheitspatches nur in Abstimmung mit dem Hersteller; Netzwerk- und DICOM-Konfiguration; Informationssicherheit |\n| Bildqualität | tägliche oder wöchentliche Phantommessung (SNR, Homogenität, Geometrie) nach Herstellerprotokoll; Trendanalyse |\n\n> [!warnung] **Arbeiten im Magnetraum:** Nur MR-geeignete (nichtmagnetische) Werkzeuge, Prüfmittel und Leitern verwenden. Messgeräte, Akkuschrauber, Gasflaschen und Reinigungsmaschinen dürfen nicht in Zone IV. Externe Handwerker und Reinigungskräfte sind vorher einzuweisen und zu begleiten. Instandsetzungen am Magneten, Kryosystem oder an der Leistungselektronik bleiben dem autorisierten Herstellerservice vorbehalten [@kanal-2013].\n\n> [!praxis] Viele MRT-Ausfälle kündigen sich an: steigender Heliumverbrauch (Kaltkopf), wachsende Spike-Artefakte (HF-Dichtigkeit), abnehmendes SNR einzelner Spulenelemente. Eine Trendauswertung der Fernüberwachungs- und Phantomdaten im [[medizintechnik-management|Medizintechnik-Management]] verkürzt Stillstände erheblich.\n",
+    "testing": "## Prüfverfahren\n\n### Sicherheitstechnische und elektrische Prüfungen\n\n* **Elektrische Sicherheit nach IEC 62353** ([[elektrische-sicherheitspruefung]]): [[schutzleiterwiderstand|Schutzleiterwiderstand]] der Systemkomponenten, [[ableitstrommessung|Ableitströme]] (Gerät und – wo zugänglich – Anwendungsteile wie Spulen, Liege, EKG-Triggerung) gemäß Klassifizierung der [[anwendungsteile|Anwendungsteile]]. Bei fest installierten Großgeräten erfolgen die Messungen in Abstimmung mit dem Hersteller, häufig an der Systemeinspeisung bzw. im Technikraum; Messgeräte bleiben außerhalb von Zone IV [@iec-62353].\n* **Sicherheitsfunktionen:** Not-Aus-Taster (Abschaltung von HF, Gradienten, Liege), Notrufball, Gegensprechanlage, Liegenentriegelung, Sauerstoffalarm, Türkontakte.\n\n### Bildqualität und Konstanz\n\nDie IEC 62464-1 beschreibt die Messung wesentlicher Bildqualitätsparameter an Prüfkörpern (Phantomen) [@iec-62464-1]:\n\n| Parameter | Bedeutung | Typische Ursache einer Abweichung |\n|---|---|---|\n| Signal-Rausch-Verhältnis (SNR) | Signalstärke im Verhältnis zum Rauschen | Spulendefekt, Vorverstärker, HF-Störung, Fehljustage |\n| Homogenität (Uniformität) | gleichmäßige Signalverteilung | Shim, Spulenelement, B₁-Inhomogenität |\n| Schichtdicke und -profil | korrekte Schichtselektion | Gradientenkalibrierung, HF-Pulsform |\n| Geometrische Verzeichnung | maßstabsgetreue Abbildung | Gradientennichtlinearität, Kalibrierung, B₀-Inhomogenität |\n| Räumliche Auflösung | Erkennbarkeit feiner Strukturen | Gradienten, Rekonstruktion |\n| Ghosting (Geisterbilder) | Signalverschleppung in Phasenrichtung | Instabilitäten von Gradienten, HF oder Netz |\n\nDie tägliche Qualitätssicherung mit Herstellerphantom ist eine [[funktionspruefung|Funktionsprüfung]] mit Trendaussage; bei Abnahme und nach größeren Reparaturen (z. B. Gradientenspule, Rampe des Magneten) folgt eine umfassende Abnahmemessung.\n\n### Weitere gerätespezifische Prüfungen\n\n* **HF-Schirmdämpfung der Kabine:** Messung mit Sender und Empfänger innen/außen über den relevanten Frequenzbereich, typischerweise bei Abnahme und nach baulichen Änderungen.\n* **Spike-/Rauschtest:** Messung ohne Anregung zur Detektion von Funkenüberschlägen oder Störeinkopplungen.\n* **Spulentests:** Elementweise SNR-Prüfung mit Phantom; Prüfung der Verstimmschaltung.\n* **Streufeldmessung** bei Abnahme bzw. nach Änderungen am Raum (Lage der 0,5-mT-Linie).\n* **Kryo-Status:** Heliumfüllstand, Druckverlauf, Kaltkopf- und Kompressorfunktion.\n\n> [!hinweis] Die Magnet-Notabschaltung (Quench-Taster) wird **nicht** im Rahmen einer Routineprüfung ausgelöst. Geprüft werden nach Herstellervorgabe lediglich Unversehrtheit, Kennzeichnung und – bei manchen Systemen – die Auslöseelektronik ohne Quench.\n"
+  },
+  "components": [
+    {
+      "ref": "supraleitender-magnet",
+      "role": "Erzeugt das statische, hochhomogene Grundfeld B₀ (typisch 1,5 oder 3 T) im Dauerstrombetrieb; bestimmt Larmor-Frequenz, SNR und Streufeld."
+    },
+    {
+      "ref": "gradientenspule",
+      "role": "Drei Spulensätze (x, y, z) für die ortsabhängige Feldänderung – Schichtselektion, Phasen- und Frequenzkodierung; Quelle von Lärm und dB/dt-Belastung."
+    },
+    {
+      "ref": "hf-spule",
+      "role": "Sendespule (Körperspule) erzeugt das B₁-Anregungsfeld; Empfangsspulen-Arrays nehmen das MR-Signal auf."
+    },
+    {
+      "ref": "operationsverstaerker",
+      "role": "Rauscharme Vorverstärker direkt an den Empfangsspulenelementen – bestimmen maßgeblich das Rauschen der gesamten [[messkette|Messkette]]."
+    },
+    {
+      "ref": "analog-digital-wandler",
+      "role": "Digitalisierung der Empfangssignale aller Kanäle; anschließende digitale Demodulation und Filterung."
+    },
+    {
+      "ref": "kondensator",
+      "role": "Abstimm- und Anpasskondensatoren stimmen die HF-Spulen auf die Larmor-Frequenz ab und passen sie an 50 Ω an."
+    },
+    {
+      "ref": "mikrocontroller",
+      "role": "Echtzeit-Sequenzsteuerung: zeitgenaue Ausgabe von HF-Pulsen, Gradientenkurven und Auslesefenstern im Mikrosekundenraster."
+    },
+    {
+      "ref": "filter",
+      "role": "Digitale Filter und Fourier-Transformation in der Rekonstruktion; Filterplatte der HF-Kabine gegen eingekoppelte Störungen."
+    },
+    {
+      "ref": "display-bedienoberflaeche",
+      "role": "Bedienkonsole zur Protokollwahl, Planung der Schichten, Anzeige von SAR/dB/dt-Status und Bildern."
+    }
+  ],
+  "sensors": [
+    {
+      "ref": "hf-spule",
+      "role": "Empfangsspulen sind die eigentlichen Signalaufnehmer: Die präzedierende Magnetisierung induziert eine Spannung im µV-Bereich."
+    },
+    {
+      "ref": "drucksensor",
+      "role": "Überwachung des Drucks im Heliumbehälter (Kryoregelung, Früherkennung von Kaltkopfausfällen)."
+    },
+    {
+      "ref": "temperatursensor",
+      "role": "Temperaturüberwachung von Kaltkopfstufen, Gradientenspulen, Verstärkern und Kühlwasser."
+    },
+    {
+      "ref": "sauerstoffsensor",
+      "role": "Raum-Sauerstoffmonitor im Magnetraum warnt vor Sauerstoffverdrängung durch austretendes Helium (Quench, Leckage)."
+    },
+    {
+      "ref": "hall-sensor",
+      "role": "Stromsensoren (z. B. nach Hall- oder Kompensationsprinzip) liefern den Istwert für die Gradientenstromregelung."
+    },
+    {
+      "ref": "ekg-elektrode",
+      "role": "MR-taugliche EKG-Ableitung zur Herz-Triggerung (Cine-, Koronar-, Flussmessungen); das EKG ist im Magnetfeld durch den magnetohydrodynamischen Effekt verfälscht und dient nicht zur Rhythmusdiagnostik."
+    },
+    {
+      "ref": "photoplethysmographie",
+      "role": "Lichtleiterbasierter Pulssensor für die periphere Pulstriggerung."
+    }
+  ],
+  "specs": [
+    {
+      "param": "Statische Feldstärke B₀ (klinische Ganzkörpersysteme)",
+      "value": "ca. 0,2–3 T; Ultrahochfeld 7 T",
+      "note": "1,5 T und 3 T sind in der Routine am verbreitetsten.",
+      "evidence": "typisch",
+      "sources": [
+        "mcrobbie-2017",
+        "bushberg-2020"
+      ]
+    },
+    {
+      "param": "Gyromagnetisches Verhältnis ¹H (γ/2π)",
+      "value": "≈ 42,58 MHz/T",
+      "note": "Larmor-Frequenz ≈ 63,9 MHz bei 1,5 T und ≈ 127,7 MHz bei 3 T.",
+      "evidence": "belegt",
+      "sources": [
+        "mcrobbie-2017",
+        "bushberg-2020"
+      ]
+    },
+    {
+      "param": "Durchmesser der Patientenöffnung",
+      "value": "ca. 60–70 cm (einzelne Systeme bis 80 cm)",
+      "note": "70 cm gilt als „Wide Bore“; offene Niederfeldsysteme haben seitlich offene Bauformen.",
+      "evidence": "typisch",
+      "sources": [
+        "siemens-free-max"
+      ]
+    },
+    {
+      "param": "Feldhomogenität",
+      "value": "wenige ppm über ein Kugelvolumen von ca. 40–50 cm Durchmesser",
+      "note": "Herstellerspezifische Angabe; nach Shimming patientenbezogen besser.",
+      "evidence": "typisch",
+      "sources": [
+        "mcrobbie-2017"
+      ]
+    },
+    {
+      "param": "Gradientenamplitude je Achse",
+      "value": "ca. 20–80 mT/m",
+      "note": "Höherwertige Systeme und Forschungsgeräte darüber.",
+      "evidence": "typisch",
+      "sources": [
+        "mcrobbie-2017"
+      ]
+    },
+    {
+      "param": "Gradienten-Anstiegsrate (Slew Rate)",
+      "value": "ca. 100–200 T/m/s",
+      "note": "Praktisch begrenzt durch die dB/dt-Grenzwerte zur Vermeidung peripherer Nervenstimulation.",
+      "evidence": "typisch",
+      "sources": [
+        "mcrobbie-2017"
+      ]
+    },
+    {
+      "param": "SAR-Grenzwerte (Ganzkörper / Kopf)",
+      "value": "Normalbetrieb 2 W/kg / 3,2 W/kg; kontrollierter Betrieb erster Stufe 4 W/kg (Ganzkörper)",
+      "note": "Mittelung über 6 Minuten; Werte nach IEC 60601-2-33 (Ausgabe 3); maßgeblich ist die jeweils gültige Ausgabe.",
+      "evidence": "belegt",
+      "sources": [
+        "iec-60601-2-33"
+      ]
+    },
+    {
+      "param": "Anzahl Empfangskanäle",
+      "value": "ca. 8 bis über 100",
+      "note": "Viele Kanäle ermöglichen hohe Beschleunigungsfaktoren in der parallelen Bildgebung.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Heliumfüllung (supraleitende Magnete)",
+      "value": "konventionell ca. 1 000–2 000 L; versiegelte Systeme ca. 7 L bzw. < 1 L (Herstellerangaben)",
+      "note": "Siedepunkt von Helium bei Normaldruck ≈ 4,2 K.",
+      "evidence": "typisch",
+      "sources": [
+        "philips-blueseal",
+        "siemens-free-max"
+      ]
+    },
+    {
+      "param": "Schalldruckpegel während der Messung",
+      "value": "häufig > 100 dB(A) möglich",
+      "note": "Sequenz- und feldstärkeabhängig; Gehörschutz erforderlich.",
+      "evidence": "typisch",
+      "sources": [
+        "mcrobbie-2017"
+      ]
+    },
+    {
+      "param": "Lage der 0,5-mT-Linie (aktiv geschirmter Magnet)",
+      "value": "wenige Meter um das Magnetzentrum",
+      "note": "Systemspezifisch, Angabe im Installationshandbuch.",
+      "evidence": "typisch",
+      "sources": [
+        "kanal-2013"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "ref": "siemens-healthineers",
+      "models": [
+        "MAGNETOM Sola",
+        "MAGNETOM Vida",
+        "MAGNETOM Free.Max",
+        "MAGNETOM Terra.X"
+      ],
+      "note": "Produktfamilie MAGNETOM von 0,55 T bis 7 T."
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "SIGNA Artist",
+        "SIGNA Premier",
+        "SIGNA Hero"
+      ],
+      "note": "Produktfamilie SIGNA (1,5 T und 3 T)."
+    },
+    {
+      "ref": "philips",
+      "models": [
+        "Ingenia Ambition",
+        "Ingenia Elition",
+        "MR 5300"
+      ],
+      "note": "Ingenia Ambition und MR 5300 mit heliumreduziertem BlueSeal-Magneten."
+    },
+    {
+      "ref": "canon-medical",
+      "models": [
+        "Vantage Orian 1.5T",
+        "Vantage Galan 3T"
+      ]
+    },
+    {
+      "ref": "fujifilm",
+      "models": [
+        "ECHELON Synergy",
+        "APERTO Lucent"
+      ],
+      "note": "MRT-Sparte des früheren Hitachi-Healthcare-Geschäfts; APERTO Lucent ist ein offenes 0,4-T-Permanentmagnetsystem."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Für MRT-Systeme gibt es keine überprüfbaren, allgemeingültigen Preise; sie zählen zu den teuersten Großgeräten im Krankenhaus. Preisbestimmend sind vor allem: **Feldstärke und Magnetkonzept** (Niederfeld, 1,5 T, 3 T, 7 T; konventionelle oder heliumreduzierte Kryotechnik), **Gradientensystem**, Anzahl der Sende- und Empfangskanäle, **Spulenausstattung**, **Software- und Anwendungspakete** (Kardio, Neuro, Spektroskopie, Beschleunigungs- und KI-Rekonstruktion), Rahmenverträge und Ausschreibungen. Hinzu kommen erhebliche **Bau- und Installationskosten**: HF-Kabine, ggf. magnetische Raumabschirmung, Statik (Magnetgewicht mehrere Tonnen), Einbringweg, Quenchleitung, Kühlung, Klimatisierung und Elektroversorgung. Für die Wirtschaftlichkeit sind die **Gesamtbetriebskosten** maßgeblich: Servicevertrag (inklusive Kaltkopf, Spulen und Helium), Energie- und Kühlwasserverbrauch, Software-Updates, Personal, Kontrastmittel und Verbrauchsmaterial, Ausfallzeiten sowie die Lebensdauer des Systems ([[lebenszyklus-medizinprodukt]])."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: MRT-Systeme sind in Anlage 1 der MPBetreibV (Fassung 2025) nicht aufgeführt; eine Pflicht nach § 12 i. V. m. Anlage 1 besteht daher nicht unmittelbar. Vom Hersteller vorgesehene sicherheitstechnische Prüfungen sind im Rahmen der Instandhaltung durchzuführen. MTK: nicht in Anlage 2 (§ 15 MPBetreibV) genannt. Keine strahlenschutzrechtliche Konstanzprüfung (keine ionisierende Strahlung).",
+    "intervals": "Wartung, Kryoservice und sicherheitstechnische Prüfungen nach Herstellerangabe (meist im Servicevertrag festgelegt); elektrische Wiederholungsprüfung nach IEC 62353 gemäß Herstellervorgabe bzw. Gefährdungsbeurteilung des Betreibers; Bildqualitäts-Phantommessung täglich bis wöchentlich nach Herstellerprotokoll; kontinuierliche Fernüberwachung des Kryosystems."
+  },
+  "faults": [
+    {
+      "title": "Bildartefakte (Suszeptibilität, Chemical Shift, Einfaltung, Gibbs-Ringing)",
+      "ref": "bildartefakte",
+      "cause": "Physikalisch bedingt: Feldverzerrungen an Metall oder Luft-Gewebe-Grenzen, Frequenzunterschied Fett/Wasser, zu kleines Messfeld (Aliasing), Abbruch des k-Raums an scharfen Kanten.",
+      "action": "Protokoll anpassen: Spinecho statt Gradientenecho, höhere Empfangsbandbreite, Metallartefakt-Reduktionssequenzen, größeres FOV bzw. Überabtastung, höhere Matrix. Meist kein Gerätefehler – Schulung der Anwender."
+    },
+    {
+      "title": "Bewegungs- und Flussartefakte (Geisterbilder in Phasenkodierrichtung)",
+      "ref": "bewegungsartefakt",
+      "cause": "Atmung, Herzschlag, Schlucken, Darmperistaltik, unruhige Patienten; pulsierender Blutfluss.",
+      "action": "Lagerung und Fixierung optimieren, Atemanhaltetechnik, Atem- oder EKG-Triggerung, bewegungsrobuste (radiale) Sequenzen, Sättigungsbänder; Patientenkommunikation."
+    },
+    {
+      "title": "Spikes, Streifen oder Zipper-Artefakte, erhöhtes Rauschen",
+      "ref": "emv-stoerung",
+      "cause": "Undichte HF-Kabine (Tür, Fingerfedern, Fenster, Filterplatte), nicht MR-taugliche Elektronik im Raum, Funkenüberschläge an lockeren Metallteilen oder Steckverbindungen, defekte Beleuchtung.",
+      "action": "Tür und Durchführungen prüfen, Fremdgeräte entfernen, Spike-/Rauschtest durchführen; Schirmdämpfung messen lassen; Instandsetzung durch Herstellerservice."
+    },
+    {
+      "title": "Spulenfehler (Spule nicht erkannt, Signalausfall einzelner Elemente)",
+      "cause": "Beschädigte Stecker oder Kabel, Feuchtigkeit, defekte Vorverstärker oder Verstimmschaltung, Sturzschäden.",
+      "action": "Spule an anderem Anschluss testen, Spulentest per Servicesoftware; defekte Spule sofort außer Betrieb nehmen (Gefahr lokaler Erwärmung) und Instandsetzung veranlassen."
+    },
+    {
+      "title": "Steigender Heliumverbrauch / Kryoalarm",
+      "cause": "Ausfall oder Verschleiß von Kaltkopf oder Heliumkompressor, Kühlwasserstörung, Stromausfall, Vakuumverschlechterung im Kryostaten.",
+      "action": "Alarm sofort an Herstellerservice melden; Kühlwasser- und Stromversorgung prüfen; Fernüberwachungsdaten auswerten. Ein länger andauernder Kaltkopfausfall kann zu Heliumverlust und schließlich zum Quench führen."
+    },
+    {
+      "title": "Ungeplanter Quench",
+      "cause": "Störung der Supraleitung durch Kryoausfall, Fertigungs- oder Alterungseffekte; Fehlauslösung der Magnet-Notabschaltung.",
+      "action": "Raum räumen, Sauerstoffwarnung beachten, Tür ggf. offen halten (Überdruck), Feuerwehr bei Gasaustritt in den Raum informieren; Herstellerservice für Wiederbefüllung und Hochfahren (Rampe) beauftragen; Ursache klären, ggf. als Vorkommnis prüfen ([[vigilanz]])."
+    },
+    {
+      "title": "Gradienten- oder Kühlungsfehler (Messabbruch, Überhitzung)",
+      "cause": "Störung des Kaltwassersatzes, verschmutzte Filter, Ausfall eines Gradientenverstärkers, Überschreitung thermischer Grenzen bei intensiven Sequenzen (z. B. Diffusion, EPI).",
+      "action": "Kühlwassertemperatur und Durchfluss kontrollieren; Sequenzparameter anpassen; Fehlerspeicher durch Service auslesen lassen ([[fehlercodes]])."
+    },
+    {
+      "title": "Projektil- und Anziehungsunfälle",
+      "ref": "anwendungsfehler",
+      "cause": "Ferromagnetische Gegenstände gelangen in Zone IV (Gasflaschen, Rollstühle, Werkzeug, Reinigungsgeräte, Patientenzubehör).",
+      "action": "Personen nie in Gefahr bringen, um Gegenstände zu entfernen; bei eingeklemmten Personen Magnet-Notabschaltung erwägen; Zugangskontrolle, Schulung, MR-Kennzeichnung allen Zubehörs, ggf. Ferromagnetdetektor."
+    },
+    {
+      "title": "HF-Verbrennungen am Patienten",
+      "cause": "Leiterschleifen durch Hautkontakt (Hände, Oberschenkel), Kabel in Schlaufen, nicht MR-taugliche Elektroden oder Pflaster mit Metall, Tätowierungen, defekte Spulen.",
+      "action": "Lagerung mit Polstern ohne Hautkontaktschleifen, Kabel gerade und mit Abstand führen, nur MR-taugliches Zubehör; Patienten auf Wärmeempfinden hinweisen und Notrufball geben; Ereignis dokumentieren und melden."
+    }
+  ],
+  "tests": [
+    {
+      "name": "Sicherheitstechnische Prüfung nach Herstellervorgabe",
+      "ref": "stk",
+      "description": "Umfang und Frist nach Herstellerangabe (MRT nicht in Anlage 1 der [[mpbetreibv|MPBetreibV]]): Sichtprüfung, Sicherheitsfunktionen (Not-Aus, Notruf, Liegenentriegelung, Sauerstoffmonitor), elektrische Sicherheit, Kryo- und Kühlsystem, Dokumentation."
+    },
+    {
+      "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+      "ref": "elektrische-sicherheitspruefung",
+      "description": "[[schutzleiterwiderstand|Schutzleiterwiderstand]], [[isolationswiderstand|Isolationswiderstand]] (soweit zulässig) und [[ableitstrom|Ableitströme]] der Systemkomponenten und Anwendungsteile; Messung außerhalb des Magnetfelds bzw. mit Hersteller abgestimmt."
+    },
+    {
+      "name": "Funktionsprüfung und tägliche Qualitätssicherung",
+      "ref": "funktionspruefung",
+      "description": "Systemstart, Spulenerkennung, automatische Justagen, Phantommessung nach Herstellerprotokoll mit Trendauswertung (SNR, Frequenz, Homogenität), Patientenkommunikation, Liegenantrieb."
+    },
+    {
+      "name": "Bildqualitätsmessung nach IEC 62464-1",
+      "ref": "pruefgeraete",
+      "description": "Abnahme- und Konstanzmessungen mit Prüfkörpern: SNR, Homogenität, Schichtdicke und -profil, geometrische Verzeichnung, räumliche Auflösung, Ghosting [@iec-62464-1]."
+    },
+    {
+      "name": "HF-Schirmdämpfungsmessung der Kabine",
+      "description": "Messung der Schirmwirkung der HF-Kabine (Tür, Fenster, Filterplatte, Wabenkamine) bei Abnahme und nach baulichen Änderungen oder Auffälligkeiten (Spikes, Rauschen)."
+    },
+    {
+      "name": "Spulen- und Spike-Test",
+      "ref": "hf-spule",
+      "description": "Elementweise SNR-Messung aller Empfangsspulen, Prüfung der Verstimmschaltung, Rauschmessung ohne Anregung zur Detektion von Störquellen."
+    }
+  ],
+  "diagram": {
+    "title": "Funktionsschema eines MRT-Systems",
+    "caption": "Vereinfachter Energie- und Signalfluss: Die Sequenzsteuerung erzeugt Gradientenkurven und HF-Pulse; das Signal der angeregten Protonen wird von Empfangsspulen aufgenommen, digitalisiert und im k-Raum rekonstruiert (Funktionsschema, kein konkretes Modell).",
+    "width": 960,
+    "height": 520,
+    "nodes": [
+      {
+        "id": "pwr",
+        "label": "Netzversorgung",
+        "ref": "medizinisches-netzteil",
+        "kind": "source",
+        "x": 140,
+        "y": 70
+      },
+      {
+        "id": "ctrl",
+        "label": "Sequenzsteuerung\n(Echtzeitrechner)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 480,
+        "y": 70,
+        "w": 170
+      },
+      {
+        "id": "ui",
+        "label": "Bedienkonsole\nProtokolle, Planung",
+        "ref": "display-bedienoberflaeche",
+        "kind": "control",
+        "x": 820,
+        "y": 70,
+        "w": 170
+      },
+      {
+        "id": "gamp",
+        "label": "Gradienten-\nverstärker",
+        "ref": "regelkreis",
+        "kind": "actuator",
+        "x": 140,
+        "y": 200
+      },
+      {
+        "id": "rftx",
+        "label": "HF-Sender\n(Leistungsverstärker)",
+        "ref": "elektromagnetische-induktion",
+        "kind": "actuator",
+        "x": 370,
+        "y": 200,
+        "w": 170
+      },
+      {
+        "id": "sar",
+        "label": "SAR- und dB/dt-\nÜberwachung",
+        "ref": "patientensicherheit",
+        "kind": "control",
+        "x": 600,
+        "y": 200
+      },
+      {
+        "id": "mag",
+        "label": "Supraleitender\nMagnet B₀",
+        "ref": "supraleitender-magnet",
+        "kind": "source",
+        "x": 820,
+        "y": 200
+      },
+      {
+        "id": "gcoil",
+        "label": "Gradientenspulen\nGx, Gy, Gz",
+        "ref": "gradientenspule",
+        "kind": "actuator",
+        "x": 140,
+        "y": 330
+      },
+      {
+        "id": "txcoil",
+        "label": "Körperspule\n(Senden, B₁)",
+        "ref": "hf-spule",
+        "kind": "actuator",
+        "x": 370,
+        "y": 330
+      },
+      {
+        "id": "pat",
+        "label": "Patient\n(¹H-Kerne)",
+        "ref": "kernspinresonanz",
+        "kind": "patient",
+        "x": 600,
+        "y": 330
+      },
+      {
+        "id": "rxcoil",
+        "label": "Empfangsspulen\n(Array)",
+        "ref": "hf-spule",
+        "kind": "sensor",
+        "x": 820,
+        "y": 330
+      },
+      {
+        "id": "adc",
+        "label": "Vorverstärker +\nA/D-Wandler",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 820,
+        "y": 460
+      },
+      {
+        "id": "recon",
+        "label": "Rekonstruktion\n(FFT, parallele Bildg.)",
+        "ref": "filter",
+        "kind": "process",
+        "x": 560,
+        "y": 460,
+        "w": 180
+      },
+      {
+        "id": "pacs",
+        "label": "Bildanzeige /\nPACS (DICOM)",
+        "ref": "dicom",
+        "kind": "output",
+        "x": 300,
+        "y": 460
+      }
+    ],
+    "edges": [
+      {
+        "from": "pwr",
+        "to": "gamp",
+        "kind": "power"
+      },
+      {
+        "from": "pwr",
+        "to": "ctrl",
+        "kind": "power"
+      },
+      {
+        "from": "ui",
+        "to": "ctrl",
+        "kind": "data",
+        "label": "Protokoll"
+      },
+      {
+        "from": "ctrl",
+        "to": "gamp",
+        "kind": "signal",
+        "label": "Gradientenkurven"
+      },
+      {
+        "from": "ctrl",
+        "to": "rftx",
+        "kind": "signal",
+        "label": "Pulsform"
+      },
+      {
+        "from": "rftx",
+        "to": "sar",
+        "kind": "signal",
+        "label": "Leistung"
+      },
+      {
+        "from": "sar",
+        "to": "ctrl",
+        "kind": "signal",
+        "label": "Begrenzung"
+      },
+      {
+        "from": "gamp",
+        "to": "gcoil",
+        "kind": "power",
+        "label": "Spulenstrom"
+      },
+      {
+        "from": "rftx",
+        "to": "txcoil",
+        "kind": "power",
+        "label": "HF-Leistung"
+      },
+      {
+        "from": "gcoil",
+        "to": "pat",
+        "kind": "energy",
+        "label": "Ortskodierung"
+      },
+      {
+        "from": "txcoil",
+        "to": "pat",
+        "kind": "energy",
+        "label": "B₁-Feld"
+      },
+      {
+        "from": "mag",
+        "to": "pat",
+        "kind": "energy",
+        "label": "B₀"
+      },
+      {
+        "from": "pat",
+        "to": "rxcoil",
+        "kind": "signal",
+        "label": "MR-Signal"
+      },
+      {
+        "from": "rxcoil",
+        "to": "adc",
+        "kind": "signal"
+      },
+      {
+        "from": "adc",
+        "to": "recon",
+        "kind": "data",
+        "label": "k-Raum-Daten"
+      },
+      {
+        "from": "recon",
+        "to": "pacs",
+        "kind": "data",
+        "label": "Bilder"
+      }
+    ]
+  },
+  "images": [
+    {
+      "src": "img/devices/mrt-aufbau.svg",
+      "kind": "schema",
+      "caption": "Schematischer Aufbau: supraleitender Magnet im Kryostaten mit Gradienten- und Körperspule, Patientenliege mit Empfangsspule, HF-Kabine mit Filterplatte, Quenchleitung und Technikraum (Funktionsschema, kein konkretes Modell)."
+    },
+    {
+      "src": "img/devices/mrt-prinzip.svg",
+      "kind": "schema",
+      "caption": "Messprinzip: A – Präzession der Magnetisierung mit der Larmor-Frequenz und Anregung durch B₁; B – T1-Erholung und T2-Zerfall nach einem 90°-Puls; C – Schichtselektion durch ein Gradientenfeld (vereinfacht)."
+    }
+  ],
+  "paths": [
+    [
+      "mrt",
+      "hf-spule",
+      "kernspinresonanz",
+      "nervensystem"
+    ],
+    [
+      "mrt",
+      "gradientenspule",
+      "elektromagnetische-induktion",
+      "nervensystem"
+    ],
+    [
+      "mrt",
+      "supraleitender-magnet",
+      "gasgesetze",
+      "gasaustausch"
+    ],
+    [
+      "mrt",
+      "analog-digital-wandler",
+      "filter",
+      "dicom"
+    ]
+  ],
+  "related": [
+    "kernspinresonanz",
+    "supraleitender-magnet",
+    "gradientenspule",
+    "hf-spule",
+    "elektromagnetische-induktion",
+    "computertomograph",
+    "roentgengeraet",
+    "ultraschallgeraet",
+    "angiographieanlage",
+    "bildartefakte",
+    "dicom",
+    "iec-60601-2-33",
+    "iec-62353",
+    "anwendungsteile",
+    "medizinisch-genutzte-bereiche",
+    "patientensicherheit",
+    "strahlenschutz"
+  ],
+  "sources": [
+    "mcrobbie-2017",
+    "doessel-2016",
+    "bushberg-2020",
+    "weishaupt-2014",
+    "haacke-2014",
+    "kramme-2017",
+    "bloch-1946",
+    "lauterbur-1973",
+    "iec-60601-2-33",
+    "iec-62464-1",
+    "astm-f2503",
+    "kanal-2013",
+    "emfv",
+    "rl-2013-35-eu",
+    "philips-blueseal",
+    "siemens-free-max",
+    "mdr-2017",
+    "mdcg-2021-24",
+    "mpbetreibv",
+    "iec-60601-1",
+    "iec-62353"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

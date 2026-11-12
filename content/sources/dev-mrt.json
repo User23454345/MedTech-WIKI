@@ -1,0 +1,100 @@
+[
+  {
+    "id": "iec-60601-2-33",
+    "kind": "norm",
+    "title": "IEC 60601-2-33 – Medizinische elektrische Geräte – Teil 2-33: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Magnetresonanzgeräten für die medizinische Diagnostik",
+    "publisher": "IEC; in Deutschland als DIN EN 60601-2-33 (VDE 0750-2-33)",
+    "note": "Gerätespezifische Sicherheitsnorm für MR-Geräte, u. a. Betriebsarten (Normalbetrieb, kontrollierter Betrieb erster Stufe), Grenzwerte für SAR und Gradientenschaltung (dB/dt), Lärmschutz, Notabschaltung und Kennzeichnung. Ausgabe 4.0 (2022) mit Interpretationsblättern; Titel sinngemäß wiedergegeben. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-62464-1",
+    "kind": "norm",
+    "title": "IEC 62464-1 – Magnetresonanzgeräte für die medizinische Bildgebung – Teil 1: Bestimmung der wesentlichen Bildqualitätsparameter",
+    "publisher": "IEC; in Deutschland als DIN EN IEC 62464-1",
+    "year": "2018",
+    "note": "Messverfahren an Prüfkörpern für Signal-Rausch-Verhältnis, Homogenität, Schichtdicke und Schichtprofil, geometrische Verzeichnung, räumliche Auflösung und Geisterbilder (Ghosting); Grundlage für Abnahme- und Konstanzprüfungen. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "astm-f2503",
+    "kind": "norm",
+    "title": "ASTM F2503 – Standard Practice for Marking Medical Devices and Other Items for Safety in the Magnetic Resonance Environment",
+    "publisher": "ASTM International, West Conshohocken (PA)",
+    "note": "Definiert die Kennzeichnung „MR Safe“, „MR Conditional“ und „MR Unsafe“ samt Piktogrammen. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "rl-2013-35-eu",
+    "kind": "gesetz",
+    "title": "Richtlinie 2013/35/EU über Mindestvorschriften zum Schutz von Sicherheit und Gesundheit der Arbeitnehmer vor der Gefährdung durch physikalische Einwirkungen (elektromagnetische Felder)",
+    "publisher": "Amtsblatt der EU L 179",
+    "year": "2013",
+    "note": "EU-Arbeitsschutzrichtlinie zu elektromagnetischen Feldern; enthält unter bestimmten Bedingungen eine Ausnahme für Installation, Prüfung, Betrieb, Entwicklung und Wartung von MRT-Geräten für Patienten im Gesundheitswesen. In Deutschland umgesetzt durch die EMFV."
+  },
+  {
+    "id": "emfv",
+    "kind": "gesetz",
+    "title": "Verordnung zum Schutz der Beschäftigten vor Gefährdungen durch elektromagnetische Felder (Arbeitsschutzverordnung zu elektromagnetischen Feldern – EMFV)",
+    "publisher": "Bundesrepublik Deutschland",
+    "year": "2016",
+    "url": "https://www.gesetze-im-internet.de/emfv/",
+    "note": "Nationale Umsetzung der Richtlinie 2013/35/EU; verlangt u. a. eine Gefährdungsbeurteilung für Arbeitsplätze mit elektromagnetischen Feldern. Maßgeblich ist die jeweils aktuelle Fassung."
+  },
+  {
+    "id": "weishaupt-2014",
+    "kind": "buch",
+    "authors": "Weishaupt D, Köchli VD, Marincek B",
+    "title": "Wie funktioniert MRI? Eine Einführung in Physik und Funktionsweise der Magnetresonanzbildgebung",
+    "edition": "7. Aufl.",
+    "publisher": "Springer, Berlin/Heidelberg",
+    "year": "2014"
+  },
+  {
+    "id": "haacke-2014",
+    "kind": "buch",
+    "authors": "Brown RW, Cheng Y-CN, Haacke EM, Thompson MR, Venkatesan R",
+    "title": "Magnetic Resonance Imaging: Physical Principles and Sequence Design",
+    "edition": "2nd edition",
+    "publisher": "Wiley-Blackwell, Hoboken (NJ)",
+    "year": "2014"
+  },
+  {
+    "id": "lauterbur-1973",
+    "kind": "artikel",
+    "authors": "Lauterbur PC",
+    "title": "Image formation by induced local interactions: examples employing nuclear magnetic resonance",
+    "publisher": "Nature 242: 190–191",
+    "year": "1973",
+    "note": "Erste Beschreibung der Ortskodierung mit Magnetfeldgradienten (Nobelpreis für Physiologie oder Medizin 2003 gemeinsam mit Peter Mansfield)."
+  },
+  {
+    "id": "bloch-1946",
+    "kind": "artikel",
+    "authors": "Bloch F",
+    "title": "Nuclear induction",
+    "publisher": "Physical Review 70: 460–474",
+    "year": "1946"
+  },
+  {
+    "id": "kanal-2013",
+    "kind": "artikel",
+    "authors": "Kanal E, Barkovich AJ, Bell C, et al.",
+    "title": "ACR guidance document on MR safe practices: 2013",
+    "publisher": "Journal of Magnetic Resonance Imaging 37(3): 501–530",
+    "year": "2013",
+    "note": "Empfehlungen des American College of Radiology zur MR-Sicherheit, u. a. Vier-Zonen-Konzept, Screening von Patienten und Personal, Umgang mit Implantaten und Notfällen."
+  },
+  {
+    "id": "philips-blueseal",
+    "kind": "hersteller",
+    "authors": "Philips",
+    "title": "BlueSeal – versiegelte 1,5-T-Magnettechnologie (Produktinformation)",
+    "url": "https://www.philips.com/blueseal",
+    "note": "Herstellerangabe: ca. 7 Liter flüssiges Helium statt ca. 1 500 Liter bei konventionellen Magneten; eingesetzt u. a. im Ingenia Ambition 1.5T."
+  },
+  {
+    "id": "siemens-free-max",
+    "kind": "hersteller",
+    "authors": "Siemens Healthineers",
+    "title": "MAGNETOM Free.Max – 0,55-T-MRT mit DryCool-Magnettechnologie (Produktinformation)",
+    "note": "Herstellerangabe: 80 cm Patientenöffnung, ca. 0,7 Liter flüssiges Helium, keine Quenchleitung erforderlich."
+  }
+]

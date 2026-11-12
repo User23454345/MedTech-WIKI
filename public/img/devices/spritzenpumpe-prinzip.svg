@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Prinzip der Kolbenförderung einer Spritzenpumpe</title>
+  <defs>
+    <marker id="sp-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+    <marker id="sp-ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b2545"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="24" text-anchor="middle" font-size="15" font-weight="600">Kolbenförderung: vom Motorschritt zum Volumenstrom</text>
+
+  <!-- Kinematische Kette -->
+  <g font-size="13">
+    <rect x="20" y="44" width="110" height="48" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+    <text x="75" y="64" text-anchor="middle">Schritt-</text>
+    <text x="75" y="80" text-anchor="middle">frequenz f</text>
+    <rect x="165" y="44" width="110" height="48" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+    <text x="220" y="64" text-anchor="middle">Motor z +</text>
+    <text x="220" y="80" text-anchor="middle">Getriebe i</text>
+    <rect x="310" y="44" width="110" height="48" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+    <text x="365" y="64" text-anchor="middle">Spindel</text>
+    <text x="365" y="80" text-anchor="middle">Steigung P</text>
+    <rect x="455" y="44" width="125" height="48" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+    <text x="517" y="64" text-anchor="middle">Kolben,</text>
+    <text x="517" y="80" text-anchor="middle">Fläche A</text>
+  </g>
+  <line x1="130" y1="68" x2="163" y2="68" stroke="#0d9488" stroke-width="2" marker-end="url(#sp-arr)"/>
+  <line x1="275" y1="68" x2="308" y2="68" stroke="#0d9488" stroke-width="2" marker-end="url(#sp-arr)"/>
+  <line x1="420" y1="68" x2="453" y2="68" stroke="#0d9488" stroke-width="2" marker-end="url(#sp-arr)"/>
+  <text x="300" y="120" text-anchor="middle">Δs = P / (z · i)      v = f · Δs      Q = A · v = A · f · Δs</text>
+
+  <!-- Spritzenquerschnitt -->
+  <rect x="40" y="150" width="200" height="56" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="2"/>
+  <rect x="42" y="152" width="120" height="52" fill="#e6f7f5"/>
+  <rect x="162" y="152" width="12" height="52" fill="#0b2545"/>
+  <rect x="174" y="172" width="80" height="12" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="275" y1="178" x2="258" y2="178" stroke="#0d9488" stroke-width="2.5" marker-end="url(#sp-arr)"/>
+  <text x="280" y="182">F</text>
+  <text x="168" y="244" text-anchor="middle" font-size="12">F = p · A + F_R</text>
+  <line x1="30" y1="150" x2="30" y2="206" stroke="#0b2545" stroke-width="1"/>
+  <line x1="26" y1="150" x2="34" y2="150" stroke="#0b2545" stroke-width="1"/>
+  <line x1="26" y1="206" x2="34" y2="206" stroke="#0b2545" stroke-width="1"/>
+  <text x="22" y="182" text-anchor="end">d</text>
+  <text x="100" y="182" text-anchor="middle" font-size="12">Druck p</text>
+  <text x="168" y="226" text-anchor="middle" font-size="12">Stopfen (Reibung F_R)</text>
+
+  <!-- Anlaufkurve -->
+  <line x1="60" y1="370" x2="300" y2="370" stroke="#0b2545" stroke-width="1.5" marker-end="url(#sp-ax)"/>
+  <line x1="60" y1="370" x2="60" y2="250" stroke="#0b2545" stroke-width="1.5" marker-end="url(#sp-ax)"/>
+  <text x="300" y="390" text-anchor="end" font-size="12">Zeit nach Start</text>
+  <text x="52" y="258" text-anchor="end" font-size="12">Q</text>
+  <line x1="60" y1="290" x2="290" y2="290" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="200" y="284" font-size="12" fill="#0d9488">Sollrate</text>
+  <path d="M60,370 L95,368 Q120,362 140,320 Q155,292 175,294 L195,288 L215,293 L235,289 L255,291 L285,290" stroke="#0b2545" stroke-width="2" fill="none"/>
+  <text x="70" y="350" font-size="12">Spiel,</text>
+  <text x="70" y="364" font-size="12">Haftreibung</text>
+  <text x="150" y="340" font-size="12">Anlaufphase</text>
+
+  <!-- Formelbox -->
+  <rect x="340" y="150" width="240" height="225" rx="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="352" y="174" font-weight="600">Beispiel (fiktive Werte)</text>
+  <text x="352" y="198" font-size="12">d = 26 mm → A ≈ 531 mm²</text>
+  <text x="352" y="218" font-size="12">P = 1 mm, z = 3 200, i = 10</text>
+  <text x="352" y="238" font-size="12">Δs ≈ 31 nm, ΔV ≈ 16,6 nl</text>
+  <text x="352" y="258" font-size="12">Q = 1 ml/h → f ≈ 16,7 Hz</text>
+  <line x1="352" y1="272" x2="568" y2="272" stroke="#0b2545" stroke-width="1"/>
+  <text x="352" y="294" font-weight="600">Okklusion</text>
+  <text x="352" y="316" font-size="12">t_Alarm ≈ C_S · Δp / Q</text>
+  <text x="352" y="336" font-size="12">C_S = 1 µl/mmHg, Δp = 300 mmHg</text>
+  <text x="352" y="356" font-size="12">1 ml/h → ca. 18 min</text>
+  <text x="352" y="370" font-size="12">0,1 ml/h → ca. 3 h</text>
+</svg>

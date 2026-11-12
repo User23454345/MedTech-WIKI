@@ -1,0 +1,18 @@
+[
+  {
+    "id": "iec-60601-2-25",
+    "kind": "norm",
+    "title": "IEC 60601-2-25 – Medizinische elektrische Geräte – Teil 2-25: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Elektrokardiographen",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-25 (VDE 0750-2-25)",
+    "note": "Gerätespezifische Norm für diagnostische Elektrokardiographen (Ausgabe 2.0 von 2011; die frühere IEC 60601-2-51 wurde darin integriert). Eine Nachfolgenorm IEC 80601-2-86 für EKG-Geräte ist in Vorbereitung; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "kligfield-2007",
+    "kind": "artikel",
+    "authors": "Kligfield P, Gettes LS, Bailey JJ et al.",
+    "title": "Recommendations for the Standardization and Interpretation of the Electrocardiogram. Part I: The Electrocardiogram and Its Technology",
+    "publisher": "Circulation 115(10): 1306–1324",
+    "year": "2007",
+    "note": "Wissenschaftliche Stellungnahme von AHA, ACC und HRS zu Ableitungen, Filtern, Abtastung und automatischer Auswertung des EKG."
+  }
+]

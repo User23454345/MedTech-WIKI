@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Schematischer Aufbau einer Spritzenpumpe</title>
+  <defs>
+    <marker id="sa-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="26" text-anchor="middle" font-size="15" font-weight="600">Spritzenpumpe – schematischer Aufbau (Längsschnitt)</text>
+
+  <!-- Gehäuse -->
+  <rect x="40" y="150" width="440" height="150" rx="10" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <!-- Spritzenmulde -->
+  <rect x="60" y="138" width="300" height="12" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Spritze: Zylinder -->
+  <rect x="80" y="100" width="210" height="38" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="2"/>
+  <!-- Flüssigkeit -->
+  <rect x="82" y="102" width="120" height="34" fill="#e6f7f5"/>
+  <!-- Konus / Luer -->
+  <path d="M80,112 L62,116 L62,122 L80,126 Z" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Leitung zum Patienten -->
+  <path d="M62,119 L40,119 Q22,119 22,140 L22,372" stroke="#0d9488" stroke-width="2.5" fill="none" marker-end="url(#sa-arr)"/>
+  <text x="30" y="390" font-size="12">zum Patienten</text>
+  <!-- Stopfen -->
+  <rect x="202" y="102" width="12" height="34" fill="#0b2545"/>
+  <!-- Kolbenstange -->
+  <rect x="214" y="114" width="110" height="10" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Flansch -->
+  <rect x="290" y="94" width="8" height="50" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Flanschaufnahme -->
+  <rect x="286" y="138" width="16" height="12" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <!-- Kolbenplatte -->
+  <rect x="324" y="96" width="8" height="46" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Niederhalter -->
+  <path d="M110,100 L110,78 L230,78 L230,100" stroke="#0b2545" stroke-width="2" fill="none"/>
+  <circle cx="170" cy="78" r="5" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+
+  <!-- Schiebeteil -->
+  <rect x="332" y="84" width="40" height="150" rx="4" fill="#e6f7f5" stroke="#0b2545" stroke-width="2"/>
+  <!-- Kolbenkrallen -->
+  <path d="M332,92 L318,92 L318,98" stroke="#0b2545" stroke-width="2" fill="none"/>
+  <path d="M332,140 L318,140 L318,134" stroke="#0b2545" stroke-width="2" fill="none"/>
+  <!-- Kraftsensor -->
+  <rect x="338" y="106" width="14" height="26" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+
+  <!-- Spindel -->
+  <line x1="120" y1="222" x2="440" y2="222" stroke="#0b2545" stroke-width="6"/>
+  <path d="M130,216 l6,12 M146,216 l6,12 M162,216 l6,12 M178,216 l6,12 M194,216 l6,12 M210,216 l6,12 M226,216 l6,12 M242,216 l6,12 M258,216 l6,12 M274,216 l6,12 M290,216 l6,12 M306,216 l6,12 M322,216 l6,12 M386,216 l6,12 M402,216 l6,12 M418,216 l6,12" stroke="#ffffff" stroke-width="1.2"/>
+  <!-- Halbmutter -->
+  <rect x="340" y="226" width="26" height="14" fill="#14b8a6" stroke="#0b2545" stroke-width="1"/>
+  <!-- Lager -->
+  <rect x="112" y="212" width="10" height="20" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Getriebe -->
+  <circle cx="452" cy="222" r="14" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="452" cy="260" r="20" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Motor -->
+  <rect x="380" y="248" width="52" height="40" rx="3" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="432" y1="268" x2="452" y2="260" stroke="#0b2545" stroke-width="2"/>
+  <text x="406" y="273" text-anchor="middle" font-size="12" font-weight="600">M</text>
+  <!-- Wegsensor -->
+  <rect x="130" y="250" width="200" height="8" fill="#ffffff" stroke="#0b2545" stroke-width="1.2"/>
+  <line x1="353" y1="240" x2="330" y2="250" stroke="#0b2545" stroke-width="1"/>
+  <!-- Elektronik -->
+  <rect x="130" y="268" width="120" height="24" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="190" y="284" text-anchor="middle" font-size="12">Elektronik</text>
+  <rect x="260" y="268" width="60" height="24" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="290" y="284" text-anchor="middle" font-size="12">Akku</text>
+
+  <!-- Display -->
+  <rect x="60" y="165" width="90" height="34" rx="3" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="105" y="187" text-anchor="middle" font-size="12">Display</text>
+
+  <!-- Vorschubpfeil -->
+  <line x1="470" y1="78" x2="385" y2="78" stroke="#0d9488" stroke-width="2.5" marker-end="url(#sa-arr)"/>
+  <text x="478" y="82" font-size="12" fill="#0d9488">Vorschub v</text>
+
+  <!-- Beschriftungen rechts -->
+  <g font-size="13">
+    <line x1="352" y1="119" x2="500" y2="110" stroke="#0b2545" stroke-width="1"/>
+    <text x="504" y="114">Kraftsensor</text>
+    <line x1="372" y1="160" x2="500" y2="140" stroke="#0b2545" stroke-width="1"/>
+    <text x="504" y="144">Schiebeteil</text>
+    <line x1="318" y1="140" x2="500" y2="170" stroke="#0b2545" stroke-width="1"/>
+    <text x="504" y="174">Kolbenkralle</text>
+    <line x1="366" y1="233" x2="500" y2="200" stroke="#0b2545" stroke-width="1"/>
+    <text x="504" y="204">Halbmutter</text>
+    <line x1="472" y1="260" x2="500" y2="236" stroke="#0b2545" stroke-width="1"/>
+    <text x="504" y="240">Getriebe</text>
+    <line x1="432" y1="282" x2="500" y2="272" stroke="#0b2545" stroke-width="1"/>
+    <text x="504" y="276">Schrittmotor</text>
+  </g>
+  <!-- Beschriftungen oben/links -->
+  <line x1="170" y1="73" x2="170" y2="50" stroke="#0b2545" stroke-width="1"/>
+  <text x="170" y="46" text-anchor="middle">Niederhalter mit Ø-Sensor</text>
+  <line x1="290" y1="150" x2="240" y2="334" stroke="#0b2545" stroke-width="1"/>
+  <text x="200" y="350" text-anchor="middle">Flanschaufnahme mit Sensor</text>
+  <line x1="208" y1="100" x2="272" y2="60" stroke="#0b2545" stroke-width="1"/>
+  <text x="276" y="60">Kolbenstopfen</text>
+  <line x1="300" y1="222" x2="420" y2="330" stroke="#0b2545" stroke-width="1"/>
+  <text x="430" y="346" text-anchor="middle">Gewindespindel (Steigung P)</text>
+  <line x1="320" y1="254" x2="360" y2="370" stroke="#0b2545" stroke-width="1"/>
+  <text x="360" y="386" text-anchor="middle">Wegsensor (Kolbenposition)</text>
+</svg>

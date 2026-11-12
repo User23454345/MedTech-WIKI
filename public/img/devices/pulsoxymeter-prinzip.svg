@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" font-family="Inter, Arial, sans-serif">
+  <title>Pulsoxymetrie – Absorptionsspektren von Hb/HbO₂ und AC/DC-Signalanteile</title>
+  <rect x="0" y="0" width="600" height="400" fill="#ffffff"/>
+
+  <!-- Panel A -->
+  <text x="160" y="28" font-size="15" font-weight="600" fill="#0b2545" text-anchor="middle">A  Absorption Hb / HbO₂</text>
+  <line x1="60" y1="270" x2="285" y2="270" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="60" y1="270" x2="60" y2="70" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="172" y="310" font-size="13" fill="#0b2545" text-anchor="middle">Wellenlänge (nm)</text>
+  <text x="60" y="288" font-size="13" fill="#0b2545" text-anchor="middle">600</text>
+  <text x="173" y="288" font-size="13" fill="#0b2545" text-anchor="middle">805</text>
+  <text x="280" y="288" font-size="13" fill="#0b2545" text-anchor="middle">1000</text>
+  <text x="30" y="170" font-size="13" fill="#0b2545" text-anchor="middle" transform="rotate(-90 30 170)">Absorption (log., qualitativ)</text>
+
+  <!-- Messwellenlängen -->
+  <line x1="93" y1="80" x2="93" y2="270" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="93" y="74" font-size="13" fill="#0d9488" text-anchor="middle">660 rot</text>
+  <line x1="247" y1="80" x2="247" y2="270" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="247" y="74" font-size="13" fill="#0d9488" text-anchor="middle">940 IR</text>
+
+  <!-- Hb (desoxygeniert) -->
+  <path d="M60,100 L77,115 L93,122 L115,150 L137,162 L148,160 L159,172 L173,190 L198,200 L225,205 L247,208 L280,215" fill="none" stroke="#0b2545" stroke-width="2"/>
+  <!-- HbO2 -->
+  <path d="M60,140 L77,200 L93,225 L110,230 L137,215 L173,190 L198,180 L225,172 L247,170 L280,178" fill="none" stroke="#0d9488" stroke-width="2.5"/>
+  <circle cx="173" cy="190" r="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="176" y1="194" x2="200" y2="245" stroke="#0b2545" stroke-width="1"/>
+  <text x="200" y="260" font-size="13" fill="#0b2545">isosbestisch</text>
+
+  <!-- Legende A -->
+  <line x1="70" y1="335" x2="95" y2="335" stroke="#0b2545" stroke-width="2"/>
+  <text x="102" y="340" font-size="13" fill="#0b2545">Hb (desoxygeniert)</text>
+  <line x1="70" y1="358" x2="95" y2="358" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="102" y="363" font-size="13" fill="#0b2545">HbO₂ (oxygeniert)</text>
+
+  <!-- Trennlinie -->
+  <line x1="310" y1="45" x2="310" y2="375" stroke="#f1f5f9" stroke-width="2"/>
+
+  <!-- Panel B -->
+  <text x="455" y="28" font-size="15" font-weight="600" fill="#0b2545" text-anchor="middle">B  Signalanteile</text>
+  <line x1="335" y1="300" x2="585" y2="300" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="335" y1="300" x2="335" y2="60" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="460" y="320" font-size="13" fill="#0b2545" text-anchor="middle">Zeit</text>
+
+  <!-- Schichten -->
+  <rect x="336" y="240" width="200" height="59" fill="#f1f5f9" stroke="#0b2545" stroke-width="1"/>
+  <rect x="336" y="200" width="200" height="40" fill="#e6f7f5" stroke="#0b2545" stroke-width="1"/>
+  <rect x="336" y="170" width="200" height="30" fill="#ffffff" stroke="#0b2545" stroke-width="1"/>
+  <!-- pulsatiler Anteil -->
+  <path d="M336,170 L346,150 L356,135 L366,140 L376,155 L386,165 L396,170 L406,150 L416,135 L426,140 L436,155 L446,165 L456,170 L466,150 L476,135 L486,140 L496,155 L506,165 L516,170 L526,150 L536,135 L536,170 Z" fill="#14b8a6" stroke="#0b2545" stroke-width="1.5"/>
+
+  <text x="436" y="274" font-size="13" fill="#0b2545" text-anchor="middle">Gewebe, Knochen, Haut</text>
+  <text x="436" y="225" font-size="13" fill="#0b2545" text-anchor="middle">venöses Blut</text>
+  <text x="436" y="190" font-size="13" fill="#0b2545" text-anchor="middle">arteriell, nicht pulsatil</text>
+
+  <!-- Klammern AC / DC -->
+  <path d="M545,135 L555,135 L555,170 L545,170" fill="none" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="560" y="157" font-size="14" font-weight="600" fill="#0d9488">AC</text>
+  <path d="M545,172 L555,172 L555,298 L545,298" fill="none" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="560" y="240" font-size="14" font-weight="600" fill="#0b2545">DC</text>
+
+  <line x1="420" y1="138" x2="400" y2="95" stroke="#0b2545" stroke-width="1"/>
+  <text x="340" y="88" font-size="13" fill="#0b2545">pulsatiles arterielles Blut</text>
+
+  <!-- Formel -->
+  <rect x="335" y="335" width="250" height="44" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="460" y="362" font-size="14" fill="#0b2545" text-anchor="middle">R = (AC/DC)rot ÷ (AC/DC)IR</text>
+</svg>

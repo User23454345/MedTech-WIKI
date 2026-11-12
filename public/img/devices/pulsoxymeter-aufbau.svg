@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" font-family="Inter, Arial, sans-serif">
+  <title>Pulsoxymeter – schematischer Aufbau aus Fingerclip-Sensor und Grundgerät</title>
+  <defs>
+    <marker id="pf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="28" font-size="15" font-weight="600" fill="#0b2545" text-anchor="middle">Pulsoxymeter – schematischer Aufbau</text>
+
+  <!-- Sensor-Clip im Schnitt -->
+  <text x="150" y="58" font-size="13" font-weight="600" fill="#0b2545" text-anchor="middle">Fingerclip-Sensor (Schnitt)</text>
+  <!-- obere Clipschale -->
+  <path d="M40,95 L260,95 L260,130 L40,130 Z" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <!-- untere Clipschale -->
+  <path d="M40,225 L260,225 L260,260 L40,260 Z" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <!-- Gelenk / Feder -->
+  <path d="M260,112 C300,112 300,243 260,243" fill="none" stroke="#0b2545" stroke-width="2"/>
+  <path d="M272,150 l10,6 l-10,6 l10,6 l-10,6 l10,6 l-10,6 l10,6 l-10,6" fill="none" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Finger -->
+  <path d="M20,140 L190,140 C235,140 245,178 245,178 C245,178 235,215 190,215 L20,215 Z" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Arterie (pulsierend) und Vene -->
+  <path d="M25,165 L200,165" stroke="#0d9488" stroke-width="5" fill="none"/>
+  <path d="M25,195 L200,195" stroke="#0b2545" stroke-width="3" fill="none" stroke-dasharray="8 4"/>
+  <!-- LEDs -->
+  <rect x="118" y="118" width="16" height="12" fill="#14b8a6" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="140" y="118" width="16" height="12" fill="#0b2545" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Photodiode -->
+  <rect x="124" y="225" width="26" height="10" fill="#0d9488" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Lichtweg -->
+  <line x1="137" y1="132" x2="137" y2="221" stroke="#0d9488" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#pf)"/>
+
+  <!-- Beschriftungen Sensor -->
+  <line x1="126" y1="118" x2="90" y2="78" stroke="#0b2545" stroke-width="1"/>
+  <text x="88" y="74" font-size="13" fill="#0b2545" text-anchor="end">Rot-LED 660 nm</text>
+  <line x1="148" y1="118" x2="190" y2="78" stroke="#0b2545" stroke-width="1"/>
+  <text x="192" y="74" font-size="13" fill="#0b2545">IR-LED ~900 nm</text>
+  <line x1="25" y1="165" x2="25" y2="314" stroke="#0b2545" stroke-width="1"/>
+  <text x="20" y="330" font-size="13" fill="#0b2545">Arterie (pulsatil)</text>
+  <line x1="180" y1="195" x2="180" y2="344" stroke="#0b2545" stroke-width="1"/>
+  <text x="170" y="360" font-size="13" fill="#0b2545">Vene, Gewebe (konstant)</text>
+  <line x1="124" y1="234" x2="100" y2="282" stroke="#0b2545" stroke-width="1"/>
+  <text x="40" y="297" font-size="13" fill="#0b2545">Photodiode</text>
+  <line x1="290" y1="178" x2="315" y2="300" stroke="#0b2545" stroke-width="1"/>
+  <text x="285" y="318" font-size="13" fill="#0b2545">Clipfeder</text>
+
+  <!-- Kabel -->
+  <path d="M260,250 C330,250 330,190 380,190" fill="none" stroke="#0b2545" stroke-width="3"/>
+  <text x="300" y="275" font-size="13" fill="#0b2545">Sensorkabel</text>
+
+  <!-- Grundgerät -->
+  <rect x="380" y="60" width="200" height="280" rx="14" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <text x="480" y="82" font-size="13" font-weight="600" fill="#0b2545" text-anchor="middle">Grundgerät</text>
+  <!-- Display -->
+  <rect x="398" y="92" width="164" height="78" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="412" y="122" font-size="15" font-weight="600" fill="#0d9488">SpO₂ 97 %</text>
+  <text x="412" y="142" font-size="13" fill="#0b2545">PR 72 /min</text>
+  <path d="M410,160 l12,0 l6,-12 l6,12 l18,0 l6,-12 l6,12 l18,0 l6,-12 l6,12 l18,0 l6,-12 l6,12 l14,0" fill="none" stroke="#0d9488" stroke-width="1.5"/>
+  <!-- Elektronik -->
+  <rect x="398" y="182" width="164" height="38" rx="5" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="480" y="199" font-size="13" fill="#0b2545" text-anchor="middle">LED-Treiber, Verstärker,</text>
+  <text x="480" y="214" font-size="13" fill="#0b2545" text-anchor="middle">A/D-Wandler</text>
+  <rect x="398" y="228" width="164" height="38" rx="5" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="480" y="245" font-size="13" fill="#0b2545" text-anchor="middle">Prozessor: R → SpO₂,</text>
+  <text x="480" y="260" font-size="13" fill="#0b2545" text-anchor="middle">Alarme, Trend</text>
+  <rect x="398" y="274" width="100" height="52" rx="5" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="448" y="305" font-size="13" fill="#0b2545" text-anchor="middle">Akku</text>
+  <circle cx="535" cy="300" r="16" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M528,294 l6,0 l6,-5 l0,22 l-6,-5 l-6,0 z" fill="#0b2545"/>
+  <line x1="551" y1="300" x2="575" y2="372" stroke="#0b2545" stroke-width="1"/>
+  <text x="590" y="388" font-size="13" fill="#0b2545" text-anchor="end">Alarm / Pulston</text>
+  <text x="300" y="388" font-size="13" fill="#0d9488" text-anchor="middle">Funktionsschema – kein konkretes Modell</text>
+</svg>

@@ -1,0 +1,642 @@
+{
+  "id": "beatmungsgeraet",
+  "type": "device",
+  "title": "Intensivbeatmungsgerät",
+  "aliases": [
+    "Beatmungsgerät",
+    "Respirator",
+    "Ventilator",
+    "ICU-Ventilator",
+    "Intensivrespirator",
+    "Critical Care Ventilator"
+  ],
+  "category": "geraete",
+  "deviceGroup": "beatmung-anaesthesie",
+  "rank": 2,
+  "domains": [
+    "intensivmedizin",
+    "anaesthesiologie",
+    "notfallmedizin",
+    "neonatologie",
+    "pneumologie"
+  ],
+  "summary": "Ein Intensivbeatmungsgerät fördert ein Luft-Sauerstoff-Gemisch mit Überdruck in die Lunge und übernimmt ganz oder teilweise die Atemarbeit. Es regelt Druck und Flow über Ventile oder eine Turbine, überwacht Volumen, Drücke und Sauerstoffkonzentration und alarmiert bei Abweichungen.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "belegt",
+    "note": "Nach [[mdr|MDR]] Anhang VIII **Regel 12** sind aktive Produkte, die Stoffe an den Körper abgeben oder aus ihm entfernen, der Klasse IIa zugeordnet – der Klasse IIb, wenn dies in potenziell gefährlicher Weise geschieht. Die Abgabe von Atemgas mit Überdruck an die Lunge eines beatmungspflichtigen Patienten gilt als potenziell gefährlich; Beatmungsgeräte werden in der MDCG-Leitlinie zur Klassifizierung als Beispiel für Klasse IIb geführt [@mdr-2017][@mdcg-2021-24]. Die verbindliche Einstufung trifft der Hersteller für sein konkretes Produkt (siehe [[risikoklassen|Risikoklassen]]).",
+    "sources": [
+      "mdr-2017",
+      "mdcg-2021-24"
+    ]
+  },
+  "sections": {
+    "purpose": "## Medizinischer Zweck\n\nEin **Intensivbeatmungsgerät** übernimmt ganz oder teilweise die Atemarbeit von Patientinnen und Patienten, deren eigene Atmung nicht ausreicht, um den [[gasaustausch|Gasaustausch]] in der [[lunge|Lunge]] sicherzustellen. Es fördert ein definiertes Gasgemisch aus Luft und Sauerstoff mit Überdruck in die Atemwege (Überdruckbeatmung) und lässt das Gas anschließend passiv über ein gesteuertes Ventil wieder ausströmen [@oczenski-2017]. Damit unterscheidet es sich grundlegend von der physiologischen Spontanatmung, bei der die Atemmuskulatur einen Unterdruck im Thorax erzeugt (siehe [[atemmechanik|Atemmechanik]]).\n\nDie Beatmung verfolgt drei therapeutische Ziele:\n\n| Ziel | Physiologischer Hintergrund | Wichtige Stellgrößen |\n|---|---|---|\n| **Oxygenierung** sichern | Sauerstoffaufnahme ins Blut, Bindung an [[haemoglobin|Hämoglobin]] | FiO₂, PEEP, mittlerer Atemwegsdruck |\n| **Ventilation** sichern (CO₂-Elimination) | Abatmung von CO₂, Steuerung des [[saeure-basen-haushalt|Säure-Basen-Haushalts]] | Tidalvolumen, Atemfrequenz, Atemminutenvolumen |\n| **Atemarbeit** entlasten | Erschöpfung der Atemmuskulatur verhindern oder behandeln | Druckunterstützung, Triggerempfindlichkeit |\n\n> [!belegt] Beatmungsgeräte für die Intensivpflege sind lebenserhaltende Systeme. Die gerätespezifische Norm [[iso-80601-2-12|ISO 80601-2-12]] legt deshalb besondere Anforderungen an Basissicherheit und wesentliche Leistungsmerkmale fest, unter anderem an Alarme, Überwachung und das Verhalten bei Ausfall der Energie- oder Gasversorgung [@iso-80601-2-12].\n\nDas Gerät ist ein aktives [[medizinprodukt|Medizinprodukt]] und ein [[medizinisches-elektrisches-geraet|ME-Gerät]] im Sinne der [[iec-60601-1|IEC 60601-1]]. Seine [[zweckbestimmung|Zweckbestimmung]] legt fest, für welche Patientengruppen (Erwachsene, Kinder, Neugeborene), welche Umgebung (Intensivstation, innerklinischer Transport) und welche Beatmungsformen (invasiv über Tubus oder Trachealkanüle, nichtinvasiv über Maske) es eingesetzt werden darf.\n",
+    "applications": "## Einsatzgebiete\n\nIntensivbeatmungsgeräte sind das zentrale Therapiegerät der [[intensivmedizin|Intensivmedizin]]. Typische Indikationen sind:\n\n* **Akute respiratorische Insuffizienz**, z. B. bei Pneumonie, akutem Lungenversagen (ARDS) oder Lungenödem – hier steht die *lungenprotektive Beatmung* mit kleinen Tidalvolumina im Vordergrund [@ardsnet-2000][@awmf-s3-invasive-beatmung].\n* **Ventilatorisches Versagen**, z. B. bei neuromuskulären Erkrankungen, exazerbierter COPD (Fachgebiet [[pneumologie|Pneumologie]]) oder Erschöpfung der Atemmuskulatur.\n* **Postoperative Nachbeatmung** nach großen Eingriffen, z. B. in der [[herzchirurgie|Herzchirurgie]], bis zur Rückkehr ausreichender Spontanatmung (Übergang aus der [[anaesthesiologie|Anästhesiologie]]).\n* **Bewusstseinsstörungen** mit fehlendem Schutz der Atemwege, z. B. nach Schädel-Hirn-Trauma oder Reanimation ([[neurologie|Neurologie]], [[notfallmedizin|Notfallmedizin]]).\n* **Neonatologie und Pädiatrie**: Geräte mit Neonatal-Option beatmen Frühgeborene mit Tidalvolumina im Bereich weniger Milliliter ([[neonatologie|Neonatologie]]).\n\n### Abgrenzung zu verwandten Geräten\n\n| Gerät | Typischer Einsatz | Unterschied zum Intensivbeatmungsgerät |\n|---|---|---|\n| [[anaesthesiegeraet|Anästhesiearbeitsplatz]] | Narkose im OP | Rückatemsystem mit [[co2-absorber|CO₂-Absorber]] und [[narkosemittelverdampfer|Narkosemittelverdampfer]] |\n| [[transportbeatmungsgeraet|Notfall- und Transportbeatmungsgerät]] | Rettungsdienst, Transport | kompakt, robust, oft pneumatisch oder mit reduziertem Modusumfang |\n| [[heimbeatmungsgeraet|Heimbeatmungsgerät]] | außerklinische Langzeitbeatmung | Gebläsegerät, häufig Leckage- oder Einschlauchsysteme |\n| [[cpap-geraet|CPAP-/Schlaftherapiegerät]] | Schlafapnoe | nur kontinuierlicher Überdruck, keine Lebenserhaltung |\n| [[high-flow-geraet|High-Flow-Sauerstofftherapiegerät]] | Sauerstofftherapie | offenes System über Nasenkanüle, keine Druckbeatmung |\n\nDarüber hinaus wird das Beatmungsgerät eng mit dem [[patientenmonitor|Patientenmonitor]], dem [[kapnometer|Kapnographen]], dem [[blutgasanalysator|Blutgasanalysator]] und bei schwerstem Lungenversagen mit der [[ecmo|ECMO]] kombiniert.\n\n> [!praxis] Bei der nichtinvasiven Beatmung (NIV) über Maske entstehen bewusst Leckagen. Intensivbeatmungsgeräte besitzen dafür eigene NIV-Modi mit Leckagekompensation; ohne diesen Modus führt die Maskenleckage zu Dauer-[[leckage|Leckagealarmen]] und fehlerhafter Triggerung.\n",
+    "principle": "## Funktionsprinzip\n\n### Die Bewegungsgleichung des respiratorischen Systems\n\nDie Grundlage jeder Beatmung ist ein einfaches mechanisches Modell: Die Lunge wird als elastischer Ballon (Dehnbarkeit = **Compliance C**) beschrieben, der über ein Rohr mit Strömungswiderstand (**Resistance R**) gefüllt wird. Der Druck, den Beatmungsgerät (P_aw) und Atemmuskulatur (P_mus) gemeinsam aufbringen, teilt sich auf in einen elastischen und einen resistiven Anteil [@tobin-2013][@oczenski-2017]:\n\n`P_aw(t) + P_mus(t) = V(t) / C + R · V̇(t) + PEEP_tot`\n\n* **V(t)** – über dem endexspiratorischen Volumen eingeatmetes Volumen\n* **V̇(t)** – momentaner Gasfluss (Flow)\n* **C = ΔV / ΔP** – Compliance in ml/mbar\n* **R = ΔP / V̇** – Resistance in mbar/(l/s), dominiert von Tubus und Atemwegen (siehe [[stroemungslehre|Strömungslehre]])\n* **PEEP_tot** – gesamter endexspiratorischer Druck (eingestellter PEEP plus ggf. intrinsischer PEEP)\n\n> [!vereinfacht] Das Einkompartiment-Modell vernachlässigt die Inhomogenität der erkrankten Lunge, die Nichtlinearität der Druck-Volumen-Kurve und die Trägheit der Gassäule. Für das Verständnis von Druck- und Flusskurven am Gerät ist es dennoch das wichtigste Werkzeug.\n\nAus R und C ergibt sich die **Zeitkonstante τ = R · C**. Nach einer Zeitkonstante ist eine passive Exspiration zu etwa 63 % abgeschlossen, nach drei Zeitkonstanten zu etwa 95 %. Ist die Exspirationszeit zu kurz, bleibt Volumen in der Lunge („Air Trapping“) und es entsteht ein intrinsischer PEEP.\n\n> [!beispiel] **Volumenkontrollierte Beatmung mit konstantem Flow.** Eingestellt: Tidalvolumen V_T = 500 ml, inspiratorischer Flow 60 l/min = 1 l/s, PEEP = 5 mbar. Patient: C = 50 ml/mbar, R = 10 mbar/(l/s), keine Eigenatmung.\n> * Elastischer Druckanteil am Inspirationsende: 500 ml / 50 ml/mbar = **10 mbar**\n> * Plateaudruck (Flow = 0): P_plat = 5 + 10 = **15 mbar**\n> * Resistiver Anteil bei 1 l/s: 10 mbar/(l/s) · 1 l/s = **10 mbar**\n> * Spitzendruck: P_peak = 15 + 10 = **25 mbar**\n> * Driving Pressure: ΔP = P_plat − PEEP = **10 mbar**\n> * Zeitkonstante: τ = 10 mbar·s/l · 0,05 l/mbar = **0,5 s** → für ~95 % Entleerung werden ≈ 1,5 s Exspirationszeit benötigt.\n>\n> Steigt der Spitzendruck bei gleichbleibendem Plateaudruck, hat sich die Resistance erhöht (z. B. Sekret im Tubus); steigen beide gemeinsam, ist die Compliance gesunken.\n\n### Gasdosierung und Gasmischung\n\nDas Gerät erzeugt den Inspirationsflow auf eine von zwei Arten:\n\n1. **Hochdruck-Ventilgeräte** werden aus der zentralen Gasversorgung (Sauerstoff und Druckluft) gespeist. Je ein schnelles [[proportionalventil|Proportionalventil]] pro Gasart dosiert den Flow; die Gase mischen sich im Inspirationstrakt.\n2. **Turbinengeräte** saugen Raumluft über eine [[turbine|Turbine (Radialgebläse)]] an, die von einem [[bldc-motor|bürstenlosen Gleichstrommotor]] mit hoher Drehzahldynamik angetrieben wird. Sauerstoff wird über ein Proportionalventil zugemischt. Vorteil: Betrieb ohne Druckluftanschluss, z. B. beim Transport.\n\nDie inspiratorische Sauerstofffraktion ergibt sich aus der Massenbilanz der beiden Teilflüsse:\n\n`FiO₂ = (V̇_Luft · 0,21 + V̇_O₂ · 1,0) / (V̇_Luft + V̇_O₂)`\n\n> [!beispiel] Gesamtflow 30 l/min, Ziel-FiO₂ = 0,5. Umgestellt nach dem Sauerstoffanteil: V̇_O₂ = V̇_ges · (FiO₂ − 0,21) / (1 − 0,21) = 30 · 0,29 / 0,79 ≈ **11,0 l/min** Sauerstoff und ≈ **19,0 l/min** Luft.\n\nBei Ventilgeräten verlangt ein stabiler Flow einen geregelten Eingangsdruck; Druckminderer und Rückschlagventile im Gaseinlass glätten Schwankungen der zentralen Versorgung und verhindern das Rückströmen eines Gases in die Leitung des anderen. Fällt eine Gasart aus, schaltet das Gerät nach Herstellerkonzept auf das verbleibende Gas um und alarmiert.\n\n### Messprinzipien\n\n**Druck.** Der Atemwegsdruck wird mit [[drucksensor|piezoresistiven Drucksensoren]] gemessen – meist an mehreren Stellen (inspiratorisch, exspiratorisch, teils proximal am Y-Stück). Eine Membran mit eindiffundierten Widerständen in Wheatstone-Brückenschaltung verändert unter Druck ihren Widerstand; das Brückensignal wird mit einem [[instrumentenverstaerker|Instrumentenverstärker]] verstärkt (siehe [[druckmessung|Druckmessung]], [[druck|Druck]]). Weil Drucksensoren driften, führen viele Geräte einen zyklischen **Nullabgleich** durch: Ein [[magnetventil|Magnetventil]] verbindet den Sensor kurzzeitig mit Umgebungsdruck.\n\n**Flow.** Für die Flowmessung sind in Intensivbeatmungsgeräten vor allem zwei Prinzipien verbreitet (siehe [[flowsensor|Flowsensor]]) [@hering-2018][@oczenski-2017]:\n\n| Prinzip | Physik | Eigenschaften |\n|---|---|---|\n| **Differenzdruck** (Blende, Venturi, variable Klappe) | Bernoulli: Δp ∝ ρ · V̇² bei turbulenter Blende; bei laminarem Element (Hagen-Poiseuille) Δp ∝ V̇ | robust, gasartabhängig über die Dichte ρ, Linearisierung per Kennlinie |\n| **Hitzdraht-Anemometrie** | ein beheizter Platindraht wird vom Gas gekühlt; die zur Temperaturkonstanz nötige Heizleistung steigt etwa mit √v (King’sches Gesetz) | sehr schnell, empfindlich für kleine Flüsse (Neonatologie), anfällig für Verschmutzung und Feuchtigkeit |\n\nDer Flow wird zum Volumen integriert: `V_T = ∫ V̇(t) dt`. Weil Gasvolumina von Druck, Temperatur und Feuchte abhängen ([[gasgesetze|Gasgesetze]]), rechnen Geräte gemessene Volumina in der Regel auf **BTPS-Bedingungen** (Körpertemperatur 37 °C, Umgebungsdruck, wasserdampfgesättigt) um:\n\n`V_BTPS = V_ATPD · (273 + 37) / (273 + T) · p_B / (p_B − p_H₂O,37°C)` mit p_H₂O,37°C ≈ 63 mbar (47 mmHg).\n\n**Sauerstoff.** Die FiO₂ wird mit einem [[sauerstoffsensor|Sauerstoffsensor]] überwacht – klassisch eine galvanische Zelle (Brennstoffzelle mit begrenzter Lebensdauer), alternativ ein paramagnetischer Sensor, der den Paramagnetismus von O₂ nutzt und nicht verbraucht wird.\n\n**CO₂ (optional).** Ein Hauptstrom-[[co2-sensor|CO₂-Sensor]] am Y-Stück misst nach dem NDIR-Prinzip (Absorption bei ca. 4,26 µm, [[lambert-beer|Lambert-Beer-Gesetz]]) und liefert Kapnogramm und endtidales CO₂.\n\n### Regelung: Steuerung, Trigger und Zyklierung\n\nJeder maschinelle Atemzug wird durch drei Variablen charakterisiert [@tobin-2013]:\n\n| Phase | Frage | Typische Realisierung |\n|---|---|---|\n| **Trigger** – Start der Inspiration | Wann beginnt der Atemzug? | zeitgesteuert (Frequenz) oder patientengetriggert über Flow- bzw. Drucktrigger |\n| **Limit / Ziel** – während der Inspiration | Was wird geregelt? | Flow/Volumen (volumenkontrolliert) oder Druck (druckkontrolliert) |\n| **Zyklierung** – Ende der Inspiration | Wann endet der Atemzug? | nach Zeit, nach Volumen oder bei Abfall des Flows auf einen Prozentsatz des Spitzenflows (Druckunterstützung) |\n\nTechnisch arbeitet das Gerät mit unterlagerten digitalen [[regelkreis|Regelkreisen]] (meist PI/PID mit Vorsteuerung), die auf einem [[mikrocontroller|Mikrocontroller]] mit hoher Abtastrate laufen:\n\n* **Volumenkontrolle:** Sollwert ist ein Flowprofil (konstant oder dezelerierend). Istwert ist der inspiratorische Flow; Stellglied ist das Proportionalventil bzw. die Turbinendrehzahl ([[drehzahlregelung|Drehzahlregelung]], Ansteuerung per [[pwm|PWM]]).\n* **Druckkontrolle und Druckunterstützung:** Sollwert ist ein Drucksprung auf P_insp mit einstellbarer Anstiegsrampe. Der Regler stellt den Flow so, dass der gemessene Atemwegsdruck dem Sollwert folgt. Der Flow ist dann die *abhängige* Größe und fällt mit zunehmender Füllung der Lunge exponentiell ab.\n* **PEEP-Regelung:** Während der Exspiration regelt das aktive [[exspirationsventil|Exspirationsventil]] (meist eine membranbasierte Tauchspulen- oder Proportionalkonstruktion) den Druck auf den PEEP-Sollwert. Moderne Geräte öffnen es auch während der Inspiration, wenn der Patient ausatmen möchte („offenes System“, z. B. bei BIPAP-artigen Modi).\n* **Trigger:** Beim Flowtrigger liefert das Gerät in der Exspiration einen kleinen Basisflow; die Differenz zwischen inspiratorisch und exspiratorisch gemessenem Flow zeigt die Einatembemühung des Patienten an. Zu empfindliche Einstellung führt zur Autotriggerung (z. B. durch Leckage oder kardiale Oszillationen).\n\n> [!vereinfacht] Herstellerspezifische Modusnamen (z. B. BIPAP, APRV, ASV, PRVC) beruhen auf denselben Grundbausteinen: Trigger, Zielgröße und Zyklierung. Wer diese Bausteine versteht, kann auch unbekannte Modi einordnen.\n\n### Signalverarbeitung und Kompensationen\n\n* **Filterung:** Druck- und Flowsignale werden analog vorgefiltert (Anti-Aliasing), mit einem [[analog-digital-wandler|Analog-Digital-Wandler]] digitalisiert und digital gefiltert ([[filter|Filter]]), um Ventilrauschen und kardiogene Oszillationen zu dämpfen, ohne die Triggerantwort zu verzögern.\n* **Schlauchsystem-Compliance:** Das Beatmungsschlauchsystem dehnt sich und komprimiert Gas. Ein Teil des abgegebenen Volumens erreicht den Patienten nie. Das Gerät ermittelt die Schlauch-Compliance im Selbsttest und kompensiert sie.\n* **Tubuskompensation:** Aus dem bekannten Tubusdurchmesser berechnet das Gerät den Druckabfall über dem Tubus (nichtlinear, ungefähr ∝ V̇²) und kann so die tubusbedingte Atemarbeit ausgleichen.\n* **Leckagekompensation:** Bei NIV wird die Leckage aus der Differenz von inspiratorischem und exspiratorischem Volumen geschätzt und bei Trigger und Zyklierung berücksichtigt.\n\n> [!beispiel] **Kompressibles Volumen.** Schlauchsystem-Compliance 2 ml/mbar (beispielhafter Wert), Druckdifferenz zwischen Spitzendruck und PEEP 20 mbar → 2 ml/mbar · 20 mbar = **40 ml** verbleiben im Schlauchsystem. Bei einem Neugeborenen mit 15 ml Tidalvolumen wäre das ein Vielfaches des Atemzugvolumens – deshalb werden Volumina dort möglichst proximal am Y-Stück gemessen.\n\n### Überwachung und Alarme\n\nUnabhängig von der Regelung überwacht das Gerät alle Messgrößen gegen einstellbare und feste Grenzen und erzeugt Alarme nach den Prioritäten der [[iec-60601-1-8|IEC 60601-1-8]] (siehe [[alarmsystem|Alarmsysteme]]) [@iec-60601-1-8][@iso-80601-2-12]. Typische Alarmgruppen sind: Atemwegsdruck hoch/niedrig, Minutenvolumen hoch/niedrig, Apnoe, FiO₂-Abweichung, Gasversorgungsausfall, Netzausfall/Akkubetrieb und technische Fehler. Ein **unabhängiges Sicherheitsventil** begrenzt den maximalen Druck mechanisch, und ein **Notatmungsventil** (Ambient-Ventil) erlaubt die Spontanatmung von Raumluft, wenn das Gerät ausfällt.\n",
+    "construction": "## Technischer Aufbau\n\nEin Intensivbeatmungsgerät besteht aus einer pneumatischen Einheit, einer Elektronik- und Steuereinheit, der Bedieneinheit und dem patientenseitigen Zubehör.\n\n### Baugruppen im Überblick\n\n| Baugruppe | Bestandteile | Funktion |\n|---|---|---|\n| Gaseinlass | Anschlüsse für O₂ und Druckluft, Filter, Rückschlagventile, Druckminderer, Eingangsdrucksensoren | Versorgung aus zentraler Gasversorgung oder Flasche |\n| Gasquelle | [[proportionalventil|Proportionalventile]] oder [[turbine|Turbine]] mit [[bldc-motor|BLDC-Motor]] | Erzeugung und Dosierung des Inspirationsflows |\n| Inspirationstrakt | Mischstrecke, Flow- und Drucksensoren, [[sauerstoffsensor|O₂-Sensor]], Sicherheits- und Notatmungsventil | Messung und Absicherung der inspiratorischen Seite |\n| Patientensystem | Schlauchsystem (Doppel- oder Einschlauch), Y-Stück, [[atemgasbefeuchter|Befeuchter oder HME-Filter]], Bakterienfilter | Verbindung zum Patienten, Klimatisierung des Atemgases |\n| Exspirationstrakt | [[exspirationsventil|Exspirationsventil]], exspiratorischer [[flowsensor|Flowsensor]], Wasserfalle | PEEP-Regelung, Messung des Exspirationsvolumens |\n| Elektronik | Steuerrechner und unabhängiger Überwachungsrechner ([[mikrocontroller|Mikrocontroller]]), Ventiltreiber, Signalaufbereitung | Regelung, Überwachung, Alarmierung |\n| Energieversorgung | [[medizinisches-netzteil|Medizinisches Netzteil]], [[lithium-ionen-akku|Lithium-Ionen-Akku]] (intern, teils Wechselakkus) | Netzbetrieb, unterbrechungsfreie Umschaltung bei Netzausfall |\n| Bedieneinheit | [[display-bedienoberflaeche|Touchdisplay]], Drehknopf, Alarm-LED und Lautsprecher | Einstellung, Kurven- und Trenddarstellung, Alarmanzeige |\n| Schnittstellen | serielle Schnittstellen, LAN, Anbindung an PDMS über [[hl7-fhir|HL7]] oder Herstellerprotokolle | Datenübertragung an Monitor und Dokumentation |\n\n### Redundanz und Sicherheitsarchitektur\n\nWeil ein Ausfall lebensbedrohlich ist, sind Intensivbeatmungsgeräte nach dem Prinzip der **Fehlersicherheit** aufgebaut [@iec-60601-1][@iso-80601-2-12]:\n\n* Die Messwerte für die Überwachung werden möglichst von Sensoren erfasst, die nicht allein der Regelung dienen; Steuer- und Überwachungsrechner kontrollieren sich gegenseitig (Watchdog).\n* Fällt die Elektronik aus, öffnet das Exspirationsventil, und der Patient kann über das Notatmungsventil Raumluft atmen.\n* Ein mechanisches Überdruckventil begrenzt den Systemdruck unabhängig von der Software.\n* Der Akkubetrieb ist so ausgelegt, dass ein Netzausfall oder ein innerklinischer Transport überbrückt werden kann; der Ladezustand wird angezeigt und alarmiert.\n* Die Software unterliegt dem Lebenszyklusprozess der [[iec-62304|IEC 62304]], die Gebrauchstauglichkeit der [[iec-62366-1|IEC 62366-1]] und der [[iec-60601-1-6|IEC 60601-1-6]] (siehe [[gebrauchstauglichkeit|Gebrauchstauglichkeit]]).\n\n### Elektrische Eigenschaften\n\nIntensivbeatmungsgeräte sind üblicherweise Geräte der [[schutzklassen|Schutzklasse]] I mit Schutzleiter. Das Patientensystem bildet ein [[anwendungsteile|Anwendungsteil]] (typisch Typ B oder BF; Sensoren mit elektrischem Patientenkontakt sind nach Herstellerangabe eingestuft). Die [[emv|elektromagnetische Verträglichkeit]] nach [[iec-60601-1-2|IEC 60601-1-2]] ist wegen der Nähe zu Mobilfunk, HF-Chirurgie und anderen Intensivgeräten besonders wichtig.\n\n> [!hinweis] Wiederverwendbare Teile des Patientensystems (Exspirationsventil-Einsätze, Flowsensoren, Schlauchsysteme) müssen nach den Herstellerangaben aufbereitet werden ([[aufbereitung|Aufbereitung]], [[desinfektion|Desinfektion]], [[sterilisation|Sterilisation]]); viele Kliniken setzen heute Einmal-Schlauchsysteme ein.\n",
+    "maintenance": "## Wartung und Instandhaltung\n\nDie [[instandhaltung-grundlagen|Instandhaltung]] gliedert sich nach [[din-31051|DIN 31051]] in Wartung, Inspektion, Instandsetzung und Verbesserung [@din-31051]. Für Beatmungsgeräte gilt dabei immer: **Grundlage sind die Angaben des Herstellers** in Gebrauchsanweisung und Serviceunterlagen.\n\n### Rechtlicher Rahmen\n\nBeatmungsgeräte gehören zu den in [[mpbetreibv|MPBetreibV]] Anlage 1 aufgeführten Produkten (Nr. 1.5: Produkte zur maschinellen Beatmung mit oder ohne Anästhesie, ausgenommen Schlafapnoe-Therapiegeräte) [@mpbetreibv]. Daraus ergeben sich für den Betreiber besondere Pflichten:\n\n> [!belegt] Für Produkte nach Anlage 1 sind [[stk|sicherheitstechnische Kontrollen]] nach § 12 MPBetreibV durchzuführen – in den vom Hersteller angegebenen Fristen, fehlen solche Angaben, spätestens alle zwei Jahre. Eine [[mtk|messtechnische Kontrolle]] nach § 15 i. V. m. Anlage 2 ist für Beatmungsgeräte nicht vorgeschrieben [@mpbetreibv].\n\nAußerdem verlangt die MPBetreibV für Anlage-1-Produkte eine Funktionsprüfung am Betriebsort und eine [[einweisung|Einweisung]] vor der Inbetriebnahme (§ 11 Abs. 3) sowie das Führen eines [[medizinproduktebuch|Medizinproduktebuchs]] (§ 13), in dem unter anderem diese Belege und die STK dokumentiert werden; das Gerät ist im [[bestandsverzeichnis|Bestandsverzeichnis]] zu führen. Maßgeblich ist der Wortlaut der jeweils geltenden Fassung (siehe [[betreiberpflichten|Betreiberpflichten]]).\n\n### Typische Wartungsarbeiten\n\n| Tätigkeit | Inhalt | Rhythmus |\n|---|---|---|\n| Geräte-Selbsttest | Dichtigkeit, Schlauch-Compliance, Sensorkalibrierung, Ventilfunktion | vor jedem Patienten bzw. nach Schlauchwechsel |\n| O₂-Sensor | Kalibrierung an 21 % und 100 % O₂; Tausch galvanischer Zellen | Kalibrierung nach Geräteanforderung, Tausch nach Verbrauch/Herstellerangabe |\n| Flowsensor | Kalibrierung, Sichtprüfung, ggf. Tausch (Hitzdrahtsensoren sind Verschleißteile) | nach Herstellerangabe |\n| Filter | Gaseinlassfilter, Lüfter- und Kühlluftfilter, Turbinen-Ansaugfilter | nach Herstellerangabe bzw. Betriebsstunden |\n| Wartungskit | Membranen, Dichtungen, O-Ringe, ggf. Rückschlagventile | nach Betriebsstunden (Herstellerintervall) |\n| Akku | Kapazitätstest, Tausch nach Alterung ([[akkufehler|Akkufehler]]) | nach Herstellerangabe |\n| Turbine | Laufzeitüberwachung, Tausch nach Betriebsstunden | nach Herstellerangabe |\n| Software | Updates und Sicherheitskorrekturen, Dokumentation der Version | anlassbezogen, nach Herstellerinformation |\n\n> [!praxis] Viele Hersteller koppeln die präventive Wartung an Betriebsstunden, die das Gerät selbst zählt. Im [[medizintechnik-management|Medizintechnik-Management]] lohnt es sich, Betriebsstunden und Kalenderfristen getrennt zu planen, damit stark genutzte Intensivgeräte nicht übersehen werden.\n\n### Instandsetzung\n\nDie [[instandsetzung|Instandsetzung]] darf nur durch Personen erfolgen, die über die erforderliche Sachkenntnis, Ausbildung und Hilfsmittel verfügen – in der Praxis durch herstellergeschulte Medizintechniker:innen. Nach jedem Eingriff in die Pneumatik oder Elektronik sind die vom Hersteller vorgeschriebenen Prüfungen, mindestens eine [[funktionspruefung|Funktionsprüfung]] und eine [[elektrische-sicherheitspruefung|elektrische Sicherheitsprüfung]], durchzuführen und zu dokumentieren. Für die Eingrenzung von Fehlern siehe [[fehlersuche|Systematische Fehlersuche]].\n",
+    "testing": "## Prüfverfahren\n\nDie Prüfung eines Beatmungsgeräts verbindet elektrische, pneumatische und funktionale Prüfungen. Grundlage sind die Prüfanweisungen des Herstellers, die allgemein anerkannten Regeln der Technik und die gerätespezifische Norm [[iso-80601-2-12|ISO 80601-2-12]] [@iso-80601-2-12].\n\n### Sicherheitstechnische Kontrolle (STK)\n\nDie [[stk|STK]] umfasst typischerweise:\n\n1. **Sichtprüfung:** Gehäuse, Netzkabel, Gasanschlüsse und Schläuche, Beschriftung, Vollständigkeit des Zubehörs, Zustand von Filtern und Rollen.\n2. **[[elektrische-sicherheitspruefung|Elektrische Sicherheitsprüfung]]** nach [[iec-62353|IEC 62353]]: [[schutzleiterwiderstand|Schutzleiterwiderstand]], ggf. [[isolationswiderstand|Isolationswiderstand]], Geräte- und Patientenableitstrom ([[ableitstrommessung|Ableitstrommessung]]) [@iec-62353].\n3. **Funktions- und Leistungsprüfung** mit einem Gasflow-Analysator und einer Testlunge.\n4. **Alarmprüfung:** Auslösen der wichtigsten Alarme.\n5. **Dokumentation** im Medizinproduktebuch und Kennzeichnung mit dem nächsten Prüftermin.\n\n### Pneumatische Leistungsprüfung mit Gasflow-Analysator\n\nMit einem [[pruefgeraete|Gasflow-Analysator]] (Prüfgerät für Flow, Volumen, Druck, O₂-Konzentration, teils Temperatur und Feuchte) und einer **Testlunge** mit definierter Compliance und Resistance werden Einstell- und Messwerte des Geräts verglichen:\n\n| Prüfgröße | Vorgehen | Bewertung |\n|---|---|---|\n| Tidalvolumen | VC-Modus mit mehreren Volumina, z. B. kleines, mittleres, großes Volumen | Abweichung innerhalb der Herstellertoleranz |\n| Atemfrequenz, I:E | Vergleich von Einstellung und Messung | innerhalb Toleranz |\n| Inspirationsdruck, PEEP | PC-Modus mit verschiedenen Druckniveaus | Abweichung und Stabilität |\n| FiO₂ | mehrere Stufen, z. B. 21 %, mittlere Stufe, 100 % | Gerätemessung und Analysator stimmen überein |\n| Trigger | Simulation einer Einatembemühung an der Testlunge | Trigger wird erkannt, keine Autotriggerung |\n| Druckbegrenzung | Okklusion des Y-Stücks | Hochdruckalarm und Druckbegrenzung greifen |\n\n> [!hinweis] Der Analysator muss auf dieselben Bezugsbedingungen eingestellt werden wie das Beatmungsgerät (z. B. BTPS, ATPD oder STPD). Andernfalls entstehen scheinbare Volumenabweichungen von mehreren Prozent, die allein aus der Umrechnung nach den [[gasgesetze|Gasgesetzen]] stammen. Das Prüfgerät selbst muss rückführbar kalibriert sein ([[kalibrierung|Kalibrierung]], [[messunsicherheit|Messunsicherheit]]).\n\n### Alarm- und Ausfallprüfungen\n\n* **Diskonnektion:** Lösen des Schlauchsystems → [[diskonnektion|Diskonnektionsalarm]] bzw. Alarm „Minutenvolumen niedrig“.\n* **Leckage:** definierte Leckage → [[leckage|Leckagealarm]].\n* **Okklusion:** Abklemmen des Schlauchs → [[atemwegsdruck-hoch|Alarm Atemwegsdruck hoch]].\n* **Apnoe:** keine Spontanatmung im Spontanmodus → Apnoealarm und, je nach Einstellung, Apnoeventilation.\n* **Gasversorgungsausfall:** Trennen der O₂- oder Luftversorgung → Alarm und Umschaltung.\n* **Netzausfall:** Netzstecker ziehen → unterbrechungsfreier Akkubetrieb und Alarm.\n\n### Funktionsprüfung vor der Anwendung\n\nVor jeder Anwendung führt das Anwenderteam den gerätegeführten Selbsttest (Kurztest) durch. Er prüft Dichtigkeit und Compliance des Schlauchsystems, kalibriert Sensoren und testet Ventile. Ein bestandener Selbsttest ersetzt **nicht** die STK, ein nicht bestandener Selbsttest schließt den Einsatz am Patienten in der Regel aus.\n\n> [!warnung] Prüfungen an Beatmungsgeräten werden ausschließlich mit Testlunge durchgeführt, niemals am Patienten. Nach jeder Prüfung ist das Gerät in den klinischen Ausgangszustand zurückzuversetzen (Alarmgrenzen, Patientenkategorie, Hygiene).\n"
+  },
+  "body": "## Geschichte\n\nDie maschinelle Beatmung hat zwei Wurzeln. Die **Unterdruckbeatmung** wurde mit dem 1928 von Philip Drinker vorgestellten Tankrespirator („Eiserne Lunge“) bekannt, der den Körper luftdicht umschloss und durch periodischen Unterdruck die Einatmung erzeugte. Die **Überdruckbeatmung** setzte sich durch, als während der Poliomyelitis-Epidemie in Kopenhagen 1952 Patientinnen und Patienten über Tracheotomie manuell mit Überdruck beatmet wurden und die Sterblichkeit deutlich sank – ein Ausgangspunkt der modernen [[intensivmedizin|Intensivmedizin]] (siehe [[geschichte-medizintechnik|Geschichte der Medizintechnik]]).\n\nSeitdem entwickelten sich die Geräte von pneumatisch gesteuerten, volumenkonstanten Apparaten über elektronisch geregelte Geräte mit Mikroprozessoren hin zu softwaredefinierten Systemen mit grafischen Bedienoberflächen, Kurvenanalyse und Vernetzung.\n\n## Varianten\n\n| Variante | Merkmal |\n|---|---|\n| Ventilgerät | Betrieb an der zentralen Gasversorgung (O₂ und Druckluft) |\n| Turbinengerät | eigene Gasquelle, unabhängig von Druckluft, geeignet für Transport |\n| Neonatal-/Pädiatriegerät | proximaler Flowsensor, sehr kleine Volumina, teils Hochfrequenzoszillation (HFO) |\n| Kombinationsgerät | invasive Beatmung, NIV und High-Flow-Sauerstofftherapie in einem Gerät |\n\n## Aktuelle Entwicklungen\n\n* **Lungenprotektive Strategien:** Seit der ARDS-Network-Studie gilt die Beatmung mit niedrigen Tidalvolumina (bezogen auf das Standardkörpergewicht) und begrenztem Plateaudruck als Standard beim ARDS [@ardsnet-2000][@awmf-s3-invasive-beatmung]. Geräte unterstützen dies mit Berechnungen des Sollgewichts und Anzeige von Driving Pressure und Compliance.\n* **Geschlossene Regelkreise:** Adaptive Modi passen Druckunterstützung oder Atemfrequenz automatisch an Messwerte wie Atemmechanik, endtidales CO₂ oder SpO₂ an. Bei der neural gesteuerten Beatmung (NAVA) wird die elektrische Aktivität des Zwerchfells über eine Ösophagussonde abgeleitet und als Triggersignal verwendet.\n* **Erweitertes Monitoring:** Ösophagusdruckmessung (transpulmonaler Druck), volumetrische Kapnographie und elektrische Impedanztomographie (EIT) ermöglichen eine individuelle PEEP-Einstellung.\n* **Vernetzung und Alarmmanagement:** Anbindung an Patientendatenmanagementsysteme und Alarmweiterleitung sollen [[alarmmuedigkeit|Alarmmüdigkeit]] reduzieren; gleichzeitig steigen die Anforderungen an IT-Sicherheit und [[software-medizinprodukt|Software als Medizinprodukt]].\n\n> [!hinweis] Die Darstellung der Beatmungsmodi ist gerätetyp-übergreifend. Bezeichnungen, Einstellbereiche und Verhalten unterscheiden sich zwischen Herstellern – verbindlich ist immer die Gebrauchsanweisung des konkreten Geräts.\n",
+  "components": [
+    {
+      "ref": "turbine",
+      "role": "Gasquelle in Turbinengeräten: erzeugt aus Raumluft den Inspirationsflow, Druck und Flow über die Drehzahl geregelt."
+    },
+    {
+      "ref": "bldc-motor",
+      "role": "Antrieb der Turbine; hohe Drehzahldynamik ermöglicht schnelle Druckanstiege und Triggerantworten."
+    },
+    {
+      "ref": "proportionalventil",
+      "role": "Dosiert stufenlos Sauerstoff und Druckluft (Ventilgeräte) bzw. die O₂-Zumischung (Turbinengeräte)."
+    },
+    {
+      "ref": "exspirationsventil",
+      "role": "Regelt in der Exspiration den PEEP und gibt das Ausatemgas frei; öffnet im Fehlerfall."
+    },
+    {
+      "ref": "magnetventil",
+      "role": "Schaltfunktionen, z. B. Nullabgleich der Drucksensoren und Spülung von Messleitungen."
+    },
+    {
+      "ref": "atemgasbefeuchter",
+      "role": "Aktive Befeuchtung oder HME-Filter erwärmen und befeuchten das trockene Atemgas, da die oberen Atemwege durch den Tubus umgangen werden."
+    },
+    {
+      "ref": "mikrocontroller",
+      "role": "Steuer- und unabhängiger Überwachungsrechner für Regelkreise, Alarmlogik und Selbsttests."
+    },
+    {
+      "ref": "lithium-ionen-akku",
+      "role": "Überbrückt Netzausfälle und ermöglicht den innerklinischen Transport."
+    },
+    {
+      "ref": "medizinisches-netzteil",
+      "role": "Versorgt Elektronik und Antriebe aus dem Netz, lädt den Akku; galvanisch getrennt nach IEC 60601-1."
+    },
+    {
+      "ref": "display-bedienoberflaeche",
+      "role": "Touchdisplay mit Kurven (Druck, Flow, Volumen), Loops, Trends und Alarmanzeige."
+    },
+    {
+      "ref": "alarmsystem",
+      "role": "Priorisierte optische und akustische Alarme nach IEC 60601-1-8."
+    }
+  ],
+  "sensors": [
+    {
+      "ref": "flowsensor",
+      "role": "Inspiratorische und exspiratorische Flowmessung (Differenzdruck oder Hitzdraht); Grundlage für Volumen, Trigger und Leckageberechnung."
+    },
+    {
+      "ref": "drucksensor",
+      "role": "Piezoresistive Sensoren für Atemwegsdruck (inspiratorisch, exspiratorisch, proximal) sowie Gaseingangsdrücke."
+    },
+    {
+      "ref": "sauerstoffsensor",
+      "role": "Überwacht die inspiratorische O₂-Konzentration (galvanische Zelle oder paramagnetischer Sensor)."
+    },
+    {
+      "ref": "co2-sensor",
+      "role": "Optionaler Hauptstrom-NDIR-Sensor am Y-Stück für Kapnographie und endtidales CO₂."
+    },
+    {
+      "ref": "temperatursensor",
+      "role": "Temperaturmessung im Befeuchter und Atemgas sowie Überwachung von Turbine und Elektronik."
+    }
+  ],
+  "specs": [
+    {
+      "param": "Inspiratorische O₂-Konzentration (FiO₂)",
+      "value": "21–100 %",
+      "note": "Untergrenze ist der O₂-Anteil der Raumluft; Einstellung in 1-%-Schritten üblich.",
+      "evidence": "typisch",
+      "sources": [
+        "oczenski-2017"
+      ]
+    },
+    {
+      "param": "Tidalvolumen (Einstellbereich)",
+      "value": "Erwachsene/Kinder etwa 20–2000 ml; mit Neonatal-Option ab wenigen Millilitern",
+      "note": "Bereich abhängig von Patientenkategorie und Gerät.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Atemfrequenz (Einstellbereich)",
+      "value": "etwa 1 bis 60–80 /min; Neonatalbereich teils höher",
+      "evidence": "typisch"
+    },
+    {
+      "param": "PEEP / CPAP",
+      "value": "0 bis etwa 35–50 mbar",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Inspirationsdruck (maximal einstellbar)",
+      "value": "etwa 60–100 mbar",
+      "note": "zusätzlich mechanisches Überdruckventil als unabhängige Begrenzung.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Inspiratorischer Spitzenflow",
+      "value": "> 120 l/min (Erwachsene)",
+      "note": "hohe Flowreserve für Spontanatmung und NIV-Leckagekompensation.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Gasversorgung",
+      "value": "O₂ und Druckluft aus zentraler Versorgung, Nenndruck etwa 5 bar",
+      "note": "Turbinengeräte benötigen nur O₂ (Hoch- oder Niederdruck).",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Akku-Überbrückungszeit",
+      "value": "etwa 30 min bis mehrere Stunden",
+      "note": "abhängig von Gerät, Akkuanzahl, Alter des Akkus und Beatmungsparametern.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Druckeinheit",
+      "value": "1 cmH₂O = 0,980665 mbar ≈ 1 mbar",
+      "note": "Geräte zeigen Drücke je nach Konfiguration in mbar, cmH₂O oder hPa (1 hPa = 1 mbar).",
+      "evidence": "belegt",
+      "sources": [
+        "tipler-2019"
+      ]
+    },
+    {
+      "param": "Schutzklasse / Anwendungsteil",
+      "value": "Schutzklasse I; Anwendungsteil Typ B oder BF",
+      "note": "Einstufung nach Herstellerangabe auf dem Typschild.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Alarmsystem",
+      "value": "Alarme hoher, mittlerer und niedriger Priorität",
+      "note": "Alarmprioritäten und Signale nach [[iec-60601-1-8|IEC 60601-1-8]].",
+      "evidence": "belegt",
+      "sources": [
+        "iec-60601-1-8"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "ref": "draeger",
+      "models": [
+        "Evita V800",
+        "Evita V600",
+        "Evita Infinity V500",
+        "Savina 300",
+        "Babylog VN800"
+      ]
+    },
+    {
+      "ref": "hamilton-medical",
+      "models": [
+        "HAMILTON-C6",
+        "HAMILTON-C3",
+        "HAMILTON-C1",
+        "HAMILTON-G5"
+      ]
+    },
+    {
+      "ref": "getinge",
+      "models": [
+        "Servo-u",
+        "Servo-n",
+        "Servo-air"
+      ],
+      "note": "Servo-Produktlinie, früher unter der Marke Maquet."
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "Puritan Bennett 980",
+        "Puritan Bennett 840"
+      ]
+    },
+    {
+      "ref": "mindray",
+      "models": [
+        "SV600",
+        "SV800"
+      ]
+    },
+    {
+      "ref": "ge-healthcare",
+      "models": [
+        "CARESCAPE R860"
+      ]
+    },
+    {
+      "ref": "loewenstein-medical",
+      "models": [
+        "elisa 800"
+      ]
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Für Intensivbeatmungsgeräte liegen keine öffentlich überprüfbaren Listenpreise vor. Der Preis hängt ab von: Geräteplattform (Ventil- oder Turbinengerät, Transportfähigkeit), Patientenkategorien (Neonatal-Option), freigeschalteten Software-Optionen (Beatmungsmodi, NIV, High-Flow, adaptive Regelkreise, erweitertes Monitoring), Zubehör (Befeuchter, CO₂-Sensor, Halterungen, Wechselakkus), Schnittstellen zum PDMS, Servicevertrag und Ausschreibungsbedingungen (Stückzahl, Rahmenvertrag). Für die Investitionsentscheidung sind die **Gesamtbetriebskosten** maßgeblich: Verbrauchsmaterial (Schlauchsysteme, Filter, Flowsensoren, O₂-Zellen), Wartungskits, Akkutausch, STK und Schulung der Anwender ([[medizintechnik-management|Medizintechnik-Management]])."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.5 – Produkte zur maschinellen Beatmung mit oder ohne Anästhesie (ausgenommen Schlafapnoe-Therapiegeräte); nicht in Anlage 2 aufgeführt",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); präventive Wartung nach Herstellerangabe (häufig Betriebsstunden-basiert)"
+  },
+  "faults": [
+    {
+      "title": "Leckagealarm",
+      "ref": "leckage",
+      "cause": "Undichtes Schlauchsystem, nicht geblockter oder defekter Tubus-Cuff, schlecht sitzende NIV-Maske, lose Wasserfalle oder Befeuchterkammer.",
+      "action": "Patientenzustand sichern, Schlauchsystem vom Gerät zum Patienten systematisch prüfen, Cuffdruck kontrollieren; nach Behebung Selbsttest bei nächster Gelegenheit."
+    },
+    {
+      "title": "Atemwegsdruck hoch",
+      "ref": "atemwegsdruck-hoch",
+      "cause": "Sekret oder abgeknickter Tubus, Husten/Pressen gegen das Gerät, Bronchospasmus, Abnahme der Compliance (z. B. Pneumothorax), Wasser im Schlauch.",
+      "action": "Patienten beurteilen, Tubus und Schläuche prüfen, ggf. Absaugen ([[absauggeraet|Absauggerät]]); Spitzen- und Plateaudruck vergleichen, um Resistance- von Compliance-Problemen zu unterscheiden."
+    },
+    {
+      "title": "Diskonnektion / Minutenvolumen niedrig",
+      "ref": "diskonnektion",
+      "cause": "Abgerutschtes Schlauchsystem am Y-Stück oder Tubus, gelöster Filter, Extubation.",
+      "action": "Sofort Verbindung wiederherstellen, bei Bedarf manuell mit Beatmungsbeutel beatmen; Alarmgrenzen für das Minutenvolumen sinnvoll einstellen."
+    },
+    {
+      "title": "Flowsensor-Fehler / unplausible Volumina",
+      "ref": "sensordrift",
+      "cause": "Verschmutzter, feuchter oder gealterter Flowsensor, fehlende Kalibrierung, falscher Sensortyp.",
+      "action": "Sensor kalibrieren oder tauschen, Feuchtigkeitsquelle (Befeuchter, Kondensat) beseitigen; bei wiederholtem Auftreten Medizintechnik informieren."
+    },
+    {
+      "title": "O₂-Messung unplausibel",
+      "ref": "sensordrift",
+      "cause": "Verbrauchte galvanische O₂-Zelle, fehlende Kalibrierung, Ausfall der O₂-Versorgung.",
+      "action": "O₂-Kalibrierung durchführen, Zelle nach Herstellerangabe tauschen; Gasversorgung prüfen."
+    },
+    {
+      "title": "Gasversorgungsausfall",
+      "cause": "Abgezogener Gasschlauch, Druckabfall in der zentralen Gasversorgung, leere Flasche beim Transport.",
+      "action": "Gasanschlüsse und Wandentnahmestellen prüfen, ggf. auf Flaschenversorgung umstellen; bei Ausfall der Zentralversorgung Haustechnik und Notfallplan aktivieren."
+    },
+    {
+      "title": "Akkubetrieb / Akku schwach",
+      "ref": "akkufehler",
+      "cause": "Netzausfall, gezogener Netzstecker, gealterter Akku mit verringerter Kapazität.",
+      "action": "Netzversorgung sofort wiederherstellen; Akku bei Kapazitätsverlust durch die Medizintechnik tauschen lassen."
+    },
+    {
+      "title": "Autotriggerung",
+      "cause": "Zu empfindlicher Trigger, Leckage, Kondenswasser im Schlauch oder kardiale Oszillationen.",
+      "action": "Leckage beseitigen, Kondensat entfernen, Triggerempfindlichkeit durch ärztliches Personal anpassen."
+    },
+    {
+      "title": "Häufige Fehlalarme",
+      "ref": "alarmmuedigkeit",
+      "cause": "Nicht an den Patienten angepasste Alarmgrenzen, Artefakte, Leckagen.",
+      "action": "Alarmgrenzen patientenindividuell einstellen, Ursachen beseitigen statt Alarme zu ignorieren."
+    },
+    {
+      "title": "Technischer Fehler / Gerät nicht betriebsbereit",
+      "ref": "fehlercodes",
+      "cause": "Nicht bestandener Selbsttest, Ventil- oder Turbinenfehler, Elektronikfehler.",
+      "action": "Patienten mit Ersatzgerät bzw. manuell beatmen, Gerät außer Betrieb nehmen, kennzeichnen und der Medizintechnik übergeben; Fehlerspeicher durch befugtes Personal auslesen."
+    }
+  ],
+  "tests": [
+    {
+      "name": "Sicherheitstechnische Kontrolle",
+      "ref": "stk",
+      "description": "Pflichtprüfung nach § 12 MPBetreibV (Anlage 1 Nr. 1.5): Sichtprüfung, elektrische Sicherheit, Funktions- und Leistungsprüfung, Alarmprüfung und Dokumentation nach Herstellerprüfanweisung."
+    },
+    {
+      "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+      "ref": "elektrische-sicherheitspruefung",
+      "description": "Schutzleiterwiderstand, ggf. Isolationswiderstand, Geräte- und Patientenableitstrom; Prüfung nach STK, Instandsetzung und Software-/Hardwareeingriffen."
+    },
+    {
+      "name": "Leistungsprüfung mit Gasflow-Analysator und Testlunge",
+      "ref": "pruefgeraete",
+      "description": "Vergleich von Tidalvolumen, Frequenz, Drücken, PEEP und FiO₂ zwischen Einstellung, Gerätemessung und Analysator unter definierten Bezugsbedingungen (BTPS/ATPD)."
+    },
+    {
+      "name": "Alarmprüfung",
+      "ref": "alarmsystem",
+      "description": "Auslösen von Diskonnektions-, Okklusions-, Apnoe-, Gasversorgungs- und Netzausfallalarm; Prüfung von Priorität, Lautstärke und Anzeige."
+    },
+    {
+      "name": "Funktionsprüfung / Selbsttest vor Anwendung",
+      "ref": "funktionspruefung",
+      "description": "Gerätegeführter Kurztest vor jedem Patienten: Dichtigkeit, Schlauch-Compliance, Sensorkalibrierung und Ventilfunktion."
+    },
+    {
+      "name": "Kalibrierung der Sensoren",
+      "ref": "kalibrierung",
+      "description": "O₂-Sensor (21 % und 100 %), Flowsensor und Nullpunkt der Drucksensoren nach Herstellerangabe."
+    }
+  ],
+  "diagram": {
+    "title": "Pneumatisch-elektronisches Funktionsschema",
+    "caption": "Vereinfachtes Funktionsschema eines Intensivbeatmungsgeräts mit Turbine (Luft) und Proportionalventil (O₂). Gasflüsse durchgezogen, Mess- und Steuersignale als Signal-/Datenkanten. Kein Abbild eines konkreten Modells.",
+    "width": 960,
+    "height": 470,
+    "nodes": [
+      {
+        "id": "o2",
+        "label": "O₂-Versorgung\n(zentral/Flasche)",
+        "kind": "source",
+        "x": 95,
+        "y": 80
+      },
+      {
+        "id": "luft",
+        "label": "Raumluft\n(Ansaugfilter)",
+        "kind": "source",
+        "x": 95,
+        "y": 235
+      },
+      {
+        "id": "prop",
+        "label": "O₂-Proportional-\nventil",
+        "ref": "proportionalventil",
+        "kind": "actuator",
+        "x": 285,
+        "y": 80
+      },
+      {
+        "id": "turb",
+        "label": "Turbine\n(BLDC-Antrieb)",
+        "ref": "turbine",
+        "kind": "actuator",
+        "x": 285,
+        "y": 235
+      },
+      {
+        "id": "mix",
+        "label": "Mischstrecke /\nSicherheitsventil",
+        "ref": "gasgesetze",
+        "kind": "process",
+        "x": 475,
+        "y": 80
+      },
+      {
+        "id": "insp",
+        "label": "Insp. Flow- und\nDrucksensor",
+        "ref": "flowsensor",
+        "kind": "sensor",
+        "x": 665,
+        "y": 80
+      },
+      {
+        "id": "o2s",
+        "label": "O₂-Sensor",
+        "ref": "sauerstoffsensor",
+        "kind": "sensor",
+        "x": 665,
+        "y": 235
+      },
+      {
+        "id": "bef",
+        "label": "Befeuchter /\nHME-Filter",
+        "ref": "atemgasbefeuchter",
+        "kind": "process",
+        "x": 860,
+        "y": 80
+      },
+      {
+        "id": "pat",
+        "label": "Patient\n(Lunge)",
+        "ref": "lunge",
+        "kind": "patient",
+        "x": 860,
+        "y": 235
+      },
+      {
+        "id": "expf",
+        "label": "Exsp. Flow-\nsensor",
+        "ref": "flowsensor",
+        "kind": "sensor",
+        "x": 860,
+        "y": 395
+      },
+      {
+        "id": "expv",
+        "label": "Exspirations-\nventil (PEEP)",
+        "ref": "exspirationsventil",
+        "kind": "actuator",
+        "x": 665,
+        "y": 395
+      },
+      {
+        "id": "ctrl",
+        "label": "Steuer- und\nÜberwachungsrechner",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 475,
+        "y": 312,
+        "w": 170
+      },
+      {
+        "id": "ui",
+        "label": "Display, Bedienung\nund Alarme",
+        "ref": "display-bedienoberflaeche",
+        "kind": "output",
+        "x": 285,
+        "y": 395,
+        "w": 160
+      },
+      {
+        "id": "pwr",
+        "label": "Netzteil + Akku",
+        "ref": "lithium-ionen-akku",
+        "kind": "source",
+        "x": 95,
+        "y": 395
+      }
+    ],
+    "edges": [
+      {
+        "from": "o2",
+        "to": "prop",
+        "kind": "gas",
+        "label": "O₂"
+      },
+      {
+        "from": "luft",
+        "to": "turb",
+        "kind": "gas",
+        "label": "Luft"
+      },
+      {
+        "from": "prop",
+        "to": "mix",
+        "kind": "gas"
+      },
+      {
+        "from": "turb",
+        "to": "mix",
+        "kind": "gas"
+      },
+      {
+        "from": "mix",
+        "to": "insp",
+        "kind": "gas",
+        "label": "Atemgas"
+      },
+      {
+        "from": "insp",
+        "to": "o2s",
+        "kind": "gas",
+        "label": "Messgas"
+      },
+      {
+        "from": "insp",
+        "to": "bef",
+        "kind": "gas"
+      },
+      {
+        "from": "bef",
+        "to": "pat",
+        "kind": "gas",
+        "label": "Inspiration"
+      },
+      {
+        "from": "pat",
+        "to": "expf",
+        "kind": "gas",
+        "label": "Exspiration"
+      },
+      {
+        "from": "expf",
+        "to": "expv",
+        "kind": "gas"
+      },
+      {
+        "from": "insp",
+        "to": "ctrl",
+        "kind": "signal",
+        "label": "p, V̇"
+      },
+      {
+        "from": "o2s",
+        "to": "ctrl",
+        "kind": "signal",
+        "label": "FiO₂"
+      },
+      {
+        "from": "expf",
+        "to": "ctrl",
+        "kind": "signal"
+      },
+      {
+        "from": "ctrl",
+        "to": "prop",
+        "kind": "signal",
+        "label": "Stellsignal"
+      },
+      {
+        "from": "ctrl",
+        "to": "turb",
+        "kind": "signal",
+        "label": "Drehzahl"
+      },
+      {
+        "from": "ctrl",
+        "to": "expv",
+        "kind": "signal",
+        "label": "PEEP-Soll"
+      },
+      {
+        "from": "ctrl",
+        "to": "ui",
+        "kind": "data",
+        "label": "Kurven, Alarme"
+      },
+      {
+        "from": "pwr",
+        "to": "ui",
+        "kind": "power"
+      },
+      {
+        "from": "pwr",
+        "to": "turb",
+        "kind": "power"
+      }
+    ]
+  },
+  "images": [
+    {
+      "src": "img/devices/beatmungsgeraet-aufbau.svg",
+      "kind": "schema",
+      "caption": "Schematischer Aufbau eines Intensivbeatmungsgeräts mit Gaseinlass, Gasquelle, Inspirations- und Exspirationstrakt, Doppelschlauchsystem und Bedieneinheit (eigene Darstellung, kein reales Modell)."
+    },
+    {
+      "src": "img/devices/beatmungsgeraet-prinzip.svg",
+      "kind": "schema",
+      "caption": "Druck- und Flowkurve bei volumenkontrollierter Beatmung mit konstantem Flow: Spitzendruck, Plateaudruck und PEEP sowie die Bewegungsgleichung des respiratorischen Systems (eigene Darstellung, Beispielwerte)."
+    }
+  ],
+  "paths": [
+    [
+      "beatmungsgeraet",
+      "flowsensor",
+      "stroemungslehre",
+      "atemmechanik",
+      "lunge"
+    ],
+    [
+      "beatmungsgeraet",
+      "drucksensor",
+      "druckmessung",
+      "druck",
+      "atemmechanik"
+    ],
+    [
+      "beatmungsgeraet",
+      "sauerstoffsensor",
+      "gasaustausch",
+      "haemoglobin"
+    ]
+  ],
+  "related": [
+    "anaesthesiegeraet",
+    "transportbeatmungsgeraet",
+    "heimbeatmungsgeraet",
+    "cpap-geraet",
+    "high-flow-geraet",
+    "kapnometer",
+    "patientenmonitor",
+    "ecmo",
+    "blutgasanalysator",
+    "absauggeraet",
+    "iso-80601-2-12",
+    "atemmechanik",
+    "turbine",
+    "exspirationsventil",
+    "flowsensor"
+  ],
+  "sources": [
+    "oczenski-2017",
+    "tobin-2013",
+    "kramme-2017",
+    "hering-2018",
+    "iso-80601-2-12",
+    "iec-60601-1",
+    "iec-60601-1-8",
+    "iec-62353",
+    "mdr-2017",
+    "mdcg-2021-24",
+    "mpbetreibv",
+    "din-31051",
+    "ardsnet-2000",
+    "awmf-s3-invasive-beatmung",
+    "tipler-2019"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

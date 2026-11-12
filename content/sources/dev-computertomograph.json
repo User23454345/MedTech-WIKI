@@ -1,0 +1,80 @@
+[
+  {
+    "id": "iec-60601-2-44",
+    "kind": "norm",
+    "title": "IEC 60601-2-44 – Medizinische elektrische Geräte – Teil 2-44: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Röntgeneinrichtungen für die Computertomographie",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-44 (VDE 0750-2-44)",
+    "note": "Gerätespezifische Sicherheitsnorm für CT-Röntgeneinrichtungen, u. a. mit Festlegungen zur Dosisangabe (CTDI, DLP). Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-61223-2-6",
+    "kind": "norm",
+    "title": "IEC 61223-2-6 – Bewertung und routinemäßige Prüfung in Abteilungen für medizinische Bildgebung – Teil 2-6: Konstanzprüfungen an Röntgeneinrichtungen für die Computertomographie",
+    "publisher": "IEC / in Deutschland als DIN EN 61223-2-6",
+    "note": "Deutsche Fassung DIN EN 61223-2-6:2008-12 (EN 61223-2-6:2007); Nachfolgerin der früheren DIN 6868-6. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-61223-3-5",
+    "kind": "norm",
+    "title": "IEC 61223-3-5 – Bewertung und routinemäßige Prüfung in Abteilungen für medizinische Bildgebung – Teil 3-5: Abnahmeprüfungen und Konstanzprüfungen – Leistungsmerkmale zur Bildgebung von Röntgeneinrichtungen für die Computertomographie",
+    "publisher": "IEC / in Deutschland als DIN EN IEC 61223-3-5",
+    "note": "Norm für die Abnahmeprüfung (in neueren Ausgaben auch Konstanzprüfung) von CT-Systemen. Titel sinngemäß wiedergegeben; maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "qs-rl-roentgendiagnostik-2024",
+    "kind": "behoerde",
+    "authors": "Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV)",
+    "title": "Qualitätssicherungs-Richtlinie für Abnahme- und Konstanzprüfungen nach §§ 115, 116 und 117 StrlSchV bei Röntgeneinrichtungen zur Untersuchung am Menschen (QS-RL Röntgendiagnostik)",
+    "year": "2024",
+    "note": "Richtlinie vom 28.08.2024, geändert durch Rundschreiben vom 27.05.2025; konkretisiert Abnahme- und Konstanzprüfungen, u. a. für CT-Einrichtungen (alternativ zu DIN EN 61223-2-6). Titel sinngemäß; maßgeblich ist die jeweils aktuelle Fassung."
+  },
+  {
+    "id": "hsieh-2015",
+    "kind": "buch",
+    "authors": "Hsieh J",
+    "title": "Computed Tomography: Principles, Design, Artifacts, and Recent Advances",
+    "edition": "3. Aufl.",
+    "publisher": "SPIE Press, Bellingham (WA)",
+    "year": "2015"
+  },
+  {
+    "id": "buzug-2008",
+    "kind": "buch",
+    "authors": "Buzug TM",
+    "title": "Computed Tomography: From Photon Statistics to Modern Cone-Beam CT",
+    "publisher": "Springer, Berlin/Heidelberg",
+    "year": "2008"
+  },
+  {
+    "id": "hounsfield-1973",
+    "kind": "artikel",
+    "authors": "Hounsfield GN",
+    "title": "Computerized transverse axial scanning (tomography): Part 1. Description of system",
+    "publisher": "British Journal of Radiology 46(552): 1016–1022",
+    "year": "1973"
+  },
+  {
+    "id": "radon-1917",
+    "kind": "artikel",
+    "authors": "Radon J",
+    "title": "Über die Bestimmung von Funktionen durch ihre Integralwerte längs gewisser Mannigfaltigkeiten",
+    "publisher": "Berichte über die Verhandlungen der Königlich-Sächsischen Gesellschaft der Wissenschaften zu Leipzig, Mathematisch-Physische Klasse 69: 262–277",
+    "year": "1917",
+    "note": "Mathematische Grundlage der tomographischen Rekonstruktion (Radon-Transformation)."
+  },
+  {
+    "id": "feldkamp-1984",
+    "kind": "artikel",
+    "authors": "Feldkamp LA, Davis LC, Kress JW",
+    "title": "Practical cone-beam algorithm",
+    "publisher": "Journal of the Optical Society of America A 1(6): 612–619",
+    "year": "1984"
+  },
+  {
+    "id": "bfs-drw",
+    "kind": "behoerde",
+    "authors": "Bundesamt für Strahlenschutz (BfS)",
+    "title": "Diagnostische Referenzwerte für diagnostische und interventionelle Röntgenanwendungen",
+    "note": "Vom BfS bekannt gemachte diagnostische Referenzwerte, u. a. CTDIvol und DLP für typische CT-Untersuchungen; maßgeblich ist die jeweils aktuelle Bekanntmachung."
+  }
+]

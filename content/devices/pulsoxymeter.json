@@ -1,0 +1,575 @@
+{
+  "id": "pulsoxymeter",
+  "type": "device",
+  "title": "Pulsoxymeter",
+  "aliases": [
+    "Pulsoximeter",
+    "Pulsoximetrie",
+    "Pulsoxymetrie",
+    "SpO₂-Messgerät",
+    "Sättigungsmessgerät",
+    "Pulse Oximeter",
+    "Fingerpulsoximeter"
+  ],
+  "category": "geraete",
+  "deviceGroup": "monitoring",
+  "rank": 7,
+  "domains": [
+    "anaesthesiologie",
+    "intensivmedizin",
+    "notfallmedizin",
+    "neonatologie",
+    "pneumologie"
+  ],
+  "summary": "Ein Pulsoxymeter misst nichtinvasiv die arterielle Sauerstoffsättigung des Hämoglobins (SpO₂) und die Pulsfrequenz, indem es Gewebe mit rotem und infrarotem Licht durchleuchtet und den pulsierenden Anteil der Lichtabsorption auswertet. Es ist Standard der Überwachung in Anästhesie, Intensiv- und Notfallmedizin.",
+  "body": "## Geschichte\n\nDie Idee, die Sauerstoffsättigung optisch durch das Gewebe zu messen, ist älter als die Pulsoxymetrie. Frühe Ohroximeter der 1930er- und 1940er-Jahre arbeiteten mit erwärmtem, hyperämisiertem Ohr und mussten aufwendig individuell kalibriert werden, weil sie nicht zwischen arteriellem Blut und Gewebe unterscheiden konnten. Den Durchbruch brachte Anfang der 1970er-Jahre der japanische Ingenieur **Takuo Aoyagi** bei [[nihon-kohden|Nihon Kohden]]: Er erkannte, dass sich aus dem *pulsatilen* Anteil der Lichtabsorption bei zwei Wellenlängen die arterielle Sättigung bestimmen lässt – das Prinzip der Ratio of Ratios. In den 1980er-Jahren machten LEDs, Photodioden und Mikroprozessoren kleine, robuste Geräte möglich; die Pulsoxymetrie verbreitete sich rasch und wurde zum Standard der Narkoseüberwachung [@jubran-2015]. Siehe auch [[geschichte-medizintechnik]].\n\n## Aktuelle Entwicklungen\n\n* **Bewegungs- und Low-Perfusion-Robustheit:** Fortgeschrittene Signalverarbeitung reduziert Fehlalarme und Messausfälle – ein wichtiger Beitrag gegen [[alarmmuedigkeit|Alarmmüdigkeit]].\n* **Genauigkeit über alle Hauttöne:** Nach Studien zur systematischen Überschätzung bei dunkler Hautpigmentierung [@sjoding-2020] überarbeiten Normungsgremien und Zulassungsbehörden die Anforderungen an Validierungsstudien (Diversität der Proband:innen, objektive Erfassung des Hauttons).\n* **Mehrwellenlängen-Puls-CO-Oximetrie:** nichtinvasive Schätzwerte für Carboxy-, Methämoglobin und Gesamthämoglobin.\n* **Drahtlose Sensoren und kontinuierliche Überwachung auf Normalstation:** Kombination mit Frühwarnsystemen, Weiterleitung an mobile Endgeräte.\n* **Consumer-Wearables:** Reflexionssensoren in Uhren und Ringen. Für klinische Entscheidungen sind nur Produkte mit entsprechender medizinischer Zweckbestimmung und nachgewiesener Genauigkeit geeignet ([[medizinprodukt]], [[software-medizinprodukt]]).",
+  "riskClass": {
+    "value": "IIa / IIb",
+    "evidence": "typisch",
+    "note": "Pulsoxymeter sind aktive Diagnose- und Überwachungsprodukte und fallen unter **Regel 10** der [[mdr|MDR]] Anhang VIII. Produkte, die eine direkte Diagnose oder Kontrolle vitaler Körperfunktionen ermöglichen, gehören danach zur Klasse IIa; sind sie speziell für die Überwachung vitaler physiologischer Parameter bestimmt, deren Änderungen zu einer unmittelbaren Gefahr für den Patienten führen können (z. B. Atmung), zur **Klasse IIb** [@mdr-2017] [@mdcg-2021-24]. Geräte für die kontinuierliche, alarmgestützte Überwachung in Anästhesie und Intensivmedizin werden daher typischerweise als IIb eingestuft, reine Stichprobengeräte häufig als IIa. Maßgeblich ist die Klassifizierung durch den Hersteller auf Grundlage seiner [[zweckbestimmung|Zweckbestimmung]] ([[risikoklassen]]).",
+    "sources": [
+      "mdr-2017",
+      "mdcg-2021-24"
+    ]
+  },
+  "sections": {
+    "purpose": "## Medizinischer Zweck\n\nEin Pulsoxymeter misst **nichtinvasiv, kontinuierlich und ohne Blutentnahme** die *funktionelle arterielle Sauerstoffsättigung* des Hämoglobins (SpO₂) sowie die Pulsfrequenz. Es durchleuchtet dazu ein gut durchblutetes Körperteil – meist Finger, Ohrläppchen, bei Neugeborenen Hand oder Fuß – mit rotem und infrarotem Licht und wertet den pulsierenden Anteil des durchgelassenen Lichts aus ([[photoplethysmographie|Photoplethysmographie]]) [@jubran-2015] [@webster-2010].\n\nDie Sauerstoffsättigung beschreibt, welcher Anteil des [[haemoglobin|Hämoglobins]] im arteriellen Blut mit Sauerstoff beladen ist. Sie ist ein zentraler Indikator für die Funktion der Kette aus Ventilation, [[gasaustausch|Gasaustausch]] in der [[lunge|Lunge]] und Sauerstofftransport im [[blutkreislauf|Blutkreislauf]]. Eine **Hypoxämie** (zu niedriger Sauerstoffgehalt im Blut) kann klinisch lange unbemerkt bleiben – die Zyanose wird erst bei deutlicher Entsättigung sichtbar. Das Pulsoxymeter macht sie früh und quantitativ erkennbar [@jubran-2015].\n\n| Messgröße | Bedeutung | Einheit |\n|---|---|---|\n| **SpO₂** | pulsoxymetrisch bestimmte funktionelle Sauerstoffsättigung | % |\n| **Pulsfrequenz (PR)** | aus dem Plethysmogramm abgeleitete Frequenz der peripheren Pulswellen | /min |\n| **Plethysmogramm** | Kurve des pulsatilen Lichtabsorptionsanteils; Qualitätsindikator für das Signal | – |\n| **Perfusionsindex (PI)** | Verhältnis pulsatiler zu nicht-pulsatiler Lichtabsorption; Maß für die periphere Durchblutung am Messort | % |\n\n> [!hinweis] Die Bezeichnungen sind genau zu unterscheiden: **SaO₂** ist die im arteriellen Blut mit einem CO-Oximeter (z. B. im [[blutgasanalysator|Blutgasanalysator]]) gemessene Sättigung, **SpO₂** der pulsoxymetrische Schätzwert dafür. Das Pulsoxymeter misst weder den Sauerstoffpartialdruck (paO₂) noch den Sauerstoffgehalt des Blutes und liefert keine Information über die Ventilation (CO₂-Elimination).\n\n### Stellenwert für die Patientensicherheit\n\nDie Pulsoxymetrie gilt seit den 1980er-Jahren als Standard der Überwachung in Anästhesie, Intensiv- und Notfallmedizin [@jubran-2015]. Sie warnt vor Hypoxämie durch Atemwegsverlegung, Fehlintubation, Diskonnektion vom [[beatmungsgeraet|Beatmungsgerät]] oder Atemdepression – bevor Organschäden entstehen. Ihr Nutzen hängt aber vollständig von **richtig angelegten Sensoren, sinnvoll eingestellten Alarmgrenzen** und dem Wissen um ihre physikalischen Grenzen ab ([[patientensicherheit]]). Die [[zweckbestimmung|Zweckbestimmung]] des Herstellers legt fest, für welche Patientengruppen (Erwachsene, Kinder, Neugeborene), Einsatzorte (Klinik, Transport, häusliche Umgebung) und Betriebsarten (Stichprobenmessung oder kontinuierliche Überwachung) ein Gerät vorgesehen ist.",
+    "applications": "## Einsatzgebiete\n\nPulsoxymetrie ist eine der am häufigsten eingesetzten Messmethoden im Krankenhaus. Sie begegnet Medizintechniker:innen in drei Bauformen: als eigenständiges Gerät, als Parametermodul im [[patientenmonitor|Patientenmonitor]] und als Funktion in anderen Geräten (z. B. [[defibrillator|Defibrillatoren]], Transportmonitoren, [[polysomnograph|Polysomnographen]]).\n\n| Bereich | Typische Anwendung | Besonderheiten |\n|---|---|---|\n| [[anaesthesiologie|Anästhesie]] und OP | kontinuierliche Überwachung während Narkose und Sedierung | Standardparameter; Kombination mit [[kapnometer|Kapnographie]] zur Beurteilung der Ventilation |\n| [[intensivmedizin|Intensivmedizin]] | Dauerüberwachung beatmeter und spontan atmender Patient:innen, Steuerung der Sauerstofftherapie | Zentralüberwachung, Trendspeicher, Alarmmanagement |\n| [[notfallmedizin|Notfall- und Rettungsmedizin]] | Ersteinschätzung, Transport, Reanimationsnachsorge | robuste, akkubetriebene Geräte; Bewegungs- und Fremdlichtstörungen häufig |\n| [[neonatologie|Neonatologie]] | Überwachung Früh- und Neugeborener, Steuerung der O₂-Zufuhr im [[inkubator|Inkubator]] | enge Zielbereiche wegen Risiken von Hypoxie **und** Hyperoxie; Sensoren an Hand oder Fuß |\n| [[pneumologie|Pneumologie]] | Belastungstests, Einstellung von [[sauerstoffkonzentrator|Langzeit-Sauerstofftherapie]] und [[high-flow-geraet|High-Flow-Therapie]], Schlafdiagnostik | Trendaufzeichnung über Stunden, Entsättigungsindizes |\n| Normalstation, Aufwachraum | Spotcheck-Messungen, Überwachung nach Opioidgabe | Handgeräte, Vitalzeichenmonitore, drahtlose Sensoren |\n| Häusliche Umgebung | Heimbeatmung, Heim-O₂-Therapie, Telemonitoring | Geräte für die häusliche Gesundheitsversorgung nach [[iec-60601-1-11]] |\n\n### Bauformen\n\n* **Fingerclip-Kompaktgeräte (Fingertip-Oximeter):** Sensor, Elektronik und Anzeige in einem Gehäuse; überwiegend für Stichprobenmessungen.\n* **Handgeräte mit Kabelsensor:** tragbare Geräte mit Display für Plethysmogramm und Alarme; für Spotcheck und kontinuierliche Überwachung, häufig im Transport.\n* **Tisch- bzw. Bettgeräte:** Netz- und Akkubetrieb, Trendspeicher, Schwesternrufanbindung oder Datenschnittstelle.\n* **SpO₂-Modul im Multiparametermonitor:** identisches Messprinzip, die Signalverarbeitung läuft im Modul, Anzeige und Alarmierung im Monitor.\n* **Puls-CO-Oximeter:** Mehrwellenlängengeräte, die zusätzlich Dyshämoglobine (Carboxy- und Methämoglobin) oder einen Schätzwert des Gesamthämoglobins bestimmen.\n* **Wearables:** Smartwatches und Fitness-Tracker mit Reflexionssensoren. Sie sind häufig **keine** Medizinprodukte mit entsprechender Zweckbestimmung und dürfen nicht mit klinischen Pulsoxymetern gleichgesetzt werden.\n\n> [!praxis] In der Medizintechnik-Abteilung ist es sinnvoll, Pulsoxymeter-Sensoren, Verlängerungskabel und Geräte als **System** zu verwalten: Viele Hersteller erlauben nur ihre eigenen oder ausdrücklich freigegebenen Sensoren, weil die Kalibrierkurve auf die optischen Eigenschaften dieser Sensoren abgestimmt ist. Ein „passender“ Stecker allein garantiert keine korrekte Messung.",
+    "principle": "## Funktionsprinzip\n\nDie Pulsoxymetrie kombiniert zwei physikalische Ideen: die **Spektrophotometrie** – unterschiedliche Stoffe absorbieren Licht verschiedener Wellenlänge unterschiedlich stark – und die **Plethysmographie** – das arterielle Blutvolumen im Gewebe schwankt im Rhythmus des Herzschlags. Aus der Verknüpfung beider ergibt sich eine Messung, die selektiv das **arterielle** Blut erfasst, obwohl das Licht Haut, Gewebe, Knochen, venöses und arterielles Blut gleichermaßen durchdringt [@webster-2010] [@jubran-2015].\n\n### Physiologische Grundlage: Sauerstoffsättigung\n\nJedes Hämoglobinmolekül kann bis zu vier Sauerstoffmoleküle binden. Die **funktionelle Sauerstoffsättigung** bezieht das oxygenierte Hämoglobin (HbO₂) auf die Summe aus oxygeniertem und desoxygeniertem Hämoglobin (Hb):\n\n`SaO₂ (funktionell) = c(HbO₂) / [c(HbO₂) + c(Hb)] · 100 %`\n\nDie **fraktionelle Sättigung** bezieht HbO₂ dagegen auf das gesamte Hämoglobin einschließlich der Dyshämoglobine Carboxyhämoglobin (COHb) und Methämoglobin (MetHb):\n\n`FO₂Hb = c(HbO₂) / [c(HbO₂) + c(Hb) + c(COHb) + c(MetHb)] · 100 %`\n\nEin Zwei-Wellenlängen-Pulsoxymeter kann nur zwei Absorber unterscheiden und schätzt daher die funktionelle Sättigung – unter der Annahme, dass keine nennenswerten Dyshämoglobinkonzentrationen vorliegen [@jubran-2015].\n\nDer Zusammenhang zwischen Sättigung und Sauerstoffpartialdruck wird durch die S-förmige **Sauerstoffbindungskurve** beschrieben ([[haemoglobin]]) [@schmidt-lang-2019]:\n\n| paO₂ (ca.) | SaO₂ (ca.) | Bedeutung |\n|---|---|---|\n| 90–100 mmHg | 97–98 % | normale arterielle Werte beim Lungengesunden |\n| 60 mmHg | 90 % | Beginn des steilen Kurventeils – kleine pO₂-Abfälle bewirken große Sättigungsabfälle |\n| 40 mmHg | ca. 75 % | etwa gemischtvenöses Niveau |\n| ca. 27 mmHg | 50 % | Halbsättigungsdruck P₅₀ |\n\n> [!vereinfacht] Die Werte gelten für die Normalbedingungen der Standard-Bindungskurve (pH 7,4, 37 °C, normales 2,3-BPG). Azidose, Fieber und erhöhtes CO₂ verschieben die Kurve nach rechts, Alkalose und Hypothermie nach links ([[saeure-basen-haushalt]]). Wichtig für die Praxis: Im **flachen oberen Teil** der Kurve zeigt SpO₂ eine Hyperoxie praktisch nicht an – ein Wert von 99 % kann einem paO₂ von 100 mmHg ebenso entsprechen wie 400 mmHg.\n\n### Optische Grundlage: Absorptionsspektren von Hb und HbO₂\n\nOxygeniertes und desoxygeniertes Hämoglobin unterscheiden sich in ihrer Farbe – arterielles Blut ist hellrot, venöses dunkelrot. Messtechnisch drückt sich das in unterschiedlichen **molaren Extinktionskoeffizienten ε(λ)** aus ([[optik]]) [@webster-2010]:\n\n| Wellenlänge | Absorption Hb | Absorption HbO₂ | Funktion |\n|---|---|---|---|\n| **ca. 660 nm (rot)** | hoch | deutlich niedriger | empfindlich für desoxygeniertes Hb |\n| ca. 805 nm | gleich | gleich | **isosbestischer Punkt** – Absorption unabhängig von der Sättigung |\n| **ca. 880–940 nm (infrarot)** | niedriger | etwas höher | Referenzkanal, empfindlich für HbO₂ |\n\nDie Wellenlängen liegen im sogenannten **optischen Fenster** des Gewebes (etwa 600–1 000 nm): Darunter absorbieren Hämoglobin und Melanin sehr stark, darüber Wasser. Rot und Infrarot dringen daher mehrere Millimeter bis Zentimeter tief ein und erreichen – je nach Messort – die Gegenseite eines Fingers.\n\n### Lambert-Beer-Gesetz\n\nDie Abschwächung monochromatischen Lichts in einem absorbierenden Medium beschreibt das [[lambert-beer|Lambert-Beer-Gesetz]]:\n\n`I = I₀ · e^(−ε · c · d)`  bzw.  `A = ln(I₀ / I) = ε · c · d`\n\nmit eingestrahlter Intensität I₀, durchgelassener Intensität I, Extinktionskoeffizient ε, Konzentration c und optischer Weglänge d. Bei mehreren Absorbern addieren sich die Absorbanzen: `A = Σ εᵢ · cᵢ · dᵢ`.\n\nIm Gewebe ist dieses Gesetz nur näherungsweise gültig, weil Licht nicht nur absorbiert, sondern vor allem an Zellen und Fasern **gestreut** wird. Die effektive Weglänge ist dadurch wesentlich länger als die geometrische Dicke des Fingers und hängt von der Wellenlänge ab. Genau deshalb wird die Sättigung nicht direkt aus dem Lambert-Beer-Gesetz berechnet, sondern über eine **empirische Kalibrierkurve** ermittelt (siehe unten) [@webster-2010].\n\n### Pulsatile und nicht-pulsatile Signalanteile\n\nDas Licht, das die Photodiode erreicht, ist durch mehrere Schichten abgeschwächt:\n\n* Haut, Pigment, Gewebe, Knochen – zeitlich konstant,\n* venöses und kapilläres Blut – nahezu konstant (abgesehen von langsamen Schwankungen durch Atmung),\n* nicht-pulsatiler Anteil des arteriellen Blutes – konstant,\n* **pulsatiler Anteil des arteriellen Blutes** – im Herzrhythmus schwankend, weil sich die Arteriolen mit jeder Systole etwas weiten.\n\nDas Detektorsignal besteht daher aus einem großen Gleichanteil **DC** und einem kleinen Wechselanteil **AC**, der typischerweise nur etwa 0,1 % bis wenige Prozent des Gleichanteils beträgt. Diese Pulskurve ist das **Photoplethysmogramm (PPG)** [@webster-2010]. Der entscheidende Trick der Pulsoxymetrie: Nur der AC-Anteil stammt vom zusätzlich einströmenden *arteriellen* Blut. Wertet man ausschließlich ihn aus, fallen alle konstanten Absorber – Haut, Gewebe, venöses Blut – heraus.\n\n### Ratio of Ratios\n\nFür jede Wellenlänge wird der pulsatile Anteil auf den Gleichanteil normiert. Das Verhältnis der beiden normierten Signale ist die zentrale Messgröße **R** („Ratio of Ratios“) [@webster-2010] [@jubran-2015]:\n\n`R = (AC_rot / DC_rot) / (AC_IR / DC_IR)`\n\nDie Normierung auf DC hat erhebliche praktische Vorteile: Die absolute LED-Helligkeit, die Empfindlichkeit der Photodiode, die Dicke des Fingers und die Hautpigmentierung kürzen sich in erster Näherung heraus. Für kleine Pulsationen gilt näherungsweise `AC/DC ≈ ε · c · Δd`, sodass R im Wesentlichen das Verhältnis der Absorption des arteriellen Blutes bei Rot und Infrarot widerspiegelt – und damit von der Sättigung abhängt:\n\n* hohe Sättigung → wenig Hb → geringe Rotabsorption → **R klein** (ca. 0,4–0,5 bei ca. 100 %),\n* R ≈ 1 → SpO₂ um ca. 85 %,\n* niedrige Sättigung → viel Hb → hohe Rotabsorption → **R groß**.\n\nDie Zuordnung R → SpO₂ erfolgt über eine **Kalibrierkurve**, die der Hersteller in kontrollierten Desaturationsstudien an gesunden Proband:innen ermittelt: Die Proband:innen atmen sauerstoffarme Gasgemische, parallel werden arterielle Blutproben mit einem CO-Oximeter analysiert. Die Kurve ist geräte- und sensorspezifisch und im Speicher des Geräts abgelegt. Weil Proband:innen nicht beliebig tief entsättigt werden können, ist die Genauigkeit unterhalb von etwa 70 % SaO₂ in der Regel nicht spezifiziert [@jubran-2015] [@iso-80601-2-61].\n\n> [!vereinfacht] Eine häufig zitierte lineare Näherung für den mittleren Bereich der Kalibrierkurve lautet `SpO₂ ≈ 110 % − 25 % · R`. Reale Geräte verwenden nichtlineare, empirisch bestimmte Kurven bzw. Tabellen, die zudem von den tatsächlichen Wellenlängen der verwendeten LEDs abhängen.\n\n> [!beispiel] **Rechenbeispiel.** Ein Finger liefert im Rotkanal einen Gleichanteil von DC_rot = 1,20 V und einen Pulshub von AC_rot = 12 mV, im Infrarotkanal DC_IR = 1,60 V und AC_IR = 32 mV (beispielhafte Werte nach der Transimpedanzverstärkung).\n>\n> * normierter Rotanteil: 0,012 V / 1,20 V = 0,010 (1,0 %)\n> * normierter IR-Anteil: 0,032 V / 1,60 V = 0,020 (2,0 %)\n> * R = 0,010 / 0,020 = **0,50**\n> * mit der linearen Näherung: SpO₂ ≈ 110 % − 25 % · 0,50 = **97,5 %**, angezeigt als 97 % bzw. 98 %.\n>\n> Sinkt die Sättigung, steigt die Rotabsorption des arteriellen Blutes: Bei AC_rot = 24 mV (sonst gleiche Werte) wird R = 0,020 / 0,020 = 1,0 und SpO₂ ≈ 85 %. Der **Perfusionsindex** im Ausgangsbeispiel beträgt PI = AC_IR / DC_IR · 100 % = 2,0 %.\n\n### Optoelektronische Messung und Zeitmultiplex\n\nDer Sensor enthält zwei Leuchtdioden (rot und infrarot) und **eine** gemeinsame Silizium-Photodiode, die beide Wellenlängen erfasst. Damit die Elektronik die Signale unterscheiden kann, werden die LEDs im **Zeitmultiplex** betrieben – typischerweise in einem Zyklus aus *Rot an – IR an – beide aus* mit Wiederholraten im Bereich von einigen hundert Hertz bis wenigen Kilohertz (gerätetypabhängig) [@webster-2010]:\n\n1. **Rot-Phase:** Photostrom = Rotsignal + Umgebungslicht\n2. **IR-Phase:** Photostrom = IR-Signal + Umgebungslicht\n3. **Dunkelphase:** Photostrom = nur Umgebungslicht (und Dunkelstrom)\n\nDurch Subtraktion des Dunkelwerts wird der Einfluss von Umgebungslicht (Raumbeleuchtung, OP-Leuchte, Phototherapie) weitgehend entfernt – solange die Photodiode nicht übersteuert wird.\n\nDie Photodiode liefert einen Strom im Bereich von Nano- bis Mikroampere. Ein **Transimpedanzverstärker** ([[operationsverstaerker|Operationsverstärker]] mit Rückkopplungswiderstand R_f) wandelt ihn in eine Spannung um: `U_aus = −I_ph · R_f`. Nach Demultiplexen, Filterung und Digitalisierung im [[analog-digital-wandler|A/D-Wandler]] stehen zwei Zeitreihen (Rot und IR) zur Verfügung. Moderne Geräte digitalisieren früh mit hochauflösenden Wandlern und erledigen Demultiplex und Filterung digital.\n\n### Regelung der LED-Intensität\n\nFingerdicke, Pigmentierung und Durchblutung unterscheiden sich stark zwischen Patient:innen. Damit der Gleichanteil weder im Rauschen untergeht noch den Verstärker übersteuert, enthält jedes Pulsoxymeter einen **Regelkreis** für die Lichtintensität ([[regelkreis]]):\n\n* **Regelgröße:** DC-Pegel des jeweiligen Kanals nach der Verstärkung,\n* **Sollwert:** ein Arbeitspunkt im mittleren Aussteuerungsbereich des A/D-Wandlers,\n* **Stellgröße:** LED-Strom (über eine geregelte Stromquelle, oft mit [[pwm|PWM]] bzw. D/A-Wandler eingestellt) und ggf. die Verstärkung des Transimpedanzverstärkers.\n\nBeide Kanäle werden unabhängig geregelt. Da R aus normierten Größen gebildet wird, beeinflusst die Regelung das Messergebnis nicht, solange der Arbeitspunkt im linearen Bereich bleibt. Gelingt die Regelung nicht – etwa bei sehr dicken oder ödematösen Fingern, starker Pigmentierung oder abgefallenem Sensor –, meldet das Gerät „schwaches Signal“ oder „Sensor ab“.\n\n### Digitale Signalverarbeitung\n\nAus den Rohsignalen werden SpO₂, Pulsfrequenz und Qualitätsindikatoren in mehreren Schritten berechnet [@webster-2010]:\n\n| Schritt | Verfahren | Zweck |\n|---|---|---|\n| Vorfilterung | Bandpass (grob ca. 0,5–5 Hz) für AC, Tiefpass für DC ([[filter]]) | Trennung von Pulssignal, Atemschwankung und Rauschen |\n| Pulserkennung | Erkennung von Maxima/Minima bzw. Spektralanalyse | Pulsfrequenz, Bestimmung von AC je Pulsschlag |\n| R-Berechnung | Peak-to-Peak-Verfahren oder Regression zwischen Rot- und IR-Signal | robuster Schätzwert für R |\n| Kalibrierung | Kennlinie bzw. Tabelle R → SpO₂ | Messwert |\n| Mittelung | gleitender Mittelwert über mehrere Sekunden (einstellbar) | Rauschunterdrückung; längere Mittelung = ruhigerer Wert, aber verzögerte Alarmierung |\n| Plausibilität | Signalqualitätsindex, Artefakterkennung | Unterdrückung unplausibler Werte, Hinweise „Signal schwach“ |\n\nDie größte Herausforderung sind **Bewegungsartefakte**. Bei Bewegung wird vor allem venöses Blut verschoben; es erzeugt AC-Anteile, die gleichzeitig in Rot und IR auftreten und deren Verhältnis eher der venösen Sättigung entspricht. Ein einfaches Gerät berechnet dann ein falsches R – bei großen Artefakten tendiert der angezeigte Wert typischerweise in Richtung R ≈ 1 (ca. 85 %). Hersteller setzen daher **adaptive Filter**, Frequenzanalysen und eigene Verfahren zur Trennung arterieller und venöser Signalanteile ein; die Details sind herstellerspezifisch und meist proprietär ([[bewegungsartefakt]]) [@jubran-2015].\n\n### Grenzen und Störgrößen\n\n| Störgröße | Wirkung auf SpO₂ | Ursache |\n|---|---|---|\n| **Carboxyhämoglobin** (CO-Vergiftung, Rauchgas) | **falsch hoch** | COHb absorbiert bei 660 nm ähnlich wie HbO₂; ein Zwei-Wellenlängen-Gerät zählt es näherungsweise als oxygeniert |\n| **Methämoglobin** | Tendenz gegen ca. 85 % | MetHb absorbiert bei Rot und IR stark, R strebt gegen 1 |\n| Intravasale Farbstoffe (z. B. Methylenblau) | vorübergehend falsch niedrig | zusätzliche Rotabsorption |\n| Nagellack, Kunstnägel | je nach Farbe falsch niedrig oder Messausfall | Absorption im Strahlengang |\n| Niedrige Perfusion (Schock, Hypothermie, Vasokonstriktion) | Messausfall, erhöhte Streuung | sehr kleiner AC-Anteil, schlechter Signal-Rausch-Abstand |\n| Venöse Pulsationen (Trikuspidalinsuffizienz, zu fest sitzender Sensor) | falsch niedrig | venöses Blut trägt zum AC-Anteil bei |\n| Optischer Shunt, Fremdlicht | unplausible Werte | Licht erreicht die Photodiode am Gewebe vorbei bzw. Übersteuerung |\n| Starke Hautpigmentierung | Tendenz zur **Überschätzung**, besonders bei niedriger Sättigung | Melaninabsorption, Kalibrierung an überwiegend hellhäutigen Kollektiven [@sjoding-2020] |\n| Schwere Anämie | erhöhte Streuung, v. a. bei Hypoxämie | geringe Absorberkonzentration |\n\n> [!warnung] Bei Verdacht auf **Kohlenmonoxidvergiftung** (Brandrauch, Abgase, defekte Heizung) darf ein normaler SpO₂-Wert nicht beruhigen: Das Standard-Pulsoxymeter kann eine lebensbedrohliche Hypoxie vollständig maskieren. Maßgeblich ist die CO-Oximetrie einer Blutprobe; Mehrwellenlängengeräte können einen nichtinvasiven Schätzwert für COHb liefern [@jubran-2015].\n\n> [!belegt] In einer retrospektiven Analyse gepaarter Messungen trat eine **okkulte Hypoxämie** (arterielle Sättigung unter 88 % trotz SpO₂ von 92–96 %) bei Schwarzen Patient:innen etwa dreimal so häufig auf wie bei weißen [@sjoding-2020]. Seitdem werden Anforderungen an die Zusammensetzung der Probandenkollektive in Validierungsstudien international verschärft.\n\n### Antwortzeit und Messort\n\nZwischen einer Änderung der Sättigung in der Lunge und der Anzeige vergehen mehrere Sekunden bis deutlich über eine halbe Minute. Die Verzögerung setzt sich zusammen aus der **Kreislaufzeit** von der Lunge zum Messort und der **Mittelungszeit** des Algorithmus. Zentrale Messorte (Ohrläppchen, Stirn) reagieren schneller als der Finger, besonders bei Vasokonstriktion [@jubran-2015].\n\n### Transmission und Reflexion\n\n* **Transmissionspulsoxymetrie:** LEDs und Photodiode liegen sich gegenüber (Finger, Ohrläppchen, Fuß von Neugeborenen). Hohe Signalamplitude, Standardverfahren.\n* **Reflexionspulsoxymetrie:** LEDs und Photodiode liegen nebeneinander auf derselben Hautseite (Stirn, Handgelenk); erfasst rückgestreutes Licht. Geringere AC-Anteile, empfindlich für Anpressdruck – aber an Orten einsetzbar, die sich nicht durchleuchten lassen.\n\n### Mehrwellenlängen-Verfahren\n\nMit mehr als zwei Wellenlängen lassen sich mehr Absorber unterscheiden. Puls-CO-Oximeter verwenden dazu zusätzliche LEDs im roten und nahinfraroten Bereich und bestimmen neben SpO₂ auch Schätzwerte für **SpCO** (Carboxyhämoglobin), **SpMet** (Methämoglobin) und **SpHb** (Gesamthämoglobin). Diese Werte ersetzen keine Laboranalyse, eignen sich aber als Trend- und Screeningparameter [@masimo-rad97].",
+    "construction": "## Technischer Aufbau\n\nEin Pulsoxymeter ist ein kompaktes optoelektronisches Messsystem. Unabhängig von der Bauform finden sich immer dieselben Baugruppen.\n\n### Sensor\n\n| Element | Ausführung | Funktion |\n|---|---|---|\n| Rot-LED | Emission um ca. 660 nm | Lichtquelle für den Hb-empfindlichen Kanal |\n| IR-LED | Emission ca. 880–940 nm | Lichtquelle für den Referenzkanal |\n| Photodiode | Silizium-PIN-Photodiode | empfängt beide Wellenlängen nacheinander |\n| Kodierelement | Kodierwiderstand oder Speicherchip im Stecker (herstellerabhängig) | teilt dem Gerät Sensortyp, Kalibrierdaten oder Wellenlängenklasse mit |\n| Gehäuse | Clip (Silikon/Kunststoff), Klebe- oder Wickelsensor | lichtdichte, druckarme Positionierung |\n| Kabel | geschirmt, mit Steckverbinder | Übertragung der kleinen Photoströme und der LED-Ströme |\n\nDie Emissionswellenlänge einer LED streut fertigungsbedingt um einige Nanometer und verschiebt sich mit der Temperatur. Da die Absorption von Hb bei 660 nm steil vom Wellenlängenwert abhängt, sind Sensor und Kalibrierkurve aufeinander abgestimmt – ein Grund, warum Sensoren nicht beliebig zwischen Systemen getauscht werden können [@webster-2010].\n\n**Sensortypen:**\n\n* **Wiederverwendbare Fingerclips** – für Spotcheck und kurze Überwachung; müssen nach jeder Anwendung gereinigt bzw. desinfiziert werden ([[aufbereitung]], [[desinfektion]]).\n* **Einweg-Klebesensoren** – für Dauerüberwachung, Kinder und Neugeborene; sicherer Sitz, geringere Bewegungsartefakte, kein Aufbereitungsaufwand.\n* **Ohr-, Stirn- und Mehrzwecksensoren** – für zentrale Messorte bei schlechter peripherer Perfusion.\n\n### Analoges Front-End\n\n* **LED-Treiber:** geregelte Stromquellen für beide LEDs mit Multiplexsteuerung; LED-Ströme typischerweise im Milliampere-Bereich, gepulst.\n* **Transimpedanzverstärker:** wandelt den Photostrom rauscharm in Spannung; zuschaltbare Verstärkungsstufen.\n* **Abtast-Halte-Glieder bzw. Demultiplexer:** trennen Rot-, IR- und Dunkelphase.\n* **Filter und Offset-Kompensation:** entfernen Gleichanteil bzw. Störfrequenzen, damit der kleine AC-Anteil mit hoher Auflösung digitalisiert werden kann.\n* **A/D-Wandler** mit hoher Auflösung; viele Geräte nutzen integrierte optische Front-End-Bausteine, die Treiber, Verstärker und Wandler vereinen.\n\nDie gesamte Kette entspricht einer klassischen [[messkette|Messkette]] für [[biosignale|Biosignale]]: Sensor → Signalaufbereitung → Digitalisierung → Verarbeitung → Anzeige.\n\n### Verarbeitung, Anzeige und Alarm\n\n* **[[mikrocontroller|Mikrocontroller]] bzw. Signalprozessor:** Ablaufsteuerung des Multiplex, Intensitätsregelung, Algorithmen für SpO₂, Pulsfrequenz, Perfusionsindex und Artefakterkennung; Trendspeicher.\n* **[[display-bedienoberflaeche|Display und Bedienelemente]]:** Zahlenwerte, Plethysmogramm oder Balkenanzeige der Pulsamplitude, Signalqualitätsanzeige.\n* **Akustische Pulstonmodulation:** Die Tonhöhe des Pulstons sinkt mit fallender Sättigung – ein wichtiges Merkmal, da das Personal die Entsättigung hört, ohne auf das Display zu sehen.\n* **[[alarmsystem|Alarmsystem]]:** physiologische Alarme (SpO₂ und Pulsfrequenz außerhalb der Grenzen) und technische Alarme (Sensor ab, kein Puls, Akku schwach) nach [[iec-60601-1-8]].\n* **Schnittstellen:** Datenschnittstelle zum PC oder Patientendatenmanagement, Anbindung an Zentralen bzw. Netzwerke ([[hl7-fhir]]), Schwesternruf.\n\n### Energieversorgung und elektrische Sicherheit\n\nHandgeräte werden mit Batterien oder einem [[lithium-ionen-akku|Lithium-Ionen-Akku]] betrieben, Tischgeräte zusätzlich über ein [[medizinisches-netzteil|medizinisches Netzteil]]. Der Sensor ist ein **[[anwendungsteile|Anwendungsteil]]** mit direktem Hautkontakt; üblich sind Typ BF oder CF, häufig defibrillationsgeschützt. Bei netzbetriebenen Geräten und SpO₂-Modulen in Monitoren trennt eine [[galvanische-trennung|galvanische Trennung]] den Patientenstromkreis vom Netz, um den [[ableitstrom|Patientenableitstrom]] gering zu halten [@iec-60601-1].\n\n### Normative Einordnung\n\nFür die Basissicherheit gilt die Allgemeine Norm [[iec-60601-1]], für die elektromagnetische Verträglichkeit [[iec-60601-1-2]] und für Alarmsysteme [[iec-60601-1-8]]. Die besonderen Anforderungen an Pulsoxymeter – u. a. Angabe und klinischer Nachweis der SpO₂-Genauigkeit, Kennzeichnung, Verhalten bei Sensorfehlern – legt die gerätespezifische Norm [[iso-80601-2-61]] fest [@iso-80601-2-61]. Für Geräte in der häuslichen Umgebung kommt [[iec-60601-1-11]] hinzu.",
+    "maintenance": "## Wartung und Instandhaltung\n\nPulsoxymeter sind im Vergleich zu Therapiegeräten wartungsarm: Sie enthalten keine bewegten Teile, keine Pneumatik und keine Verschleißteile im engeren Sinne. Die [[instandhaltung-grundlagen|Instandhaltung]] konzentriert sich deshalb auf **Sensoren, Kabel, Steckverbinder, Akkus und Alarmfunktionen** – und auf die korrekte Anwendung.\n\n### Rechtlicher Rahmen\n\n* **[[mpbetreibv|MPBetreibV]] (Fassung 2025):** Sicherheitstechnische Kontrollen ([[stk|STK]]) sind nach § 12 für die in **Anlage 1** aufgeführten Produktarten vorgeschrieben. Eigenständige Pulsoxymeter sind dort nicht genannt. Schreibt der Hersteller regelmäßige Kontrollen vor, sind diese nach seinen Angaben (Umfang und Frist) durchzuführen [@mpbetreibv].\n* **Messtechnische Kontrollen** ([[mtk|MTK]]) nach § 15 i. V. m. **Anlage 2** sind für Pulsoxymeter **nicht** vorgesehen [@mpbetreibv].\n* Ist die SpO₂-Messung Teil eines Multiparametermonitors oder eines Defibrillators, gelten die Pflichten für das jeweilige Gesamtgerät (siehe [[patientenmonitor]], [[defibrillator]]).\n* Unabhängig davon gelten die allgemeinen [[betreiberpflichten|Betreiberpflichten]]: Instandhaltung nach Herstellerangaben, [[einweisung|Einweisung]] der Anwender:innen sowie Dokumentation im [[bestandsverzeichnis|Bestandsverzeichnis]] und – sofern vorgeschrieben – im [[medizinproduktebuch|Medizinproduktebuch]].\n\n> [!hinweis] Für Gesetzes- und Normzitate gilt jeweils die aktuell gültige Fassung. Die hier genannten Paragraphen beziehen sich auf die MPBetreibV vom 14.02.2025.\n\n### Typische Instandhaltungsmaßnahmen\n\n| Maßnahme | Inhalt | Häufigkeit (Orientierung) |\n|---|---|---|\n| Sichtprüfung durch Anwender | Gehäuse, Display, Sensor, Kabel, Stecker auf Beschädigung; Sauberkeit | vor jeder Anwendung |\n| Reinigung/Desinfektion | Gerät und wiederverwendbare Sensoren nach Herstellervorgabe mit freigegebenen Mitteln | nach jeder Patientenanwendung |\n| [[inspektion|Inspektion]] durch Medizintechnik | Funktion, Alarme, Akku, Selbsttest, Softwarestand | nach Herstellerangabe bzw. Gefährdungsbeurteilung |\n| Elektrische Sicherheitsprüfung | nach [[iec-62353]] bei netzbetriebenen Geräten | nach Herstellerangabe bzw. Gefährdungsbeurteilung |\n| Akkutausch | bei Kapazitätsverlust oder nach Herstellerintervall | bedarfsabhängig |\n| Sensortausch | bei Kabelbruch, Rissen, getrübten Optiken, ausgeleierten Clipfedern | bedarfsabhängig |\n\n### Schwachstellen in der Praxis\n\n* **Sensorkabel und Stecker:** Knickstellen am Kabelausgang, Bruch der feinen Adern, verbogene Kontakte. Wackelkontakte führen zu sporadischen „Sensor ab“-Meldungen.\n* **Optische Fenster:** Verkratzte oder durch Desinfektionsmittel getrübte Fenster verändern die Lichtintensität; die Intensitätsregelung kompensiert das nur bis zu einer Grenze.\n* **Clipfedern:** Zu schwache Federn führen zu schlechtem Sitz und Fremdlicht, zu starke zu venöser Stauung und Druckstellen.\n* **Akkus:** Kapazitätsverlust bei Handgeräten, die dauerhaft am Ladegerät stehen oder selten benutzt werden ([[akkufehler]]).\n* **Inkompatible Sensoren:** Nicht freigegebene Fremdsensoren können erhebliche Messabweichungen verursachen, ohne dass das Gerät einen Fehler meldet.\n\n> [!warnung] Instandsetzungen an Elektronik und Sensoren dürfen nur befugte, sachkundige Personen nach Herstellerangaben durchführen ([[instandsetzung]]). Reparierte oder „aufbereitete“ Einwegsensoren dürfen nur verwendet werden, wenn dies rechtlich und vom Hersteller bzw. Aufbereiter ausdrücklich abgesichert ist.\n\n> [!praxis] Bei gehäuften Reklamationen „misst falsch“ lohnt sich eine [[fehlersuche|systematische Fehlersuche]]: Zuerst Anwendung prüfen (Messort, Sitz, Nagellack, Perfusion, Bewegung, Fremdlicht), dann Sensor tauschen, dann das Gerät mit einem Simulator prüfen. In der Mehrzahl der Fälle liegt die Ursache bei Anwendung oder Sensor, nicht beim Gerät.",
+    "testing": "## Prüfverfahren\n\n### Grundsätzliches\n\nEin Pulsoxymeter lässt sich in der Werkstatt **nicht absolut kalibrieren**: Die Genauigkeit der SpO₂-Messung hängt von der empirischen Kalibrierkurve ab, die der Hersteller in klinischen Desaturationsstudien ermittelt hat [@iso-80601-2-61]. Prüfungen im Betrieb weisen daher nach, dass Gerät, Sensor und Signalverarbeitung **bestimmungsgemäß funktionieren** – nicht, dass die Messung am Menschen eine bestimmte Genauigkeit erreicht.\n\n### Sicherheitstechnische Kontrolle\n\nSofern der Hersteller eine STK vorschreibt, erfolgt sie nach seinem Prüfprotokoll und in seinen Fristen. Typische Bestandteile: Sichtprüfung, elektrische Sicherheit, Funktions- und Alarmprüfung, Akkuprüfung und Dokumentation ([[stk]]).\n\n### Elektrische Sicherheitsprüfung\n\nNach [[iec-62353]] mit einem Sicherheitstester ([[elektrische-sicherheitspruefung]]):\n\n* [[schutzleiterwiderstand|Schutzleiterwiderstand]] bei Geräten der [[schutzklassen|Schutzklasse I]],\n* ggf. [[isolationswiderstand|Isolationswiderstand]],\n* Geräteableitstrom und **Patientenableitstrom** am Anwendungsteil (Sensoranschluss) mit den Grenzwerten des Anwendungsteiltyps (BF bzw. CF) ([[ableitstrommessung]]).\n\nRein batteriebetriebene Handgeräte ohne Netzanschluss sind nach Herstellerangaben zu behandeln; bei ihnen entfallen netzbezogene Messungen, Sicht- und Funktionsprüfung bleiben.\n\n### Funktionsprüfung mit SpO₂-Simulator\n\nSpO₂-Simulatoren ([[pruefgeraete|Prüfgeräte und Simulatoren]]) werden anstelle des Fingers in den Sensor eingelegt (optischer „Finger“) oder elektrisch anstelle des Sensors angeschlossen. Sie empfangen das LED-Licht und erzeugen eine modulierte Lichtantwort bzw. ein Signal mit einstellbarem R-Wert und einstellbarer Pulsfrequenz und Amplitude. Damit lassen sich prüfen:\n\n| Prüfpunkt | Vorgehen |\n|---|---|\n| SpO₂-Anzeige | mehrere Sättigungsstufen (z. B. hoch, mittel, niedrig) simulieren, Anzeige mit Sollwert der gewählten Hersteller-Kalibrierkurve vergleichen |\n| Pulsfrequenz | niedrige, normale und hohe Frequenzen simulieren |\n| Schwache Perfusion | Pulsamplitude reduzieren, Grenze der Messfähigkeit und Meldung „Signal schwach“ prüfen |\n| Artefakte/Fremdlicht | soweit der Simulator dies unterstützt |\n| Alarme | Grenzwertalarme auslösen; Priorität, Lautstärke, optische Signale und Weiterleitung prüfen |\n| Technische Alarme | Sensor abziehen bzw. entfernen → „Sensor ab“, Akku-/Netzausfall |\n\n> [!vereinfacht] Ein Simulator prüft den Pfad **Sensor → Elektronik → Algorithmus**, nicht die physiologische Kalibrierkurve. Da sich die Kurven verschiedener Hersteller unterscheiden, muss am Simulator die zum Gerät passende Kurve gewählt werden; sonst entstehen scheinbare Abweichungen von mehreren Prozentpunkten.\n\n### Sensor- und Kabelprüfung\n\nSensoren und Verlängerungskabel werden durch Bewegen des Kabels während einer Simulator- oder Selbstmessung auf Wackelkontakte geprüft. Einige Geräte bieten Diagnosefunktionen, die LED-Ströme oder Signalpegel anzeigen. Defekte Sensoren werden ersetzt, nicht repariert.\n\n### Prüfung der Messgenauigkeit (Hersteller)\n\nDie Genauigkeit wird vom Hersteller im Rahmen der [[konformitaetsbewertung|Konformitätsbewertung]] durch kontrollierte Desaturationsstudien nachgewiesen und als **A_rms** (Wurzel aus dem mittleren quadratischen Fehler zwischen SpO₂ und SaO₂) angegeben [@iso-80601-2-61]:\n\n`A_rms = √( Σ (SpO₂ᵢ − SaO₂ᵢ)² / n )`\n\nEin A_rms von 2 % bedeutet, dass rund zwei Drittel der Messwerte innerhalb von ±2 Prozentpunkten der Referenz liegen – einzelne Abweichungen können deutlich größer sein ([[messunsicherheit]]).\n\n### Dokumentation\n\nAlle Prüfungen werden mit Datum, Prüfer:in, Prüfmittel, Messwerten und Ergebnis dokumentiert – im [[medizinproduktebuch|Medizinproduktebuch]], sofern vorgeschrieben, sonst in der Gerätedokumentation des [[medizintechnik-management|Medizintechnik-Managements]]."
+  },
+  "components": [
+    {
+      "ref": "photoplethysmographie",
+      "role": "**Optischer Sensor** mit Rot- und IR-LED sowie Photodiode; erfasst das Photoplethysmogramm am Messort."
+    },
+    {
+      "ref": "operationsverstaerker",
+      "role": "**Transimpedanzverstärker** wandelt den Photostrom (nA bis µA) in eine auswertbare Spannung."
+    },
+    {
+      "ref": "regelkreis",
+      "role": "**LED-Treiber mit Intensitätsregelung** – geregelte Stromquellen, Zeitmultiplex, Anpassung an Gewebedicke und Perfusion."
+    },
+    {
+      "ref": "analog-digital-wandler",
+      "role": "Hochauflösende **Digitalisierung** von Rot-, IR- und Dunkelsignal."
+    },
+    {
+      "ref": "filter",
+      "role": "**Analoge und digitale Filter** zur Trennung von AC- und DC-Anteil und zur Unterdrückung von Störungen."
+    },
+    {
+      "ref": "mikrocontroller",
+      "role": "**Signalprozessor/Mikrocontroller**: R-Berechnung, Kalibrierkurve, Artefakterkennung, Alarmlogik, Trendspeicher."
+    },
+    {
+      "ref": "display-bedienoberflaeche",
+      "role": "**Anzeige** von SpO₂, Pulsfrequenz, Plethysmogramm und Signalqualität; Bedienelemente."
+    },
+    {
+      "ref": "alarmsystem",
+      "role": "**Alarmsignalgeber** mit sättigungsabhängigem Pulston sowie physiologischen und technischen Alarmen."
+    },
+    {
+      "ref": "lithium-ionen-akku",
+      "role": "**Energieversorgung** tragbarer Geräte; bei Tischgeräten ergänzt durch ein medizinisches Netzteil."
+    },
+    {
+      "ref": "galvanische-trennung",
+      "role": "**Patiententrennung** bei netzbetriebenen Geräten und Monitormodulen zur Begrenzung des Patientenableitstroms."
+    }
+  ],
+  "sensors": [
+    {
+      "ref": "photoplethysmographie",
+      "role": "**Silizium-Photodiode** – empfängt das durch das Gewebe transmittierte bzw. rückgestreute Licht beider Wellenlängen."
+    },
+    {
+      "ref": "optik",
+      "role": "**Rot-LED (ca. 660 nm) und IR-LED (ca. 880–940 nm)** als definierte Lichtquellen; Wellenlänge bestimmt die Gültigkeit der Kalibrierkurve."
+    },
+    {
+      "ref": "photoplethysmographie",
+      "role": "**Fremdlichterfassung** in der Dunkelphase des Multiplexzyklus zur Subtraktion von Umgebungslicht."
+    },
+    {
+      "ref": "kalibrierung",
+      "role": "**Sensorkodierung** (Kodierwiderstand oder Speicherchip, herstellerabhängig) zur Erkennung von Sensortyp und Kalibrierdaten."
+    },
+    {
+      "ref": "lithium-ionen-akku",
+      "role": "**Akku- bzw. Batterieüberwachung** (Spannung, Ladezustand) für die Warnung vor Versorgungsausfall."
+    }
+  ],
+  "specs": [
+    {
+      "param": "Messgrößen",
+      "value": "SpO₂ (funktionell), Pulsfrequenz, Plethysmogramm; häufig Perfusionsindex",
+      "note": "Mehrwellenlängengeräte zusätzlich SpCO, SpMet, SpHb.",
+      "evidence": "typisch",
+      "sources": [
+        "jubran-2015"
+      ]
+    },
+    {
+      "param": "Wellenlängen",
+      "value": "ca. 660 nm (rot) und ca. 880–940 nm (infrarot)",
+      "note": "Exakte Wellenlängen sensorabhängig.",
+      "evidence": "typisch",
+      "sources": [
+        "webster-2010"
+      ]
+    },
+    {
+      "param": "SpO₂-Anzeigebereich",
+      "value": "0 bzw. 1 % bis 100 %",
+      "note": "Genauigkeit unterhalb ca. 70 % meist nicht spezifiziert.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "SpO₂-Genauigkeit (A_rms)",
+      "value": "ca. 2–3 % im Bereich 70–100 % SaO₂",
+      "note": "Herstellerangaben; abhängig von Sensortyp, Patientengruppe und Bewegungszustand. Die Norm [[iso-80601-2-61]] legt Höchstwerte und das Validierungsverfahren fest.",
+      "evidence": "typisch",
+      "sources": [
+        "jubran-2015",
+        "iso-80601-2-61"
+      ]
+    },
+    {
+      "param": "Pulsfrequenz-Messbereich",
+      "value": "ca. 20–250 /min",
+      "note": "Geräte für Neugeborene teils mit höherer Obergrenze.",
+      "evidence": "typisch",
+      "sources": [
+        "medtronic-pm10n"
+      ]
+    },
+    {
+      "param": "Pulsfrequenz-Genauigkeit",
+      "value": "ca. ±2–3 /min",
+      "note": "In Ruhe; bei Bewegung größer.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Auflösung der Anzeige",
+      "value": "1 % SpO₂; 1 /min",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Mittelungszeit",
+      "value": "einige Sekunden bis ca. 15 s, häufig einstellbar",
+      "note": "Längere Mittelung glättet, verzögert aber die Alarmierung.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Perfusionsindex (PI)",
+      "value": "ca. 0,02 % bis 20 %",
+      "note": "Herstellerabhängiger Anzeigebereich; Werte unter ca. 0,5–1 % deuten auf schwache periphere Perfusion.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Multiplexfrequenz der LEDs",
+      "value": "einige hundert Hz bis wenige kHz",
+      "note": "Herstellerabhängig.",
+      "evidence": "typisch",
+      "sources": [
+        "webster-2010"
+      ]
+    },
+    {
+      "param": "Anwendungsteil",
+      "value": "Typ BF oder CF, häufig defibrillationsgeschützt",
+      "note": "Angabe am Sensoranschluss des Geräts.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Energieversorgung",
+      "value": "Batterie oder Akku (Handgeräte), Netz und Akku (Tischgeräte)",
+      "note": "Betriebsdauer modellabhängig von Stunden bis Tagen.",
+      "evidence": "typisch"
+    }
+  ],
+  "manufacturers": [
+    {
+      "ref": "masimo",
+      "models": [
+        "Radical-7",
+        "Rad-97",
+        "MightySat Rx"
+      ],
+      "note": "Signalverarbeitungstechnologie „Masimo SET“; Mehrwellenlängen-Puls-CO-Oximetrie („rainbow SET“) [@masimo-rad97]."
+    },
+    {
+      "ref": "medtronic",
+      "models": [
+        "Nellcor Portable SpO₂ Patient Monitoring System (PM10N)"
+      ],
+      "note": "Marke Nellcor mit OxiMax-Sensortechnologie [@medtronic-pm10n]."
+    },
+    {
+      "ref": "mindray",
+      "models": [
+        "PM-60"
+      ],
+      "note": "Handheld-Pulsoxymeter für Spotcheck und kontinuierliche Überwachung [@mindray-pm60]."
+    },
+    {
+      "ref": "nihon-kohden",
+      "models": [
+        "OLV-3100 (Oxypal Neo)"
+      ],
+      "note": "Tischgerät; Nihon Kohden ist eng mit der Erfindung der Pulsoxymetrie durch Takuo Aoyagi verbunden."
+    },
+    {
+      "ref": "philips",
+      "models": [
+        "IntelliVue (SpO₂-Messung mit FAST-SpO₂)"
+      ],
+      "note": "SpO₂ vor allem als Parameter in Patientenmonitoren."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Für Pulsoxymeter liegen keine überprüfbaren, allgemeingültigen Preisangaben vor; die Spanne reicht von einfachen Fingerclip-Geräten bis zu Puls-CO-Oximetern mit Software-Optionen. Preisbestimmend sind: **Bauform** (Fingerclip, Handgerät, Tischgerät, Monitormodul), **Messtechnologie** und Bewegungsrobustheit, **Zusatzparameter** und deren Software-Lizenzen (z. B. SpCO, SpMet, SpHb), Display, Trendspeicher und Schnittstellen, Zulassung für Neugeborene, Akkutechnik sowie Rahmenverträge und Ausschreibungen. Für die Wirtschaftlichkeit entscheidend sind die **Gesamtbetriebskosten**: Einweg-Klebesensoren für die Dauerüberwachung, Ersatz wiederverwendbarer Sensoren und Kabel, Akkus, Aufbereitung, Prüfungen und Servicevertrag übersteigen über die Nutzungsdauer häufig den Anschaffungspreis. Bei herstellergebundenen Sensorsystemen beeinflusst die Sensorbindung die Folgekosten erheblich."
+  },
+  "maintenance": {
+    "stk": "abhaengig",
+    "mtk": "nein",
+    "basis": "STK: Eigenständige Pulsoxymeter sind in Anlage 1 der MPBetreibV (2025) nicht aufgeführt; Kontrollen nur, wenn der Hersteller sie vorschreibt. Als Funktion in Monitoren oder Defibrillatoren gelten die Pflichten des Gesamtgeräts. MTK: nicht in Anlage 2 (§ 15 MPBetreibV) genannt.",
+    "intervals": "Vom Hersteller vorgeschriebene Kontrollen nach Herstellerangabe; elektrische Wiederholungsprüfung nach IEC 62353 bei netzbetriebenen Geräten gemäß Herstellervorgabe bzw. Gefährdungsbeurteilung des Betreibers; Sicht- und Funktionskontrolle von Sensor und Kabel vor jeder Anwendung."
+  },
+  "faults": [
+    {
+      "title": "Bewegungsartefakte, unplausible Werte",
+      "ref": "bewegungsartefakt",
+      "cause": "Patientenbewegung, Zittern, Transport, lose sitzender Sensor; venöses Blut erzeugt pulsartige Signale, die das R-Verhältnis verfälschen.",
+      "action": "Sensor sicher anlegen, ggf. Klebesensor oder zentralen Messort wählen; Plethysmogramm auf saubere Pulskurve prüfen; Messwert mit klinischem Bild abgleichen."
+    },
+    {
+      "title": "Kein Puls / schwaches Signal",
+      "cause": "Niedrige periphere Perfusion (Schock, Kälte, Vasopressoren), Blutdruckmanschette am selben Arm, sehr kleiner AC-Anteil.",
+      "action": "Messort erwärmen oder wechseln (Ohr, Stirn), Sensor nicht am Arm mit NIBP-Manschette oder arteriellem Zugang anlegen; Perfusionsindex beachten."
+    },
+    {
+      "title": "Falsche Werte durch Fremdlicht oder optischen Shunt",
+      "ref": "anwendungsfehler",
+      "cause": "Falsche Sensorgröße, Sensor nicht vollständig über dem Gewebe, starke Lichtquellen (OP-Leuchte, Phototherapie, Infrarotwärmer).",
+      "action": "Passende Sensorgröße wählen, Sensor korrekt positionieren und mit lichtundurchlässigem Material abdecken."
+    },
+    {
+      "title": "Falsch hohe SpO₂ bei Kohlenmonoxidvergiftung",
+      "cause": "Carboxyhämoglobin wird von Zwei-Wellenlängen-Geräten als oxygeniertes Hämoglobin gewertet.",
+      "action": "Bei Verdacht CO-Oximetrie im Blutgasanalysator; kein Geräte-, sondern ein Methodenfehler – Anwender:innen schulen."
+    },
+    {
+      "title": "Störungen durch HF-Chirurgie oder elektromagnetische Felder",
+      "ref": "emv-stoerung",
+      "cause": "Einkopplung hochfrequenter Störungen in Sensorkabel und Front-End während der Anwendung eines HF-Chirurgiegeräts oder durch Funkquellen.",
+      "action": "Sensorkabel nicht parallel zu HF-Kabeln führen, Abstand zur aktiven Elektrode; Werte während HF-Aktivierung kritisch bewerten; bei anhaltenden Störungen EMV-Situation prüfen."
+    },
+    {
+      "title": "„Sensor ab“ sporadisch, Wackelkontakt",
+      "cause": "Kabelbruch am Sensor- oder Steckerausgang, beschädigte Kontakte, defekte oder inkompatible Sensoren.",
+      "action": "Sensor und Verlängerungskabel tauschen, Kabel unter Bewegung mit Simulator prüfen; defekte Sensoren aussondern."
+    },
+    {
+      "title": "Akku hält nicht, Gerät schaltet ab",
+      "ref": "akkufehler",
+      "cause": "Alterung bzw. Kapazitätsverlust des Akkus, Tiefentladung bei Lagerung, falsches Ladeverhalten.",
+      "action": "Akkukapazität prüfen, Akku nach Herstellerangabe tauschen, Lager- und Ladekonzept überprüfen."
+    },
+    {
+      "title": "Häufige Fehlalarme",
+      "ref": "alarmmuedigkeit",
+      "cause": "Zu enge Alarmgrenzen, zu kurze Mittelungs- oder Alarmverzögerungszeiten, schlecht sitzende Sensoren.",
+      "action": "Alarmgrenzen patientenindividuell und nach klinischem Standard einstellen, Sensorsitz optimieren, Alarmkonzept der Station überprüfen."
+    },
+    {
+      "title": "Druckstellen oder Hautschäden am Messort",
+      "cause": "Lange Liegedauer am selben Ort, zu fest sitzender Clip oder Klebesensor, empfindliche Haut bei Neugeborenen; im MRT Verbrennungsgefahr bei nicht MR-geeigneten Sensoren.",
+      "action": "Messort nach Herstellerangabe regelmäßig wechseln, Haut kontrollieren; im MRT nur ausdrücklich freigegebene Systeme verwenden."
+    }
+  ],
+  "tests": [
+    {
+      "name": "Sicherheitstechnische Kontrolle (falls vom Hersteller vorgeschrieben)",
+      "ref": "stk",
+      "description": "Umfang und Frist nach Herstellerangabe: Sichtprüfung, elektrische Sicherheit, Funktions- und Alarmprüfung, Akkuprüfung, Dokumentation."
+    },
+    {
+      "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+      "ref": "elektrische-sicherheitspruefung",
+      "description": "Bei netzbetriebenen Geräten: [[schutzleiterwiderstand|Schutzleiterwiderstand]] (Schutzklasse I), ggf. Isolationswiderstand, Geräte- und Patientenableitstrom am Sensoranschluss mit den Grenzwerten für Typ BF bzw. CF."
+    },
+    {
+      "name": "Funktionsprüfung mit SpO₂-Simulator",
+      "ref": "funktionspruefung",
+      "description": "Simulation mehrerer Sättigungsstufen, Pulsfrequenzen und Pulsamplituden mit herstellerpassender Kalibrierkurve; Vergleich der Anzeige mit den Sollwerten des [[pruefgeraete|Simulators]]."
+    },
+    {
+      "name": "Alarmprüfung",
+      "ref": "alarmsystem",
+      "description": "Auslösen der oberen und unteren SpO₂- und Pulsfrequenzgrenzen sowie technischer Alarme (Sensor ab, Akku schwach); Prüfung von Lautstärke, Priorität, Pulston-Modulation und Weiterleitung."
+    },
+    {
+      "name": "Sensor- und Kabelprüfung",
+      "ref": "inspektion",
+      "description": "Sichtprüfung von Optik, Clipfeder, Kabel und Stecker; Bewegungstest des Kabels während einer Simulatormessung zur Erkennung von Wackelkontakten."
+    }
+  ],
+  "diagram": {
+    "title": "Funktionsschema eines Pulsoxymeters",
+    "caption": "Vereinfachter Signal- und Energiefluss: geregelter LED-Treiber, Durchleuchtung des Gewebes, Photodiode, Transimpedanzverstärker, Digitalisierung, Demultiplex und Signalverarbeitung mit Ausgabe an Anzeige, Alarm und Schnittstelle.",
+    "width": 960,
+    "height": 480,
+    "nodes": [
+      {
+        "id": "pat",
+        "label": "Gewebe am Messort\n(arteriell, venös,\nGewebe)",
+        "ref": "haemoglobin",
+        "kind": "patient",
+        "x": 85,
+        "y": 220,
+        "h": 70
+      },
+      {
+        "id": "led",
+        "label": "Rot-LED ~660 nm\nIR-LED ~900 nm",
+        "ref": "optik",
+        "kind": "actuator",
+        "x": 280,
+        "y": 90
+      },
+      {
+        "id": "drv",
+        "label": "LED-Treiber\n(Multiplex, Strom)",
+        "ref": "pwm",
+        "kind": "actuator",
+        "x": 480,
+        "y": 90
+      },
+      {
+        "id": "pd",
+        "label": "Photodiode",
+        "ref": "photoplethysmographie",
+        "kind": "sensor",
+        "x": 280,
+        "y": 350
+      },
+      {
+        "id": "tia",
+        "label": "Transimpedanz-\nverstärker",
+        "ref": "operationsverstaerker",
+        "kind": "process",
+        "x": 480,
+        "y": 350
+      },
+      {
+        "id": "adc",
+        "label": "A/D-Wandler",
+        "ref": "analog-digital-wandler",
+        "kind": "process",
+        "x": 680,
+        "y": 350
+      },
+      {
+        "id": "filt",
+        "label": "Demultiplex,\nFremdlichtabzug,\nFilter",
+        "ref": "filter",
+        "kind": "process",
+        "x": 870,
+        "y": 350,
+        "h": 70
+      },
+      {
+        "id": "cpu",
+        "label": "Prozessor\nR → SpO₂, Regelung",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 680,
+        "y": 220
+      },
+      {
+        "id": "power",
+        "label": "Akku / Netzteil",
+        "ref": "lithium-ionen-akku",
+        "kind": "source",
+        "x": 480,
+        "y": 220
+      },
+      {
+        "id": "disp",
+        "label": "Display\nSpO₂, PR, Pleth",
+        "ref": "display-bedienoberflaeche",
+        "kind": "output",
+        "x": 870,
+        "y": 90
+      },
+      {
+        "id": "alarm",
+        "label": "Alarm und\nPulston",
+        "ref": "alarmsystem",
+        "kind": "output",
+        "x": 870,
+        "y": 220
+      },
+      {
+        "id": "iface",
+        "label": "Schnittstelle\nMonitor / Netzwerk",
+        "ref": "hl7-fhir",
+        "kind": "output",
+        "x": 680,
+        "y": 440
+      }
+    ],
+    "edges": [
+      {
+        "from": "drv",
+        "to": "led",
+        "kind": "power",
+        "label": "Strompulse"
+      },
+      {
+        "from": "led",
+        "to": "pat",
+        "kind": "energy",
+        "label": "Licht"
+      },
+      {
+        "from": "pat",
+        "to": "pd",
+        "kind": "energy",
+        "label": "transmittiertes Licht"
+      },
+      {
+        "from": "pd",
+        "to": "tia",
+        "kind": "signal",
+        "label": "Photostrom"
+      },
+      {
+        "from": "tia",
+        "to": "adc",
+        "kind": "signal",
+        "label": "Spannung"
+      },
+      {
+        "from": "adc",
+        "to": "filt",
+        "kind": "data"
+      },
+      {
+        "from": "filt",
+        "to": "cpu",
+        "kind": "data",
+        "label": "AC/DC rot, IR"
+      },
+      {
+        "from": "cpu",
+        "to": "drv",
+        "kind": "signal",
+        "label": "Intensitätsregelung"
+      },
+      {
+        "from": "cpu",
+        "to": "disp",
+        "kind": "data"
+      },
+      {
+        "from": "cpu",
+        "to": "alarm",
+        "kind": "signal"
+      },
+      {
+        "from": "cpu",
+        "to": "iface",
+        "kind": "data"
+      },
+      {
+        "from": "power",
+        "to": "cpu",
+        "kind": "power"
+      },
+      {
+        "from": "power",
+        "to": "drv",
+        "kind": "power"
+      }
+    ]
+  },
+  "images": [
+    {
+      "src": "img/devices/pulsoxymeter-aufbau.svg",
+      "kind": "schema",
+      "caption": "Schematischer Aufbau: Fingerclip-Sensor im Schnitt mit Rot- und IR-LED, Gewebe und Photodiode sowie Grundgerät mit Anzeige, Elektronik und Akku (Funktionsschema, kein konkretes Modell)."
+    },
+    {
+      "src": "img/devices/pulsoxymeter-prinzip.svg",
+      "kind": "schema",
+      "caption": "Messprinzip: A – Absorptionsspektren von Hb und HbO₂ mit den Messwellenlängen (qualitativ); B – Zusammensetzung des Detektorsignals aus konstantem DC- und pulsatilem AC-Anteil (vereinfacht)."
+    }
+  ],
+  "paths": [
+    [
+      "pulsoxymeter",
+      "photoplethysmographie",
+      "lambert-beer",
+      "optik"
+    ],
+    [
+      "pulsoxymeter",
+      "haemoglobin",
+      "gasaustausch",
+      "lunge"
+    ],
+    [
+      "pulsoxymeter",
+      "photoplethysmographie",
+      "blutkreislauf",
+      "herz"
+    ]
+  ],
+  "related": [
+    "patientenmonitor",
+    "kapnometer",
+    "blutgasanalysator",
+    "nibp-messgeraet",
+    "polysomnograph",
+    "beatmungsgeraet",
+    "high-flow-geraet",
+    "sauerstoffkonzentrator",
+    "inkubator",
+    "defibrillator",
+    "photoplethysmographie",
+    "lambert-beer",
+    "haemoglobin",
+    "alarmsystem",
+    "alarmmuedigkeit",
+    "bewegungsartefakt",
+    "iso-80601-2-61",
+    "iec-60601-1-8",
+    "iec-60601-1-11"
+  ],
+  "sources": [
+    "jubran-2015",
+    "webster-2010",
+    "kramme-2017",
+    "schmidt-lang-2019",
+    "iso-80601-2-61",
+    "sjoding-2020",
+    "mdr-2017",
+    "mdcg-2021-24",
+    "mpbetreibv",
+    "iec-60601-1",
+    "iec-62353",
+    "masimo-rad97",
+    "medtronic-pm10n",
+    "mindray-pm60"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

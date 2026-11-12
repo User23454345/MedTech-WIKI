@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" font-family="Inter, Arial, sans-serif">
+  <title>MRT – schematischer Aufbau (Längsschnitt durch Magnet und Untersuchungsraum)</title>
+  <defs>
+    <marker id="pf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b2545"/>
+    </marker>
+    <pattern id="cage" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0,8 L8,0" stroke="#14b8a6" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="22" font-size="15" font-weight="600" fill="#0b2545" text-anchor="middle">Aufbau eines Ganzkörper-MRT (Längsschnitt, schematisch)</text>
+
+  <!-- HF-Kabine -->
+  <rect x="20" y="40" width="400" height="300" fill="none" stroke="url(#cage)" stroke-width="8"/>
+  <rect x="16" y="36" width="408" height="308" fill="none" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Kryostat (oben/unten) -->
+  <rect x="150" y="80" width="210" height="62" rx="10" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <rect x="150" y="228" width="210" height="62" rx="10" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+  <!-- supraleitende Spulenwicklungen -->
+  <g fill="#14b8a6" stroke="#0b2545" stroke-width="1">
+    <rect x="164" y="94" width="22" height="18"/><rect x="212" y="94" width="22" height="18"/>
+    <rect x="276" y="94" width="22" height="18"/><rect x="324" y="94" width="22" height="18"/>
+    <rect x="164" y="258" width="22" height="18"/><rect x="212" y="258" width="22" height="18"/>
+    <rect x="276" y="258" width="22" height="18"/><rect x="324" y="258" width="22" height="18"/>
+  </g>
+  <!-- Gradientenspulen -->
+  <rect x="150" y="142" width="210" height="14" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="150" y="214" width="210" height="14" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Körperspule -->
+  <rect x="150" y="156" width="210" height="8" fill="#0d9488" stroke="#0b2545" stroke-width="1"/>
+  <rect x="150" y="206" width="210" height="8" fill="#0d9488" stroke="#0b2545" stroke-width="1"/>
+
+  <!-- Patientenliege und Patient -->
+  <rect x="96" y="194" width="300" height="7" fill="#0b2545"/>
+  <line x1="116" y1="201" x2="116" y2="330" stroke="#0b2545" stroke-width="2"/>
+  <ellipse cx="236" cy="185" rx="80" ry="8" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <circle cx="330" cy="183" r="10" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Empfangsspule -->
+  <path d="M206,176 Q236,166 266,176" fill="none" stroke="#0d9488" stroke-width="3"/>
+
+  <!-- B0-Pfeil -->
+  <line x1="364" y1="250" x2="410" y2="250" stroke="#0b2545" stroke-width="2" marker-end="url(#pf)"/>
+  <text x="386" y="243" font-size="14" fill="#0b2545" text-anchor="middle">B₀</text>
+
+  <!-- Kaltkopf -->
+  <rect x="200" y="58" width="30" height="22" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <!-- Quenchleitung -->
+  <line x1="310" y1="80" x2="310" y2="40" stroke="#0b2545" stroke-width="3"/>
+
+  <!-- Technikraum -->
+  <rect x="440" y="40" width="145" height="300" fill="#f1f5f9" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="512" y="60" font-size="13" font-weight="600" fill="#0b2545" text-anchor="middle">Technikraum</text>
+  <rect x="452" y="72" width="121" height="34" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="512" y="94" font-size="13" fill="#0b2545" text-anchor="middle">Gradientenverst.</text>
+  <rect x="452" y="116" width="121" height="34" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="512" y="138" font-size="13" fill="#0b2545" text-anchor="middle">HF-Sender</text>
+  <rect x="452" y="160" width="121" height="34" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="512" y="182" font-size="13" fill="#0b2545" text-anchor="middle">Empfänger/ADC</text>
+  <rect x="452" y="204" width="121" height="34" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="512" y="226" font-size="13" fill="#0b2545" text-anchor="middle">Heliumkompressor</text>
+  <rect x="452" y="248" width="121" height="34" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="512" y="270" font-size="13" fill="#0b2545" text-anchor="middle">Kaltwassersatz</text>
+  <rect x="452" y="292" width="121" height="34" rx="4" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="512" y="314" font-size="13" fill="#0b2545" text-anchor="middle">Rekonstruktion</text>
+  <!-- Filterplatte -->
+  <rect x="420" y="130" width="20" height="90" fill="#14b8a6" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- Beschriftungen mit Führungslinien -->
+  <g font-size="13" fill="#0b2545">
+    <line x1="164" y1="100" x2="142" y2="62" stroke="#0b2545" stroke-width="1"/>
+    <text x="30" y="60">Supraleitende</text>
+    <text x="30" y="76">Spulen (NbTi)</text>
+    <line x1="150" y1="149" x2="134" y2="118" stroke="#0b2545" stroke-width="1"/>
+    <text x="30" y="116">Gradienten-</text>
+    <text x="30" y="132">spule</text>
+    <line x1="150" y1="160" x2="134" y2="152" stroke="#0b2545" stroke-width="1"/>
+    <text x="30" y="156">Körperspule</text>
+    <line x1="208" y1="175" x2="134" y2="176" stroke="#0b2545" stroke-width="1"/>
+    <text x="30" y="180">Empfangsspule</text>
+    <line x1="116" y1="250" x2="100" y2="250" stroke="#0b2545" stroke-width="1"/>
+    <text x="30" y="254">Liege</text>
+    <line x1="255" y1="290" x2="270" y2="312" stroke="#0b2545" stroke-width="1"/>
+    <text x="210" y="326">Kryostat (He, 4,2 K)</text>
+    <line x1="230" y1="66" x2="246" y2="66" stroke="#0b2545" stroke-width="1"/>
+    <text x="250" y="70">Kaltkopf</text>
+    <text x="316" y="62">Quench-</text>
+    <text x="316" y="76">leitung</text>
+    <line x1="430" y1="220" x2="420" y2="362" stroke="#0b2545" stroke-width="1"/>
+    <text x="300" y="378">Filterplatte (Durchführungen)</text>
+    <text x="28" y="378">HF-Kabine (Faraday-Käfig)</text>
+    <line x1="60" y1="366" x2="40" y2="342" stroke="#0b2545" stroke-width="1"/>
+  </g>
+</svg>

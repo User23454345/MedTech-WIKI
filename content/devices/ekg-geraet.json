@@ -1,0 +1,619 @@
+{
+ "id": "ekg-geraet",
+ "type": "device",
+ "title": "Elektrokardiograph (12-Kanal-EKG)",
+ "aliases": [
+  "EKG-Gerät",
+  "Elektrokardiograph",
+  "Elektrokardiograf",
+  "Ruhe-EKG",
+  "12-Kanal-EKG",
+  "12-Ableitungs-EKG",
+  "ECG",
+  "Electrocardiograph",
+  "Resting ECG",
+  "EKG-Schreiber"
+ ],
+ "category": "geraete",
+ "deviceGroup": "kardiologie",
+ "rank": 6,
+ "domains": [
+  "kardiologie",
+  "intensivmedizin",
+  "notfallmedizin",
+  "anaesthesiologie"
+ ],
+ "summary": "Der Elektrokardiograph registriert die elektrische Aktivität des Herzens über Hautelektroden und stellt sie standardisiert in zwölf Ableitungen dar. Das Ruhe-EKG ist die wichtigste nichtinvasive Basisuntersuchung zur Diagnose von Rhythmusstörungen, Durchblutungsstörungen und Herzinfarkten.",
+ "riskClass": {
+  "value": "IIa",
+  "evidence": "typisch",
+  "note": "Nach [[mdr|MDR]] Anhang VIII **Regel 10** gehören aktive Produkte zur Diagnose und Überwachung zur **Klasse IIa**, wenn sie eine direkte Diagnose oder Überwachung vitaler Körperfunktionen ermöglichen. Klasse IIb gilt nur, wenn sie speziell zur Überwachung vitaler Parameter bestimmt sind, deren Änderung eine unmittelbare Gefahr bedeuten kann, oder zur Diagnose in klinischen Situationen mit unmittelbarer Gefahr [@mdr-2017][@mdcg-2021-24]. Diagnostische Ruhe-EKG-Geräte werden daher typischerweise als **Klasse IIa** eingestuft; die Software zur automatischen Interpretation unterliegt zusätzlich **Regel 11** (mindestens Klasse IIa). Geräte, die als Überwachungsmonitor in der Intensivmedizin bestimmt sind, können höher eingestuft sein ([[patientenmonitor]]). Maßgeblich ist die Klassifizierung des Herstellers für sein konkretes Produkt ([[risikoklassen|Risikoklassen]]).",
+  "sources": [
+   "mdr-2017",
+   "mdcg-2021-24"
+  ]
+ },
+ "sections": {
+  "purpose": "## Medizinischer Zweck\n\nDer **Elektrokardiograph** (EKG-Gerät, „Ruhe-EKG“) zeichnet die elektrische Aktivität des [[herz|Herzens]] von der Körperoberfläche auf. Jede Herzaktion beginnt mit einer elektrischen Erregung, die vom Sinusknoten über die Vorhöfe, den AV-Knoten und das His-Purkinje-System in die Kammern läuft ([[erregungsleitungssystem|Erregungsbildungs- und -leitungssystem]]). Die dabei entstehenden Potentialdifferenzen im Gewebe sind an der Haut als Spannungen im Bereich von etwa 0,1 bis wenigen Millivolt messbar [@webster-2010][@schmidt-lang-2019].\n\nDas standardisierte **12-Kanal-EKG** betrachtet diese Erregung aus zwölf „Blickrichtungen“ (Ableitungen): sechs Extremitätenableitungen in der Frontalebene und sechs Brustwandableitungen in der Horizontalebene. Erst diese räumliche Betrachtung erlaubt es, Veränderungen einer bestimmten Herzregion zuzuordnen [@kligfield-2007].\n\n### Diagnostische Fragestellungen\n\n| Fragestellung | Was das EKG zeigt (Beispiele) |\n|---|---|\n| Herzrhythmusstörungen | Vorhofflimmern, Extrasystolen, AV-Blockierungen, Schenkelblöcke, Tachykardien |\n| Akutes Koronarsyndrom | ST-Hebungen oder -Senkungen, T-Wellen-Veränderungen, pathologische Q-Zacken |\n| Strukturelle Veränderungen | Hinweise auf Hypertrophie, Belastung der Vorhöfe oder Kammern, Lagetyp |\n| Elektrolyt- und Medikamenteneffekte | QT-Verlängerung, Veränderungen der T-Welle, z. B. bei Kaliumstörungen |\n| Schrittmacherkontrolle | Stimulationsimpulse und deren Antwort (siehe [[herzschrittmacher]]) |\n| Verlaufs- und Vorsorgeuntersuchungen | Ausgangsbefund vor Operationen, Vergleich mit Vor-EKGs |\n\n> [!hinweis] Das Ruhe-EKG ist ein **diagnostisches Momentbild** über typischerweise 10 Sekunden. Es ist kein Überwachungsgerät: Für die kontinuierliche Rhythmusüberwachung dienen der [[patientenmonitor|Patientenmonitor]] und der [[langzeit-ekg|Langzeit-EKG-Rekorder]], für die Untersuchung unter Belastung das [[ergometer|Belastungs-EKG]].\n\nDas EKG ist schnell, nichtinvasiv, kostengünstig und beliebig wiederholbar. Gerade beim Verdacht auf einen Herzinfarkt mit ST-Hebung ist es die zentrale Erstdiagnostik, nach deren Ergebnis über die sofortige Katheterintervention entschieden wird. Die **Interpretation** bleibt jedoch ärztliche Aufgabe: Automatische Befundvorschläge des Geräts sind ein Hilfsmittel und müssen ärztlich überprüft werden [@kligfield-2007].\n",
+  "applications": "## Einsatzgebiete\n\nElektrokardiographen gehören zur Grundausstattung nahezu jeder medizinischen Einrichtung. Sie werden überwiegend in der [[kardiologie|Kardiologie]], der [[intensivmedizin|Intensivmedizin]], der [[notfallmedizin|Notfall- und Rettungsmedizin]] und der präoperativen Diagnostik der [[anaesthesiologie|Anästhesiologie]] eingesetzt.\n\n| Einsatzort | Typische Bauform | Besonderheiten |\n|---|---|---|\n| Hausarzt- und Facharztpraxis | kompaktes Tischgerät mit Thermodrucker | einfache Bedienung, Interpretation, Anbindung an die Praxissoftware |\n| Klinik: Funktionsdiagnostik | Gerät auf fahrbarem Wagen | hoher Durchsatz, Barcode-Patientenidentifikation, Übertragung ins EKG-Managementsystem |\n| Notaufnahme, Chest Pain Unit | mobiles Gerät, oft papierlos | schnelle Auswertung, Vergleich mit Vor-EKGs, Hinweise auf akuten Infarkt |\n| Rettungsdienst | 12-Kanal-Funktion im Monitor-[[defibrillator|Defibrillator]] | Telemetrie des EKG an die Zielklinik |\n| Belastungs- und Langzeitdiagnostik | Ergometrie-Arbeitsplatz, Rekorder | eigene Gerätekategorien mit speziellen Filter- und Artefaktalgorithmen |\n| Arbeitsmedizin, Sportmedizin | Tisch- oder PC-basierte Systeme | Vorsorgeuntersuchungen, Leistungssport |\n\n### PC-basierte und papierlose Systeme\n\nNeben klassischen Geräten mit eingebautem Drucker gibt es **PC-basierte EKG-Systeme**: Eine kleine Erfassungseinheit (Aufnahmemodul mit Verstärker und [[analog-digital-wandler|A/D-Wandler]]) überträgt die Daten per USB oder Funk an einen Rechner. Die Befundung erfolgt am Bildschirm, Archivierung und Austausch über Formate wie DICOM-Waveform, XML oder PDF sowie über Schnittstellen wie [[hl7-fhir|HL7]] und [[dicom|DICOM]]. Dabei sind die Anforderungen an [[software-medizinprodukt|Software als Medizinprodukt]] und an die IT-Sicherheit zu beachten.\n\n> [!praxis] In Kliniken liegt der größte Nutzen eines vernetzten EKG-Managements im **Vergleich mit Voraufnahmen**: Eine neu aufgetretene Veränderung ist diagnostisch viel aussagekräftiger als ein einzelner Befund. Voraussetzung ist eine eindeutige Patientenzuordnung (z. B. per Barcode oder Auftragsliste aus dem Krankenhausinformationssystem).\n",
+  "principle": "## Funktionsprinzip\n\nDas EKG-Gerät ist ein hochempfindliches **Differenzspannungs-Messsystem**. Es muss Nutzsignale von etwa 0,05 bis 5 mV auflösen, während gleichzeitig Elektroden-Gleichspannungen von einigen hundert Millivolt und netzfrequente Störspannungen, die um Größenordnungen größer sind als das Nutzsignal, am Körper anliegen. Die gesamte [[messkette|Messkette]] – Elektrode, Kabel, Verstärker, Filter, Wandler und Software – ist auf dieses Problem ausgerichtet [@webster-2010][@kramme-2017].\n\n### Elektrophysiologische Grundlage\n\nMyokardzellen haben ein Ruhemembranpotential von etwa −90 mV. Bei der Erregung läuft ein [[aktionspotential|Aktionspotential]] über die Zellmembran; die Grenze zwischen erregtem und unerregtem Gewebe wirkt wie eine Schicht elektrischer Dipole. Die Summe aller Dipole zu einem Zeitpunkt lässt sich als **Herzvektor** (integraler elektrischer Dipol) beschreiben, dessen Betrag und Richtung sich während des Herzzyklus ändern [@schmidt-lang-2019][@webster-2010].\n\n> [!vereinfacht] Das Dipolmodell betrachtet den Körper als homogenen, unendlich ausgedehnten Volumenleiter mit einer punktförmigen Quelle im Zentrum. Real sind Lunge, Blut, Muskeln und Knochen elektrisch sehr unterschiedlich leitfähig, und das Herz ist ausgedehnt. Für das Verständnis der Ableitungen genügt das Modell dennoch gut.\n\nEine Ableitung misst die Projektion des Herzvektors auf ihre **Ableitungsachse**. Zeigt der Vektor zur positiven Elektrode, entsteht ein positiver Ausschlag, zeigt er weg, ein negativer. Daraus ergeben sich die charakteristischen Wellen des EKG:\n\n| Abschnitt | Elektrophysiologisches Korrelat | typische Dauer (Erwachsene) |\n|---|---|---|\n| P-Welle | Erregungsausbreitung in den Vorhöfen | bis etwa 0,10–0,12 s |\n| PQ-Zeit | Vorhoferregung bis Beginn Kammererregung (AV-Überleitung) | etwa 0,12–0,20 s |\n| QRS-Komplex | Erregungsausbreitung in den Kammern | bis etwa 0,10–0,12 s |\n| ST-Strecke | vollständige Kammererregung (Plateauphase) | – |\n| T-Welle | Erregungsrückbildung der Kammern | – |\n| QT-Zeit | gesamte elektrische Kammeraktion | frequenzabhängig |\n\nDie Richtwerte sind Lehrbuchwerte; Grenzwerte hängen von Alter, Geschlecht und der verwendeten Definition ab [@schmidt-lang-2019].\n\n### Ableitungssysteme\n\nDas Standard-12-Kanal-EKG verwendet **zehn Elektroden**: vier an den Extremitäten (rechter Arm R, linker Arm L, linkes Bein F, rechtes Bein N als Bezugs-/Neutralelektrode) und sechs an der Brustwand (V1–V6). Bezeichnet Φ das Potential einer Elektrode, gilt:\n\n**Bipolare Extremitätenableitungen nach Einthoven**\n\n* I = Φ_L − Φ_R\n* II = Φ_F − Φ_R\n* III = Φ_F − Φ_L\n\nDaraus folgt unmittelbar das **Einthoven-Gesetz** II = I + III. Die drei Elektroden bilden näherungsweise ein gleichseitiges Dreieck (Einthoven-Dreieck) um das Herz [@webster-2010].\n\n**Wilson-Sammelelektrode (Wilson Central Terminal, WCT)**\n\nWerden R, L und F über drei gleich große Widerstände zusammengeführt, entsteht ein Mittelpotential Φ_WCT = (Φ_R + Φ_L + Φ_F) / 3, das während des Herzzyklus näherungsweise konstant ist. Die **unipolaren Brustwandableitungen** messen gegen diesen Bezugspunkt: Vi = Φ_Vi − Φ_WCT (i = 1 … 6).\n\n**Augmentierte Extremitätenableitungen nach Goldberger**\n\nHier wird gegen den Mittelwert der beiden *anderen* Extremitätenelektroden gemessen, wodurch die Amplitude um 50 % größer ist als gegen die WCT:\n\n* aVR = Φ_R − (Φ_L + Φ_F)/2 = −(I + II)/2\n* aVL = Φ_L − (Φ_R + Φ_F)/2 = (I − III)/2\n* aVF = Φ_F − (Φ_R + Φ_L)/2 = (II + III)/2\n\n> [!belegt] Von den zwölf Ableitungen sind nur **acht linear unabhängig** (z. B. I, II und V1–V6). III, aVR, aVL und aVF sind Linearkombinationen von I und II. Moderne digitale Elektrokardiographen messen daher meist nur die unabhängigen Kanäle und **berechnen** die übrigen Ableitungen [@kligfield-2007][@webster-2010].\n\n### Elektrode-Haut-Übergang\n\nAn der [[ekg-elektrode|Elektrode]] findet der Übergang von Ionenleitung (Gewebe, Elektrolytgel) zu Elektronenleitung (Metall) statt. Jede Metall-Elektrolyt-Grenzfläche bildet eine **Halbzellenspannung**; unterschiedliche Elektroden ergeben deshalb eine **Elektroden-Offsetspannung** (Gleichspannung), die bei gelgefüllten Silber/Silberchlorid-Elektroden (Ag/AgCl) klein und stabil ist, bei polarisierbaren Metallelektroden jedoch groß und bewegungsabhängig. Ag/AgCl gilt als nahezu unpolarisierbar und ist deshalb der Standard für Einmalelektroden [@webster-2010].\n\nDie Elektrode lässt sich elektrisch als Spannungsquelle mit einem Netzwerk aus Widerständen und Kapazitäten modellieren (Haut, Gel, Grenzschicht). Ihre Impedanz hängt stark von der Hautvorbereitung ab und kann sich von Elektrode zu Elektrode deutlich unterscheiden – das ist für die Störunterdrückung entscheidend (siehe unten). Die [[haut|Haut]], insbesondere die Hornschicht, trägt den größten Teil des Übergangswiderstands.\n\n### Verstärkung und Gleichtaktunterdrückung\n\nDas Herzsignal ist eine **Differenzspannung** U_d zwischen zwei Elektroden. Zusätzlich liegt an beiden Elektroden eine nahezu gleiche **Gleichtaktspannung** U_cm an, vor allem durch kapazitive Kopplung des Körpers an das 50-Hz-Stromnetz (Leitungen, Leuchten, Betten). Ein [[instrumentenverstaerker|Instrumentenverstärker]] verstärkt die Differenz und unterdrückt den Gleichtaktanteil. Kenngröße ist die **Gleichtaktunterdrückung** (CMRR, *common mode rejection ratio*):\n\nCMRR = A_d / A_cm  bzw.  CMRR_dB = 20 · log₁₀(A_d / A_cm)\n\nmit der Differenzverstärkung A_d und der Gleichtaktverstärkung A_cm [@tietze-schenk-2019].\n\nEin zweiter, in der Praxis oft dominierender Mechanismus ist die **Umwandlung von Gleichtakt- in Gegentaktstörung** durch ungleiche Elektrodenimpedanzen: Elektrodenimpedanz Z_E und Eingangs-Gleichtaktimpedanz Z_cm des Verstärkers bilden einen Spannungsteiler. Unterscheiden sich die Elektrodenimpedanzen um ΔZ, entsteht näherungsweise eine Störspannung\n\nU_stör ≈ U_cm · ΔZ / Z_cm\n\ndie der Verstärker nicht mehr vom Nutzsignal unterscheiden kann. Gegenmaßnahmen sind eine sehr hohe Eingangsimpedanz, eine möglichst kleine Gleichtaktspannung und gut vorbereitete Haut [@webster-2010].\n\n> [!beispiel] **Rechenbeispiel Netzbrumm.** Angenommen, am Patienten liegt eine Gleichtaktspannung von U_cm = 0,5 V (50 Hz) an. Die Elektrodenimpedanzen unterscheiden sich um ΔZ = 51 kΩ, die Eingangs-Gleichtaktimpedanz des Verstärkers beträgt bei 50 Hz Z_cm = 100 MΩ.\n> Umwandlung durch Impedanzunsymmetrie: U_stör ≈ 0,5 V · 51 kΩ / 100 MΩ = 0,5 V · 5,1 · 10⁻⁴ ≈ **255 µV**.\n> Endliche CMRR von 100 dB (Faktor 10⁵): eingangsbezogene Störung = 0,5 V / 10⁵ = **5 µV**.\n> Bei einem QRS-Komplex von etwa 1 mV wäre ein Brumm von rund 0,26 mV deutlich sichtbar. Wird U_cm durch eine Rechte-Bein-Treiberschaltung auf 10 mV gesenkt, sinkt die Störung um den Faktor 50 auf etwa 5 µV. Die Zahlen sind beispielhaft gewählt.\n\n### Rechte-Bein-Treiber (Driven Right Leg)\n\nDie Elektrode am rechten Bein (N) dient als Bezug. In modernen Geräten ist sie nicht einfach mit Masse verbunden, sondern wird von einem [[operationsverstaerker|Operationsverstärker]] aktiv angesteuert: Die Schaltung ermittelt die Gleichtaktspannung (z. B. aus dem Mittelwert der Eingangssignale), invertiert und verstärkt sie und speist sie über einen strombegrenzenden Widerstand in den Körper zurück. Dieser **Regelkreis** ([[regelkreis]]) drückt die Gleichtaktspannung des Patienten gegen das Bezugspotential des Verstärkers und verbessert die Störunterdrückung erheblich. Der Strombegrenzungswiderstand sorgt dafür, dass auch im Fehlerfall nur sehr kleine Ströme fließen können [@webster-2010].\n\n### Filterung und Bandbreite\n\nDas diagnostische EKG enthält relevante Frequenzanteile von unter 1 Hz (ST-Strecke, T-Welle) bis über 100 Hz (steile Flanken und Kerben des QRS-Komplexes). Die Empfehlungen von AHA, ACC und HRS legen deshalb für Erwachsene eine untere Grenzfrequenz von **0,05 Hz** fest; mit linearphasigen digitalen Filtern (ohne Phasenverzerrung) ist auch eine Grenzfrequenz bis **0,67 Hz** zulässig. Die obere Grenzfrequenz soll mindestens **150 Hz**, bei Kindern **250 Hz** betragen [@kligfield-2007].\n\n| Filter | Zweck | Zielkonflikt |\n|---|---|---|\n| Hochpass (Basislinienfilter) | entfernt Elektrodenoffset und Atemschwankung | zu hohe Grenzfrequenz verzerrt die ST-Strecke (falsche Hebung/Senkung) |\n| Tiefpass | begrenzt hochfrequentes Rauschen, Anti-Aliasing vor dem A/D-Wandler | zu niedrige Grenzfrequenz verkleinert Amplituden und verschleift Kerben |\n| Netzfilter (50 bzw. 60 Hz) | unterdrückt Netzbrumm | kann Signalanteile nahe 50 Hz verändern, Nachschwingen |\n| Muskelfilter (z. B. 25–40 Hz Tiefpass) | unterdrückt Muskelzittern | verfälscht QRS-Amplituden; nicht für die Diagnostik ohne Hinweis |\n\nDie Wirkung eines Hochpasses erster Ordnung lässt sich über seine Zeitkonstante verstehen: τ = 1 / (2π · f_g).\n\n> [!beispiel] **Zeitkonstante des Basislinienfilters.** Für f_g = 0,05 Hz ergibt sich τ = 1 / (2π · 0,05 Hz) ≈ **3,2 s**. Ein Sprung der Eingangsspannung, etwa nach einer Bewegung, klingt mit dieser Zeitkonstante ab – es dauert also mehrere Sekunden, bis die Nulllinie wieder ruhig ist. Bei f_g = 0,5 Hz wäre τ ≈ 0,32 s: Die Nulllinie beruhigt sich schneller, ein analoges Filter erster Ordnung würde aber die langsame ST-Strecke merklich verzerren. Genau deshalb sind höhere Grenzfrequenzen nur mit phasenlinearen digitalen Filtern akzeptabel [@kligfield-2007].\n\nDie Bezeichnungen der Filter ([[filter|analoge und digitale Filter]]) und ihre aktuelle Einstellung werden auf dem Ausdruck angegeben, damit die befundende Person Filtereffekte einschätzen kann.\n\n### Analog-Digital-Wandlung\n\nNach Verstärkung und Bandbegrenzung digitalisiert ein [[analog-digital-wandler|A/D-Wandler]] das Signal. Nach dem **Abtasttheorem** muss die Abtastfrequenz f_s mehr als doppelt so hoch sein wie die höchste im Signal enthaltene Frequenz; in der Praxis liegt sie deutlich darüber. Viele moderne Geräte verwenden **Sigma-Delta-Wandler** mit hoher Auflösung (z. B. 24 bit) und Überabtastung. Wegen des großen Dynamikbereichs kann das Signal dann auch gleichspannungsgekoppelt erfasst und der Elektrodenoffset digital entfernt werden.\n\n> [!beispiel] **Auflösung.** Ein 24-bit-Wandler mit einem Eingangsbereich von ±400 mV (Spanne 800 mV) besitzt eine Quantisierungsstufe von 800 mV / 2²⁴ ≈ **48 nV**. Damit lassen sich sowohl ein Elektrodenoffset von mehreren hundert Millivolt als auch eine P-Welle von 0,1 mV verarbeiten, ohne dass der Verstärker übersteuert. Für 0,1 mV ergeben sich rund 2 000 Quantisierungsstufen. Werte beispielhaft.\n\n**Schrittmacherimpulse** sind sehr kurz (im Bereich von Bruchteilen einer Millisekunde bis wenige Millisekunden) und würden durch die normale Bandbegrenzung verschluckt. Geräte erkennen sie daher mit einem eigenen, schnell abgetasteten Detektionspfad und markieren sie im Ausdruck.\n\n### Signalverarbeitung und automatische Auswertung\n\nNach der Digitalisierung (siehe [[mikrocontroller|Mikrocontroller und Embedded-Systeme]]) folgen typischerweise:\n\n1. **Berechnung der abhängigen Ableitungen** (III, aVR, aVL, aVF) aus den gemessenen Kanälen.\n2. **Digitale Filter** (Basislinie, Netz, Muskel) nach Auswahl der Anwenderin bzw. des Anwenders.\n3. **QRS-Detektion** und Klassifikation der Schläge; Bildung eines **Medianschlags** (repräsentativer Durchschnittsschlag), der Rauschen reduziert.\n4. **Vermessung**: Herzfrequenz, PQ-, QRS-, QT-Dauer, Amplituden, elektrische Achsen.\n5. **Interpretation**: regel- oder statistikbasierte Algorithmen erzeugen Befundvorschläge; die Ergebnisse sind ärztlich zu überprüfen [@kligfield-2007].\n\nDie QT-Zeit hängt von der Herzfrequenz ab und wird deshalb korrigiert, klassisch nach **Bazett**: QTc = QT / √RR (RR in Sekunden). Bei hohen und niedrigen Frequenzen ist diese Formel ungenau; Geräte bieten oft alternative Korrekturen an.\n\n### Registrierung und Maßstab\n\nDie Darstellung ist standardisiert: Eichung **10 mm/mV** und Papiergeschwindigkeit **25 mm/s** oder **50 mm/s**. Bei 25 mm/s entspricht 1 mm einer Zeit von 40 ms, ein großes Kästchen (5 mm) 200 ms.\n\n> [!beispiel] **Herzfrequenz aus dem Ausdruck.** Der Abstand zweier R-Zacken beträgt bei 25 mm/s 20 mm. Das RR-Intervall ist 20 mm / 25 mm/s = 0,8 s, die Herzfrequenz HF = 60 / 0,8 s = **75 /min** (Faustformel: HF = 1500 / RR in mm). Beträgt die QT-Zeit 0,36 s, ergibt sich QTc = 0,36 s / √0,8 ≈ **0,40 s**.\n\nJeder Ausdruck beginnt mit einem **Eichimpuls** (1 mV-Rechteck), an dem sich Verstärkung und Filterverhalten visuell kontrollieren lassen. Ein verschliffener oder überschwingender Eichimpuls deutet auf eine abweichende Filtereinstellung hin.\n",
+  "construction": "## Technischer Aufbau\n\nEin Elektrokardiograph besteht aus dem **Anwendungsteil** (Elektroden und Patientenkabel), der **isolierten Erfassungselektronik**, der **Verarbeitungs- und Bedieneinheit** sowie der Energieversorgung. Das Blockschaltbild unten zeigt den Signalfluss; die folgenden Abschnitte beschreiben die Baugruppen.\n\n### Elektroden\n\nFür das Ruhe-EKG werden Einmal-Klebeelektroden mit Ag/AgCl-Sensor und Gel, wiederverwendbare Saugelektroden (Brustwand) oder Klemmelektroden (Extremitäten) verwendet. Saugelektroden sind wegen möglicher Hautreizungen und hygienischer Anforderungen ([[aufbereitung|Aufbereitung]]) zunehmend durch Einmalelektroden ersetzt. Für die Elektrodenposition gilt die Standardanordnung:\n\n| Elektrode | Position |\n|---|---|\n| V1 | 4. Interkostalraum, rechts parasternal |\n| V2 | 4. Interkostalraum, links parasternal |\n| V3 | zwischen V2 und V4 |\n| V4 | 5. Interkostalraum, linke Medioklavikularlinie |\n| V5 | vordere Axillarlinie, Höhe von V4 |\n| V6 | mittlere Axillarlinie, Höhe von V4 |\n\nExtremitätenelektroden werden an Hand- und Fußgelenken bzw. körperstammnah an den Extremitäten angebracht; eine Verlagerung auf den Rumpf (z. B. beim Belastungs-EKG) verändert die Kurvenform und ist zu dokumentieren [@kligfield-2007].\n\n### Patientenkabel und Farbcodes\n\nDas 10-adrige Patientenkabel ist zur Reduktion von Störungen oft geschirmt und enthält bei vielen Geräten **Schutzwiderstände** zur Defibrillationsfestigkeit. Es gibt zwei verbreitete Farbcodes:\n\n| Elektrode | IEC (Europa) | AHA (Nordamerika) |\n|---|---|---|\n| rechter Arm | R – rot | RA – weiß |\n| linker Arm | L – gelb | LA – schwarz |\n| linkes Bein | F – grün | LL – rot |\n| rechtes Bein | N – schwarz | RL – grün |\n| Brustwand | C1–C6: weiß mit Farbmarkierung | V1–V6: braun mit Farbmarkierung |\n\n> [!warnung] Werden Kabel nach unterschiedlichen Farbcodes gemischt (z. B. Ersatzkabel aus anderen Märkten), drohen **Elektrodenvertauschungen**, die pathologische Befunde vortäuschen können. Im Bestand sollte ein einheitlicher Farbcode verwendet werden.\n\n### Eingangsschutz und Anwendungsteil\n\nDa EKG-Elektroden während einer Reanimation am Patienten verbleiben, sind die Eingänge von Elektrokardiographen üblicherweise **defibrillationsgeschützt** ausgeführt: Serienwiderstände, Überspannungsableiter (z. B. Gasentladungsstrecken) und Dioden begrenzen die Energie, die in das Gerät gelangt. Das Anwendungsteil ist meist vom Typ **CF** bzw. **BF** ([[anwendungsteile|Anwendungsteile Typ B, BF, CF]]) mit Defibrillationsschutz (Symbol mit Herz in Kasten bzw. „Defi-Herz“). Die Schutzmaßnahmen sind in [[iec-60601-1|IEC 60601-1]] und der gerätespezifischen Norm [[iec-60601-2-25|IEC 60601-2-25]] geregelt [@iec-60601-1][@iec-60601-2-25].\n\n### Erfassungselektronik\n\n* **Eingangsstufe:** Impedanzwandler bzw. [[instrumentenverstaerker|Instrumentenverstärker]] mit sehr hoher Eingangsimpedanz und niedrigem Eingangsstrom, oft je Elektrode ein Puffer.\n* **Wilson-Netzwerk:** Widerstandsnetzwerk oder rechnerische Bildung der Sammelelektrode.\n* **Rechte-Bein-Treiber:** aktive Ansteuerung der Bezugselektrode.\n* **Elektrodenüberwachung (Lead-off):** Ein sehr kleiner Prüfstrom oder ein Hochfrequenz-Messsignal erkennt abgefallene Elektroden und hohe Übergangsimpedanzen.\n* **Anti-Aliasing-Filter und A/D-Wandler:** häufig mehrkanalige Sigma-Delta-Wandler.\n* **Schrittmacherdetektion:** separater, schneller Pfad.\n\n### Galvanische Trennung\n\nZwischen dem patientenseitigen Teil und dem netzbezogenen Teil liegt eine **[[galvanische-trennung|galvanische Trennung]]**: Daten werden über Optokoppler oder digitale Isolatoren übertragen, die Energie über einen Trenntransformator bzw. isolierten DC/DC-Wandler. Die Trennung begrenzt den [[ableitstrom|Patientenableitstrom]] und schützt den Patienten bei einem Fehler im Netzteil oder an einem angeschlossenen PC.\n\n### Verarbeitung, Bedienung und Ausgabe\n\nEin Mikrocontroller bzw. eingebetteter Rechner übernimmt Filterung, Analyse, Speicherung und Bedienung ([[display-bedienoberflaeche|Display und Bedienoberfläche]], meist Touchscreen). Ein **Thermodrucker** druckt auf Endlos- oder Faltpapier mit EKG-Raster. Für die Anbindung stehen LAN, WLAN, USB und gegebenenfalls Barcode-Leser zur Verfügung. Die Versorgung erfolgt über ein [[medizinisches-netzteil|medizinisches Netzteil]] und meist einen [[lithium-ionen-akku|Lithium-Ionen-Akku]] für den mobilen Einsatz auf Station.\n\n> [!vereinfacht] Das Blockschaltbild unten und die Schemazeichnungen zeigen ein generisches Gerät. Reale Geräte integrieren viele Funktionen in einem einzigen hochintegrierten Analog-Frontend-Baustein; manche Funktionen (z. B. Wilson-Netzwerk, Teile der Filterung) werden vollständig digital umgesetzt.\n",
+  "maintenance": "## Wartung und Instandhaltung\n\nDie [[instandhaltung-grundlagen|Instandhaltung]] umfasst nach [[din-31051|DIN 31051]] [[wartung|Wartung]], [[inspektion|Inspektion]], [[instandsetzung|Instandsetzung]] und Verbesserung [@din-31051]. Maßgeblich sind Gebrauchsanweisung und Servicedokumentation des Herstellers sowie die [[betreiberpflichten|Betreiberpflichten]] nach der [[mpbetreibv|MPBetreibV]] [@mpbetreibv].\n\n### Rechtlicher Rahmen\n\n* **Sicherheitstechnische Kontrolle ([[stk|STK]]):** Diagnostische Oberflächen-Elektrokardiographen sind in **Anlage 1** der MPBetreibV (Fassung 2025) nicht ausdrücklich aufgeführt; die Anlage betrifft unter anderem Produkte zur Erzeugung elektrischer Energie zur Beeinflussung der Herztätigkeit sowie zur intrakardialen Messung elektrischer Größen. Eine STK nach § 12 MPBetreibV ist für EKG-Geräte daher in der Regel nur erforderlich, wenn der **Hersteller** sie vorschreibt – dann im vom Hersteller angegebenen Umfang und Intervall [@mpbetreibv]. Viele Hersteller geben regelmäßige sicherheitstechnische Prüfungen vor.\n* **Messtechnische Kontrolle ([[mtk|MTK]]):** EKG-Geräte sind in **Anlage 2** (§ 15 MPBetreibV) nicht genannt; eine MTK entfällt. Ist das EKG Teil eines Systems mit MTK-pflichtigen Funktionen (z. B. NIBP im Monitor, Fahrradergometer beim [[ergometer|Belastungs-EKG]]), gilt die Pflicht für diese Funktion.\n* **Betreiberpflichten allgemein:** Unabhängig von STK/MTK müssen Betreiber den sicheren Zustand gewährleisten, Anwender [[einweisung|einweisen]] bzw. sicherstellen, dass diese mit dem Gerät vertraut sind, das Gerät im [[bestandsverzeichnis|Bestandsverzeichnis]] führen und Instandhaltung nur durch Personen mit entsprechender Qualifikation durchführen lassen.\n* **Elektrische Sicherheit:** Wiederholungsprüfungen nach [[iec-62353|IEC 62353]] werden üblicherweise im Rahmen der Herstellervorgaben bzw. der Gefährdungsbeurteilung des Betreibers festgelegt ([[dguv-vorschrift-3|DGUV Vorschrift 3]]) [@iec-62353][@dguv-v3].\n\n> [!hinweis] Rechtsangaben beziehen sich auf die MPBetreibV in der Neufassung vom 14.02.2025. Maßgeblich sind die jeweils geltende Fassung und die Herstellerangaben. Ob ein konkretes Kombinationsgerät unter Anlage 1 fällt, ergibt sich aus seiner [[zweckbestimmung|Zweckbestimmung]].\n\n### Typische Wartungsmaßnahmen\n\n| Maßnahme | Inhalt | Hinweis |\n|---|---|---|\n| Sichtprüfung | Gehäuse, Display, Tasten, Netzkabel, Steckverbinder, Wagen | durch Anwender vor Gebrauch, ausführlich bei Inspektion |\n| Patientenkabel | Knickstellen, Bruch der Adern, Steckerverriegelung, Zugentlastung, Schutzwiderstände | Patientenkabel sind das häufigste Verschleißteil |\n| Saug- und Klemmelektroden | Dichtigkeit der Saugbälle, Korrosion der Kontakte, Federkraft | Aufbereitung nach Herstellerangabe |\n| Drucker | Thermokopf reinigen, Papiervorschub, Papiererkennung | Papiervorschub bestimmt die Zeitachse des Ausdrucks |\n| Akku | Kapazität, Laufzeit, Alter | Tausch nach Herstellerangabe ([[akkufehler]]) |\n| Software und Konfiguration | Updates nach Freigabe, Filtervoreinstellungen, Uhrzeit, Netzwerkkonfiguration | falsche Filtervoreinstellung ist ein stiller Fehler |\n| IT-Sicherheit | Zugriffsschutz, Patches, Verschlüsselung | Abstimmung mit der Krankenhaus-IT |\n\n### Reinigung und Aufbereitung\n\nGerät und Kabel werden mit vom Hersteller freigegebenen Mitteln wischdesinfiziert ([[desinfektion]]). Ungeeignete Desinfektionsmittel können Kabelmäntel verspröden lassen und Displays beschädigen. Wiederverwendbare Elektroden werden nach Herstellerangabe aufbereitet; Gelreste an Saugelektroden führen zu Korrosion und Artefakten.\n\n> [!praxis] Viele „Gerätefehler“ beim EKG sind in Wahrheit Zubehörfehler. Ein Satz geprüfter Ersatz-Patientenkabel auf Station verkürzt Ausfallzeiten erheblich; defekte Kabel sollten konsequent ausgesondert und nicht improvisiert repariert werden.\n",
+  "testing": "## Prüfverfahren\n\nDie Prüfungen eines Elektrokardiographen verbinden **elektrische Sicherheit** mit der Kontrolle der **messtechnischen Signaltreue** (Amplitude, Zeitachse, Frequenzgang, Störunterdrückung). Grundlage sind die Prüfanweisungen des Herstellers; als Prüfmittel dienen Sicherheitsprüfgeräte und EKG-Simulatoren ([[pruefgeraete|Prüfgeräte und Simulatoren]]).\n\n### Elektrische Sicherheitsprüfung nach IEC 62353\n\nDie [[elektrische-sicherheitspruefung|Wiederholungsprüfung]] umfasst [@iec-62353]:\n\n1. **Sichtprüfung** von Gehäuse, Netzkabel, Patientenkabel und Kennzeichnung.\n2. **[[schutzleiterwiderstand|Schutzleiterwiderstand]]** bei Geräten der Schutzklasse I ([[schutzklassen]]).\n3. ggf. **[[isolationswiderstand|Isolationswiderstand]]** nach Herstellerangabe.\n4. **[[ableitstrommessung|Ableitströme]]**: Geräteableitstrom und Patientenableitstrom (Anwendungsteil). Beim EKG werden alle Elektrodenleitungen gemeinsam an das Prüfgerät angeschlossen. Für Typ-CF-Anwendungsteile gelten besonders niedrige Grenzwerte.\n5. **Funktionsprüfung** und Dokumentation.\n\n> [!warnung] Messungen mit Netzspannung am Anwendungsteil dürfen nur mit geeigneten Prüfgeräten und durch Elektrofachkräfte bzw. befähigte Personen erfolgen. Defibrillationsschutz-Bauteile können bei der Prüfung nicht direkt geprüft werden; ihr Zustand wird indirekt über Funktion und Herstellerprüfungen beurteilt.\n\n### Funktions- und Signalprüfung mit EKG-Simulator\n\nEin EKG-Simulator erzeugt definierte Signale an allen zehn Elektrodenanschlüssen:\n\n| Prüfung | Vorgehen | Erwartung |\n|---|---|---|\n| Amplitudengenauigkeit | Sinus- oder Rechtecksignal bzw. Normal-EKG definierter Amplitude (z. B. 1 mV) | Ausschlag 10 mm bei 10 mm/mV in allen Ableitungen, Toleranz nach Herstellerangabe |\n| Zeitachse | Signal definierter Frequenz, Ausdruck bei 25 und 50 mm/s | korrekter Abstand der Komplexe; prüft Papiervorschub und Zeitbasis |\n| Herzfrequenzanzeige | simulierte Frequenzen (z. B. 60, 120, 180 /min) | Anzeige innerhalb der Herstellertoleranz |\n| Ableitungslogik | Simulator mit ableitungsspezifischen Signalen | richtige Polarität und Zuordnung aller zwölf Ableitungen |\n| Elektrodenüberwachung | einzelne Elektroden abziehen | korrekte Meldung „Elektrode ab“ mit Bezeichnung |\n| Frequenzgang | Sinussignale verschiedener Frequenzen bzw. Dreieck-/Rechtecksignal | Amplitude und Form entsprechend Filtereinstellung |\n| Schrittmachererkennung | simulierte Schrittmacherimpulse | Markierung im Ausdruck |\n| Drucker und Datenübertragung | Testausdruck, Übertragung an das Managementsystem | lesbares Raster, vollständige Patientendaten |\n\n### Prüfungen in der Entwicklung (Typprüfung)\n\nDie gerätespezifische Norm [[iec-60601-2-25|IEC 60601-2-25]] fordert für die Zulassung umfangreiche Prüfungen, unter anderem zu Eingangsimpedanz, Gleichtaktunterdrückung mit definierter Impedanzunsymmetrie, Rauschen, Toleranz gegenüber Elektroden-Offsetspannungen, Frequenzgang, Erholung nach Defibrillation sowie zur Genauigkeit der automatischen Vermessung anhand von Referenzdatenbanken [@iec-60601-2-25]. Diese Typprüfungen sind Sache des Herstellers; im Klinikbetrieb werden nur ausgewählte Funktionen nachgeprüft.\n\n> [!praxis] Nach jeder Instandsetzung (z. B. Tausch der Hauptplatine, des Druckers oder des Netzteils) sind elektrische Sicherheitsprüfung und Funktionsprüfung zu wiederholen und im Gerätedokumentationssystem festzuhalten ([[medizinproduktebuch|Medizinproduktebuch]] bzw. Gerätekartei).\n"
+ },
+ "body": "## Geschichte\n\nDie Registrierung der Herzströme von der Körperoberfläche geht auf **Willem Einthoven** zurück, der Anfang des 20. Jahrhunderts mit dem Saitengalvanometer erstmals zuverlässige EKG-Kurven aufzeichnete, die Bezeichnungen P, Q, R, S und T einführte und die drei bipolaren Extremitätenableitungen definierte. Für die Entdeckung des Mechanismus des Elektrokardiogramms erhielt er 1924 den Nobelpreis für Physiologie oder Medizin. In den 1930er- und 1940er-Jahren kamen die Brustwandableitungen über die Wilson-Sammelelektrode und die augmentierten Ableitungen nach Goldberger hinzu – damit war das bis heute gebräuchliche 12-Kanal-EKG komplett ([[geschichte-medizintechnik|Geschichte der Medizintechnik]]).\n\nRöhrenverstärker, später Transistorverstärker und Direktschreiber machten das EKG zur Routineuntersuchung. Seit den 1960er-Jahren wurden Programme zur computergestützten Auswertung entwickelt; heutige Geräte arbeiten vollständig digital.\n\n## Varianten und Erweiterungen\n\n| Variante | Merkmal |\n|---|---|\n| 3- oder 6-Kanal-Gerät | gleiche zwölf Ableitungen, aber weniger gleichzeitig dargestellt; heute selten |\n| 15- und 18-Kanal-EKG | zusätzliche rechtspräkordiale (V3R–V6R) oder posteriore Ableitungen (V7–V9) bzw. deren rechnerische Abschätzung |\n| Nehb-Ableitungen | kleines Dreieck auf der Brustwand, ergänzend zur Hinterwanddiagnostik |\n| Vektorkardiographie | räumliche Darstellung der Herzvektorschleife (z. B. Frank-Ableitungen) |\n| Einkanal-/Smartphone- und Smartwatch-EKG | Rhythmusdiagnostik, kein Ersatz für das 12-Kanal-EKG |\n\n## Aktuelle Entwicklungen\n\n* **Vernetzung:** EKG-Managementsysteme, Anbindung an elektronische Patientenakten, standardisierte Datenformate.\n* **Algorithmen:** Neben klassischen Regelwerken werden zunehmend Verfahren des maschinellen Lernens erforscht und als [[software-medizinprodukt|Medizinproduktesoftware]] zugelassen, z. B. zur Erkennung von Rhythmusstörungen. Deren Zuverlässigkeit hängt stark von Trainings- und Validierungsdaten ab.\n* **Normung:** Die bisher getrennten Normen für diagnostische EKG-Geräte, EKG-Monitore ([[iec-60601-2-27|IEC 60601-2-27]]) und Langzeit-EKG sollen in einer gemeinsamen Norm zusammengeführt werden; maßgeblich bleibt bis zu deren Inkrafttreten die jeweils gültige Ausgabe der bestehenden Normen.\n",
+ "components": [
+  {
+   "ref": "instrumentenverstaerker",
+   "role": "Hochohmige Differenzverstärkung der Elektrodenspannungen mit hoher Gleichtaktunterdrückung."
+  },
+  {
+   "ref": "operationsverstaerker",
+   "role": "Rechte-Bein-Treiber (Driven Right Leg), Pufferstufen und aktives Wilson-Netzwerk."
+  },
+  {
+   "ref": "filter",
+   "role": "Anti-Aliasing-Tiefpass vor dem Wandler; digitale Basislinien-, Netz- und Muskelfilter."
+  },
+  {
+   "ref": "analog-digital-wandler",
+   "role": "Mehrkanalige, meist hochauflösende Sigma-Delta-Wandlung der Ableitungssignale."
+  },
+  {
+   "ref": "galvanische-trennung",
+   "role": "Isolationsbarriere zwischen Anwendungsteil und netzbezogener Elektronik (Typ BF/CF), begrenzt Patientenableitströme."
+  },
+  {
+   "ref": "mikrocontroller",
+   "role": "Signalverarbeitung, Medianschlagbildung, Vermessung, Interpretation, Speicherung und Kommunikation."
+  },
+  {
+   "ref": "display-bedienoberflaeche",
+   "role": "Touchscreen zur Kurvendarstellung und Bedienung; dazu Thermodrucker für den Ausdruck auf Rasterpapier."
+  },
+  {
+   "ref": "medizinisches-netzteil",
+   "role": "Netzversorgung mit verstärkter Isolation nach IEC 60601-1 und Akkuladung."
+  },
+  {
+   "ref": "lithium-ionen-akku",
+   "role": "Mobiler Betrieb auf Station und in der Notaufnahme."
+  }
+ ],
+ "sensors": [
+  {
+   "ref": "ekg-elektrode",
+   "role": "Zehn Ag/AgCl-Klebe-, Saug- oder Klemmelektroden wandeln Ionenströme im Gewebe in elektrische Signale."
+  },
+  {
+   "ref": "biosignale",
+   "role": "Ableitungsbildung (Einthoven, Goldberger, Wilson) aus den Elektrodenpotentialen – teils analog, teils rechnerisch."
+  },
+  {
+   "ref": "spannung-strom-widerstand",
+   "role": "Elektrodenüberwachung (Lead-off): Prüfstrom bzw. Impedanzmessung erkennt abgefallene Elektroden und hohe Übergangswiderstände."
+  },
+  {
+   "ref": "herzschrittmacher",
+   "role": "Schneller Detektionspfad für Schrittmacherimpulse, die im Ausdruck markiert werden."
+  }
+ ],
+ "specs": [
+  {
+   "param": "Anzahl der Ableitungen",
+   "value": "12 (I, II, III, aVR, aVL, aVF, V1–V6), davon 8 linear unabhängig",
+   "note": "Zehn Elektroden; erweiterte Systeme mit 15 oder 18 Ableitungen.",
+   "evidence": "belegt",
+   "sources": [
+    "kligfield-2007",
+    "webster-2010"
+   ]
+  },
+  {
+   "param": "Amplitude des Nutzsignals",
+   "value": "etwa 0,05 bis 5 mV",
+   "note": "QRS-Komplex typischerweise um 1 mV, P-Welle um 0,1–0,2 mV.",
+   "evidence": "typisch",
+   "sources": [
+    "webster-2010"
+   ]
+  },
+  {
+   "param": "Untere Grenzfrequenz (Diagnostik)",
+   "value": "0,05 Hz; bis 0,67 Hz bei phasenlinearen digitalen Filtern",
+   "note": "Schützt die ST-Strecke vor Filterverzerrung.",
+   "evidence": "belegt",
+   "sources": [
+    "kligfield-2007"
+   ]
+  },
+  {
+   "param": "Obere Grenzfrequenz (Diagnostik)",
+   "value": "mindestens 150 Hz (Erwachsene), 250 Hz (Kinder)",
+   "note": "Niedrigere Einstellungen (z. B. Muskelfilter) verkleinern QRS-Amplituden.",
+   "evidence": "belegt",
+   "sources": [
+    "kligfield-2007"
+   ]
+  },
+  {
+   "param": "Verstärkung (Darstellung)",
+   "value": "10 mm/mV (Standard), wählbar z. B. 5 und 20 mm/mV",
+   "note": "Eichimpuls 1 mV am Beginn des Ausdrucks.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Papiergeschwindigkeit",
+   "value": "25 mm/s oder 50 mm/s",
+   "note": "Bei 25 mm/s entspricht 1 mm 40 ms.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Aufzeichnungsdauer Ruhe-EKG",
+   "value": "typisch 10 s je Ableitung",
+   "note": "Zusätzlich längere Rhythmusstreifen möglich.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Elektroden-Offsetspannung (Toleranz)",
+   "value": "bis etwa ±300 mV Gleichspannung",
+   "note": "Prüfbedingung der gerätespezifischen Norm; das Gerät muss bei solchen Offsets korrekt messen. Genaue Anforderungen siehe jeweils gültige Ausgabe von [[iec-60601-2-25|IEC 60601-2-25]].",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-25"
+   ]
+  },
+  {
+   "param": "Prüfnetzwerk Gleichtaktunterdrückung",
+   "value": "Impedanzunsymmetrie 51 kΩ ∥ 47 nF in einer Elektrodenleitung",
+   "note": "Simuliert ungleiche Elektrodenimpedanzen bei der Typprüfung der Gleichtaktunterdrückung.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-25"
+   ]
+  },
+  {
+   "param": "Eigenrauschen (eingangsbezogen)",
+   "value": "im Bereich weniger µV, Normforderung in der Größenordnung von 30 µV Spitze-Spitze",
+   "note": "Genauen Grenzwert und Messverfahren der jeweils gültigen Norm entnehmen.",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-2-25"
+   ]
+  },
+  {
+   "param": "A/D-Auflösung",
+   "value": "häufig 16–24 bit, Sigma-Delta-Wandler",
+   "note": "Herstellerabhängig; hohe Auflösung erlaubt gleichspannungsgekoppelte Erfassung.",
+   "evidence": "typisch"
+  },
+  {
+   "param": "Anwendungsteil",
+   "value": "Typ CF oder BF, defibrillationsgeschützt",
+   "note": "Kennzeichnung am Patientenkabelanschluss beachten ([[anwendungsteile]]).",
+   "evidence": "typisch",
+   "sources": [
+    "iec-60601-1"
+   ]
+  }
+ ],
+ "manufacturers": [
+  {
+   "ref": "ge-healthcare",
+   "models": [
+    "MAC 2000",
+    "MAC 5500 HD",
+    "MAC VU360",
+    "MAC 5"
+   ],
+   "note": "Interpretationsprogramm Marquette 12SL."
+  },
+  {
+   "ref": "philips",
+   "models": [
+    "PageWriter TC20",
+    "PageWriter TC35",
+    "PageWriter TC50",
+    "PageWriter TC70"
+   ],
+   "note": "Verfügbarkeit einzelner Modelle regional unterschiedlich."
+  },
+  {
+   "ref": "schiller",
+   "models": [
+    "CARDIOVIT AT-102 G2",
+    "CARDIOVIT FT-1"
+   ],
+   "note": "Schweizer Hersteller mit Schwerpunkt Kardiologie."
+  },
+  {
+   "ref": "nihon-kohden",
+   "models": [
+    "Cardiofax M",
+    "Cardiofax V"
+   ]
+  },
+  {
+   "ref": "mindray",
+   "models": [
+    "BeneHeart R12"
+   ],
+   "note": "Interpretation nach dem Glasgow-Programm."
+  },
+  {
+   "ref": "hillrom",
+   "models": [
+    "ELI 280"
+   ],
+   "note": "Produktlinie ursprünglich von Mortara Instrument; Hillrom gehört inzwischen zu Baxter."
+  }
+ ],
+ "price": {
+  "status": "nicht-verifiziert",
+  "note": "Für Elektrokardiographen gibt es keine öffentlich überprüfbaren, allgemein gültigen Listenpreise. Einflussfaktoren: Bauform (Kompaktgerät, Wagensystem, PC-basiertes System), Displaygröße und Drucker, Interpretationssoftware und Zusatzmodule (z. B. Vergleich mit Vor-EKGs, Kinderauswertung, erweiterte Ableitungen), Konnektivität (WLAN, Anbindung an EKG-Managementsystem und Krankenhausinformationssystem, Lizenzen), Zubehör (Patientenkabel, Saugelektroden, Wagen), Servicevertrag und Garantielaufzeit sowie Ausschreibungs- und Rahmenvertragskonditionen. Für die Investitionsentscheidung sind die **Gesamtbetriebskosten** maßgeblich: Einmalelektroden und Thermopapier, Ersatz-Patientenkabel, Akkus, Software-Updates und Lizenzen des Managementsystems, IT-Sicherheit, Prüfungen und Schulung."
+ },
+ "maintenance": {
+  "stk": "abhaengig",
+  "mtk": "nein",
+  "basis": "STK: Diagnostische Oberflächen-EKG-Geräte sind in Anlage 1 der MPBetreibV (2025) nicht aufgeführt; STK nach § 12 MPBetreibV nur, wenn der Hersteller sie vorschreibt. MTK: nicht in Anlage 2 (§ 15 MPBetreibV) genannt.",
+  "intervals": "STK, falls vom Hersteller vorgeschrieben, nach Herstellerangabe; elektrische Wiederholungsprüfung nach IEC 62353 gemäß Herstellervorgabe bzw. Gefährdungsbeurteilung des Betreibers; Sicht- und Funktionskontrolle von Kabeln und Elektroden vor jeder Anwendung."
+ },
+ "faults": [
+  {
+   "title": "Elektrode ab / schlechter Elektrodenkontakt",
+   "ref": "elektrodenproblem",
+   "cause": "Elektrode abgefallen, Gel ausgetrocknet (abgelaufene Elektroden), fettige oder behaarte Haut, Kabelbruch oder Stecker nicht eingerastet.",
+   "action": "Haut vorbereiten (reinigen, ggf. Haare entfernen, leicht anrauen), frische Elektroden verwenden, Steckverbindung prüfen; bei wiederkehrender Meldung Patientenkabel tauschen und prüfen lassen."
+  },
+  {
+   "title": "Netzbrumm (50-Hz-Störung)",
+   "ref": "netzstoerung",
+   "cause": "Hohe oder ungleiche Elektrodenimpedanzen, Bezugselektrode (N) schlecht angelegt, Kabel parallel zu Netzleitungen, Netzbetrieb in gestörter Umgebung.",
+   "action": "Elektrodenkontakt verbessern, Kabel entflechten, Abstand zu Netzkabeln und Geräten herstellen, ggf. Akkubetrieb; Netzfilter nur bewusst einsetzen und auf dem Ausdruck kennzeichnen."
+  },
+  {
+   "title": "Muskelzittern und Bewegungsartefakte",
+   "ref": "bewegungsartefakt",
+   "cause": "Frieren, Anspannung, Tremor, Sprechen, Husten; Zug am Kabel; Patient liegt nicht entspannt.",
+   "action": "Patient warm und entspannt lagern, Arme abstützen, Kabel zugentlastet führen; Muskelfilter nur mit Hinweis auf eingeschränkte Diagnostik verwenden."
+  },
+  {
+   "title": "Unruhige oder wandernde Nulllinie",
+   "ref": "bewegungsartefakt",
+   "cause": "Atmung, Elektrodenbewegung, polarisierbare oder gemischte Elektrodentypen, schwankende Halbzellenspannungen.",
+   "action": "Einheitliche Ag/AgCl-Elektroden verwenden, ruhige Atmung, Basislinienfilter prüfen; zu hohe Hochpass-Grenzfrequenz vermeiden, da sie die ST-Strecke verfälscht."
+  },
+  {
+   "title": "Elektrodenvertauschung",
+   "ref": "anwendungsfehler",
+   "cause": "Vertauschte Extremitätenkabel (z. B. R und L) oder falsch platzierte Brustwandelektroden; Mischung unterschiedlicher Farbcodes.",
+   "action": "Kabelzuordnung nach Farbcode kontrollieren, Positionen anhand anatomischer Landmarken prüfen, EKG wiederholen; auf Plausibilitätshinweise des Geräts achten."
+  },
+  {
+   "title": "Akku leer oder geringe Laufzeit",
+   "ref": "akkufehler",
+   "cause": "Gealterter Akku, Gerät nicht an das Netz angeschlossen, defekte Ladeelektronik.",
+   "action": "Gerät laden, Akkukapazität prüfen, Akku nach Herstellerangabe tauschen."
+  },
+  {
+   "title": "Einstreuung durch andere Geräte",
+   "ref": "emv-stoerung",
+   "cause": "Hochfrequenzchirurgie, Funkgeräte, Netzteile oder Motoren in der Nähe; defekte Kabelschirmung.",
+   "action": "Störquelle identifizieren und Abstand erhöhen, geschirmte Kabel prüfen; bei anhaltenden Störungen EMV-Ursache durch Medizintechnik klären lassen ([[emv]])."
+  },
+  {
+   "title": "Drucker- oder Übertragungsfehler",
+   "cause": "Papier falsch eingelegt oder falscher Papiertyp, verschmutzter Thermokopf, fehlende Netzwerkverbindung oder fehlerhafte Patientenzuordnung.",
+   "action": "Papier korrekt einlegen, Thermokopf nach Herstellerangabe reinigen, Netzwerk- und Serverstatus prüfen; nicht übertragene EKGs nachsenden und Zuordnung kontrollieren ([[fehlersuche|systematische Fehlersuche]])."
+  }
+ ],
+ "tests": [
+  {
+   "name": "Sicherheitstechnische Kontrolle (falls vom Hersteller vorgeschrieben)",
+   "ref": "stk",
+   "description": "Prüfumfang und Intervall nach Herstellerangabe: Sichtprüfung, elektrische Sicherheit, Funktion aller Ableitungen, Elektrodenüberwachung, Drucker, Dokumentation."
+  },
+  {
+   "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+   "ref": "elektrische-sicherheitspruefung",
+   "description": "Schutzleiterwiderstand (Schutzklasse I), ggf. Isolationswiderstand, Geräte- und Patientenableitstrom des Typ-BF/CF-Anwendungsteils mit allen Elektrodenleitungen; nach Instandsetzung und in festgelegten Intervallen."
+  },
+  {
+   "name": "Funktionsprüfung mit EKG-Simulator",
+   "ref": "pruefgeraete",
+   "description": "Simuliertes 12-Kanal-EKG: korrekte Zuordnung und Polarität aller Ableitungen, Herzfrequenzanzeige, Elektrode-ab-Meldungen, Schrittmachermarkierung."
+  },
+  {
+   "name": "Amplituden- und Zeitachsenprüfung",
+   "ref": "funktionspruefung",
+   "description": "Eichsignal 1 mV ergibt 10 mm; Testsignal definierter Frequenz bei 25 und 50 mm/s – prüft Verstärkung, Papiervorschub und Zeitbasis."
+  },
+  {
+   "name": "Prüfung von Frequenzgang und Filtern",
+   "ref": "filter",
+   "description": "Sinus-, Rechteck- oder Dreiecksignale zeigen den Einfluss von Basislinien-, Netz- und Muskelfilter; Kontrolle der Voreinstellungen (diagnostische Bandbreite)."
+  },
+  {
+   "name": "Prüfung der Datenübertragung",
+   "ref": "hl7-fhir",
+   "description": "Testaufnahme an das EKG-Managementsystem senden; Vollständigkeit, Patientenzuordnung und Zeitstempel kontrollieren."
+  }
+ ],
+ "diagram": {
+  "title": "Signalkette eines 12-Kanal-Elektrokardiographen",
+  "caption": "Vereinfachtes Funktionsschema: Signalpfad (oben) vom Patienten über Elektroden, Eingangsschutz, Ableitungsbildung und Instrumentenverstärker; Digitalisierung und Schrittmacherdetektion (Mitte); isolierte Verarbeitung, Ausgabe und Vernetzung (unten). Kein Abbild eines konkreten Modells.",
+  "width": 940,
+  "height": 400,
+  "nodes": [
+   {
+    "id": "pat",
+    "label": "Patient\n(Herz)",
+    "ref": "herz",
+    "kind": "patient",
+    "x": 90,
+    "y": 70
+   },
+   {
+    "id": "elek",
+    "label": "10 Elektroden\n(Ag/AgCl)",
+    "ref": "ekg-elektrode",
+    "kind": "sensor",
+    "x": 270,
+    "y": 70
+   },
+   {
+    "id": "schutz",
+    "label": "Eingangsschutz\n(Defi-Schutz)",
+    "ref": "anwendungsteile",
+    "kind": "process",
+    "x": 450,
+    "y": 70
+   },
+   {
+    "id": "wct",
+    "label": "Ableitungsbildung\n(Wilson-Netzwerk)",
+    "ref": "biosignale",
+    "kind": "process",
+    "x": 630,
+    "y": 70
+   },
+   {
+    "id": "inamp",
+    "label": "Instrumenten-\nverstärker",
+    "ref": "instrumentenverstaerker",
+    "kind": "process",
+    "x": 830,
+    "y": 70
+   },
+   {
+    "id": "drl",
+    "label": "Rechte-Bein-\nTreiber",
+    "ref": "operationsverstaerker",
+    "kind": "control",
+    "x": 90,
+    "y": 200
+   },
+   {
+    "id": "pace",
+    "label": "Schrittmacher-\ndetektion",
+    "ref": "herzschrittmacher",
+    "kind": "sensor",
+    "x": 450,
+    "y": 200
+   },
+   {
+    "id": "adc",
+    "label": "A/D-Wandler\n(Sigma-Delta)",
+    "ref": "analog-digital-wandler",
+    "kind": "process",
+    "x": 630,
+    "y": 200
+   },
+   {
+    "id": "filt",
+    "label": "Anti-Aliasing-\nFilter",
+    "ref": "filter",
+    "kind": "process",
+    "x": 830,
+    "y": 200
+   },
+   {
+    "id": "net",
+    "label": "Netzwerk /\nEKG-Management",
+    "ref": "hl7-fhir",
+    "kind": "output",
+    "x": 90,
+    "y": 330
+   },
+   {
+    "id": "ui",
+    "label": "Display &\nThermodrucker",
+    "ref": "display-bedienoberflaeche",
+    "kind": "output",
+    "x": 270,
+    "y": 330
+   },
+   {
+    "id": "cpu",
+    "label": "Prozessor: Filter,\nVermessung, Befund",
+    "ref": "mikrocontroller",
+    "kind": "control",
+    "x": 450,
+    "y": 330
+   },
+   {
+    "id": "iso",
+    "label": "Galvanische\nTrennung",
+    "ref": "galvanische-trennung",
+    "kind": "process",
+    "x": 630,
+    "y": 330
+   },
+   {
+    "id": "netz",
+    "label": "Netzteil /\nAkku",
+    "ref": "medizinisches-netzteil",
+    "kind": "source",
+    "x": 830,
+    "y": 330
+   }
+  ],
+  "edges": [
+   {
+    "from": "pat",
+    "to": "elek",
+    "kind": "signal",
+    "label": "µV–mV"
+   },
+   {
+    "from": "elek",
+    "to": "schutz",
+    "kind": "signal"
+   },
+   {
+    "from": "schutz",
+    "to": "wct",
+    "kind": "signal"
+   },
+   {
+    "from": "wct",
+    "to": "inamp",
+    "kind": "signal"
+   },
+   {
+    "from": "inamp",
+    "to": "filt",
+    "kind": "signal"
+   },
+   {
+    "from": "filt",
+    "to": "adc",
+    "kind": "signal"
+   },
+   {
+    "from": "schutz",
+    "to": "drl",
+    "kind": "signal",
+    "label": "Gleichtakt"
+   },
+   {
+    "from": "drl",
+    "to": "pat",
+    "kind": "signal",
+    "label": "Elektrode N"
+   },
+   {
+    "from": "schutz",
+    "to": "pace",
+    "kind": "signal"
+   },
+   {
+    "from": "pace",
+    "to": "cpu",
+    "kind": "data",
+    "label": "Marker"
+   },
+   {
+    "from": "adc",
+    "to": "iso",
+    "kind": "data"
+   },
+   {
+    "from": "iso",
+    "to": "cpu",
+    "kind": "data"
+   },
+   {
+    "from": "cpu",
+    "to": "ui",
+    "kind": "data"
+   },
+   {
+    "from": "ui",
+    "to": "net",
+    "kind": "data",
+    "label": "XML / DICOM"
+   },
+   {
+    "from": "netz",
+    "to": "iso",
+    "kind": "power",
+    "label": "isolierte Versorgung"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "img/devices/ekg-geraet-aufbau.svg",
+   "kind": "schema",
+   "caption": "Schematischer Aufbau: zehn Elektroden am Patienten (Standardpositionen), Patientenkabel und Baugruppen des Geräts mit Isolationsbarriere zwischen Anwendungsteil und netzbezogener Elektronik (eigene Darstellung, kein reales Modell)."
+  },
+  {
+   "src": "img/devices/ekg-geraet-prinzip.svg",
+   "kind": "schema",
+   "caption": "Messprinzip: Einthoven-Dreieck mit den Ableitungen I, II, III und den Ableitungsgleichungen; daneben ein EKG-Zyklus mit P-Welle, QRS-Komplex, T-Welle und den Zeitintervallen im Maßstab 25 mm/s (eigene Darstellung, schematisch)."
+  }
+ ],
+ "paths": [
+  [
+   "ekg-geraet",
+   "ekg-elektrode",
+   "biosignale",
+   "aktionspotential",
+   "erregungsleitungssystem",
+   "herz"
+  ],
+  [
+   "ekg-geraet",
+   "instrumentenverstaerker",
+   "operationsverstaerker",
+   "spannung-strom-widerstand"
+  ],
+  [
+   "ekg-geraet",
+   "galvanische-trennung",
+   "ableitstrom",
+   "elektrische-stromwirkung",
+   "herz"
+  ]
+ ],
+ "related": [
+  "patientenmonitor",
+  "langzeit-ekg",
+  "ergometer",
+  "defibrillator",
+  "herzschrittmacher",
+  "icd",
+  "eeg-geraet",
+  "emg-geraet",
+  "ekg-elektrode",
+  "instrumentenverstaerker",
+  "filter",
+  "analog-digital-wandler",
+  "biosignale",
+  "erregungsleitungssystem",
+  "iec-60601-2-25",
+  "iec-60601-2-27",
+  "iec-60601-1",
+  "iec-62353",
+  "netzstoerung",
+  "elektrodenproblem"
+ ],
+ "sources": [
+  "kligfield-2007",
+  "webster-2010",
+  "kramme-2017",
+  "schmidt-lang-2019",
+  "tietze-schenk-2019",
+  "iec-60601-2-25",
+  "iec-60601-1",
+  "iec-62353",
+  "mdr-2017",
+  "mdcg-2021-24",
+  "mpbetreibv",
+  "din-31051",
+  "dguv-v3"
+ ],
+ "status": "ausfuehrlich",
+ "updated": "2026-11-11"
+}

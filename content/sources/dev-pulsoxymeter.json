@@ -1,0 +1,42 @@
+[
+  {
+    "id": "iso-80601-2-61",
+    "kind": "norm",
+    "title": "ISO 80601-2-61 – Medizinische elektrische Geräte – Teil 2-61: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Pulsoximetriegeräten",
+    "publisher": "ISO / IEC; in Deutschland als DIN EN ISO 80601-2-61",
+    "note": "Gerätespezifische Norm für Pulsoximeter (u. a. Anforderungen an die SpO₂-Genauigkeit und deren klinische Validierung). Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "sjoding-2020",
+    "kind": "artikel",
+    "authors": "Sjoding MW, Dickson RP, Iwashyna TJ, Gay SE, Valley TS",
+    "title": "Racial Bias in Pulse Oximetry Measurement",
+    "publisher": "New England Journal of Medicine 383(25): 2477–2478",
+    "year": "2020",
+    "note": "Retrospektive Analyse gepaarter SpO₂-/SaO₂-Messungen; okkulte Hypoxämie trat bei Schwarzen Patientinnen und Patienten deutlich häufiger auf als bei weißen."
+  },
+  {
+    "id": "masimo-rad97",
+    "kind": "hersteller",
+    "authors": "Masimo",
+    "title": "Rad-97 Family – Produktinformation",
+    "url": "https://professional.masimo.com/products/continuous/rad97-family",
+    "note": "Herstellerseite zur Rad-97-Familie (Puls-CO-Oximeter mit Masimo-SET- bzw. rainbow-SET-Technologie)."
+  },
+  {
+    "id": "medtronic-pm10n",
+    "kind": "hersteller",
+    "authors": "Medtronic",
+    "title": "Nellcor Portable SpO₂ Patient Monitor – Produktinformation",
+    "url": "https://www.medtronic.com/en-gb/healthcare-professionals/products/patient-monitoring/pulse-oximetry/portable-patient-monitoring/nellcor-portable-spo2-patient-monitor.html",
+    "note": "Herstellerseite zum tragbaren Nellcor-Pulsoximeter (PM10N) für OxiMax-Sensoren."
+  },
+  {
+    "id": "mindray-pm60",
+    "kind": "hersteller",
+    "authors": "Mindray",
+    "title": "PM-60 – Handheld-Pulsoximeter, Produktinformation",
+    "url": "https://www.mindray.com/uk/products/patient-monitoring/vital-signs-monitoring/pm-60",
+    "note": "Herstellerseite zum Handheld-Pulsoximeter PM-60 für Spotcheck und kontinuierliche Überwachung."
+  }
+]

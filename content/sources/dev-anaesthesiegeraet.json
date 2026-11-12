@@ -1,0 +1,19 @@
+[
+  {
+    "id": "iso-80601-2-13-2022",
+    "kind": "norm",
+    "title": "ISO 80601-2-13 – Medizinische elektrische Geräte – Teil 2-13: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Anästhesie-Arbeitsplätzen",
+    "publisher": "ISO / in Deutschland als DIN EN ISO 80601-2-13 (VDE 0750-2-13)",
+    "year": "2022",
+    "note": "Gerätespezifische Norm für Anästhesiearbeitsplätze (Inhalationsanästhesie unter ständiger Aufsicht eines Anwenders); die Ausgabe 2022 berücksichtigt u. a. Arbeitsplätze mit Sauerstoff 93. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "baum-2001",
+    "kind": "buch",
+    "authors": "Baum, J. A.",
+    "title": "Low Flow Anaesthesia: The Theory and Practice of Low Flow, Minimal Flow and Closed System Anaesthesia",
+    "edition": "2nd edition",
+    "publisher": "Butterworth-Heinemann",
+    "year": "2001"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "iec-60601-2-37",
+    "kind": "norm",
+    "title": "IEC 60601-2-37 – Medizinische elektrische Geräte – Teil 2-37: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Ultraschallgeräten für die medizinische Diagnose und Überwachung",
+    "publisher": "IEC; in Deutschland als DIN EN 60601-2-37 (VDE 0750-2-37)",
+    "note": "Gerätespezifische Norm für diagnostische Ultraschallgeräte, u. a. Anforderungen an Schallausgangsgrößen, Anzeige von thermischem und mechanischem Index sowie Oberflächentemperatur der Schallköpfe. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "iec-62359",
+    "kind": "norm",
+    "title": "IEC 62359 – Ultraschall – Charakterisierung von Feldern – Prüfverfahren für die Ermittlung thermischer und mechanischer Indizes bezogen auf medizinische diagnostische Ultraschallfelder",
+    "publisher": "IEC; in Deutschland als DIN EN 62359",
+    "note": "Legt die Berechnungs- und Messverfahren für TI und MI fest, die nach IEC 60601-2-37 angezeigt werden. Maßgeblich ist die jeweils gültige Ausgabe."
+  },
+  {
+    "id": "nisv",
+    "kind": "gesetz",
+    "title": "Verordnung zum Schutz vor schädlichen Wirkungen nichtionisierender Strahlung bei der Anwendung am Menschen (NiSV)",
+    "publisher": "Bundesministerium der Justiz / Bundesamt für Justiz",
+    "url": "https://www.gesetze-im-internet.de/nisv/",
+    "note": "Gilt seit dem 31.12.2020; regelt u. a. nichtmedizinische (kosmetische) Anwendungen von Ultraschall. § 10 untersagt die Exposition eines Fötus bei der Anwendung von Ultraschallgeräten zu nichtmedizinischen Zwecken."
+  },
+  {
+    "id": "fda-ultrasound-guidance",
+    "kind": "behoerde",
+    "authors": "U.S. Food and Drug Administration (FDA)",
+    "title": "Marketing Clearance of Diagnostic Ultrasound Systems and Transducers – Guidance for Industry and Food and Drug Administration Staff",
+    "publisher": "FDA, Center for Devices and Radiological Health",
+    "note": "US-amerikanische Leitlinie zur Zulassung diagnostischer Ultraschallsysteme; nennt u. a. die Obergrenzen für die abgeleitete räumliche Spitzen-zeitliche Mittel-Intensität (I_SPTA.3 = 720 mW/cm²) und den mechanischen Index (MI = 1,9) für die meisten Anwendungen. Maßgeblich ist die jeweils gültige Fassung."
+  }
+]

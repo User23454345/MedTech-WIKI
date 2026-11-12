@@ -1,0 +1,27 @@
+[
+  {
+    "id": "iec-60601-2-4",
+    "kind": "norm",
+    "title": "IEC 60601-2-4 – Medizinische elektrische Geräte – Teil 2-4: Besondere Festlegungen für die Sicherheit einschließlich der wesentlichen Leistungsmerkmale von Herzdefibrillatoren",
+    "publisher": "IEC / in Deutschland als DIN EN 60601-2-4 (VDE 0750-2-4)",
+    "note": "Gerätespezifische Norm für externe Defibrillatoren und AED; maßgeblich ist die jeweils gültige Ausgabe (Ausgabe 2010 mit Änderung 1:2018)."
+  },
+  {
+    "id": "kerber-1997",
+    "kind": "artikel",
+    "authors": "Kerber RE et al.",
+    "title": "Automatic External Defibrillators for Public Access Defibrillation: Recommendations for Specifying and Reporting Arrhythmia Analysis Algorithm Performance, Incorporating New Waveforms, and Enhancing Safety",
+    "publisher": "Circulation 95(6): 1677–1682",
+    "year": "1997",
+    "note": "AHA Scientific Statement (Task Force on Automatic External Defibrillation)."
+  },
+  {
+    "id": "erc-2025-als",
+    "kind": "leitlinie",
+    "authors": "European Resuscitation Council",
+    "title": "European Resuscitation Council Guidelines 2025 Adult Advanced Life Support",
+    "publisher": "Resuscitation 215 (Suppl. 1): 110769",
+    "year": "2025",
+    "note": "Aktuelle ERC-Leitlinie zur erweiterten Reanimation Erwachsener; maßgeblich ist jeweils die aktuelle Fassung."
+  }
+]

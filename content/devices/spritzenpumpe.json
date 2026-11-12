@@ -1,0 +1,601 @@
+{
+  "id": "spritzenpumpe",
+  "type": "device",
+  "title": "Spritzenpumpe",
+  "aliases": [
+    "Perfusor",
+    "Spritzendosierpumpe",
+    "Motorspritze",
+    "Spritzenpumpe (SP)",
+    "Syringe Pump",
+    "Syringe Driver",
+    "Infusionsspritzenpumpe"
+  ],
+  "category": "geraete",
+  "deviceGroup": "infusion",
+  "rank": 5,
+  "domains": [
+    "intensivmedizin",
+    "anaesthesiologie",
+    "neonatologie",
+    "notfallmedizin",
+    "herzchirurgie",
+    "kardiologie"
+  ],
+  "summary": "Eine Spritzenpumpe schiebt den Kolben einer Einmalspritze über einen motorgetriebenen Spindelantrieb mit definierter Geschwindigkeit vor und fördert so kleine Volumina hochwirksamer Medikamente sehr gleichmäßig in ml/h. Die Förderrate folgt aus Kolbenquerschnitt und Vorschub; ein Kraftsensor im Schiebeteil erkennt Okklusionen, weitere Sensoren überwachen Spritzensitz, Kolbenposition und Antrieb.",
+  "riskClass": {
+    "value": "IIb",
+    "evidence": "belegt",
+    "note": "Nach [[mdr|MDR]] Anhang VIII **Regel 12** gehören aktive Produkte, die Arzneimittel, Körperflüssigkeiten oder andere Stoffe an den Körper abgeben, zur Klasse IIa – zur Klasse **IIb**, wenn dies unter Berücksichtigung der Art der Stoffe, des betroffenen Körperteils und der Art der Anwendung in potenziell gefährlicher Weise erfolgt [@mdr-2017]. Die kontinuierliche intravenöse Gabe hochwirksamer Medikamente mit aktiv erzeugtem Druck gilt als potenziell gefährlich; Spritzenpumpen werden von den Herstellern entsprechend als Klasse IIb eingestuft. Die verbindliche Einstufung trifft der Hersteller für sein Produkt (siehe [[risikoklassen|Risikoklassen]]).",
+    "sources": [
+      "mdr-2017"
+    ]
+  },
+  "sections": {
+    "purpose": "## Medizinischer Zweck\n\nEine **Spritzenpumpe** (englisch *syringe pump* oder *syringe driver*, im deutschen Klinikjargon nach einem verbreiteten Markennamen oft „Perfusor“ genannt) fördert den Inhalt einer handelsüblichen Einmalspritze mit einer **eingestellten Förderrate in ml/h** kontinuierlich in das Gefäßsystem des Patienten. Dazu schiebt ein motorisch angetriebener [[spindelantrieb|Spindelantrieb]] den Spritzenkolben mit genau definierter Geschwindigkeit vor [@kramme-2017][@webster-2010]. Das geförderte Volumen ergibt sich unmittelbar aus dem Kolbenweg und der Querschnittsfläche der Spritze – Spritzenpumpen gehören damit, wie die [[infusionspumpe|volumetrische Infusionspumpe]], zu den **verdrängenden** (volumetrischen) Fördersystemen.\n\nIhre besondere Stärke ist die **gleichmäßige Förderung kleiner Volumina**: Weil der Kolben kontinuierlich und nahezu pulsationsfrei vorgeschoben wird, lassen sich Raten von wenigen Zehntel Millilitern pro Stunde mit guter Kurzzeitgenauigkeit realisieren. Das ist entscheidend für hochwirksame Medikamente mit **kurzer Halbwertszeit**, bei denen schon kurze Förderunterbrechungen oder kleine Boli klinisch wirksam werden – etwa Katecholamine (Noradrenalin, Adrenalin, Dobutamin), Vasodilatatoren, Sedativa und Opioide, Insulin auf der Intensivstation oder Heparin.\n\nDie wichtigsten therapeutischen Aufgaben:\n\n| Aufgabe | Beispiel | Anforderung an die Pumpe |\n|---|---|---|\n| Kreislaufunterstützung | Katecholamine über einen zentralvenösen Katheter | pulsationsarme Förderung, kleine Raten, kein Bolus bei Spritzenwechsel |\n| Analgosedierung | Opioide, Hypnotika auf der Intensivstation | lange Laufzeiten, Dosisberechnung in µg/kg/min oder mg/h |\n| Totale intravenöse Anästhesie (TIVA) | Hypnotikum und Opioid im OP | schnelle Ratenänderung, Bolus, ggf. zielkonzentrationsgesteuerte Infusion (TCI) |\n| Neonatologie und Pädiatrie | Medikamente und Ernährungskomponenten für Früh- und Neugeborene | sehr kleine Raten (Zehntel ml/h und darunter), kleine Spritzen, geringe Totvolumina |\n| Antikoagulation, Insulin, Elektrolyte | Heparin, Insulin, Kalium in hoher Konzentration | genaue Dosierung, Medikamentenbibliothek mit Grenzwerten |\n| Patientenkontrollierte Analgesie | Schmerzmittelbolus auf Anforderung | Sperrzeiten, Dosislimits (eigener Gerätetyp [[pca-pumpe|PCA-Pumpe]]) |\n\n> [!belegt] Spritzenpumpen sind aktive [[medizinprodukt|Medizinprodukte]] und [[medizinisches-elektrisches-geraet|ME-Geräte]]. Neben der Basisnorm [[iec-60601-1|IEC 60601-1]] gilt für sie die besondere Norm [[iec-60601-2-24|IEC 60601-2-24]] für Infusionspumpen und Infusionsregler, deren Anwendungsbereich ausdrücklich auch Spritzen- und Spritzendosierpumpen umfasst. Sie legt u. a. Prüfverfahren für die Fördergenauigkeit (Anlauf- und Trompetenkurve), den Schutz vor Über- und Unterinfusion sowie Anforderungen an Okklusionsalarme fest [@iec-60601-2-24][@iec-60601-1].\n\nDie Pumpe überwacht das **Fördersystem**, nicht den Patienten. Sie erkennt beispielsweise einen Druckanstieg bei verschlossener Leitung, aber weder eine Fehlpunktion noch eine falsche Medikamentenkonzentration in der Spritze. Die Wirkung der Therapie muss klinisch und mit dem [[patientenmonitor|Patientenmonitor]] überwacht werden.\n\n> [!warnung] Die häufigsten Gefährdungen durch Spritzenpumpen sind **Eingabe- und Verwechslungsfehler** (Rate statt Dosis, falsche Konzentration, falsche Spritzengröße bestätigt), **ungewollte Boli** (nach Okklusion, beim Spritzenwechsel, durch Höhenänderung der Pumpe oder durch Heberwirkung bei nicht korrekt eingelegter Spritze) und **Therapieunterbrechungen** bei kleinen Raten. Medikamentenbibliotheken mit Dosisgrenzen, standardisierte Konzentrationen, die korrekte Spritzenwahl und eine sorgfältige [[einweisung|Einweisung]] sind daher zentrale Bausteine der [[patientensicherheit|Patientensicherheit]].",
+    "applications": "## Einsatzgebiete\n\nSpritzenpumpen gehören neben der volumetrischen Infusionspumpe zu den zahlenmäßig häufigsten aktiven Medizinprodukten im Krankenhaus. Ein beatmeter Intensivpatient erhält nicht selten fünf bis zehn Medikamente gleichzeitig über Spritzenpumpen, die in einem Pumpenständer oder einer **Dockingstation** mit gemeinsamer Stromversorgung, Datenanbindung und Schwesternruf-Anschluss zusammengefasst sind.\n\n* **[[intensivmedizin|Intensivmedizin]]** – Katecholamine, Analgosedierung, Antikoagulation, Insulin, Elektrolytkonzentrate; viele parallele Leitungen über mehrlumige zentralvenöse Katheter.\n* **[[anaesthesiologie|Anästhesie]] und OP** – totale intravenöse Anästhesie, häufig mit **TCI-Funktion** (*Target Controlled Infusion*): Die Pumpe berechnet die Rate aus einem pharmakokinetischen Modell so, dass eine vorgegebene Plasma- oder Wirkortkonzentration erreicht wird (für Propofol z. B. nach den Modellen von Marsh oder Schnider, für Remifentanil nach Minto) [@larsen-2018].\n* **[[neonatologie|Neonatologie]] und Pädiatrie** – sehr kleine Raten und Volumina; Spritzenpumpen sind hier wegen ihrer gleichmäßigen Förderung bei kleinsten Raten meist das Standardgerät.\n* **[[herzchirurgie|Herzchirurgie]] und [[kardiologie|Kardiologie]]** – vasoaktive und antiarrhythmische Medikamente, Heparin während Interventionen.\n* **[[notfallmedizin|Notfallmedizin]] und Transport** – akkubetriebene Spritzenpumpen in Rettungsmitteln und beim innerklinischen Transport von Intensivpatienten, mit robusten Halterungen für Trage oder Transportbeatmungsgerät.\n* **Normalstation, Palliativmedizin und ambulante Versorgung** – kontinuierliche Gabe von Analgetika oder Antibiotika; in der Palliativversorgung auch kleine, tragbare Spritzentreiber für subkutane Infusionen.\n\n### Abgrenzung zu verwandten Geräten\n\n| Gerät | Förderprinzip | Typischer Einsatz |\n|---|---|---|\n| **Spritzenpumpe** | Spindelantrieb schiebt den Kolben einer Einmalspritze vor | kleine Volumina (bis 50/60 ml je Spritze), hochwirksame Medikamente, sehr kleine Raten |\n| [[infusionspumpe|Volumetrische Infusionspumpe]] | Verdrängung im Schlauchsegment (Peristaltik oder Kassette) | große Volumina aus Beutel oder Flasche, Raten bis etwa 1 000 ml/h |\n| [[pca-pumpe|PCA-Pumpe]] | Spritze oder Kassette, Bolusanforderung durch den Patienten | patientenkontrollierte Schmerztherapie |\n| [[insulinpumpe|Insulinpumpe]] | Mikrodosierung aus Reservoir, oft ebenfalls Kolbenprinzip | ambulante subkutane Insulintherapie ([[diabetologie|Diabetologie]]) |\n| [[enterale-ernaehrungspumpe|Enterale Ernährungspumpe]] | meist Rotationsperistaltik | Sondennahrung – **nicht** intravenös |\n\n> [!praxis] Faustregel in vielen Kliniken: **kleine Volumina hochkonzentrierter Medikamente → Spritzenpumpe, große Volumina → volumetrische Pumpe.** Die beiden Gerätetypen werden in modernen Pumpensystemen desselben Herstellers oft in einer gemeinsamen Dockingstation betrieben und über dieselbe Medikamentenbibliothek konfiguriert. Für die Wahl entscheidend ist neben dem Volumen die **Kurzzeitgenauigkeit** bei der verordneten Rate.\n\nZunehmend werden Spritzenpumpen in die Krankenhaus-IT eingebunden: Raten, Volumina und Alarme werden an Patientendatenmanagementsysteme übertragen (z. B. über [[hl7-fhir|HL7]]-basierte Schnittstellen), Medikamentenbibliotheken zentral verteilt. Damit unterliegt die Pumpe auch Anforderungen an IT-Sicherheit und [[software-medizinprodukt|Software]]-Lebenszyklusprozesse nach [[iec-62304|IEC 62304]].",
+    "principle": "## Funktionsprinzip\n\n### Grundgleichung: Kolbenweg mal Querschnitt\n\nEine Spritzenpumpe ist ein **Kolbenverdränger**. Der Kolben der Spritze wird mit der Geschwindigkeit v vorgeschoben; das verdrängte Volumen pro Zeiteinheit ist das Produkt aus Kolbengeschwindigkeit und innerer Querschnittsfläche A des Spritzenzylinders [@webster-2010][@tipler-2019]:\n\n`Q = A · v` mit `A = π · d² / 4`\n\n* **Q** – Volumenstrom (Förderrate), in der Klinik in ml/h angegeben\n* **d** – Innendurchmesser des Spritzenzylinders\n* **v** – Vorschubgeschwindigkeit des Kolbens\n\nWeil A quadratisch vom Durchmesser abhängt, ist die **genaue Kenntnis des Spritzeninnendurchmessers** die wichtigste Voraussetzung für eine korrekte Förderrate. Eine Abweichung des Durchmessers um 1 % verursacht bereits eine Volumenabweichung von etwa 2 %. Die Pumpe kennt den Durchmesser nicht aus einer Messung mit ausreichender Genauigkeit, sondern aus einer **Spritzentabelle**: Für jede freigegebene Spritzenmarke und -größe sind Innendurchmesser, Kolbenweg und Kolbenhaltekräfte hinterlegt. Die Anwenderin bestätigt beim Einlegen Hersteller und Größe der Spritze; der Durchmessersensor am Spritzenhalter dient nur der **Plausibilitätsprüfung** (z. B. 20-ml- statt 50-ml-Spritze).\n\n> [!warnung] Wird eine falsche Spritzenmarke bestätigt, fördert die Pumpe systematisch falsch – auch wenn alle Alarme stumm bleiben. Spritzen verschiedener Hersteller mit gleichem Nennvolumen haben unterschiedliche Innendurchmesser. Es dürfen daher nur die in der Gebrauchsanweisung freigegebenen Spritzen verwendet werden; Anforderungen an Spritzen für Spritzenpumpen beschreibt u. a. die Norm ISO 7886-2 [@iso-7886-2].\n\n### Kinematische Kette: vom Schrittimpuls zum Kolbenvorschub\n\nDie Vorschubgeschwindigkeit wird über eine Kette aus Motor, Getriebe und Gewindespindel erzeugt:\n\n| Glied | Funktion | Kenngröße |\n|---|---|---|\n| [[schrittmotor|Schrittmotor]] (oder DC-Motor mit Drehgeber) | wandelt elektrische Impulse in Drehwinkel | Schritte pro Umdrehung z (z. B. 200 Vollschritte), ggf. Mikroschritte |\n| Untersetzungsgetriebe | erhöht Drehmoment, verfeinert die Auflösung | Übersetzung i |\n| Gewindespindel mit Spindelmutter | wandelt Drehung in Linearbewegung | Steigung P (Weg pro Spindelumdrehung) |\n| Schiebeteil (Kolbenhalter) | überträgt die Kraft auf die Kolbenplatte, hält den Kolben fest | enthält Kraftsensor und Kolbenkrallen |\n\nFür den Kolbenweg pro Motorschritt und die Vorschubgeschwindigkeit gilt:\n\n`Δs = P / (z · i)` und `v = f · Δs`\n\nDabei ist f die Schrittfrequenz. Zusammen mit der Grundgleichung ergibt sich das **Volumen pro Schritt** `ΔV = A · Δs` und die erforderliche Schrittfrequenz `f = Q / ΔV`. Der [[mikrocontroller|Mikrocontroller]] berechnet f aus der eingestellten Rate und der Spritzentabelle; der Motortreiber erzeugt die Phasenströme mit [[pwm|PWM]]-Stromregelung, häufig im Mikroschrittbetrieb [@kramme-2017].\n\n> [!beispiel] **Von der Förderrate zur Schrittfrequenz.** Annahmen (Beispielwerte, kein reales Gerät): Spritzeninnendurchmesser d = 26 mm, Spindelsteigung P = 1 mm, Schrittmotor mit z = 200 Vollschritten und 16-fachem Mikroschritt (3 200 Mikroschritte pro Umdrehung), Getriebe i = 10.\n> * Querschnitt: A = π · (13 mm)² ≈ **531 mm²** = 5,31 cm²\n> * Weg pro Mikroschritt: Δs = 1 mm / (3 200 · 10) ≈ **31 nm**\n> * Volumen pro Mikroschritt: ΔV = 531 mm² · 0,031 25 µm ≈ 0,016 6 mm³ ≈ **16,6 nl**\n> * Rate Q = 1 ml/h = 1 000 mm³/h → Kolbengeschwindigkeit v = 1 000 / 531 ≈ **1,88 mm/h**, also etwa 0,5 µm/s\n> * Erforderliche Mikroschrittfrequenz: f = 1 000 mm³/h / 0,016 6 mm³ ≈ 60 200 /h ≈ **16,7 Hz**\n> * Bei Q = 0,1 ml/h: f ≈ 1,7 Hz; bei Q = 100 ml/h: f ≈ 1,67 kHz\n>\n> Selbst bei sehr kleinen Raten wird das Volumen in Portionen von wenigen Nanolitern abgegeben – die Förderung ist praktisch kontinuierlich. Bei einer peristaltischen Pumpe liegen die Portionen typischerweise im Mikroliterbereich.\n\n### Dosisberechnung\n\nKlinisch wird häufig nicht die Rate, sondern die **Dosis** verordnet, etwa in µg/kg/min. Die Pumpe rechnet mit dem Dosisrechner aus Konzentration c, Körpergewicht m und Dosis D die Rate:\n\n`Q [ml/h] = D [µg/kg/min] · m [kg] · 60 min/h / c [µg/ml]`\n\n> [!beispiel] **Dosis in Rate umrechnen** (reine Rechenübung, keine Dosierempfehlung): D = 0,1 µg/kg/min, m = 70 kg, c = 100 µg/ml (z. B. 5 mg in 50 ml). Q = 0,1 · 70 · 60 / 100 = **4,2 ml/h**. Eine verwechselte Konzentration von 10 statt 100 µg/ml ergäbe 42 ml/h – eine zehnfache Überdosierung. Genau solche Fehler sollen Medikamentenbibliotheken mit hinterlegten Standardkonzentrationen und Dosisgrenzen (*Soft* und *Hard Limits*) verhindern.\n\n### Anlaufverhalten: Spiel, Haftreibung und Compliance\n\nDirekt nach dem Start fördert eine Spritzenpumpe oft **deutlich weniger** als eingestellt. Ursachen sind:\n\n1. **Mechanisches Spiel** zwischen Spindelmutter, Schiebeteil, Kolbenplatte und Kolbenstange, das erst überwunden werden muss.\n2. **Haftreibung (Losbrechkraft)** des elastomeren Kolbenstopfens an der Zylinderwand: Der Stopfen verformt sich zunächst elastisch, bevor er gleitet. Danach wirkt die geringere Gleitreibung; ein Wechsel zwischen Haften und Gleiten (*Stick-Slip*) kann kleine Förderschwankungen verursachen.\n3. **Compliance** von Stopfen, Spritzenzylinder und Leitung: Der beim Fördern entstehende Gegendruck verformt die nachgiebigen Teile und speichert Volumen, das nicht beim Patienten ankommt.\n\nDie Zeit bis zum Erreichen der Sollrate wächst umgekehrt proportional zur Rate. Bei Raten im Bereich von 0,1 ml/h kann es ohne Gegenmaßnahmen viele Minuten bis über eine Stunde dauern, bis das Medikament tatsächlich gleichmäßig fließt. Die Norm [[iec-60601-2-24|IEC 60601-2-24]] verlangt deshalb bei der Typprüfung eine **Anlaufkurve** (Förderrate über die ersten Betriebsstunden) [@iec-60601-2-24].\n\n> [!praxis] Gegenmaßnahmen in der Praxis: Spritze und Leitung vor dem Anschluss mit der Pumpe **vorfüllen** (Funktion „Entlüften/Prime“ bzw. „Spiel ausgleichen“), damit Spiel und Haftreibung bereits überwunden sind; möglichst kleine Spritzen bei kleinen Raten verwenden (kleiner Querschnitt → größerer Kolbenweg pro Volumen); kurze, steife, druckfeste Leitungen mit kleinem Innendurchmesser einsetzen. Viele Pumpen bieten eine automatische Spielausgleichsfunktion beim Einlegen der Spritze.\n\n### Okklusionserkennung über die Kolbenkraft\n\nWeil der Kolben zwangsweise vorgeschoben wird, steigt bei einem Verschluss der Leitung (Okklusion, z. B. geschlossener Dreiwegehahn oder verstopfter Katheter) der Druck in Spritze und Leitung an. Die Spritzenpumpe misst diesen Druck in der Regel **indirekt über die Kraft auf das Schiebeteil**. Ein [[kraftsensor|Kraftsensor]] (z. B. mit Dehnungsmessstreifen in Brückenschaltung) zwischen Spindelmutter und Kolbenplatte erfasst die Vorschubkraft F. Sie setzt sich aus dem Druckanteil und der Reibung des Kolbenstopfens zusammen:\n\n`F = p · A + F_R` und damit `p ≈ (F − F_R) / A`\n\n* **p** – Überdruck in der Spritze gegenüber der Umgebung\n* **F_R** – Gleitreibungskraft des Stopfens (spritzen- und temperaturabhängig, streut von Spritze zu Spritze)\n\nDaraus folgen zwei physikalische Konsequenzen:\n\n* Bei gleichem Druck ist die Kraft in einer großen Spritze viel größer als in einer kleinen. Bei 50-ml-Spritzen bedeutet eine kleine Kraftunsicherheit nur eine kleine Druckunsicherheit; bei kleinen Spritzen geht die Reibung stärker ein. Deshalb sind Alarmschwellen für jede Spritzengröße getrennt in der Spritzentabelle hinterlegt.\n* Weil F_R unbekannt streut, ist die Druckmessung über die Kolbenkraft grundsätzlich **ungenauer** als eine direkte Druckmessung in der Leitung. Manche Systeme nutzen deshalb zusätzlich einen Drucksensor oder eine Druckscheibe im Leitungssystem.\n\nModerne Pumpen werten nicht nur das Überschreiten einer Grenze aus, sondern auch die **Steigung des Druckverlaufs** und zeigen den aktuellen Druck als Balken oder Trend an. Die Messkette folgt dem allgemeinen Schema der [[messkette|Messkette]]: Brückenschaltung → [[instrumentenverstaerker|Instrumentenverstärker]] → [[analog-digital-wandler|A/D-Wandler]] → digitale [[filter|Filterung]] → Grenzwertvergleich im Überwachungsprozessor.\n\n#### Zeit bis zum Alarm und Bolus nach Okklusion\n\nSpritze, Stopfen und Leitung bilden ein elastisches System mit der **Systemcompliance** C_S (aufgenommenes Volumen pro Druckänderung). Bei einer Okklusion fördert der Kolben in diese Compliance hinein; der Druck steigt mit\n\n`dp/dt = Q / C_S` → `t_Alarm ≈ C_S · Δp_Alarm / Q`\n\nDas dabei gespeicherte Volumen `V_Bolus ≈ C_S · Δp_Alarm` wird beim Lösen des Verschlusses schlagartig an den Patienten abgegeben.\n\n> [!beispiel] **Okklusion bei kleinen Raten** (Beispielwerte): Systemcompliance C_S = 1 µl/mmHg, Alarmgrenze Δp = 300 mmHg (≈ 0,4 bar; 1 mmHg ≈ 133,3 Pa).\n> * Gespeichertes Volumen: V = 1 µl/mmHg · 300 mmHg = **300 µl = 0,3 ml**\n> * Bei Q = 10 ml/h: t_Alarm ≈ 0,3 ml / 10 ml/h = 0,03 h ≈ **1,8 min**\n> * Bei Q = 1 ml/h: t_Alarm ≈ **18 min**\n> * Bei Q = 0,1 ml/h: t_Alarm ≈ **3 h**\n>\n> Bei 0,1 ml/h entsprechen die 0,3 ml einer Förderdauer von drei Stunden – nach dem Lösen der Okklusion erhält der Patient diese Menge in Sekunden. Bei einem Katecholamin ist das hämodynamisch relevant.\n\nTechnische Gegenmaßnahmen sind eine **niedrige Alarmstufe** bei kleinen Raten, die Auswertung des Druckanstiegs (frühere Erkennung), und die **Anti-Bolus-Funktion**: Nach einem Okklusionsalarm fährt die Pumpe das Schiebeteil ein kleines Stück zurück und baut so den gespeicherten Druck ab, bevor die Leitung geöffnet wird.\n\n### Hydrostatik: Höhenänderung und Heberwirkung\n\nSpritzenpumpen sind empfindlich gegenüber dem **hydrostatischen Druck** `p = ρ · g · h` der Flüssigkeitssäule zwischen Spritze und Patient [@tipler-2019]. Für wässrige Lösungen (ρ ≈ 1 000 kg/m³) entspricht 1 m Höhendifferenz etwa 9,8 kPa ≈ 74 mmHg.\n\n* **Höhenänderung der Pumpe:** Wird eine laufende Pumpe angehoben, steigt der Druck an der Kanüle; die Compliance gibt Volumen ab (ungewollter Bolus). Wird sie abgesenkt, nimmt die Compliance Volumen auf, und die Förderung stockt kurzzeitig. Mit C_S = 1 µl/mmHg ergibt ein Höhensprung von 0,5 m (≈ 37 mmHg) etwa 37 µl – bei 0,5 ml/h die Menge von gut vier Minuten.\n* **Heberwirkung (Siphoning):** Ist der Kolben nicht sicher in den Krallen des Schiebeteils fixiert oder der Spritzenflansch nicht in der Halterung, kann eine oberhalb des Patienten hängende Spritze sich unter der Schwerkraft **frei entleeren**. Pumpen erkennen deshalb Flanschsitz und Kolbenfixierung über eigene Sensoren und verweigern den Start bei unvollständig eingelegter Spritze.\n\n> [!vereinfacht] Die Betrachtung als lineares System mit konstanter Compliance ist eine Vereinfachung. Tatsächlich hängt C_S vom Druck, von der Temperatur, von der Spritzengröße und von der Art der Leitung ab; Stopfenreibung und Spiel verhalten sich nichtlinear. Die Größenordnungen und Proportionalitäten (Alarmzeit ∝ 1/Q, Bolus ∝ C_S · Δp) gelten jedoch qualitativ.\n\n### Regelung und Überwachung\n\nEin Schrittmotor arbeitet grundsätzlich **gesteuert**: Jede Schrittfolge entspricht einem Drehwinkel, solange das Lastmoment kleiner als das Haltemoment bleibt. Damit verlorene Schritte (z. B. bei Überlast oder mechanischer Blockade) erkannt werden, überwachen Spritzenpumpen die tatsächliche Bewegung über einen **Drehgeber** an Motor oder Spindel (optisch oder mit [[hall-sensor|Hall-Sensoren]]) und zusätzlich die Kolbenposition über einen linearen Wegaufnehmer. Abweichungen zwischen Soll- und Istbewegung führen zum Stopp und zu einem technischen Alarm. So entsteht eine Kombination aus Steuerung und Plausibilitäts-[[regelkreis|Regelkreis]].\n\nSicherheitsrelevante Funktionen sind meist **zweikanalig** realisiert: Ein Steuerprozessor berechnet Raten und bedient die Oberfläche, ein unabhängiger Überwachungsprozessor kontrolliert Motorbewegung, Kolbenweg, Kraft und Zeitbasis und kann den Motor unabhängig abschalten. Das [[alarmsystem|Alarmsystem]] unterscheidet Alarme hoher Priorität (Okklusion, Spritze leer, technischer Fehler) von Voralarmen (Spritze fast leer, Akku schwach) entsprechend [[iec-60601-1-8|IEC 60601-1-8]] [@iec-60601-1-8].\n\n| Überwachte Größe | Sensor | Typischer Alarm |\n|---|---|---|\n| Kolbenkraft | Kraftsensor im Schiebeteil | Okklusion, Druckanstieg |\n| Kolbenposition | Linearpotentiometer oder Wegsensor | Spritze fast leer, Spritze leer, Restlaufzeit |\n| Spritzendurchmesser | Potentiometer am Niederhalter | Spritzengröße unplausibel |\n| Flansch- und Kolbensitz | Mikroschalter, Hall- oder optische Sensoren | Spritze nicht korrekt eingelegt |\n| Motordrehung | Drehgeber | technischer Alarm, Förderstopp |\n| Energieversorgung | Spannungs- und Strommessung, Ladezustand | Netzausfall, Akku schwach/leer |",
+    "construction": "## Technischer Aufbau\n\nEine Spritzenpumpe besteht aus einem kompakten Gehäuse mit einer **Spritzenmulde** auf der Oberseite oder Front, der **Antriebseinheit** darunter sowie Elektronik, Energieversorgung und Bedienoberfläche. Das Schema zeigt die wesentlichen Baugruppen (siehe Abbildungen).\n\n### Spritzenaufnahme\n\n* **Spritzenmulde und Niederhalter:** Der Spritzenzylinder liegt in einer Mulde und wird von einem federbelasteten Niederhalter fixiert. Ein Drehwinkel- oder Linearsensor am Niederhalter misst den Außendurchmesser für die Plausibilitätsprüfung der Spritzengröße.\n* **Flanschaufnahme:** Ein Schlitz fixiert den Spritzenflansch axial; ein Sensor meldet, ob der Flansch korrekt sitzt. Nur so stützt sich die Vorschubkraft am Gehäuse ab und nicht an der Spritze selbst.\n* **Schiebeteil (Antriebskopf):** Es greift die Kolbenplatte, schiebt sie vor und hält sie mit **Kolbenkrallen** fest, sodass der Kolben weder durch Unterdruck (Heberwirkung) herausgezogen noch frei bewegt werden kann. Im Schiebeteil sitzt der Kraftsensor für die Okklusionserkennung; Sensoren melden, ob die Kolbenplatte anliegt und die Krallen geschlossen sind.\n\n### Antriebseinheit\n\n* **Motor:** Häufig ein [[schrittmotor|Schrittmotor]], teils ein bürstenloser oder bürstenbehafteter Gleichstrommotor mit Drehgeber ([[elektromotor|Elektromotor]]).\n* **Getriebe:** Stirnrad- oder Schneckengetriebe zur Untersetzung.\n* **Gewindespindel mit Mutter:** Trapez- oder Kugelgewindespindel; die Mutter ist häufig als **Halbmutter** ausgeführt, die sich über einen Kupplungshebel am Schiebeteil vom Gewinde lösen lässt. So kann das Schiebeteil zum Einlegen der Spritze schnell verfahren werden.\n* **Wegsensor:** Linearpotentiometer oder anderes Wegmesssystem entlang der Spindel für die Kolbenposition (Restvolumen, Voralarm „Spritze fast leer“).\n\n> [!warnung] Wird die Kupplung bei an den Patienten angeschlossener Spritze geöffnet, ist der Kolben nicht mehr fixiert; je nach Lage der Spritze droht ein freier Fluss oder ein Rückfluss. Spritzen dürfen nur nach Gebrauchsanweisung und bei geschlossenem Leitungssystem eingelegt oder entnommen werden.\n\n### Elektronik\n\n* **Steuerprozessor** ([[mikrocontroller|Mikrocontroller]]): Ratenberechnung, Dosisrechner, Medikamentenbibliothek, Ereignisprotokoll, Schnittstellen.\n* **Überwachungsprozessor:** unabhängige Kontrolle der sicherheitsrelevanten Funktionen und eigene Abschaltmöglichkeit für den Motortreiber.\n* **Motortreiber** mit Stromregelung über [[pwm|PWM]].\n* **Messverstärker** für Kraftsensor und Potentiometer, [[analog-digital-wandler|A/D-Wandler]].\n* **[[display-bedienoberflaeche|Display und Bedienoberfläche]]** (Tasten, Drehknopf oder Touchscreen), Status-LED, Lautsprecher bzw. Summer des [[alarmsystem|Alarmsystems]].\n* **Kommunikationsschnittstellen:** Dockingkontakte, serielle Schnittstelle, LAN oder WLAN, Schwesternruf.\n\n### Energieversorgung\n\nSpritzenpumpen werden über ein internes oder externes [[medizinisches-netzteil|medizinisches Netzteil]] bzw. über die Dockingstation versorgt und besitzen einen [[lithium-ionen-akku|Lithium-Ionen-Akku]] (ältere Geräte auch NiMH) für Transport und Netzausfall. Der Übergang auf Akkubetrieb muss unterbrechungsfrei erfolgen; das Gerät meldet den Netzausfall und den Ladezustand. Häufig sind Spritzenpumpen in [[schutzklassen|Schutzklasse]] II ausgeführt oder werden über ein Netzteil mit Kleinspannung versorgt; das Anwendungsteil – die leitfähige Flüssigkeitssäule zum Patienten – ist meist vom Typ CF und defibrillationsgeschützt ([[anwendungsteile|Anwendungsteile]]). Maßgeblich sind die Angaben des Herstellers.\n\n### Gehäuse und Halterung\n\nDas Gehäuse muss Flüssigkeiten widerstehen (Schutz gegen eindringendes Wasser, IP-Code nach Herstellerangabe), desinfizierbar sein und einen Fall aus Transporthöhe überstehen. Universalklemmen für Stangen und Schienen, Dockingstationen sowie Transporthalterungen gehören zum Systemzubehör. Die [[emv|elektromagnetische Verträglichkeit]] nach [[iec-60601-1-2|IEC 60601-1-2]] ist wegen des Einsatzes in der Nähe von Funkgeräten, Defibrillatoren und HF-Chirurgie besonders wichtig [@iec-60601-1-2].\n\n### Verbrauchsmaterial\n\n| Teil | Bedeutung |\n|---|---|\n| Einmalspritze (z. B. 2, 5, 10, 20, 30, 50/60 ml) | nur in der Spritzentabelle freigegebene Marken und Größen; Luer-Lock-Anschluss |\n| Perfusorleitung (Spritzenleitung) | dünnlumige, druckfeste Leitung mit geringer Compliance und kleinem Füllvolumen; teils lichtgeschützt (für lichtempfindliche Medikamente) |\n| Rückschlagventile, Filter, Mehrfachverteiler | verhindern Rückfluss in andere Leitungen bei Okklusion; erhöhen aber Compliance und Totvolumen |",
+    "maintenance": "## Wartung und Instandhaltung\n\nDie [[instandhaltung-grundlagen|Instandhaltung]] nach [[din-31051|DIN 31051]] umfasst bei Spritzenpumpen [[wartung|Wartung]], [[inspektion|Inspektion]], [[instandsetzung|Instandsetzung]] und Verbesserung [@din-31051]. Grundlage sind immer die Angaben des Herstellers in Gebrauchsanweisung und Servicehandbuch.\n\n### Rechtlicher Rahmen\n\n> [!belegt] Spritzenpumpen sind nichtimplantierbare aktive Medizinprodukte zur unmittelbaren Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potentiellem Druckaufbau und damit in **Anlage 1 Nr. 1.4 der [[mpbetreibv|MPBetreibV]]** (Fassung 2025) aufgeführt. Für sie ist eine [[stk|sicherheitstechnische Kontrolle]] nach **§ 12 MPBetreibV** vorgeschrieben – in den vom Hersteller angegebenen Fristen; fehlen solche Angaben, spätestens alle zwei Jahre [@mpbetreibv]. Eine [[mtk|messtechnische Kontrolle]] ist nicht vorgeschrieben, da Spritzenpumpen nicht in Anlage 2 aufgeführt sind.\n\nFür Anlage-1-Produkte gelten zudem besondere Betreiberpflichten: Funktionsprüfung am Betriebsort und [[einweisung|Einweisung]] der vom Betreiber beauftragten Person vor der ersten Inbetriebnahme, Einweisung der Anwenderinnen und Anwender sowie die Führung eines [[medizinproduktebuch|Medizinproduktebuchs]]; außerdem ist das Gerät im [[bestandsverzeichnis|Bestandsverzeichnis]] zu führen ([[betreiberpflichten|Betreiberpflichten]]). Maßgeblich ist die jeweils geltende Fassung der Verordnung.\n\n### Typische Wartungsarbeiten\n\n* **Mechanik:** Sichtprüfung und Reinigung von Spindel, Führungen und Schiebeteil; Prüfung der Kolbenkrallen, des Niederhalters und der Flanschaufnahme auf Verschleiß und Leichtgängigkeit; Schmierung nur nach Herstellerangabe.\n* **Sensorik:** Kalibrierung bzw. Justierung von Kraftsensor, Durchmesser- und Wegsensor nach Servicehandbuch mit Referenzgewichten oder Messlehren ([[kalibrierung|Kalibrierung]]).\n* **Akku:** Kapazitätstest und Austausch nach Herstellerintervall oder bei unzureichender Laufzeit; Akkus altern auch ohne Nutzung.\n* **Software:** Aktualisierung von Firmware und Medikamentenbibliothek nach Freigabe; Dokumentation der Versionsstände.\n* **Gehäuse, Dichtungen, Netzteil und Halterungen:** Risse, gebrochene Klemmen und beschädigte Kabel sind häufige Ursachen für Ausfälle nach Stürzen.\n\n> [!praxis] Rückstände eingetrockneter Medikamente oder Desinfektionsmittel an Spindel und Schiebeteil gehören zu den häufigsten Ursachen schwergängiger Mechanik und fehlerhafter Okklusionsalarme. Bei der [[aufbereitung|Aufbereitung]] nur vom Hersteller freigegebene Desinfektionsmittel verwenden und keine Flüssigkeit in die Spindelöffnung gelangen lassen. Nach Stürzen ist das Gerät außer Betrieb zu nehmen und von der Medizintechnik zu prüfen.\n\n### Organisation\n\nSpritzenpumpen sind in großer Zahl im Bestand; ein strukturiertes [[medizintechnik-management|Medizintechnik-Management]] mit Prüfterminverwaltung, Leih- und Poolkonzept, Akkutauschprogramm und Versionsverwaltung der Medikamentenbibliotheken ist daher wirtschaftlich und sicherheitlich sinnvoll. Vorkommnisse sind nach den Vorgaben der [[vigilanz|Vigilanz]] zu melden; sicherheitsrelevante Herstellerinformationen (Field Safety Notices) und Mitteilungen des BfArM sind zeitnah umzusetzen [@bfarm]. Instandsetzungen dürfen nur von Personen mit der erforderlichen Sachkenntnis und nach Herstellervorgaben durchgeführt werden.",
+    "testing": "## Prüfverfahren\n\n### Sicherheitstechnische Kontrolle (STK)\n\nDie [[stk|STK]] nach § 12 MPBetreibV folgt der Prüfanweisung des Herstellers [@mpbetreibv]. Typischer Ablauf:\n\n1. **Sichtprüfung:** Gehäuse, Spritzenmulde, Niederhalter, Kolbenkrallen, Kupplung, Netzteil, Kabel, Halterung; Lesbarkeit der Kennzeichnung; Vollständigkeit der Begleitpapiere.\n2. **Elektrische Sicherheit** nach [[iec-62353|IEC 62353]] (siehe unten).\n3. **Fördergenauigkeit** bei einer oder mehreren Raten mit einer freigegebenen Spritze.\n4. **Okklusionsalarm:** Alarmdruck bzw. Alarmkraft in den Alarmstufen, Anti-Bolus-Funktion.\n5. **Spritzenerkennung:** Durchmessererkennung, Flansch- und Kolbensitz, Kupplungsüberwachung.\n6. **Weitere Alarme:** Spritze fast leer/leer, Netzausfall, Akku schwach, Bedienpause/Erinnerungsalarm.\n7. **Akkubetrieb** und Umschaltung bei Netztrennung.\n8. **Dokumentation** der Messwerte, Prüfplakette, Eintrag ins Medizinproduktebuch.\n\n### Elektrische Sicherheitsprüfung\n\nDie [[elektrische-sicherheitspruefung|Wiederholungsprüfung nach IEC 62353]] umfasst je nach [[schutzklassen|Schutzklasse]] den [[schutzleiterwiderstand|Schutzleiterwiderstand]] (nur Schutzklasse I bzw. bei Netzteil oder Dockingstation mit Schutzleiter), ggf. den [[isolationswiderstand|Isolationswiderstand]] sowie die [[ableitstrommessung|Messung]] von Geräte- und Patientenableitstrom [@iec-62353]. Das Anwendungsteil ist die Flüssigkeitssäule: Für die Messung wird eine mit physiologischer Kochsalzlösung gefüllte Spritze mit Leitung eingelegt und die Leitungsspitze mit dem Anschluss des Prüfgeräts verbunden oder ein vom Hersteller vorgesehener Adapter verwendet. Bei Dockingstationen werden Station und Pumpen nach Herstellervorgabe geprüft.\n\n### Fördergenauigkeit: gravimetrisch und mit Analysator\n\nDie genaueste Methode ist die **gravimetrische Messung**: Die Pumpe fördert destilliertes Wasser in ein Gefäß auf einer Präzisionswaage. Aus Masse und Dichte folgt das Volumen bzw. die Rate:\n\n`Q = Δm / (ρ · Δt)`\n\nVerdunstung wird durch eine Ölschicht oder einen Deckel mit durchgeführter Kanüle verringert. In der Medizintechnik-Praxis werden meist [[pruefgeraete|Infusionspumpen-Analysatoren]] verwendet, die Volumen und Rate über eine Messstrecke (z. B. mit optischer Erfassung eines Meniskus oder einem anderen volumetrischen Prinzip) bestimmen und zusätzlich den Okklusionsdruck messen.\n\n> [!beispiel] **Auswertung einer Genauigkeitsprüfung.** Eingestellt: Q = 5 ml/h mit freigegebener 50-ml-Spritze, Messung nach Abschluss der Anlaufphase über 60 min → Sollvolumen 5,00 ml. Gemessen: 4,93 g Wasser bei ≈ 20 °C (ρ ≈ 0,998 g/ml) → 4,94 ml. Abweichung: (4,94 − 5,00) / 5,00 = **−1,2 %**. Liegt die Herstellerspezifikation z. B. bei ± 2 % für die Mechanik zuzüglich der Spritzentoleranz, ist die Prüfung bestanden.\n\n> [!hinweis] Bei der Genauigkeitsprüfung von Spritzenpumpen ist die **Anlaufphase** abzuwarten oder durch Vorfahren der Spritze zu eliminieren, sonst wird die Pumpe zu Unrecht als ungenau bewertet. Die Prüfung erfolgt mit einer in der Spritzentabelle freigegebenen Spritze – das Ergebnis gilt nur für diese Kombination.\n\n### Anlauf- und Trompetenkurve\n\nBei der Typprüfung nach [[iec-60601-2-24|IEC 60601-2-24]] werden die Fördermengen in kurzen Intervallen gravimetrisch erfasst. Daraus entstehen zwei Darstellungen [@iec-60601-2-24]:\n\n* die **Anlaufkurve** – die Förderrate über die ersten Stunden nach dem Start; sie zeigt den Einfluss von Spiel, Haftreibung und Compliance;\n* die **Trompetenkurve** – die größte positive und negative Abweichung der mittleren Rate in Beobachtungsfenstern unterschiedlicher Länge; je kürzer das Fenster, desto größer die mögliche Abweichung.\n\nDiese Prüfungen sind aufwendig und gehören zur Typprüfung beim Hersteller, nicht zur routinemäßigen STK. Für Anwender sind sie dennoch wichtig, weil sie zeigen, wie gleichmäßig eine Pumpe bei kleinen Raten tatsächlich fördert.\n\n### Okklusionsdruckprüfung\n\nMit dem Analysator oder einem Druckmessgerät mit Absperrhahn wird die Leitung verschlossen und der Druck gemessen, bei dem der Alarm auslöst – für jede einstellbare Alarmstufe bzw. nach Herstellervorgabe für eine Referenzstufe. Zusätzlich wird geprüft, ob die Anti-Bolus-Funktion den Druck nach dem Alarm abbaut. Wegen p = F / A hängt der Messwert von der verwendeten Spritze ab; Prüfspritze und Grenzwerte gibt der Hersteller vor.\n\n### Funktionsprüfung vor der Anwendung\n\nVor jeder Anwendung führen die Anwender eine [[funktionspruefung|Funktionsprüfung]] durch: Selbsttest nach dem Einschalten (Display, Alarmton), Sichtprüfung, korrektes Einlegen der Spritze, Bestätigung von Spritzenmarke und -größe, Vorfüllen der Leitung, Plausibilität von Rate, Dosis und Konzentration sowie Akkuladezustand."
+  },
+  "body": "## Geschichte und Entwicklung\n\nKolbengetriebene Dosierpumpen wurden in den 1950er- und 1960er-Jahren zunächst als Laborgeräte für Experimente mit kontinuierlicher Substanzzufuhr eingesetzt. Mit der Verbreitung von Einmalspritzen aus Kunststoff und von Intensivstationen in den 1960er- und 1970er-Jahren hielten motorgetriebene Spritzenpumpen Einzug in die Klinik [@kramme-2017]. Frühe Geräte arbeiteten mit Synchronmotoren und Getrieben fester Übersetzung; die Rate wurde über Wahlschalter und Getriebestufen eingestellt. Mit der Mikroprozessortechnik ab den 1980er-Jahren kamen Schrittmotorantriebe, Spritzentabellen, Dosisrechner und digitale Alarmüberwachung hinzu.\n\n## Varianten\n\n| Variante | Besonderheit |\n|---|---|\n| Standard-Spritzenpumpe | Intensivstation und Normalstation, Spritzen bis 50/60 ml |\n| Anästhesie-/TCI-Pumpe | pharmakokinetische Modelle zur Steuerung der Ziel-Konzentration, schnelle Bolusgabe |\n| Neonatal-Spritzenpumpe bzw. -Konfiguration | sehr kleine Raten und Spritzen, feine Ratenauflösung, niedrige Okklusionsstufen |\n| PCA-Spritzenpumpe | patientengesteuerter Bolus mit Sperrzeit, abschließbares Spritzenfach ([[pca-pumpe|PCA-Pumpe]]) |\n| Tragbare Spritzentreiber | kleine, batteriebetriebene Geräte z. B. für die subkutane Palliativtherapie |\n| MRT-taugliche Pumpen | für den Betrieb in der Nähe eines [[mrt|MRT]] mit eingeschränkter Magnetfeldverträglichkeit nach Herstellerangabe |\n\n## Aktuelle Entwicklungen\n\n* **Interoperabilität:** bidirektionale Anbindung an Patientendatenmanagementsysteme, Übernahme der Verordnung direkt in die Pumpe (Reduktion von Eingabefehlern) und Dokumentation der tatsächlichen Gabe.\n* **Medikamentenbibliotheken (DERS, *Dose Error Reduction Software*):** zentral gepflegte Konzentrationen, Dosisgrenzen und Pflegebereiche; Auswertung von Grenzwertüberschreitungen als Qualitätsindikator.\n* **Usability:** Gestaltung der Bedienoberflächen nach [[iec-62366-1|IEC 62366-1]] zur Vermeidung typischer Eingabefehler ([[gebrauchstauglichkeit|Gebrauchstauglichkeit]]) [@iec-62366-1].\n* **Cybersecurity:** Vernetzte Pumpen müssen gegen unbefugten Zugriff geschützt werden; Softwareupdates und Schwachstellenmanagement gehören heute zum Betrieb.",
+  "components": [
+    {
+      "ref": "spindelantrieb",
+      "role": "Gewindespindel mit (Halb-)Mutter wandelt die Motordrehung in den linearen Kolbenvorschub; Steigung und Übersetzung bestimmen das Volumen pro Motorschritt."
+    },
+    {
+      "ref": "schrittmotor",
+      "role": "Antrieb der Spindel über ein Untersetzungsgetriebe; die Förderrate wird digital über die Schrittfrequenz eingestellt, die Bewegung über einen Drehgeber überwacht."
+    },
+    {
+      "ref": "mikrocontroller",
+      "role": "Steuerprozessor (Ratenberechnung aus Spritzentabelle, Dosisrechner, Medikamentenbibliothek, Protokoll) und unabhängiger Überwachungsprozessor mit eigener Abschaltmöglichkeit."
+    },
+    {
+      "ref": "pwm",
+      "role": "Stromregelung der Motorphasen im Schrittmotortreiber (Mikroschrittbetrieb, gleichmäßiger Vorschub, Energieeffizienz)."
+    },
+    {
+      "ref": "lithium-ionen-akku",
+      "role": "Unterbrechungsfreier Betrieb bei Transport und Netzausfall; Alterung bestimmt die Restlaufzeit."
+    },
+    {
+      "ref": "medizinisches-netzteil",
+      "role": "Netzversorgung und Akkuladung, intern, extern oder über die Dockingstation."
+    },
+    {
+      "ref": "display-bedienoberflaeche",
+      "role": "Eingabe von Spritzentyp, Rate, Dosis und Konzentration, Anzeige von Druck, Restvolumen und Alarmen."
+    },
+    {
+      "ref": "alarmsystem",
+      "role": "Akustische und optische Alarme mit Prioritäten nach [[iec-60601-1-8|IEC 60601-1-8]], ggf. Weiterleitung an Schwesternruf oder Zentrale."
+    }
+  ],
+  "sensors": [
+    {
+      "ref": "kraftsensor",
+      "role": "Im Schiebeteil: misst die Vorschubkraft auf die Kolbenplatte; aus p ≈ (F − F_R) / A folgt der Druck für die Okklusionserkennung."
+    },
+    {
+      "ref": "hall-sensor",
+      "role": "Drehgeber an Motor oder Spindel sowie Erkennung von Kupplung, Kolbenkrallen und Flanschsitz (je nach Bauart auch optisch oder mit Mikroschaltern)."
+    },
+    {
+      "ref": "messkette",
+      "role": "Linearer Wegaufnehmer (z. B. Potentiometer) für die Kolbenposition: Restvolumen, Voralarm „Spritze fast leer“, Plausibilisierung der Förderung."
+    },
+    {
+      "ref": "drucksensor",
+      "role": "Optional: direkte Druckmessung in der Leitung über eine Druckscheibe für eine genauere, reibungsunabhängige Okklusionserkennung."
+    },
+    {
+      "ref": "temperatursensor",
+      "role": "Überwachung von Akku und Elektronik; bei einigen Geräten Kompensation temperaturabhängiger Effekte."
+    }
+  ],
+  "specs": [
+    {
+      "param": "Förderrate (Einstellbereich)",
+      "value": "etwa 0,01–0,1 ml/h bis rund 1 000–1 200 ml/h",
+      "note": "Obergrenze abhängig von der Spritzengröße (bei kleinen Spritzen deutlich geringer); Auflösung im unteren Bereich häufig 0,01 oder 0,1 ml/h.",
+      "evidence": "typisch",
+      "sources": [
+        "kramme-2017"
+      ]
+    },
+    {
+      "param": "Verwendbare Spritzengrößen",
+      "value": "etwa 2/3 ml bis 50/60 ml",
+      "note": "Nur in der Spritzentabelle freigegebene Marken und Größen; siehe ISO 7886-2.",
+      "evidence": "typisch",
+      "sources": [
+        "iso-7886-2"
+      ]
+    },
+    {
+      "param": "Fördergenauigkeit",
+      "value": "Mechanik etwa ± 1–2 %, gesamt einschließlich Spritze etwa ± 2–5 %",
+      "note": "Gilt nach der Anlaufphase und unter Bezugsbedingungen mit freigegebener Spritze; Prüfverfahren nach [[iec-60601-2-24|IEC 60601-2-24]].",
+      "evidence": "typisch",
+      "sources": [
+        "iec-60601-2-24"
+      ]
+    },
+    {
+      "param": "Okklusionsalarmgrenze",
+      "value": "mehrere Stufen, Größenordnung etwa 100 bis rund 1 000 mmHg",
+      "note": "Zeit bis zum Alarm wächst bei kleinen Raten stark (t ≈ C_S · Δp / Q); Genauigkeit durch Stopfenreibung begrenzt.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Bolusrate",
+      "value": "einstellbar, bei 50-ml-Spritzen bis in den Bereich von etwa 1 000 ml/h",
+      "note": "Bolus mit Volumen- oder Zeitbegrenzung, manuell oder programmiert.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Voralarm „Spritze fast leer“",
+      "value": "einige Minuten vor Ende bzw. bei einstellbarem Restvolumen",
+      "note": "Ermittelt über den Kolbenwegsensor und die eingestellte Rate.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "KVO-Rate",
+      "value": "kleine Erhaltungsrate nach Ende, meist einstellbar oder abschaltbar",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Akkulaufzeit",
+      "value": "mehrere Stunden bis über 10 Stunden bei mittlerer Rate",
+      "note": "Stark abhängig von Rate, Akkualter, Display und Funkmodul – Herstellerangabe beachten.",
+      "evidence": "typisch"
+    },
+    {
+      "param": "Anwendungsteil",
+      "value": "häufig Typ CF, oft defibrillationsgeschützt",
+      "note": "Siehe [[anwendungsteile|Anwendungsteile]]; maßgeblich ist die Kennzeichnung des Geräts.",
+      "evidence": "typisch",
+      "sources": [
+        "iec-60601-1"
+      ]
+    },
+    {
+      "param": "Alarmsystem",
+      "value": "Alarme hoher, mittlerer und niedriger Priorität mit akustischer und optischer Signalisierung",
+      "note": "Anforderungen nach [[iec-60601-1-8|IEC 60601-1-8]].",
+      "evidence": "belegt",
+      "sources": [
+        "iec-60601-1-8"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "ref": "b-braun",
+      "models": [
+        "Perfusor Space",
+        "Perfusor compact plus"
+      ],
+      "note": "Perfusor Space ist Teil des Space-Systems mit Infusomat Space und Dockingstation; „Perfusor“ ist ein Markenname von B. Braun."
+    },
+    {
+      "ref": "fresenius-kabi",
+      "models": [
+        "Agilia SP"
+      ],
+      "note": "Spritzenpumpe der Agilia-Plattform."
+    },
+    {
+      "ref": "bd",
+      "models": [
+        "BD Alaris CC Plus",
+        "BD Alaris GH Plus",
+        "BD Alaris PK Plus"
+      ],
+      "note": "Alaris-Spritzenpumpen, u. a. für Intensivmedizin (CC) und Anästhesie mit TCI (PK); aktuelle Sicherheitsinformationen des Herstellers beachten."
+    },
+    {
+      "ref": "icu-medical",
+      "models": [
+        "Medfusion 3500",
+        "Medfusion 4000"
+      ],
+      "note": "Ursprünglich Smiths Medical; seit der Übernahme durch ICU Medical in deren Portfolio."
+    },
+    {
+      "ref": "mindray",
+      "models": [
+        "BeneFusion SP5"
+      ],
+      "note": "Spritzenpumpe der BeneFusion-5-Serie, auch in TCI-Variante."
+    }
+  ],
+  "price": {
+    "status": "nicht-verifiziert",
+    "note": "Für Spritzenpumpen gibt es keine öffentlich überprüfbaren Listenpreise; Kliniken beschaffen sie meist in großer Stückzahl über Ausschreibungen oder Rahmenverträge, oft zusammen mit volumetrischen Pumpen und Dockingstationen. Einflussfaktoren: Ausstattung (Display, Funkmodul, TCI-Funktion), Software-Lizenzen (Medikamentenbibliothek, PDMS-Schnittstelle, Bibliotheksverwaltung), Dockingstationen und Halterungen, Stückzahl, Vertragslaufzeit und Serviceumfang. Entscheidend sind die **Gesamtbetriebskosten**: Spritzen und Spritzenleitungen sind Einmalartikel, die über die Nutzungsdauer erhebliche Kosten verursachen; hinzu kommen Akkutausch, Wartung und STK, IT-Integration, Pflege der Medikamentenbibliothek und Schulung ([[medizintechnik-management|Medizintechnik-Management]])."
+  },
+  "maintenance": {
+    "stk": "ja",
+    "mtk": "nein",
+    "basis": "MPBetreibV (2025) Anlage 1 Nr. 1.4 – nichtimplantierbare aktive Produkte zur unmittelbaren Einbringung von Substanzen und Flüssigkeiten in den Blutkreislauf unter potentiellem Druckaufbau; nicht in Anlage 2 aufgeführt",
+    "intervals": "STK nach Herstellerangabe, fehlen Angaben spätestens alle 2 Jahre (§ 12 MPBetreibV 2025); Wartung, Kalibrierung der Sensorik und Akkutausch nach Herstellerangabe"
+  },
+  "faults": [
+    {
+      "title": "Okklusionsalarm (Druck zu hoch)",
+      "ref": "okklusionsalarm",
+      "cause": "Geschlossener Dreiwegehahn oder Klemme, abgeknickte Leitung, verstopfter Katheter oder Filter, zu niedrige Alarmstufe bei viskösen Lösungen oder dünnen Kathetern, schwergängiger Spritzenkolben.",
+      "action": "Leitung von der Pumpe bis zum Patienten verfolgen und Ursache beheben; Anti-Bolus abwarten bzw. Druck kontrolliert entlasten, bevor die Leitung geöffnet wird; Zugang prüfen; bei wiederholten Fehlalarmen Spritze tauschen und Gerät prüfen lassen."
+    },
+    {
+      "title": "Spritze nicht korrekt eingelegt / Kolben nicht erkannt",
+      "ref": "anwendungsfehler",
+      "cause": "Flansch nicht in der Halterung, Kolbenplatte nicht in den Krallen, Niederhalter nicht geschlossen, nicht freigegebene Spritze, verschlissene Krallen oder Sensoren.",
+      "action": "Spritze nach Gebrauchsanweisung neu einlegen und Spritzentyp bestätigen; nur freigegebene Spritzen verwenden; bei mechanischem Defekt außer Betrieb nehmen (Gefahr der Heberwirkung)."
+    },
+    {
+      "title": "Spritze fast leer / Spritze leer",
+      "cause": "Regulärer Voralarm bzw. Ende der Förderung; bei Katecholaminen kritisch, weil eine Förderpause sofort hämodynamisch wirksam werden kann.",
+      "action": "Spritzenwechsel rechtzeitig vorbereiten (ggf. Wechsel mit zweiter, bereits laufender Pumpe nach Klinikstandard); neue Spritze vorfüllen, um Anlaufverzögerung zu vermeiden."
+    },
+    {
+      "title": "Ungewollter Bolus oder Förderpause durch Höhenänderung",
+      "ref": "anwendungsfehler",
+      "cause": "Anheben oder Absenken der laufenden Pumpe gegenüber dem Patienten (hydrostatischer Druck, Compliance), Lösen des Kolbens, Öffnen der Kupplung bei angeschlossener Leitung.",
+      "action": "Pumpen möglichst auf Herzhöhe und nicht deutlich oberhalb des Patienten positionieren, Höhe bei laufender Infusion nicht verändern; Spritze nur bei geschlossenem System wechseln."
+    },
+    {
+      "title": "Falsche Förderrate durch Eingabe- oder Spritzenfehler",
+      "ref": "anwendungsfehler",
+      "cause": "Falsche Spritzenmarke oder -größe bestätigt, Konzentration falsch eingegeben, Kommafehler, Rate statt Dosis eingestellt.",
+      "action": "Medikamentenbibliothek nutzen, Konzentrationen standardisieren, Vier-Augen-Prinzip bei Hochrisikomedikamenten; Plausibilität von Dosis und Rate prüfen."
+    },
+    {
+      "title": "Akku schwach / Akku leer",
+      "ref": "akkufehler",
+      "cause": "Lange Netztrennung (Transport), gealterter Akku, defekte Ladeelektronik oder Dockingkontakte.",
+      "action": "Netzversorgung herstellen; bei kurzer Laufzeit Akkutest und Austausch durch die Medizintechnik."
+    },
+    {
+      "title": "Netzausfall",
+      "ref": "netzstoerung",
+      "cause": "Netzstecker gezogen, Dockingstation ohne Versorgung, defektes Netzteil oder Kabel.",
+      "action": "Versorgung wiederherstellen; Akkubetrieb und Restlaufzeit kontrollieren; defekte Netzteile austauschen lassen."
+    },
+    {
+      "title": "Technischer Alarm / Systemfehler",
+      "ref": "fehlercodes",
+      "cause": "Abweichung zwischen Soll- und Istbewegung des Antriebs, Sensorfehler, Speicher- oder Prozessorfehler, mechanische Blockade, Sturzschaden.",
+      "action": "Infusion mit einer Ersatzpumpe fortsetzen, Gerät außer Betrieb nehmen, kennzeichnen und mit Fehlerbeschreibung an die Medizintechnik geben; ggf. Vorkommnismeldung prüfen."
+    }
+  ],
+  "tests": [
+    {
+      "name": "Sicherheitstechnische Kontrolle",
+      "ref": "stk",
+      "description": "Pflichtprüfung nach § 12 MPBetreibV (Anlage 1 Nr. 1.4) nach Herstellerprüfanweisung: Sichtprüfung, elektrische Sicherheit, Fördergenauigkeit, Okklusionsalarm, Spritzenerkennung, Alarme, Akkubetrieb, Dokumentation."
+    },
+    {
+      "name": "Elektrische Sicherheitsprüfung nach IEC 62353",
+      "ref": "elektrische-sicherheitspruefung",
+      "description": "Je nach Schutzklasse Schutzleiterwiderstand, ggf. Isolationswiderstand, Geräte- und Patientenableitstrom; Kontaktierung des Anwendungsteils über eine mit Kochsalzlösung gefüllte Spritze mit Leitung oder einen Herstelleradapter."
+    },
+    {
+      "name": "Fördergenauigkeitsprüfung mit Infusionspumpen-Analysator",
+      "ref": "pruefgeraete",
+      "description": "Vergleich von eingestellter und gemessener Rate bzw. Volumen nach Abschluss der Anlaufphase mit freigegebener Spritze; alternativ gravimetrisch mit Präzisionswaage (Q = Δm / (ρ · Δt))."
+    },
+    {
+      "name": "Okklusionsdruckprüfung",
+      "ref": "okklusionsalarm",
+      "description": "Verschluss der Leitung am Analysator oder Druckmessgerät, Messung des Alarmdrucks je Stufe bzw. Referenzstufe, Prüfung der Anti-Bolus-Funktion; Grenzwerte und Prüfspritze nach Hersteller."
+    },
+    {
+      "name": "Prüfung der Spritzenerkennung und Alarme",
+      "ref": "alarmsystem",
+      "description": "Durchmessererkennung, Flansch- und Kolbensitz, Kupplungsüberwachung, Spritze fast leer/leer, Netzausfall, Akku schwach; Priorität, Lautstärke und Anzeige der Alarmsignale."
+    },
+    {
+      "name": "Funktionsprüfung vor Anwendung",
+      "ref": "funktionspruefung",
+      "description": "Selbsttest nach dem Einschalten, Sichtprüfung, korrektes Einlegen und Bestätigen der Spritze, Vorfüllen der Leitung, Plausibilität von Rate, Dosis und Konzentration, Akkuladezustand."
+    }
+  ],
+  "diagram": {
+    "title": "Funktionsschema einer Spritzenpumpe",
+    "caption": "Vereinfachtes Funktionsschema: Antriebskette (oben/rechts) vom Steuerprozessor über Motortreiber, Schrittmotor und Spindel zum Spritzenkolben, Sensorik mit unabhängiger Überwachung sowie Energieversorgung und Schnittstellen. Kein Abbild eines konkreten Modells.",
+    "width": 960,
+    "height": 470,
+    "nodes": [
+      {
+        "id": "ui",
+        "label": "Display und\nBedienung",
+        "ref": "display-bedienoberflaeche",
+        "kind": "output",
+        "x": 100,
+        "y": 70
+      },
+      {
+        "id": "ctrl",
+        "label": "Steuerprozessor\n(Rate, Dosis, Tabelle)",
+        "ref": "mikrocontroller",
+        "kind": "control",
+        "x": 330,
+        "y": 70,
+        "w": 170
+      },
+      {
+        "id": "drv",
+        "label": "Motortreiber\n(PWM, Mikroschritt)",
+        "ref": "pwm",
+        "kind": "control",
+        "x": 560,
+        "y": 70,
+        "w": 160
+      },
+      {
+        "id": "motor",
+        "label": "Schrittmotor +\nGetriebe + Drehgeber",
+        "ref": "schrittmotor",
+        "kind": "actuator",
+        "x": 800,
+        "y": 70,
+        "w": 170
+      },
+      {
+        "id": "spindel",
+        "label": "Gewindespindel\n+ Halbmutter",
+        "ref": "spindelantrieb",
+        "kind": "actuator",
+        "x": 800,
+        "y": 190
+      },
+      {
+        "id": "kraft",
+        "label": "Kraftsensor\nim Schiebeteil",
+        "ref": "kraftsensor",
+        "kind": "sensor",
+        "x": 560,
+        "y": 190
+      },
+      {
+        "id": "erkenn",
+        "label": "Spritzenerkennung\n(Ø, Flansch, Kolben)",
+        "ref": "hall-sensor",
+        "kind": "sensor",
+        "x": 560,
+        "y": 310,
+        "w": 170
+      },
+      {
+        "id": "spritze",
+        "label": "Einmalspritze\n(Kolben, Zylinder)",
+        "ref": "stroemungslehre",
+        "kind": "process",
+        "x": 800,
+        "y": 310
+      },
+      {
+        "id": "pat",
+        "label": "Patient\n(venöser Zugang)",
+        "ref": "blutkreislauf",
+        "kind": "patient",
+        "x": 800,
+        "y": 420
+      },
+      {
+        "id": "mon",
+        "label": "Überwachungs-\nprozessor",
+        "ref": "regelkreis",
+        "kind": "control",
+        "x": 330,
+        "y": 250,
+        "w": 170
+      },
+      {
+        "id": "alarm",
+        "label": "Alarmgeber\n(akustisch/optisch)",
+        "ref": "alarmsystem",
+        "kind": "output",
+        "x": 330,
+        "y": 400,
+        "w": 170
+      },
+      {
+        "id": "netz",
+        "label": "Netzteil /\nDockingstation",
+        "ref": "medizinisches-netzteil",
+        "kind": "source",
+        "x": 100,
+        "y": 200
+      },
+      {
+        "id": "akku",
+        "label": "Li-Ionen-Akku",
+        "ref": "lithium-ionen-akku",
+        "kind": "source",
+        "x": 100,
+        "y": 310
+      },
+      {
+        "id": "it",
+        "label": "Schnittstelle\n(PDMS, Bibliothek)",
+        "ref": "hl7-fhir",
+        "kind": "output",
+        "x": 100,
+        "y": 420
+      }
+    ],
+    "edges": [
+      {
+        "from": "ui",
+        "to": "ctrl",
+        "kind": "data",
+        "label": "Rate, Spritze"
+      },
+      {
+        "from": "ctrl",
+        "to": "drv",
+        "kind": "signal",
+        "label": "Schrittimpulse f"
+      },
+      {
+        "from": "drv",
+        "to": "motor",
+        "kind": "power",
+        "label": "Phasenströme"
+      },
+      {
+        "from": "motor",
+        "to": "spindel",
+        "kind": "energy",
+        "label": "Drehmoment"
+      },
+      {
+        "from": "spindel",
+        "to": "spritze",
+        "kind": "energy",
+        "label": "Vorschub v"
+      },
+      {
+        "from": "spritze",
+        "to": "pat",
+        "kind": "fluid",
+        "label": "Q = A · v"
+      },
+      {
+        "from": "spindel",
+        "to": "kraft",
+        "kind": "energy",
+        "label": "Kraft F"
+      },
+      {
+        "from": "kraft",
+        "to": "mon",
+        "kind": "signal",
+        "label": "Druck"
+      },
+      {
+        "from": "erkenn",
+        "to": "ctrl",
+        "kind": "signal"
+      },
+      {
+        "from": "erkenn",
+        "to": "mon",
+        "kind": "signal"
+      },
+      {
+        "from": "motor",
+        "to": "mon",
+        "kind": "signal",
+        "label": "Drehgeber"
+      },
+      {
+        "from": "ctrl",
+        "to": "mon",
+        "kind": "data",
+        "label": "Sollwerte"
+      },
+      {
+        "from": "mon",
+        "to": "drv",
+        "kind": "signal",
+        "label": "Abschaltung"
+      },
+      {
+        "from": "mon",
+        "to": "alarm",
+        "kind": "signal"
+      },
+      {
+        "from": "netz",
+        "to": "akku",
+        "kind": "power",
+        "label": "Laden"
+      },
+      {
+        "from": "akku",
+        "to": "ctrl",
+        "kind": "power"
+      },
+      {
+        "from": "ctrl",
+        "to": "it",
+        "kind": "data"
+      }
+    ]
+  },
+  "images": [
+    {
+      "src": "img/devices/spritzenpumpe-aufbau.svg",
+      "kind": "schema",
+      "caption": "Schematischer Aufbau einer Spritzenpumpe: Spritze mit Niederhalter und Flanschaufnahme, Schiebeteil mit Kolbenkrallen und Kraftsensor, Gewindespindel mit Halbmutter, Getriebe und Schrittmotor (eigene Darstellung, kein reales Modell)."
+    },
+    {
+      "src": "img/devices/spritzenpumpe-prinzip.svg",
+      "kind": "schema",
+      "caption": "Prinzip der Kolbenförderung: kinematische Kette vom Motorschritt zum Volumen, Anlaufverhalten durch Spiel und Haftreibung sowie Okklusionsdruck über die Kolbenkraft (eigene Darstellung, Beispielwerte)."
+    }
+  ],
+  "paths": [
+    [
+      "spritzenpumpe",
+      "spindelantrieb",
+      "schrittmotor",
+      "elektromagnetische-induktion"
+    ],
+    [
+      "spritzenpumpe",
+      "kraftsensor",
+      "druckmessung",
+      "druck",
+      "blutdruck"
+    ],
+    [
+      "spritzenpumpe",
+      "stroemungslehre",
+      "blutkreislauf",
+      "herz"
+    ]
+  ],
+  "related": [
+    "infusionspumpe",
+    "pca-pumpe",
+    "insulinpumpe",
+    "enterale-ernaehrungspumpe",
+    "infusionswaermer",
+    "patientenmonitor",
+    "iec-60601-2-24",
+    "okklusionsalarm",
+    "spindelantrieb",
+    "schrittmotor",
+    "kraftsensor",
+    "mpbetreibv",
+    "stk",
+    "anwendungsfehler",
+    "alarmmuedigkeit"
+  ],
+  "sources": [
+    "kramme-2017",
+    "webster-2010",
+    "tipler-2019",
+    "larsen-2018",
+    "iec-60601-2-24",
+    "iso-7886-2",
+    "iec-60601-1",
+    "iec-60601-1-2",
+    "iec-60601-1-8",
+    "iec-62353",
+    "iec-62366-1",
+    "mdr-2017",
+    "mpbetreibv",
+    "din-31051",
+    "bfarm"
+  ],
+  "status": "ausfuehrlich",
+  "updated": "2026-11-11"
+}

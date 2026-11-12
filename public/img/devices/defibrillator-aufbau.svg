@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0b2545">
+  <title>Schematischer Aufbau eines externen Defibrillators</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d9488"/>
+    </marker>
+    <marker id="arrd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b2545"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#ffffff"/>
+  <text x="300" y="26" text-anchor="middle" font-size="15" font-weight="600">Aufbau eines externen Defibrillators (Schema)</text>
+
+  <!-- Gehäuse -->
+  <rect x="20" y="44" width="400" height="312" rx="12" fill="#f1f5f9" stroke="#0b2545" stroke-width="2"/>
+
+  <!-- Bedienfeld / Display -->
+  <rect x="36" y="58" width="150" height="92" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <polyline points="44,112 60,112 64,108 68,112 76,112 80,80 84,124 88,112 104,112 108,108 112,112 120,112 124,80 128,124 132,112 148,112 152,108 156,112 178,112" fill="none" stroke="#0d9488" stroke-width="1.8"/>
+  <text x="111" y="140" text-anchor="middle" font-size="13">EKG · Energie · Text</text>
+
+  <!-- Bedienelemente -->
+  <circle cx="218" cy="80" r="14" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="218" y="85" text-anchor="middle" font-size="13">J</text>
+  <rect x="244" y="66" width="44" height="28" rx="5" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="266" y="85" text-anchor="middle" font-size="13">Laden</text>
+  <rect x="300" y="66" width="44" height="28" rx="14" fill="#14b8a6" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="322" y="85" text-anchor="middle" font-size="13" fill="#ffffff">⚡</text>
+
+  <!-- Steuerung -->
+  <rect x="210" y="110" width="194" height="40" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="307" y="135" text-anchor="middle">Steuer-/Analyserechner</text>
+
+  <!-- Akku -->
+  <rect x="36" y="182" width="96" height="56" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="132" y="200" width="6" height="20" fill="#0b2545"/>
+  <text x="84" y="208" text-anchor="middle">Akku /</text>
+  <text x="84" y="226" text-anchor="middle">Batterie</text>
+
+  <!-- Ladeschaltung -->
+  <rect x="160" y="182" width="96" height="56" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="208" y="208" text-anchor="middle">HV-Lade-</text>
+  <text x="208" y="226" text-anchor="middle">wandler</text>
+
+  <!-- Kondensator -->
+  <rect x="280" y="182" width="64" height="56" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="306" y1="192" x2="306" y2="228" stroke="#0b2545" stroke-width="2.5"/>
+  <line x1="318" y1="192" x2="318" y2="228" stroke="#0b2545" stroke-width="2.5"/>
+  <line x1="290" y1="210" x2="306" y2="210" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="318" y1="210" x2="334" y2="210" stroke="#0b2545" stroke-width="1.5"/>
+
+  <!-- H-Brücke -->
+  <rect x="280" y="262" width="124" height="48" rx="6" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="342" y="283" text-anchor="middle">H-Brücke +</text>
+  <text x="342" y="300" text-anchor="middle">Patientenrelais</text>
+
+  <!-- Entladewiderstand -->
+  <rect x="160" y="270" width="96" height="40" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="208" y="286" text-anchor="middle">Sicherheits-</text>
+  <text x="208" y="302" text-anchor="middle">entladung</text>
+
+  <!-- EKG-/Impedanz-Eingang -->
+  <rect x="36" y="270" width="104" height="40" rx="6" fill="#ffffff" stroke="#0b2545" stroke-width="1.5"/>
+  <text x="88" y="286" text-anchor="middle">EKG- und</text>
+  <text x="88" y="302" text-anchor="middle">Z-Messung</text>
+
+  <!-- Energiefluss -->
+  <line x1="138" y1="210" x2="158" y2="210" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="256" y1="210" x2="278" y2="210" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="344" y1="210" x2="370" y2="210" stroke="#0d9488" stroke-width="2"/>
+  <line x1="370" y1="210" x2="370" y2="260" stroke="#0d9488" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="290" y1="238" x2="240" y2="268" stroke="#0b2545" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrd)"/>
+
+  <!-- Gehäuseausgang Elektrodenkabel -->
+  <path d="M404,286 C450,286 452,180 492,180" fill="none" stroke="#0b2545" stroke-width="2"/>
+  <path d="M404,296 C462,296 462,300 492,300" fill="none" stroke="#0b2545" stroke-width="2"/>
+  <path d="M140,300 C150,340 380,345 404,300" fill="none" stroke="#0b2545" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+  <!-- Patient Thorax -->
+  <rect x="470" y="140" width="110" height="190" rx="40" fill="#e6f7f5" stroke="#0b2545" stroke-width="1.5"/>
+  <path d="M516,230 q10,-18 22,-4 q12,-14 18,6 q-6,22 -20,32 q-16,-12 -20,-34 z" fill="#ffffff" stroke="#0d9488" stroke-width="1.8"/>
+  <rect x="478" y="166" width="34" height="28" rx="5" fill="#14b8a6" stroke="#0b2545" stroke-width="1.5"/>
+  <rect x="540" y="286" width="34" height="28" rx="5" fill="#14b8a6" stroke="#0b2545" stroke-width="1.5"/>
+  <line x1="492" y1="300" x2="538" y2="300" stroke="#0b2545" stroke-width="2"/>
+
+  <!-- Beschriftungen mit Führungslinien -->
+  <line x1="495" y1="166" x2="495" y2="120" stroke="#0b2545" stroke-width="1"/>
+  <text x="440" y="74" font-size="13">Klebeelektrode</text>
+  <text x="440" y="90" font-size="13">rechts parasternal</text>
+  <text x="440" y="106" font-size="13">(sternal)</text>
+  <line x1="557" y1="314" x2="557" y2="348" stroke="#0b2545" stroke-width="1"/>
+  <text x="470" y="368" font-size="13">Elektrode apikal</text>
+  <line x1="538" y1="258" x2="590" y2="258" stroke="#0b2545" stroke-width="1"/>
+  <text x="560" y="250" font-size="13" text-anchor="middle">Herz</text>
+
+  <text x="30" y="380" font-size="13">Grün: Energiepfad · gestrichelt: Sicherheitsentladung / Messsignale</text>
+</svg>
